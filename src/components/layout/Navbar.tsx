@@ -1,6 +1,7 @@
 'use client'
 import { useState, useEffect } from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X, Sun, Moon } from 'lucide-react'
 import { useLanguage } from '@/contexts/LanguageContext'
@@ -46,19 +47,21 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-          <a href="#" className="flex items-center">
-            <div className="bg-white/10 rounded-lg px-2 py-1">
-              <Image
-                src="/logo.png"
-                alt="Stackup Agency"
-                width={220}
-                height={66}
-                quality={100}
-                className="object-contain"
-                priority
-              />
+          <Link href="/" className="flex items-center gap-3">
+            <Image
+              src="/logo-icon.png"
+              alt="Stackup"
+              width={45}
+              height={45}
+              quality={100}
+              className="object-contain"
+              priority
+            />
+            <div className="flex flex-col leading-tight">
+              <span className="font-bold text-xl tracking-tight text-[#1E3A5F] dark:text-white">Stackup</span>
+              <span className="font-light text-xs tracking-[0.2em] uppercase text-[#1E3A5F]/70 dark:text-white/70">Agency</span>
             </div>
-          </a>
+          </Link>
 
           {/* Desktop nav */}
           <div className="hidden lg:flex items-center gap-8">

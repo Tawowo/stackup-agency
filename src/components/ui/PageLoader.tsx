@@ -33,10 +33,11 @@ export default function PageLoader() {
                 transition={{ duration: 1.2, repeat: Infinity }}
               >
                 <Image
-                  src="/logo.png"
+                  src="/logo-icon.png"
                   alt="Stackup Agency"
-                  width={120}
-                  height={36}
+                  width={80}
+                  height={80}
+                  quality={100}
                   className="object-contain"
                 />
               </motion.div>
