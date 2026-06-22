@@ -61,7 +61,7 @@ export default function Blog() {
           <p className="text-foreground/60 dark:text-white/60 text-lg">{t.blog.subtitle}</p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           {articles.map((article, i) => (
             <motion.article
               key={article.slug}

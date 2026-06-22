@@ -93,7 +93,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.1 }}
-          className="text-5xl sm:text-7xl lg:text-8xl font-extrabold text-white leading-tight mb-2"
+          className="text-4xl sm:text-7xl lg:text-8xl font-extrabold text-white leading-tight mb-2"
         >
           {t.hero.title1}
         </motion.h1>
@@ -101,7 +101,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.25 }}
-          className="text-5xl sm:text-7xl lg:text-8xl font-extrabold leading-tight mb-8"
+          className="text-4xl sm:text-7xl lg:text-8xl font-extrabold leading-tight mb-8"
           style={{ background: 'linear-gradient(135deg, #2D7DD2, #F59E0B)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}
         >
           {t.hero.title2}
@@ -111,7 +111,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.4 }}
-          className="text-lg sm:text-xl text-white/60 max-w-2xl mx-auto mb-12 leading-relaxed"
+          className="text-base sm:text-xl text-white/60 max-w-2xl mx-auto mb-10 leading-relaxed px-2"
         >
           {t.hero.subtitle}
         </motion.p>
@@ -120,18 +120,18 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.55 }}
-          className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+          className="flex flex-col sm:flex-row gap-4 justify-center items-center px-4"
         >
           <a
             href="#services"
-            className="group flex items-center gap-2 px-8 py-4 bg-white/10 hover:bg-white/20 backdrop-blur border border-white/20 hover:border-white/40 text-white font-semibold rounded-2xl transition-all hover:-translate-y-0.5"
+            className="group w-full sm:w-auto flex items-center justify-center gap-2 px-8 py-4 bg-white/10 hover:bg-white/20 backdrop-blur border border-white/20 hover:border-white/40 text-white font-semibold rounded-2xl transition-all hover:-translate-y-0.5"
           >
             {t.hero.cta1}
             <ChevronRight size={18} className="group-hover:translate-x-1 transition-transform" />
           </a>
           <a
             href="#contact"
-            className="group flex items-center gap-2 px-8 py-4 bg-gold hover:bg-amber-500 text-white font-semibold rounded-2xl shadow-xl shadow-gold/30 hover:shadow-gold/50 transition-all hover:-translate-y-0.5"
+            className="group w-full sm:w-auto flex items-center justify-center gap-2 px-8 py-4 bg-gold hover:bg-amber-500 text-white font-semibold rounded-2xl shadow-xl shadow-gold/30 hover:shadow-gold/50 transition-all hover:-translate-y-0.5"
           >
             <Calendar size={18} />
             {t.hero.cta2}
@@ -142,16 +142,16 @@ export default function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 0.9 }}
-          className="mt-20 flex flex-wrap justify-center gap-8 sm:gap-16"
+          className="mt-16 grid grid-cols-3 gap-4 sm:gap-16 max-w-sm sm:max-w-none mx-auto"
         >
           {[
             { value: '100%', label: 'Code sur mesure' },
-            { value: '< 3s', label: 'Temps de chargement' },
+            { value: '< 3s', label: 'Chargement' },
             { value: '24h', label: 'Devis gratuit' },
           ].map(stat => (
             <div key={stat.label} className="text-center">
-              <div className="text-3xl font-bold text-white mb-1">{stat.value}</div>
-              <div className="text-sm text-white/40">{stat.label}</div>
+              <div className="text-2xl sm:text-3xl font-bold text-white mb-1">{stat.value}</div>
+              <div className="text-xs sm:text-sm text-white/40">{stat.label}</div>
             </div>
           ))}
         </motion.div>

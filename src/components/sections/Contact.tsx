@@ -53,7 +53,7 @@ export default function Contact() {
           <p className="text-foreground/60 dark:text-white/60 text-lg">{t.contact.subtitle}</p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-5 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-12">
           {/* Form */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -62,7 +62,7 @@ export default function Contact() {
             className="lg:col-span-3"
           >
             <form onSubmit={handleSubmit} className="space-y-4">
-              <div className="grid sm:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <input
                   type="text"
                   required

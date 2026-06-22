@@ -19,6 +19,12 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
+  // Lock body scroll when mobile menu is open
+  useEffect(() => {
+    document.body.style.overflow = open ? 'hidden' : ''
+    return () => { document.body.style.overflow = '' }
+  }, [open])
+
   const links = [
     { href: '#services', label: t.nav.services },
     { href: '#tarifs', label: t.nav.pricing },
@@ -28,7 +34,6 @@ export default function Navbar() {
     { href: '#contact', label: t.nav.contact },
   ]
 
-  // On dark hero (not scrolled): white text. On white scrolled bg: gray-900
   const linkClass = scrolled
     ? 'text-gray-900 dark:text-white hover:text-electric dark:hover:text-electric'
     : 'text-white hover:text-electric'
@@ -58,8 +63,12 @@ export default function Navbar() {
               priority
             />
             <div className="flex flex-col leading-tight">
-              <span className="font-bold text-xl tracking-tight text-white">Stackup</span>
-              <span className="font-light text-xs tracking-[0.2em] uppercase text-white/70">Agency</span>
+              <span className={`font-bold text-xl tracking-tight transition-colors ${
+                scrolled ? 'text-[#1E3A5F] dark:text-white' : 'text-white'
+              }`}>Stackup</span>
+              <span className={`font-light text-xs tracking-[0.2em] uppercase transition-colors ${
+                scrolled ? 'text-[#1E3A5F]/70 dark:text-white/70' : 'text-white/70'
+              }`}>Agency</span>
             </div>
           </Link>
 
@@ -77,7 +86,7 @@ export default function Navbar() {
             ))}
           </div>
 
-          {/* Right controls */}
+          {/* Right controls — desktop */}
           <div className="hidden lg:flex items-center gap-3">
             <button
               onClick={() => setLang(lang === 'fr' ? 'en' : 'fr')}
@@ -105,55 +114,58 @@ export default function Navbar() {
             </a>
           </div>
 
-          {/* Mobile hamburger */}
-          <div className="flex lg:hidden items-center gap-2">
+          {/* Mobile controls */}
+          <div className="flex lg:hidden items-center gap-1">
             <button
               onClick={toggleDark}
-              className={`p-2 ${scrolled ? 'text-gray-700 dark:text-white' : 'text-white'}`}
+              className="p-2.5 min-w-[44px] min-h-[44px] flex items-center justify-center text-white"
+              aria-label="Toggle dark mode"
             >
-              {dark ? <Sun size={18} /> : <Moon size={18} />}
+              {dark ? <Sun size={20} /> : <Moon size={20} />}
             </button>
             <button
               onClick={() => setOpen(!open)}
-              className={`p-2 ${scrolled ? 'text-gray-900 dark:text-white' : 'text-white'}`}
+              className="p-2.5 min-w-[44px] min-h-[44px] flex items-center justify-center text-white"
+              aria-label="Toggle menu"
             >
-              {open ? <X size={22} /> : <Menu size={22} />}
+              {open ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
         </div>
       </div>
 
-      {/* Mobile menu */}
+      {/* Mobile menu — full screen, always dark bg */}
       <AnimatePresence>
         {open && (
           <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-white/10"
+            initial={{ opacity: 0, y: -8 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -8 }}
+            transition={{ duration: 0.2 }}
+            className="lg:hidden fixed inset-0 top-16 z-40 bg-gray-900 overflow-y-auto"
           >
-            <div className="px-4 py-4 flex flex-col gap-1">
+            <div className="px-6 py-6 flex flex-col gap-1">
               {links.map(link => (
                 <a
                   key={link.href}
                   href={link.href}
                   onClick={() => setOpen(false)}
-                  className="py-3 px-4 text-sm font-medium text-gray-900 dark:text-white hover:text-electric rounded-lg hover:bg-electric/5 transition-colors"
+                  className="py-4 px-4 text-base font-medium text-white hover:text-electric rounded-xl hover:bg-white/5 transition-colors min-h-[56px] flex items-center"
                 >
                   {link.label}
                 </a>
               ))}
-              <div className="flex items-center gap-2 pt-3 mt-2 border-t border-gray-100 dark:border-white/10">
+              <div className="flex items-center gap-3 pt-4 mt-3 border-t border-white/10">
                 <button
                   onClick={() => setLang(lang === 'fr' ? 'en' : 'fr')}
-                  className="px-3 py-1.5 text-xs font-semibold rounded-lg border border-gray-300 dark:border-white/20 text-gray-900 dark:text-white"
+                  className="px-4 py-2.5 text-sm font-semibold rounded-xl border border-white/20 text-white min-h-[44px]"
                 >
                   {lang === 'fr' ? 'EN' : 'FR'}
                 </button>
                 <a
                   href="#contact"
                   onClick={() => setOpen(false)}
-                  className="flex-1 py-2.5 text-center bg-gold text-white text-sm font-semibold rounded-xl"
+                  className="flex-1 py-3 text-center bg-gold text-white text-sm font-semibold rounded-xl min-h-[44px] flex items-center justify-center"
                 >
                   {t.nav.cta}
                 </a>

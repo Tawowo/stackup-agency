@@ -29,7 +29,7 @@ export default function Portfolio() {
           <p className="text-foreground/60 dark:text-white/60 text-lg">{t.portfolio.subtitle}</p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-8 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           {/* Card */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}

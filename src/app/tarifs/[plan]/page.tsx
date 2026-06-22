@@ -202,8 +202,8 @@ export default function TarifPage({ params }: { params: { plan: string } }) {
               Recommandé
             </div>
           )}
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white mb-4">Plan {plan.name}</h1>
-          <p className="text-xl text-white/70 mb-4">{plan.tagline}</p>
+          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white mb-4">Plan {plan.name}</h1>
+          <p className="text-base sm:text-xl text-white/70 mb-4">{plan.tagline}</p>
           <div className="text-5xl font-black text-white">{plan.price}</div>
         </div>
       </section>
@@ -219,7 +219,7 @@ export default function TarifPage({ params }: { params: { plan: string } }) {
           </div>
         </section>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Included */}
           <section className="bg-white dark:bg-white/5 rounded-2xl p-8 border border-gray-100 dark:border-white/10">
             <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-6">Ce qui est inclus</h2>

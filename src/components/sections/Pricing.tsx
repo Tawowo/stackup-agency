@@ -49,7 +49,7 @@ export default function Pricing() {
           {t.pricing.monthly}
         </motion.h3>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-20">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-20">
           {t.pricing.plans.map((plan, i) => {
             const isPro = i === 1
             const slug = planSlugs[i]
@@ -121,7 +121,7 @@ export default function Pricing() {
           {t.pricing.project}
         </motion.h3>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-5">
           {t.pricing.projects.map((p, i) => {
             const Icon = projectIcons[i] || Code2
             const slug = projectSlugs[i]

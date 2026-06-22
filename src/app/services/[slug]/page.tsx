@@ -373,8 +373,8 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
               {service.price}
             </div>
           )}
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white mb-4">{service.title}</h1>
-          <p className="text-xl text-white/70">{service.subtitle}</p>
+          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white mb-4">{service.title}</h1>
+          <p className="text-base sm:text-xl text-white/70">{service.subtitle}</p>
           <div className="mt-6 flex flex-wrap gap-4 text-sm text-white/60">
             <span>⏱ Délai : {service.duration}</span>
             {service.price !== 'Sur devis' && <span>💰 {service.price}</span>}
