@@ -49,7 +49,7 @@ export default function Navbar() {
           <a href="#" className="flex items-center">
             <div className="bg-white/10 rounded-lg px-2 py-1">
               <Image
-                src="/logo.svg"
+                src="/logo.png"
                 alt="Stackup Agency"
                 width={180}
                 height={55}

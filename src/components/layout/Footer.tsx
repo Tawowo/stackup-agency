@@ -50,7 +50,7 @@ export default function Footer() {
             <div className="mb-5">
               {/* White version: brightness-0 invert makes the navy text white */}
               <Image
-                src="/logo.svg"
+                src="/logo.png"
                 alt="Stackup Agency"
                 width={180}
                 height={55}
