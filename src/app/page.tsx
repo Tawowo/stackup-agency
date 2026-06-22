@@ -1,4 +1,3 @@
-import Navbar from '@/components/layout/Navbar'
 import Hero from '@/components/sections/Hero'
 import Services from '@/components/sections/Services'
 import Pricing from '@/components/sections/Pricing'
@@ -8,14 +7,12 @@ import Testimonials from '@/components/sections/Testimonials'
 import Blog from '@/components/sections/Blog'
 import FAQ from '@/components/sections/FAQ'
 import Contact from '@/components/sections/Contact'
-import Footer from '@/components/layout/Footer'
 import PageLoader from '@/components/ui/PageLoader'
 
 export default function Home() {
   return (
     <>
       <PageLoader />
-      <Navbar />
       <main>
         <Hero />
         <Services />
@@ -27,7 +24,6 @@ export default function Home() {
         <FAQ />
         <Contact />
       </main>
-      <Footer />
     </>
   )
 }

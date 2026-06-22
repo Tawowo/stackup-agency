@@ -19,34 +19,34 @@ type PlanData = {
 const plans: Record<string, PlanData> = {
   starter: {
     name: 'Starter',
-    price: '19€/mois',
+    price: '29€/mois',
     tagline: 'L\'essentiel pour démarrer sereinement.',
-    description: `Le plan Starter est conçu pour les indépendants et les petites entreprises qui ont besoin d'une maintenance de base fiable sans se ruiner. À seulement 19€/mois, il garantit que votre site reste en ligne, sécurisé et fonctionnel.
+    description: `Le plan Starter est conçu pour les indépendants et les petites entreprises qui ont besoin d'une maintenance de base fiable. Il garantit que votre site reste en ligne, sécurisé et fonctionnel.
 
-Ce plan convient parfaitement si vous venez de lancer votre site et que vous souhaitez une solution d'hébergement et de maintenance sans surprise. Vous bénéficiez d'un hébergement haute disponibilité inclus, des mises à jour de sécurité régulières et d'un support par email si vous avez des questions.
+Ce plan convient parfaitement si vous venez de lancer votre site et que vous souhaitez une solution d'hébergement et de maintenance sans surprise. Vous bénéficiez d'un hébergement haute disponibilité inclus, des mises à jour de sécurité régulières et d'un support par email avec réponse garantie sous 72h.
 
-Le plan Starter inclut également une modification par mois — idéal pour mettre à jour vos horaires, changer une photo ou modifier un tarif. Simple, efficace, abordable.
+Le plan Starter inclut également une modification par mois — idéal pour mettre à jour vos horaires, changer une photo ou modifier un tarif.
 
-C'est le point d'entrée idéal pour professionnaliser votre présence en ligne sans engagement lourd. Et si vos besoins évoluent, vous pouvez passer au plan Pro en quelques clics.`,
+C'est le point d'entrée idéal pour professionnaliser votre présence en ligne. Et si vos besoins évoluent, vous pouvez passer au plan Pro à tout moment.`,
     audience: 'Idéal pour les indépendants, artisans et petites entreprises avec un site vitrine simple.',
     features: [
       'Hébergement haute disponibilité inclus',
       'Mises à jour de sécurité régulières',
-      'Support par email (réponse sous 48h)',
-      '1 modification de contenu par mois',
+      'Support email — réponse sous 72h',
+      '1 modification de contenu par mois (ajouts de contenu sur devis)',
       'Certificat SSL inclus',
       'Monitoring basique de disponibilité',
     ],
     notIncluded: [
       'Support téléphonique',
       'Rapport mensuel de performance',
-      'Sauvegardes hebdomadaires',
+      'Sauvegarde automatique hebdomadaire',
       'Modifications illimitées',
-      'Optimisation SEO mensuelle',
+      'Audit SEO mensuel',
       'Conseil stratégique',
     ],
     faq: [
-      { q: 'Qu\'est-ce qu\'une "modification" dans le plan Starter ?', a: 'Il s\'agit de toute mise à jour de contenu : changer un texte, remplacer une image, modifier des horaires ou des prix. Une modification par mois est incluse.' },
+      { q: 'Qu\'est-ce qu\'une "modification" dans le plan Starter ?', a: 'Il s\'agit de toute mise à jour de contenu : changer un texte, remplacer une image, modifier des horaires ou des prix. Une modification par mois est incluse. Les ajouts de contenu plus conséquents font l\'objet d\'un devis.' },
       { q: 'Puis-je passer au plan Pro à tout moment ?', a: 'Oui, vous pouvez évoluer vers un plan supérieur à n\'importe quel renouvellement mensuel.' },
       { q: 'L\'hébergement est-il vraiment inclus ?', a: 'Oui, votre site est hébergé sur notre infrastructure incluse dans le prix. Vous n\'avez pas à gérer de serveur.' },
       { q: 'Que se passe-t-il si j\'ai besoin de plus d\'une modification par mois ?', a: 'Les modifications supplémentaires sont facturées 15€ l\'unité, ou vous pouvez passer au plan Pro.' },
@@ -54,89 +54,87 @@ C'est le point d'entrée idéal pour professionnaliser votre présence en ligne 
     compare: [
       { feature: 'Hébergement inclus', starter: true, pro: true, premium: true },
       { feature: 'Mises à jour sécurité', starter: true, pro: true, premium: true },
-      { feature: 'Support email 48h', starter: true, pro: true, premium: true },
-      { feature: 'Support prioritaire 24h', starter: false, pro: true, premium: true },
-      { feature: 'Support urgent 4h', starter: false, pro: false, premium: true },
-      { feature: 'Modifications/mois', starter: false, pro: false, premium: true },
-      { feature: 'Rapport mensuel', starter: false, pro: true, premium: true },
-      { feature: 'Sauvegarde hebdo', starter: false, pro: true, premium: true },
-      { feature: 'SEO mensuel', starter: false, pro: false, premium: true },
-      { feature: 'Analytics avancé', starter: false, pro: false, premium: true },
-      { feature: '1h conseil/mois', starter: false, pro: false, premium: true },
+      { feature: 'Support email 72h', starter: true, pro: true, premium: true },
+      { feature: 'Support prioritaire 48h', starter: false, pro: true, premium: true },
+      { feature: 'Support urgent 16h', starter: false, pro: false, premium: true },
+      { feature: 'Modifications illimitées', starter: false, pro: false, premium: true },
+      { feature: 'Rapport mensuel de performance', starter: false, pro: true, premium: true },
+      { feature: 'Sauvegarde automatique hebdomadaire', starter: false, pro: true, premium: true },
+      { feature: 'Audit SEO mensuel', starter: false, pro: false, premium: true },
+      { feature: 'Tableau de bord statistiques', starter: false, pro: false, premium: true },
+      { feature: 'Appel stratégie 30min/mois', starter: false, pro: false, premium: true },
     ],
     color: 'from-slate-600 to-slate-800',
   },
   pro: {
     name: 'Pro',
-    price: '49€/mois',
+    price: '44€/mois',
     tagline: 'Le plan recommandé pour les entreprises actives.',
     description: `Le plan Pro est notre offre la plus populaire. Il combine l'essentiel de la maintenance avec un niveau de support et de service qui permet à votre site de rester performant et à jour en permanence.
 
-Avec le support prioritaire en 24h, vous n'attendez plus. Que vous ayez un bug à corriger, une question technique ou une mise à jour urgente à effectuer, nous intervenons rapidement. Les 3 modifications mensuelles incluses couvrent la grande majorité des besoins courants.
+Avec le support prioritaire sous 48h, vos demandes sont traitées en priorité. Que vous ayez un bug à corriger, une question technique ou une mise à jour à effectuer, nous intervenons rapidement. Les 3 modifications mensuelles incluses couvrent la grande majorité des besoins courants.
 
-Le rapport mensuel est un plus appréciable : vous savez exactement ce qui a été fait sur votre site, comment il performe et s'il y a des points à améliorer. Pas de boîte noire — une transparence totale.
+Le rapport mensuel de performance vous donne une visibilité claire sur ce qui a été fait sur votre site, comment il performe et s'il y a des points à améliorer.
 
-Les sauvegardes hebdomadaires automatiques vous offrent une tranquillité d'esprit. En cas de problème, nous pouvons restaurer votre site dans l'état d'une semaine au pire.
-
-Le plan Pro est recommandé pour tout site actif avec du trafic régulier et des mises à jour fréquentes.`,
+Les sauvegardes automatiques hebdomadaires vous offrent une tranquillité d'esprit. En cas de problème, nous pouvons restaurer votre site dans l'état d'une semaine au pire.`,
     audience: 'Recommandé pour les PME, commerces et prestataires avec un site régulièrement mis à jour.',
     features: [
       'Tout le plan Starter +',
-      'Support prioritaire (réponse sous 24h)',
-      '3 modifications de contenu par mois',
+      'Support prioritaire — réponse sous 48h',
+      '3 modifications de contenu par mois (ajouts de contenu sur devis)',
       'Rapport mensuel de performance',
-      'Sauvegarde hebdomadaire automatique',
+      'Sauvegarde automatique hebdomadaire',
       'Monitoring avancé de disponibilité',
     ],
     notIncluded: [
-      'Support urgent en 4h',
+      'Support urgent sous 16h',
       'Modifications illimitées',
-      'Optimisation SEO mensuelle',
-      'Analytics avancé',
-      '1h de conseil stratégique mensuel',
+      'Audit SEO mensuel',
+      'Tableau de bord statistiques',
+      'Appel stratégie 30min/mois',
     ],
     faq: [
-      { q: 'Que comprend le rapport mensuel ?', a: 'Le rapport inclut : disponibilité du site, interventions effectuées, mises à jour réalisées et recommandations pour le mois suivant.' },
-      { q: 'Qu\'est-ce que le support prioritaire ?', a: 'Votre demande est traitée avant les demandes des plans inférieurs. Réponse garantie sous 24h ouvrées.' },
+      { q: 'Que comprend le rapport mensuel de performance ?', a: 'Le rapport inclut : disponibilité du site, interventions effectuées, mises à jour réalisées et recommandations pour le mois suivant.' },
+      { q: 'Qu\'est-ce que le support prioritaire ?', a: 'Votre demande est traitée avant les demandes des plans inférieurs. Réponse garantie sous 48h ouvrées.' },
       { q: 'Puis-je utiliser mes 3 modifications en une fois ?', a: 'Oui, vous pouvez regrouper vos 3 modifications dans la même semaine si besoin.' },
       { q: 'Les sauvegardes sont-elles automatiques ?', a: 'Oui, une sauvegarde complète de votre site est effectuée automatiquement chaque semaine.' },
     ],
     compare: [
       { feature: 'Hébergement inclus', starter: true, pro: true, premium: true },
       { feature: 'Mises à jour sécurité', starter: true, pro: true, premium: true },
-      { feature: 'Support email 48h', starter: true, pro: true, premium: true },
-      { feature: 'Support prioritaire 24h', starter: false, pro: true, premium: true },
-      { feature: 'Support urgent 4h', starter: false, pro: false, premium: true },
+      { feature: 'Support email 72h', starter: true, pro: true, premium: true },
+      { feature: 'Support prioritaire 48h', starter: false, pro: true, premium: true },
+      { feature: 'Support urgent 16h', starter: false, pro: false, premium: true },
       { feature: 'Modifications illimitées', starter: false, pro: false, premium: true },
-      { feature: 'Rapport mensuel', starter: false, pro: true, premium: true },
-      { feature: 'Sauvegarde hebdo', starter: false, pro: true, premium: true },
-      { feature: 'SEO mensuel', starter: false, pro: false, premium: true },
-      { feature: 'Analytics avancé', starter: false, pro: false, premium: true },
-      { feature: '1h conseil/mois', starter: false, pro: false, premium: true },
+      { feature: 'Rapport mensuel de performance', starter: false, pro: true, premium: true },
+      { feature: 'Sauvegarde automatique hebdomadaire', starter: false, pro: true, premium: true },
+      { feature: 'Audit SEO mensuel', starter: false, pro: false, premium: true },
+      { feature: 'Tableau de bord statistiques', starter: false, pro: false, premium: true },
+      { feature: 'Appel stratégie 30min/mois', starter: false, pro: false, premium: true },
     ],
     color: 'from-navy to-electric',
   },
   premium: {
     name: 'Premium',
-    price: '99€/mois',
+    price: '89€/mois',
     tagline: 'Le service complet pour les exigeants.',
-    description: `Le plan Premium est notre offre la plus complète. Il est conçu pour les entreprises qui considèrent leur site web comme un actif stratégique et qui veulent le meilleur service possible.
+    description: `Le plan Premium est notre offre la plus complète. Il est conçu pour les entreprises qui considèrent leur site web comme un actif stratégique et qui souhaitent bénéficier du meilleur niveau de service.
 
-Le support urgent en 4h est notre engagement le plus fort. Si votre site tombe en panne ou si vous avez une urgence, nous intervenons en moins de 4 heures, week-end compris pour les incidents critiques.
+Le support urgent sous 16h est notre engagement le plus fort. Si votre site rencontre un problème critique, nous intervenons dans les plus brefs délais, y compris le week-end pour les incidents graves.
 
-Les modifications illimitées changent tout. Vous pouvez mettre à jour votre site autant que vous le souhaitez sans vous soucier d'un compteur. Nouveaux prix, nouvelle galerie, nouvelle page, nouveau contenu — à vous de décider, nous exécutons.
+Les modifications illimitées vous donnent une flexibilité totale. Vous pouvez mettre à jour votre site sans vous soucier d'un compteur : nouveaux prix, nouvelle galerie, nouvelle page, nouveau contenu.
 
-Le suivi SEO mensuel est un vrai avantage compétitif. Nous analysons vos positions sur Google, vos opportunités de mots-clés et nous effectuons des optimisations régulières pour améliorer votre visibilité organique.
+L'audit SEO mensuel est un avantage compétitif concret. Nous analysons vos positions sur Google, vos opportunités de mots-clés et effectuons des optimisations régulières pour améliorer votre visibilité organique.
 
-L'heure de conseil mensuel incluse est votre ligne directe avec notre expertise. Stratégie digitale, nouveaux projets, questions techniques — nous sommes votre partenaire numérique à long terme.`,
+L'appel stratégie de 30 minutes par mois est votre ligne directe avec notre expertise. Stratégie digitale, nouveaux projets, questions techniques — nous sommes votre partenaire numérique sur le long terme.`,
     audience: 'Idéal pour les entreprises exigeantes, les e-commerces actifs et ceux qui veulent un partenaire digital complet.',
     features: [
       'Tout le plan Pro +',
-      'Support urgent (réponse sous 4h)',
-      'Modifications de contenu illimitées',
-      'Optimisation SEO mensuelle',
-      'Analytics avancé (heatmaps, funnels)',
-      '1h de conseil stratégique mensuel',
+      'Support urgent — réponse sous 16h',
+      'Modifications de contenu illimitées (ajouts de contenu sur devis)',
+      'Audit SEO mensuel',
+      'Tableau de bord statistiques (visiteurs, trafic, conversions)',
+      'Appel stratégie 30min/mois',
       'Audit de performance trimestriel',
       'Priorité absolue sur tous les projets',
     ],
@@ -147,22 +145,22 @@ L'heure de conseil mensuel incluse est votre ligne directe avec notre expertise.
     ],
     faq: [
       { q: 'Le support urgent fonctionne-t-il le week-end ?', a: 'Pour les incidents critiques (site hors ligne, faille de sécurité), oui. Pour les demandes courantes, les délais sont ceux des jours ouvrés.' },
-      { q: 'Que signifie "modifications illimitées" ?', a: 'Toutes les mises à jour de contenu, ajouts de photos, modifications de textes, changements de prix — sans limite ni surcoût.' },
-      { q: 'En quoi consiste l\'heure de conseil mensuel ?', a: 'Un appel ou une réunion de 60 minutes pour discuter de votre stratégie digitale, de vos projets et de vos questions. C\'est votre temps, utilisez-le comme vous le souhaitez.' },
+      { q: 'Que signifie "modifications illimitées" ?', a: 'Toutes les mises à jour de contenu, ajouts de photos, modifications de textes, changements de prix — sans limite ni surcoût. Les ajouts de contenu plus conséquents font l\'objet d\'un devis.' },
+      { q: 'En quoi consiste l\'appel stratégie de 30 minutes ?', a: 'Un appel mensuel de 30 minutes pour discuter de votre stratégie digitale, de vos projets et de vos questions. C\'est votre temps, utilisez-le comme vous le souhaitez.' },
       { q: 'Qu\'est-ce que l\'audit de performance trimestriel ?', a: 'Un rapport approfondi tous les 3 mois sur les performances techniques de votre site, votre SEO et des recommandations d\'amélioration.' },
     ],
     compare: [
       { feature: 'Hébergement inclus', starter: true, pro: true, premium: true },
       { feature: 'Mises à jour sécurité', starter: true, pro: true, premium: true },
-      { feature: 'Support email 48h', starter: true, pro: true, premium: true },
-      { feature: 'Support prioritaire 24h', starter: false, pro: true, premium: true },
-      { feature: 'Support urgent 4h', starter: false, pro: false, premium: true },
+      { feature: 'Support email 72h', starter: true, pro: true, premium: true },
+      { feature: 'Support prioritaire 48h', starter: false, pro: true, premium: true },
+      { feature: 'Support urgent 16h', starter: false, pro: false, premium: true },
       { feature: 'Modifications illimitées', starter: false, pro: false, premium: true },
-      { feature: 'Rapport mensuel', starter: false, pro: true, premium: true },
-      { feature: 'Sauvegarde hebdo', starter: false, pro: true, premium: true },
-      { feature: 'SEO mensuel', starter: false, pro: false, premium: true },
-      { feature: 'Analytics avancé', starter: false, pro: false, premium: true },
-      { feature: '1h conseil/mois', starter: false, pro: false, premium: true },
+      { feature: 'Rapport mensuel de performance', starter: false, pro: true, premium: true },
+      { feature: 'Sauvegarde automatique hebdomadaire', starter: false, pro: true, premium: true },
+      { feature: 'Audit SEO mensuel', starter: false, pro: false, premium: true },
+      { feature: 'Tableau de bord statistiques', starter: false, pro: false, premium: true },
+      { feature: 'Appel stratégie 30min/mois', starter: false, pro: false, premium: true },
     ],
     color: 'from-purple-600 to-violet-800',
   },

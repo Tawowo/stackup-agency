@@ -4,6 +4,9 @@ import Script from 'next/script'
 import './globals.css'
 import { LanguageProvider } from '@/contexts/LanguageContext'
 import { ThemeProvider } from '@/contexts/ThemeContext'
+import Navbar from '@/components/layout/Navbar'
+import Footer from '@/components/layout/Footer'
+import CookieBanner from '@/components/ui/CookieBanner'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -18,7 +21,7 @@ export const metadata: Metadata = {
     template: '%s | Stackup Agency',
   },
   description:
-    'Stackup Agency : agence digitale spécialisée en création de sites web, applications et systèmes de gestion sur mesure. Devis gratuit sous 24h. Prix accessibles, qualité premium.',
+    'Stackup Agency : agence digitale spécialisée en création de sites web, applications et systèmes de gestion sur mesure. Devis gratuit sous 72h. Prix accessibles, qualité premium.',
   keywords: [
     'agence web',
     'création site internet',
@@ -37,7 +40,7 @@ export const metadata: Metadata = {
     'agence web jeune',
     'stackup agency',
   ],
-  authors: [{ name: 'Mathéo Reboul', url: 'https://stackup-agency.vercel.app' }],
+  authors: [{ name: 'Stackup Agency', url: 'https://stackup-agency.vercel.app' }],
   creator: 'Stackup Agency',
   publisher: 'Stackup Agency',
   robots: {
@@ -58,7 +61,7 @@ export const metadata: Metadata = {
     siteName: 'Stackup Agency',
     title: 'Stackup Agency — Agence Web & Digital | Création Site Internet',
     description:
-      'Agence digitale spécialisée en création de sites web, applications et systèmes de gestion sur mesure. Devis gratuit sous 24h.',
+      'Agence digitale spécialisée en création de sites web, applications et systèmes de gestion sur mesure. Devis gratuit sous 72h.',
     images: [
       {
         url: '/og-image.png',
@@ -102,10 +105,6 @@ const schemaOrg = {
   },
   priceRange: '€€',
   serviceType: ['Création de site web', 'Développement web', 'Marketing digital'],
-  founder: {
-    '@type': 'Person',
-    name: 'Mathéo Reboul',
-  },
   sameAs: ['https://stackup-agency.vercel.app'],
 }
 
@@ -121,7 +120,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body className={`${inter.variable} antialiased overflow-x-hidden`}>
         <ThemeProvider>
-          <LanguageProvider>{children}</LanguageProvider>
+          <LanguageProvider>
+            <Navbar />
+            {children}
+            <Footer />
+            <CookieBanner />
+          </LanguageProvider>
         </ThemeProvider>
       </body>
     </html>

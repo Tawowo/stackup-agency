@@ -29,8 +29,8 @@ Que vous soyez artisan, consultant, prestataire de service ou commerçant local,
 Le résultat : un site qui ressemble à ce que vous êtes, qui charge en moins de 3 secondes, qui s'affiche parfaitement sur mobile et tablette, et qui remonte dans les résultats Google. Parce qu'un beau site invisible ne sert à rien.
 
 Nous intégrons également les éléments essentiels à toute présence en ligne sérieuse : formulaire de contact, Google Maps, liens réseaux sociaux, mentions légales et politique de confidentialité conformes RGPD. Votre site est opérationnel dès le premier jour.`,
-    price: 'À partir de 490€',
-    duration: '1 à 3 semaines',
+    price: 'À partir de 449€',
+    duration: '10 jours',
     features: [
       'Design personnalisé (pas de template)',
       'Responsive mobile & tablette',
@@ -46,10 +46,10 @@ Nous intégrons également les éléments essentiels à toute présence en ligne
       '2 révisions incluses',
       'Livraison des fichiers sources',
       'Formation à l\'administration',
-      'Support 30 jours post-livraison',
+      'Support technique 30 jours post-livraison',
     ],
     process: [
-      { step: 'Découverte', desc: 'Appel de 30 min pour comprendre votre activité, vos cibles et vos objectifs.' },
+      { step: 'Découverte', desc: 'Échange initial pour comprendre votre activité, vos cibles et vos objectifs.' },
       { step: 'Maquette', desc: 'Création d\'une maquette visuelle de votre site pour validation avant développement.' },
       { step: 'Développement', desc: 'Intégration du design en code propre, responsive et optimisé.' },
       { step: 'Validation', desc: 'Test complet sur tous les appareils, retours et ajustements.' },
@@ -74,8 +74,8 @@ Ce type de site est idéal si vous proposez plusieurs services distincts, si vou
 Nous travaillons sur l'architecture de l'information — la façon dont les pages s'organisent et s'enchaînent — pour que vos visiteurs trouvent naturellement ce qu'ils cherchent et soient guidés vers une prise de contact ou un achat. Navigation intuitive, maillage interne stratégique, appels à l'action bien placés.
 
 Le rendu final est un site professionnel, rapide, sécurisé et optimisé pour les moteurs de recherche. Nous livrons avec une formation à l'outil d'administration pour que vous puissiez mettre à jour votre contenu en autonomie.`,
-    price: 'À partir de 790€',
-    duration: '2 à 4 semaines',
+    price: 'À partir de 749€',
+    duration: '10 jours',
     features: [
       'Jusqu\'à 10 pages personnalisées',
       'Blog / actualités intégré',
@@ -91,7 +91,7 @@ Le rendu final est un site professionnel, rapide, sécurisé et optimisé pour l
       '3 révisions incluses',
       'Module blog',
       'Formation à l\'administration',
-      'Support 60 jours post-livraison',
+      'Support technique 60 jours post-livraison',
     ],
     process: [
       { step: 'Audit & Stratégie', desc: 'Analyse de votre marché, définition de l\'architecture des pages et de la stratégie SEO.' },
@@ -110,7 +110,7 @@ Le rendu final est un site professionnel, rapide, sécurisé et optimisé pour l
   'site-ecommerce': {
     title: 'Site E-commerce',
     subtitle: 'Vendez en ligne 24h/24 avec une boutique performante.',
-    description: `Le commerce en ligne ne s'improvise pas. Un site e-commerce mal conçu, lent ou peu sécurisé, c'est des paniers abandonnés, de la méfiance et des ventes perdues. Chez Stackup Agency, nous développons des boutiques en ligne qui donnent confiance, simplifient l'achat et maximisent les conversions.
+    description: `Le commerce en ligne ne s'improvise pas. Un site e-commerce mal conçu, lent ou peu sécurisé génère des paniers abandonnés, de la méfiance et des ventes perdues. Chez Stackup Agency, nous développons des boutiques en ligne qui inspirent confiance, simplifient le parcours d'achat et maximisent les conversions.
 
 Chaque e-commerce que nous créons est pensé du point de vue de l'acheteur. Parcours d'achat fluide, pages produits optimisées, paiement sécurisé multi-méthodes (carte, virement, PayPal), gestion des stocks intuitive et tableau de bord administrateur complet pour piloter votre activité.
 
@@ -118,9 +118,9 @@ Nous intégrons les meilleures pratiques de l'UX e-commerce : photos produits zo
 
 Sur le plan technique, vos clients peuvent faire confiance : certificat SSL, paiement conforme PCI DSS, données cryptées. De votre côté, vous avez accès à des analytics détaillés pour suivre vos performances et optimiser vos ventes.
 
-Que vous vendiez 10 ou 10 000 produits, nous adaptons la solution à votre catalogue et à vos ambitions. Nous vous accompagnons jusqu'à la première vente.`,
-    price: 'À partir de 1 290€',
-    duration: '3 à 6 semaines',
+Que vous vendiez 10 ou 10 000 produits, nous adaptons la solution à votre catalogue et à vos ambitions.`,
+    price: 'À partir de 1 147€',
+    duration: '17 jours',
     features: [
       'Catalogue produits illimité',
       'Paiement sécurisé (Stripe, PayPal)',
@@ -136,7 +136,7 @@ Que vous vendiez 10 ou 10 000 produits, nous adaptons la solution à votre catal
       'Configuration paiement & livraison',
       '3 révisions design',
       'Formation complète',
-      'Support 90 jours post-livraison',
+      'Support technique 90 jours post-livraison',
     ],
     process: [
       { step: 'Audit & Cahier des charges', desc: 'Analyse de votre catalogue, de vos modes de livraison et de vos besoins spécifiques.' },
@@ -155,17 +155,17 @@ Que vous vendiez 10 ou 10 000 produits, nous adaptons la solution à votre catal
   'systeme-gestion': {
     title: 'Système de Gestion',
     subtitle: 'Des outils sur mesure pour piloter votre activité.',
-    description: `Les logiciels génériques ne font jamais exactement ce dont vous avez besoin. Ils sont souvent trop complexes, trop chers, ou trop rigides pour s'adapter à vos process spécifiques. Chez Stackup Agency, nous développons des systèmes de gestion entièrement sur mesure, pensés pour votre métier et vos équipes.
+    description: `Les logiciels génériques ne font jamais exactement ce dont vous avez besoin. Ils sont souvent trop complexes, trop chers, ou trop rigides pour s'adapter à vos processus spécifiques. Chez Stackup Agency, nous développons des systèmes de gestion entièrement sur mesure, pensés pour votre métier et vos équipes.
 
 Un système de gestion, c'est l'interface centrale de votre activité : réservations en ligne, gestion des commandes, tableau de bord en temps réel, programme de fidélité, gestion des employés, suivi des stocks, rapports automatiques... Tout ce dont vous avez besoin, rien de superflu.
 
 Notre premier client — Roma Pizzeria — utilise un système de ce type. Il permet aux clients de réserver une table et de passer commande en ligne, à la cuisine de recevoir les commandes en temps réel sur une tablette, au gestionnaire de tout piloter depuis un dashboard, et aux clients fidèles de cumuler des points automatiquement.
 
-Le résultat : moins d'erreurs, moins de temps perdu, plus de satisfaction client et plus de rentabilité. Ce type de système s'amortit souvent en quelques mois grâce aux gains de productivité qu'il génère.
+Le résultat : moins d'erreurs, moins de temps perdu, plus de satisfaction client et plus de rentabilité. Ce type de système s'amortit généralement en quelques mois grâce aux gains de productivité qu'il génère.
 
 Nous analysons vos flux de travail, nous concevons l'architecture, nous développons, nous testons et nous formons vos équipes. Et nous restons disponibles pour faire évoluer l'outil avec votre activité.`,
-    price: 'À partir de 950€',
-    duration: '3 à 8 semaines',
+    price: 'À partir de 1 447€',
+    duration: '17 jours',
     features: [
       'Application web sur mesure',
       'Dashboard administrateur en temps réel',
@@ -181,7 +181,7 @@ Nous analysons vos flux de travail, nous concevons l'architecture, nous dévelop
       'Architecture & conception',
       'Formation des équipes',
       'Documentation technique',
-      'Support 90 jours post-livraison',
+      'Support technique 90 jours post-livraison',
     ],
     process: [
       { step: 'Analyse des besoins', desc: 'Audit complet de vos processus, identification des points de friction et des gains possibles.' },
@@ -200,17 +200,17 @@ Nous analysons vos flux de travail, nous concevons l'architecture, nous dévelop
   'design-branding': {
     title: 'Design & Branding',
     subtitle: 'Une identité visuelle forte qui vous démarque.',
-    description: `Votre image de marque, c'est la première impression que vous donnez. Elle précède votre discours, elle habille vos supports, elle reste dans les mémoires. Une identité visuelle professionnelle n'est pas un luxe réservé aux grandes marques — c'est un investissement qui vous distingue de la concurrence dès le premier regard.
+    description: `Votre image de marque est la première impression que vous donnez. Elle précède votre discours, elle habille vos supports, elle reste dans les mémoires. Une identité visuelle professionnelle n'est pas un luxe réservé aux grandes marques — c'est un investissement qui vous distingue de la concurrence dès le premier regard.
 
-Chez Stackup Agency, nous créons des identités visuelles cohérentes et mémorables. Pas de logo généré par IA en 2 minutes — un travail de réflexion, de conception et d'itération pour créer quelque chose qui vous ressemble et qui parle à vos clients.
+Chez Stackup Agency, nous créons des identités visuelles cohérentes et mémorables. Nous ne nous contentons pas de générer un logo — nous travaillons la réflexion, la conception et l'itération pour créer quelque chose qui vous ressemble et qui parle à vos clients.
 
-Nous commençons toujours par comprendre votre activité, vos valeurs, votre clientèle cible et votre positionnement. Un restaurant haut de gamme n'a pas le même univers graphique qu'une boulangerie artisanale ou qu'une startup tech. La bonne identité visuelle, c'est celle qui est juste pour vous.
+Nous commençons toujours par comprendre votre activité, vos valeurs, votre clientèle cible et votre positionnement. Un restaurant haut de gamme n'a pas le même univers graphique qu'une boulangerie artisanale ou qu'une startup tech. La bonne identité visuelle est celle qui est juste pour vous.
 
 Notre prestation comprend la conception du logo en plusieurs déclinaisons (couleur, noir/blanc, simplifié), la définition de la palette de couleurs, la sélection des typographies, et la création d'une charte graphique qui servira de référence pour tous vos supports futurs.
 
 Nous livrons les fichiers dans tous les formats nécessaires (PNG, SVG, PDF, AI) pour que vous puissiez utiliser votre identité sur tous vos supports : site web, réseaux sociaux, carte de visite, signalétique, emballages.`,
-    price: 'À partir de 290€',
-    duration: '1 à 2 semaines',
+    price: 'À partir de 189€',
+    duration: '7 à 10 jours',
     features: [
       'Logo en plusieurs déclinaisons',
       'Palette de couleurs',
@@ -226,7 +226,7 @@ Nous livrons les fichiers dans tous les formats nécessaires (PNG, SVG, PDF, AI)
       '2 rounds de révisions',
       'Livraison de tous les fichiers sources',
       'Manuel d\'identité visuelle',
-      'Support 30 jours post-livraison',
+      'Support technique 30 jours post-livraison',
     ],
     process: [
       { step: 'Brief créatif', desc: 'Échange approfondi sur vos valeurs, votre clientèle et vos références visuelles.' },
@@ -245,19 +245,19 @@ Nous livrons les fichiers dans tous les formats nécessaires (PNG, SVG, PDF, AI)
   'marketing-digital': {
     title: 'Marketing Digital',
     subtitle: 'Faites-vous trouver par vos clients en ligne.',
-    description: `Avoir un beau site web, c'est bien. Que vos clients potentiels le trouvent, c'est mieux. Le marketing digital regroupe l'ensemble des leviers qui permettent d'attirer du trafic qualifié vers votre site et de transformer ce trafic en clients.
+    description: `Disposer d'un site web performant est une première étape. Encore faut-il que vos clients potentiels puissent le trouver. Le marketing digital regroupe l'ensemble des leviers permettant d'attirer un trafic qualifié vers votre site et de transformer ces visiteurs en clients.
 
-Chez Stackup Agency, nous proposons une approche du marketing digital adaptée aux PME et aux entrepreneurs. Pas de grand discours ni de promesses impossibles — une stratégie réaliste, des actions concrètes et des résultats mesurables.
+Chez Stackup Agency, nous proposons une approche du marketing digital adaptée aux PME et aux entrepreneurs. Notre démarche repose sur une stratégie réaliste, des actions concrètes et des résultats mesurables.
 
-Le SEO (référencement naturel) est le pilier de toute stratégie digitale durable. Nous optimisons votre site pour qu'il remonte sur les requêtes que cherchent vraiment vos clients. Titre de page, méta-descriptions, structure des URLs, contenu optimisé, backlinks — chaque détail compte.
+Le SEO (référencement naturel) constitue le pilier de toute stratégie digitale durable. Nous optimisons votre site pour qu'il remonte sur les requêtes que cherchent réellement vos clients : titre de page, méta-descriptions, structure des URLs, contenu optimisé, backlinks — chaque détail est pris en compte.
 
-Les réseaux sociaux sont un outil de visibilité et de relation client puissant quand ils sont bien utilisés. Nous créons des stratégies de contenu cohérentes avec votre image de marque et adaptées aux plateformes sur lesquelles se trouve votre audience.
+Les réseaux sociaux sont un levier de visibilité et de relation client efficace lorsqu'ils sont utilisés avec méthode. Nous élaborons des stratégies de contenu cohérentes avec votre image de marque et adaptées aux plateformes où se trouve votre audience.
 
-L'emailing reste l'un des canaux avec le meilleur retour sur investissement. Newsletters, séquences automatisées, offres promotionnelles — nous créons des campagnes qui engagent et convertissent.
+L'emailing reste l'un des canaux offrant le meilleur retour sur investissement. Newsletters, séquences automatisées, offres promotionnelles — nous concevons des campagnes qui engagent et convertissent.
 
-Nous suivons les performances avec des outils d'analyse et vous fournissons des rapports mensuels clairs pour que vous sachiez exactement où va votre budget.`,
+Nous suivons les performances à l'aide d'outils d'analyse et vous fournissons des rapports mensuels clairs pour que vous sachiez exactement où va votre budget.`,
     price: 'Sur devis',
-    duration: 'Prestation continue',
+    duration: 'Selon la demande',
     features: [
       'Audit SEO complet',
       'Optimisation on-page & technique',
@@ -285,41 +285,41 @@ Nous suivons les performances avec des outils d'analyse et vous fournissons des 
     faq: [
       { q: 'Combien de temps avant de voir des résultats SEO ?', a: 'Le SEO est un investissement long terme. Les premiers résultats visibles apparaissent généralement entre 3 et 6 mois.' },
       { q: 'Quelle est la différence entre SEO et SEA ?', a: 'Le SEO (naturel) est gratuit mais prend du temps. Le SEA (Google Ads) est payant mais immédiat. Les deux sont complémentaires.' },
-      { q: 'Gérez-vous tous les réseaux sociaux ?', a: 'Nous nous concentrons sur les réseaux pertinents pour votre activité. Pas besoin d\'être partout — mieux vaut être excellent sur 2 plateformes.' },
+      { q: 'Gérez-vous tous les réseaux sociaux ?', a: 'Nous nous concentrons sur les réseaux pertinents pour votre activité. Mieux vaut être excellent sur 2 plateformes que médiocre sur toutes.' },
     ],
     cta: 'Booster ma visibilité',
   },
   'maintenance-support': {
     title: 'Maintenance & Support',
     subtitle: 'Votre site entre de bonnes mains, en permanence.',
-    description: `Un site web n'est pas un produit fini qui se pose et s'oublie. C'est un outil vivant qui a besoin d'être maintenu, mis à jour, sécurisé et surveillé pour rester performant et en ligne. La maintenance est souvent négligée par les entreprises jusqu'au jour où quelque chose casse.
+    description: `Un site web n'est pas un produit fini que l'on pose et que l'on oublie. C'est un outil vivant qui doit être maintenu, mis à jour, sécurisé et surveillé pour rester performant et disponible. La maintenance est souvent négligée jusqu'au jour où quelque chose cesse de fonctionner.
 
-Chez Stackup Agency, nous proposons des plans de maintenance adaptés à vos besoins et à votre budget. Notre objectif : que vous n'ayez jamais à vous soucier de votre site. Nous nous en chargeons.
+Chez Stackup Agency, nous proposons des plans de maintenance adaptés à vos besoins et à votre budget. Notre objectif est que vous n'ayez jamais à vous préoccuper de votre site. Nous nous en chargeons.
 
-Les mises à jour de sécurité sont notre priorité numéro un. Les sites non mis à jour sont les premières cibles des hackers et des malwares. Nous appliquons les correctifs de sécurité dès leur publication pour maintenir votre site à l'abri des menaces.
+Les mises à jour de sécurité sont notre priorité absolue. Les sites non mis à jour sont les premières cibles des attaques et des malwares. Nous appliquons les correctifs dès leur publication pour maintenir votre site à l'abri des menaces.
 
-Les sauvegardes régulières sont votre filet de sécurité. En cas de problème — hack, erreur de manipulation, panne d'hébergeur — nous pouvons restaurer votre site en quelques minutes plutôt qu'en plusieurs jours.
+Les sauvegardes régulières constituent votre filet de sécurité. En cas de problème — intrusion, erreur de manipulation, panne d'hébergeur — nous pouvons restaurer votre site en quelques minutes.
 
-Le support technique est disponible selon votre plan : de l'email avec réponse en 48h pour le plan Starter, jusqu'au support urgent en 4h pour le plan Premium. Nous répondons à vos questions, corrigeons les bugs et effectuons les modifications demandées.
+Le support technique est disponible selon votre plan : du support email avec réponse sous 72h pour le plan Starter, jusqu'au support urgent sous 16h pour le plan Premium. Nous répondons à vos questions, corrigeons les anomalies et effectuons les modifications demandées.
 
-Nous surveillons également les performances de votre site : temps de chargement, disponibilité, erreurs techniques. Si quelque chose ne va pas, nous le détectons avant vous et nous intervenons.`,
-    price: 'À partir de 19€/mois',
+Nous surveillons également les performances de votre site : temps de chargement, disponibilité, erreurs techniques. Si quelque chose ne va pas, nous le détectons avant vous.`,
+    price: 'À partir de 29€/mois',
     duration: 'Engagement mensuel',
     features: [
       'Mises à jour sécurité',
       'Sauvegardes automatiques',
       'Monitoring disponibilité 24/7',
-      'Support par email',
-      'Modifications incluses',
-      'Rapport mensuel',
+      'Support email — réponse sous 72h',
+      'Modifications incluses (ajouts de contenu sur devis)',
+      'Rapport mensuel de performance',
       'Hébergement inclus (certains plans)',
       'Optimisation performances',
     ],
     included: [
       'Hébergement haute disponibilité',
       'Certificat SSL',
-      'Sauvegardes hebdomadaires',
-      'Rapport mensuel',
+      'Sauvegarde automatique hebdomadaire',
+      'Rapport mensuel de performance',
       'Support selon plan choisi',
     ],
     process: [
@@ -327,12 +327,12 @@ Nous surveillons également les performances de votre site : temps de chargement
       { step: 'Onboarding', desc: 'Configuration des outils de monitoring, sauvegardes et accès nécessaires.' },
       { step: 'Maintenance régulière', desc: 'Mises à jour, vérifications de sécurité et sauvegardes selon planning.' },
       { step: 'Interventions', desc: 'Gestion des demandes de modifications et résolution des incidents.' },
-      { step: 'Reporting', desc: 'Rapport mensuel avec état du site, interventions effectuées et recommandations.' },
+      { step: 'Reporting', desc: 'Rapport mensuel de performance avec état du site, interventions effectuées et recommandations.' },
     ],
     faq: [
       { q: 'Que se passe-t-il si mon site tombe en panne ?', a: 'Nous sommes alertés automatiquement dès qu\'une panne est détectée et nous intervenons dans les délais de votre plan.' },
       { q: 'Puis-je changer de plan à tout moment ?', a: 'Oui, vous pouvez monter ou descendre en gamme à chaque renouvellement mensuel.' },
-      { q: 'Que comprennent les "modifications" incluses ?', a: 'Changements de texte, d\'images, d\'horaires, de prix — toutes les mises à jour courantes de votre contenu.' },
+      { q: 'Que comprennent les "modifications" incluses ?', a: 'Changements de texte, d\'images, d\'horaires, de prix — toutes les mises à jour courantes de votre contenu. Les ajouts de contenu plus conséquents font l\'objet d\'un devis.' },
     ],
     cta: 'Protéger mon site',
   },
@@ -369,7 +369,7 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
               Sur devis — Contactez-nous →
             </Link>
           ) : (
-            <div className="inline-block px-4 py-1.5 rounded-full bg-white/10 text-white/80 text-sm font-semibold mb-4">
+            <div className="inline-block px-4 py-1.5 rounded-full bg-white/10 text-white/80 text-sm font-semibold mb-4 mt-6">
               {service.price}
             </div>
           )}
@@ -461,7 +461,7 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
         {/* CTA */}
         <section className="bg-gradient-to-br from-navy to-electric rounded-2xl p-8 text-center">
           <h2 className="text-2xl font-bold text-white mb-3">{service.cta}</h2>
-          <p className="text-white/70 mb-6">Devis gratuit sous 24h. Sans engagement.</p>
+          <p className="text-white/70 mb-6">Devis gratuit sous 72h. Sans engagement.</p>
           <Link
             href="/#contact"
             className="inline-flex items-center gap-2 px-8 py-3.5 bg-gold hover:bg-amber-500 text-white font-semibold rounded-xl transition-all hover:-translate-y-0.5 shadow-lg"

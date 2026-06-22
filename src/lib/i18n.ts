@@ -45,27 +45,45 @@ export const translations = {
       plans: [
         {
           name: 'Starter',
-          price: '19',
-          features: ['Hébergement inclus', 'Mises à jour sécurité', 'Support email 48h', '1 modification/mois'],
+          price: '29',
+          features: [
+            'Hébergement inclus',
+            'Mises à jour sécurité',
+            'Support email — réponse sous 72h',
+            '1 modification/mois (ajouts de contenu sur devis)',
+          ],
         },
         {
           name: 'Pro',
-          price: '49',
-          features: ['Tout Starter +', 'Support prioritaire 24h', '3 modifications/mois', 'Rapport mensuel', 'Sauvegarde hebdomadaire'],
+          price: '44',
+          features: [
+            'Tout Starter +',
+            'Support prioritaire — réponse sous 48h',
+            '3 modifications/mois (ajouts de contenu sur devis)',
+            'Rapport mensuel de performance',
+            'Sauvegarde automatique hebdomadaire',
+          ],
         },
         {
           name: 'Premium',
-          price: '99',
-          features: ['Tout Pro +', 'Support urgent 4h', 'Modifications illimitées', 'SEO mensuel', 'Analytics avancé', '1h conseil/mois'],
+          price: '89',
+          features: [
+            'Tout Pro +',
+            'Support urgent — réponse sous 16h',
+            'Modifications illimitées (ajouts de contenu sur devis)',
+            'Audit SEO mensuel',
+            'Tableau de bord statistiques (visiteurs, trafic, conversions)',
+            'Appel stratégie 30min/mois',
+          ],
         },
       ],
       projects: [
-        { name: 'Site vitrine 1 page', price: '490€' },
-        { name: 'Site multi-pages', price: '790€' },
-        { name: 'Site e-commerce', price: '1 290€' },
-        { name: 'Système gestion métier', price: '950€' },
-        { name: 'Logo + identité visuelle', price: '290€' },
-        { name: 'Affiche / Flyer', price: '49€' },
+        { name: 'Site vitrine 1 page', price: '449€' },
+        { name: 'Site multi-pages', price: '749€' },
+        { name: 'Site e-commerce', price: '1 147€' },
+        { name: 'Système gestion métier', price: '1 447€' },
+        { name: 'Logo + identité visuelle', price: '189€' },
+        { name: 'Affiche / Flyer', price: '45€' },
         { name: 'Application web', price: 'Sur devis' },
       ],
     },
@@ -93,10 +111,10 @@ export const translations = {
         "Chaque projet est traité comme s'il était le nôtre. Parce que votre réussite, c'est la nôtre.",
       ],
       stats: [
-        { value: '2026', label: 'Année de fondation' },
-        { value: '100h', label: '1er projet' },
-        { value: '1', label: 'Client satisfait' },
-        { value: '∞', label: 'Ambition' },
+        { value: '2026', label: 'Fondation' },
+        { value: '10j', label: 'Délai moyen' },
+        { value: '100%', label: 'Sur mesure' },
+        { value: '72h', label: 'Réponse garantie' },
       ],
     },
     testimonials: {
@@ -117,7 +135,7 @@ export const translations = {
       items: [
         {
           q: 'Quels sont les délais de création ?',
-          a: "Un site vitrine prend généralement 1 à 3 semaines. Un e-commerce ou système métier entre 3 et 8 semaines selon la complexité. Je vous donne un délai précis dès notre premier échange.",
+          a: "Un site vitrine est livré en 10 jours. Un e-commerce ou système métier en 17 jours. Un devis précis vous est transmis dès notre premier échange.",
         },
         {
           q: 'Comment se passe le processus de création ?',
@@ -145,7 +163,7 @@ export const translations = {
         },
         {
           q: 'Comment se passe le premier RDV ?',
-          a: "Un appel de 30 minutes gratuit pour comprendre votre projet, vos besoins et votre budget. Je vous fais ensuite un devis précis sous 24h. Aucun engagement de votre côté.",
+          a: "Envoyez-nous un email à contact@stackup.agency en précisant vos disponibilités. Nous revenons vers vous sous 72h pour organiser un échange gratuit et sans engagement.",
         },
       ],
     },
@@ -161,12 +179,12 @@ export const translations = {
         message: 'Décrivez votre projet...',
         send: 'Envoyer le message',
         sending: 'Envoi en cours...',
-        success: 'Message envoyé ! Je vous réponds sous 24h.',
-        error: "Erreur lors de l'envoi. Réessayez ou contactez-moi par email.",
+        success: 'Message envoyé ! Nous vous répondons sous 72h.',
+        error: "Erreur lors de l'envoi. Réessayez ou contactez-nous par email.",
       },
       info: {
         email: 'contact@stackup.agency',
-        calendly: 'Planifier un appel gratuit',
+        calendly: 'Planifier un appel',
       },
     },
     footer: {
@@ -176,7 +194,7 @@ export const translations = {
       follow: 'Nous suivre',
       mentions: 'Mentions légales',
       privacy: 'Politique de confidentialité',
-      copyright: '© 2026 Stackup Agency. Tous droits réservés.',
+      copyright: '© 2026 Stackup Agency — Tous droits réservés · Fait avec ❤️ en France',
     },
   },
   en: {
@@ -223,27 +241,45 @@ export const translations = {
       plans: [
         {
           name: 'Starter',
-          price: '19',
-          features: ['Hosting included', 'Security updates', 'Email support 48h', '1 edit/month'],
+          price: '29',
+          features: [
+            'Hosting included',
+            'Security updates',
+            'Email support — reply within 72h',
+            '1 edit/month (content additions on quote)',
+          ],
         },
         {
           name: 'Pro',
-          price: '49',
-          features: ['Everything in Starter +', 'Priority support 24h', '3 edits/month', 'Monthly report', 'Weekly backup'],
+          price: '44',
+          features: [
+            'Everything in Starter +',
+            'Priority support — reply within 48h',
+            '3 edits/month (content additions on quote)',
+            'Monthly performance report',
+            'Automatic weekly backup',
+          ],
         },
         {
           name: 'Premium',
-          price: '99',
-          features: ['Everything in Pro +', 'Urgent support 4h', 'Unlimited edits', 'Monthly SEO', 'Advanced analytics', '1h consulting/month'],
+          price: '89',
+          features: [
+            'Everything in Pro +',
+            'Urgent support — reply within 16h',
+            'Unlimited edits (content additions on quote)',
+            'Monthly SEO audit',
+            'Statistics dashboard (visitors, traffic, conversions)',
+            'Strategy call 30min/month',
+          ],
         },
       ],
       projects: [
-        { name: '1-page showcase site', price: '€490' },
-        { name: 'Multi-page showcase site', price: '€790' },
-        { name: 'E-commerce site', price: '€1,290' },
-        { name: 'Business management system', price: '€950' },
-        { name: 'Logo + visual identity', price: '€290' },
-        { name: 'Poster / Flyer', price: '€49' },
+        { name: '1-page showcase site', price: '€449' },
+        { name: 'Multi-page showcase site', price: '€749' },
+        { name: 'E-commerce site', price: '€1,147' },
+        { name: 'Business management system', price: '€1,447' },
+        { name: 'Logo + visual identity', price: '€189' },
+        { name: 'Poster / Flyer', price: '€45' },
         { name: 'Web application', price: 'On quote' },
       ],
     },
@@ -271,10 +307,10 @@ export const translations = {
         "Every project is treated as if it were our own. Because your success is ours.",
       ],
       stats: [
-        { value: '2026', label: 'Year founded' },
-        { value: '100h', label: '1st project' },
-        { value: '1', label: 'Happy client' },
-        { value: '∞', label: 'Ambition' },
+        { value: '2026', label: 'Founded' },
+        { value: '10d', label: 'Avg. delivery' },
+        { value: '100%', label: 'Custom-built' },
+        { value: '72h', label: 'Reply guaranteed' },
       ],
     },
     testimonials: {
@@ -295,7 +331,7 @@ export const translations = {
       items: [
         {
           q: 'How long does creation take?',
-          a: 'A showcase site typically takes 1 to 3 weeks. An e-commerce or business system takes 3 to 8 weeks depending on complexity. I give you a precise deadline at our first meeting.',
+          a: 'A showcase site is delivered in 10 days. An e-commerce or business system in 17 days. A precise timeline is provided at our first meeting.',
         },
         {
           q: 'How does the creation process work?',
@@ -323,7 +359,7 @@ export const translations = {
         },
         {
           q: 'How does the first call work?',
-          a: "A free 30-minute call to understand your project, needs and budget. I then send you a precise quote within 24h. No commitment on your side.",
+          a: "Send us an email at contact@stackup.agency with your availability. We'll get back to you within 72h to arrange a free, no-commitment call.",
         },
       ],
     },
@@ -339,12 +375,12 @@ export const translations = {
         message: 'Describe your project...',
         send: 'Send message',
         sending: 'Sending...',
-        success: "Message sent! I'll reply within 24h.",
-        error: 'Error sending message. Please try again or email me directly.',
+        success: "Message sent! We'll reply within 72h.",
+        error: 'Error sending message. Please try again or email us directly.',
       },
       info: {
         email: 'contact@stackup.agency',
-        calendly: 'Schedule a free call',
+        calendly: 'Schedule a call',
       },
     },
     footer: {
@@ -354,7 +390,7 @@ export const translations = {
       follow: 'Follow us',
       mentions: 'Legal mentions',
       privacy: 'Privacy policy',
-      copyright: '© 2026 Stackup Agency. All rights reserved.',
+      copyright: '© 2026 Stackup Agency — All rights reserved · Made with ❤️ in France',
     },
   },
 }
