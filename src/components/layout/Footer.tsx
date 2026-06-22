@@ -92,6 +92,7 @@ export default function Footer() {
             <ul className="space-y-3">
               <li><a href="/mentions-legales" className="text-white/50 hover:text-white text-sm transition-colors">{t.footer.mentions}</a></li>
               <li><a href="/politique-confidentialite" className="text-white/50 hover:text-white text-sm transition-colors">{t.footer.privacy}</a></li>
+              <li><a href="/cookies" className="text-white/50 hover:text-white text-sm transition-colors">Politique de cookies</a></li>
               <li><a href="mailto:contact@stackup.agency" className="text-white/50 hover:text-white text-sm transition-colors">contact@stackup.agency</a></li>
             </ul>
           </div>

@@ -6,13 +6,13 @@ import { useLanguage } from '@/contexts/LanguageContext'
 import Link from 'next/link'
 
 const serviceData = [
-  { icon: Globe,          slug: 'site-vitrine',       color: 'from-blue-500 to-electric',     bg: 'bg-blue-50 dark:bg-blue-900/20'       },
-  { icon: FileText,       slug: 'site-multi-pages',   color: 'from-emerald-500 to-teal-600',  bg: 'bg-emerald-50 dark:bg-emerald-900/20' },
-  { icon: ShoppingCart,   slug: 'site-ecommerce',     color: 'from-purple-500 to-violet-600', bg: 'bg-purple-50 dark:bg-purple-900/20'   },
-  { icon: LayoutDashboard,slug: 'systeme-gestion',    color: 'from-electric to-navy',         bg: 'bg-sky-50 dark:bg-sky-900/20'         },
-  { icon: Palette,        slug: 'design-branding',    color: 'from-pink-500 to-rose-600',     bg: 'bg-pink-50 dark:bg-pink-900/20'       },
-  { icon: TrendingUp,     slug: 'marketing-digital',  color: 'from-orange-500 to-amber-600',  bg: 'bg-orange-50 dark:bg-orange-900/20'   },
-  { icon: Wrench,         slug: 'maintenance-support',color: 'from-slate-500 to-slate-700',   bg: 'bg-slate-50 dark:bg-slate-900/20'     },
+  { icon: Globe,          slug: 'site-vitrine',       color: 'from-blue-500 to-electric',     bg: 'bg-blue-50 dark:bg-blue-900/20',       price: 'À partir de 449€'        },
+  { icon: FileText,       slug: 'site-multi-pages',   color: 'from-emerald-500 to-teal-600',  bg: 'bg-emerald-50 dark:bg-emerald-900/20', price: 'À partir de 749€'        },
+  { icon: ShoppingCart,   slug: 'site-ecommerce',     color: 'from-purple-500 to-violet-600', bg: 'bg-purple-50 dark:bg-purple-900/20',   price: 'À partir de 1 147€'      },
+  { icon: LayoutDashboard,slug: 'systeme-gestion',    color: 'from-electric to-navy',         bg: 'bg-sky-50 dark:bg-sky-900/20',         price: 'À partir de 1 447€'      },
+  { icon: Palette,        slug: 'design-branding',    color: 'from-pink-500 to-rose-600',     bg: 'bg-pink-50 dark:bg-pink-900/20',       price: 'À partir de 189€'        },
+  { icon: TrendingUp,     slug: 'marketing-digital',  color: 'from-orange-500 to-amber-600',  bg: 'bg-orange-50 dark:bg-orange-900/20',   price: 'Sur devis'               },
+  { icon: Wrench,         slug: 'maintenance-support',color: 'from-slate-500 to-slate-700',   bg: 'bg-slate-50 dark:bg-slate-900/20',     price: 'À partir de 29€/mois'   },
 ]
 
 export default function Services() {
@@ -30,9 +30,6 @@ export default function Services() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="inline-block px-4 py-1.5 rounded-full bg-electric/10 text-electric text-sm font-semibold mb-4">
-            Ce que nous faisons
-          </span>
           <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4">
             {t.services.title}
           </h2>
@@ -43,7 +40,7 @@ export default function Services() {
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           {t.services.items.map((item, i) => {
-            const { icon: Icon, slug, color, bg } = serviceData[i]
+            const { icon: Icon, slug, color, bg, price } = serviceData[i]
             return (
               <motion.div
                 key={i}
@@ -61,9 +58,11 @@ export default function Services() {
                 <h3 className="font-bold text-gray-900 dark:text-white mb-2 text-lg group-hover:text-electric transition-colors">
                   {item.title}
                 </h3>
-                <p className="text-gray-500 dark:text-white/60 text-sm leading-relaxed flex-1 mb-5">
+                <p className="text-gray-500 dark:text-white/60 text-sm leading-relaxed flex-1 mb-4">
                   {item.desc}
                 </p>
+
+                <span className="text-sm font-bold text-electric mb-3 block">{price}</span>
 
                 <Link
                   href={`/services/${slug}`}

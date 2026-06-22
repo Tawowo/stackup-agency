@@ -1,7 +1,7 @@
 'use client'
 import { motion, useInView } from 'framer-motion'
 import { useRef, useState } from 'react'
-import { Send, Mail, Calendar, CheckCircle, AlertCircle } from 'lucide-react'
+import { Send, Mail, CheckCircle, AlertCircle } from 'lucide-react'
 import { useLanguage } from '@/contexts/LanguageContext'
 
 export default function Contact() {
@@ -32,7 +32,7 @@ export default function Contact() {
     setTimeout(() => setStatus('idle'), 5000)
   }
 
-  const inputClass = "w-full px-4 py-3 rounded-xl bg-white dark:bg-white/5 border border-navy/20 dark:border-white/20 text-foreground dark:text-white placeholder:text-foreground/40 dark:placeholder:text-white/30 focus:outline-none focus:border-electric focus:ring-2 focus:ring-electric/20 transition-all text-sm"
+  const inputClass = "w-full px-4 py-3 rounded-xl bg-white dark:bg-gray-800 border border-navy/20 dark:border-white/20 text-foreground dark:text-white placeholder:text-foreground/40 dark:placeholder:text-white/30 focus:outline-none focus:border-electric focus:ring-2 focus:ring-electric/20 transition-all text-sm"
 
   return (
     <section id="contact" className="py-24 lg:py-32 bg-white dark:bg-[#060D1A]">
@@ -44,9 +44,6 @@ export default function Contact() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="inline-block px-4 py-1.5 rounded-full bg-gold/10 text-gold text-sm font-semibold mb-4">
-            Contact
-          </span>
           <h2 className="text-4xl lg:text-5xl font-bold text-foreground dark:text-white mb-4">
             {t.contact.title}
           </h2>
@@ -90,7 +87,7 @@ export default function Contact() {
               <select
                 value={form.project}
                 onChange={e => setForm({ ...form, project: e.target.value })}
-                className={inputClass}
+                className="w-full px-4 py-3 rounded-xl bg-white dark:bg-gray-800 border border-navy/20 dark:border-white/20 text-foreground dark:text-white placeholder:text-foreground/40 dark:placeholder:text-white/30 focus:outline-none focus:border-electric focus:ring-2 focus:ring-electric/20 transition-all text-sm"
               >
                 <option value="">{t.contact.form.project}</option>
                 {t.contact.form.projectOptions.map(opt => (
@@ -148,21 +145,12 @@ export default function Contact() {
             </div>
 
             <div className="glass dark:bg-white/5 rounded-2xl p-6 border border-navy/10 dark:border-white/10">
-              <div className="w-10 h-10 rounded-xl bg-gold/10 flex items-center justify-center mb-4">
-                <Calendar size={20} className="text-gold" />
+              <div className="w-10 h-10 rounded-xl bg-electric/10 flex items-center justify-center mb-4">
+                <Mail size={20} className="text-electric" />
               </div>
-              <h3 className="font-bold text-foreground dark:text-white mb-1">Calendly</h3>
-              <a href="#" className="text-gold text-sm hover:underline">{t.contact.info.calendly}</a>
-              <p className="text-foreground/50 dark:text-white/50 text-xs mt-1">Appel gratuit de 30 minutes</p>
-            </div>
-
-            <div className="rounded-2xl p-6 bg-gradient-to-br from-navy to-electric">
-              <div className="text-white font-bold mb-2">Réponse garantie</div>
-              <p className="text-white/70 text-sm">Je réponds à tous les messages dans les 24h. Devis gratuit sous 24h également.</p>
-              <div className="flex items-center gap-2 mt-4">
-                <div className="w-2 h-2 rounded-full bg-gold animate-pulse" />
-                <span className="text-white/80 text-xs">Disponible maintenant</span>
-              </div>
+              <h3 className="font-bold text-foreground dark:text-white mb-2">Réponse sous 72h garantie</h3>
+              <p className="text-foreground/60 dark:text-white/60 text-sm mb-3">Pour planifier un échange, envoyez-nous un email à contact@stackup.agency en précisant vos disponibilités.</p>
+              <a href="mailto:contact@stackup.agency" className="text-electric text-sm hover:underline font-medium">contact@stackup.agency</a>
             </div>
           </motion.div>
         </div>

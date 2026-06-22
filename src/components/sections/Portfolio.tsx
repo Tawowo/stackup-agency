@@ -20,9 +20,6 @@ export default function Portfolio() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="inline-block px-4 py-1.5 rounded-full bg-navy/10 dark:bg-white/10 text-navy dark:text-white text-sm font-semibold mb-4">
-            Portfolio
-          </span>
           <h2 className="text-4xl lg:text-5xl font-bold text-foreground dark:text-white mb-4">
             {t.portfolio.title}
           </h2>
@@ -92,15 +89,6 @@ export default function Portfolio() {
             transition={{ duration: 0.7, delay: 0.4 }}
             className="space-y-6"
           >
-            <div className="glass dark:bg-white/5 rounded-2xl p-6 border border-navy/10 dark:border-white/10">
-              <div className="text-4xl font-black text-electric mb-2">~100h</div>
-              <p className="text-foreground/70 dark:text-white/70 text-sm">de développement pour un système complet de gestion restaurant avec 8 modules fonctionnels.</p>
-            </div>
-            <div className="glass dark:bg-white/5 rounded-2xl p-6 border border-navy/10 dark:border-white/10">
-              <div className="text-4xl font-black text-gold mb-2">8+</div>
-              <p className="text-foreground/70 dark:text-white/70 text-sm">modules : réservations, commandes, cuisine, fidélité, stats, admin, menu digital, notifications.</p>
-            </div>
-
             <div className="rounded-2xl p-6 bg-gradient-to-br from-navy to-electric text-white">
               <h3 className="font-bold text-xl mb-2">{t.portfolio.cta}</h3>
               <p className="text-white/70 text-sm mb-4">Votre projet mérite la même attention et le même investissement.</p>

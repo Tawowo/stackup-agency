@@ -52,9 +52,6 @@ export default function Blog() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="inline-block px-4 py-1.5 rounded-full bg-electric/10 text-electric text-sm font-semibold mb-4">
-            Ressources
-          </span>
           <h2 className="text-4xl lg:text-5xl font-bold text-foreground dark:text-white mb-4">
             {t.blog.title}
           </h2>

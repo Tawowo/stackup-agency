@@ -6,6 +6,13 @@ import { Target, BookOpen, Users, Rocket } from 'lucide-react'
 
 const statIcons = [BookOpen, Target, Users, Rocket]
 
+const stats = [
+  { value: '2026', label: 'Fondation' },
+  { value: '10j', label: 'Délai moyen' },
+  { value: '100%', label: 'Sur mesure' },
+  { value: '72h', label: 'Réponse garantie' },
+]
+
 export default function About() {
   const { t } = useLanguage()
   const ref = useRef(null)
@@ -47,7 +54,7 @@ export default function About() {
           <div className="space-y-6">
             {/* Stats grid */}
             <div className="grid grid-cols-2 gap-4">
-              {t.about.stats.map((stat, i) => {
+              {stats.map((stat, i) => {
                 const Icon = statIcons[i]
                 return (
                   <motion.div
@@ -73,10 +80,11 @@ export default function About() {
               className="rounded-2xl p-6 bg-gradient-to-br from-navy to-electric"
             >
               <div className="text-gold text-5xl font-serif leading-none mb-3">&ldquo;</div>
-              <p className="text-white font-medium text-lg leading-relaxed mb-6">
+              <p className="text-white font-medium text-lg leading-relaxed mb-3">
                 Le digital ne devrait pas être un privilège. Nous le rendons accessible à ceux qui construisent vraiment.
               </p>
-              <span className="text-white font-semibold text-sm tracking-wide opacity-90">Stackup Agency</span>
+              <p className="text-white/80 text-sm italic mt-3">&ldquo;Chaque ligne de code que nous écrivons porte une ambition : transformer votre vision en avantage compétitif réel.&rdquo;</p>
+              <span className="text-white font-semibold text-sm tracking-wide opacity-90 mt-4 block">Stackup Agency</span>
             </motion.div>
           </div>
         </div>

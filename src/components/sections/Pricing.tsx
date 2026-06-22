@@ -1,16 +1,11 @@
 'use client'
 import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
-import { Check, Zap, Globe, ShoppingCart, LayoutDashboard, Code2, Palette, FileImage, ArrowRight } from 'lucide-react'
+import { Check, Zap } from 'lucide-react'
 import { useLanguage } from '@/contexts/LanguageContext'
 import Link from 'next/link'
 
 const planSlugs = ['starter', 'pro', 'premium']
-
-import { FileText } from 'lucide-react'
-
-const projectIcons = [Globe, FileText, ShoppingCart, LayoutDashboard, Palette, FileImage, Code2]
-const projectSlugs = ['site-vitrine', 'site-multi-pages', 'site-ecommerce', 'systeme-gestion', 'design-branding', null, null]
 
 export default function Pricing() {
   const { t } = useLanguage()
@@ -28,9 +23,6 @@ export default function Pricing() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="inline-block px-4 py-1.5 rounded-full bg-gold/10 text-gold text-sm font-semibold mb-4">
-            Tarification
-          </span>
           <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4">
             {t.pricing.title}
           </h2>
@@ -49,7 +41,7 @@ export default function Pricing() {
           {t.pricing.monthly}
         </motion.h3>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-20">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           {t.pricing.plans.map((plan, i) => {
             const isPro = i === 1
             const slug = planSlugs[i]
@@ -110,66 +102,6 @@ export default function Pricing() {
             )
           })}
         </div>
-
-        {/* Project pricing */}
-        <motion.h3
-          initial={{ opacity: 0 }}
-          animate={inView ? { opacity: 1 } : {}}
-          transition={{ delay: 0.6 }}
-          className="text-2xl font-bold text-gray-900 dark:text-white text-center mb-8"
-        >
-          {t.pricing.project}
-        </motion.h3>
-
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-5">
-          {t.pricing.projects.map((p, i) => {
-            const Icon = projectIcons[i] || Code2
-            const slug = projectSlugs[i]
-            return (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 20 }}
-                animate={inView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.4, delay: i * 0.07 + 0.7 }}
-                className="group bg-white dark:bg-white/5 rounded-2xl p-6 border border-gray-100 dark:border-white/10 hover:border-electric/30 dark:hover:border-electric/30 hover:shadow-lg hover:shadow-electric/10 transition-all duration-300 hover:-translate-y-1 flex flex-col gap-4"
-              >
-                <div className="w-11 h-11 rounded-xl bg-electric/10 flex items-center justify-center group-hover:bg-electric/20 transition-colors">
-                  <Icon size={20} className="text-electric" />
-                </div>
-                <div className="flex-1">
-                  <h4 className="font-semibold text-gray-900 dark:text-white mb-1 group-hover:text-electric transition-colors">{p.name}</h4>
-                  {p.price === 'Sur devis' || p.price === 'On quote' ? (
-                    <Link href="#contact" className="text-xl font-black text-gold hover:text-amber-500 transition-colors underline decoration-dotted underline-offset-4">
-                      Sur devis →
-                    </Link>
-                  ) : (
-                    <div className="text-xl font-black text-electric">
-                      {p.price.startsWith('À') || p.price.startsWith('Starting') ? p.price : `à partir de ${p.price}`}
-                    </div>
-                  )}
-                </div>
-                {slug && (
-                  <Link
-                    href={`/services/${slug}`}
-                    className="inline-flex items-center gap-1.5 text-electric text-xs font-semibold group-hover:gap-2.5 transition-all"
-                  >
-                    En savoir plus
-                    <ArrowRight size={13} />
-                  </Link>
-                )}
-              </motion.div>
-            )
-          })}
-        </div>
-
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={inView ? { opacity: 1 } : {}}
-          transition={{ delay: 1.2 }}
-          className="text-center text-gray-400 dark:text-white/40 text-sm mt-8"
-        >
-          * Tous les prix sont HT. Devis personnalisé gratuit sous 24h.
-        </motion.p>
       </div>
     </section>
   )
