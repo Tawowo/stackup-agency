@@ -1,18 +1,18 @@
 'use client'
 import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
-import { Globe, ShoppingCart, LayoutDashboard, Code2, Palette, TrendingUp, Wrench, ArrowRight } from 'lucide-react'
+import { Globe, ShoppingCart, LayoutDashboard, FileText, Palette, TrendingUp, Wrench, ArrowRight } from 'lucide-react'
 import { useLanguage } from '@/contexts/LanguageContext'
 import Link from 'next/link'
 
 const serviceData = [
-  { icon: Globe, slug: 'site-vitrine', color: 'from-blue-500 to-electric', bg: 'bg-blue-50 dark:bg-blue-900/20' },
-  { icon: ShoppingCart, slug: 'site-multi-pages', color: 'from-emerald-500 to-teal-600', bg: 'bg-emerald-50 dark:bg-emerald-900/20' },
-  { icon: LayoutDashboard, slug: 'site-ecommerce', color: 'from-purple-500 to-violet-600', bg: 'bg-purple-50 dark:bg-purple-900/20' },
-  { icon: Code2, slug: 'systeme-gestion', color: 'from-electric to-navy', bg: 'bg-sky-50 dark:bg-sky-900/20' },
-  { icon: Palette, slug: 'design-branding', color: 'from-pink-500 to-rose-600', bg: 'bg-pink-50 dark:bg-pink-900/20' },
-  { icon: TrendingUp, slug: 'marketing-digital', color: 'from-orange-500 to-amber-600', bg: 'bg-orange-50 dark:bg-orange-900/20' },
-  { icon: Wrench, slug: 'maintenance-support', color: 'from-slate-500 to-slate-700', bg: 'bg-slate-50 dark:bg-slate-900/20' },
+  { icon: Globe,          slug: 'site-vitrine',       color: 'from-blue-500 to-electric',     bg: 'bg-blue-50 dark:bg-blue-900/20'       },
+  { icon: FileText,       slug: 'site-multi-pages',   color: 'from-emerald-500 to-teal-600',  bg: 'bg-emerald-50 dark:bg-emerald-900/20' },
+  { icon: ShoppingCart,   slug: 'site-ecommerce',     color: 'from-purple-500 to-violet-600', bg: 'bg-purple-50 dark:bg-purple-900/20'   },
+  { icon: LayoutDashboard,slug: 'systeme-gestion',    color: 'from-electric to-navy',         bg: 'bg-sky-50 dark:bg-sky-900/20'         },
+  { icon: Palette,        slug: 'design-branding',    color: 'from-pink-500 to-rose-600',     bg: 'bg-pink-50 dark:bg-pink-900/20'       },
+  { icon: TrendingUp,     slug: 'marketing-digital',  color: 'from-orange-500 to-amber-600',  bg: 'bg-orange-50 dark:bg-orange-900/20'   },
+  { icon: Wrench,         slug: 'maintenance-support',color: 'from-slate-500 to-slate-700',   bg: 'bg-slate-50 dark:bg-slate-900/20'     },
 ]
 
 export default function Services() {
@@ -52,7 +52,6 @@ export default function Services() {
                 transition={{ duration: 0.5, delay: i * 0.07 }}
                 className="group relative bg-white dark:bg-white/5 rounded-2xl p-7 border border-gray-100 dark:border-white/10 hover:shadow-2xl hover:shadow-electric/10 hover:border-electric/30 dark:hover:border-electric/30 transition-all duration-300 hover:-translate-y-1.5 flex flex-col"
               >
-                {/* Icon */}
                 <div className={`w-14 h-14 rounded-2xl ${bg} flex items-center justify-center mb-5 transition-transform duration-300 group-hover:scale-110`}>
                   <div className={`w-8 h-8 rounded-xl bg-gradient-to-br ${color} flex items-center justify-center shadow-md`}>
                     <Icon size={18} className="text-white" />
@@ -74,7 +73,6 @@ export default function Services() {
                   <ArrowRight size={15} className="group-hover:translate-x-1 transition-transform" />
                 </Link>
 
-                {/* Bottom accent line */}
                 <div className={`absolute inset-x-0 bottom-0 h-0.5 bg-gradient-to-r ${color} rounded-full scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left`} />
               </motion.div>
             )

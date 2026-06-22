@@ -7,7 +7,9 @@ import Link from 'next/link'
 
 const planSlugs = ['starter', 'pro', 'premium']
 
-const projectIcons = [Globe, Globe, ShoppingCart, LayoutDashboard, Palette, FileImage, Code2]
+import { FileText } from 'lucide-react'
+
+const projectIcons = [Globe, FileText, ShoppingCart, LayoutDashboard, Palette, FileImage, Code2]
 const projectSlugs = ['site-vitrine', 'site-multi-pages', 'site-ecommerce', 'systeme-gestion', 'design-branding', null, null]
 
 export default function Pricing() {
@@ -136,11 +138,15 @@ export default function Pricing() {
                 </div>
                 <div className="flex-1">
                   <h4 className="font-semibold text-gray-900 dark:text-white mb-1 group-hover:text-electric transition-colors">{p.name}</h4>
-                  <div className={`text-xl font-black ${p.price === 'Sur devis' || p.price === 'On quote' ? 'text-gold' : 'text-electric'}`}>
-                    {p.price.startsWith('À') || p.price.startsWith('Starting') || p.price === 'Sur devis' || p.price === 'On quote'
-                      ? p.price
-                      : `à partir de ${p.price}`}
-                  </div>
+                  {p.price === 'Sur devis' || p.price === 'On quote' ? (
+                    <Link href="#contact" className="text-xl font-black text-gold hover:text-amber-500 transition-colors underline decoration-dotted underline-offset-4">
+                      Sur devis →
+                    </Link>
+                  ) : (
+                    <div className="text-xl font-black text-electric">
+                      {p.price.startsWith('À') || p.price.startsWith('Starting') ? p.price : `à partir de ${p.price}`}
+                    </div>
+                  )}
                 </div>
                 {slug && (
                   <Link

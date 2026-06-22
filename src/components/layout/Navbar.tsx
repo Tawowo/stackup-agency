@@ -1,10 +1,10 @@
 'use client'
 import { useState, useEffect } from 'react'
-import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X, Sun, Moon } from 'lucide-react'
 import { useLanguage } from '@/contexts/LanguageContext'
 import { useTheme } from '@/contexts/ThemeContext'
+import StackupLogo from '@/components/ui/StackupLogo'
 
 export default function Navbar() {
   const { lang, setLang, t } = useLanguage()
@@ -27,6 +27,11 @@ export default function Navbar() {
     { href: '#contact', label: t.nav.contact },
   ]
 
+  // When not scrolled, always on dark hero → white text. When scrolled → gray-900 light / white dark
+  const linkClass = scrolled
+    ? 'text-gray-900 dark:text-white hover:text-electric dark:hover:text-electric'
+    : 'text-white hover:text-electric'
+
   return (
     <motion.nav
       initial={{ y: -80, opacity: 0 }}
@@ -42,22 +47,10 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
           <a href="#" className="flex items-center">
-            <Image
-              src="/logo.svg"
-              alt="Stackup Agency"
-              width={200}
-              height={60}
-              className="dark:hidden h-12 w-auto"
-              priority
-            />
-            <Image
-              src="/logo-white.svg"
-              alt="Stackup Agency"
-              width={200}
-              height={60}
-              className="hidden dark:block h-12 w-auto"
-              priority
-            />
+            {/* White background pill behind logo when not scrolled to stay visible on dark hero */}
+            <div className={`transition-all duration-300 rounded-xl ${scrolled ? '' : 'bg-white/10 backdrop-blur-sm px-2 py-1'}`}>
+              <StackupLogo height={36} textSize="text-lg" />
+            </div>
           </a>
 
           {/* Desktop nav */}
@@ -66,7 +59,7 @@ export default function Navbar() {
               <a
                 key={link.href}
                 href={link.href}
-                className="text-sm font-medium text-gray-900 dark:text-white hover:text-electric dark:hover:text-electric transition-colors relative group"
+                className={`text-sm font-medium transition-colors relative group ${linkClass}`}
               >
                 {link.label}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-electric group-hover:w-full transition-all duration-300" />
@@ -78,13 +71,19 @@ export default function Navbar() {
           <div className="hidden lg:flex items-center gap-3">
             <button
               onClick={() => setLang(lang === 'fr' ? 'en' : 'fr')}
-              className="px-3 py-1.5 text-xs font-semibold rounded-lg border border-gray-300 dark:border-white/20 text-gray-900 dark:text-white hover:border-electric hover:text-electric transition-colors"
+              className={`px-3 py-1.5 text-xs font-semibold rounded-lg border transition-colors hover:border-electric hover:text-electric ${
+                scrolled
+                  ? 'border-gray-300 dark:border-white/20 text-gray-900 dark:text-white'
+                  : 'border-white/40 text-white'
+              }`}
             >
               {lang === 'fr' ? 'EN' : 'FR'}
             </button>
             <button
               onClick={toggleDark}
-              className="p-2 rounded-lg text-gray-600 dark:text-white/70 hover:text-electric hover:bg-electric/10 transition-colors"
+              className={`p-2 rounded-lg transition-colors hover:text-electric hover:bg-electric/10 ${
+                scrolled ? 'text-gray-600 dark:text-white/70' : 'text-white/80'
+              }`}
             >
               {dark ? <Sun size={18} /> : <Moon size={18} />}
             </button>
@@ -98,12 +97,15 @@ export default function Navbar() {
 
           {/* Mobile hamburger */}
           <div className="flex lg:hidden items-center gap-2">
-            <button onClick={toggleDark} className="p-2 text-gray-700 dark:text-white">
+            <button
+              onClick={toggleDark}
+              className={`p-2 ${scrolled ? 'text-gray-700 dark:text-white' : 'text-white'}`}
+            >
               {dark ? <Sun size={18} /> : <Moon size={18} />}
             </button>
             <button
               onClick={() => setOpen(!open)}
-              className="p-2 text-gray-900 dark:text-white"
+              className={`p-2 ${scrolled ? 'text-gray-900 dark:text-white' : 'text-white'}`}
             >
               {open ? <X size={22} /> : <Menu size={22} />}
             </button>

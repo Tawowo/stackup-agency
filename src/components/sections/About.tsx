@@ -3,6 +3,7 @@ import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
 import { useLanguage } from '@/contexts/LanguageContext'
 import { Target, BookOpen, Users, Rocket } from 'lucide-react'
+import StackupLogo from '@/components/ui/StackupLogo'
 
 const statIcons = [BookOpen, Target, Users, Rocket]
 
@@ -73,18 +74,10 @@ export default function About() {
               className="rounded-2xl p-6 bg-gradient-to-br from-navy to-electric"
             >
               <div className="text-gold text-5xl font-serif leading-none mb-3">&ldquo;</div>
-              <p className="text-white font-medium text-lg leading-relaxed mb-4">
+              <p className="text-white font-medium text-lg leading-relaxed mb-6">
                 Le digital ne devrait pas être un privilège. Nous le rendons accessible à ceux qui construisent vraiment.
               </p>
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-gold/20 flex items-center justify-center">
-                  <span className="text-gold font-bold text-sm">S</span>
-                </div>
-                <div>
-                  <div className="text-white font-semibold text-sm">Notre fondateur</div>
-                  <div className="text-white/50 text-xs">Stackup Agency</div>
-                </div>
-              </div>
+              <StackupLogo height={32} textSize="text-base" inverted />
             </motion.div>
           </div>
         </div>

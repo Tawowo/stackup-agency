@@ -364,14 +364,20 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
             <ArrowLeft size={16} />
             Retour aux services
           </Link>
-          <div className="inline-block px-4 py-1.5 rounded-full bg-white/10 text-white/80 text-sm font-semibold mb-4">
-            {service.price}
-          </div>
+          {service.price === 'Sur devis' ? (
+            <Link href="/#contact" className="inline-block px-4 py-1.5 rounded-full bg-gold/20 text-gold text-sm font-semibold mb-4 hover:bg-gold/30 transition-colors">
+              Sur devis — Contactez-nous →
+            </Link>
+          ) : (
+            <div className="inline-block px-4 py-1.5 rounded-full bg-white/10 text-white/80 text-sm font-semibold mb-4">
+              {service.price}
+            </div>
+          )}
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white mb-4">{service.title}</h1>
           <p className="text-xl text-white/70">{service.subtitle}</p>
           <div className="mt-6 flex flex-wrap gap-4 text-sm text-white/60">
             <span>⏱ Délai : {service.duration}</span>
-            <span>💰 {service.price}</span>
+            {service.price !== 'Sur devis' && <span>💰 {service.price}</span>}
           </div>
         </div>
       </section>
