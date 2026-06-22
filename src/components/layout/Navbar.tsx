@@ -1,10 +1,10 @@
 'use client'
 import { useState, useEffect } from 'react'
+import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X, Sun, Moon } from 'lucide-react'
 import { useLanguage } from '@/contexts/LanguageContext'
 import { useTheme } from '@/contexts/ThemeContext'
-import StackupLogo from '@/components/ui/StackupLogo'
 
 export default function Navbar() {
   const { lang, setLang, t } = useLanguage()
@@ -27,7 +27,7 @@ export default function Navbar() {
     { href: '#contact', label: t.nav.contact },
   ]
 
-  // When not scrolled, always on dark hero → white text. When scrolled → gray-900 light / white dark
+  // On dark hero (not scrolled): white text. On white scrolled bg: gray-900
   const linkClass = scrolled
     ? 'text-gray-900 dark:text-white hover:text-electric dark:hover:text-electric'
     : 'text-white hover:text-electric'
@@ -47,9 +47,15 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
           <a href="#" className="flex items-center">
-            {/* White background pill behind logo when not scrolled to stay visible on dark hero */}
-            <div className={`transition-all duration-300 rounded-xl ${scrolled ? '' : 'bg-white/10 backdrop-blur-sm px-2 py-1'}`}>
-              <StackupLogo height={36} textSize="text-lg" />
+            <div className="bg-white/10 rounded-lg px-2 py-1">
+              <Image
+                src="/logo.svg"
+                alt="Stackup Agency"
+                width={180}
+                height={55}
+                className="object-contain h-11 w-auto"
+                priority
+              />
             </div>
           </a>
 

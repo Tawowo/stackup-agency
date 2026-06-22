@@ -1,9 +1,27 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 72" fill="none">
-  <!-- S ribbon shape (navy top, gold bottom accent) -->
-  <polygon points="8,6 52,6 36,24 8,24" fill="#1E3A5F"/>
-  <polygon points="8,24 36,24 20,42 8,42" fill="#1E3A5F"/>
-  <polygon points="20,42 52,42 36,60 4,60" fill="#F59E0B"/>
-  <!-- Stackup text -->
-  <text x="64" y="44" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-weight="800" font-size="26" fill="#1E3A5F" letter-spacing="-0.5">Stackup</text>
-  <text x="66" y="60" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-weight="500" font-size="10" fill="#1E3A5F" letter-spacing="3.5">AGENCY</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 120" fill="none">
+  <!-- S mark: two angled chevrons -->
+  <!-- Top piece: navy, points/tapers to the right -->
+  <polygon points="6,6 94,6 94,54 30,54" fill="#1E3A5F"/>
+  <!-- Bottom piece: gold, points/tapers to the left -->
+  <polygon points="6,66 70,66 94,114 6,114" fill="#F59E0B"/>
+
+  <!-- "Stackup" text — bold, navy -->
+  <text
+    x="118" y="76"
+    font-family="'Inter','Helvetica Neue',Arial,sans-serif"
+    font-weight="800"
+    font-size="62"
+    fill="#1E3A5F"
+    letter-spacing="-1"
+  >Stackup</text>
+
+  <!-- "AGENCY" text — lighter, tracked, navy -->
+  <text
+    x="122" y="106"
+    font-family="'Inter','Helvetica Neue',Arial,sans-serif"
+    font-weight="500"
+    font-size="19"
+    fill="#1E3A5F"
+    letter-spacing="8"
+  >AGENCY</text>
 </svg>

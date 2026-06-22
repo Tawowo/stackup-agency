@@ -1,6 +1,6 @@
 'use client'
+import Image from 'next/image'
 import { useLanguage } from '@/contexts/LanguageContext'
-import StackupLogo from '@/components/ui/StackupLogo'
 
 function LinkedinIcon() {
   return (
@@ -48,7 +48,14 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
           <div className="md:col-span-2">
             <div className="mb-5">
-              <StackupLogo height={38} textSize="text-lg" inverted />
+              {/* White version: brightness-0 invert makes the navy text white */}
+              <Image
+                src="/logo.svg"
+                alt="Stackup Agency"
+                width={180}
+                height={55}
+                className="h-11 w-auto object-contain brightness-0 invert"
+              />
             </div>
             <p className="text-white/50 text-sm mb-6 max-w-xs leading-relaxed">{t.footer.tagline}</p>
             <div className="flex gap-3">
