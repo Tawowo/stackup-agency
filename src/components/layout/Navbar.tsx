@@ -58,8 +58,8 @@ export default function Navbar() {
               priority
             />
             <div className="flex flex-col leading-tight">
-              <span className="font-bold text-xl tracking-tight text-[#1E3A5F] dark:text-white">Stackup</span>
-              <span className="font-light text-xs tracking-[0.2em] uppercase text-[#1E3A5F]/70 dark:text-white/70">Agency</span>
+              <span className="font-bold text-xl tracking-tight text-white">Stackup</span>
+              <span className="font-light text-xs tracking-[0.2em] uppercase text-white/70">Agency</span>
             </div>
           </Link>
 
