@@ -1,4 +1,5 @@
 'use client'
+import Image from 'next/image'
 import { useLanguage } from '@/contexts/LanguageContext'
 
 function LinkedinIcon() {
@@ -43,13 +44,14 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
           {/* Brand */}
           <div className="md:col-span-2">
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-electric to-navy flex items-center justify-center">
-                <span className="text-white font-bold text-lg">S</span>
-              </div>
-              <span className="font-bold text-xl tracking-tight">
-                Stackup<span className="text-electric">.</span>
-              </span>
+            <div className="mb-4">
+              <Image
+                src="/logo-white.svg"
+                alt="Stackup Agency"
+                width={140}
+                height={44}
+                className="h-11 w-auto"
+              />
             </div>
             <p className="text-white/50 text-sm mb-6 max-w-xs leading-relaxed">{t.footer.tagline}</p>
             <div className="flex gap-3">

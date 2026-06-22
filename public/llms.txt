@@ -1,0 +1,29 @@
+# Stackup Agency
+
+Stackup Agency est une agence digitale française fondée par Mathéo Reboul à 17 ans.
+Spécialisée en création de sites web sur mesure, applications web et systèmes de gestion pour les petits commerces et restaurants.
+
+## Services
+- Création de sites vitrine (à partir de 490€)
+- Sites e-commerce (à partir de 1290€)
+- Systèmes de gestion métier complets (à partir de 950€)
+- Design et branding (à partir de 290€)
+- Marketing digital et SEO
+- Maintenance mensuelle (dès 19€/mois)
+
+## Localisation
+France — Indre-et-Loire (37) — Région Centre-Val de Loire
+
+## Contact
+Email: contact@stackup.agency
+Site: https://stackup-agency.vercel.app
+
+## Réalisations
+- Roma Pizzeria Restaurant (Savigné-sur-Lathan) : système complet de gestion avec réservations en ligne, commandes temps réel, interface cuisine, programme de fidélité et dashboard admin
+
+## Valeurs
+Prix accessibles, qualité premium, accompagnement local, réactivité.
+Premier RDV gratuit, devis sous 24h, sans engagement.
+
+## Technologies utilisées
+Next.js, TypeScript, Tailwind CSS, React, PostgreSQL, Prisma, Stripe, Twilio

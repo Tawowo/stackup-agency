@@ -1,5 +1,6 @@
 'use client'
 import { useState, useEffect } from 'react'
+import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X, Sun, Moon } from 'lucide-react'
 import { useLanguage } from '@/contexts/LanguageContext'
@@ -40,13 +41,23 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-2 group">
-            <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-electric to-navy flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform">
-              <span className="text-white font-bold text-lg">S</span>
-            </div>
-            <span className="font-bold text-xl text-navy dark:text-white tracking-tight">
-              Stackup<span className="text-electric">.</span>
-            </span>
+          <a href="#" className="flex items-center group">
+            <Image
+              src="/logo.svg"
+              alt="Stackup Agency"
+              width={160}
+              height={50}
+              className="dark:hidden h-10 w-auto"
+              priority
+            />
+            <Image
+              src="/logo-white.svg"
+              alt="Stackup Agency"
+              width={160}
+              height={50}
+              className="hidden dark:block h-10 w-auto"
+              priority
+            />
           </a>
 
           {/* Desktop nav */}
