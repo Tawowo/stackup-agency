@@ -20,9 +20,6 @@ export default function FAQ() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="inline-block px-4 py-1.5 rounded-full bg-navy/10 dark:bg-white/10 text-navy dark:text-white text-sm font-semibold mb-4">
-            FAQ
-          </span>
           <h2 className="text-4xl lg:text-5xl font-bold text-foreground dark:text-white mb-4">
             {t.faq.title}
           </h2>

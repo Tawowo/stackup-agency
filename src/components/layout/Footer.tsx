@@ -47,19 +47,15 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-12">
           <div className="md:col-span-2">
-            <div className="mb-5 flex items-center gap-3">
+            <div className="mb-5">
               <Image
                 src="/logo-icon.png"
-                alt="Stackup"
+                alt="Stackup Agency"
                 width={40}
                 height={40}
                 quality={100}
                 className="object-contain brightness-0 invert"
               />
-              <div className="flex flex-col leading-tight">
-                <span className="font-bold text-lg text-white">Stackup</span>
-                <span className="font-light text-xs tracking-[0.2em] uppercase text-white/70">Agency</span>
-              </div>
             </div>
             <p className="text-white/50 text-sm mb-6 max-w-xs leading-relaxed">{t.footer.tagline}</p>
             <div className="flex gap-3">

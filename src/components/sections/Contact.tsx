@@ -132,25 +132,27 @@ export default function Contact() {
             initial={{ opacity: 0, x: 30 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.7, delay: 0.4 }}
-            className="lg:col-span-2 space-y-6"
+            className="lg:col-span-2"
           >
             <div className="glass dark:bg-white/5 rounded-2xl p-6 border border-navy/10 dark:border-white/10">
               <div className="w-10 h-10 rounded-xl bg-electric/10 flex items-center justify-center mb-4">
                 <Mail size={20} className="text-electric" />
               </div>
-              <h3 className="font-bold text-foreground dark:text-white mb-1">Email</h3>
-              <a href="mailto:contact@stackup.agency" className="text-electric text-sm hover:underline">
-                {t.contact.info.email}
-              </a>
-            </div>
-
-            <div className="glass dark:bg-white/5 rounded-2xl p-6 border border-navy/10 dark:border-white/10">
-              <div className="w-10 h-10 rounded-xl bg-electric/10 flex items-center justify-center mb-4">
-                <Mail size={20} className="text-electric" />
-              </div>
-              <h3 className="font-bold text-foreground dark:text-white mb-2">Réponse sous 72h garantie</h3>
-              <p className="text-foreground/60 dark:text-white/60 text-sm mb-3">Pour planifier un échange, envoyez-nous un email à contact@stackup.agency en précisant vos disponibilités.</p>
-              <a href="mailto:contact@stackup.agency" className="text-electric text-sm hover:underline font-medium">contact@stackup.agency</a>
+              <h3 className="font-bold text-foreground dark:text-white mb-3">Nous contacter</h3>
+              <ul className="space-y-3 text-sm text-foreground/70 dark:text-white/60">
+                <li className="flex items-center gap-2">
+                  <span className="text-base">📧</span>
+                  <a href="mailto:contact@stackup.agency" className="text-electric hover:underline font-medium">contact@stackup.agency</a>
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="text-base">⏱</span>
+                  <span>Réponse sous 72h garantie</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-base mt-0.5">📅</span>
+                  <span>Pour planifier un échange, précisez vos disponibilités dans votre message.</span>
+                </li>
+              </ul>
             </div>
           </motion.div>
         </div>

@@ -194,7 +194,7 @@ export const translations = {
       follow: 'Nous suivre',
       mentions: 'Mentions légales',
       privacy: 'Politique de confidentialité',
-      copyright: '© 2026 Stackup Agency — Tous droits réservés · Fait avec ❤️ en France',
+      copyright: '© 2026 Stackup Agency — Tous droits réservés',
     },
   },
   en: {
@@ -390,7 +390,7 @@ export const translations = {
       follow: 'Follow us',
       mentions: 'Legal mentions',
       privacy: 'Privacy policy',
-      copyright: '© 2026 Stackup Agency — All rights reserved · Made with ❤️ in France',
+      copyright: '© 2026 Stackup Agency — All rights reserved',
     },
   },
 }

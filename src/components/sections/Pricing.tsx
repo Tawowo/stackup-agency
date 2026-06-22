@@ -24,22 +24,9 @@ export default function Pricing() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-            {t.pricing.title}
+            {t.pricing.monthly}
           </h2>
-          <p className="text-gray-600 dark:text-white/60 text-lg max-w-2xl mx-auto">
-            {t.pricing.subtitle}
-          </p>
         </motion.div>
-
-        {/* Monthly plans */}
-        <motion.h3
-          initial={{ opacity: 0 }}
-          animate={inView ? { opacity: 1 } : {}}
-          transition={{ delay: 0.2 }}
-          className="text-2xl font-bold text-gray-900 dark:text-white text-center mb-8"
-        >
-          {t.pricing.monthly}
-        </motion.h3>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           {t.pricing.plans.map((plan, i) => {

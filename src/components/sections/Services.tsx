@@ -1,18 +1,17 @@
 'use client'
 import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
-import { Globe, ShoppingCart, LayoutDashboard, FileText, Palette, TrendingUp, Wrench, ArrowRight } from 'lucide-react'
+import { Globe, ShoppingCart, LayoutDashboard, FileText, Palette, TrendingUp, ArrowRight } from 'lucide-react'
 import { useLanguage } from '@/contexts/LanguageContext'
 import Link from 'next/link'
 
 const serviceData = [
-  { icon: Globe,          slug: 'site-vitrine',       color: 'from-blue-500 to-electric',     bg: 'bg-blue-50 dark:bg-blue-900/20',       price: 'À partir de 449€'        },
-  { icon: FileText,       slug: 'site-multi-pages',   color: 'from-emerald-500 to-teal-600',  bg: 'bg-emerald-50 dark:bg-emerald-900/20', price: 'À partir de 749€'        },
-  { icon: ShoppingCart,   slug: 'site-ecommerce',     color: 'from-purple-500 to-violet-600', bg: 'bg-purple-50 dark:bg-purple-900/20',   price: 'À partir de 1 147€'      },
-  { icon: LayoutDashboard,slug: 'systeme-gestion',    color: 'from-electric to-navy',         bg: 'bg-sky-50 dark:bg-sky-900/20',         price: 'À partir de 1 447€'      },
-  { icon: Palette,        slug: 'design-branding',    color: 'from-pink-500 to-rose-600',     bg: 'bg-pink-50 dark:bg-pink-900/20',       price: 'À partir de 189€'        },
-  { icon: TrendingUp,     slug: 'marketing-digital',  color: 'from-orange-500 to-amber-600',  bg: 'bg-orange-50 dark:bg-orange-900/20',   price: 'Sur devis'               },
-  { icon: Wrench,         slug: 'maintenance-support',color: 'from-slate-500 to-slate-700',   bg: 'bg-slate-50 dark:bg-slate-900/20',     price: 'À partir de 29€/mois'   },
+  { icon: Globe,          slug: 'site-vitrine',       color: 'from-blue-500 to-electric',     bg: 'bg-blue-50 dark:bg-blue-900/20',       price: 'À partir de 449€'   },
+  { icon: FileText,       slug: 'site-multi-pages',   color: 'from-emerald-500 to-teal-600',  bg: 'bg-emerald-50 dark:bg-emerald-900/20', price: 'À partir de 749€'   },
+  { icon: ShoppingCart,   slug: 'site-ecommerce',     color: 'from-purple-500 to-violet-600', bg: 'bg-purple-50 dark:bg-purple-900/20',   price: 'À partir de 1 147€' },
+  { icon: LayoutDashboard,slug: 'systeme-gestion',    color: 'from-electric to-navy',         bg: 'bg-sky-50 dark:bg-sky-900/20',         price: 'À partir de 1 447€' },
+  { icon: Palette,        slug: 'design-branding',    color: 'from-pink-500 to-rose-600',     bg: 'bg-pink-50 dark:bg-pink-900/20',       price: 'À partir de 189€'   },
+  { icon: TrendingUp,     slug: 'marketing-digital',  color: 'from-orange-500 to-amber-600',  bg: 'bg-orange-50 dark:bg-orange-900/20',   price: 'Sur devis'          },
 ]
 
 export default function Services() {
@@ -39,7 +38,7 @@ export default function Services() {
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-          {t.services.items.map((item, i) => {
+          {t.services.items.slice(0, 6).map((item, i) => {
             const { icon: Icon, slug, color, bg, price } = serviceData[i]
             return (
               <motion.div
