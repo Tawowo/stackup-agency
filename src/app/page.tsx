@@ -9,14 +9,12 @@ import Blog from '@/components/sections/Blog'
 import FAQ from '@/components/sections/FAQ'
 import Contact from '@/components/sections/Contact'
 import Footer from '@/components/layout/Footer'
-import CustomCursor from '@/components/ui/CustomCursor'
 import PageLoader from '@/components/ui/PageLoader'
 
 export default function Home() {
   return (
     <>
       <PageLoader />
-      <CustomCursor />
       <Navbar />
       <main>
         <Hero />

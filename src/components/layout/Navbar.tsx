@@ -34,28 +34,28 @@ export default function Navbar() {
       transition={{ duration: 0.6, ease: 'easeOut' }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? 'bg-white/90 dark:bg-[#0A0F1C]/90 backdrop-blur-md shadow-lg shadow-navy/5'
+          ? 'bg-white/95 dark:bg-gray-900/95 backdrop-blur-md shadow-lg shadow-black/5'
           : 'bg-transparent'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-          <a href="#" className="flex items-center group">
+          <a href="#" className="flex items-center">
             <Image
               src="/logo.svg"
               alt="Stackup Agency"
-              width={160}
-              height={50}
-              className="dark:hidden h-10 w-auto"
+              width={200}
+              height={60}
+              className="dark:hidden h-12 w-auto"
               priority
             />
             <Image
               src="/logo-white.svg"
               alt="Stackup Agency"
-              width={160}
-              height={50}
-              className="hidden dark:block h-10 w-auto"
+              width={200}
+              height={60}
+              className="hidden dark:block h-12 w-auto"
               priority
             />
           </a>
@@ -66,7 +66,7 @@ export default function Navbar() {
               <a
                 key={link.href}
                 href={link.href}
-                className="text-sm font-medium text-foreground/70 dark:text-white/70 hover:text-electric dark:hover:text-electric transition-colors relative group"
+                className="text-sm font-medium text-gray-900 dark:text-white hover:text-electric dark:hover:text-electric transition-colors relative group"
               >
                 {link.label}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-electric group-hover:w-full transition-all duration-300" />
@@ -78,13 +78,13 @@ export default function Navbar() {
           <div className="hidden lg:flex items-center gap-3">
             <button
               onClick={() => setLang(lang === 'fr' ? 'en' : 'fr')}
-              className="px-3 py-1.5 text-xs font-semibold rounded-lg border border-navy/20 dark:border-white/20 text-navy dark:text-white hover:border-electric hover:text-electric transition-colors"
+              className="px-3 py-1.5 text-xs font-semibold rounded-lg border border-gray-300 dark:border-white/20 text-gray-900 dark:text-white hover:border-electric hover:text-electric transition-colors"
             >
               {lang === 'fr' ? 'EN' : 'FR'}
             </button>
             <button
               onClick={toggleDark}
-              className="p-2 rounded-lg text-foreground/60 dark:text-white/60 hover:text-electric hover:bg-electric/10 transition-colors"
+              className="p-2 rounded-lg text-gray-600 dark:text-white/70 hover:text-electric hover:bg-electric/10 transition-colors"
             >
               {dark ? <Sun size={18} /> : <Moon size={18} />}
             </button>
@@ -98,12 +98,12 @@ export default function Navbar() {
 
           {/* Mobile hamburger */}
           <div className="flex lg:hidden items-center gap-2">
-            <button onClick={toggleDark} className="p-2 text-foreground/60 dark:text-white/60">
+            <button onClick={toggleDark} className="p-2 text-gray-700 dark:text-white">
               {dark ? <Sun size={18} /> : <Moon size={18} />}
             </button>
             <button
               onClick={() => setOpen(!open)}
-              className="p-2 text-foreground dark:text-white"
+              className="p-2 text-gray-900 dark:text-white"
             >
               {open ? <X size={22} /> : <Menu size={22} />}
             </button>
@@ -118,23 +118,23 @@ export default function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden bg-white dark:bg-[#0A0F1C] border-t border-navy/10 dark:border-white/10"
+            className="lg:hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-white/10"
           >
-            <div className="px-4 py-4 flex flex-col gap-2">
+            <div className="px-4 py-4 flex flex-col gap-1">
               {links.map(link => (
                 <a
                   key={link.href}
                   href={link.href}
                   onClick={() => setOpen(false)}
-                  className="py-3 px-4 text-sm font-medium text-foreground dark:text-white hover:text-electric rounded-lg hover:bg-electric/5 transition-colors"
+                  className="py-3 px-4 text-sm font-medium text-gray-900 dark:text-white hover:text-electric rounded-lg hover:bg-electric/5 transition-colors"
                 >
                   {link.label}
                 </a>
               ))}
-              <div className="flex items-center gap-2 pt-2">
+              <div className="flex items-center gap-2 pt-3 mt-2 border-t border-gray-100 dark:border-white/10">
                 <button
                   onClick={() => setLang(lang === 'fr' ? 'en' : 'fr')}
-                  className="px-3 py-1.5 text-xs font-semibold rounded-lg border border-navy/20 dark:border-white/20 text-navy dark:text-white"
+                  className="px-3 py-1.5 text-xs font-semibold rounded-lg border border-gray-300 dark:border-white/20 text-gray-900 dark:text-white"
                 >
                   {lang === 'fr' ? 'EN' : 'FR'}
                 </button>

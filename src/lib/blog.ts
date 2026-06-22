@@ -13,6 +13,8 @@ export interface Post {
   date: string
   readTime: number
   tag: string
+  category?: string
+  keywords?: string[]
   content?: string
 }
 

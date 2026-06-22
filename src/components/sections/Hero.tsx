@@ -30,7 +30,6 @@ function AnimatedBackground() {
     let animId: number
     const draw = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height)
-
       particles.forEach(p => {
         p.x += p.vx
         p.y += p.vy
@@ -38,13 +37,11 @@ function AnimatedBackground() {
         if (p.x > canvas.width) p.x = 0
         if (p.y < 0) p.y = canvas.height
         if (p.y > canvas.height) p.y = 0
-
         ctx.beginPath()
         ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2)
         ctx.fillStyle = `rgba(45, 125, 210, ${p.opacity})`
         ctx.fill()
       })
-
       for (let i = 0; i < particles.length; i++) {
         for (let j = i + 1; j < particles.length; j++) {
           const dx = particles[i].x - particles[j].x
@@ -60,11 +57,9 @@ function AnimatedBackground() {
           }
         }
       }
-
       animId = requestAnimationFrame(draw)
     }
     draw()
-
     const onResize = () => {
       canvas.width = window.innerWidth
       canvas.height = window.innerHeight
@@ -84,7 +79,6 @@ export default function Hero() {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#060D1A]">
-      {/* Gradient blobs */}
       <div className="absolute inset-0">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full bg-electric/20 blur-[100px]" />
         <div className="absolute bottom-1/4 right-1/4 w-80 h-80 rounded-full bg-navy/40 blur-[80px]" />
@@ -94,22 +88,11 @@ export default function Hero() {
       <AnimatedBackground />
 
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 text-center">
-        {/* Badge */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur border border-white/20 text-white/80 text-sm font-medium mb-8"
-        >
-          <span className="w-2 h-2 rounded-full bg-gold animate-pulse" />
-          {t.hero.badge}
-        </motion.div>
-
         {/* Title */}
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.15 }}
+          transition={{ duration: 0.7, delay: 0.1 }}
           className="text-5xl sm:text-7xl lg:text-8xl font-extrabold text-white leading-tight mb-2"
         >
           {t.hero.title1}
@@ -117,28 +100,26 @@ export default function Hero() {
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.3 }}
+          transition={{ duration: 0.7, delay: 0.25 }}
           className="text-5xl sm:text-7xl lg:text-8xl font-extrabold leading-tight mb-8"
           style={{ background: 'linear-gradient(135deg, #2D7DD2, #F59E0B)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}
         >
           {t.hero.title2}
         </motion.h1>
 
-        {/* Subtitle */}
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.45 }}
+          transition={{ duration: 0.7, delay: 0.4 }}
           className="text-lg sm:text-xl text-white/60 max-w-2xl mx-auto mb-12 leading-relaxed"
         >
           {t.hero.subtitle}
         </motion.p>
 
-        {/* CTAs */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.6 }}
+          transition={{ duration: 0.7, delay: 0.55 }}
           className="flex flex-col sm:flex-row gap-4 justify-center items-center"
         >
           <a
@@ -157,11 +138,10 @@ export default function Hero() {
           </a>
         </motion.div>
 
-        {/* Stats */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 1 }}
+          transition={{ duration: 1, delay: 0.9 }}
           className="mt-20 flex flex-wrap justify-center gap-8 sm:gap-16"
         >
           {[
@@ -177,16 +157,19 @@ export default function Hero() {
         </motion.div>
       </div>
 
-      {/* Scroll indicator */}
+      {/* Scroll indicator — arrow only, no text */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 1.5 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white/40 text-xs"
+        transition={{ delay: 1.4 }}
+        className="absolute bottom-8 left-1/2 -translate-x-1/2"
       >
-        <span>{t.hero.scroll}</span>
-        <motion.div animate={{ y: [0, 6, 0] }} transition={{ repeat: Infinity, duration: 1.5 }}>
-          <ArrowDown size={16} />
+        <motion.div
+          animate={{ y: [0, 6, 0] }}
+          transition={{ repeat: Infinity, duration: 1.5 }}
+          className="text-white/30"
+        >
+          <ArrowDown size={20} />
         </motion.div>
       </motion.div>
     </section>

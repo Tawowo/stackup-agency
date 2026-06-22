@@ -15,7 +15,7 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: var(--font-inter, 'Inter', system-ui, sans-serif);
-  cursor: none;
+  
 }
 
 @media (max-width: 768px) {

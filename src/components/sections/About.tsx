@@ -25,7 +25,7 @@ export default function About() {
             <span className="inline-block px-4 py-1.5 rounded-full bg-electric/10 text-electric text-sm font-semibold mb-4">
               Notre histoire
             </span>
-            <h2 className="text-4xl lg:text-5xl font-bold text-foreground dark:text-white mb-8">
+            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-8">
               {t.about.title}
             </h2>
             <div className="space-y-4">
@@ -35,7 +35,7 @@ export default function About() {
                   initial={{ opacity: 0, y: 15 }}
                   animate={inView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.5, delay: i * 0.1 + 0.3 }}
-                  className={`leading-relaxed ${i === 0 ? 'text-lg text-foreground dark:text-white font-medium' : 'text-foreground/70 dark:text-white/60 text-sm'}`}
+                  className={`leading-relaxed ${i === 0 ? 'text-lg text-gray-900 dark:text-white font-medium' : 'text-gray-600 dark:text-white/60 text-sm'}`}
                 >
                   {para}
                 </motion.p>
@@ -55,11 +55,11 @@ export default function About() {
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={inView ? { opacity: 1, scale: 1 } : {}}
                     transition={{ duration: 0.5, delay: i * 0.1 + 0.4 }}
-                    className="glass dark:bg-white/5 rounded-2xl p-6 border border-navy/10 dark:border-white/10"
+                    className="bg-white dark:bg-white/5 rounded-2xl p-6 border border-gray-100 dark:border-white/10 shadow-sm"
                   >
                     <Icon size={22} className="text-electric mb-3" />
-                    <div className="text-3xl font-black text-foreground dark:text-white mb-1">{stat.value}</div>
-                    <div className="text-foreground/60 dark:text-white/60 text-sm">{stat.label}</div>
+                    <div className="text-3xl font-black text-gray-900 dark:text-white mb-1">{stat.value}</div>
+                    <div className="text-gray-500 dark:text-white/60 text-sm">{stat.label}</div>
                   </motion.div>
                 )
               })}
@@ -74,15 +74,15 @@ export default function About() {
             >
               <div className="text-gold text-5xl font-serif leading-none mb-3">&ldquo;</div>
               <p className="text-white font-medium text-lg leading-relaxed mb-4">
-                Peu importe l&apos;âge ou les ressources. Avec de la détermination et du travail, on peut construire quelque chose de réel.
+                Le digital ne devrait pas être un privilège. Nous le rendons accessible à ceux qui construisent vraiment.
               </p>
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 rounded-full bg-gold/20 flex items-center justify-center">
-                  <span className="text-gold font-bold text-sm">M</span>
+                  <span className="text-gold font-bold text-sm">S</span>
                 </div>
                 <div>
-                  <div className="text-white font-semibold text-sm">Mathéo</div>
-                  <div className="text-white/50 text-xs">Fondateur, Stackup Agency</div>
+                  <div className="text-white font-semibold text-sm">Notre fondateur</div>
+                  <div className="text-white/50 text-xs">Stackup Agency</div>
                 </div>
               </div>
             </motion.div>

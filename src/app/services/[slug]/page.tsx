@@ -1,0 +1,470 @@
+import { notFound } from 'next/navigation'
+import type { Metadata } from 'next'
+import Link from 'next/link'
+import { ArrowLeft, Check, ArrowRight } from 'lucide-react'
+
+type ServiceData = {
+  title: string
+  subtitle: string
+  description: string
+  price: string
+  duration: string
+  features: string[]
+  included: string[]
+  process: { step: string; desc: string }[]
+  faq: { q: string; a: string }[]
+  cta: string
+}
+
+const services: Record<string, ServiceData> = {
+  'site-vitrine': {
+    title: 'Site Vitrine',
+    subtitle: 'Votre présence digitale professionnelle, clé en main.',
+    description: `Un site vitrine, c'est votre carte de visite permanente sur internet. Il est disponible 24h/24, 7j/7, et travaille pour vous même quand vous dormez. Chez Stackup Agency, nous créons des sites vitrines qui ne se contentent pas d'exister — ils convertissent des visiteurs en clients.
+
+Nous savons qu'un site web mal conçu peut faire fuir vos prospects en quelques secondes. C'est pourquoi chaque site que nous livrons est optimisé pour trois choses : la vitesse, l'esthétique et la conversion. Pas de template générique, pas de constructeur de page limitant — du code sur mesure, performant et évolutif.
+
+Que vous soyez artisan, consultant, prestataire de service ou commerçant local, votre site vitrine doit refléter la qualité de votre travail. Nous prenons le temps de comprendre votre activité, vos clients cibles et vos objectifs avant d'écrire la première ligne de code.
+
+Le résultat : un site qui ressemble à ce que vous êtes, qui charge en moins de 3 secondes, qui s'affiche parfaitement sur mobile et tablette, et qui remonte dans les résultats Google. Parce qu'un beau site invisible ne sert à rien.
+
+Nous intégrons également les éléments essentiels à toute présence en ligne sérieuse : formulaire de contact, Google Maps, liens réseaux sociaux, mentions légales et politique de confidentialité conformes RGPD. Votre site est opérationnel dès le premier jour.`,
+    price: 'À partir de 490€',
+    duration: '1 à 3 semaines',
+    features: [
+      'Design personnalisé (pas de template)',
+      'Responsive mobile & tablette',
+      'Optimisation SEO on-page',
+      'Formulaire de contact',
+      'Google Maps intégré',
+      'Certificat SSL inclus',
+      'Temps de chargement < 3s',
+      'Conformité RGPD',
+    ],
+    included: [
+      'Jusqu\'à 5 pages',
+      '2 révisions incluses',
+      'Livraison des fichiers sources',
+      'Formation à l\'administration',
+      'Support 30 jours post-livraison',
+    ],
+    process: [
+      { step: 'Découverte', desc: 'Appel de 30 min pour comprendre votre activité, vos cibles et vos objectifs.' },
+      { step: 'Maquette', desc: 'Création d\'une maquette visuelle de votre site pour validation avant développement.' },
+      { step: 'Développement', desc: 'Intégration du design en code propre, responsive et optimisé.' },
+      { step: 'Validation', desc: 'Test complet sur tous les appareils, retours et ajustements.' },
+      { step: 'Mise en ligne', desc: 'Déploiement sur votre domaine avec configuration SSL et DNS.' },
+    ],
+    faq: [
+      { q: 'Combien de pages peut inclure un site vitrine ?', a: 'Notre offre de base inclut jusqu\'à 5 pages (Accueil, Services, À propos, Contact, etc.). Des pages supplémentaires peuvent être ajoutées.' },
+      { q: 'Est-ce que je peux modifier le contenu moi-même ?', a: 'Oui, nous pouvons intégrer un CMS simple si vous souhaitez gérer votre contenu. Nous vous formons à son utilisation.' },
+      { q: 'Le site sera-t-il bien référencé sur Google ?', a: 'Nous optimisons chaque site pour le SEO technique (balises, vitesse, structure). Le référencement naturel prend du temps mais nous posons les bonnes bases.' },
+    ],
+    cta: 'Démarrer mon site vitrine',
+  },
+  'site-multi-pages': {
+    title: 'Site Multi-pages',
+    subtitle: 'Une présence digitale complète pour votre activité.',
+    description: `Un site multi-pages va plus loin qu'un simple site vitrine. Il permet de développer l'ensemble de votre univers de marque, de détailler chaque service, de créer une vraie relation avec vos visiteurs et d'optimiser votre référencement sur de nombreux mots-clés.
+
+Chez Stackup Agency, nous concevons des sites multi-pages pensés comme de véritables machines à générer des opportunités commerciales. Chaque page est conçue avec un objectif précis : informer, rassurer, convaincre et convertir.
+
+Ce type de site est idéal si vous proposez plusieurs services distincts, si vous souhaitez partager du contenu régulier via un blog, si vous gérez plusieurs types de clients, ou si vous avez besoin d'une page dédiée pour chaque produit ou offre.
+
+Nous travaillons sur l'architecture de l'information — la façon dont les pages s'organisent et s'enchaînent — pour que vos visiteurs trouvent naturellement ce qu'ils cherchent et soient guidés vers une prise de contact ou un achat. Navigation intuitive, maillage interne stratégique, appels à l'action bien placés.
+
+Le rendu final est un site professionnel, rapide, sécurisé et optimisé pour les moteurs de recherche. Nous livrons avec une formation à l'outil d'administration pour que vous puissiez mettre à jour votre contenu en autonomie.`,
+    price: 'À partir de 790€',
+    duration: '2 à 4 semaines',
+    features: [
+      'Jusqu\'à 10 pages personnalisées',
+      'Blog / actualités intégré',
+      'Navigation avancée avec menu déroulant',
+      'SEO avancé avec sitemap',
+      'Formulaires multiples',
+      'Galerie photo & vidéo',
+      'Intégration réseaux sociaux',
+      'Analytics Google intégré',
+    ],
+    included: [
+      'Jusqu\'à 10 pages',
+      '3 révisions incluses',
+      'Module blog',
+      'Formation à l\'administration',
+      'Support 60 jours post-livraison',
+    ],
+    process: [
+      { step: 'Audit & Stratégie', desc: 'Analyse de votre marché, définition de l\'architecture des pages et de la stratégie SEO.' },
+      { step: 'Design système', desc: 'Création d\'une charte graphique cohérente déclinée sur toutes les pages.' },
+      { step: 'Développement', desc: 'Intégration page par page avec animations, formulaires et fonctionnalités.' },
+      { step: 'Tests & Validation', desc: 'Tests multi-appareils, vérification des performances et du référencement.' },
+      { step: 'Mise en ligne & Formation', desc: 'Déploiement et formation complète à l\'administration du site.' },
+    ],
+    faq: [
+      { q: 'Puis-je ajouter des pages par la suite ?', a: 'Absolument. L\'architecture est conçue pour évoluer. Des pages supplémentaires peuvent être ajoutées à tout moment.' },
+      { q: 'Intégrez-vous un blog ?', a: 'Oui, le blog est inclus et vous pouvez publier des articles en toute autonomie.' },
+      { q: 'Combien de temps après la livraison puis-je vous contacter ?', a: 'Vous bénéficiez de 60 jours de support post-livraison inclus. Au-delà, un plan de maintenance peut prendre le relais.' },
+    ],
+    cta: 'Créer mon site multi-pages',
+  },
+  'site-ecommerce': {
+    title: 'Site E-commerce',
+    subtitle: 'Vendez en ligne 24h/24 avec une boutique performante.',
+    description: `Le commerce en ligne ne s'improvise pas. Un site e-commerce mal conçu, lent ou peu sécurisé, c'est des paniers abandonnés, de la méfiance et des ventes perdues. Chez Stackup Agency, nous développons des boutiques en ligne qui donnent confiance, simplifient l'achat et maximisent les conversions.
+
+Chaque e-commerce que nous créons est pensé du point de vue de l'acheteur. Parcours d'achat fluide, pages produits optimisées, paiement sécurisé multi-méthodes (carte, virement, PayPal), gestion des stocks intuitive et tableau de bord administrateur complet pour piloter votre activité.
+
+Nous intégrons les meilleures pratiques de l'UX e-commerce : photos produits zoomables, avis clients, produits similaires, promotions et codes promo, gestion des retours, emails transactionnels automatiques (confirmation de commande, livraison, etc.).
+
+Sur le plan technique, vos clients peuvent faire confiance : certificat SSL, paiement conforme PCI DSS, données cryptées. De votre côté, vous avez accès à des analytics détaillés pour suivre vos performances et optimiser vos ventes.
+
+Que vous vendiez 10 ou 10 000 produits, nous adaptons la solution à votre catalogue et à vos ambitions. Nous vous accompagnons jusqu'à la première vente.`,
+    price: 'À partir de 1 290€',
+    duration: '3 à 6 semaines',
+    features: [
+      'Catalogue produits illimité',
+      'Paiement sécurisé (Stripe, PayPal)',
+      'Gestion des stocks',
+      'Emails transactionnels automatiques',
+      'Gestion des promotions & codes promo',
+      'Dashboard administrateur complet',
+      'Suivi des commandes',
+      'Optimisation SEO produits',
+    ],
+    included: [
+      'Jusqu\'à 50 produits intégrés',
+      'Configuration paiement & livraison',
+      '3 révisions design',
+      'Formation complète',
+      'Support 90 jours post-livraison',
+    ],
+    process: [
+      { step: 'Audit & Cahier des charges', desc: 'Analyse de votre catalogue, de vos modes de livraison et de vos besoins spécifiques.' },
+      { step: 'Design UX/UI', desc: 'Conception du parcours d\'achat et des templates de pages produits.' },
+      { step: 'Développement & Intégration', desc: 'Développement de la boutique avec intégration des paiements et de la logistique.' },
+      { step: 'Tests & Sécurité', desc: 'Tests d\'achat complets, vérification de sécurité et optimisation des performances.' },
+      { step: 'Lancement & Formation', desc: 'Mise en ligne, formation à l\'administration et premier suivi des ventes.' },
+    ],
+    faq: [
+      { q: 'Quels moyens de paiement peuvent être intégrés ?', a: 'Carte bancaire via Stripe, PayPal, virement bancaire, et d\'autres solutions sur demande.' },
+      { q: 'Puis-je gérer les stocks moi-même ?', a: 'Oui, vous avez un accès complet à l\'interface d\'administration pour gérer stocks, commandes et clients.' },
+      { q: 'Le site est-il sécurisé pour les paiements ?', a: 'Absolument. Nous utilisons uniquement des solutions de paiement certifiées PCI DSS avec cryptage SSL.' },
+    ],
+    cta: 'Lancer ma boutique en ligne',
+  },
+  'systeme-gestion': {
+    title: 'Système de Gestion',
+    subtitle: 'Des outils sur mesure pour piloter votre activité.',
+    description: `Les logiciels génériques ne font jamais exactement ce dont vous avez besoin. Ils sont souvent trop complexes, trop chers, ou trop rigides pour s'adapter à vos process spécifiques. Chez Stackup Agency, nous développons des systèmes de gestion entièrement sur mesure, pensés pour votre métier et vos équipes.
+
+Un système de gestion, c'est l'interface centrale de votre activité : réservations en ligne, gestion des commandes, tableau de bord en temps réel, programme de fidélité, gestion des employés, suivi des stocks, rapports automatiques... Tout ce dont vous avez besoin, rien de superflu.
+
+Notre premier client — Roma Pizzeria — utilise un système de ce type. Il permet aux clients de réserver une table et de passer commande en ligne, à la cuisine de recevoir les commandes en temps réel sur une tablette, au gestionnaire de tout piloter depuis un dashboard, et aux clients fidèles de cumuler des points automatiquement.
+
+Le résultat : moins d'erreurs, moins de temps perdu, plus de satisfaction client et plus de rentabilité. Ce type de système s'amortit souvent en quelques mois grâce aux gains de productivité qu'il génère.
+
+Nous analysons vos flux de travail, nous concevons l'architecture, nous développons, nous testons et nous formons vos équipes. Et nous restons disponibles pour faire évoluer l'outil avec votre activité.`,
+    price: 'À partir de 950€',
+    duration: '3 à 8 semaines',
+    features: [
+      'Application web sur mesure',
+      'Dashboard administrateur en temps réel',
+      'Gestion des réservations / commandes',
+      'Interface multi-utilisateurs avec rôles',
+      'Notifications et alertes automatiques',
+      'Rapports et statistiques',
+      'API et intégrations tierces',
+      'Application mobile possible',
+    ],
+    included: [
+      'Analyse complète de vos besoins',
+      'Architecture & conception',
+      'Formation des équipes',
+      'Documentation technique',
+      'Support 90 jours post-livraison',
+    ],
+    process: [
+      { step: 'Analyse des besoins', desc: 'Audit complet de vos processus, identification des points de friction et des gains possibles.' },
+      { step: 'Conception', desc: 'Architecture technique, wireframes et validation du périmètre fonctionnel.' },
+      { step: 'Développement itératif', desc: 'Développement par modules avec démonstrations régulières pour validation.' },
+      { step: 'Tests & Formation', desc: 'Tests approfondis avec vos équipes et formation à l\'utilisation du système.' },
+      { step: 'Déploiement', desc: 'Mise en production avec monitoring et support renforcé les premières semaines.' },
+    ],
+    faq: [
+      { q: 'Mon activité est très spécifique. Pouvez-vous vraiment l\'adapter ?', a: 'C\'est justement notre spécialité. Nous développons sur mesure, donc oui, nous pouvons nous adapter à n\'importe quel métier.' },
+      { q: 'Combien d\'utilisateurs peuvent accéder au système ?', a: 'Autant que nécessaire. Nous gérons les accès par rôles (admin, gérant, employé, client).' },
+      { q: 'Peut-on faire évoluer le système ?', a: 'Absolument. Tout est conçu pour être évolutif. Vous pouvez ajouter des modules au fil du temps.' },
+    ],
+    cta: 'Discuter de mon projet',
+  },
+  'design-branding': {
+    title: 'Design & Branding',
+    subtitle: 'Une identité visuelle forte qui vous démarque.',
+    description: `Votre image de marque, c'est la première impression que vous donnez. Elle précède votre discours, elle habille vos supports, elle reste dans les mémoires. Une identité visuelle professionnelle n'est pas un luxe réservé aux grandes marques — c'est un investissement qui vous distingue de la concurrence dès le premier regard.
+
+Chez Stackup Agency, nous créons des identités visuelles cohérentes et mémorables. Pas de logo généré par IA en 2 minutes — un travail de réflexion, de conception et d'itération pour créer quelque chose qui vous ressemble et qui parle à vos clients.
+
+Nous commençons toujours par comprendre votre activité, vos valeurs, votre clientèle cible et votre positionnement. Un restaurant haut de gamme n'a pas le même univers graphique qu'une boulangerie artisanale ou qu'une startup tech. La bonne identité visuelle, c'est celle qui est juste pour vous.
+
+Notre prestation comprend la conception du logo en plusieurs déclinaisons (couleur, noir/blanc, simplifié), la définition de la palette de couleurs, la sélection des typographies, et la création d'une charte graphique qui servira de référence pour tous vos supports futurs.
+
+Nous livrons les fichiers dans tous les formats nécessaires (PNG, SVG, PDF, AI) pour que vous puissiez utiliser votre identité sur tous vos supports : site web, réseaux sociaux, carte de visite, signalétique, emballages.`,
+    price: 'À partir de 290€',
+    duration: '1 à 2 semaines',
+    features: [
+      'Logo en plusieurs déclinaisons',
+      'Palette de couleurs',
+      'Sélection typographique',
+      'Charte graphique complète',
+      'Versions couleur, N&B et monochrome',
+      'Fichiers vectoriels (SVG, AI)',
+      'Formats web et print',
+      'Guide d\'utilisation de la marque',
+    ],
+    included: [
+      '3 propositions de logo',
+      '2 rounds de révisions',
+      'Livraison de tous les fichiers sources',
+      'Manuel d\'identité visuelle',
+      'Support 30 jours post-livraison',
+    ],
+    process: [
+      { step: 'Brief créatif', desc: 'Échange approfondi sur vos valeurs, votre clientèle et vos références visuelles.' },
+      { step: 'Recherche & Inspiration', desc: 'Analyse de votre marché et exploration des directions créatives.' },
+      { step: 'Propositions', desc: 'Présentation de 3 propositions de logo avec rationale créatif.' },
+      { step: 'Raffinement', desc: 'Ajustements selon vos retours jusqu\'à validation finale.' },
+      { step: 'Livraison', desc: 'Livraison de tous les fichiers + charte graphique complète.' },
+    ],
+    faq: [
+      { q: 'Que comprend exactement la charte graphique ?', a: 'Logo, couleurs (codes Pantone, CMJN, RVB, HEX), typographies, exemples d\'utilisation et règles à respecter.' },
+      { q: 'Est-ce que j\'ai les droits sur mon logo ?', a: 'Oui, à 100%. Une fois livré et payé, le logo vous appartient entièrement.' },
+      { q: 'Pouvez-vous aussi créer mes supports de communication ?', a: 'Oui, nous créons affiches, flyers, cartes de visite, bannières réseaux sociaux et autres supports.' },
+    ],
+    cta: 'Créer mon identité visuelle',
+  },
+  'marketing-digital': {
+    title: 'Marketing Digital',
+    subtitle: 'Faites-vous trouver par vos clients en ligne.',
+    description: `Avoir un beau site web, c'est bien. Que vos clients potentiels le trouvent, c'est mieux. Le marketing digital regroupe l'ensemble des leviers qui permettent d'attirer du trafic qualifié vers votre site et de transformer ce trafic en clients.
+
+Chez Stackup Agency, nous proposons une approche du marketing digital adaptée aux PME et aux entrepreneurs. Pas de grand discours ni de promesses impossibles — une stratégie réaliste, des actions concrètes et des résultats mesurables.
+
+Le SEO (référencement naturel) est le pilier de toute stratégie digitale durable. Nous optimisons votre site pour qu'il remonte sur les requêtes que cherchent vraiment vos clients. Titre de page, méta-descriptions, structure des URLs, contenu optimisé, backlinks — chaque détail compte.
+
+Les réseaux sociaux sont un outil de visibilité et de relation client puissant quand ils sont bien utilisés. Nous créons des stratégies de contenu cohérentes avec votre image de marque et adaptées aux plateformes sur lesquelles se trouve votre audience.
+
+L'emailing reste l'un des canaux avec le meilleur retour sur investissement. Newsletters, séquences automatisées, offres promotionnelles — nous créons des campagnes qui engagent et convertissent.
+
+Nous suivons les performances avec des outils d'analyse et vous fournissons des rapports mensuels clairs pour que vous sachiez exactement où va votre budget.`,
+    price: 'Sur devis',
+    duration: 'Prestation continue',
+    features: [
+      'Audit SEO complet',
+      'Optimisation on-page & technique',
+      'Création de contenu optimisé',
+      'Gestion réseaux sociaux',
+      'Campagnes emailing',
+      'Google Ads (optionnel)',
+      'Reporting mensuel',
+      'Conseil stratégique',
+    ],
+    included: [
+      'Audit initial offert',
+      'Stratégie personnalisée',
+      'Rapport mensuel',
+      'Point stratégique mensuel',
+      'Accès aux outils d\'analyse',
+    ],
+    process: [
+      { step: 'Audit', desc: 'Analyse de votre présence digitale actuelle, de vos concurrents et de vos opportunités.' },
+      { step: 'Stratégie', desc: 'Définition des canaux prioritaires, des objectifs et du plan d\'action.' },
+      { step: 'Mise en place', desc: 'Configuration des outils, création des comptes et premiers contenus.' },
+      { step: 'Exécution', desc: 'Production de contenu, publications, optimisations et campagnes.' },
+      { step: 'Analyse & Optimisation', desc: 'Suivi des KPIs, rapport mensuel et ajustement de la stratégie.' },
+    ],
+    faq: [
+      { q: 'Combien de temps avant de voir des résultats SEO ?', a: 'Le SEO est un investissement long terme. Les premiers résultats visibles apparaissent généralement entre 3 et 6 mois.' },
+      { q: 'Quelle est la différence entre SEO et SEA ?', a: 'Le SEO (naturel) est gratuit mais prend du temps. Le SEA (Google Ads) est payant mais immédiat. Les deux sont complémentaires.' },
+      { q: 'Gérez-vous tous les réseaux sociaux ?', a: 'Nous nous concentrons sur les réseaux pertinents pour votre activité. Pas besoin d\'être partout — mieux vaut être excellent sur 2 plateformes.' },
+    ],
+    cta: 'Booster ma visibilité',
+  },
+  'maintenance-support': {
+    title: 'Maintenance & Support',
+    subtitle: 'Votre site entre de bonnes mains, en permanence.',
+    description: `Un site web n'est pas un produit fini qui se pose et s'oublie. C'est un outil vivant qui a besoin d'être maintenu, mis à jour, sécurisé et surveillé pour rester performant et en ligne. La maintenance est souvent négligée par les entreprises jusqu'au jour où quelque chose casse.
+
+Chez Stackup Agency, nous proposons des plans de maintenance adaptés à vos besoins et à votre budget. Notre objectif : que vous n'ayez jamais à vous soucier de votre site. Nous nous en chargeons.
+
+Les mises à jour de sécurité sont notre priorité numéro un. Les sites non mis à jour sont les premières cibles des hackers et des malwares. Nous appliquons les correctifs de sécurité dès leur publication pour maintenir votre site à l'abri des menaces.
+
+Les sauvegardes régulières sont votre filet de sécurité. En cas de problème — hack, erreur de manipulation, panne d'hébergeur — nous pouvons restaurer votre site en quelques minutes plutôt qu'en plusieurs jours.
+
+Le support technique est disponible selon votre plan : de l'email avec réponse en 48h pour le plan Starter, jusqu'au support urgent en 4h pour le plan Premium. Nous répondons à vos questions, corrigeons les bugs et effectuons les modifications demandées.
+
+Nous surveillons également les performances de votre site : temps de chargement, disponibilité, erreurs techniques. Si quelque chose ne va pas, nous le détectons avant vous et nous intervenons.`,
+    price: 'À partir de 19€/mois',
+    duration: 'Engagement mensuel',
+    features: [
+      'Mises à jour sécurité',
+      'Sauvegardes automatiques',
+      'Monitoring disponibilité 24/7',
+      'Support par email',
+      'Modifications incluses',
+      'Rapport mensuel',
+      'Hébergement inclus (certains plans)',
+      'Optimisation performances',
+    ],
+    included: [
+      'Hébergement haute disponibilité',
+      'Certificat SSL',
+      'Sauvegardes hebdomadaires',
+      'Rapport mensuel',
+      'Support selon plan choisi',
+    ],
+    process: [
+      { step: 'Audit initial', desc: 'Analyse de votre site actuel, identification des points faibles et mise en conformité.' },
+      { step: 'Onboarding', desc: 'Configuration des outils de monitoring, sauvegardes et accès nécessaires.' },
+      { step: 'Maintenance régulière', desc: 'Mises à jour, vérifications de sécurité et sauvegardes selon planning.' },
+      { step: 'Interventions', desc: 'Gestion des demandes de modifications et résolution des incidents.' },
+      { step: 'Reporting', desc: 'Rapport mensuel avec état du site, interventions effectuées et recommandations.' },
+    ],
+    faq: [
+      { q: 'Que se passe-t-il si mon site tombe en panne ?', a: 'Nous sommes alertés automatiquement dès qu\'une panne est détectée et nous intervenons dans les délais de votre plan.' },
+      { q: 'Puis-je changer de plan à tout moment ?', a: 'Oui, vous pouvez monter ou descendre en gamme à chaque renouvellement mensuel.' },
+      { q: 'Que comprennent les "modifications" incluses ?', a: 'Changements de texte, d\'images, d\'horaires, de prix — toutes les mises à jour courantes de votre contenu.' },
+    ],
+    cta: 'Protéger mon site',
+  },
+}
+
+export async function generateStaticParams() {
+  return Object.keys(services).map(slug => ({ slug }))
+}
+
+export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
+  const service = services[params.slug]
+  if (!service) return {}
+  return {
+    title: `${service.title} — Stackup Agency`,
+    description: service.subtitle,
+  }
+}
+
+export default function ServicePage({ params }: { params: { slug: string } }) {
+  const service = services[params.slug]
+  if (!service) notFound()
+
+  return (
+    <main className="min-h-screen bg-[#F8FAFC] dark:bg-[#0A0F1C]">
+      {/* Hero */}
+      <section className="bg-gradient-to-br from-navy via-[#1a3254] to-electric py-24 pt-32">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6">
+          <Link href="/#services" className="inline-flex items-center gap-2 text-white/60 hover:text-white text-sm mb-8 transition-colors">
+            <ArrowLeft size={16} />
+            Retour aux services
+          </Link>
+          <div className="inline-block px-4 py-1.5 rounded-full bg-white/10 text-white/80 text-sm font-semibold mb-4">
+            {service.price}
+          </div>
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white mb-4">{service.title}</h1>
+          <p className="text-xl text-white/70">{service.subtitle}</p>
+          <div className="mt-6 flex flex-wrap gap-4 text-sm text-white/60">
+            <span>⏱ Délai : {service.duration}</span>
+            <span>💰 {service.price}</span>
+          </div>
+        </div>
+      </section>
+
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 py-16 space-y-16">
+        {/* Description */}
+        <section>
+          <div className="prose prose-lg dark:prose-invert max-w-none">
+            {service.description.split('\n\n').map((para, i) => (
+              <p key={i} className="text-gray-700 dark:text-white/70 leading-relaxed mb-4">{para}</p>
+            ))}
+          </div>
+        </section>
+
+        <div className="grid md:grid-cols-2 gap-8">
+          {/* Features */}
+          <section className="bg-white dark:bg-white/5 rounded-2xl p-8 border border-gray-100 dark:border-white/10">
+            <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-6">Ce qui est inclus</h2>
+            <ul className="space-y-3">
+              {service.features.map((f, i) => (
+                <li key={i} className="flex items-start gap-3">
+                  <div className="mt-0.5 w-5 h-5 rounded-full bg-electric/10 flex items-center justify-center flex-shrink-0">
+                    <Check size={12} className="text-electric" />
+                  </div>
+                  <span className="text-gray-700 dark:text-white/70 text-sm">{f}</span>
+                </li>
+              ))}
+            </ul>
+          </section>
+
+          {/* What's included in the package */}
+          <section className="bg-white dark:bg-white/5 rounded-2xl p-8 border border-gray-100 dark:border-white/10">
+            <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-6">Notre engagement</h2>
+            <ul className="space-y-3">
+              {service.included.map((item, i) => (
+                <li key={i} className="flex items-start gap-3">
+                  <div className="mt-0.5 w-5 h-5 rounded-full bg-gold/10 flex items-center justify-center flex-shrink-0">
+                    <Check size={12} className="text-gold" />
+                  </div>
+                  <span className="text-gray-700 dark:text-white/70 text-sm">{item}</span>
+                </li>
+              ))}
+            </ul>
+          </section>
+        </div>
+
+        {/* Process */}
+        <section>
+          <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-8">Notre processus</h2>
+          <div className="space-y-4">
+            {service.process.map((step, i) => (
+              <div key={i} className="flex gap-6">
+                <div className="flex flex-col items-center">
+                  <div className="w-10 h-10 rounded-full bg-electric flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
+                    {i + 1}
+                  </div>
+                  {i < service.process.length - 1 && <div className="w-0.5 h-full bg-electric/20 mt-2" />}
+                </div>
+                <div className="pb-6">
+                  <h3 className="font-semibold text-gray-900 dark:text-white mb-1">{step.step}</h3>
+                  <p className="text-gray-600 dark:text-white/60 text-sm">{step.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* FAQ */}
+        <section>
+          <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-8">Questions fréquentes</h2>
+          <div className="space-y-4">
+            {service.faq.map((item, i) => (
+              <div key={i} className="bg-white dark:bg-white/5 rounded-2xl p-6 border border-gray-100 dark:border-white/10">
+                <h3 className="font-semibold text-gray-900 dark:text-white mb-2">{item.q}</h3>
+                <p className="text-gray-600 dark:text-white/60 text-sm">{item.a}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* CTA */}
+        <section className="bg-gradient-to-br from-navy to-electric rounded-2xl p-8 text-center">
+          <h2 className="text-2xl font-bold text-white mb-3">{service.cta}</h2>
+          <p className="text-white/70 mb-6">Devis gratuit sous 24h. Sans engagement.</p>
+          <Link
+            href="/#contact"
+            className="inline-flex items-center gap-2 px-8 py-3.5 bg-gold hover:bg-amber-500 text-white font-semibold rounded-xl transition-all hover:-translate-y-0.5 shadow-lg"
+          >
+            Demander un devis
+            <ArrowRight size={16} />
+          </Link>
+        </section>
+      </div>
+    </main>
+  )
+}
