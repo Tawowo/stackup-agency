@@ -53,8 +53,9 @@ export default function Footer() {
                 src="/logo.png"
                 alt="Stackup Agency"
                 width={180}
-                height={55}
-                className="h-11 w-auto object-contain brightness-0 invert"
+                height={54}
+                quality={100}
+                className="object-contain brightness-0 invert"
               />
             </div>
             <p className="text-white/50 text-sm mb-6 max-w-xs leading-relaxed">{t.footer.tagline}</p>

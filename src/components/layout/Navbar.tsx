@@ -51,9 +51,10 @@ export default function Navbar() {
               <Image
                 src="/logo.png"
                 alt="Stackup Agency"
-                width={180}
-                height={55}
-                className="object-contain h-11 w-auto"
+                width={220}
+                height={66}
+                quality={100}
+                className="object-contain"
                 priority
               />
             </div>
