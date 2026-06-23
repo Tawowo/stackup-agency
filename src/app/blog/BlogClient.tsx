@@ -15,33 +15,54 @@ type Post = {
 
 const categoryColors: Record<string, string> = {
   restaurants: 'from-orange-400 to-red-500',
+  artisans: 'from-amber-500 to-orange-600',
   commerce: 'from-emerald-500 to-teal-600',
+  'seo-local': 'from-blue-500 to-electric',
+  'creation-sites': 'from-purple-500 to-violet-600',
+  'applications-metier': 'from-cyan-500 to-blue-600',
+  'pages-locales': 'from-rose-500 to-pink-600',
   seo: 'from-blue-500 to-electric',
   digital: 'from-purple-500 to-violet-600',
   entrepreneuriat: 'from-gold to-amber-600',
   design: 'from-pink-500 to-rose-600',
+  'professions-liberales': 'from-indigo-500 to-purple-600',
+  strategie: 'from-teal-500 to-emerald-600',
 }
 
 const categoryEmojis: Record<string, string> = {
   restaurants: '🍽️',
+  artisans: '🔨',
   commerce: '🛍️',
+  'seo-local': '📍',
+  'creation-sites': '🌐',
+  'applications-metier': '⚙️',
+  'pages-locales': '🗺️',
   seo: '🔍',
   digital: '💻',
   entrepreneuriat: '🚀',
   design: '🎨',
+  'professions-liberales': '👔',
+  strategie: '📊',
 }
 
 const categoryLabels: Record<string, string> = {
   tous: 'Tous',
-  restaurants: 'Restaurants',
+  restaurants: 'Restauration',
+  artisans: 'Artisans',
   commerce: 'Commerce',
+  'seo-local': 'SEO Local',
+  'creation-sites': 'Création de sites',
+  'applications-metier': 'Applications métier',
+  'pages-locales': 'Pages locales',
   seo: 'SEO',
   digital: 'Digital',
   entrepreneuriat: 'Entrepreneuriat',
   design: 'Design',
+  'professions-liberales': 'Professions libérales',
+  strategie: 'Stratégie',
 }
 
-const filters = ['tous', 'restaurants', 'commerce', 'seo', 'digital', 'entrepreneuriat', 'design']
+const filters = ['tous', 'seo-local', 'creation-sites', 'restaurants', 'artisans', 'commerce', 'applications-metier', 'pages-locales', 'digital', 'entrepreneuriat', 'design']
 
 export default function BlogClient({ posts }: { posts: Post[] }) {
   const [active, setActive] = useState('tous')
