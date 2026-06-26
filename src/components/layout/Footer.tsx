@@ -35,10 +35,9 @@ export default function Footer() {
 
   const links = [
     { href: '#services', label: t.nav.services },
-    { href: '#tarifs', label: t.nav.pricing },
     { href: '#realisations', label: t.nav.portfolio },
     { href: '#apropos', label: t.nav.about },
-    { href: '#blog', label: t.nav.blog },
+    { href: '/blog', label: t.nav.blog },
     { href: '#contact', label: t.nav.contact },
   ]
 
