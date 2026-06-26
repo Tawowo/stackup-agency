@@ -21,6 +21,10 @@ body {
 @media (max-width: 768px) {
   body {
     cursor: auto;
+    font-size: 15px;
+  }
+  p, li, label, input, textarea, select, button {
+    font-size: max(15px, 1em);
   }
 }
 

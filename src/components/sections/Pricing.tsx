@@ -40,7 +40,7 @@ export default function Pricing() {
                 transition={{ duration: 0.5, delay: i * 0.1 + 0.3 }}
                 className={`relative rounded-2xl p-8 flex flex-col ${
                   isPro
-                    ? 'bg-gradient-to-b from-navy to-[#1a3254] text-white shadow-2xl shadow-navy/30 scale-[1.03]'
+                    ? 'bg-gradient-to-b from-navy to-[#1a3254] text-white shadow-2xl shadow-navy/30 lg:scale-[1.03]'
                     : 'bg-white dark:bg-white/5 border border-gray-100 dark:border-white/10 shadow-sm'
                 }`}
               >

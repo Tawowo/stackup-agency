@@ -35,7 +35,7 @@ export default function Navbar() {
 
   const linkClass = scrolled
     ? 'text-gray-900 dark:text-white hover:text-electric dark:hover:text-electric'
-    : 'text-white hover:text-electric'
+    : 'text-[#1E3A5F] hover:text-electric'
 
   return (
     <motion.nav
@@ -63,10 +63,10 @@ export default function Navbar() {
             />
             <div className="flex flex-col leading-tight">
               <span className={`font-bold text-xl tracking-tight transition-colors ${
-                scrolled ? 'text-[#1E3A5F] dark:text-white' : 'text-white'
+                scrolled ? 'text-[#1E3A5F] dark:text-white' : 'text-[#1E3A5F]'
               }`}>Stackup</span>
               <span className={`font-light text-xs tracking-[0.2em] uppercase transition-colors ${
-                scrolled ? 'text-[#1E3A5F]/70 dark:text-white/70' : 'text-white/70'
+                scrolled ? 'text-[#1E3A5F]/70 dark:text-white/70' : 'text-[#1E3A5F]/70'
               }`}>Agency</span>
             </div>
           </Link>
@@ -92,7 +92,7 @@ export default function Navbar() {
               className={`px-3 py-1.5 text-xs font-semibold rounded-lg border transition-colors hover:border-electric hover:text-electric ${
                 scrolled
                   ? 'border-gray-300 dark:border-white/20 text-gray-900 dark:text-white'
-                  : 'border-white/40 text-white'
+                  : 'border-[#1E3A5F]/40 text-[#1E3A5F]'
               }`}
             >
               {lang === 'fr' ? 'EN' : 'FR'}
@@ -100,7 +100,7 @@ export default function Navbar() {
             <button
               onClick={toggleDark}
               className={`p-2 rounded-lg transition-colors hover:text-electric hover:bg-electric/10 ${
-                scrolled ? 'text-gray-600 dark:text-white/70' : 'text-white/80'
+                scrolled ? 'text-gray-600 dark:text-white/70' : 'text-[#1E3A5F]/80'
               }`}
             >
               {dark ? <Sun size={18} /> : <Moon size={18} />}
@@ -117,14 +117,14 @@ export default function Navbar() {
           <div className="flex lg:hidden items-center gap-1">
             <button
               onClick={toggleDark}
-              className="p-2.5 min-w-[44px] min-h-[44px] flex items-center justify-center text-white"
+              className={`p-2.5 min-w-[44px] min-h-[44px] flex items-center justify-center transition-colors ${scrolled ? 'text-gray-700 dark:text-white' : 'text-[#1E3A5F]'}`}
               aria-label="Toggle dark mode"
             >
               {dark ? <Sun size={20} /> : <Moon size={20} />}
             </button>
             <button
               onClick={() => setOpen(!open)}
-              className="p-2.5 min-w-[44px] min-h-[44px] flex items-center justify-center text-white"
+              className={`p-2.5 min-w-[44px] min-h-[44px] flex items-center justify-center transition-colors ${scrolled ? 'text-gray-700 dark:text-white' : 'text-[#1E3A5F]'}`}
               aria-label="Toggle menu"
             >
               {open ? <X size={24} /> : <Menu size={24} />}
@@ -141,7 +141,7 @@ export default function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -8 }}
             transition={{ duration: 0.2 }}
-            className="lg:hidden fixed inset-0 top-16 z-40 bg-gray-900 overflow-y-auto"
+            className="lg:hidden fixed inset-0 top-16 z-40 bg-[#1E3A5F] overflow-y-auto"
           >
             <div className="px-6 py-6 flex flex-col gap-1">
               {links.map(link => (
@@ -149,7 +149,7 @@ export default function Navbar() {
                   key={link.href}
                   href={link.href}
                   onClick={() => setOpen(false)}
-                  className="py-4 px-4 text-base font-medium text-white hover:text-electric rounded-xl hover:bg-white/5 transition-colors min-h-[56px] flex items-center"
+                  className="py-4 px-4 text-lg font-medium text-white hover:text-[#F59E0B] rounded-xl hover:bg-white/10 transition-colors min-h-[56px] flex items-center"
                 >
                   {link.label}
                 </a>
