@@ -1,106 +1,143 @@
 'use client'
 import { motion, useInView } from 'framer-motion'
-import { useRef } from 'react'
-import { ExternalLink, Star, MapPin } from 'lucide-react'
-import { useLanguage } from '@/contexts/LanguageContext'
+import { useRef, useState } from 'react'
+import { ExternalLink, ArrowRight } from 'lucide-react'
+import Link from 'next/link'
+import { realisations } from '@/lib/realisations'
+
+const filters = ['Tous', 'Site vitrine', 'E-commerce', 'Système de gestion', 'Design']
 
 export default function Portfolio() {
-  const { t } = useLanguage()
   const ref = useRef(null)
   const inView = useInView(ref, { once: true, margin: '-80px' })
-  const c = t.portfolio.client1
+  const [activeFilter, setActiveFilter] = useState('Tous')
+
+  const filtered = activeFilter === 'Tous'
+    ? realisations
+    : realisations.filter(r => r.filterType === activeFilter)
 
   return (
-    <section id="realisations" className="py-24 lg:py-32 bg-background dark:bg-[#0A0F1C]">
+    <section id="realisations" className="py-24 lg:py-32 bg-[#F8FAFC] dark:bg-[#0A0F1C]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-12"
         >
-          <h2 className="text-4xl lg:text-5xl font-bold text-foreground dark:text-white mb-4">
-            {t.portfolio.title}
+          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+            Nos réalisations
           </h2>
-          <p className="text-foreground/60 dark:text-white/60 text-lg">{t.portfolio.subtitle}</p>
+          <p className="text-gray-600 dark:text-white/60 text-lg max-w-2xl mx-auto">
+            Des projets livrés en 10 jours pour des clients exigeants. Chaque site est unique, performant et sur mesure.
+          </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-          {/* Card */}
-          <motion.div
-            initial={{ opacity: 0, x: -40 }}
-            animate={inView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.7, delay: 0.2 }}
-            className="relative group rounded-3xl overflow-hidden shadow-2xl"
-          >
-            {/* Gradient background representing the project */}
-            <div className="h-64 bg-gradient-to-br from-red-600 via-orange-500 to-amber-500 relative">
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center">
-                  <div className="text-7xl mb-2">🍕</div>
-                  <div className="text-white font-bold text-xl">Roma Pizzeria</div>
-                  <div className="text-white/70 text-sm">Restaurant Management System</div>
-                </div>
-              </div>
-              {/* Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-              {/* Badge */}
-              <div className="absolute top-4 left-4 flex items-center gap-1.5 px-3 py-1.5 bg-gold rounded-full text-white text-xs font-bold shadow-lg">
-                <Star size={12} fill="white" />
-                {c.badge}
-              </div>
-            </div>
+        {/* Filters */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={inView ? { opacity: 1 } : {}}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          className="flex flex-wrap justify-center gap-2 mb-12"
+        >
+          {filters.map(f => (
+            <button
+              key={f}
+              onClick={() => setActiveFilter(f)}
+              className={`px-4 py-2 rounded-full text-sm font-semibold transition-all ${
+                activeFilter === f
+                  ? 'bg-[#1E3A5F] text-white shadow-lg'
+                  : 'bg-white dark:bg-white/5 text-gray-600 dark:text-white/60 border border-gray-200 dark:border-white/10 hover:border-[#1E3A5F] hover:text-[#1E3A5F]'
+              }`}
+            >
+              {f}
+            </button>
+          ))}
+        </motion.div>
 
-            <div className="bg-white dark:bg-[#111827] p-6">
-              <div className="flex items-start justify-between mb-3">
-                <div>
-                  <h3 className="text-xl font-bold text-foreground dark:text-white">{c.name}</h3>
-                  <div className="flex items-center gap-1 text-foreground/50 dark:text-white/50 text-sm mt-1">
-                    <MapPin size={13} />
-                    {c.location}
-                  </div>
-                </div>
-                <a
-                  href="https://roma-pizzeria-restaurante.vercel.app"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-1.5 px-3 py-1.5 bg-electric/10 hover:bg-electric text-electric hover:text-white rounded-lg text-xs font-semibold transition-colors"
-                >
-                  {c.link}
-                  <ExternalLink size={12} />
-                </a>
-              </div>
-              <p className="text-foreground/70 dark:text-white/70 text-sm leading-relaxed mb-4">{c.desc}</p>
-              <div className="flex flex-wrap gap-2">
-                {c.tags.map(tag => (
-                  <span key={tag} className="px-2.5 py-1 bg-navy/5 dark:bg-white/10 text-navy dark:text-white/80 rounded-md text-xs font-medium">
-                    {tag}
-                  </span>
-                ))}
-              </div>
-            </div>
-          </motion.div>
-
-          {/* Right side content */}
-          <motion.div
-            initial={{ opacity: 0, x: 40 }}
-            animate={inView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.7, delay: 0.4 }}
-            className="space-y-6"
-          >
-            <div className="rounded-2xl p-6 bg-gradient-to-br from-navy to-electric text-white">
-              <h3 className="font-bold text-xl mb-2">{t.portfolio.cta}</h3>
-              <p className="text-white/70 text-sm mb-4">Votre projet mérite la même attention et le même investissement.</p>
-              <a
-                href="#contact"
-                className="inline-flex items-center gap-2 px-5 py-2.5 bg-gold hover:bg-amber-500 text-white rounded-xl text-sm font-semibold transition-all hover:-translate-y-0.5"
+        {/* Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          {filtered.map((r, i) => (
+            <motion.div
+              key={r.slug}
+              initial={{ opacity: 0, y: 40 }}
+              animate={inView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.5, delay: i * 0.06 }}
+              className="group rounded-2xl overflow-hidden border border-gray-100 dark:border-white/10 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col"
+            >
+              {/* Color header */}
+              <div
+                className="h-36 relative flex items-end p-5"
+                style={{ background: r.couleur }}
               >
-                Démarrer mon projet →
-              </a>
-            </div>
-          </motion.div>
+                <div
+                  className="absolute inset-0 opacity-20"
+                  style={{ background: `radial-gradient(circle at 80% 20%, ${r.accent}, transparent 60%)` }}
+                />
+                <div className="relative z-10">
+                  <div className="flex flex-wrap gap-1.5 mb-2">
+                    {r.tags.slice(0, 3).map(tag => (
+                      <span
+                        key={tag}
+                        className="px-2 py-0.5 rounded-md text-xs font-semibold"
+                        style={{ background: `${r.accent}30`, color: r.accent, border: `1px solid ${r.accent}40` }}
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                  <h3 className="font-bold text-xl text-white">{r.nom}</h3>
+                  <p className="text-white/60 text-sm">{r.type}</p>
+                </div>
+              </div>
+
+              {/* Body */}
+              <div className="flex-1 p-5 bg-white dark:bg-[#111827] flex flex-col">
+                <p className="text-gray-600 dark:text-white/70 text-sm leading-relaxed mb-5 flex-1">
+                  {r.description}
+                </p>
+                <div className="flex gap-2 flex-wrap">
+                  <Link
+                    href={`/realisations/${r.slug}`}
+                    className="flex items-center gap-1.5 px-4 py-2 bg-[#1E3A5F] hover:bg-[#162E4D] text-white text-sm font-semibold rounded-lg transition-colors min-h-[40px]"
+                  >
+                    Voir le projet
+                    <ArrowRight size={14} />
+                  </Link>
+                  <a
+                    href={r.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-1.5 px-4 py-2 border border-gray-200 dark:border-white/20 text-gray-700 dark:text-white/80 hover:border-[#1E3A5F] hover:text-[#1E3A5F] text-sm font-medium rounded-lg transition-colors min-h-[40px]"
+                  >
+                    Démo live
+                    <ExternalLink size={13} />
+                  </a>
+                </div>
+              </div>
+            </motion.div>
+          ))}
         </div>
+
+        {/* CTA bottom */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.5, delay: 0.6 }}
+          className="text-center mt-16"
+        >
+          <div className="inline-block rounded-2xl p-8 bg-gradient-to-br from-[#1E3A5F] to-[#2D7DD2] text-white">
+            <h3 className="font-bold text-xl mb-2">Votre projet sera le suivant</h3>
+            <p className="text-white/70 text-sm mb-5">Même niveau d&apos;exigence, même attention aux détails, livré en 10 jours.</p>
+            <a
+              href="#contact"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-[#F59E0B] hover:bg-amber-500 text-white rounded-xl text-sm font-semibold transition-all hover:-translate-y-0.5"
+            >
+              Démarrer mon projet →
+            </a>
+          </div>
+        </motion.div>
       </div>
     </section>
   )
