@@ -22,7 +22,7 @@ const services: Record<string, ServiceData> = {
     subtitle: 'Votre présence digitale professionnelle, clé en main.',
     description: `Un site vitrine, c'est votre carte de visite permanente sur internet. Il est disponible 24h/24, 7j/7, et travaille pour vous même quand vous dormez. Chez Stackup Agency, nous créons des sites vitrines qui ne se contentent pas d'exister — ils convertissent des visiteurs en clients.
 
-Nous savons qu'un site web mal conçu peut faire fuir vos prospects en quelques secondes. C'est pourquoi chaque site que nous livrons est optimisé pour trois choses : la vitesse, l'esthétique et la conversion. Pas de template générique, pas de constructeur de page limitant — du code sur mesure, performant et évolutif.
+Nous savons qu'un site web mal conçu peut faire fuir vos prospects en quelques secondes. C'est pourquoi chaque site que nous livrons est optimisé pour trois choses : la vitesse, l'esthétique et la conversion. Pas de modèle générique préfabriqué, pas de constructeur de page limitant — du code sur mesure, performant et évolutif.
 
 Que vous soyez artisan, consultant, prestataire de service ou commerçant local, votre site vitrine doit refléter la qualité de votre travail. Nous prenons le temps de comprendre votre activité, vos clients cibles et vos objectifs avant d'écrire la première ligne de code.
 
@@ -32,7 +32,7 @@ Nous intégrons également les éléments essentiels à toute présence en ligne
     price: 'À partir de 449€',
     duration: '10 jours ouvrés',
     features: [
-      'Design personnalisé (pas de template)',
+      'Design personnalisé (pas de modèle préfabriqué)',
       'Responsive mobile & tablette',
       'Optimisation SEO on-page',
       'Formulaire de contact',
@@ -140,7 +140,7 @@ Que vous vendiez 10 ou 10 000 produits, nous adaptons la solution à votre catal
     ],
     process: [
       { step: 'Audit & Cahier des charges', desc: 'Analyse de votre catalogue, de vos modes de livraison et de vos besoins spécifiques.' },
-      { step: 'Design UX/UI', desc: 'Conception du parcours d\'achat et des templates de pages produits.' },
+      { step: 'Design UX/UI', desc: 'Conception du parcours d\'achat et des modèles de pages produits.' },
       { step: 'Développement & Intégration', desc: 'Développement de la boutique avec intégration des paiements et de la logistique.' },
       { step: 'Tests & Sécurité', desc: 'Tests d\'achat complets, vérification de sécurité et optimisation des performances.' },
       { step: 'Lancement & Formation', desc: 'Mise en ligne, formation à l\'administration et premier suivi des ventes.' },

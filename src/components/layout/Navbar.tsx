@@ -191,7 +191,12 @@ export default function Navbar() {
                 </button>
                 <a
                   href="#contact"
-                  onClick={() => setOpen(false)}
+                  onClick={() => {
+                    setOpen(false)
+                    setTimeout(() => {
+                      document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })
+                    }, 100)
+                  }}
                   className="flex-1 py-3 text-center bg-gold text-white text-sm font-semibold rounded-xl min-h-[44px] flex items-center justify-center"
                 >
                   {t.nav.cta}
