@@ -1,15 +1,17 @@
-import { NextRequest, NextResponse } from 'next/server'
 import { Resend } from 'resend'
+import { NextResponse } from 'next/server'
 
 const resend = new Resend('re_fKNfkhxL_88xFyednhBqBy24b43Vh29xV')
 
-export async function POST(req: NextRequest) {
+export async function POST(req: Request) {
   try {
-    const { name, email, phone, project, message } = await req.json()
+    const body = await req.json()
+    const { name, email, phone, project, message } = body
 
     const { error } = await resend.emails.send({
-      from: 'Stackup Agency <contact@stackup-agency.fr>',
+      from: 'Stackup Agency <onboarding@resend.dev>',
       to: 'contact@stackup-agency.fr',
+      replyTo: email,
       subject: `Nouveau contact — ${project || 'Non précisé'} — ${name}`,
       html: `
         <h2>Nouveau message depuis stackup-agency.fr</h2>
@@ -23,13 +25,12 @@ export async function POST(req: NextRequest) {
 
     if (error) {
       console.error('Resend error:', error)
-      return NextResponse.json({ error: 'Email send failed' }, { status: 500 })
+      return NextResponse.json({ error }, { status: 400 })
     }
 
-    console.log(`Contact email sent: ${name} <${email}> — ${project}`)
-    return NextResponse.json({ success: true })
-  } catch (error) {
-    console.error('Contact API error:', error)
-    return NextResponse.json({ error: 'Internal server error' }, { status: 500 })
+    return NextResponse.json({ ok: true })
+  } catch (err) {
+    console.error('Contact error:', err)
+    return NextResponse.json({ error: String(err) }, { status: 500 })
   }
 }
