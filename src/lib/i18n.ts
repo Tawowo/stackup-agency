@@ -28,8 +28,8 @@ export const translations = {
         { title: 'Site Multi-pages', desc: 'Un site avec plusieurs pages distinctes (/services, /about, /contact) — idéal pour agences, cabinets et prestataires.' },
         { title: 'Site E-commerce', desc: 'Boutiques en ligne performantes, avec paiement sécurisé et gestion des stocks intégrée.' },
         { title: 'Système de gestion', desc: 'Applications métier sur mesure : réservations, commandes, fidélité, dashboard admin.' },
-        { title: 'Design & Branding', desc: 'Logo, identité visuelle, charte graphique pour une image de marque mémorable.' },
-        { title: 'Marketing Digital', desc: 'SEO, réseaux sociaux, emailing — une stratégie pour vous faire trouver en ligne.' },
+        { title: 'Site Association', desc: 'Site professionnel clé en main pour associations, clubs et structures à but non lucratif — livré en 7 jours à partir de 149€.' },
+        { title: 'Marketing Digital', desc: 'SEO, emailing, conseil stratégique — une approche concrète pour améliorer votre visibilité en ligne.' },
         { title: 'Maintenance & Support', desc: 'Suivi continu, mises à jour, sécurité et évolutions pour que votre site reste au top.' },
       ],
     },
@@ -80,9 +80,9 @@ export const translations = {
       projects: [
         { name: 'Site vitrine 1 page', price: '449€' },
         { name: 'Site multi-pages', price: '749€' },
-        { name: 'Site e-commerce', price: '1 147€' },
+        { name: 'Site e-commerce', price: '1 647€' },
         { name: 'Système gestion métier', price: '1 447€' },
-        { name: 'Logo + identité visuelle', price: '189€' },
+        { name: 'Site Association', price: '149€' },
         { name: 'Affiche / Flyer', price: '45€' },
         { name: 'Application web', price: 'Sur devis' },
       ],
@@ -135,7 +135,7 @@ export const translations = {
       items: [
         {
           q: 'Quels sont les délais de création ?',
-          a: "Un site vitrine est livré en 10 jours. Un e-commerce ou système métier en 17 jours. Un devis précis vous est transmis dès notre premier échange.",
+          a: "Un site vitrine est livré en 10 jours ouvrés, un site multi-pages en 17 jours ouvrés, un e-commerce ou système de gestion en 21 jours ouvrés, un site association en 7 jours ouvrés. Ces délais sont indicatifs — Stackup Agency se réserve le droit de les prolonger de 20 jours ouvrés maximum en cas de forte demande, avec notification préalable. Un devis précis vous est transmis dès notre premier échange.",
         },
         {
           q: 'Comment se passe le processus de création ?',
@@ -175,7 +175,7 @@ export const translations = {
         email: 'Votre email',
         phone: 'Votre téléphone',
         project: 'Type de projet',
-        projectOptions: ['Site vitrine', 'Site e-commerce', 'Système de gestion', 'Application web', 'Design & Branding', 'Maintenance', 'Autre'],
+        projectOptions: ['Site vitrine', 'Site e-commerce', 'Système de gestion', 'Site association', 'Application web', 'Maintenance', 'Autre'],
         message: 'Décrivez votre projet...',
         send: 'Envoyer le message',
         sending: 'Envoi en cours...',
@@ -224,8 +224,8 @@ export const translations = {
         { title: 'Multi-page Website', desc: 'A site with distinct pages (/services, /about, /contact) — ideal for agencies, firms and service providers.' },
         { title: 'E-commerce Site', desc: 'High-performance online stores with secure payment and integrated inventory management.' },
         { title: 'Management System', desc: 'Custom business apps: reservations, orders, loyalty programs, admin dashboards.' },
-        { title: 'Design & Branding', desc: 'Logo, visual identity, brand guidelines for a memorable brand image.' },
-        { title: 'Digital Marketing', desc: 'SEO, social media, emailing — a strategy to get found online.' },
+        { title: 'Association Website', desc: 'Professional turnkey website for non-profits, clubs and associations — delivered in 7 days from €149.' },
+        { title: 'Digital Marketing', desc: 'SEO, emailing, strategic consulting — a concrete approach to improving your online visibility.' },
         { title: 'Maintenance & Support', desc: 'Ongoing monitoring, updates, security and improvements to keep your site at its best.' },
       ],
     },
@@ -276,9 +276,9 @@ export const translations = {
       projects: [
         { name: '1-page showcase site', price: '€449' },
         { name: 'Multi-page showcase site', price: '€749' },
-        { name: 'E-commerce site', price: '€1,147' },
+        { name: 'E-commerce site', price: '€1,647' },
         { name: 'Business management system', price: '€1,447' },
-        { name: 'Logo + visual identity', price: '€189' },
+        { name: 'Association website', price: '€149' },
         { name: 'Poster / Flyer', price: '€45' },
         { name: 'Web application', price: 'On quote' },
       ],
@@ -331,7 +331,7 @@ export const translations = {
       items: [
         {
           q: 'How long does creation take?',
-          a: 'A showcase site is delivered in 10 days. An e-commerce or business system in 17 days. A precise timeline is provided at our first meeting.',
+          a: 'A showcase site is delivered in 10 working days, a multi-page site in 17 working days, an e-commerce or management system in 21 working days, and an association website in 7 working days. These timelines are indicative — Stackup Agency reserves the right to extend them by up to 20 working days in case of high demand, with prior notice. A precise timeline is provided at our first meeting.',
         },
         {
           q: 'How does the creation process work?',
@@ -371,7 +371,7 @@ export const translations = {
         email: 'Your email',
         phone: 'Your phone',
         project: 'Project type',
-        projectOptions: ['Showcase site', 'E-commerce site', 'Management system', 'Web application', 'Design & Branding', 'Maintenance', 'Other'],
+        projectOptions: ['Showcase site', 'E-commerce site', 'Management system', 'Association website', 'Web application', 'Maintenance', 'Other'],
         message: 'Describe your project...',
         send: 'Send message',
         sending: 'Sending...',

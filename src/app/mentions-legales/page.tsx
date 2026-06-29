@@ -65,7 +65,21 @@ export default function MentionsLegales() {
           </section>
 
           <section>
-            <h2>8. Contact</h2>
+            <h2>8. Délais de livraison</h2>
+            <p>Les délais de livraison indiqués sur le site sont des délais indicatifs exprimés en jours ouvrés :</p>
+            <ul>
+              <li><strong>Site vitrine 1 page :</strong> 10 jours ouvrés</li>
+              <li><strong>Site multi-pages :</strong> 17 jours ouvrés</li>
+              <li><strong>Site e-commerce :</strong> 21 jours ouvrés</li>
+              <li><strong>Système de gestion métier :</strong> 21 jours ouvrés</li>
+              <li><strong>Site association :</strong> 7 jours ouvrés</li>
+            </ul>
+            <p>Stackup Agency se réserve le droit de prolonger ces délais de <strong>20 jours ouvrés maximum</strong> en cas de forte demande, d&apos;imprévus techniques ou de circonstances exceptionnelles. Le client en sera informé par email dans les meilleurs délais, avec proposition d&apos;un nouveau calendrier.</p>
+            <p>Les délais courent à compter de la réception de l&apos;acompte et de la transmission de l&apos;ensemble des éléments nécessaires à la réalisation du projet (textes, images, accès, informations).</p>
+          </section>
+
+          <section>
+            <h2>9. Contact</h2>
             <p>Pour toute question relative au site ou à son contenu : <a href="mailto:contact@stackup.agency" className="text-electric">contact@stackup.agency</a></p>
           </section>
         </div>

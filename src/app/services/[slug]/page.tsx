@@ -30,7 +30,7 @@ Le résultat : un site qui ressemble à ce que vous êtes, qui charge en moins d
 
 Nous intégrons également les éléments essentiels à toute présence en ligne sérieuse : formulaire de contact, Google Maps, liens réseaux sociaux, mentions légales et politique de confidentialité conformes RGPD. Votre site est opérationnel dès le premier jour.`,
     price: 'À partir de 449€',
-    duration: '10 jours',
+    duration: '10 jours ouvrés',
     features: [
       'Design personnalisé (pas de template)',
       'Responsive mobile & tablette',
@@ -75,7 +75,7 @@ Nous travaillons sur l'architecture de l'information — la façon dont les page
 
 Le rendu final est un site professionnel, rapide, sécurisé et optimisé pour les moteurs de recherche. Nous livrons avec une formation à l'outil d'administration pour que vous puissiez mettre à jour votre contenu en autonomie.`,
     price: 'À partir de 749€',
-    duration: '10 jours',
+    duration: '17 jours ouvrés',
     features: [
       'Jusqu\'à 10 pages personnalisées',
       'Blog / actualités intégré',
@@ -119,17 +119,17 @@ Nous intégrons les meilleures pratiques de l'UX e-commerce : photos produits zo
 Sur le plan technique, vos clients peuvent faire confiance : certificat SSL, paiement conforme PCI DSS, données cryptées. De votre côté, vous avez accès à des analytics détaillés pour suivre vos performances et optimiser vos ventes.
 
 Que vous vendiez 10 ou 10 000 produits, nous adaptons la solution à votre catalogue et à vos ambitions.`,
-    price: 'À partir de 1 147€',
-    duration: '17 jours',
+    price: 'À partir de 1 647€',
+    duration: '21 jours ouvrés',
     features: [
       'Catalogue produits illimité',
       'Paiement sécurisé (Stripe, PayPal)',
-      'Gestion des stocks',
       'Emails transactionnels automatiques',
       'Gestion des promotions & codes promo',
       'Dashboard administrateur complet',
-      'Suivi des commandes',
       'Optimisation SEO produits',
+      'Certificat SSL inclus',
+      'Conformité RGPD',
     ],
     included: [
       'Jusqu\'à 50 produits intégrés',
@@ -159,13 +159,13 @@ Que vous vendiez 10 ou 10 000 produits, nous adaptons la solution à votre catal
 
 Un système de gestion, c'est l'interface centrale de votre activité : réservations en ligne, gestion des commandes, tableau de bord en temps réel, programme de fidélité, gestion des employés, suivi des stocks, rapports automatiques... Tout ce dont vous avez besoin, rien de superflu.
 
-Notre premier client — Roma Pizzeria — utilise un système de ce type. Il permet aux clients de réserver une table et de passer commande en ligne, à la cuisine de recevoir les commandes en temps réel sur une tablette, au gestionnaire de tout piloter depuis un dashboard, et aux clients fidèles de cumuler des points automatiquement.
+Notre exemple de référence — L'Olivier Dashboard — illustre ce type de système. Il permet aux clients de réserver une table et de passer commande en ligne, à la cuisine de recevoir les commandes en temps réel sur une tablette, au gestionnaire de tout piloter depuis un dashboard, et aux clients fidèles de cumuler des points automatiquement.
 
 Le résultat : moins d'erreurs, moins de temps perdu, plus de satisfaction client et plus de rentabilité. Ce type de système s'amortit généralement en quelques mois grâce aux gains de productivité qu'il génère.
 
 Nous analysons vos flux de travail, nous concevons l'architecture, nous développons, nous testons et nous formons vos équipes. Et nous restons disponibles pour faire évoluer l'outil avec votre activité.`,
     price: 'À partir de 1 447€',
-    duration: '17 jours',
+    duration: '21 jours ouvrés',
     features: [
       'Application web sur mesure',
       'Dashboard administrateur en temps réel',
@@ -197,50 +197,50 @@ Nous analysons vos flux de travail, nous concevons l'architecture, nous dévelop
     ],
     cta: 'Discuter de mon projet',
   },
-  'design-branding': {
-    title: 'Design & Branding',
-    subtitle: 'Une identité visuelle forte qui vous démarque.',
-    description: `Votre image de marque est la première impression que vous donnez. Elle précède votre discours, elle habille vos supports, elle reste dans les mémoires. Une identité visuelle professionnelle n'est pas un luxe réservé aux grandes marques — c'est un investissement qui vous distingue de la concurrence dès le premier regard.
+  'site-association': {
+    title: 'Site Association',
+    subtitle: 'Un site professionnel pour votre association, club ou structure à but non lucratif.',
+    description: `Les associations méritent une présence digitale sérieuse. Trop souvent, faute de budget ou de compétences techniques, les associations se retrouvent avec des sites obsolètes, peu accessibles ou inexistants. Chez Stackup Agency, nous avons créé une offre spécifiquement pensée pour les structures associatives.
 
-Chez Stackup Agency, nous créons des identités visuelles cohérentes et mémorables. Nous ne nous contentons pas de générer un logo — nous travaillons la réflexion, la conception et l'itération pour créer quelque chose qui vous ressemble et qui parle à vos clients.
+Notre offre Site Association permet à votre structure de disposer d'un site web professionnel, moderne et fonctionnel à un tarif adapté aux budgets associatifs. Adhérents, bénévoles, partenaires et donateurs potentiels trouveront toutes les informations dont ils ont besoin.
 
-Nous commençons toujours par comprendre votre activité, vos valeurs, votre clientèle cible et votre positionnement. Un restaurant haut de gamme n'a pas le même univers graphique qu'une boulangerie artisanale ou qu'une startup tech. La bonne identité visuelle est celle qui est juste pour vous.
+Nous construisons un site qui présente clairement votre mission, vos activités, vos membres actifs et vos événements à venir. Le formulaire d'adhésion en ligne simplifie le recrutement de nouveaux membres, et la page actualités vous permet de maintenir votre communauté informée.
 
-Notre prestation comprend la conception du logo en plusieurs déclinaisons (couleur, noir/blanc, simplifié), la définition de la palette de couleurs, la sélection des typographies, et la création d'une charte graphique qui servira de référence pour tous vos supports futurs.
+Optimisé pour les moteurs de recherche et parfaitement adapté aux mobiles, votre site sera facilement trouvable par les personnes qui recherchent une structure comme la vôtre dans votre région.
 
-Nous livrons les fichiers dans tous les formats nécessaires (PNG, SVG, PDF, AI) pour que vous puissiez utiliser votre identité sur tous vos supports : site web, réseaux sociaux, carte de visite, signalétique, emballages.`,
-    price: 'À partir de 189€',
-    duration: '7 à 10 jours',
+Le tout est livré en 7 jours ouvrés, hébergement inclus la première année, avec une formation à l'administration pour que votre équipe puisse gérer le contenu en toute autonomie.`,
+    price: 'À partir de 149€',
+    duration: '7 jours ouvrés',
     features: [
-      'Logo en plusieurs déclinaisons',
-      'Palette de couleurs',
-      'Sélection typographique',
-      'Charte graphique complète',
-      'Versions couleur, N&B et monochrome',
-      'Fichiers vectoriels (SVG, AI)',
-      'Formats web et print',
-      'Guide d\'utilisation de la marque',
+      'Design personnalisé aux couleurs de l\'association',
+      'Responsive mobile & tablette',
+      'Page d\'accueil + présentation + contact',
+      'Formulaire d\'adhésion en ligne',
+      'Page actualités / événements',
+      'Optimisation SEO local',
+      'Certificat SSL inclus',
+      'Conformité RGPD',
     ],
     included: [
-      '3 propositions de logo',
-      '2 rounds de révisions',
-      'Livraison de tous les fichiers sources',
-      'Manuel d\'identité visuelle',
+      'Jusqu\'à 4 pages',
+      '1 révision incluse',
+      'Hébergement offert 1 an',
+      'Formation à l\'administration',
       'Support technique 30 jours post-livraison',
     ],
     process: [
-      { step: 'Brief créatif', desc: 'Échange approfondi sur vos valeurs, votre clientèle et vos références visuelles.' },
-      { step: 'Recherche & Inspiration', desc: 'Analyse de votre marché et exploration des directions créatives.' },
-      { step: 'Propositions', desc: 'Présentation de 3 propositions de logo avec rationale créatif.' },
-      { step: 'Raffinement', desc: 'Ajustements selon vos retours jusqu\'à validation finale.' },
-      { step: 'Livraison', desc: 'Livraison de tous les fichiers + charte graphique complète.' },
+      { step: 'Échange initial', desc: 'Découverte de votre association, vos besoins et votre audience cible.' },
+      { step: 'Maquette', desc: 'Proposition visuelle rapide pour validation avant développement.' },
+      { step: 'Développement', desc: 'Intégration du design, du contenu et des fonctionnalités.' },
+      { step: 'Validation', desc: 'Relecture et ajustements selon vos retours.' },
+      { step: 'Mise en ligne', desc: 'Déploiement sur votre domaine avec configuration SSL.' },
     ],
     faq: [
-      { q: 'Que comprend exactement la charte graphique ?', a: 'Logo, couleurs (codes Pantone, CMJN, RVB, HEX), typographies, exemples d\'utilisation et règles à respecter.' },
-      { q: 'Est-ce que j\'ai les droits sur mon logo ?', a: 'Oui, à 100%. Une fois livré et payé, le logo vous appartient entièrement.' },
-      { q: 'Pouvez-vous aussi créer mes supports de communication ?', a: 'Oui, nous créons affiches, flyers, cartes de visite, bannières réseaux sociaux et autres supports.' },
+      { q: 'L\'offre est-elle éligible aux subventions associatives ?', a: 'Nous pouvons fournir toutes les pièces justificatives nécessaires à votre demande de subvention numérique.' },
+      { q: 'Pouvons-nous gérer le contenu nous-mêmes ?', a: 'Oui, nous intégrons une interface d\'administration simple et vous formons à son utilisation.' },
+      { q: 'L\'hébergement est-il vraiment inclus ?', a: 'Oui, l\'hébergement est offert la première année. À partir de la deuxième année, un abonnement maintenance à partir de 29€/mois prend le relais.' },
     ],
-    cta: 'Créer mon identité visuelle',
+    cta: 'Créer le site de votre association',
   },
   'marketing-digital': {
     title: 'Marketing Digital',
@@ -262,16 +262,15 @@ Nous suivons les performances à l'aide d'outils d'analyse et vous fournissons d
       'Audit SEO complet',
       'Optimisation on-page & technique',
       'Création de contenu optimisé',
-      'Gestion réseaux sociaux',
       'Campagnes emailing',
       'Google Ads (optionnel)',
-      'Reporting mensuel',
+      'Suivi des résultats',
       'Conseil stratégique',
     ],
     included: [
       'Audit initial offert',
       'Stratégie personnalisée',
-      'Rapport mensuel',
+      'Suivi des résultats mensuel',
       'Point stratégique mensuel',
       'Accès aux outils d\'analyse',
     ],
@@ -339,8 +338,10 @@ Nous surveillons également les performances de votre site : temps de chargement
 }
 
 export async function generateStaticParams() {
-  return Object.keys(services).map(slug => ({ slug }))
+  return Object.keys(services).map((slug) => ({ slug }))
 }
+
+export const dynamic = 'force-static'
 
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
   const service = services[params.slug]
@@ -370,6 +371,7 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
             <span>⏱ Délai : {service.duration}</span>
             {service.price !== 'Sur devis' && <span>💰 {service.price}</span>}
           </div>
+          <p className="mt-3 text-xs text-white/40 max-w-xl">Délai indicatif en jours ouvrés. Stackup Agency se réserve le droit de prolonger ce délai de 20 jours ouvrés maximum en cas de forte demande ou d&apos;imprévu, avec notification préalable.</p>
         </div>
       </section>
 

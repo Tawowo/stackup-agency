@@ -114,7 +114,7 @@ export default function Navbar() {
           </div>
 
           {/* Mobile controls */}
-          <div className="flex lg:hidden items-center gap-1">
+          <div className="flex lg:hidden items-center gap-1 relative z-[60]">
             <button
               onClick={toggleDark}
               className={`p-2.5 min-w-[44px] min-h-[44px] flex items-center justify-center transition-colors ${scrolled ? 'text-gray-700 dark:text-white' : 'text-[#1E3A5F]'}`}

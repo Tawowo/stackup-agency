@@ -92,7 +92,12 @@ export default function PolitiqueConfidentialite() {
           </section>
 
           <section>
-            <h2>11. Droit de réclamation</h2>
+            <h2>11. Délais de livraison</h2>
+            <p>Les délais de livraison communiqués lors de la commande sont des délais indicatifs en jours ouvrés. Stackup Agency s&apos;engage à respecter ces délais dans la mesure du possible et à informer le client par email en cas de prolongation nécessaire. Conformément aux conditions générales de vente, le délai peut être prolongé de 20 jours ouvrés maximum en cas de forte demande ou d&apos;imprévu, avec notification préalable au client.</p>
+          </section>
+
+          <section>
+            <h2>12. Droit de réclamation</h2>
             <p>Si vous estimez que le traitement de vos données personnelles constitue une violation du RGPD, vous avez le droit d&apos;introduire une réclamation auprès de la <strong>CNIL</strong> (Commission Nationale de l&apos;Informatique et des Libertés) : <a href="https://www.cnil.fr" className="text-electric" target="_blank" rel="noopener noreferrer">www.cnil.fr</a></p>
           </section>
         </div>
