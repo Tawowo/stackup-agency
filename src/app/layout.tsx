@@ -91,7 +91,7 @@ export const metadata: Metadata = {
   },
   manifest: '/manifest.json',
   verification: {
-    google: 'À_REMPLIR_APRÈS_GOOGLE_SEARCH_CONSOLE',
+    google: 'xiP5qgErkvFWvBzdgLl2rUGwMVWq0jLJTk0OwUnGrX4',
   },
 }
 
