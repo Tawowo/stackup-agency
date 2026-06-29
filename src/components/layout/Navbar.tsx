@@ -33,6 +33,7 @@ export default function Navbar() {
     { href: '#apropos', label: t.nav.about },
     { href: '#blog', label: t.nav.blog },
     { href: '#contact', label: t.nav.contact },
+    { href: '/parrainage', label: t.nav.parrainage },
   ]
 
   const linkClass = !isHomePage
