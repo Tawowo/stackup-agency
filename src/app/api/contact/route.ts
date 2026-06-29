@@ -11,7 +11,7 @@ export async function POST(req: Request) {
     const { name, email, phone, project, message } = body
 
     const { data, error } = await resend.emails.send({
-      from: 'Stackup Agency <onboarding@resend.dev>',
+      from: 'Stackup Agency <contact@stackup-agency.fr>',
       to: 'contact@stackup-agency.fr',
       replyTo: email,
       subject: `Nouveau contact — ${project || 'Non précisé'} — ${name}`,

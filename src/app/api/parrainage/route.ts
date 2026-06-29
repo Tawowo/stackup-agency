@@ -8,7 +8,7 @@ export async function POST(req: NextRequest) {
     const { parrain_nom, parrain_email, filleul_nom, filleul_email, message } = await req.json()
 
     const { error } = await resend.emails.send({
-      from: 'Stackup Agency <onboarding@resend.dev>',
+      from: 'Stackup Agency <contact@stackup-agency.fr>',
       to: 'contact@stackup-agency.fr',
       subject: `Nouveau parrainage — ${parrain_nom} → ${filleul_nom}`,
       html: `
