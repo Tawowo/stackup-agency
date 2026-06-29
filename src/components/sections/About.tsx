@@ -79,11 +79,19 @@ export default function About() {
               transition={{ duration: 0.6, delay: 0.7 }}
               className="rounded-2xl p-6 bg-gradient-to-br from-navy to-electric"
             >
-              <div className="text-2xl md:text-3xl font-bold leading-tight">
-                Nous transformons vos idées en leviers de croissance.{' '}
-                <span className="text-white">Stratégie.</span>{' '}
-                <span className="text-[#F59E0B]">Design.</span>{' '}
-                <span className="text-[#2D7DD2]">Performance.</span>
+              <div className="flex flex-col gap-6">
+                <p className="text-base md:text-lg text-white/70 font-light tracking-wide">
+                  Nous transformons vos idées en leviers de croissance.
+                </p>
+                <div className="w-12 h-px bg-[#F59E0B]" />
+                <div className="flex flex-col gap-1">
+                  <span className="text-3xl md:text-4xl font-bold tracking-tight text-white">Stratégie.</span>
+                  <span className="text-3xl md:text-4xl font-bold tracking-tight text-[#F59E0B]">Design.</span>
+                  <span className="text-3xl md:text-4xl font-bold tracking-tight text-[#2D7DD2]">Performance.</span>
+                </div>
+                <p className="text-sm tracking-[0.3em] uppercase text-white/40 font-light">
+                  — Stackup Agency
+                </p>
               </div>
             </motion.div>
           </div>
