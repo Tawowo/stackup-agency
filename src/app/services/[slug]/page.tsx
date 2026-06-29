@@ -341,8 +341,6 @@ export async function generateStaticParams() {
   return Object.keys(services).map((slug) => ({ slug }))
 }
 
-export const dynamic = 'force-static'
-
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
   const service = services[params.slug]
   if (!service) return {}
@@ -359,7 +357,7 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
   return (
     <main className="min-h-screen bg-[#F8FAFC] dark:bg-[#0A0F1C]">
       {/* Hero */}
-      <section className="bg-gradient-to-br from-navy via-[#1a3254] to-electric py-24 pt-32">
+      <section className="bg-gradient-to-b from-[#1E3A5F] to-[#0F172A] py-24 pt-32">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <Link href="/#services" className="inline-flex items-center gap-2 text-white/60 hover:text-white text-sm mb-8 transition-colors">
             <ArrowLeft size={16} />

@@ -49,7 +49,7 @@ export const translations = {
           features: [
             'Hébergement inclus',
             'Mises à jour sécurité',
-            'Support email — réponse sous 72h',
+            'Support email — réponse sous 7 jours',
             '1 modification/mois (ajouts de contenu sur devis)',
           ],
         },
@@ -58,7 +58,7 @@ export const translations = {
           price: '44',
           features: [
             'Tout Starter +',
-            'Support prioritaire — réponse sous 48h',
+            'Support prioritaire — réponse sous 5 jours',
             '3 modifications/mois (ajouts de contenu sur devis)',
             'Rapport mensuel de performance',
             'Sauvegarde automatique hebdomadaire',
@@ -69,7 +69,7 @@ export const translations = {
           price: '89',
           features: [
             'Tout Pro +',
-            'Support urgent — réponse sous 16h',
+            'Support urgent — réponse sous 48h',
             'Modifications illimitées (ajouts de contenu sur devis)',
             'Audit SEO mensuel',
             'Tableau de bord statistiques (visiteurs, trafic, conversions)',
@@ -102,13 +102,12 @@ export const translations = {
     },
     about: {
       title: "L'histoire de Stackup",
-      subtitle: 'Une agence née de la détermination.',
+      subtitle: 'Une agence née de la frustration.',
       story: [
-        "Stackup Agency est née d'une conviction simple : trop d'entrepreneurs talentueux abandonnent leurs projets faute d'un site web digne de ce nom.",
-        "Notre fondateur a vu autour de lui des commerçants, restaurateurs et créateurs se battre chaque jour sans outil digital adapté — soit parce que les agences classiques étaient trop chères, soit parce qu'ils ne savaient pas par où commencer.",
-        "La réponse, c'est Stackup. Des sites performants, des systèmes de gestion sur mesure, un accompagnement humain — à des prix accessibles aux vrais bâtisseurs. Pas les grands groupes. Ceux qui construisent vraiment, avec leurs mains et leurs convictions.",
-        "Aujourd'hui, Stackup Agency grandit. L'objectif est clair : devenir le partenaire digital de référence pour les entrepreneurs qui méritent mieux que des solutions génériques.",
-        "Chaque projet est traité comme s'il était le nôtre. Parce que votre réussite, c'est la nôtre.",
+        "Stackup Agency n'est pas née dans un incubateur ni financée par des fonds d'investissement. Elle est née d'une frustration — celle de voir des entrepreneurs talentueux, des artisans passionnés, des commerçants ambitieux, tous freinés par la même barrière : l'accès à un digital de qualité.",
+        "Notre équipe a choisi de partir de zéro. Pas de template préfabriqué, pas de solution générique. Nous avons passé des centaines d'heures à apprendre, à coder, à tout déconstruire pour mieux reconstruire. Le premier projet — un système de gestion complet pour un restaurant local — nous a pris plus de 100 heures. Mais il a tout prouvé : avec les bonnes méthodes, on peut livrer une qualité d'agence parisienne à des prix accessibles, depuis n'importe où en France.",
+        "Aujourd'hui, Stackup Agency a une ambition claire et assumée : devenir le partenaire digital de référence pour les entrepreneurs qui méritent mieux. Pas dans 10 ans. Maintenant. Nous construisons une infrastructure scalable, des processus industrialisés, une équipe qui grandit — avec un seul objectif : que chaque client, qu'il soit restaurateur, artisan ou e-commerçant, ait accès aux mêmes outils que les grandes entreprises. Sans les tarifs des grandes agences.",
+        "Ce que nous faisons aujourd'hui pour des centaines d'euros, d'autres le facturent des milliers. Ce n'est pas de la modestie — c'est une stratégie. Nous voulons d'abord prouver, puis scaler. Et nous sommes convaincus que les meilleurs clients ne cherchent pas le moins cher. Ils cherchent le meilleur rapport qualité/vision/exécution. C'est exactement ce que nous offrons.",
       ],
       stats: [
         { value: '2026', label: 'Fondation' },
@@ -245,7 +244,7 @@ export const translations = {
           features: [
             'Hosting included',
             'Security updates',
-            'Email support — reply within 72h',
+            'Email support — reply within 7 days',
             '1 edit/month (content additions on quote)',
           ],
         },
@@ -254,7 +253,7 @@ export const translations = {
           price: '44',
           features: [
             'Everything in Starter +',
-            'Priority support — reply within 48h',
+            'Priority support — reply within 5 days',
             '3 edits/month (content additions on quote)',
             'Monthly performance report',
             'Automatic weekly backup',
@@ -265,7 +264,7 @@ export const translations = {
           price: '89',
           features: [
             'Everything in Pro +',
-            'Urgent support — reply within 16h',
+            'Urgent support — reply within 48h',
             'Unlimited edits (content additions on quote)',
             'Monthly SEO audit',
             'Statistics dashboard (visitors, traffic, conversions)',

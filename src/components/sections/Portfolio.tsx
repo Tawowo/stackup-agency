@@ -5,7 +5,7 @@ import { ExternalLink, ArrowRight } from 'lucide-react'
 import Link from 'next/link'
 import { realisations } from '@/lib/realisations'
 
-const filters = ['Tous', 'Site vitrine', 'E-commerce', 'Système de gestion', 'Design']
+const filters = ['Tous', 'Site vitrine', 'E-commerce', 'Système de gestion']
 
 export default function Portfolio() {
   const ref = useRef(null)

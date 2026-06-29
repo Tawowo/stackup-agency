@@ -23,7 +23,7 @@ const plans: Record<string, PlanData> = {
     tagline: 'L\'essentiel pour démarrer sereinement.',
     description: `Le plan Starter est conçu pour les indépendants et les petites entreprises qui ont besoin d'une maintenance de base fiable. Il garantit que votre site reste en ligne, sécurisé et fonctionnel.
 
-Ce plan convient parfaitement si vous venez de lancer votre site et que vous souhaitez une solution d'hébergement et de maintenance sans surprise. Vous bénéficiez d'un hébergement haute disponibilité inclus, des mises à jour de sécurité régulières et d'un support par email avec réponse garantie sous 72h.
+Ce plan convient parfaitement si vous venez de lancer votre site et que vous souhaitez une solution d'hébergement et de maintenance sans surprise. Vous bénéficiez d'un hébergement haute disponibilité inclus, des mises à jour de sécurité régulières et d'un support par email avec réponse garantie sous 7 jours ouvrés.
 
 Le plan Starter inclut également une modification par mois — idéal pour mettre à jour vos horaires, changer une photo ou modifier un tarif.
 
@@ -32,7 +32,7 @@ C'est le point d'entrée idéal pour professionnaliser votre présence en ligne.
     features: [
       'Hébergement haute disponibilité inclus',
       'Mises à jour de sécurité régulières',
-      'Support email — réponse sous 72h',
+      'Support email — réponse sous 7 jours',
       '1 modification de contenu par mois (ajouts de contenu sur devis)',
       'Certificat SSL inclus',
       'Monitoring basique de disponibilité',
@@ -54,9 +54,9 @@ C'est le point d'entrée idéal pour professionnaliser votre présence en ligne.
     compare: [
       { feature: 'Hébergement inclus', starter: true, pro: true, premium: true },
       { feature: 'Mises à jour sécurité', starter: true, pro: true, premium: true },
-      { feature: 'Support email 72h', starter: true, pro: true, premium: true },
-      { feature: 'Support prioritaire 48h', starter: false, pro: true, premium: true },
-      { feature: 'Support urgent 16h', starter: false, pro: false, premium: true },
+      { feature: 'Support email 7 jours', starter: true, pro: true, premium: true },
+      { feature: 'Support prioritaire 5 jours', starter: false, pro: true, premium: true },
+      { feature: 'Support urgent 48h', starter: false, pro: false, premium: true },
       { feature: 'Modifications illimitées', starter: false, pro: false, premium: true },
       { feature: 'Rapport mensuel de performance', starter: false, pro: true, premium: true },
       { feature: 'Sauvegarde automatique hebdomadaire', starter: false, pro: true, premium: true },
@@ -72,7 +72,7 @@ C'est le point d'entrée idéal pour professionnaliser votre présence en ligne.
     tagline: 'Le plan recommandé pour les entreprises actives.',
     description: `Le plan Pro est notre offre la plus populaire. Il combine l'essentiel de la maintenance avec un niveau de support et de service qui permet à votre site de rester performant et à jour en permanence.
 
-Avec le support prioritaire sous 48h, vos demandes sont traitées en priorité. Que vous ayez un bug à corriger, une question technique ou une mise à jour à effectuer, nous intervenons rapidement. Les 3 modifications mensuelles incluses couvrent la grande majorité des besoins courants.
+Avec le support prioritaire sous 5 jours ouvrés, vos demandes sont traitées en priorité. Que vous ayez un bug à corriger, une question technique ou une mise à jour à effectuer, nous intervenons rapidement. Les 3 modifications mensuelles incluses couvrent la grande majorité des besoins courants.
 
 Le rapport mensuel de performance vous donne une visibilité claire sur ce qui a été fait sur votre site, comment il performe et s'il y a des points à améliorer.
 
@@ -80,14 +80,14 @@ Les sauvegardes automatiques hebdomadaires vous offrent une tranquillité d'espr
     audience: 'Recommandé pour les PME, commerces et prestataires avec un site régulièrement mis à jour.',
     features: [
       'Tout le plan Starter +',
-      'Support prioritaire — réponse sous 48h',
+      'Support prioritaire — réponse sous 5 jours',
       '3 modifications de contenu par mois (ajouts de contenu sur devis)',
       'Rapport mensuel de performance',
       'Sauvegarde automatique hebdomadaire',
       'Monitoring avancé de disponibilité',
     ],
     notIncluded: [
-      'Support urgent sous 16h',
+      'Support urgent sous 48h',
       'Modifications illimitées',
       'Audit SEO mensuel',
       'Tableau de bord statistiques',
@@ -95,16 +95,16 @@ Les sauvegardes automatiques hebdomadaires vous offrent une tranquillité d'espr
     ],
     faq: [
       { q: 'Que comprend le rapport mensuel de performance ?', a: 'Le rapport inclut : disponibilité du site, interventions effectuées, mises à jour réalisées et recommandations pour le mois suivant.' },
-      { q: 'Qu\'est-ce que le support prioritaire ?', a: 'Votre demande est traitée avant les demandes des plans inférieurs. Réponse garantie sous 48h ouvrées.' },
+      { q: 'Qu\'est-ce que le support prioritaire ?', a: 'Votre demande est traitée avant les demandes des plans inférieurs. Réponse garantie sous 5 jours ouvrés.' },
       { q: 'Puis-je utiliser mes 3 modifications en une fois ?', a: 'Oui, vous pouvez regrouper vos 3 modifications dans la même semaine si besoin.' },
       { q: 'Les sauvegardes sont-elles automatiques ?', a: 'Oui, une sauvegarde complète de votre site est effectuée automatiquement chaque semaine.' },
     ],
     compare: [
       { feature: 'Hébergement inclus', starter: true, pro: true, premium: true },
       { feature: 'Mises à jour sécurité', starter: true, pro: true, premium: true },
-      { feature: 'Support email 72h', starter: true, pro: true, premium: true },
-      { feature: 'Support prioritaire 48h', starter: false, pro: true, premium: true },
-      { feature: 'Support urgent 16h', starter: false, pro: false, premium: true },
+      { feature: 'Support email 7 jours', starter: true, pro: true, premium: true },
+      { feature: 'Support prioritaire 5 jours', starter: false, pro: true, premium: true },
+      { feature: 'Support urgent 48h', starter: false, pro: false, premium: true },
       { feature: 'Modifications illimitées', starter: false, pro: false, premium: true },
       { feature: 'Rapport mensuel de performance', starter: false, pro: true, premium: true },
       { feature: 'Sauvegarde automatique hebdomadaire', starter: false, pro: true, premium: true },
@@ -130,7 +130,7 @@ L'appel stratégie de 30 minutes par mois est votre ligne directe avec notre exp
     audience: 'Idéal pour les entreprises exigeantes, les e-commerces actifs et ceux qui veulent un partenaire digital complet.',
     features: [
       'Tout le plan Pro +',
-      'Support urgent — réponse sous 16h',
+      'Support urgent — réponse sous 48h',
       'Modifications de contenu illimitées (ajouts de contenu sur devis)',
       'Audit SEO mensuel',
       'Tableau de bord statistiques (visiteurs, trafic, conversions)',
@@ -152,9 +152,9 @@ L'appel stratégie de 30 minutes par mois est votre ligne directe avec notre exp
     compare: [
       { feature: 'Hébergement inclus', starter: true, pro: true, premium: true },
       { feature: 'Mises à jour sécurité', starter: true, pro: true, premium: true },
-      { feature: 'Support email 72h', starter: true, pro: true, premium: true },
-      { feature: 'Support prioritaire 48h', starter: false, pro: true, premium: true },
-      { feature: 'Support urgent 16h', starter: false, pro: false, premium: true },
+      { feature: 'Support email 7 jours', starter: true, pro: true, premium: true },
+      { feature: 'Support prioritaire 5 jours', starter: false, pro: true, premium: true },
+      { feature: 'Support urgent 48h', starter: false, pro: false, premium: true },
       { feature: 'Modifications illimitées', starter: false, pro: false, premium: true },
       { feature: 'Rapport mensuel de performance', starter: false, pro: true, premium: true },
       { feature: 'Sauvegarde automatique hebdomadaire', starter: false, pro: true, premium: true },
@@ -188,7 +188,7 @@ export default function TarifPage({ params }: { params: { plan: string } }) {
   return (
     <main className="min-h-screen bg-[#F8FAFC] dark:bg-[#0A0F1C]">
       {/* Hero */}
-      <section className={`bg-gradient-to-br ${plan.color} py-24 pt-32`}>
+      <section className="bg-gradient-to-b from-[#1E3A5F] to-[#0F172A] py-24 pt-32">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <Link href="/#tarifs" className="inline-flex items-center gap-2 text-white/60 hover:text-white text-sm mb-8 transition-colors">
             <ArrowLeft size={16} />
