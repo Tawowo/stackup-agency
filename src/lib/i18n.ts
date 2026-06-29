@@ -10,7 +10,7 @@ export const translations = {
       blog: 'Blog',
       contact: 'Contact',
       cta: 'Prendre RDV',
-      parrainage: 'Parrainage 🎁',
+      parrainage: 'Parrainage',
     },
     hero: {
       badge: 'Agence digitale nouvelle génération',
@@ -208,7 +208,7 @@ export const translations = {
       blog: 'Blog',
       contact: 'Contact',
       cta: 'Book a call',
-      parrainage: 'Referral 🎁',
+      parrainage: 'Referral',
     },
     hero: {
       badge: 'Next-generation digital agency',
