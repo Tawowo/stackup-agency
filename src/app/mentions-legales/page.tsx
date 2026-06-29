@@ -4,7 +4,7 @@ import { ArrowLeft } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Mentions légales — Stackup Agency',
-  description: 'Mentions légales du site stackup-agency.vercel.app',
+  description: 'Mentions légales du site stackup-agency.fr',
 }
 
 export default function MentionsLegales() {
@@ -19,7 +19,7 @@ export default function MentionsLegales() {
         <div className="prose dark:prose-invert prose-sm max-w-none space-y-10">
           <section>
             <h2>1. Éditeur du site</h2>
-            <p>Le site <strong>stackup-agency.vercel.app</strong> est édité par :</p>
+            <p>Le site <strong>stackup-agency.fr</strong> est édité par :</p>
             <ul>
               <li><strong>Raison sociale :</strong> Stackup Agency (micro-entreprise)</li>
               <li><strong>SIRET :</strong> À compléter lors de l&apos;immatriculation</li>

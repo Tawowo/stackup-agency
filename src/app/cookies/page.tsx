@@ -4,7 +4,7 @@ import { ArrowLeft } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Politique de cookies — Stackup Agency',
-  description: 'Informations sur les cookies utilisés par stackup-agency.vercel.app',
+  description: 'Informations sur les cookies utilisés par stackup-agency.fr',
 }
 
 export default function Cookies() {

@@ -15,7 +15,7 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://stackup-agency.vercel.app'),
+  metadataBase: new URL('https://stackup-agency.fr'),
   title: {
     default: 'Stackup Agency — Agence Web & Digital | Création Site Internet',
     template: '%s | Stackup Agency',
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     'agence web jeune',
     'stackup agency',
   ],
-  authors: [{ name: 'Stackup Agency', url: 'https://stackup-agency.vercel.app' }],
+  authors: [{ name: 'Stackup Agency', url: 'https://stackup-agency.fr' }],
   creator: 'Stackup Agency',
   publisher: 'Stackup Agency',
   robots: {
@@ -57,7 +57,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'fr_FR',
-    url: 'https://stackup-agency.vercel.app',
+    url: 'https://stackup-agency.fr',
     siteName: 'Stackup Agency',
     title: 'Stackup Agency — Agence Web & Digital | Création Site Internet',
     description:
@@ -78,10 +78,10 @@ export const metadata: Metadata = {
     images: ['/og-image.png'],
   },
   alternates: {
-    canonical: 'https://stackup-agency.vercel.app',
+    canonical: 'https://stackup-agency.fr',
     languages: {
-      'fr-FR': 'https://stackup-agency.vercel.app',
-      'en-US': 'https://stackup-agency.vercel.app/en',
+      'fr-FR': 'https://stackup-agency.fr',
+      'en-US': 'https://stackup-agency.fr/en',
     },
   },
   icons: {
@@ -101,7 +101,7 @@ const schemaOrg = {
   name: 'Stackup Agency',
   description:
     'Agence digitale spécialisée en création de sites web, applications et systèmes de gestion sur mesure',
-  url: 'https://stackup-agency.vercel.app',
+  url: 'https://stackup-agency.fr',
   telephone: '+33764020898',
   email: 'contact@stackup-agency.fr',
   address: {
@@ -111,7 +111,7 @@ const schemaOrg = {
   },
   priceRange: '€€',
   serviceType: ['Création de site web', 'Développement web', 'Marketing digital'],
-  sameAs: ['https://stackup-agency.vercel.app'],
+  sameAs: ['https://stackup-agency.fr'],
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
