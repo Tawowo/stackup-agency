@@ -59,9 +59,9 @@ export default function Footer() {
             <p className="text-white/50 text-sm mb-6 max-w-xs leading-relaxed">{t.footer.tagline}</p>
             <div className="flex gap-3">
               {[
-                { Icon: LinkedinIcon, href: '#', label: 'LinkedIn' },
-                { Icon: InstagramIcon, href: '#', label: 'Instagram' },
-                { Icon: GithubIcon, href: '#', label: 'GitHub' },
+                { Icon: LinkedinIcon, href: 'https://linkedin.com/company/stackup-agency', label: 'LinkedIn' },
+                { Icon: InstagramIcon, href: 'https://instagram.com/stackup.agency', label: 'Instagram' },
+                { Icon: GithubIcon, href: 'https://github.com/stackup-agency', label: 'GitHub' },
               ].map(({ Icon, href, label }) => (
                 <a key={label} href={href} aria-label={label}
                   className="w-10 h-10 rounded-xl bg-white/10 hover:bg-electric flex items-center justify-center transition-colors">
