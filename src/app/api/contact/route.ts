@@ -6,9 +6,11 @@ const resend = new Resend('re_fKNfkhxL_88xFyednhBqBy24b43Vh29xV')
 export async function POST(req: Request) {
   try {
     const body = await req.json()
+    console.log('Body reçu:', JSON.stringify(body))
+
     const { name, email, phone, project, message } = body
 
-    const { error } = await resend.emails.send({
+    const { data, error } = await resend.emails.send({
       from: 'Stackup Agency <onboarding@resend.dev>',
       to: 'contact@stackup-agency.fr',
       replyTo: email,
@@ -24,13 +26,14 @@ export async function POST(req: Request) {
     })
 
     if (error) {
-      console.error('Resend error:', error)
+      console.error('Resend error détaillé:', JSON.stringify(error))
       return NextResponse.json({ error }, { status: 400 })
     }
 
+    console.log('Email envoyé avec succès, id:', data?.id)
     return NextResponse.json({ ok: true })
   } catch (err) {
-    console.error('Contact error:', err)
+    console.error('Contact error (catch):', String(err))
     return NextResponse.json({ error: String(err) }, { status: 500 })
   }
 }
