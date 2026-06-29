@@ -27,12 +27,14 @@ export default function Navbar() {
     return () => { document.body.style.overflow = '' }
   }, [open])
 
+  const p = (anchor: string) => isHomePage ? anchor : `/${anchor}`
+
   const links = [
-    { href: '#services', label: t.nav.services },
-    { href: '#realisations', label: t.nav.portfolio },
-    { href: '#apropos', label: t.nav.about },
-    { href: '#blog', label: t.nav.blog },
-    { href: '#contact', label: t.nav.contact },
+    { href: p('#services'), label: t.nav.services },
+    { href: p('#realisations'), label: t.nav.portfolio },
+    { href: p('#apropos'), label: t.nav.about },
+    { href: p('#blog'), label: t.nav.blog },
+    { href: p('#contact'), label: t.nav.contact },
     { href: '/parrainage', label: t.nav.parrainage },
   ]
 
@@ -125,7 +127,7 @@ export default function Navbar() {
                   {dark ? <Sun size={18} /> : <Moon size={18} />}
                 </button>
                 <a
-                  href="#contact"
+                  href={p('#contact')}
                   className="px-5 py-2.5 bg-gold hover:bg-amber-500 text-white text-sm font-semibold rounded-xl shadow-lg shadow-gold/30 hover:shadow-gold/50 transition-all hover:-translate-y-0.5"
                 >
                   {t.nav.cta}
@@ -190,12 +192,14 @@ export default function Navbar() {
                   {lang === 'fr' ? 'EN' : 'FR'}
                 </button>
                 <a
-                  href="#contact"
+                  href={p('#contact')}
                   onClick={() => {
                     setOpen(false)
-                    setTimeout(() => {
-                      document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })
-                    }, 100)
+                    if (isHomePage) {
+                      setTimeout(() => {
+                        document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })
+                      }, 100)
+                    }
                   }}
                   className="flex-1 py-3 text-center bg-gold text-white text-sm font-semibold rounded-xl min-h-[44px] flex items-center justify-center"
                 >
