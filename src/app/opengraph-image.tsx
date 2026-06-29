@@ -85,7 +85,7 @@ export default async function Image() {
           <span>·</span>
           <span>À partir de 490€</span>
           <span>·</span>
-          <span>contact@stackup.agency</span>
+          <span>contact@stackup-agency.fr</span>
         </div>
       </div>
     ),

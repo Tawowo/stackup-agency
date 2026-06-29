@@ -127,7 +127,7 @@ export default async function RealisationPage({ params }: { params: Promise<{ sl
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="mailto:contact@stackup.agency"
+              href="mailto:contact@stackup-agency.fr"
               className="inline-flex items-center justify-center gap-2 px-8 py-4 text-white font-semibold rounded-xl transition-all hover:scale-105 min-h-[52px]"
               style={{ background: r.accent }}
             >

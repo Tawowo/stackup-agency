@@ -84,6 +84,12 @@ export const metadata: Metadata = {
       'en-US': 'https://stackup-agency.vercel.app/en',
     },
   },
+  icons: {
+    icon: '/logo-icon.png',
+    shortcut: '/logo-icon.png',
+    apple: '/logo-icon.png',
+  },
+  manifest: '/manifest.json',
   verification: {
     google: 'À_REMPLIR_APRÈS_GOOGLE_SEARCH_CONSOLE',
   },
@@ -97,7 +103,7 @@ const schemaOrg = {
     'Agence digitale spécialisée en création de sites web, applications et systèmes de gestion sur mesure',
   url: 'https://stackup-agency.vercel.app',
   telephone: '+33764020898',
-  email: 'contact@stackup.agency',
+  email: 'contact@stackup-agency.fr',
   address: {
     '@type': 'PostalAddress',
     addressRegion: 'Indre-et-Loire',

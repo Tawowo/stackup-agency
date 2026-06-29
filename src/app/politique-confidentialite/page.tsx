@@ -20,7 +20,7 @@ export default function PolitiqueConfidentialite() {
         <div className="prose dark:prose-invert prose-sm max-w-none space-y-10">
           <section>
             <h2>1. Responsable du traitement</h2>
-            <p>Stackup Agency (micro-entreprise), Indre-et-Loire (37), France — <a href="mailto:contact@stackup.agency" className="text-electric">contact@stackup.agency</a></p>
+            <p>Stackup Agency (micro-entreprise), Indre-et-Loire (37), France — <a href="mailto:contact@stackup-agency.fr" className="text-electric">contact@stackup-agency.fr</a></p>
           </section>
 
           <section>
@@ -82,7 +82,7 @@ export default function PolitiqueConfidentialite() {
 
           <section>
             <h2>9. Exercer vos droits</h2>
-            <p>Pour exercer vos droits ou pour toute question relative au traitement de vos données personnelles, contactez-nous à : <a href="mailto:contact@stackup.agency" className="text-electric">contact@stackup.agency</a></p>
+            <p>Pour exercer vos droits ou pour toute question relative au traitement de vos données personnelles, contactez-nous à : <a href="mailto:contact@stackup-agency.fr" className="text-electric">contact@stackup-agency.fr</a></p>
             <p>Nous nous engageons à répondre à votre demande dans un délai d&apos;un mois.</p>
           </section>
 

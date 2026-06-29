@@ -24,7 +24,7 @@ export default function MentionsLegales() {
               <li><strong>Raison sociale :</strong> Stackup Agency (micro-entreprise)</li>
               <li><strong>SIRET :</strong> À compléter lors de l&apos;immatriculation</li>
               <li><strong>Adresse :</strong> Indre-et-Loire (37), France</li>
-              <li><strong>Email :</strong> contact@stackup.agency</li>
+              <li><strong>Email :</strong> contact@stackup-agency.fr</li>
               <li><strong>Téléphone :</strong> +33 7 64 02 08 98</li>
             </ul>
           </section>
@@ -80,7 +80,7 @@ export default function MentionsLegales() {
 
           <section>
             <h2>9. Contact</h2>
-            <p>Pour toute question relative au site ou à son contenu : <a href="mailto:contact@stackup.agency" className="text-electric">contact@stackup.agency</a></p>
+            <p>Pour toute question relative au site ou à son contenu : <a href="mailto:contact@stackup-agency.fr" className="text-electric">contact@stackup-agency.fr</a></p>
           </section>
         </div>
       </div>

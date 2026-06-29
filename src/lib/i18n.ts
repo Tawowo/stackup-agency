@@ -164,7 +164,7 @@ export const translations = {
         },
         {
           q: 'Comment se passe le premier RDV ?',
-          a: "Envoyez-nous un email à contact@stackup.agency en précisant vos disponibilités. Nous revenons vers vous sous 72h pour organiser un échange gratuit et sans engagement.",
+          a: "Envoyez-nous un email à contact@stackup-agency.fr en précisant vos disponibilités. Nous revenons vers vous sous 72h pour organiser un échange gratuit et sans engagement.",
         },
       ],
     },
@@ -184,7 +184,7 @@ export const translations = {
         error: "Erreur lors de l'envoi. Réessayez ou contactez-nous par email.",
       },
       info: {
-        email: 'contact@stackup.agency',
+        email: 'contact@stackup-agency.fr',
         calendly: 'Planifier un appel',
       },
     },
@@ -361,7 +361,7 @@ export const translations = {
         },
         {
           q: 'How does the first call work?',
-          a: "Send us an email at contact@stackup.agency with your availability. We'll get back to you within 72h to arrange a free, no-commitment call.",
+          a: "Send us an email at contact@stackup-agency.fr with your availability. We'll get back to you within 72h to arrange a free, no-commitment call.",
         },
       ],
     },
@@ -381,7 +381,7 @@ export const translations = {
         error: 'Error sending message. Please try again or email us directly.',
       },
       info: {
-        email: 'contact@stackup.agency',
+        email: 'contact@stackup-agency.fr',
         calendly: 'Schedule a call',
       },
     },

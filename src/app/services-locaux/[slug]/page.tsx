@@ -482,11 +482,11 @@ export default async function ServicesLocauxPage({ params }: { params: Promise<{
           <p className="text-white/60 mb-10">Répondez en 72h garanties. Consultation initiale gratuite et sans engagement.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="mailto:contact@stackup.agency"
+              href="mailto:contact@stackup-agency.fr"
               className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#F59E0B] hover:bg-amber-500 text-white font-semibold rounded-xl transition-all hover:scale-105 shadow-lg shadow-amber-500/25"
             >
               <Mail size={18} />
-              contact@stackup.agency
+              contact@stackup-agency.fr
             </a>
             <Link
               href="/"

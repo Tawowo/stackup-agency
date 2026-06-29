@@ -1,41 +1,32 @@
 import { NextRequest, NextResponse } from 'next/server'
+import { Resend } from 'resend'
+
+const resend = new Resend('re_fKNfkhxL_88xFyednhBqBy24b43Vh29xV')
 
 export async function POST(req: NextRequest) {
   try {
     const { name, email, phone, project, message } = await req.json()
 
-    const accountSid = process.env.TWILIO_ACCOUNT_SID
-    const authToken = process.env.TWILIO_AUTH_TOKEN
-    const fromNumber = process.env.TWILIO_PHONE_NUMBER
-    const toNumber = '+33764020898'
+    const { error } = await resend.emails.send({
+      from: 'Stackup Agency <contact@stackup-agency.fr>',
+      to: 'contact@stackup-agency.fr',
+      subject: `Nouveau contact — ${project || 'Non précisé'} — ${name}`,
+      html: `
+        <h2>Nouveau message depuis stackup-agency.fr</h2>
+        <p><strong>Nom :</strong> ${name}</p>
+        <p><strong>Email :</strong> ${email}</p>
+        <p><strong>Téléphone :</strong> ${phone || 'Non renseigné'}</p>
+        <p><strong>Type de projet :</strong> ${project || 'Non précisé'}</p>
+        <p><strong>Message :</strong><br>${message}</p>
+      `,
+    })
 
-    const smsBody = `🔔 Nouveau contact Stackup Agency\n\nNom: ${name}\nEmail: ${email}\nTél: ${phone || 'Non renseigné'}\nProjet: ${project || 'Non précisé'}\n\nMessage: ${message}`
-
-    if (accountSid && authToken && fromNumber) {
-      const twilioUrl = `https://api.twilio.com/2010-04-01/Accounts/${accountSid}/Messages.json`
-      const credentials = Buffer.from(`${accountSid}:${authToken}`).toString('base64')
-
-      const twilioRes = await fetch(twilioUrl, {
-        method: 'POST',
-        headers: {
-          'Authorization': `Basic ${credentials}`,
-          'Content-Type': 'application/x-www-form-urlencoded',
-        },
-        body: new URLSearchParams({
-          From: fromNumber,
-          To: toNumber,
-          Body: smsBody,
-        }),
-      })
-
-      if (!twilioRes.ok) {
-        const err = await twilioRes.text()
-        console.error('Twilio error:', err)
-      }
-    } else {
-      console.log('Twilio not configured. Would send SMS:', smsBody)
+    if (error) {
+      console.error('Resend error:', error)
+      return NextResponse.json({ error: 'Email send failed' }, { status: 500 })
     }
 
+    console.log(`Contact email sent: ${name} <${email}> — ${project}`)
     return NextResponse.json({ success: true })
   } catch (error) {
     console.error('Contact API error:', error)

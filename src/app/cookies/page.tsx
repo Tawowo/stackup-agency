@@ -68,7 +68,7 @@ export default function Cookies() {
 
           <section>
             <h2>5. Contact</h2>
-            <p>Pour toute question relative aux cookies : <a href="mailto:contact@stackup.agency" className="text-electric">contact@stackup.agency</a></p>
+            <p>Pour toute question relative aux cookies : <a href="mailto:contact@stackup-agency.fr" className="text-electric">contact@stackup-agency.fr</a></p>
           </section>
         </div>
       </div>

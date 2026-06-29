@@ -142,7 +142,7 @@ export default function Contact() {
               <ul className="space-y-3 text-sm text-foreground/70 dark:text-white/60">
                 <li className="flex items-center gap-2">
                   <span className="text-base">📧</span>
-                  <a href="mailto:contact@stackup.agency" className="text-electric hover:underline font-medium">contact@stackup.agency</a>
+                  <a href="mailto:contact@stackup-agency.fr" className="text-electric hover:underline font-medium">contact@stackup-agency.fr</a>
                 </li>
                 <li className="flex items-center gap-2">
                   <span className="text-base">⏱</span>
