@@ -81,9 +81,9 @@ export default function About() {
             >
               <div className="text-gold text-5xl font-serif leading-none mb-3">&ldquo;</div>
               <p className="text-white font-medium text-lg leading-relaxed mb-3">
-                Nous ne faisons pas des sites web. Nous construisons les fondations digitales de ceux qui changeront leur marché.
+                {t.about.quote}
               </p>
-              <p className="text-white/80 text-sm italic mt-3">&ldquo;Ce que nous faisons aujourd&apos;hui pour des centaines d&apos;euros, d&apos;autres le facturent des milliers. C&apos;est une stratégie, pas de la modestie.&rdquo;</p>
+              <p className="text-white/80 text-sm italic mt-3">&ldquo;{t.about.quote2}&rdquo;</p>
               <span className="text-white font-semibold text-sm tracking-wide opacity-90 mt-4 block">Stackup Agency</span>
             </motion.div>
           </div>

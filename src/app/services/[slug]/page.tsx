@@ -197,51 +197,6 @@ Nous analysons vos flux de travail, nous concevons l'architecture, nous dévelop
     ],
     cta: 'Discuter de mon projet',
   },
-  'site-association': {
-    title: 'Site Association',
-    subtitle: 'Un site professionnel pour votre association, club ou structure à but non lucratif.',
-    description: `Les associations méritent une présence digitale sérieuse. Trop souvent, faute de budget ou de compétences techniques, les associations se retrouvent avec des sites obsolètes, peu accessibles ou inexistants. Chez Stackup Agency, nous avons créé une offre spécifiquement pensée pour les structures associatives.
-
-Notre offre Site Association permet à votre structure de disposer d'un site web professionnel, moderne et fonctionnel à un tarif adapté aux budgets associatifs. Adhérents, bénévoles, partenaires et donateurs potentiels trouveront toutes les informations dont ils ont besoin.
-
-Nous construisons un site qui présente clairement votre mission, vos activités, vos membres actifs et vos événements à venir. Le formulaire d'adhésion en ligne simplifie le recrutement de nouveaux membres, et la page actualités vous permet de maintenir votre communauté informée.
-
-Optimisé pour les moteurs de recherche et parfaitement adapté aux mobiles, votre site sera facilement trouvable par les personnes qui recherchent une structure comme la vôtre dans votre région.
-
-Le tout est livré en 7 jours ouvrés, hébergement inclus la première année, avec une formation à l'administration pour que votre équipe puisse gérer le contenu en toute autonomie.`,
-    price: 'À partir de 149€',
-    duration: '7 jours ouvrés',
-    features: [
-      'Design personnalisé aux couleurs de l\'association',
-      'Responsive mobile & tablette',
-      'Page d\'accueil + présentation + contact',
-      'Formulaire d\'adhésion en ligne',
-      'Page actualités / événements',
-      'Optimisation SEO local',
-      'Certificat SSL inclus',
-      'Conformité RGPD',
-    ],
-    included: [
-      'Jusqu\'à 4 pages',
-      '1 révision incluse',
-      'Hébergement offert 1 an',
-      'Formation à l\'administration',
-      'Support technique 30 jours post-livraison',
-    ],
-    process: [
-      { step: 'Échange initial', desc: 'Découverte de votre association, vos besoins et votre audience cible.' },
-      { step: 'Maquette', desc: 'Proposition visuelle rapide pour validation avant développement.' },
-      { step: 'Développement', desc: 'Intégration du design, du contenu et des fonctionnalités.' },
-      { step: 'Validation', desc: 'Relecture et ajustements selon vos retours.' },
-      { step: 'Mise en ligne', desc: 'Déploiement sur votre domaine avec configuration SSL.' },
-    ],
-    faq: [
-      { q: 'L\'offre est-elle éligible aux subventions associatives ?', a: 'Nous pouvons fournir toutes les pièces justificatives nécessaires à votre demande de subvention numérique.' },
-      { q: 'Pouvons-nous gérer le contenu nous-mêmes ?', a: 'Oui, nous intégrons une interface d\'administration simple et vous formons à son utilisation.' },
-      { q: 'L\'hébergement est-il vraiment inclus ?', a: 'Oui, l\'hébergement est offert la première année. À partir de la deuxième année, un abonnement maintenance à partir de 29€/mois prend le relais.' },
-    ],
-    cta: 'Créer le site de votre association',
-  },
   'marketing-digital': {
     title: 'Marketing Digital',
     subtitle: 'Faites-vous trouver par vos clients en ligne.',

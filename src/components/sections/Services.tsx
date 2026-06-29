@@ -8,9 +8,9 @@ import Link from 'next/link'
 const serviceData = [
   { icon: Globe,          slug: 'site-vitrine',       color: 'from-blue-500 to-electric',     bg: 'bg-blue-50 dark:bg-blue-900/20',       price: 'À partir de 449€'   },
   { icon: FileText,       slug: 'site-multi-pages',   color: 'from-emerald-500 to-teal-600',  bg: 'bg-emerald-50 dark:bg-emerald-900/20', price: 'À partir de 749€'   },
-  { icon: ShoppingCart,   slug: 'site-ecommerce',     color: 'from-purple-500 to-violet-600', bg: 'bg-purple-50 dark:bg-purple-900/20',   price: 'À partir de 1 147€' },
+  { icon: ShoppingCart,   slug: 'site-ecommerce',     color: 'from-purple-500 to-violet-600', bg: 'bg-purple-50 dark:bg-purple-900/20',   price: 'À partir de 1 647€' },
   { icon: LayoutDashboard,slug: 'systeme-gestion',    color: 'from-electric to-navy',         bg: 'bg-sky-50 dark:bg-sky-900/20',         price: 'À partir de 1 447€' },
-  { icon: Palette,        slug: 'design-branding',    color: 'from-pink-500 to-rose-600',     bg: 'bg-pink-50 dark:bg-pink-900/20',       price: 'À partir de 189€'   },
+  { icon: Palette,        slug: 'site-association',   color: 'from-pink-500 to-rose-600',     bg: 'bg-pink-50 dark:bg-pink-900/20',       price: 'À partir de 149€'   },
   { icon: TrendingUp,     slug: 'marketing-digital',  color: 'from-orange-500 to-amber-600',  bg: 'bg-orange-50 dark:bg-orange-900/20',   price: 'Sur devis'          },
 ]
 

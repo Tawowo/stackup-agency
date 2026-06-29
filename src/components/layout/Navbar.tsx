@@ -6,12 +6,15 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { Sun, Moon } from 'lucide-react'
 import { useLanguage } from '@/contexts/LanguageContext'
 import { useTheme } from '@/contexts/ThemeContext'
+import { usePathname } from 'next/navigation'
 
 export default function Navbar() {
   const { lang, setLang, t } = useLanguage()
   const { dark, toggleDark } = useTheme()
   const [open, setOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+  const pathname = usePathname()
+  const isHomePage = pathname === '/'
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20)
@@ -32,25 +35,29 @@ export default function Navbar() {
     { href: '#contact', label: t.nav.contact },
   ]
 
-  const linkClass = scrolled
+  const linkClass = !isHomePage
+    ? 'text-white hover:text-[#F59E0B]'
+    : scrolled
     ? 'text-gray-900 dark:text-white hover:text-electric dark:hover:text-electric'
     : 'text-[#1E3A5F] hover:text-electric'
 
   const barColor = open
     ? 'bg-white'
-    : scrolled
+    : !isHomePage || scrolled
     ? 'bg-gray-900 dark:bg-white'
     : 'bg-[#1E3A5F]'
+
+  const navBg = !isHomePage
+    ? 'bg-[#1E3A5F]'
+    : scrolled
+    ? 'bg-white/95 dark:bg-gray-900/95 backdrop-blur-md shadow-lg shadow-black/5'
+    : 'bg-transparent'
 
   return (
     <>
       {/* Main navbar — plain nav (no transform) to avoid stacking context issues */}
       <nav
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          scrolled
-            ? 'bg-white/95 dark:bg-gray-900/95 backdrop-blur-md shadow-lg shadow-black/5'
-            : 'bg-transparent'
-        }`}
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${navBg}`}
       >
         <motion.div
           initial={{ y: -80, opacity: 0 }}
@@ -72,10 +79,10 @@ export default function Navbar() {
                 />
                 <div className="flex flex-col leading-tight">
                   <span className={`font-bold text-xl tracking-tight transition-colors ${
-                    scrolled ? 'text-[#1E3A5F] dark:text-white' : 'text-[#1E3A5F]'
+                    !isHomePage ? 'text-white' : scrolled ? 'text-[#1E3A5F] dark:text-white' : 'text-[#1E3A5F]'
                   }`}>Stackup</span>
                   <span className={`font-light text-xs tracking-[0.2em] uppercase transition-colors ${
-                    scrolled ? 'text-[#1E3A5F]/70 dark:text-white/70' : 'text-[#1E3A5F]/70'
+                    !isHomePage ? 'text-white/70' : scrolled ? 'text-[#1E3A5F]/70 dark:text-white/70' : 'text-[#1E3A5F]/70'
                   }`}>Agency</span>
                 </div>
               </Link>
@@ -99,7 +106,9 @@ export default function Navbar() {
                 <button
                   onClick={() => setLang(lang === 'fr' ? 'en' : 'fr')}
                   className={`px-3 py-1.5 text-xs font-semibold rounded-lg border transition-colors hover:border-electric hover:text-electric ${
-                    scrolled
+                    !isHomePage
+                      ? 'border-white/40 text-white'
+                      : scrolled
                       ? 'border-gray-300 dark:border-white/20 text-gray-900 dark:text-white'
                       : 'border-[#1E3A5F]/40 text-[#1E3A5F]'
                   }`}
@@ -109,7 +118,7 @@ export default function Navbar() {
                 <button
                   onClick={toggleDark}
                   className={`p-2 rounded-lg transition-colors hover:text-electric hover:bg-electric/10 ${
-                    scrolled ? 'text-gray-600 dark:text-white/70' : 'text-[#1E3A5F]/80'
+                    !isHomePage ? 'text-white/80' : scrolled ? 'text-gray-600 dark:text-white/70' : 'text-[#1E3A5F]/80'
                   }`}
                 >
                   {dark ? <Sun size={18} /> : <Moon size={18} />}
@@ -127,7 +136,7 @@ export default function Navbar() {
                 <button
                   onClick={toggleDark}
                   className={`p-2.5 min-w-[44px] min-h-[44px] flex items-center justify-center transition-colors ${
-                    scrolled ? 'text-gray-700 dark:text-white' : 'text-[#1E3A5F]'
+                    !isHomePage ? 'text-white' : scrolled ? 'text-gray-700 dark:text-white' : 'text-[#1E3A5F]'
                   }`}
                   aria-label="Toggle dark mode"
                 >

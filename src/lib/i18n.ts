@@ -104,7 +104,7 @@ export const translations = {
       title: "L'histoire de Stackup",
       subtitle: 'Une agence née de la frustration.',
       story: [
-        "Stackup Agency n'est pas née dans un incubateur ni financée par des fonds d'investissement. Elle est née d'une frustration — celle de voir des entrepreneurs talentueux, des artisans passionnés, des commerçants ambitieux, tous freinés par la même barrière : l'accès à un digital de qualité.",
+        "Stackup Agency n'est pas née d'un capital-risque ni d'un programme d'accélération. Elle est née d'une frustration — celle de voir des entrepreneurs talentueux, des artisans passionnés, des commerçants ambitieux, tous freinés par la même barrière : l'accès à un digital de qualité.",
         "Notre équipe a choisi de partir de zéro. Pas de template préfabriqué, pas de solution générique. Nous avons passé des centaines d'heures à apprendre, à coder, à tout déconstruire pour mieux reconstruire. Le premier projet — un système de gestion complet pour un restaurant local — nous a pris plus de 100 heures. Mais il a tout prouvé : avec les bonnes méthodes, on peut livrer une qualité d'agence parisienne à des prix accessibles, depuis n'importe où en France.",
         "Aujourd'hui, Stackup Agency a une ambition claire et assumée : devenir le partenaire digital de référence pour les entrepreneurs qui méritent mieux. Pas dans 10 ans. Maintenant. Nous construisons une infrastructure scalable, des processus industrialisés, une équipe qui grandit — avec un seul objectif : que chaque client, qu'il soit restaurateur, artisan ou e-commerçant, ait accès aux mêmes outils que les grandes entreprises. Sans les tarifs des grandes agences.",
         "Ce que nous faisons aujourd'hui pour des centaines d'euros, d'autres le facturent des milliers. Ce n'est pas de la modestie — c'est une stratégie. Nous voulons d'abord prouver, puis scaler. Et nous sommes convaincus que les meilleurs clients ne cherchent pas le moins cher. Ils cherchent le meilleur rapport qualité/vision/exécution. C'est exactement ce que nous offrons.",
@@ -115,6 +115,8 @@ export const translations = {
         { value: '100%', label: 'Sur mesure' },
         { value: '72h', label: 'Réponse garantie' },
       ],
+      quote: 'Nous ne faisons pas des sites web. Nous construisons les fondations digitales de ceux qui changeront leur marché.',
+      quote2: 'Ce que nous faisons aujourd\'hui pour des centaines d\'euros, d\'autres le facturent des milliers. C\'est une stratégie, pas de la modestie.',
     },
     testimonials: {
       title: 'Témoignages',
@@ -297,13 +299,12 @@ export const translations = {
     },
     about: {
       title: 'The Stackup Story',
-      subtitle: 'An agency born from determination.',
+      subtitle: 'An agency born from frustration.',
       story: [
-        "Stackup Agency was born from a simple conviction: too many talented entrepreneurs abandon their projects for lack of a proper website.",
-        "Our founder saw merchants, restaurateurs and creators struggling every day without the right digital tools — either because traditional agencies were too expensive, or because they didn't know where to start.",
-        "The answer is Stackup. High-performance websites, custom management systems, human support — at prices accessible to real builders. Not large corporations. Those who truly build, with their hands and convictions.",
-        "Today, Stackup Agency is growing. The goal is clear: become the go-to digital partner for entrepreneurs who deserve better than generic solutions.",
-        "Every project is treated as if it were our own. Because your success is ours.",
+        "Stackup Agency wasn't born out of venture capital or an accelerator program. It was born from frustration — watching talented entrepreneurs, passionate craftspeople and ambitious business owners all held back by the same barrier: access to quality digital tools.",
+        "Our team chose to start from scratch. No pre-built templates, no generic solutions. We spent hundreds of hours learning, coding, tearing things apart and building them back better. The first project — a complete management system for a local restaurant — took over 100 hours. But it proved everything: with the right approach, you can deliver Parisian-agency quality at accessible prices, from anywhere in France.",
+        "Today, Stackup Agency has a clear and unapologetic ambition: to become the go-to digital partner for entrepreneurs who deserve better. Not in 10 years. Now. We're building a scalable infrastructure, industrialised processes, a growing team — with one single goal: every client, whether a restaurateur, craftsperson or e-merchant, gets access to the same tools as large corporations. Without the large-agency price tags.",
+        "What we do today for hundreds of euros, others charge thousands for. That's not modesty — it's a strategy. We want to prove it first, then scale. And we're convinced that the best clients aren't looking for the cheapest option. They're looking for the best quality/vision/execution ratio. That's exactly what we offer.",
       ],
       stats: [
         { value: '2026', label: 'Founded' },
@@ -311,6 +312,8 @@ export const translations = {
         { value: '100%', label: 'Custom-built' },
         { value: '72h', label: 'Reply guaranteed' },
       ],
+      quote: "We don't build websites. We build the digital foundations of those who will change their market.",
+      quote2: "What we do today for hundreds of euros, others charge thousands for. That's a strategy, not modesty.",
     },
     testimonials: {
       title: 'Testimonials',
