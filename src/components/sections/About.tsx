@@ -79,12 +79,12 @@ export default function About() {
               transition={{ duration: 0.6, delay: 0.7 }}
               className="rounded-2xl p-6 bg-gradient-to-br from-navy to-electric"
             >
-              <div className="text-gold text-5xl font-serif leading-none mb-3">&ldquo;</div>
-              <p className="text-white font-medium text-lg leading-relaxed mb-3">
-                {t.about.quote}
-              </p>
-              <p className="text-white/80 text-sm italic mt-3">&ldquo;{t.about.quote2}&rdquo;</p>
-              <span className="text-white font-semibold text-sm tracking-wide opacity-90 mt-4 block">Stackup Agency</span>
+              <div className="text-2xl md:text-3xl font-bold leading-tight">
+                Nous transformons vos idées en leviers de croissance.{' '}
+                <span className="text-white">Stratégie.</span>{' '}
+                <span className="text-[#F59E0B]">Design.</span>{' '}
+                <span className="text-[#2D7DD2]">Performance.</span>
+              </div>
             </motion.div>
           </div>
         </div>
