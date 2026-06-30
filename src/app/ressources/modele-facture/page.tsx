@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArrowLeft } from 'lucide-react'
+import { ArrowLeft, Download } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Modèle de facture — Stackup Agency',
@@ -14,7 +14,17 @@ export default function ModeleFacture() {
         <Link href="/" className="inline-flex items-center gap-2 text-electric hover:underline text-sm mb-8">
           <ArrowLeft size={16} /> Retour à l&apos;accueil
         </Link>
-        <h1 className="text-4xl font-extrabold text-gray-900 dark:text-white mb-3">Modèle de facture</h1>
+        <div className="flex items-start justify-between mb-3 gap-4">
+          <h1 className="text-4xl font-extrabold text-gray-900 dark:text-white">Modèle de facture</h1>
+          <a
+            href="/documents/facture-type.pdf"
+            download
+            className="flex-shrink-0 inline-flex items-center gap-2 px-4 py-2 border border-electric text-electric text-sm font-semibold rounded-xl hover:bg-electric/10 transition-colors"
+          >
+            <Download size={15} />
+            PDF
+          </a>
+        </div>
         <p className="text-sm text-gray-500 dark:text-white/40 mb-12">Structure type des factures émises par Stackup Agency</p>
 
         {/* Document preview */}

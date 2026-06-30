@@ -19,13 +19,22 @@ export default function ModeleDevis() {
             <h1 className="text-4xl font-extrabold text-gray-900 dark:text-white mb-3">Modèle de devis</h1>
             <p className="text-sm text-gray-500 dark:text-white/40">Structure type des devis émis par Stackup Agency</p>
           </div>
-          <Link
-            href="/#contact"
-            className="flex-shrink-0 inline-flex items-center gap-2 px-4 py-2 bg-electric text-white text-sm font-semibold rounded-xl hover:bg-electric/90 transition-colors"
-          >
-            <Download size={15} />
-            Demander un devis
-          </Link>
+          <div className="flex flex-col sm:flex-row gap-2 flex-shrink-0">
+            <a
+              href="/documents/devis-type.pdf"
+              download
+              className="inline-flex items-center gap-2 px-4 py-2 border border-electric text-electric text-sm font-semibold rounded-xl hover:bg-electric/10 transition-colors"
+            >
+              <Download size={15} />
+              PDF
+            </a>
+            <Link
+              href="/#contact"
+              className="inline-flex items-center gap-2 px-4 py-2 bg-electric text-white text-sm font-semibold rounded-xl hover:bg-electric/90 transition-colors"
+            >
+              Demander un devis
+            </Link>
+          </div>
         </div>
 
         {/* Document preview */}
@@ -96,7 +105,7 @@ export default function ModeleDevis() {
           <div className="bg-gray-50 dark:bg-white/5 rounded-xl p-4 space-y-2">
             <div className="text-xs uppercase tracking-widest text-gray-400 dark:text-white/30 mb-2">Modalités de paiement</div>
             <div className="text-gray-700 dark:text-white/70">Acompte 40 % à la signature (soit <strong>[XXX] €</strong>)</div>
-            <div className="text-gray-700 dark:text-white/70">Solde 60 % à la livraison (soit <strong>[XXX] €</strong>)</div>
+            <div className="text-gray-700 dark:text-white/70">Solde 60 % à la livraison (soit <strong>[XXX] €</strong>) — payable sous 30 jours</div>
             <div className="text-xs text-gray-500 dark:text-white/40 mt-1">Paiement par virement bancaire, PayPal ou carte via Stripe</div>
           </div>
 

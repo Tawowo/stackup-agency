@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArrowLeft } from 'lucide-react'
+import { ArrowLeft, Download } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Conditions Générales de Vente — Stackup Agency',
@@ -71,7 +71,7 @@ const sections = [
       <div className="space-y-2">
         <ul className="list-disc pl-5 space-y-1">
           <li><strong>40 %</strong> du montant total à la signature du devis</li>
-          <li><strong>60 %</strong> du solde à la livraison du projet</li>
+          <li><strong>60 %</strong> du solde à la livraison du projet — payable dans un délai de <strong>30 jours</strong> à compter de la date de livraison</li>
         </ul>
         <p>Paiement par virement bancaire, PayPal ou carte bancaire via Stripe.</p>
         <p>En cas de retard de paiement : pénalités au taux légal en vigueur (3 fois le taux d&apos;intérêt légal) + indemnité forfaitaire de <strong>40 €</strong> pour frais de recouvrement (Art. L441-10 du Code de commerce).</p>
@@ -156,9 +156,19 @@ export default function CGV() {
         <Link href="/" className="inline-flex items-center gap-2 text-electric hover:underline text-sm mb-8">
           <ArrowLeft size={16} /> Retour à l&apos;accueil
         </Link>
-        <h1 className="text-4xl font-extrabold text-gray-900 dark:text-white mb-3">
-          Conditions Générales de Vente
-        </h1>
+        <div className="flex items-start justify-between mb-3 gap-4">
+          <h1 className="text-4xl font-extrabold text-gray-900 dark:text-white">
+            Conditions Générales de Vente
+          </h1>
+          <a
+            href="/documents/cgv.pdf"
+            download
+            className="flex-shrink-0 inline-flex items-center gap-2 px-4 py-2 bg-electric text-white text-sm font-semibold rounded-xl hover:bg-electric/90 transition-colors"
+          >
+            <Download size={15} />
+            PDF
+          </a>
+        </div>
         <p className="text-sm text-gray-500 dark:text-white/40 mb-12">Stackup Agency — Dernière mise à jour : 30 juin 2026</p>
 
         <div className="prose dark:prose-invert prose-sm max-w-none space-y-10">
