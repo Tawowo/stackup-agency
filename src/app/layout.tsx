@@ -84,11 +84,6 @@ export const metadata: Metadata = {
       'en-US': 'https://stackup-agency.fr/en',
     },
   },
-  icons: {
-    icon: '/logo-icon.png',
-    shortcut: '/logo-icon.png',
-    apple: '/logo-icon.png',
-  },
   manifest: '/manifest.json',
   verification: {
     google: 'xiP5qgErkvFWvBzdgLl2rUGwMVWq0jLJTk0OwUnGrX4',
@@ -118,9 +113,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="fr" suppressHydrationWarning>
       <head>
-        <link rel="icon" href="/logo-icon.png" type="image/png" />
-        <link rel="shortcut icon" href="/logo-icon.png" type="image/png" />
-        <link rel="apple-touch-icon" href="/logo-icon.png" />
         <Script
           id="schema-org"
           type="application/ld+json"
