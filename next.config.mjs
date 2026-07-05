@@ -5,6 +5,13 @@ const nextConfig = {
   },
   compress: true,
   poweredByHeader: false,
+  redirects: async () => [
+    {
+      source: '/blog/pourquoi-votre-restaurant-a-besoin-dun-site-web-en-2026',
+      destination: '/blog/pourquoi-votre-restaurant-perd-des-clients-sans-site-web',
+      permanent: true,
+    },
+  ],
   headers: async () => [
     {
       source: '/(.*)',
