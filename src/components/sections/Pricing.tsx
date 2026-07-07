@@ -1,7 +1,7 @@
 'use client'
 import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
-import { Check, Zap } from 'lucide-react'
+import { Check, Zap, ArrowRight } from 'lucide-react'
 import { useLanguage } from '@/contexts/LanguageContext'
 import Link from 'next/link'
 
@@ -87,6 +87,23 @@ export default function Pricing() {
                 >
                   Choisir {plan.name}
                 </Link>
+
+                {/* En savoir plus */}
+                <div className={`mt-4 pt-4 ${isPro ? 'border-t border-white/20' : 'border-t border-gray-100 dark:border-white/10'}`}>
+                  <Link
+                    href={`/tarifs/${slug}`}
+                    className={`group/btn w-full flex items-center justify-center gap-2 py-2.5 rounded-xl font-medium text-sm border-2 transition-all duration-200 ${
+                      isPro
+                        ? 'text-white border-white hover:bg-white hover:text-navy'
+                        : i === 0
+                          ? 'text-electric border-electric hover:bg-electric hover:text-white'
+                          : 'text-[#F59E0B] border-[#F59E0B] hover:bg-[#F59E0B] hover:text-white'
+                    }`}
+                  >
+                    En savoir plus
+                    <ArrowRight size={14} className="transition-transform duration-200 group-hover/btn:translate-x-1" />
+                  </Link>
+                </div>
               </motion.div>
             )
           })}
