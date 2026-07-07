@@ -6,12 +6,12 @@ import { useLanguage } from '@/contexts/LanguageContext'
 import Link from 'next/link'
 
 const serviceData = [
-  { icon: Globe,          slug: 'site-vitrine',       color: 'from-blue-500 to-electric',     bg: 'bg-blue-50 dark:bg-blue-900/20',       price: 'À partir de 449€'   },
-  { icon: FileText,       slug: 'site-multi-pages',   color: 'from-emerald-500 to-teal-600',  bg: 'bg-emerald-50 dark:bg-emerald-900/20', price: 'À partir de 749€'   },
-  { icon: ShoppingCart,   slug: 'site-ecommerce',     color: 'from-purple-500 to-violet-600', bg: 'bg-purple-50 dark:bg-purple-900/20',   price: 'À partir de 1 647€' },
-  { icon: LayoutDashboard,slug: 'systeme-gestion',    color: 'from-electric to-navy',         bg: 'bg-sky-50 dark:bg-sky-900/20',         price: 'À partir de 1 447€' },
-  { icon: Palette,        slug: 'site-association',   color: 'from-pink-500 to-rose-600',     bg: 'bg-pink-50 dark:bg-pink-900/20',       price: 'À partir de 149€'   },
-  { icon: TrendingUp,     slug: 'marketing-digital',  color: 'from-orange-500 to-amber-600',  bg: 'bg-orange-50 dark:bg-orange-900/20',   price: 'Sur devis'          },
+  { icon: Globe,          slug: 'site-vitrine',       color: 'from-blue-500 to-electric',     bg: 'bg-blue-50 dark:bg-blue-900/20',       price: 'À partir de 449€',   border: 'border-blue-500   hover:border-blue-500'   },
+  { icon: FileText,       slug: 'site-multi-pages',   color: 'from-emerald-500 to-teal-600',  bg: 'bg-emerald-50 dark:bg-emerald-900/20', price: 'À partir de 749€',   border: 'border-emerald-500 hover:border-emerald-500' },
+  { icon: ShoppingCart,   slug: 'site-ecommerce',     color: 'from-purple-500 to-violet-600', bg: 'bg-purple-50 dark:bg-purple-900/20',   price: 'À partir de 1 647€', border: 'border-purple-500  hover:border-purple-500'  },
+  { icon: LayoutDashboard,slug: 'systeme-gestion',    color: 'from-electric to-navy',         bg: 'bg-sky-50 dark:bg-sky-900/20',         price: 'À partir de 1 447€', border: 'border-electric    hover:border-electric'    },
+  { icon: Palette,        slug: 'site-association',   color: 'from-pink-500 to-rose-600',     bg: 'bg-pink-50 dark:bg-pink-900/20',       price: 'À partir de 149€',   border: 'border-pink-500    hover:border-pink-500'    },
+  { icon: TrendingUp,     slug: 'marketing-digital',  color: 'from-orange-500 to-amber-600',  bg: 'bg-orange-50 dark:bg-orange-900/20',   price: 'Sur devis',          border: 'border-orange-500  hover:border-orange-500'  },
 ]
 
 export default function Services() {
@@ -39,14 +39,14 @@ export default function Services() {
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           {t.services.items.slice(0, 6).map((item, i) => {
-            const { icon: Icon, slug, color, bg, price } = serviceData[i]
+            const { icon: Icon, slug, color, bg, price, border } = serviceData[i]
             return (
               <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 40 }}
                 animate={inView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5, delay: i * 0.07 }}
-                className="group relative bg-white dark:bg-white/5 rounded-2xl p-7 border-2 border-electric/40 dark:border-electric/30 hover:border-electric hover:shadow-xl hover:shadow-electric/10 dark:hover:border-electric transition-all duration-300 hover:-translate-y-1.5 flex flex-col"
+                className={`group relative bg-white dark:bg-white/5 rounded-2xl p-7 border-2 ${border} border-opacity-50 hover:shadow-xl transition-all duration-300 hover:-translate-y-1.5 flex flex-col`}
               >
                 <div className={`w-14 h-14 rounded-2xl ${bg} flex items-center justify-center mb-5 transition-transform duration-300 group-hover:scale-110`}>
                   <div className={`w-8 h-8 rounded-xl bg-gradient-to-br ${color} flex items-center justify-center shadow-md`}>

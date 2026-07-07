@@ -42,8 +42,8 @@ export default function Pricing() {
                   isPro
                     ? 'bg-gradient-to-b from-navy to-[#1a3254] text-white shadow-2xl shadow-navy/30 lg:scale-[1.03]'
                     : i === 0
-                      ? 'bg-white dark:bg-white/5 border-2 border-navy/60 dark:border-navy hover:border-navy hover:shadow-xl hover:-translate-y-1'
-                      : 'bg-white dark:bg-white/5 border-2 border-[#F59E0B]/60 dark:border-[#F59E0B]/50 hover:border-[#F59E0B] hover:shadow-xl hover:shadow-[#F59E0B]/10 hover:-translate-y-1'
+                      ? 'bg-white dark:bg-white/5 border-2 border-electric hover:shadow-xl hover:shadow-electric/10 hover:-translate-y-1'
+                      : 'bg-white dark:bg-white/5 border-2 border-[#F59E0B] hover:shadow-xl hover:shadow-[#F59E0B]/10 hover:-translate-y-1'
                 }`}
               >
                 {isPro && (
