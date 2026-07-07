@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArrowLeft, Check, X, ArrowRight, Zap } from 'lucide-react'
+import { Check, X, ArrowRight, Zap } from 'lucide-react'
 
 type PlanData = {
   name: string
@@ -192,16 +192,56 @@ export default function TarifPage({ params }: { params: { plan: string } }) {
   if (!plan) notFound()
 
   const planKeys = ['starter', 'pro', 'premium'] as const
+  const url = `https://stackup-agency.fr/tarifs/${params.plan}`
+
+  const offerSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Offer',
+    name: `Plan ${plan.name} — Maintenance Web`,
+    description: plan.tagline,
+    url,
+    price: plan.price.replace(/[^0-9]/g, ''),
+    priceCurrency: 'EUR',
+    priceSpecification: { '@type': 'UnitPriceSpecification', price: plan.price.replace(/[^0-9]/g, ''), priceCurrency: 'EUR', unitCode: 'MON' },
+    seller: { '@type': 'Organization', name: 'Stackup Agency', url: 'https://stackup-agency.fr' },
+  }
+
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: plan.faq.map(item => ({
+      '@type': 'Question',
+      name: item.q,
+      acceptedAnswer: { '@type': 'Answer', text: item.a },
+    })),
+  }
+
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://stackup-agency.fr' },
+      { '@type': 'ListItem', position: 2, name: 'Tarifs', item: 'https://stackup-agency.fr/#tarifs' },
+      { '@type': 'ListItem', position: 3, name: `Plan ${plan.name}`, item: url },
+    ],
+  }
 
   return (
     <main className="min-h-screen bg-[#F8FAFC] dark:bg-[#0A0F1C]">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(offerSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       {/* Hero */}
       <section className="bg-gradient-to-b from-[#1E3A5F] to-[#0F172A] py-24 pt-32">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
-          <Link href="/#tarifs" className="inline-flex items-center gap-2 text-white/60 hover:text-white text-sm mb-8 transition-colors">
-            <ArrowLeft size={16} />
-            Retour aux tarifs
-          </Link>
+          {/* Breadcrumb */}
+          <nav className="flex items-center gap-1.5 text-white/40 text-xs mb-6" aria-label="Fil d'Ariane">
+            <Link href="/" className="hover:text-white transition-colors">Accueil</Link>
+            <span>›</span>
+            <Link href="/#tarifs" className="hover:text-white transition-colors">Tarifs</Link>
+            <span>›</span>
+            <span className="text-white/60">Plan {plan.name}</span>
+          </nav>
           {params.plan === 'pro' && (
             <div className="inline-flex items-center gap-1.5 px-4 py-1.5 bg-gold rounded-full text-white text-xs font-bold mb-4">
               <Zap size={12} fill="white" />

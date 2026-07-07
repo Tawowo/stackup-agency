@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArrowLeft, Check, ArrowRight } from 'lucide-react'
+import { Check, ArrowRight } from 'lucide-react'
 
 type ServiceData = {
   title: string
@@ -317,15 +317,57 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
   const service = services[params.slug]
   if (!service) notFound()
 
+  const url = `https://stackup-agency.fr/services/${params.slug}`
+
+  const serviceSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: service.title,
+    description: service.subtitle,
+    url,
+    provider: { '@type': 'Organization', name: 'Stackup Agency', url: 'https://stackup-agency.fr' },
+    areaServed: { '@type': 'Country', name: 'France' },
+    ...(service.price !== 'Sur devis' ? {
+      offers: { '@type': 'Offer', price: service.price.replace(/[^0-9]/g, ''), priceCurrency: 'EUR', priceSpecification: { '@type': 'PriceSpecification', minPrice: service.price.replace(/[^0-9]/g, ''), priceCurrency: 'EUR' } },
+    } : {}),
+  }
+
+  const faqSchema = service.faq.length > 0 ? {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: service.faq.map(item => ({
+      '@type': 'Question',
+      name: item.q,
+      acceptedAnswer: { '@type': 'Answer', text: item.a },
+    })),
+  } : null
+
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://stackup-agency.fr' },
+      { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://stackup-agency.fr/#services' },
+      { '@type': 'ListItem', position: 3, name: service.title, item: url },
+    ],
+  }
+
   return (
     <main className="min-h-screen bg-[#F8FAFC] dark:bg-[#0A0F1C]">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      {faqSchema && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       {/* Hero */}
       <section className="bg-gradient-to-b from-[#1E3A5F] to-[#0F172A] py-24 pt-32">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
-          <Link href="/#services" className="inline-flex items-center gap-2 text-white/60 hover:text-white text-sm mb-8 transition-colors">
-            <ArrowLeft size={16} />
-            Retour aux services
-          </Link>
+          {/* Breadcrumb */}
+          <nav className="flex items-center gap-1.5 text-white/40 text-xs mb-6" aria-label="Fil d'Ariane">
+            <Link href="/" className="hover:text-white transition-colors">Accueil</Link>
+            <span>›</span>
+            <Link href="/#services" className="hover:text-white transition-colors">Services</Link>
+            <span>›</span>
+            <span className="text-white/60">{service.title}</span>
+          </nav>
           <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white mb-4">{service.title}</h1>
           <p className="text-base sm:text-xl text-white/70">{service.subtitle}</p>
           <div className="mt-6 flex flex-wrap gap-4 text-sm text-white/60">
