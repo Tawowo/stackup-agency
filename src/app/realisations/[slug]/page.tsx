@@ -30,8 +30,20 @@ export default async function RealisationPage({ params }: { params: Promise<{ sl
   const r = realisations.find(r => r.slug === slug)
   if (!r) notFound()
 
+  const url = `https://stackup-agency.fr/realisations/${slug}`
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://stackup-agency.fr' },
+      { '@type': 'ListItem', position: 2, name: 'Réalisations', item: 'https://stackup-agency.fr/#realisations' },
+      { '@type': 'ListItem', position: 3, name: r.nom, item: url },
+    ],
+  }
+
   return (
     <div className="min-h-screen bg-white dark:bg-[#0A0F1C]">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       {/* Hero */}
       <div className="relative pt-24 pb-20 px-4" style={{ background: r.couleur }}>
         <div
