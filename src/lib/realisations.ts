@@ -2,6 +2,7 @@ export const realisations = [
   {
     nom: 'Château des Lumières',
     type: 'Site vitrine — Hôtel boutique',
+    projectType: 'demo' as const,
     slug: 'chateau-lumieres',
     url: 'https://stackup-demos-e85v.vercel.app',
     couleur: '#213547',
@@ -16,7 +17,7 @@ export const realisations = [
       'Section événements (mariages, séminaires)',
       "Ambiance lumineuse adaptée à l'heure réelle",
       'Galerie photographique professionnelle',
-      'Témoignages TripAdvisor intégrés',
+      'Module d\'avis clients intégré (données de démonstration)',
       "Menu restaurant de l'hôtel",
       'Conciergerie en ligne',
       'Navigation par scroll cinématographique',
@@ -26,6 +27,7 @@ export const realisations = [
   {
     nom: 'Maison Élise',
     type: 'Site e-commerce — Boutique mode',
+    projectType: 'demo' as const,
     slug: 'maison-elise',
     url: 'https://stackup-demos-tq9a.vercel.app',
     couleur: '#2E2B28',
@@ -50,6 +52,7 @@ export const realisations = [
   {
     nom: 'Au Pain Doré',
     type: 'Site vitrine — Boulangerie artisanale',
+    projectType: 'demo' as const,
     slug: 'au-pain-dore',
     url: 'https://stackup-demos-u2go.vercel.app',
     couleur: '#5A3E2B',
@@ -74,6 +77,7 @@ export const realisations = [
   {
     nom: 'Prestige Immo',
     type: 'Site vitrine — Agence immobilière',
+    projectType: 'demo' as const,
     slug: 'prestige-immo',
     url: 'https://stackup-demos-9lnu.vercel.app',
     couleur: '#17202A',
@@ -98,6 +102,7 @@ export const realisations = [
   {
     nom: "L'Olivier — Dashboard",
     type: 'Système de gestion — Restaurant',
+    projectType: 'demo' as const,
     slug: 'lolivier-dashboard',
     url: 'https://stackup-demos-jxtr.vercel.app',
     couleur: '#101828',
@@ -122,6 +127,7 @@ export const realisations = [
   {
     nom: 'Domaine Château Fleury',
     type: 'Site e-commerce — Cave à vins',
+    projectType: 'demo' as const,
     slug: 'chateau-fleury',
     url: 'https://stackup-demos-9ib4.vercel.app',
     couleur: '#2F1B14',

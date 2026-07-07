@@ -137,7 +137,7 @@ export const translations = {
       items: [
         {
           q: 'Quels sont les délais de création ?',
-          a: "Un site vitrine est livré en 10 jours ouvrés, un site multi-pages en 17 jours ouvrés, un e-commerce ou système de gestion en 21 jours ouvrés, un site association en 7 jours ouvrés. Ces délais sont indicatifs — Stackup Agency se réserve le droit de les prolonger de 20 jours ouvrés maximum en cas de forte demande, avec notification préalable. Un devis précis vous est transmis dès notre premier échange.",
+          a: "Un site vitrine est livré en 10 jours ouvrés, un site multi-pages en 17 jours ouvrés, un e-commerce ou système de gestion en 21 jours ouvrés, un site association en 7 jours ouvrés. Un devis précis vous est transmis dès notre premier échange.",
         },
         {
           q: 'Comment se passe le processus de création ?',

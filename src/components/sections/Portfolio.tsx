@@ -30,7 +30,7 @@ export default function Portfolio() {
             Nos réalisations
           </h2>
           <p className="text-gray-600 dark:text-white/60 text-lg max-w-2xl mx-auto">
-            Des projets livrés en 10 jours pour des clients exigeants. Chaque site est unique, performant et sur mesure.
+            Des démonstrations concrètes de notre savoir-faire — voyez exactement ce que nous pouvons construire pour vous en 10 jours.
           </p>
         </motion.div>
 
