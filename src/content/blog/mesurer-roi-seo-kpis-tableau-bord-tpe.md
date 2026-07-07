@@ -1,177 +1,191 @@
 ---
-title: "Mesurer le ROI du SEO : KPIs, suivi de positions et tableau de bord pour les TPE/PME"
-description: "Comment prouver que votre investissement SEO rapporte ? Découvrez les KPIs essentiels, les outils gratuits et un tableau de bord simple pour piloter votre référencement naturel."
+title: "Mesurer le ROI SEO : KPIs et tableau de bord pour TPE"
+excerpt: "Comment mesurer le retour sur investissement de votre SEO ? Positions, trafic organique, leads, coût par lead : guide pratique avec tableau de bord pour PME."
 date: "2026-06-15"
 readTime: 8
 tag: "Stratégie"
 category: "strategie"
-slug: "mesurer-roi-seo-kpis-tableau-bord-tpe"
-author: "Stackup Agency"
-canonical: "https://stackup-agency.fr/blog/mesurer-roi-seo-kpis-tableau-bord-tpe"
+keywords: ["ROI SEO", "KPIs SEO", "tableau de bord SEO", "mesurer SEO", "trafic organique", "coût par lead SEO"]
 ---
 
-# Mesurer le ROI du SEO : KPIs, suivi de positions et tableau de bord pour les TPE/PME
+# Mesurer le ROI SEO : KPIs et tableau de bord pour TPE
 
-Le SEO est souvent perçu comme une boîte noire. On investit du temps et de l'argent, et on espère que quelque chose finit par remonter dans Google. Pour une TPE ou une PME, cette incertitude est inacceptable — chaque euro doit être justifié. Pourtant, mesurer le retour sur investissement du référencement naturel est tout à fait possible, à condition de suivre les bons indicateurs dès le départ. Ce guide vous donne les outils, les KPIs et une méthode de tableau de bord adaptés aux petites structures.
+"Le SEO, ça marche ? Combien ça m'a rapporté ce mois-ci ?" C'est la question que tout dirigeant de PME devrait pouvoir répondre à propos de son investissement SEO. Et pourtant, le SEO reste souvent perçu comme une "boite noire" dont on espère des résultats sans savoir comment les mesurer.
 
-## Pourquoi le ROI SEO est difficile à mesurer — et comment surmonter ce défi
+Ce guide vous donne les outils, les métriques et la méthode pour construire un tableau de bord SEO simple, actionnable et directement parlant pour un chef d'entreprise — sans nécessiter un profil data scientist.
 
-Contrairement à la publicité payante (Google Ads, Meta Ads) où chaque clic a un coût précis et chaque conversion est tracée, le SEO agit sur le long terme et de façon diffuse. Plusieurs facteurs compliquent la mesure :
+## Pourquoi le ROI SEO est difficile à calculer
 
-- **Latence temporelle** : une action SEO (publication d'article, optimisation de page) peut prendre 3 à 6 mois pour produire des effets mesurables dans les classements Google.
-- **Attribution multi-canal** : un visiteur peut vous trouver via Google, partir, revenir via votre newsletter, et finalement convertir. Quel canal créditez-vous ?
-- **Trafic "de marque"** : les requêtes sur votre nom propre (ex : "Stackup Agency") sont capturées par le SEO mais ne reflètent pas la performance de votre référencement sur des mots-clés génériques.
+Avant d'aller plus loin, reconnaissons la difficulté honnêtement. Le SEO a plusieurs caractéristiques qui compliquent la mesure du ROI :
 
-La solution : mettre en place dès le départ un système de mesure cohérent, avec des objectifs clairs et des outils adaptés.
+**L'attribution multi-touch** : un client qui vous appelle a peut-être visité votre site via Google il y a 3 semaines, puis est revenu via un lien dans un email, puis a tapé directement votre nom. Quel canal lui attribuer ?
 
-## Les 5 KPIs fondamentaux du SEO pour une TPE
+**La fenêtre temporelle longue** : un article de blog écrit en janvier peut générer des leads en septembre. Les campagnes Google Ads donnent des résultats en quelques heures — le SEO prend des mois.
 
-### 1. Trafic organique (sessions sans marque)
+**Le dark social** : certaines visites provenant du SEO apparaissent en "trafic direct" dans Analytics parce que l'utilisateur a copié-collé l'URL ou ouvert un lien depuis une appli qui ne transmet pas de referrer.
 
-C'est la base. Combien de visiteurs arrivent sur votre site via Google sans taper votre nom ? Pour isoler ce trafic, excluez les requêtes de marque dans Google Search Console : filtrez sur les requêtes qui **ne contiennent pas** votre nom d'entreprise.
+Malgré ces limites, il est tout à fait possible de construire une estimation du ROI SEO suffisamment précise pour prendre des décisions éclairées.
 
-**Outil** : Google Search Console → Performances → Filtrer les requêtes
+## Les 6 KPIs SEO essentiels pour une PME
 
-**Objectif réaliste pour une TPE locale** : +20 % de trafic organique hors marque en 6 mois.
+### KPI 1 : Trafic organique (sessions organiques)
 
-### 2. Positions moyennes sur les mots-clés cibles
+**Source** : Google Analytics 4 → Acquisition → Trafic → Organique / Naturel
 
-Le classement moyen n'est pas très utile (il mélange requêtes importantes et anecdotiques). Préférez le suivi de **10 à 20 mots-clés stratégiques** pour votre activité — ceux que vos clients tapent réellement avant de vous contacter.
+C'est le nombre de visites provenant des moteurs de recherche. C'est votre métrique de base, mais pas suffisante seule. Regardez la tendance sur 12 mois : est-elle croissante, stable ou décroissante ?
 
-**Exemple pour un plombier à Tours** :
-- "plombier Tours urgence"
-- "débouchage canalisation Tours"
-- "installation chauffe-eau Tours"
-- "plombier Indre-et-Loire"
+**Piège à éviter** : une hausse du trafic organique qui ne génère pas de conversions est peut-être due à des requêtes informatives peu qualifiées. Croisez toujours avec le taux de conversion.
 
-**Outil** : Google Search Console (gratuit) ou Semrush/Ubersuggest (payant).
+### KPI 2 : Positions sur les mots-clés cibles
 
-### 3. Taux de clic (CTR) organique
+**Source** : Google Search Console → Performance → Requêtes / Semrush / Ahrefs
 
-Une page en position 3 avec un CTR de 2 % performe moins bien qu'une page en position 5 avec un CTR de 8 %. Le CTR révèle si vos titres et méta-descriptions sont attractifs.
+Définissez 20 à 50 mots-clés stratégiques pour votre activité et trackez leur position semaine par semaine. Ce sont votre "baromètre SEO" le plus immédiat — les gains de position précèdent de plusieurs semaines les gains de trafic.
 
-**Benchmarks** :
-- Position 1 : ~28-30 % de CTR
-- Position 3 : ~12-15 %
-- Position 5-10 : 3-8 %
+Pour identifier vos mots-clés cibles, notre article sur la [stratégie de longue traîne](/blog/strategie-longue-traine-tpe-clients-locaux) vous guide dans la sélection.
 
-Si votre CTR est inférieur à ces benchmarks, travaillez vos balises `<title>` et méta-descriptions — elles sont votre "publicité gratuite" dans les résultats Google.
+**Outil gratuit** : Google Search Console (position moyenne sur toutes les requêtes, pas seulement vos cibles). **Outil payant** : Semrush Position Tracking ou Ahrefs Rank Tracker (suivi quotidien de positions sur une liste précise).
 
-### 4. Conversions issues du trafic organique
+### KPI 3 : Taux de clic (CTR) depuis les SERP
 
-C'est le KPI qui compte vraiment pour le dirigeant : combien de devis, d'appels, d'achats ou de prises de contact viennent du SEO ?
+**Source** : Google Search Console → Performance → Pages ou Requêtes
 
-Pour le mesurer, configurez des **objectifs dans Google Analytics 4** :
-- Formulaire de contact envoyé
-- Clics sur un lien mailto ou tel:
-- Page de confirmation après achat
-- Temps passé sur le site > 3 minutes
+Le CTR mesure le pourcentage d'internautes qui cliquent sur votre résultat quand il apparaît. Un bon CTR signifie que votre titre et meta description sont attractifs.
 
-**Formule de base du ROI SEO** :
+**CTR moyen par position** (références indicatives) :
+- Position 1 : 25-35 % de CTR
+- Position 2-3 : 10-15 %
+- Position 4-10 : 2-8 %
+- Position 11-20 : < 2 %
 
-```
-ROI SEO (%) = (Valeur générée par le SEO - Coût du SEO) / Coût du SEO × 100
-```
+Un CTR inférieur aux moyennes de votre position signifie que votre titre/description est peu attractif, même si la position est bonne. Optimisez vos balises title et meta descriptions.
 
-Si votre agence SEO vous coûte 500 €/mois et que vous générez 3 leads qualifiés par mois valant en moyenne 800 € chacun (valeur client estimée), votre ROI mensuel est de 380 %.
+### KPI 4 : Conversions organiques
 
-### 5. Autorité de domaine et profil de backlinks
+**Source** : Google Analytics 4 → Rapports → Conversions → par source "Organic"
 
-L'autorité de votre domaine (mesurée via Domain Authority chez Moz, ou Domain Rating chez Ahrefs) indique la confiance que Google accorde à votre site. Elle dépend principalement de la quantité et qualité des sites qui pointent vers vous.
+C'est LE KPI business : combien d'actions concrètes (formulaires remplis, appels trackés, achats, demandes de devis) sont générées par le trafic organique ?
 
-Une TPE débutante a généralement un DA de 5-15. Atteindre 20-30 en 12 mois est un objectif raisonnable avec une stratégie de [netlinking local ciblé](/blog/netlinking-local-backlinks-region-methodes).
+**Configuration requise** : vous devez avoir configuré des événements de conversion dans GA4. Pour un site vitrine, l'événement de conversion typique est la soumission du formulaire de contact. Pour un e-commerce, c'est l'achat.
 
-**Outil gratuit** : Moz Free Domain Analysis ou Semrush (3 requêtes gratuites/jour).
+**Tracking des appels** : si votre activité génère beaucoup d'appels, configurez un numéro de tracking (CallRail, Ringover avec tracking source) pour attribuer les appels à leur source marketing.
 
-## Construire votre tableau de bord SEO en 1 heure
+### KPI 5 : Coût par lead organique
 
-Un bon tableau de bord SEO pour une TPE doit tenir sur une page, être mis à jour mensuellement, et permettre de répondre à 3 questions : est-ce que je progresse ? d'où vient mon trafic ? est-ce que ça convertit ?
+**Calcul** : Investissement SEO mensuel ÷ Nombre de leads organiques mensuels
 
-### Structure recommandée (feuille Google Sheets ou Notion)
+C'est la métrique qui permet de comparer le SEO aux autres canaux. Exemple :
 
-| Indicateur | Mois -3 | Mois -2 | Mois -1 | Ce mois | Tendance |
-|---|---|---|---|---|---|
-| Sessions organiques | 234 | 267 | 312 | 389 | ↑ |
-| Taux de clic moyen | 3.2% | 3.5% | 4.1% | 4.8% | ↑ |
-| Impressions Google | 12 400 | 14 200 | 17 800 | 22 100 | ↑ |
-| Leads formulaire (SEO) | 2 | 3 | 5 | 7 | ↑ |
-| Position moy. mot-clé 1 | 18 | 12 | 8 | 5 | ↑ |
-| Position moy. mot-clé 2 | 34 | 28 | 21 | 15 | ↑ |
-| Nouveaux backlinks | 0 | 2 | 1 | 3 | ↑ |
-| Domain Rating | 8 | 9 | 11 | 13 | ↑ |
+| Canal | Coût mensuel | Leads/mois | Coût par lead |
+|---|---|---|---|
+| SEO (plan Pro Stackup) | 44 €/mois | 12 leads | 3,70 €/lead |
+| Google Ads | 500 €/mois | 8 leads | 62,50 €/lead |
+| Facebook Ads | 300 €/mois | 5 leads | 60 €/lead |
 
-Ce tableau simple suffit pour la plupart des TPE. Il vous prend 20 minutes à remplir chaque mois et vous permet de voir si vos actions SEO produisent des résultats.
+Ce tableau est fictif mais illustre une réalité fréquente : le SEO, une fois installé, génère les leads les moins chers. Le défi est qu'il faut investir 6 à 12 mois avant d'atteindre ce stade.
 
-### Aller plus loin avec Google Looker Studio (gratuit)
+**Attention** : incluez dans l'investissement SEO le temps interne passé (création de contenu, gestion de blog) et pas seulement le forfait agence.
 
-[Google Looker Studio](https://lookerstudio.google.com) (anciennement Data Studio) permet de créer des tableaux de bord visuels connectés directement à Google Analytics 4 et Google Search Console. En 2 heures, vous pouvez avoir un dashboard automatisé avec :
+### KPI 6 : Valeur du trafic organique (SEO Value)
 
-- Graphiques d'évolution du trafic organique
-- Top 10 des pages les plus performantes
-- Suivi des conversions par source
-- Évolution du nombre d'impressions
+**Source** : Semrush, Ahrefs
 
-C'est l'outil idéal pour les dirigeants qui veulent une vue rapide sans plonger dans les interfaces complexes.
+Ces outils calculent ce que vous devriez dépenser en Google Ads pour obtenir le même volume de trafic que votre SEO génère gratuitement. C'est une métrique d'estimation, mais utile pour communiquer la valeur du SEO à des dirigeants ou actionnaires peu familiers avec le référencement.
 
-## Délais réalistes : ce que vous devriez attendre du SEO
+Exemple : si votre site génère 2 000 visites organiques par mois et que le coût par clic moyen sur vos mots-clés est de 1,50 €, votre "SEO value" est de 3 000 €/mois — soit la valeur publicitaire du trafic que vous obtenez gratuitement.
 
-L'un des plus grands risques est d'abandonner une stratégie SEO trop tôt, avant qu'elle porte ses fruits. Voici des délais réalistes selon les actions :
+## Construire un tableau de bord SEO mensuel simple
 
-**0-1 mois** : Google indexe vos nouvelles pages, premiers signaux dans Search Console.
+### Version Google Sheets (gratuite)
 
-**1-3 mois** : Apparition dans les résultats sur des requêtes longue traîne, premières impressions sur les mots-clés cibles.
+Créez un tableur avec ces colonnes, mis à jour mensuellement :
 
-**3-6 mois** : Progression visible des positions, augmentation du trafic organique de 30-50 % si les actions sont bien menées.
+| Mois | Sessions organiques | Conversions organiques | Taux de conversion | Leads | Coût/lead | Top 5 mots-clés |
+|---|---|---|---|---|---|---|
+| Jan 2026 | 850 | 12 | 1,4 % | 9 formulaires + 3 appels | 4,90 € | ... |
+| Fév 2026 | 920 | 15 | 1,6 % | 11 formulaires + 4 appels | 2,93 € | ... |
 
-**6-12 mois** : Résultats significatifs sur les mots-clés compétitifs, leads organiques réguliers, ROI positif dans la plupart des secteurs.
+Ajoutez un graphique de tendance du trafic organique et des positions sur vos 5 mots-clés principaux. En 10 minutes par mois, vous avez un tableau de bord complet.
 
-**12 mois+** : Compound effect — chaque article, chaque backlink obtenu continue à générer du trafic sans coût supplémentaire.
+### Version Looker Studio (anciennement Data Studio)
 
-C'est là le vrai avantage du SEO sur la publicité payante : vous arrêtez de payer Google Ads, le trafic s'arrête. Vous stoppez le SEO, le trafic continue pendant des mois ou des années.
+Google Looker Studio est gratuit et se connecte directement à Google Search Console et Google Analytics 4. Des templates prêts à l'emploi sont disponibles :
+- Template "SEO Dashboard by Stackup" (créez le vôtre en quelques heures)
+- Templates communautaires gratuits sur les galeries Looker Studio
 
-## Les 3 erreurs qui faussent votre mesure du ROI SEO
+L'avantage : le tableau de bord se met à jour automatiquement, vous n'avez rien à saisir manuellement.
 
-### Erreur 1 : Comparer le mauvais mois de référence
+## Calculer le ROI SEO sur 12 mois
 
-Comparer novembre avec décembre (effets saisonniers) ou comparer à un mois anormal (lancement produit, campagne presse) fausse tout. Comparez **toujours en glissement annuel** (mois M vs mois M-12) pour éliminer la saisonnalité.
+La formule de base :
 
-### Erreur 2 : Inclure le trafic de marque dans les métriques SEO
+**ROI = ((Valeur générée - Investissement) / Investissement) × 100**
 
-Si vous lancez une campagne Instagram qui génère des recherches de votre nom sur Google, votre "trafic organique" va exploser — mais ce n'est pas du SEO. Excluez systématiquement les requêtes de marque de vos KPIs SEO.
+Exemple concret pour une PME tourangelle :
 
-### Erreur 3 : Ignorer la valeur vie client (LTV)
+- **Investissement SEO sur 12 mois** : 44 €/mois × 12 = 528 € (plan Pro Stackup)
+- **Leads organiques sur 12 mois** : 0 à mois 3, puis montée progressive, total = 85 leads
+- **Taux de conversion leads → clients** : 20 % = 17 clients
+- **Valeur moyenne d'un client** : 800 € (devis moyen)
+- **Valeur totale générée** : 17 × 800 = 13 600 €
+- **ROI = ((13 600 - 528) / 528) × 100 = 2 476 %**
 
-Un lead SEO qui génère un contrat de 2 000 € aujourd'hui peut valoir 8 000 € sur 3 ans s'il devient client régulier. Intégrez la LTV dans votre calcul de ROI pour ne pas sous-estimer la rentabilité du SEO.
+Ce calcul est simplifié (il ne tient pas compte de la lifetime value client, ni du temps interne), mais il illustre pourquoi le SEO est l'un des canaux marketing les plus rentables sur le long terme.
 
-## Intégrer le SEO dans votre pilotage global
+## SEO vs Google Ads : lequel est plus rentable ?
 
-Le tableau de bord SEO n'est qu'une pièce du puzzle. Pour avoir une vision complète, croisez-le avec :
+La bonne réponse est "les deux, mais différemment". Voici la comparaison honnête :
 
-- Votre **CRM** : d'où viennent réellement vos clients (demandez-leur systématiquement lors du premier contact)
-- Vos **Google Ads** : quelle part du trafic vient du payant vs organique ? Le SEO peut parfois réduire votre besoin en publicité payante
-- Votre **tableau de bord commercial** : nombre de devis, taux de transformation, CA par source
+**Google Ads**
+- ✓ Résultats immédiats (dès le premier jour)
+- ✓ Contrôle précis du ciblage
+- ✗ Coût par clic en hausse constante
+- ✗ Trafic s'arrête si on arrête de payer
+- ✗ Coût par lead élevé sur le long terme
 
-Pour les TPE qui démarrent, un site web optimisé pour le SEO local couplé à une stratégie de [contenu longue traîne ciblée](/blog/strategie-longue-traine-tpe-clients-locaux) offre généralement le meilleur ROI sur 12-24 mois — bien supérieur à la publicité payante dont les coûts explosent en 2026.
+**SEO**
+- ✓ Trafic gratuit une fois installé
+- ✓ Effet cumulatif et durable
+- ✓ Confiance accrue (les résultats organiques inspirent plus confiance que les annonces)
+- ✗ 6 à 12 mois pour des résultats significatifs
+- ✗ Nécessite un investissement continu en contenu
 
-Un [audit SEO technique complet](/blog/audit-seo-technique-checklist-50-points) initial vous permettra d'identifier les quick wins (gains rapides) et de prioriser les actions à fort impact avant d'investir dans du contenu ou du netlinking.
+**Notre recommandation pour les PME** : combinez les deux en phase de lancement (Ads pour le trafic immédiat, SEO pour la fondation long terme), puis réduisez progressivement les Ads au profit du SEO au fur et à mesure que les positions organiques s'installent.
 
-## FAQ — Mesurer le ROI du SEO
+## Quand attendre les premiers résultats SEO ?
 
-**Combien de temps avant d'avoir un ROI SEO positif ?**
-En moyenne 6 à 9 mois pour une TPE locale dans un secteur peu concurrentiel, 12 à 18 mois dans des secteurs très compétitifs (avocat, finance, immobilier). Le SEO est un investissement à moyen terme, pas un levier de croissance immédiat.
+| Mois | Ce que vous pouvez attendre |
+|---|---|
+| 1-2 | Indexation des nouvelles pages, début du crawl par Google |
+| 3-4 | Premières positions sur les requêtes longue traîne les moins concurrentielles |
+| 5-6 | Hausse visible des impressions dans Search Console, premiers leads organiques |
+| 7-9 | Consolidation des positions, augmentation du trafic organique mesurable |
+| 10-12 | ROI positif sur la plupart des secteurs, effet cumulatif visible |
 
-**Quels outils gratuits pour mesurer mon SEO ?**
-Google Search Console (positions, clics, impressions), Google Analytics 4 (trafic, conversions), Google Looker Studio (dashboard visuel), Moz Free (autorité de domaine). Ces 4 outils suffisent pour 80 % des besoins d'une TPE.
+Ces délais supposent un site techniquement sain (consultez notre [checklist d'audit SEO](/blog/audit-seo-technique-checklist-50-points)), du contenu optimisé publié régulièrement, et un minimum de [netlinking local](/blog/netlinking-local-backlinks-region-methodes).
 
-**Comment calculer la valeur d'un lead issu du SEO ?**
-Multipliez votre taux de transformation commercial (ex : 30 %) par votre panier moyen (ex : 1 500 €) puis par la LTV moyenne (ex : 3 projets sur 5 ans). Un lead vaut donc 0,30 × 1 500 × 3 = 1 350 € en valeur vie. Avec ce chiffre, un investissement SEO de 500 €/mois qui génère 2 leads/mois a un ROI de +440 %.
+## FAQ
 
-**Le SEO vaut-il encore le coup en 2026 avec l'IA ?**
-Oui, peut-être plus que jamais. Les [AI Overviews de Google](/blog/seo-ia-generative-ai-ai-overviews-google) citent des sources — les sites bien positionnés sont les premiers cités. Le SEO de qualité (expertise, autorité, contenu utile) est précisément ce que l'IA récompense.
+### Combien de temps faut-il pour voir des résultats SEO ?
 
-**Doit-on confier son SEO à une agence ou le faire soi-même ?**
-Pour une TPE avec moins de 10 pages stratégiques et un budget limité, le DIY avec Google Search Console et quelques articles de blog peut suffire les 6 premiers mois. Au-delà, l'accompagnement d'une agence comme Stackup Agency accélère les résultats et évite les erreurs techniques qui peuvent pénaliser le site durablement.
+Pour des requêtes longue traîne peu concurrentielles, 3 à 4 mois suffisent souvent pour apparaître en page 1. Pour des requêtes concurrentielles locales, comptez 6 à 9 mois. Pour des mots-clés très concurrentiels (comme "avocat Paris"), plusieurs années peuvent être nécessaires. La clé : choisissez des mots-clés atteignables selon la taille et l'autorité de votre site, et investissez durablement.
+
+### Le SEO est-il plus profitable que Google Ads ?
+
+Sur le long terme, généralement oui. Une étude BrightEdge (2024) montre que le SEO génère en moyenne 10 fois plus de trafic que la recherche payante pour un budget comparable, et que le trafic organique convertit mieux (car plus intentionnel). Mais Google Ads démarre immédiatement là où le SEO prend 6 mois. L'idéal est une stratégie combinée, avec un budget Ads réduit progressivement au profit du SEO.
+
+### Quels outils gratuits existent pour tracker le SEO ?
+
+Les indispensables gratuits : **Google Search Console** (positions, clics, impressions, couverture d'index), **Google Analytics 4** (trafic, conversions, comportement utilisateur), **Looker Studio** (visualisation et tableaux de bord). Ces trois outils gratuits couvrent 80 % des besoins d'une PME pour le suivi SEO. Ubersuggest propose également une version gratuite limitée pour le tracking de positions.
+
+### Comment calculer le ROI du SEO pour mon activité ?
+
+Formule simplifiée : (Nombre de leads organiques × Taux de conversion en clients × Valeur moyenne d'un client) - Investissement SEO. Pour obtenir le nombre de leads organiques, configurez des objectifs de conversion dans GA4 et filtrez par source "Organic". La difficulté principale est d'attribuer correctement les leads multi-touch — en cas de doute, utilisez une attribution par dernier clic, même si elle sous-estime un peu le SEO.
 
 ---
 
-*Besoin d'un tableau de bord SEO sur mesure et d'une stratégie de contenu adaptée à votre secteur ? [Contactez Stackup Agency](/contact) pour un audit gratuit de votre référencement actuel.*
+Mesurer le SEO n'est pas optionnel — c'est la condition pour optimiser votre stratégie, justifier vos investissements et démontrer la valeur du référencement naturel à vos parties prenantes. Commencez avec les outils gratuits, construisez votre tableau de bord, et réviser-le chaque mois.
+
+Nos [plans Starter (29€/mois)](/tarifs/starter), [Pro (44€/mois)](/tarifs/pro) et [Premium (89€/mois)](/tarifs/premium) incluent un reporting mensuel de vos KPIs SEO.
+
+[Prendre rendez-vous gratuitement](/contact)
