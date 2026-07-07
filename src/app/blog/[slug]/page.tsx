@@ -11,7 +11,20 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: { params: { slug: string } }) {
   const post = await getPost(params.slug)
   if (!post) return {}
-  return { title: `${post.title} — Stackup Agency Blog`, description: post.excerpt }
+  const url = `https://stackup-agency.fr/blog/${post.slug}`
+  return {
+    title: `${post.title} | Stackup Agency`,
+    description: post.excerpt,
+    alternates: { canonical: url },
+    openGraph: {
+      url,
+      title: post.title,
+      description: post.excerpt,
+      type: 'article',
+      publishedTime: post.date,
+      modifiedTime: post.date,
+    },
+  }
 }
 
 export default async function BlogPostPage({ params }: { params: { slug: string } }) {

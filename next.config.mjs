@@ -7,6 +7,12 @@ const nextConfig = {
   poweredByHeader: false,
   redirects: async () => [
     {
+      source: '/:path*',
+      has: [{ type: 'host', value: 'www.stackup-agency.fr' }],
+      destination: 'https://stackup-agency.fr/:path*',
+      permanent: true,
+    },
+    {
       source: '/blog/pourquoi-votre-restaurant-a-besoin-dun-site-web-en-2026',
       destination: '/blog/pourquoi-votre-restaurant-perd-des-clients-sans-site-web',
       permanent: true,

@@ -57,7 +57,7 @@ export default function SiteAssociationPage() {
             <span>⏱ Délai : 7 jours ouvrés</span>
             <span>💰 À partir de 149€</span>
           </div>
-          <p className="mt-3 text-xs text-white/40 max-w-xl">Délai indicatif en jours ouvrés. Stackup Agency se réserve le droit de prolonger ce délai de 20 jours ouvrés maximum en cas de forte demande ou d&apos;imprévu, avec notification préalable.</p>
+          <p className="mt-3 text-xs text-white/40 max-w-xl">Délais détaillés dans nos <a href="/cgv" className="underline hover:text-white/60 transition-colors">CGV</a>.</p>
 
           <div className="mt-8 flex flex-wrap gap-2">
             {['Clubs sportifs', 'Associations culturelles', 'Amicales', 'Groupes locaux'].map(tag => (

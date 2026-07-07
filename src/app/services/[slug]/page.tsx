@@ -254,7 +254,7 @@ Les mises à jour de sécurité sont notre priorité absolue. Les sites non mis 
 
 Les sauvegardes régulières constituent votre filet de sécurité. En cas de problème — intrusion, erreur de manipulation, panne d'hébergeur — nous pouvons restaurer votre site en quelques minutes.
 
-Le support technique est disponible selon votre plan : du support email avec réponse sous 72h pour le plan Starter, jusqu'au support urgent sous 16h pour le plan Premium. Nous répondons à vos questions, corrigeons les anomalies et effectuons les modifications demandées.
+Le support technique est disponible selon votre plan : du support email avec réponse sous 72h pour le plan Starter, jusqu'au support urgent sous 48h pour le plan Premium. Nous répondons à vos questions, corrigeons les anomalies et effectuons les modifications demandées.
 
 Nous surveillons également les performances de votre site : temps de chargement, disponibilité, erreurs techniques. Si quelque chose ne va pas, nous le détectons avant vous.`,
     price: 'À partir de 29€/mois',
@@ -299,9 +299,17 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
   const service = services[params.slug]
   if (!service) return {}
+  const url = `https://stackup-agency.fr/services/${params.slug}`
   return {
-    title: `${service.title} — Stackup Agency`,
+    title: `${service.title} — ${service.price} | Stackup Agency`,
     description: service.subtitle,
+    alternates: { canonical: url },
+    openGraph: {
+      url,
+      title: `${service.title} — ${service.price}`,
+      description: service.subtitle,
+      type: 'website',
+    },
   }
 }
 
@@ -324,7 +332,7 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
             <span>⏱ Délai : {service.duration}</span>
             {service.price !== 'Sur devis' && <span>💰 {service.price}</span>}
           </div>
-          <p className="mt-3 text-xs text-white/40 max-w-xl">Délai indicatif en jours ouvrés. Stackup Agency se réserve le droit de prolonger ce délai de 20 jours ouvrés maximum en cas de forte demande ou d&apos;imprévu, avec notification préalable.</p>
+          <p className="mt-3 text-xs text-white/40 max-w-xl">Délais détaillés dans nos <a href="/cgv" className="underline hover:text-white/60 transition-colors">CGV</a>.</p>
         </div>
       </section>
 

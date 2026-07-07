@@ -3,8 +3,15 @@ import Link from 'next/link'
 import { ArrowLeft } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Politique de cookies — Stackup Agency',
-  description: 'Informations sur les cookies utilisés par stackup-agency.fr',
+  title: 'Politique de Cookies | Stackup Agency',
+  description: 'Politique de cookies de stackup-agency.fr — quels cookies nous utilisons, pourquoi et comment les gérer.',
+  alternates: { canonical: 'https://stackup-agency.fr/cookies' },
+  openGraph: {
+    url: 'https://stackup-agency.fr/cookies',
+    title: 'Politique de Cookies | Stackup Agency',
+    description: 'Politique de cookies de stackup-agency.fr.',
+    type: 'website',
+  },
 }
 
 export default function Cookies() {

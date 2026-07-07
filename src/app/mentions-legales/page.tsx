@@ -3,8 +3,15 @@ import Link from 'next/link'
 import { ArrowLeft, Download } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Mentions légales — Stackup Agency',
-  description: 'Mentions légales du site stackup-agency.fr',
+  title: 'Mentions Légales | Stackup Agency',
+  description: 'Mentions légales du site stackup-agency.fr — éditeur, hébergeur, propriété intellectuelle et responsabilité.',
+  alternates: { canonical: 'https://stackup-agency.fr/mentions-legales' },
+  openGraph: {
+    url: 'https://stackup-agency.fr/mentions-legales',
+    title: 'Mentions Légales | Stackup Agency',
+    description: 'Mentions légales du site stackup-agency.fr.',
+    type: 'website',
+  },
 }
 
 export default function MentionsLegales() {

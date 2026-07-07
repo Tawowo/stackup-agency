@@ -120,7 +120,7 @@ Les sauvegardes automatiques hebdomadaires vous offrent une tranquillité d'espr
     tagline: 'Le service complet pour les exigeants.',
     description: `Le plan Premium est notre offre la plus complète. Il est conçu pour les entreprises qui considèrent leur site web comme un actif stratégique et qui souhaitent bénéficier du meilleur niveau de service.
 
-Le support urgent sous 16h est notre engagement le plus fort. Si votre site rencontre un problème critique, nous intervenons dans les plus brefs délais, y compris le week-end pour les incidents graves.
+Le support urgent sous 48h est notre engagement le plus fort. Si votre site rencontre un problème critique, nous intervenons dans les plus brefs délais, y compris le week-end pour les incidents graves.
 
 Les modifications illimitées vous donnent une flexibilité totale. Vous pouvez mettre à jour votre site sans vous soucier d'un compteur : nouveaux prix, nouvelle galerie, nouvelle page, nouveau contenu.
 
@@ -173,9 +173,17 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: { params: { plan: string } }): Promise<Metadata> {
   const plan = plans[params.plan]
   if (!plan) return {}
+  const url = `https://stackup-agency.fr/tarifs/${params.plan}`
   return {
-    title: `Plan ${plan.name} ${plan.price} — Stackup Agency`,
+    title: `Plan ${plan.name} ${plan.price} — Maintenance Web | Stackup Agency`,
     description: plan.tagline,
+    alternates: { canonical: url },
+    openGraph: {
+      url,
+      title: `Plan ${plan.name} ${plan.price} — Maintenance Web`,
+      description: plan.tagline,
+      type: 'website',
+    },
   }
 }
 

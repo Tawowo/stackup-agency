@@ -3,8 +3,15 @@ import Link from 'next/link'
 import { ArrowLeft, Download } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Conditions Générales de Vente — Stackup Agency',
-  description: 'CGV de Stackup Agency — création de sites web, applications et maintenance.',
+  title: 'Conditions Générales de Vente (CGV) | Stackup Agency',
+  description: 'Conditions générales de vente de Stackup Agency. Modalités de commande, délais de livraison, paiement et garanties pour tous nos services de création web.',
+  alternates: { canonical: 'https://stackup-agency.fr/cgv' },
+  openGraph: {
+    url: 'https://stackup-agency.fr/cgv',
+    title: 'Conditions Générales de Vente (CGV) | Stackup Agency',
+    description: 'Conditions générales de vente de Stackup Agency : commande, délais, paiement et garanties.',
+    type: 'website',
+  },
 }
 
 const sections = [

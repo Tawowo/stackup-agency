@@ -11,9 +11,17 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params
   const r = realisations.find(r => r.slug === slug)
   if (!r) return {}
+  const url = `https://stackup-agency.fr/realisations/${slug}`
   return {
-    title: `${r.nom} — Réalisation Stackup Agency`,
+    title: `${r.nom} — Démonstration Stackup Agency | Stackup Agency`,
     description: r.description,
+    alternates: { canonical: url },
+    openGraph: {
+      url,
+      title: `${r.nom} — Démonstration Stackup Agency`,
+      description: r.description,
+      type: 'website',
+    },
   }
 }
 

@@ -3,8 +3,15 @@ import Link from 'next/link'
 import { ArrowLeft, Download, FileText, FileCheck, FilePen, FileSignature, Presentation, ClipboardList } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Documents à télécharger — Stackup Agency',
+  title: 'Documents à Télécharger | Stackup Agency',
   description: 'Téléchargez tous les documents légaux et commerciaux de Stackup Agency : CGV, contrat de prestation, devis, facture, attestation.',
+  alternates: { canonical: 'https://stackup-agency.fr/ressources/documents' },
+  openGraph: {
+    url: 'https://stackup-agency.fr/ressources/documents',
+    title: 'Documents à Télécharger | Stackup Agency',
+    description: 'Téléchargez tous les documents légaux et commerciaux de Stackup Agency.',
+    type: 'website',
+  },
 }
 
 const docs = [

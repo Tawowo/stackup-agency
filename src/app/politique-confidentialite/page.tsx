@@ -3,8 +3,15 @@ import Link from 'next/link'
 import { ArrowLeft } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Politique de confidentialité — Stackup Agency',
-  description: 'Politique de confidentialité et traitement des données personnelles — Stackup Agency',
+  title: 'Politique de Confidentialité | Stackup Agency',
+  description: 'Politique de confidentialité et traitement des données personnelles de Stackup Agency. Vos droits RGPD et la gestion de vos données.',
+  alternates: { canonical: 'https://stackup-agency.fr/politique-confidentialite' },
+  openGraph: {
+    url: 'https://stackup-agency.fr/politique-confidentialite',
+    title: 'Politique de Confidentialité | Stackup Agency',
+    description: 'Politique de confidentialité et traitement des données personnelles de Stackup Agency.',
+    type: 'website',
+  },
 }
 
 export default function PolitiqueConfidentialite() {
