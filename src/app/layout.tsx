@@ -64,10 +64,10 @@ export const metadata: Metadata = {
       'Agence digitale spécialisée en création de sites web, applications et systèmes de gestion sur mesure. Devis gratuit sous 72h.',
     images: [
       {
-        url: '/og-image.png',
+        url: 'https://stackup-agency.fr/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'Stackup Agency — Votre vision. Notre code.',
+        alt: 'Stackup Agency',
       },
     ],
   },
@@ -75,7 +75,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Stackup Agency — Agence Web & Digital',
     description: 'Création de sites web, applications et systèmes de gestion sur mesure.',
-    images: ['/og-image.png'],
+    images: ['https://stackup-agency.fr/og-image.png'],
   },
   alternates: {
     canonical: 'https://stackup-agency.fr',
