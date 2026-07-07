@@ -38,21 +38,12 @@ export default function Pricing() {
                 initial={{ opacity: 0, y: 40 }}
                 animate={inView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5, delay: i * 0.1 + 0.3 }}
-                className={`relative rounded-2xl p-8 flex flex-col overflow-hidden ${
+                className={`relative rounded-2xl p-8 flex flex-col ${
                   isPro
                     ? 'bg-gradient-to-b from-navy to-[#1a3254] text-white shadow-2xl shadow-navy/30 lg:scale-[1.03]'
-                    : 'bg-white dark:bg-white/5 border border-gray-100 dark:border-white/10 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300'
+                    : 'bg-white dark:bg-white/5 border border-gray-100 dark:border-white/10 shadow-sm'
                 }`}
               >
-                {/* Top accent stripe for Starter and Premium */}
-                {!isPro && (
-                  <div className={`absolute top-0 inset-x-0 h-[3px] ${
-                    i === 0
-                      ? 'bg-navy'
-                      : 'bg-gradient-to-r from-[#F59E0B] to-amber-400'
-                  }`} />
-                )}
-
                 {isPro && (
                   <div className="absolute -top-4 left-1/2 -translate-x-1/2 flex items-center gap-1.5 px-4 py-1.5 bg-gold rounded-full text-white text-xs font-bold shadow-lg">
                     <Zap size={12} fill="white" />
