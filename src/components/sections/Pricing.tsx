@@ -38,10 +38,12 @@ export default function Pricing() {
                 initial={{ opacity: 0, y: 40 }}
                 animate={inView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5, delay: i * 0.1 + 0.3 }}
-                className={`relative rounded-2xl p-8 flex flex-col ${
+                className={`relative rounded-2xl p-8 flex flex-col transition-all duration-300 ${
                   isPro
                     ? 'bg-gradient-to-b from-navy to-[#1a3254] text-white shadow-2xl shadow-navy/30 lg:scale-[1.03]'
-                    : 'bg-white dark:bg-white/5 border border-gray-100 dark:border-white/10 shadow-sm'
+                    : i === 0
+                      ? 'bg-white dark:bg-white/5 border-2 border-navy/60 dark:border-navy hover:border-navy hover:shadow-xl hover:-translate-y-1'
+                      : 'bg-white dark:bg-white/5 border-2 border-[#F59E0B]/60 dark:border-[#F59E0B]/50 hover:border-[#F59E0B] hover:shadow-xl hover:shadow-[#F59E0B]/10 hover:-translate-y-1'
                 }`}
               >
                 {isPro && (

@@ -46,7 +46,7 @@ export default function Services() {
                 initial={{ opacity: 0, y: 40 }}
                 animate={inView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5, delay: i * 0.07 }}
-                className="group relative bg-white dark:bg-white/5 rounded-2xl p-7 border border-gray-100 dark:border-white/10 hover:shadow-2xl hover:shadow-electric/10 hover:border-electric/30 dark:hover:border-electric/30 transition-all duration-300 hover:-translate-y-1.5 flex flex-col"
+                className="group relative bg-white dark:bg-white/5 rounded-2xl p-7 border-2 border-electric/40 dark:border-electric/30 hover:border-electric hover:shadow-xl hover:shadow-electric/10 dark:hover:border-electric transition-all duration-300 hover:-translate-y-1.5 flex flex-col"
               >
                 <div className={`w-14 h-14 rounded-2xl ${bg} flex items-center justify-center mb-5 transition-transform duration-300 group-hover:scale-110`}>
                   <div className={`w-8 h-8 rounded-xl bg-gradient-to-br ${color} flex items-center justify-center shadow-md`}>
@@ -70,8 +70,6 @@ export default function Services() {
                   En savoir plus
                   <ArrowRight size={15} className="group-hover:translate-x-1 transition-transform" />
                 </Link>
-
-                <div className={`absolute inset-x-0 bottom-0 h-0.5 bg-gradient-to-r ${color} rounded-full scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left`} />
               </motion.div>
             )
           })}
