@@ -6,12 +6,12 @@ import { useLanguage } from '@/contexts/LanguageContext'
 import Link from 'next/link'
 
 const serviceData = [
-  { icon: Globe,          slug: 'site-vitrine',       color: 'from-blue-500 to-electric',     bg: 'bg-blue-50 dark:bg-blue-900/20',       price: 'À partir de 449€'   },
-  { icon: FileText,       slug: 'site-multi-pages',   color: 'from-emerald-500 to-teal-600',  bg: 'bg-emerald-50 dark:bg-emerald-900/20', price: 'À partir de 749€'   },
-  { icon: ShoppingCart,   slug: 'site-ecommerce',     color: 'from-purple-500 to-violet-600', bg: 'bg-purple-50 dark:bg-purple-900/20',   price: 'À partir de 1 647€' },
-  { icon: LayoutDashboard,slug: 'systeme-gestion',    color: 'from-electric to-navy',         bg: 'bg-sky-50 dark:bg-sky-900/20',         price: 'À partir de 1 447€' },
-  { icon: Palette,        slug: 'site-association',   color: 'from-pink-500 to-rose-600',     bg: 'bg-pink-50 dark:bg-pink-900/20',       price: 'À partir de 149€'   },
-  { icon: TrendingUp,     slug: 'marketing-digital',  color: 'from-orange-500 to-amber-600',  bg: 'bg-orange-50 dark:bg-orange-900/20',   price: 'Sur devis'          },
+  { icon: Globe,          slug: 'site-vitrine',       color: 'from-blue-500 to-electric',     bg: 'bg-blue-50 dark:bg-blue-900/20',       price: 'À partir de 449€',   delay: '10 jours' },
+  { icon: FileText,       slug: 'site-multi-pages',   color: 'from-emerald-500 to-teal-600',  bg: 'bg-emerald-50 dark:bg-emerald-900/20', price: 'À partir de 749€',   delay: '17 jours' },
+  { icon: ShoppingCart,   slug: 'site-ecommerce',     color: 'from-purple-500 to-violet-600', bg: 'bg-purple-50 dark:bg-purple-900/20',   price: 'À partir de 1 647€', delay: '21 jours' },
+  { icon: LayoutDashboard,slug: 'systeme-gestion',    color: 'from-electric to-navy',         bg: 'bg-sky-50 dark:bg-sky-900/20',         price: 'À partir de 1 447€', delay: '21 jours' },
+  { icon: Palette,        slug: 'site-association',   color: 'from-pink-500 to-rose-600',     bg: 'bg-pink-50 dark:bg-pink-900/20',       price: 'À partir de 149€',   delay: '7 jours'  },
+  { icon: TrendingUp,     slug: 'marketing-digital',  color: 'from-orange-500 to-amber-600',  bg: 'bg-orange-50 dark:bg-orange-900/20',   price: 'Sur devis',          delay: 'Sur devis' },
 ]
 
 export default function Services() {
@@ -39,15 +39,23 @@ export default function Services() {
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           {t.services.items.slice(0, 6).map((item, i) => {
-            const { icon: Icon, slug, color, bg, price } = serviceData[i]
+            const { icon: Icon, slug, color, bg, price, delay } = serviceData[i]
             return (
               <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 40 }}
                 animate={inView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5, delay: i * 0.07 }}
-                className="group relative bg-white dark:bg-white/5 rounded-2xl p-7 border border-gray-100 dark:border-white/10 hover:shadow-2xl hover:shadow-electric/10 hover:border-electric/30 dark:hover:border-electric/30 transition-all duration-300 hover:-translate-y-1.5 flex flex-col"
+                className="group relative bg-white dark:bg-white/5 rounded-2xl p-7 border border-gray-100 dark:border-white/10 hover:shadow-2xl hover:shadow-electric/10 hover:border-electric/20 dark:hover:border-electric/20 transition-all duration-300 hover:-translate-y-1.5 flex flex-col overflow-hidden"
               >
+                {/* Top color stripe */}
+                <div className={`absolute top-0 inset-x-0 h-[3px] bg-gradient-to-r ${color} opacity-70 group-hover:opacity-100 group-hover:from-electric group-hover:to-[#F59E0B] transition-all duration-300`} />
+
+                {/* Delivery badge */}
+                <div className="absolute top-4 right-4 px-2 py-0.5 rounded-full bg-navy/8 dark:bg-white/10 border border-navy/15 dark:border-white/10 text-[10px] font-semibold text-navy dark:text-white/60 tracking-wide">
+                  {delay}
+                </div>
+
                 <div className={`w-14 h-14 rounded-2xl ${bg} flex items-center justify-center mb-5 transition-transform duration-300 group-hover:scale-110`}>
                   <div className={`w-8 h-8 rounded-xl bg-gradient-to-br ${color} flex items-center justify-center shadow-md`}>
                     <Icon size={18} className="text-white" />
@@ -65,13 +73,11 @@ export default function Services() {
 
                 <Link
                   href={`/services/${slug}`}
-                  className="inline-flex items-center gap-2 text-electric text-sm font-semibold group-hover:gap-3 transition-all"
+                  className="inline-flex items-center gap-2 text-electric text-sm font-semibold group-hover:gap-3 group-hover:text-[#F59E0B] transition-all duration-200"
                 >
                   En savoir plus
                   <ArrowRight size={15} className="group-hover:translate-x-1 transition-transform" />
                 </Link>
-
-                <div className={`absolute inset-x-0 bottom-0 h-0.5 bg-gradient-to-r ${color} rounded-full scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left`} />
               </motion.div>
             )
           })}
