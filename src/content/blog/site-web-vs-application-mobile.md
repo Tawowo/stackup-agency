@@ -1,7 +1,7 @@
 ---
 title: "Site web vs application mobile : quoi choisir"
 excerpt: "Site web ou application mobile ? Ce choix stratégique dépend de vos objectifs, votre budget, et votre audience. Voici le comparatif complet pour prendre la bonne décision."
-date: "2026-01-18"
+date: "2026-02-18"
 readTime: 7
 tag: "Digital"
 category: "digital"

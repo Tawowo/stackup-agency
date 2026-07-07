@@ -1,6 +1,6 @@
 ---
 title: "Gestion des stocks digitale : zéro rupture et zéro gaspillage"
-date: "2026-06-23"
+date: "2026-05-28"
 excerpt: "Les ruptures de stock coûtent en moyenne 8 % du chiffre d'affaires. Le surstockage immobilise de la trésorerie. La digitalisation des stocks permet d'optimiser les deux simultanément."
 tag: "Applications métier"
 category: "applications-metier"

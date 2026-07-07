@@ -1,6 +1,6 @@
 ---
 title: "Site web décoration et ameublement : catalogue en ligne et showroom virtuel"
-date: "2026-06-23"
+date: "2026-03-26"
 excerpt: "Comment un magasin de décoration ou d'ameublement peut créer un catalogue en ligne attractif, proposer un showroom virtuel et convertir les visiteurs web en clients en magasin."
 tag: "Commerce"
 category: "commerce"

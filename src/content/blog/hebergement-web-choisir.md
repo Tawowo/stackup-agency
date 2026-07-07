@@ -1,6 +1,6 @@
 ---
 title: "Hébergement web : les différentes solutions et comment choisir"
-date: "2026-06-23"
+date: "2026-05-27"
 excerpt: "Hébergement mutualisé, VPS, serveur dédié ou cloud ? Guide complet pour choisir la solution d'hébergement adaptée à votre site et votre budget."
 tag: "Création de sites"
 category: "creation-sites"

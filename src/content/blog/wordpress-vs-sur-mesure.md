@@ -1,6 +1,6 @@
 ---
 title: "WordPress ou développement sur mesure : comment choisir en 2026 ?"
-date: "2026-06-23"
+date: "2026-01-05"
 excerpt: "WordPress ou développement sur mesure ? Ce comparatif honnête vous aide à faire le bon choix selon votre projet, votre budget et vos ambitions."
 tag: "Création de sites"
 category: "creation-sites"

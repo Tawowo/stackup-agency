@@ -1,6 +1,6 @@
 ---
 title: "Application de livraison interne : gérer ses tournées et ses livreurs"
-date: "2026-06-23"
+date: "2026-06-21"
 excerpt: "Une tournée de livraison mal optimisée peut coûter 30 % de carburant et de temps en trop. Une application de gestion des tournées réduit ces coûts tout en améliorant la traçabilité des livraisons."
 tag: "Applications métier"
 category: "applications-metier"

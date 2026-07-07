@@ -1,6 +1,6 @@
 ---
 title: "Site web traiteur et événementiel : capter les mariages et séminaires"
-date: "2026-06-23"
+date: "2026-02-24"
 excerpt: "Mariages, séminaires, cocktails d'entreprise : le secteur traiteur événementiel représente des commandes à 5 chiffres. Voici comment votre site web devient votre premier commercial."
 tag: "Restauration"
 category: "restaurants"

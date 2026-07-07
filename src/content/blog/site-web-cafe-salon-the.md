@@ -1,6 +1,6 @@
 ---
 title: "Site web café et salon de thé : ambiance en ligne et réservation de tables"
-date: "2026-06-23"
+date: "2026-04-06"
 excerpt: "Un café ou salon de thé vend d'abord une ambiance. Votre site web doit transmettre cette émotion et permettre la réservation en ligne pour maximiser votre fréquentation."
 tag: "Restauration"
 category: "restaurants"

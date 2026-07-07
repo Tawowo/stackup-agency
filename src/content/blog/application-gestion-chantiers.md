@@ -1,6 +1,6 @@
 ---
 title: "Application gestion de chantiers : suivi terrain et reporting en temps réel"
-date: "2026-06-23"
+date: "2026-06-22"
 excerpt: "Les dépassements de budget sur les chantiers atteignent en moyenne 28 %. Une application de suivi de chantier permet de détecter les dérives en temps réel et de sauvegarder la marge."
 tag: "Applications métier"
 category: "applications-metier"

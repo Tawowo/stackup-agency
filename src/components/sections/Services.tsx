@@ -67,7 +67,7 @@ export default function Services() {
                   href={`/services/${slug}`}
                   className="inline-flex items-center gap-2 text-electric text-sm font-semibold group-hover:gap-3 transition-all"
                 >
-                  En savoir plus
+                  {t.services.learnMore}
                   <ArrowRight size={15} className="group-hover:translate-x-1 transition-transform" />
                 </Link>
               </motion.div>
@@ -85,16 +85,16 @@ export default function Services() {
               <div className="w-14 h-14 rounded-2xl bg-white/10 flex items-center justify-center mb-5 text-2xl font-black text-white group-hover:bg-white/20 transition-colors">
                 ✦
               </div>
-              <h3 className="font-bold text-white text-xl mb-2">Projet sur mesure</h3>
+              <h3 className="font-bold text-white text-xl mb-2">{t.services.customProject}</h3>
               <p className="text-white/70 text-sm leading-relaxed">
-                Vous avez un besoin spécifique ? Discutons de votre projet, gratuit et sans engagement.
+                {t.services.customProjectDesc}
               </p>
             </div>
             <Link
               href="#contact"
               className="mt-6 inline-flex items-center gap-2 px-5 py-2.5 bg-gold hover:bg-amber-500 text-white rounded-xl text-sm font-semibold transition-all group-hover:-translate-y-0.5"
             >
-              Nous contacter
+              {t.services.contactUs}
               <ArrowRight size={15} />
             </Link>
           </motion.div>

@@ -1,6 +1,6 @@
 ---
 title: "Application de gestion des rendez-vous : automatiser sa prise de RDV"
-date: "2026-06-23"
+date: "2026-06-21"
 excerpt: "40 % des appels entrants d'une PME de services concernent la prise de rendez-vous. Automatiser ce flux libère du temps, réduit les no-shows et améliore l'expérience client."
 tag: "Applications métier"
 category: "applications-metier"

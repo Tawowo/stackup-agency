@@ -1,6 +1,6 @@
 ---
 title: "Portail client et extranet : offrir un espace privé à vos clients"
-date: "2026-06-23"
+date: "2026-05-16"
 excerpt: "Les entreprises qui proposent un portail client réduisent leurs demandes de support de 40 % et augmentent la satisfaction client de 35 %. Un extranet sur mesure transforme la relation commerciale."
 tag: "Applications métier"
 category: "applications-metier"

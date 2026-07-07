@@ -1,6 +1,6 @@
 ---
 title: "Site web pharmacie : informations, click & collect et fidélisation"
-date: "2026-06-23"
+date: "2026-03-08"
 excerpt: "Découvrez comment une pharmacie peut tirer parti d'un site web professionnel pour informer ses patients, proposer le click & collect et renforcer la fidélisation client face à la concurrence des pure players."
 tag: "Commerce"
 category: "commerce"

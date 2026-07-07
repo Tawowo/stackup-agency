@@ -1,6 +1,6 @@
 ---
 title: "Agence web à Évreux : création de sites et applications en Normandie"
-date: "2026-06-23"
+date: "2026-06-29"
 excerpt: "Stackup Agency crée des sites internet et applications pour les entreprises d'Évreux et de l'Eure. Dès 449€, livraison en 10 jours, devis gratuit."
 tag: "Agences locales"
 category: "pages-locales"

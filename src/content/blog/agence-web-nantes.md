@@ -1,6 +1,6 @@
 ---
 title: "Agence web à Nantes : développement web pour les entreprises de Loire-Atlantique"
-date: "2026-06-23"
+date: "2026-06-26"
 excerpt: "Stackup Agency crée des sites internet et applications pour les entreprises de Nantes et de Loire-Atlantique. Dès 449€, livraison en 10 jours, expertise digitale."
 tag: "Agences locales"
 category: "pages-locales"

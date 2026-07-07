@@ -1,10 +1,10 @@
 ---
 title: "Site web multilingue : comment attirer des clients étrangers et développer votre activité touristique"
 description: "Un touriste britannique ne cherche pas en français. Un site web multilingue bien optimisé vous rend visible auprès de millions de voyageurs supplémentaires. Guide complet de mise en place."
-date: "2026-06-22"
+date: "2026-03-20"
 category: "strategie"
 tags: ["site multilingue", "tourisme", "clients étrangers"]
-readTime: "8 min de lecture"
+readTime: 8
 ---
 
 La France est la première destination touristique mondiale avec 100 millions de visiteurs étrangers par an. Ces voyageurs viennent du Royaume-Uni, d'Allemagne, des Pays-Bas, des États-Unis, du Japon, de Chine, d'Italie. Ils planifient leurs séjours en ligne, cherchent des hébergements, des restaurants, des activités, des guides — dans leur propre langue. Un gîte en Dordogne, un camping en Bretagne, une activité de canyoning dans les Pyrénées, un restaurant étoilé en Bourgogne : si votre site n'est disponible qu'en français, vous êtes invisibles pour l'immense majorité de ces voyageurs. Selon Google, 75 % des internautes préfèrent acheter dans leur propre langue et 60 % n'achètent jamais sur des sites uniquement en langue étrangère. C'est une barrière à l'entrée considérable — et une opportunité extraordinaire pour ceux qui la franchissent.

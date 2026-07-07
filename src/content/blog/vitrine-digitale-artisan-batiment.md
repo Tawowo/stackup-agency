@@ -1,10 +1,10 @@
 ---
 title: "Artisan du bâtiment : comment un site web vous positionne face aux grandes entreprises"
 description: "Plaquiste, menuisier, peintre en bâtiment : un site web professionnel avec portfolio de chantiers est votre meilleur commercial. Voici comment en tirer parti."
-date: "2026-06-08"
+date: "2026-01-15"
 category: "artisans"
 tags: ["artisan bâtiment", "site vitrine", "portfolio chantiers"]
-readTime: "7 min de lecture"
+readTime: 7
 ---
 
 En France, plus de 600 000 entreprises artisanales exercent dans le secteur du bâtiment — plombiers, électriciens, peintres, menuisiers, plaquistes, carreleurs. La grande majorité travaillent sur recommandation, le bouche-à-oreille étant historiquement le principal canal d'acquisition dans ce secteur. Mais en 2026, cette réalité a profondément changé. Les particuliers qui cherchent un artisan commencent systématiquement par une recherche Google, consultent les avis en ligne et comparent les portfolios de chantiers avant de demander un devis. L'artisan qui n'a pas de présence digitale professionnelle perd cette première sélection — et laisse les chantiers aux concurrents qui ont compris les règles du jeu. Pire encore : sans site web, vous n'existez pas pour la clientèle des promoteurs, des architectes et des entreprises générales du bâtiment, qui constituent souvent les marchés les plus rentables.

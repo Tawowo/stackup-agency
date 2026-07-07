@@ -1,6 +1,6 @@
 ---
 title: "Avis clients pour artisans : la stratégie pour obtenir 100+ avis Google"
-date: "2026-06-23"
+date: "2026-06-18"
 excerpt: "Les avis Google sont devenus le premier critère de sélection d'un artisan. Voici une stratégie concrète pour passer de 5 avis à 100+, et transformer votre réputation en moteur de croissance."
 tag: "Artisans"
 category: "artisans"

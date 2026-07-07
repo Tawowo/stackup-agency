@@ -1,7 +1,7 @@
 ---
 title: "Comment trouver ses premiers clients"
 excerpt: "Trouver ses premiers clients est le défi numéro un de tout entrepreneur qui se lance. Voici des stratégies concrètes et actionnables pour décrocher vos premières missions rapidement."
-date: "2026-02-12"
+date: "2026-02-03"
 readTime: 7
 tag: "Entrepreneuriat"
 category: "entrepreneuriat"

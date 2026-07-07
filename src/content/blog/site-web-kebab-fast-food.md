@@ -1,6 +1,6 @@
 ---
 title: "Site web kebab et fast-food : commandes en ligne et gestion simplifiée"
-date: "2026-06-23"
+date: "2026-03-28"
 excerpt: "Kebabs et fast-foods indépendants : comment un site web avec commandes en ligne peut doubler vos ventes et vous libérer des plateformes de livraison."
 tag: "Restauration"
 category: "restaurants"

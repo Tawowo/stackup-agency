@@ -1,6 +1,6 @@
 ---
 title: "SEO local pour commerces : attirer les clients du quartier en ligne"
-date: "2026-06-23"
+date: "2026-04-25"
 excerpt: "Le commerce physique n'est pas mort — il s'est transformé. 78% des achats en magasin commencent par une recherche en ligne. Voici comment en profiter."
 tag: "SEO Local"
 category: "seo-local"

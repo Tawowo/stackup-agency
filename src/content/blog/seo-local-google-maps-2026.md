@@ -1,6 +1,6 @@
 ---
 title: "SEO local : comment apparaître en premier sur Google Maps en 2026"
-date: "2026-06-23"
+date: "2026-04-24"
 excerpt: "46% des recherches Google ont une intention locale. Voici comment exploiter le Local Pack pour apparaître en premier sur Google Maps et capter ces clients."
 tag: "SEO Local"
 category: "seo-local"

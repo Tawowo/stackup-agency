@@ -1,6 +1,6 @@
 ---
 title: "Site web jardinerie et animalerie : catalogue, conseils et click & collect"
-date: "2026-06-23"
+date: "2026-03-29"
 excerpt: "Comment une jardinerie ou animalerie indépendante peut utiliser un site web pour présenter son catalogue, proposer des conseils experts et mettre en place le click & collect face à la concurrence des grandes enseignes."
 tag: "Commerce"
 category: "commerce"

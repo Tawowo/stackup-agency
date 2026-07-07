@@ -1,7 +1,7 @@
 ---
 title: "Programme de fidélité restaurant : guide complet"
 excerpt: "Un client fidèle vaut 5 fois plus qu'un nouveau client. Découvrez comment créer un programme de fidélité efficace pour votre restaurant et en faire un levier de croissance."
-date: "2026-02-18"
+date: "2026-05-11"
 readTime: 7
 tag: "Restaurants"
 category: "restaurants"

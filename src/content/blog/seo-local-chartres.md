@@ -1,6 +1,6 @@
 ---
 title: "Référencement local à Chartres : être visible sur Google dans l'Eure-et-Loir"
-date: "2026-06-23"
+date: "2026-04-27"
 excerpt: "Chartres est la préfecture d'un département en forte croissance. Les entreprises locales qui dominent Google Maps aujourd'hui construisent une avance durable."
 tag: "SEO Local"
 category: "seo-local"

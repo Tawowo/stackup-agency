@@ -24,6 +24,10 @@ export const translations = {
     services: {
       title: 'Nos Services',
       subtitle: 'Des solutions digitales complètes pour propulser votre business.',
+      learnMore: 'En savoir plus',
+      contactUs: 'Nous contacter',
+      customProject: 'Projet sur mesure',
+      customProjectDesc: 'Vous avez un besoin spécifique ? Discutons de votre projet, gratuit et sans engagement.',
       items: [
         { title: 'Site Vitrine', desc: 'Un site professionnel qui représente votre activité 24h/24 et convertit vos visiteurs en clients.' },
         { title: 'Site Multi-pages', desc: 'Un site avec plusieurs pages distinctes (/services, /about, /contact) — idéal pour agences, cabinets et prestataires.' },
@@ -43,6 +47,8 @@ export const translations = {
       recommended: 'Recommandé',
       from: 'À partir de',
       quote: 'Sur devis',
+      choose: 'Choisir',
+      learnMore: 'En savoir plus',
       plans: [
         {
           name: 'Starter',
@@ -89,8 +95,13 @@ export const translations = {
       ],
     },
     portfolio: {
-      title: 'Réalisations',
-      subtitle: 'Nos premiers projets — et bientôt le vôtre.',
+      title: 'Nos réalisations',
+      subtitle: "Des démonstrations concrètes de notre savoir-faire — voyez exactement ce que nous pouvons construire pour vous en 10 jours.",
+      demoSameQuality: "Même niveau d'exigence, même attention aux détails, livré en 10 jours.",
+      demoBadge: 'Projet de démonstration — ce que nous pouvons construire pour vous',
+      viewDemo: 'Voir la démo',
+      viewProject: 'Voir le projet',
+      yourProject: 'Votre projet ici ?',
       client1: {
         name: 'Roma Pizzeria Restaurant',
         location: 'Savigné-sur-Lathan',
@@ -117,7 +128,7 @@ export const translations = {
         { value: '72h', label: 'Réponse garantie' },
       ],
       quote: 'Nous ne livrons pas des solutions toutes faites. Chaque projet est conçu de zéro, pensé pour votre activité et optimisé pour vos clients.',
-      quote2: 'Ce que nous faisons aujourd\'hui pour des centaines d\'euros, d\'autres le facturent des milliers. C\'est une stratégie, pas de la modestie.',
+      quote2: "Ce que nous faisons aujourd'hui pour des centaines d'euros, d'autres le facturent des milliers. C'est une stratégie, pas de la modestie.",
     },
     testimonials: {
       title: 'Témoignages',
@@ -130,6 +141,24 @@ export const translations = {
       readMore: "Lire l'article",
       readTime: 'min de lecture',
       allArticles: 'Tous les articles',
+      frOnly: '',
+    },
+    cookie: {
+      message: 'Ce site utilise des cookies pour améliorer votre expérience.',
+      learnMore: 'En savoir plus',
+      refuseAll: 'Tout refuser',
+      customize: 'Personnaliser',
+      acceptAll: 'Tout accepter',
+      manageTitle: 'Gérer mes préférences',
+      manageDesc: 'Choisissez les cookies que vous souhaitez activer.',
+      technical: 'Cookies techniques',
+      technicalRequired: '(obligatoires)',
+      technicalDesc: 'Nécessaires au fonctionnement du site (thème, session). Ne peuvent pas être désactivés.',
+      analytics: 'Cookies analytiques',
+      analyticsDesc: 'Nous aident à comprendre comment les visiteurs utilisent le site (Google Analytics).',
+      marketing: 'Cookies marketing',
+      marketingDesc: 'Permettent de personnaliser les publicités selon vos intérêts.',
+      save: 'Enregistrer',
     },
     faq: {
       title: 'Questions fréquentes',
@@ -222,6 +251,10 @@ export const translations = {
     services: {
       title: 'Our Services',
       subtitle: 'Complete digital solutions to propel your business forward.',
+      learnMore: 'Learn more',
+      contactUs: 'Contact us',
+      customProject: 'Custom project',
+      customProjectDesc: 'Have a specific need? Let\'s talk about your project — free and no commitment.',
       items: [
         { title: 'Showcase Website', desc: 'A professional website representing your business 24/7, converting visitors into customers.' },
         { title: 'Multi-page Website', desc: 'A site with distinct pages (/services, /about, /contact) — ideal for agencies, firms and service providers.' },
@@ -241,6 +274,8 @@ export const translations = {
       recommended: 'Recommended',
       from: 'Starting from',
       quote: 'On quote',
+      choose: 'Choose',
+      learnMore: 'Learn more',
       plans: [
         {
           name: 'Starter',
@@ -288,7 +323,12 @@ export const translations = {
     },
     portfolio: {
       title: 'Portfolio',
-      subtitle: 'Our first projects — and soon yours.',
+      subtitle: 'Concrete demonstrations of our expertise — see exactly what we can build for you in 10 days.',
+      demoSameQuality: 'Same level of quality, same attention to detail, delivered in 10 days.',
+      demoBadge: 'Demonstration project — what we can build for you',
+      viewDemo: 'View demo',
+      viewProject: 'View project',
+      yourProject: 'Your project here?',
       client1: {
         name: 'Roma Pizzeria Restaurant',
         location: 'Savigné-sur-Lathan',
@@ -328,6 +368,24 @@ export const translations = {
       readMore: 'Read article',
       readTime: 'min read',
       allArticles: 'All articles',
+      frOnly: 'Our blog articles are written in French for local SEO purposes. Browse our services or contact us in English.',
+    },
+    cookie: {
+      message: 'This site uses cookies to improve your experience.',
+      learnMore: 'Learn more',
+      refuseAll: 'Refuse all',
+      customize: 'Customize',
+      acceptAll: 'Accept all',
+      manageTitle: 'Manage my preferences',
+      manageDesc: 'Choose which cookies you want to enable.',
+      technical: 'Technical cookies',
+      technicalRequired: '(required)',
+      technicalDesc: 'Required for the site to work (theme, session). Cannot be disabled.',
+      analytics: 'Analytics cookies',
+      analyticsDesc: 'Help us understand how visitors use the site (Google Analytics).',
+      marketing: 'Marketing cookies',
+      marketingDesc: 'Allow us to personalise ads based on your interests.',
+      save: 'Save',
     },
     faq: {
       title: 'Frequently Asked Questions',
@@ -335,7 +393,7 @@ export const translations = {
       items: [
         {
           q: 'How long does creation take?',
-          a: 'A showcase site is delivered in 10 working days, a multi-page site in 17 working days, an e-commerce or management system in 21 working days, and an association website in 7 working days. These timelines are indicative — Stackup Agency reserves the right to extend them by up to 20 working days in case of high demand, with prior notice. A precise timeline is provided at our first meeting.',
+          a: 'A showcase site is delivered in 10 working days, a multi-page site in 17 working days, an e-commerce or management system in 21 working days, and an association website in 7 working days. A precise timeline is provided at our first meeting.',
         },
         {
           q: 'How does the creation process work?',

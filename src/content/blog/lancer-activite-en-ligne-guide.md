@@ -1,7 +1,7 @@
 ---
 title: "Lancer son activité en ligne : guide complet"
 excerpt: "Vous avez une idée, une compétence, ou un produit à vendre. Ce guide complet vous accompagne étape par étape pour lancer votre activité en ligne et générer vos premiers revenus."
-date: "2026-01-08"
+date: "2026-05-24"
 readTime: 9
 tag: "Entrepreneuriat"
 category: "entrepreneuriat"

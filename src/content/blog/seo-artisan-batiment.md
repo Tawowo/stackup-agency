@@ -1,6 +1,6 @@
 ---
 title: "SEO pour artisan du bâtiment : être trouvé avant vos concurrents"
-date: "2026-06-23"
+date: "2026-05-01"
 excerpt: "Le référencement naturel est le canal d'acquisition le plus rentable sur le long terme pour un artisan du bâtiment. Voici comment le maîtriser sans être un expert technique."
 tag: "Artisans"
 category: "artisans"

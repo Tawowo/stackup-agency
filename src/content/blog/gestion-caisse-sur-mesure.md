@@ -1,6 +1,6 @@
 ---
 title: "Caisse enregistreuse sur mesure : quand les solutions génériques ne conviennent pas"
-date: "2026-06-23"
+date: "2026-05-29"
 excerpt: "Les logiciels de caisse génériques couvrent 80 % des besoins standards. Pour les 20 % restants — activité multi-sites, tarification complexe, intégrations spécifiques — le sur mesure s'impose."
 tag: "Applications métier"
 category: "applications-metier"

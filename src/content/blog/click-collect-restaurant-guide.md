@@ -1,6 +1,6 @@
 ---
 title: "Click & Collect pour restaurant : mise en place technique et marketing"
-date: "2026-06-23"
+date: "2026-06-11"
 excerpt: "Le Click & Collect a explosé de 300 % depuis 2020. Voici comment le mettre en place techniquement, le promouvoir efficacement et en faire un vrai canal de revenus."
 tag: "Restauration"
 category: "restaurants"

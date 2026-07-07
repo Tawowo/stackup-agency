@@ -1,10 +1,10 @@
 ---
 title: "Gestion des stocks restaurant : comment le digital élimine le gaspillage et augmente vos marges"
 description: "Le gaspillage alimentaire coûte en moyenne 30 000€ par an à un restaurant. Les outils digitaux de gestion des stocks permettent de réduire drastiquement ces pertes."
-date: "2026-06-04"
+date: "2026-05-28"
 category: "restaurants"
 tags: ["gestion stock", "gaspillage alimentaire", "restaurant digital"]
-readTime: "7 min de lecture"
+readTime: 7
 ---
 
 30 000 euros. C'est le coût moyen annuel du gaspillage alimentaire dans un restaurant de taille moyenne en France, selon les chiffres de l'ADEME. Dans les établissements à fort volume, ce chiffre peut atteindre 80 000 à 150 000 euros par an. Et cette réalité ne concerne pas uniquement les denrées jetées directement à la poubelle : elle englobe les surproductions, les ruptures de stock qui forcent à remplacer en urgence à prix fort, les pertes liées aux erreurs de traçabilité et les matières premières mal valorisées faute d'une organisation rigoureuse. La bonne nouvelle : les outils digitaux de gestion des stocks ont atteint en 2026 un niveau de maturité qui les rend accessibles à tous les établissements, quelle que soit leur taille. La mauvaise : la grande majorité des restaurateurs français n'en utilisent aucun.

@@ -1,6 +1,6 @@
 ---
 title: "Accessibilité web : pourquoi votre site doit être utilisable par tous"
-date: "2026-06-23"
+date: "2026-04-14"
 excerpt: "L'accessibilité numérique est une obligation légale pour de nombreux acteurs et un avantage SEO prouvé. Guide pour comprendre les enjeux et agir."
 tag: "Création de sites"
 category: "creation-sites"

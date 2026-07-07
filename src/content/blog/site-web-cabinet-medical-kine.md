@@ -1,10 +1,10 @@
 ---
 title: "Cabinet médical, kinésithérapeute, ostéopathe : le site web qui rassure et convertit"
 description: "Dans le secteur de la santé, la confiance est le premier facteur de choix. Un site web professionnel avec prise de RDV en ligne est désormais indispensable pour attirer de nouveaux patients."
-date: "2026-06-13"
+date: "2026-04-06"
 category: "professions-liberales"
 tags: ["cabinet médical", "kinésithérapeute", "prise de RDV santé"]
-readTime: "8 min de lecture"
+readTime: 8
 ---
 
 Choisir un professionnel de santé est l'une des décisions les plus personnelles et les plus chargées d'enjeux qu'un individu puisse prendre. Avant même de décrocher le téléphone pour prendre rendez-vous, **83 % des patients recherchent leur praticien en ligne**. Ils lisent les avis, consultent le profil du médecin, vérifient les spécialités, s'interrogent sur les modalités de prise en charge. Si votre présence digitale est inexistante ou négligée, vous n'êtes tout simplement pas dans la course — et ce n'est pas le bouche-à-oreille qui compensera cette invisibilité sur le long terme, surtout dans les zones urbaines à forte densité de praticiens.

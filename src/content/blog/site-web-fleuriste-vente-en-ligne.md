@@ -1,10 +1,10 @@
 ---
 title: "Fleuriste : vendre en ligne et gérer les commandes pour occasions spéciales"
 description: "Mariages, enterrements, anniversaires : les commandes florales se font de plus en plus en ligne. Voici comment un site e-commerce adapté à la fleuristerie transforme votre activité."
-date: "2026-06-12"
+date: "2026-03-30"
 category: "artisans"
 tags: ["fleuriste", "vente en ligne", "commandes florales"]
-readTime: "7 min de lecture"
+readTime: 7
 ---
 
 En France, le marché de la fleuristerie représente plus de **3,5 milliards d'euros** de chiffre d'affaires annuel. Pourtant, moins de 30 % des fleuristes indépendants disposent d'un site e-commerce opérationnel. C'est un paradoxe saisissant quand on sait que 54 % des Français déclarent avoir déjà cherché un fleuriste en ligne avant de passer commande — et que parmi eux, près de la moitié choisissent de commander directement sur internet plutôt que de se déplacer. Les grandes plateformes comme Interflora, 1001 Fleurs ou Florajet ont capturé cette demande. Elles prospèrent sur une infrastructure numérique que la plupart des fleuristes indépendants n'ont pas encore construite. La bonne nouvelle : il est encore temps de reprendre ce terrain, à condition de s'y prendre intelligemment.

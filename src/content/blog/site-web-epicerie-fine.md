@@ -1,6 +1,6 @@
 ---
 title: "Site web épicerie fine : abonnement panier et vente en ligne de terroir"
-date: "2026-06-23"
+date: "2026-03-31"
 excerpt: "Comment une épicerie fine peut développer ses ventes grâce à un site web proposant des paniers en abonnement, une boutique de produits du terroir en ligne et un storytelling producteur fort."
 tag: "Commerce"
 category: "commerce"

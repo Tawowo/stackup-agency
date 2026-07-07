@@ -1,6 +1,6 @@
 ---
 title: "Site web vêtements enfants : tailles, conseils et achat en ligne"
-date: "2026-06-23"
+date: "2026-02-22"
 excerpt: "Comment un magasin de vêtements pour enfants peut créer une boutique en ligne efficace avec des guides de tailles précis, des conseils styling et une expérience d'achat adaptée aux parents."
 tag: "Commerce"
 category: "commerce"

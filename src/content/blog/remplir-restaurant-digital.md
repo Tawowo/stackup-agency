@@ -1,6 +1,6 @@
 ---
 title: "Comment remplir son restaurant grâce au digital : stratégie complète"
-date: "2026-06-23"
+date: "2026-05-05"
 excerpt: "Site web, réseaux sociaux, Google Ads, email marketing : découvrez la stratégie digitale complète pour remplir votre restaurant toute l'année."
 tag: "Restauration"
 category: "restaurants"

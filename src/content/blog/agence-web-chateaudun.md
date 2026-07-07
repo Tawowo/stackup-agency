@@ -1,6 +1,6 @@
 ---
 title: "Agence web à Châteaudun : création de sites et applications"
-date: "2026-06-23"
+date: "2026-06-30"
 excerpt: "Vous êtes entrepreneur à Châteaudun ? Stackup Agency crée votre site internet professionnel dès 449€, livré en 10 jours. Devis gratuit, réponse sous 72h."
 tag: "Agences locales"
 category: "pages-locales"

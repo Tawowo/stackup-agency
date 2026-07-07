@@ -1,6 +1,6 @@
 ---
 title: "Site web magasin informatique : SAV en ligne et vente de reconditionné"
-date: "2026-06-23"
+date: "2026-03-29"
 excerpt: "Comment un magasin informatique et téléphonie indépendant peut se différencier en ligne grâce au service après-vente digitalisé, à la vente de matériel reconditionné et au conseil expert."
 tag: "Commerce"
 category: "commerce"

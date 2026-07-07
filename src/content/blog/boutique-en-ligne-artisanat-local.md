@@ -1,6 +1,6 @@
 ---
 title: "Boutique en ligne pour artisanat local : vendre sans intermédiaire"
-date: "2026-06-23"
+date: "2026-06-14"
 excerpt: "Comment un artisan local peut créer sa boutique en ligne pour vendre directement ses créations, sans dépendre d'Etsy ou des marketplaces, et construire une relation client durable."
 tag: "Commerce"
 category: "commerce"

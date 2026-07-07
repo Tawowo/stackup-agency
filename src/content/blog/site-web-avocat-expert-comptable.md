@@ -1,10 +1,10 @@
 ---
 title: "Avocat, expert-comptable, notaire : le site web qui inspire confiance et génère des leads"
 description: "Les professions réglementées ont des contraintes de communication spécifiques. Voici comment créer un site web conforme, professionnel et réellement générateur de nouvelles affaires."
-date: "2026-06-15"
+date: "2026-04-12"
 category: "professions-liberales"
 tags: ["avocat", "expert-comptable", "professions libérales"]
-readTime: "8 min de lecture"
+readTime: 8
 ---
 
 Il y a encore dix ans, un avocat ou un expert-comptable pouvait se permettre de ne pas avoir de site web. Le cabinet tournait au bouche-à-oreille, aux recommandations entre confrères, aux réseaux professionnels. Cette époque est révolue. Aujourd'hui, **76 % des particuliers et 68 % des dirigeants de TPE/PME** consultent le site web d'un professionnel juridique ou comptable avant de le contacter — même quand ils ont été recommandés par un tiers. Le site web est devenu le mécanisme de validation ultime : il confirme l'existence, le sérieux et la légitimité du professionnel avant que s'engage toute relation d'affaires.

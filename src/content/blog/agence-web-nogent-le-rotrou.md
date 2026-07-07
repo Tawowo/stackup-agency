@@ -1,6 +1,6 @@
 ---
 title: "Agence web à Nogent-le-Rotrou : votre partenaire digital en Perche"
-date: "2026-06-23"
+date: "2026-06-26"
 excerpt: "Stackup Agency crée des sites internet professionnels pour les entreprises de Nogent-le-Rotrou et du Perche. Dès 449€, livraison en 10 jours, devis gratuit."
 tag: "Agences locales"
 category: "pages-locales"

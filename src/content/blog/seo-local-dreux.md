@@ -1,6 +1,6 @@
 ---
 title: "Référencement local à Dreux : guide complet pour les entreprises locales"
-date: "2026-06-23"
+date: "2026-04-24"
 excerpt: "Les entreprises de Dreux et du Drouais qui investissent dans le SEO local captent les clients que leurs concurrents laissent filer. Voici comment faire."
 tag: "SEO Local"
 category: "seo-local"

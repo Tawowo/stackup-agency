@@ -1,6 +1,6 @@
 ---
 title: "SEO local pour restaurants : remplir votre salle grâce à Google"
-date: "2026-06-23"
+date: "2026-04-18"
 excerpt: "90% des gens cherchent un restaurant sur leur téléphone avant de réserver. Voici comment faire en sorte que ce soit le vôtre qui apparaît en premier."
 tag: "SEO Local"
 category: "seo-local"

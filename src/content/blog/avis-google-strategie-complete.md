@@ -1,6 +1,6 @@
 ---
 title: "Avis Google : stratégie complète pour obtenir 50+ avis 5 étoiles"
-date: "2026-06-23"
+date: "2026-06-16"
 excerpt: "Les avis Google sont le facteur de confiance numéro 1 pour les consommateurs locaux. Voici comment construire une réputation de 50+ avis sans pratiques douteuses."
 tag: "SEO Local"
 category: "seo-local"

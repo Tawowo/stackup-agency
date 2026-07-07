@@ -1,6 +1,6 @@
 ---
 title: "Site web bijouterie : vitrine premium et vente en ligne sécurisée"
-date: "2026-06-23"
+date: "2026-04-10"
 excerpt: "Comment une bijouterie ou horlogerie indépendante peut créer une vitrine digitale premium, rassurer ses clients sur la sécurité des achats et vendre en ligne sans dévaluer son image de marque."
 tag: "Commerce"
 category: "commerce"

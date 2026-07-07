@@ -1,6 +1,6 @@
 ---
 title: "Site web carreleur : galerie de réalisations et devis personnalisés"
-date: "2026-06-23"
+date: "2026-04-06"
 excerpt: "La pose de carrelage est un métier visuel et technique. Un site avec une galerie de réalisations soignée et un système de devis en ligne génère des leads qualifiés et haut de gamme."
 tag: "Artisans"
 category: "artisans"

@@ -4,10 +4,12 @@ import { useRef, useState } from 'react'
 import { ExternalLink, ArrowRight } from 'lucide-react'
 import Link from 'next/link'
 import { realisations } from '@/lib/realisations'
+import { useLanguage } from '@/contexts/LanguageContext'
 
 const filters = ['Tous', 'Site vitrine', 'E-commerce', 'Système de gestion']
 
 export default function Portfolio() {
+  const { t } = useLanguage()
   const ref = useRef(null)
   const inView = useInView(ref, { once: true, margin: '-80px' })
   const [activeFilter, setActiveFilter] = useState('Tous')
@@ -27,10 +29,10 @@ export default function Portfolio() {
           className="text-center mb-12"
         >
           <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-            Nos réalisations
+            {t.portfolio.title}
           </h2>
           <p className="text-gray-600 dark:text-white/60 text-lg max-w-2xl mx-auto">
-            Des démonstrations concrètes de notre savoir-faire — voyez exactement ce que nous pouvons construire pour vous en 10 jours.
+            {t.portfolio.subtitle}
           </p>
         </motion.div>
 
@@ -128,13 +130,13 @@ export default function Portfolio() {
           className="text-center mt-16"
         >
           <div className="inline-block rounded-2xl p-8 bg-gradient-to-br from-[#1E3A5F] to-[#2D7DD2] text-white">
-            <h3 className="font-bold text-xl mb-2">Votre projet sera le suivant</h3>
-            <p className="text-white/70 text-sm mb-5">Même niveau d&apos;exigence, même attention aux détails, livré en 10 jours.</p>
+            <h3 className="font-bold text-xl mb-2">{t.portfolio.yourProject}</h3>
+            <p className="text-white/70 text-sm mb-5">{t.portfolio.demoSameQuality}</p>
             <a
               href="#contact"
               className="inline-flex items-center gap-2 px-6 py-3 bg-[#F59E0B] hover:bg-amber-500 text-white rounded-xl text-sm font-semibold transition-all hover:-translate-y-0.5"
             >
-              Démarrer mon projet →
+              {t.portfolio.viewProject} →
             </a>
           </div>
         </motion.div>

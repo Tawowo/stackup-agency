@@ -1,6 +1,6 @@
 ---
 title: "Référencement local à Tours : dominer les recherches locales en Indre-et-Loire"
-date: "2026-06-23"
+date: "2026-04-18"
 excerpt: "Tours est la métropole la plus dynamique du Centre-Val de Loire. La concurrence SEO locale y est réelle — mais les opportunités aussi. Guide complet."
 tag: "SEO Local"
 category: "seo-local"

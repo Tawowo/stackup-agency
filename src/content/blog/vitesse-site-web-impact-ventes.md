@@ -1,10 +1,10 @@
 ---
 title: "Vitesse de chargement d'un site web : comment chaque seconde perdue vous coûte des clients"
 description: "Google indique qu'un délai de chargement d'une seconde supplémentaire réduit les conversions de 7%. Voici comment auditer et améliorer la vitesse de votre site pour récupérer ce manque à gagner."
-date: "2026-06-22"
+date: "2026-01-20"
 category: "strategie"
 tags: ["vitesse site web", "Core Web Vitals", "performance web"]
-readTime: "8 min de lecture"
+readTime: 8
 ---
 
 Votre site met 4 secondes à charger. Cela vous semble raisonnable ? Derrière cet indicateur apparemment banal se cache un manque à gagner considérable. Google a mesuré que chaque seconde supplémentaire de temps de chargement réduit les conversions de 7 % et augmente le taux d'abandon de 16 %. Amazon a estimé qu'une seconde de latence lui coûterait 1,6 milliard de dollars de chiffre d'affaires annuel. Vous n'êtes pas Amazon — mais le principe s'applique à votre échelle avec la même inexorabilité. Un prospect qui attend que votre page charge n'attend pas : il clique sur "précédent" et va chez votre concurrent. Ce comportement est universel, automatique, et s'est accentué avec les smartphones, dont les utilisateurs ont une tolérance à l'attente encore plus faible. La performance technique de votre site n'est pas un sujet réservé aux développeurs — c'est un enjeu commercial direct.

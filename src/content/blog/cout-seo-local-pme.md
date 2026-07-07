@@ -1,6 +1,6 @@
 ---
 title: "Combien coûte le SEO local pour une PME en 2026 ?"
-date: "2026-06-23"
+date: "2026-06-08"
 excerpt: "Budget SEO local : de 0€ à 2 000€/mois. Ce guide démystifie les tarifs, explique ce que vous obtenez à chaque niveau et comment calculer votre ROI réel."
 tag: "SEO Local"
 category: "seo-local"

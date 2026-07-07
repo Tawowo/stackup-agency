@@ -1,6 +1,6 @@
 ---
 title: "Agence web à Angers : création de sites internet en Maine-et-Loire"
-date: "2026-06-23"
+date: "2026-07-02"
 excerpt: "Stackup Agency crée des sites internet pour les entreprises d'Angers et du Maine-et-Loire. Dès 449€, livraison en 10 jours, expertise Val de Loire."
 tag: "Agences locales"
 category: "pages-locales"

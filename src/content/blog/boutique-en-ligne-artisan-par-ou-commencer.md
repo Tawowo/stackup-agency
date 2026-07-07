@@ -1,7 +1,7 @@
 ---
 title: "Boutique en ligne pour artisan : par où commencer"
 excerpt: "Vous êtes artisan et vous voulez vendre en ligne mais vous ne savez pas par où commencer ? Ce guide étape par étape vous accompagne de zéro jusqu'à votre première vente."
-date: "2026-01-10"
+date: "2026-06-16"
 readTime: 7
 tag: "Commerce"
 category: "commerce"

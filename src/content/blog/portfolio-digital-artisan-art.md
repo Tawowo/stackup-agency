@@ -1,10 +1,10 @@
 ---
 title: "Artisan d'art et créateur : le portfolio digital qui attire les clients premium"
 description: "Bijoutier, céramiste, sculpteur, ébéniste : un portfolio en ligne bien conçu vous permet d'accéder à une clientèle internationale et de vendre vos créations au juste prix."
-date: "2026-06-10"
+date: "2026-05-15"
 category: "artisans"
 tags: ["artisan d'art", "portfolio digital", "vente créations"]
-readTime: "7 min de lecture"
+readTime: 7
 ---
 
 Une ébéniste de Bourgogne, formée aux Compagnons du Devoir, crée des meubles d'exception qui mettraient en valeur n'importe quelle galerie parisienne. Sa liste d'attente est de 6 mois. Ses tarifs ? Ceux d'un artisan de province qui vend à des clients locaux. À 800 km de là, une céramiste autodidacte installée à Lisbonne, avec un niveau technique inférieur, vend ses pièces 3 à 5 fois plus cher à une clientèle internationale — grâce à un portfolio en ligne soigné, une communauté Instagram de 40 000 abonnés et un site e-commerce optimisé pour la conversion. La différence entre ces deux artisanes n'est pas le talent. C'est la visibilité et le positionnement digital. En 2026, le marché de l'artisanat d'art est mondial — et accessible à tout créateur disposant d'un portfolio digital de qualité.

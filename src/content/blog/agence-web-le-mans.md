@@ -1,6 +1,6 @@
 ---
 title: "Agence web au Mans : votre partenaire digital en Sarthe"
-date: "2026-06-23"
+date: "2026-06-28"
 excerpt: "Stackup Agency accompagne les PME, commerces et industries du Mans dans leur développement digital. Sites internet professionnels dès 449€, livrés en 10 jours."
 tag: "Agences locales"
 category: "pages-locales"

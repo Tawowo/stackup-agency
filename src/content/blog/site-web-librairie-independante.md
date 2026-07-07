@@ -1,10 +1,10 @@
 ---
 title: "Librairie indépendante : comment le digital vous aide à rivaliser avec Amazon"
 description: "Amazon représente 50% du marché du livre en France. Mais les librairies indépendantes qui misent sur le digital et la communauté locale résistent et prospèrent. Voici comment."
-date: "2026-06-20"
+date: "2026-03-28"
 category: "commerce"
 tags: ["librairie indépendante", "e-commerce livre", "click and collect"]
-readTime: "8 min de lecture"
+readTime: 8
 ---
 
 Voici un chiffre qui devrait décourager n'importe quel libraire indépendant : Amazon détient aujourd'hui **entre 45 et 55 % du marché du livre en France**, selon les estimations de l'interprofession. Les grandes chaînes (Fnac, Cultura, Leclerc Maison de la Presse) capturent une part significative du reste. Ce qui reste aux librairies indépendantes est un marché certes étroit — mais infiniment plus fertile qu'il n'y paraît pour qui sait le cultiver intelligemment.

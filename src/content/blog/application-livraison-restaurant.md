@@ -1,10 +1,10 @@
 ---
 title: "Créer son propre système de livraison : l'alternative aux commissions Uber Eats et Deliveroo"
 description: "Uber Eats prélève jusqu'à 30% par commande. Voici comment développer votre propre système de commande en ligne et livraison pour reprendre le contrôle de vos marges."
-date: "2026-06-03"
+date: "2026-06-20"
 category: "restaurants"
 tags: ["livraison restaurant", "Uber Eats", "commande en ligne"]
-readTime: "8 min de lecture"
+readTime: 8
 ---
 
 30 %. C'est la commission maximale que prélève Uber Eats sur chaque commande dans certains contrats. Deliveroo tourne entre 25 et 32 %. Just Eat n'est guère en reste. Pour un restaurateur qui travaille avec des marges nettes de 5 à 10 %, céder un tiers du prix de chaque plat livré à une plateforme tierce revient à travailler à perte sur chaque commande de livraison. Et pourtant, des dizaines de milliers de restaurateurs français continuent d'alimenter ces plateformes sans alternative, faute de savoir qu'une autre voie existe — et qu'elle est accessible. Voici ce que les meilleurs restaurateurs indépendants ont compris et mis en place pour reprendre le contrôle de leur canal de vente digital.

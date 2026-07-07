@@ -1,6 +1,6 @@
 ---
 title: "Site web sport et outdoor : location de matériel et conseils experts"
-date: "2026-06-23"
+date: "2026-02-25"
 excerpt: "Comment un magasin de sport et outdoor indépendant peut se différencier en ligne grâce à la location de matériel, des conseils techniques pointus et une communauté de passionnés."
 tag: "Commerce"
 category: "commerce"

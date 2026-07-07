@@ -1,6 +1,6 @@
 ---
 title: "Site web restaurant gastronomique : créer une expérience en ligne à la hauteur"
-date: "2026-06-23"
+date: "2026-02-28"
 excerpt: "Un restaurant gastronomique mérite un site web qui reflète son niveau d'excellence. Voici comment créer une présence digitale digne de votre cuisine."
 tag: "Restauration"
 category: "restaurants"

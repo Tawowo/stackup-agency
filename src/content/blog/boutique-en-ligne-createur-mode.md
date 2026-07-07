@@ -1,10 +1,10 @@
 ---
 title: "Créateur de mode et styliste : lancer sa boutique en ligne sans budget marketing"
 description: "Tisserands, créateurs indépendants, stylistes : vendre sa collection en ligne ne nécessite pas un budget publicitaire conséquent si votre site est bien construit. Voici la méthode."
-date: "2026-06-19"
+date: "2026-06-13"
 category: "commerce"
 tags: ["mode", "boutique en ligne", "créateur"]
-readTime: "7 min de lecture"
+readTime: 7
 ---
 
 Le mythe du créateur de mode qui doit investir des dizaines de milliers d'euros en communication pour se faire connaître est en train de s'effondrer. Des marques nées dans des garages de province, des ateliers de broderie en appartement, des collections capsules cousues à la main dans des chambres d'étudiant ont trouvé leur public — sans budget publicitaire, ou presque. Leur secret ? Un site e-commerce qui fait le travail à leur place : référencement naturel bien pensé, contenu qui raconte une histoire, et une architecture de vente optimisée pour convertir les visiteurs en clients fidèles.

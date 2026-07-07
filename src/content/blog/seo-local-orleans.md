@@ -1,6 +1,6 @@
 ---
 title: "Référencement local à Orléans : guide SEO pour les entreprises du Loiret"
-date: "2026-06-23"
+date: "2026-04-22"
 excerpt: "Orléans est la métropole la plus proche de Paris en Centre-Val de Loire. Un marché local dynamique où le SEO local fait la différence entre croître et stagner."
 tag: "SEO Local"
 category: "seo-local"

@@ -1,6 +1,6 @@
 ---
 title: "Agence web à Anet : développement web pour les entreprises locales"
-date: "2026-06-23"
+date: "2026-07-02"
 excerpt: "Stackup Agency accompagne les entreprises d'Anet et du canton de Dreux dans la création de sites internet professionnels dès 449€, avec livraison en 10 jours."
 tag: "Agences locales"
 category: "pages-locales"

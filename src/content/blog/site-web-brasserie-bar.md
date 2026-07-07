@@ -1,6 +1,6 @@
 ---
 title: "Site web brasserie et bar : réservation, événements et carte en ligne"
-date: "2026-06-23"
+date: "2026-04-08"
 excerpt: "Une brasserie ou un bar sans site web optimisé rate des réservations chaque soir. Voici comment la réservation en ligne, la gestion d'événements et la carte digitale transforment votre activité."
 tag: "Restauration"
 category: "restaurants"

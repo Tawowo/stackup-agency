@@ -1,7 +1,7 @@
 ---
 title: "Menu digital vs menu papier : le comparatif complet"
 excerpt: "Menu papier classique ou menu digital sur tablette ou QR code ? Avantages, inconvénients, coûts et conseils pour faire le bon choix pour votre restaurant."
-date: "2026-02-05"
+date: "2026-05-19"
 readTime: 6
 tag: "Restaurants"
 category: "restaurants"

@@ -1,6 +1,7 @@
 import { MetadataRoute } from 'next'
 import fs from 'fs'
 import path from 'path'
+import matter from 'gray-matter'
 
 const base = 'https://stackup-agency.fr'
 
@@ -33,19 +34,25 @@ const servicesLocauxSlugs = [
   'referencement-local-seo',
 ]
 
-function getBlogSlugs(): string[] {
+function getBlogPosts(): { slug: string; date: Date }[] {
   const dir = path.join(process.cwd(), 'src/content/blog')
   try {
     return fs.readdirSync(dir)
       .filter(f => f.endsWith('.md'))
-      .map(f => f.replace(/\.md$/, ''))
+      .map(f => {
+        const slug = f.replace(/\.md$/, '')
+        const raw = fs.readFileSync(path.join(dir, f), 'utf8')
+        const { data } = matter(raw)
+        return { slug, date: data.date ? new Date(data.date) : new Date() }
+      })
+      .sort((a, b) => b.date.getTime() - a.date.getTime())
   } catch {
     return []
   }
 }
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const blogSlugs = getBlogSlugs()
+  const blogPosts = getBlogPosts()
   const now = new Date()
 
   return [
@@ -55,9 +62,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // Pages statiques principales
     { url: `${base}/blog`, lastModified: now, changeFrequency: 'weekly', priority: 0.8 },
     { url: `${base}/parrainage`, lastModified: now, changeFrequency: 'monthly', priority: 0.6 },
-    { url: `${base}/services/site-association`, lastModified: now, changeFrequency: 'weekly', priority: 0.9 },
+    { url: `${base}/cgv`, lastModified: now, changeFrequency: 'yearly', priority: 0.4 },
+    { url: `${base}/ressources/documents`, lastModified: now, changeFrequency: 'monthly', priority: 0.5 },
 
     // Services
+    { url: `${base}/services/site-association`, lastModified: now, changeFrequency: 'weekly', priority: 0.9 },
     ...serviceSlugs.map(slug => ({
       url: `${base}/services/${slug}`,
       lastModified: now,
@@ -89,10 +98,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     })),
 
-    // Articles de blog
-    ...blogSlugs.map(slug => ({
+    // Articles de blog (avec dates réelles)
+    ...blogPosts.map(({ slug, date }) => ({
       url: `${base}/blog/${slug}`,
-      lastModified: now,
+      lastModified: date,
       changeFrequency: 'monthly' as const,
       priority: 0.7,
     })),

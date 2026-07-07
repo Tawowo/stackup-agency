@@ -1,6 +1,6 @@
 ---
 title: "Google Business Profile : le guide complet pour dominer les recherches locales"
-date: "2026-06-23"
+date: "2026-05-30"
 excerpt: "Votre fiche Google Business Profile est votre vitrine numéro 1 sur internet. Ce guide détaille chaque paramètre à optimiser pour dominer les recherches locales."
 tag: "SEO Local"
 category: "seo-local"

@@ -1,6 +1,6 @@
 ---
 title: "Site web opticien : catalogue, prise de RDV et simulation en ligne"
-date: "2026-06-23"
+date: "2026-03-16"
 excerpt: "Comment un opticien indépendant peut s'imposer face à Alain Afflelou ou Optic 2000 grâce à un site web offrant catalogue en ligne, prise de rendez-vous et essayage virtuel de montures."
 tag: "Commerce"
 category: "commerce"

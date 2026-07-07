@@ -1,10 +1,10 @@
 ---
 title: "Antiquaire et brocante : toucher des acheteurs du monde entier grâce au digital"
 description: "Une armoire Empire, un service en porcelaine de Limoges : vos pièces intéressent des acheteurs en France et à l'international. Voici comment le digital vous ouvre ces marchés."
-date: "2026-06-22"
+date: "2026-01-26"
 category: "commerce"
 tags: ["antiquaire", "brocante", "vente en ligne objets"]
-readTime: "7 min de lecture"
+readTime: 7
 ---
 
 Un collectionneur américain cherche une pendule Louis-Philippe en état de marche. Un décorateur londonien veut une paire de fauteuils Napoléon III pour un projet d'hôtel parisien. Un amateur néerlandais traque les aquarelles de la fin du XIXe siècle représentant la campagne française. Tous ces acheteurs sont réels, solvables, et cherchent activement sur internet. La question est simple : est-ce qu'ils vous trouvent ? Pour la grande majorité des antiquaires et brocanteurs français — qui exercent encore principalement via les marchés physiques, les salons et les galeries — la réponse est non. Et chaque semaine sans présence digitale professionnelle, c'est un marché international qui se ferme un peu plus. Le commerce de l'art et des antiquités en ligne a représenté 13,3 milliards de dollars mondiaux en 2025 — un secteur en croissance de 7 % annuels, tiré par les nouvelles générations d'acheteurs.

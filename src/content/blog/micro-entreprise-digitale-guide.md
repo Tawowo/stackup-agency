@@ -1,7 +1,7 @@
 ---
 title: "Micro-entreprise digitale : tout ce qu'il faut savoir"
 excerpt: "La micro-entreprise est le statut idéal pour tester une activité en ligne. Création, charges, TVA, plafonds, obligations... ce guide répond à toutes vos questions pratiques."
-date: "2026-01-30"
+date: "2026-05-18"
 readTime: 8
 tag: "Entrepreneuriat"
 category: "entrepreneuriat"

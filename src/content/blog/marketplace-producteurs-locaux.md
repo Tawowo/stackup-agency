@@ -1,6 +1,6 @@
 ---
 title: "Marketplace producteurs locaux : comment fédérer et vendre ensemble"
-date: "2026-06-23"
+date: "2026-05-21"
 excerpt: "Guide complet pour créer une marketplace collective de producteurs locaux : modèle économique, fonctionnalités clés, gouvernance et stratégies pour réussir la vente directe groupée en ligne."
 tag: "Commerce"
 category: "commerce"

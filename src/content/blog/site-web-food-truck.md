@@ -1,6 +1,6 @@
 ---
 title: "Site web food truck : localisation en temps réel, menu du jour et commandes"
-date: "2026-06-23"
+date: "2026-03-30"
 excerpt: "Un food truck sans site web perd des clients chaque jour. Découvrez comment la localisation en temps réel, le menu du jour et les commandes en ligne transforment votre activité."
 tag: "Restauration"
 category: "restaurants"

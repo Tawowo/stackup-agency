@@ -1,6 +1,6 @@
 ---
 title: "Application de fidélité sur mesure : pourquoi les solutions génériques ne suffisent pas"
-date: "2026-06-23"
+date: "2026-06-22"
 excerpt: "Acquérir un nouveau client coûte 5 à 7 fois plus cher que de fidéliser un client existant. Pourtant, 60 % des programmes de fidélité génériques sont abandonnés dans les 6 mois. Voici pourquoi le sur mesure change tout."
 tag: "Applications métier"
 category: "applications-metier"

@@ -1,6 +1,6 @@
 ---
 title: "Instagram pour restaurant : stratégie complète pour attirer des clients"
-date: "2026-06-23"
+date: "2026-05-25"
 excerpt: "Instagram est le premier réseau social de découverte restaurant en France. Voici la stratégie complète pour transformer vos abonnés en clients réguliers."
 tag: "Restauration"
 category: "restaurants"

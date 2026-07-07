@@ -1,7 +1,7 @@
 ---
 title: "Click & Collect : comment le mettre en place"
 excerpt: "Le Click & Collect booste les ventes des commerces locaux tout en fidélisant une clientèle qui veut commander en ligne et récupérer en boutique. Guide complet de mise en place."
-date: "2026-01-28"
+date: "2026-06-11"
 readTime: 6
 tag: "Commerce"
 category: "commerce"

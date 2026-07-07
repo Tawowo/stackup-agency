@@ -90,31 +90,44 @@ export const metadata: Metadata = {
   },
 }
 
-const schemaOrg = {
-  '@context': 'https://schema.org',
-  '@type': 'ProfessionalService',
-  name: 'Stackup Agency',
-  description:
-    'Agence digitale spécialisée en création de sites web, applications et systèmes de gestion sur mesure',
-  url: 'https://stackup-agency.fr',
-  telephone: '+33764020898',
-  email: 'contact@stackup-agency.fr',
-  address: {
-    '@type': 'PostalAddress',
-    addressRegion: 'Indre-et-Loire',
-    addressCountry: 'FR',
+const schemaOrg = [
+  {
+    '@context': 'https://schema.org',
+    '@type': ['Organization', 'LocalBusiness'],
+    '@id': 'https://stackup-agency.fr/#organization',
+    name: 'Stackup Agency',
+    description: 'Agence digitale spécialisée en création de sites web, applications et systèmes de gestion sur mesure — basée en Indre-et-Loire, intervenant sur toute la France.',
+    url: 'https://stackup-agency.fr',
+    email: 'contact@stackup-agency.fr',
+    logo: {
+      '@type': 'ImageObject',
+      url: 'https://stackup-agency.fr/logo.png',
+    },
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: 'Tours',
+      addressRegion: 'Indre-et-Loire',
+      addressCountry: 'FR',
+    },
+    areaServed: {
+      '@type': 'Country',
+      name: 'France',
+    },
+    priceRange: '€€',
+    knowsAbout: ['Création de site web', 'Développement web', 'SEO', 'Marketing digital', 'Applications web sur mesure'],
+    sameAs: [
+      'https://linkedin.com/in/matheo-reboul',
+      'https://instagram.com/stackup.agency',
+      'https://tiktok.com/@stackupagency',
+    ],
   },
-  priceRange: '€€',
-  serviceType: ['Création de site web', 'Développement web', 'Marketing digital'],
-  sameAs: ['https://stackup-agency.fr'],
-}
+]
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="fr" suppressHydrationWarning>
       <head>
-        <Script
-          id="schema-org"
+        <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaOrg) }}
         />

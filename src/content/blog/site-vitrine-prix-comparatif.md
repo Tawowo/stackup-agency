@@ -1,6 +1,6 @@
 ---
 title: "Prix d'un site vitrine : agence vs freelance vs Wix — comparatif honnête"
-date: "2026-06-23"
+date: "2026-04-14"
 excerpt: "Agence web, freelance ou constructeur no-code : quelle option choisir pour votre site vitrine ? Comparatif des prix et des réalités du terrain."
 tag: "Création de sites"
 category: "creation-sites"

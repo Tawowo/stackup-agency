@@ -1,10 +1,10 @@
 ---
 title: "Click & Collect pour boucherie et charcuterie : guide pratique de mise en place"
 description: "Commandes préparées à l'avance, réservation de pièces maîtresses, abonnements panier : le click & collect ouvre de nouvelles sources de revenus pour votre boucherie."
-date: "2026-06-09"
+date: "2026-06-11"
 category: "artisans"
 tags: ["boucherie", "charcuterie", "click and collect"]
-readTime: "7 min de lecture"
+readTime: 7
 ---
 
 Le samedi matin à 10h, la queue devant votre boucherie s'étend sur le trottoir. Pendant ce temps, dans votre rayon froid, plusieurs pièces de viande d'exception sont commandées par une dizaine de clients qui n'ont pas pu se déplacer — et qui iront se rabattre sur le supermarché faute d'alternative. Cette scène se répète chaque semaine dans des milliers de boucheries artisanales françaises. Et elle révèle une opportunité que les bouchers les plus innovants ont saisie : le click & collect ne sert pas uniquement à éviter la queue — il ouvre des segments de marché entièrement nouveaux, crée de la prévisibilité dans les approvisionnements et transforme la relation avec une clientèle fidèle en abonnement à long terme.

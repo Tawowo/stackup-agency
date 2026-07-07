@@ -1,6 +1,6 @@
 ---
 title: "SEO local vs Google Ads : que choisir pour votre business ?"
-date: "2026-06-23"
+date: "2026-04-16"
 excerpt: "SEO local ou Google Ads ? La vraie réponse dépend de votre secteur, votre budget et votre horizon. Ce guide compare les deux canaux honnêtement."
 tag: "SEO Local"
 category: "seo-local"

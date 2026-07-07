@@ -1,6 +1,6 @@
 ---
 title: "Intranet d'entreprise : améliorer la communication interne"
-date: "2026-06-23"
+date: "2026-05-25"
 excerpt: "Les employés passent en moyenne 2,5h par jour à chercher l'information dont ils ont besoin pour travailler. Un intranet bien conçu peut réduire ce temps de moitié et renforcer la culture d'entreprise."
 tag: "Applications métier"
 category: "applications-metier"

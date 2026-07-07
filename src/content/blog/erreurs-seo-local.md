@@ -1,6 +1,6 @@
 ---
 title: "Les 8 erreurs de SEO local qui vous font perdre des clients"
-date: "2026-06-23"
+date: "2026-05-30"
 excerpt: "Certaines erreurs de SEO local sont silencieuses : elles ne génèrent pas de message d'erreur, elles se contentent de vous coûter des clients invisiblement."
 tag: "SEO Local"
 category: "seo-local"

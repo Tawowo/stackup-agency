@@ -1,6 +1,6 @@
 ---
 title: "Site web menuisier et ébéniste : catalogue de réalisations sur mesure"
-date: "2026-06-23"
+date: "2026-03-24"
 excerpt: "Placards sur mesure, escaliers, cuisines aménagées, mobilier d'ébénisterie : un catalogue digital de vos réalisations convertit les visiteurs en clients prêts à payer le juste prix."
 tag: "Artisans"
 category: "artisans"

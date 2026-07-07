@@ -1,6 +1,6 @@
 ---
 title: "Tableau de bord dirigeant : voir son activité en temps réel"
-date: "2026-06-23"
+date: "2026-02-10"
 excerpt: "57 % des dirigeants de PME prennent leurs décisions stratégiques sans données fiables en temps réel. Un tableau de bord sur mesure change radicalement la façon de piloter une entreprise."
 tag: "Applications métier"
 category: "applications-metier"

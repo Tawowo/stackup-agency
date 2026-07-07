@@ -1,7 +1,7 @@
 ---
 title: "Qu'est-ce que le responsive design"
 excerpt: "Le responsive design permet à votre site web de s'adapter automatiquement à tous les écrans. Comprendre son fonctionnement, c'est comprendre pourquoi c'est indispensable en 2026."
-date: "2026-02-01"
+date: "2026-05-09"
 readTime: 5
 tag: "Digital"
 category: "digital"

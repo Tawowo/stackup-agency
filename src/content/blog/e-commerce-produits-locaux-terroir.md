@@ -1,10 +1,10 @@
 ---
 title: "Producteurs locaux et terroir : vendre en ligne sans intermédiaire et garder 100% de vos marges"
 description: "Producteur fermier, maraîcher, vigneron indépendant : vendre en direct via votre propre boutique en ligne vous permet de conserver l'intégralité de vos marges et de construire une relation client durable."
-date: "2026-06-21"
+date: "2026-06-03"
 category: "commerce"
 tags: ["produits locaux", "terroir", "vente directe producteur"]
-readTime: "8 min de lecture"
+readTime: 8
 ---
 
 La filière agroalimentaire française repose encore très largement sur des circuits de distribution qui captent entre 40 et 70 % de la valeur créée par le producteur. Un fromage affiné vendu 8 euros en grande surface a bien souvent quitté la ferme pour moins de 3 euros. La multiplication des intermédiaires — grossistes, centrales d'achat, distributeurs — érode des marges que les producteurs peinent à reconstituer, même en augmentant les volumes. Pourtant, une alternative structurelle s'est imposée en quelques années : la vente directe en ligne. En 2025, le marché des produits alimentaires locaux vendus en circuit court numérique a dépassé les 2,8 milliards d'euros en France, avec une croissance annuelle de 18 %. Les consommateurs sont là. Les outils sont matures. La question n'est plus "faut-il vendre en ligne ?" mais "comment le faire sans y laisser son âme, son temps et sa rentabilité ?"

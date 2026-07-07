@@ -1,7 +1,7 @@
 ---
 title: "UX Design : créer une expérience qui convertit"
 excerpt: "L'UX Design va bien au-delà de l'esthétique. C'est la science de créer des interfaces que les utilisateurs adorent utiliser — et qui convertissent. Découvrez les principes fondamentaux."
-date: "2026-02-03"
+date: "2026-01-31"
 readTime: 7
 tag: "Design"
 category: "design"

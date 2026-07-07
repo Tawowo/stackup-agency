@@ -1,6 +1,6 @@
 ---
 title: "Devis en ligne pour artisans : comment automatiser et gagner du temps"
-date: "2026-06-23"
+date: "2026-06-04"
 excerpt: "Un système de devis en ligne bien conçu peut vous faire économiser 5 à 10 heures par semaine tout en qualifiant automatiquement vos leads. Voici comment le mettre en place."
 tag: "Artisans"
 category: "artisans"

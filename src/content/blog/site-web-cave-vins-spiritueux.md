@@ -1,10 +1,10 @@
 ---
 title: "Cave à vins et spiritueux : site web, abonnement bouteille et click & collect"
 description: "Abonnement mensuel, box découverte, click & collect et conseil personnalisé en ligne : voici comment une cave à vins utilise le digital pour multiplier ses canaux de revenus."
-date: "2026-06-22"
+date: "2026-04-06"
 category: "commerce"
 tags: ["cave à vins", "spiritueux", "abonnement bouteille"]
-readTime: "7 min de lecture"
+readTime: 7
 ---
 
 En France, la vente de vin en ligne a franchi le cap des 1,2 milliard d'euros en 2025 — et cette croissance n'est pas captée par les caves indépendantes, mais par les pure players comme Vinatis, La Grande Cave ou les clubs d'abonnement qui ont su industrialiser la relation client digitale. Pourtant, une cave à vins indépendante possède quelque chose qu'aucun entrepôt automatisé ne peut proposer : la passion, l'expertise humaine, la capacité à écouter un client et à lui faire découvrir une bouteille qu'il n'aurait jamais choisie seul. Cette valeur ajoutée, démultipliée par le digital, peut transformer une belle cave de quartier en une affaire régionale ou nationale prospère. La clé est de comprendre comment le digital amplifie votre expertise au lieu de la remplacer.

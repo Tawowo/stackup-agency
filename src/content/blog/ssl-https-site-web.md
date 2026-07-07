@@ -1,6 +1,6 @@
 ---
 title: "SSL et HTTPS pour votre site web : sécurité et référencement expliqués simplement"
-date: "2026-06-23"
+date: "2026-02-16"
 excerpt: "Qu'est-ce que le SSL et le HTTPS ? Pourquoi c'est indispensable pour votre site en 2026, tant pour la sécurité que pour le référencement Google."
 tag: "Création de sites"
 category: "creation-sites"

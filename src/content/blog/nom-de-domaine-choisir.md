@@ -1,6 +1,6 @@
 ---
 title: "Choisir son nom de domaine : guide complet pour les entrepreneurs"
-date: "2026-06-23"
+date: "2026-05-17"
 excerpt: "Comment choisir le bon nom de domaine pour votre entreprise ? Conseils d'expert sur les extensions, les pièges à éviter et les bonnes pratiques en 2026."
 tag: "Création de sites"
 category: "creation-sites"

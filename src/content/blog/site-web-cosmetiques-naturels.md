@@ -1,6 +1,6 @@
 ---
 title: "Site web cosmétiques naturels : valeurs, certifications et abonnement"
-date: "2026-06-23"
+date: "2026-04-05"
 excerpt: "Comment une boutique de cosmétiques naturels et bio peut construire un site web qui reflète ses valeurs, met en avant ses certifications et développe un modèle d'abonnement fidélisant."
 tag: "Commerce"
 category: "commerce"

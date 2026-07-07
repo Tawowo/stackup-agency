@@ -1,6 +1,6 @@
 ---
 title: "Site web serrurier : apparaître en urgence sur Google et convertir"
-date: "2026-06-23"
+date: "2026-02-26"
 excerpt: "La serrurerie de dépannage est le secteur artisanal où la vitesse de réponse digitale est la plus critique. Voici comment dominer Google en local et transformer chaque visite en appel."
 tag: "Artisans"
 category: "artisans"

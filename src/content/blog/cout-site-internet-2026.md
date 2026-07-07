@@ -1,6 +1,6 @@
 ---
 title: "Combien coûte un site internet en 2026 ? Guide complet des tarifs"
-date: "2026-06-23"
+date: "2026-06-07"
 excerpt: "Prix d'un site vitrine, e-commerce ou sur mesure en 2026 : découvrez les tarifs réels et ce qui justifie les écarts de prix."
 tag: "Création de sites"
 category: "creation-sites"

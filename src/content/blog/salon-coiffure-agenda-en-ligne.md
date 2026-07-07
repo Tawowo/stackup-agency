@@ -1,7 +1,7 @@
 ---
 title: "Salon de coiffure : comment remplir son agenda en ligne"
 excerpt: "Un agenda plein, c'est un salon rentable. Découvrez comment les outils de réservation en ligne peuvent transformer votre salon de coiffure et attirer de nouveaux clients automatiquement."
-date: "2026-03-08"
+date: "2026-05-01"
 readTime: 6
 tag: "Commerce"
 category: "commerce"

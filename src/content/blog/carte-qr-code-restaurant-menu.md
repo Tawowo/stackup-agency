@@ -1,10 +1,10 @@
 ---
 title: "Menu QR code pour restaurant : mise en place, avantages et retour sur investissement"
 description: "Le menu QR code n'est plus une tendance post-COVID : c'est un outil de gestion puissant qui réduit les coûts d'impression et augmente le ticket moyen."
-date: "2026-06-05"
+date: "2026-06-12"
 category: "restaurants"
 tags: ["QR code", "menu digital", "restaurant"]
-readTime: "6 min de lecture"
+readTime: 6
 ---
 
 Né de la nécessité sanitaire en 2020, le menu QR code a d'abord été perçu comme une solution de dépannage temporaire — pratique en temps de pandémie, mais destinée à disparaître avec elle. Six ans plus tard, force est de constater que les restaurateurs qui ont maintenu et développé leurs menus digitaux ne reviendraient en arrière pour rien au monde. Non pas par nostalgie de la crise, mais parce qu'ils ont découvert une réalité que les grandes chaînes de restauration exploitent depuis bien plus longtemps : un menu digital est un outil de gestion et de vente considérablement plus puissant qu'une carte imprimée. Voici pourquoi, et comment le mettre en place correctement.

@@ -1,6 +1,6 @@
 ---
 title: "Google Ads pour restaurant : campagnes qui remplissent les tables"
-date: "2026-06-23"
+date: "2026-05-28"
 excerpt: "Google Ads bien configuré peut remplir vos tables chaque soir. Découvrez les types de campagnes, les budgets et les erreurs à éviter pour un ROI maximum en restauration."
 tag: "Restauration"
 category: "restaurants"

@@ -1,6 +1,6 @@
 ---
 title: "Gestion du planning employés : l'application qui remplace les tableurs Excel"
-date: "2026-06-23"
+date: "2026-05-29"
 excerpt: "Excel pour les plannings, c'est 3h de mise à jour hebdomadaire, des erreurs à répétition et des conflits évitables. Voici comment une application dédiée transforme la gestion du temps de travail."
 tag: "Applications métier"
 category: "applications-metier"

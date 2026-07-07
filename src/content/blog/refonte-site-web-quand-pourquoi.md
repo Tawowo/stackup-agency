@@ -1,10 +1,10 @@
 ---
 title: "Refonte de site web : les 7 signaux qui indiquent qu'il est temps de changer"
 description: "Taux de rebond élevé, chargement lent, absence sur mobile, design vieillissant : voici les 7 indicateurs qui signalent qu'une refonte de votre site web est devenue urgente."
-date: "2026-06-22"
+date: "2026-05-06"
 category: "strategie"
 tags: ["refonte site web", "audit web", "performance site"]
-readTime: "8 min de lecture"
+readTime: 8
 ---
 
 Votre site web a trois, cinq, huit ans. Il vous a coûté de l'argent à l'époque, il fonctionne encore — du moins en apparence. Alors pourquoi y toucher ? Parce que le web évolue à une vitesse que peu d'autres secteurs connaissent. Les standards de Google ont changé, les comportements des utilisateurs ont évolué, votre offre a peut-être été enrichie, vos concurrents ont refait le leur. Un site web vieillissant n'est pas neutre : il vous coûte des prospects que vous ne voyez jamais, des clients qui partent avant même d'avoir pris contact, des positions perdues dans les résultats de recherche. Selon HubSpot, les entreprises qui ont refondu leur site ont constaté en moyenne une augmentation de 55 % de leur génération de leads dans les six mois suivant la refonte. La question n'est pas "faut-il refaire son site ?" mais "à quel moment est-ce devenu urgent ?" Voici les sept signaux qui ne trompent pas.

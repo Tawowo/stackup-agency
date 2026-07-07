@@ -1,10 +1,10 @@
 ---
 title: "Magasin de sport et loisirs : le site qui génère des ventes en dehors de vos heures d'ouverture"
 description: "Les achats d'équipements sportifs se décident souvent le soir ou le week-end. Un site e-commerce bien structuré transforme votre magasin physique en source de revenus 24h/24."
-date: "2026-06-22"
+date: "2026-03-26"
 category: "commerce"
 tags: ["magasin sport", "e-commerce", "ventes en dehors horaires"]
-readTime: "7 min de lecture"
+readTime: 7
 ---
 
 Il est 22h un dimanche soir. Un client a décidé de s'inscrire à son premier triathlon — il a trois semaines pour s'équiper. Il ouvre son ordinateur, cherche une combinaison néoprène, des chaussures de running adaptées à son foulée, un casque de vélo homologué. Si votre magasin de sport dispose d'un site e-commerce bien conçu, vous êtes dans la course. Sinon, ce client — et tous ses futurs achats — partira chez Decathlon, Amazon ou une boutique spécialisée en ligne qui a compris que le commerce ne dort jamais. Selon une étude de la Fédération du Commerce Spécialisé, 64 % des décisions d'achat d'équipements sportifs sont prises en dehors des heures d'ouverture des magasins. Votre vitrine physique, aussi bien agencée soit-elle, reste fermée la nuit. Votre site, lui, n'a pas d'horaires.

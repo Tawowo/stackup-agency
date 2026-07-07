@@ -1,7 +1,7 @@
 ---
 title: "Les couleurs qui convertissent : psychologie du design web"
 excerpt: "Les couleurs influencent nos émotions et nos décisions d'achat bien plus que nous ne le pensons. Découvrez la psychologie des couleurs appliquée au design web pour maximiser vos conversions."
-date: "2026-01-26"
+date: "2026-06-08"
 readTime: 6
 tag: "Design"
 category: "design"

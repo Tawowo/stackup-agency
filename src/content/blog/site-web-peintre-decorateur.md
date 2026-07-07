@@ -1,6 +1,6 @@
 ---
 title: "Site web peintre en bâtiment : avant/après et prise de RDV en ligne"
-date: "2026-06-23"
+date: "2026-03-14"
 excerpt: "La peinture en bâtiment est un métier visuel. Avant/après, palette de couleurs, finitions premium : un site web bien construit est votre meilleur book commercial."
 tag: "Artisans"
 category: "artisans"

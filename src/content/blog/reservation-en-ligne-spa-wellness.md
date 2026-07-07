@@ -1,10 +1,10 @@
 ---
 title: "Spa, wellness et soins : comment la réservation en ligne double votre taux de remplissage"
 description: "Les clients réservent leurs soins à 22h, pas pendant vos heures d'ouverture. Voici comment un système de réservation en ligne adapté au secteur wellness transforme votre planning."
-date: "2026-06-06"
+date: "2026-05-02"
 category: "restaurants"
 tags: ["spa", "wellness", "réservation en ligne"]
-readTime: "7 min de lecture"
+readTime: 7
 ---
 
 Il est 22h17. Votre spa est fermé depuis des heures, votre équipe est rentrée chez elle. Pourtant, à ce moment précis, une cliente cherche sur son téléphone un soin visage pour son anniversaire le week-end prochain. Elle est prête à payer, elle a sa carte bancaire en main. Si votre établissement ne propose pas de réservation en ligne, elle va chez le concurrent qui, lui, a compris que le pic de réservation du secteur wellness se situe entre 20h et 23h. Ce scénario se répète des dizaines de fois chaque soir dans tout l'hexagone. Voici ce que les spas et instituts de soins les plus performants ont mis en place pour ne plus jamais rater ces opportunités.

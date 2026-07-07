@@ -1,7 +1,7 @@
 ---
 title: "7 raisons pour lesquelles votre boutique a besoin d'un site"
 excerpt: "Votre boutique physique tourne bien, alors pourquoi investir dans un site web ? Voici 7 raisons concrètes qui montrent que ne pas avoir de site en 2026 vous coûte de l'argent."
-date: "2026-02-10"
+date: "2026-07-04"
 readTime: 5
 tag: "Commerce"
 category: "commerce"

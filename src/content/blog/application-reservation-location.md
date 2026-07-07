@@ -1,6 +1,6 @@
 ---
 title: "Application de réservation et location : gérer un parc de biens en ligne"
-date: "2026-06-23"
+date: "2026-06-19"
 excerpt: "Gérer manuellement un parc de 20 biens à louer génère 15h de travail administratif par semaine. Une application de réservation en ligne peut automatiser 80 % de ce flux et augmenter le taux d'occupation de 30 %."
 tag: "Applications métier"
 category: "applications-metier"

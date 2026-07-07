@@ -1,6 +1,6 @@
 ---
 title: "CRM sur mesure pour PME : gérer ses clients sans payer Salesforce"
-date: "2026-06-23"
+date: "2026-06-07"
 excerpt: "Salesforce coûte en moyenne 1 800 € par utilisateur et par an. Découvrez pourquoi un CRM sur mesure est plus rentable, plus adapté et plus puissant pour une PME française."
 tag: "Applications métier"
 category: "applications-metier"

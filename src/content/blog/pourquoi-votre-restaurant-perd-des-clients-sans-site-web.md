@@ -1,7 +1,7 @@
 ---
 title: "Pourquoi votre restaurant perd des clients sans site web en 2026"
 excerpt: "En 2026, ne pas avoir de site web pour votre restaurant, c'est laisser des centaines de couverts à vos concurrents. Découvrez pourquoi et comment y remédier."
-date: "2026-01-15"
+date: "2026-05-13"
 readTime: 5
 tag: "Restaurants"
 category: "restaurants"

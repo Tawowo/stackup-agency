@@ -1,7 +1,7 @@
 ---
 title: "Comment écrire un article de blog qui se positionne sur Google"
 excerpt: "Écrire pour Google sans ennuyer ses lecteurs, c'est tout un art. Découvrez la méthode complète pour créer des articles de blog qui plaisent à la fois aux humains et aux algorithmes."
-date: "2026-02-08"
+date: "2026-06-02"
 readTime: 8
 tag: "SEO"
 category: "seo"

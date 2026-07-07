@@ -1,10 +1,10 @@
 ---
 title: "Hôtel et chambres d'hôtes : comment un site web vous fait gagner 30% de réservations directes"
 description: "Booking.com prend 15 à 20% de commission sur chaque réservation. Un site web professionnel vous permet de récupérer ces marges en capturant les clients en direct."
-date: "2026-06-02"
+date: "2026-03-30"
 category: "restaurants"
 tags: ["hôtel", "chambres d'hôtes", "réservation directe"]
-readTime: "8 min de lecture"
+readTime: 8
 ---
 
 Chaque année, les hôteliers et propriétaires de chambres d'hôtes français reversent collectivement plus de 2 milliards d'euros de commissions aux grandes OTA — Online Travel Agencies — que sont Booking.com, Expedia et leurs concurrents. À 15, 18, voire 22 % de commission sur chaque nuit vendue, la dépendance aux plateformes est devenue l'une des principales menaces sur la rentabilité des établissements indépendants. Pourtant, la solution existe, est prouvée et accessible : un site web professionnel avec moteur de réservation intégré. Les établissements qui ont investi dans cette direction rapportent des augmentations de réservations directes allant de 25 à 40 % dès la première année. Voici pourquoi et comment.

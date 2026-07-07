@@ -1,7 +1,7 @@
 ---
 title: "Logo et identité visuelle : pourquoi c'est la base de tout"
 excerpt: "Votre logo est bien plus qu'un joli dessin. C'est le fondement de votre identité de marque. Découvrez pourquoi l'identité visuelle est stratégique et comment la construire correctement."
-date: "2026-02-20"
+date: "2026-05-22"
 readTime: 7
 tag: "Design"
 category: "design"

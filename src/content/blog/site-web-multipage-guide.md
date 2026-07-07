@@ -1,6 +1,6 @@
 ---
 title: "Site web multi-pages : quand en avez-vous vraiment besoin ?"
-date: "2026-06-23"
+date: "2026-03-18"
 excerpt: "Un site d'une page suffit-il ou avez-vous besoin d'un site multi-pages ? Ce guide vous aide à décider selon votre activité et vos objectifs."
 tag: "Création de sites"
 category: "creation-sites"

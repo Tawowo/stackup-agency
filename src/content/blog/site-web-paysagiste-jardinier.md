@@ -1,6 +1,6 @@
 ---
 title: "Site web paysagiste : portfolio jardin et devis entretien en ligne"
-date: "2026-06-23"
+date: "2026-03-14"
 excerpt: "Création de jardins, entretien régulier, terrasses et aménagements extérieurs : un site web avec un portfolio saisonnier transforme votre visibilité en contrats récurrents."
 tag: "Artisans"
 category: "artisans"

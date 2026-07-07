@@ -1,6 +1,6 @@
 ---
 title: "Site web rapide : pourquoi la vitesse est votre meilleur argument commercial"
-date: "2026-06-23"
+date: "2026-03-03"
 excerpt: "Un site lent vous coûte des clients et du référencement. Découvrez pourquoi la performance web est un levier business majeur en 2026."
 tag: "Création de sites"
 category: "creation-sites"

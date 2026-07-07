@@ -1,6 +1,6 @@
 ---
 title: "Peut-on faire du SEO local sans site web ? La réponse complète"
-date: "2026-06-23"
+date: "2026-04-18"
 excerpt: "Un artisan sans site web peut-il quand même apparaître sur Google Maps ? Oui — mais avec des limites importantes. Voici ce qui est possible et ce qui ne l'est pas."
 tag: "SEO Local"
 category: "seo-local"

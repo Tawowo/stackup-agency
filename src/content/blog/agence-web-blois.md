@@ -1,6 +1,6 @@
 ---
 title: "Agence web à Blois : création de sites internet en Centre-Val de Loire"
-date: "2026-06-23"
+date: "2026-06-30"
 excerpt: "Votre agence web à Blois pour la création de sites internet et applications. Stackup Agency, basée en Centre-Val de Loire, livre vos projets dès 449€ en 10 jours."
 tag: "Agences locales"
 category: "pages-locales"

@@ -1,6 +1,6 @@
 ---
 title: "Agence web à Caen : sites internet sur mesure en Normandie"
-date: "2026-06-23"
+date: "2026-06-30"
 excerpt: "Stackup Agency crée des sites internet professionnels pour les entreprises de Caen et du Calvados. Dès 449€, livraison en 10 jours, expertise normande."
 tag: "Agences locales"
 category: "pages-locales"

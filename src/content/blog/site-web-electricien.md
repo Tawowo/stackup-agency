@@ -1,6 +1,6 @@
 ---
 title: "Site web électricien : générer des devis en ligne et remplir votre agenda"
-date: "2026-06-23"
+date: "2026-04-02"
 excerpt: "Un électricien bien référencé en ligne peut remplir son agenda plusieurs semaines à l'avance. Voici comment un site web professionnel transforme votre visibilité en chiffre d'affaires."
 tag: "Artisans"
 category: "artisans"

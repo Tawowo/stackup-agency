@@ -1,6 +1,6 @@
 ---
 title: "Agence web à Rouen : développement web pour la métropole normande"
-date: "2026-06-23"
+date: "2026-06-24"
 excerpt: "Stackup Agency accompagne les entreprises de Rouen et de la métropole normande dans leur développement digital. Sites internet dès 449€, livraison en 10 jours."
 tag: "Agences locales"
 category: "pages-locales"

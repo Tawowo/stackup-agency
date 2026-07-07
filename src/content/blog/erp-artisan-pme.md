@@ -1,6 +1,6 @@
 ---
 title: "ERP pour artisan et PME : tout gérer depuis un seul outil"
-date: "2026-06-23"
+date: "2026-06-02"
 excerpt: "Devis, facturation, stocks, planning, comptabilité : les artisans jonglent avec 5 à 8 outils différents. Un ERP sur mesure peut tout centraliser et faire économiser 10h par semaine."
 tag: "Applications métier"
 category: "applications-metier"

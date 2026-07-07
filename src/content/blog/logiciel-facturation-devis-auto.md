@@ -1,6 +1,6 @@
 ---
 title: "Logiciel de facturation et devis : automatiser pour gagner 5h par semaine"
-date: "2026-06-23"
+date: "2026-05-22"
 excerpt: "La facturation manuelle coûte en moyenne 15 € par facture en temps de traitement. Automatiser la chaîne devis-commande-facture-relance peut faire économiser 5h par semaine et accélérer les encaissements."
 tag: "Applications métier"
 category: "applications-metier"

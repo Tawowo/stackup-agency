@@ -17,6 +17,21 @@ const nextConfig = {
       destination: '/blog/pourquoi-votre-restaurant-perd-des-clients-sans-site-web',
       permanent: true,
     },
+    {
+      source: '/blog/avis-clients-google-strategie',
+      destination: '/blog/avis-google-strategie-complete',
+      permanent: true,
+    },
+    {
+      source: '/blog/hebergement-web-comment-choisir',
+      destination: '/blog/hebergement-web-choisir',
+      permanent: true,
+    },
+    {
+      source: '/blog/seo-local-google-maps-premier',
+      destination: '/blog/seo-local-google-maps-2026',
+      permanent: true,
+    },
   ],
   headers: async () => [
     {

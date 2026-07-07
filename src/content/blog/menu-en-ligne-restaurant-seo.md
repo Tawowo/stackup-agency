@@ -1,6 +1,6 @@
 ---
 title: "Menu en ligne pour restaurant : comment il booste votre référencement Google"
-date: "2026-06-23"
+date: "2026-05-19"
 excerpt: "Votre menu en ligne n'est pas seulement utile pour vos clients — c'est un puissant levier SEO qui peut vous faire apparaître en première position sur Google. Voici comment l'optimiser."
 tag: "Restauration"
 category: "restaurants"

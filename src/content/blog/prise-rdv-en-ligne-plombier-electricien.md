@@ -1,10 +1,10 @@
 ---
 title: "Plombier, électricien, chauffagiste : la prise de RDV en ligne qui remplit votre agenda"
 description: "Un système de prise de rendez-vous en ligne professionnel vous évite des heures de téléphone, réduit les oublis et vous permet d'optimiser vos tournées. Guide complet."
-date: "2026-06-11"
+date: "2026-05-12"
 category: "artisans"
 tags: ["plombier", "électricien", "prise de RDV en ligne"]
-readTime: "7 min de lecture"
+readTime: 7
 ---
 
 Chaque semaine, un artisan du bâtiment perd en moyenne **4 à 6 heures** à gérer ses appels entrants, rappeler des clients qui n'ont pas laissé de message clair, ou à jongler entre son chantier et son téléphone. C'est l'équivalent d'une demi-journée de travail facturable qui part en fumée — soit plusieurs milliers d'euros de manque à gagner chaque année. Pendant ce temps, 67 % des particuliers affirment qu'ils préfèrent désormais prendre rendez-vous en ligne plutôt que par téléphone, notamment parce qu'ils cherchent de l'aide en dehors des heures ouvrables. La question n'est plus de savoir si vous devez adopter un système de prise de rendez-vous en ligne, mais comment le faire sans perturber votre organisation actuelle. Ce guide vous donne les clés.

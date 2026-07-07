@@ -85,7 +85,7 @@ export default function Pricing() {
                       : 'bg-electric/10 hover:bg-electric/20 text-electric'
                   }`}
                 >
-                  Choisir {plan.name}
+                  {t.pricing.choose} {plan.name}
                 </Link>
 
                 {/* En savoir plus */}
@@ -100,7 +100,7 @@ export default function Pricing() {
                           : 'text-[#F59E0B] border-[#F59E0B] hover:bg-[#F59E0B] hover:text-white'
                     }`}
                   >
-                    En savoir plus
+                    {t.pricing.learnMore}
                     <ArrowRight size={14} className="transition-transform duration-200 group-hover/btn:translate-x-1" />
                   </Link>
                 </div>

@@ -1,6 +1,6 @@
 ---
 title: "Site web plombier : être trouvé en urgence par les clients de votre secteur"
-date: "2026-06-23"
+date: "2026-03-03"
 excerpt: "Un plombier sans site web perd jusqu'à 70% des appels d'urgence au profit de concurrents mieux positionnés sur Google. Voici comment changer la donne."
 tag: "Artisans"
 category: "artisans"

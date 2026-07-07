@@ -1,7 +1,7 @@
 ---
 title: "Outils digitaux indispensables pour un entrepreneur en 2026"
 excerpt: "Les bons outils digitaux peuvent multiplier votre productivité par 2 ou 3. Voici la sélection des outils incontournables pour les entrepreneurs en 2026, classés par usage."
-date: "2026-03-15"
+date: "2026-05-16"
 readTime: 7
 tag: "Entrepreneuriat"
 category: "entrepreneuriat"

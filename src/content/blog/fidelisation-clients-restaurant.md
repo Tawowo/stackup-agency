@@ -1,6 +1,6 @@
 ---
 title: "Fidélisation clients restaurant : le programme de fidélité qui fait revenir"
-date: "2026-06-23"
+date: "2026-05-30"
 excerpt: "Acquérir un nouveau client coûte 5 fois plus cher que de fidéliser un client existant. Découvrez comment mettre en place un programme de fidélité restaurant efficace et digital."
 tag: "Restauration"
 category: "restaurants"

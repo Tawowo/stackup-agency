@@ -1,10 +1,10 @@
 ---
 title: "Coach, formateur, consultant : l'agenda en ligne qui professionnalise votre activité"
 description: "Un agenda en ligne bien intégré à votre site web vous évite les allers-retours email, réduit les no-shows et vous positionne comme un professionnel sérieux. Voici comment le mettre en place."
-date: "2026-06-14"
+date: "2026-06-23"
 category: "professions-liberales"
 tags: ["coach", "formateur", "agenda en ligne"]
-readTime: "7 min de lecture"
+readTime: 7
 ---
 
 Il y a une ironie cruelle dans la situation de nombreux coachs et formateurs : ils aident leurs clients à s'organiser, à gagner en efficacité, à reprendre le contrôle de leur temps — tout en passant eux-mêmes **deux à trois heures par semaine** à gérer leur agenda par email. Les échanges de type "Êtes-vous disponible mardi à 14h ? Non, mais jeudi à 10h ? Finalement vendredi ?" sont une perte de temps et d'énergie qui, cumulée sur une année, représente plusieurs dizaines d'heures de travail non facturé. Pire : chaque échange manuel est une opportunité de décourager un prospect qui ne rappellera pas.

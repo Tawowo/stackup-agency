@@ -1,7 +1,7 @@
 ---
 title: "Personal branding : pourquoi votre image en ligne compte"
 excerpt: "En 2026, votre réputation en ligne précède vos rendez-vous professionnels. Le personal branding n'est plus réservé aux stars des réseaux sociaux — c'est un outil stratégique pour tout entrepreneur."
-date: "2026-03-02"
+date: "2026-05-16"
 readTime: 6
 tag: "Entrepreneuriat"
 category: "entrepreneuriat"

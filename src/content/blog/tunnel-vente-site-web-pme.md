@@ -1,10 +1,10 @@
 ---
 title: "Tunnel de vente pour PME : transformer votre site vitrine en machine à générer des leads"
 description: "Un site vitrine qui ne convertit pas est un coût, pas un investissement. Le tunnel de vente transforme chaque visiteur en prospect qualifié. Voici les principes fondamentaux à appliquer."
-date: "2026-06-22"
+date: "2026-02-01"
 category: "strategie"
 tags: ["tunnel de vente", "lead generation", "conversion site web"]
-readTime: "8 min de lecture"
+readTime: 8
 ---
 
 Vous avez investi dans un beau site web. Il reçoit des visites. Mais le téléphone ne sonne pas davantage qu'avant, les emails de contact restent rares et vous ne voyez pas le retour sur investissement attendu. Ce scenario est malheureusement celui de la majorité des PME françaises qui ont un site vitrine : selon une étude de l'ACSEL publiée en 2025, 78 % des sites professionnels de TPE-PME n'ont aucun système de conversion structuré. Ils informent, mais ils ne convertissent pas. La différence entre un site qui génère des leads régulièrement et un site qui n'en génère aucun n'est pas une question de budget ou de beauté graphique — c'est une question d'architecture commerciale. Le tunnel de vente est cette architecture. Et sa mise en place peut transformer radicalement le retour sur investissement de votre présence digitale.

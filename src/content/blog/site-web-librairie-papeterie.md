@@ -1,6 +1,6 @@
 ---
 title: "Site web librairie et papeterie : combattre Amazon avec le service local"
-date: "2026-06-23"
+date: "2026-03-28"
 excerpt: "Face à Amazon qui domine la vente de livres en ligne, comment une librairie indépendante peut utiliser son site web pour valoriser ses conseils, ses événements et sa relation client unique."
 tag: "Commerce"
 category: "commerce"

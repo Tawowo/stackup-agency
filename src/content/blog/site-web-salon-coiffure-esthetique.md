@@ -1,10 +1,10 @@
 ---
 title: "Salon de coiffure et esthétique : le système de réservation qui élimine les oublis et les no-shows"
 description: "Les no-shows coûtent en moyenne 10% du chiffre d'affaires d'un salon. Un système de réservation en ligne avec rappels automatiques est la solution la plus efficace pour les éliminer."
-date: "2026-06-18"
+date: "2026-02-27"
 category: "professions-liberales"
 tags: ["salon de coiffure", "esthétique", "réservation en ligne"]
-readTime: "7 min de lecture"
+readTime: 7
 ---
 
 Imaginez qu'en fin d'année, vous découvrez que vous avez perdu **l'équivalent de 5 semaines de chiffre d'affaires** à cause de créneaux non honorés, d'annulations de dernière minute et de trous dans l'agenda non comblés. C'est la réalité de nombreux salons de coiffure et instituts d'esthétique en France. Les no-shows — ces clients qui ne se présentent pas sans prévenir — représentent en moyenne 8 à 12 % du chiffre d'affaires annuel dans le secteur de la beauté. Pour un salon qui génère 200 000 € par an, c'est entre 16 000 et 24 000 € qui s'évaporent chaque année, sans que rien ne soit fait pour les retenir.

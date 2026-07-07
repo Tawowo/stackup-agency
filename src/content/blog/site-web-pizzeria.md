@@ -1,6 +1,6 @@
 ---
 title: "Site web pour pizzeria : les fonctionnalités qui font venir les clients"
-date: "2026-06-23"
+date: "2026-03-06"
 excerpt: "Découvrez quelles fonctionnalités un site web de pizzeria doit absolument avoir pour attirer, convertir et fidéliser vos clients en 2026."
 tag: "Restauration"
 category: "restaurants"

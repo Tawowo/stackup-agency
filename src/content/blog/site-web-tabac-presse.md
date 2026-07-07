@@ -1,6 +1,6 @@
 ---
 title: "Site web tabac-presse : horaires, actualités locales et livraison de journaux"
-date: "2026-06-23"
+date: "2026-02-24"
 excerpt: "Comment un débit de tabac-presse peut tirer parti d'un site web pour afficher ses services, informer sur ses horaires et développer la livraison de journaux à domicile."
 tag: "Commerce"
 category: "commerce"

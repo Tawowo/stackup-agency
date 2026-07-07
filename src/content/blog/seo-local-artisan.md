@@ -1,6 +1,6 @@
 ---
 title: "SEO local pour artisans : être trouvé par les clients de votre secteur"
-date: "2026-06-23"
+date: "2026-04-27"
 excerpt: "Plombier, électricien, menuisier, peintre : le SEO local peut générer 60% de vos nouveaux clients. Voici comment le mettre en place concrètement."
 tag: "SEO Local"
 category: "seo-local"
