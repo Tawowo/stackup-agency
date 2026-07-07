@@ -1,9 +1,5 @@
 import { getAllPosts } from '@/lib/blog'
-import Link from 'next/link'
-import { ArrowLeft } from 'lucide-react'
-import BlogClient from './BlogClient'
 import BlogPageClient from './BlogPageClient'
-
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {

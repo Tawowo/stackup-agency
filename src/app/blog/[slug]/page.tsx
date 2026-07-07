@@ -1,7 +1,7 @@
 import { getPost, getAllPosts } from '@/lib/blog'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
-import { ArrowLeft, Clock, Tag } from 'lucide-react'
+import { Clock, Tag, Home, ChevronRight } from 'lucide-react'
 
 export async function generateStaticParams() {
   const posts = getAllPosts()
@@ -31,13 +31,52 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
   const post = await getPost(params.slug)
   if (!post) notFound()
 
+  const url = `https://stackup-agency.fr/blog/${post.slug}`
+
+  const blogPostingSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: post.title,
+    description: post.excerpt,
+    url,
+    datePublished: post.date,
+    dateModified: post.date,
+    author: { '@type': 'Organization', name: 'Stackup Agency', url: 'https://stackup-agency.fr' },
+    publisher: {
+      '@type': 'Organization',
+      name: 'Stackup Agency',
+      url: 'https://stackup-agency.fr',
+      logo: { '@type': 'ImageObject', url: 'https://stackup-agency.fr/logo.png' },
+    },
+    mainEntityOfPage: { '@type': 'WebPage', '@id': url },
+    keywords: post.keywords?.join(', '),
+  }
+
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://stackup-agency.fr' },
+      { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://stackup-agency.fr/blog' },
+      { '@type': 'ListItem', position: 3, name: post.title, item: url },
+    ],
+  }
+
   return (
     <div className="min-h-screen bg-background dark:bg-[#0A0F1C]">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(blogPostingSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+
       <div className="bg-gradient-to-b from-[#060D1A] to-[#0A0F1C] pt-24 pb-16">
         <div className="max-w-3xl mx-auto px-4 sm:px-6">
-          <Link href="/blog" className="inline-flex items-center gap-2 text-white/50 hover:text-white text-sm mb-8 transition-colors">
-            <ArrowLeft size={16} /> Tous les articles
-          </Link>
+          {/* Breadcrumb */}
+          <nav className="flex items-center gap-1.5 text-white/40 text-xs mb-6" aria-label="Fil d'Ariane">
+            <Link href="/" className="hover:text-white transition-colors flex items-center gap-1"><Home size={11} /> Accueil</Link>
+            <ChevronRight size={11} />
+            <Link href="/blog" className="hover:text-white transition-colors">Blog</Link>
+            <ChevronRight size={11} />
+            <span className="text-white/60 truncate max-w-[200px]">{post.title}</span>
+          </nav>
           <div className="flex items-center gap-3 mb-4">
             <span className="flex items-center gap-1 px-3 py-1.5 bg-white/10 text-white/80 rounded-full text-xs font-medium">
               <Tag size={11} /> {post.tag}
@@ -45,7 +84,7 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
             <span className="flex items-center gap-1 text-white/40 text-xs">
               <Clock size={11} /> {post.readTime} min de lecture
             </span>
-            <span className="text-white/40 text-xs">{post.date}</span>
+            <span className="text-white/40 text-xs">{new Date(post.date).toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' })}</span>
           </div>
           <h1 className="text-3xl lg:text-5xl font-bold text-white leading-tight">{post.title}</h1>
         </div>
