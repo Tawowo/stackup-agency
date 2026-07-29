@@ -127,7 +127,7 @@ export default function AgenceWebVillePage({ params }: { params: { ville: string
           </div>
 
           <div className="flex flex-wrap gap-4">
-            <Link href="/contact" className="px-6 py-3 bg-amber-500 hover:bg-amber-400 text-white font-semibold rounded-xl transition-all hover:-translate-y-0.5">
+            <Link href="/contact" className="px-6 py-3 bg-amber-500 hover:bg-amber-400 text-amber-950 font-semibold rounded-xl transition-all hover:-translate-y-0.5">
               Devis gratuit sous 72h →
             </Link>
             <Link href="/services/site-vitrine" className="px-6 py-3 border border-white/20 text-white hover:bg-white/10 rounded-xl transition-all">
@@ -280,7 +280,7 @@ export default function AgenceWebVillePage({ params }: { params: { ville: string
           <h3 className="text-white font-bold text-2xl mb-2">Vous êtes à {v.ville} ? Parlons de votre projet.</h3>
           <p className="text-white/70 mb-2">Premier rendez-vous gratuit, devis sous 72h, sans engagement.</p>
           <p className="text-white/50 text-sm mb-6">Tout se passe à distance — aussi efficace qu'en présentiel, plus rapide.</p>
-          <Link href="/contact" className="inline-block px-8 py-3 bg-amber-500 hover:bg-amber-400 text-white font-semibold rounded-xl transition-all hover:-translate-y-0.5">
+          <Link href="/contact" className="inline-block px-8 py-3 bg-amber-500 hover:bg-amber-400 text-amber-950 font-semibold rounded-xl transition-all hover:-translate-y-0.5">
             Demander un devis gratuit →
           </Link>
         </div>

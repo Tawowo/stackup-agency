@@ -91,10 +91,10 @@ export default function TarifsPage() {
               },
             ].map(s => (
               <div key={s.titre} className={`rounded-2xl border p-6 flex flex-col ${s.highlight ? 'border-amber-500/40 bg-amber-500/5' : 'border-navy/20 dark:border-white/10'}`}>
-                {s.highlight && <div className="text-xs font-semibold text-amber-500 mb-3 uppercase tracking-wide">Le plus populaire</div>}
+                {s.highlight && <div className="text-xs font-semibold text-amber-700 dark:text-amber-500 mb-3 uppercase tracking-wide">Le plus populaire</div>}
                 <div className="flex items-start justify-between mb-3">
                   <h3 className="text-lg font-bold text-foreground dark:text-white">{s.titre}</h3>
-                  <span className="text-2xl font-bold text-amber-500 ml-3">{s.prix}€</span>
+                  <span className="text-2xl font-bold text-amber-700 dark:text-amber-500 ml-3">{s.prix}€</span>
                 </div>
                 <p className="text-sm text-foreground/60 dark:text-white/60 mb-4">{s.desc}</p>
                 <ul className="space-y-1.5 mb-5 flex-1">
@@ -105,8 +105,8 @@ export default function TarifsPage() {
                     </li>
                   ))}
                 </ul>
-                <div className="text-xs text-foreground/50 dark:text-white/40 mb-4">Livraison : {s.delai}</div>
-                <Link href={s.href} className={`flex items-center justify-center gap-1 py-2.5 rounded-xl text-sm font-semibold transition-colors ${s.highlight ? 'bg-amber-500 hover:bg-amber-400 text-white' : 'border border-white/20 text-white hover:bg-white/10'}`}>
+                <div className="text-xs text-foreground/70 dark:text-white/40 mb-4">Livraison : {s.delai}</div>
+                <Link href={s.href} className={`flex items-center justify-center gap-1 py-2.5 rounded-xl text-sm font-semibold transition-colors ${s.highlight ? 'bg-amber-500 hover:bg-amber-400 text-amber-950' : 'border border-foreground/20 dark:border-white/20 text-foreground dark:text-white hover:bg-foreground/5 dark:hover:bg-white/10'}`}>
                   Voir l'offre <ChevronRight size={14} />
                 </Link>
               </div>
@@ -122,8 +122,8 @@ export default function TarifsPage() {
               <p className="text-foreground/60 dark:text-white/60 text-sm mt-1">Application métier 100% personnalisée</p>
             </div>
             <div className="text-right flex-shrink-0">
-              <div className="text-3xl font-bold text-blue-400">à partir de {SITE.pricing.gestion}€</div>
-              <div className="text-xs text-foreground/50 dark:text-white/50 mt-0.5">Livraison : 4 semaines</div>
+              <div className="text-3xl font-bold text-blue-600 dark:text-blue-400">à partir de {SITE.pricing.gestion}€</div>
+              <div className="text-xs text-foreground/70 dark:text-white/50 mt-0.5">Livraison : 4 semaines</div>
             </div>
           </div>
           <p className="text-foreground/80 dark:text-white/80 mb-5">
@@ -142,7 +142,7 @@ export default function TarifsPage() {
             <Link href="/services/systeme-gestion" className="px-5 py-2.5 bg-blue-600 hover:bg-blue-500 text-white text-sm font-semibold rounded-xl transition-colors">
               Voir l'offre
             </Link>
-            <Link href="/contact" className="px-5 py-2.5 border border-white/20 text-white hover:bg-white/10 text-sm font-semibold rounded-xl transition-colors">
+            <Link href="/contact" className="px-5 py-2.5 border border-foreground/20 dark:border-white/20 text-foreground dark:text-white hover:bg-foreground/5 dark:hover:bg-white/10 text-sm font-semibold rounded-xl transition-colors">
               Demander un devis
             </Link>
           </div>
@@ -161,7 +161,7 @@ export default function TarifsPage() {
               <div key={m.titre} className="rounded-2xl border border-navy/20 dark:border-white/10 p-5">
                 <div className="flex items-center justify-between mb-3">
                   <h3 className="font-bold text-foreground dark:text-white">{m.titre}</h3>
-                  <span className="text-xl font-bold text-amber-500">{m.prix}€<span className="text-sm font-normal text-foreground/50 dark:text-white/50">/mois</span></span>
+                  <span className="text-xl font-bold text-amber-700 dark:text-amber-500">{m.prix}€<span className="text-sm font-normal text-foreground/70 dark:text-white/50">/mois</span></span>
                 </div>
                 <ul className="space-y-1.5">
                   {m.inclus.map(item => (
@@ -187,10 +187,10 @@ export default function TarifsPage() {
               { titre: 'Pack Autorité', prix: '159', unite: '/mois', inclus: ['8 articles/mois', 'Stratégie contenu 3 mois', 'Mots-clés longue traîne', 'Cocon sémantique', 'Rapport mensuel détaillé'] },
             ].map(p => (
               <div key={p.titre} className={`rounded-2xl border p-5 ${('highlight' in p && p.highlight) ? 'border-amber-500/40 bg-amber-500/5' : 'border-navy/20 dark:border-white/10'}`}>
-                {('highlight' in p && p.highlight) && <div className="text-xs font-semibold text-amber-500 mb-2 uppercase tracking-wide">Le plus populaire</div>}
+                {('highlight' in p && p.highlight) && <div className="text-xs font-semibold text-amber-700 dark:text-amber-500 mb-2 uppercase tracking-wide">Le plus populaire</div>}
                 <div className="flex items-center justify-between mb-3">
                   <h3 className="font-bold text-foreground dark:text-white">{p.titre}</h3>
-                  <span className="text-xl font-bold text-amber-500">{p.prix}€<span className="text-sm font-normal text-foreground/50 dark:text-white/50">{p.unite}</span></span>
+                  <span className="text-xl font-bold text-amber-700 dark:text-amber-500">{p.prix}€<span className="text-sm font-normal text-foreground/70 dark:text-white/50">{p.unite}</span></span>
                 </div>
                 <ul className="space-y-1.5">
                   {p.inclus.map(item => (
@@ -208,7 +208,7 @@ export default function TarifsPage() {
               <span className="font-semibold text-foreground dark:text-white text-sm">Accès technique blog</span>
               <span className="text-foreground/60 dark:text-white/60 text-sm ml-2">— Installation du blog sur votre site existant</span>
             </div>
-            <span className="font-bold text-amber-500 flex-shrink-0">49€ <span className="text-white/50 font-normal text-xs">une fois</span></span>
+            <span className="font-bold text-amber-700 dark:text-amber-500 flex-shrink-0">49€ <span className="text-foreground/60 dark:text-white/50 font-normal text-xs">une fois</span></span>
           </div>
         </section>
 
@@ -237,7 +237,7 @@ export default function TarifsPage() {
         <div className="rounded-2xl p-6 bg-gradient-to-br from-navy to-electric text-center">
           <h2 className="text-white font-bold text-xl mb-2">Obtenez votre devis personnalisé</h2>
           <p className="text-white/70 mb-4">Devis gratuit sous 72h. Premier rendez-vous sans engagement.</p>
-          <Link href="/contact" className="inline-block px-6 py-3 bg-amber-500 hover:bg-amber-400 text-white font-semibold rounded-xl transition-all hover:-translate-y-0.5">
+          <Link href="/contact" className="inline-block px-6 py-3 bg-amber-500 hover:bg-amber-400 text-amber-950 font-semibold rounded-xl transition-all hover:-translate-y-0.5">
             Demander un devis gratuit →
           </Link>
         </div>

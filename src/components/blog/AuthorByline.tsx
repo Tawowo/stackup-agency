@@ -18,7 +18,7 @@ export default function AuthorByline({ date, updated, readTime, compact = false 
 
   if (compact) {
     return (
-      <div className="flex items-center gap-3 text-xs text-foreground/50 dark:text-white/50">
+      <div className="flex items-center gap-3 text-xs text-foreground/70 dark:text-white/50">
         <span>{name}</span>
         {dateStr && <span>·</span>}
         {dateStr && <span>{dateStr}</span>}
@@ -35,7 +35,7 @@ export default function AuthorByline({ date, updated, readTime, compact = false 
       </div>
       <div>
         <div className="font-semibold text-foreground dark:text-white text-sm">{name}</div>
-        <div className="text-xs text-foreground/50 dark:text-white/50 flex items-center gap-2">
+        <div className="text-xs text-foreground/70 dark:text-white/50 flex items-center gap-2">
           <Link href="/a-propos" className="hover:text-blue-400 transition-colors">Stackup Agency</Link>
           {dateStr && <span>·</span>}
           {dateStr && <span>{updated ? `Mis à jour le ${dateStr}` : dateStr}</span>}

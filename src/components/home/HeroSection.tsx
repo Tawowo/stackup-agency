@@ -97,7 +97,7 @@ export default function HeroSection() {
 
             <div className="flex flex-wrap gap-4 mb-5">
               <Link href="/contact"
-                className="px-7 py-4 bg-amber-500 hover:bg-amber-400 text-white font-semibold rounded-xl shadow-lg shadow-amber-500/25 transition-all hover:-translate-y-0.5">
+                className="px-7 py-4 bg-amber-500 hover:bg-amber-400 text-amber-950 font-bold rounded-xl shadow-lg shadow-amber-500/25 transition-all hover:-translate-y-0.5">
                 Obtenir mon devis gratuit →
               </Link>
               <Link href="/services"
@@ -140,7 +140,7 @@ export default function HeroSection() {
                     <span className="w-3 h-3 rounded-full bg-red-400/70" />
                     <span className="w-3 h-3 rounded-full bg-amber-400/70" />
                     <span className="w-3 h-3 rounded-full bg-green-400/70" />
-                    <span className="ml-3 text-gray-400 text-xs font-mono">stackup-agency.fr</span>
+                    <span className="ml-3 text-gray-600 text-xs font-mono">stackup-agency.fr</span>
                   </div>
                   <div className="p-4 space-y-2">
                     <div className="h-5 w-3/4 rounded bg-[#1E3A5F]" />

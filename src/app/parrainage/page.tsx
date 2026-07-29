@@ -165,7 +165,7 @@ export default function ParrainagePage() {
                 <button
                   type="submit"
                   disabled={status === 'sending'}
-                  className="w-full py-3 bg-[#F59E0B] hover:bg-amber-500 disabled:opacity-60 text-white font-semibold rounded-xl transition-all text-sm"
+                  className="w-full py-3 bg-[#F59E0B] hover:bg-amber-500 disabled:opacity-60 text-amber-950 font-semibold rounded-xl transition-all text-sm"
                 >
                   {status === 'sending' ? 'Envoi en cours...' : 'Envoyer le parrainage'}
                 </button>

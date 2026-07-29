@@ -47,7 +47,7 @@ export default function Pricing() {
                 }`}
               >
                 {isPro && (
-                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 flex items-center gap-1.5 px-4 py-1.5 bg-gold rounded-full text-white text-xs font-bold shadow-lg">
+                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 flex items-center gap-1.5 px-4 py-1.5 bg-gold rounded-full text-amber-950 text-xs font-bold shadow-lg">
                     <Zap size={12} fill="white" />
                     {t.pricing.recommended}
                   </div>
@@ -81,7 +81,7 @@ export default function Pricing() {
                   href={`/tarifs/${slug}`}
                   className={`block text-center py-3.5 rounded-xl font-semibold text-sm transition-all hover:-translate-y-0.5 ${
                     isPro
-                      ? 'bg-gold hover:bg-amber-500 text-white shadow-lg shadow-gold/30'
+                      ? 'bg-gold hover:bg-amber-500 text-amber-950 shadow-lg shadow-gold/30'
                       : 'bg-electric/10 hover:bg-electric/20 text-electric'
                   }`}
                 >
@@ -97,7 +97,7 @@ export default function Pricing() {
                         ? 'text-white border-white hover:bg-white hover:text-navy'
                         : i === 0
                           ? 'text-electric border-electric hover:bg-electric hover:text-white'
-                          : 'text-[#F59E0B] border-[#F59E0B] hover:bg-[#F59E0B] hover:text-white'
+                          : 'text-[#F59E0B] border-[#F59E0B] hover:bg-[#F59E0B] hover:text-amber-950'
                     }`}
                   >
                     {t.pricing.learnMore}

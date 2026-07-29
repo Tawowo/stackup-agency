@@ -137,14 +137,14 @@ export default function DocumentsPage() {
       <div className="max-w-3xl mx-auto px-4 sm:px-6 py-16 space-y-14">
         {GROUPS.map(group => (
           <section key={group.label}>
-            <h2 className="text-xs font-bold uppercase tracking-widest text-blue-400 mb-5">{group.label}</h2>
+            <h2 className="text-xs font-bold uppercase tracking-widest text-blue-700 dark:text-blue-400 mb-5">{group.label}</h2>
             <div className="space-y-3">
               {group.docs.map(doc => (
                 <div key={doc.pdf} className="flex items-start gap-4 bg-white dark:bg-white/5 rounded-2xl border border-gray-200 dark:border-white/10 p-5">
                   <div className="flex-1 min-w-0">
                     <p className="font-semibold text-gray-900 dark:text-white text-sm mb-1">{doc.title}</p>
                     <p className="text-xs text-gray-500 dark:text-white/50 leading-relaxed mb-3">{doc.desc}</p>
-                    <p className="text-xs text-gray-400 dark:text-white/30 mb-0">{doc.size}</p>
+                    <p className="text-xs text-gray-600 dark:text-white/30 mb-0">{doc.size}</p>
                   </div>
                   <div className="flex items-center gap-2 flex-shrink-0 mt-1">
                     {doc.slug && (
@@ -164,9 +164,9 @@ export default function DocumentsPage() {
           </section>
         ))}
 
-        <p className="text-xs text-gray-400 dark:text-white/30 text-center">
+        <p className="text-xs text-gray-600 dark:text-white/30 text-center">
           Les modèles commerciaux sont fournis à titre indicatif. Votre exemplaire personnalisé vous sera remis lors de votre projet.{' '}
-          <Link href="/contact" className="text-blue-400 hover:text-blue-300 transition-colors">Nous contacter →</Link>
+          <Link href="/contact" className="text-blue-600 dark:text-blue-400 underline hover:text-blue-500 dark:hover:text-blue-300 transition-colors">Nous contacter →</Link>
         </p>
       </div>
     </div>

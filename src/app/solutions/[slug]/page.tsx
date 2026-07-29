@@ -81,7 +81,7 @@ export default function SolutionPage({ params }: { params: { slug: string } }) {
           </h1>
           <p className="text-white/70 text-lg mb-8 max-w-2xl">{s.intro}</p>
           <div className="flex flex-wrap gap-4">
-            <Link href="/contact" className="px-6 py-3 bg-amber-500 hover:bg-amber-400 text-white font-semibold rounded-xl transition-all hover:-translate-y-0.5">
+            <Link href="/contact" className="px-6 py-3 bg-amber-500 hover:bg-amber-400 text-amber-950 font-semibold rounded-xl transition-all hover:-translate-y-0.5">
               Demander un devis →
             </Link>
             <Link href="/services/systeme-gestion" className="px-6 py-3 border border-white/20 text-white hover:bg-white/10 rounded-xl transition-all">
@@ -202,7 +202,7 @@ export default function SolutionPage({ params }: { params: { slug: string } }) {
         <div className="rounded-2xl p-6 bg-gradient-to-br from-navy to-electric text-center">
           <h3 className="text-white font-bold text-xl mb-2">Discutons de votre projet</h3>
           <p className="text-white/70 mb-4">Devis gratuit sous 72h. Premier rendez-vous sans engagement.</p>
-          <Link href="/contact" className="inline-block px-6 py-3 bg-amber-500 hover:bg-amber-400 text-white font-semibold rounded-xl transition-all hover:-translate-y-0.5">
+          <Link href="/contact" className="inline-block px-6 py-3 bg-amber-500 hover:bg-amber-400 text-amber-950 font-semibold rounded-xl transition-all hover:-translate-y-0.5">
             Demander un devis gratuit →
           </Link>
         </div>

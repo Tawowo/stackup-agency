@@ -92,7 +92,7 @@ export default function Services() {
             </div>
             <Link
               href="#contact"
-              className="mt-6 inline-flex items-center gap-2 px-5 py-2.5 bg-gold hover:bg-amber-500 text-white rounded-xl text-sm font-semibold transition-all group-hover:-translate-y-0.5"
+              className="mt-6 inline-flex items-center gap-2 px-5 py-2.5 bg-gold hover:bg-amber-500 text-amber-950 rounded-xl text-sm font-semibold transition-all group-hover:-translate-y-0.5"
             >
               {t.services.contactUs}
               <ArrowRight size={15} />

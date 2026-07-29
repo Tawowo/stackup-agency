@@ -116,8 +116,8 @@ export default function ServicesPage() {
                 <p className="text-foreground/60 dark:text-white/60 text-sm">Idéal pour : {s.ideal}</p>
               </div>
               <div className="text-right flex-shrink-0">
-                <div className="text-3xl font-bold text-amber-500">{s.prix}€</div>
-                <div className="text-xs text-foreground/50 dark:text-white/50 mt-0.5">Livraison : {s.delai}</div>
+                <div className="text-3xl font-bold text-amber-700 dark:text-amber-500">{s.prix}€</div>
+                <div className="text-xs text-foreground/70 dark:text-white/50 mt-0.5">Livraison : {s.delai}</div>
               </div>
             </div>
             <p className="text-foreground/80 dark:text-white/80 mb-5">{s.desc}</p>
@@ -133,7 +133,7 @@ export default function ServicesPage() {
               <Link href={`/services/${s.slug}`} className="flex items-center gap-1 px-5 py-2.5 bg-blue-600 hover:bg-blue-500 text-white text-sm font-semibold rounded-xl transition-colors">
                 Voir l'offre <ChevronRight size={14} />
               </Link>
-              <Link href="/contact" className="px-5 py-2.5 border border-white/20 text-white hover:bg-white/10 text-sm font-semibold rounded-xl transition-colors">
+              <Link href="/contact" className="px-5 py-2.5 border border-foreground/20 dark:border-white/20 text-foreground dark:text-white hover:bg-foreground/5 dark:hover:bg-white/10 text-sm font-semibold rounded-xl transition-colors">
                 Demander un devis
               </Link>
             </div>
@@ -150,8 +150,8 @@ export default function ServicesPage() {
                   <th className="text-left py-3 pr-4 text-foreground/60 dark:text-white/60 font-medium">Fonctionnalité</th>
                   <th className="text-center py-3 px-3 text-foreground dark:text-white font-semibold">Vitrine</th>
                   <th className="text-center py-3 px-3 text-foreground dark:text-white font-semibold">Multi-pages</th>
-                  <th className="text-center py-3 px-3 text-amber-500 font-semibold">E-commerce</th>
-                  <th className="text-center py-3 px-3 text-blue-400 font-semibold">Gestion</th>
+                  <th className="text-center py-3 px-3 text-amber-700 dark:text-amber-500 font-semibold">E-commerce</th>
+                  <th className="text-center py-3 px-3 text-blue-600 dark:text-blue-400 font-semibold">Gestion</th>
                 </tr>
               </thead>
               <tbody>
@@ -178,8 +178,8 @@ export default function ServicesPage() {
                   <td className="py-3 pr-4 text-foreground/60 dark:text-white/60 font-medium">Prix à partir de</td>
                   <td className="text-center py-3 px-3 font-bold text-foreground dark:text-white">{SITE.pricing.vitrine}€</td>
                   <td className="text-center py-3 px-3 font-bold text-foreground dark:text-white">{SITE.pricing.multipages}€</td>
-                  <td className="text-center py-3 px-3 font-bold text-amber-500">{SITE.pricing.ecommerce}€</td>
-                  <td className="text-center py-3 px-3 font-bold text-blue-400">{SITE.pricing.gestion}€</td>
+                  <td className="text-center py-3 px-3 font-bold text-amber-700 dark:text-amber-500">{SITE.pricing.ecommerce}€</td>
+                  <td className="text-center py-3 px-3 font-bold text-blue-600 dark:text-blue-400">{SITE.pricing.gestion}€</td>
                 </tr>
               </tbody>
             </table>
@@ -210,7 +210,7 @@ export default function ServicesPage() {
         <div className="rounded-2xl p-6 bg-gradient-to-br from-navy to-electric text-center">
           <h2 className="text-white font-bold text-xl mb-2">Pas sûr de l'offre adaptée ?</h2>
           <p className="text-white/70 mb-4">Décrivez votre projet et nous vous recommandons la solution idéale. Devis gratuit sous 72h.</p>
-          <Link href="/contact" className="inline-block px-6 py-3 bg-amber-500 hover:bg-amber-400 text-white font-semibold rounded-xl transition-all hover:-translate-y-0.5">
+          <Link href="/contact" className="inline-block px-6 py-3 bg-amber-500 hover:bg-amber-400 text-amber-950 font-semibold rounded-xl transition-all hover:-translate-y-0.5">
             Demander un devis gratuit →
           </Link>
         </div>

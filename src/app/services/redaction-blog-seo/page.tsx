@@ -136,7 +136,7 @@ export default function RedactionBlogSEOPage() {
             <span className="flex items-center gap-1.5"><CheckCircle size={14} className="text-green-400" /> Optimisation SEO incluse</span>
           </div>
           <div className="flex flex-wrap gap-4">
-            <Link href="/contact" className="px-6 py-3 bg-amber-500 hover:bg-amber-400 text-white font-semibold rounded-xl transition-all hover:-translate-y-0.5">
+            <Link href="/contact" className="px-6 py-3 bg-amber-500 hover:bg-amber-400 text-amber-950 font-semibold rounded-xl transition-all hover:-translate-y-0.5">
               Démarrer mon blog →
             </Link>
             <Link href="#packs" className="px-6 py-3 border border-white/20 text-white hover:bg-white/10 rounded-xl transition-all">
@@ -189,15 +189,15 @@ export default function RedactionBlogSEOPage() {
             {PACKS.map(p => (
               <div key={p.nom} className={`rounded-2xl border p-6 flex flex-col ${p.highlight ? 'border-amber-500/40 bg-amber-500/5' : 'border-navy/20 dark:border-white/10'}`}>
                 {p.highlight && (
-                  <div className="text-xs font-semibold text-amber-500 mb-3 uppercase tracking-wide">Le plus populaire</div>
+                  <div className="text-xs font-semibold text-amber-700 dark:text-amber-500 mb-3 uppercase tracking-wide">Le plus populaire</div>
                 )}
                 <h3 className="text-lg font-bold text-foreground dark:text-white mb-1">{p.nom}</h3>
                 {'detail' in p && p.detail && (
-                  <div className="text-blue-400 text-xs font-medium mb-2">{p.detail}</div>
+                  <div className="text-blue-700 dark:text-blue-400 text-xs font-medium mb-2">{p.detail}</div>
                 )}
                 <div className="mb-3">
-                  <span className="text-3xl font-bold text-amber-500">{p.prix}€</span>
-                  <span className="text-white/50 text-sm ml-1">{p.unite}</span>
+                  <span className="text-3xl font-bold text-amber-700 dark:text-amber-500">{p.prix}€</span>
+                  <span className="text-foreground/60 dark:text-white/50 text-sm ml-1">{p.unite}</span>
                 </div>
                 <p className="text-sm text-foreground/60 dark:text-white/60 mb-4">{p.desc}</p>
                 <ul className="space-y-2 mb-6 flex-1">
@@ -208,7 +208,7 @@ export default function RedactionBlogSEOPage() {
                     </li>
                   ))}
                 </ul>
-                <Link href="/contact" className={`flex items-center justify-center gap-1 px-4 py-2.5 rounded-xl text-sm font-semibold transition-colors ${p.highlight ? 'bg-amber-500 hover:bg-amber-400 text-white' : 'bg-blue-600 hover:bg-blue-500 text-white'}`}>
+                <Link href="/contact" className={`flex items-center justify-center gap-1 px-4 py-2.5 rounded-xl text-sm font-semibold transition-colors ${p.highlight ? 'bg-amber-500 hover:bg-amber-400 text-amber-950' : 'bg-blue-600 hover:bg-blue-500 text-white'}`}>
                   {p.cta} <ChevronRight size={14} />
                 </Link>
               </div>
@@ -221,11 +221,11 @@ export default function RedactionBlogSEOPage() {
           <div className="flex items-start justify-between gap-4 mb-3">
             <div>
               <h3 className="text-lg font-bold text-foreground dark:text-white">Accès technique blog</h3>
-              <p className="text-blue-400 text-sm mt-0.5">Pour les sites existants sans blog</p>
+              <p className="text-blue-600 dark:text-blue-400 text-sm mt-0.5">Pour les sites existants sans blog</p>
             </div>
             <div className="text-right flex-shrink-0">
-              <span className="text-2xl font-bold text-amber-500">49€</span>
-              <div className="text-xs text-white/50">une fois</div>
+              <span className="text-2xl font-bold text-amber-700 dark:text-amber-500">49€</span>
+              <div className="text-xs text-foreground/60 dark:text-white/50">une fois</div>
             </div>
           </div>
           <p className="text-foreground/70 dark:text-white/70 text-sm mb-4">
@@ -240,7 +240,7 @@ export default function RedactionBlogSEOPage() {
               </div>
             ))}
           </div>
-          <Link href="/contact" className="inline-flex items-center gap-1 text-blue-400 hover:text-blue-300 font-medium text-sm transition-colors">
+          <Link href="/contact" className="inline-flex items-center gap-1 text-blue-600 dark:text-blue-400 hover:text-blue-500 dark:hover:text-blue-300 font-medium text-sm transition-colors">
             Demander l'accès technique <ChevronRight size={14} />
           </Link>
         </section>
@@ -293,7 +293,7 @@ export default function RedactionBlogSEOPage() {
         <div className="rounded-2xl p-6 bg-gradient-to-br from-navy to-electric text-center">
           <h2 className="text-white font-bold text-xl mb-2">Prêt à booster votre référencement ?</h2>
           <p className="text-white/70 mb-4">Devis gratuit sous 72h. Premier article livré en 5 jours ouvrés.</p>
-          <Link href="/contact" className="inline-block px-6 py-3 bg-amber-500 hover:bg-amber-400 text-white font-semibold rounded-xl transition-all hover:-translate-y-0.5">
+          <Link href="/contact" className="inline-block px-6 py-3 bg-amber-500 hover:bg-amber-400 text-amber-950 font-semibold rounded-xl transition-all hover:-translate-y-0.5">
             Démarrer mon blog SEO →
           </Link>
         </div>

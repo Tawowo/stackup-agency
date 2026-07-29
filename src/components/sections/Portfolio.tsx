@@ -134,7 +134,7 @@ export default function Portfolio() {
             <p className="text-white/70 text-sm mb-5">{t.portfolio.demoSameQuality}</p>
             <a
               href="#contact"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-[#F59E0B] hover:bg-amber-500 text-white rounded-xl text-sm font-semibold transition-all hover:-translate-y-0.5"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-[#F59E0B] hover:bg-amber-500 text-amber-950 rounded-xl text-sm font-semibold transition-all hover:-translate-y-0.5"
             >
               {t.portfolio.viewProject} →
             </a>

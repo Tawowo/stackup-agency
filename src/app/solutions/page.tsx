@@ -86,7 +86,7 @@ export default function SolutionsPage() {
         <div className="rounded-2xl p-6 bg-gradient-to-br from-navy to-electric text-center">
           <h2 className="text-white font-bold text-xl mb-2">Une idée de solution sur mesure ?</h2>
           <p className="text-white/70 mb-4">Décrivez votre besoin, nous vous répondons sous 72h.</p>
-          <Link href="/contact" className="inline-block px-6 py-3 bg-amber-500 hover:bg-amber-400 text-white font-semibold rounded-xl transition-all hover:-translate-y-0.5">
+          <Link href="/contact" className="inline-block px-6 py-3 bg-amber-500 hover:bg-amber-400 text-amber-950 font-semibold rounded-xl transition-all hover:-translate-y-0.5">
             Demander un devis →
           </Link>
         </div>

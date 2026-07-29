@@ -147,20 +147,20 @@ export default function Footer() {
                 </li>
               ))}
               <li className="pt-1 border-t border-white/10 mt-2">
-                <Link href="/mentions-legales" className="text-white/40 hover:text-white/60 text-xs transition-colors block py-0.5">Mentions légales</Link>
+                <Link href="/mentions-legales" className="text-white/60 hover:text-white text-xs transition-colors block py-0.5">Mentions légales</Link>
               </li>
               <li>
-                <Link href="/politique-confidentialite" className="text-white/40 hover:text-white/60 text-xs transition-colors block py-0.5">Confidentialité</Link>
+                <Link href="/politique-confidentialite" className="text-white/60 hover:text-white text-xs transition-colors block py-0.5">Confidentialité</Link>
               </li>
             </ul>
           </div>
         </div>
 
         <div className="border-t border-white/10 pt-8 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p className="text-white/30 text-xs">
+          <p className="text-white/60 text-xs">
             © {new Date().getFullYear()} Stackup Agency — Tours (37), France
           </p>
-          <p className="text-white/20 text-xs">
+          <p className="text-white/50 text-xs">
             Agence web à Tours — devis gratuit sous 72h
           </p>
         </div>

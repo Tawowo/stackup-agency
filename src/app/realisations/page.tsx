@@ -66,11 +66,11 @@ export default function RealisationsPage() {
                   <h2 className="font-bold text-foreground dark:text-white group-hover:text-blue-400 transition-colors">{r.nom}</h2>
                   <ChevronRight size={16} className="text-white/30 group-hover:text-blue-400 transition-colors flex-shrink-0 mt-0.5" />
                 </div>
-                <p className="text-xs text-foreground/50 dark:text-white/50 mb-2">{r.type}</p>
+                <p className="text-xs text-foreground/70 dark:text-white/50 mb-2">{r.type}</p>
                 <p className="text-sm text-foreground/70 dark:text-white/70 line-clamp-2">{r.description}</p>
                 <div className="flex flex-wrap gap-1.5 mt-3">
                   {r.tags.slice(0, 3).map(tag => (
-                    <span key={tag} className="px-2 py-0.5 rounded-full text-xs border border-white/10 text-foreground/50 dark:text-white/50">{tag}</span>
+                    <span key={tag} className="px-2 py-0.5 rounded-full text-xs border border-white/10 text-foreground/70 dark:text-white/50">{tag}</span>
                   ))}
                 </div>
               </div>
@@ -90,7 +90,7 @@ export default function RealisationsPage() {
         <div className="rounded-2xl p-6 bg-gradient-to-br from-navy to-electric text-center">
           <h2 className="text-white font-bold text-xl mb-2">Votre projet mérite le même soin</h2>
           <p className="text-white/70 mb-4">Devis gratuit sous 72h. Premier rendez-vous sans engagement.</p>
-          <Link href="/contact" className="inline-block px-6 py-3 bg-amber-500 hover:bg-amber-400 text-white font-semibold rounded-xl transition-all hover:-translate-y-0.5">
+          <Link href="/contact" className="inline-block px-6 py-3 bg-amber-500 hover:bg-amber-400 text-amber-950 font-semibold rounded-xl transition-all hover:-translate-y-0.5">
             Démarrer mon projet →
           </Link>
         </div>

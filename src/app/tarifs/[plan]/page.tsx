@@ -243,7 +243,7 @@ export default function TarifPage({ params }: { params: { plan: string } }) {
             <span className="text-white/60">Plan {plan.name}</span>
           </nav>
           {params.plan === 'pro' && (
-            <div className="inline-flex items-center gap-1.5 px-4 py-1.5 bg-gold rounded-full text-white text-xs font-bold mb-4">
+            <div className="inline-flex items-center gap-1.5 px-4 py-1.5 bg-gold rounded-full text-amber-950 text-xs font-bold mb-4">
               <Zap size={12} fill="white" />
               Recommandé
             </div>
@@ -352,7 +352,7 @@ export default function TarifPage({ params }: { params: { plan: string } }) {
           <p className="text-white/70 mb-6">Sans engagement. Résiliable à tout moment.</p>
           <Link
             href="/contact"
-            className="inline-flex items-center gap-2 px-8 py-3.5 bg-gold hover:bg-amber-500 text-white font-semibold rounded-xl transition-all hover:-translate-y-0.5 shadow-lg"
+            className="inline-flex items-center gap-2 px-8 py-3.5 bg-gold hover:bg-amber-500 text-amber-950 font-semibold rounded-xl transition-all hover:-translate-y-0.5 shadow-lg"
           >
             Démarrer maintenant
             <ArrowRight size={16} />

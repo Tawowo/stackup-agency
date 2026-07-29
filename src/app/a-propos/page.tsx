@@ -102,7 +102,7 @@ export default function AProposPage() {
           <div className="space-y-4">
             {METHODE.map(step => (
               <div key={step.n} className="flex items-start gap-5 p-5 rounded-2xl border border-white/10 bg-white/2">
-                <div className="w-10 h-10 rounded-xl bg-blue-500/20 flex items-center justify-center flex-shrink-0 text-blue-400 font-bold text-sm">
+                <div className="w-10 h-10 rounded-xl bg-blue-500/20 flex items-center justify-center flex-shrink-0 text-blue-700 dark:text-blue-400 font-bold text-sm">
                   {step.n}
                 </div>
                 <div>
@@ -126,7 +126,7 @@ export default function AProposPage() {
             ].map(t => (
               <div key={t.label} className="p-4 rounded-xl border border-white/10 bg-white/3">
                 <div className="font-semibold text-foreground dark:text-white text-sm mb-1">{t.label}</div>
-                <div className="text-foreground/50 dark:text-white/50 text-xs">{t.desc}</div>
+                <div className="text-foreground/70 dark:text-white/50 text-xs">{t.desc}</div>
               </div>
             ))}
           </div>
@@ -180,13 +180,13 @@ export default function AProposPage() {
         <div className="rounded-2xl p-6 bg-gradient-to-br from-navy to-electric text-center">
           <h3 className="text-white font-bold text-xl mb-2">Votre vision. Notre code.</h3>
           <p className="text-white/70 mb-4">Premier rendez-vous gratuit, devis sous 72h, sans engagement.</p>
-          <Link href="/contact" className="inline-block px-6 py-3 bg-amber-500 hover:bg-amber-400 text-white font-semibold rounded-xl transition-all hover:-translate-y-0.5">
+          <Link href="/contact" className="inline-block px-6 py-3 bg-amber-500 hover:bg-amber-400 text-amber-950 font-semibold rounded-xl transition-all hover:-translate-y-0.5">
             Démarrer mon projet →
           </Link>
         </div>
 
         {/* Signature */}
-        <p className="text-center text-foreground/40 dark:text-white/40 text-sm">{SITE.signature}</p>
+        <p className="text-center text-foreground/60 dark:text-white/60 text-sm">{SITE.signature}</p>
       </div>
     </div>
   )

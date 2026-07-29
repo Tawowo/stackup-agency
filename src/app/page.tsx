@@ -79,7 +79,7 @@ export default function Home() {
               </p>
             </div>
             <ServiceCards />
-            <Link href="/services" className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 font-medium transition-colors">
+            <Link href="/services" className="inline-flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium transition-colors">
               Voir tous nos services <ArrowRight size={16} />
             </Link>
           </div>
@@ -131,7 +131,7 @@ export default function Home() {
                 </h2>
                 <p className="text-foreground/60 dark:text-white/60">Nos démonstrations sont des projets complets, construits par nos soins et consultables en ligne. Ce que vous voyez est exactement ce que nous livrons.</p>
               </div>
-              <Link href="/realisations" className="hidden sm:flex items-center gap-1 text-blue-400 hover:text-blue-300 font-medium text-sm transition-colors">
+              <Link href="/realisations" className="hidden sm:flex items-center gap-1 text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium text-sm transition-colors">
                 Voir tout <ArrowRight size={14} />
               </Link>
             </div>
@@ -148,12 +148,12 @@ export default function Home() {
                   </div>
                   <div className="p-4">
                     <h3 className="font-semibold text-foreground dark:text-white group-hover:text-blue-400 transition-colors mb-1">{r.nom}</h3>
-                    <p className="text-xs text-foreground/50 dark:text-white/50">{r.type}</p>
+                    <p className="text-xs text-foreground/60 dark:text-white/60">{r.type}</p>
                   </div>
                 </Link>
               ))}
             </div>
-            <Link href="/realisations" className="sm:hidden inline-flex items-center gap-1 text-blue-400 hover:text-blue-300 font-medium text-sm transition-colors">
+            <Link href="/realisations" className="sm:hidden inline-flex items-center gap-1 text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium text-sm transition-colors">
               Voir toutes les réalisations <ArrowRight size={14} />
             </Link>
           </div>
@@ -170,7 +170,7 @@ export default function Home() {
                 Nos démonstrations sont des projets complets, construits par nos soins et consultables en ligne.
                 Ce que vous voyez est exactement ce que nous livrons.
               </p>
-              <Link href="/realisations" className="inline-flex items-center gap-2 px-6 py-3 bg-electric text-white font-semibold rounded-xl text-sm hover:bg-blue-500 transition-colors">
+              <Link href="/realisations" className="inline-flex items-center gap-2 px-6 py-3 bg-blue-700 text-white font-semibold rounded-xl text-sm hover:bg-blue-600 transition-colors">
                 Explorer nos démonstrations →
               </Link>
             </div>
@@ -199,7 +199,7 @@ export default function Home() {
                 </Link>
               ))}
             </div>
-            <Link href="/blog" className="sm:hidden mt-6 inline-flex items-center gap-1 text-blue-400 hover:text-blue-300 font-medium text-sm transition-colors">
+            <Link href="/blog" className="sm:hidden mt-6 inline-flex items-center gap-1 text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium text-sm transition-colors">
               Tous les articles <ArrowRight size={14} />
             </Link>
           </div>
@@ -218,7 +218,7 @@ export default function Home() {
               Livraison garantie en {SITE.delais.vitrine}.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Link href="/contact" className="px-8 py-4 bg-amber-500 hover:bg-amber-400 text-white font-semibold rounded-xl shadow-lg shadow-amber-500/25 transition-all hover:-translate-y-0.5">
+              <Link href="/contact" className="px-8 py-4 bg-amber-500 hover:bg-amber-400 text-amber-950 font-bold rounded-xl shadow-lg shadow-amber-500/25 transition-all hover:-translate-y-0.5">
                 Démarrer mon projet →
               </Link>
               <Link href="/tarifs" className="px-8 py-4 border border-white/20 text-white hover:bg-white/10 font-semibold rounded-xl transition-all">

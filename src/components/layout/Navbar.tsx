@@ -115,7 +115,7 @@ export default function Navbar() {
                 className={`p-2 rounded-lg transition-colors ${!isHome ? 'text-white/80 hover:text-white' : scrolled ? 'text-gray-600 dark:text-white/70 hover:text-blue-600' : 'text-[#1E3A5F]/80 hover:text-blue-600'}`}>
                 {dark ? <Sun size={18} /> : <Moon size={18} />}
               </button>
-              <Link href="/contact" className="px-5 py-2.5 bg-amber-500 hover:bg-amber-400 text-white text-sm font-semibold rounded-xl shadow-lg shadow-amber-500/30 transition-all hover:-translate-y-0.5">
+              <Link href="/contact" className="px-5 py-2.5 bg-amber-500 hover:bg-amber-400 text-amber-950 text-sm font-semibold rounded-xl shadow-lg shadow-amber-500/30 transition-all hover:-translate-y-0.5">
                 Devis gratuit →
               </Link>
             </div>
@@ -165,7 +165,7 @@ export default function Navbar() {
             ))}
             <div className="pt-4 mt-3 border-t border-white/10">
               <Link href="/contact" onClick={() => setOpen(false)}
-                className="flex items-center justify-center py-3 bg-amber-500 text-white text-sm font-semibold rounded-xl min-h-[48px] hover:bg-amber-400 transition-colors">
+                className="flex items-center justify-center py-3 bg-amber-500 text-amber-950 text-sm font-semibold rounded-xl min-h-[48px] hover:bg-amber-400 transition-colors">
                 Devis gratuit →
               </Link>
             </div>

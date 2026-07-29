@@ -435,7 +435,7 @@ export default async function ServicesLocauxPage({ params }: { params: Promise<{
             <p className="text-gray-500 dark:text-white/60 mb-8">{page.price.details}</p>
             <Link
               href="#contact"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-[#F59E0B] hover:bg-amber-500 text-white font-semibold rounded-xl transition-all hover:scale-105"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-[#F59E0B] hover:bg-amber-500 text-amber-950 font-semibold rounded-xl transition-all hover:scale-105"
             >
               <Mail size={16} />
               Devis gratuit en 24h
@@ -483,7 +483,7 @@ export default async function ServicesLocauxPage({ params }: { params: Promise<{
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="mailto:contact@stackup-agency.fr"
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#F59E0B] hover:bg-amber-500 text-white font-semibold rounded-xl transition-all hover:scale-105 shadow-lg shadow-amber-500/25"
+              className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#F59E0B] hover:bg-amber-500 text-amber-950 font-semibold rounded-xl transition-all hover:scale-105 shadow-lg shadow-amber-500/25"
             >
               <Mail size={18} />
               contact@stackup-agency.fr

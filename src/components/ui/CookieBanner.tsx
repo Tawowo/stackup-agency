@@ -46,7 +46,7 @@ export default function CookieBanner() {
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-start sm:items-center gap-4">
           <p className="text-white/80 text-sm flex-1">
             {t.cookie.message}{' '}
-            <Link href="/cookies" className="text-electric hover:underline">{t.cookie.learnMore}</Link>
+            <Link href="/cookies" className="text-blue-400 underline">{t.cookie.learnMore}</Link>
           </p>
           <div className="flex flex-wrap gap-2 shrink-0">
             <button
@@ -63,7 +63,7 @@ export default function CookieBanner() {
             </button>
             <button
               onClick={acceptAll}
-              className="px-4 py-2 bg-electric hover:bg-blue-500 text-white text-sm font-semibold rounded-xl transition-colors"
+              className="px-4 py-2 bg-blue-700 hover:bg-blue-600 text-white text-sm font-semibold rounded-xl transition-colors"
             >
               {t.cookie.acceptAll}
             </button>
@@ -133,7 +133,7 @@ export default function CookieBanner() {
               </button>
               <button
                 onClick={savePrefs}
-                className="flex-1 py-2.5 bg-electric hover:bg-blue-500 text-white text-sm font-semibold rounded-xl transition-colors"
+                className="flex-1 py-2.5 bg-blue-700 hover:bg-blue-600 text-white text-sm font-semibold rounded-xl transition-colors"
               >
                 {t.cookie.save}
               </button>
