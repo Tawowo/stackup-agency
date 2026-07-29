@@ -19,6 +19,8 @@ const serviceSlugs = [
 
 const tarifPlans = ['starter', 'pro', 'premium']
 
+const blogCategories = ['seo', 'creation-sites', 'applications-metier', 'strategie', 'restaurants', 'artisans']
+
 const realisationSlugs = [
   'chateau-lumieres',
   'maison-elise',
@@ -100,6 +102,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: now,
       changeFrequency: 'weekly' as const,
       priority: 0.8,
+    })),
+
+    // Catégories blog
+    ...blogCategories.map(cat => ({
+      url: `${base}/blog/categorie/${cat}`,
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.7,
     })),
 
     // Articles de blog (avec dates réelles)

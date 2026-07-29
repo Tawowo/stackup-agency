@@ -2,6 +2,7 @@ import { getPost, getAllPosts } from '@/lib/blog'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { Clock, Tag, Home, ChevronRight } from 'lucide-react'
+import RelatedPosts from '@/components/blog/RelatedPosts'
 
 export async function generateStaticParams() {
   const posts = getAllPosts()
@@ -30,6 +31,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
 export default async function BlogPostPage({ params }: { params: { slug: string } }) {
   const post = await getPost(params.slug)
   if (!post) notFound()
+  const allPosts = getAllPosts()
 
   const url = `https://stackup-agency.fr/blog/${post.slug}`
 
@@ -105,10 +107,17 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
           dangerouslySetInnerHTML={{ __html: post.content || '' }}
         />
 
-        <div className="mt-16 pt-8 border-t border-navy/10 dark:border-white/10">
+        <RelatedPosts
+          currentSlug={post.slug}
+          currentCategory={post.category}
+          currentTag={post.tag}
+          allPosts={allPosts}
+        />
+
+        <div className="mt-12 pt-8 border-t border-navy/10 dark:border-white/10">
           <div className="rounded-2xl p-6 bg-gradient-to-br from-navy to-electric">
             <h3 className="text-white font-bold text-lg mb-2">Prêt à démarrer votre projet ?</h3>
-            <p className="text-white/70 text-sm mb-4">Premier RDV gratuit, devis sous 24h, sans engagement.</p>
+            <p className="text-white/70 text-sm mb-4">Premier RDV gratuit, devis sous 72h, sans engagement.</p>
             <Link href="/contact" className="inline-block px-6 py-3 bg-gold hover:bg-amber-500 text-white font-semibold rounded-xl text-sm transition-all hover:-translate-y-0.5">
               Prendre rendez-vous →
             </Link>
