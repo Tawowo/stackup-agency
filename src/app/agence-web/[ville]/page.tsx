@@ -2,7 +2,7 @@
 import { VILLES, getVille } from '@/data/villes'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
-import { ChevronRight, Home, MapPin, CheckCircle, Star } from 'lucide-react'
+import { ChevronRight, Home, MapPin, CheckCircle, Star, Building2, TrendingUp } from 'lucide-react'
 import { SITE } from '@/config/site'
 
 export async function generateStaticParams() {
@@ -13,8 +13,8 @@ export async function generateMetadata({ params }: { params: { ville: string } }
   const v = getVille(params.ville)
   if (!v) return {}
   const url = `${SITE.url}/agence-web/${v.slug}`
-  const title = `Agence web ${v.ville} — Création site internet à partir de ${SITE.pricing.vitrine}€`
-  const description = `Agence web à ${v.ville} (${v.departement}). Création de sites internet professionnels, e-commerce et applications métier. Devis gratuit sous 72h, livraison en 10 jours.`
+  const title = `Agence web ${v.ville} — Création site internet à partir de ${SITE.pricing.vitrine}€ | Stackup Agency`
+  const description = `Agence web à ${v.ville} (${v.departement}). ${v.economie.slice(0, 100)}... Devis gratuit sous 72h, livraison en 10 jours.`
   return {
     title,
     description,
@@ -64,26 +64,33 @@ export default function AgenceWebVillePage({ params }: { params: { ville: string
     ],
   }
 
+  const faqItems = [
+    {
+      q: `Quel est le prix d'un site internet à ${v.ville} ?`,
+      a: `Stackup Agency propose des sites vitrine à partir de ${SITE.pricing.vitrine}€ et des sites e-commerce à partir de ${SITE.pricing.ecommerce}€. Le devis est gratuit et rendu sous 72h, sans engagement.`,
+    },
+    {
+      q: `Combien de temps pour créer un site web à ${v.ville} ?`,
+      a: `Un site vitrine est livré en ${SITE.delais.vitrine}. Un site multi-pages en ${SITE.delais.multipages}. Un e-commerce en ${SITE.delais.ecommerce}. Nous intervenons à distance pour toute la région ${v.region}.`,
+    },
+    {
+      q: `Stackup Agency intervient-elle à ${v.ville} ?`,
+      a: `Oui, nous travaillons avec des clients dans toute la France, dont ${v.ville} et sa région. Les échanges se font par visioconférence et email — ce qui nous permet de tenir des délais courts et des tarifs compétitifs.`,
+    },
+    {
+      q: `Mon site sera-t-il bien référencé à ${v.ville} ?`,
+      a: `Le SEO local est intégré à tous nos sites dès la création. Nous optimisons votre fiche Google My Business, les balises locales et le contenu pour que vous apparaissiez sur les recherches de vos futurs clients à ${v.ville} et dans le ${v.departement}.`,
+    },
+  ]
+
   const faqSchema = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
-    mainEntity: [
-      {
-        '@type': 'Question',
-        name: `Quel est le prix d'un site internet à ${v.ville} ?`,
-        acceptedAnswer: { '@type': 'Answer', text: `Stackup Agency propose des sites vitrine à partir de ${SITE.pricing.vitrine}€ et des sites e-commerce à partir de ${SITE.pricing.ecommerce}€. Le devis est gratuit et rendu sous 72h.` },
-      },
-      {
-        '@type': 'Question',
-        name: `Combien de temps pour créer un site web à ${v.ville} ?`,
-        acceptedAnswer: { '@type': 'Answer', text: `Un site vitrine est livré en ${SITE.delais.vitrine}. Un site e-commerce en ${SITE.delais.ecommerce}. Nous intervenons à distance pour toute la région ${v.region}.` },
-      },
-      {
-        '@type': 'Question',
-        name: `Stackup Agency se déplace-t-elle à ${v.ville} ?`,
-        acceptedAnswer: { '@type': 'Answer', text: `Nous travaillons principalement à distance pour des clients partout en France, y compris à ${v.ville}. Les réunions se font par visioconférence, ce qui permet des délais plus courts et des tarifs compétitifs.` },
-      },
-    ],
+    mainEntity: faqItems.map(faq => ({
+      '@type': 'Question',
+      name: faq.q,
+      acceptedAnswer: { '@type': 'Answer', text: faq.a },
+    })),
   }
 
   return (
@@ -108,13 +115,19 @@ export default function AgenceWebVillePage({ params }: { params: { ville: string
             <span className="text-blue-400 text-sm font-medium">{v.departement} — {v.region}</span>
           </div>
 
-          <h1 className="text-3xl lg:text-5xl font-bold text-white leading-tight mb-6">
+          <h1 className="text-3xl lg:text-5xl font-bold text-white leading-tight mb-4">
             Agence web {v.ville}
           </h1>
-          <p className="text-white/70 text-lg mb-8 max-w-2xl">
+          <p className="text-white/70 text-lg mb-6 max-w-2xl">
             Création de sites internet professionnels pour les entrepreneurs et commerces de {v.ville} et alentours.
             Sites vitrine, e-commerce, applications métier — livrés en 10 à 21 jours, à partir de {SITE.pricing.vitrine}€.
           </p>
+
+          <div className="flex flex-wrap gap-3 mb-8 text-sm text-white/60">
+            <span className="flex items-center gap-1.5"><CheckCircle size={14} className="text-green-400" /> À partir de {SITE.pricing.vitrine}€</span>
+            <span className="flex items-center gap-1.5"><CheckCircle size={14} className="text-green-400" /> Livraison en {SITE.delais.vitrine}</span>
+            <span className="flex items-center gap-1.5"><CheckCircle size={14} className="text-green-400" /> Devis gratuit sous 72h</span>
+          </div>
 
           <div className="flex flex-wrap gap-4">
             <Link href="/contact" className="px-6 py-3 bg-amber-500 hover:bg-amber-400 text-white font-semibold rounded-xl transition-all hover:-translate-y-0.5">
@@ -128,6 +141,29 @@ export default function AgenceWebVillePage({ params }: { params: { ville: string
       </div>
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 py-16 space-y-16">
+
+        {/* Contexte économique local */}
+        <section>
+          <div className="flex items-center gap-3 mb-4">
+            <div className="w-10 h-10 rounded-xl bg-blue-500/20 flex items-center justify-center">
+              <Building2 size={20} className="text-blue-400" />
+            </div>
+            <h2 className="text-2xl font-bold text-foreground dark:text-white">
+              Le digital à {v.ville}
+            </h2>
+          </div>
+          <p className="text-foreground/70 dark:text-white/70 leading-relaxed mb-6">
+            {v.economie} Dans cet environnement, un site internet professionnel n'est plus un luxe — c'est la condition pour exister aux yeux de vos futurs clients qui cherchent sur Google avant de prendre contact.
+          </p>
+          <div className="grid sm:grid-cols-2 gap-3">
+            {v.secteurs.map(s => (
+              <div key={s} className="flex items-center gap-3 p-3 rounded-xl bg-blue-950/20 border border-blue-900/20">
+                <TrendingUp size={16} className="text-blue-400 flex-shrink-0" />
+                <span className="text-foreground/80 dark:text-white/80 text-sm font-medium">{s}</span>
+              </div>
+            ))}
+          </div>
+        </section>
 
         {/* Services */}
         <section>
@@ -160,16 +196,40 @@ export default function AgenceWebVillePage({ params }: { params: { ville: string
           </h2>
           <div className="space-y-3">
             {[
-              `Intervention à distance sur toute la région ${v.region}`,
+              `Intervention à distance sur toute la région ${v.region} — visioconférence et email`,
               'Devis gratuit rendu sous 72h, sans engagement',
-              `Sites vitrine livrés en ${SITE.delais.vitrine}`,
-              'SEO local optimisé pour votre ville et département',
-              'Maintenance et hébergement inclus sur 12 mois',
-              'Fondateur accessible directement — pas d\'intermédiaires',
+              `Sites vitrine livrés en ${SITE.delais.vitrine}, délai tenu garanti`,
+              `SEO local optimisé pour ${v.ville} et le ${v.departement}`,
+              'Hébergement haute disponibilité inclus sur 12 mois',
+              "Fondateur accessible directement — pas d'intermédiaires",
+              'Aucune commission, aucun abonnement imposé après livraison',
             ].map(item => (
               <div key={item} className="flex items-start gap-3">
                 <CheckCircle size={18} className="text-green-400 mt-0.5 flex-shrink-0" />
                 <span className="text-foreground/80 dark:text-white/80">{item}</span>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Processus */}
+        <section>
+          <h2 className="text-2xl font-bold text-foreground dark:text-white mb-6">
+            Comment ça se passe pour une entreprise de {v.ville} ?
+          </h2>
+          <div className="space-y-4">
+            {[
+              { n: '01', titre: 'Premier contact', desc: `Vous nous contactez depuis ${v.ville} — par email ou via le formulaire. Nous vous répondons sous 24h pour comprendre votre projet.` },
+              { n: '02', titre: 'Devis sous 72h', desc: 'Après un premier échange (visioconférence ou email), vous recevez un devis précis, sans engagement, dans les 72h.' },
+              { n: '03', titre: 'Développement à distance', desc: `Nous travaillons à distance pour toute la région ${v.region}. Vous suivez l'avancement sur un lien de prévisualisation privé.` },
+              { n: '04', titre: 'Mise en ligne', desc: 'Votre site est mis en ligne, référencé sur Google et livré clé en main avec hébergement 12 mois inclus.' },
+            ].map(step => (
+              <div key={step.n} className="flex items-start gap-4 p-4 rounded-xl border border-white/10">
+                <span className="text-2xl font-bold text-blue-400/40 font-mono flex-shrink-0 w-10">{step.n}</span>
+                <div>
+                  <h3 className="font-semibold text-foreground dark:text-white mb-1">{step.titre}</h3>
+                  <p className="text-foreground/60 dark:text-white/60 text-sm">{step.desc}</p>
+                </div>
               </div>
             ))}
           </div>
@@ -193,27 +253,14 @@ export default function AgenceWebVillePage({ params }: { params: { ville: string
           <h2 className="text-2xl font-bold text-foreground dark:text-white mb-6">
             Questions fréquentes — création de site à {v.ville}
           </h2>
-          <div className="space-y-4">
-            {[
-              {
-                q: `Quel est le prix d'un site internet à ${v.ville} ?`,
-                a: `Stackup Agency propose des sites vitrine à partir de ${SITE.pricing.vitrine}€ et des boutiques en ligne à partir de ${SITE.pricing.ecommerce}€. Le devis est gratuit et rendu sous 72h.`,
-              },
-              {
-                q: `Combien de temps faut-il pour créer un site à ${v.ville} ?`,
-                a: `Un site vitrine est livré en ${SITE.delais.vitrine}. Un site multi-pages en ${SITE.delais.multipages}. Un e-commerce en ${SITE.delais.ecommerce}. Nous travaillons à distance pour toute la ${v.region}.`,
-              },
-              {
-                q: `Stackup Agency intervient-elle à ${v.ville} ?`,
-                a: `Oui, nous travaillons avec des clients dans toute la France dont ${v.ville} et sa région. Les échanges se font par visioconférence et email pour plus d'efficacité.`,
-              },
-            ].map(faq => (
+          <div className="space-y-3">
+            {faqItems.map(faq => (
               <details key={faq.q} className="group rounded-xl border border-navy/20 dark:border-white/10 overflow-hidden">
                 <summary className="flex items-center justify-between p-4 cursor-pointer font-medium text-foreground dark:text-white list-none">
                   {faq.q}
-                  <ChevronRight size={16} className="text-white/40 group-open:rotate-90 transition-transform" />
+                  <ChevronRight size={16} className="text-white/40 group-open:rotate-90 transition-transform flex-shrink-0 ml-3" />
                 </summary>
-                <div className="px-4 pb-4 text-foreground/70 dark:text-white/70 text-sm">{faq.a}</div>
+                <div className="px-4 pb-4 text-foreground/70 dark:text-white/70 text-sm leading-relaxed">{faq.a}</div>
               </details>
             ))}
           </div>
@@ -223,7 +270,7 @@ export default function AgenceWebVillePage({ params }: { params: { ville: string
         {villesVoisines.length > 0 && (
           <section>
             <h2 className="text-xl font-bold text-foreground dark:text-white mb-4">
-              Nous intervenons aussi dans les villes proches
+              Nous intervenons aussi dans les villes proches de {v.ville}
             </h2>
             <div className="flex flex-wrap gap-3">
               {villesVoisines.map(vi => (
@@ -236,10 +283,11 @@ export default function AgenceWebVillePage({ params }: { params: { ville: string
         )}
 
         {/* CTA */}
-        <div className="rounded-2xl p-6 bg-gradient-to-br from-navy to-electric text-center">
-          <h3 className="text-white font-bold text-xl mb-2">Vous êtes à {v.ville} ? Parlons de votre projet.</h3>
-          <p className="text-white/70 mb-4">Premier rendez-vous gratuit, devis sous 72h, sans engagement.</p>
-          <Link href="/contact" className="inline-block px-6 py-3 bg-amber-500 hover:bg-amber-400 text-white font-semibold rounded-xl transition-all hover:-translate-y-0.5">
+        <div className="rounded-2xl p-8 bg-gradient-to-br from-navy to-electric text-center">
+          <h3 className="text-white font-bold text-2xl mb-2">Vous êtes à {v.ville} ? Parlons de votre projet.</h3>
+          <p className="text-white/70 mb-2">Premier rendez-vous gratuit, devis sous 72h, sans engagement.</p>
+          <p className="text-white/50 text-sm mb-6">Tout se passe à distance — aussi efficace qu'en présentiel, plus rapide.</p>
+          <Link href="/contact" className="inline-block px-8 py-3 bg-amber-500 hover:bg-amber-400 text-white font-semibold rounded-xl transition-all hover:-translate-y-0.5">
             Demander un devis gratuit →
           </Link>
         </div>
