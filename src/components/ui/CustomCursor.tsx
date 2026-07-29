@@ -1,60 +1,56 @@
 'use client'
-import { useEffect, useState } from 'react'
-import { motion } from 'framer-motion'
+import { useEffect, useRef } from 'react'
 
 export default function CustomCursor() {
-  const [pos, setPos] = useState({ x: 0, y: 0 })
-  const [dot, setDot] = useState({ x: 0, y: 0 })
-  const [hovered, setHovered] = useState(false)
-  const [visible, setVisible] = useState(false)
+  const dotRef = useRef<HTMLDivElement>(null)
+  const ringRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
+    if (typeof window === 'undefined') return
+    const mq = window.matchMedia('(pointer: coarse)')
+    if (mq.matches) return
+    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)')
+    if (reduced.matches) return
+
+    const dot = dotRef.current
+    const ring = ringRef.current
+    if (!dot || !ring) return
+
+    let rx = 0, ry = 0
+    let rafId: number
+
     const onMove = (e: MouseEvent) => {
-      setPos({ x: e.clientX, y: e.clientY })
-      setVisible(true)
+      const x = e.clientX, y = e.clientY
+      dot.style.left = `${x}px`
+      dot.style.top = `${y}px`
+      cancelAnimationFrame(rafId)
+      rafId = requestAnimationFrame(() => {
+        rx += (x - rx) * 0.14
+        ry += (y - ry) * 0.14
+        ring.style.left = `${rx}px`
+        ring.style.top = `${ry}px`
+      })
     }
-    const onOver = (e: MouseEvent) => {
-      const el = e.target as HTMLElement
-      setHovered(el.closest('a, button, [data-hover]') !== null)
-    }
-    window.addEventListener('mousemove', onMove)
-    window.addEventListener('mouseover', onOver)
+
+    const onEnterLink = () => { dot.classList.add('expanded'); ring.classList.add('expanded') }
+    const onLeaveLink = () => { dot.classList.remove('expanded'); ring.classList.remove('expanded') }
+
+    document.addEventListener('mousemove', onMove)
+    document.querySelectorAll('a, button, [role="button"]').forEach(el => {
+      el.addEventListener('mouseenter', onEnterLink)
+      el.addEventListener('mouseleave', onLeaveLink)
+    })
+
     return () => {
-      window.removeEventListener('mousemove', onMove)
-      window.removeEventListener('mouseover', onOver)
+      document.removeEventListener('mousemove', onMove)
+      cancelAnimationFrame(rafId)
     }
   }, [])
 
-  useEffect(() => {
-    let raf: number
-    const lerp = (a: number, b: number, t: number) => a + (b - a) * t
-    const animate = () => {
-      setDot(prev => ({
-        x: lerp(prev.x, pos.x, 0.12),
-        y: lerp(prev.y, pos.y, 0.12),
-      }))
-      raf = requestAnimationFrame(animate)
-    }
-    raf = requestAnimationFrame(animate)
-    return () => cancelAnimationFrame(raf)
-  }, [pos])
-
-  if (!visible) return null
-
   return (
     <>
-      <motion.div
-        className="fixed top-0 left-0 w-4 h-4 rounded-full bg-electric pointer-events-none z-[9999] hidden md:block"
-        style={{ x: pos.x - 8, y: pos.y - 8 }}
-        animate={{ scale: hovered ? 0.5 : 1, opacity: 0.9 }}
-        transition={{ duration: 0.1 }}
-      />
-      <motion.div
-        className="fixed top-0 left-0 w-10 h-10 rounded-full border-2 border-electric pointer-events-none z-[9999] hidden md:block"
-        style={{ x: dot.x - 20, y: dot.y - 20 }}
-        animate={{ scale: hovered ? 1.5 : 1, opacity: 0.5 }}
-        transition={{ duration: 0.15 }}
-      />
+      <div ref={dotRef} className="custom-cursor hidden lg:block" aria-hidden="true" />
+      <div ref={ringRef} className="custom-cursor-ring hidden lg:block" aria-hidden="true" />
     </>
   )
 }

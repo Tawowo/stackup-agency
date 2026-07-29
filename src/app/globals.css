@@ -11,6 +11,220 @@ html {
   scroll-behavior: smooth;
 }
 
+/* ─── Aurora blobs ─────────────────────────────────────── */
+@keyframes aurora-drift-1 {
+  0%   { transform: translate(0, 0) scale(1); }
+  33%  { transform: translate(60px, -40px) scale(1.08); }
+  66%  { transform: translate(-30px, 50px) scale(0.95); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+@keyframes aurora-drift-2 {
+  0%   { transform: translate(0, 0) scale(1); }
+  40%  { transform: translate(-80px, 30px) scale(1.12); }
+  70%  { transform: translate(40px, -60px) scale(0.92); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+@keyframes aurora-drift-3 {
+  0%   { transform: translate(0, 0) scale(1); }
+  50%  { transform: translate(50px, 70px) scale(1.06); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+
+.aurora-blob-1 { animation: aurora-drift-1 32s ease-in-out infinite; }
+.aurora-blob-2 { animation: aurora-drift-2 40s ease-in-out infinite; }
+.aurora-blob-3 { animation: aurora-drift-3 28s ease-in-out infinite; }
+
+/* ─── Film grain ────────────────────────────────────────── */
+@keyframes grain {
+  0%, 100% { transform: translate(0, 0); }
+  10%  { transform: translate(-2%, -3%); }
+  30%  { transform: translate(2%, 2%); }
+  50%  { transform: translate(-1%, 3%); }
+  70%  { transform: translate(3%, -1%); }
+  90%  { transform: translate(-2%, 1%); }
+}
+.grain-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-size: 200px;
+  animation: grain 0.4s steps(1) infinite;
+  z-index: 1;
+}
+
+/* ─── Hero word reveal ──────────────────────────────────── */
+.word-mask {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: bottom;
+}
+.word-inner {
+  display: inline-block;
+  transform: translateY(110%);
+  opacity: 0;
+  transition: transform 0.6s cubic-bezier(0.16,1,0.3,1), opacity 0.6s ease;
+}
+.hero-revealed .word-inner {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* ─── Code window flip ──────────────────────────────────── */
+.flip-scene {
+  perspective: 800px;
+}
+.flip-card {
+  transform-style: preserve-3d;
+  transition: transform 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+.flip-card.flipped {
+  transform: rotateY(180deg);
+}
+.flip-face {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+.flip-face-back {
+  position: absolute;
+  inset: 0;
+  transform: rotateY(180deg);
+}
+
+/* ─── Reveal on scroll ──────────────────────────────────── */
+.reveal-item {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.reveal-item.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ─── Service card spotlight ─────────────────────────────── */
+.spotlight-card {
+  position: relative;
+  overflow: hidden;
+}
+.spotlight-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at var(--x, 50%) var(--y, 50%), rgba(45,125,210,0.12) 0%, transparent 60%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  z-index: 0;
+}
+.spotlight-card:hover::before {
+  opacity: 1;
+}
+
+/* ─── Process line ───────────────────────────────────────── */
+.process-line {
+  transform-origin: left center;
+  transform: scaleX(0);
+  transition: transform 0.8s cubic-bezier(0.16,1,0.3,1);
+}
+.process-line.drawn {
+  transform: scaleX(1);
+}
+
+/* ─── Marquee ────────────────────────────────────────────── */
+@keyframes marquee-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll 20s linear infinite;
+}
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track { animation: none; }
+  .aurora-blob-1, .aurora-blob-2, .aurora-blob-3 { animation: none; }
+  .reveal-item { opacity: 1; transform: none; transition: none; }
+  .grain-overlay { display: none; }
+  .word-inner { transform: translateY(0); opacity: 1; transition: none; }
+}
+
+/* ─── Animated gradient CTA ──────────────────────────────── */
+@keyframes grad-shift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+.animated-gradient {
+  background: linear-gradient(135deg, #1E3A5F, #2D7DD2, #1E3A5F, #0B1A2E);
+  background-size: 300% 300%;
+  animation: grad-shift 8s ease infinite;
+}
+
+/* ─── Custom cursor ──────────────────────────────────────── */
+@media (pointer: fine) {
+  body { cursor: none; }
+  a, button, [role="button"] { cursor: none; }
+}
+.custom-cursor {
+  position: fixed;
+  top: 0; left: 0;
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: #2D7DD2;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: transform 0.08s ease, width 0.2s ease, height 0.2s ease, opacity 0.2s ease;
+  will-change: transform;
+}
+.custom-cursor-ring {
+  position: fixed;
+  top: 0; left: 0;
+  width: 32px; height: 32px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(45,125,210,0.5);
+  pointer-events: none;
+  z-index: 9998;
+  transform: translate(-50%, -50%);
+  transition: transform 0.18s ease, width 0.2s ease, height 0.2s ease, opacity 0.2s ease;
+  will-change: transform;
+}
+.custom-cursor.expanded, .custom-cursor-ring.expanded {
+  width: 44px; height: 44px;
+}
+
+/* ─── Page transition ────────────────────────────────────── */
+.page-transition {
+  animation: page-in 0.25s cubic-bezier(0.16,1,0.3,1) both;
+}
+@keyframes page-in {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ─── Animated link underline ────────────────────────────── */
+.link-underline {
+  background-image: linear-gradient(#2D7DD2, #2D7DD2);
+  background-size: 0% 1.5px;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  transition: background-size 0.3s ease;
+}
+.link-underline:hover { background-size: 100% 1.5px; }
+
+/* ─── Focus visible ──────────────────────────────────────── */
+:focus-visible {
+  outline: 2px solid #2D7DD2;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
 body {
   color: var(--foreground);
   background: var(--background);
