@@ -2,6 +2,9 @@ import { MetadataRoute } from 'next'
 import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
+import { VILLES } from '@/data/villes'
+import { METIERS } from '@/data/metiers'
+import { SOLUTIONS } from '@/data/solutions'
 
 const base = 'https://stackup-agency.fr'
 
@@ -105,6 +108,36 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: date,
       changeFrequency: 'monthly' as const,
       priority: 0.7,
+    })),
+
+    // Cocons sémantiques — hubs
+    { url: `${base}/agence-web`, lastModified: now, changeFrequency: 'weekly', priority: 0.9 },
+    { url: `${base}/creation-site-internet`, lastModified: now, changeFrequency: 'weekly', priority: 0.9 },
+    { url: `${base}/solutions`, lastModified: now, changeFrequency: 'weekly', priority: 0.8 },
+    { url: `${base}/a-propos`, lastModified: now, changeFrequency: 'monthly', priority: 0.6 },
+
+    // Pages villes /agence-web/[ville]
+    ...VILLES.map(v => ({
+      url: `${base}/agence-web/${v.slug}`,
+      lastModified: now,
+      changeFrequency: 'monthly' as const,
+      priority: v.priorite === 'P1' ? 0.85 : v.priorite === 'P2' ? 0.75 : 0.65,
+    })),
+
+    // Pages métier /creation-site-internet/[metier]
+    ...METIERS.map(m => ({
+      url: `${base}/creation-site-internet/${m.slug}`,
+      lastModified: now,
+      changeFrequency: 'monthly' as const,
+      priority: m.priorite === 'P1' ? 0.85 : m.priorite === 'P2' ? 0.75 : 0.65,
+    })),
+
+    // Pages solutions /solutions/[slug]
+    ...SOLUTIONS.map(s => ({
+      url: `${base}/solutions/${s.slug}`,
+      lastModified: now,
+      changeFrequency: 'monthly' as const,
+      priority: s.priorite === 'P1' ? 0.8 : 0.7,
     })),
 
     // Pages légales

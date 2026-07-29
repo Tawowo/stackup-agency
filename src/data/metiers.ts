@@ -1,0 +1,101 @@
+export interface Metier {
+  slug: string
+  metier: string
+  categorie: string
+  priorite: 'P1' | 'P2' | 'P3'
+  requetePrincipale: string
+  variantes: string[]
+  serviceLie: string
+}
+
+export const METIERS: Metier[] = [
+  { slug: 'agence-immobiliere', metier: 'agence immobilière', categorie: 'services', priorite: 'P1', requetePrincipale: 'site internet agence immobilière', variantes: ['site web agence immobiliere', 'création site immobilier', 'logiciel vitrine agence immobilière', 'site agence immobilière prix'], serviceLie: 'site-multi-pages' },
+  { slug: 'restaurant', metier: 'restaurant', categorie: 'restauration', priorite: 'P1', requetePrincipale: 'création site internet restaurant', variantes: ['site web restaurant prix', 'site restaurant avec réservation', 'créer site restaurant'], serviceLie: 'site-vitrine' },
+  { slug: 'pizzeria', metier: 'pizzeria', categorie: 'restauration', priorite: 'P1', requetePrincipale: 'site internet pizzeria', variantes: ['création site pizzeria', 'site pizzeria commande en ligne', 'site web pizzeria click and collect'], serviceLie: 'site-vitrine' },
+  { slug: 'boulangerie-patisserie', metier: 'boulangerie-pâtisserie', categorie: 'restauration', priorite: 'P1', requetePrincipale: 'site internet boulangerie', variantes: ['site web boulangerie patisserie', 'click and collect boulangerie', 'créer site boulangerie'], serviceLie: 'site-vitrine' },
+  { slug: 'plombier', metier: 'plombier', categorie: 'artisanat-btp', priorite: 'P1', requetePrincipale: 'site internet plombier', variantes: ['création site plombier', 'site web plombier chauffagiste', 'site plombier depannage'], serviceLie: 'site-vitrine' },
+  { slug: 'electricien', metier: 'électricien', categorie: 'artisanat-btp', priorite: 'P1', requetePrincipale: 'site internet électricien', variantes: ['création site electricien', 'site web electricien', 'site artisan electricien'], serviceLie: 'site-vitrine' },
+  { slug: 'salon-coiffure', metier: 'salon de coiffure', categorie: 'sante-bien-etre', priorite: 'P1', requetePrincipale: 'site internet salon de coiffure', variantes: ['site web coiffeur', 'création site coiffure', 'site coiffeur avec rdv en ligne'], serviceLie: 'site-vitrine' },
+  { slug: 'avocat', metier: 'avocat', categorie: 'services', priorite: 'P1', requetePrincipale: 'site internet avocat', variantes: ['création site avocat', 'site web cabinet avocat', 'site avocat déontologie'], serviceLie: 'site-multi-pages' },
+  { slug: 'expert-comptable', metier: 'expert-comptable', categorie: 'services', priorite: 'P1', requetePrincipale: 'site internet expert comptable', variantes: ['site web cabinet comptable', 'création site expert-comptable'], serviceLie: 'site-multi-pages' },
+  { slug: 'garage-automobile', metier: 'garage automobile', categorie: 'services', priorite: 'P1', requetePrincipale: 'site internet garage automobile', variantes: ['site web garage auto', 'création site garagiste', 'site garage rdv en ligne'], serviceLie: 'site-vitrine' },
+  { slug: 'hotel-chambres-hotes', metier: 'hôtel & chambres d\'hôtes', categorie: 'tourisme', priorite: 'P1', requetePrincipale: 'site internet chambres d\'hôtes', variantes: ['site web hotel', 'création site chambre dhotes', 'site hotel réservation sans commission'], serviceLie: 'site-multi-pages' },
+  { slug: 'kebab-fast-food', metier: 'kebab & fast-food', categorie: 'restauration', priorite: 'P2', requetePrincipale: 'site internet fast food', variantes: ['site web kebab', 'site snack commande en ligne'], serviceLie: 'site-vitrine' },
+  { slug: 'food-truck', metier: 'food truck', categorie: 'restauration', priorite: 'P2', requetePrincipale: 'site internet food truck', variantes: ['site web food truck', 'emplacements food truck en ligne'], serviceLie: 'site-vitrine' },
+  { slug: 'brasserie-bar', metier: 'brasserie & bar', categorie: 'restauration', priorite: 'P2', requetePrincipale: 'site internet brasserie', variantes: ['site web bar', 'création site brasserie'], serviceLie: 'site-vitrine' },
+  { slug: 'cafe-salon-the', metier: 'café & salon de thé', categorie: 'restauration', priorite: 'P3', requetePrincipale: 'site internet salon de thé', variantes: ['site web café', 'création site coffee shop'], serviceLie: 'site-vitrine' },
+  { slug: 'restaurant-gastronomique', metier: 'restaurant gastronomique', categorie: 'restauration', priorite: 'P2', requetePrincipale: 'site internet restaurant gastronomique', variantes: ['site web restaurant étoilé', 'site gastronomique réservation'], serviceLie: 'site-multi-pages' },
+  { slug: 'traiteur-evenementiel', metier: 'traiteur événementiel', categorie: 'restauration', priorite: 'P2', requetePrincipale: 'site internet traiteur', variantes: ['site web traiteur', 'création site traiteur mariage'], serviceLie: 'site-vitrine' },
+  { slug: 'boucherie-charcuterie', metier: 'boucherie-charcuterie', categorie: 'restauration', priorite: 'P2', requetePrincipale: 'site internet boucherie', variantes: ['click and collect boucherie', 'site web boucherie charcuterie'], serviceLie: 'site-vitrine' },
+  { slug: 'chocolatier', metier: 'chocolatier', categorie: 'restauration', priorite: 'P3', requetePrincipale: 'site internet chocolatier', variantes: ['site web chocolatier', 'vente en ligne chocolat artisanal'], serviceLie: 'site-ecommerce' },
+  { slug: 'glacier', metier: 'glacier', categorie: 'restauration', priorite: 'P3', requetePrincipale: 'site internet glacier', variantes: ['site web glacier artisanal'], serviceLie: 'site-vitrine' },
+  { slug: 'epicerie-fine', metier: 'épicerie fine', categorie: 'commerce', priorite: 'P2', requetePrincipale: 'site internet épicerie fine', variantes: ['site web epicerie', 'vente en ligne produits du terroir'], serviceLie: 'site-ecommerce' },
+  { slug: 'cave-vins-spiritueux', metier: 'cave à vins', categorie: 'commerce', priorite: 'P2', requetePrincipale: 'site internet cave à vins', variantes: ['site web caviste', 'vente vin en ligne réglementation'], serviceLie: 'site-ecommerce' },
+  { slug: 'fleuriste', metier: 'fleuriste', categorie: 'commerce', priorite: 'P1', requetePrincipale: 'site internet fleuriste', variantes: ['site web fleuriste', 'vente fleurs en ligne', 'création site fleuriste'], serviceLie: 'site-ecommerce' },
+  { slug: 'fromager', metier: 'fromager', categorie: 'commerce', priorite: 'P3', requetePrincipale: 'site internet fromagerie', variantes: ['site web fromager', 'click and collect fromagerie'], serviceLie: 'site-vitrine' },
+  { slug: 'primeur', metier: 'primeur', categorie: 'commerce', priorite: 'P3', requetePrincipale: 'site internet primeur', variantes: ['site web primeur fruits légumes'], serviceLie: 'site-vitrine' },
+  { slug: 'poissonnier', metier: 'poissonnier', categorie: 'commerce', priorite: 'P3', requetePrincipale: 'site internet poissonnerie', variantes: ['site web poissonnier', 'click and collect poissonnerie'], serviceLie: 'site-vitrine' },
+  { slug: 'librairie-papeterie', metier: 'librairie & papeterie', categorie: 'commerce', priorite: 'P2', requetePrincipale: 'site internet librairie', variantes: ['site web librairie indépendante', 'vente livres en ligne libraire'], serviceLie: 'site-ecommerce' },
+  { slug: 'tabac-presse', metier: 'tabac-presse', categorie: 'commerce', priorite: 'P3', requetePrincipale: 'site internet tabac presse', variantes: ['site web bureau de tabac'], serviceLie: 'site-vitrine' },
+  { slug: 'magasin-sport', metier: 'magasin de sport', categorie: 'commerce', priorite: 'P3', requetePrincipale: 'site internet magasin de sport', variantes: ['site web magasin sport outdoor'], serviceLie: 'site-ecommerce' },
+  { slug: 'magasin-jouets', metier: 'magasin de jouets', categorie: 'commerce', priorite: 'P3', requetePrincipale: 'site internet magasin de jouets', variantes: ['site web jouets loisirs créatifs'], serviceLie: 'site-ecommerce' },
+  { slug: 'boutique-decoration', metier: 'boutique de décoration', categorie: 'commerce', priorite: 'P3', requetePrincipale: 'site internet boutique décoration', variantes: ['site web maison décoration'], serviceLie: 'site-ecommerce' },
+  { slug: 'magasin-informatique', metier: 'magasin informatique & téléphonie', categorie: 'commerce', priorite: 'P3', requetePrincipale: 'site internet magasin informatique', variantes: ['site web réparateur téléphone'], serviceLie: 'site-vitrine' },
+  { slug: 'opticien', metier: 'opticien', categorie: 'commerce', priorite: 'P2', requetePrincipale: 'site internet opticien', variantes: ['site web optique lunetterie', 'prise rdv opticien en ligne'], serviceLie: 'site-vitrine' },
+  { slug: 'bijouterie-horlogerie', metier: 'bijouterie-horlogerie', categorie: 'commerce', priorite: 'P3', requetePrincipale: 'site internet bijouterie', variantes: ['site web bijoutier', 'vente bijoux en ligne artisan'], serviceLie: 'site-ecommerce' },
+  { slug: 'vetements-enfants', metier: 'boutique vêtements enfants', categorie: 'commerce', priorite: 'P3', requetePrincipale: 'site internet boutique vêtements', variantes: ['site web vetements enfants'], serviceLie: 'site-ecommerce' },
+  { slug: 'boutique-mode', metier: 'boutique de mode', categorie: 'commerce', priorite: 'P2', requetePrincipale: 'site internet boutique de vêtements', variantes: ['création site boutique mode', 'site e-commerce prêt-à-porter'], serviceLie: 'site-ecommerce' },
+  { slug: 'cosmetiques-naturels', metier: 'cosmétiques naturels', categorie: 'commerce', priorite: 'P3', requetePrincipale: 'site internet cosmétiques', variantes: ['vente en ligne cosmétiques naturels', 'réglementation vente cosmétiques'], serviceLie: 'site-ecommerce' },
+  { slug: 'jardinerie-animalerie', metier: 'jardinerie & animalerie', categorie: 'commerce', priorite: 'P3', requetePrincipale: 'site internet jardinerie', variantes: ['site web animalerie'], serviceLie: 'site-vitrine' },
+  { slug: 'chauffagiste-climatisation', metier: 'chauffagiste & climatisation', categorie: 'artisanat-btp', priorite: 'P1', requetePrincipale: 'site internet chauffagiste', variantes: ['site web climatisation', 'site chauffagiste depannage urgence'], serviceLie: 'site-vitrine' },
+  { slug: 'macon-renovateur', metier: 'maçon & rénovation', categorie: 'artisanat-btp', priorite: 'P2', requetePrincipale: 'site internet maçon', variantes: ['site web entreprise rénovation', 'site artisan maçonnerie'], serviceLie: 'site-vitrine' },
+  { slug: 'couvreur-charpentier', metier: 'couvreur & charpentier', categorie: 'artisanat-btp', priorite: 'P2', requetePrincipale: 'site internet couvreur', variantes: ['site web charpentier', 'site couvreur zinc toiture'], serviceLie: 'site-vitrine' },
+  { slug: 'menuisier-ebeniste', metier: 'menuisier & ébéniste', categorie: 'artisanat-btp', priorite: 'P2', requetePrincipale: 'site internet menuisier', variantes: ['site web ebeniste', 'portfolio menuisier en ligne'], serviceLie: 'site-vitrine' },
+  { slug: 'peintre-decorateur', metier: 'peintre en bâtiment', categorie: 'artisanat-btp', priorite: 'P2', requetePrincipale: 'site internet peintre en bâtiment', variantes: ['site web peintre décorateur'], serviceLie: 'site-vitrine' },
+  { slug: 'carreleur-sol', metier: 'carreleur & sols', categorie: 'artisanat-btp', priorite: 'P3', requetePrincipale: 'site internet carreleur', variantes: ['site web carrelage revêtement sol'], serviceLie: 'site-vitrine' },
+  { slug: 'serrurier-depannage', metier: 'serrurier', categorie: 'artisanat-btp', priorite: 'P2', requetePrincipale: 'site internet serrurier', variantes: ['site web serrurier depannage', 'référencement serrurier urgence'], serviceLie: 'site-vitrine' },
+  { slug: 'paysagiste-jardinier', metier: 'paysagiste & jardinier', categorie: 'artisanat-btp', priorite: 'P1', requetePrincipale: 'site internet paysagiste', variantes: ['site web jardinier paysagiste', 'portfolio paysagiste'], serviceLie: 'site-vitrine' },
+  { slug: 'cuisiniste', metier: 'cuisiniste', categorie: 'artisanat-btp', priorite: 'P3', requetePrincipale: 'site internet cuisiniste', variantes: ['site web cuisiniste aménagement'], serviceLie: 'site-vitrine' },
+  { slug: 'pisciniste', metier: 'pisciniste', categorie: 'artisanat-btp', priorite: 'P3', requetePrincipale: 'site internet pisciniste', variantes: ['site web construction piscine'], serviceLie: 'site-vitrine' },
+  { slug: 'vitrier', metier: 'vitrier', categorie: 'artisanat-btp', priorite: 'P3', requetePrincipale: 'site internet vitrier', variantes: ['site web vitrier depannage'], serviceLie: 'site-vitrine' },
+  { slug: 'ramoneur', metier: 'ramoneur', categorie: 'artisanat-btp', priorite: 'P3', requetePrincipale: 'site internet ramoneur', variantes: ['site web ramonage rdv en ligne'], serviceLie: 'site-vitrine' },
+  { slug: 'facadier', metier: 'façadier', categorie: 'artisanat-btp', priorite: 'P3', requetePrincipale: 'site internet façadier', variantes: ['site web ravalement façade'], serviceLie: 'site-vitrine' },
+  { slug: 'terrassier', metier: 'terrassier', categorie: 'artisanat-btp', priorite: 'P3', requetePrincipale: 'site internet terrassement', variantes: ['site web entreprise terrassement'], serviceLie: 'site-vitrine' },
+  { slug: 'cabinet-medical', metier: 'cabinet médical', categorie: 'sante-bien-etre', priorite: 'P2', requetePrincipale: 'site internet cabinet médical', variantes: ['site web médecin généraliste', 'site cabinet medical rdv'], serviceLie: 'site-vitrine' },
+  { slug: 'kinesitherapeute', metier: 'kinésithérapeute', categorie: 'sante-bien-etre', priorite: 'P2', requetePrincipale: 'site internet kinésithérapeute', variantes: ['site web kine', 'prise rdv kine en ligne'], serviceLie: 'site-vitrine' },
+  { slug: 'osteopathe', metier: 'ostéopathe', categorie: 'sante-bien-etre', priorite: 'P1', requetePrincipale: 'site internet ostéopathe', variantes: ['site web osteopathe', 'rdv osteopathe en ligne sans commission'], serviceLie: 'site-vitrine' },
+  { slug: 'dentiste', metier: 'dentiste', categorie: 'sante-bien-etre', priorite: 'P2', requetePrincipale: 'site internet dentiste', variantes: ['site web cabinet dentaire', 'site dentiste rdv en ligne'], serviceLie: 'site-vitrine' },
+  { slug: 'pharmacie-parapharmacie', metier: 'pharmacie', categorie: 'sante-bien-etre', priorite: 'P2', requetePrincipale: 'site internet pharmacie', variantes: ['site web pharmacie', 'click and collect pharmacie'], serviceLie: 'site-vitrine' },
+  { slug: 'veterinaire', metier: 'vétérinaire', categorie: 'sante-bien-etre', priorite: 'P2', requetePrincipale: 'site internet vétérinaire', variantes: ['site web clinique vétérinaire', 'rdv vétérinaire en ligne'], serviceLie: 'site-vitrine' },
+  { slug: 'psychologue', metier: 'psychologue', categorie: 'sante-bien-etre', priorite: 'P2', requetePrincipale: 'site internet psychologue', variantes: ['site web psychologue', 'site psy prise de rdv'], serviceLie: 'site-vitrine' },
+  { slug: 'sophrologue', metier: 'sophrologue', categorie: 'sante-bien-etre', priorite: 'P3', requetePrincipale: 'site internet sophrologue', variantes: ['site web sophrologie'], serviceLie: 'site-vitrine' },
+  { slug: 'naturopathe', metier: 'naturopathe', categorie: 'sante-bien-etre', priorite: 'P3', requetePrincipale: 'site internet naturopathe', variantes: ['site web naturopathie rdv'], serviceLie: 'site-vitrine' },
+  { slug: 'institut-beaute', metier: 'institut de beauté', categorie: 'sante-bien-etre', priorite: 'P1', requetePrincipale: 'site internet institut de beauté', variantes: ['site web esthéticienne', 'rdv institut beauté en ligne'], serviceLie: 'site-vitrine' },
+  { slug: 'salle-de-sport', metier: 'salle de sport', categorie: 'sante-bien-etre', priorite: 'P2', requetePrincipale: 'site internet salle de sport', variantes: ['site web salle de sport', 'abonnements salle de sport en ligne'], serviceLie: 'systeme-gestion' },
+  { slug: 'notaire', metier: 'notaire', categorie: 'services', priorite: 'P2', requetePrincipale: 'site internet notaire', variantes: ['site web office notarial'], serviceLie: 'site-multi-pages' },
+  { slug: 'architecte', metier: 'architecte', categorie: 'services', priorite: 'P2', requetePrincipale: 'site internet architecte', variantes: ['site web architecte portfolio', 'site architecte intérieur'], serviceLie: 'site-multi-pages' },
+  { slug: 'courtier-credit', metier: 'courtier en crédit', categorie: 'services', priorite: 'P3', requetePrincipale: 'site internet courtier', variantes: ['site web courtier immobilier', 'génération leads courtier'], serviceLie: 'site-multi-pages' },
+  { slug: 'diagnostiqueur-immobilier', metier: 'diagnostiqueur immobilier', categorie: 'services', priorite: 'P3', requetePrincipale: 'site internet diagnostiqueur immobilier', variantes: ['site web diagnostic immobilier'], serviceLie: 'site-vitrine' },
+  { slug: 'photographe', metier: 'photographe', categorie: 'services', priorite: 'P1', requetePrincipale: 'site internet photographe', variantes: ['site web photographe', 'portfolio photographe en ligne', 'vendre photos en ligne'], serviceLie: 'site-vitrine' },
+  { slug: 'agence-evenementielle', metier: 'agence événementielle', categorie: 'services', priorite: 'P3', requetePrincipale: 'site internet agence événementielle', variantes: ['site web wedding planner', 'site organisateur événements'], serviceLie: 'site-multi-pages' },
+  { slug: 'organisme-formation', metier: 'organisme de formation', categorie: 'services', priorite: 'P2', requetePrincipale: 'site internet organisme de formation', variantes: ['site web centre de formation', 'inscriptions formation en ligne qualiopi'], serviceLie: 'site-multi-pages' },
+  { slug: 'auto-ecole', metier: 'auto-école', categorie: 'services', priorite: 'P2', requetePrincipale: 'site internet auto-école', variantes: ['site web auto ecole', 'réservation leçons conduite en ligne'], serviceLie: 'systeme-gestion' },
+  { slug: 'gite-location-saisonniere', metier: 'gîte & location saisonnière', categorie: 'tourisme', priorite: 'P1', requetePrincipale: 'site internet gîte', variantes: ['site web location saisonnière', 'réservation gite sans commission', 'site airbnb indépendant'], serviceLie: 'site-vitrine' },
+  { slug: 'camping', metier: 'camping', categorie: 'tourisme', priorite: 'P3', requetePrincipale: 'site internet camping', variantes: ['site web camping réservation emplacements'], serviceLie: 'site-multi-pages' },
+  { slug: 'ecole-danse-musique', metier: 'école de danse & musique', categorie: 'tourisme', priorite: 'P3', requetePrincipale: 'site internet école de danse', variantes: ['site web ecole de musique inscriptions'], serviceLie: 'site-vitrine' },
+  { slug: 'tatoueur', metier: 'tatoueur', categorie: 'tourisme', priorite: 'P2', requetePrincipale: 'site internet tatoueur', variantes: ['site web salon tatouage', 'portfolio tatoueur rdv en ligne'], serviceLie: 'site-vitrine' },
+  { slug: 'toiletteur', metier: 'toiletteur', categorie: 'tourisme', priorite: 'P3', requetePrincipale: 'site internet toiletteur', variantes: ['site web toilettage rdv en ligne'], serviceLie: 'site-vitrine' },
+]
+
+export function getMetier(slug: string): Metier | undefined {
+  return METIERS.find(m => m.slug === slug)
+}
+
+export const CATEGORIES_METIERS: Record<string, string> = {
+  'restauration': 'Restauration & alimentation',
+  'artisanat-btp': 'Artisanat & BTP',
+  'commerce': 'Commerce & retail',
+  'sante-bien-etre': 'Santé & bien-être',
+  'services': 'Services & professions libérales',
+  'tourisme': 'Tourisme & loisirs',
+}
