@@ -139,6 +139,7 @@ export default function Footer() {
                 { href: '/contact', label: 'Contact' },
                 { href: '/parrainage', label: 'Parrainage' },
                 { href: '/plan-du-site', label: 'Plan du site' },
+                { href: '/motion-lab', label: '⚡ Motion Lab' },
               ].map(l => (
                 <li key={l.href}>
                   <Link href={l.href} className="text-white/50 hover:text-white text-sm transition-colors block py-0.5">{l.label}</Link>
