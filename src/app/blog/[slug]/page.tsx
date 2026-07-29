@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { Clock, Tag, Home, ChevronRight } from 'lucide-react'
 import RelatedPosts from '@/components/blog/RelatedPosts'
+import AuthorByline from '@/components/blog/AuthorByline'
 
 export async function generateStaticParams() {
   const posts = getAllPosts()
@@ -98,6 +99,7 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
             </span>
           </div>
           <h1 className="text-3xl lg:text-5xl font-bold text-white leading-tight">{post.title}</h1>
+          <AuthorByline date={post.date} updated={post.updated} readTime={post.readTime} />
         </div>
       </div>
 
