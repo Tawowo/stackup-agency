@@ -36,7 +36,7 @@ export default async function RealisationPage({ params }: { params: Promise<{ sl
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://stackup-agency.fr' },
-      { '@type': 'ListItem', position: 2, name: 'Réalisations', item: 'https://stackup-agency.fr/#realisations' },
+      { '@type': 'ListItem', position: 2, name: 'Réalisations', item: 'https://stackup-agency.fr/realisations' },
       { '@type': 'ListItem', position: 3, name: r.nom, item: url },
     ],
   }

@@ -459,7 +459,7 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
           <h2 className="text-2xl font-bold text-white mb-3">{service.cta}</h2>
           <p className="text-white/70 mb-6">Devis gratuit sous 72h. Sans engagement.</p>
           <Link
-            href="/#contact"
+            href="/contact"
             className="inline-flex items-center gap-2 px-8 py-3.5 bg-gold hover:bg-amber-500 text-white font-semibold rounded-xl transition-all hover:-translate-y-0.5 shadow-lg"
           >
             Demander un devis

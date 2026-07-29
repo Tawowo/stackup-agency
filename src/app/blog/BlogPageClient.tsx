@@ -29,7 +29,7 @@ export default function BlogPageClient({ posts }: { posts: Post[] }) {
             {t.blog.frOnly}
           </p>
           <Link
-            href="/#contact"
+            href="/contact"
             className="inline-flex items-center gap-2 px-6 py-3 bg-electric hover:bg-blue-500 text-white rounded-xl font-semibold transition-all hover:-translate-y-0.5"
           >
             Contact us in English →

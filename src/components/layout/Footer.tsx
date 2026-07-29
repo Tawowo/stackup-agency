@@ -1,6 +1,6 @@
-'use client'
+import Link from 'next/link'
 import Image from 'next/image'
-import { useLanguage } from '@/contexts/LanguageContext'
+import { SITE } from '@/config/site'
 
 function LinkedinIcon() {
   return (
@@ -30,76 +30,140 @@ function TiktokIcon() {
   )
 }
 
+const VILLES_PRINCIPALES = [
+  { href: '/agence-web/tours', label: 'Tours' },
+  { href: '/agence-web/orleans', label: 'Orléans' },
+  { href: '/agence-web/blois', label: 'Blois' },
+  { href: '/agence-web/chartres', label: 'Chartres' },
+  { href: '/agence-web/le-mans', label: 'Le Mans' },
+  { href: '/agence-web/angers', label: 'Angers' },
+  { href: '/agence-web/nantes', label: 'Nantes' },
+  { href: '/agence-web/rouen', label: 'Rouen' },
+]
+
 export default function Footer() {
-  const { t } = useLanguage()
-
-  const links = [
-    { href: '#services', label: t.nav.services },
-    { href: '#realisations', label: t.nav.portfolio },
-    { href: '#apropos', label: t.nav.about },
-    { href: '/blog', label: t.nav.blog },
-    { href: '#contact', label: t.nav.contact },
-  ]
-
   return (
     <footer className="bg-[#060D1A] text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-12">
-          <div className="md:col-span-2">
-            <div className="mb-5">
-              <Image
-                src="/logo-icon.png"
-                alt="Stackup Agency"
-                width={40}
-                height={40}
-                quality={100}
-                className="object-contain brightness-0 invert"
-              />
-            </div>
-            <p className="text-white/50 text-sm mb-6 max-w-xs leading-relaxed">{t.footer.tagline}</p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-10 mb-12">
+
+          {/* Col 1 — Marque */}
+          <div className="lg:col-span-1">
+            <Link href="/" className="flex items-center gap-2 mb-4">
+              <Image src="/logo-icon.png" alt="Stackup Agency" width={36} height={36} quality={100} className="object-contain brightness-0 invert" />
+              <span className="font-bold text-white">Stackup Agency</span>
+            </Link>
+            <p className="text-white/50 text-sm mb-5 leading-relaxed">
+              Agence web à Tours. Sites internet professionnels pour TPE et artisans, livrés en 10 jours.
+            </p>
             <div className="flex gap-3">
               {[
-                { Icon: LinkedinIcon, href: 'https://linkedin.com/in/matheo-reboul', label: 'LinkedIn' },
-                { Icon: InstagramIcon, href: 'https://instagram.com/stackup.agency', label: 'Instagram' },
-                { Icon: TiktokIcon, href: 'https://tiktok.com/@stackupagency', label: 'TikTok' },
+                { Icon: LinkedinIcon, href: SITE.social.linkedin, label: 'LinkedIn' },
+                { Icon: InstagramIcon, href: SITE.social.instagram, label: 'Instagram' },
+                { Icon: TiktokIcon, href: SITE.social.tiktok, label: 'TikTok' },
               ].map(({ Icon, href, label }) => (
-                <a key={label} href={href} aria-label={label}
-                  className="w-10 h-10 rounded-xl bg-white/10 hover:bg-electric flex items-center justify-center transition-colors">
+                <a key={label} href={href} aria-label={label} target="_blank" rel="noopener noreferrer"
+                  className="w-9 h-9 rounded-xl bg-white/10 hover:bg-blue-600 flex items-center justify-center transition-colors">
                   <Icon />
                 </a>
               ))}
             </div>
           </div>
 
+          {/* Col 2 — Services */}
           <div>
-            <h3 className="font-semibold text-sm mb-5 text-white/80">{t.footer.links}</h3>
-            <ul className="space-y-3">
-              {links.map(link => (
-                <li key={link.href}>
-                  <a href={link.href} className="text-white/50 hover:text-white text-sm transition-colors block py-1">{link.label}</a>
+            <h3 className="font-semibold text-sm mb-4 text-white/80">Services</h3>
+            <ul className="space-y-2.5">
+              {[
+                { href: '/services/site-vitrine', label: 'Site vitrine' },
+                { href: '/services/site-multi-pages', label: 'Site multi-pages' },
+                { href: '/services/site-ecommerce', label: 'Boutique en ligne' },
+                { href: '/services/systeme-gestion', label: 'Système de gestion' },
+                { href: '/services/site-association', label: 'Site association' },
+                { href: '/services', label: 'Tous les services' },
+                { href: '/tarifs', label: 'Tarifs' },
+              ].map(l => (
+                <li key={l.href}>
+                  <Link href={l.href} className="text-white/50 hover:text-white text-sm transition-colors block py-0.5">{l.label}</Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Col 3 — Solutions & Métiers */}
+          <div>
+            <h3 className="font-semibold text-sm mb-4 text-white/80">Solutions & Métiers</h3>
+            <ul className="space-y-2.5">
+              {[
+                { href: '/solutions', label: 'Toutes les solutions' },
+                { href: '/solutions/logiciel-gestion-stocks', label: 'Gestion des stocks' },
+                { href: '/solutions/systeme-reservation', label: 'Réservation en ligne' },
+                { href: '/solutions/caisse-enregistreuse', label: 'Caisse enregistreuse' },
+                { href: '/creation-site-internet', label: 'Par métier' },
+                { href: '/creation-site-internet/restaurant', label: 'Site restaurant' },
+                { href: '/creation-site-internet/artisan', label: 'Site artisan' },
+              ].map(l => (
+                <li key={l.href}>
+                  <Link href={l.href} className="text-white/50 hover:text-white text-sm transition-colors block py-0.5">{l.label}</Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Col 4 — Villes */}
+          <div>
+            <h3 className="font-semibold text-sm mb-4 text-white/80">Agence web par ville</h3>
+            <ul className="space-y-2.5">
+              {VILLES_PRINCIPALES.map(l => (
+                <li key={l.href}>
+                  <Link href={l.href} className="text-white/50 hover:text-white text-sm transition-colors block py-0.5">
+                    Agence web {l.label}
+                  </Link>
                 </li>
               ))}
               <li>
-                <a href="/parrainage" className="text-white/50 hover:text-white text-sm transition-colors block py-1">Parrainage</a>
+                <Link href="/agence-web" className="text-blue-400 hover:text-blue-300 text-sm transition-colors block py-0.5 font-medium">Toutes les villes →</Link>
               </li>
             </ul>
           </div>
 
+          {/* Col 5 — Ressources */}
           <div>
-            <h3 className="font-semibold text-sm mb-5 text-white/80">{t.footer.legal}</h3>
-            <ul className="space-y-3">
-              <li><a href="/mentions-legales" className="text-white/50 hover:text-white text-sm transition-colors">{t.footer.mentions}</a></li>
-              <li><a href="/cgv" className="text-white/50 hover:text-white text-sm transition-colors">CGV</a></li>
-              <li><a href="/politique-confidentialite" className="text-white/50 hover:text-white text-sm transition-colors">{t.footer.privacy}</a></li>
-              <li><a href="/ressources/documents" className="text-white/50 hover:text-white text-sm transition-colors">Documents PDF</a></li>
-              <li><a href="/cookies" className="text-white/50 hover:text-white text-sm transition-colors">Politique de cookies</a></li>
-              <li><a href="mailto:contact@stackup-agency.fr" className="text-white/50 hover:text-white text-sm transition-colors">contact@stackup-agency.fr</a></li>
+            <h3 className="font-semibold text-sm mb-4 text-white/80">Ressources</h3>
+            <ul className="space-y-2.5">
+              {[
+                { href: '/blog', label: 'Blog' },
+                { href: '/realisations', label: 'Réalisations' },
+                { href: '/a-propos', label: 'À propos' },
+                { href: '/faq', label: 'FAQ' },
+                { href: '/contact', label: 'Contact' },
+                { href: '/parrainage', label: 'Parrainage' },
+                { href: '/plan-du-site', label: 'Plan du site' },
+              ].map(l => (
+                <li key={l.href}>
+                  <Link href={l.href} className="text-white/50 hover:text-white text-sm transition-colors block py-0.5">{l.label}</Link>
+                </li>
+              ))}
+              <li className="pt-1 border-t border-white/10 mt-2">
+                <Link href="/mentions-legales" className="text-white/40 hover:text-white/60 text-xs transition-colors block py-0.5">Mentions légales</Link>
+              </li>
+              <li>
+                <Link href="/politique-confidentialite" className="text-white/40 hover:text-white/60 text-xs transition-colors block py-0.5">Confidentialité</Link>
+              </li>
             </ul>
           </div>
         </div>
 
-        <div className="border-t border-white/10 pt-8">
-          <p className="text-white/30 text-xs text-center">{t.footer.copyright}</p>
+        <div className="border-t border-white/10 pt-8 flex flex-col sm:flex-row items-center justify-between gap-3">
+          <p className="text-white/30 text-xs">
+            © {new Date().getFullYear()} Stackup Agency — Tours (37), France
+          </p>
+          <p className="text-white/20 text-xs">
+            Fondé par{' '}
+            <a href={SITE.social.linkedin} target="_blank" rel="noopener noreferrer" className="text-white/40 hover:text-white/60 transition-colors">
+              {SITE.founder.name}
+            </a>
+          </p>
         </div>
       </div>
     </footer>

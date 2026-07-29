@@ -36,7 +36,7 @@ export default function ModeleDevis() {
               PDF
             </a>
             <Link
-              href="/#contact"
+              href="/contact"
               className="inline-flex items-center gap-2 px-4 py-2 bg-electric text-white text-sm font-semibold rounded-xl hover:bg-electric/90 transition-colors"
             >
               Demander un devis
@@ -146,7 +146,7 @@ export default function ModeleDevis() {
 
         <p className="text-xs text-gray-400 dark:text-white/30 text-center mt-6">
           Ce modèle est fourni à titre indicatif. Votre devis personnalisé sera émis après notre premier échange.{' '}
-          <Link href="/#contact" className="text-electric hover:underline">Demander un devis gratuit →</Link>
+          <Link href="/contact" className="text-electric hover:underline">Demander un devis gratuit →</Link>
         </p>
       </div>
     </main>

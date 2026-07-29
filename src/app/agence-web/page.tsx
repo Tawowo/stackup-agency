@@ -84,7 +84,7 @@ export default function AgenceWebPage() {
         <div className="rounded-2xl p-6 bg-gradient-to-br from-navy to-electric text-center">
           <h2 className="text-white font-bold text-xl mb-2">Votre ville n'est pas listée ?</h2>
           <p className="text-white/70 mb-4">Nous intervenons dans toute la France. Contactez-nous pour en parler.</p>
-          <Link href="/#contact" className="inline-block px-6 py-3 bg-amber-500 hover:bg-amber-400 text-white font-semibold rounded-xl transition-all hover:-translate-y-0.5">
+          <Link href="/contact" className="inline-block px-6 py-3 bg-amber-500 hover:bg-amber-400 text-white font-semibold rounded-xl transition-all hover:-translate-y-0.5">
             Demander un devis →
           </Link>
         </div>

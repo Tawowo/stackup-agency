@@ -153,7 +153,7 @@ export default function SiteAssociationPage() {
           <h2 className="text-2xl font-bold text-white mb-3">Prêt à créer le site de votre association ?</h2>
           <p className="text-white/70 mb-6">Livraison en 7 jours ouvrés. Hébergement offert la première année. À partir de 149€.</p>
           <Link
-            href="/#contact"
+            href="/contact"
             className="inline-flex items-center gap-2 px-6 py-3 bg-[#F59E0B] hover:bg-amber-500 text-white font-semibold rounded-xl transition-all hover:-translate-y-0.5"
           >
             Créer le site de votre association

@@ -110,13 +110,13 @@ export default function Hero() {
 
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-12 lg:mb-16">
             <Link
-              href="#services"
+              href="/services"
               className="w-full sm:w-auto text-center px-8 py-4 bg-[#1E3A5F] text-white font-semibold rounded-lg hover:bg-[#162E4D] transition-all hover:scale-105 shadow-lg shadow-[#1E3A5F]/20 min-h-[52px] flex items-center justify-center"
             >
               Voir nos services
             </Link>
             <Link
-              href="#contact"
+              href="/contact"
               className="w-full sm:w-auto text-center px-8 py-4 bg-white text-[#1E3A5F] font-semibold rounded-lg border-2 border-[#1E3A5F] hover:bg-[#1E3A5F] hover:text-white transition-all min-h-[52px] flex items-center justify-center"
             >
               Devis gratuit →

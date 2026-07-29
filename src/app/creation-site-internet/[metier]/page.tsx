@@ -98,7 +98,7 @@ export default function MetierPage({ params }: { params: { metier: string } }) {
           </p>
 
           <div className="flex flex-wrap gap-4">
-            <Link href="/#contact" className="px-6 py-3 bg-amber-500 hover:bg-amber-400 text-white font-semibold rounded-xl transition-all hover:-translate-y-0.5">
+            <Link href="/contact" className="px-6 py-3 bg-amber-500 hover:bg-amber-400 text-white font-semibold rounded-xl transition-all hover:-translate-y-0.5">
               Devis gratuit sous 72h →
             </Link>
             <Link href={service.href} className="px-6 py-3 border border-white/20 text-white hover:bg-white/10 rounded-xl transition-all">
@@ -216,7 +216,7 @@ export default function MetierPage({ params }: { params: { metier: string } }) {
         <div className="rounded-2xl p-6 bg-gradient-to-br from-navy to-electric text-center">
           <h3 className="text-white font-bold text-xl mb-2">Prêt à créer votre site de {m.metier} ?</h3>
           <p className="text-white/70 mb-4">Premier RDV gratuit, devis sous 72h, livraison garantie en {delai}.</p>
-          <Link href="/#contact" className="inline-block px-6 py-3 bg-amber-500 hover:bg-amber-400 text-white font-semibold rounded-xl transition-all hover:-translate-y-0.5">
+          <Link href="/contact" className="inline-block px-6 py-3 bg-amber-500 hover:bg-amber-400 text-white font-semibold rounded-xl transition-all hover:-translate-y-0.5">
             Demander un devis gratuit →
           </Link>
         </div>

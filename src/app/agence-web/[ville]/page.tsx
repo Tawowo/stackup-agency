@@ -34,21 +34,24 @@ export default function AgenceWebVillePage({ params }: { params: { ville: string
   const url = `${SITE.url}/agence-web/${v.slug}`
   const villesVoisines = VILLES.filter(vi => v.villesVoisines.includes(vi.slug))
 
-  const localBusinessSchema = {
+  const serviceSchema = {
     '@context': 'https://schema.org',
-    '@type': 'LocalBusiness',
-    name: SITE.name,
-    url: SITE.url,
-    description: `Agence web intervenant à ${v.ville} et dans toute la région ${v.region}. Création de sites internet, e-commerce et applications sur mesure.`,
-    address: {
-      '@type': 'PostalAddress',
-      addressLocality: SITE.address.locality,
-      addressRegion: SITE.address.region,
-      addressCountry: SITE.address.country,
+    '@type': 'Service',
+    name: `Création de site internet à ${v.ville}`,
+    provider: {
+      '@type': 'Organization',
+      '@id': `${SITE.url}/#organization`,
+      name: SITE.name,
+      url: SITE.url,
     },
     areaServed: { '@type': 'City', name: v.ville },
-    priceRange: `À partir de ${SITE.pricing.vitrine}€`,
-    founder: { '@type': 'Person', name: SITE.founder.name },
+    description: `Création de sites internet professionnels pour les entreprises de ${v.ville} et de la région ${v.region}.`,
+    offers: {
+      '@type': 'Offer',
+      priceCurrency: 'EUR',
+      price: `${SITE.pricing.vitrine}`,
+      priceSpecification: { '@type': 'UnitPriceSpecification', price: SITE.pricing.vitrine, priceCurrency: 'EUR' },
+    },
   }
 
   const breadcrumbSchema = {
@@ -85,7 +88,7 @@ export default function AgenceWebVillePage({ params }: { params: { ville: string
 
   return (
     <div className="min-h-screen bg-background dark:bg-[#0A0F1C]">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
@@ -114,7 +117,7 @@ export default function AgenceWebVillePage({ params }: { params: { ville: string
           </p>
 
           <div className="flex flex-wrap gap-4">
-            <Link href="/#contact" className="px-6 py-3 bg-amber-500 hover:bg-amber-400 text-white font-semibold rounded-xl transition-all hover:-translate-y-0.5">
+            <Link href="/contact" className="px-6 py-3 bg-amber-500 hover:bg-amber-400 text-white font-semibold rounded-xl transition-all hover:-translate-y-0.5">
               Devis gratuit sous 72h →
             </Link>
             <Link href="/services/site-vitrine" className="px-6 py-3 border border-white/20 text-white hover:bg-white/10 rounded-xl transition-all">
@@ -236,7 +239,7 @@ export default function AgenceWebVillePage({ params }: { params: { ville: string
         <div className="rounded-2xl p-6 bg-gradient-to-br from-navy to-electric text-center">
           <h3 className="text-white font-bold text-xl mb-2">Vous êtes à {v.ville} ? Parlons de votre projet.</h3>
           <p className="text-white/70 mb-4">Premier rendez-vous gratuit, devis sous 72h, sans engagement.</p>
-          <Link href="/#contact" className="inline-block px-6 py-3 bg-amber-500 hover:bg-amber-400 text-white font-semibold rounded-xl transition-all hover:-translate-y-0.5">
+          <Link href="/contact" className="inline-block px-6 py-3 bg-amber-500 hover:bg-amber-400 text-white font-semibold rounded-xl transition-all hover:-translate-y-0.5">
             Demander un devis gratuit →
           </Link>
         </div>

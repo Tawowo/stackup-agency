@@ -1,20 +1,26 @@
 'use client'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { motion, AnimatePresence } from 'framer-motion'
-import { Sun, Moon } from 'lucide-react'
-import { useLanguage } from '@/contexts/LanguageContext'
+import { Sun, Moon, ChevronDown } from 'lucide-react'
 import { useTheme } from '@/contexts/ThemeContext'
 import { usePathname } from 'next/navigation'
 
+const SERVICES_LINKS = [
+  { href: '/services/site-vitrine', label: 'Site vitrine' },
+  { href: '/services/site-multi-pages', label: 'Site multi-pages' },
+  { href: '/services/site-ecommerce', label: 'Boutique en ligne' },
+  { href: '/services/systeme-gestion', label: 'Système de gestion' },
+  { href: '/services/site-association', label: 'Site association' },
+]
+
 export default function Navbar() {
-  const { lang, setLang, t } = useLanguage()
   const { dark, toggleDark } = useTheme()
   const [open, setOpen] = useState(false)
+  const [servicesOpen, setServicesOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
   const pathname = usePathname()
-  const isHomePage = pathname === '/'
+  const dropdownRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20)
@@ -27,189 +33,145 @@ export default function Navbar() {
     return () => { document.body.style.overflow = '' }
   }, [open])
 
-  const p = (anchor: string) => isHomePage ? anchor : `/${anchor}`
+  useEffect(() => {
+    const handler = (e: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
+        setServicesOpen(false)
+      }
+    }
+    document.addEventListener('mousedown', handler)
+    return () => document.removeEventListener('mousedown', handler)
+  }, [])
 
-  const links = [
-    { href: p('#services'), label: t.nav.services },
-    { href: p('#realisations'), label: t.nav.portfolio },
-    { href: p('#apropos'), label: t.nav.about },
-    { href: p('#blog'), label: t.nav.blog },
-    { href: p('#contact'), label: t.nav.contact },
-    { href: '/parrainage', label: t.nav.parrainage },
-  ]
-
-  const linkClass = !isHomePage
-    ? 'text-white hover:text-[#F59E0B]'
-    : scrolled
-    ? 'text-gray-900 dark:text-white hover:text-electric dark:hover:text-electric'
-    : 'text-[#1E3A5F] hover:text-electric'
-
-  const barColor = open
-    ? 'bg-white'
-    : !isHomePage || scrolled
-    ? 'bg-gray-900 dark:bg-white'
-    : 'bg-[#1E3A5F]'
-
-  const navBg = !isHomePage
+  const isHome = pathname === '/'
+  const navBg = !isHome
     ? 'bg-[#1E3A5F]'
     : scrolled
     ? 'bg-white/95 dark:bg-gray-900/95 backdrop-blur-md shadow-lg shadow-black/5'
     : 'bg-transparent'
 
+  const linkClass = !isHome
+    ? 'text-white hover:text-amber-400'
+    : scrolled
+    ? 'text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400'
+    : 'text-[#1E3A5F] hover:text-blue-600'
+
+  const barColor = open ? 'bg-white' : !isHome || scrolled ? 'bg-gray-900 dark:bg-white' : 'bg-[#1E3A5F]'
+
   return (
     <>
-      {/* Main navbar — plain nav (no transform) to avoid stacking context issues */}
-      <nav
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${navBg}`}
-      >
-        <motion.div
-          initial={{ y: -80, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.6, ease: 'easeOut' }}
-        >
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex items-center justify-between h-16 lg:h-20">
-              {/* Logo */}
-              <Link href="/" className="flex items-center gap-3">
-                <Image
-                  src="/logo-icon.png"
-                  alt="Stackup"
-                  width={45}
-                  height={45}
-                  quality={100}
-                  className="object-contain"
-                  priority
-                />
-                <div className="flex flex-col leading-tight">
-                  <span className={`font-bold text-xl tracking-tight transition-colors ${
-                    !isHomePage ? 'text-white' : scrolled ? 'text-[#1E3A5F] dark:text-white' : 'text-[#1E3A5F]'
-                  }`}>Stackup</span>
-                  <span className={`font-light text-xs tracking-[0.2em] uppercase transition-colors ${
-                    !isHomePage ? 'text-white/70' : scrolled ? 'text-[#1E3A5F]/70 dark:text-white/70' : 'text-[#1E3A5F]/70'
-                  }`}>Agency</span>
+      <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${navBg}`} role="navigation" aria-label="Navigation principale">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between h-16 lg:h-20">
+            <Link href="/" className="flex items-center gap-3" aria-label="Stackup Agency — Accueil">
+              <Image src="/logo-icon.png" alt="Stackup Agency" width={45} height={45} quality={100} className="object-contain" priority />
+              <div className="flex flex-col leading-tight">
+                <span className={`font-bold text-xl tracking-tight transition-colors ${!isHome ? 'text-white' : scrolled ? 'text-[#1E3A5F] dark:text-white' : 'text-[#1E3A5F]'}`}>Stackup</span>
+                <span className={`font-light text-xs tracking-[0.2em] uppercase transition-colors ${!isHome ? 'text-white/70' : scrolled ? 'text-[#1E3A5F]/70 dark:text-white/70' : 'text-[#1E3A5F]/70'}`}>Agency</span>
+              </div>
+            </Link>
+
+            {/* Desktop nav */}
+            <div className="hidden lg:flex items-center gap-6">
+              {/* Services dropdown */}
+              <div className="relative" ref={dropdownRef}>
+                <button
+                  onClick={() => setServicesOpen(v => !v)}
+                  aria-expanded={servicesOpen}
+                  aria-haspopup="true"
+                  className={`flex items-center gap-1 text-sm font-medium transition-colors ${linkClass}`}
+                >
+                  Services
+                  <ChevronDown size={14} className={`transition-transform ${servicesOpen ? 'rotate-180' : ''}`} />
+                </button>
+                {/* Crawlable dropdown — visible in DOM always, hidden visually when closed */}
+                <div
+                  className={`absolute top-full left-1/2 -translate-x-1/2 mt-2 w-52 rounded-xl bg-white dark:bg-gray-900 shadow-xl border border-gray-100 dark:border-white/10 py-1 transition-all duration-150 ${servicesOpen ? 'opacity-100 pointer-events-auto translate-y-0' : 'opacity-0 pointer-events-none -translate-y-1'}`}
+                  role="menu"
+                >
+                  {SERVICES_LINKS.map(l => (
+                    <Link key={l.href} href={l.href} role="menuitem" onClick={() => setServicesOpen(false)}
+                      className="block px-4 py-2.5 text-sm text-gray-700 dark:text-white/80 hover:bg-blue-50 dark:hover:bg-white/5 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                      {l.label}
+                    </Link>
+                  ))}
+                  <div className="border-t border-gray-100 dark:border-white/10 my-1" />
+                  <Link href="/services" role="menuitem" onClick={() => setServicesOpen(false)}
+                    className="block px-4 py-2.5 text-sm font-semibold text-blue-600 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-white/5 transition-colors">
+                    Voir tous les services →
+                  </Link>
                 </div>
+              </div>
+
+              <Link href="/tarifs" aria-current={pathname === '/tarifs' ? 'page' : undefined} className={`text-sm font-medium transition-colors ${linkClass}`}>Tarifs</Link>
+              <Link href="/realisations" aria-current={pathname === '/realisations' ? 'page' : undefined} className={`text-sm font-medium transition-colors ${linkClass}`}>Réalisations</Link>
+              <Link href="/blog" aria-current={pathname.startsWith('/blog') ? 'page' : undefined} className={`text-sm font-medium transition-colors ${linkClass}`}>Blog</Link>
+              <Link href="/a-propos" aria-current={pathname === '/a-propos' ? 'page' : undefined} className={`text-sm font-medium transition-colors ${linkClass}`}>À propos</Link>
+            </div>
+
+            {/* Desktop right */}
+            <div className="hidden lg:flex items-center gap-3">
+              <button onClick={toggleDark} aria-label="Basculer thème sombre"
+                className={`p-2 rounded-lg transition-colors ${!isHome ? 'text-white/80 hover:text-white' : scrolled ? 'text-gray-600 dark:text-white/70 hover:text-blue-600' : 'text-[#1E3A5F]/80 hover:text-blue-600'}`}>
+                {dark ? <Sun size={18} /> : <Moon size={18} />}
+              </button>
+              <Link href="/contact" className="px-5 py-2.5 bg-amber-500 hover:bg-amber-400 text-white text-sm font-semibold rounded-xl shadow-lg shadow-amber-500/30 transition-all hover:-translate-y-0.5">
+                Devis gratuit →
               </Link>
+            </div>
 
-              {/* Desktop nav */}
-              <div className="hidden lg:flex items-center gap-8">
-                {links.map(link => (
-                  <a
-                    key={link.href}
-                    href={link.href}
-                    className={`text-sm font-medium transition-colors relative group ${linkClass}`}
-                  >
-                    {link.label}
-                    <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-electric group-hover:w-full transition-all duration-300" />
-                  </a>
-                ))}
-              </div>
-
-              {/* Desktop right controls */}
-              <div className="hidden lg:flex items-center gap-3">
-                <button
-                  onClick={() => setLang(lang === 'fr' ? 'en' : 'fr')}
-                  className={`px-3 py-1.5 text-xs font-semibold rounded-lg border transition-colors hover:border-electric hover:text-electric ${
-                    !isHomePage
-                      ? 'border-white/40 text-white'
-                      : scrolled
-                      ? 'border-gray-300 dark:border-white/20 text-gray-900 dark:text-white'
-                      : 'border-[#1E3A5F]/40 text-[#1E3A5F]'
-                  }`}
-                >
-                  {lang === 'fr' ? 'EN' : 'FR'}
-                </button>
-                <button
-                  onClick={toggleDark}
-                  className={`p-2 rounded-lg transition-colors hover:text-electric hover:bg-electric/10 ${
-                    !isHomePage ? 'text-white/80' : scrolled ? 'text-gray-600 dark:text-white/70' : 'text-[#1E3A5F]/80'
-                  }`}
-                >
-                  {dark ? <Sun size={18} /> : <Moon size={18} />}
-                </button>
-                <a
-                  href={p('#contact')}
-                  className="px-5 py-2.5 bg-gold hover:bg-amber-500 text-white text-sm font-semibold rounded-xl shadow-lg shadow-gold/30 hover:shadow-gold/50 transition-all hover:-translate-y-0.5"
-                >
-                  {t.nav.cta}
-                </a>
-              </div>
-
-              {/* Mobile dark mode (hamburger is outside nav — see below) */}
-              <div className="flex lg:hidden items-center pr-12">
-                <button
-                  onClick={toggleDark}
-                  className={`p-2.5 min-w-[44px] min-h-[44px] flex items-center justify-center transition-colors ${
-                    !isHomePage ? 'text-white' : scrolled ? 'text-gray-700 dark:text-white' : 'text-[#1E3A5F]'
-                  }`}
-                  aria-label="Toggle dark mode"
-                >
-                  {dark ? <Sun size={20} /> : <Moon size={20} />}
-                </button>
-              </div>
+            {/* Mobile dark mode */}
+            <div className="flex lg:hidden items-center pr-12">
+              <button onClick={toggleDark} aria-label="Basculer thème sombre"
+                className={`p-2.5 min-w-[44px] min-h-[44px] flex items-center justify-center transition-colors ${!isHome ? 'text-white' : scrolled ? 'text-gray-700 dark:text-white' : 'text-[#1E3A5F]'}`}>
+                {dark ? <Sun size={20} /> : <Moon size={20} />}
+              </button>
             </div>
           </div>
-        </motion.div>
+        </div>
       </nav>
 
-      {/* Hamburger — fixed outside nav to bypass transform stacking context */}
-      <button
-        onClick={() => setOpen(!open)}
-        type="button"
-        aria-label="Menu"
-        className="fixed top-3 right-4 z-[100] lg:hidden w-11 h-11 flex flex-col justify-center items-center gap-[5px]"
-      >
+      {/* Hamburger */}
+      <button onClick={() => setOpen(!open)} type="button" aria-label={open ? 'Fermer le menu' : 'Ouvrir le menu'} aria-expanded={open}
+        className="fixed top-3 right-4 z-[100] lg:hidden w-11 h-11 flex flex-col justify-center items-center gap-[5px]">
         <span className={`block w-6 h-0.5 transition-all duration-300 ${barColor} ${open ? 'rotate-45 translate-y-[7px]' : ''}`} />
         <span className={`block w-6 h-0.5 transition-all duration-300 ${barColor} ${open ? 'opacity-0' : ''}`} />
         <span className={`block w-6 h-0.5 transition-all duration-300 ${barColor} ${open ? '-rotate-45 -translate-y-[7px]' : ''}`} />
       </button>
 
-      {/* Mobile menu — fixed full screen, below hamburger */}
-      <AnimatePresence>
-        {open && (
-          <motion.div
-            initial={{ opacity: 0, y: -8 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -8 }}
-            transition={{ duration: 0.2 }}
-            className="fixed inset-0 z-[90] bg-[#1E3A5F] overflow-y-auto lg:hidden"
-          >
-            <div className="pt-20 px-6 pb-6 flex flex-col gap-1">
-              {links.map(link => (
-                <a
-                  key={link.href}
-                  href={link.href}
-                  onClick={() => setOpen(false)}
-                  className="py-4 px-4 text-lg font-medium text-white hover:text-[#F59E0B] rounded-xl hover:bg-white/10 transition-colors min-h-[56px] flex items-center"
-                >
-                  {link.label}
-                </a>
-              ))}
-              <div className="flex items-center gap-3 pt-4 mt-3 border-t border-white/10">
-                <button
-                  onClick={() => setLang(lang === 'fr' ? 'en' : 'fr')}
-                  className="px-4 py-2.5 text-sm font-semibold rounded-xl border border-white/20 text-white min-h-[44px]"
-                >
-                  {lang === 'fr' ? 'EN' : 'FR'}
-                </button>
-                <a
-                  href={p('#contact')}
-                  onClick={() => {
-                    setOpen(false)
-                    if (isHomePage) {
-                      setTimeout(() => {
-                        document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })
-                      }, 100)
-                    }
-                  }}
-                  className="flex-1 py-3 text-center bg-gold text-white text-sm font-semibold rounded-xl min-h-[44px] flex items-center justify-center"
-                >
-                  {t.nav.cta}
-                </a>
-              </div>
+      {/* Mobile menu */}
+      {open && (
+        <div className="fixed inset-0 z-[90] bg-[#1E3A5F] overflow-y-auto lg:hidden">
+          <div className="pt-20 px-6 pb-6 flex flex-col gap-1">
+            <div className="py-2 px-4 text-xs font-semibold text-white/40 uppercase tracking-wider">Services</div>
+            {SERVICES_LINKS.map(l => (
+              <Link key={l.href} href={l.href} onClick={() => setOpen(false)}
+                className="py-3 px-4 text-base font-medium text-white/80 hover:text-amber-400 rounded-xl hover:bg-white/10 transition-colors min-h-[48px] flex items-center">
+                {l.label}
+              </Link>
+            ))}
+            <div className="border-t border-white/10 my-2" />
+            {[
+              { href: '/tarifs', label: 'Tarifs' },
+              { href: '/realisations', label: 'Réalisations' },
+              { href: '/blog', label: 'Blog' },
+              { href: '/a-propos', label: 'À propos' },
+              { href: '/faq', label: 'FAQ' },
+            ].map(l => (
+              <Link key={l.href} href={l.href} onClick={() => setOpen(false)}
+                className="py-4 px-4 text-lg font-medium text-white hover:text-amber-400 rounded-xl hover:bg-white/10 transition-colors min-h-[56px] flex items-center">
+                {l.label}
+              </Link>
+            ))}
+            <div className="pt-4 mt-3 border-t border-white/10">
+              <Link href="/contact" onClick={() => setOpen(false)}
+                className="flex items-center justify-center py-3 bg-amber-500 text-white text-sm font-semibold rounded-xl min-h-[48px] hover:bg-amber-400 transition-colors">
+                Devis gratuit →
+              </Link>
             </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+          </div>
+        </div>
+      )}
     </>
   )
 }

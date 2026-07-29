@@ -154,7 +154,7 @@ export default function DocumentsPage() {
 
         <p className="text-xs text-gray-400 dark:text-white/30 text-center mt-10">
           Les documents commerciaux sont des modèles. Votre exemplaire personnalisé vous sera remis lors de votre projet.{' '}
-          <Link href="/#contact" className="text-electric hover:underline">Nous contacter →</Link>
+          <Link href="/contact" className="text-electric hover:underline">Nous contacter →</Link>
         </p>
       </div>
     </main>

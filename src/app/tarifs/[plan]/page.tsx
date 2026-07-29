@@ -351,7 +351,7 @@ export default function TarifPage({ params }: { params: { plan: string } }) {
           <h2 className="text-2xl font-bold text-white mb-3">Commencer avec le plan {plan.name}</h2>
           <p className="text-white/70 mb-6">Sans engagement. Résiliable à tout moment.</p>
           <Link
-            href="/#contact"
+            href="/contact"
             className="inline-flex items-center gap-2 px-8 py-3.5 bg-gold hover:bg-amber-500 text-white font-semibold rounded-xl transition-all hover:-translate-y-0.5 shadow-lg"
           >
             Démarrer maintenant
