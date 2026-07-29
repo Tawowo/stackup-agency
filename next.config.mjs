@@ -13,6 +13,16 @@ const nextConfig = {
       permanent: true,
     },
     {
+      source: '/contact',
+      destination: '/#contact',
+      permanent: true,
+    },
+    {
+      source: '/en',
+      destination: '/',
+      permanent: true,
+    },
+    {
       source: '/blog/pourquoi-votre-restaurant-a-besoin-dun-site-web-en-2026',
       destination: '/blog/pourquoi-votre-restaurant-perd-des-clients-sans-site-web',
       permanent: true,

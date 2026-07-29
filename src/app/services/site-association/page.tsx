@@ -5,6 +5,13 @@ import { ArrowLeft, Check } from 'lucide-react'
 export const metadata: Metadata = {
   title: 'Site Web pour Associations — Stackup Agency',
   description: 'Site professionnel clé en main pour associations, clubs et structures à but non lucratif — livré en 7 jours ouvrés à partir de 149€.',
+  alternates: { canonical: 'https://stackup-agency.fr/services/site-association' },
+  openGraph: {
+    url: 'https://stackup-agency.fr/services/site-association',
+    title: 'Site Web pour Associations — Stackup Agency',
+    description: 'Site professionnel clé en main pour associations, clubs et structures à but non lucratif — livré en 7 jours ouvrés à partir de 149€.',
+    type: 'website',
+  },
 }
 
 const features = [

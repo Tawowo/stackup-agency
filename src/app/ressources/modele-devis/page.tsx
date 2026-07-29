@@ -5,6 +5,13 @@ import { ArrowLeft, Download } from 'lucide-react'
 export const metadata: Metadata = {
   title: 'Modèle de devis — Stackup Agency',
   description: 'Structure type des devis émis par Stackup Agency pour vos projets web.',
+  alternates: { canonical: 'https://stackup-agency.fr/ressources/modele-devis' },
+  openGraph: {
+    url: 'https://stackup-agency.fr/ressources/modele-devis',
+    title: 'Modèle de devis — Stackup Agency',
+    description: 'Structure type des devis émis par Stackup Agency pour vos projets web.',
+    type: 'website',
+  },
 }
 
 export default function ModeleDevis() {

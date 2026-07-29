@@ -5,6 +5,13 @@ import { ArrowLeft, Download } from 'lucide-react'
 export const metadata: Metadata = {
   title: 'Modèle de facture — Stackup Agency',
   description: 'Structure type des factures émises par Stackup Agency.',
+  alternates: { canonical: 'https://stackup-agency.fr/ressources/modele-facture' },
+  openGraph: {
+    url: 'https://stackup-agency.fr/ressources/modele-facture',
+    title: 'Modèle de facture — Stackup Agency',
+    description: 'Structure type des factures émises par Stackup Agency.',
+    type: 'website',
+  },
 }
 
 export default function ModeleFacture() {
