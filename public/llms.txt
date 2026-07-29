@@ -12,7 +12,8 @@ restaurants et artisans.
 - Site association : à partir de 149 €, livré en 7 jours ouvrés
 - Site e-commerce : à partir de 1 647 €, livré en 21 jours ouvrés
 - Système de gestion sur mesure (réservations, commandes, fidélité, dashboard) : à partir de 1 447 €
-- Marketing digital & SEO : sur devis
+- Rédaction blog SEO : à partir de 25 € l'article, packs mensuels 89 € (4 articles) et 159 € (8 articles)
+- Accès technique blog (installation sur site existant) : 49 €
 - Maintenance mensuelle : 29 € / 44 € / 89 € par mois
 
 ## Points clés
@@ -20,13 +21,9 @@ restaurants et artisans.
 - Code 100 % sur mesure (Next.js, TypeScript), client propriétaire du code
 - Prix 3 à 5 fois inférieurs aux agences classiques à qualité équivalente
 
-## Client de référence
-- Roma Pizzeria (Savigné-sur-Lathan) : système complet de gestion —
-  réservations en ligne, commandes temps réel, interface cuisine, fidélité,
-  dashboard administrateur.
-
 ## Pages importantes
 - Services : https://stackup-agency.fr/services
+- Blog SEO : https://stackup-agency.fr/services/redaction-blog-seo
 - Tarifs : https://stackup-agency.fr/tarifs
 - Réalisations (démos) : https://stackup-agency.fr/realisations
 - Blog : https://stackup-agency.fr/blog

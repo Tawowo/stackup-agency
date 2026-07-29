@@ -80,6 +80,7 @@ export default function Footer() {
                 { href: '/services/site-ecommerce', label: 'Boutique en ligne' },
                 { href: '/services/systeme-gestion', label: 'Système de gestion' },
                 { href: '/services/site-association', label: 'Site association' },
+                { href: '/services/redaction-blog-seo', label: 'Blog SEO' },
                 { href: '/services', label: 'Tous les services' },
                 { href: '/tarifs', label: 'Tarifs' },
               ].map(l => (

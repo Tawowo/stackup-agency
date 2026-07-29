@@ -240,6 +240,25 @@ export default function MetierPage({ params }: { params: { metier: string } }) {
           </Link>
         </section>
 
+        {/* Encart blog SEO */}
+        <section className="rounded-2xl border border-blue-500/20 bg-blue-950/20 p-6">
+          <div className="flex items-start justify-between gap-4 mb-3">
+            <div>
+              <h3 className="font-bold text-white">Rendez votre site encore plus visible avec un blog SEO</h3>
+              <p className="text-blue-400 text-xs font-medium mt-0.5">À partir de 25€ l'article</p>
+            </div>
+            <span className="text-amber-500 font-bold text-xl flex-shrink-0">25€</span>
+          </div>
+          <p className="text-white/70 text-sm mb-4">
+            Un site web seul ne suffit pas toujours à dominer Google. Des articles de blog optimisés SEO
+            publiés régulièrement renforcent votre autorité, attirent du trafic qualifié et convertissent
+            vos lecteurs en clients — sans publicité payante.
+          </p>
+          <Link href="/services/redaction-blog-seo" className="inline-flex items-center gap-2 text-blue-400 text-sm font-medium hover:text-blue-300 transition-colors">
+            Découvrir nos packs rédaction blog <ArrowRight size={14} />
+          </Link>
+        </section>
+
         {/* Processus en 4 étapes */}
         <section>
           <h2 className="text-2xl font-bold text-foreground dark:text-white mb-6">

@@ -62,6 +62,15 @@ const SERVICES = [
     inclus: ['Design adapté association', 'Formulaire d\'adhésion', 'Calendrier événements', 'Espace membres', 'Hébergement 12 mois', 'SSL inclus'],
     ideal: 'Associations loi 1901, clubs sportifs, culturels',
   },
+  {
+    slug: 'redaction-blog-seo',
+    titre: 'Rédaction blog SEO',
+    prix: 25,
+    delai: '5 jours ouvrés',
+    desc: 'Articles de blog optimisés SEO pour gagner en visibilité sur Google. Packs mensuels disponibles.',
+    inclus: ['Recherche de mots-clés', 'Structure Hn optimisée', 'Méta-titre et description', 'Liens internes', 'Article 800–1 500 mots', 'Livraison en 5 jours'],
+    ideal: 'TPE, artisans, commerçants avec un site existant',
+  },
 ]
 
 const serviceSchema = {
@@ -75,7 +84,7 @@ const serviceSchema = {
       '@type': 'Service',
       name: s.titre,
       url: `${SITE.url}/services/${s.slug}`,
-      offers: { '@type': 'Offer', priceCurrency: 'EUR', price: s.prix },
+      offers: { '@type': 'Offer', priceCurrency: 'EUR', price: s.prix, priceSpecification: { '@type': 'UnitPriceSpecification', price: s.prix, priceCurrency: 'EUR' } },
     },
   })),
 }

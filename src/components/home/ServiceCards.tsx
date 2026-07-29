@@ -10,6 +10,7 @@ const SERVICES = [
   { titre: 'Système de gestion', prix: SITE.pricing.gestion, delai: '4 semaines', desc: 'Logiciel sur mesure : caisse, RDV, CRM, commandes.', href: '/services/systeme-gestion' },
   { titre: 'Site association', prix: SITE.pricing.association, delai: SITE.delais.association, desc: 'Site association loi 1901 avec adhésion et événements.', href: '/services/site-association' },
   { titre: 'Maintenance', prix: SITE.pricing.maintenanceStarter, delai: '/mois', desc: 'Hébergement, sauvegardes, mises à jour et support continu.', href: '/tarifs' },
+  { titre: 'Blog SEO', prix: 25, delai: '/article', desc: 'Articles optimisés SEO pour booster votre référencement naturel.', href: '/services/redaction-blog-seo' },
 ]
 
 function SpotlightCard({ s }: { s: typeof SERVICES[0] }) {
@@ -27,10 +28,10 @@ function SpotlightCard({ s }: { s: typeof SERVICES[0] }) {
       <div className="relative z-10">
         <div className="flex items-start justify-between mb-3">
           <h3 className="font-semibold text-foreground dark:text-white group-hover:text-blue-400 transition-colors">{s.titre}</h3>
-          <span className="text-amber-500 font-bold text-sm ml-2 flex-shrink-0">{s.prix}€{s.delai === '/mois' ? '/mois' : ''}</span>
+          <span className="text-amber-500 font-bold text-sm ml-2 flex-shrink-0">{s.prix}€{(s.delai === '/mois' || s.delai === '/article') ? s.delai : ''}</span>
         </div>
         <p className="text-foreground/60 dark:text-white/60 text-sm mb-3">{s.desc}</p>
-        <span className="text-xs text-blue-400">{s.delai !== '/mois' ? `Livraison : ${s.delai}` : 'Mensuel'}</span>
+        <span className="text-xs text-blue-400">{s.delai !== '/mois' && s.delai !== '/article' ? `Livraison : ${s.delai}` : s.delai === '/article' ? 'À l\'unité ou en pack' : 'Mensuel'}</span>
       </div>
     </Link>
   )

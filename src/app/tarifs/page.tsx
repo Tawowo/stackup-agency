@@ -176,6 +176,42 @@ export default function TarifsPage() {
           </div>
         </section>
 
+        {/* Rédaction blog SEO */}
+        <section>
+          <h2 className="text-2xl font-bold text-foreground dark:text-white mb-2">Rédaction blog SEO</h2>
+          <p className="text-foreground/60 dark:text-white/60 mb-6">Des articles optimisés pour Google, rédigés par des professionnels. Boostez votre référencement naturel sans écrire une ligne.</p>
+          <div className="grid sm:grid-cols-3 gap-4 mb-4">
+            {[
+              { titre: 'Article à l\'unité', prix: '25', unite: '/article', inclus: ['Article 800–1 200 mots', 'Recherche de mots-clés', 'Structure Hn optimisée', 'Méta-titre & description', 'Livraison 5 jours ouvrés'] },
+              { titre: 'Pack Visibilité', prix: '89', unite: '/mois', inclus: ['4 articles/mois', 'Calendrier éditorial', 'Recherche de mots-clés', 'Optimisation SEO on-page', 'Rapport mensuel positions'], highlight: true },
+              { titre: 'Pack Autorité', prix: '159', unite: '/mois', inclus: ['8 articles/mois', 'Stratégie contenu 3 mois', 'Mots-clés longue traîne', 'Cocon sémantique', 'Rapport mensuel détaillé'] },
+            ].map(p => (
+              <div key={p.titre} className={`rounded-2xl border p-5 ${('highlight' in p && p.highlight) ? 'border-amber-500/40 bg-amber-500/5' : 'border-navy/20 dark:border-white/10'}`}>
+                {('highlight' in p && p.highlight) && <div className="text-xs font-semibold text-amber-500 mb-2 uppercase tracking-wide">Le plus populaire</div>}
+                <div className="flex items-center justify-between mb-3">
+                  <h3 className="font-bold text-foreground dark:text-white">{p.titre}</h3>
+                  <span className="text-xl font-bold text-amber-500">{p.prix}€<span className="text-sm font-normal text-foreground/50 dark:text-white/50">{p.unite}</span></span>
+                </div>
+                <ul className="space-y-1.5">
+                  {p.inclus.map(item => (
+                    <li key={item} className="flex items-center gap-2 text-sm text-foreground/60 dark:text-white/60">
+                      <CheckCircle size={12} className="text-green-400 flex-shrink-0" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+          <div className="rounded-xl border border-blue-500/20 bg-blue-500/5 p-4 flex items-center justify-between gap-4">
+            <div>
+              <span className="font-semibold text-foreground dark:text-white text-sm">Accès technique blog</span>
+              <span className="text-foreground/60 dark:text-white/60 text-sm ml-2">— Installation du blog sur votre site existant</span>
+            </div>
+            <span className="font-bold text-amber-500 flex-shrink-0">49€ <span className="text-white/50 font-normal text-xs">une fois</span></span>
+          </div>
+        </section>
+
         {/* FAQ */}
         <section>
           <h2 className="text-2xl font-bold text-foreground dark:text-white mb-6">Questions sur les tarifs</h2>
