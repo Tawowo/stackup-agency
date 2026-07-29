@@ -15,7 +15,7 @@ export async function GET() {
     language: 'fr',
     copyright: `© ${new Date().getFullYear()} ${SITE.name}`,
     author: {
-      name: SITE.founder.name,
+      name: SITE.name,
       email: SITE.email,
       link: SITE.url,
     },

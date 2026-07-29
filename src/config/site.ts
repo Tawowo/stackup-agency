@@ -3,11 +3,7 @@ export const SITE = {
   legalName: 'Stackup Agency',
   url: 'https://stackup-agency.fr',
   email: 'contact@stackup-agency.fr',
-  founder: {
-    name: 'Mathéo Reboul',
-    role: 'Fondateur & développeur',
-    linkedin: 'https://linkedin.com/in/matheo-reboul',
-  },
+  signature: "L'équipe Stackup Agency",
   address: {
     locality: 'Tours',
     department: 'Indre-et-Loire',
@@ -18,9 +14,9 @@ export const SITE = {
   serviceArea: 'Toute la France — interventions à distance et en région Centre-Val de Loire',
   founded: '2026',
   social: {
-    linkedin: 'https://linkedin.com/in/matheo-reboul',
-    instagram: 'https://instagram.com/stackup.agency',
-    tiktok: 'https://tiktok.com/@stackupagency',
+    linkedin: 'https://www.linkedin.com/in/stackup-agency-5756943aa/',
+    instagram: 'https://www.instagram.com/stackup.agency/',
+    facebook: 'https://www.facebook.com/profile.php?id=61588724591496',
   },
   pricing: {
     vitrine: 449,

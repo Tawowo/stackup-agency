@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     'site e-commerce',
     'application web sur mesure',
   ],
-  authors: [{ name: SITE.founder.name, url: SITE.url }],
+  authors: [{ name: SITE.name, url: SITE.url }],
   creator: SITE.name,
   publisher: SITE.name,
   robots: {
@@ -110,12 +110,6 @@ const schemaOrg = [
     url: SITE.url,
     email: SITE.email,
     foundingDate: SITE.founded,
-    founder: {
-      '@type': 'Person',
-      name: SITE.founder.name,
-      jobTitle: SITE.founder.role,
-      url: SITE.founder.linkedin,
-    },
     logo: {
       '@type': 'ImageObject',
       url: `${SITE.url}/icons/icon-512.png`,
@@ -143,7 +137,7 @@ const schemaOrg = [
     sameAs: [
       SITE.social.linkedin,
       SITE.social.instagram,
-      SITE.social.tiktok,
+      SITE.social.facebook,
     ],
   },
 ]

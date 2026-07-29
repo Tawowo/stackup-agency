@@ -1,6 +1,6 @@
 # Stackup Agency
 
-Stackup Agency est une agence web française fondée en 2026 par Mathéo Reboul,
+Stackup Agency est une agence web française fondée en 2026,
 basée à Tours (Indre-et-Loire, Centre-Val de Loire) et intervenant dans toute
 la France. Spécialités : création de sites vitrines, sites multi-pages,
 e-commerce et applications de gestion sur mesure pour TPE, PME, commerces,

@@ -1,17 +1,18 @@
 /* eslint-disable react/no-unescaped-entities */
 import Link from 'next/link'
-import { ChevronRight, Home, ExternalLink, CheckCircle } from 'lucide-react'
+import { CheckCircle } from 'lucide-react'
 import { SITE } from '@/config/site'
+import Breadcrumb from '@/components/ui/Breadcrumb'
 
 export const metadata = {
-  title: 'À propos — Mathéo Reboul, fondateur de Stackup Agency',
-  description: `Stackup Agency est une agence web fondée par Mathéo Reboul, développeur basé à Tours (37). Création de sites internet et applications sur mesure pour les TPE et artisans. À partir de ${SITE.pricing.vitrine}€.`,
+  title: 'À propos — Stackup Agency, agence web à Tours',
+  description: `Stackup Agency est une agence web basée à Tours (37), spécialisée dans la création de sites internet et d'applications sur mesure pour les TPE et artisans. À partir de ${SITE.pricing.vitrine}€.`,
   alternates: { canonical: `${SITE.url}/a-propos` },
   openGraph: {
     url: `${SITE.url}/a-propos`,
     title: 'À propos — Stackup Agency',
-    description: `Stackup Agency, agence web fondée par Mathéo Reboul à Tours. Sites internet et applications sur mesure pour TPE et artisans.`,
-    type: 'profile',
+    description: `Agence web à Tours spécialisée dans la création de sites internet pour TPE et artisans.`,
+    type: 'website',
   },
 }
 
@@ -23,7 +24,7 @@ export default function AProposPage() {
     '@type': 'AboutPage',
     name: 'À propos de Stackup Agency',
     url,
-    description: 'Stackup Agency est une agence web fondée par Mathéo Reboul, développeur basé à Tours.',
+    description: 'Stackup Agency est une agence web basée à Tours, spécialisée dans la création de sites internet pour TPE et artisans.',
     mainEntity: {
       '@type': 'Organization',
       name: SITE.name,
@@ -35,31 +36,8 @@ export default function AProposPage() {
         addressRegion: SITE.address.region,
         addressCountry: SITE.address.country,
       },
-      founder: {
-        '@type': 'Person',
-        name: SITE.founder.name,
-        jobTitle: SITE.founder.role,
-        url: SITE.founder.linkedin,
-        sameAs: [SITE.founder.linkedin],
-      },
+      sameAs: [SITE.social.linkedin, SITE.social.instagram, SITE.social.facebook],
     },
-  }
-
-  const personSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'Person',
-    name: SITE.founder.name,
-    jobTitle: SITE.founder.role,
-    url: SITE.founder.linkedin,
-    worksFor: { '@type': 'Organization', name: SITE.name, url: SITE.url },
-    address: {
-      '@type': 'PostalAddress',
-      addressLocality: SITE.address.locality,
-      addressRegion: SITE.address.region,
-      addressCountry: SITE.address.country,
-    },
-    sameAs: [SITE.founder.linkedin, SITE.social.instagram],
-    knowsAbout: ['Développement web', 'Next.js', 'SEO', 'TypeScript', 'Applications métier', 'E-commerce'],
   }
 
   const breadcrumbSchema = {
@@ -74,72 +52,22 @@ export default function AProposPage() {
   return (
     <div className="min-h-screen bg-background dark:bg-[#0A0F1C]">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutPageSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
       <div className="bg-gradient-to-b from-[#060D1A] to-[#0A0F1C] pt-24 pb-16">
         <div className="max-w-3xl mx-auto px-4 sm:px-6">
-          <nav className="flex items-center gap-1.5 text-white/40 text-xs mb-6" aria-label="Fil d'Ariane">
-            <Link href="/" className="hover:text-white transition-colors flex items-center gap-1"><Home size={11} /> Accueil</Link>
-            <ChevronRight size={11} />
-            <span className="text-white/60">À propos</span>
-          </nav>
+          <Breadcrumb items={[{ name: 'À propos' }]} />
           <h1 className="text-3xl lg:text-5xl font-bold text-white mb-6">
             À propos de Stackup Agency
           </h1>
           <p className="text-white/70 text-lg">
-            Une agence web fondée à Tours par un développeur qui croit qu'un bon site internet
+            Une agence web fondée à Tours par des développeurs convaincus qu'un bon site internet
             ne devrait pas coûter une fortune ni prendre trois mois.
           </p>
         </div>
       </div>
 
       <div className="max-w-3xl mx-auto px-4 sm:px-6 py-16 space-y-16">
-
-        {/* Fondateur */}
-        <section>
-          <h2 className="text-2xl font-bold text-foreground dark:text-white mb-6">Le fondateur</h2>
-          <div className="p-6 rounded-2xl border border-navy/20 dark:border-white/10">
-            <div className="flex items-start gap-4 mb-4">
-              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-600 to-blue-900 flex items-center justify-center text-2xl font-bold text-white flex-shrink-0">
-                M
-              </div>
-              <div>
-                <h3 className="text-xl font-bold text-foreground dark:text-white">{SITE.founder.name}</h3>
-                <p className="text-blue-400 font-medium">{SITE.founder.role}</p>
-                <p className="text-foreground/50 dark:text-white/50 text-sm mt-1">
-                  Basé à {SITE.address.locality}, {SITE.address.department}
-                </p>
-              </div>
-            </div>
-            <div className="prose dark:prose-invert max-w-none text-foreground/80 dark:text-white/80 space-y-3">
-              <p>
-                Développeur web fullstack spécialisé en Next.js, TypeScript et applications métier.
-                J'ai fondé Stackup Agency en {SITE.founded} avec une conviction simple : les TPE et artisans
-                méritent des sites web aussi professionnels que les grandes entreprises, à des tarifs accessibles.
-              </p>
-              <p>
-                Avant Stackup Agency, j'ai travaillé sur des projets web variés — de la landing page simple
-                au système de gestion complet. Cette expérience m'a convaincu que la clé est dans la rapidité
-                d'exécution et la qualité du code, pas dans des processus d'agence interminables.
-              </p>
-              <p>
-                Chaque projet est géré directement par moi. Pas de chef de projet intermédiaire, pas de délégation
-                à des sous-traitants anonymes. Vous parlez au développeur qui code votre site.
-              </p>
-            </div>
-            <div className="mt-4 flex gap-3">
-              <a
-                href={SITE.founder.linkedin}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 px-4 py-2 bg-blue-600/20 hover:bg-blue-600/30 text-blue-400 rounded-xl text-sm transition-colors"
-              >
-                <ExternalLink size={14} /> LinkedIn
-              </a>
-            </div>
-          </div>
-        </section>
 
         {/* L'agence */}
         <section>
@@ -152,7 +80,14 @@ export default function AProposPage() {
             </p>
             <p>
               Le modèle est simple : des offres transparentes avec des prix affichés, des délais tenus,
-              et un interlocuteur unique du devis à la mise en ligne.
+              et un interlocuteur unique du devis à la mise en ligne. Pas de chef de projet intermédiaire,
+              pas de délégation à des sous-traitants anonymes. Vous parlez directement au développeur
+              qui code votre site.
+            </p>
+            <p>
+              Nous travaillons en Next.js, TypeScript et applications métier sur mesure. Cette approche
+              nous permet de livrer des sites rapides, bien référencés et faciles à faire évoluer —
+              sans compromis sur la qualité du code.
             </p>
           </div>
 
@@ -170,7 +105,24 @@ export default function AProposPage() {
           </div>
         </section>
 
-        {/* Valeurs */}
+        {/* Notre approche */}
+        <section>
+          <h2 className="text-2xl font-bold text-foreground dark:text-white mb-6">Notre approche</h2>
+          <div className="space-y-4 text-foreground/80 dark:text-white/80">
+            <p>
+              Chaque projet démarre par une écoute attentive : quels sont vos objectifs, vos clients,
+              vos contraintes ? Nous proposons ensuite une solution adaptée — pas un template générique
+              sorti d'un catalogue.
+            </p>
+            <p>
+              Nos sites sont construits avec les mêmes technologies que les grandes applications web :
+              Next.js pour la performance et le SEO, TypeScript pour la fiabilité, Tailwind pour
+              l'interface. Résultat : des sites rapides, accessibles, et faciles à maintenir.
+            </p>
+          </div>
+        </section>
+
+        {/* Ce en quoi nous croyons */}
         <section>
           <h2 className="text-2xl font-bold text-foreground dark:text-white mb-6">Ce en quoi nous croyons</h2>
           <div className="space-y-3">
@@ -190,18 +142,16 @@ export default function AProposPage() {
           </div>
         </section>
 
-        {/* Client réel */}
+        {/* Jugez sur pièce */}
         <section className="rounded-2xl p-6 bg-gradient-to-br from-navy/20 to-blue-950/20 border border-white/10">
-          <h2 className="text-xl font-bold text-foreground dark:text-white mb-3">Notre client de référence</h2>
+          <h2 className="text-xl font-bold text-foreground dark:text-white mb-3">Jugez sur pièce</h2>
           <p className="text-foreground/70 dark:text-white/70 mb-4">
-            <strong className="text-white">Roma Pizzeria</strong> à Savigné-sur-Lathan (37) est notre premier client réel.
-            Site livré en 9 jours avec système de commande en ligne intégré. C'est le type de projet sur lequel
-            nous nous spécialisons : rapide, concret, rentable pour le client.
+            Toutes nos démonstrations sont des projets complets, construits par nos soins et consultables en ligne.
+            Ce que vous voyez est exactement ce que nous livrons.
           </p>
-          <p className="text-foreground/50 dark:text-white/50 text-sm">
-            Les autres réalisations présentées sur ce site sont des démonstrations de nos capacités,
-            réalisées par Stackup Agency pour illustrer nos offres. Elles ne représentent pas de vrais clients.
-          </p>
+          <Link href="/realisations" className="inline-flex items-center gap-2 text-blue-400 text-sm font-medium hover:text-blue-300 transition-colors">
+            Explorer nos démonstrations →
+          </Link>
         </section>
 
         {/* Contact */}

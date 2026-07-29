@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { ChevronRight, ExternalLink } from 'lucide-react'
+import { ChevronRight } from 'lucide-react'
 import { realisations } from '@/lib/realisations'
 import { SITE } from '@/config/site'
 import Breadcrumb from '@/components/ui/Breadcrumb'
@@ -78,22 +78,13 @@ export default function RealisationsPage() {
           ))}
         </div>
 
-        {/* Roma Pizzeria — seul client réel */}
-        <section className="rounded-2xl border border-green-500/30 bg-green-500/5 p-6 lg:p-8 mb-16">
-          <div className="flex items-center gap-2 mb-4">
-            <span className="px-2 py-1 bg-green-500/20 text-green-400 text-xs font-semibold rounded-full">Client réel</span>
-          </div>
-          <h2 className="text-xl font-bold text-foreground dark:text-white mb-2">Roma Pizzeria — Savigné-sur-Lathan</h2>
-          <p className="text-foreground/70 dark:text-white/70 mb-4">
-            Site vitrine avec prise de commande en ligne pour une pizzeria artisanale en Indre-et-Loire.
-            Livré en 9 jours, le site a permis de développer la vente en ligne.
+        {/* Jugez sur pièce */}
+        <section className="rounded-2xl border border-blue-500/30 bg-blue-500/5 p-6 lg:p-8 mb-16">
+          <h2 className="text-xl font-bold text-foreground dark:text-white mb-2">Jugez sur pièce</h2>
+          <p className="text-foreground/70 dark:text-white/70">
+            Toutes nos démonstrations sont des projets complets, construits par nos soins et consultables en ligne.
+            Ce que vous voyez est exactement ce que nous livrons.
           </p>
-          <div className="flex items-center gap-2">
-            <a href="https://romapizzeria.fr" target="_blank" rel="noopener noreferrer"
-              className="flex items-center gap-1.5 px-4 py-2 border border-white/20 text-white hover:bg-white/10 text-sm rounded-xl transition-colors">
-              Voir le site <ExternalLink size={13} />
-            </a>
-          </div>
         </section>
 
         <div className="rounded-2xl p-6 bg-gradient-to-br from-navy to-electric text-center">

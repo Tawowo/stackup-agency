@@ -128,7 +128,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/faq`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
 
     // Motion Lab
-    { url: `${base}/motion-lab`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
 
     // Cocons sémantiques — hubs
     { url: `${base}/agence-web`, lastModified: now, changeFrequency: 'weekly', priority: 0.9 },

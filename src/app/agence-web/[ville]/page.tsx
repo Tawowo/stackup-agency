@@ -2,7 +2,7 @@
 import { VILLES, getVille } from '@/data/villes'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
-import { ChevronRight, Home, MapPin, CheckCircle, Star, Building2, TrendingUp } from 'lucide-react'
+import { ChevronRight, Home, MapPin, CheckCircle, Building2, TrendingUp, ArrowRight } from 'lucide-react'
 import { SITE } from '@/config/site'
 
 export async function generateStaticParams() {
@@ -23,9 +23,6 @@ export async function generateMetadata({ params }: { params: { ville: string } }
   }
 }
 
-const TEMOIGNAGES = [
-  { nom: 'Roma Pizzeria', ville: 'Savigné-sur-Lathan', texte: 'Site livré en 9 jours, exactement ce dont nous avions besoin. La prise de commande en ligne a transformé notre activité.', note: 5 },
-]
 
 export default function AgenceWebVillePage({ params }: { params: { ville: string } }) {
   const v = getVille(params.ville)
@@ -235,18 +232,14 @@ export default function AgenceWebVillePage({ params }: { params: { ville: string
           </div>
         </section>
 
-        {/* Témoignage */}
-        {TEMOIGNAGES.map(t => (
-          <section key={t.nom} className="rounded-2xl p-6 bg-gradient-to-br from-navy/20 to-blue-950/20 border border-white/10">
-            <div className="flex gap-1 mb-3">
-              {Array.from({ length: t.note }).map((_, i) => (
-                <Star key={i} size={16} className="text-amber-500 fill-amber-500" />
-              ))}
-            </div>
-            <p className="text-foreground/80 dark:text-white/80 italic mb-3">"{t.texte}"</p>
-            <p className="text-sm font-semibold text-foreground dark:text-white">{t.nom} — <span className="font-normal text-white/50">{t.ville} (client réel)</span></p>
-          </section>
-        ))}
+        {/* Jugez sur pièce */}
+        <section className="rounded-2xl p-6 bg-gradient-to-br from-navy/20 to-blue-950/20 border border-white/10">
+          <h3 className="font-bold text-white mb-2">Jugez sur pièce</h3>
+          <p className="text-white/70 text-sm mb-4">Toutes nos démonstrations sont des projets complets, construits par nos soins et consultables en ligne. Ce que vous voyez est exactement ce que nous livrons.</p>
+          <Link href="/realisations" className="inline-flex items-center gap-2 text-blue-400 text-sm font-medium hover:text-blue-300 transition-colors">
+            Explorer nos démonstrations <ArrowRight size={14} />
+          </Link>
+        </section>
 
         {/* FAQ */}
         <section>

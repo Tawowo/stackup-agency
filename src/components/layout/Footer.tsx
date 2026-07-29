@@ -22,10 +22,10 @@ function InstagramIcon() {
   )
 }
 
-function TiktokIcon() {
+function FacebookIcon() {
   return (
     <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
-      <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.74a4.85 4.85 0 0 1-1.01-.05z"/>
+      <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
     </svg>
   )
 }
@@ -60,7 +60,7 @@ export default function Footer() {
               {[
                 { Icon: LinkedinIcon, href: SITE.social.linkedin, label: 'LinkedIn' },
                 { Icon: InstagramIcon, href: SITE.social.instagram, label: 'Instagram' },
-                { Icon: TiktokIcon, href: SITE.social.tiktok, label: 'TikTok' },
+                { Icon: FacebookIcon, href: SITE.social.facebook, label: 'Facebook' },
               ].map(({ Icon, href, label }) => (
                 <a key={label} href={href} aria-label={label} target="_blank" rel="noopener noreferrer"
                   className="w-9 h-9 rounded-xl bg-white/10 hover:bg-blue-600 flex items-center justify-center transition-colors">
@@ -139,7 +139,6 @@ export default function Footer() {
                 { href: '/contact', label: 'Contact' },
                 { href: '/parrainage', label: 'Parrainage' },
                 { href: '/plan-du-site', label: 'Plan du site' },
-                { href: '/motion-lab', label: '⚡ Motion Lab' },
               ].map(l => (
                 <li key={l.href}>
                   <Link href={l.href} className="text-white/50 hover:text-white text-sm transition-colors block py-0.5">{l.label}</Link>
@@ -160,10 +159,7 @@ export default function Footer() {
             © {new Date().getFullYear()} Stackup Agency — Tours (37), France
           </p>
           <p className="text-white/20 text-xs">
-            Fondé par{' '}
-            <a href={SITE.social.linkedin} target="_blank" rel="noopener noreferrer" className="text-white/40 hover:text-white/60 transition-colors">
-              {SITE.founder.name}
-            </a>
+            Agence web à Tours — devis gratuit sous 72h
           </p>
         </div>
       </div>

@@ -102,14 +102,6 @@ export const translations = {
       viewDemo: 'Voir la démo',
       viewProject: 'Voir le projet',
       yourProject: 'Votre projet ici ?',
-      client1: {
-        name: 'Roma Pizzeria Restaurant',
-        location: 'Savigné-sur-Lathan',
-        desc: 'Système complet de gestion : réservations en ligne, commandes en temps réel, interface cuisine, programme de fidélité et dashboard administrateur.',
-        badge: 'Client #1',
-        link: 'Voir le projet',
-        tags: ['Réservations', 'Commandes', 'Cuisine temps réel', 'Fidélité', 'Admin'],
-      },
       cta: 'Votre projet ici ?',
     },
     about: {
@@ -329,14 +321,6 @@ export const translations = {
       viewDemo: 'View demo',
       viewProject: 'View project',
       yourProject: 'Your project here?',
-      client1: {
-        name: 'Roma Pizzeria Restaurant',
-        location: 'Savigné-sur-Lathan',
-        desc: 'Complete management system: online reservations, real-time orders, kitchen interface, loyalty program and admin dashboard.',
-        badge: 'Client #1',
-        link: 'View project',
-        tags: ['Reservations', 'Orders', 'Real-time kitchen', 'Loyalty', 'Admin'],
-      },
       cta: 'Your project here?',
     },
     about: {

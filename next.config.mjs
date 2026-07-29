@@ -104,6 +104,9 @@ const nextConfig = {
     { source: '/blog/site-web-tabac-presse', destination: '/creation-site-internet/tabac-presse', permanent: true },
     { source: '/blog/site-web-traiteur-evenementiel', destination: '/creation-site-internet/traiteur-evenementiel', permanent: true },
     { source: '/blog/site-web-vetements-enfants', destination: '/creation-site-internet/vetements-enfants', permanent: true },
+    { source: '/ressources/modele-devis', destination: '/ressources/documents', permanent: true },
+    { source: '/ressources/modele-facture', destination: '/ressources/documents', permanent: true },
+    { source: '/motion-lab', destination: '/', permanent: true },
   ],
   headers: async () => [
     {
@@ -114,6 +117,10 @@ const nextConfig = {
         { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
         { key: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=()' },
       ],
+    },
+    {
+      source: '/documents/:path*',
+      headers: [{ key: 'X-Robots-Tag', value: 'noindex, nofollow' }],
     },
     {
       source: '/(.*)\\.(jpg|jpeg|png|gif|ico|svg|woff|woff2)',

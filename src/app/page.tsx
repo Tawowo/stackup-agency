@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { CheckCircle, Star, ArrowRight, Clock, Zap, Shield, Users } from 'lucide-react'
+import { CheckCircle, ArrowRight, Clock, Zap, Shield, Users } from 'lucide-react'
 import { SITE } from '@/config/site'
 import { realisations } from '@/lib/realisations'
 import PageLoader from '@/components/ui/PageLoader'
@@ -45,16 +45,9 @@ const organizationSchema = {
     postalCode: SITE.address.departmentCode,
     addressCountry: SITE.address.country,
   },
-  founder: {
-    '@type': 'Person',
-    '@id': `${SITE.url}/#matheo`,
-    name: SITE.founder.name,
-    jobTitle: SITE.founder.role,
-    sameAs: SITE.social.linkedin,
-  },
   priceRange: `À partir de ${SITE.pricing.vitrine}€`,
   areaServed: { '@type': 'Country', name: 'France' },
-  sameAs: [SITE.social.linkedin, SITE.social.instagram, SITE.social.tiktok],
+  sameAs: [SITE.social.linkedin, SITE.social.instagram, SITE.social.facebook],
 }
 
 const SERVICES_HOME = [
@@ -160,7 +153,7 @@ export default function Home() {
                 { Icon: Clock, titre: 'Livraison rapide', desc: `Site vitrine livré en ${SITE.delais.vitrine}. Pas de promesses floues.` },
                 { Icon: Zap, titre: 'Prix accessibles', desc: `À partir de ${SITE.pricing.vitrine}€ tout inclus. 3 à 5x moins qu'une agence classique.` },
                 { Icon: Shield, titre: 'Code propriétaire', desc: 'Le code vous appartient à 100%. Données hébergées en France.' },
-                { Icon: Users, titre: 'Interlocuteur unique', desc: `${SITE.founder.name} s'occupe de votre projet du début à la fin.` },
+                { Icon: Users, titre: 'Interlocuteur unique', desc: `Un seul interlocuteur s'occupe de votre projet du début à la fin.` },
               ].map(({ Icon, titre, desc }) => (
                 <div key={titre} className="p-5 rounded-2xl bg-white/5 border border-white/10">
                   <div className="w-10 h-10 rounded-xl bg-blue-500/20 flex items-center justify-center mb-4">
@@ -233,19 +226,18 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Témoignage Roma Pizzeria */}
+        {/* Jugez sur pièce */}
         <section className="py-16 bg-background dark:bg-[#0A0F1C]">
           <div className="max-w-3xl mx-auto px-4 sm:px-6">
             <div className="rounded-2xl p-8 bg-gradient-to-br from-navy/20 to-blue-950/20 border border-white/10 text-center">
-              <div className="flex justify-center gap-1 mb-4">
-                {[1,2,3,4,5].map(i => <Star key={i} size={18} className="text-amber-500 fill-amber-500" />)}
-              </div>
-              <p className="text-foreground/80 dark:text-white/80 italic text-lg mb-4">
-                "Site livré en 9 jours, exactement ce dont nous avions besoin. La prise de commande en ligne a transformé notre activité."
+              <h3 className="font-bold text-white text-xl mb-3">Jugez sur pièce</h3>
+              <p className="text-white/70 mb-5">
+                Nos démonstrations sont des projets complets, construits par nos soins et consultables en ligne.
+                Ce que vous voyez est exactement ce que nous livrons.
               </p>
-              <p className="font-semibold text-foreground dark:text-white">
-                Roma Pizzeria — <span className="font-normal text-white/50">Savigné-sur-Lathan (client réel)</span>
-              </p>
+              <Link href="/realisations" className="inline-flex items-center gap-2 px-6 py-3 bg-electric text-white font-semibold rounded-xl text-sm hover:bg-blue-500 transition-colors">
+                Explorer nos démonstrations →
+              </Link>
             </div>
           </div>
         </section>

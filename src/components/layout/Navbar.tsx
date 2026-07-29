@@ -107,10 +107,6 @@ export default function Navbar() {
               <Link href="/realisations" aria-current={pathname === '/realisations' ? 'page' : undefined} className={`text-sm font-medium transition-colors ${linkClass}`}>Réalisations</Link>
               <Link href="/blog" aria-current={pathname.startsWith('/blog') ? 'page' : undefined} className={`text-sm font-medium transition-colors ${linkClass}`}>Blog</Link>
               <Link href="/a-propos" aria-current={pathname === '/a-propos' ? 'page' : undefined} className={`text-sm font-medium transition-colors ${linkClass}`}>À propos</Link>
-              <Link href="/motion-lab" aria-current={pathname === '/motion-lab' ? 'page' : undefined} className={`text-sm font-medium transition-colors ${linkClass} flex items-center gap-1`}>
-                <span className="w-1.5 h-1.5 rounded-full bg-electric inline-block animate-pulse" />
-                Lab
-              </Link>
             </div>
 
             {/* Desktop right */}
@@ -160,7 +156,6 @@ export default function Navbar() {
               { href: '/realisations', label: 'Réalisations' },
               { href: '/blog', label: 'Blog' },
               { href: '/a-propos', label: 'À propos' },
-              { href: '/motion-lab', label: '⚡ Motion Lab' },
               { href: '/faq', label: 'FAQ' },
             ].map(l => (
               <Link key={l.href} href={l.href} onClick={() => setOpen(false)}

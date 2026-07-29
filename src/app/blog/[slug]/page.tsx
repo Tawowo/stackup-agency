@@ -46,9 +46,9 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
     dateModified: post.updated ?? post.date,
     image: `https://stackup-agency.fr/blog/${post.slug}/opengraph-image`,
     author: {
-      '@type': 'Person',
-      name: 'Mathéo Reboul',
-      url: 'https://linkedin.com/in/matheo-reboul',
+      '@type': 'Organization',
+      name: 'Stackup Agency',
+      url: 'https://stackup-agency.fr',
     },
     publisher: {
       '@type': 'Organization',
