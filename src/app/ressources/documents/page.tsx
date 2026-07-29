@@ -1,91 +1,118 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArrowLeft, Download, FileText, FileCheck, FilePen, FileSignature, Presentation, ClipboardList } from 'lucide-react'
+import { Download, ExternalLink } from 'lucide-react'
+import { SITE } from '@/config/site'
+import Breadcrumb from '@/components/ui/Breadcrumb'
 
 export const metadata: Metadata = {
-  title: 'Documents à Télécharger | Stackup Agency',
-  description: 'Téléchargez tous les documents légaux et commerciaux de Stackup Agency : CGV, contrat de prestation, devis, facture, attestation.',
-  alternates: { canonical: 'https://stackup-agency.fr/ressources/documents' },
+  title: 'Documents officiels — Cadre contractuel | Stackup Agency',
+  description: 'Téléchargez les documents officiels de Stackup Agency : CGV, contrat de prestation, mentions légales, politique de confidentialité et documents commerciaux.',
+  alternates: { canonical: `${SITE.url}/ressources/documents` },
   openGraph: {
-    url: 'https://stackup-agency.fr/ressources/documents',
-    title: 'Documents à Télécharger | Stackup Agency',
-    description: 'Téléchargez tous les documents légaux et commerciaux de Stackup Agency.',
+    url: `${SITE.url}/ressources/documents`,
+    title: 'Documents officiels | Stackup Agency',
+    description: 'Cadre contractuel complet : CGV, contrats, devis, factures. Chaque projet Stackup est encadré par un dispositif contractuel qui vous protège.',
     type: 'website',
   },
 }
 
-const docs = [
+const GROUPS = [
   {
-    category: 'Documents légaux',
-    items: [
+    label: 'Légal',
+    docs: [
       {
-        icon: FileText,
         title: 'Conditions Générales de Vente',
-        description: 'CGV complètes — tarifs, délais, paiement, support, propriété intellectuelle (17 articles).',
-        href: '/cgv',
+        slug: 'cgv',
         pdf: '/documents/cgv.pdf',
-        filename: 'cgv.pdf',
+        size: '174 Ko',
+        desc: 'Régit l\'ensemble de la relation commerciale : tarifs, délais d\'intervention (72/48/24 h), propriété du code et modalités de résiliation. Inclut l\'Annexe 1 RGPD.',
       },
       {
-        icon: FileText,
         title: 'Mentions légales',
-        description: 'Éditeur, hébergeur, propriété intellectuelle et droit applicable.',
-        href: '/mentions-legales',
+        slug: 'mentions-legales',
         pdf: '/documents/mentions-legales.pdf',
-        filename: 'mentions-legales.pdf',
+        size: '34 Ko',
+        desc: 'Éditeur du site, hébergeur, propriété intellectuelle et droit applicable. Document obligatoire pour tout site web professionnel.',
+      },
+      {
+        title: 'Politique de confidentialité',
+        slug: 'politique-confidentialite',
+        pdf: '/documents/politique-confidentialite.pdf',
+        size: '53 Ko',
+        desc: 'Données collectées, durées de conservation, droits d\'accès et de suppression, base légale du traitement. Conforme au RGPD.',
       },
     ],
   },
   {
-    category: 'Documents commerciaux',
-    items: [
+    label: 'Contractuel',
+    docs: [
       {
-        icon: FilePen,
         title: 'Contrat de prestation de services',
-        description: 'Contrat complet à imprimer, remplir et faire signer. Inclut tous les articles essentiels.',
-        href: null,
+        slug: null,
         pdf: '/documents/contrat-prestation.pdf',
-        filename: 'contrat-prestation.pdf',
+        size: '129 Ko',
+        desc: 'Contrat complet encadrant la mission : périmètre, livrables, délais, conditions de paiement, transfert de propriété du code à réception du solde.',
       },
       {
-        icon: FileCheck,
-        title: 'Devis type',
-        description: 'Modèle de devis avec tableau de prestations, modalités de paiement et espace de signature.',
-        href: '/ressources/modele-devis',
-        pdf: '/documents/devis-type.pdf',
-        filename: 'devis-type.pdf',
+        title: 'Contrat de maintenance',
+        slug: null,
+        pdf: '/documents/contrat-maintenance.pdf',
+        size: '108 Ko',
+        desc: 'Détaille les engagements de support, les délais d\'intervention (72/48/24 h selon formule) et les conditions de résiliation mensuelle sans pénalité.',
       },
       {
-        icon: FileCheck,
-        title: 'Facture type',
-        description: 'Modèle de facture avec mentions légales obligatoires et zone de règlement.',
-        href: '/ressources/modele-facture',
-        pdf: '/documents/facture-type.pdf',
-        filename: 'facture-type.pdf',
+        title: 'Cession de droits',
+        slug: null,
+        pdf: '/documents/cession-droits.pdf',
+        size: '59 Ko',
+        desc: 'Transfert explicite des droits patrimoniaux sur le code et les créations graphiques. Garantit que le site vous appartient intégralement à la livraison.',
       },
       {
-        icon: Presentation,
-        title: 'Présentation Stackup Agency',
-        description: 'Document "Comment ça se passe" — 7 étapes, tarifs et engagements. Idéal pour vos premiers échanges.',
-        href: null,
-        pdf: '/documents/presentation-stackup.pdf',
-        filename: 'presentation-stackup.pdf',
+        title: 'Accord de confidentialité (NDA)',
+        slug: null,
+        pdf: '/documents/nda-confidentialite.pdf',
+        size: '54 Ko',
+        desc: 'Protège les informations sensibles échangées pendant le projet (données métier, stratégie, accès). Engagement réciproque des deux parties.',
       },
       {
-        icon: FileSignature,
         title: 'Avenant au contrat',
-        description: 'Document de modification de contrat en cours de projet — prix, délai, périmètre.',
-        href: null,
+        slug: null,
         pdf: '/documents/avenant-contrat.pdf',
-        filename: 'avenant-contrat.pdf',
+        size: '48 Ko',
+        desc: 'Formalise toute modification en cours de projet : ajout de périmètre, révision de délai ou ajustement de prix. Aucune modification sans avenant signé.',
+      },
+    ],
+  },
+  {
+    label: 'Commercial',
+    docs: [
+      {
+        title: 'Devis type',
+        slug: null,
+        pdf: '/documents/devis-type.pdf',
+        size: '63 Ko',
+        desc: 'Modèle de devis avec tableau de prestations détaillé, modalités de paiement et espace de signature. Valable 30 jours à compter de la date d\'émission.',
       },
       {
-        icon: ClipboardList,
-        title: 'Attestation de fin de projet',
-        description: 'Procès-verbal de réception — validation client et déclenchement du support post-livraison.',
-        href: null,
-        pdf: '/documents/attestation-fin-projet.pdf',
-        filename: 'attestation-fin-projet.pdf',
+        title: 'Bon de commande',
+        slug: null,
+        pdf: '/documents/bon-de-commande.pdf',
+        size: '57 Ko',
+        desc: 'Document de validation de commande précisant les références du projet, les montants et l\'acompte requis pour démarrer la mission.',
+      },
+      {
+        title: 'Facture type',
+        slug: null,
+        pdf: '/documents/facture-type.pdf',
+        size: '40 Ko',
+        desc: 'Modèle de facture avec toutes les mentions légales obligatoires, numérotation, TVA applicable et zone de règlement.',
+      },
+      {
+        title: 'Procès-verbal de livraison',
+        slug: null,
+        pdf: '/documents/pv-livraison.pdf',
+        size: '53 Ko',
+        desc: 'Validation officielle de la recette du projet. Signature du client déclenchant le transfert définitif de propriété et le démarrage du support post-livraison.',
       },
     ],
   },
@@ -93,70 +120,55 @@ const docs = [
 
 export default function DocumentsPage() {
   return (
-    <main className="min-h-screen bg-[#F8FAFC] dark:bg-[#0A0F1C] py-24 pt-32">
-      <div className="max-w-3xl mx-auto px-4 sm:px-6">
-        <Link href="/" className="inline-flex items-center gap-2 text-electric hover:underline text-sm mb-8">
-          <ArrowLeft size={16} /> Retour à l&apos;accueil
-        </Link>
-        <h1 className="text-4xl font-extrabold text-gray-900 dark:text-white mb-3">Documents</h1>
-        <p className="text-sm text-gray-500 dark:text-white/40 mb-12">
-          Tous les documents légaux et commerciaux de Stackup Agency, disponibles en téléchargement PDF.
-        </p>
-
-        <div className="space-y-12">
-          {docs.map((group) => (
-            <div key={group.category}>
-              <h2 className="text-xs font-bold uppercase tracking-widest text-electric mb-4">{group.category}</h2>
-              <div className="space-y-3">
-                {group.items.map((doc) => {
-                  const Icon = doc.icon
-                  return (
-                    <div
-                      key={doc.filename}
-                      className="flex items-start gap-4 bg-white dark:bg-white/5 rounded-2xl border border-gray-200 dark:border-white/10 p-5"
-                    >
-                      <div className="flex-shrink-0 w-10 h-10 rounded-xl bg-electric/10 flex items-center justify-center">
-                        <Icon size={18} className="text-electric" />
-                      </div>
-                      <div className="flex-1 min-w-0">
-                        <div className="flex items-start justify-between gap-3">
-                          <div>
-                            <p className="font-semibold text-gray-900 dark:text-white text-sm">{doc.title}</p>
-                            <p className="text-xs text-gray-500 dark:text-white/50 mt-0.5 leading-relaxed">{doc.description}</p>
-                          </div>
-                          <div className="flex items-center gap-2 flex-shrink-0">
-                            {doc.href && (
-                              <Link
-                                href={doc.href}
-                                className="text-xs text-electric hover:underline whitespace-nowrap"
-                              >
-                                Voir
-                              </Link>
-                            )}
-                            <a
-                              href={doc.pdf}
-                              download={doc.filename}
-                              className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-electric text-white text-xs font-semibold rounded-lg hover:bg-electric/90 transition-colors"
-                            >
-                              <Download size={12} />
-                              PDF
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  )
-                })}
-              </div>
-            </div>
-          ))}
+    <div className="min-h-screen bg-background dark:bg-[#0A0F1C]">
+      <div className="bg-gradient-to-b from-[#060D1A] to-[#0A0F1C] pt-24 pb-16">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6">
+          <Breadcrumb items={[{ name: 'Ressources', href: '/ressources' }, { name: 'Documents officiels' }]} />
+          <h1 className="text-3xl lg:text-5xl font-bold text-white mb-6">
+            Documents officiels
+          </h1>
+          <p className="text-white/70 text-lg max-w-2xl">
+            Un cadre contractuel qui vous protège — chaque projet Stackup est encadré par un dispositif
+            contractuel complet. Vous avez égaré un document reçu par email ? Retrouvez-le ici.
+          </p>
         </div>
+      </div>
 
-        <p className="text-xs text-gray-400 dark:text-white/30 text-center mt-10">
-          Les documents commerciaux sont des modèles. Votre exemplaire personnalisé vous sera remis lors de votre projet.{' '}
-          <Link href="/contact" className="text-electric hover:underline">Nous contacter →</Link>
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 py-16 space-y-14">
+        {GROUPS.map(group => (
+          <section key={group.label}>
+            <h2 className="text-xs font-bold uppercase tracking-widest text-blue-400 mb-5">{group.label}</h2>
+            <div className="space-y-3">
+              {group.docs.map(doc => (
+                <div key={doc.pdf} className="flex items-start gap-4 bg-white dark:bg-white/5 rounded-2xl border border-gray-200 dark:border-white/10 p-5">
+                  <div className="flex-1 min-w-0">
+                    <p className="font-semibold text-gray-900 dark:text-white text-sm mb-1">{doc.title}</p>
+                    <p className="text-xs text-gray-500 dark:text-white/50 leading-relaxed mb-3">{doc.desc}</p>
+                    <p className="text-xs text-gray-400 dark:text-white/30 mb-0">{doc.size}</p>
+                  </div>
+                  <div className="flex items-center gap-2 flex-shrink-0 mt-1">
+                    {doc.slug && (
+                      <Link href={`/${doc.slug}`} className="inline-flex items-center gap-1 px-3 py-1.5 border border-white/20 text-white/70 text-xs font-medium rounded-lg hover:text-white hover:border-white/40 transition-colors">
+                        <ExternalLink size={11} />
+                        Consulter
+                      </Link>
+                    )}
+                    <a href={doc.pdf} download className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-blue-600 hover:bg-blue-500 text-white text-xs font-semibold rounded-lg transition-colors">
+                      <Download size={12} />
+                      Télécharger le PDF
+                    </a>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
+        ))}
+
+        <p className="text-xs text-gray-400 dark:text-white/30 text-center">
+          Les modèles commerciaux sont fournis à titre indicatif. Votre exemplaire personnalisé vous sera remis lors de votre projet.{' '}
+          <Link href="/contact" className="text-blue-400 hover:text-blue-300 transition-colors">Nous contacter →</Link>
         </p>
       </div>
-    </main>
+    </div>
   )
 }

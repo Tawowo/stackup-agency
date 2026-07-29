@@ -47,6 +47,13 @@ const FAQ_ITEMS = [
     ],
   },
   {
+    cat: 'Documents et contrats',
+    faqs: [
+      { q: 'Où retrouver mes documents ?', a: "Tous les documents officiels (CGV, contrat de prestation, devis, facture, NDA, avenant…) sont disponibles en téléchargement sur la page /ressources/documents. Votre exemplaire personnalisé vous est également remis par email en cours de projet." },
+      { q: 'Avez-vous des CGV et un contrat ?', a: "Oui. Chaque projet est encadré par un contrat de prestation signé, des CGV complètes et une cession de droits explicite. Vous disposez d'un cadre contractuel solide dès le démarrage." },
+    ],
+  },
+  {
     cat: 'SEO et visibilité',
     faqs: [
       { q: 'Le SEO est-il inclus ?', a: "Un SEO de base est inclus dans chaque projet : balises title et meta, structure HTML sémantique, données structurées Schema.org, sitemap XML, optimisation mobile et vitesse de chargement." },

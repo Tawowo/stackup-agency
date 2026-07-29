@@ -62,6 +62,15 @@ export default function ContactPage() {
       </div>
 
       <ContactForm />
+
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 pb-16">
+        <p className="text-center text-sm text-foreground/50 dark:text-white/40">
+          Nos documents contractuels (CGV, contrat de prestation, devis type…) sont consultables{' '}
+          <a href="/ressources/documents" className="text-blue-400 hover:text-blue-300 transition-colors underline underline-offset-2">
+            sur la page Documents officiels
+          </a>.
+        </p>
+      </div>
     </div>
   )
 }

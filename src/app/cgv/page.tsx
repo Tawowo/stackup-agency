@@ -173,7 +173,7 @@ export default function CGV() {
             className="flex-shrink-0 inline-flex items-center gap-2 px-4 py-2 bg-electric text-white text-sm font-semibold rounded-xl hover:bg-electric/90 transition-colors"
           >
             <Download size={15} />
-            PDF
+            Télécharger la version PDF officielle
           </a>
         </div>
         <p className="text-sm text-gray-500 dark:text-white/40 mb-12">Stackup Agency — Dernière mise à jour : 30 juin 2026</p>

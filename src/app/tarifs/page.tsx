@@ -154,9 +154,9 @@ export default function TarifsPage() {
           <p className="text-foreground/60 dark:text-white/60 mb-6">Après la première année d'hébergement incluse, optez pour une maintenance mensuelle.</p>
           <div className="grid sm:grid-cols-3 gap-4">
             {[
-              { titre: 'Starter', prix: SITE.pricing.maintenanceStarter, inclus: ['Hébergement', 'SSL', 'Sauvegardes hebdo', 'Mises à jour sécurité'] },
-              { titre: 'Pro', prix: SITE.pricing.maintenancePro, inclus: ['Tout Starter', 'Sauvegardes quotidiennes', '2h modifications/mois', 'Support prioritaire'] },
-              { titre: 'Premium', prix: SITE.pricing.maintenancePremium, inclus: ['Tout Pro', '5h modifications/mois', 'Rapport mensuel SEO', 'Réponse < 4h'] },
+              { titre: 'Starter', prix: SITE.pricing.maintenanceStarter, inclus: ['Hébergement', 'SSL', 'Sauvegardes hebdo', 'Mises à jour sécurité', 'Réponse sous 72 h ouvrées'] },
+              { titre: 'Pro', prix: SITE.pricing.maintenancePro, inclus: ['Tout Starter', 'Sauvegardes quotidiennes', '2h modifications/mois', 'Réponse sous 48 h ouvrées'] },
+              { titre: 'Premium', prix: SITE.pricing.maintenancePremium, inclus: ['Tout Pro', '5h modifications/mois', 'Rapport mensuel SEO', 'Réponse sous 24 h ouvrées'] },
             ].map(m => (
               <div key={m.titre} className="rounded-2xl border border-navy/20 dark:border-white/10 p-5">
                 <div className="flex items-center justify-between mb-3">

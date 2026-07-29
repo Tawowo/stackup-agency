@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArrowLeft } from 'lucide-react'
+import { ArrowLeft, Download } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Politique de Confidentialité | Stackup Agency',
@@ -21,7 +21,13 @@ export default function PolitiqueConfidentialite() {
         <Link href="/" className="inline-flex items-center gap-2 text-electric hover:underline text-sm mb-8">
           <ArrowLeft size={16} /> Retour à l&apos;accueil
         </Link>
-        <h1 className="text-4xl font-extrabold text-gray-900 dark:text-white mb-4">Politique de confidentialité</h1>
+        <div className="flex items-start justify-between mb-3 gap-4">
+          <h1 className="text-4xl font-extrabold text-gray-900 dark:text-white">Politique de confidentialité</h1>
+          <a href="/documents/politique-confidentialite.pdf" download className="flex-shrink-0 inline-flex items-center gap-2 px-4 py-2 bg-electric text-white text-sm font-semibold rounded-xl hover:bg-electric/90 transition-colors">
+            <Download size={15} />
+            Télécharger la version PDF officielle
+          </a>
+        </div>
         <p className="text-gray-500 dark:text-white/50 text-sm mb-12">Dernière mise à jour : juin 2026</p>
 
         <div className="prose dark:prose-invert prose-sm max-w-none space-y-10">
