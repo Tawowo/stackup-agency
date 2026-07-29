@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { CheckCircle, ArrowRight, Clock, Zap, Shield, Users } from 'lucide-react'
+import { CheckCircle, ArrowRight, Clock, Zap, Shield } from 'lucide-react'
 import { SITE } from '@/config/site'
 import { realisations } from '@/lib/realisations'
 import PageLoader from '@/components/ui/PageLoader'
@@ -81,27 +81,31 @@ export default function Home() {
               Agence web — Tours, France
             </div>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6 max-w-3xl">
-              L'agence web qui livre votre site en 10 jours, dès {SITE.pricing.vitrine}€
+              Le site web qui fait décoller votre activité.
             </h1>
-            <p className="text-white/70 text-lg lg:text-xl mb-10 max-w-2xl leading-relaxed">
-              Site vitrine, boutique en ligne ou application sur mesure — conçu pour votre métier,
-              livré vite, hébergé en France. Devis gratuit sous 72h.
+            <p className="text-white/70 text-lg lg:text-xl mb-4 max-w-2xl leading-relaxed">
+              Sites vitrines, e-commerce et applications sur mesure — conçus, développés et mis en ligne en 10 jours ouvrés.
             </p>
-            <div className="flex flex-wrap gap-4 mb-14">
+            <div className="flex flex-wrap gap-4 mb-5">
               <Link href="/contact" className="px-7 py-4 bg-amber-500 hover:bg-amber-400 text-white font-semibold rounded-xl shadow-lg shadow-amber-500/30 transition-all hover:-translate-y-0.5">
-                Devis gratuit sous 72h →
+                Obtenir mon devis gratuit →
               </Link>
               <Link href="/services" className="px-7 py-4 border border-white/20 text-white hover:bg-white/10 font-semibold rounded-xl transition-all">
-                Voir nos services
+                Découvrir nos services
               </Link>
+            </div>
+            <div className="mb-10">
+              <span className="inline-block px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-white/50 text-xs">
+                À partir de {SITE.pricing.vitrine} € · Devis gratuit sous 72 h
+              </span>
             </div>
             {/* Confiance bar */}
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
               {[
-                { val: SITE.delais.vitrine, label: 'Délai moyen' },
-                { val: `dès ${SITE.pricing.vitrine}€`, label: 'Tarif tout inclus' },
-                { val: '72h', label: 'Devis garanti' },
-                { val: '100%', label: 'Sur mesure' },
+                { val: '10 jours', label: "de l'idée à la mise en ligne" },
+                { val: '100 %', label: 'sur mesure — zéro template' },
+                { val: '72 h', label: 'réponse garantie' },
+                { val: 'Code livré', label: 'vous êtes propriétaire' },
               ].map(s => (
                 <div key={s.label} className="text-center p-4 rounded-xl bg-white/5 border border-white/10">
                   <div className="text-xl font-bold text-white mb-0.5">{s.val}</div>
@@ -146,21 +150,32 @@ export default function Home() {
         <section className="py-24 bg-[#060D1A]">
           <div className="max-w-5xl mx-auto px-4 sm:px-6">
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-12">
-              Pourquoi choisir Stackup Agency ?
+              Pourquoi Stackup Agency ?
             </h2>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid sm:grid-cols-3 gap-6">
               {[
-                { Icon: Clock, titre: 'Livraison rapide', desc: `Site vitrine livré en ${SITE.delais.vitrine}. Pas de promesses floues.` },
-                { Icon: Zap, titre: 'Prix accessibles', desc: `À partir de ${SITE.pricing.vitrine}€ tout inclus. 3 à 5x moins qu'une agence classique.` },
-                { Icon: Shield, titre: 'Code propriétaire', desc: 'Le code vous appartient à 100%. Données hébergées en France.' },
-                { Icon: Users, titre: 'Interlocuteur unique', desc: `Un seul interlocuteur s'occupe de votre projet du début à la fin.` },
+                {
+                  Icon: Zap,
+                  titre: "Le prix d'un indépendant",
+                  desc: "Des tarifs 3 à 5 fois inférieurs aux agences classiques, à périmètre égal. Pas de bureaux à amortir, pas de couches commerciales : vous payez le travail, pas la structure.",
+                },
+                {
+                  Icon: Shield,
+                  titre: "La qualité d'une grande agence",
+                  desc: "Code sur mesure en Next.js et TypeScript, performance et SEO intégrés dès la conception. Jugez sur pièce : toutes nos démonstrations sont en ligne.",
+                },
+                {
+                  Icon: Clock,
+                  titre: 'Une rapidité assumée',
+                  desc: 'Votre site vitrine en ligne en 10 jours ouvrés, contractuellement. Chaque étape est cadrée, chaque délai est écrit.',
+                },
               ].map(({ Icon, titre, desc }) => (
-                <div key={titre} className="p-5 rounded-2xl bg-white/5 border border-white/10">
+                <div key={titre} className="p-6 rounded-2xl bg-white/5 border border-white/10">
                   <div className="w-10 h-10 rounded-xl bg-blue-500/20 flex items-center justify-center mb-4">
                     <Icon size={20} className="text-blue-400" />
                   </div>
                   <h3 className="font-semibold text-white mb-2">{titre}</h3>
-                  <p className="text-white/60 text-sm">{desc}</p>
+                  <p className="text-white/60 text-sm leading-relaxed">{desc}</p>
                 </div>
               ))}
             </div>
@@ -175,7 +190,7 @@ export default function Home() {
                 <h2 className="text-3xl lg:text-4xl font-bold text-foreground dark:text-white mb-3">
                   Nos réalisations
                 </h2>
-                <p className="text-foreground/60 dark:text-white/60">Sites de démonstration illustrant nos capacités.</p>
+                <p className="text-foreground/60 dark:text-white/60">Nos démonstrations sont des projets complets, construits par nos soins et consultables en ligne. Ce que vous voyez est exactement ce que nous livrons.</p>
               </div>
               <Link href="/realisations" className="hidden sm:flex items-center gap-1 text-blue-400 hover:text-blue-300 font-medium text-sm transition-colors">
                 Voir tout <ArrowRight size={14} />
@@ -253,7 +268,7 @@ export default function Home() {
             </div>
             <div className="grid sm:grid-cols-3 gap-5">
               {[
-                { href: '/blog/creation-site-internet-prix', titre: 'Combien coûte un site internet en 2025 ?', cat: 'Tarifs' },
+                { href: '/blog/creation-site-internet-prix', titre: 'Combien coûte un site internet en 2026 ?', cat: 'Tarifs' },
                 { href: '/blog/vitesse-site-web-core-web-vitals', titre: 'Core Web Vitals : guide pratique pour les TPE', cat: 'Technique' },
                 { href: '/blog/seo-local-google-business', titre: 'SEO local : comment apparaître en tête sur Google Maps', cat: 'SEO' },
               ].map(a => (

@@ -27,6 +27,12 @@ const FAQ_ITEMS = [
     ],
   },
   {
+    cat: 'Pourquoi Stackup Agency ?',
+    faqs: [
+      { q: 'Pourquoi vous plutôt qu\'une agence classique ?', a: 'Des tarifs 3 à 5 fois inférieurs à périmètre égal, car pas de bureaux à amortir ni de couches commerciales. Du code sur mesure en Next.js et TypeScript, pas de template. Un délai de 10 jours ouvrés contractuel pour un site vitrine. Et toutes nos démonstrations sont en ligne — pas de portfolio fantôme.' },
+    ],
+  },
+  {
     cat: 'Tarifs et paiement',
     faqs: [
       { q: 'Quels sont les tarifs ?', a: `Site vitrine : ${SITE.pricing.vitrine}€. Site multi-pages : ${SITE.pricing.multipages}€. Boutique en ligne : ${SITE.pricing.ecommerce}€. Système de gestion : à partir de ${SITE.pricing.gestion}€. Site association : ${SITE.pricing.association}€. Ces prix sont tout inclus (design, développement, SEO, hébergement 12 mois, SSL).` },
