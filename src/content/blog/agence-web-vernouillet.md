@@ -11,7 +11,7 @@ Vernouillet, commune dynamique de l'agglomération de Dreux en Eure-et-Loir, con
 
 En 2026, ne pas avoir de site internet professionnel, c'est tout simplement ne pas exister pour une majorité de vos clients potentiels. Selon les dernières études, plus de **87 % des consommateurs recherchent un produit ou un service en ligne avant de se déplacer ou d'appeler**. Si votre entreprise n'apparaît pas dans ces résultats, vous ratez des opportunités commerciales chaque jour.
 
-C'est exactement pour répondre à ce besoin que Stackup Agency, basée à Dreux, accompagne les entreprises de Vernouillet et de toute l'Eure-et-Loir dans leur transformation digitale. Notre proximité géographique n'est pas un détail : elle nous permet de vous rencontrer rapidement, de comprendre votre marché local et de créer un site internet vraiment adapté à votre clientèle.
+C'est exactement pour répondre à ce besoin que Stackup Agency, basée à Tours, accompagne les entreprises de Vernouillet et de toute l'Eure-et-Loir dans leur transformation digitale. Notre proximité géographique n'est pas un détail : elle nous permet de vous rencontrer rapidement, de comprendre votre marché local et de créer un site internet vraiment adapté à votre clientèle.
 
 ---
 
@@ -71,7 +71,7 @@ Nous avons conçu notre offre pour qu'elle soit accessible aux entreprises de to
 
 ### Une équipe locale qui connaît votre marché
 
-Basée à Dreux, Stackup Agency est implantée au cœur du territoire que vous servez. Nous connaissons le tissu économique local, les habitudes des consommateurs de la région et les spécificités du marché eurélien. Cette connaissance de proximité nous permet de créer des sites web qui parlent vraiment à votre clientèle cible.
+Basée à Tours, Stackup Agency est implantée au cœur du territoire que vous servez. Nous connaissons le tissu économique local, les habitudes des consommateurs de la région et les spécificités du marché eurélien. Cette connaissance de proximité nous permet de créer des sites web qui parlent vraiment à votre clientèle cible.
 
 ### Une réactivité exemplaire
 

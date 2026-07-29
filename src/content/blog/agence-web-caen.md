@@ -11,7 +11,7 @@ Caen, préfecture du Calvados et capitale de la Basse-Normandie, est une ville u
 
 La présence d'une université importante signifie une population jeune et connectée, habituée à tout faire en ligne. Les étudiants et les jeunes professionnels qui s'installent à Caen attendent de leurs prestataires une expérience numérique irréprochable. Et les touristes — notamment les nombreux visiteurs étrangers qui viennent commémorer le Débarquement — planifient entièrement leur séjour sur internet, avec des attentes élevées en termes de qualité de l'information et de facilité de réservation.
 
-Stackup Agency, basée à Dreux et intervenant dans toute la Normandie, accompagne les entreprises caennaises dans leur transformation digitale avec des solutions sur mesure adaptées à chaque secteur.
+Stackup Agency, basée à Tours (Indre-et-Loire) et intervenant dans toute la France, accompagne les entreprises caennaises dans leur transformation digitale avec des solutions sur mesure adaptées à chaque secteur.
 
 ---
 

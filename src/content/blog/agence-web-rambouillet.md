@@ -11,7 +11,7 @@ Rambouillet, ville résidentielle et touristique des Yvelines, est à la croisé
 
 Dans ce contexte, la présence digitale est particulièrement importante pour deux raisons. D'abord, la clientèle locale est très connectée et utilise massivement internet pour trouver des prestataires locaux. Ensuite, la proximité de Paris signifie une concurrence accrue : les habitants de Rambouillet ont facilement accès à des prestataires parisiens ou franciliens qui, eux, ont souvent une présence en ligne très développée.
 
-Pour les entreprises de Rambouillet, ne pas avoir de site professionnel, c'est laisser ses clients potentiels aller vers des prestataires extérieurs mieux positionnés en ligne. Stackup Agency, basée à Dreux et intervenant dans les Yvelines et les départements limitrophes, vous aide à prendre ce tournant digital.
+Pour les entreprises de Rambouillet, ne pas avoir de site professionnel, c'est laisser ses clients potentiels aller vers des prestataires extérieurs mieux positionnés en ligne. Stackup Agency, basée à Tours (Centre-Val de Loire), vous aide à prendre ce tournant digital.
 
 ---
 
@@ -67,7 +67,7 @@ Pour les cabinets médicaux, les artisans et les prestataires de services qui on
 
 ### Proximité géographique
 
-Basée à Dreux, à 40 km de Rambouillet, Stackup Agency est votre agence web de proximité dans les Yvelines. Nous pouvons nous déplacer pour vous rencontrer, comprendre votre environnement et créer un site vraiment ancré dans votre réalité locale.
+Basée à Tours, à 40 km de Rambouillet, Stackup Agency est votre agence web de proximité dans les Yvelines. Nous pouvons nous déplacer pour vous rencontrer, comprendre votre environnement et créer un site vraiment ancré dans votre réalité locale.
 
 ### Réponse sous 72h
 
@@ -85,7 +85,7 @@ Notre modèle est simple : vous payez pour la création et l'éventuelle mainten
 
 > **À retenir :**
 > - Rambouillet et les Yvelines ont une clientèle connectée et exigeante qui cherche ses prestataires en ligne
-> - Stackup Agency est l'agence web de proximité pour le secteur de Rambouillet, basée à Dreux
+> - Stackup Agency est l'agence web de proximité pour le secteur de Rambouillet, basée à Tours (Centre-Val de Loire)
 > - Sites professionnels dès 449€, livrés en 10 jours, avec réponse sous 72h
 > - Devis gratuit et accompagnement personnalisé
 

@@ -11,7 +11,7 @@ Amboise est l'une des villes les plus visitées du Val de Loire. Son château ro
 
 Car voilà le paradoxe d'Amboise : des millions de visiteurs potentiels qui se renseignent sur internet avant de réserver, et des entreprises locales parfois peu présentes sur le web, laissant les plateformes de réservation et les concurrents mieux digitalisés capter l'essentiel du trafic.
 
-Stackup Agency, basée à Dreux et spécialisée dans le développement web pour le tourisme et le commerce local, accompagne les entreprises d'Amboise dans leur stratégie digitale. Nous comprenons les spécificités du marché touristique ligérien et créons des sites qui captent les visiteurs au moment clé de leur décision.
+Stackup Agency, basée à Tours et spécialisée dans le développement web pour le tourisme et le commerce local, accompagne les entreprises d'Amboise dans leur stratégie digitale. Nous comprenons les spécificités du marché touristique ligérien et créons des sites qui captent les visiteurs au moment clé de leur décision.
 
 ---
 

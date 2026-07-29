@@ -81,9 +81,9 @@ export default async function Image() {
             fontSize: '16px',
           }}
         >
-          <span>Devis gratuit 24h</span>
+          <span>Devis gratuit sous 72h</span>
           <span>·</span>
-          <span>À partir de 490€</span>
+          <span>À partir de 449€</span>
           <span>·</span>
           <span>contact@stackup-agency.fr</span>
         </div>

@@ -11,7 +11,7 @@ Vendôme, sous-préfecture du Loir-et-Cher traversée par le Loir, est une ville
 
 Dans ce contexte dynamique, la présence digitale est devenue un facteur clé de différenciation. Les consommateurs vendômois, comme partout en France, commencent leurs recherches en ligne : que ce soit pour trouver un plombier, choisir un restaurant ou comparer des prestataires avant de prendre une décision d'achat. Les entreprises qui ne sont pas visibles sur internet perdent chaque jour des opportunités commerciales considérables.
 
-Stackup Agency, basée à Dreux et intervenant dans toute la région Centre-Val de Loire, propose aux entreprises de Vendôme des solutions digitales sur mesure, adaptées à leurs besoins spécifiques et à leur budget.
+Stackup Agency, basée à Tours (Centre-Val de Loire), propose aux entreprises de Vendôme des solutions digitales sur mesure, adaptées à leurs besoins spécifiques et à leur budget.
 
 ---
 
@@ -71,7 +71,7 @@ Nos tarifs sont construits pour être transparents et accessibles aux entreprise
 
 ### Une agence régionale avec une vision locale
 
-Basée à Dreux, Stackup Agency intervient régulièrement à Vendôme et dans le Loir-et-Cher. Nous comprenons les enjeux économiques locaux, que ce soit le dynamisme du corridor TGV, le poids du tourisme des châteaux de la Loire ou les besoins spécifiques des PME industrielles. Cette compréhension du contexte local est intégrée dans chaque projet.
+Basée à Tours, Stackup Agency intervient régulièrement à Vendôme et dans le Loir-et-Cher. Nous comprenons les enjeux économiques locaux, que ce soit le dynamisme du corridor TGV, le poids du tourisme des châteaux de la Loire ou les besoins spécifiques des PME industrielles. Cette compréhension du contexte local est intégrée dans chaque projet.
 
 ### Réactivité sous 72h
 

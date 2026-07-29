@@ -13,7 +13,7 @@ Ce contexte économique riche — viticulture, tourisme équestre, hôtellerie-r
 
 En 2026, un touriste qui projette un séjour à Saumur commence sa recherche sur Google des semaines avant son départ. Un amateur de vins qui veut commander du Saumur Champigny cherche "achat direct vigneron Saumur" sur son smartphone. Si votre domaine, votre hôtel ou votre commerce n'apparaît pas dans ces résultats, c'est votre concurrent qui récolte le client.
 
-Stackup Agency, basée à Dreux et intervenant dans tout le Val de Loire et les régions environnantes, accompagne les entreprises de Saumur dans leur développement digital.
+Stackup Agency, basée à Tours (Centre-Val de Loire), accompagne les entreprises de Saumur dans leur développement digital.
 
 ---
 

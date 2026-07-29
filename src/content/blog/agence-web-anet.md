@@ -11,7 +11,7 @@ Anet est une commune chargée d'histoire, connue pour son magnifique château Re
 
 Pourtant, combien d'entreprises locales restent encore invisibles sur internet ? En 2026, la réalité est implacable : si un client potentiel ne vous trouve pas sur Google dans les premières secondes de sa recherche, il contactera votre concurrent. C'est aussi simple que ça. Et cette réalité vaut pour toutes les tailles d'entreprises, du micro-entrepreneur à la PME bien établie.
 
-Stackup Agency, basée à Dreux à quelques kilomètres d'Anet, accompagne les entrepreneurs locaux dans leur développement digital. Nous comprenons les spécificités du marché local, nous connaissons les attentes des consommateurs de la région et nous créons des sites internet qui génèrent de vrais résultats commerciaux.
+Stackup Agency, basée à Tours et intervenant partout en France, accompagne les entrepreneurs locaux dans leur développement digital. Nous comprenons les spécificités du marché local, nous connaissons les attentes des consommateurs de la région et nous créons des sites internet qui génèrent de vrais résultats commerciaux.
 
 ---
 
@@ -71,7 +71,7 @@ Nous avons conçu des offres transparentes et accessibles pour les entreprises d
 
 ### Proximité et connaissance du terrain
 
-Basée à Dreux, à quelques kilomètres d'Anet, Stackup Agency n'est pas une agence anonyme opérant depuis Paris ou Lyon. Nous sommes vos voisins, nous connaissons votre territoire et nous intervenons physiquement chez vous si nécessaire. Cette proximité est un atout réel pour comprendre votre environnement concurrentiel et créer un site qui résonne avec votre clientèle locale.
+Basée à Tours, à quelques kilomètres d'Anet, Stackup Agency n'est pas une agence anonyme opérant depuis Paris ou Lyon. Nous sommes vos voisins, nous connaissons votre territoire et nous intervenons physiquement chez vous si nécessaire. Cette proximité est un atout réel pour comprendre votre environnement concurrentiel et créer un site qui résonne avec votre clientèle locale.
 
 ### Réactivité garantie sous 72h
 
@@ -89,7 +89,7 @@ Chaque client est unique, chaque projet est différent. Nous prenons le temps de
 
 > **À retenir :**
 > - Anet et le Drouais concentrent un tissu économique local dynamique qui gagnerait à être mieux visible en ligne
-> - Stackup Agency, basée à Dreux, est votre partenaire digital de proximité
+> - Stackup Agency, basée à Tours, est votre partenaire digital de proximité
 > - Sites professionnels dès 449€, livrés en 10 jours, avec réponse garantie sous 72h
 > - Devis gratuit, sans engagement, sans commission sur vos ventes
 

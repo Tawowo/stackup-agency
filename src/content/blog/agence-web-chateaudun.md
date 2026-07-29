@@ -11,7 +11,7 @@ Châteaudun, au cœur de l'Eure-et-Loir, est une ville qui conjugue patrimoine h
 
 Or, la réalité digitale de nombreuses entreprises de Châteaudun reste en deçà de leur potentiel réel. Des artisans d'excellence, des commerces de qualité, des prestataires compétents restent invisibles en ligne alors que leurs clients potentiels les cherchent activement sur Google. Chaque jour sans présence digitale professionnelle, c'est des opportunités commerciales perdues au profit de concurrents mieux positionnés.
 
-Stackup Agency, basée à Dreux et intervenant dans tout l'Eure-et-Loir, propose aux entreprises de Châteaudun des solutions digitales concrètes et abordables pour développer leur visibilité en ligne et attirer de nouveaux clients.
+Stackup Agency, basée à Tours (Centre-Val de Loire), propose aux entreprises de Châteaudun des solutions digitales concrètes et abordables pour développer leur visibilité en ligne et attirer de nouveaux clients.
 
 ---
 
@@ -71,7 +71,7 @@ Nous avons construit une offre claire et sans surprise pour les entrepreneurs de
 
 ### Expertise locale, ambitions régionales
 
-Basée à Dreux, notre équipe intervient régulièrement sur Châteaudun et dans tout l'Eure-et-Loir. Nous connaissons le marché local, les spécificités de chaque secteur d'activité et les attentes des consommateurs euréliens. Cette expertise de terrain fait la différence dans la qualité des sites que nous livrons.
+Basée à Tours, notre équipe intervient régulièrement sur Châteaudun et dans tout l'Eure-et-Loir. Nous connaissons le marché local, les spécificités de chaque secteur d'activité et les attentes des consommateurs euréliens. Cette expertise de terrain fait la différence dans la qualité des sites que nous livrons.
 
 ### Réactivité : 72h maximum
 

@@ -11,7 +11,7 @@ Blois, préfecture du Loir-et-Cher et capitale d'une des régions les plus touri
 
 Dans un environnement aussi concurrentiel, la visibilité en ligne n'est plus un avantage : c'est une condition de survie. Les touristes planifient leurs visites sur internet, les habitants cherchent leurs prestataires sur Google et les acheteurs B2B évaluent les fournisseurs en ligne avant de prendre contact. Si votre entreprise blésoise n'est pas représentée professionnellement sur internet, elle perd face à des concurrents moins qualifiés mais mieux référencés.
 
-Stackup Agency, basée à Dreux et intervenant dans tout le Centre-Val de Loire, propose aux entreprises de Blois des solutions digitales performantes, adaptées aux spécificités du marché local.
+Stackup Agency, basée à Tours (Centre-Val de Loire), propose aux entreprises de Blois des solutions digitales performantes, adaptées aux spécificités du marché local.
 
 ---
 

@@ -11,7 +11,7 @@ Angers, préfecture du Maine-et-Loire et métropole de 275 000 habitants, est l'
 
 L'Anjou est le berceau d'appellations viticoles réputées — Muscadet, Anjou blanc, Saumur, Layon — et ses vignerons ont besoin de se démarquer dans un marché concurrentiel. Mais Angers, c'est aussi une métropole universitaire avec 40 000 étudiants, un écosystème numérique émergent avec des startups innovantes, et un secteur agroalimentaire important porté par des fleurons comme Terrena ou Avril.
 
-Dans ce contexte économique multiple, la présence digitale est un enjeu stratégique pour les entreprises de toutes tailles. Stackup Agency, basée à Dreux et intervenant dans toute la région Loire, accompagne les entreprises angevines dans leur développement digital.
+Dans ce contexte économique multiple, la présence digitale est un enjeu stratégique pour les entreprises de toutes tailles. Stackup Agency, basée à Tours (Centre-Val de Loire), accompagne les entreprises angevines dans leur développement digital.
 
 ---
 

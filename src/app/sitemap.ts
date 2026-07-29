@@ -43,7 +43,8 @@ function getBlogPosts(): { slug: string; date: Date }[] {
         const slug = f.replace(/\.md$/, '')
         const raw = fs.readFileSync(path.join(dir, f), 'utf8')
         const { data } = matter(raw)
-        return { slug, date: data.date ? new Date(data.date) : new Date() }
+        const d = data.updated ?? data.date
+        return { slug, date: d ? new Date(d) : new Date() }
       })
       .sort((a, b) => b.date.getTime() - a.date.getTime())
   } catch {
@@ -57,7 +58,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return [
     // Accueil
-    { url: base, lastModified: now, changeFrequency: 'daily', priority: 1.0 },
+    { url: base, lastModified: new Date('2026-07-29'), changeFrequency: 'weekly', priority: 1.0 },
 
     // Pages statiques principales
     { url: `${base}/blog`, lastModified: now, changeFrequency: 'weekly', priority: 0.8 },

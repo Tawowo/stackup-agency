@@ -31,7 +31,7 @@ Le marché local de Dreux présente des caractéristiques particulières qui ren
 
 ## Les erreurs les plus courantes chez les entreprises dréoises
 
-**1. Se concentrer uniquement sur "Dreux" sans couvrir le bassin.** Une entreprise basée à Dreux mais qui travaille dans tout le Drouais doit apparaître pour des recherches depuis Vernouillet, Anet ou Nonancourt. Sans configuration de zone de service et sans pages de ville, elle ne capture que les recherches depuis la ville-centre.
+**1. Se concentrer uniquement sur "Dreux" sans couvrir le bassin.** Une entreprise basée à Tours (Centre-Val de Loire), Anet ou Nonancourt. Sans configuration de zone de service et sans pages de ville, elle ne capture que les recherches depuis la ville-centre.
 
 **2. Manquer les requêtes département.** Beaucoup de recherches se font au niveau de l'Eure-et-Loir : "plombier Eure-et-Loir", "expert-comptable 28", "avocat Chartres et environs". Les entreprises de Dreux doivent aussi cibler ces requêtes régionales.
 

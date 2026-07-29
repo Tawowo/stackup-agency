@@ -11,7 +11,7 @@ Nogent-le-Rotrou, capitale du Perche en Eure-et-Loir, est une ville à l'identit
 
 Le Perche attire chaque année de nouveaux habitants, notamment des néo-ruraux venus d'Île-de-France à la recherche d'un cadre de vie différent. Ces nouveaux arrivants ont des comportements d'achat très digitaux : ils cherchent en ligne avant d'acheter local. Si votre entreprise n'est pas visible sur Google, vous ratez une clientèle naturelle qui cherche précisément ce que vous proposez.
 
-Stackup Agency, basée à Dreux et intervenant dans toute l'Eure-et-Loir et la région Centre-Val de Loire, accompagne les entrepreneurs percherons dans leur développement digital. Notre équipe connaît les spécificités économiques et culturelles du territoire et crée des sites web qui parlent aux habitants du Perche comme aux visiteurs de passage.
+Stackup Agency, basée à Tours (Centre-Val de Loire), accompagne les entrepreneurs percherons dans leur développement digital. Notre équipe connaît les spécificités économiques et culturelles du territoire et crée des sites web qui parlent aux habitants du Perche comme aux visiteurs de passage.
 
 ---
 
@@ -71,7 +71,7 @@ Nous proposons des tarifs transparents, pensés pour être accessibles aux entre
 
 ### Une agence régionale qui comprend le Perche
 
-Stackup Agency est basée à Dreux, à une heure de Nogent-le-Rotrou. Nous intervenons régulièrement dans le Perche et connaissons l'économie locale, les enjeux du tourisme vert et les attentes des consommateurs du territoire. Cette connaissance de terrain se traduit dans chaque site que nous créons.
+Stackup Agency est basée à Tours, à une heure de Nogent-le-Rotrou. Nous intervenons régulièrement dans le Perche et connaissons l'économie locale, les enjeux du tourisme vert et les attentes des consommateurs du territoire. Cette connaissance de terrain se traduit dans chaque site que nous créons.
 
 ### Réactivité et disponibilité
 

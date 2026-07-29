@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
       description: post.excerpt,
       type: 'article',
       publishedTime: post.date,
-      modifiedTime: post.date,
+      modifiedTime: post.updated ?? post.date,
     },
   }
 }
@@ -40,13 +40,18 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
     description: post.excerpt,
     url,
     datePublished: post.date,
-    dateModified: post.date,
-    author: { '@type': 'Organization', name: 'Stackup Agency', url: 'https://stackup-agency.fr' },
+    dateModified: post.updated ?? post.date,
+    image: `https://stackup-agency.fr/blog/${post.slug}/opengraph-image`,
+    author: {
+      '@type': 'Person',
+      name: 'Mathéo Reboul',
+      url: 'https://linkedin.com/in/matheo-reboul',
+    },
     publisher: {
       '@type': 'Organization',
       name: 'Stackup Agency',
       url: 'https://stackup-agency.fr',
-      logo: { '@type': 'ImageObject', url: 'https://stackup-agency.fr/logo.png' },
+      logo: { '@type': 'ImageObject', url: 'https://stackup-agency.fr/icons/icon-512.png', width: 512, height: 512 },
     },
     mainEntityOfPage: { '@type': 'WebPage', '@id': url },
     keywords: post.keywords?.join(', '),
@@ -84,7 +89,11 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
             <span className="flex items-center gap-1 text-white/40 text-xs">
               <Clock size={11} /> {post.readTime} min de lecture
             </span>
-            <span className="text-white/40 text-xs">{new Date(post.date).toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' })}</span>
+            <span className="text-white/40 text-xs">
+              {post.updated
+                ? `Mis à jour le ${new Date(post.updated).toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' })}`
+                : new Date(post.date).toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' })}
+            </span>
           </div>
           <h1 className="text-3xl lg:text-5xl font-bold text-white leading-tight">{post.title}</h1>
         </div>

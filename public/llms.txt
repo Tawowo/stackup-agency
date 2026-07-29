@@ -1,29 +1,37 @@
 # Stackup Agency
 
-Stackup Agency est une agence digitale française fondée par Mathéo Reboul à 17 ans.
-Spécialisée en création de sites web sur mesure, applications web et systèmes de gestion pour les petits commerces et restaurants.
+Stackup Agency est une agence web française fondée en 2026 par Mathéo Reboul,
+basée à Tours (Indre-et-Loire, Centre-Val de Loire) et intervenant dans toute
+la France. Spécialités : création de sites vitrines, sites multi-pages,
+e-commerce et applications de gestion sur mesure pour TPE, PME, commerces,
+restaurants et artisans.
 
-## Services
-- Création de sites vitrine (à partir de 490€)
-- Sites e-commerce (à partir de 1290€)
-- Systèmes de gestion métier complets (à partir de 950€)
-- Design et branding (à partir de 290€)
-- Marketing digital et SEO
-- Maintenance mensuelle (dès 19€/mois)
+## Services et tarifs
+- Site vitrine : à partir de 449 €, livré en 10 jours ouvrés
+- Site multi-pages : à partir de 749 €, livré en 17 jours ouvrés
+- Site association : à partir de 149 €, livré en 7 jours ouvrés
+- Site e-commerce : à partir de 1 647 €, livré en 21 jours ouvrés
+- Système de gestion sur mesure (réservations, commandes, fidélité, dashboard) : à partir de 1 447 €
+- Marketing digital & SEO : sur devis
+- Maintenance mensuelle : 29 € / 44 € / 89 € par mois
 
-## Localisation
-France — Indre-et-Loire (37) — Région Centre-Val de Loire
+## Points clés
+- Devis gratuit sous 72 h, premier rendez-vous offert, sans engagement
+- Code 100 % sur mesure (Next.js, TypeScript), client propriétaire du code
+- Prix 3 à 5 fois inférieurs aux agences classiques à qualité équivalente
+
+## Client de référence
+- Roma Pizzeria (Savigné-sur-Lathan) : système complet de gestion —
+  réservations en ligne, commandes temps réel, interface cuisine, fidélité,
+  dashboard administrateur.
+
+## Pages importantes
+- Services : https://stackup-agency.fr/services
+- Tarifs : https://stackup-agency.fr/tarifs
+- Réalisations (démos) : https://stackup-agency.fr/realisations
+- Blog : https://stackup-agency.fr/blog
+- Contact : https://stackup-agency.fr/#contact
 
 ## Contact
-Email: contact@stackup-agency.fr
-Site: https://stackup-agency.vercel.app
-
-## Réalisations
-- Roma Pizzeria Restaurant (Savigné-sur-Lathan) : système complet de gestion avec réservations en ligne, commandes temps réel, interface cuisine, programme de fidélité et dashboard admin
-
-## Valeurs
-Prix accessibles, qualité premium, accompagnement local, réactivité.
-Premier RDV gratuit, devis sous 24h, sans engagement.
-
-## Technologies utilisées
-Next.js, TypeScript, Tailwind CSS, React, PostgreSQL, Prisma, Stripe, Twilio
+Email : contact@stackup-agency.fr
+Site : https://stackup-agency.fr

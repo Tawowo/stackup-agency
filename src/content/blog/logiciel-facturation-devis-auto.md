@@ -1,7 +1,8 @@
 ---
-title: "Logiciel de facturation et devis : automatiser pour gagner 5h par semaine"
+title: "Devis et factures automatisés : le guide 2026 pour TPE et artisans"
 date: "2026-05-22"
-excerpt: "La facturation manuelle coûte en moyenne 15 € par facture en temps de traitement. Automatiser la chaîne devis-commande-facture-relance peut faire économiser 5h par semaine et accélérer les encaissements."
+updated: "2026-07-29"
+excerpt: "Gagnez des heures chaque semaine : solutions de gestion de devis et factures automatisées, prix, obligations légales 2026 et option sur mesure."
 tag: "Applications métier"
 category: "applications-metier"
 readTime: 8

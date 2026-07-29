@@ -6,6 +6,7 @@ import { ThemeProvider } from '@/contexts/ThemeContext'
 import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
 import CookieBanner from '@/components/ui/CookieBanner'
+import { SITE } from '@/config/site'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -14,7 +15,7 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://stackup-agency.fr'),
+  metadataBase: new URL(SITE.url),
   title: {
     default: 'Stackup Agency — Agence Web & Digital | Création Site Internet',
     template: '%s | Stackup Agency',
@@ -25,23 +26,14 @@ export const metadata: Metadata = {
     'agence web',
     'création site internet',
     'développement web',
-    'agence digitale',
+    'agence digitale Tours',
     'site vitrine',
     'site e-commerce',
     'application web sur mesure',
-    'agence web Touraine',
-    'agence web Indre-et-Loire',
-    'création site web Tours',
-    'développeur web freelance',
-    'agence web pas cher',
-    'système de gestion restaurant',
-    'site web restaurant',
-    'agence web jeune',
-    'stackup agency',
   ],
-  authors: [{ name: 'Stackup Agency', url: 'https://stackup-agency.fr' }],
-  creator: 'Stackup Agency',
-  publisher: 'Stackup Agency',
+  authors: [{ name: SITE.founder.name, url: SITE.url }],
+  creator: SITE.name,
+  publisher: SITE.name,
   robots: {
     index: true,
     follow: true,
@@ -56,14 +48,14 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'fr_FR',
-    url: 'https://stackup-agency.fr',
-    siteName: 'Stackup Agency',
+    url: SITE.url,
+    siteName: SITE.name,
     title: 'Stackup Agency — Agence Web & Digital | Création Site Internet',
     description:
       'Agence digitale spécialisée en création de sites web, applications et systèmes de gestion sur mesure. Devis gratuit sous 72h.',
     images: [
       {
-        url: 'https://stackup-agency.fr/og-image.png',
+        url: `${SITE.url}/og-image.png`,
         width: 1200,
         height: 630,
         alt: 'Stackup Agency',
@@ -74,14 +66,24 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Stackup Agency — Agence Web & Digital',
     description: 'Création de sites web, applications et systèmes de gestion sur mesure.',
-    images: ['https://stackup-agency.fr/og-image.png'],
+    images: [`${SITE.url}/og-image.png`],
   },
   alternates: {
-    canonical: 'https://stackup-agency.fr',
-    languages: {
-      'fr-FR': 'https://stackup-agency.fr',
-      'en-US': 'https://stackup-agency.fr/en',
+    canonical: SITE.url,
+    types: {
+      'application/rss+xml': `${SITE.url}/feed.xml`,
     },
+  },
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: '48x48' },
+      { url: '/icons/icon-48.png', sizes: '48x48', type: 'image/png' },
+      { url: '/icons/icon-96.png', sizes: '96x96', type: 'image/png' },
+      { url: '/icons/icon-192.png', sizes: '192x192', type: 'image/png' },
+      { url: '/icons/icon-512.png', sizes: '512x512', type: 'image/png' },
+    ],
+    apple: [{ url: '/apple-icon.png', sizes: '180x180', type: 'image/png' }],
+    shortcut: ['/favicon.ico'],
   },
   manifest: '/manifest.json',
   verification: {
@@ -92,32 +94,56 @@ export const metadata: Metadata = {
 const schemaOrg = [
   {
     '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    '@id': `${SITE.url}/#website`,
+    name: SITE.name,
+    url: SITE.url,
+    publisher: { '@id': `${SITE.url}/#organization` },
+  },
+  {
+    '@context': 'https://schema.org',
     '@type': ['Organization', 'LocalBusiness'],
-    '@id': 'https://stackup-agency.fr/#organization',
-    name: 'Stackup Agency',
-    description: 'Agence digitale spécialisée en création de sites web, applications et systèmes de gestion sur mesure — basée en Indre-et-Loire, intervenant sur toute la France.',
-    url: 'https://stackup-agency.fr',
-    email: 'contact@stackup-agency.fr',
+    '@id': `${SITE.url}/#organization`,
+    name: SITE.name,
+    legalName: SITE.legalName,
+    description: 'Agence digitale spécialisée en création de sites web, applications et systèmes de gestion sur mesure — basée à Tours, intervenant sur toute la France.',
+    url: SITE.url,
+    email: SITE.email,
+    foundingDate: SITE.founded,
+    founder: {
+      '@type': 'Person',
+      name: SITE.founder.name,
+      jobTitle: SITE.founder.role,
+      url: SITE.founder.linkedin,
+    },
     logo: {
       '@type': 'ImageObject',
-      url: 'https://stackup-agency.fr/logo.png',
+      url: `${SITE.url}/icons/icon-512.png`,
+      width: 512,
+      height: 512,
     },
     address: {
       '@type': 'PostalAddress',
-      addressLocality: 'Tours',
-      addressRegion: 'Indre-et-Loire',
-      addressCountry: 'FR',
+      addressLocality: SITE.address.locality,
+      addressRegion: SITE.address.department,
+      addressCountry: SITE.address.country,
     },
     areaServed: {
       '@type': 'Country',
       name: 'France',
     },
+    contactPoint: {
+      '@type': 'ContactPoint',
+      email: SITE.email,
+      contactType: 'customer service',
+      availableLanguage: ['fr'],
+    },
     priceRange: '€€',
     knowsAbout: ['Création de site web', 'Développement web', 'SEO', 'Marketing digital', 'Applications web sur mesure'],
     sameAs: [
-      'https://linkedin.com/in/matheo-reboul',
-      'https://instagram.com/stackup.agency',
-      'https://tiktok.com/@stackupagency',
+      SITE.social.linkedin,
+      SITE.social.instagram,
+      SITE.social.tiktok,
     ],
   },
 ]

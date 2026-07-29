@@ -1,7 +1,8 @@
 ---
-title: "Agence immobilière : le site web qui présente vos biens et capte les acheteurs"
-description: "Avec la baisse du marché immobilier, différencier votre agence est crucial. Un site web avec visite virtuelle, estimation en ligne et formulaire de mandat peut transformer votre acquisition client."
+title: "Site internet d'agence immobilière : prix, fonctionnalités et exemples (2026)"
+excerpt: "Combien coûte un site d'agence immobilière en 2026 ? Fonctionnalités indispensables (recherche de biens, estimation, visites), prix réels et erreurs à éviter."
 date: "2026-07-04"
+updated: "2026-07-29"
 category: "professions-liberales"
 tags: ["agence immobilière", "site web", "estimation en ligne"]
 readTime: 8

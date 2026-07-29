@@ -1,7 +1,8 @@
 ---
-title: "Refonte de site web : quand, pourquoi et combien ça coûte ?"
+title: "Refonte de site web : le guide complet 2026 (étapes, prix, SEO)"
 date: "2026-05-08"
-excerpt: "Votre site a plus de 3 ans ? Il est peut-être temps de le refondre. Guide complet sur les signaux d'alerte, le processus et le budget d'une refonte web."
+updated: "2026-07-29"
+excerpt: "Quand refaire son site, combien ça coûte, comment ne pas perdre son référencement : le guide complet de la refonte, avec checklist des redirections."
 tag: "Création de sites"
 category: "creation-sites"
 readTime: 7

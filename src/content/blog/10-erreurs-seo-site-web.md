@@ -1,7 +1,8 @@
 ---
-title: "10 erreurs SEO qui plombent votre site web"
-excerpt: "Votre site web est beau mais personne ne le trouve ? Ces 10 erreurs SEO classiques expliquent probablement pourquoi vous n'apparaissez pas sur Google. Et comment les corriger."
+title: "10 erreurs SEO qui plombent votre site (et comment les corriger vite)"
+excerpt: "Votre site n'apparaît pas sur Google ? Ces 10 erreurs SEO en sont presque toujours la cause. Diagnostic simple et corrections concrètes, exemples à l'appui."
 date: "2026-07-04"
+updated: "2026-07-29"
 readTime: 7
 tag: "SEO"
 category: "seo"

@@ -14,11 +14,6 @@ export const metadata: Metadata = {
   description: 'Stackup Agency crée votre site web en 10 jours à partir de 449€. Agence digitale à Tours : site vitrine, e-commerce, applications sur mesure. Devis gratuit sous 72h.',
   alternates: {
     canonical: 'https://stackup-agency.fr',
-    languages: {
-      'fr-FR': 'https://stackup-agency.fr',
-      'en-US': 'https://stackup-agency.fr',
-      'x-default': 'https://stackup-agency.fr',
-    },
   },
   openGraph: {
     url: 'https://stackup-agency.fr',

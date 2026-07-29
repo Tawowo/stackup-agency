@@ -13,7 +13,7 @@ Les vignerons chinonais font face à un défi commercial de taille : comment se 
 
 De même, les hôtels, restaurants, commerces et prestataires touristiques de Chinon ont tout à gagner à optimiser leur visibilité en ligne, dans une ville qui reçoit des centaines de milliers de visiteurs chaque année et où la concurrence pour capter l'attention du touriste commence bien avant l'arrivée sur place.
 
-Stackup Agency, basée à Dreux et intervenant dans toute la région Centre-Val de Loire et les territoires environnants, accompagne les entreprises de Chinon dans leur développement digital.
+Stackup Agency, basée à Tours (Centre-Val de Loire), accompagne les entreprises de Chinon dans leur développement digital.
 
 ---
 

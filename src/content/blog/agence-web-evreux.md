@@ -11,7 +11,7 @@ readTime: 6
 
 L'Eure est un département stratégiquement situé entre Paris et la Normandie côtière, ce qui en fait un territoire de transit et d'installation pour des entreprises et des habitants qui travaillent dans la capitale tout en vivant en province. Cette population pendulaire, habituée aux standards de service parisiens, attend naturellement de ses prestataires locaux une qualité de présentation et de service au niveau de ce qu'elle connaît en ville.
 
-Stackup Agency, basée à Dreux et intervenant en Normandie, accompagne les entreprises d'Évreux et de l'Eure dans la construction d'une présence digitale professionnelle et efficace.
+Stackup Agency, basée à Tours (Centre-Val de Loire), accompagne les entreprises d'Évreux et de l'Eure dans la construction d'une présence digitale professionnelle et efficace.
 
 ---
 
@@ -67,7 +67,7 @@ Un site web nécessite un entretien régulier. Nous proposons des contrats de ma
 
 ### Proximité avec l'Eure
 
-Basée à Dreux, à la frontière de l'Eure-et-Loir et de l'Eure, Stackup Agency intervient régulièrement à Évreux et dans le département. Nous connaissons le tissu économique local et pouvons nous déplacer pour vous rencontrer.
+Basée à Tours, à la frontière de l'Eure-et-Loir et de l'Eure, Stackup Agency intervient régulièrement à Évreux et dans le département. Nous connaissons le tissu économique local et pouvons nous déplacer pour vous rencontrer.
 
 ### Réactivité sous 72h
 

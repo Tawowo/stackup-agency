@@ -7,10 +7,6 @@ export const metadata: Metadata = {
   description: 'Conseils SEO, création de site web et marketing digital par Stackup Agency. Articles experts pour aider les TPE et PME à développer leur présence en ligne.',
   alternates: {
     canonical: 'https://stackup-agency.fr/blog',
-    languages: {
-      'fr-FR': 'https://stackup-agency.fr/blog',
-      'x-default': 'https://stackup-agency.fr/blog',
-    },
   },
   openGraph: {
     url: 'https://stackup-agency.fr/blog',

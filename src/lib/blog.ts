@@ -11,6 +11,7 @@ export interface Post {
   title: string
   excerpt: string
   date: string
+  updated?: string
   readTime: number
   tag: string
   category?: string

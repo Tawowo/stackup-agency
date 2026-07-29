@@ -11,7 +11,7 @@ Rouen, capitale de la Normandie et métropole de 500 000 habitants, est l'une de
 
 Dans une métropole de cette taille, la concurrence entre entreprises est intense. Les commerces de centre-ville rivalisent avec les grands ensembles périphériques et le commerce en ligne. Les prestataires de services B2B se disputent des clients qui ont l'embarras du choix. Dans ce contexte hautement concurrentiel, une présence digitale professionnelle n'est pas un luxe : c'est un impératif pour toute entreprise qui veut rester visible et compétitive.
 
-Stackup Agency, basée à Dreux et intervenant dans toute la Normandie, accompagne les entreprises rouennaises dans leur développement digital avec des solutions adaptées à la diversité de leur marché.
+Stackup Agency, basée à Tours (Indre-et-Loire) et intervenant dans toute la France, accompagne les entreprises rouennaises dans leur développement digital avec des solutions adaptées à la diversité de leur marché.
 
 ---
 
@@ -71,7 +71,7 @@ Pour les entreprises de l'agglomération rouennaise qui ont besoin d'outils inte
 
 ### Couverture de toute la Normandie
 
-Basée à Dreux, Stackup Agency intervient dans toute la Normandie, de Rouen à Caen en passant par Évreux. Cette présence régionale nous permet de vous proposer un service de proximité avec une connaissance fine des marchés locaux.
+Basée à Tours, Stackup Agency intervient dans toute la France, de Tours à Paris et partout en France. Cette présence régionale nous permet de vous proposer un service de proximité avec une connaissance fine des marchés locaux.
 
 ### Réactivité sous 72h
 
@@ -90,7 +90,7 @@ Notre modèle est clair et transparent. Vous savez exactement ce que vous payez 
 > **À retenir :**
 > - Rouen est une métropole compétitive où la présence digitale est un facteur clé de différenciation
 > - Les PME rouennaises qui investissent dans leur web génèrent plus de leads et de ventes
-> - Stackup Agency intervient dans toute la Normandie avec des sites dès 449€ en 10 jours
+> - Stackup Agency intervient dans toute la France avec des sites dès 449€ en 10 jours
 > - Réponse sous 72h, expertise technique solide, aucune commission
 
 ---

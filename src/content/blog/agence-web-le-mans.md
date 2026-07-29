@@ -11,7 +11,7 @@ Le Mans, préfecture de la Sarthe, est une ville dont la réputation mondiale es
 
 Ce tissu économique diversifié — fabricants de pièces automobiles, sous-traitants aéronautiques, producteurs de rillettes et de volailles, commerces de centre-ville, hôtels qui doublent de capacité pendant les 24 Heures — crée une demande variée en matière de présence digitale. Les enjeux ne sont pas les mêmes pour un industriel B2B qui cherche à référencer ses produits auprès de donneurs d'ordre et pour un restaurateur qui veut remplir ses tables pendant les 24 Heures ou en dehors.
 
-Stackup Agency, basée à Dreux et intervenant dans tout le Grand Ouest, accompagne les entreprises du Mans dans leur stratégie digitale avec des solutions adaptées à chaque secteur.
+Stackup Agency, basée à Tours (Centre-Val de Loire), accompagne les entreprises du Mans dans leur stratégie digitale avec des solutions adaptées à chaque secteur.
 
 ---
 
