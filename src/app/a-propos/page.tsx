@@ -11,7 +11,7 @@ export const metadata = {
   openGraph: {
     url: `${SITE.url}/a-propos`,
     title: 'À propos — Stackup Agency',
-    description: `Agence web à Tours spécialisée dans la création de sites internet pour TPE et artisans.`,
+    description: 'Agence web à Tours spécialisée dans la création de sites internet pour TPE et artisans.',
     type: 'website',
   },
 }
@@ -49,6 +49,14 @@ export default function AProposPage() {
     ],
   }
 
+  const METHODE = [
+    { n: '01', titre: 'Écoute', desc: 'Un entretien de 30 minutes pour comprendre vos objectifs, vos clients et vos contraintes.' },
+    { n: '02', titre: 'Proposition', desc: 'Un devis clair, un délai précis, une liste de livrables. Pas de surprise.' },
+    { n: '03', titre: 'Design', desc: 'Maquette validée par vos soins avant une seule ligne de code.' },
+    { n: '04', titre: 'Développement', desc: 'Next.js, TypeScript, Tailwind. Code propre, performant, votre propriété.' },
+    { n: '05', titre: 'Livraison', desc: 'Mise en ligne, formation à l\'administration, transfert complet des accès.' },
+  ]
+
   return (
     <div className="min-h-screen bg-background dark:bg-[#0A0F1C]">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutPageSchema) }} />
@@ -58,67 +66,69 @@ export default function AProposPage() {
         <div className="max-w-3xl mx-auto px-4 sm:px-6">
           <Breadcrumb items={[{ name: 'À propos' }]} />
           <h1 className="text-3xl lg:text-5xl font-bold text-white mb-6">
-            À propos de Stackup Agency
+            L'agence qui rend le digital de qualité accessible.
           </h1>
           <p className="text-white/70 text-lg">
-            Une agence web fondée à Tours par des développeurs convaincus qu'un bon site internet
-            ne devrait pas coûter une fortune ni prendre trois mois.
+            Stackup Agency est née d'un constat simple : les indépendants, commerçants et TPE méritent
+            le même niveau d'exigence digitale que les grandes entreprises — sans les tarifs des grandes agences.
           </p>
         </div>
       </div>
 
       <div className="max-w-3xl mx-auto px-4 sm:px-6 py-16 space-y-16">
 
-        {/* L'agence */}
-        <section>
-          <h2 className="text-2xl font-bold text-foreground dark:text-white mb-6">L'agence</h2>
-          <div className="space-y-4 text-foreground/80 dark:text-white/80">
-            <p>
-              Stackup Agency est une micro-agence web basée à {SITE.address.locality} ({SITE.address.department}),
-              spécialisée dans la création de sites internet et d'applications sur mesure pour les TPE,
-              artisans et commerces locaux.
-            </p>
-            <p>
-              Le modèle est simple : des offres transparentes avec des prix affichés, des délais tenus,
-              et un interlocuteur unique du devis à la mise en ligne. Pas de chef de projet intermédiaire,
-              pas de délégation à des sous-traitants anonymes. Vous parlez directement au développeur
-              qui code votre site.
-            </p>
-            <p>
-              Nous travaillons en Next.js, TypeScript et applications métier sur mesure. Cette approche
-              nous permet de livrer des sites rapides, bien référencés et faciles à faire évoluer —
-              sans compromis sur la qualité du code.
-            </p>
-          </div>
+        {/* Corps principal */}
+        <section className="space-y-5 text-foreground/80 dark:text-white/80 text-lg leading-relaxed">
+          <p>
+            Nous avons choisi une autre voie : une structure légère, des processus précis,
+            une stack moderne (Next.js, TypeScript), et des centaines d'heures investies
+            dans la méthode plutôt que dans les bureaux. Résultat : des sites et des applications
+            sur mesure, livrés en 10 jours ouvrés, à des prix qu'aucune agence classique
+            ne peut proposer à qualité égale.
+          </p>
+          <p>
+            Notre conviction : les meilleurs clients ne cherchent pas le moins cher — ils cherchent
+            le meilleur rapport qualité, vision, exécution. C'est exactement ce que nous construisons,
+            projet après projet.
+          </p>
+          <p className="text-xl font-semibold text-foreground dark:text-white">
+            Votre vision. Notre code.
+          </p>
+        </section>
 
-          <div className="mt-6 grid sm:grid-cols-3 gap-4">
-            {[
-              { label: 'Fondée en', value: SITE.founded },
-              { label: 'Basée à', value: `${SITE.address.locality} (${SITE.address.departmentCode})` },
-              { label: 'Délai site vitrine', value: SITE.delais.vitrine },
-            ].map(stat => (
-              <div key={stat.label} className="p-4 rounded-xl bg-white/5 border border-white/10 text-center">
-                <div className="text-2xl font-bold text-white">{stat.value}</div>
-                <div className="text-sm text-white/50 mt-1">{stat.label}</div>
+        {/* Méthode */}
+        <section>
+          <h2 className="text-2xl font-bold text-foreground dark:text-white mb-8">Notre méthode en 5 étapes</h2>
+          <div className="space-y-4">
+            {METHODE.map(step => (
+              <div key={step.n} className="flex items-start gap-5 p-5 rounded-2xl border border-white/10 bg-white/2">
+                <div className="w-10 h-10 rounded-xl bg-blue-500/20 flex items-center justify-center flex-shrink-0 text-blue-400 font-bold text-sm">
+                  {step.n}
+                </div>
+                <div>
+                  <h3 className="font-semibold text-foreground dark:text-white mb-1">{step.titre}</h3>
+                  <p className="text-foreground/60 dark:text-white/60 text-sm">{step.desc}</p>
+                </div>
               </div>
             ))}
           </div>
         </section>
 
-        {/* Notre approche */}
+        {/* Technologies */}
         <section>
-          <h2 className="text-2xl font-bold text-foreground dark:text-white mb-6">Notre approche</h2>
-          <div className="space-y-4 text-foreground/80 dark:text-white/80">
-            <p>
-              Chaque projet démarre par une écoute attentive : quels sont vos objectifs, vos clients,
-              vos contraintes ? Nous proposons ensuite une solution adaptée — pas un template générique
-              sorti d'un catalogue.
-            </p>
-            <p>
-              Nos sites sont construits avec les mêmes technologies que les grandes applications web :
-              Next.js pour la performance et le SEO, TypeScript pour la fiabilité, Tailwind pour
-              l'interface. Résultat : des sites rapides, accessibles, et faciles à maintenir.
-            </p>
+          <h2 className="text-2xl font-bold text-foreground dark:text-white mb-6">Technologies</h2>
+          <div className="grid sm:grid-cols-2 gap-3">
+            {[
+              { label: 'Next.js', desc: 'Performance, SEO natif, déploiement edge' },
+              { label: 'TypeScript', desc: 'Fiabilité, maintenabilité, zéro bug silencieux' },
+              { label: 'Tailwind CSS', desc: 'Interfaces précises, cohérentes, rapides' },
+              { label: 'PostgreSQL / Prisma', desc: 'Bases de données robustes pour applications métier' },
+            ].map(t => (
+              <div key={t.label} className="p-4 rounded-xl border border-white/10 bg-white/3">
+                <div className="font-semibold text-foreground dark:text-white text-sm mb-1">{t.label}</div>
+                <div className="text-foreground/50 dark:text-white/50 text-xs">{t.desc}</div>
+              </div>
+            ))}
           </div>
         </section>
 
@@ -142,6 +152,18 @@ export default function AProposPage() {
           </div>
         </section>
 
+        {/* Cadre contractuel */}
+        <section className="rounded-2xl p-6 bg-gradient-to-br from-navy/20 to-blue-950/20 border border-white/10">
+          <h2 className="text-xl font-bold text-foreground dark:text-white mb-3">Cadre contractuel</h2>
+          <p className="text-foreground/70 dark:text-white/70 mb-4">
+            Devis, contrat de prestation, CGV, mentions légales et tous les documents officiels
+            sont disponibles en téléchargement.
+          </p>
+          <Link href="/ressources/documents" className="inline-flex items-center gap-2 text-blue-400 text-sm font-medium hover:text-blue-300 transition-colors">
+            Consulter les documents officiels →
+          </Link>
+        </section>
+
         {/* Jugez sur pièce */}
         <section className="rounded-2xl p-6 bg-gradient-to-br from-navy/20 to-blue-950/20 border border-white/10">
           <h2 className="text-xl font-bold text-foreground dark:text-white mb-3">Jugez sur pièce</h2>
@@ -154,14 +176,17 @@ export default function AProposPage() {
           </Link>
         </section>
 
-        {/* Contact */}
+        {/* CTA */}
         <div className="rounded-2xl p-6 bg-gradient-to-br from-navy to-electric text-center">
-          <h3 className="text-white font-bold text-xl mb-2">On discute de votre projet ?</h3>
+          <h3 className="text-white font-bold text-xl mb-2">Votre vision. Notre code.</h3>
           <p className="text-white/70 mb-4">Premier rendez-vous gratuit, devis sous 72h, sans engagement.</p>
           <Link href="/contact" className="inline-block px-6 py-3 bg-amber-500 hover:bg-amber-400 text-white font-semibold rounded-xl transition-all hover:-translate-y-0.5">
-            Prendre contact →
+            Démarrer mon projet →
           </Link>
         </div>
+
+        {/* Signature */}
+        <p className="text-center text-foreground/40 dark:text-white/40 text-sm">{SITE.signature}</p>
       </div>
     </div>
   )
