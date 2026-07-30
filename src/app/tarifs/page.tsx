@@ -94,7 +94,7 @@ export default function TarifsPage() {
             </div>
             <div className="text-right flex-shrink-0">
               <div className="text-3xl font-bold text-electric-ink dark:text-electric">à partir de {SITE.pricing.gestion}€</div>
-              <div className="text-xs text-foreground/70 dark:text-white/50 mt-0.5">Livraison : 4 semaines</div>
+              <div className="text-xs text-foreground/70 dark:text-white/50 mt-0.5">Livraison : {SITE.delais.gestion}</div>
             </div>
           </div>
           <p className="text-foreground/80 dark:text-white/80 mb-5">

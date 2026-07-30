@@ -32,7 +32,7 @@ const articles = [
     date: '25 jan. 2026',
     readTime: 7,
     tag: 'SEO',
-    color: 'from-emerald-400 to-teal-500',
+    color: 'from-electric to-navy',
     emoji: '🔍',
   },
 ]

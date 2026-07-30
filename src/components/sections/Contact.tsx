@@ -104,7 +104,7 @@ export default function Contact() {
               />
 
               {status === 'success' && (
-                <div className="flex items-center gap-2 text-emerald-500 text-sm">
+                <div className="flex items-center gap-2 text-success text-sm">
                   <CheckCircle size={16} />
                   {t.contact.form.success}
                 </div>

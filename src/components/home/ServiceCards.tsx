@@ -1,34 +1,91 @@
 'use client'
 import Link from 'next/link'
-import { SITE } from '@/config/site'
+import { useRef, MouseEvent } from 'react'
+import { ArrowRight } from 'lucide-react'
+import { SERVICES } from '@/config/site'
 
-const SERVICES = [
-  { titre: 'Site vitrine', prix: SITE.pricing.vitrine, delai: SITE.delais.vitrine, desc: 'Présence professionnelle en ligne, SEO local, formulaire de contact.', href: '/services/site-vitrine' },
-  { titre: 'Site multi-pages', prix: SITE.pricing.multipages, delai: SITE.delais.multipages, desc: 'Site complet avec blog, galerie, pages service et formulaires.', href: '/services/site-multi-pages' },
-  { titre: 'Boutique en ligne', prix: SITE.pricing.ecommerce, delai: SITE.delais.ecommerce, desc: 'E-commerce avec paiement sécurisé et gestion des stocks.', href: '/services/site-ecommerce' },
-  { titre: 'Système de gestion', prix: SITE.pricing.gestion, delai: '4 semaines', desc: 'Logiciel sur mesure : caisse, RDV, CRM, commandes.', href: '/services/systeme-gestion' },
-  { titre: 'Site association', prix: SITE.pricing.association, delai: SITE.delais.association, desc: 'Site association loi 1901 avec adhésion et événements.', href: '/services/site-association' },
-  { titre: 'Maintenance', prix: SITE.pricing.maintenanceStarter, delai: '/mois', desc: 'Hébergement, sauvegardes, mises à jour et support continu.', href: '/tarifs' },
-  { titre: 'Blog SEO', prix: 25, delai: '/article', desc: 'Articles optimisés SEO pour booster votre référencement naturel.', href: '/services/redaction-blog-seo' },
-]
+function ServiceCard({
+  s,
+  index,
+}: {
+  s: (typeof SERVICES)[number]
+  index: number
+}) {
+  const cardRef = useRef<HTMLAnchorElement>(null)
 
-function ServiceCard({ s }: { s: typeof SERVICES[0] }) {
-  const isMois = s.delai === '/mois'
-  const isArticle = s.delai === '/article'
+  function handleMouseMove(e: MouseEvent<HTMLAnchorElement>) {
+    const el = cardRef.current
+    if (!el) return
+    const rect = el.getBoundingClientRect()
+    const x = ((e.clientX - rect.left) / rect.width) * 100
+    const y = ((e.clientY - rect.top) / rect.height) * 100
+    el.style.setProperty('--sx', `${x}%`)
+    el.style.setProperty('--sy', `${y}%`)
+  }
+
+  function handleMouseLeave() {
+    const el = cardRef.current
+    if (!el) return
+    el.style.setProperty('--sx', '50%')
+    el.style.setProperty('--sy', '50%')
+  }
 
   return (
-    <Link href={s.href}
-      className="group reveal-item p-5 rounded-2xl border border-navy/20 dark:border-white/10 hover:border-electric/40 hover:-translate-y-1 hover:shadow-lg hover:shadow-electric/10 transition-all duration-300">
-      <div className="flex items-start justify-between mb-3">
-        <h3 className="font-semibold text-foreground dark:text-white group-hover:text-electric transition-colors">{s.titre}</h3>
-        <span className="text-navy dark:text-gold font-bold text-sm ml-2 flex-shrink-0">
-          {s.prix}€{(isMois || isArticle) ? s.delai : ''}
-        </span>
+    <Link
+      ref={cardRef}
+      href={s.href}
+      onMouseMove={handleMouseMove}
+      onMouseLeave={handleMouseLeave}
+      className="service-card group reveal-item block rounded-2xl border border-navy/20 dark:border-white/10 p-5 transition-all duration-300 hover:-translate-y-1 hover:border-electric/40 hover:shadow-lg hover:shadow-electric/10"
+      style={{
+        animationDelay: `${index * 80}ms`,
+        '--sx': '50%',
+        '--sy': '50%',
+      } as React.CSSProperties}
+    >
+      {/* Spotlight */}
+      <span
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+        style={{
+          background:
+            'radial-gradient(200px circle at var(--sx) var(--sy), rgba(45,125,210,0.08), transparent 70%)',
+        }}
+      />
+
+      <div className="relative">
+        {s.badge && (
+          <span className="mb-2 inline-block rounded-full bg-electric/10 px-2.5 py-0.5 text-xs font-semibold text-electric-ink dark:text-electric">
+            {s.badge}
+          </span>
+        )}
+
+        <div className="flex items-start justify-between gap-2 mb-2">
+          <h3 className="font-semibold text-foreground dark:text-white group-hover:text-electric transition-colors leading-snug">
+            {s.titre}
+          </h3>
+          <span className="shrink-0 font-bold text-sm text-navy dark:text-white">
+            À partir de {s.prix}&thinsp;{s.unite}
+          </span>
+        </div>
+
+        <p className="text-foreground/60 dark:text-white/60 text-sm mb-3 leading-relaxed">
+          {s.desc}
+        </p>
+
+        <div className="flex items-center justify-between">
+          {s.delai ? (
+            <span className="text-xs text-electric-ink dark:text-electric">
+              Livraison&nbsp;: {s.delai}
+            </span>
+          ) : (
+            <span />
+          )}
+          <span className="flex items-center gap-1 text-xs font-medium text-electric-ink dark:text-electric opacity-0 group-hover:opacity-100 transition-opacity">
+            Découvrir <ArrowRight size={12} />
+          </span>
+        </div>
       </div>
-      <p className="text-foreground/60 dark:text-white/60 text-sm mb-3">{s.desc}</p>
-      <span className="text-xs text-electric-ink dark:text-electric">
-        {!isMois && !isArticle ? `Livraison : ${s.delai}` : isArticle ? "À l'unité ou en pack" : 'Mensuel'}
-      </span>
     </Link>
   )
 }
@@ -36,7 +93,9 @@ function ServiceCard({ s }: { s: typeof SERVICES[0] }) {
 export default function ServiceCards() {
   return (
     <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-8">
-      {SERVICES.map(s => <ServiceCard key={s.titre} s={s} />)}
+      {SERVICES.map((s, i) => (
+        <ServiceCard key={s.id} s={s} index={i} />
+      ))}
     </div>
   )
 }

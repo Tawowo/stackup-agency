@@ -172,7 +172,7 @@ export default function AgenceWebVillePage({ params }: { params: { ville: string
               { titre: 'Site vitrine', prix: `${SITE.pricing.vitrine}€`, delai: SITE.delais.vitrine, desc: 'Présence en ligne professionnelle, SEO local optimisé', href: '/services/site-vitrine' },
               { titre: 'Site multi-pages', prix: `${SITE.pricing.multipages}€`, delai: SITE.delais.multipages, desc: 'Site complet avec plusieurs sections et pages de service', href: '/services/site-multi-pages' },
               { titre: 'Boutique en ligne', prix: `${SITE.pricing.ecommerce}€`, delai: SITE.delais.ecommerce, desc: 'E-commerce complet, paiement sécurisé, gestion des stocks', href: '/services/site-ecommerce' },
-              { titre: 'Application métier', prix: `${SITE.pricing.gestion}€`, delai: '4 semaines', desc: 'Logiciel sur mesure : caisse, RDV, commandes, CRM', href: '/services/systeme-gestion' },
+              { titre: 'Application métier', prix: `${SITE.pricing.gestion}€`, delai: SITE.delais.gestion, desc: 'Logiciel sur mesure : caisse, RDV, commandes, CRM', href: '/services/systeme-gestion' },
             ].map(s => (
               <Link key={s.titre} href={s.href} className="p-5 rounded-2xl border border-navy/20 dark:border-white/10 hover:border-electric/40 transition-colors group">
                 <div className="flex items-start justify-between mb-2">

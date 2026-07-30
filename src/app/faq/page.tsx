@@ -20,7 +20,7 @@ const FAQ_ITEMS = [
   {
     cat: 'Délais et processus',
     faqs: [
-      { q: 'Quels sont les délais de livraison ?', a: `Site vitrine : ${SITE.delais.vitrine}. Site multi-pages : ${SITE.delais.multipages}. Boutique en ligne : ${SITE.delais.ecommerce}. Site association : ${SITE.delais.association}. Système de gestion : 4 semaines. Les délais sont garantis contractuellement à partir de la validation du brief et du paiement de l'acompte.` },
+      { q: 'Quels sont les délais de livraison ?', a: `Site vitrine : ${SITE.delais.vitrine}. Site multi-pages : ${SITE.delais.multipages}. Boutique en ligne : ${SITE.delais.ecommerce}. Site association : ${SITE.delais.association}. Système de gestion : ${SITE.delais.gestion}. Les délais sont garantis contractuellement à partir de la validation du brief et du paiement de l'acompte.` },
       { q: 'Comment se déroule le processus de création ?', a: "1. Prise de contact et brief. 2. Devis et bon de commande. 3. Acompte de 30%. 4. Maquette. 5. Développement. 6. Retours et ajustements. 7. Livraison et mise en ligne. 8. Formation à la prise en main." },
       { q: 'Combien de modifications peut-on demander ?', a: "Deux rounds de retours sont inclus dans chaque projet. Des modifications supplémentaires sont facturées au taux horaire." },
       { q: 'Travaillez-vous à distance ou en présentiel ?', a: "Nous travaillons principalement à distance par visioconférence et email. Cela nous permet d'être réactifs pour tous nos clients en France, pas seulement en Touraine." },

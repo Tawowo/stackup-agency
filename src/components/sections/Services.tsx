@@ -6,12 +6,12 @@ import { useLanguage } from '@/contexts/LanguageContext'
 import Link from 'next/link'
 
 const serviceData = [
-  { icon: Globe,          slug: 'site-vitrine',       color: 'from-blue-500 to-electric',     bg: 'bg-blue-50 dark:bg-blue-900/20',       price: 'À partir de 449€',   border: 'border-electric   hover:border-electric'   },
-  { icon: FileText,       slug: 'site-multi-pages',   color: 'from-emerald-500 to-teal-600',  bg: 'bg-emerald-50 dark:bg-emerald-900/20', price: 'À partir de 749€',   border: 'border-emerald-500 hover:border-emerald-500' },
-  { icon: ShoppingCart,   slug: 'site-ecommerce',     color: 'from-purple-500 to-violet-600', bg: 'bg-purple-50 dark:bg-purple-900/20',   price: 'À partir de 1 647€', border: 'border-purple-500  hover:border-purple-500'  },
-  { icon: LayoutDashboard,slug: 'systeme-gestion',    color: 'from-electric to-navy',         bg: 'bg-sky-50 dark:bg-sky-900/20',         price: 'À partir de 1 447€', border: 'border-electric    hover:border-electric'    },
-  { icon: Palette,        slug: 'site-association',   color: 'from-pink-500 to-rose-600',     bg: 'bg-pink-50 dark:bg-pink-900/20',       price: 'À partir de 149€',   border: 'border-pink-500    hover:border-pink-500'    },
-  { icon: TrendingUp,     slug: 'marketing-digital',  color: 'from-orange-500 to-amber-600',  bg: 'bg-orange-50 dark:bg-orange-900/20',   price: 'Sur devis',          border: 'border-orange-500  hover:border-orange-500'  },
+  { icon: Globe,          slug: 'site-vitrine',       color: 'from-electric to-navy',  bg: 'bg-electric/10 dark:bg-electric/10', price: 'À partir de 449€',    border: 'border-electric/40  hover:border-electric'  },
+  { icon: FileText,       slug: 'site-multi-pages',   color: 'from-navy to-electric',  bg: 'bg-navy/10 dark:bg-navy/20',         price: 'À partir de 749€',    border: 'border-navy/30      hover:border-electric'  },
+  { icon: ShoppingCart,   slug: 'site-ecommerce',     color: 'from-gold to-amber-400', bg: 'bg-gold/10 dark:bg-gold/10',         price: 'À partir de 1 647€',  border: 'border-gold/40      hover:border-gold'      },
+  { icon: LayoutDashboard,slug: 'systeme-gestion',    color: 'from-electric to-navy',  bg: 'bg-electric/10 dark:bg-electric/10', price: 'À partir de 1 447€',  border: 'border-electric/40  hover:border-electric'  },
+  { icon: Palette,        slug: 'site-association',   color: 'from-navy to-electric',  bg: 'bg-navy/10 dark:bg-navy/20',         price: 'À partir de 149€',    border: 'border-navy/30      hover:border-electric'  },
+  { icon: TrendingUp,     slug: 'marketing-digital',  color: 'from-gold to-amber-400', bg: 'bg-gold/10 dark:bg-gold/10',         price: 'À partir de 299€/mois', border: 'border-gold/40    hover:border-gold'      },
 ]
 
 export default function Services() {

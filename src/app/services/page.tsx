@@ -48,7 +48,7 @@ const SERVICES = [
     slug: 'systeme-gestion',
     titre: 'Système de gestion',
     prix: SITE.pricing.gestion,
-    delai: '4 semaines',
+    delai: SITE.delais.gestion,
     desc: 'Application métier sur mesure : caisse, RDV, CRM, commandes, planning.',
     inclus: ['Développement 100% sur mesure', 'Interface d\'administration', 'Formation incluse', 'Données hébergées en France', 'Pas d\'abonnement SaaS', 'Évolutions possibles'],
     ideal: 'Restaurants, hôtels, artisans, professions de santé',
@@ -184,7 +184,7 @@ export default function ServicesPage() {
           <h2 className="text-2xl font-bold text-foreground dark:text-white mb-6">Questions fréquentes</h2>
           <div className="space-y-3">
             {[
-              { q: 'Quels sont les délais de livraison ?', a: `Site vitrine : ${SITE.delais.vitrine}. Site multi-pages : ${SITE.delais.multipages}. Boutique en ligne : ${SITE.delais.ecommerce}. Système de gestion : 4 semaines. Délais garantis contractuellement.` },
+              { q: 'Quels sont les délais de livraison ?', a: `Site vitrine : ${SITE.delais.vitrine}. Site multi-pages : ${SITE.delais.multipages}. Boutique en ligne : ${SITE.delais.ecommerce}. Système de gestion : ${SITE.delais.gestion}. Délais garantis contractuellement.` },
               { q: 'Le prix est-il tout inclus ?', a: 'Oui. Le prix affiché inclut le design, le développement, le SEO de base, l\'hébergement 12 mois, le certificat SSL et la formation à la prise en main. Pas de surprise.' },
               { q: 'Est-ce que je suis propriétaire du code ?', a: 'Oui, à 100%. Une fois le projet livré et payé, le code vous appartient entièrement. Vous êtes libre de le modifier ou de changer d\'hébergeur.' },
               { q: 'Que se passe-t-il après les 12 mois d\'hébergement inclus ?', a: `Après la première année, vous pouvez opter pour l'une de nos offres de maintenance (à partir de ${SITE.pricing.maintenanceStarter}€/mois) ou récupérer votre code et gérer l'hébergement vous-même.` },

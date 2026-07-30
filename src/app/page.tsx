@@ -5,7 +5,7 @@ import { CheckCircle, ArrowRight, Clock, Zap, Shield } from 'lucide-react'
 import { SITE } from '@/config/site'
 import PageLoader from '@/components/ui/PageLoader'
 import HeroSection from '@/components/home/HeroSection'
-import StickyServiceStack from '@/components/home/StickyServiceStack'
+import ServiceCards from '@/components/home/ServiceCards'
 import ProcessSection from '@/components/home/ProcessSection'
 import ManifestoSection from '@/components/home/ManifestoSection'
 import PinnedGallery from '@/components/home/PinnedGallery'
@@ -82,7 +82,7 @@ export default function Home() {
                 Du site vitrine à l'application sur mesure — une solution adaptée à chaque budget et chaque activité.
               </p>
             </div>
-            <StickyServiceStack />
+            <ServiceCards />
             <Link href="/services" className="inline-flex items-center gap-2 text-electric-ink dark:text-electric hover:text-navy dark:hover:text-electric font-medium transition-colors">
               Voir tous nos services <ArrowRight size={16} />
             </Link>
@@ -269,7 +269,7 @@ export default function Home() {
                 'Hébergement France',
               ].map(item => (
                 <div key={item} className="flex items-center gap-1.5 text-white/60 text-sm">
-                  <CheckCircle size={14} className="text-green-400" />
+                  <CheckCircle size={14} className="text-success" />
                   {item}
                 </div>
               ))}
