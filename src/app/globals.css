@@ -265,3 +265,65 @@ body {
 @layer utilities {
   .text-balance { text-wrap: balance; }
 }
+
+/* ─── Badge shimmer (Démonstration) ─────────────────────── */
+@keyframes shimmer {
+  0%   { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+.badge-shimmer {
+  background: linear-gradient(90deg, rgba(255,255,255,0.1) 25%, rgba(255,255,255,0.25) 50%, rgba(255,255,255,0.1) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 2.5s linear infinite;
+}
+
+/* ─── Icon pulse on appear ───────────────────────────────── */
+@keyframes icon-pulse {
+  0%  { transform: scale(1); }
+  40% { transform: scale(1.2); }
+  70% { transform: scale(0.95); }
+  100%{ transform: scale(1); }
+}
+.is-visible .icon-pulse {
+  animation: icon-pulse 0.6s cubic-bezier(0.16,1,0.3,1) both;
+  animation-delay: 0.3s;
+}
+
+/* ─── Reveal with scale (cards) ─────────────────────────── */
+.reveal-scale {
+  opacity: 0;
+  transform: scale(0.96) translateY(16px);
+  transition: opacity 0.5s ease, transform 0.5s cubic-bezier(0.16,1,0.3,1);
+}
+.reveal-scale.is-visible {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+}
+
+/* ─── Realisation card: thumbnail pan on hover ───────────── */
+.real-thumb {
+  transition: transform 0.6s ease;
+}
+.group:hover .real-thumb {
+  transform: scale(1.04);
+}
+
+/* ─── Price ticker ───────────────────────────────────────── */
+@keyframes ticker-in {
+  from { transform: translateY(100%); opacity: 0; }
+  to   { transform: translateY(0); opacity: 1; }
+}
+.price-ticker {
+  display: inline-block;
+  overflow: hidden;
+}
+.is-visible .price-ticker-inner {
+  animation: ticker-in 0.5s cubic-bezier(0.16,1,0.3,1) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .badge-shimmer { animation: none; }
+  .reveal-scale { opacity: 1; transform: none; transition: none; }
+  .is-visible .icon-pulse { animation: none; }
+  .is-visible .price-ticker-inner { animation: none; }
+}

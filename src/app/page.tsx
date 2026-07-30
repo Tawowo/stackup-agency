@@ -63,7 +63,7 @@ export default function Home() {
       <PageLoader />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }} />
-      <main>
+      <main className="page-transition">
 
         <HeroSection />
 
@@ -71,7 +71,7 @@ export default function Home() {
         <section id="services" className="py-24 bg-background dark:bg-[#0A0F1C]">
           <div className="max-w-5xl mx-auto px-4 sm:px-6">
             <div className="mb-12">
-              <h2 className="text-3xl lg:text-4xl font-bold text-foreground dark:text-white mb-4">
+              <h2 className="text-3xl lg:text-4xl font-bold text-foreground dark:text-white mb-4 reveal-item heading-underline">
                 Nos services web
               </h2>
               <p className="text-foreground/60 dark:text-white/60 max-w-xl">
@@ -138,12 +138,12 @@ export default function Home() {
             <div className="grid sm:grid-cols-3 gap-5 mb-8">
               {realisationsHome.map(r => (
                 <Link key={r.slug} href={`/realisations/${r.slug}`}
-                  className="group rounded-2xl border border-navy/20 dark:border-white/10 overflow-hidden hover:border-electric/30 transition-colors">
-                  <div className="h-36 flex items-center justify-center relative" style={{ background: r.couleur }}>
+                  className="group reveal-scale rounded-2xl border border-navy/20 dark:border-white/10 overflow-hidden hover:border-electric/30 transition-colors">
+                  <div className="real-thumb h-36 flex items-center justify-center relative overflow-hidden" style={{ background: r.couleur }}>
                     <div className="absolute inset-0 opacity-20" style={{ background: `linear-gradient(135deg, ${r.accent}, transparent)` }} />
-                    <span className="relative text-white/70 font-bold text-4xl">{r.nom.charAt(0)}</span>
+                    <span className="relative text-white/70 font-bold text-4xl group-hover:scale-110 transition-transform duration-500">{r.nom.charAt(0)}</span>
                     <div className="absolute top-2 right-2">
-                      <span className="px-2 py-0.5 bg-black/40 text-white/70 text-xs rounded-full">Démonstration</span>
+                      <span className="badge-shimmer px-2 py-0.5 bg-black/40 text-white/70 text-xs rounded-full">Démonstration</span>
                     </div>
                   </div>
                   <div className="p-4">
