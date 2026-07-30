@@ -43,7 +43,7 @@ export default function ProcessSection() {
         <div className="hidden sm:block">
           <div className="relative mb-8">
             <div className="absolute top-5 left-8 right-8 h-px bg-white/10" />
-            <div ref={lineRef} className="process-line absolute top-5 left-8 right-8 h-px bg-gradient-to-r from-blue-500 to-electric" />
+            <div ref={lineRef} className="process-line absolute top-5 left-8 right-8 h-px bg-gradient-to-r from-electric to-navy" />
           </div>
           <div className="grid grid-cols-4 gap-6">
             {STEPS.map((s, i) => (

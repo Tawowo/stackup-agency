@@ -47,7 +47,7 @@ export default function Navbar() {
   const navBg = !isHome
     ? 'bg-[#1E3A5F]'
     : scrolled
-    ? 'bg-white/95 dark:bg-gray-900/95 backdrop-blur-md shadow-lg shadow-black/5'
+    ? 'bg-white/95 dark:bg-gray-900/95 backdrop-blur-md shadow-lg shadow-black/5 border-b border-navy/10 dark:border-white/10'
     : 'bg-transparent'
 
   const linkClass = !isHome

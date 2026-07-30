@@ -19,7 +19,7 @@ const categoryColors: Record<string, string> = {
   commerce: 'from-emerald-500 to-teal-600',
   'seo-local': 'from-blue-500 to-electric',
   'creation-sites': 'from-purple-500 to-violet-600',
-  'applications-metier': 'from-cyan-500 to-blue-600',
+  'applications-metier': 'from-cyan-500 to-electric',
   'pages-locales': 'from-rose-500 to-pink-600',
   seo: 'from-blue-500 to-electric',
   digital: 'from-purple-500 to-violet-600',

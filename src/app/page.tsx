@@ -3,12 +3,12 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { CheckCircle, ArrowRight, Clock, Zap, Shield } from 'lucide-react'
 import { SITE } from '@/config/site'
-import { realisations } from '@/lib/realisations'
 import PageLoader from '@/components/ui/PageLoader'
 import HeroSection from '@/components/home/HeroSection'
 import ServiceCards from '@/components/home/ServiceCards'
 import ProcessSection from '@/components/home/ProcessSection'
 import MarqueeSeparator from '@/components/home/MarqueeSeparator'
+import ImmersiveGallery from '@/components/home/ImmersiveGallery'
 
 export const metadata: Metadata = {
   title: "Agence web Tours — Création site internet livré en 10 jours dès 449€ | Stackup Agency",
@@ -56,7 +56,6 @@ const organizationSchema = {
 
 
 export default function Home() {
-  const realisationsHome = realisations.slice(0, 3)
 
   return (
     <>
@@ -125,43 +124,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Réalisations */}
-        <section id="realisations" className="py-24 bg-background dark:bg-[#0A0F1C]">
-          <div className="max-w-5xl mx-auto px-4 sm:px-6">
-            <div className="flex items-end justify-between mb-12">
-              <div>
-                <h2 className="text-3xl lg:text-4xl font-bold text-foreground dark:text-white mb-3">
-                  Nos réalisations
-                </h2>
-                <p className="text-foreground/60 dark:text-white/60">Nos démonstrations sont des projets complets, construits par nos soins et consultables en ligne. Ce que vous voyez est exactement ce que nous livrons.</p>
-              </div>
-              <Link href="/realisations" className="hidden sm:flex items-center gap-1 text-electric-ink dark:text-electric hover:text-navy dark:hover:text-electric font-medium text-sm transition-colors">
-                Voir tout <ArrowRight size={14} />
-              </Link>
-            </div>
-            <div className="grid sm:grid-cols-3 gap-5 mb-8">
-              {realisationsHome.map(r => (
-                <Link key={r.slug} href={`/realisations/${r.slug}`}
-                  className="group reveal-scale rounded-2xl border border-navy/20 dark:border-white/10 overflow-hidden hover:border-electric/30 transition-colors">
-                  <div className="real-thumb h-36 flex items-center justify-center relative overflow-hidden" style={{ background: r.couleur }}>
-                    <div className="absolute inset-0 opacity-20" style={{ background: `linear-gradient(135deg, ${r.accent}, transparent)` }} />
-                    <span className="relative text-white/70 font-bold text-4xl group-hover:scale-110 transition-transform duration-500">{r.nom.charAt(0)}</span>
-                    <div className="absolute top-2 right-2">
-                      <span className="badge-shimmer px-2 py-0.5 bg-black/40 text-white/70 text-xs rounded-full">Démonstration</span>
-                    </div>
-                  </div>
-                  <div className="p-4">
-                    <h3 className="font-semibold text-foreground dark:text-white group-hover:text-electric transition-colors mb-1">{r.nom}</h3>
-                    <p className="text-xs text-foreground/60 dark:text-white/60">{r.type}</p>
-                  </div>
-                </Link>
-              ))}
-            </div>
-            <Link href="/realisations" className="sm:hidden inline-flex items-center gap-1 text-electric-ink dark:text-electric hover:text-navy dark:hover:text-electric font-medium text-sm transition-colors">
-              Voir toutes les réalisations <ArrowRight size={14} />
-            </Link>
-          </div>
-        </section>
+        <ImmersiveGallery />
 
         <ProcessSection />
 
