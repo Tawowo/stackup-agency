@@ -17,12 +17,34 @@ html {
   scroll-behavior: smooth;
 }
 
-/* ─── Typography (charte) ────────────────────────────────── */
-h1 { font-weight: 800; letter-spacing: -0.5px; }
-h2 { font-weight: 700; }
+/* ─── Typography Premium (Space Grotesk + Inter) ─────────── */
+h1, h2, .font-display {
+  font-family: var(--font-space, 'Space Grotesk', system-ui, sans-serif);
+}
+h1 {
+  font-size: clamp(2.6rem, 6vw, 4.6rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+}
+h2 {
+  font-size: clamp(1.9rem, 4vw, 3rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.12;
+}
 h3 { font-weight: 600; }
 body { line-height: 1.6; }
 blockquote { font-weight: 600; font-style: italic; }
+.overline-label {
+  font-family: var(--font-inter, 'Inter', system-ui, sans-serif);
+  font-weight: 600;
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--electric-ink);
+}
+.dark .overline-label { color: var(--electric); }
 
 /* ─── Aurora blobs (max 2, blur ≤ 80px, transform-only) ─── */
 @keyframes aurora-drift-1 {
