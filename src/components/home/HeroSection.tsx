@@ -260,6 +260,32 @@ export default function HeroSection() {
           ))}
         </div>
       </div>
+
+      {/* ── Indicateur de scroll ────────────────────────────────── */}
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1.5" aria-hidden="true">
+        <span className="text-white/40 text-xs tracking-widest uppercase">Défiler</span>
+        <div className="w-px h-12 bg-gradient-to-b from-white/40 to-transparent" style={{ animation: 'scroll-line 1.8s ease-in-out infinite' }} />
+      </div>
+
+      {/* ── Veine dorée SVG — couture vers section suivante ─────── */}
+      <svg
+        aria-hidden="true"
+        className="gold-vein absolute bottom-0 left-0 w-full"
+        style={{ height: '160px' }}
+        viewBox="0 0 1440 160"
+        preserveAspectRatio="none"
+      >
+        <path
+          d="M0,160 C200,120 400,40 720,80 C1040,120 1240,40 1440,60"
+          strokeWidth="1.5"
+          style={{ opacity: 0.3 }}
+        />
+        <path
+          d="M0,160 C300,100 600,60 900,100 C1100,130 1300,80 1440,100"
+          strokeWidth="1"
+          style={{ opacity: 0.18 }}
+        />
+      </svg>
     </section>
   )
 }

@@ -411,6 +411,12 @@ body {
   animation: ticker-in 0.5s cubic-bezier(0.16,1,0.3,1) both;
 }
 
+/* ─── Scroll indicator ────────────────────────────────────── */
+@keyframes scroll-line {
+  0%, 100% { opacity: 0.4; transform: scaleY(1); }
+  50%  { opacity: 0.9; transform: scaleY(0.6); }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .badge-shimmer { animation: none; }
   .reveal-scale { opacity: 1; transform: none; transition: none; }
