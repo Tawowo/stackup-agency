@@ -85,7 +85,7 @@ export default function ImmersiveGallery() {
                   <span className="w-3 h-3 rounded-full bg-amber-400/70" aria-hidden="true" />
                   <span className="w-3 h-3 rounded-full bg-green-400/70" aria-hidden="true" />
                   <div className="ml-3 flex-1 flex items-center justify-between">
-                    <span className="text-white/30 text-xs font-mono truncate">{new URL(r.url).hostname}</span>
+                    <span className="text-white/60 text-xs font-mono truncate">{new URL(r.url).hostname}</span>
                     <span className="badge-shimmer ml-2 px-2 py-0.5 bg-white/10 text-white/60 text-xs rounded-full shrink-0">
                       Démonstration
                     </span>
@@ -110,13 +110,13 @@ export default function ImmersiveGallery() {
                 <div className="p-5 lg:p-6">
                   <div className="flex items-start justify-between gap-4 mb-3">
                     <div>
-                      <div className="text-xs text-foreground/40 dark:text-white/30 font-mono mb-1">
+                      <div className="text-xs text-foreground/60 dark:text-white/50 font-mono mb-1">
                         {String(i + 1).padStart(2, '0')}/{String(PANELS.length).padStart(2, '0')}
                       </div>
                       <h3 className="font-display font-bold text-lg text-foreground dark:text-white group-hover:text-electric transition-colors">
                         {r.nom}
                       </h3>
-                      <p className="text-xs text-foreground/50 dark:text-white/50 mt-0.5">{r.type}</p>
+                      <p className="text-xs text-foreground/60 dark:text-white/50 mt-0.5">{r.type}</p>
                     </div>
                     <Link
                       href={r.url}
@@ -133,7 +133,7 @@ export default function ImmersiveGallery() {
                   </p>
                   <div className="mt-4 flex flex-wrap gap-1.5">
                     {r.tags.slice(0, 3).map(tag => (
-                      <span key={tag} className="px-2 py-0.5 rounded-full bg-navy/10 dark:bg-white/5 text-navy/70 dark:text-white/50 text-xs border border-navy/10 dark:border-white/5">
+                      <span key={tag} className="px-2 py-0.5 rounded-full bg-navy/10 dark:bg-white/5 text-electric-ink dark:text-white/60 text-xs border border-navy/15 dark:border-white/5">
                         {tag}
                       </span>
                     ))}
