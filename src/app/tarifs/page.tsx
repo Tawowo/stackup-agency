@@ -212,6 +212,22 @@ export default function TarifsPage() {
             Demander un devis gratuit →
           </Link>
         </div>
+
+        {/* Parrainage */}
+        <div className="rounded-2xl border border-gold/20 bg-gradient-to-br from-amber-50/50 to-transparent dark:from-gold/5 dark:to-transparent p-6 flex flex-col sm:flex-row items-start sm:items-center gap-5">
+          <div className="flex-1">
+            <div className="text-xs font-semibold text-gold uppercase tracking-widest mb-1">Programme parrainage</div>
+            <h3 className="font-bold text-foreground dark:text-white mb-1">
+              Recommandez Stackup et gagnez 1 mois de maintenance offert
+            </h3>
+            <p className="text-sm text-foreground/60 dark:text-white/60">
+              Votre filleul bénéficie de −10% sur son premier projet. Valeur jusqu'à 89€ pour vous.
+            </p>
+          </div>
+          <Link href="/parrainage" className="flex-shrink-0 px-5 py-2.5 bg-gold hover:bg-gold/80 text-ink text-sm font-semibold rounded-xl transition-colors">
+            En savoir plus →
+          </Link>
+        </div>
       </div>
     </div>
   )

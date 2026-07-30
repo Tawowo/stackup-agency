@@ -116,6 +116,16 @@ export default function FAQPage() {
           </section>
         ))}
 
+        <div className="rounded-xl border border-gold/20 bg-amber-50/30 dark:bg-gold/5 p-5 flex items-center gap-4 mb-6">
+          <div className="flex-1">
+            <div className="font-semibold text-foreground dark:text-white text-sm mb-0.5">Programme de parrainage</div>
+            <p className="text-xs text-foreground/60 dark:text-white/60">Recommandez-nous et gagnez 1 mois de maintenance. Votre filleul reçoit −10% sur son projet.</p>
+          </div>
+          <Link href="/parrainage" className="flex-shrink-0 px-4 py-2 bg-gold hover:bg-gold/80 text-ink text-xs font-semibold rounded-xl transition-colors">
+            Découvrir →
+          </Link>
+        </div>
+
         <div className="rounded-2xl p-6 bg-gradient-to-br from-navy to-electric text-center">
           <h2 className="text-white font-bold text-xl mb-2">Une question sans réponse ici ?</h2>
           <p className="text-white/70 mb-4">Contactez-nous directement. Nous répondons sous 72h.</p>

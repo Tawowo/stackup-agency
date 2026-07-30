@@ -157,6 +157,7 @@ export default function Navbar() {
               { href: '/blog', label: 'Blog' },
               { href: '/a-propos', label: 'À propos' },
               { href: '/faq', label: 'FAQ' },
+              { href: '/parrainage', label: 'Parrainage' },
             ].map(l => (
               <Link key={l.href} href={l.href} onClick={() => setOpen(false)}
                 className="py-4 px-4 text-lg font-medium text-white hover:text-amber-400 rounded-xl hover:bg-white/10 transition-colors min-h-[56px] flex items-center">
