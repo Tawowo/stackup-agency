@@ -1,5 +1,5 @@
 import { SITE } from '@/config/site'
-import Breadcrumb from '@/components/ui/Breadcrumb'
+import MiniHero from '@/components/ui/MiniHero'
 import ContactForm from '@/components/sections/Contact'
 
 export const metadata = {
@@ -48,18 +48,11 @@ export default function ContactPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(contactPageSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
-      <div className="bg-gradient-to-b from-[#060D1A] to-[#0A0F1C] pt-24 pb-10">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6">
-          <Breadcrumb items={[{ name: 'Contact' }]} />
-          <h1 className="text-3xl lg:text-5xl font-bold text-white mb-4">
-            Parlons de votre projet
-          </h1>
-          <p className="text-white/70 text-lg max-w-2xl">
-            Décrivez votre projet et nous vous répondons sous 72h avec un devis personnalisé.
-            Premier rendez-vous sans engagement.
-          </p>
-        </div>
-      </div>
+      <MiniHero
+        title="Parlons de votre projet"
+        subtitle="Décrivez votre projet et nous vous répondons sous 72h avec un devis personnalisé. Premier rendez-vous sans engagement."
+        breadcrumb={[{ name: 'Contact' }]}
+      />
 
       <ContactForm />
 

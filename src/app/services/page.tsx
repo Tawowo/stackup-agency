@@ -2,7 +2,7 @@
 import Link from 'next/link'
 import { CheckCircle, ChevronRight } from 'lucide-react'
 import { SITE } from '@/config/site'
-import Breadcrumb from '@/components/ui/Breadcrumb'
+import MiniHero from '@/components/ui/MiniHero'
 
 export const metadata = {
   title: 'Nos services web — Site vitrine, e-commerce, système de gestion | Stackup Agency',
@@ -94,18 +94,11 @@ export default function ServicesPage() {
     <div className="min-h-screen bg-background dark:bg-[#0A0F1C]">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
 
-      <div className="bg-gradient-to-b from-[#060D1A] to-[#0A0F1C] pt-24 pb-16">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6">
-          <Breadcrumb items={[{ name: 'Services' }]} />
-          <h1 className="text-3xl lg:text-5xl font-bold text-white mb-6">
-            Nos services de création web
-          </h1>
-          <p className="text-white/70 text-lg max-w-2xl">
-            Sites internet professionnels à partir de {SITE.pricing.vitrine}€. Livrés en 10 à 21 jours,
-            hébergement inclus, SEO optimisé. Devis gratuit sous 72h.
-          </p>
-        </div>
-      </div>
+      <MiniHero
+        title="Nos services de création web"
+        subtitle={`Sites internet professionnels à partir de ${SITE.pricing.vitrine}€. Livrés en 10 à 21 jours, hébergement inclus, SEO optimisé. Devis gratuit sous 72h.`}
+        breadcrumb={[{ name: 'Services' }]}
+      />
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 py-16 space-y-8">
         {SERVICES.map(s => (

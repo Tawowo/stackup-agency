@@ -2,7 +2,7 @@
 import Link from 'next/link'
 import { CheckCircle } from 'lucide-react'
 import { SITE } from '@/config/site'
-import Breadcrumb from '@/components/ui/Breadcrumb'
+import MiniHero from '@/components/ui/MiniHero'
 
 export const metadata = {
   title: 'À propos — Stackup Agency, agence web à Tours',
@@ -62,18 +62,11 @@ export default function AProposPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutPageSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
-      <div className="bg-gradient-to-b from-[#060D1A] to-[#0A0F1C] pt-24 pb-16">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6">
-          <Breadcrumb items={[{ name: 'À propos' }]} />
-          <h1 className="text-3xl lg:text-5xl font-bold text-white mb-6">
-            L'agence qui rend le digital de qualité accessible.
-          </h1>
-          <p className="text-white/70 text-lg">
-            Stackup Agency est née d'un constat simple : les indépendants, commerçants et TPE méritent
-            le même niveau d'exigence digitale que les grandes entreprises — sans les tarifs des grandes agences.
-          </p>
-        </div>
-      </div>
+      <MiniHero
+        title="L'agence qui rend le digital de qualité accessible."
+        subtitle="Stackup Agency est née d'un constat simple : les indépendants, commerçants et TPE méritent le même niveau d'exigence digitale que les grandes entreprises — sans les tarifs des grandes agences."
+        breadcrumb={[{ name: 'À propos' }]}
+      />
 
       <div className="max-w-3xl mx-auto px-4 sm:px-6 py-16 space-y-16">
 

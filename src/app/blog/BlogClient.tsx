@@ -1,7 +1,13 @@
 'use client'
 import { useState } from 'react'
 import Link from 'next/link'
-import { Clock, Tag, ArrowRight } from 'lucide-react'
+import {
+  Clock, Tag, ArrowRight,
+  Utensils, Wrench, ShoppingBag, MapPin, Globe, Cpu,
+  Map, Search, Monitor, Rocket, Paintbrush, Briefcase, BarChart3,
+  FileText,
+} from 'lucide-react'
+import type { LucideIcon } from 'lucide-react'
 
 type Post = {
   slug: string
@@ -29,20 +35,20 @@ const categoryColors: Record<string, string> = {
   strategie: 'from-teal-500 to-emerald-600',
 }
 
-const categoryEmojis: Record<string, string> = {
-  restaurants: '🍽️',
-  artisans: '🔨',
-  commerce: '🛍️',
-  'seo-local': '📍',
-  'creation-sites': '🌐',
-  'applications-metier': '⚙️',
-  'pages-locales': '🗺️',
-  seo: '🔍',
-  digital: '💻',
-  entrepreneuriat: '🚀',
-  design: '🎨',
-  'professions-liberales': '👔',
-  strategie: '📊',
+const categoryIcons: Record<string, LucideIcon> = {
+  restaurants: Utensils,
+  artisans: Wrench,
+  commerce: ShoppingBag,
+  'seo-local': MapPin,
+  'creation-sites': Globe,
+  'applications-metier': Cpu,
+  'pages-locales': Map,
+  seo: Search,
+  digital: Monitor,
+  entrepreneuriat: Rocket,
+  design: Paintbrush,
+  'professions-liberales': Briefcase,
+  strategie: BarChart3,
 }
 
 const categoryLabels: Record<string, string> = {
@@ -77,13 +83,13 @@ export default function BlogClient({ posts }: { posts: Post[] }) {
           <button
             key={f}
             onClick={() => setActive(f)}
-            className={`px-4 py-2 rounded-full text-sm font-semibold transition-all ${
+            className={`inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-semibold transition-all ${
               active === f
                 ? 'bg-electric text-white shadow-lg shadow-electric/30'
                 : 'bg-white dark:bg-white/5 text-ink/70 dark:text-white/60 border border-gray-200 dark:border-white/10 hover:border-electric hover:text-electric'
             }`}
           >
-            {f !== 'tous' && categoryEmojis[f] && <span className="mr-1.5">{categoryEmojis[f]}</span>}
+            {f !== 'tous' && categoryIcons[f] && (() => { const Icon = categoryIcons[f]; return <Icon size={13} /> })()}
             {categoryLabels[f]}
           </button>
         ))}
@@ -100,11 +106,11 @@ export default function BlogClient({ posts }: { posts: Post[] }) {
         {filtered.map(post => {
           const cat = (post.category || 'digital').toLowerCase()
           const gradient = categoryColors[cat] || 'from-navy to-electric'
-          const emoji = categoryEmojis[cat] || '📄'
+          const IconComp = categoryIcons[cat] || FileText
           return (
             <article key={post.slug} className="bg-white dark:bg-white/5 rounded-2xl overflow-hidden border border-gray-100 dark:border-white/10 hover:shadow-xl hover:shadow-electric/10 hover:border-electric/30 transition-all hover:-translate-y-0.5 group flex flex-col sm:flex-row">
-              <div className={`sm:w-44 h-36 sm:h-auto bg-gradient-to-br ${gradient} flex items-center justify-center text-4xl flex-shrink-0`}>
-                {emoji}
+              <div className={`sm:w-44 h-36 sm:h-auto bg-gradient-to-br ${gradient} flex items-center justify-center flex-shrink-0`}>
+                <IconComp size={40} className="text-white/80" strokeWidth={1.5} />
               </div>
               <div className="p-6 flex flex-col justify-center flex-1">
                 <div className="flex flex-wrap items-center gap-3 mb-3">

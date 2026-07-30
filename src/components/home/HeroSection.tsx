@@ -4,6 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { SITE } from '@/config/site'
 import { HERO_BLUR_DATA_URL } from '@/config/hero-blur'
+import CountUp from '@/components/ui/CountUp'
 
 const CODE_LINES = [
   { code: 'export default function', color: '#7dd3fc' },
@@ -245,16 +246,21 @@ export default function HeroSection() {
         {/* Trust bar */}
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-16">
           {[
-            { val: '10 jours', label: "de l'idée à la mise en ligne" },
-            { val: '100 %', label: 'sur mesure — zéro template' },
-            { val: '72 h', label: 'réponse garantie' },
-            { val: 'Code livré', label: 'vous êtes propriétaire' },
-          ].map(s => (
+            { num: 10, suffix: ' j', label: "de l'idée à la mise en ligne" },
+            { num: 100, suffix: ' %', label: 'sur mesure — zéro template' },
+            { num: 72, suffix: ' h', label: 'réponse garantie' },
+            { num: null, text: 'Code livré', label: 'vous êtes propriétaire' },
+          ].map((s) => (
             <div
               key={s.label}
               className="text-center p-4 rounded-xl bg-white/5 border border-white/10 reveal-item"
             >
-              <div className="text-xl font-bold text-white mb-0.5">{s.val}</div>
+              <div className="text-xl font-bold text-white mb-0.5 price-ticker">
+                {s.num !== null
+                  ? <CountUp target={s.num} suffix={s.suffix} duration={1200} className="price-ticker-inner" />
+                  : <span>{s.text}</span>
+                }
+              </div>
               <div className="text-xs text-white/60">{s.label}</div>
             </div>
           ))}

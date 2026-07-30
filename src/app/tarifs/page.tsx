@@ -2,7 +2,8 @@
 import Link from 'next/link'
 import { CheckCircle, ChevronRight } from 'lucide-react'
 import { SITE } from '@/config/site'
-import Breadcrumb from '@/components/ui/Breadcrumb'
+import MiniHero from '@/components/ui/MiniHero'
+import PricingCards from '@/components/tarifs/PricingCards'
 
 export const metadata = {
   title: `Tarifs création site internet — À partir de ${SITE.pricing.vitrine}€ | Stackup Agency`,
@@ -33,85 +34,55 @@ export default function TarifsPage() {
     <div className="min-h-screen bg-background dark:bg-[#0A0F1C]">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
-      <div className="bg-gradient-to-b from-[#060D1A] to-[#0A0F1C] pt-24 pb-16">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6">
-          <Breadcrumb items={[{ name: 'Tarifs' }]} />
-          <h1 className="text-3xl lg:text-5xl font-bold text-white mb-4">
-            Tarifs clairs, sans surprise
-          </h1>
-          <p className="text-white/70 text-lg max-w-2xl">
-            Site vitrine à partir de {SITE.pricing.vitrine}€, tout inclus : design, développement, SEO,
-            hébergement 12 mois et SSL. Devis gratuit sous 72h.
-          </p>
-        </div>
-      </div>
+      <MiniHero
+        title="Tarifs clairs, sans surprise"
+        subtitle={`Site vitrine à partir de ${SITE.pricing.vitrine}€, tout inclus : design, développement, SEO, hébergement 12 mois et SSL. Devis gratuit sous 72h.`}
+        breadcrumb={[{ name: 'Tarifs' }]}
+      />
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 py-16 space-y-16">
 
         {/* Création */}
         <section>
           <h2 className="text-2xl font-bold text-foreground dark:text-white mb-6">Création de site internet</h2>
-          <div className="grid sm:grid-cols-2 gap-4">
-            {[
-              {
-                titre: 'Site vitrine',
-                prix: SITE.pricing.vitrine,
-                delai: SITE.delais.vitrine,
-                desc: 'Présence en ligne professionnelle pour artisans, commerçants et professions libérales.',
-                inclus: ['1 page principale + mentions légales', 'Design sur mesure', 'SEO local', 'Hébergement 12 mois', 'SSL', 'Formulaire de contact'],
-                href: '/services/site-vitrine',
-                highlight: false,
-              },
-              {
-                titre: 'Site multi-pages',
-                prix: SITE.pricing.multipages,
-                delai: SITE.delais.multipages,
-                desc: 'Site complet avec blog, galerie, pages de service et formulaires avancés.',
-                inclus: ['Jusqu\'à 10 pages', 'Blog + galerie', 'Formulaires avancés', 'Google Analytics', 'Hébergement 12 mois', 'SSL'],
-                href: '/services/site-multi-pages',
-                highlight: false,
-              },
-              {
-                titre: 'Boutique en ligne',
-                prix: SITE.pricing.ecommerce,
-                delai: SITE.delais.ecommerce,
-                desc: 'E-commerce complet avec paiement sécurisé, gestion des stocks et tableau de bord.',
-                inclus: ['Catalogue illimité', 'Paiement Stripe', 'Gestion stocks', 'Emails auto', 'Click & Collect', 'Hébergement 12 mois'],
-                href: '/services/site-ecommerce',
-                highlight: true,
-              },
-              {
-                titre: 'Site association',
-                prix: SITE.pricing.association,
-                delai: SITE.delais.association,
-                desc: 'Site professionnel pour associations loi 1901 avec adhésion et événements.',
-                inclus: ['Design associatif', 'Formulaire d\'adhésion', 'Calendrier', 'Hébergement 12 mois', 'SSL', 'Formation'],
-                href: '/services/site-association',
-                highlight: false,
-              },
-            ].map(s => (
-              <div key={s.titre} className={`rounded-2xl border p-6 flex flex-col ${s.highlight ? 'border-amber-500/40 bg-gold/5' : 'border-navy/20 dark:border-white/10'}`}>
-                {s.highlight && <div className="text-xs font-semibold text-navy dark:text-gold mb-3 uppercase tracking-wide">Le plus populaire</div>}
-                <div className="flex items-start justify-between mb-3">
-                  <h3 className="text-lg font-bold text-foreground dark:text-white">{s.titre}</h3>
-                  <span className="text-2xl font-bold text-navy dark:text-gold ml-3">{s.prix}€</span>
-                </div>
-                <p className="text-sm text-foreground/60 dark:text-white/60 mb-4">{s.desc}</p>
-                <ul className="space-y-1.5 mb-5 flex-1">
-                  {s.inclus.map(item => (
-                    <li key={item} className="flex items-center gap-2 text-sm text-foreground/70 dark:text-white/70">
-                      <CheckCircle size={13} className="text-green-400 flex-shrink-0" />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-                <div className="text-xs text-foreground/70 dark:text-white/40 mb-4">Livraison : {s.delai}</div>
-                <Link href={s.href} className={`flex items-center justify-center gap-1 py-2.5 rounded-xl text-sm font-semibold transition-colors ${s.highlight ? 'bg-gold hover:bg-gold/80 text-ink' : 'border border-foreground/20 dark:border-white/20 text-foreground dark:text-white hover:bg-foreground/5 dark:hover:bg-white/10'}`}>
-                  Voir l'offre <ChevronRight size={14} />
-                </Link>
-              </div>
-            ))}
-          </div>
+          <PricingCards cards={[
+            {
+              titre: 'Site vitrine',
+              prix: SITE.pricing.vitrine,
+              delai: SITE.delais.vitrine,
+              desc: 'Présence en ligne professionnelle pour artisans, commerçants et professions libérales.',
+              inclus: ['1 page principale + mentions légales', 'Design sur mesure', 'SEO local', 'Hébergement 12 mois', 'SSL', 'Formulaire de contact'],
+              href: '/services/site-vitrine',
+              highlight: false,
+            },
+            {
+              titre: 'Site multi-pages',
+              prix: SITE.pricing.multipages,
+              delai: SITE.delais.multipages,
+              desc: 'Site complet avec blog, galerie, pages de service et formulaires avancés.',
+              inclus: ['Jusqu\'à 10 pages', 'Blog + galerie', 'Formulaires avancés', 'Google Analytics', 'Hébergement 12 mois', 'SSL'],
+              href: '/services/site-multi-pages',
+              highlight: false,
+            },
+            {
+              titre: 'Boutique en ligne',
+              prix: SITE.pricing.ecommerce,
+              delai: SITE.delais.ecommerce,
+              desc: 'E-commerce complet avec paiement sécurisé, gestion des stocks et tableau de bord.',
+              inclus: ['Catalogue illimité', 'Paiement Stripe', 'Gestion stocks', 'Emails auto', 'Click & Collect', 'Hébergement 12 mois'],
+              href: '/services/site-ecommerce',
+              highlight: true,
+            },
+            {
+              titre: 'Site association',
+              prix: SITE.pricing.association,
+              delai: SITE.delais.association,
+              desc: 'Site professionnel pour associations loi 1901 avec adhésion et événements.',
+              inclus: ['Design associatif', 'Formulaire d\'adhésion', 'Calendrier', 'Hébergement 12 mois', 'SSL', 'Formation'],
+              href: '/services/site-association',
+              highlight: false,
+            },
+          ]} />
         </section>
 
         {/* Système de gestion */}

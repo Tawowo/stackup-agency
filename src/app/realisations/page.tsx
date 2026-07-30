@@ -2,7 +2,7 @@ import Link from 'next/link'
 import { ChevronRight } from 'lucide-react'
 import { realisations } from '@/lib/realisations'
 import { SITE } from '@/config/site'
-import Breadcrumb from '@/components/ui/Breadcrumb'
+import MiniHero from '@/components/ui/MiniHero'
 
 export const metadata = {
   title: 'Réalisations — Sites de démonstration | Stackup Agency',
@@ -33,21 +33,15 @@ export default function RealisationsPage() {
     <div className="min-h-screen bg-background dark:bg-[#0A0F1C]">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} />
 
-      <div className="bg-gradient-to-b from-[#060D1A] to-[#0A0F1C] pt-24 pb-16">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6">
-          <Breadcrumb items={[{ name: 'Réalisations' }]} />
-          <div className="inline-block px-3 py-1 bg-gold/20 text-amber-400 text-xs font-semibold rounded-full mb-4 uppercase tracking-wide">
-            Sites de démonstration
-          </div>
-          <h1 className="text-3xl lg:text-5xl font-bold text-white mb-6">
-            Nos réalisations
-          </h1>
-          <p className="text-white/70 text-lg max-w-2xl">
-            Ces projets sont des sites de démonstration conçus pour illustrer nos capacités techniques.
-            Ils ne représentent pas de clients réels, sauf mention explicite.
-          </p>
+      <MiniHero
+        title="Nos réalisations"
+        subtitle="Ces projets sont des sites de démonstration conçus pour illustrer nos capacités techniques. Ils ne représentent pas de clients réels, sauf mention explicite."
+        breadcrumb={[{ name: 'Réalisations' }]}
+      >
+        <div className="inline-block mt-4 px-3 py-1 bg-gold/20 text-amber-400 text-xs font-semibold rounded-full uppercase tracking-wide">
+          Sites de démonstration
         </div>
-      </div>
+      </MiniHero>
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 py-16">
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
