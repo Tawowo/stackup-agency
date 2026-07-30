@@ -130,7 +130,7 @@ export default function PinnedGallery() {
                 />
               ))}
             </div>
-            <span className="font-mono text-xs text-foreground/40 dark:text-white/40 tabular-nums">
+            <span aria-hidden="true" className="font-mono text-xs text-foreground/60 dark:text-white/60 tabular-nums">
               {String(active + 1).padStart(2, '0')}&thinsp;/&thinsp;{String(PANELS.length).padStart(2, '0')}
             </span>
           </div>
@@ -141,7 +141,7 @@ export default function PinnedGallery() {
             style={{ opacity: progress < 0.08 ? 1 : 0 }}
             aria-hidden="true"
           >
-            <span className="text-foreground/30 dark:text-white/30 text-xs tracking-widest uppercase">Défiler</span>
+            <span aria-hidden="true" className="text-foreground/30 dark:text-white/30 text-xs tracking-widest uppercase">Défiler</span>
             <div className="w-px h-10 bg-gradient-to-b from-foreground/20 dark:from-white/20 to-transparent" />
           </div>
 

@@ -114,7 +114,7 @@ export default function SolutionPage({ params }: { params: { slug: string } }) {
           <div className="grid sm:grid-cols-2 gap-3">
             {s.fonctionnalites.map(item => (
               <div key={item} className="flex items-start gap-3">
-                <CheckCircle size={17} className="text-green-400 mt-0.5 flex-shrink-0" />
+                <CheckCircle size={17} className="text-success mt-0.5 flex-shrink-0" />
                 <span className="text-foreground/80 dark:text-white/80">{item}</span>
               </div>
             ))}
@@ -129,7 +129,7 @@ export default function SolutionPage({ params }: { params: { slug: string } }) {
               <p className="text-foreground/80 dark:text-white/80">{s.exempleContexte}</p>
             </div>
             <div>
-              <p className="text-xs text-green-400 font-semibold mb-2 uppercase tracking-wider">Avec la solution sur mesure</p>
+              <p className="text-xs text-success font-semibold mb-2 uppercase tracking-wider">Avec la solution sur mesure</p>
               <p className="text-foreground/80 dark:text-white/80">{s.exempleFonctionnement}</p>
             </div>
           </div>
@@ -142,7 +142,7 @@ export default function SolutionPage({ params }: { params: { slug: string } }) {
           <div className="grid sm:grid-cols-2 gap-3 mb-5">
             {s.avantages.map(item => (
               <div key={item} className="flex items-start gap-3">
-                <CheckCircle size={17} className="text-green-400 mt-0.5 flex-shrink-0" />
+                <CheckCircle size={17} className="text-success mt-0.5 flex-shrink-0" />
                 <span className="text-foreground/80 dark:text-white/80">{item}</span>
               </div>
             ))}

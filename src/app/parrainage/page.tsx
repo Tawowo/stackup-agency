@@ -156,7 +156,7 @@ export default function ParrainagePage() {
                 <span className="font-display font-bold text-5xl text-navy dark:text-gold">−10%</span>
                 <span className="text-foreground/60 dark:text-white/60 text-lg">premier projet</span>
               </div>
-              <div className="text-foreground/40 dark:text-white/40 text-sm mb-6">Sur tous nos services, HT, à la signature</div>
+              <div className="text-foreground/60 dark:text-white/60 text-sm mb-6">Sur tous nos services, HT, à la signature</div>
               <ul className="space-y-2 text-sm">
                 {[
                   'Valable sur site vitrine, e-commerce, gestion…',
@@ -277,9 +277,9 @@ export default function ParrainagePage() {
               </details>
             ))}
           </div>
-          <div className="mt-5 flex items-center gap-2 text-sm text-foreground/50 dark:text-white/40">
+          <div className="mt-5 flex items-center gap-2 text-sm text-foreground/70 dark:text-white/60">
             <FileText size={14} />
-            <Link href="/cgv" className="hover:text-electric transition-colors">
+            <Link href="/cgv" className="underline hover:text-electric transition-colors">
               Conditions complètes — CGV Stackup Agency, art. 23
             </Link>
           </div>

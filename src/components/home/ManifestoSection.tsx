@@ -75,8 +75,8 @@ export default function ManifestoSection() {
         <p
           className="font-display font-bold leading-tight text-balance"
           style={{ fontSize: 'clamp(2rem, 5vw, 3.8rem)', letterSpacing: '-0.025em' }}
-          aria-label="Stratégie rigoureuse. Design soigné. Code sur mesure. Performance."
         >
+          <span className="sr-only">Stratégie rigoureuse. Design soigné. Code sur mesure. Performance.</span>
           {WORDS.map((w, i) => {
             const isLast = w.highlight
             return (
@@ -84,6 +84,7 @@ export default function ManifestoSection() {
                 <span
                   ref={el => { wordsRef.current[i] = el }}
                   className="inline-block text-white transition-none"
+                  aria-hidden="true"
                   style={{ opacity: reducedMotion ? 1 : 0.12 }}
                 >
                   {isLast ? (

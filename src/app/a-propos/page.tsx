@@ -138,7 +138,7 @@ export default function AProposPage() {
               'Pas de clients fictifs, pas de témoignages inventés : uniquement ce que nous avons réellement fait',
             ].map(item => (
               <div key={item} className="flex items-start gap-3">
-                <CheckCircle size={18} className="text-green-400 mt-0.5 flex-shrink-0" />
+                <CheckCircle size={18} className="text-success mt-0.5 flex-shrink-0" />
                 <span className="text-foreground/80 dark:text-white/80">{item}</span>
               </div>
             ))}

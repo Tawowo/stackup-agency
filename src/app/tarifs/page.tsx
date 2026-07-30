@@ -104,7 +104,7 @@ export default function TarifsPage() {
           <div className="grid sm:grid-cols-3 gap-2 mb-6">
             {['Développement sur mesure', 'Interface d\'administration', 'Formation incluse', 'Données en France', 'Sans abonnement SaaS', 'Évolutions possibles'].map(item => (
               <div key={item} className="flex items-center gap-2 text-sm text-foreground/70 dark:text-white/70">
-                <CheckCircle size={13} className="text-green-400 flex-shrink-0" />
+                <CheckCircle size={13} className="text-success flex-shrink-0" />
                 {item}
               </div>
             ))}
@@ -137,7 +137,7 @@ export default function TarifsPage() {
                 <ul className="space-y-1.5">
                   {m.inclus.map(item => (
                     <li key={item} className="flex items-center gap-2 text-sm text-foreground/60 dark:text-white/60">
-                      <CheckCircle size={12} className="text-green-400 flex-shrink-0" />
+                      <CheckCircle size={12} className="text-success flex-shrink-0" />
                       {item}
                     </li>
                   ))}
@@ -166,7 +166,7 @@ export default function TarifsPage() {
                 <ul className="space-y-1.5">
                   {p.inclus.map(item => (
                     <li key={item} className="flex items-center gap-2 text-sm text-foreground/60 dark:text-white/60">
-                      <CheckCircle size={12} className="text-green-400 flex-shrink-0" />
+                      <CheckCircle size={12} className="text-success flex-shrink-0" />
                       {item}
                     </li>
                   ))}

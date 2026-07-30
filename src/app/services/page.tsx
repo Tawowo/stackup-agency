@@ -117,7 +117,7 @@ export default function ServicesPage() {
             <div className="grid sm:grid-cols-2 gap-2 mb-6">
               {s.inclus.map(item => (
                 <div key={item} className="flex items-center gap-2">
-                  <CheckCircle size={15} className="text-green-400 flex-shrink-0" />
+                  <CheckCircle size={15} className="text-success flex-shrink-0" />
                   <span className="text-sm text-foreground/70 dark:text-white/70">{item}</span>
                 </div>
               ))}
@@ -162,7 +162,7 @@ export default function ServicesPage() {
                     <td className="py-3 pr-4 text-foreground/70 dark:text-white/70">{feat}</td>
                     {values.map((v, i) => (
                       <td key={i} className="text-center py-3 px-3">
-                        {v ? <span className="text-green-400">✓</span> : <span className="text-white/20">—</span>}
+                        {v ? <span className="text-success">✓</span> : <span className="text-white/20">—</span>}
                       </td>
                     ))}
                   </tr>

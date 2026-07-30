@@ -119,9 +119,9 @@ export default function MetierPage({ params }: { params: { metier: string } }) {
           </p>
 
           <div className="flex flex-wrap gap-3 mb-8 text-sm text-white/60">
-            <span className="flex items-center gap-1.5"><CheckCircle size={14} className="text-green-400" /> À partir de {service.prix}€</span>
-            <span className="flex items-center gap-1.5"><CheckCircle size={14} className="text-green-400" /> Livraison en {delai}</span>
-            <span className="flex items-center gap-1.5"><CheckCircle size={14} className="text-green-400" /> Devis gratuit sous 72h</span>
+            <span className="flex items-center gap-1.5"><CheckCircle size={14} className="text-success" /> À partir de {service.prix}€</span>
+            <span className="flex items-center gap-1.5"><CheckCircle size={14} className="text-success" /> Livraison en {delai}</span>
+            <span className="flex items-center gap-1.5"><CheckCircle size={14} className="text-success" /> Devis gratuit sous 72h</span>
           </div>
 
           <div className="flex flex-wrap gap-4">
@@ -204,7 +204,7 @@ export default function MetierPage({ params }: { params: { metier: string } }) {
               ...m.inclus,
             ].map(item => (
               <div key={item} className="flex items-start gap-3 p-3 rounded-xl bg-green-950/20 border border-green-900/20">
-                <CheckCircle size={16} className="text-green-400 mt-0.5 flex-shrink-0" />
+                <CheckCircle size={16} className="text-success mt-0.5 flex-shrink-0" />
                 <span className="text-foreground/80 dark:text-white/80 text-sm">{item}</span>
               </div>
             ))}

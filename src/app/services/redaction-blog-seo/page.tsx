@@ -202,9 +202,9 @@ export default function RedactionBlogSEOPage() {
             Gagnez en visibilité sans écrire une ligne — à partir de 25€ l'article.
           </p>
           <div className="flex flex-wrap gap-3 mb-8 text-sm text-white/60">
-            <span className="flex items-center gap-1.5"><CheckCircle size={14} className="text-green-400" /> Dès 25€ l'article</span>
-            <span className="flex items-center gap-1.5"><CheckCircle size={14} className="text-green-400" /> Livraison sous 5 jours ouvrés</span>
-            <span className="flex items-center gap-1.5"><CheckCircle size={14} className="text-green-400" /> Relecture humaine systématique</span>
+            <span className="flex items-center gap-1.5"><CheckCircle size={14} className="text-success" /> Dès 25€ l'article</span>
+            <span className="flex items-center gap-1.5"><CheckCircle size={14} className="text-success" /> Livraison sous 5 jours ouvrés</span>
+            <span className="flex items-center gap-1.5"><CheckCircle size={14} className="text-success" /> Relecture humaine systématique</span>
           </div>
           <div className="flex flex-wrap gap-4">
             <Link href="/contact?projet=redaction" className="px-6 py-3 bg-gold hover:bg-gold/80 text-ink font-semibold rounded-xl transition-all hover:-translate-y-0.5">
@@ -346,7 +346,7 @@ export default function RedactionBlogSEOPage() {
                 <ul className="space-y-2 mb-6 flex-1">
                   {p.inclus.map(item => (
                     <li key={item} className="flex items-start gap-2">
-                      <CheckCircle size={14} className={`mt-0.5 flex-shrink-0 ${p.contentRefresh && item.includes('content-refresh') ? 'text-amber-500' : 'text-green-400'}`} />
+                      <CheckCircle size={14} className={`mt-0.5 flex-shrink-0 text-success'}`} />
                       <span className="text-sm text-foreground/70 dark:text-white/70">{item}</span>
                     </li>
                   ))}
@@ -383,7 +383,7 @@ export default function RedactionBlogSEOPage() {
           <div className="grid sm:grid-cols-2 gap-2 mb-4">
             {['Installation du module blog', 'Configuration SEO de base', 'Mise en page intégrée au design', 'Test et validation fonctionnelle'].map(f => (
               <div key={f} className="flex items-center gap-2">
-                <CheckCircle size={13} className="text-green-400 flex-shrink-0" />
+                <CheckCircle size={13} className="text-success flex-shrink-0" />
                 <span className="text-sm text-foreground/70 dark:text-white/70">{f}</span>
               </div>
             ))}

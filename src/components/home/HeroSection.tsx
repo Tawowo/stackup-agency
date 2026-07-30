@@ -222,7 +222,7 @@ export default function HeroSection() {
                     <span className="w-3 h-3 rounded-full bg-amber-400/70" aria-hidden="true" />
                     <span className="w-3 h-3 rounded-full bg-green-400/70" aria-hidden="true" />
                     <span className="ml-3 text-ink/70 text-xs font-mono">votre-site.fr</span>
-                    <span className="ml-auto text-[10px] text-green-500 font-medium">● En ligne</span>
+                    <span aria-hidden="true" className="ml-auto text-[10px] text-success font-medium">● En ligne</span>
                   </div>
                   {/* Scrolling site skeleton — animates upward slowly */}
                   <div className="relative overflow-hidden" style={{ height: 'calc(100% - 41px)' }}>
@@ -292,7 +292,7 @@ export default function HeroSection() {
 
       {/* ── Indicateur de scroll ────────────────────────────────── */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1.5" aria-hidden="true">
-        <span className="text-white/40 text-xs tracking-widest uppercase">Défiler</span>
+        <span aria-hidden="true" className="text-white/40 text-xs tracking-widest uppercase">Défiler</span>
         <div className="w-px h-12 bg-gradient-to-b from-white/40 to-transparent" style={{ animation: 'scroll-line 1.8s ease-in-out infinite' }} />
       </div>
 
