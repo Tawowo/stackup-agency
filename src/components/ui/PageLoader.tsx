@@ -15,7 +15,7 @@ export default function PageLoader() {
     <AnimatePresence>
       {show && (
         <motion.div
-          className="fixed inset-0 z-[99999] flex items-center justify-center bg-[#0A0F1C]"
+          className="fixed inset-0 z-[99999] flex items-center justify-center bg-[#0A0F1C] pointer-events-none"
           initial={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.5, ease: 'easeInOut' }}

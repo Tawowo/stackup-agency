@@ -30,9 +30,16 @@ export default function RevealObserver() {
     }
 
     watch()
-    const t = setTimeout(watch, 300)
+    const t1 = setTimeout(watch, 300)
+    const t2 = setTimeout(watch, 800)
+    // Safety fallback: after 1500ms force-reveal anything still invisible
+    const t3 = setTimeout(() => {
+      document.querySelectorAll(SELECTORS).forEach(el => el.classList.add('is-visible'))
+    }, 1500)
     return () => {
-      clearTimeout(t)
+      clearTimeout(t1)
+      clearTimeout(t2)
+      clearTimeout(t3)
       obs.disconnect()
     }
   }, [])

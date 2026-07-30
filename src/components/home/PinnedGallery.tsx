@@ -1,6 +1,7 @@
 'use client'
 import { useRef, useState, useEffect, useCallback } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { ArrowRight, ExternalLink } from 'lucide-react'
 import { realisations } from '@/lib/realisations'
 
@@ -196,19 +197,38 @@ export default function PinnedGallery() {
                       </div>
                     </div>
 
-                    {/* Preview area — slow pan illusion with gradient overlay */}
+                    {/* Preview area — real screenshot or gradient fallback */}
                     <div
                       className="relative overflow-hidden"
-                      style={{
-                        height: 'clamp(280px, 38vh, 420px)',
-                        background: `linear-gradient(155deg, ${r.couleur} 0%, ${r.accent} 100%)`,
-                      }}
+                      style={{ height: 'clamp(280px, 38vh, 420px)' }}
                     >
-                      {/* Simulated UI skeleton — scrolls slowly */}
+                      {/* Real screenshot with slow-pan animation */}
+                      {'image' in r && r.image ? (
+                        <div
+                          className="absolute inset-0"
+                          style={{ animation: `demo-scroll-${i} 8s ease-in-out infinite alternate` }}
+                        >
+                          <Image
+                            src={(r as { image: string }).image}
+                            alt={`Capture d'écran ${r.nom}`}
+                            fill
+                            sizes="(min-width: 1024px) 56vw, 85vw"
+                            className="object-cover object-top"
+                            loading="lazy"
+                          />
+                        </div>
+                      ) : (
+                        <div
+                          className="absolute inset-0"
+                          style={{ background: `linear-gradient(155deg, ${r.couleur} 0%, ${r.accent} 100%)` }}
+                        />
+                      )}
+                      {/* Simulated UI skeleton — always shown (on top of real image via overlay when image present) */}
                       <div
                         className="absolute inset-x-0 top-0 px-8 pt-8 space-y-4"
                         style={{
                           animation: `demo-scroll-${i} 8s ease-in-out infinite alternate`,
+                          display: 'image' in r && r.image ? 'none' : undefined,
                         }}
                       >
                         <div className="h-8 w-2/3 rounded-lg bg-white/20" />

@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { ChevronRight } from 'lucide-react'
 import { realisations } from '@/lib/realisations'
 import { SITE } from '@/config/site'
@@ -48,9 +49,22 @@ export default function RealisationsPage() {
           {realisations.map(r => (
             <Link key={r.slug} href={`/realisations/${r.slug}`}
               className="group rounded-2xl border border-navy/20 dark:border-white/10 overflow-hidden hover:border-electric/30 transition-colors">
-              <div className="h-40 flex items-center justify-center relative" style={{ background: r.couleur }}>
-                <div className="absolute inset-0 opacity-20" style={{ background: `linear-gradient(135deg, ${r.accent}, transparent)` }} />
-                <span className="relative text-white/80 font-bold text-2xl tracking-tight">{r.nom.charAt(0)}</span>
+              <div className="h-40 relative overflow-hidden" style={{ background: r.couleur }}>
+                {'image' in r && r.image ? (
+                  <Image
+                    src={(r as { image: string }).image}
+                    alt={`Capture d'écran ${r.nom}`}
+                    fill
+                    sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                    className="object-cover object-top"
+                    loading="lazy"
+                  />
+                ) : (
+                  <>
+                    <div className="absolute inset-0 opacity-20" style={{ background: `linear-gradient(135deg, ${r.accent}, transparent)` }} />
+                    <span className="absolute inset-0 flex items-center justify-center text-white/80 font-bold text-2xl tracking-tight">{r.nom.charAt(0)}</span>
+                  </>
+                )}
                 <div className="absolute top-3 right-3">
                   <span className="px-2 py-1 bg-black/40 text-white/80 text-xs rounded-full font-medium">Démonstration</span>
                 </div>

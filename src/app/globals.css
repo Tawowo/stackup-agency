@@ -451,3 +451,9 @@ body {
   .is-visible .icon-pulse { animation: none; }
   .is-visible .price-ticker-inner { animation: none; }
 }
+
+/* ─── Performance: content-visibility on off-screen sections ── */
+.cv-auto {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 600px;
+}

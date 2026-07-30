@@ -1,5 +1,6 @@
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
+import Image from 'next/image'
 import { ArrowLeft, ExternalLink, Check, ArrowRight, Mail } from 'lucide-react'
 import { realisations } from '@/lib/realisations'
 
@@ -45,7 +46,17 @@ export default async function RealisationPage({ params }: { params: Promise<{ sl
     <div className="min-h-screen bg-white dark:bg-[#0A0F1C]">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       {/* Hero */}
-      <div className="relative pt-24 pb-20 px-4" style={{ background: r.couleur }}>
+      <div className="relative pt-24 pb-20 px-4 overflow-hidden" style={{ background: r.couleur }}>
+        {'image' in r && r.image && (
+          <Image
+            src={(r as { image: string }).image}
+            alt=""
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover object-top opacity-20"
+          />
+        )}
         <div
           className="absolute inset-0 opacity-25"
           style={{ background: `radial-gradient(ellipse at 70% 30%, ${r.accent}, transparent 60%)` }}
