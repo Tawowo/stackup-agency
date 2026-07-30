@@ -4,7 +4,8 @@
       "/opt/node22/bin/node",
       "/home/user/stackup-agency/node_modules/.bin/playwright",
       "test",
-      "tests/e2e/visual-qa.spec.ts"
+      "tests/e2e/prix-delais-audit.spec.ts",
+      "--project=desktop-1440"
     ],
     "configFile": "/home/user/stackup-agency/playwright.config.ts",
     "rootDir": "/home/user/stackup-agency/tests/e2e",
@@ -18,7 +19,7 @@
     "grepInvert": null,
     "maxFailures": 0,
     "metadata": {
-      "actualWorkers": 2
+      "actualWorkers": 1
     },
     "preserveOutput": "always",
     "projects": [
@@ -27,7 +28,7 @@
         "repeatEach": 1,
         "retries": 0,
         "metadata": {
-          "actualWorkers": 2
+          "actualWorkers": 1
         },
         "id": "mobile-390",
         "name": "mobile-390",
@@ -43,7 +44,7 @@
         "repeatEach": 1,
         "retries": 0,
         "metadata": {
-          "actualWorkers": 2
+          "actualWorkers": 1
         },
         "id": "desktop-1440",
         "name": "desktop-1440",
@@ -82,122 +83,20 @@
   },
   "suites": [
     {
-      "title": "visual-qa.spec.ts",
-      "file": "visual-qa.spec.ts",
+      "title": "prix-delais-audit.spec.ts",
+      "file": "prix-delais-audit.spec.ts",
       "column": 0,
       "line": 0,
       "specs": [],
       "suites": [
         {
-          "title": "home",
-          "file": "visual-qa.spec.ts",
-          "line": 16,
-          "column": 8,
+          "title": "S2 — Prix visibles sur toutes les pages clés",
+          "file": "prix-delais-audit.spec.ts",
+          "line": 52,
+          "column": 6,
           "specs": [
             {
-              "title": "screenshot light @",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "mobile-390",
-                  "projectName": "mobile-390",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 7248,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-07-30T09:03:26.847Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "acd366a2e83d4ab68325-9b19551a903876a82641",
-              "file": "visual-qa.spec.ts",
-              "line": 17,
-              "column": 9
-            },
-            {
-              "title": "screenshot dark @",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "mobile-390",
-                  "projectName": "mobile-390",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 2590,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-07-30T09:03:35.147Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "acd366a2e83d4ab68325-72a53a5407859e29b2fc",
-              "file": "visual-qa.spec.ts",
-              "line": 27,
-              "column": 9
-            },
-            {
-              "title": "axe accessibility",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "mobile-390",
-                  "projectName": "mobile-390",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 1568,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-07-30T09:03:37.759Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "acd366a2e83d4ab68325-6884e88f2375d3093de7",
-              "file": "visual-qa.spec.ts",
-              "line": 38,
-              "column": 9
-            },
-            {
-              "title": "screenshot light @",
+              "title": "/ — au moins un prix visible (€)",
               "ok": true,
               "tags": [],
               "tests": [
@@ -209,15 +108,15 @@
                   "projectName": "desktop-1440",
                   "results": [
                     {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 6249,
+                      "duration": 1059,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-07-30T09:03:26.874Z",
+                      "startTime": "2026-07-30T22:09:10.204Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -225,13 +124,13 @@
                   "status": "expected"
                 }
               ],
-              "id": "acd366a2e83d4ab68325-4b2ca88d9d280a9c99a0",
-              "file": "visual-qa.spec.ts",
-              "line": 17,
+              "id": "3c6fe4d4b4c77f69717b-5c7032cab73675f54e11",
+              "file": "prix-delais-audit.spec.ts",
+              "line": 54,
               "column": 9
             },
             {
-              "title": "screenshot dark @",
+              "title": "/services — au moins un prix visible (€)",
               "ok": true,
               "tags": [],
               "tests": [
@@ -243,15 +142,15 @@
                   "projectName": "desktop-1440",
                   "results": [
                     {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 2284,
+                      "duration": 771,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-07-30T09:03:34.183Z",
+                      "startTime": "2026-07-30T22:09:12.129Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -259,13 +158,13 @@
                   "status": "expected"
                 }
               ],
-              "id": "acd366a2e83d4ab68325-e2273f8b7d7f263dc174",
-              "file": "visual-qa.spec.ts",
-              "line": 27,
+              "id": "3c6fe4d4b4c77f69717b-26bd25b8e722503866ef",
+              "file": "prix-delais-audit.spec.ts",
+              "line": 54,
               "column": 9
             },
             {
-              "title": "axe accessibility",
+              "title": "/services/site-vitrine — au moins un prix visible (€)",
               "ok": true,
               "tags": [],
               "tests": [
@@ -277,15 +176,15 @@
                   "projectName": "desktop-1440",
                   "results": [
                     {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 1912,
+                      "duration": 771,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-07-30T09:03:36.566Z",
+                      "startTime": "2026-07-30T22:09:12.921Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -293,123 +192,327 @@
                   "status": "expected"
                 }
               ],
-              "id": "acd366a2e83d4ab68325-e2c2bcd67b63ed318f47",
-              "file": "visual-qa.spec.ts",
-              "line": 38,
+              "id": "3c6fe4d4b4c77f69717b-61ea8b44a80c2918f575",
+              "file": "prix-delais-audit.spec.ts",
+              "line": 54,
+              "column": 9
+            },
+            {
+              "title": "/services/site-multi-pages — au moins un prix visible (€)",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop-1440",
+                  "projectName": "desktop-1440",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 760,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-30T22:09:13.706Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "3c6fe4d4b4c77f69717b-d69573d54df77c536e53",
+              "file": "prix-delais-audit.spec.ts",
+              "line": 54,
+              "column": 9
+            },
+            {
+              "title": "/services/site-ecommerce — au moins un prix visible (€)",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop-1440",
+                  "projectName": "desktop-1440",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 697,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-30T22:09:14.476Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "3c6fe4d4b4c77f69717b-d22798f7019b330da413",
+              "file": "prix-delais-audit.spec.ts",
+              "line": 54,
+              "column": 9
+            },
+            {
+              "title": "/services/systeme-gestion — au moins un prix visible (€)",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop-1440",
+                  "projectName": "desktop-1440",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 752,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-30T22:09:15.184Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "3c6fe4d4b4c77f69717b-ad9ece321bc9979851b9",
+              "file": "prix-delais-audit.spec.ts",
+              "line": 54,
+              "column": 9
+            },
+            {
+              "title": "/services/site-association — au moins un prix visible (€)",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop-1440",
+                  "projectName": "desktop-1440",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 706,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-30T22:09:15.953Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "3c6fe4d4b4c77f69717b-d89a89c4717f3725f438",
+              "file": "prix-delais-audit.spec.ts",
+              "line": 54,
+              "column": 9
+            },
+            {
+              "title": "/services/redaction-blog-seo — au moins un prix visible (€)",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop-1440",
+                  "projectName": "desktop-1440",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 793,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-30T22:09:16.672Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "3c6fe4d4b4c77f69717b-07a97f4da42993258db2",
+              "file": "prix-delais-audit.spec.ts",
+              "line": 54,
+              "column": 9
+            },
+            {
+              "title": "/tarifs — au moins un prix visible (€)",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop-1440",
+                  "projectName": "desktop-1440",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 747,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-30T22:09:17.477Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "3c6fe4d4b4c77f69717b-cb96148084f9239c2aa6",
+              "file": "prix-delais-audit.spec.ts",
+              "line": 54,
+              "column": 9
+            },
+            {
+              "title": "/tarifs/starter — au moins un prix visible (€)",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop-1440",
+                  "projectName": "desktop-1440",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 730,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-30T22:09:18.239Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "3c6fe4d4b4c77f69717b-3b06a541dadd18699e52",
+              "file": "prix-delais-audit.spec.ts",
+              "line": 54,
+              "column": 9
+            },
+            {
+              "title": "/tarifs/pro — au moins un prix visible (€)",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop-1440",
+                  "projectName": "desktop-1440",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 717,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-30T22:09:18.980Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "3c6fe4d4b4c77f69717b-0e888ef307786bca9b54",
+              "file": "prix-delais-audit.spec.ts",
+              "line": 54,
+              "column": 9
+            },
+            {
+              "title": "/tarifs/premium — au moins un prix visible (€)",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop-1440",
+                  "projectName": "desktop-1440",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 809,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-30T22:09:19.707Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "3c6fe4d4b4c77f69717b-d924be44b558e397b6a8",
+              "file": "prix-delais-audit.spec.ts",
+              "line": 54,
               "column": 9
             }
           ]
         },
         {
-          "title": "services",
-          "file": "visual-qa.spec.ts",
-          "line": 16,
-          "column": 8,
+          "title": "S2 — Délais CGV corrects (pas de \"4 semaines\")",
+          "file": "prix-delais-audit.spec.ts",
+          "line": 77,
+          "column": 6,
           "specs": [
             {
-              "title": "screenshot light @",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "mobile-390",
-                  "projectName": "mobile-390",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 1881,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-07-30T09:03:39.349Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "acd366a2e83d4ab68325-73f7b85f92a854867d58",
-              "file": "visual-qa.spec.ts",
-              "line": 17,
-              "column": 9
-            },
-            {
-              "title": "screenshot dark @",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "mobile-390",
-                  "projectName": "mobile-390",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 2090,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-07-30T09:03:41.245Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "acd366a2e83d4ab68325-3f47533a976661fb668e",
-              "file": "visual-qa.spec.ts",
-              "line": 27,
-              "column": 9
-            },
-            {
-              "title": "axe accessibility",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "mobile-390",
-                  "projectName": "mobile-390",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 1431,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-07-30T09:03:43.353Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "acd366a2e83d4ab68325-24a47e2ad4060303bee8",
-              "file": "visual-qa.spec.ts",
-              "line": 38,
-              "column": 9
-            },
-            {
-              "title": "screenshot light @",
+              "title": "/ — aucun délai invalide",
               "ok": true,
               "tags": [],
               "tests": [
@@ -421,15 +524,15 @@
                   "projectName": "desktop-1440",
                   "results": [
                     {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 1604,
+                      "duration": 720,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-07-30T09:03:38.493Z",
+                      "startTime": "2026-07-30T22:09:20.527Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -437,13 +540,13 @@
                   "status": "expected"
                 }
               ],
-              "id": "acd366a2e83d4ab68325-a7507dba18cbc62d59a1",
-              "file": "visual-qa.spec.ts",
-              "line": 17,
+              "id": "3c6fe4d4b4c77f69717b-579005a55d72aadae8cc",
+              "file": "prix-delais-audit.spec.ts",
+              "line": 79,
               "column": 9
             },
             {
-              "title": "screenshot dark @",
+              "title": "/services — aucun délai invalide",
               "ok": true,
               "tags": [],
               "tests": [
@@ -455,15 +558,15 @@
                   "projectName": "desktop-1440",
                   "results": [
                     {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 1623,
+                      "duration": 669,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-07-30T09:03:40.112Z",
+                      "startTime": "2026-07-30T22:09:21.261Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -471,13 +574,13 @@
                   "status": "expected"
                 }
               ],
-              "id": "acd366a2e83d4ab68325-755d6edb7a188ed9399d",
-              "file": "visual-qa.spec.ts",
-              "line": 27,
+              "id": "3c6fe4d4b4c77f69717b-6b0d0f4650d3383b8bfe",
+              "file": "prix-delais-audit.spec.ts",
+              "line": 79,
               "column": 9
             },
             {
-              "title": "axe accessibility",
+              "title": "/services/site-vitrine — aucun délai invalide",
               "ok": true,
               "tags": [],
               "tests": [
@@ -489,15 +592,15 @@
                   "projectName": "desktop-1440",
                   "results": [
                     {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 1536,
+                      "duration": 694,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-07-30T09:03:41.750Z",
+                      "startTime": "2026-07-30T22:09:21.939Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -505,123 +608,225 @@
                   "status": "expected"
                 }
               ],
-              "id": "acd366a2e83d4ab68325-3c9c75cf0ad0f811e255",
-              "file": "visual-qa.spec.ts",
-              "line": 38,
+              "id": "3c6fe4d4b4c77f69717b-3c326ce76b9fb5207165",
+              "file": "prix-delais-audit.spec.ts",
+              "line": 79,
+              "column": 9
+            },
+            {
+              "title": "/services/site-multi-pages — aucun délai invalide",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop-1440",
+                  "projectName": "desktop-1440",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 686,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-30T22:09:22.644Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "3c6fe4d4b4c77f69717b-b10a01bcd4d80a8ab2aa",
+              "file": "prix-delais-audit.spec.ts",
+              "line": 79,
+              "column": 9
+            },
+            {
+              "title": "/services/site-ecommerce — aucun délai invalide",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop-1440",
+                  "projectName": "desktop-1440",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 656,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-30T22:09:23.340Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "3c6fe4d4b4c77f69717b-45c82515d12091a6ca43",
+              "file": "prix-delais-audit.spec.ts",
+              "line": 79,
+              "column": 9
+            },
+            {
+              "title": "/services/systeme-gestion — aucun délai invalide",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop-1440",
+                  "projectName": "desktop-1440",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 674,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-30T22:09:24.006Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "3c6fe4d4b4c77f69717b-a4aac6e4f9c34486ac7d",
+              "file": "prix-delais-audit.spec.ts",
+              "line": 79,
+              "column": 9
+            },
+            {
+              "title": "/services/site-association — aucun délai invalide",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop-1440",
+                  "projectName": "desktop-1440",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 661,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-30T22:09:24.690Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "3c6fe4d4b4c77f69717b-a522b2d92a78b84968c0",
+              "file": "prix-delais-audit.spec.ts",
+              "line": 79,
+              "column": 9
+            },
+            {
+              "title": "/tarifs — aucun délai invalide",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop-1440",
+                  "projectName": "desktop-1440",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 727,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-30T22:09:25.362Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "3c6fe4d4b4c77f69717b-5412b074a7e0f51f0130",
+              "file": "prix-delais-audit.spec.ts",
+              "line": 79,
+              "column": 9
+            },
+            {
+              "title": "/faq — aucun délai invalide",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop-1440",
+                  "projectName": "desktop-1440",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 681,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-30T22:09:26.101Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "3c6fe4d4b4c77f69717b-d788c2e9dcb65bf6959d",
+              "file": "prix-delais-audit.spec.ts",
+              "line": 79,
               "column": 9
             }
           ]
         },
         {
-          "title": "blog-seo",
-          "file": "visual-qa.spec.ts",
-          "line": 16,
-          "column": 8,
+          "title": "S2 — Contrôle des pages services individuelles",
+          "file": "prix-delais-audit.spec.ts",
+          "line": 96,
+          "column": 6,
           "specs": [
             {
-              "title": "screenshot light @",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "mobile-390",
-                  "projectName": "mobile-390",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 2040,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-07-30T09:03:44.813Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "acd366a2e83d4ab68325-41e640cdabe45f4ef50c",
-              "file": "visual-qa.spec.ts",
-              "line": 17,
-              "column": 9
-            },
-            {
-              "title": "screenshot dark @",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "mobile-390",
-                  "projectName": "mobile-390",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 1917,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-07-30T09:03:46.871Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "acd366a2e83d4ab68325-231888ccdf8983705274",
-              "file": "visual-qa.spec.ts",
-              "line": 27,
-              "column": 9
-            },
-            {
-              "title": "axe accessibility",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "mobile-390",
-                  "projectName": "mobile-390",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 1233,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-07-30T09:03:48.799Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "acd366a2e83d4ab68325-22197037599bf96fdafb",
-              "file": "visual-qa.spec.ts",
-              "line": 38,
-              "column": 9
-            },
-            {
-              "title": "screenshot light @",
+              "title": "/services/site-vitrine — prix et délai CGV corrects",
               "ok": true,
               "tags": [],
               "tests": [
@@ -633,15 +838,15 @@
                   "projectName": "desktop-1440",
                   "results": [
                     {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 1701,
+                      "duration": 707,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-07-30T09:03:43.297Z",
+                      "startTime": "2026-07-30T22:09:26.794Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -649,13 +854,13 @@
                   "status": "expected"
                 }
               ],
-              "id": "acd366a2e83d4ab68325-0b59fa71db2b6fd36ef2",
-              "file": "visual-qa.spec.ts",
-              "line": 17,
+              "id": "3c6fe4d4b4c77f69717b-24f01ebb6a9178c78893",
+              "file": "prix-delais-audit.spec.ts",
+              "line": 106,
               "column": 9
             },
             {
-              "title": "screenshot dark @",
+              "title": "/services/site-multi-pages — prix et délai CGV corrects",
               "ok": true,
               "tags": [],
               "tests": [
@@ -665,93 +870,17 @@
                   "expectedStatus": "passed",
                   "projectId": "desktop-1440",
                   "projectName": "desktop-1440",
-                  "results": [
-                    {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
-                      "status": "passed",
-                      "duration": 1642,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-07-30T09:03:45.025Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "acd366a2e83d4ab68325-fa13a6624d8d0890af30",
-              "file": "visual-qa.spec.ts",
-              "line": 27,
-              "column": 9
-            },
-            {
-              "title": "axe accessibility",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "desktop-1440",
-                  "projectName": "desktop-1440",
-                  "results": [
-                    {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
-                      "status": "passed",
-                      "duration": 1341,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-07-30T09:03:46.683Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "acd366a2e83d4ab68325-70ef34602dcf4bd5d147",
-              "file": "visual-qa.spec.ts",
-              "line": 38,
-              "column": 9
-            }
-          ]
-        },
-        {
-          "title": "tarifs",
-          "file": "visual-qa.spec.ts",
-          "line": 16,
-          "column": 8,
-          "specs": [
-            {
-              "title": "screenshot light @",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "mobile-390",
-                  "projectName": "mobile-390",
                   "results": [
                     {
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 1877,
+                      "duration": 692,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-07-30T09:03:50.042Z",
+                      "startTime": "2026-07-30T22:09:27.511Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -759,13 +888,13 @@
                   "status": "expected"
                 }
               ],
-              "id": "acd366a2e83d4ab68325-26f66d90a499bc188f89",
-              "file": "visual-qa.spec.ts",
-              "line": 17,
+              "id": "3c6fe4d4b4c77f69717b-2df19dcff882638337d1",
+              "file": "prix-delais-audit.spec.ts",
+              "line": 106,
               "column": 9
             },
             {
-              "title": "screenshot dark @",
+              "title": "/services/site-ecommerce — prix et délai CGV corrects",
               "ok": true,
               "tags": [],
               "tests": [
@@ -773,19 +902,19 @@
                   "timeout": 30000,
                   "annotations": [],
                   "expectedStatus": "passed",
-                  "projectId": "mobile-390",
-                  "projectName": "mobile-390",
+                  "projectId": "desktop-1440",
+                  "projectName": "desktop-1440",
                   "results": [
                     {
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 2041,
+                      "duration": 658,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-07-30T09:03:51.933Z",
+                      "startTime": "2026-07-30T22:09:28.213Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -793,13 +922,13 @@
                   "status": "expected"
                 }
               ],
-              "id": "acd366a2e83d4ab68325-347c51264fa01a6e096b",
-              "file": "visual-qa.spec.ts",
-              "line": 27,
+              "id": "3c6fe4d4b4c77f69717b-91b73fd411cc6039003b",
+              "file": "prix-delais-audit.spec.ts",
+              "line": 106,
               "column": 9
             },
             {
-              "title": "axe accessibility",
+              "title": "/services/systeme-gestion — prix et délai CGV corrects",
               "ok": true,
               "tags": [],
               "tests": [
@@ -807,19 +936,19 @@
                   "timeout": 30000,
                   "annotations": [],
                   "expectedStatus": "passed",
-                  "projectId": "mobile-390",
-                  "projectName": "mobile-390",
+                  "projectId": "desktop-1440",
+                  "projectName": "desktop-1440",
                   "results": [
                     {
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 1394,
+                      "duration": 684,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-07-30T09:03:54.003Z",
+                      "startTime": "2026-07-30T22:09:28.880Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -827,13 +956,13 @@
                   "status": "expected"
                 }
               ],
-              "id": "acd366a2e83d4ab68325-3257ae74c9fdc97b791f",
-              "file": "visual-qa.spec.ts",
-              "line": 38,
+              "id": "3c6fe4d4b4c77f69717b-1e8c577f8ad67e84d78e",
+              "file": "prix-delais-audit.spec.ts",
+              "line": 106,
               "column": 9
             },
             {
-              "title": "screenshot light @",
+              "title": "/services/site-association — prix et délai CGV corrects",
               "ok": true,
               "tags": [],
               "tests": [
@@ -843,127 +972,17 @@
                   "expectedStatus": "passed",
                   "projectId": "desktop-1440",
                   "projectName": "desktop-1440",
-                  "results": [
-                    {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
-                      "status": "passed",
-                      "duration": 1556,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-07-30T09:03:48.034Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "acd366a2e83d4ab68325-6bf6b7850e324eb48223",
-              "file": "visual-qa.spec.ts",
-              "line": 17,
-              "column": 9
-            },
-            {
-              "title": "screenshot dark @",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "desktop-1440",
-                  "projectName": "desktop-1440",
-                  "results": [
-                    {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
-                      "status": "passed",
-                      "duration": 1525,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-07-30T09:03:49.604Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "acd366a2e83d4ab68325-ad3d9b36a0adf41e6667",
-              "file": "visual-qa.spec.ts",
-              "line": 27,
-              "column": 9
-            },
-            {
-              "title": "axe accessibility",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "desktop-1440",
-                  "projectName": "desktop-1440",
-                  "results": [
-                    {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
-                      "status": "passed",
-                      "duration": 1554,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-07-30T09:03:51.164Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "acd366a2e83d4ab68325-6fbad6c800b040fe4852",
-              "file": "visual-qa.spec.ts",
-              "line": 38,
-              "column": 9
-            }
-          ]
-        },
-        {
-          "title": "a-propos",
-          "file": "visual-qa.spec.ts",
-          "line": 16,
-          "column": 8,
-          "specs": [
-            {
-              "title": "screenshot light @",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "mobile-390",
-                  "projectName": "mobile-390",
                   "results": [
                     {
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 1866,
+                      "duration": 695,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-07-30T09:03:55.406Z",
+                      "startTime": "2026-07-30T22:09:29.574Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -971,815 +990,9 @@
                   "status": "expected"
                 }
               ],
-              "id": "acd366a2e83d4ab68325-0781637a887c26dff8dd",
-              "file": "visual-qa.spec.ts",
-              "line": 17,
-              "column": 9
-            },
-            {
-              "title": "screenshot dark @",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "mobile-390",
-                  "projectName": "mobile-390",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 2089,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-07-30T09:03:57.287Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "acd366a2e83d4ab68325-7bde219c6eeb8dcea06c",
-              "file": "visual-qa.spec.ts",
-              "line": 27,
-              "column": 9
-            },
-            {
-              "title": "axe accessibility",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "mobile-390",
-                  "projectName": "mobile-390",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 1269,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-07-30T09:03:59.390Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "acd366a2e83d4ab68325-41a1a20d6c0b16e94e6c",
-              "file": "visual-qa.spec.ts",
-              "line": 38,
-              "column": 9
-            },
-            {
-              "title": "screenshot light @",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "desktop-1440",
-                  "projectName": "desktop-1440",
-                  "results": [
-                    {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
-                      "status": "passed",
-                      "duration": 1549,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-07-30T09:03:52.729Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "acd366a2e83d4ab68325-93b392f0c283805a7278",
-              "file": "visual-qa.spec.ts",
-              "line": 17,
-              "column": 9
-            },
-            {
-              "title": "screenshot dark @",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "desktop-1440",
-                  "projectName": "desktop-1440",
-                  "results": [
-                    {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
-                      "status": "passed",
-                      "duration": 1685,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-07-30T09:03:54.294Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "acd366a2e83d4ab68325-1459dbc8d751dacdb53c",
-              "file": "visual-qa.spec.ts",
-              "line": 27,
-              "column": 9
-            },
-            {
-              "title": "axe accessibility",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "desktop-1440",
-                  "projectName": "desktop-1440",
-                  "results": [
-                    {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
-                      "status": "passed",
-                      "duration": 1103,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-07-30T09:03:55.994Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "acd366a2e83d4ab68325-95dbad8a5193140e3b60",
-              "file": "visual-qa.spec.ts",
-              "line": 38,
-              "column": 9
-            }
-          ]
-        },
-        {
-          "title": "contact",
-          "file": "visual-qa.spec.ts",
-          "line": 16,
-          "column": 8,
-          "specs": [
-            {
-              "title": "screenshot light @",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "mobile-390",
-                  "projectName": "mobile-390",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 2804,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-07-30T09:04:00.670Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "acd366a2e83d4ab68325-ee6b6f79401bac9619a7",
-              "file": "visual-qa.spec.ts",
-              "line": 17,
-              "column": 9
-            },
-            {
-              "title": "screenshot dark @",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "mobile-390",
-                  "projectName": "mobile-390",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 2716,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-07-30T09:04:03.489Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "acd366a2e83d4ab68325-fd400e468f4ff33787c7",
-              "file": "visual-qa.spec.ts",
-              "line": 27,
-              "column": 9
-            },
-            {
-              "title": "axe accessibility",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "mobile-390",
-                  "projectName": "mobile-390",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 1442,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-07-30T09:04:06.230Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "acd366a2e83d4ab68325-eac90c72cbed3f4189e3",
-              "file": "visual-qa.spec.ts",
-              "line": 38,
-              "column": 9
-            },
-            {
-              "title": "screenshot light @",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "desktop-1440",
-                  "projectName": "desktop-1440",
-                  "results": [
-                    {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
-                      "status": "passed",
-                      "duration": 2394,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-07-30T09:03:57.112Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "acd366a2e83d4ab68325-c661f1280102994ad2e7",
-              "file": "visual-qa.spec.ts",
-              "line": 17,
-              "column": 9
-            },
-            {
-              "title": "screenshot dark @",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "desktop-1440",
-                  "projectName": "desktop-1440",
-                  "results": [
-                    {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
-                      "status": "passed",
-                      "duration": 2218,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-07-30T09:03:59.518Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "acd366a2e83d4ab68325-ab39cae9ccbc32b5ce33",
-              "file": "visual-qa.spec.ts",
-              "line": 27,
-              "column": 9
-            },
-            {
-              "title": "axe accessibility",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "desktop-1440",
-                  "projectName": "desktop-1440",
-                  "results": [
-                    {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
-                      "status": "passed",
-                      "duration": 1771,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-07-30T09:04:01.750Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "acd366a2e83d4ab68325-6b0cf17c6ce3fb100e76",
-              "file": "visual-qa.spec.ts",
-              "line": 38,
-              "column": 9
-            }
-          ]
-        },
-        {
-          "title": "realisations",
-          "file": "visual-qa.spec.ts",
-          "line": 16,
-          "column": 8,
-          "specs": [
-            {
-              "title": "screenshot light @",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "mobile-390",
-                  "projectName": "mobile-390",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 2093,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-07-30T09:04:07.690Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "acd366a2e83d4ab68325-e1453d68d0992fc8a4ba",
-              "file": "visual-qa.spec.ts",
-              "line": 17,
-              "column": 9
-            },
-            {
-              "title": "screenshot dark @",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "mobile-390",
-                  "projectName": "mobile-390",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 2140,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-07-30T09:04:09.793Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "acd366a2e83d4ab68325-5aa9d3f54853cb598e9f",
-              "file": "visual-qa.spec.ts",
-              "line": 27,
-              "column": 9
-            },
-            {
-              "title": "axe accessibility",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "mobile-390",
-                  "projectName": "mobile-390",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 1154,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-07-30T09:04:11.955Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "acd366a2e83d4ab68325-b61b03f415e2ef17f49a",
-              "file": "visual-qa.spec.ts",
-              "line": 38,
-              "column": 9
-            },
-            {
-              "title": "screenshot light @",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "desktop-1440",
-                  "projectName": "desktop-1440",
-                  "results": [
-                    {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
-                      "status": "passed",
-                      "duration": 1660,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-07-30T09:04:03.530Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "acd366a2e83d4ab68325-cdaf97da7b83d399803f",
-              "file": "visual-qa.spec.ts",
-              "line": 17,
-              "column": 9
-            },
-            {
-              "title": "screenshot dark @",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "desktop-1440",
-                  "projectName": "desktop-1440",
-                  "results": [
-                    {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
-                      "status": "passed",
-                      "duration": 1588,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-07-30T09:04:05.202Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "acd366a2e83d4ab68325-09ea8f2505bbf7f14ac8",
-              "file": "visual-qa.spec.ts",
-              "line": 27,
-              "column": 9
-            },
-            {
-              "title": "axe accessibility",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "desktop-1440",
-                  "projectName": "desktop-1440",
-                  "results": [
-                    {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
-                      "status": "passed",
-                      "duration": 1377,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-07-30T09:04:06.806Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "acd366a2e83d4ab68325-16fd8e146d0cf4f0f25d",
-              "file": "visual-qa.spec.ts",
-              "line": 38,
-              "column": 9
-            }
-          ]
-        },
-        {
-          "title": "ressources-documents",
-          "file": "visual-qa.spec.ts",
-          "line": 16,
-          "column": 8,
-          "specs": [
-            {
-              "title": "screenshot light @",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "mobile-390",
-                  "projectName": "mobile-390",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 1758,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-07-30T09:04:13.120Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "acd366a2e83d4ab68325-1e5dc6653fa7ffefc9f0",
-              "file": "visual-qa.spec.ts",
-              "line": 17,
-              "column": 9
-            },
-            {
-              "title": "screenshot dark @",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "mobile-390",
-                  "projectName": "mobile-390",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 1729,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-07-30T09:04:14.887Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "acd366a2e83d4ab68325-83bbeb4b6b23b7cbcea1",
-              "file": "visual-qa.spec.ts",
-              "line": 27,
-              "column": 9
-            },
-            {
-              "title": "axe accessibility",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "mobile-390",
-                  "projectName": "mobile-390",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 1082,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-07-30T09:04:16.625Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "acd366a2e83d4ab68325-34f3a78bf4e1c910c58d",
-              "file": "visual-qa.spec.ts",
-              "line": 38,
-              "column": 9
-            },
-            {
-              "title": "screenshot light @",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "desktop-1440",
-                  "projectName": "desktop-1440",
-                  "results": [
-                    {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
-                      "status": "passed",
-                      "duration": 1453,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-07-30T09:04:08.197Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "acd366a2e83d4ab68325-3d31d803e351f98a29b7",
-              "file": "visual-qa.spec.ts",
-              "line": 17,
-              "column": 9
-            },
-            {
-              "title": "screenshot dark @",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "desktop-1440",
-                  "projectName": "desktop-1440",
-                  "results": [
-                    {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
-                      "status": "passed",
-                      "duration": 1494,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-07-30T09:04:09.660Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "acd366a2e83d4ab68325-9c1d0bc7fa41310c0886",
-              "file": "visual-qa.spec.ts",
-              "line": 27,
-              "column": 9
-            },
-            {
-              "title": "axe accessibility",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "desktop-1440",
-                  "projectName": "desktop-1440",
-                  "results": [
-                    {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
-                      "status": "passed",
-                      "duration": 1393,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-07-30T09:04:11.163Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "acd366a2e83d4ab68325-a2e1f1e1a953a2befa88",
-              "file": "visual-qa.spec.ts",
-              "line": 38,
+              "id": "3c6fe4d4b4c77f69717b-9cb5bdcea2e2777f42c0",
+              "file": "prix-delais-audit.spec.ts",
+              "line": 106,
               "column": 9
             }
           ]
@@ -1789,9 +1002,9 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-07-30T09:03:26.034Z",
-    "duration": 51758.035,
-    "expected": 48,
+    "startTime": "2026-07-30T22:09:09.528Z",
+    "duration": 20891.957000000002,
+    "expected": 26,
     "skipped": 0,
     "unexpected": 0,
     "flaky": 0
