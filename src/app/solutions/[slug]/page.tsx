@@ -81,7 +81,7 @@ export default function SolutionPage({ params }: { params: { slug: string } }) {
           </h1>
           <p className="text-white/70 text-lg mb-8 max-w-2xl">{s.intro}</p>
           <div className="flex flex-wrap gap-4">
-            <Link href="/contact" className="px-6 py-3 bg-amber-500 hover:bg-amber-400 text-amber-950 font-semibold rounded-xl transition-all hover:-translate-y-0.5">
+            <Link href="/contact" className="px-6 py-3 bg-gold hover:bg-gold/80 text-ink font-semibold rounded-xl transition-all hover:-translate-y-0.5">
               Demander un devis →
             </Link>
             <Link href="/services/systeme-gestion" className="px-6 py-3 border border-white/20 text-white hover:bg-white/10 rounded-xl transition-all">
@@ -121,7 +121,7 @@ export default function SolutionPage({ params }: { params: { slug: string } }) {
           </div>
         </section>
 
-        <section className="rounded-2xl p-6 lg:p-8 bg-blue-500/5 border border-blue-500/20">
+        <section className="rounded-2xl p-6 lg:p-8 bg-blue-500/5 border border-electric/20">
           <h2 className="text-xl font-bold text-foreground dark:text-white mb-5">Exemple concret</h2>
           <div className="space-y-5">
             <div>
@@ -147,9 +147,9 @@ export default function SolutionPage({ params }: { params: { slug: string } }) {
               </div>
             ))}
           </div>
-          <div className="p-5 rounded-xl bg-amber-500/10 border border-amber-500/20">
+          <div className="p-5 rounded-xl bg-gold/10 border border-amber-500/20">
             <div className="flex items-start gap-3">
-              <Star size={18} className="text-amber-500 mt-0.5 flex-shrink-0" />
+              <Star size={18} className="text-gold mt-0.5 flex-shrink-0" />
               <p className="text-foreground/80 dark:text-white/80 text-sm">
                 <strong className="text-foreground dark:text-white">Prix à partir de {SITE.pricing.gestion}€</strong> — à comparer avec 50 à 300€/mois d'abonnement SaaS. La solution est amortie en 6 à 18 mois selon votre volume d'activité.
               </p>
@@ -165,7 +165,7 @@ export default function SolutionPage({ params }: { params: { slug: string } }) {
             <div className="flex flex-wrap gap-3">
               {metiersLies.map(m => (
                 <Link key={m.slug} href={`/creation-site-internet/${m.slug}`}
-                  className="px-4 py-2 rounded-xl border border-white/10 hover:border-blue-400/40 text-sm text-foreground/70 dark:text-white/70 hover:text-blue-400 transition-colors capitalize">
+                  className="px-4 py-2 rounded-xl border border-white/10 hover:border-blue-400/40 text-sm text-foreground/70 dark:text-white/70 hover:text-electric transition-colors capitalize">
                   {m.metier}
                 </Link>
               ))}
@@ -202,7 +202,7 @@ export default function SolutionPage({ params }: { params: { slug: string } }) {
         <div className="rounded-2xl p-6 bg-gradient-to-br from-navy to-electric text-center">
           <h3 className="text-white font-bold text-xl mb-2">Discutons de votre projet</h3>
           <p className="text-white/70 mb-4">Devis gratuit sous 72h. Premier rendez-vous sans engagement.</p>
-          <Link href="/contact" className="inline-block px-6 py-3 bg-amber-500 hover:bg-amber-400 text-amber-950 font-semibold rounded-xl transition-all hover:-translate-y-0.5">
+          <Link href="/contact" className="inline-block px-6 py-3 bg-gold hover:bg-gold/80 text-ink font-semibold rounded-xl transition-all hover:-translate-y-0.5">
             Demander un devis gratuit →
           </Link>
         </div>

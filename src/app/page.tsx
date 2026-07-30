@@ -79,7 +79,7 @@ export default function Home() {
               </p>
             </div>
             <ServiceCards />
-            <Link href="/services" className="inline-flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium transition-colors">
+            <Link href="/services" className="inline-flex items-center gap-2 text-electric-ink dark:text-electric hover:text-navy dark:hover:text-electric font-medium transition-colors">
               Voir tous nos services <ArrowRight size={16} />
             </Link>
           </div>
@@ -111,7 +111,7 @@ export default function Home() {
               ].map(({ Icon, titre, desc }) => (
                 <div key={titre} className="p-6 rounded-2xl bg-white/5 border border-white/10">
                   <div className="w-10 h-10 rounded-xl bg-blue-500/20 flex items-center justify-center mb-4">
-                    <Icon size={20} className="text-blue-400" />
+                    <Icon size={20} className="text-electric" />
                   </div>
                   <h3 className="font-semibold text-white mb-2">{titre}</h3>
                   <p className="text-white/60 text-sm leading-relaxed">{desc}</p>
@@ -131,14 +131,14 @@ export default function Home() {
                 </h2>
                 <p className="text-foreground/60 dark:text-white/60">Nos démonstrations sont des projets complets, construits par nos soins et consultables en ligne. Ce que vous voyez est exactement ce que nous livrons.</p>
               </div>
-              <Link href="/realisations" className="hidden sm:flex items-center gap-1 text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium text-sm transition-colors">
+              <Link href="/realisations" className="hidden sm:flex items-center gap-1 text-electric-ink dark:text-electric hover:text-navy dark:hover:text-electric font-medium text-sm transition-colors">
                 Voir tout <ArrowRight size={14} />
               </Link>
             </div>
             <div className="grid sm:grid-cols-3 gap-5 mb-8">
               {realisationsHome.map(r => (
                 <Link key={r.slug} href={`/realisations/${r.slug}`}
-                  className="group rounded-2xl border border-navy/20 dark:border-white/10 overflow-hidden hover:border-blue-500/30 transition-colors">
+                  className="group rounded-2xl border border-navy/20 dark:border-white/10 overflow-hidden hover:border-electric/30 transition-colors">
                   <div className="h-36 flex items-center justify-center relative" style={{ background: r.couleur }}>
                     <div className="absolute inset-0 opacity-20" style={{ background: `linear-gradient(135deg, ${r.accent}, transparent)` }} />
                     <span className="relative text-white/70 font-bold text-4xl">{r.nom.charAt(0)}</span>
@@ -147,13 +147,13 @@ export default function Home() {
                     </div>
                   </div>
                   <div className="p-4">
-                    <h3 className="font-semibold text-foreground dark:text-white group-hover:text-blue-400 transition-colors mb-1">{r.nom}</h3>
+                    <h3 className="font-semibold text-foreground dark:text-white group-hover:text-electric transition-colors mb-1">{r.nom}</h3>
                     <p className="text-xs text-foreground/60 dark:text-white/60">{r.type}</p>
                   </div>
                 </Link>
               ))}
             </div>
-            <Link href="/realisations" className="sm:hidden inline-flex items-center gap-1 text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium text-sm transition-colors">
+            <Link href="/realisations" className="sm:hidden inline-flex items-center gap-1 text-electric-ink dark:text-electric hover:text-navy dark:hover:text-electric font-medium text-sm transition-colors">
               Voir toutes les réalisations <ArrowRight size={14} />
             </Link>
           </div>
@@ -170,7 +170,7 @@ export default function Home() {
                 Nos démonstrations sont des projets complets, construits par nos soins et consultables en ligne.
                 Ce que vous voyez est exactement ce que nous livrons.
               </p>
-              <Link href="/realisations" className="inline-flex items-center gap-2 px-6 py-3 bg-blue-700 text-white font-semibold rounded-xl text-sm hover:bg-blue-600 transition-colors">
+              <Link href="/realisations" className="inline-flex items-center gap-2 px-6 py-3 bg-navy text-white font-semibold rounded-xl text-sm hover:bg-electric transition-colors">
                 Explorer nos démonstrations →
               </Link>
             </div>
@@ -182,7 +182,7 @@ export default function Home() {
           <div className="max-w-5xl mx-auto px-4 sm:px-6">
             <div className="flex items-end justify-between mb-12">
               <h2 className="text-3xl lg:text-4xl font-bold text-white">Du concret sur le blog</h2>
-              <Link href="/blog" className="hidden sm:flex items-center gap-1 text-blue-400 hover:text-blue-300 font-medium text-sm transition-colors">
+              <Link href="/blog" className="hidden sm:flex items-center gap-1 text-electric hover:text-electric/80 font-medium text-sm transition-colors">
                 Tous les articles <ArrowRight size={14} />
               </Link>
             </div>
@@ -193,14 +193,81 @@ export default function Home() {
                 { href: '/blog/seo-local-google-business', titre: 'SEO local : comment apparaître en tête sur Google Maps', cat: 'SEO' },
               ].map(a => (
                 <Link key={a.href} href={a.href}
-                  className="group p-5 rounded-2xl bg-white/5 border border-white/10 hover:border-blue-500/30 transition-colors">
-                  <div className="text-xs text-blue-400 mb-2 font-medium">{a.cat}</div>
-                  <h3 className="font-semibold text-white group-hover:text-blue-300 transition-colors text-sm leading-snug">{a.titre}</h3>
+                  className="group p-5 rounded-2xl bg-white/5 border border-white/10 hover:border-electric/30 transition-colors">
+                  <div className="text-xs text-electric mb-2 font-medium">{a.cat}</div>
+                  <h3 className="font-semibold text-white group-hover:text-electric/80 transition-colors text-sm leading-snug">{a.titre}</h3>
                 </Link>
               ))}
             </div>
-            <Link href="/blog" className="sm:hidden mt-6 inline-flex items-center gap-1 text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium text-sm transition-colors">
+            <Link href="/blog" className="sm:hidden mt-6 inline-flex items-center gap-1 text-electric-ink dark:text-electric hover:text-navy dark:hover:text-electric font-medium text-sm transition-colors">
               Tous les articles <ArrowRight size={14} />
+            </Link>
+          </div>
+        </section>
+
+        {/* Maintenance */}
+        <section className="py-24 bg-background dark:bg-[#0A0F1C]">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6">
+            <div className="mb-10">
+              <h2 className="text-3xl lg:text-4xl font-bold text-foreground dark:text-white mb-3">
+                Maintenance & hébergement
+              </h2>
+              <p className="text-foreground/60 dark:text-white/60">Après la première année incluse, une formule mensuelle pour que votre site reste rapide, sécurisé et à jour.</p>
+            </div>
+            <div className="grid sm:grid-cols-3 gap-5">
+              {[
+                { nom: 'Starter', prix: SITE.pricing.maintenanceStarter, delai: '72h ouvrées', inclus: ['Hébergement', 'SSL', 'Sauvegardes hebdo', 'Mises à jour sécurité'] },
+                { nom: 'Pro', prix: SITE.pricing.maintenancePro, delai: '48h ouvrées', inclus: ['Tout Starter', 'Sauvegardes quotidiennes', '2h modifications/mois', 'Rapport mensuel SEO'], highlight: true },
+                { nom: 'Premium', prix: SITE.pricing.maintenancePremium, delai: '24h ouvrées', inclus: ['Tout Pro', '5h modifications/mois', 'Rapport mensuel SEO', 'Réponse prioritaire'] },
+              ].map(f => (
+                <div key={f.nom} className={`reveal-item rounded-2xl border p-5 ${f.highlight ? 'border-electric/40 bg-electric/5' : 'border-navy/20 dark:border-white/10'}`}>
+                  {f.highlight && <div className="text-xs font-semibold text-electric-ink dark:text-electric mb-2 uppercase tracking-wide">Le plus populaire</div>}
+                  <div className="flex items-baseline gap-1 mb-1">
+                    <span className="text-2xl font-bold text-navy dark:text-gold">{f.prix}€</span>
+                    <span className="text-sm text-foreground/60 dark:text-white/60">/mois</span>
+                  </div>
+                  <div className="font-semibold text-foreground dark:text-white mb-1">{f.nom}</div>
+                  <div className="text-xs text-electric-ink dark:text-electric mb-4">Réponse {f.delai}</div>
+                  <ul className="space-y-1.5">
+                    {f.inclus.map(i => (
+                      <li key={i} className="flex items-center gap-2 text-sm text-foreground/70 dark:text-white/70">
+                        <CheckCircle size={12} className="text-success flex-shrink-0" />
+                        {i}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+            <div className="mt-6">
+              <Link href="/tarifs" className="inline-flex items-center gap-2 text-electric-ink dark:text-electric font-medium text-sm transition-colors hover:text-navy dark:hover:text-electric/80">
+                Voir toutes les formules <ArrowRight size={14} />
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ teaser */}
+        <section className="py-16 bg-[#060D1A]">
+          <div className="max-w-3xl mx-auto px-4 sm:px-6">
+            <h2 className="text-2xl font-bold text-white mb-6">Questions fréquentes</h2>
+            <div className="space-y-3">
+              {[
+                { q: 'Combien coûte un site internet professionnel ?', a: `Un site vitrine complet démarre à ${SITE.pricing.vitrine} €, livraison et hébergement 12 mois inclus. Pas de frais cachés.` },
+                { q: 'Combien de temps dure la réalisation ?', a: `Un site vitrine est livré en ${SITE.delais.vitrine} ouvrés à compter de la validation du design. Les délais sont contractuels.` },
+                { q: 'Suis-je propriétaire de mon site ?', a: 'Oui, à 100 %. Vous recevez tous les accès (hébergement, nom de domaine, code source) à la livraison.' },
+              ].map(({ q, a }) => (
+                <details key={q} className="group rounded-xl border border-white/10 bg-white/3 p-5 open:bg-white/5 transition-colors">
+                  <summary className="font-semibold text-white cursor-pointer list-none flex justify-between items-center gap-4">
+                    {q}
+                    <span className="text-electric shrink-0 group-open:rotate-45 transition-transform duration-200">+</span>
+                  </summary>
+                  <p className="mt-3 text-white/70 text-sm leading-relaxed">{a}</p>
+                </details>
+              ))}
+            </div>
+            <Link href="/faq" className="mt-6 inline-flex items-center gap-2 text-electric font-medium text-sm hover:text-electric/80 transition-colors">
+              Toutes les questions <ArrowRight size={14} />
             </Link>
           </div>
         </section>
@@ -218,7 +285,7 @@ export default function Home() {
               Livraison garantie en {SITE.delais.vitrine}.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Link href="/contact" className="px-8 py-4 bg-amber-500 hover:bg-amber-400 text-amber-950 font-bold rounded-xl shadow-lg shadow-amber-500/25 transition-all hover:-translate-y-0.5">
+              <Link href="/contact" className="px-8 py-4 bg-gold hover:bg-gold/80 text-ink font-bold rounded-xl shadow-lg shadow-amber-500/25 transition-all hover:-translate-y-0.5">
                 Démarrer mon projet →
               </Link>
               <Link href="/tarifs" className="px-8 py-4 border border-white/20 text-white hover:bg-white/10 font-semibold rounded-xl transition-all">

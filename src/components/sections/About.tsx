@@ -42,7 +42,7 @@ export default function About() {
                   initial={{ opacity: 0, y: 15 }}
                   animate={inView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.5, delay: i * 0.1 + 0.3 }}
-                  className={`leading-relaxed ${i === 0 ? 'text-lg text-gray-900 dark:text-white font-medium' : 'text-gray-600 dark:text-white/60 text-sm'}`}
+                  className={`leading-relaxed ${i === 0 ? 'text-lg text-gray-900 dark:text-white font-medium' : 'text-ink/70 dark:text-white/60 text-sm'}`}
                 >
                   {para}
                 </motion.p>

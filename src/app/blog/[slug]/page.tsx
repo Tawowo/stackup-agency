@@ -120,7 +120,7 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
           <div className="rounded-2xl p-6 bg-gradient-to-br from-navy to-electric">
             <h3 className="text-white font-bold text-lg mb-2">Prêt à démarrer votre projet ?</h3>
             <p className="text-white/70 text-sm mb-4">Premier RDV gratuit, devis sous 72h, sans engagement.</p>
-            <Link href="/contact" className="inline-block px-6 py-3 bg-gold hover:bg-amber-500 text-amber-950 font-semibold rounded-xl text-sm transition-all hover:-translate-y-0.5">
+            <Link href="/contact" className="inline-block px-6 py-3 bg-gold hover:bg-gold text-ink font-semibold rounded-xl text-sm transition-all hover:-translate-y-0.5">
               Prendre rendez-vous →
             </Link>
           </div>

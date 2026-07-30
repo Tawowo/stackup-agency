@@ -434,7 +434,7 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
                 </div>
                 <div className="pb-6">
                   <h3 className="font-semibold text-gray-900 dark:text-white mb-1">{step.step}</h3>
-                  <p className="text-gray-600 dark:text-white/60 text-sm">{step.desc}</p>
+                  <p className="text-ink/70 dark:text-white/60 text-sm">{step.desc}</p>
                 </div>
               </div>
             ))}
@@ -448,7 +448,7 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
             {service.faq.map((item, i) => (
               <div key={i} className="bg-white dark:bg-white/5 rounded-2xl p-6 border border-gray-100 dark:border-white/10">
                 <h3 className="font-semibold text-gray-900 dark:text-white mb-2">{item.q}</h3>
-                <p className="text-gray-600 dark:text-white/60 text-sm">{item.a}</p>
+                <p className="text-ink/70 dark:text-white/60 text-sm">{item.a}</p>
               </div>
             ))}
           </div>
@@ -460,7 +460,7 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
           <p className="text-white/70 mb-6">Devis gratuit sous 72h. Sans engagement.</p>
           <Link
             href="/contact"
-            className="inline-flex items-center gap-2 px-8 py-3.5 bg-gold hover:bg-amber-500 text-amber-950 font-semibold rounded-xl transition-all hover:-translate-y-0.5 shadow-lg"
+            className="inline-flex items-center gap-2 px-8 py-3.5 bg-gold hover:bg-gold text-ink font-semibold rounded-xl transition-all hover:-translate-y-0.5 shadow-lg"
           >
             Demander un devis
             <ArrowRight size={16} />

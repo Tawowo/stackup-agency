@@ -86,7 +86,7 @@ export default function ParrainagePage() {
           <div className="bg-white dark:bg-white/5 rounded-2xl p-8 border border-gray-100 dark:border-white/10">
             <Gift size={28} className="text-[#1E3A5F] dark:text-[#F59E0B] mb-4" />
             <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">Pour votre filleul</h3>
-            <ul className="space-y-2 text-gray-600 dark:text-white/70 text-sm">
+            <ul className="space-y-2 text-ink/70 dark:text-white/70 text-sm">
               <li className="flex items-center gap-2"><Check size={16} className="text-green-500 flex-shrink-0" />-10% sur son premier projet</li>
               <li className="flex items-center gap-2"><Check size={16} className="text-green-500 flex-shrink-0" />Valable sur tous nos services</li>
               <li className="flex items-center gap-2"><Check size={16} className="text-green-500 flex-shrink-0" />Sans minimum de commande</li>
@@ -165,7 +165,7 @@ export default function ParrainagePage() {
                 <button
                   type="submit"
                   disabled={status === 'sending'}
-                  className="w-full py-3 bg-[#F59E0B] hover:bg-amber-500 disabled:opacity-60 text-amber-950 font-semibold rounded-xl transition-all text-sm"
+                  className="w-full py-3 bg-[#F59E0B] hover:bg-gold disabled:opacity-60 text-ink font-semibold rounded-xl transition-all text-sm"
                 >
                   {status === 'sending' ? 'Envoi en cours...' : 'Envoyer le parrainage'}
                 </button>

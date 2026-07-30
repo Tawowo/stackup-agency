@@ -72,7 +72,7 @@ function Section({ title, links }: { title: string; links: { href: string; label
       <ul className="space-y-1.5">
         {links.map(l => (
           <li key={l.href}>
-            <Link href={l.href} className="text-sm text-foreground/70 dark:text-white/70 hover:text-blue-400 transition-colors">
+            <Link href={l.href} className="text-sm text-foreground/70 dark:text-white/70 hover:text-electric transition-colors">
               {l.label}
             </Link>
           </li>
@@ -126,7 +126,7 @@ export default function PlanDuSitePage() {
           <ul className="grid grid-cols-2 gap-x-6 gap-y-1.5">
             {metiersLinks.map(l => (
               <li key={l.href}>
-                <Link href={l.href} className="text-sm text-foreground/70 dark:text-white/70 hover:text-blue-400 transition-colors">
+                <Link href={l.href} className="text-sm text-foreground/70 dark:text-white/70 hover:text-electric transition-colors">
                   {l.label}
                 </Link>
               </li>

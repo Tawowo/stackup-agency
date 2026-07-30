@@ -243,7 +243,7 @@ export default function TarifPage({ params }: { params: { plan: string } }) {
             <span className="text-white/60">Plan {plan.name}</span>
           </nav>
           {params.plan === 'pro' && (
-            <div className="inline-flex items-center gap-1.5 px-4 py-1.5 bg-gold rounded-full text-amber-950 text-xs font-bold mb-4">
+            <div className="inline-flex items-center gap-1.5 px-4 py-1.5 bg-gold rounded-full text-ink text-xs font-bold mb-4">
               <Zap size={12} fill="white" />
               Recommandé
             </div>
@@ -340,7 +340,7 @@ export default function TarifPage({ params }: { params: { plan: string } }) {
             {plan.faq.map((item, i) => (
               <div key={i} className="bg-white dark:bg-white/5 rounded-2xl p-6 border border-gray-100 dark:border-white/10">
                 <h3 className="font-semibold text-gray-900 dark:text-white mb-2">{item.q}</h3>
-                <p className="text-gray-600 dark:text-white/60 text-sm">{item.a}</p>
+                <p className="text-ink/70 dark:text-white/60 text-sm">{item.a}</p>
               </div>
             ))}
           </div>
@@ -352,7 +352,7 @@ export default function TarifPage({ params }: { params: { plan: string } }) {
           <p className="text-white/70 mb-6">Sans engagement. Résiliable à tout moment.</p>
           <Link
             href="/contact"
-            className="inline-flex items-center gap-2 px-8 py-3.5 bg-gold hover:bg-amber-500 text-amber-950 font-semibold rounded-xl transition-all hover:-translate-y-0.5 shadow-lg"
+            className="inline-flex items-center gap-2 px-8 py-3.5 bg-gold hover:bg-gold text-ink font-semibold rounded-xl transition-all hover:-translate-y-0.5 shadow-lg"
           >
             Démarrer maintenant
             <ArrowRight size={16} />

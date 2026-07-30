@@ -102,7 +102,7 @@ export default function AProposPage() {
           <div className="space-y-4">
             {METHODE.map(step => (
               <div key={step.n} className="flex items-start gap-5 p-5 rounded-2xl border border-white/10 bg-white/2">
-                <div className="w-10 h-10 rounded-xl bg-blue-500/20 flex items-center justify-center flex-shrink-0 text-blue-700 dark:text-blue-400 font-bold text-sm">
+                <div className="w-10 h-10 rounded-xl bg-blue-500/20 flex items-center justify-center flex-shrink-0 text-navy dark:text-electric font-bold text-sm">
                   {step.n}
                 </div>
                 <div>
@@ -159,7 +159,7 @@ export default function AProposPage() {
             Devis, contrat de prestation, CGV, mentions légales et tous les documents officiels
             sont disponibles en téléchargement.
           </p>
-          <Link href="/ressources/documents" className="inline-flex items-center gap-2 text-blue-400 text-sm font-medium hover:text-blue-300 transition-colors">
+          <Link href="/ressources/documents" className="inline-flex items-center gap-2 text-electric text-sm font-medium hover:text-electric/80 transition-colors">
             Consulter les documents officiels →
           </Link>
         </section>
@@ -171,7 +171,7 @@ export default function AProposPage() {
             Toutes nos démonstrations sont des projets complets, construits par nos soins et consultables en ligne.
             Ce que vous voyez est exactement ce que nous livrons.
           </p>
-          <Link href="/realisations" className="inline-flex items-center gap-2 text-blue-400 text-sm font-medium hover:text-blue-300 transition-colors">
+          <Link href="/realisations" className="inline-flex items-center gap-2 text-electric text-sm font-medium hover:text-electric/80 transition-colors">
             Explorer nos démonstrations →
           </Link>
         </section>
@@ -180,7 +180,7 @@ export default function AProposPage() {
         <div className="rounded-2xl p-6 bg-gradient-to-br from-navy to-electric text-center">
           <h3 className="text-white font-bold text-xl mb-2">Votre vision. Notre code.</h3>
           <p className="text-white/70 mb-4">Premier rendez-vous gratuit, devis sous 72h, sans engagement.</p>
-          <Link href="/contact" className="inline-block px-6 py-3 bg-amber-500 hover:bg-amber-400 text-amber-950 font-semibold rounded-xl transition-all hover:-translate-y-0.5">
+          <Link href="/contact" className="inline-block px-6 py-3 bg-gold hover:bg-gold/80 text-ink font-semibold rounded-xl transition-all hover:-translate-y-0.5">
             Démarrer mon projet →
           </Link>
         </div>

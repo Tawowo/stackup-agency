@@ -59,11 +59,11 @@ export default function SolutionsPage() {
           <div className="grid sm:grid-cols-2 gap-4">
             {p1.map(s => (
               <Link key={s.slug} href={`/solutions/${s.slug}`} className="p-5 rounded-2xl border border-navy/20 dark:border-white/10 hover:border-blue-400/40 transition-colors group">
-                <h3 className="font-bold text-foreground dark:text-white group-hover:text-blue-400 transition-colors mb-2">{s.nom}</h3>
+                <h3 className="font-bold text-foreground dark:text-white group-hover:text-electric transition-colors mb-2">{s.nom}</h3>
                 <p className="text-sm text-foreground/60 dark:text-white/60 mb-3">{s.requetePrincipale}</p>
                 <div className="flex flex-wrap gap-2">
                   {s.variantes.slice(0, 2).map(v => (
-                    <span key={v} className="px-2 py-0.5 text-xs rounded-full bg-blue-500/10 text-blue-400">{v}</span>
+                    <span key={v} className="px-2 py-0.5 text-xs rounded-full bg-blue-500/10 text-electric">{v}</span>
                   ))}
                 </div>
               </Link>
@@ -76,8 +76,8 @@ export default function SolutionsPage() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
             {p2p3.map(s => (
               <Link key={s.slug} href={`/solutions/${s.slug}`} className="flex items-center justify-between p-4 rounded-xl border border-navy/20 dark:border-white/10 hover:border-blue-400/40 transition-colors group">
-                <span className="font-medium text-foreground dark:text-white group-hover:text-blue-400 transition-colors">{s.nom}</span>
-                <ChevronRight size={16} className="text-white/30 group-hover:text-blue-400 transition-colors" />
+                <span className="font-medium text-foreground dark:text-white group-hover:text-electric transition-colors">{s.nom}</span>
+                <ChevronRight size={16} className="text-white/30 group-hover:text-electric transition-colors" />
               </Link>
             ))}
           </div>
@@ -86,7 +86,7 @@ export default function SolutionsPage() {
         <div className="rounded-2xl p-6 bg-gradient-to-br from-navy to-electric text-center">
           <h2 className="text-white font-bold text-xl mb-2">Une idée de solution sur mesure ?</h2>
           <p className="text-white/70 mb-4">Décrivez votre besoin, nous vous répondons sous 72h.</p>
-          <Link href="/contact" className="inline-block px-6 py-3 bg-amber-500 hover:bg-amber-400 text-amber-950 font-semibold rounded-xl transition-all hover:-translate-y-0.5">
+          <Link href="/contact" className="inline-block px-6 py-3 bg-gold hover:bg-gold/80 text-ink font-semibold rounded-xl transition-all hover:-translate-y-0.5">
             Demander un devis →
           </Link>
         </div>

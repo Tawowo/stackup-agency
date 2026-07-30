@@ -84,7 +84,7 @@ export default function BlogCategoriePage({ params }: { params: { cat: string } 
             <ChevronRight size={11} />
             <span className="text-white/60">{catData.label}</span>
           </nav>
-          <div className="inline-block px-3 py-1 bg-blue-500/20 text-blue-400 text-xs font-medium rounded-full mb-4">
+          <div className="inline-block px-3 py-1 bg-blue-500/20 text-electric text-xs font-medium rounded-full mb-4">
             {posts.length} article{posts.length > 1 ? 's' : ''}
           </div>
           <h1 className="text-3xl lg:text-5xl font-bold text-white leading-tight mb-4">{catData.label}</h1>
@@ -101,7 +101,7 @@ export default function BlogCategoriePage({ params }: { params: { cat: string } 
               <Link
                 key={post.slug}
                 href={`/blog/${post.slug}`}
-                className="group p-6 rounded-2xl border border-white/10 hover:border-blue-500/30 transition-colors bg-white/5 hover:bg-white/10"
+                className="group p-6 rounded-2xl border border-white/10 hover:border-electric/30 transition-colors bg-white/5 hover:bg-white/10"
               >
                 <div className="flex items-center gap-3 mb-3 text-xs text-white/40">
                   <span className="px-2 py-1 rounded-full bg-white/10 text-white/60">{post.tag}</span>
@@ -110,11 +110,11 @@ export default function BlogCategoriePage({ params }: { params: { cat: string } 
                     {new Date(post.updated ?? post.date).toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' })}
                   </span>
                 </div>
-                <h2 className="text-lg font-semibold text-foreground dark:text-white mb-2 group-hover:text-blue-400 transition-colors">
+                <h2 className="text-lg font-semibold text-foreground dark:text-white mb-2 group-hover:text-electric transition-colors">
                   {post.title}
                 </h2>
                 <p className="text-foreground/60 dark:text-white/60 text-sm mb-4 line-clamp-2">{post.excerpt}</p>
-                <span className="inline-flex items-center gap-1 text-blue-400 text-sm font-medium">
+                <span className="inline-flex items-center gap-1 text-electric text-sm font-medium">
                   Lire l'article <ArrowRight size={14} />
                 </span>
               </Link>
@@ -127,7 +127,7 @@ export default function BlogCategoriePage({ params }: { params: { cat: string } 
             <Link
               key={slug}
               href={`/blog/categorie/${slug}`}
-              className="px-4 py-2 rounded-xl border border-white/10 hover:border-blue-400/40 text-sm text-foreground/60 dark:text-white/60 hover:text-blue-400 transition-colors"
+              className="px-4 py-2 rounded-xl border border-white/10 hover:border-blue-400/40 text-sm text-foreground/60 dark:text-white/60 hover:text-electric transition-colors"
             >
               {data.label}
             </Link>

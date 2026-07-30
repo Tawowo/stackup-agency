@@ -128,7 +128,7 @@ export default function SiteAssociationPage() {
                 </div>
                 <div>
                   <h3 className="font-semibold text-gray-900 dark:text-white mb-1">{p.step}</h3>
-                  <p className="text-gray-600 dark:text-white/60 text-sm">{p.desc}</p>
+                  <p className="text-ink/70 dark:text-white/60 text-sm">{p.desc}</p>
                 </div>
               </div>
             ))}
@@ -142,7 +142,7 @@ export default function SiteAssociationPage() {
             {faq.map((item, i) => (
               <div key={i} className="bg-white dark:bg-white/5 rounded-2xl p-6 border border-gray-100 dark:border-white/10">
                 <h3 className="font-semibold text-gray-900 dark:text-white mb-2">{item.q}</h3>
-                <p className="text-gray-600 dark:text-white/60 text-sm leading-relaxed">{item.a}</p>
+                <p className="text-ink/70 dark:text-white/60 text-sm leading-relaxed">{item.a}</p>
               </div>
             ))}
           </div>
@@ -154,7 +154,7 @@ export default function SiteAssociationPage() {
           <p className="text-white/70 mb-6">Livraison en 7 jours ouvrés. Hébergement offert la première année. À partir de 149€.</p>
           <Link
             href="/contact"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-[#F59E0B] hover:bg-amber-500 text-amber-950 font-semibold rounded-xl transition-all hover:-translate-y-0.5"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-[#F59E0B] hover:bg-gold text-ink font-semibold rounded-xl transition-all hover:-translate-y-0.5"
           >
             Créer le site de votre association
           </Link>

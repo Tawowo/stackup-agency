@@ -62,14 +62,12 @@ export default function HeroSection() {
 
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden bg-[#060D1A]">
-      {/* Aurora blobs */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
-        <div className="aurora-blob-1 absolute top-1/4 right-1/3 w-[600px] h-[600px] rounded-full blur-[140px] opacity-30"
+      {/* Aurora blobs — max 2, blur ≤ 80px, transform-only, contain:paint */}
+      <div className="absolute inset-0 pointer-events-none" style={{ contain: 'paint' }} aria-hidden="true">
+        <div className="aurora-blob-1 absolute top-1/4 right-1/3 w-[380px] h-[380px] rounded-full blur-[80px] opacity-25 will-change-transform"
           style={{ background: 'radial-gradient(circle, #2D7DD2, #1E3A5F)' }} />
-        <div className="aurora-blob-2 absolute bottom-1/4 left-1/5 w-[400px] h-[400px] rounded-full blur-[160px] opacity-20"
-          style={{ background: 'radial-gradient(circle, #F59E0B, #1E3A5F)' }} />
-        <div className="aurora-blob-3 absolute top-2/3 right-1/5 w-[300px] h-[300px] rounded-full blur-[120px] opacity-15"
-          style={{ background: 'radial-gradient(circle, #2D7DD2, transparent)' }} />
+        <div className="aurora-blob-2 absolute bottom-1/4 left-1/5 w-[280px] h-[280px] rounded-full blur-[70px] opacity-18 will-change-transform"
+          style={{ background: 'radial-gradient(circle, #F59E0B44, #1E3A5F)' }} />
         <div className="grain-overlay" />
       </div>
 
@@ -97,7 +95,7 @@ export default function HeroSection() {
 
             <div className="flex flex-wrap gap-4 mb-5">
               <Link href="/contact"
-                className="px-7 py-4 bg-amber-500 hover:bg-amber-400 text-amber-950 font-bold rounded-xl shadow-lg shadow-amber-500/25 transition-all hover:-translate-y-0.5">
+                className="px-7 py-4 bg-gold hover:bg-gold/80 text-ink font-bold rounded-xl shadow-lg shadow-amber-500/25 transition-all hover:-translate-y-0.5">
                 Obtenir mon devis gratuit →
               </Link>
               <Link href="/services"
@@ -140,7 +138,7 @@ export default function HeroSection() {
                     <span className="w-3 h-3 rounded-full bg-red-400/70" />
                     <span className="w-3 h-3 rounded-full bg-amber-400/70" />
                     <span className="w-3 h-3 rounded-full bg-green-400/70" />
-                    <span className="ml-3 text-gray-600 text-xs font-mono">stackup-agency.fr</span>
+                    <span className="ml-3 text-ink/70 text-xs font-mono">stackup-agency.fr</span>
                   </div>
                   <div className="p-4 space-y-2">
                     <div className="h-5 w-3/4 rounded bg-[#1E3A5F]" />

@@ -31,7 +31,7 @@ export default function Portfolio() {
           <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4">
             {t.portfolio.title}
           </h2>
-          <p className="text-gray-600 dark:text-white/60 text-lg max-w-2xl mx-auto">
+          <p className="text-ink/70 dark:text-white/60 text-lg max-w-2xl mx-auto">
             {t.portfolio.subtitle}
           </p>
         </motion.div>
@@ -50,7 +50,7 @@ export default function Portfolio() {
               className={`px-4 py-2 rounded-full text-sm font-semibold transition-all ${
                 activeFilter === f
                   ? 'bg-[#1E3A5F] text-white shadow-lg'
-                  : 'bg-white dark:bg-white/5 text-gray-600 dark:text-white/60 border border-gray-200 dark:border-white/10 hover:border-[#1E3A5F] hover:text-[#1E3A5F]'
+                  : 'bg-white dark:bg-white/5 text-ink/70 dark:text-white/60 border border-gray-200 dark:border-white/10 hover:border-[#1E3A5F] hover:text-[#1E3A5F]'
               }`}
             >
               {f}
@@ -96,7 +96,7 @@ export default function Portfolio() {
 
               {/* Body */}
               <div className="flex-1 p-5 bg-white dark:bg-[#111827] flex flex-col">
-                <p className="text-gray-600 dark:text-white/70 text-sm leading-relaxed mb-5 flex-1">
+                <p className="text-ink/70 dark:text-white/70 text-sm leading-relaxed mb-5 flex-1">
                   {r.description}
                 </p>
                 <div className="flex gap-2 flex-wrap">
@@ -134,7 +134,7 @@ export default function Portfolio() {
             <p className="text-white/70 text-sm mb-5">{t.portfolio.demoSameQuality}</p>
             <a
               href="#contact"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-[#F59E0B] hover:bg-amber-500 text-amber-950 rounded-xl text-sm font-semibold transition-all hover:-translate-y-0.5"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-[#F59E0B] hover:bg-gold text-ink rounded-xl text-sm font-semibold transition-all hover:-translate-y-0.5"
             >
               {t.portfolio.viewProject} →
             </a>

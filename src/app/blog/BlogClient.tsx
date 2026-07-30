@@ -80,7 +80,7 @@ export default function BlogClient({ posts }: { posts: Post[] }) {
             className={`px-4 py-2 rounded-full text-sm font-semibold transition-all ${
               active === f
                 ? 'bg-electric text-white shadow-lg shadow-electric/30'
-                : 'bg-white dark:bg-white/5 text-gray-600 dark:text-white/60 border border-gray-200 dark:border-white/10 hover:border-electric hover:text-electric'
+                : 'bg-white dark:bg-white/5 text-ink/70 dark:text-white/60 border border-gray-200 dark:border-white/10 hover:border-electric hover:text-electric'
             }`}
           >
             {f !== 'tous' && categoryEmojis[f] && <span className="mr-1.5">{categoryEmojis[f]}</span>}
@@ -90,7 +90,7 @@ export default function BlogClient({ posts }: { posts: Post[] }) {
       </div>
 
       {/* Count */}
-      <p className="text-gray-400 dark:text-white/40 text-sm mb-6">
+      <p className="text-muted dark:text-white/40 text-sm mb-6">
         {filtered.length} article{filtered.length > 1 ? 's' : ''}
         {active !== 'tous' ? ` dans "${categoryLabels[active]}"` : ''}
       </p>
@@ -111,10 +111,10 @@ export default function BlogClient({ posts }: { posts: Post[] }) {
                   <span className="flex items-center gap-1 px-2.5 py-1 bg-electric/10 text-electric rounded-md text-xs font-medium">
                     <Tag size={10} /> {post.tag}
                   </span>
-                  <span className="flex items-center gap-1 text-gray-400 dark:text-white/40 text-xs">
+                  <span className="flex items-center gap-1 text-muted dark:text-white/40 text-xs">
                     <Clock size={11} /> {post.readTime} min de lecture
                   </span>
-                  <span className="text-gray-400 dark:text-white/40 text-xs">{post.date}</span>
+                  <span className="text-muted dark:text-white/40 text-xs">{post.date}</span>
                 </div>
                 <h2 className="text-lg font-bold text-gray-900 dark:text-white mb-2 group-hover:text-electric transition-colors line-clamp-2">
                   {post.title}
@@ -131,7 +131,7 @@ export default function BlogClient({ posts }: { posts: Post[] }) {
       </div>
 
       {filtered.length === 0 && (
-        <div className="text-center py-16 text-gray-400 dark:text-white/40">
+        <div className="text-center py-16 text-muted dark:text-white/40">
           Aucun article dans cette catégorie pour le moment.
         </div>
       )}

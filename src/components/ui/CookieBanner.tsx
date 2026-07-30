@@ -46,7 +46,7 @@ export default function CookieBanner() {
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-start sm:items-center gap-4">
           <p className="text-white/80 text-sm flex-1">
             {t.cookie.message}{' '}
-            <Link href="/cookies" className="text-blue-400 underline">{t.cookie.learnMore}</Link>
+            <Link href="/cookies" className="text-electric underline">{t.cookie.learnMore}</Link>
           </p>
           <div className="flex flex-wrap gap-2 shrink-0">
             <button
@@ -63,7 +63,7 @@ export default function CookieBanner() {
             </button>
             <button
               onClick={acceptAll}
-              className="px-4 py-2 bg-blue-700 hover:bg-blue-600 text-white text-sm font-semibold rounded-xl transition-colors"
+              className="px-4 py-2 bg-navy hover:bg-electric text-white text-sm font-semibold rounded-xl transition-colors"
             >
               {t.cookie.acceptAll}
             </button>
@@ -89,7 +89,7 @@ export default function CookieBanner() {
                 <div>
                   <div className="font-semibold text-sm text-gray-900 dark:text-white flex items-center gap-2">
                     {t.cookie.technical}
-                    <span className="text-xs font-normal text-gray-400 dark:text-white/40">{t.cookie.technicalRequired}</span>
+                    <span className="text-xs font-normal text-muted dark:text-white/40">{t.cookie.technicalRequired}</span>
                   </div>
                   <p className="text-xs text-gray-500 dark:text-white/50 mt-0.5">{t.cookie.technicalDesc}</p>
                 </div>
@@ -133,7 +133,7 @@ export default function CookieBanner() {
               </button>
               <button
                 onClick={savePrefs}
-                className="flex-1 py-2.5 bg-blue-700 hover:bg-blue-600 text-white text-sm font-semibold rounded-xl transition-colors"
+                className="flex-1 py-2.5 bg-navy hover:bg-electric text-white text-sm font-semibold rounded-xl transition-colors"
               >
                 {t.cookie.save}
               </button>

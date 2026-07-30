@@ -6,7 +6,7 @@ import { useLanguage } from '@/contexts/LanguageContext'
 import Link from 'next/link'
 
 const serviceData = [
-  { icon: Globe,          slug: 'site-vitrine',       color: 'from-blue-500 to-electric',     bg: 'bg-blue-50 dark:bg-blue-900/20',       price: 'À partir de 449€',   border: 'border-blue-500   hover:border-blue-500'   },
+  { icon: Globe,          slug: 'site-vitrine',       color: 'from-blue-500 to-electric',     bg: 'bg-blue-50 dark:bg-blue-900/20',       price: 'À partir de 449€',   border: 'border-electric   hover:border-electric'   },
   { icon: FileText,       slug: 'site-multi-pages',   color: 'from-emerald-500 to-teal-600',  bg: 'bg-emerald-50 dark:bg-emerald-900/20', price: 'À partir de 749€',   border: 'border-emerald-500 hover:border-emerald-500' },
   { icon: ShoppingCart,   slug: 'site-ecommerce',     color: 'from-purple-500 to-violet-600', bg: 'bg-purple-50 dark:bg-purple-900/20',   price: 'À partir de 1 647€', border: 'border-purple-500  hover:border-purple-500'  },
   { icon: LayoutDashboard,slug: 'systeme-gestion',    color: 'from-electric to-navy',         bg: 'bg-sky-50 dark:bg-sky-900/20',         price: 'À partir de 1 447€', border: 'border-electric    hover:border-electric'    },
@@ -32,7 +32,7 @@ export default function Services() {
           <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4">
             {t.services.title}
           </h2>
-          <p className="text-gray-600 dark:text-white/60 text-lg max-w-2xl mx-auto">
+          <p className="text-ink/70 dark:text-white/60 text-lg max-w-2xl mx-auto">
             {t.services.subtitle}
           </p>
         </motion.div>
@@ -92,7 +92,7 @@ export default function Services() {
             </div>
             <Link
               href="#contact"
-              className="mt-6 inline-flex items-center gap-2 px-5 py-2.5 bg-gold hover:bg-amber-500 text-amber-950 rounded-xl text-sm font-semibold transition-all group-hover:-translate-y-0.5"
+              className="mt-6 inline-flex items-center gap-2 px-5 py-2.5 bg-gold hover:bg-gold text-ink rounded-xl text-sm font-semibold transition-all group-hover:-translate-y-0.5"
             >
               {t.services.contactUs}
               <ArrowRight size={15} />

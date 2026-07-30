@@ -63,17 +63,17 @@ export default function AgenceWebPage() {
           villes.length > 0 && (
             <section key={region}>
               <h2 className="text-xl font-bold text-foreground dark:text-white mb-4 flex items-center gap-2">
-                <MapPin size={18} className="text-blue-400" />
+                <MapPin size={18} className="text-electric" />
                 {region}
               </h2>
               <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
                 {villes.map(v => (
                   <Link key={v.slug} href={`/agence-web/${v.slug}`} className="flex items-center justify-between p-4 rounded-xl border border-navy/20 dark:border-white/10 hover:border-blue-400/40 transition-colors group">
                     <div>
-                      <span className="font-medium text-foreground dark:text-white group-hover:text-blue-400 transition-colors">Agence web {v.ville}</span>
+                      <span className="font-medium text-foreground dark:text-white group-hover:text-electric transition-colors">Agence web {v.ville}</span>
                       <p className="text-xs text-foreground/70 dark:text-white/50 mt-0.5">{v.departement}</p>
                     </div>
-                    <ChevronRight size={16} className="text-white/30 group-hover:text-blue-400 transition-colors" />
+                    <ChevronRight size={16} className="text-white/30 group-hover:text-electric transition-colors" />
                   </Link>
                 ))}
               </div>
@@ -84,7 +84,7 @@ export default function AgenceWebPage() {
         <div className="rounded-2xl p-6 bg-gradient-to-br from-navy to-electric text-center">
           <h2 className="text-white font-bold text-xl mb-2">Votre ville n'est pas listée ?</h2>
           <p className="text-white/70 mb-4">Nous intervenons dans toute la France. Contactez-nous pour en parler.</p>
-          <Link href="/contact" className="inline-block px-6 py-3 bg-amber-500 hover:bg-amber-400 text-amber-950 font-semibold rounded-xl transition-all hover:-translate-y-0.5">
+          <Link href="/contact" className="inline-block px-6 py-3 bg-gold hover:bg-gold/80 text-ink font-semibold rounded-xl transition-all hover:-translate-y-0.5">
             Demander un devis →
           </Link>
         </div>

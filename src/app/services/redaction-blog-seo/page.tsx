@@ -120,7 +120,7 @@ export default function RedactionBlogSEOPage() {
       <div className="bg-gradient-to-b from-[#060D1A] to-[#0A0F1C] pt-24 pb-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <Breadcrumb items={[{ name: 'Services', href: '/services' }, { name: 'Rédaction blog SEO' }]} />
-          <div className="inline-block px-3 py-1 bg-blue-500/20 text-blue-400 text-xs font-medium rounded-full mb-4">
+          <div className="inline-block px-3 py-1 bg-blue-500/20 text-electric text-xs font-medium rounded-full mb-4">
             Contenu & Référencement
           </div>
           <h1 className="text-3xl lg:text-5xl font-bold text-white leading-tight mb-4">
@@ -136,7 +136,7 @@ export default function RedactionBlogSEOPage() {
             <span className="flex items-center gap-1.5"><CheckCircle size={14} className="text-green-400" /> Optimisation SEO incluse</span>
           </div>
           <div className="flex flex-wrap gap-4">
-            <Link href="/contact" className="px-6 py-3 bg-amber-500 hover:bg-amber-400 text-amber-950 font-semibold rounded-xl transition-all hover:-translate-y-0.5">
+            <Link href="/contact" className="px-6 py-3 bg-gold hover:bg-gold/80 text-ink font-semibold rounded-xl transition-all hover:-translate-y-0.5">
               Démarrer mon blog →
             </Link>
             <Link href="#packs" className="px-6 py-3 border border-white/20 text-white hover:bg-white/10 rounded-xl transition-all">
@@ -173,7 +173,7 @@ export default function RedactionBlogSEOPage() {
             ].map(({ Icon, titre, desc }) => (
               <div key={titre} className="p-5 rounded-2xl border border-navy/20 dark:border-white/10 bg-white/2">
                 <div className="w-10 h-10 rounded-xl bg-blue-500/20 flex items-center justify-center mb-4">
-                  <Icon size={20} className="text-blue-400" />
+                  <Icon size={20} className="text-electric" />
                 </div>
                 <h3 className="font-semibold text-foreground dark:text-white mb-2">{titre}</h3>
                 <p className="text-foreground/60 dark:text-white/60 text-sm leading-relaxed">{desc}</p>
@@ -187,16 +187,16 @@ export default function RedactionBlogSEOPage() {
           <h2 className="text-2xl font-bold text-foreground dark:text-white mb-6">Nos packs de rédaction</h2>
           <div className="grid sm:grid-cols-3 gap-5">
             {PACKS.map(p => (
-              <div key={p.nom} className={`rounded-2xl border p-6 flex flex-col ${p.highlight ? 'border-amber-500/40 bg-amber-500/5' : 'border-navy/20 dark:border-white/10'}`}>
+              <div key={p.nom} className={`rounded-2xl border p-6 flex flex-col ${p.highlight ? 'border-amber-500/40 bg-gold/5' : 'border-navy/20 dark:border-white/10'}`}>
                 {p.highlight && (
-                  <div className="text-xs font-semibold text-amber-700 dark:text-amber-500 mb-3 uppercase tracking-wide">Le plus populaire</div>
+                  <div className="text-xs font-semibold text-navy dark:text-gold mb-3 uppercase tracking-wide">Le plus populaire</div>
                 )}
                 <h3 className="text-lg font-bold text-foreground dark:text-white mb-1">{p.nom}</h3>
                 {'detail' in p && p.detail && (
-                  <div className="text-blue-700 dark:text-blue-400 text-xs font-medium mb-2">{p.detail}</div>
+                  <div className="text-navy dark:text-electric text-xs font-medium mb-2">{p.detail}</div>
                 )}
                 <div className="mb-3">
-                  <span className="text-3xl font-bold text-amber-700 dark:text-amber-500">{p.prix}€</span>
+                  <span className="text-3xl font-bold text-navy dark:text-gold">{p.prix}€</span>
                   <span className="text-foreground/60 dark:text-white/50 text-sm ml-1">{p.unite}</span>
                 </div>
                 <p className="text-sm text-foreground/60 dark:text-white/60 mb-4">{p.desc}</p>
@@ -208,7 +208,7 @@ export default function RedactionBlogSEOPage() {
                     </li>
                   ))}
                 </ul>
-                <Link href="/contact" className={`flex items-center justify-center gap-1 px-4 py-2.5 rounded-xl text-sm font-semibold transition-colors ${p.highlight ? 'bg-amber-500 hover:bg-amber-400 text-amber-950' : 'bg-blue-600 hover:bg-blue-500 text-white'}`}>
+                <Link href="/contact" className={`flex items-center justify-center gap-1 px-4 py-2.5 rounded-xl text-sm font-semibold transition-colors ${p.highlight ? 'bg-gold hover:bg-gold/80 text-ink' : 'bg-electric hover:bg-electric text-white'}`}>
                   {p.cta} <ChevronRight size={14} />
                 </Link>
               </div>
@@ -217,14 +217,14 @@ export default function RedactionBlogSEOPage() {
         </section>
 
         {/* Accès technique */}
-        <section className="rounded-2xl border border-blue-500/20 bg-blue-500/5 p-6">
+        <section className="rounded-2xl border border-electric/20 bg-blue-500/5 p-6">
           <div className="flex items-start justify-between gap-4 mb-3">
             <div>
               <h3 className="text-lg font-bold text-foreground dark:text-white">Accès technique blog</h3>
-              <p className="text-blue-600 dark:text-blue-400 text-sm mt-0.5">Pour les sites existants sans blog</p>
+              <p className="text-electric-ink dark:text-electric text-sm mt-0.5">Pour les sites existants sans blog</p>
             </div>
             <div className="text-right flex-shrink-0">
-              <span className="text-2xl font-bold text-amber-700 dark:text-amber-500">49€</span>
+              <span className="text-2xl font-bold text-navy dark:text-gold">49€</span>
               <div className="text-xs text-foreground/60 dark:text-white/50">une fois</div>
             </div>
           </div>
@@ -240,7 +240,7 @@ export default function RedactionBlogSEOPage() {
               </div>
             ))}
           </div>
-          <Link href="/contact" className="inline-flex items-center gap-1 text-blue-600 dark:text-blue-400 hover:text-blue-500 dark:hover:text-blue-300 font-medium text-sm transition-colors">
+          <Link href="/contact" className="inline-flex items-center gap-1 text-electric-ink dark:text-electric hover:text-electric dark:hover:text-electric/80 font-medium text-sm transition-colors">
             Demander l'accès technique <ChevronRight size={14} />
           </Link>
         </section>
@@ -256,7 +256,7 @@ export default function RedactionBlogSEOPage() {
               { n: '04', titre: 'Livraison & publication', desc: 'Vous recevez l\'article finalisé sous 5 jours ouvrés. En pack, nous gérons la publication directement sur votre site.' },
             ].map(step => (
               <div key={step.n} className="flex items-start gap-4 p-4 rounded-xl border border-white/5 bg-white/2">
-                <div className="w-9 h-9 rounded-full bg-blue-600 flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
+                <div className="w-9 h-9 rounded-full bg-electric flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
                   {step.n}
                 </div>
                 <div>
@@ -293,7 +293,7 @@ export default function RedactionBlogSEOPage() {
         <div className="rounded-2xl p-6 bg-gradient-to-br from-navy to-electric text-center">
           <h2 className="text-white font-bold text-xl mb-2">Prêt à booster votre référencement ?</h2>
           <p className="text-white/70 mb-4">Devis gratuit sous 72h. Premier article livré en 5 jours ouvrés.</p>
-          <Link href="/contact" className="inline-block px-6 py-3 bg-amber-500 hover:bg-amber-400 text-amber-950 font-semibold rounded-xl transition-all hover:-translate-y-0.5">
+          <Link href="/contact" className="inline-block px-6 py-3 bg-gold hover:bg-gold/80 text-ink font-semibold rounded-xl transition-all hover:-translate-y-0.5">
             Démarrer mon blog SEO →
           </Link>
         </div>

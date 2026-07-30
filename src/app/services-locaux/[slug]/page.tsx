@@ -359,7 +359,7 @@ export default async function ServicesLocauxPage({ params }: { params: Promise<{
           </p>
           <Link
             href="#contact"
-            className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-[#1E3A5F] to-[#2D7DD2] text-white font-semibold rounded-lg hover:opacity-90 transition-all hover:scale-105 shadow-lg shadow-blue-500/25"
+            className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-[#1E3A5F] to-[#2D7DD2] text-white font-semibold rounded-lg hover:opacity-90 transition-all hover:scale-105 shadow-lg shadow-electric/25"
           >
             {page.hero.cta}
             <ArrowRight size={16} />
@@ -373,7 +373,7 @@ export default async function ServicesLocauxPage({ params }: { params: Promise<{
           <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8">{page.problem.title}</h2>
           <ul className="space-y-4">
             {page.problem.points.map((p, i) => (
-              <li key={i} className="flex items-start gap-3 text-gray-600 dark:text-white/70">
+              <li key={i} className="flex items-start gap-3 text-ink/70 dark:text-white/70">
                 <span className="text-red-500 mt-0.5 flex-shrink-0">✗</span>
                 {p}
               </li>
@@ -386,7 +386,7 @@ export default async function ServicesLocauxPage({ params }: { params: Promise<{
       <section className="py-20 px-4">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">{page.solution.title}</h2>
-          <p className="text-lg text-gray-600 dark:text-white/70 leading-relaxed">{page.solution.desc}</p>
+          <p className="text-lg text-ink/70 dark:text-white/70 leading-relaxed">{page.solution.desc}</p>
         </div>
       </section>
 
@@ -435,7 +435,7 @@ export default async function ServicesLocauxPage({ params }: { params: Promise<{
             <p className="text-gray-500 dark:text-white/60 mb-8">{page.price.details}</p>
             <Link
               href="#contact"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-[#F59E0B] hover:bg-amber-500 text-amber-950 font-semibold rounded-xl transition-all hover:scale-105"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-[#F59E0B] hover:bg-gold text-ink font-semibold rounded-xl transition-all hover:scale-105"
             >
               <Mail size={16} />
               Devis gratuit en 24h
@@ -447,11 +447,11 @@ export default async function ServicesLocauxPage({ params }: { params: Promise<{
       {/* Testimonial */}
       <section className="py-20 px-4">
         <div className="max-w-2xl mx-auto text-center">
-          <blockquote className="text-xl text-gray-600 dark:text-white/70 italic leading-relaxed mb-6">
+          <blockquote className="text-xl text-ink/70 dark:text-white/70 italic leading-relaxed mb-6">
             &ldquo;{page.testimonial.quote}&rdquo;
           </blockquote>
           <div className="font-semibold text-gray-900 dark:text-white">{page.testimonial.author}</div>
-          <div className="text-sm text-gray-400 dark:text-white/40">{page.testimonial.company}</div>
+          <div className="text-sm text-muted dark:text-white/40">{page.testimonial.company}</div>
         </div>
       </section>
 
@@ -483,7 +483,7 @@ export default async function ServicesLocauxPage({ params }: { params: Promise<{
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="mailto:contact@stackup-agency.fr"
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#F59E0B] hover:bg-amber-500 text-amber-950 font-semibold rounded-xl transition-all hover:scale-105 shadow-lg shadow-amber-500/25"
+              className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#F59E0B] hover:bg-gold text-ink font-semibold rounded-xl transition-all hover:scale-105 shadow-lg shadow-amber-500/25"
             >
               <Mail size={18} />
               contact@stackup-agency.fr

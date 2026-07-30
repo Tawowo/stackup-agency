@@ -62,8 +62,8 @@ export default function CreationSiteInternetPage() {
               <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
                 {metiersOfCat.map(m => (
                   <Link key={m.slug} href={`/creation-site-internet/${m.slug}`} className="flex items-center justify-between p-4 rounded-xl border border-navy/20 dark:border-white/10 hover:border-blue-400/40 transition-colors group">
-                    <span className="font-medium text-foreground dark:text-white group-hover:text-blue-400 transition-colors capitalize">{m.metier}</span>
-                    <ChevronRight size={16} className="text-white/30 group-hover:text-blue-400 transition-colors" />
+                    <span className="font-medium text-foreground dark:text-white group-hover:text-electric transition-colors capitalize">{m.metier}</span>
+                    <ChevronRight size={16} className="text-white/30 group-hover:text-electric transition-colors" />
                   </Link>
                 ))}
               </div>
@@ -74,7 +74,7 @@ export default function CreationSiteInternetPage() {
         <div className="rounded-2xl p-6 bg-gradient-to-br from-navy to-electric text-center">
           <h2 className="text-white font-bold text-xl mb-2">Votre métier n'est pas listé ?</h2>
           <p className="text-white/70 mb-4">Nous travaillons avec tous les types d'entreprises. Contactez-nous.</p>
-          <Link href="/contact" className="inline-block px-6 py-3 bg-amber-500 hover:bg-amber-400 text-amber-950 font-semibold rounded-xl transition-all hover:-translate-y-0.5">
+          <Link href="/contact" className="inline-block px-6 py-3 bg-gold hover:bg-gold/80 text-ink font-semibold rounded-xl transition-all hover:-translate-y-0.5">
             Demander un devis →
           </Link>
         </div>

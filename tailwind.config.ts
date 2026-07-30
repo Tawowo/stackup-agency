@@ -12,7 +12,12 @@ const config: Config = {
       colors: {
         navy: "#1E3A5F",
         electric: "#2D7DD2",
+        "electric-ink": "#1B5A9E",
         gold: "#F59E0B",
+        ink: "#1E293B",
+        muted: "#94A3B8",
+        success: "#10B981",
+        danger: "#EF4444",
         background: "#F8FAFC",
         foreground: "#0F172A",
       },

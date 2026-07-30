@@ -25,12 +25,12 @@ export default function BlogPageClient({ posts }: { posts: Post[] }) {
           <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
             Our blog is in French
           </h2>
-          <p className="text-gray-600 dark:text-white/60 mb-8">
+          <p className="text-ink/70 dark:text-white/60 mb-8">
             {t.blog.frOnly}
           </p>
           <Link
             href="/contact"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-electric hover:bg-blue-500 text-white rounded-xl font-semibold transition-all hover:-translate-y-0.5"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-electric hover:bg-electric text-white rounded-xl font-semibold transition-all hover:-translate-y-0.5"
           >
             Contact us in English →
           </Link>

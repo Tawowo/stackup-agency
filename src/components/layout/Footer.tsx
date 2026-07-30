@@ -63,7 +63,7 @@ export default function Footer() {
                 { Icon: FacebookIcon, href: SITE.social.facebook, label: 'Facebook' },
               ].map(({ Icon, href, label }) => (
                 <a key={label} href={href} aria-label={label} target="_blank" rel="noopener noreferrer"
-                  className="w-9 h-9 rounded-xl bg-white/10 hover:bg-blue-600 flex items-center justify-center transition-colors">
+                  className="w-9 h-9 rounded-xl bg-white/10 hover:bg-electric flex items-center justify-center transition-colors">
                   <Icon />
                 </a>
               ))}
@@ -123,7 +123,7 @@ export default function Footer() {
                 </li>
               ))}
               <li>
-                <Link href="/agence-web" className="text-blue-400 hover:text-blue-300 text-sm transition-colors block py-0.5 font-medium">Toutes les villes →</Link>
+                <Link href="/agence-web" className="text-electric hover:text-electric/80 text-sm transition-colors block py-0.5 font-medium">Toutes les villes →</Link>
               </li>
             </ul>
           </div>

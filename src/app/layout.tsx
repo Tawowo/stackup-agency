@@ -6,8 +6,7 @@ import { ThemeProvider } from '@/contexts/ThemeContext'
 import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
 import CookieBanner from '@/components/ui/CookieBanner'
-import SmoothScroll from '@/components/ui/SmoothScroll'
-import CustomCursor from '@/components/ui/CustomCursor'
+import RevealObserver from '@/components/ui/RevealObserver'
 import { SITE } from '@/config/site'
 
 const inter = Inter({
@@ -156,8 +155,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className={`${inter.variable} antialiased overflow-x-hidden`}>
         <ThemeProvider>
           <LanguageProvider>
-            <SmoothScroll />
-            <CustomCursor />
+            <RevealObserver />
             <Navbar />
             {children}
             <Footer />

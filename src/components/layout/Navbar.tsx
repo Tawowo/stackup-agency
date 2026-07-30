@@ -53,8 +53,8 @@ export default function Navbar() {
   const linkClass = !isHome
     ? 'text-white hover:text-amber-400'
     : scrolled
-    ? 'text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400'
-    : 'text-[#1E3A5F] hover:text-blue-600'
+    ? 'text-gray-900 dark:text-white hover:text-electric-ink dark:hover:text-electric'
+    : 'text-[#1E3A5F] hover:text-electric-ink'
 
   const barColor = open ? 'bg-white' : !isHome || scrolled ? 'bg-gray-900 dark:bg-white' : 'bg-[#1E3A5F]'
 
@@ -91,13 +91,13 @@ export default function Navbar() {
                 >
                   {SERVICES_LINKS.map(l => (
                     <Link key={l.href} href={l.href} role="menuitem" onClick={() => setServicesOpen(false)}
-                      className="block px-4 py-2.5 text-sm text-gray-700 dark:text-white/80 hover:bg-blue-50 dark:hover:bg-white/5 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                      className="block px-4 py-2.5 text-sm text-gray-700 dark:text-white/80 hover:bg-blue-50 dark:hover:bg-white/5 hover:text-electric-ink dark:hover:text-electric transition-colors">
                       {l.label}
                     </Link>
                   ))}
                   <div className="border-t border-gray-100 dark:border-white/10 my-1" />
                   <Link href="/services" role="menuitem" onClick={() => setServicesOpen(false)}
-                    className="block px-4 py-2.5 text-sm font-semibold text-blue-600 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-white/5 transition-colors">
+                    className="block px-4 py-2.5 text-sm font-semibold text-electric-ink dark:text-electric hover:bg-blue-50 dark:hover:bg-white/5 transition-colors">
                     Voir tous les services →
                   </Link>
                 </div>
@@ -112,10 +112,10 @@ export default function Navbar() {
             {/* Desktop right */}
             <div className="hidden lg:flex items-center gap-3">
               <button onClick={toggleDark} aria-label="Basculer thème sombre"
-                className={`p-2 rounded-lg transition-colors ${!isHome ? 'text-white/80 hover:text-white' : scrolled ? 'text-gray-600 dark:text-white/70 hover:text-blue-600' : 'text-[#1E3A5F]/80 hover:text-blue-600'}`}>
+                className={`p-2 rounded-lg transition-colors ${!isHome ? 'text-white/80 hover:text-white' : scrolled ? 'text-ink/70 dark:text-white/70 hover:text-electric-ink' : 'text-[#1E3A5F]/80 hover:text-electric-ink'}`}>
                 {dark ? <Sun size={18} /> : <Moon size={18} />}
               </button>
-              <Link href="/contact" className="px-5 py-2.5 bg-amber-500 hover:bg-amber-400 text-amber-950 text-sm font-semibold rounded-xl shadow-lg shadow-amber-500/30 transition-all hover:-translate-y-0.5">
+              <Link href="/contact" className="px-5 py-2.5 bg-gold hover:bg-gold/80 text-ink text-sm font-semibold rounded-xl shadow-lg shadow-amber-500/30 transition-all hover:-translate-y-0.5">
                 Devis gratuit →
               </Link>
             </div>
@@ -165,7 +165,7 @@ export default function Navbar() {
             ))}
             <div className="pt-4 mt-3 border-t border-white/10">
               <Link href="/contact" onClick={() => setOpen(false)}
-                className="flex items-center justify-center py-3 bg-amber-500 text-amber-950 text-sm font-semibold rounded-xl min-h-[48px] hover:bg-amber-400 transition-colors">
+                className="flex items-center justify-center py-3 bg-gold text-ink text-sm font-semibold rounded-xl min-h-[48px] hover:bg-gold/80 transition-colors">
                 Devis gratuit →
               </Link>
             </div>

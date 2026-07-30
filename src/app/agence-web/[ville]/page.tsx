@@ -108,8 +108,8 @@ export default function AgenceWebVillePage({ params }: { params: { ville: string
           </nav>
 
           <div className="flex items-center gap-2 mb-4">
-            <MapPin size={16} className="text-blue-400" />
-            <span className="text-blue-400 text-sm font-medium">{v.departement} — {v.region}</span>
+            <MapPin size={16} className="text-electric" />
+            <span className="text-electric text-sm font-medium">{v.departement} — {v.region}</span>
           </div>
 
           <h1 className="text-3xl lg:text-5xl font-bold text-white leading-tight mb-4">
@@ -127,7 +127,7 @@ export default function AgenceWebVillePage({ params }: { params: { ville: string
           </div>
 
           <div className="flex flex-wrap gap-4">
-            <Link href="/contact" className="px-6 py-3 bg-amber-500 hover:bg-amber-400 text-amber-950 font-semibold rounded-xl transition-all hover:-translate-y-0.5">
+            <Link href="/contact" className="px-6 py-3 bg-gold hover:bg-gold/80 text-ink font-semibold rounded-xl transition-all hover:-translate-y-0.5">
               Devis gratuit sous 72h →
             </Link>
             <Link href="/services/site-vitrine" className="px-6 py-3 border border-white/20 text-white hover:bg-white/10 rounded-xl transition-all">
@@ -143,7 +143,7 @@ export default function AgenceWebVillePage({ params }: { params: { ville: string
         <section>
           <div className="flex items-center gap-3 mb-4">
             <div className="w-10 h-10 rounded-xl bg-blue-500/20 flex items-center justify-center">
-              <Building2 size={20} className="text-blue-400" />
+              <Building2 size={20} className="text-electric" />
             </div>
             <h2 className="text-2xl font-bold text-foreground dark:text-white">
               Le digital à {v.ville}
@@ -155,7 +155,7 @@ export default function AgenceWebVillePage({ params }: { params: { ville: string
           <div className="grid sm:grid-cols-2 gap-3">
             {v.secteurs.map(s => (
               <div key={s} className="flex items-center gap-3 p-3 rounded-xl bg-blue-950/20 border border-blue-900/20">
-                <TrendingUp size={16} className="text-blue-400 flex-shrink-0" />
+                <TrendingUp size={16} className="text-electric flex-shrink-0" />
                 <span className="text-foreground/80 dark:text-white/80 text-sm font-medium">{s}</span>
               </div>
             ))}
@@ -174,13 +174,13 @@ export default function AgenceWebVillePage({ params }: { params: { ville: string
               { titre: 'Boutique en ligne', prix: `${SITE.pricing.ecommerce}€`, delai: SITE.delais.ecommerce, desc: 'E-commerce complet, paiement sécurisé, gestion des stocks', href: '/services/site-ecommerce' },
               { titre: 'Application métier', prix: `${SITE.pricing.gestion}€`, delai: '4 semaines', desc: 'Logiciel sur mesure : caisse, RDV, commandes, CRM', href: '/services/systeme-gestion' },
             ].map(s => (
-              <Link key={s.titre} href={s.href} className="p-5 rounded-2xl border border-navy/20 dark:border-white/10 hover:border-blue-500/40 transition-colors group">
+              <Link key={s.titre} href={s.href} className="p-5 rounded-2xl border border-navy/20 dark:border-white/10 hover:border-electric/40 transition-colors group">
                 <div className="flex items-start justify-between mb-2">
-                  <h3 className="font-semibold text-foreground dark:text-white group-hover:text-blue-400 transition-colors">{s.titre}</h3>
-                  <span className="text-amber-500 font-bold text-sm">{s.prix}</span>
+                  <h3 className="font-semibold text-foreground dark:text-white group-hover:text-electric transition-colors">{s.titre}</h3>
+                  <span className="text-gold font-bold text-sm">{s.prix}</span>
                 </div>
                 <p className="text-foreground/60 dark:text-white/60 text-sm mb-2">{s.desc}</p>
-                <span className="text-xs text-blue-400">Livraison : {s.delai}</span>
+                <span className="text-xs text-electric">Livraison : {s.delai}</span>
               </Link>
             ))}
           </div>
@@ -222,7 +222,7 @@ export default function AgenceWebVillePage({ params }: { params: { ville: string
               { n: '04', titre: 'Mise en ligne', desc: 'Votre site est mis en ligne, référencé sur Google et livré clé en main avec hébergement 12 mois inclus.' },
             ].map(step => (
               <div key={step.n} className="flex items-start gap-4 p-4 rounded-xl border border-white/10">
-                <span className="text-2xl font-bold text-blue-400/40 font-mono flex-shrink-0 w-10">{step.n}</span>
+                <span className="text-2xl font-bold text-electric/40 font-mono flex-shrink-0 w-10">{step.n}</span>
                 <div>
                   <h3 className="font-semibold text-foreground dark:text-white mb-1">{step.titre}</h3>
                   <p className="text-foreground/60 dark:text-white/60 text-sm">{step.desc}</p>
@@ -236,7 +236,7 @@ export default function AgenceWebVillePage({ params }: { params: { ville: string
         <section className="rounded-2xl p-6 bg-gradient-to-br from-navy/20 to-blue-950/20 border border-white/10">
           <h3 className="font-bold text-white mb-2">Jugez sur pièce</h3>
           <p className="text-white/70 text-sm mb-4">Toutes nos démonstrations sont des projets complets, construits par nos soins et consultables en ligne. Ce que vous voyez est exactement ce que nous livrons.</p>
-          <Link href="/realisations" className="inline-flex items-center gap-2 text-blue-400 text-sm font-medium hover:text-blue-300 transition-colors">
+          <Link href="/realisations" className="inline-flex items-center gap-2 text-electric text-sm font-medium hover:text-electric/80 transition-colors">
             Explorer nos démonstrations <ArrowRight size={14} />
           </Link>
         </section>
@@ -267,7 +267,7 @@ export default function AgenceWebVillePage({ params }: { params: { ville: string
             </h2>
             <div className="flex flex-wrap gap-3">
               {villesVoisines.map(vi => (
-                <Link key={vi.slug} href={`/agence-web/${vi.slug}`} className="px-4 py-2 rounded-xl border border-white/10 hover:border-blue-400/40 text-sm text-foreground/70 dark:text-white/70 hover:text-blue-400 transition-colors">
+                <Link key={vi.slug} href={`/agence-web/${vi.slug}`} className="px-4 py-2 rounded-xl border border-white/10 hover:border-blue-400/40 text-sm text-foreground/70 dark:text-white/70 hover:text-electric transition-colors">
                   Agence web {vi.ville}
                 </Link>
               ))}
@@ -280,7 +280,7 @@ export default function AgenceWebVillePage({ params }: { params: { ville: string
           <h3 className="text-white font-bold text-2xl mb-2">Vous êtes à {v.ville} ? Parlons de votre projet.</h3>
           <p className="text-white/70 mb-2">Premier rendez-vous gratuit, devis sous 72h, sans engagement.</p>
           <p className="text-white/50 text-sm mb-6">Tout se passe à distance — aussi efficace qu'en présentiel, plus rapide.</p>
-          <Link href="/contact" className="inline-block px-8 py-3 bg-amber-500 hover:bg-amber-400 text-amber-950 font-semibold rounded-xl transition-all hover:-translate-y-0.5">
+          <Link href="/contact" className="inline-block px-8 py-3 bg-gold hover:bg-gold/80 text-ink font-semibold rounded-xl transition-all hover:-translate-y-0.5">
             Demander un devis gratuit →
           </Link>
         </div>

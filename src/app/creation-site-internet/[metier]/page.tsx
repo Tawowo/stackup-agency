@@ -109,7 +109,7 @@ export default function MetierPage({ params }: { params: { metier: string } }) {
             <span className="text-white/60 capitalize">{m.metier}</span>
           </nav>
 
-          <div className="inline-block px-3 py-1 bg-blue-500/20 text-blue-400 text-xs font-medium rounded-full mb-4">{categorieLbl}</div>
+          <div className="inline-block px-3 py-1 bg-blue-500/20 text-electric text-xs font-medium rounded-full mb-4">{categorieLbl}</div>
 
           <h1 className="text-3xl lg:text-5xl font-bold text-white leading-tight mb-4">
             Site internet pour {m.metier}
@@ -125,7 +125,7 @@ export default function MetierPage({ params }: { params: { metier: string } }) {
           </div>
 
           <div className="flex flex-wrap gap-4">
-            <Link href="/contact" className="px-6 py-3 bg-amber-500 hover:bg-amber-400 text-amber-950 font-semibold rounded-xl transition-all hover:-translate-y-0.5">
+            <Link href="/contact" className="px-6 py-3 bg-gold hover:bg-gold/80 text-ink font-semibold rounded-xl transition-all hover:-translate-y-0.5">
               Devis gratuit sous 72h →
             </Link>
             <Link href={service.href} className="px-6 py-3 border border-white/20 text-white hover:bg-white/10 rounded-xl transition-all">
@@ -160,13 +160,13 @@ export default function MetierPage({ params }: { params: { metier: string } }) {
           <h2 className="text-2xl font-bold text-foreground dark:text-white mb-6">
             Notre recommandation pour un {m.metier}
           </h2>
-          <div className="p-6 rounded-2xl border border-blue-500/30 bg-blue-500/5">
+          <div className="p-6 rounded-2xl border border-electric/30 bg-blue-500/5">
             <div className="flex items-start justify-between mb-3">
               <div>
                 <h3 className="text-xl font-bold text-foreground dark:text-white">{service.label}</h3>
-                <p className="text-blue-400 text-sm mt-0.5">Solution recommandée pour les {m.metier}s</p>
+                <p className="text-electric text-sm mt-0.5">Solution recommandée pour les {m.metier}s</p>
               </div>
-              <span className="text-2xl font-bold text-amber-700 dark:text-amber-500">{service.prix}€</span>
+              <span className="text-2xl font-bold text-navy dark:text-gold">{service.prix}€</span>
             </div>
             <p className="text-foreground/70 dark:text-white/70 mb-5">
               Solution adaptée à la grande majorité des {m.metier}s. Inclut SEO local optimisé pour votre ville,
@@ -220,7 +220,7 @@ export default function MetierPage({ params }: { params: { metier: string } }) {
             {AVANTAGES_STACKUP.map(({ icon: Icon, titre, desc }) => (
               <div key={titre} className="flex items-start gap-4 p-4 rounded-xl border border-white/10 bg-white/5">
                 <div className="w-10 h-10 rounded-xl bg-blue-500/20 flex items-center justify-center flex-shrink-0">
-                  <Icon size={20} className="text-blue-400" />
+                  <Icon size={20} className="text-electric" />
                 </div>
                 <div>
                   <h3 className="font-semibold text-foreground dark:text-white mb-1">{titre}</h3>
@@ -235,26 +235,26 @@ export default function MetierPage({ params }: { params: { metier: string } }) {
         <section className="rounded-2xl p-6 bg-gradient-to-br from-navy/20 to-blue-950/20 border border-white/10">
           <h3 className="font-bold text-white mb-2">Jugez sur pièce</h3>
           <p className="text-white/70 text-sm mb-4">Toutes nos démonstrations sont des projets complets, construits par nos soins et consultables en ligne. Ce que vous voyez est exactement ce que nous livrons.</p>
-          <Link href="/realisations" className="inline-flex items-center gap-2 text-blue-400 text-sm font-medium hover:text-blue-300 transition-colors">
+          <Link href="/realisations" className="inline-flex items-center gap-2 text-electric text-sm font-medium hover:text-electric/80 transition-colors">
             Explorer nos démonstrations <ArrowRight size={14} />
           </Link>
         </section>
 
         {/* Encart blog SEO */}
-        <section className="rounded-2xl border border-blue-500/20 bg-blue-950/20 p-6">
+        <section className="rounded-2xl border border-electric/20 bg-blue-950/20 p-6">
           <div className="flex items-start justify-between gap-4 mb-3">
             <div>
               <h3 className="font-bold text-white">Rendez votre site encore plus visible avec un blog SEO</h3>
-              <p className="text-blue-400 text-xs font-medium mt-0.5">À partir de 25€ l'article</p>
+              <p className="text-electric text-xs font-medium mt-0.5">À partir de 25€ l'article</p>
             </div>
-            <span className="text-amber-500 font-bold text-xl flex-shrink-0">25€</span>
+            <span className="text-gold font-bold text-xl flex-shrink-0">25€</span>
           </div>
           <p className="text-white/70 text-sm mb-4">
             Un site web seul ne suffit pas toujours à dominer Google. Des articles de blog optimisés SEO
             publiés régulièrement renforcent votre autorité, attirent du trafic qualifié et convertissent
             vos lecteurs en clients — sans publicité payante.
           </p>
-          <Link href="/services/redaction-blog-seo" className="inline-flex items-center gap-2 text-blue-400 text-sm font-medium hover:text-blue-300 transition-colors">
+          <Link href="/services/redaction-blog-seo" className="inline-flex items-center gap-2 text-electric text-sm font-medium hover:text-electric/80 transition-colors">
             Découvrir nos packs rédaction blog <ArrowRight size={14} />
           </Link>
         </section>
@@ -272,7 +272,7 @@ export default function MetierPage({ params }: { params: { metier: string } }) {
               { n: '04', titre: 'Mise en ligne', desc: 'Nous gérons le nom de domaine, l\'hébergement et la mise en production. Votre site est en ligne, référencé, optimisé.' },
             ].map(step => (
               <div key={step.n} className="flex items-start gap-4 p-4 rounded-xl border border-white/10">
-                <span className="text-2xl font-bold text-blue-400/40 font-mono flex-shrink-0 w-10">{step.n}</span>
+                <span className="text-2xl font-bold text-electric/40 font-mono flex-shrink-0 w-10">{step.n}</span>
                 <div>
                   <h3 className="font-semibold text-foreground dark:text-white mb-1">{step.titre}</h3>
                   <p className="text-foreground/60 dark:text-white/60 text-sm">{step.desc}</p>
@@ -308,7 +308,7 @@ export default function MetierPage({ params }: { params: { metier: string } }) {
             </h2>
             <div className="flex flex-wrap gap-3">
               {metiersMemeCategorie.map(mi => (
-                <Link key={mi.slug} href={`/creation-site-internet/${mi.slug}`} className="px-4 py-2 rounded-xl border border-white/10 hover:border-blue-400/40 text-sm text-foreground/70 dark:text-white/70 hover:text-blue-400 transition-colors">
+                <Link key={mi.slug} href={`/creation-site-internet/${mi.slug}`} className="px-4 py-2 rounded-xl border border-white/10 hover:border-blue-400/40 text-sm text-foreground/70 dark:text-white/70 hover:text-electric transition-colors">
                   Site internet {mi.metier}
                 </Link>
               ))}
@@ -333,7 +333,7 @@ export default function MetierPage({ params }: { params: { metier: string } }) {
           <h3 className="text-white font-bold text-2xl mb-2">Prêt à créer votre site de {m.metier} ?</h3>
           <p className="text-white/70 mb-2">Premier RDV gratuit, devis sous 72h, livraison garantie en {delai}.</p>
           <p className="text-white/50 text-sm mb-6">Pas d'abonnement, pas de commission, pas de frais cachés.</p>
-          <Link href="/contact" className="inline-block px-8 py-3 bg-amber-500 hover:bg-amber-400 text-amber-950 font-semibold rounded-xl transition-all hover:-translate-y-0.5">
+          <Link href="/contact" className="inline-block px-8 py-3 bg-gold hover:bg-gold/80 text-ink font-semibold rounded-xl transition-all hover:-translate-y-0.5">
             Demander un devis gratuit →
           </Link>
         </div>

@@ -36,7 +36,7 @@ export default function RealisationsPage() {
       <div className="bg-gradient-to-b from-[#060D1A] to-[#0A0F1C] pt-24 pb-16">
         <div className="max-w-5xl mx-auto px-4 sm:px-6">
           <Breadcrumb items={[{ name: 'Réalisations' }]} />
-          <div className="inline-block px-3 py-1 bg-amber-500/20 text-amber-400 text-xs font-semibold rounded-full mb-4 uppercase tracking-wide">
+          <div className="inline-block px-3 py-1 bg-gold/20 text-amber-400 text-xs font-semibold rounded-full mb-4 uppercase tracking-wide">
             Sites de démonstration
           </div>
           <h1 className="text-3xl lg:text-5xl font-bold text-white mb-6">
@@ -53,7 +53,7 @@ export default function RealisationsPage() {
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
           {realisations.map(r => (
             <Link key={r.slug} href={`/realisations/${r.slug}`}
-              className="group rounded-2xl border border-navy/20 dark:border-white/10 overflow-hidden hover:border-blue-500/30 transition-colors">
+              className="group rounded-2xl border border-navy/20 dark:border-white/10 overflow-hidden hover:border-electric/30 transition-colors">
               <div className="h-40 flex items-center justify-center relative" style={{ background: r.couleur }}>
                 <div className="absolute inset-0 opacity-20" style={{ background: `linear-gradient(135deg, ${r.accent}, transparent)` }} />
                 <span className="relative text-white/80 font-bold text-2xl tracking-tight">{r.nom.charAt(0)}</span>
@@ -63,8 +63,8 @@ export default function RealisationsPage() {
               </div>
               <div className="p-5">
                 <div className="flex items-start justify-between mb-2">
-                  <h2 className="font-bold text-foreground dark:text-white group-hover:text-blue-400 transition-colors">{r.nom}</h2>
-                  <ChevronRight size={16} className="text-white/30 group-hover:text-blue-400 transition-colors flex-shrink-0 mt-0.5" />
+                  <h2 className="font-bold text-foreground dark:text-white group-hover:text-electric transition-colors">{r.nom}</h2>
+                  <ChevronRight size={16} className="text-white/30 group-hover:text-electric transition-colors flex-shrink-0 mt-0.5" />
                 </div>
                 <p className="text-xs text-foreground/70 dark:text-white/50 mb-2">{r.type}</p>
                 <p className="text-sm text-foreground/70 dark:text-white/70 line-clamp-2">{r.description}</p>
@@ -79,7 +79,7 @@ export default function RealisationsPage() {
         </div>
 
         {/* Jugez sur pièce */}
-        <section className="rounded-2xl border border-blue-500/30 bg-blue-500/5 p-6 lg:p-8 mb-16">
+        <section className="rounded-2xl border border-electric/30 bg-blue-500/5 p-6 lg:p-8 mb-16">
           <h2 className="text-xl font-bold text-foreground dark:text-white mb-2">Jugez sur pièce</h2>
           <p className="text-foreground/70 dark:text-white/70">
             Toutes nos démonstrations sont des projets complets, construits par nos soins et consultables en ligne.
@@ -90,7 +90,7 @@ export default function RealisationsPage() {
         <div className="rounded-2xl p-6 bg-gradient-to-br from-navy to-electric text-center">
           <h2 className="text-white font-bold text-xl mb-2">Votre projet mérite le même soin</h2>
           <p className="text-white/70 mb-4">Devis gratuit sous 72h. Premier rendez-vous sans engagement.</p>
-          <Link href="/contact" className="inline-block px-6 py-3 bg-amber-500 hover:bg-amber-400 text-amber-950 font-semibold rounded-xl transition-all hover:-translate-y-0.5">
+          <Link href="/contact" className="inline-block px-6 py-3 bg-gold hover:bg-gold/80 text-ink font-semibold rounded-xl transition-all hover:-translate-y-0.5">
             Démarrer mon projet →
           </Link>
         </div>

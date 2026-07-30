@@ -47,7 +47,7 @@ export default function Pricing() {
                 }`}
               >
                 {isPro && (
-                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 flex items-center gap-1.5 px-4 py-1.5 bg-gold rounded-full text-amber-950 text-xs font-bold shadow-lg">
+                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 flex items-center gap-1.5 px-4 py-1.5 bg-gold rounded-full text-ink text-xs font-bold shadow-lg">
                     <Zap size={12} fill="white" />
                     {t.pricing.recommended}
                   </div>
@@ -71,7 +71,7 @@ export default function Pricing() {
                       <div className={`mt-0.5 w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 ${isPro ? 'bg-gold/20' : 'bg-electric/10'}`}>
                         <Check size={12} className={isPro ? 'text-gold' : 'text-electric'} />
                       </div>
-                      <span className={`text-sm ${isPro ? 'text-white/80' : 'text-gray-600 dark:text-white/70'}`}>
+                      <span className={`text-sm ${isPro ? 'text-white/80' : 'text-ink/70 dark:text-white/70'}`}>
                         {f}
                       </span>
                     </li>
@@ -81,7 +81,7 @@ export default function Pricing() {
                   href={`/tarifs/${slug}`}
                   className={`block text-center py-3.5 rounded-xl font-semibold text-sm transition-all hover:-translate-y-0.5 ${
                     isPro
-                      ? 'bg-gold hover:bg-amber-500 text-amber-950 shadow-lg shadow-gold/30'
+                      ? 'bg-gold hover:bg-gold text-ink shadow-lg shadow-gold/30'
                       : 'bg-electric/10 hover:bg-electric/20 text-electric'
                   }`}
                 >
@@ -97,7 +97,7 @@ export default function Pricing() {
                         ? 'text-white border-white hover:bg-white hover:text-navy'
                         : i === 0
                           ? 'text-electric border-electric hover:bg-electric hover:text-white'
-                          : 'text-[#F59E0B] border-[#F59E0B] hover:bg-[#F59E0B] hover:text-amber-950'
+                          : 'text-[#F59E0B] border-[#F59E0B] hover:bg-[#F59E0B] hover:text-ink'
                     }`}
                   >
                     {t.pricing.learnMore}

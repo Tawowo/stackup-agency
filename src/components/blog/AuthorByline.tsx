@@ -36,7 +36,7 @@ export default function AuthorByline({ date, updated, readTime, compact = false 
       <div>
         <div className="font-semibold text-foreground dark:text-white text-sm">{name}</div>
         <div className="text-xs text-foreground/70 dark:text-white/50 flex items-center gap-2">
-          <Link href="/a-propos" className="hover:text-blue-400 transition-colors">Stackup Agency</Link>
+          <Link href="/a-propos" className="hover:text-electric transition-colors">Stackup Agency</Link>
           {dateStr && <span>·</span>}
           {dateStr && <span>{updated ? `Mis à jour le ${dateStr}` : dateStr}</span>}
           {readTime && <span>· {readTime} min de lecture</span>}
