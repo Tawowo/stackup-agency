@@ -72,7 +72,7 @@ export default function Navbar() {
             </Link>
 
             {/* Desktop nav */}
-            <div className="hidden lg:flex items-center gap-6">
+            <div className="hidden lg:flex items-center gap-4 xl:gap-6">
               {/* Services dropdown */}
               <div className="relative" ref={dropdownRef}>
                 <button
@@ -107,6 +107,7 @@ export default function Navbar() {
               <Link href="/realisations" aria-current={pathname === '/realisations' ? 'page' : undefined} className={`text-sm font-medium transition-colors ${linkClass}`}>Réalisations</Link>
               <Link href="/blog" aria-current={pathname.startsWith('/blog') ? 'page' : undefined} className={`text-sm font-medium transition-colors ${linkClass}`}>Blog</Link>
               <Link href="/a-propos" aria-current={pathname === '/a-propos' ? 'page' : undefined} className={`text-sm font-medium transition-colors ${linkClass}`}>À propos</Link>
+              <Link href="/parrainage" aria-current={pathname === '/parrainage' ? 'page' : undefined} className={`text-sm font-medium transition-colors ${linkClass} relative after:absolute after:bottom-[-2px] after:left-0 after:h-[2px] after:w-0 after:bg-current after:transition-[width] after:duration-200 hover:after:w-full`}>Parrainage</Link>
             </div>
 
             {/* Desktop right */}
