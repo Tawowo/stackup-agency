@@ -194,12 +194,12 @@ export default function Home() {
               ].map(a => (
                 <Link key={a.href} href={a.href}
                   className="group p-5 rounded-2xl bg-white/5 border border-white/10 hover:border-electric/30 transition-colors">
-                  <div className="text-xs text-electric mb-2 font-medium">{a.cat}</div>
+                  <div className="text-xs text-white/70 mb-2 font-medium">{a.cat}</div>
                   <h3 className="font-semibold text-white group-hover:text-electric/80 transition-colors text-sm leading-snug">{a.titre}</h3>
                 </Link>
               ))}
             </div>
-            <Link href="/blog" className="sm:hidden mt-6 inline-flex items-center gap-1 text-electric-ink dark:text-electric hover:text-navy dark:hover:text-electric font-medium text-sm transition-colors">
+            <Link href="/blog" className="sm:hidden mt-6 inline-flex items-center gap-1 text-electric hover:text-electric/80 font-medium text-sm transition-colors">
               Tous les articles <ArrowRight size={14} />
             </Link>
           </div>

@@ -144,7 +144,7 @@ export default function DocumentsPage() {
                   <div className="flex-1 min-w-0">
                     <p className="font-semibold text-gray-900 dark:text-white text-sm mb-1">{doc.title}</p>
                     <p className="text-xs text-gray-500 dark:text-white/50 leading-relaxed mb-3">{doc.desc}</p>
-                    <p className="text-xs text-muted dark:text-white/30 mb-0">{doc.size}</p>
+                    <p className="text-xs text-foreground/70 dark:text-white/30 mb-0">{doc.size}</p>
                   </div>
                   <div className="flex items-center gap-2 flex-shrink-0 mt-1">
                     {doc.slug && (
@@ -153,7 +153,7 @@ export default function DocumentsPage() {
                         Consulter
                       </Link>
                     )}
-                    <a href={doc.pdf} download className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-electric hover:bg-electric text-white text-xs font-semibold rounded-lg transition-colors">
+                    <a href={doc.pdf} download className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-navy hover:bg-electric text-white text-xs font-semibold rounded-lg transition-colors">
                       <Download size={12} />
                       Télécharger le PDF
                     </a>
@@ -164,7 +164,7 @@ export default function DocumentsPage() {
           </section>
         ))}
 
-        <p className="text-xs text-muted dark:text-white/30 text-center">
+        <p className="text-xs text-foreground/70 dark:text-white/30 text-center">
           Les modèles commerciaux sont fournis à titre indicatif. Votre exemplaire personnalisé vous sera remis lors de votre projet.{' '}
           <Link href="/contact" className="text-electric-ink dark:text-electric underline hover:text-electric dark:hover:text-electric/80 transition-colors">Nous contacter →</Link>
         </p>

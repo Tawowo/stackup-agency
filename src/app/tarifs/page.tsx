@@ -139,7 +139,7 @@ export default function TarifsPage() {
             ))}
           </div>
           <div className="flex flex-wrap gap-3">
-            <Link href="/services/systeme-gestion" className="px-5 py-2.5 bg-electric hover:bg-electric text-white text-sm font-semibold rounded-xl transition-colors">
+            <Link href="/services/systeme-gestion" className="px-5 py-2.5 bg-navy hover:bg-electric text-white text-sm font-semibold rounded-xl transition-colors">
               Voir l'offre
             </Link>
             <Link href="/contact" className="px-5 py-2.5 border border-foreground/20 dark:border-white/20 text-foreground dark:text-white hover:bg-foreground/5 dark:hover:bg-white/10 text-sm font-semibold rounded-xl transition-colors">

@@ -208,7 +208,7 @@ export default function RedactionBlogSEOPage() {
                     </li>
                   ))}
                 </ul>
-                <Link href="/contact" className={`flex items-center justify-center gap-1 px-4 py-2.5 rounded-xl text-sm font-semibold transition-colors ${p.highlight ? 'bg-gold hover:bg-gold/80 text-ink' : 'bg-electric hover:bg-electric text-white'}`}>
+                <Link href="/contact" className={`flex items-center justify-center gap-1 px-4 py-2.5 rounded-xl text-sm font-semibold transition-colors ${p.highlight ? 'bg-gold hover:bg-gold/80 text-ink' : 'bg-navy hover:bg-electric text-white'}`}>
                   {p.cta} <ChevronRight size={14} />
                 </Link>
               </div>
@@ -256,7 +256,7 @@ export default function RedactionBlogSEOPage() {
               { n: '04', titre: 'Livraison & publication', desc: 'Vous recevez l\'article finalisé sous 5 jours ouvrés. En pack, nous gérons la publication directement sur votre site.' },
             ].map(step => (
               <div key={step.n} className="flex items-start gap-4 p-4 rounded-xl border border-white/5 bg-white/2">
-                <div className="w-9 h-9 rounded-full bg-electric flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
+                <div className="w-9 h-9 rounded-full bg-navy flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
                   {step.n}
                 </div>
                 <div>

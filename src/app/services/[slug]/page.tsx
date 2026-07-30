@@ -427,7 +427,7 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
             {service.process.map((step, i) => (
               <div key={i} className="flex gap-6">
                 <div className="flex flex-col items-center">
-                  <div className="w-10 h-10 rounded-full bg-electric flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
+                  <div className="w-10 h-10 rounded-full bg-navy flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
                     {i + 1}
                   </div>
                   {i < service.process.length - 1 && <div className="w-0.5 h-full bg-electric/20 mt-2" />}

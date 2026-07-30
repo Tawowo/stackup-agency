@@ -180,7 +180,7 @@ export default function AgenceWebVillePage({ params }: { params: { ville: string
                   <span className="text-gold font-bold text-sm">{s.prix}</span>
                 </div>
                 <p className="text-foreground/60 dark:text-white/60 text-sm mb-2">{s.desc}</p>
-                <span className="text-xs text-electric">Livraison : {s.delai}</span>
+                <span className="text-xs text-electric-ink dark:text-electric">Livraison : {s.delai}</span>
               </Link>
             ))}
           </div>

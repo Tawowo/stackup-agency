@@ -48,7 +48,7 @@ export default function ProcessSection() {
           <div className="grid grid-cols-4 gap-6">
             {STEPS.map((s, i) => (
               <div key={s.n} ref={el => { stepRefs.current[i] = el }} className="reveal-item">
-                <div className="w-10 h-10 rounded-full bg-electric flex items-center justify-center mb-4 text-white font-bold text-sm shadow-lg shadow-blue-600/30">
+                <div className="w-10 h-10 rounded-full bg-navy flex items-center justify-center mb-4 text-white font-bold text-sm shadow-lg shadow-navy/30">
                   {s.n}
                 </div>
                 <h3 className="font-semibold text-white mb-2">{s.titre}</h3>
@@ -62,7 +62,7 @@ export default function ProcessSection() {
         <div className="sm:hidden space-y-6">
           {STEPS.map(s => (
             <div key={s.n} className="flex items-start gap-4">
-              <div className="w-10 h-10 flex-shrink-0 rounded-full bg-electric flex items-center justify-center text-white font-bold text-sm">
+              <div className="w-10 h-10 flex-shrink-0 rounded-full bg-navy flex items-center justify-center text-white font-bold text-sm">
                 {s.n}
               </div>
               <div className="pt-1">

@@ -46,7 +46,7 @@ export default function CookieBanner() {
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-start sm:items-center gap-4">
           <p className="text-white/80 text-sm flex-1">
             {t.cookie.message}{' '}
-            <Link href="/cookies" className="text-electric underline">{t.cookie.learnMore}</Link>
+            <Link href="/cookies" className="text-white underline">{t.cookie.learnMore}</Link>
           </p>
           <div className="flex flex-wrap gap-2 shrink-0">
             <button

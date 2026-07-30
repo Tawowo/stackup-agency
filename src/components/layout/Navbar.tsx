@@ -54,9 +54,9 @@ export default function Navbar() {
     ? 'text-white hover:text-amber-400'
     : scrolled
     ? 'text-gray-900 dark:text-white hover:text-electric-ink dark:hover:text-electric'
-    : 'text-[#1E3A5F] hover:text-electric-ink'
+    : 'text-white hover:text-white/80'
 
-  const barColor = open ? 'bg-white' : !isHome || scrolled ? 'bg-gray-900 dark:bg-white' : 'bg-[#1E3A5F]'
+  const barColor = open ? 'bg-white' : !isHome || scrolled ? 'bg-gray-900 dark:bg-white' : 'bg-white'
 
   return (
     <>
@@ -66,8 +66,8 @@ export default function Navbar() {
             <Link href="/" className="flex items-center gap-3" aria-label="Stackup Agency — Accueil">
               <Image src="/logo-icon.png" alt="Stackup Agency" width={45} height={45} quality={100} className="object-contain" priority />
               <div className="flex flex-col leading-tight">
-                <span className={`font-bold text-xl tracking-tight transition-colors ${!isHome ? 'text-white' : scrolled ? 'text-[#1E3A5F] dark:text-white' : 'text-[#1E3A5F]'}`}>Stackup</span>
-                <span className={`font-light text-xs tracking-[0.2em] uppercase transition-colors ${!isHome ? 'text-white/70' : scrolled ? 'text-[#1E3A5F]/70 dark:text-white/70' : 'text-[#1E3A5F]/70'}`}>Agency</span>
+                <span className={`font-bold text-xl tracking-tight transition-colors ${!isHome ? 'text-white' : scrolled ? 'text-[#1E3A5F] dark:text-white' : 'text-white'}`}>Stackup</span>
+                <span className={`font-light text-xs tracking-[0.2em] uppercase transition-colors ${!isHome ? 'text-white/70' : scrolled ? 'text-[#1E3A5F]/70 dark:text-white/70' : 'text-white/70'}`}>Agency</span>
               </div>
             </Link>
 
@@ -112,7 +112,7 @@ export default function Navbar() {
             {/* Desktop right */}
             <div className="hidden lg:flex items-center gap-3">
               <button onClick={toggleDark} aria-label="Basculer thème sombre"
-                className={`p-2 rounded-lg transition-colors ${!isHome ? 'text-white/80 hover:text-white' : scrolled ? 'text-ink/70 dark:text-white/70 hover:text-electric-ink' : 'text-[#1E3A5F]/80 hover:text-electric-ink'}`}>
+                className={`p-2 rounded-lg transition-colors ${!isHome ? 'text-white/80 hover:text-white' : scrolled ? 'text-ink/70 dark:text-white/70 hover:text-electric-ink' : 'text-white/80 hover:text-white'}`}>
                 {dark ? <Sun size={18} /> : <Moon size={18} />}
               </button>
               <Link href="/contact" className="px-5 py-2.5 bg-gold hover:bg-gold/80 text-ink text-sm font-semibold rounded-xl shadow-lg shadow-amber-500/30 transition-all hover:-translate-y-0.5">
@@ -123,7 +123,7 @@ export default function Navbar() {
             {/* Mobile dark mode */}
             <div className="flex lg:hidden items-center pr-12">
               <button onClick={toggleDark} aria-label="Basculer thème sombre"
-                className={`p-2.5 min-w-[44px] min-h-[44px] flex items-center justify-center transition-colors ${!isHome ? 'text-white' : scrolled ? 'text-gray-700 dark:text-white' : 'text-[#1E3A5F]'}`}>
+                className={`p-2.5 min-w-[44px] min-h-[44px] flex items-center justify-center transition-colors ${!isHome ? 'text-white' : scrolled ? 'text-gray-700 dark:text-white' : 'text-white'}`}>
                 {dark ? <Sun size={20} /> : <Moon size={20} />}
               </button>
             </div>

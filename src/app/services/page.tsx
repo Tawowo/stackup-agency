@@ -130,7 +130,7 @@ export default function ServicesPage() {
               ))}
             </div>
             <div className="flex flex-wrap gap-3">
-              <Link href={`/services/${s.slug}`} className="flex items-center gap-1 px-5 py-2.5 bg-electric hover:bg-electric text-white text-sm font-semibold rounded-xl transition-colors">
+              <Link href={`/services/${s.slug}`} className="flex items-center gap-1 px-5 py-2.5 bg-navy hover:bg-electric text-white text-sm font-semibold rounded-xl transition-colors">
                 Voir l'offre <ChevronRight size={14} />
               </Link>
               <Link href="/contact" className="px-5 py-2.5 border border-foreground/20 dark:border-white/20 text-foreground dark:text-white hover:bg-foreground/5 dark:hover:bg-white/10 text-sm font-semibold rounded-xl transition-colors">
@@ -143,7 +143,7 @@ export default function ServicesPage() {
         {/* Comparison table */}
         <section className="mt-12">
           <h2 className="text-2xl font-bold text-foreground dark:text-white mb-6">Comparatif des offres</h2>
-          <div className="overflow-x-auto">
+          <div className="overflow-x-auto" tabIndex={0}>
             <table className="w-full text-sm border-collapse">
               <thead>
                 <tr className="border-b border-white/10">
