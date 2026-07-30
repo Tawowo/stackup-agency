@@ -7,6 +7,7 @@ import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
 import CookieBanner from '@/components/ui/CookieBanner'
 import RevealObserver from '@/components/ui/RevealObserver'
+import BrandPreloader from '@/components/ui/BrandPreloader'
 import { SITE } from '@/config/site'
 
 const inter = Inter({
@@ -162,6 +163,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className={`${inter.variable} ${spaceGrotesk.variable} antialiased overflow-x-hidden`}>
         <ThemeProvider>
           <LanguageProvider>
+            <BrandPreloader />
             <RevealObserver />
             <Navbar />
             {children}
