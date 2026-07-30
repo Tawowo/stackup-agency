@@ -67,6 +67,9 @@ export default function Home() {
 
         <HeroSection />
 
+        {/* Couture hero → light */}
+        <div className="seam-to-light dark:hidden" aria-hidden="true" />
+
         {/* Services */}
         <section id="services" className="py-24 bg-background dark:bg-[#0A0F1C]">
           <div className="max-w-5xl mx-auto px-4 sm:px-6">
@@ -86,9 +89,10 @@ export default function Home() {
         </section>
 
         {/* Pourquoi Stackup */}
-        <section className="py-24 bg-[#060D1A]">
+        <section className="py-24 bg-[#060D1A] relative">
           <div className="max-w-5xl mx-auto px-4 sm:px-6">
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-12">
+            <div className="overline-label mb-3 !text-electric">Pourquoi nous</div>
+            <h2 className="text-white mb-12">
               Pourquoi Stackup Agency ?
             </h2>
             <div className="grid sm:grid-cols-3 gap-6">
