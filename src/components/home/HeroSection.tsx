@@ -215,26 +215,49 @@ export default function HeroSection() {
                     )}
                   </div>
                 </div>
-                {/* Back: site preview */}
+                {/* Back: site preview with slow-scroll illusion */}
                 <div className="flip-face flip-face-back w-full h-full rounded-2xl overflow-hidden border border-white/10 bg-white shadow-2xl">
                   <div className="flex items-center gap-1.5 px-4 py-3 bg-gray-50 border-b border-gray-200">
                     <span className="w-3 h-3 rounded-full bg-red-400/70" aria-hidden="true" />
                     <span className="w-3 h-3 rounded-full bg-amber-400/70" aria-hidden="true" />
                     <span className="w-3 h-3 rounded-full bg-green-400/70" aria-hidden="true" />
-                    <span className="ml-3 text-ink/70 text-xs font-mono">stackup-agency.fr</span>
+                    <span className="ml-3 text-ink/70 text-xs font-mono">votre-site.fr</span>
+                    <span className="ml-auto text-[10px] text-green-500 font-medium">● En ligne</span>
                   </div>
-                  <div className="p-4 space-y-2">
-                    <div className="h-5 w-3/4 rounded bg-[#1E3A5F]" />
-                    <div className="h-3 w-full rounded bg-gray-200" />
-                    <div className="h-3 w-5/6 rounded bg-gray-200" />
-                    <div className="mt-3 flex gap-2">
-                      <div className="h-8 w-24 rounded-lg bg-amber-400" />
-                      <div className="h-8 w-20 rounded-lg bg-gray-200" />
-                    </div>
-                    <div className="mt-3 grid grid-cols-3 gap-2">
-                      {[1, 2, 3].map(n => (
-                        <div key={n} className="h-10 rounded-lg bg-gray-100" />
-                      ))}
+                  {/* Scrolling site skeleton — animates upward slowly */}
+                  <div className="relative overflow-hidden" style={{ height: 'calc(100% - 41px)' }}>
+                    <div
+                      className="p-3 space-y-2 absolute inset-x-0 top-0"
+                      style={{ animation: 'site-scroll 4s ease-in-out 0.5s infinite alternate' }}
+                    >
+                      {/* Navbar skeleton */}
+                      <div className="flex items-center justify-between mb-1">
+                        <div className="h-3 w-16 rounded bg-[#1E3A5F]" />
+                        <div className="flex gap-1.5">
+                          {[12,10,14,10].map((w,i) => <div key={i} className="h-2 rounded bg-gray-200" style={{width:`${w}px`}} />)}
+                        </div>
+                      </div>
+                      {/* Hero section */}
+                      <div className="h-5 w-3/4 rounded bg-[#1E3A5F]" />
+                      <div className="h-2.5 w-full rounded bg-gray-200" />
+                      <div className="h-2.5 w-5/6 rounded bg-gray-200" />
+                      <div className="flex gap-2 pt-1">
+                        <div className="h-7 w-20 rounded-lg bg-amber-400" />
+                        <div className="h-7 w-16 rounded-lg bg-gray-200" />
+                      </div>
+                      {/* Cards */}
+                      <div className="pt-2 grid grid-cols-3 gap-1.5">
+                        {[1,2,3].map(n => <div key={n} className="h-10 rounded-lg bg-[#EFF6FF]" />)}
+                      </div>
+                      {/* Section 2 */}
+                      <div className="pt-2 h-2.5 w-2/3 rounded bg-gray-300" />
+                      <div className="h-2 w-full rounded bg-gray-100" />
+                      <div className="h-2 w-4/5 rounded bg-gray-100" />
+                      <div className="grid grid-cols-2 gap-1.5">
+                        {[1,2].map(n => <div key={n} className="h-14 rounded-lg bg-[#F8FAFC] border border-gray-100" />)}
+                      </div>
+                      {/* CTA */}
+                      <div className="pt-1 h-8 w-full rounded-xl bg-[#1E3A5F]/90" />
                     </div>
                   </div>
                 </div>

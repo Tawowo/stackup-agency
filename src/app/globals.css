@@ -223,6 +223,18 @@ blockquote { font-weight: 600; font-style: italic; }
   border-radius: 4px;
 }
 
+/* ─── Hero flip back: site scroll illusion ──────────────── */
+@keyframes site-scroll {
+  from { transform: translateY(0); }
+  to   { transform: translateY(-38%); }
+}
+
+/* ─── Pinned gallery demo-scroll animations ─────────────── */
+@keyframes demo-scroll-0 { from { transform: translateY(0); }    to { transform: translateY(-18%); } }
+@keyframes demo-scroll-1 { from { transform: translateY(0); }    to { transform: translateY(-22%); } }
+@keyframes demo-scroll-2 { from { transform: translateY(0); }    to { transform: translateY(-15%); } }
+@keyframes demo-scroll-3 { from { transform: translateY(0); }    to { transform: translateY(-20%); } }
+
 /* ─── Reduced motion ─────────────────────────────────────── */
 @media (prefers-reduced-motion: reduce) {
   .marquee-track { animation: none; }
@@ -232,6 +244,8 @@ blockquote { font-weight: 600; font-style: italic; }
   .word-inner { transform: translateY(0); opacity: 1; transition: none; }
   .animated-gradient { animation: none; }
   .heading-underline::after { width: 100%; transition: none; }
+  [style*="demo-scroll"] { animation: none !important; }
+  [style*="site-scroll"] { animation: none !important; }
 }
 
 body {

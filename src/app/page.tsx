@@ -5,10 +5,11 @@ import { CheckCircle, ArrowRight, Clock, Zap, Shield } from 'lucide-react'
 import { SITE } from '@/config/site'
 import PageLoader from '@/components/ui/PageLoader'
 import HeroSection from '@/components/home/HeroSection'
-import ServiceCards from '@/components/home/ServiceCards'
+import StickyServiceStack from '@/components/home/StickyServiceStack'
 import ProcessSection from '@/components/home/ProcessSection'
-import MarqueeSeparator from '@/components/home/MarqueeSeparator'
-import ImmersiveGallery from '@/components/home/ImmersiveGallery'
+import ManifestoSection from '@/components/home/ManifestoSection'
+import PinnedGallery from '@/components/home/PinnedGallery'
+import ScrollBackground from '@/components/home/ScrollBackground'
 
 export const metadata: Metadata = {
   title: "Agence web Tours — Création site internet livré en 10 jours dès 449€ | Stackup Agency",
@@ -59,6 +60,7 @@ export default function Home() {
 
   return (
     <>
+      <ScrollBackground />
       <PageLoader />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }} />
@@ -80,7 +82,7 @@ export default function Home() {
                 Du site vitrine à l'application sur mesure — une solution adaptée à chaque budget et chaque activité.
               </p>
             </div>
-            <ServiceCards />
+            <StickyServiceStack />
             <Link href="/services" className="inline-flex items-center gap-2 text-electric-ink dark:text-electric hover:text-navy dark:hover:text-electric font-medium transition-colors">
               Voir tous nos services <ArrowRight size={16} />
             </Link>
@@ -124,7 +126,7 @@ export default function Home() {
           </div>
         </section>
 
-        <ImmersiveGallery />
+        <PinnedGallery />
 
         <ProcessSection />
 
@@ -239,7 +241,7 @@ export default function Home() {
           </div>
         </section>
 
-        <MarqueeSeparator />
+        <ManifestoSection />
 
         {/* CTA final */}
         <section className="py-24 animated-gradient">

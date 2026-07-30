@@ -1,7 +1,7 @@
 'use client'
 import Link from 'next/link'
 import { CheckCircle, ChevronRight } from 'lucide-react'
-import CountUp from '@/components/ui/CountUp'
+import Odometer from '@/components/ui/Odometer'
 
 interface Card {
   titre: string
@@ -32,13 +32,8 @@ export default function PricingCards({ cards }: { cards: Card[] }) {
           )}
           <div className="flex items-start justify-between mb-3">
             <h3 className="text-lg font-bold text-foreground dark:text-white">{s.titre}</h3>
-            <span className="text-2xl font-bold text-navy dark:text-gold ml-3 price-ticker">
-              <CountUp
-                target={s.prix}
-                suffix="€"
-                duration={1000}
-                className="price-ticker-inner is-visible"
-              />
+            <span className="text-2xl font-bold text-navy dark:text-gold ml-3">
+              <Odometer value={s.prix} suffix="€" />
             </span>
           </div>
           <p className="text-sm text-foreground/60 dark:text-white/60 mb-4">{s.desc}</p>
