@@ -15,7 +15,10 @@
 
 html {
   scroll-behavior: smooth;
-  overflow-x: hidden;
+  overflow-x: clip; /* clip ≠ hidden : ne crée pas de contexte de défilement → sticky préservé */
+}
+@supports not (overflow: clip) {
+  html, body { overflow-x: hidden; }
 }
 
 /* ─── Typography Premium (Space Grotesk + Inter) ─────────── */

@@ -162,7 +162,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaOrg) }}
         />
       </head>
-      <body className={`${inter.variable} ${spaceGrotesk.variable} antialiased overflow-x-hidden`}>
+      <body className={`${inter.variable} ${spaceGrotesk.variable} antialiased`}>
         <ThemeProvider>
           <LanguageProvider>
             <PageProgressBar />
