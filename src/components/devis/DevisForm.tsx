@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 'use client'
-import { useState, useEffect, Suspense } from 'react'
+import { useState, useEffect, useRef, useCallback, Suspense } from 'react'
 import { useSearchParams } from 'next/navigation'
 import Link from 'next/link'
 import { CheckCircle, ChevronRight, ChevronLeft, Loader2 } from 'lucide-react'
@@ -133,6 +133,7 @@ function Etape1({ state, set }: { state: FormState; set: (k: keyof FormState, v:
         {PROJETS.map(p => (
           <button
             key={p.id}
+            type="button"
             onClick={() => set('projet', p.id)}
             className={`text-left p-4 rounded-xl border-2 transition-all ${
               state.projet === p.id
@@ -374,6 +375,15 @@ function DevisFormInner() {
     return INITIAL
   })
   const [step, setStep] = useState(1)
+  const wrapperRef = useRef<HTMLDivElement>(null)
+  const stepTitleRef = useRef<HTMLHeadingElement>(null)
+  const goToStep = useCallback((next: number) => {
+    setStep(next)
+    setTimeout(() => {
+      wrapperRef.current?.scrollIntoView({ block: 'start', behavior: 'smooth' })
+      stepTitleRef.current?.focus({ preventScroll: true })
+    }, 50)
+  }, [])
   const [sending, setSending] = useState(false)
   const [sent, setSent] = useState(false)
   const [error, setError] = useState('')
@@ -491,9 +501,14 @@ function DevisFormInner() {
   }
 
   return (
-    <div className="max-w-5xl mx-auto px-4 sm:px-6 py-10 flex gap-8 items-start">
+    <div ref={wrapperRef} className="max-w-5xl mx-auto px-4 sm:px-6 py-10 flex gap-8 items-start" style={{ scrollMarginTop: '5rem' }}>
       {/* Formulaire */}
       <div className="flex-1 min-w-0">
+        {/* Focus target for scroll discipline */}
+        <span ref={stepTitleRef} tabIndex={-1} className="sr-only" aria-live="polite">
+          Étape {step} : {STEPS[step - 1]}
+        </span>
+
         {/* Barre de progression */}
         <div className="mb-8">
           <div className="flex items-center gap-2 mb-3">
@@ -530,7 +545,8 @@ function DevisFormInner() {
         {/* Navigation */}
         <div className="flex items-center justify-between mt-8 pt-6 border-t border-navy/10 dark:border-white/10">
           <button
-            onClick={() => setStep(s => s - 1)}
+            type="button"
+            onClick={() => goToStep(step - 1)}
             disabled={step === 1}
             className="flex items-center gap-1 px-4 py-2.5 text-sm text-foreground/60 dark:text-white/50 disabled:opacity-30 hover:text-foreground dark:hover:text-white transition-colors"
           >
@@ -539,7 +555,8 @@ function DevisFormInner() {
 
           {step < STEPS.length ? (
             <button
-              onClick={() => { if (canNext()) setStep(s => s + 1) }}
+              type="button"
+              onClick={() => { if (canNext()) goToStep(step + 1) }}
               disabled={!canNext()}
               className="flex items-center gap-1 px-6 py-2.5 bg-navy hover:bg-electric text-white text-sm font-semibold rounded-xl transition-colors disabled:opacity-40"
             >
@@ -547,6 +564,7 @@ function DevisFormInner() {
             </button>
           ) : (
             <button
+              type="button"
               onClick={submit}
               disabled={!canNext() || sending}
               className="flex items-center gap-2 px-6 py-2.5 bg-gold hover:bg-gold/90 text-ink text-sm font-bold rounded-xl transition-colors disabled:opacity-40"

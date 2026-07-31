@@ -721,6 +721,19 @@ export default function StudioClient() {
   const [config, setConfigState] = useState<Config>(DEFAULT_CONFIG)
   const [section, setSection] = useState(0)
   const [mounted, setMounted] = useState(false)
+  const wrapperRef = useRef<HTMLDivElement>(null)
+  const sectionTitleRef = useRef<HTMLSpanElement>(null)
+
+  const goToSection = useCallback((next: number | ((s: number) => number)) => {
+    setSection(prev => {
+      const n = typeof next === 'function' ? next(prev) : next
+      setTimeout(() => {
+        wrapperRef.current?.scrollIntoView({ block: 'start', behavior: 'smooth' })
+        sectionTitleRef.current?.focus({ preventScroll: true })
+      }, 50)
+      return n
+    })
+  }, [])
 
   useEffect(() => {
     setConfigState(loadConfig())
@@ -758,18 +771,18 @@ export default function StudioClient() {
   const progress = ((section + 1) / SECTIONS.length) * 100
 
   return (
-    <div className="max-w-5xl mx-auto px-4 sm:px-6 py-8">
+    <div ref={wrapperRef} className="max-w-5xl mx-auto px-4 sm:px-6 py-8" style={{ scrollMarginTop: '5rem' }}>
       {/* Presets bandeau */}
       <div className="mb-6 overflow-x-auto">
         <div className="flex gap-2 min-w-max pb-1">
           <span className="text-xs text-gray-500 dark:text-white/40 self-center mr-1 shrink-0">Démarrer avec :</span>
           {PRESETS.map(p => (
-            <button key={p.id} onClick={() => applyPreset(p)}
+            <button key={p.id} type="button" onClick={() => applyPreset(p)}
               className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white dark:bg-gray-900/60 border border-gray-200 dark:border-white/10 hover:border-electric-ink dark:hover:border-electric text-xs font-medium text-gray-700 dark:text-white/70 transition-colors whitespace-nowrap">
               <span>{p.emoji}</span> {p.label}
             </button>
           ))}
-          <button onClick={surprise}
+          <button type="button" onClick={surprise}
             className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-electric-ink text-white text-xs font-medium hover:bg-electric-ink/80 transition-colors whitespace-nowrap">
             <Shuffle size={12} /> Surprends-moi
           </button>
@@ -779,6 +792,11 @@ export default function StudioClient() {
       <div className="grid lg:grid-cols-[1fr_320px] gap-8">
         {/* Left: configurator */}
         <div>
+          {/* Focus target for scroll discipline */}
+          <span ref={sectionTitleRef} tabIndex={-1} className="sr-only" aria-live="polite">
+            {SECTIONS[section].label}
+          </span>
+
           {/* Progress + sommaire */}
           <div className="mb-6">
             <div className="flex items-center justify-between mb-2">
@@ -790,7 +808,7 @@ export default function StudioClient() {
             </div>
             <div className="flex gap-1">
               {SECTIONS.map((s, i) => (
-                <button key={s.id} onClick={() => setSection(i)}
+                <button key={s.id} type="button" onClick={() => goToSection(i)}
                   className={`flex-1 py-2 text-xs font-medium rounded-lg transition-colors ${i === section ? 'bg-electric-ink text-white' : i < section ? 'bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400' : 'bg-gray-100 dark:bg-white/10 text-gray-500 dark:text-white/40'}`}>
                   {i < section ? '✓ ' : ''}{s.label}
                 </button>
@@ -809,18 +827,18 @@ export default function StudioClient() {
           {/* Navigation */}
           <div className="flex gap-3">
             {section > 0 && (
-              <button onClick={() => setSection(s => s - 1)}
+              <button type="button" onClick={() => goToSection(s => s - 1)}
                 className="px-5 py-2.5 rounded-xl border border-gray-200 dark:border-white/10 text-sm font-medium text-gray-700 dark:text-white/70 hover:bg-gray-50 dark:hover:bg-white/5 transition-colors">
                 ← Précédent
               </button>
             )}
             {section < SECTIONS.length - 1 ? (
-              <button onClick={() => setSection(s => s + 1)}
+              <button type="button" onClick={() => goToSection(s => s + 1)}
                 className="flex-1 py-2.5 bg-electric-ink hover:bg-electric-ink/90 text-white text-sm font-semibold rounded-xl transition-all hover:-translate-y-0.5">
                 Suivant : {SECTIONS[section + 1].label} <ChevronRight size={14} className="inline" />
               </button>
             ) : (
-              <button onClick={() => setSection(0)}
+              <button type="button" onClick={() => goToSection(0)}
                 className="px-5 py-2.5 rounded-xl border border-gray-200 dark:border-white/10 text-sm font-medium text-gray-700 dark:text-white/70 hover:bg-gray-50 dark:hover:bg-white/5 transition-colors">
                 Recommencer
               </button>
