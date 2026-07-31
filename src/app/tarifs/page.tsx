@@ -6,7 +6,7 @@ import MiniHero from '@/components/ui/MiniHero'
 import PricingCards from '@/components/tarifs/PricingCards'
 
 export const metadata = {
-  title: `Tarifs création site internet — À partir de ${SITE.pricing.vitrine}€ | Stackup Agency`,
+  title: `Tarifs création site internet — À partir de ${SITE.pricing.vitrine}€`,
   description: `Tarifs transparents pour la création de sites internet. Site vitrine ${SITE.pricing.vitrine}€, e-commerce ${SITE.pricing.ecommerce}€, système de gestion ${SITE.pricing.gestion}€. Pas de frais cachés.`,
   alternates: { canonical: `${SITE.url}/tarifs` },
   openGraph: {

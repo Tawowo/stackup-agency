@@ -3,12 +3,12 @@ import Link from 'next/link'
 import { ArrowLeft, Download } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Politique de Confidentialité | Stackup Agency',
+  title: 'Politique de Confidentialité — RGPD',
   description: 'Politique de confidentialité et traitement des données personnelles de Stackup Agency. Vos droits RGPD et la gestion de vos données.',
   alternates: { canonical: 'https://stackup-agency.fr/politique-confidentialite' },
   openGraph: {
     url: 'https://stackup-agency.fr/politique-confidentialite',
-    title: 'Politique de Confidentialité | Stackup Agency',
+    title: 'Politique de Confidentialité',
     description: 'Politique de confidentialité et traitement des données personnelles de Stackup Agency.',
     type: 'website',
   },
@@ -113,6 +113,12 @@ export default function PolitiqueConfidentialite() {
             <h2>12. Droit de réclamation</h2>
             <p>Si vous estimez que le traitement de vos données personnelles constitue une violation du RGPD, vous avez le droit d&apos;introduire une réclamation auprès de la <strong>CNIL</strong> (Commission Nationale de l&apos;Informatique et des Libertés) : <a href="https://www.cnil.fr" className="text-electric" target="_blank" rel="noopener noreferrer">www.cnil.fr</a></p>
           </section>
+        </div>
+
+        <div className="mt-12 pt-8 border-t border-gray-200 dark:border-white/10 flex flex-wrap gap-4 text-sm">
+          <Link href="/mentions-legales" className="text-electric hover:underline">Mentions légales →</Link>
+          <Link href="/cookies" className="text-electric hover:underline">Politique de cookies →</Link>
+          <Link href="/contact" className="text-electric hover:underline">Nous contacter →</Link>
         </div>
       </div>
     </main>

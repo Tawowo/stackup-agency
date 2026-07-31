@@ -8,7 +8,6 @@ category: "seo-local"
 keywords: ["longue traîne SEO", "mots-clés longue traîne", "SEO TPE", "référencement local", "AnswerThePublic", "mots-clés locaux"]
 ---
 
-# Stratégie longue traîne : capter des clients locaux pour les TPE
 
 Un artisan électricien à Tours va-t-il se positionner sur "électricien" ? Non. La concurrence nationale est écrasante, le mot-clé est générique, et les visiteurs qui le tapent peuvent chercher une définition, un cours d'électricité ou un forum de bricolage. Par contre, "électricien pour installation tableau électrique appartement Tours" ? Là, la concurrence est quasi nulle, et l'internaute cherche exactement ce que propose cet artisan.
 

@@ -8,7 +8,6 @@ category: "seo"
 keywords: ["Google Search Console", "GSC", "SEO", "indexation Google", "rapport de performance", "couverture d'index"]
 ---
 
-# Google Search Console : guide avancé pour le SEO
 
 Google Search Console (GSC) est l'outil le plus puissant disponible gratuitement pour comprendre comment Google voit votre site. Et pourtant, la majorité des propriétaires de sites ne l'utilisent qu'occasionnellement, pour vérifier si leur site est indexé ou répondre à une alerte de sécurité. Ils passent à côté d'une mine d'informations qui permettraient de tripler leur trafic organique.
 

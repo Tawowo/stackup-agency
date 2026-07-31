@@ -5,7 +5,7 @@ import { SITE } from '@/config/site'
 import Breadcrumb from '@/components/ui/Breadcrumb'
 
 export const metadata: Metadata = {
-  title: 'Documents officiels — Cadre contractuel | Stackup Agency',
+  title: 'Documents officiels — Cadre contractuel',
   description: 'Téléchargez les documents officiels de Stackup Agency : CGV, contrat de prestation, mentions légales, politique de confidentialité et documents commerciaux.',
   alternates: { canonical: `${SITE.url}/ressources/documents` },
   openGraph: {

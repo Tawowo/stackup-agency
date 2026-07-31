@@ -6,7 +6,7 @@ import { SITE } from '@/config/site'
 import MiniHero from '@/components/ui/MiniHero'
 
 export const metadata = {
-  title: 'Réalisations — Sites de démonstration | Stackup Agency',
+  title: 'Réalisations — Sites de démonstration web',
   description: 'Découvrez nos réalisations et sites de démonstration : site vitrine, e-commerce, boutique en ligne, système de gestion. Projets créés par Stackup Agency.',
   alternates: { canonical: `${SITE.url}/realisations` },
   openGraph: {

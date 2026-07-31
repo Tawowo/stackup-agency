@@ -8,7 +8,6 @@ category: "strategie"
 keywords: ["E-E-A-T", "expertise Google", "autorité SEO", "confiance site web", "quality raters", "YMYL"]
 ---
 
-# E-E-A-T Google : expertise, autorité, confiance en 2026
 
 Pourquoi un grand cabinet médical se positionne-t-il plus facilement qu'une petite clinique, même avec moins de contenu ? Pourquoi un site d'avocat bien connu surclasse-t-il une jeune étude avec un blog actif ? La réponse tient en quatre lettres : **E-E-A-T**. Ce concept, issu des Quality Rater Guidelines de Google, influence profondément la manière dont l'algorithme évalue la valeur d'une page — et donc son positionnement.
 

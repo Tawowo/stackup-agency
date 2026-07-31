@@ -14,14 +14,26 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   const post = await getPost(params.slug)
   if (!post) return {}
   const url = `https://stackup-agency.fr/blog/${post.slug}`
+  const rawTitle = post.seoTitle || post.title
+  const suffix = ' | Stackup Agency'
+  const maxBase = 65 - suffix.length // 47
+  const seoTitle = rawTitle.length > maxBase
+    ? rawTitle.slice(0, rawTitle.lastIndexOf(' ', maxBase - 1) || maxBase) + '…' + suffix
+    : rawTitle + suffix
+  const rawDesc = post.excerpt || post.title
+  const desc = rawDesc.length > 165
+    ? rawDesc.slice(0, rawDesc.lastIndexOf(' ', 162) || 162) + '…'
+    : rawDesc.length < 120
+      ? rawDesc + ' Devis gratuit sous 72h, livraison garantie.'
+      : rawDesc
   return {
-    title: `${post.title} | Stackup Agency`,
-    description: post.excerpt,
+    title: { absolute: seoTitle },
+    description: desc,
     alternates: { canonical: url },
     openGraph: {
       url,
       title: post.title,
-      description: post.excerpt,
+      description: desc,
       type: 'article',
       publishedTime: post.date,
       modifiedTime: post.updated ?? post.date,
@@ -108,6 +120,12 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
           className="prose prose-lg dark:prose-invert max-w-none prose-headings:text-foreground dark:prose-headings:text-white prose-p:text-foreground/70 dark:prose-p:text-white/70 prose-a:text-electric prose-strong:text-foreground dark:prose-strong:text-white prose-li:text-foreground/70 dark:prose-li:text-white/70"
           dangerouslySetInnerHTML={{ __html: post.content || '' }}
         />
+
+        <div className="mt-8 pt-6 border-t border-navy/10 dark:border-white/10 flex flex-wrap gap-3 text-sm">
+          <Link href="/tarifs" className="text-electric hover:underline">Nos tarifs →</Link>
+          <Link href="/services" className="text-electric hover:underline">Nos services →</Link>
+          <Link href="/realisations" className="text-electric hover:underline">Nos réalisations →</Link>
+        </div>
 
         <RelatedPosts
           currentSlug={post.slug}

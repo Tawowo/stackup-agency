@@ -8,7 +8,6 @@ category: "seo"
 keywords: ["maillage interne", "cocon sémantique", "SEO", "liens internes", "architecture de site", "PageRank"]
 ---
 
-# Maillage interne et cocon sémantique : guide SEO
 
 Votre site contient peut-être d'excellents articles de blog, des pages de services bien rédigées, une page d'accueil optimisée — et pourtant, Google peine à les classer. L'une des causes les plus fréquentes et les plus sous-estimées : un **maillage interne inexistant ou anarchique**. Les liens entre vos pages sont le système nerveux de votre site. Ils transmettent l'autorité, indiquent la hiérarchie thématique et guident les robots d'exploration de Google. Comprendre et structurer ce réseau, c'est l'objet du cocon sémantique.
 

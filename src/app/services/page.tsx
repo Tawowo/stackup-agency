@@ -5,7 +5,7 @@ import { SITE } from '@/config/site'
 import MiniHero from '@/components/ui/MiniHero'
 
 export const metadata = {
-  title: 'Nos services web — Site vitrine, e-commerce, système de gestion | Stackup Agency',
+  title: 'Nos services — Vitrine, e-commerce, gestion web',
   description: `Création de sites internet professionnels à partir de ${SITE.pricing.vitrine}€. Site vitrine, multi-pages, boutique en ligne, application métier. Devis gratuit sous 72h.`,
   alternates: { canonical: `${SITE.url}/services` },
   openGraph: {

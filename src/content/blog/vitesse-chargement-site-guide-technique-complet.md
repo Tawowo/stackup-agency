@@ -8,7 +8,6 @@ category: "performance"
 keywords: ["vitesse chargement site", "PageSpeed", "CDN", "cache navigateur", "optimisation performance web", "TTFB"]
 ---
 
-# Vitesse de chargement : guide technique complet 2026
 
 Un site qui met 5 secondes à charger sur mobile perd en moyenne 53 % de ses visiteurs avant même qu'ils ne voient votre page d'accueil. C'est une statistique Google bien documentée, et elle reste d'actualité en 2026. Pire : cette lenteur est pénalisée par l'algorithme via les Core Web Vitals. Un site lent perd des visiteurs ET des positions Google.
 

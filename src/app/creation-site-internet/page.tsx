@@ -5,8 +5,8 @@ import { ChevronRight, Home } from 'lucide-react'
 import { SITE } from '@/config/site'
 
 export const metadata = {
-  title: 'Création site internet par métier — Artisans, commerces, professions libérales',
-  description: `Stackup Agency crée des sites internet adaptés à votre métier. Restaurant, artisan, médecin, commerçant : votre site professionnel à partir de ${SITE.pricing.vitrine}€, livré en 10 jours.`,
+  title: 'Sites internet par métier — TPE, artisans',
+  description: `Site internet sur mesure selon votre métier : restaurant, artisan, médecin, commerçant. À partir de ${SITE.pricing.vitrine}€, livré en 10 jours. Devis gratuit sous 72h.`,
   alternates: { canonical: `${SITE.url}/creation-site-internet` },
   openGraph: {
     url: `${SITE.url}/creation-site-internet`,

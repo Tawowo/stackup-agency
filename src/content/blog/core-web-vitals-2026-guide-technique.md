@@ -8,7 +8,6 @@ category: "performance"
 keywords: ["core web vitals", "LCP", "INP", "CLS", "performance web", "SEO technique"]
 ---
 
-# Core Web Vitals 2026 : le guide technique complet
 
 Depuis leur intégration officielle dans l'algorithme de Google en 2021, les Core Web Vitals sont devenus incontournables pour tout site qui souhaite performer en recherche organique. En 2026, ces métriques ont évolué : l'INP a remplacé le FID, les seuils sont mieux compris, et Google les pondère davantage pour les requêtes mobiles. Ce guide vous donne les clés pour mesurer, comprendre et optimiser chaque indicateur — avec des données concrètes.
 

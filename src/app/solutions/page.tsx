@@ -4,12 +4,12 @@ import { ChevronRight, Home } from 'lucide-react'
 import { SITE } from '@/config/site'
 
 export const metadata = {
-  title: 'Solutions digitales sur mesure — RDV, commandes, gestion, CRM',
-  description: `Stackup Agency développe des solutions digitales sur mesure pour TPE et artisans : prise de RDV, click & collect, commande en ligne, CRM, gestion des stocks. À partir de ${SITE.pricing.gestion}€.`,
+  title: 'Solutions digitales sur mesure — RDV, gestion',
+  description: `Solutions digitales pour TPE et artisans : prise de RDV, click & collect, commande en ligne, CRM, gestion des stocks. Développement sur mesure à partir de ${SITE.pricing.gestion}€.`,
   alternates: { canonical: `${SITE.url}/solutions` },
   openGraph: {
     url: `${SITE.url}/solutions`,
-    title: 'Solutions digitales sur mesure — Stackup Agency',
+    title: 'Solutions digitales sur mesure — RDV, commandes, gestion',
     description: `Solutions digitales sur mesure pour TPE et artisans. À partir de ${SITE.pricing.gestion}€.`,
     type: 'website',
   },

@@ -8,7 +8,6 @@ category: "performance"
 keywords: ["optimiser images web", "WebP", "AVIF", "compression images", "alt text SEO", "lazy loading"]
 ---
 
-# Optimiser images web : WebP, AVIF et SEO en 2026
 
 Les images représentent en moyenne 50 à 70 % du poids total d'une page web. Sur un site e-commerce avec des photos produit en JPEG non compressé, ce chiffre peut monter à 85 %. Résultat : des pages lentes, un mauvais score Core Web Vitals, et des visiteurs qui quittent avant d'avoir vu votre offre. L'optimisation des images est l'un des leviers de performance les plus impactants — et souvent le plus négligé.
 

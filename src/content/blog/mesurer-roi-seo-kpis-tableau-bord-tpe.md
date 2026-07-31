@@ -8,7 +8,6 @@ category: "strategie"
 keywords: ["ROI SEO", "KPIs SEO", "tableau de bord SEO", "mesurer SEO", "trafic organique", "coût par lead SEO"]
 ---
 
-# Mesurer le ROI SEO : KPIs et tableau de bord pour TPE
 
 "Le SEO, ça marche ? Combien ça m'a rapporté ce mois-ci ?" C'est la question que tout dirigeant de PME devrait pouvoir répondre à propos de son investissement SEO. Et pourtant, le SEO reste souvent perçu comme une "boite noire" dont on espère des résultats sans savoir comment les mesurer.
 

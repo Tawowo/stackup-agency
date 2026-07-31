@@ -5,7 +5,7 @@ import { SITE } from '@/config/site'
 import Breadcrumb from '@/components/ui/Breadcrumb'
 
 export const metadata = {
-  title: 'FAQ — Questions fréquentes | Stackup Agency',
+  title: 'FAQ — Questions fréquentes création de site',
   description: 'Toutes les réponses à vos questions sur la création de site internet : délais, prix, processus, paiement, hébergement, propriété du code, maintenance.',
   alternates: { canonical: `${SITE.url}/faq` },
   openGraph: {
@@ -133,6 +133,11 @@ export default function FAQPage() {
             Nous contacter →
           </Link>
         </div>
+      </div>
+
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 pb-8 flex flex-wrap gap-4 text-sm">
+        <Link href="/tarifs" className="text-electric hover:underline">Voir les tarifs →</Link>
+        <Link href="/services" className="text-electric hover:underline">Nos services →</Link>
       </div>
     </div>
   )

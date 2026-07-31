@@ -9,6 +9,7 @@ const postsDir = path.join(process.cwd(), 'src/content/blog')
 export interface Post {
   slug: string
   title: string
+  seoTitle?: string
   excerpt: string
   date: string
   updated?: string
@@ -19,6 +20,11 @@ export interface Post {
   content?: string
 }
 
+function normalizePost(slug: string, data: Record<string, unknown>): Post {
+  const excerpt = (data.excerpt as string) || (data.description as string) || ''
+  return { slug, ...(data as Omit<Post, 'slug' | 'excerpt'>), excerpt }
+}
+
 export function getAllPosts(): Post[] {
   const files = fs.readdirSync(postsDir)
   return files
@@ -27,7 +33,7 @@ export function getAllPosts(): Post[] {
       const slug = f.replace('.md', '')
       const raw = fs.readFileSync(path.join(postsDir, f), 'utf8')
       const { data } = matter(raw)
-      return { slug, ...(data as Omit<Post, 'slug'>) }
+      return normalizePost(slug, data as Record<string, unknown>)
     })
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
 }
@@ -38,5 +44,6 @@ export async function getPost(slug: string): Promise<Post | null> {
   const raw = fs.readFileSync(filePath, 'utf8')
   const { data, content } = matter(raw)
   const processed = await remark().use(html).process(content)
-  return { slug, ...(data as Omit<Post, 'slug' | 'content'>), content: processed.toString() }
+  const post = normalizePost(slug, data as Record<string, unknown>)
+  return { ...post, content: processed.toString() }
 }

@@ -15,13 +15,18 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   const s = getSolution(params.slug)
   if (!s) return {}
   const url = `${SITE.url}/solutions/${s.slug}`
-  const title = `${s.nom} sur mesure — Solution digitale pour TPE et artisans | Stackup Agency`
-  const description = s.intro.length > 160 ? s.intro.slice(0, 157) + '...' : s.intro
+  const suffix = ' | Stackup Agency'
+  const maxBase = 65 - suffix.length
+  const rawTitle = s.nom
+  const seoTitle = rawTitle.length > maxBase
+    ? rawTitle.slice(0, rawTitle.lastIndexOf(' ', maxBase - 1) || maxBase) + '…' + suffix
+    : rawTitle + suffix
+  const description = s.intro.length > 165 ? s.intro.slice(0, s.intro.lastIndexOf(' ', 162) || 162) + '…' : s.intro
   return {
-    title,
+    title: { absolute: seoTitle },
     description,
     alternates: { canonical: url },
-    openGraph: { url, title, description, type: 'website' },
+    openGraph: { url, title: s.nom, description, type: 'website' },
   }
 }
 

@@ -13,13 +13,17 @@ export async function generateMetadata({ params }: { params: { ville: string } }
   const v = getVille(params.ville)
   if (!v) return {}
   const url = `${SITE.url}/agence-web/${v.slug}`
-  const title = `Agence web ${v.ville} — Création site internet à partir de ${SITE.pricing.vitrine}€ | Stackup Agency`
-  const description = `Agence web à ${v.ville} (${v.departement}). ${v.economie.slice(0, 100)}... Devis gratuit sous 72h, livraison en 10 jours.`
+  const rawTitle = `Agence web ${v.ville} — Site internet dès ${SITE.pricing.vitrine}€`
+  const suffix = ' | Stackup Agency'
+  const seoTitle = rawTitle.length <= 65 - suffix.length
+    ? rawTitle + suffix
+    : `Agence web ${v.ville} — dès ${SITE.pricing.vitrine}€` + suffix
+  const description = `Création de site internet à ${v.ville} à partir de ${SITE.pricing.vitrine}€, livré en 10 jours ouvrés. Design personnalisé, SEO intégré. Devis gratuit sous 72h.`
   return {
-    title,
+    title: { absolute: seoTitle },
     description,
     alternates: { canonical: url },
-    openGraph: { url, title, description, type: 'website' },
+    openGraph: { url, title: rawTitle, description, type: 'website' },
   }
 }
 

@@ -3,12 +3,12 @@ import Link from 'next/link'
 import { ArrowLeft, Download } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Mentions Légales | Stackup Agency',
-  description: 'Mentions légales du site stackup-agency.fr — éditeur, hébergeur, propriété intellectuelle et responsabilité.',
+  title: 'Mentions Légales',
+  description: 'Mentions légales du site stackup-agency.fr — identité de l\'éditeur, hébergeur, propriété intellectuelle, limitation de responsabilité et données personnelles.',
   alternates: { canonical: 'https://stackup-agency.fr/mentions-legales' },
   openGraph: {
     url: 'https://stackup-agency.fr/mentions-legales',
-    title: 'Mentions Légales | Stackup Agency',
+    title: 'Mentions Légales',
     description: 'Mentions légales du site stackup-agency.fr.',
     type: 'website',
   },
@@ -108,6 +108,12 @@ export default function MentionsLegales() {
               <a href="mailto:contact@stackup-agency.fr" className="text-electric hover:underline">contact@stackup-agency.fr</a>
             </p>
           </section>
+        </div>
+
+        <div className="mt-12 pt-8 border-t border-gray-200 dark:border-white/10 flex flex-wrap gap-4 text-sm">
+          <Link href="/cgv" className="text-electric hover:underline">Conditions Générales de Vente →</Link>
+          <Link href="/politique-confidentialite" className="text-electric hover:underline">Politique de confidentialité →</Link>
+          <Link href="/contact" className="text-electric hover:underline">Nous contacter →</Link>
         </div>
       </div>
     </main>

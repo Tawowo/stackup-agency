@@ -8,7 +8,6 @@ category: "creation-sites"
 keywords: ["refonte site web SEO", "redirections 301", "migration SEO", "refonte sans perte SEO", "plan de redirections"]
 ---
 
-# Refonte de site web sans perdre son SEO : guide complet
 
 Une refonte de site web est souvent synonyme de catastrophe SEO pour les PME qui ne s'y préparent pas. Trois mois après le lancement du nouveau site, le trafic organique a chuté de 40 %, les positions sur les mots-clés stratégiques ont disparu, et le téléphone ne sonne plus comme avant. Ce scénario, nous l'avons vu des dizaines de fois. Il est entièrement évitable avec une planification rigoureuse.
 

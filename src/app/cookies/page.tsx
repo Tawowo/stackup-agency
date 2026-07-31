@@ -3,12 +3,12 @@ import Link from 'next/link'
 import { ArrowLeft } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Politique de Cookies | Stackup Agency',
-  description: 'Politique de cookies de stackup-agency.fr — quels cookies nous utilisons, pourquoi et comment les gérer.',
+  title: 'Politique de Cookies — gestion et paramétrage',
+  description: 'Politique de cookies de stackup-agency.fr — quels cookies nous utilisons (analytiques, fonctionnels), pourquoi et comment les gérer ou les refuser facilement.',
   alternates: { canonical: 'https://stackup-agency.fr/cookies' },
   openGraph: {
     url: 'https://stackup-agency.fr/cookies',
-    title: 'Politique de Cookies | Stackup Agency',
+    title: 'Politique de Cookies',
     description: 'Politique de cookies de stackup-agency.fr.',
     type: 'website',
   },
@@ -77,6 +77,12 @@ export default function Cookies() {
             <h2>5. Contact</h2>
             <p>Pour toute question relative aux cookies : <a href="mailto:contact@stackup-agency.fr" className="text-electric">contact@stackup-agency.fr</a></p>
           </section>
+        </div>
+
+        <div className="mt-12 pt-8 border-t border-gray-200 dark:border-white/10 flex flex-wrap gap-4 text-sm">
+          <Link href="/mentions-legales" className="text-electric hover:underline">Mentions légales →</Link>
+          <Link href="/politique-confidentialite" className="text-electric hover:underline">Politique de confidentialité →</Link>
+          <Link href="/contact" className="text-electric hover:underline">Nous contacter →</Link>
         </div>
       </div>
     </main>

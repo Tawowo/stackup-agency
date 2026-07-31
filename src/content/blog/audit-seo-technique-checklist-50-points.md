@@ -8,7 +8,6 @@ category: "seo"
 keywords: ["audit SEO technique", "checklist SEO", "SEO technique", "audit site web", "SEO 50 points"]
 ---
 
-# Audit SEO technique : checklist 50 points complète
 
 Un audit SEO technique est le bilan de santé de votre site web. Avant de produire du contenu, de construire des liens ou d'investir dans la publicité, vous devez vous assurer que votre site est techniquement capable d'être indexé, compris et bien classé par Google. Cette checklist de 50 points couvre tous les aspects critiques, organisés par priorité.
 

@@ -5,12 +5,12 @@ import { MapPin, ChevronRight, Home } from 'lucide-react'
 import { SITE } from '@/config/site'
 
 export const metadata = {
-  title: 'Agence web — Création de sites internet partout en France',
-  description: `Stackup Agency crée des sites internet professionnels pour les entrepreneurs et TPE. Basée à Tours, nous intervenons dans toute la région Centre-Val de Loire et au-delà. À partir de ${SITE.pricing.vitrine}€.`,
+  title: 'Agence web — Création site internet en France',
+  description: `Agence web basée à Tours, création de sites internet pour TPE et artisans partout en France. Site vitrine à partir de ${SITE.pricing.vitrine}€, livré en 10 jours. Devis gratuit.`,
   alternates: { canonical: `${SITE.url}/agence-web` },
   openGraph: {
     url: `${SITE.url}/agence-web`,
-    title: 'Agence web — Création de sites internet partout en France',
+    title: 'Agence web — Création site internet en France',
     description: `Stackup Agency crée des sites internet professionnels pour les entrepreneurs et TPE. À partir de ${SITE.pricing.vitrine}€.`,
     type: 'website',
   },

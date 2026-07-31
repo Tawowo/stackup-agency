@@ -8,7 +8,6 @@ category: "performance"
 keywords: ["mobile-first indexing", "index mobile-first", "SEO mobile", "responsive design", "optimisation mobile", "Google mobile"]
 ---
 
-# Index mobile-first Google : optimiser votre site mobile
 
 Depuis juillet 2024, **100 % des sites indexés par Google le sont en mode mobile-first**. Cela signifie que Googlebot Smartphone est l'agent principal qui crawle et évalue votre site. Si votre version mobile cache du contenu, charge lentement ou présente des erreurs d'ergonomie, c'est votre référencement global qui en pâtit — pas seulement votre trafic mobile.
 

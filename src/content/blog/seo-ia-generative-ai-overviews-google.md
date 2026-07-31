@@ -8,7 +8,6 @@ category: "strategie"
 keywords: ["AI Overviews", "SEO IA générative", "ChatGPT SEO", "SGE", "AIO", "search generative experience"]
 ---
 
-# SEO et IA générative : survivre aux AI Overviews Google
 
 En 2026, les AI Overviews (anciennement Search Generative Experience ou SGE) de Google apparaissent sur près de 30 % des requêtes aux États-Unis et s'étendent progressivement en Europe. Simultanément, des millions d'internautes utilisent ChatGPT, Perplexity ou Gemini pour trouver des informations sans même ouvrir Google. La question que posent de nombreux dirigeants de PME est légitime : **le SEO traditionnel est-il en train de mourir ?**
 

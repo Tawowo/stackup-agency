@@ -13,13 +13,17 @@ export async function generateMetadata({ params }: { params: { metier: string } 
   const m = getMetier(params.metier)
   if (!m) return {}
   const url = `${SITE.url}/creation-site-internet/${m.slug}`
-  const titre = `Site internet ${m.metier} — Création à partir de ${SITE.pricing.vitrine}€ | Stackup Agency`
-  const description = `Création de site internet pour ${m.metier} : ${m.intro.slice(0, 120)}... Devis gratuit sous 72h, livraison en ${m.serviceLie === 'site-ecommerce' ? SITE.delais.ecommerce : m.serviceLie === 'site-multi-pages' ? SITE.delais.multipages : SITE.delais.vitrine}.`
+  const prix = m.serviceLie === 'site-ecommerce' ? SITE.pricing.ecommerce : m.serviceLie === 'site-multi-pages' ? SITE.pricing.multipages : SITE.pricing.vitrine
+  const delai = m.serviceLie === 'site-ecommerce' ? SITE.delais.ecommerce : m.serviceLie === 'site-multi-pages' ? SITE.delais.multipages : SITE.delais.vitrine
+  const rawTitre = `Site web ${m.metier} — dès ${prix}€`
+  const suffix = ' | Stackup Agency'
+  const seoTitre = rawTitre.length <= 65 - suffix.length ? rawTitre + suffix : rawTitre.slice(0, rawTitre.lastIndexOf(' ', 64 - suffix.length) || 64 - suffix.length) + '…' + suffix
+  const description = `Site internet pour ${m.metier} à partir de ${prix}€, livré en ${delai}. Design sur mesure, SEO local, devis gratuit sous 72h.`
   return {
-    title: titre,
+    title: { absolute: seoTitre },
     description,
     alternates: { canonical: url },
-    openGraph: { url, title: titre, description, type: 'website' },
+    openGraph: { url, title: rawTitre, description, type: 'website' },
   }
 }
 

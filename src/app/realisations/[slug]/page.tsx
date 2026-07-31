@@ -14,7 +14,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!r) return {}
   const url = `https://stackup-agency.fr/realisations/${slug}`
   return {
-    title: `${r.nom} — Démonstration Stackup Agency | Stackup Agency`,
+    title: `${r.nom} — Démonstration web`,
     description: r.description,
     alternates: { canonical: url },
     openGraph: {
@@ -181,6 +181,12 @@ export default async function RealisationPage({ params }: { params: Promise<{ sl
           </div>
         </div>
       </section>
+
+      <div className="max-w-3xl mx-auto px-4 py-8 flex flex-wrap gap-4 text-sm">
+        <Link href="/services" className="text-electric hover:underline">Nos services →</Link>
+        <Link href="/tarifs" className="text-electric hover:underline">Voir les tarifs →</Link>
+        <Link href="/contact" className="text-electric hover:underline">Demander un devis →</Link>
+      </div>
     </div>
   )
 }

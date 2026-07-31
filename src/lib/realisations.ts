@@ -8,7 +8,7 @@ export const realisations = [
     url: 'https://stackup-demos-e85v.vercel.app',
     couleur: '#213547',
     accent: '#5F8D6A',
-    description: "Expérience immersive de visite virtuelle de l'hôtel avec réservation de chambres et de soins spa.",
+    description: "Site hôtel boutique avec visite immersive room-by-room, réservation de chambres, soins spa en ligne et galerie photographique professionnelle.",
     tags: ['Site vitrine', 'Réservation', 'Spa', 'Événements'],
     services: ['Développement web', 'Design UI/UX', 'Animations avancées'],
     fonctionnalites: [
@@ -34,7 +34,7 @@ export const realisations = [
     url: 'https://stackup-demos-tq9a.vercel.app',
     couleur: '#2E2B28',
     accent: '#D46A92',
-    description: 'Boutique en ligne éditoriale avec catalogue filtrable, panier dynamique et expérience magazine.',
+    description: 'Boutique mode e-commerce avec catalogue filtrable, panier latéral animé, wishlist, lookbook éditorial et guide des tailles interactif.',
     tags: ['E-commerce', 'Mode', 'Panier', 'Catalogue'],
     services: ['E-commerce', 'Design éditorial', 'UX Shopping'],
     fonctionnalites: [
@@ -60,7 +60,7 @@ export const realisations = [
     url: 'https://stackup-demos-u2go.vercel.app',
     couleur: '#5A3E2B',
     accent: '#D89C4A',
-    description: 'Site chaleureux avec click & collect, catalogue produits et statut ouvert/fermé en temps réel.',
+    description: 'Site boulangerie artisanale avec click & collect, catalogue par catégorie, statut ouvert/fermé automatique et programme de fidélité.',
     tags: ['Site vitrine', 'Click & Collect', 'Catalogue', 'Artisanal'],
     services: ['Développement web', 'Design chaleureux', 'Click & Collect'],
     fonctionnalites: [
@@ -86,7 +86,7 @@ export const realisations = [
     url: 'https://stackup-demos-9lnu.vercel.app',
     couleur: '#17202A',
     accent: '#008C8C',
-    description: 'Plateforme immobilière avec recherche avancée, simulateur de crédit et estimation en ligne.',
+    description: 'Plateforme immobilière avec moteur de recherche avancé, fiches biens, DPE visuel, simulateur de crédit et estimateur de bien en ligne.',
     tags: ['Site vitrine', 'Immobilier', 'Simulateur', 'Estimation'],
     services: ['Développement web', 'Design data-driven', 'Outils interactifs'],
     fonctionnalites: [
@@ -112,7 +112,7 @@ export const realisations = [
     url: 'https://stackup-demos-jxtr.vercel.app',
     couleur: '#101828',
     accent: '#29C36A',
-    description: 'Interface de gestion complète pour restaurant : commandes, réservations, plan de salle et analytics.',
+    description: 'Application de gestion restaurant avec dashboard temps réel, plan de salle interactif, tickets cuisine, analytics et programme fidélité clients.',
     tags: ['Système de gestion', 'Dashboard', 'Temps réel', 'Analytics'],
     services: ['Application web', 'Dashboard SaaS', 'Temps réel'],
     fonctionnalites: [
@@ -138,7 +138,7 @@ export const realisations = [
     url: 'https://stackup-demos-9ib4.vercel.app',
     couleur: '#2F1B14',
     accent: '#7A1F2B',
-    description: 'Boutique en ligne premium pour cave à vins avec catalogue filtrable et abonnements mensuels.',
+    description: 'Boutique en ligne cave à vins avec catalogue filtrable, fiches vins détaillées avec accords mets, coffrets cadeaux et abonnements mensuels.',
     tags: ['E-commerce', 'Vins', 'Abonnement', 'Premium'],
     services: ['E-commerce', 'Design luxe', 'Abonnements'],
     fonctionnalites: [

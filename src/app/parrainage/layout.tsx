@@ -2,12 +2,12 @@ import type { Metadata } from 'next'
 import type { ReactNode } from 'react'
 
 export const metadata: Metadata = {
-  title: 'Programme de Parrainage — Gagnez 200€ par Filleul | Stackup Agency',
-  description: 'Recommandez Stackup Agency et gagnez 200€ pour chaque client que vous nous apportez. Programme de parrainage simple, transparent et rémunérateur.',
+  title: 'Parrainage — 1 mois de maintenance offert',
+  description: 'Recommandez Stackup Agency et recevez 1 mois de maintenance offert (jusqu\'à 89€) pour chaque client apporté. Programme simple, transparent, sans condition cachée.',
   alternates: { canonical: 'https://stackup-agency.fr/parrainage' },
   openGraph: {
     url: 'https://stackup-agency.fr/parrainage',
-    title: 'Programme de Parrainage — Gagnez 200€ par Filleul | Stackup Agency',
+    title: 'Parrainage — 1 mois de maintenance offert',
     description: 'Recommandez Stackup Agency et gagnez 200€ pour chaque client que vous nous apportez.',
     type: 'website',
   },

@@ -47,7 +47,7 @@ export async function generateMetadata({ params }: { params: { cat: string } }) 
   if (!catData) return {}
   const url = `${SITE.url}/blog/categorie/${params.cat}`
   return {
-    title: `${catData.label} — Blog Stackup Agency`,
+    title: `${catData.label} — Articles et conseils`,
     description: catData.description,
     alternates: { canonical: url },
     openGraph: { url, title: catData.label, description: catData.description, type: 'website' },

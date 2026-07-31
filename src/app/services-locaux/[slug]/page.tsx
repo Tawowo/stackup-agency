@@ -19,7 +19,7 @@ type PageData = {
 const pages: Record<string, PageData> = {
   'creation-site-restaurant': {
     title: 'Création de site web pour restaurant',
-    metaTitle: 'Création de site web restaurant — Stackup Agency | Réservation, menu, SEO local',
+    metaTitle: 'Site web restaurant — Réservation en ligne',
     metaDesc: 'Créez un site web professionnel pour votre restaurant : réservation en ligne, menu digital, SEO local, click & collect. Livré en 10 jours dès 449€.',
     hero: {
       headline: 'Le site web qui remplit votre restaurant',
@@ -70,7 +70,7 @@ const pages: Record<string, PageData> = {
 
   'creation-site-artisan': {
     title: 'Création de site web pour artisan',
-    metaTitle: 'Création de site web artisan — Stackup Agency | Devis en ligne, portfolio, SEO local',
+    metaTitle: 'Site web artisan — Devis en ligne et SEO local',
     metaDesc: 'Site web professionnel pour artisans : portfolio chantiers, devis en ligne, prise de RDV, SEO local. Générez des leads qualifiés. Livré en 10 jours dès 449€.',
     hero: {
       headline: 'Le site qui remplit votre carnet de commandes',
@@ -121,7 +121,7 @@ const pages: Record<string, PageData> = {
 
   'creation-site-commerce': {
     title: 'Création de site web pour commerce',
-    metaTitle: 'Création de site web commerce — Stackup Agency | Vitrine, click & collect, SEO local',
+    metaTitle: 'Site web commerce — Click & collect, SEO local',
     metaDesc: 'Site web professionnel pour votre commerce : catalogue en ligne, click & collect, horaires, SEO local. Attirez des clients et vendez en ligne. Dès 449€.',
     hero: {
       headline: 'Votre commerce mérite d\'être visible en ligne',
@@ -172,7 +172,7 @@ const pages: Record<string, PageData> = {
 
   'creation-boutique-en-ligne': {
     title: 'Création de boutique en ligne',
-    metaTitle: 'Création boutique en ligne — Stackup Agency | E-commerce sur mesure dès 1 147€',
+    metaTitle: 'Boutique en ligne sur mesure — dès 1 147€',
     metaDesc: 'Lancez votre boutique en ligne sur mesure : paiement sécurisé, gestion des stocks, livraison, SEO e-commerce. Développement professionnel dès 1 147€.',
     hero: {
       headline: 'Votre boutique en ligne livrée en 10 jours',
@@ -223,7 +223,7 @@ const pages: Record<string, PageData> = {
 
   'developpement-application-metier': {
     title: 'Développement d\'application métier sur mesure',
-    metaTitle: 'Application métier sur mesure — Stackup Agency | CRM, ERP, gestion interne',
+    metaTitle: 'Application métier sur mesure — CRM et ERP',
     metaDesc: 'Développement d\'application métier sur mesure : CRM, ERP, gestion planning, facturation automatique. Remplacez Excel et les logiciels génériques. Dès 1 447€.',
     hero: {
       headline: 'Remplacez vos outils obsolètes par une application sur mesure',
@@ -274,8 +274,8 @@ const pages: Record<string, PageData> = {
 
   'referencement-local-seo': {
     title: 'Référencement local SEO',
-    metaTitle: 'Référencement local SEO — Stackup Agency | Apparaître sur Google Maps en 2026',
-    metaDesc: 'Service de référencement local SEO : Google Business Profile, mots-clés locaux, backlinks, avis clients. Apparaissez en premier sur Google dans votre ville. Dès 189€/mois.',
+    metaTitle: 'Référencement local — Apparaître sur Google Maps',
+    metaDesc: 'Référencement local SEO : Google Business Profile, mots-clés locaux, backlinks, avis clients. Apparaissez en premier sur Google dans votre ville. Dès 189€/mois.',
     hero: {
       headline: 'Apparaître en premier sur Google dans votre ville',
       subheadline: 'Google Business Profile optimisé, mots-clés locaux, stratégie d\'avis et backlinks — tout pour dominer les résultats de recherche locaux.',
@@ -332,9 +332,12 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params
   const page = pages[slug]
   if (!page) return {}
+  const url = `https://stackup-agency.fr/services-locaux/${slug}`
   return {
     title: page.metaTitle,
     description: page.metaDesc,
+    alternates: { canonical: url },
+    openGraph: { url, title: page.metaTitle, description: page.metaDesc, type: 'website' },
   }
 }
 
@@ -498,6 +501,12 @@ export default async function ServicesLocauxPage({ params }: { params: Promise<{
           </div>
         </div>
       </section>
+
+      <div className="max-w-3xl mx-auto px-4 py-8 flex flex-wrap gap-4 text-sm">
+        <Link href="/tarifs" className="text-electric hover:underline">Voir les tarifs →</Link>
+        <Link href="/realisations" className="text-electric hover:underline">Nos réalisations →</Link>
+        <Link href="/contact" className="text-electric hover:underline">Demander un devis →</Link>
+      </div>
     </div>
   )
 }

@@ -8,7 +8,6 @@ category: "seo"
 keywords: ["données structurées", "schema.org", "JSON-LD", "SEO local", "rich snippets", "commerce local"]
 ---
 
-# Données structurées Schema.org pour commerces locaux
 
 Lorsqu'une pizzeria à Tours apparaît dans Google avec ses horaires, son numéro de téléphone, ses étoiles d'avis et un lien direct vers le menu — sans que l'internaute clique — c'est grâce aux données structurées. Ces balises invisibles dans le code HTML permettent à Google de comprendre précisément ce qu'est votre page et d'afficher des **résultats enrichis** (rich snippets) qui augmentent drastiquement votre taux de clics.
 

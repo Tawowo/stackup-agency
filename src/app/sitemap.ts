@@ -39,6 +39,29 @@ const servicesLocauxSlugs = [
   'referencement-local-seo',
 ]
 
+// Blog slugs with 301 redirects to canonical non-blog URLs — must not appear in sitemap
+const REDIRECTED_BLOG_SLUGS = new Set([
+  'agence-web-amboise','agence-web-anet','agence-web-angers','agence-web-blois','agence-web-caen',
+  'agence-web-chateaudun','agence-web-chinon','agence-web-evreux','agence-web-le-mans','agence-web-nantes',
+  'agence-web-nogent-le-rotrou','agence-web-rambouillet','agence-web-rouen','agence-web-saumur',
+  'agence-web-vendome','agence-web-vernouillet','seo-local-chartres','seo-local-dreux',
+  'seo-local-orleans','seo-local-tours',
+  'site-web-auto-ecole-reservation','site-web-avocat-expert-comptable','site-web-bijouterie-horlogerie',
+  'site-web-boulangerie-patisserie','site-web-brasserie-bar','site-web-cabinet-medical-kine',
+  'site-web-cafe-salon-the','site-web-carreleur-sol','site-web-cave-vins-spiritueux',
+  'site-web-chauffagiste-climatisation','site-web-cosmetiques-naturels','site-web-couvreur-charpentier',
+  'site-web-electricien','site-web-epicerie-fine','site-web-fleuriste-vente-en-ligne',
+  'site-web-food-truck','site-web-hotel-chambres-hotes','site-web-informatique-telephonie',
+  'site-web-jardinerie-animalerie','site-web-jouets-loisirs-creatifs','site-web-kebab-fast-food',
+  'site-web-librairie-independante','site-web-librairie-papeterie','site-web-macon-renovateur',
+  'site-web-magasin-sport-loisirs','site-web-maison-decoration','site-web-menuisier-ebeniste',
+  'site-web-optique-lunetterie','site-web-paysagiste-jardinier','site-web-peintre-decorateur',
+  'site-web-pharmacie-parapharmacie','site-web-pizzeria','site-web-plombier',
+  'site-web-restaurant-gastronomique','site-web-salon-coiffure-esthetique','site-web-serrurier-depannage',
+  'site-web-sport-outdoor','site-web-tabac-presse','site-web-traiteur-evenementiel',
+  'site-web-vetements-enfants',
+])
+
 function getBlogPosts(): { slug: string; date: Date }[] {
   const dir = path.join(process.cwd(), 'src/content/blog')
   try {
@@ -51,6 +74,7 @@ function getBlogPosts(): { slug: string; date: Date }[] {
         const d = data.updated ?? data.date
         return { slug, date: d ? new Date(d) : new Date() }
       })
+      .filter(({ slug }) => !REDIRECTED_BLOG_SLUGS.has(slug))
       .sort((a, b) => b.date.getTime() - a.date.getTime())
   } catch {
     return []

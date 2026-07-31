@@ -6,7 +6,7 @@ import { METIERS } from '@/data/metiers'
 import { SOLUTIONS } from '@/data/solutions'
 
 export const metadata = {
-  title: 'Plan du site — Stackup Agency',
+  title: 'Plan du site',
   description: 'Toutes les pages de Stackup Agency : services, tarifs, réalisations, blog, villes et métiers desservis.',
   alternates: { canonical: `${SITE.url}/plan-du-site` },
   robots: { index: false },

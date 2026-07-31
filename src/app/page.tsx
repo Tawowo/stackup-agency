@@ -11,7 +11,7 @@ import PinnedGallery from '@/components/home/PinnedGallery'
 import ScrollBackground from '@/components/home/ScrollBackground'
 
 export const metadata: Metadata = {
-  title: "Agence web Tours — Création site internet livré en 10 jours dès 449€ | Stackup Agency",
+  title: "Agence web Tours — Site internet en 10 jours",
   description: `Stackup Agency crée votre site internet en ${SITE.delais.vitrine} à partir de ${SITE.pricing.vitrine}€. Site vitrine, e-commerce, système de gestion sur mesure. Devis gratuit sous 72h.`,
   alternates: { canonical: SITE.url },
   openGraph: {

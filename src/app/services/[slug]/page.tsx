@@ -6,6 +6,7 @@ import { Check, ArrowRight } from 'lucide-react'
 type ServiceData = {
   title: string
   subtitle: string
+  metaDesc: string
   description: string
   price: string
   duration: string
@@ -20,6 +21,7 @@ const services: Record<string, ServiceData> = {
   'site-vitrine': {
     title: 'Site Vitrine',
     subtitle: 'Votre présence digitale professionnelle, clé en main.',
+    metaDesc: 'Site vitrine professionnel livré en 10 jours ouvrés à partir de 449 €. Design sur mesure, SEO intégré, responsive mobile. Devis gratuit sous 72h.',
     description: `Un site vitrine, c'est votre carte de visite permanente sur internet. Il est disponible 24h/24, 7j/7, et travaille pour vous même quand vous dormez. Chez Stackup Agency, nous créons des sites vitrines qui ne se contentent pas d'exister — ils convertissent des visiteurs en clients.
 
 Nous savons qu'un site web mal conçu peut faire fuir vos prospects en quelques secondes. C'est pourquoi chaque site que nous livrons est optimisé pour trois choses : la vitesse, l'esthétique et la conversion. Pas de modèle générique préfabriqué, pas de constructeur de page limitant — du code sur mesure, performant et évolutif.
@@ -65,6 +67,7 @@ Nous intégrons également les éléments essentiels à toute présence en ligne
   'site-multi-pages': {
     title: 'Site Multi-pages',
     subtitle: 'Une présence digitale complète pour votre activité.',
+    metaDesc: 'Site multi-pages jusqu\'à 10 pages, blog intégré, livré en 17 jours à partir de 749 €. Architecture SEO, design personnalisé. Devis gratuit.',
     description: `Un site multi-pages va plus loin qu'un simple site vitrine. Il permet de développer l'ensemble de votre univers de marque, de détailler chaque service, de créer une vraie relation avec vos visiteurs et d'optimiser votre référencement sur de nombreux mots-clés.
 
 Chez Stackup Agency, nous concevons des sites multi-pages pensés comme de véritables machines à générer des opportunités commerciales. Chaque page est conçue avec un objectif précis : informer, rassurer, convaincre et convertir.
@@ -110,6 +113,7 @@ Le rendu final est un site professionnel, rapide, sécurisé et optimisé pour l
   'site-ecommerce': {
     title: 'Site E-commerce',
     subtitle: 'Vendez en ligne 24h/24 avec une boutique performante.',
+    metaDesc: 'Boutique en ligne sur mesure à partir de 1 647 €, livrée en 21 jours. Paiement sécurisé Stripe/PayPal, SEO produits, gestion des stocks. Devis gratuit.',
     description: `Le commerce en ligne ne s'improvise pas. Un site e-commerce mal conçu, lent ou peu sécurisé génère des paniers abandonnés, de la méfiance et des ventes perdues. Chez Stackup Agency, nous développons des boutiques en ligne qui inspirent confiance, simplifient le parcours d'achat et maximisent les conversions.
 
 Chaque e-commerce que nous créons est pensé du point de vue de l'acheteur. Parcours d'achat fluide, pages produits optimisées, paiement sécurisé multi-méthodes (carte, virement, PayPal), gestion des stocks intuitive et tableau de bord administrateur complet pour piloter votre activité.
@@ -155,6 +159,7 @@ Que vous vendiez 10 ou 10 000 produits, nous adaptons la solution à votre catal
   'systeme-gestion': {
     title: 'Système de Gestion',
     subtitle: 'Des outils sur mesure pour piloter votre activité.',
+    metaDesc: 'Application de gestion sur mesure à partir de 1 447 €, livrée en 21 jours. Réservations, commandes, dashboard temps réel. Adapté à votre métier.',
     description: `Les logiciels génériques ne font jamais exactement ce dont vous avez besoin. Ils sont souvent trop complexes, trop chers, ou trop rigides pour s'adapter à vos processus spécifiques. Chez Stackup Agency, nous développons des systèmes de gestion entièrement sur mesure, pensés pour votre métier et vos équipes.
 
 Un système de gestion, c'est l'interface centrale de votre activité : réservations en ligne, gestion des commandes, tableau de bord en temps réel, programme de fidélité, gestion des employés, suivi des stocks, rapports automatiques... Tout ce dont vous avez besoin, rien de superflu.
@@ -200,6 +205,7 @@ Nous analysons vos flux de travail, nous concevons l'architecture, nous dévelop
   'marketing-digital': {
     title: 'Marketing Digital',
     subtitle: 'Faites-vous trouver par vos clients en ligne.',
+    metaDesc: 'Stratégie marketing digital pour TPE et PME : SEO, réseaux sociaux, emailing. Audit gratuit, résultats mesurables. Agence web Tours, toute la France.',
     description: `Disposer d'un site web performant est une première étape. Encore faut-il que vos clients potentiels puissent le trouver. Le marketing digital regroupe l'ensemble des leviers permettant d'attirer un trafic qualifié vers votre site et de transformer ces visiteurs en clients.
 
 Chez Stackup Agency, nous proposons une approche du marketing digital adaptée aux PME et aux entrepreneurs. Notre démarche repose sur une stratégie réaliste, des actions concrètes et des résultats mesurables.
@@ -246,6 +252,7 @@ Nous suivons les performances à l'aide d'outils d'analyse et vous fournissons d
   'maintenance-support': {
     title: 'Maintenance & Support',
     subtitle: 'Votre site entre de bonnes mains, en permanence.',
+    metaDesc: 'Maintenance site internet à partir de 29 €/mois. Mises à jour sécurité, sauvegardes, hébergement, support réactif. Première année incluse à la livraison.',
     description: `Un site web n'est pas un produit fini que l'on pose et que l'on oublie. C'est un outil vivant qui doit être maintenu, mis à jour, sécurisé et surveillé pour rester performant et disponible. La maintenance est souvent négligée jusqu'au jour où quelque chose cesse de fonctionner.
 
 Chez Stackup Agency, nous proposons des plans de maintenance adaptés à vos besoins et à votre budget. Notre objectif est que vous n'ayez jamais à vous préoccuper de votre site. Nous nous en chargeons.
@@ -301,13 +308,13 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   if (!service) return {}
   const url = `https://stackup-agency.fr/services/${params.slug}`
   return {
-    title: `${service.title} — ${service.price} | Stackup Agency`,
-    description: service.subtitle,
+    title: `${service.title} — ${service.price}`,
+    description: service.metaDesc,
     alternates: { canonical: url },
     openGraph: {
       url,
       title: `${service.title} — ${service.price}`,
-      description: service.subtitle,
+      description: service.metaDesc,
       type: 'website',
     },
   }
@@ -467,6 +474,16 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
             Demander un devis
             <ArrowRight size={16} />
           </Link>
+        </section>
+
+        {/* Liens utiles */}
+        <section className="pt-4">
+          <p className="text-sm text-gray-500 dark:text-white/40 mb-3">Pour aller plus loin</p>
+          <div className="flex flex-wrap gap-3">
+            <Link href="/tarifs" className="text-sm text-electric hover:underline">Voir les tarifs →</Link>
+            <Link href="/realisations" className="text-sm text-electric hover:underline">Nos réalisations →</Link>
+            <Link href="/faq" className="text-sm text-electric hover:underline">Questions fréquentes →</Link>
+          </div>
         </section>
       </div>
     </main>

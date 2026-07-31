@@ -8,7 +8,6 @@ category: "creation-sites"
 keywords: ["système de gestion sur mesure", "développement web sur mesure", "tableau de bord entreprise", "application web PME", "logiciel gestion personnalisé"]
 ---
 
-# Comment j'ai créé un système de gestion complet en moins de 100h
 
 Quand un client m'a contacté en disant "j'ai besoin d'un logiciel pour gérer mes commandes, mon stock et mes factures — les solutions du marché ne correspondent pas à mon métier", j'aurais pu lui suggérer Salesforce, HubSpot ou un ERP standard. À la place, j'ai construit quelque chose sur mesure. En 94 heures de développement, étalées sur 3 semaines. Voici comment.
 

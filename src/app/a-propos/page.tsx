@@ -5,8 +5,8 @@ import { SITE } from '@/config/site'
 import MiniHero from '@/components/ui/MiniHero'
 
 export const metadata = {
-  title: 'À propos — Stackup Agency, agence web à Tours',
-  description: `Stackup Agency est une agence web basée à Tours (37), spécialisée dans la création de sites internet et d'applications sur mesure pour les TPE et artisans. À partir de ${SITE.pricing.vitrine}€.`,
+  title: 'À propos — Notre agence web à Tours',
+  description: `Stackup Agency, agence web à Tours (37), crée des sites internet sur mesure pour TPE et artisans. Fondateur accessible, livraison en 10 jours ouvrés, prix fixes.`,
   alternates: { canonical: `${SITE.url}/a-propos` },
   openGraph: {
     url: `${SITE.url}/a-propos`,

@@ -8,7 +8,6 @@ category: "seo-local"
 keywords: ["recherche vocale", "SEO local", "près de moi", "Google Assistant", "Siri", "voice search"]
 ---
 
-# Recherche vocale et SEO local : optimiser "près de moi"
 
 "Dis Siri, trouve-moi un plombier près de chez moi." "Ok Google, pharmacie ouverte maintenant à Tours." Ces requêtes vocales explosent. En France, 39 % des internautes de 18-34 ans utilisent la recherche vocale au moins une fois par semaine selon Médiamétrie (2025). Pour un commerce local, ignorer ce canal, c'est se couper d'un trafic qualifié à fort potentiel de conversion.
 

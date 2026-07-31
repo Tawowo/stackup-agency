@@ -8,7 +8,6 @@ category: "strategie"
 keywords: ["erreurs digitales commerces", "présence en ligne commerce", "site web petit commerce", "Google My Business commerce", "digitalisation TPE"]
 ---
 
-# Les 5 erreurs digitales des petits commerces (et comment les éviter)
 
 En 2026, 78 % des consommateurs recherchent un commerce local sur Google avant de s'y rendre. Pourtant, des milliers de petits commerces continuent de perdre des clients chaque jour à cause des mêmes erreurs digitales — des erreurs souvent simples à corriger. Boulangeries, coiffeurs, fleuristes, librairies : ce guide vous donne les 5 problèmes les plus fréquents et les solutions concrètes pour chacun.
 
