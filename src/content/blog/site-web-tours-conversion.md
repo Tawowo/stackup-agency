@@ -1,7 +1,7 @@
 ---
 title: "Site web à Tours : 5 erreurs qui font fuir vos visiteurs"
 excerpt: "Un site web à Tours peut attirer du trafic et ne générer aucun contact. Ces 5 erreurs de conversion sont les plus fréquentes chez les TPE tourangelles."
-date: "2026-08-22"
+date: "2026-07-30"
 updated: "2026-07-30"
 readTime: 7
 tag: "SEO Local"

@@ -1,7 +1,7 @@
 ---
 title: "Site web pour coach sportif : attirer des clients en ligne et se démarquer"
 excerpt: "Le marché du coaching sportif en ligne a explosé. Un coach qui a un site web optimisé génère 3 à 5 fois plus de demandes qu'un coach qui s'appuie uniquement sur les réseaux sociaux."
-date: "2026-11-09"
+date: "2026-07-23"
 updated: "2026-07-30"
 readTime: 6
 tag: "Création de site"

@@ -1,7 +1,7 @@
 ---
 title: "Tunnel d'achat e-commerce : réduire les abandons de panier"
 excerpt: "70% des paniers e-commerce sont abandonnés avant la finalisation. Ce guide identifie les 6 causes les plus fréquentes et les solutions concrètes pour chaque étape du tunnel."
-date: "2026-11-03"
+date: "2026-07-30"
 updated: "2026-07-30"
 readTime: 7
 tag: "E-commerce"

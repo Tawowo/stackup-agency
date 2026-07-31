@@ -4,7 +4,6 @@ import { useState } from 'react'
 import Link from 'next/link'
 import { Gift, Users, Check, ChevronRight, FileText } from 'lucide-react'
 import MiniHero from '@/components/ui/MiniHero'
-import Odometer from '@/components/ui/Odometer'
 
 const faqSchema = {
   '@context': 'https://schema.org',
@@ -120,7 +119,7 @@ export default function ParrainagePage() {
           </div>
         </section>
 
-        {/* Cartes récompenses avec Odometer */}
+        {/* Cartes récompenses */}
         <section>
           <h2 className="text-2xl font-bold text-foreground dark:text-white mb-6">Vos récompenses</h2>
           <div className="grid sm:grid-cols-2 gap-6">
@@ -132,7 +131,7 @@ export default function ParrainagePage() {
                 <span className="text-white/70 text-lg">mois de maintenance</span>
               </div>
               <div className="text-white/50 text-sm mb-6">
-                Valeur : jusqu'à <Odometer value={89} suffix="€" className="text-gold" />
+                Valeur : jusqu'à <span className="text-gold font-semibold">89&thinsp;€</span>
                 <span className="ml-1">(plan Premium)</span>
               </div>
               <ul className="space-y-2 text-sm">

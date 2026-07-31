@@ -10,15 +10,13 @@ interface Props {
 }
 
 export default function CountUp({ target, duration = 1200, suffix = '', prefix = '', className }: Props) {
-  const [value, setValue] = useState(0)
+  const [value, setValue] = useState(target)
   const spanRef = useRef<HTMLSpanElement>(null)
   const started = useRef(false)
 
   useEffect(() => {
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      setValue(target)
-      return
-    }
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
+    setValue(0)
     const obs = new IntersectionObserver(([e]) => {
       if (e.isIntersecting && !started.current) {
         started.current = true

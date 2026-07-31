@@ -1,7 +1,7 @@
 ---
 title: "Meta Ads pour TPE : commencer avec 300€/mois et obtenir des résultats"
 excerpt: "La publicité Facebook et Instagram peut fonctionner avec de petits budgets si elle est bien ciblée. Ce guide évite les 5 erreurs qui font brûler votre budget Meta Ads."
-date: "2026-09-24"
+date: "2026-07-26"
 updated: "2026-07-30"
 readTime: 7
 tag: "Marketing Digital"

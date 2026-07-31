@@ -1,6 +1,5 @@
 'use client'
-import { motion, useInView } from 'framer-motion'
-import { useRef } from 'react'
+import { motion } from 'framer-motion'
 import { Globe, ShoppingCart, LayoutDashboard, FileText, Palette, TrendingUp, ArrowRight } from 'lucide-react'
 import { useLanguage } from '@/contexts/LanguageContext'
 import Link from 'next/link'
@@ -16,16 +15,14 @@ const serviceData = [
 
 export default function Services() {
   const { t } = useLanguage()
-  const ref = useRef(null)
-  const inView = useInView(ref, { once: true, margin: '-80px' })
 
   return (
     <section id="services" className="py-24 lg:py-32 bg-[#F8FAFC] dark:bg-[#0A0F1C]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
-          ref={ref}
+         
           initial={{ opacity: 0, y: 30 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
+          whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
@@ -44,7 +41,7 @@ export default function Services() {
               <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 40 }}
-                animate={inView ? { opacity: 1, y: 0 } : {}}
+                whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-80px" }}
                 transition={{ duration: 0.5, delay: i * 0.07 }}
                 className={`group relative bg-white dark:bg-white/5 rounded-2xl p-7 border-2 ${border} border-opacity-50 hover:shadow-xl transition-all duration-300 hover:-translate-y-1.5 flex flex-col`}
               >
@@ -77,7 +74,7 @@ export default function Services() {
           {/* CTA card */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
-            animate={inView ? { opacity: 1, y: 0 } : {}}
+            whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.5, delay: 0.5 }}
             className="group relative rounded-2xl p-7 bg-gradient-to-br from-navy via-[#1a3254] to-electric flex flex-col justify-between hover:shadow-2xl hover:shadow-electric/30 transition-all duration-300 hover:-translate-y-1.5"
           >

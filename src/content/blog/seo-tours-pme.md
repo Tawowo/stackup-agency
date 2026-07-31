@@ -1,7 +1,7 @@
 ---
 title: "SEO à Tours : comment les PME locales gagnent du terrain sur Google"
 excerpt: "Les PME de Tours qui dominent les résultats Google locaux ne dépensent pas forcément plus. Elles appliquent 5 leviers que la plupart ignorent encore."
-date: "2026-08-24"
+date: "2026-07-27"
 updated: "2026-07-30"
 readTime: 8
 tag: "SEO Local"

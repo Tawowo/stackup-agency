@@ -1,6 +1,5 @@
 'use client'
-import { motion, useInView } from 'framer-motion'
-import { useRef } from 'react'
+import { motion } from 'framer-motion'
 import { Clock, Tag, ArrowRight } from 'lucide-react'
 import { useLanguage } from '@/contexts/LanguageContext'
 
@@ -39,16 +38,14 @@ const articles = [
 
 export default function Blog() {
   const { t } = useLanguage()
-  const ref = useRef(null)
-  const inView = useInView(ref, { once: true, margin: '-80px' })
 
   return (
     <section id="blog" className="py-24 lg:py-32 bg-white dark:bg-[#060D1A]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
-          ref={ref}
+         
           initial={{ opacity: 0, y: 30 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
+          whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
@@ -63,7 +60,7 @@ export default function Blog() {
             <motion.article
               key={article.slug}
               initial={{ opacity: 0, y: 40 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
+              whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-80px" }}
               transition={{ duration: 0.5, delay: i * 0.12 }}
               className="group glass dark:bg-white/5 rounded-2xl overflow-hidden border border-navy/10 dark:border-white/10 hover:shadow-xl hover:shadow-electric/10 transition-all hover:-translate-y-1"
             >
@@ -107,7 +104,7 @@ export default function Blog() {
 
         <motion.div
           initial={{ opacity: 0 }}
-          animate={inView ? { opacity: 1 } : {}}
+          whileInView={{ opacity: 1 }} viewport={{ once: true, margin: "-80px" }}
           transition={{ delay: 0.7 }}
           className="text-center mt-10"
         >

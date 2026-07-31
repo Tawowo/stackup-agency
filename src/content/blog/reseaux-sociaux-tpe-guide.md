@@ -1,7 +1,7 @@
 ---
 title: "Réseaux sociaux pour TPE : par où commencer sans se disperser"
 excerpt: "Facebook, Instagram, LinkedIn, TikTok — une TPE ne peut pas tout faire. Ce guide identifie le réseau prioritaire selon votre activité et ce qu'il faut y publier."
-date: "2026-09-18"
+date: "2026-07-25"
 updated: "2026-07-30"
 readTime: 7
 tag: "Marketing Digital"

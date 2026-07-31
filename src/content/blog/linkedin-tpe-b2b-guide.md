@@ -1,7 +1,7 @@
 ---
 title: "LinkedIn pour TPE B2B : obtenir des clients professionnels sans publicité"
 excerpt: "LinkedIn génère 3 fois plus de leads B2B que Facebook et Twitter réunis. Pour une TPE qui vend aux entreprises, c'est le réseau prioritaire. Ce qui fonctionne en 2026."
-date: "2026-09-22"
+date: "2026-07-24"
 updated: "2026-07-30"
 readTime: 7
 tag: "Marketing Digital"

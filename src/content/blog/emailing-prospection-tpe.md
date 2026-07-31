@@ -1,7 +1,7 @@
 ---
 title: "Emailing de prospection pour TPE : ce qui est légal et ce qui fonctionne"
 excerpt: "L'emailing reste l'un des outils de prospection les plus efficaces en B2B. Mais envoyer des e-mails en masse sans respecter les règles expose à des risques légaux. Ce guide fait le point."
-date: "2026-09-26"
+date: "2026-07-28"
 updated: "2026-07-30"
 readTime: 6
 tag: "Marketing Digital"

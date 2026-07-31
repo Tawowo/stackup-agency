@@ -1,7 +1,7 @@
 ---
 title: "Site web pour maçon et entreprise générale : guide 2026"
 excerpt: "Comment créer un site web efficace pour une entreprise de maçonnerie. Contenu, SEO local, et demandes de devis en ligne."
-date: "2026-09-10"
+date: "2026-07-19"
 updated: "2026-07-28"
 readTime: 6
 tag: "SEO Local"

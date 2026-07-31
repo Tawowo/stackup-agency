@@ -1,7 +1,7 @@
 ---
 title: "Site web pour menuisier : valoriser son savoir-faire et capter des clients"
 excerpt: "Un site vitrine bien conçu permet à un menuisier de montrer ses réalisations et d'attirer des clients locaux qualifiés."
-date: "2026-09-09"
+date: "2026-07-29"
 updated: "2026-07-28"
 readTime: 6
 tag: "SEO Local"

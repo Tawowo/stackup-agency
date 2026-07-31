@@ -1,7 +1,7 @@
 ---
 title: "Amazon vs votre propre boutique : ce que les chiffres disent vraiment"
 excerpt: "Vendre sur Amazon ou créer sa boutique en ligne ? Pour une TPE, ce n'est pas une question de l'un ou l'autre — c'est une question de stratégie combinée. Analyse chiffrée."
-date: "2026-10-28"
+date: "2026-07-29"
 updated: "2026-07-30"
 readTime: 6
 tag: "E-commerce"

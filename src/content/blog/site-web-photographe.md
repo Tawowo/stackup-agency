@@ -1,7 +1,7 @@
 ---
 title: "Site web pour photographe : portfolio, SEO et prise de contact"
 excerpt: "Un photographe professionnel a besoin d'un site qui montre son travail et le positionne sur les bonnes requêtes Google."
-date: "2026-09-14"
+date: "2026-07-28"
 updated: "2026-07-28"
 readTime: 7
 tag: "Création de site"

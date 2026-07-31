@@ -1,7 +1,7 @@
 ---
 title: "Tarifs des agences web en France en 2026 : ce que vous devez savoir"
 excerpt: "Fourchettes de prix réelles pour créer un site web avec une agence en France. De la micro-agence à l'agence parisienne, les vraies différences."
-date: "2026-08-13"
+date: "2026-07-25"
 updated: "2026-07-28"
 readTime: 7
 tag: "Création de site"

@@ -1,7 +1,7 @@
 ---
 title: "Vendre son artisanat en ligne : créer sa boutique sans se ruiner"
 excerpt: "Bijoux, céramiques, maroquinerie, textile artisanal — vendre ses créations en ligne est accessible. Ce guide compare les options et explique comment construire une boutique qui convertit."
-date: "2026-10-14"
+date: "2026-07-29"
 updated: "2026-07-30"
 readTime: 6
 tag: "E-commerce"

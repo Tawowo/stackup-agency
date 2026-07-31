@@ -1,7 +1,7 @@
 ---
 title: "Netlinking pour TPE : obtenir des liens sans budget colossal"
 excerpt: "Stratégie de liens entrants pour les petites entreprises en 2026 : presse locale, partenaires, annuaires sectoriels. Ce qui fonctionne réellement."
-date: "2026-08-20"
+date: "2026-07-30"
 updated: "2026-07-28"
 readTime: 7
 tag: "SEO"

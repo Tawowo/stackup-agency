@@ -1,7 +1,7 @@
 ---
 title: "Site web pour électricien : attirer des chantiers via Google"
 excerpt: "Un électricien référencé localement reçoit des demandes de devis qualifiées. Ce que doit contenir son site et comment le positionner."
-date: "2026-09-06"
+date: "2026-07-26"
 updated: "2026-07-28"
 readTime: 7
 tag: "SEO Local"

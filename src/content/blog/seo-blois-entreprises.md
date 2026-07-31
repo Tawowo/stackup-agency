@@ -1,7 +1,7 @@
 ---
 title: "SEO à Blois : guide pratique pour commerces et artisans du Loir-et-Cher"
 excerpt: "Blois et son agglomération offrent un marché local moins concurrentiel en SEO que les grandes métropoles ligériennes. Ce guide explique comment en profiter rapidement."
-date: "2026-10-30"
+date: "2026-07-28"
 updated: "2026-07-30"
 readTime: 6
 tag: "SEO Local"

@@ -1,7 +1,7 @@
 ---
 title: "Pourquoi votre restaurant a besoin d'un site web (et pas seulement d'une page Facebook)"
 excerpt: "3 restaurants sur 4 n'ont pas de site web en France. Ceux qui en ont convertissent 3 fois plus de recherches en réservations. Ce qu'un site de restaurant doit contenir."
-date: "2026-09-16"
+date: "2026-07-28"
 updated: "2026-07-30"
 readTime: 6
 tag: "Création de site"

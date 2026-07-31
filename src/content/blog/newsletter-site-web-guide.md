@@ -1,7 +1,7 @@
 ---
 title: "Newsletter pour TPE : intégrer l'e-mail depuis votre site web"
 excerpt: "La newsletter est le canal marketing avec le meilleur ROI. Comment l'intégrer à votre site web, quel outil choisir, et comment constituer une liste qualifiée."
-date: "2026-09-14"
+date: "2026-07-25"
 updated: "2026-07-30"
 readTime: 6
 tag: "Marketing Digital"

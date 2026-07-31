@@ -1,7 +1,7 @@
 ---
 title: "Instagram pour artisans : montrer son savoir-faire et trouver des clients"
 excerpt: "Les artisans qui documentent leur travail sur Instagram génèrent des demandes qualifiées sans publicité. Guide pratique : contenu, fréquence, hashtags locaux."
-date: "2026-09-20"
+date: "2026-07-30"
 updated: "2026-07-30"
 readTime: 6
 tag: "Marketing Digital"

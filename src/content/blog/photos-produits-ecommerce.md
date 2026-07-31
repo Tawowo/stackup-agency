@@ -1,7 +1,7 @@
 ---
 title: "Photos produits pour e-commerce : faire soi-même ou déléguer ?"
 excerpt: "Les photos produits déterminent 60% des décisions d'achat en ligne. Faire soi-même avec un smartphone ou déléguer à un photographe produit ? Ce guide compare les deux approches."
-date: "2026-10-18"
+date: "2026-07-18"
 updated: "2026-07-30"
 readTime: 6
 tag: "E-commerce"

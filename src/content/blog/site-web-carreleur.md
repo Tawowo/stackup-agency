@@ -1,7 +1,7 @@
 ---
 title: "Site web pour carreleur : photos de réalisations et SEO local"
 excerpt: "Les photos de chantiers et le SEO local sont les deux piliers d'un site web efficace pour un carreleur. Guide pratique."
-date: "2026-09-11"
+date: "2026-07-22"
 updated: "2026-07-28"
 readTime: 6
 tag: "SEO Local"

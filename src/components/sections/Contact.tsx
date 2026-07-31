@@ -1,7 +1,8 @@
 'use client'
 import { motion, useInView } from 'framer-motion'
 import { useRef, useState } from 'react'
-import { Send, Mail, CheckCircle, AlertCircle } from 'lucide-react'
+import Link from 'next/link'
+import { Send, Mail, CheckCircle, AlertCircle, Gift } from 'lucide-react'
 import { useLanguage } from '@/contexts/LanguageContext'
 
 export default function Contact() {
@@ -104,9 +105,21 @@ export default function Contact() {
               />
 
               {status === 'success' && (
-                <div className="flex items-center gap-2 text-success text-sm">
-                  <CheckCircle size={16} />
-                  {t.contact.form.success}
+                <div className="space-y-3">
+                  <div className="flex items-center gap-2 text-success text-sm">
+                    <CheckCircle size={16} />
+                    {t.contact.form.success}
+                  </div>
+                  <div className="flex items-start gap-3 p-3 rounded-xl bg-gold/10 border border-gold/20">
+                    <Gift size={16} className="text-gold flex-shrink-0 mt-0.5" />
+                    <p className="text-xs text-foreground/70 dark:text-white/70">
+                      Déjà client Stackup ?{' '}
+                      <Link href="/parrainage" className="font-semibold text-gold hover:underline">
+                        Recommandez-nous
+                      </Link>{' '}
+                      et gagnez 1 mois de maintenance offert.
+                    </p>
+                  </div>
                 </div>
               )}
               {status === 'error' && (

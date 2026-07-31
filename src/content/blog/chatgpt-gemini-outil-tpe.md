@@ -1,7 +1,7 @@
 ---
 title: "ChatGPT et Gemini pour les TPE : comment vraiment gagner du temps"
 excerpt: "Les outils IA génératifs peuvent diviser par 3 le temps de production de contenu pour une TPE. Ce guide présente les cas d'usage concrets — et ce qu'il ne faut surtout pas leur déléguer."
-date: "2026-11-05"
+date: "2026-07-21"
 updated: "2026-07-30"
 readTime: 7
 tag: "IA & 2026"

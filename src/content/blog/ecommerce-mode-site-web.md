@@ -1,7 +1,7 @@
 ---
 title: "Boutique en ligne de mode : les fonctionnalités indispensables"
 excerpt: "Créer une boutique en ligne de vêtements ou accessoires requiert des fonctionnalités spécifiques. Guide complet sur ce qu'une e-boutique de mode doit avoir pour convertir."
-date: "2026-10-10"
+date: "2026-07-30"
 updated: "2026-07-30"
 readTime: 7
 tag: "E-commerce"

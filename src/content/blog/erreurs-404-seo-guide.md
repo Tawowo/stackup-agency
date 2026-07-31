@@ -1,7 +1,7 @@
 ---
 title: "Erreurs 404 et SEO : comment les détecter et les corriger"
 excerpt: "Une erreur 404 fait perdre le trafic et les liens que vous avez accumulés. Comment les trouver, les corriger et éviter de les recréer."
-date: "2026-09-06"
+date: "2026-07-29"
 updated: "2026-07-30"
 readTime: 6
 tag: "SEO"

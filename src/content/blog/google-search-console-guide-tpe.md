@@ -1,7 +1,7 @@
 ---
 title: "Google Search Console pour TPE : les 5 rapports qui changent tout"
 excerpt: "Google Search Console est gratuit et révèle exactement comment Google voit votre site. Ce guide se concentre sur les 5 rapports utiles pour une TPE et comment agir sur les données."
-date: "2026-11-01"
+date: "2026-07-20"
 updated: "2026-07-30"
 readTime: 6
 tag: "SEO"

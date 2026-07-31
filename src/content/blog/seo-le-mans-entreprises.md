@@ -1,7 +1,7 @@
 ---
 title: "SEO au Mans : guide pour entreprises et artisans de la Sarthe"
 excerpt: "Le référencement local au Mans a ses spécificités économiques. Ce guide couvre les leviers qui fonctionnent pour les entreprises et artisans de la Sarthe, avec un plan d'action concret."
-date: "2026-10-08"
+date: "2026-07-26"
 updated: "2026-07-30"
 readTime: 7
 tag: "SEO Local"

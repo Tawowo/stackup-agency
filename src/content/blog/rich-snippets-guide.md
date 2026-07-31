@@ -1,7 +1,7 @@
 ---
 title: "Rich snippets et données structurées : guide pratique pour TPE"
 excerpt: "Les rich snippets (étoiles, FAQ, prix) augmentent le taux de clic jusqu'à +30%. Comment les implémenter concrètement sur votre site en 2026."
-date: "2026-09-04"
+date: "2026-07-26"
 updated: "2026-07-30"
 readTime: 7
 tag: "SEO"

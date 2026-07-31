@@ -1,7 +1,7 @@
 ---
 title: "Vente en ligne de produits alimentaires : règles et fonctionnalités clés"
 excerpt: "La vente alimentaire en ligne est soumise à des réglementations spécifiques. Ce guide présente les obligations légales, les fonctionnalités indispensables et les options logistiques pour une épicerie en ligne."
-date: "2026-10-12"
+date: "2026-07-22"
 updated: "2026-07-30"
 readTime: 7
 tag: "E-commerce"

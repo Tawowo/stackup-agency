@@ -1,7 +1,7 @@
 ---
 title: "Automatisation pour TPE : 7 tâches à automatiser dès maintenant"
 excerpt: "Une TPE passe en moyenne 15 heures par semaine sur des tâches répétitives automatisables. Ces 7 automatisations ne nécessitent pas de développeur et sont rentabilisées en quelques jours."
-date: "2026-11-07"
+date: "2026-07-23"
 updated: "2026-07-30"
 readTime: 6
 tag: "IA & 2026"

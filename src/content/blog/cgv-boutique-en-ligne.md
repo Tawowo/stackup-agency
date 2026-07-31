@@ -1,7 +1,7 @@
 ---
 title: "CGV boutique en ligne : ce qui est obligatoire en France"
 excerpt: "Les Conditions Générales de Vente sont obligatoires pour toute boutique en ligne française. Ce guide liste les mentions obligatoires et les clauses qui vous protègent réellement."
-date: "2026-10-20"
+date: "2026-07-26"
 updated: "2026-07-30"
 readTime: 6
 tag: "E-commerce"

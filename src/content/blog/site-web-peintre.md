@@ -1,7 +1,7 @@
 ---
 title: "Site web pour peintre en bâtiment : attirer des chantiers en ligne"
 excerpt: "Comment un peintre en bâtiment peut utiliser son site web pour générer des demandes de devis via Google."
-date: "2026-09-08"
+date: "2026-07-19"
 updated: "2026-07-28"
 readTime: 6
 tag: "SEO Local"

@@ -1,7 +1,7 @@
 ---
 title: "Portfolio en ligne pour créatifs : ce qui fait vraiment la différence"
 excerpt: "Designer, illustrateur, photographe, rédacteur — votre portfolio en ligne est votre premier commercial. Ce qui fait qu'un client choisit de vous contacter ou pas."
-date: "2026-10-06"
+date: "2026-07-28"
 updated: "2026-07-30"
 readTime: 6
 tag: "Création de site"

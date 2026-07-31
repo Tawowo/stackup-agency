@@ -1,7 +1,7 @@
 ---
 title: "Google Maps sur votre site web : intégration et avantages SEO"
 excerpt: "Intégrer Google Maps sur votre site web renforce votre SEO local et aide vos clients à vous trouver. Ce qu'il faut faire et ce qu'il faut éviter."
-date: "2026-09-12"
+date: "2026-07-30"
 updated: "2026-07-30"
 readTime: 5
 tag: "SEO Local"

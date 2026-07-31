@@ -1,7 +1,7 @@
 ---
 title: "Créer un blog pour son entreprise artisanale : ce qui vaut vraiment la peine"
 excerpt: "Un blog d'artisan qui génère des clients ne ressemble pas à un blog généraliste. Ce guide explique quels sujets traiter, à quelle fréquence, et pourquoi certains artisans obtiennent 20 demandes par mois grâce à leur contenu."
-date: "2026-09-28"
+date: "2026-07-25"
 updated: "2026-07-30"
 readTime: 6
 tag: "SEO"

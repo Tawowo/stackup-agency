@@ -1,7 +1,7 @@
 ---
 title: "Site web pour traiteur : menu, galerie et prise de commande"
 excerpt: "Un traiteur avec un site web professionnel reçoit plus de demandes pour mariages, événements d'entreprise et particuliers."
-date: "2026-09-15"
+date: "2026-07-17"
 updated: "2026-07-28"
 readTime: 6
 tag: "Création de site"

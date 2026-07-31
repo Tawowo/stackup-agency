@@ -1,7 +1,7 @@
 ---
 title: "SEO pour e-commerce : les optimisations qui augmentent vraiment le trafic organique"
 excerpt: "Le SEO e-commerce est différent du SEO de service. Fiches produits, pages catégories, duplicate content, données structurées — les points critiques pour une boutique en ligne."
-date: "2026-10-16"
+date: "2026-07-30"
 updated: "2026-07-30"
 readTime: 8
 tag: "SEO"

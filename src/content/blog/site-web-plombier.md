@@ -1,7 +1,7 @@
 ---
 title: "Site web pour plombier : capter des urgences et des chantiers"
 excerpt: "Un site web professionnel permet à un plombier de se positionner sur les requêtes d'urgence et de chantier. Guide complet."
-date: "2026-09-07"
+date: "2026-07-29"
 updated: "2026-07-28"
 readTime: 7
 tag: "SEO Local"

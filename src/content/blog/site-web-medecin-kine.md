@@ -1,7 +1,7 @@
 ---
 title: "Site web pour médecin ou kinésithérapeute : règles, fonctionnalités et coûts"
 excerpt: "Les professionnels de santé ont des contraintes déontologiques strictes pour leur site web. Ce guide explique ce qui est autorisé, ce qui est interdit, et les fonctionnalités indispensables."
-date: "2026-09-30"
+date: "2026-07-29"
 updated: "2026-07-30"
 readTime: 7
 tag: "Création de site"

@@ -1,7 +1,7 @@
 ---
 title: "Google Ads avec petit budget : est-ce que ça vaut le coup pour une TPE ?"
 excerpt: "Google Ads avec 200-500€/mois : ce qui est possible, ce qui ne l'est pas, et comment maximiser le retour sur un budget limité."
-date: "2026-09-03"
+date: "2026-07-27"
 updated: "2026-07-28"
 readTime: 7
 tag: "Marketing Digital"

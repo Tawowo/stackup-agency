@@ -1,7 +1,7 @@
 ---
 title: "Landing page pour vos publicités : ce qui fait vraiment la différence"
 excerpt: "Une bonne landing page triple les conversions d'une campagne Google Ads ou Meta. Ce qu'elle doit contenir, et ce qui ne fonctionne pas."
-date: "2026-08-17"
+date: "2026-07-23"
 updated: "2026-07-28"
 readTime: 7
 tag: "Marketing Digital"

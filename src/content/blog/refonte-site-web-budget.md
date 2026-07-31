@@ -1,7 +1,7 @@
 ---
 title: "Refonte de site web : budget et planning réalistes en 2026"
 excerpt: "Combien prévoir pour refondre son site web ? Les postes de coût, les pièges à éviter, et les questions à poser avant de signer."
-date: "2026-08-16"
+date: "2026-07-22"
 updated: "2026-07-28"
 readTime: 7
 tag: "Création de site"

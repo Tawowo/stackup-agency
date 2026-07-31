@@ -1,7 +1,7 @@
 ---
 title: "SEO à Orléans : guide pour commerces et artisans du Loiret"
 excerpt: "Le SEO local à Orléans a ses spécificités. Ce guide couvre les leviers qui fonctionnent pour les commerces et artisans du Loiret, avec un plan d'action en 90 jours."
-date: "2026-08-26"
+date: "2026-07-24"
 updated: "2026-07-30"
 readTime: 8
 tag: "SEO Local"

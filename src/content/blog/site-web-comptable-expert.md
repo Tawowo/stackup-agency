@@ -1,7 +1,7 @@
 ---
 title: "Site web pour expert-comptable : attirer des clients professionnels en 2026"
 excerpt: "Les cabinets comptables qui génèrent des leads en ligne appliquent des règles précises. Ce guide détaille la structure, le contenu et le SEO d'un site web de cabinet comptable efficace."
-date: "2026-10-02"
+date: "2026-07-22"
 updated: "2026-07-30"
 readTime: 6
 tag: "Création de site"

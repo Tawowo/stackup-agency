@@ -1,7 +1,5 @@
-'use client'
 import Link from 'next/link'
 import { CheckCircle, ChevronRight } from 'lucide-react'
-import Odometer from '@/components/ui/Odometer'
 
 interface Card {
   titre: string
@@ -33,19 +31,19 @@ export default function PricingCards({ cards }: { cards: Card[] }) {
           <div className="flex items-start justify-between mb-3">
             <h3 className="text-lg font-bold text-foreground dark:text-white">{s.titre}</h3>
             <span className="text-2xl font-bold text-navy dark:text-gold ml-3">
-              <Odometer value={s.prix} suffix="€" />
+              {s.prix}&thinsp;€
             </span>
           </div>
           <p className="text-sm text-foreground/60 dark:text-white/60 mb-4">{s.desc}</p>
           <ul className="space-y-1.5 mb-5 flex-1">
             {s.inclus.map(item => (
               <li key={item} className="flex items-center gap-2 text-sm text-foreground/70 dark:text-white/70">
-                <CheckCircle size={13} className="text-green-400 flex-shrink-0" />
+                <CheckCircle size={13} className="text-success flex-shrink-0" />
                 {item}
               </li>
             ))}
           </ul>
-          <div className="text-xs text-foreground/70 dark:text-white/40 mb-4">Livraison : {s.delai}</div>
+          <div className="text-xs text-foreground/70 dark:text-white/60 mb-4">Livraison : {s.delai}</div>
           <Link
             href={s.href}
             className={`flex items-center justify-center gap-1 py-2.5 rounded-xl text-sm font-semibold transition-colors ${

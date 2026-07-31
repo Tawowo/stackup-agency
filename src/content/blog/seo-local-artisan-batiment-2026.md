@@ -1,7 +1,7 @@
 ---
 title: "SEO local pour artisans du bâtiment : dominer Google en 2026"
 excerpt: "Plombier, électricien, maçon, menuisier — les artisans du bâtiment font face à une concurrence locale intense. Ce guide présente les 5 leviers qui font la différence sur Google en 2026."
-date: "2026-10-04"
+date: "2026-07-27"
 updated: "2026-07-30"
 readTime: 7
 tag: "SEO Local"

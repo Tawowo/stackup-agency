@@ -1,6 +1,6 @@
 'use client'
-import { motion, useInView } from 'framer-motion'
-import { useRef, useState } from 'react'
+import { motion } from 'framer-motion'
+import { useState } from 'react'
 import { ExternalLink, ArrowRight } from 'lucide-react'
 import Link from 'next/link'
 import { realisations } from '@/lib/realisations'
@@ -10,8 +10,6 @@ const filters = ['Tous', 'Site vitrine', 'E-commerce', 'Système de gestion']
 
 export default function Portfolio() {
   const { t } = useLanguage()
-  const ref = useRef(null)
-  const inView = useInView(ref, { once: true, margin: '-80px' })
   const [activeFilter, setActiveFilter] = useState('Tous')
 
   const filtered = activeFilter === 'Tous'
@@ -22,9 +20,9 @@ export default function Portfolio() {
     <section id="realisations" className="py-24 lg:py-32 bg-[#F8FAFC] dark:bg-[#0A0F1C]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
-          ref={ref}
+         
           initial={{ opacity: 0, y: 30 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
+          whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
@@ -39,7 +37,7 @@ export default function Portfolio() {
         {/* Filters */}
         <motion.div
           initial={{ opacity: 0 }}
-          animate={inView ? { opacity: 1 } : {}}
+          whileInView={{ opacity: 1 }} viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.5, delay: 0.2 }}
           className="flex flex-wrap justify-center gap-2 mb-12"
         >
@@ -64,7 +62,7 @@ export default function Portfolio() {
             <motion.div
               key={r.slug}
               initial={{ opacity: 0, y: 40 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
+              whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-80px" }}
               transition={{ duration: 0.5, delay: i * 0.06 }}
               className="group rounded-2xl overflow-hidden border border-gray-100 dark:border-white/10 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col"
             >
@@ -125,7 +123,7 @@ export default function Portfolio() {
         {/* CTA bottom */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
+          whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.5, delay: 0.6 }}
           className="text-center mt-16"
         >

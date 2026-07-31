@@ -1,7 +1,7 @@
 ---
 title: "Site web pour avocat : contenu, SEO et conformité déontologique"
 excerpt: "Un site web d'avocat doit respecter les règles déontologiques tout en étant visible sur Google. Guide complet 2026."
-date: "2026-08-08"
+date: "2026-07-27"
 updated: "2026-07-28"
 readTime: 7
 tag: "Création de site"

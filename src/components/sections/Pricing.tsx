@@ -1,6 +1,5 @@
 'use client'
-import { motion, useInView } from 'framer-motion'
-import { useRef } from 'react'
+import { motion } from 'framer-motion'
 import { Check, Zap, ArrowRight } from 'lucide-react'
 import { useLanguage } from '@/contexts/LanguageContext'
 import Link from 'next/link'
@@ -9,17 +8,15 @@ const planSlugs = ['starter', 'pro', 'premium']
 
 export default function Pricing() {
   const { t } = useLanguage()
-  const ref = useRef(null)
-  const inView = useInView(ref, { once: true, margin: '-80px' })
 
   return (
     <section id="tarifs" className="py-24 lg:py-32 bg-white dark:bg-[#060D1A]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
-          ref={ref}
+         
           initial={{ opacity: 0, y: 30 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
+          whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
@@ -36,7 +33,7 @@ export default function Pricing() {
               <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 40 }}
-                animate={inView ? { opacity: 1, y: 0 } : {}}
+                whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-80px" }}
                 transition={{ duration: 0.5, delay: i * 0.1 + 0.3 }}
                 className={`relative rounded-2xl p-8 flex flex-col transition-all duration-300 ${
                   isPro

@@ -1,7 +1,7 @@
 ---
 title: "Site web pour salon de coiffure : prise de RDV et SEO local"
 excerpt: "Un salon de coiffure avec prise de RDV en ligne attire plus de clients. Voici comment construire ce site efficacement."
-date: "2026-09-12"
+date: "2026-07-25"
 updated: "2026-07-28"
 readTime: 6
 tag: "SEO Local"

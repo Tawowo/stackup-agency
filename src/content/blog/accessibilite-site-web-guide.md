@@ -1,7 +1,7 @@
 ---
 title: "Accessibilité web pour TPE : l'essentiel sans se noyer dans les normes"
 excerpt: "Un site accessible touche plus de clients et améliore le SEO. Les 8 points d'accessibilité les plus impactants pour une TPE, sans jargon technique inutile."
-date: "2026-09-10"
+date: "2026-07-26"
 updated: "2026-07-30"
 readTime: 6
 tag: "Performance Web"
