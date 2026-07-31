@@ -4,8 +4,9 @@
       "/opt/node22/bin/node",
       "/home/user/stackup-agency/node_modules/.bin/playwright",
       "test",
-      "tests/e2e/u3-sections.spec.ts",
-      "--project=desktop-1440"
+      "tests/e2e/v-navigation.spec.ts",
+      "--project=desktop-1440",
+      "--timeout=15000"
     ],
     "configFile": "/home/user/stackup-agency/playwright.config.ts",
     "rootDir": "/home/user/stackup-agency/tests/e2e",
@@ -37,7 +38,7 @@
         "testMatch": [
           "**/*.@(spec|test).?(c|m)[jt]s?(x)"
         ],
-        "timeout": 30000
+        "timeout": 15000
       },
       {
         "outputDir": "/home/user/stackup-agency/test-results",
@@ -53,7 +54,7 @@
         "testMatch": [
           "**/*.@(spec|test).?(c|m)[jt]s?(x)"
         ],
-        "timeout": 30000
+        "timeout": 15000
       }
     ],
     "quiet": false,
@@ -83,18 +84,18 @@
   },
   "suites": [
     {
-      "title": "u3-sections.spec.ts",
-      "file": "u3-sections.spec.ts",
+      "title": "v-navigation.spec.ts",
+      "file": "v-navigation.spec.ts",
       "column": 0,
       "line": 0,
       "specs": [
         {
-          "title": "U3 — home sections présentes avec prix",
+          "title": "V2.b — navigation retour 2 cycles: prix et sections visibles",
           "ok": true,
           "tags": [],
           "tests": [
             {
-              "timeout": 30000,
+              "timeout": 15000,
               "annotations": [],
               "expectedStatus": "passed",
               "projectId": "desktop-1440",
@@ -104,12 +105,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1290,
+                  "duration": 8767,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-31T08:08:43.862Z",
+                  "startTime": "2026-07-31T08:37:48.762Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -117,18 +118,18 @@
               "status": "expected"
             }
           ],
-          "id": "c6868438f1c0f16c9e17-6364ca9dfd16416a2700",
-          "file": "u3-sections.spec.ts",
+          "id": "6f706d66c0b8535dcd3a-4c40d7d50043330e503c",
+          "file": "v-navigation.spec.ts",
           "line": 3,
           "column": 5
         },
         {
-          "title": "U3 — tarifs — prix statiques visibles",
-          "ok": true,
+          "title": "V1.d — clics CTA → /contact (local)",
+          "ok": false,
           "tags": [],
           "tests": [
             {
-              "timeout": 30000,
+              "timeout": 15000,
               "annotations": [],
               "expectedStatus": "passed",
               "projectId": "desktop-1440",
@@ -137,47 +138,77 @@
                 {
                   "workerIndex": 0,
                   "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 220,
-                  "errors": [],
+                  "status": "failed",
+                  "duration": 6109,
+                  "error": {
+                    "message": "TimeoutError: page.waitForURL: Timeout 5000ms exceeded.\n=========================== logs ===========================\nwaiting for navigation to \"**/contact\" until \"load\"\n  navigated to \"http://localhost:3000/\"\n============================================================",
+                    "stack": "TimeoutError: page.waitForURL: Timeout 5000ms exceeded.\n=========================== logs ===========================\nwaiting for navigation to \"**/contact\" until \"load\"\n  navigated to \"http://localhost:3000/\"\n============================================================\n    at /home/user/stackup-agency/tests/e2e/v-navigation.spec.ts:65:12",
+                    "location": {
+                      "file": "/home/user/stackup-agency/tests/e2e/v-navigation.spec.ts",
+                      "column": 12,
+                      "line": 65
+                    },
+                    "snippet": "  63 |     const navCTA = page.locator('nav a[href=\"/contact\"]').first()\n  64 |     await Promise.all([\n> 65 |       page.waitForURL('**/contact', { timeout: 5000 }),\n     |            ^\n  66 |       navCTA.click(),\n  67 |     ])\n  68 |     expect(page.url(), `${name}: navbar CTA → /contact`).toContain('/contact')"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/user/stackup-agency/tests/e2e/v-navigation.spec.ts",
+                        "column": 12,
+                        "line": 65
+                      },
+                      "message": "TimeoutError: page.waitForURL: Timeout 5000ms exceeded.\n=========================== logs ===========================\nwaiting for navigation to \"**/contact\" until \"load\"\n  navigated to \"http://localhost:3000/\"\n============================================================\n\n  63 |     const navCTA = page.locator('nav a[href=\"/contact\"]').first()\n  64 |     await Promise.all([\n> 65 |       page.waitForURL('**/contact', { timeout: 5000 }),\n     |            ^\n  66 |       navCTA.click(),\n  67 |     ])\n  68 |     expect(page.url(), `${name}: navbar CTA → /contact`).toContain('/contact')\n    at /home/user/stackup-agency/tests/e2e/v-navigation.spec.ts:65:12"
+                    }
+                  ],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-31T08:08:45.336Z",
+                  "startTime": "2026-07-31T08:37:57.703Z",
                   "annotations": [],
-                  "attachments": []
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/home/user/stackup-agency/test-results/v-navigation-V1-d-—-clics-CTA-→-contact-local--desktop-1440/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/home/user/stackup-agency/tests/e2e/v-navigation.spec.ts",
+                    "column": 12,
+                    "line": 65
+                  }
                 }
               ],
-              "status": "expected"
+              "status": "unexpected"
             }
           ],
-          "id": "c6868438f1c0f16c9e17-7585a4aa9f7ebbd0e480",
-          "file": "u3-sections.spec.ts",
-          "line": 33,
+          "id": "6f706d66c0b8535dcd3a-d89655cb5926223ee170",
+          "file": "v-navigation.spec.ts",
+          "line": 50,
           "column": 5
         },
         {
-          "title": "U3 — parrainage — 89€ statique visible",
+          "title": "V3 — galerie sticky: 6 panneaux, transform progresse",
           "ok": true,
           "tags": [],
           "tests": [
             {
-              "timeout": 30000,
+              "timeout": 15000,
               "annotations": [],
               "expectedStatus": "passed",
               "projectId": "desktop-1440",
               "projectName": "desktop-1440",
               "results": [
                 {
-                  "workerIndex": 0,
+                  "workerIndex": 1,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 226,
+                  "duration": 2253,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-31T08:08:45.568Z",
+                  "startTime": "2026-07-31T08:38:04.612Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -185,9 +216,9 @@
               "status": "expected"
             }
           ],
-          "id": "c6868438f1c0f16c9e17-ac195bb3220453aada6c",
-          "file": "u3-sections.spec.ts",
-          "line": 42,
+          "id": "6f706d66c0b8535dcd3a-c1b4761d2eb142128771",
+          "file": "v-navigation.spec.ts",
+          "line": 79,
           "column": 5
         }
       ]
@@ -195,11 +226,11 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-07-31T08:08:43.203Z",
-    "duration": 2706.936,
-    "expected": 3,
+    "startTime": "2026-07-31T08:37:48.249Z",
+    "duration": 18930.583,
+    "expected": 2,
     "skipped": 0,
-    "unexpected": 0,
+    "unexpected": 1,
     "flaky": 0
   }
 }
