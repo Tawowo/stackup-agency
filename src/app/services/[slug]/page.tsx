@@ -387,56 +387,60 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
         </div>
       </section>
 
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 py-16 space-y-16">
-        {/* Description */}
-        <section>
+      {/* SECTION 1 — Description (fond blanc) */}
+      <div className="bg-white dark:bg-[#0A0F1C]">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 py-16">
           <div className="prose prose-lg dark:prose-invert max-w-none">
             {service.description.split('\n\n').map((para, i) => (
               <p key={i} className="text-gray-700 dark:text-white/70 leading-relaxed mb-4">{para}</p>
             ))}
           </div>
-        </section>
-
-        <div className="grid md:grid-cols-2 gap-8">
-          {/* Features */}
-          <section className="bg-white dark:bg-white/5 rounded-2xl p-8 border border-gray-100 dark:border-white/10">
-            <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-6">Ce qui est inclus</h2>
-            <ul className="space-y-3">
-              {service.features.map((f, i) => (
-                <li key={i} className="flex items-start gap-3">
-                  <div className="mt-0.5 w-5 h-5 rounded-full bg-electric/10 flex items-center justify-center flex-shrink-0">
-                    <Check size={12} className="text-electric" />
-                  </div>
-                  <span className="text-gray-700 dark:text-white/70 text-sm">{f}</span>
-                </li>
-              ))}
-            </ul>
-          </section>
-
-          {/* What's included in the package */}
-          <section className="bg-white dark:bg-white/5 rounded-2xl p-8 border border-gray-100 dark:border-white/10">
-            <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-6">Notre engagement</h2>
-            <ul className="space-y-3">
-              {service.included.map((item, i) => (
-                <li key={i} className="flex items-start gap-3">
-                  <div className="mt-0.5 w-5 h-5 rounded-full bg-gold/10 flex items-center justify-center flex-shrink-0">
-                    <Check size={12} className="text-gold" />
-                  </div>
-                  <span className="text-gray-700 dark:text-white/70 text-sm">{item}</span>
-                </li>
-              ))}
-            </ul>
-          </section>
         </div>
+      </div>
 
-        {/* Process */}
-        <section>
+      {/* SECTION 2 — Inclus / Engagement (fond bleuté pâle) */}
+      <div className="section-pale">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 py-16">
+          <div className="grid md:grid-cols-2 gap-8">
+            <section className="bg-white dark:bg-navy/20 rounded-2xl p-8 border border-electric/10 dark:border-electric/20 card-accent card-accent-electric">
+              <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-6">Ce qui est inclus</h2>
+              <ul className="space-y-3">
+                {service.features.map((f, i) => (
+                  <li key={i} className="flex items-start gap-3">
+                    <div className="mt-0.5 w-5 h-5 rounded-full bg-electric/10 flex items-center justify-center flex-shrink-0">
+                      <Check size={12} className="text-electric" />
+                    </div>
+                    <span className="text-gray-700 dark:text-white/70 text-sm">{f}</span>
+                  </li>
+                ))}
+              </ul>
+            </section>
+            <section className="bg-white dark:bg-gold/5 rounded-2xl p-8 border border-gold/15 dark:border-gold/20 card-accent card-accent-gold">
+              <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-6">Notre engagement</h2>
+              <ul className="space-y-3">
+                {service.included.map((item, i) => (
+                  <li key={i} className="flex items-start gap-3">
+                    <div className="mt-0.5 w-5 h-5 rounded-full bg-gold/10 flex items-center justify-center flex-shrink-0">
+                      <Check size={12} className="text-amber-600 dark:text-gold" />
+                    </div>
+                    <span className="text-gray-700 dark:text-white/70 text-sm">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          </div>
+        </div>
+      </div>
+
+      {/* SECTION 3 — Processus (fond blanc) */}
+      <div className="bg-white dark:bg-[#0A0F1C]">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 py-16">
           <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-8">Notre processus</h2>
           <div className="space-y-4">
             {service.process.map((step, i) => (
               <div key={i} className="flex gap-6">
                 <div className="flex flex-col items-center">
-                  <div className="w-10 h-10 rounded-full bg-navy flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
+                  <div className="w-10 h-10 rounded-full bg-gradient-to-br from-navy to-electric flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
                     {i + 1}
                   </div>
                   {i < service.process.length - 1 && <div className="w-0.5 h-full bg-electric/20 mt-2" />}
@@ -448,43 +452,47 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
               </div>
             ))}
           </div>
-        </section>
+        </div>
+      </div>
 
-        {/* FAQ */}
-        <section>
+      {/* SECTION 4 — FAQ (fond bleuté pâle) */}
+      <div className="section-pale">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 py-16">
           <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-8">Questions fréquentes</h2>
           <div className="space-y-4">
             {service.faq.map((item, i) => (
-              <div key={i} className="bg-white dark:bg-white/5 rounded-2xl p-6 border border-gray-100 dark:border-white/10">
+              <div key={i} className="bg-white dark:bg-navy/20 rounded-2xl p-6 border border-electric/10 dark:border-white/10">
                 <h3 className="font-semibold text-gray-900 dark:text-white mb-2">{item.q}</h3>
                 <p className="text-ink/70 dark:text-white/60 text-sm">{item.a}</p>
               </div>
             ))}
           </div>
-        </section>
+        </div>
+      </div>
 
-        {/* CTA */}
-        <section className="bg-gradient-to-br from-navy to-electric rounded-2xl p-8 text-center">
-          <h2 className="text-2xl font-bold text-white mb-3">{service.cta}</h2>
-          <p className="text-white/70 mb-6">Devis gratuit sous 72h. Sans engagement.</p>
-          <Link
-            href="/contact"
-            className="inline-flex items-center gap-2 px-8 py-3.5 bg-gold hover:bg-gold text-ink font-semibold rounded-xl transition-all hover:-translate-y-0.5 shadow-lg"
-          >
-            Demander un devis
-            <ArrowRight size={16} />
-          </Link>
-        </section>
-
-        {/* Liens utiles */}
-        <section className="pt-4">
-          <p className="text-sm text-gray-500 dark:text-white/40 mb-3">Pour aller plus loin</p>
-          <div className="flex flex-wrap gap-3">
-            <Link href="/tarifs" className="text-sm text-electric hover:underline">Voir les tarifs →</Link>
-            <Link href="/realisations" className="text-sm text-electric hover:underline">Nos réalisations →</Link>
-            <Link href="/faq" className="text-sm text-electric hover:underline">Questions fréquentes →</Link>
-          </div>
-        </section>
+      {/* SECTION 5 — CTA (deep navy gradient) + liens */}
+      <div className="bg-[#0B1A2E] dark:bg-[#060D1A]">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 py-16 space-y-12">
+          <section className="bg-gradient-to-br from-navy to-electric rounded-2xl p-8 text-center">
+            <h2 className="text-2xl font-bold text-white mb-3">{service.cta}</h2>
+            <p className="text-white/70 mb-6">Devis gratuit sous 72h. Sans engagement.</p>
+            <Link
+              href="/contact"
+              className="inline-flex items-center gap-2 px-8 py-3.5 bg-gold hover:bg-gold text-ink font-semibold rounded-xl transition-all hover:-translate-y-0.5 shadow-lg"
+            >
+              Demander un devis
+              <ArrowRight size={16} />
+            </Link>
+          </section>
+          <section>
+            <p className="text-sm text-white/40 mb-3">Pour aller plus loin</p>
+            <div className="flex flex-wrap gap-3">
+              <Link href="/tarifs" className="text-sm text-electric hover:underline">Voir les tarifs →</Link>
+              <Link href="/realisations" className="text-sm text-electric hover:underline">Nos réalisations →</Link>
+              <Link href="/faq" className="text-sm text-electric hover:underline">Questions fréquentes →</Link>
+            </div>
+          </section>
+        </div>
       </div>
     </main>
   )

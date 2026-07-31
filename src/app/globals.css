@@ -470,3 +470,99 @@ body {
   content-visibility: auto;
   contain-intrinsic-size: auto 600px;
 }
+
+/* ━━━ AC3 — SYSTÈME D'ACCENTS CHARTE ━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+/* Liseret supérieur 3 px sur les cartes accentuées */
+.card-accent {
+  position: relative;
+  overflow: hidden;
+}
+.card-accent::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  border-radius: 3px 3px 0 0;
+  opacity: 0.6;
+  transition: opacity 0.25s ease;
+}
+.card-accent:hover::before { opacity: 1; }
+
+.card-accent-electric::before {
+  background: linear-gradient(90deg, #2D7DD2, #1B5A9E);
+}
+.card-accent-navy::before {
+  background: linear-gradient(90deg, #1E3A5F, #0B1A2E);
+}
+.card-accent-gold::before {
+  background: linear-gradient(90deg, #F59E0B, #D97706);
+}
+.card-accent-electric-navy::before {
+  background: linear-gradient(90deg, #2D7DD2, #1E3A5F);
+}
+.card-accent-gold-electric::before {
+  background: linear-gradient(90deg, #F59E0B, #2D7DD2);
+}
+
+/* Halo de hover coloré (hover uniquement via JS opacity) */
+.card-halo-electric:hover { box-shadow: 0 8px 28px rgba(45,125,210,0.18); }
+.card-halo-navy:hover     { box-shadow: 0 8px 28px rgba(30,58,95,0.22); }
+.card-halo-gold:hover     { box-shadow: 0 8px 28px rgba(245,158,11,0.20); }
+
+.dark .card-halo-electric:hover { box-shadow: 0 8px 28px rgba(45,125,210,0.28); }
+.dark .card-halo-navy:hover     { box-shadow: 0 8px 28px rgba(45,125,210,0.20); }
+.dark .card-halo-gold:hover     { box-shadow: 0 8px 28px rgba(245,158,11,0.25); }
+
+/* Pastille d'icône teintée */
+.icon-chip-electric { background: rgba(45,125,210,0.10); }
+.icon-chip-navy     { background: rgba(30,58,95,0.12); }
+.icon-chip-gold     { background: rgba(245,158,11,0.12); }
+
+.dark .icon-chip-electric { background: rgba(45,125,210,0.18); }
+.dark .icon-chip-navy     { background: rgba(45,125,210,0.15); }
+.dark .icon-chip-gold     { background: rgba(245,158,11,0.18); }
+
+/* Micro-vie : puces de listes teintées */
+.list-check li { position: relative; padding-left: 1.4em; }
+.list-check li::before {
+  content: '✓';
+  position: absolute; left: 0;
+  color: #2D7DD2;
+  font-weight: 700;
+  font-size: 0.85em;
+}
+.dark .list-check li::before { color: #4F9CF9; }
+
+.list-chevron li { position: relative; padding-left: 1.4em; }
+.list-chevron li::before {
+  content: '›';
+  position: absolute; left: 0;
+  color: #2D7DD2;
+  font-weight: 700;
+  font-size: 1.1em;
+  line-height: 1.4;
+}
+.dark .list-chevron li::before { color: #4F9CF9; }
+
+/* Blockquote barre gold */
+blockquote.bq-gold {
+  border-left: 3px solid #F59E0B;
+  padding-left: 1em;
+  color: inherit;
+  font-style: italic;
+}
+
+/* Section respiration : fonds alternés */
+.section-pale { background-color: #F0F5FF; }
+.dark .section-pale { background-color: rgba(45,125,210,0.06); }
+
+/* Lien avec soulignement dégradé */
+.link-gradient {
+  background-image: linear-gradient(90deg, #2D7DD2, #F59E0B);
+  background-size: 0% 1.5px;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  transition: background-size 0.3s ease;
+}
+.link-gradient:hover { background-size: 100% 1.5px; }

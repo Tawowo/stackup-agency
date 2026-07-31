@@ -1,27 +1,46 @@
 'use client'
 import Link from 'next/link'
 import { useRef, MouseEvent } from 'react'
-import { ArrowRight } from 'lucide-react'
+import { ArrowRight, Monitor, Layers, ShoppingBag, Settings, Users, PenTool, TrendingUp, type LucideIcon } from 'lucide-react'
 import { SERVICES } from '@/config/site'
 import { isRentreeActive } from '@/config/rentree'
 
-function ServiceCard({
-  s,
-  index,
-}: {
-  s: (typeof SERVICES)[number]
-  index: number
-}) {
+type Accent = 'electric' | 'navy' | 'gold'
+
+const SERVICE_META: Record<string, { accent: Accent; Icon: LucideIcon }> = {
+  'site-vitrine':       { accent: 'electric', Icon: Monitor },
+  'site-multi-pages':   { accent: 'electric', Icon: Layers },
+  'site-ecommerce':     { accent: 'navy',     Icon: ShoppingBag },
+  'systeme-gestion':    { accent: 'navy',     Icon: Settings },
+  'site-association':   { accent: 'electric', Icon: Users },
+  'redaction-blog-seo': { accent: 'gold',     Icon: PenTool },
+  'marketing-digital':  { accent: 'gold',     Icon: TrendingUp },
+}
+
+const BADGE_STYLE: Record<string, string> = {
+  'Le plus rapide':   'bg-electric text-white',
+  'Le plus populaire':'bg-gold text-ink',
+  'Sur mesure':       'bg-navy text-white',
+}
+
+const ICON_COLOR: Record<Accent, string> = {
+  electric: 'text-electric dark:text-electric',
+  navy:     'text-navy dark:text-blue-300',
+  gold:     'text-amber-600 dark:text-gold',
+}
+
+function ServiceCard({ s, index }: { s: (typeof SERVICES)[number]; index: number }) {
   const cardRef = useRef<HTMLAnchorElement>(null)
+  const meta = SERVICE_META[s.id] ?? { accent: 'electric' as Accent, Icon: Monitor as LucideIcon }
+  const { accent, Icon } = meta
+  const rentreeBadge = (s.id === 'site-vitrine' || s.id === 'site-multi-pages') && isRentreeActive()
 
   function handleMouseMove(e: MouseEvent<HTMLAnchorElement>) {
     const el = cardRef.current
     if (!el) return
     const rect = el.getBoundingClientRect()
-    const x = ((e.clientX - rect.left) / rect.width) * 100
-    const y = ((e.clientY - rect.top) / rect.height) * 100
-    el.style.setProperty('--sx', `${x}%`)
-    el.style.setProperty('--sy', `${y}%`)
+    el.style.setProperty('--sx', `${((e.clientX - rect.left) / rect.width) * 100}%`)
+    el.style.setProperty('--sy', `${((e.clientY - rect.top) / rect.height) * 100}%`)
   }
 
   function handleMouseLeave() {
@@ -31,39 +50,36 @@ function ServiceCard({
     el.style.setProperty('--sy', '50%')
   }
 
-  const showRenteeBadge = (s.id === 'site-vitrine' || s.id === 'site-multi-pages') && isRentreeActive()
-
   return (
     <Link
       ref={cardRef}
       href={s.href}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
-      className="service-card group reveal-item block rounded-2xl border border-navy/20 dark:border-white/10 p-5 transition-all duration-300 hover:-translate-y-1 hover:border-electric/40 hover:shadow-lg hover:shadow-electric/10"
-      style={{
-        animationDelay: `${index * 80}ms`,
-        '--sx': '50%',
-        '--sy': '50%',
-      } as React.CSSProperties}
+      className={`service-card card-accent card-accent-${accent} card-halo-${accent} group reveal-item block rounded-2xl border border-navy/20 dark:border-white/10 p-5 transition-all duration-300 hover:-translate-y-1 bg-white dark:bg-gray-900/40`}
+      style={{ animationDelay: `${index * 80}ms`, '--sx': '50%', '--sy': '50%' } as React.CSSProperties}
     >
-      {/* Spotlight */}
+      {/* Spotlight radial */}
       <span
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-        style={{
-          background:
-            'radial-gradient(200px circle at var(--sx) var(--sy), rgba(45,125,210,0.08), transparent 70%)',
-        }}
+        style={{ background: `radial-gradient(200px circle at var(--sx) var(--sy), ${accent === 'gold' ? 'rgba(245,158,11,0.08)' : accent === 'navy' ? 'rgba(30,58,95,0.10)' : 'rgba(45,125,210,0.08)'}, transparent 70%)` }}
       />
 
       <div className="relative">
+        {/* Icon chip */}
+        <div className={`inline-flex items-center justify-center w-9 h-9 rounded-xl mb-3 icon-chip-${accent}`}>
+          <Icon size={18} className={ICON_COLOR[accent]} />
+        </div>
+
+        {/* Badges */}
         <div className="flex flex-wrap gap-1.5 mb-2">
           {s.badge && (
-            <span className="inline-block rounded-full bg-electric/10 px-2.5 py-0.5 text-xs font-semibold text-electric-ink dark:text-electric">
+            <span className={`inline-block rounded-full px-2.5 py-0.5 text-xs font-semibold ${BADGE_STYLE[s.badge] ?? 'bg-electric/10 text-electric-ink dark:text-electric'}`}>
               {s.badge}
             </span>
           )}
-          {showRenteeBadge && (
+          {rentreeBadge && (
             <span className="inline-block rounded-full bg-gold/20 px-2.5 py-0.5 text-xs font-semibold text-amber-700 dark:text-gold">
               🎒 Maquette offerte
             </span>
