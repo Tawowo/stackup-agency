@@ -31,30 +31,34 @@ export default function ManifestoSection() {
     const section = sectionRef.current
     if (!section) return
 
+    // Initialize words to dimmed state (JS is active, animation will drive them)
+    wordsRef.current.forEach(el => { if (el) el.style.opacity = '0.12' })
+    if (lineRef.current) lineRef.current.style.width = '0%'
+
     const updateProgress = () => {
       const { top, height } = section.getBoundingClientRect()
       const vh = window.innerHeight
       // start when section top hits 80% of viewport, end when section bottom reaches 20%
-      const start = top - vh * 0.8
-      const end   = top + height - vh * 0.2
+      const start = top - vh * 0.85
+      const end   = top + height - vh * 0.95
       const range = end - start
       const p     = Math.max(0, Math.min(1, -start / range))
 
       const count = WORDS.length
+      // Clamp: section fully scrolled past → all words fully visible
+      const allVisible = p >= 1 || top + height < 0
       wordsRef.current.forEach((el, i) => {
         if (!el) return
-        // Each word lights up in sequence
+        if (allVisible) { el.style.opacity = '1'; return }
         const wordP = Math.max(0, Math.min(1, (p * count) - i))
-        // Cubic ease
         const eased = wordP < 0.5
           ? 4 * wordP * wordP * wordP
           : 1 - Math.pow(-2 * wordP + 2, 3) / 2
-        const opacity = 0.12 + eased * 0.88
-        el.style.opacity = String(opacity)
+        el.style.opacity = String(0.12 + eased * 0.88)
       })
 
-      // Gold underline on last word when fully revealed
       if (lineRef.current) {
+        if (allVisible) { lineRef.current.style.width = '100%'; return }
         const lastP = Math.max(0, Math.min(1, p * count - (count - 1)))
         lineRef.current.style.width = `${lastP * 100}%`
       }
@@ -85,7 +89,7 @@ export default function ManifestoSection() {
                   ref={el => { wordsRef.current[i] = el }}
                   className="inline-block text-white transition-none"
                   aria-hidden="true"
-                  style={{ opacity: reducedMotion ? 1 : 0.12 }}
+                  style={{ opacity: 1 }}
                 >
                   {isLast ? (
                     <span className="relative">

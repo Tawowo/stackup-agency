@@ -3,7 +3,6 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { CheckCircle, ArrowRight, Clock, Zap, Shield } from 'lucide-react'
 import { SITE } from '@/config/site'
-import PageLoader from '@/components/ui/PageLoader'
 import HeroSection from '@/components/home/HeroSection'
 import ServiceCards from '@/components/home/ServiceCards'
 import ProcessSection from '@/components/home/ProcessSection'
@@ -61,7 +60,6 @@ export default function Home() {
   return (
     <>
       <ScrollBackground />
-      <PageLoader />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }} />
       <main className="page-transition">

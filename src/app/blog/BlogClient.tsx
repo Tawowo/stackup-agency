@@ -20,19 +20,19 @@ type Post = {
 }
 
 const categoryColors: Record<string, string> = {
-  restaurants: 'from-orange-400 to-red-500',
-  artisans: 'from-amber-500 to-orange-600',
-  commerce: 'from-emerald-500 to-teal-600',
-  'seo-local': 'from-blue-500 to-electric',
-  'creation-sites': 'from-purple-500 to-violet-600',
-  'applications-metier': 'from-cyan-500 to-electric',
-  'pages-locales': 'from-rose-500 to-pink-600',
-  seo: 'from-blue-500 to-electric',
-  digital: 'from-purple-500 to-violet-600',
-  entrepreneuriat: 'from-gold to-amber-600',
-  design: 'from-pink-500 to-rose-600',
-  'professions-liberales': 'from-indigo-500 to-purple-600',
-  strategie: 'from-teal-500 to-emerald-600',
+  restaurants: 'from-navy to-electric',
+  artisans: 'from-gold to-navy',
+  commerce: 'from-electric to-navy',
+  'seo-local': 'from-navy to-electric',
+  'creation-sites': 'from-electric to-gold',
+  'applications-metier': 'from-navy to-electric',
+  'pages-locales': 'from-gold to-electric',
+  seo: 'from-navy to-electric',
+  digital: 'from-electric to-navy',
+  entrepreneuriat: 'from-gold to-navy',
+  design: 'from-electric to-gold',
+  'professions-liberales': 'from-navy to-gold',
+  strategie: 'from-electric to-navy',
 }
 
 const categoryIcons: Record<string, LucideIcon> = {

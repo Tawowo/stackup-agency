@@ -5,89 +5,115 @@ import Image from 'next/image'
 import { ArrowRight, ExternalLink } from 'lucide-react'
 import { realisations } from '@/lib/realisations'
 
-const PANELS = realisations.slice(0, 4)
-// Scroll height = 100vh pin entry + 4 panels × 100vh + 100vh exit
-const PIN_SCREENS = PANELS.length + 1   // extra scroll room to fully traverse all panels
+const PANELS = realisations  // all 6
+const N = PANELS.length
 
 export default function PinnedGallery() {
-  const wrapRef   = useRef<HTMLDivElement>(null)
-  const trackRef  = useRef<HTMLDivElement>(null)
-  const [active, setActive]     = useState(0)
-  const [progress, setProgress] = useState(0)   // 0→1 across all panels
-  const [isDesktop, setIsDesktop] = useState(false)
+  const wrapRef  = useRef<HTMLElement>(null)
+  const trackRef = useRef<HTMLDivElement>(null)
+  const rafRef   = useRef<number>(0)
 
-  // Mobile snap state
+  const [active, setActive]     = useState(0)
+  const [progress, setProgress] = useState(0)
+  const [isDesktop, setIsDesktop] = useState(false)
+  const [reducedMotion, setReducedMotion] = useState(false)
+
+  // Mobile snap
   const snapRef = useRef<HTMLDivElement>(null)
   const [snapActive, setSnapActive] = useState(0)
 
-  // ── Detect desktop ──────────────────────────────────────
   useEffect(() => {
-    const mq = window.matchMedia('(min-width: 1024px)')
-    setIsDesktop(mq.matches)
+    const mqMotion = window.matchMedia('(prefers-reduced-motion: reduce)')
+    setReducedMotion(mqMotion.matches)
+
+    const mqDesk = window.matchMedia('(min-width: 1024px)')
+    setIsDesktop(mqDesk.matches)
     const onChange = (e: MediaQueryListEvent) => setIsDesktop(e.matches)
-    mq.addEventListener('change', onChange)
-    return () => mq.removeEventListener('change', onChange)
+    mqDesk.addEventListener('change', onChange)
+    return () => mqDesk.removeEventListener('change', onChange)
   }, [])
 
-  // ── Desktop: pin + scrub scroll handler ─────────────────
-  const handleScroll = useCallback(() => {
+  // Desktop: CSS-sticky progress via scroll listener (passive, rAF-throttled)
+  const updateProgress = useCallback(() => {
     const wrap = wrapRef.current
     const track = trackRef.current
-    if (!wrap || !track || !isDesktop) return
+    if (!wrap || !track) return
 
     const { top, height } = wrap.getBoundingClientRect()
-    // total scrollable distance = height - 100vh
-    const scrollable = height - window.innerHeight
-    const scrolled   = Math.max(0, Math.min(scrollable, -top))
-    const p          = scrolled / scrollable            // 0→1
+    const vh = window.innerHeight
+    // scrollable distance = wrapper height - 1 viewport
+    const scrollable = height - vh
+    const p = Math.max(0, Math.min(1, -top / scrollable))
 
-    // Horizontal translate: move track left by (panels-1) × 100vw
-    const totalShift = (PANELS.length - 1) * window.innerWidth
-    track.style.transform = `translateX(${-p * totalShift}px)`
+    // Horizontal translation: -(N-1) × 100vw when p=1
+    track.style.transform = `translateX(${-p * (N - 1) * 100}vw)`
 
-    // Parallax: filigrane moves at 60% speed
-    const items = track.querySelectorAll<HTMLElement>('[data-filigrane]')
-    items.forEach((el, i) => {
-      const panelProgress = Math.max(0, Math.min(1, p * PANELS.length - i))
-      el.style.transform = `translateX(${panelProgress * 0.4 * window.innerWidth}px)`
-    })
-
-    const idx = Math.min(PANELS.length - 1, Math.floor(p * PANELS.length))
-    setActive(idx)
+    setActive(Math.min(N - 1, Math.floor(p * N)))
     setProgress(p)
-  }, [isDesktop])
+  }, [])
 
   useEffect(() => {
-    if (!isDesktop) return
-    window.addEventListener('scroll', handleScroll, { passive: true })
-    handleScroll()
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [isDesktop, handleScroll])
+    if (!isDesktop || reducedMotion) return
 
-  // ── Mobile: snap scroll listener ─────────────────────────
+    const onScroll = () => {
+      cancelAnimationFrame(rafRef.current)
+      rafRef.current = requestAnimationFrame(updateProgress)
+    }
+
+    window.addEventListener('scroll', onScroll, { passive: true })
+    updateProgress()
+    return () => {
+      window.removeEventListener('scroll', onScroll)
+      cancelAnimationFrame(rafRef.current)
+    }
+  }, [isDesktop, reducedMotion, updateProgress])
+
+  // Mobile snap
   useEffect(() => {
     if (isDesktop) return
     const el = snapRef.current
     if (!el) return
     const onScroll = () => {
-      const idx = Math.round(el.scrollLeft / el.clientWidth)
-      setSnapActive(Math.min(idx, PANELS.length - 1))
+      setSnapActive(Math.min(Math.round(el.scrollLeft / el.clientWidth), N - 1))
     }
     el.addEventListener('scroll', onScroll, { passive: true })
     return () => el.removeEventListener('scroll', onScroll)
   }, [isDesktop])
 
   const snapTo = (i: number) => {
-    const el = snapRef.current
-    if (!el) return
-    el.scrollTo({ left: i * el.clientWidth, behavior: 'smooth' })
+    snapRef.current?.scrollTo({ left: i * snapRef.current.clientWidth, behavior: 'smooth' })
   }
 
-  // ─────────────────────────────────────────────────────────
+  // Reduced motion: static grid
+  if (reducedMotion) {
+    return (
+      <section id="realisations">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 pt-20 pb-10">
+          <p className="overline-label mb-2">Démonstrations</p>
+          <h2 className="text-foreground dark:text-white heading-underline reveal-item">Nos réalisations</h2>
+        </div>
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 pb-20 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {PANELS.map((r) => (
+            <Link key={r.slug} href={`/realisations/${r.slug}`}
+              className="rounded-2xl overflow-hidden border border-navy/10 dark:border-white/10 bg-white dark:bg-[#0D1626] hover:shadow-lg transition-shadow">
+              <div className="relative h-40">
+                <Image src={r.image} alt={r.nom} fill className="object-cover object-top" />
+              </div>
+              <div className="p-4">
+                <h3 className="font-bold text-foreground dark:text-white">{r.nom}</h3>
+                <p className="text-xs text-foreground/60 dark:text-white/50">{r.type}</p>
+              </div>
+            </Link>
+          ))}
+        </div>
+      </section>
+    )
+  }
+
   return (
     <section id="realisations">
 
-      {/* ── Section header (always visible) ─────────────── */}
+      {/* Header */}
       <div className="max-w-5xl mx-auto px-4 sm:px-6 pt-20 pb-10">
         <div className="flex items-end justify-between">
           <div>
@@ -108,48 +134,45 @@ export default function PinnedGallery() {
         </div>
       </div>
 
-      {/* ══ DESKTOP : pin + scrub ═══════════════════════════ */}
-      <div
+      {/* ══ DESKTOP: CSS sticky horizontal scroll ══ */}
+      <section
         ref={wrapRef}
-        className="hidden lg:block relative"
-        style={{ height: `${PIN_SCREENS * 100}vh` }}
+        className="hidden lg:block"
+        style={{ height: `${(N + 1) * 100}vh` }}
         aria-label="Galerie de réalisations"
       >
-        {/* Sticky viewport */}
+        {/* Sticky scene */}
         <div className="sticky top-0 h-screen overflow-hidden bg-background dark:bg-[#0A0F1C]">
 
-          {/* Counter + progress bar */}
-          <div className="absolute top-6 right-8 z-20 flex items-center gap-4">
+          {/* Counter */}
+          <div className="absolute top-6 right-8 z-20 flex items-center gap-4" aria-hidden="true">
             <div className="flex gap-1.5">
               {PANELS.map((_, i) => (
-                <span
-                  key={i}
-                  className={`block h-0.5 rounded-full transition-all duration-300 ${
-                    i === active ? 'w-8 bg-electric' : 'w-2 bg-navy/20 dark:bg-white/20'
-                  }`}
-                />
+                <span key={i} className={`block h-0.5 rounded-full transition-all duration-300 ${
+                  i === active ? 'w-8 bg-electric' : 'w-2 bg-navy/20 dark:bg-white/20'
+                }`} />
               ))}
             </div>
-            <span aria-hidden="true" className="font-mono text-xs text-foreground/60 dark:text-white/60 tabular-nums">
-              {String(active + 1).padStart(2, '0')}&thinsp;/&thinsp;{String(PANELS.length).padStart(2, '0')}
+            <span className="font-mono text-xs text-foreground/60 dark:text-white/60 tabular-nums">
+              {String(active + 1).padStart(2, '0')}&thinsp;/&thinsp;{String(N).padStart(2, '0')}
             </span>
           </div>
 
-          {/* Scroll hint — disappears after first panel */}
+          {/* Scroll hint */}
           <div
-            className="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-1.5 transition-opacity duration-500"
-            style={{ opacity: progress < 0.08 ? 1 : 0 }}
+            className="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-1.5 transition-opacity duration-500 pointer-events-none"
+            style={{ opacity: progress < 0.06 ? 1 : 0 }}
             aria-hidden="true"
           >
-            <span aria-hidden="true" className="text-foreground/30 dark:text-white/30 text-xs tracking-widest uppercase">Défiler</span>
+            <span className="text-foreground/30 dark:text-white/30 text-xs tracking-widest uppercase">Défiler</span>
             <div className="w-px h-10 bg-gradient-to-b from-foreground/20 dark:from-white/20 to-transparent" />
           </div>
 
-          {/* Horizontal track — slides left via transform */}
+          {/* Track — N panels side by side, slides horizontally */}
           <div
             ref={trackRef}
             className="flex h-full will-change-transform"
-            style={{ width: `${PANELS.length * 100}vw`, transition: 'none' }}
+            style={{ width: `${N * 100}vw`, transition: 'none' }}
           >
             {PANELS.map((r, i) => (
               <div
@@ -157,9 +180,8 @@ export default function PinnedGallery() {
                 className="relative flex-shrink-0 h-full overflow-hidden"
                 style={{ width: '100vw' }}
               >
-                {/* Giant project name filigrane — parallax layer */}
+                {/* Filigrane */}
                 <div
-                  data-filigrane
                   className="absolute inset-0 flex items-center justify-center pointer-events-none select-none overflow-hidden"
                   aria-hidden="true"
                 >
@@ -177,7 +199,7 @@ export default function PinnedGallery() {
                   </span>
                 </div>
 
-                {/* Panel content — centered card */}
+                {/* Card */}
                 <div className="relative z-10 h-full flex items-center justify-center px-16">
                   <div
                     className="w-full max-w-4xl rounded-2xl overflow-hidden border border-white/10 bg-white dark:bg-[#0D1626] shadow-2xl"
@@ -197,60 +219,17 @@ export default function PinnedGallery() {
                       </div>
                     </div>
 
-                    {/* Preview area — real screenshot or gradient fallback */}
-                    <div
-                      className="relative overflow-hidden"
-                      style={{ height: 'clamp(280px, 38vh, 420px)' }}
-                    >
-                      {/* Real screenshot with slow-pan animation */}
-                      {'image' in r && r.image ? (
-                        <div
-                          className="absolute inset-0"
-                          style={{ animation: `demo-scroll-${i} 8s ease-in-out infinite alternate` }}
-                        >
-                          <Image
-                            src={(r as { image: string }).image}
-                            alt={`Capture d'écran ${r.nom}`}
-                            fill
-                            sizes="(min-width: 1024px) 56vw, 85vw"
-                            className="object-cover object-top"
-                            loading="lazy"
-                          />
-                        </div>
-                      ) : (
-                        <div
-                          className="absolute inset-0"
-                          style={{ background: `linear-gradient(155deg, ${r.couleur} 0%, ${r.accent} 100%)` }}
-                        />
-                      )}
-                      {/* Simulated UI skeleton — always shown (on top of real image via overlay when image present) */}
-                      <div
-                        className="absolute inset-x-0 top-0 px-8 pt-8 space-y-4"
-                        style={{
-                          animation: `demo-scroll-${i} 8s ease-in-out infinite alternate`,
-                          display: 'image' in r && r.image ? 'none' : undefined,
-                        }}
-                      >
-                        <div className="h-8 w-2/3 rounded-lg bg-white/20" />
-                        <div className="h-4 w-full rounded bg-white/10" />
-                        <div className="h-4 w-5/6 rounded bg-white/10" />
-                        <div className="flex gap-3 pt-2">
-                          <div className="h-10 w-28 rounded-xl bg-white/25" />
-                          <div className="h-10 w-24 rounded-xl bg-white/10" />
-                        </div>
-                        <div className="grid grid-cols-3 gap-3 pt-4">
-                          {[1, 2, 3].map(n => (
-                            <div key={n} className="h-20 rounded-xl bg-white/10" />
-                          ))}
-                        </div>
-                        <div className="h-4 w-4/5 rounded bg-white/10" />
-                        <div className="h-4 w-full rounded bg-white/10" />
-                        <div className="grid grid-cols-2 gap-3">
-                          {[1, 2].map(n => (
-                            <div key={n} className="h-32 rounded-xl bg-white/10" />
-                          ))}
-                        </div>
-                      </div>
+                    {/* Screenshot */}
+                    <div className="relative overflow-hidden" style={{ height: 'clamp(280px, 38vh, 420px)' }}>
+                      <Image
+                        src={r.image}
+                        alt={`Capture d'écran ${r.nom}`}
+                        fill
+                        sizes="(min-width: 1024px) 56vw"
+                        className="object-cover object-top"
+                        priority={i < 2}
+                        loading={i < 2 ? 'eager' : 'lazy'}
+                      />
                       {/* Bottom fade */}
                       <div
                         className="absolute inset-x-0 bottom-0 h-24 pointer-events-none"
@@ -261,24 +240,13 @@ export default function PinnedGallery() {
                     {/* Card body */}
                     <div className="p-8 flex items-start justify-between gap-6">
                       <div className="flex-1">
-                        <h3 className="font-display font-bold text-2xl text-foreground dark:text-white mb-1">
-                          {r.nom}
-                        </h3>
+                        <h3 className="font-display font-bold text-2xl text-foreground dark:text-white mb-1">{r.nom}</h3>
                         <p className="text-sm text-foreground/60 dark:text-white/50 mb-3">{r.type}</p>
-                        <p className="text-sm text-foreground/70 dark:text-white/60 leading-relaxed max-w-xl">
-                          {r.description}
-                        </p>
+                        <p className="text-sm text-foreground/70 dark:text-white/60 leading-relaxed max-w-xl">{r.description}</p>
                         <div className="flex flex-wrap gap-2 mt-4">
                           {r.tags.slice(0, 3).map(tag => (
-                            <span
-                              key={tag}
-                              className="px-2.5 py-0.5 rounded-full text-xs font-medium border"
-                              style={{
-                                background: `${r.couleur}18`,
-                                color: r.accent,
-                                borderColor: `${r.accent}40`,
-                              }}
-                            >
+                            <span key={tag} className="px-2.5 py-0.5 rounded-full text-xs font-medium border"
+                              style={{ background: `${r.couleur}18`, color: r.accent, borderColor: `${r.accent}40` }}>
                               {tag}
                             </span>
                           ))}
@@ -306,12 +274,10 @@ export default function PinnedGallery() {
                   </div>
                 </div>
 
-                {/* Panel index bottom-left */}
+                {/* Panel index */}
                 <div className="absolute bottom-8 left-8 z-20" aria-hidden="true">
-                  <span
-                    className="font-mono font-bold text-7xl leading-none select-none"
-                    style={{ color: r.couleur, opacity: 0.12 }}
-                  >
+                  <span className="font-mono font-bold text-7xl leading-none select-none"
+                    style={{ color: r.couleur, opacity: 0.12 }}>
                     {String(i + 1).padStart(2, '0')}
                   </span>
                 </div>
@@ -319,9 +285,9 @@ export default function PinnedGallery() {
             ))}
           </div>
         </div>
-      </div>
+      </section>
 
-      {/* ══ MOBILE : snap carousel (conservé) ═══════════════ */}
+      {/* ══ MOBILE: snap carousel ══ */}
       <div className="lg:hidden">
         <div
           ref={snapRef}
@@ -330,10 +296,7 @@ export default function PinnedGallery() {
           aria-label="Galerie de réalisations"
         >
           {PANELS.map((r, i) => (
-            <div
-              key={r.slug}
-              className="snap-center shrink-0 w-[85vw] max-w-sm mx-2 first:ml-[7.5vw] last:mr-[7.5vw]"
-            >
+            <div key={r.slug} className="snap-center shrink-0 w-[85vw] max-w-sm mx-2 first:ml-[7.5vw] last:mr-[7.5vw]">
               <div className="rounded-2xl overflow-hidden border border-navy/20 dark:border-white/10 bg-white dark:bg-[#0D1626] shadow-lg">
                 <div className="flex items-center gap-1.5 px-4 py-3 border-b border-white/5"
                   style={{ background: `${r.couleur}CC` }}>
@@ -342,22 +305,21 @@ export default function PinnedGallery() {
                   <span className="w-2.5 h-2.5 rounded-full bg-green-400/70" aria-hidden="true" />
                   <span className="ml-3 text-white/60 text-xs font-mono truncate">{new URL(r.url).hostname}</span>
                 </div>
-                <div
-                  className="h-40 flex items-center justify-center relative"
-                  style={{ background: `linear-gradient(135deg, ${r.couleur}, ${r.accent})` }}
-                >
-                  <span className="font-display font-bold text-white/80 text-5xl">
-                    {r.nom.charAt(0)}
-                  </span>
-                  <span
-                    className="absolute top-2 right-2 badge-shimmer px-2 py-0.5 bg-black/30 text-white/60 text-xs rounded-full"
-                  >
+                <div className="relative h-40">
+                  <Image
+                    src={r.image}
+                    alt={`Aperçu ${r.nom}`}
+                    fill
+                    className="object-cover object-top"
+                    loading={i < 2 ? 'eager' : 'lazy'}
+                  />
+                  <span className="absolute top-2 right-2 badge-shimmer px-2 py-0.5 bg-black/30 text-white/60 text-xs rounded-full">
                     Démonstration
                   </span>
                 </div>
                 <div className="p-4">
                   <div className="text-xs text-foreground/50 dark:text-white/40 font-mono mb-1">
-                    {String(i + 1).padStart(2, '0')}&thinsp;/&thinsp;{String(PANELS.length).padStart(2, '0')}
+                    {String(i + 1).padStart(2, '0')}&thinsp;/&thinsp;{String(N).padStart(2, '0')}
                   </div>
                   <h3 className="font-display font-bold text-foreground dark:text-white mb-0.5">{r.nom}</h3>
                   <p className="text-xs text-foreground/60 dark:text-white/50 mb-3">{r.type}</p>

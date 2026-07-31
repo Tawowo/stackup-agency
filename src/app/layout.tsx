@@ -9,6 +9,7 @@ import CookieBanner from '@/components/ui/CookieBanner'
 import RevealObserver from '@/components/ui/RevealObserver'
 import BrandPreloader from '@/components/ui/BrandPreloader'
 import PageProgressBar from '@/components/ui/PageProgressBar'
+
 import { SITE } from '@/config/site'
 
 const inter = Inter({

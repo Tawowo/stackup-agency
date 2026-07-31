@@ -162,7 +162,7 @@ L'appel stratégie de 30 minutes par mois est votre ligne directe avec notre exp
       { feature: 'Tableau de bord statistiques', starter: false, pro: false, premium: true },
       { feature: 'Appel stratégie 30min/mois', starter: false, pro: false, premium: true },
     ],
-    color: 'from-purple-600 to-violet-800',
+    color: 'from-navy to-electric',
   },
 }
 
