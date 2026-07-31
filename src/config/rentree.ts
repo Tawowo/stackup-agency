@@ -1,5 +1,5 @@
 // Offre de rentrée — date d'extinction 15/09/2026 23h59 Paris (UTC+2)
-export const RENTREE_DEADLINE = new Date('2026-09-15T21:59:59Z')
+export const RENTREE_DEADLINE = new Date('2026-09-13T21:59:59Z')
 
 export function isRentreeActive(): boolean {
   return Date.now() < RENTREE_DEADLINE.getTime()
