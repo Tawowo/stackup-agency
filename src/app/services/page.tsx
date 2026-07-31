@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { CheckCircle, ChevronRight } from 'lucide-react'
 import { SITE } from '@/config/site'
 import MiniHero from '@/components/ui/MiniHero'
+import EncartRentree from '@/components/rentree/EncartRentree'
 
 export const metadata = {
   title: 'Nos services — Vitrine, e-commerce, gestion web',
@@ -101,6 +102,7 @@ export default function ServicesPage() {
       />
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 py-16 space-y-8">
+        <EncartRentree />
         {SERVICES.map(s => (
           <div key={s.slug} className="rounded-2xl border border-navy/20 dark:border-white/10 p-6 lg:p-8 hover:border-electric/30 transition-colors">
             <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 mb-4">

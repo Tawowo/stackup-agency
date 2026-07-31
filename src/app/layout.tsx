@@ -11,6 +11,9 @@ import BrandPreloader from '@/components/ui/BrandPreloader'
 import PageProgressBar from '@/components/ui/PageProgressBar'
 
 import { SITE } from '@/config/site'
+import { BanniereProvider } from '@/contexts/BanniereContext'
+import BanniereRentree from '@/components/rentree/BanniereRentree'
+import { isRentreeActive } from '@/config/rentree'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -165,13 +168,16 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className={`${inter.variable} ${spaceGrotesk.variable} antialiased`}>
         <ThemeProvider>
           <LanguageProvider>
-            <PageProgressBar />
-            <BrandPreloader />
-            <RevealObserver />
-            <Navbar />
-            {children}
-            <Footer />
-            <CookieBanner />
+            <BanniereProvider>
+              {isRentreeActive() && <BanniereRentree />}
+              <PageProgressBar />
+              <BrandPreloader />
+              <RevealObserver />
+              <Navbar />
+              {children}
+              <Footer />
+              <CookieBanner />
+            </BanniereProvider>
           </LanguageProvider>
         </ThemeProvider>
       </body>

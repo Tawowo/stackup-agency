@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { CheckCircle, ArrowRight, Clock, Zap, Shield } from 'lucide-react'
 import { SITE } from '@/config/site'
 import HeroSection from '@/components/home/HeroSection'
+import BlocRentreeHome from '@/components/rentree/BlocRentreeHome'
 import ServiceCards from '@/components/home/ServiceCards'
 import ProcessSection from '@/components/home/ProcessSection'
 import ManifestoSection from '@/components/home/ManifestoSection'
@@ -68,6 +69,8 @@ export default function Home() {
 
         {/* Couture hero → light */}
         <div className="seam-to-light dark:hidden" aria-hidden="true" />
+
+        <BlocRentreeHome />
 
         {/* Services */}
         <section id="services" className="py-24 bg-background dark:bg-[#0A0F1C]">

@@ -2,6 +2,7 @@ import { SITE } from '@/config/site'
 import Link from 'next/link'
 import MiniHero from '@/components/ui/MiniHero'
 import ContactForm from '@/components/sections/Contact'
+import EncartRentree from '@/components/rentree/EncartRentree'
 
 export const metadata = {
   title: 'Contact — Devis gratuit sous 72h',
@@ -55,6 +56,9 @@ export default function ContactPage() {
         breadcrumb={[{ name: 'Contact' }]}
       />
 
+      <div className="max-w-4xl mx-auto px-4 sm:px-6">
+        <EncartRentree />
+      </div>
       <ContactForm />
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 pb-16">
