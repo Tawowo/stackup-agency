@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { useRef, MouseEvent } from 'react'
 import { ArrowRight } from 'lucide-react'
 import { SERVICES } from '@/config/site'
+import { isRentreeActive } from '@/config/rentree'
 
 function ServiceCard({
   s,
@@ -30,6 +31,8 @@ function ServiceCard({
     el.style.setProperty('--sy', '50%')
   }
 
+  const showRenteeBadge = (s.id === 'site-vitrine' || s.id === 'site-multi-pages') && isRentreeActive()
+
   return (
     <Link
       ref={cardRef}
@@ -54,11 +57,18 @@ function ServiceCard({
       />
 
       <div className="relative">
-        {s.badge && (
-          <span className="mb-2 inline-block rounded-full bg-electric/10 px-2.5 py-0.5 text-xs font-semibold text-electric-ink dark:text-electric">
-            {s.badge}
-          </span>
-        )}
+        <div className="flex flex-wrap gap-1.5 mb-2">
+          {s.badge && (
+            <span className="inline-block rounded-full bg-electric/10 px-2.5 py-0.5 text-xs font-semibold text-electric-ink dark:text-electric">
+              {s.badge}
+            </span>
+          )}
+          {showRenteeBadge && (
+            <span className="inline-block rounded-full bg-gold/20 px-2.5 py-0.5 text-xs font-semibold text-amber-700 dark:text-gold">
+              🎒 Maquette offerte
+            </span>
+          )}
+        </div>
 
         <div className="flex items-start justify-between gap-2 mb-2">
           <h3 className="font-semibold text-foreground dark:text-white group-hover:text-electric transition-colors leading-snug">

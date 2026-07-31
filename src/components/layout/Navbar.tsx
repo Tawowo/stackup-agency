@@ -78,7 +78,7 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className={`fixed left-0 right-0 z-50 transition-all duration-300 ${navBg}`} style={{ top: banniereActive ? '36px' : '0' }} role="navigation" aria-label="Navigation principale">
+      <nav className={`fixed left-0 right-0 z-50 transition-all duration-300 ${navBg} top-0 ${banniereActive ? 'lg:top-9' : ''}`} role="navigation" aria-label="Navigation principale">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-6 xl:px-8">
           <div className="flex items-center justify-between h-16 lg:h-20">
             <Link href="/" className="flex items-center gap-2.5 shrink-0" aria-label="Stackup Agency — Accueil">

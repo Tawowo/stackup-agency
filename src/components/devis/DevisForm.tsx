@@ -266,7 +266,7 @@ function Etape4({ state, set, rentreeActive }: { state: FormState; set: (k: keyo
             className="w-4 h-4 accent-electric"
           />
           <span className="text-sm text-foreground dark:text-white">
-            🎒 <strong>Offre rentrée</strong> — maquette offerte (valable jusqu'au 15 sept. 2026)
+            🎒 <strong>Offre rentrée</strong> — maquette offerte (valable jusqu'au 13 sept. 2026)
           </span>
         </label>
       )}

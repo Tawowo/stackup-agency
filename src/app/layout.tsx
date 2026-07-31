@@ -13,6 +13,7 @@ import PageProgressBar from '@/components/ui/PageProgressBar'
 import { SITE } from '@/config/site'
 import { BanniereProvider } from '@/contexts/BanniereContext'
 import BanniereRentree from '@/components/rentree/BanniereRentree'
+import MobileBannerSpacer from '@/components/rentree/MobileBannerSpacer'
 import { isRentreeActive } from '@/config/rentree'
 
 const inter = Inter({
@@ -168,8 +169,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className={`${inter.variable} ${spaceGrotesk.variable} antialiased`}>
         <ThemeProvider>
           <LanguageProvider>
-            <BanniereProvider>
+            <BanniereProvider initialActive={isRentreeActive()}>
               {isRentreeActive() && <BanniereRentree />}
+              {isRentreeActive() && <MobileBannerSpacer />}
               <PageProgressBar />
               <BrandPreloader />
               <RevealObserver />

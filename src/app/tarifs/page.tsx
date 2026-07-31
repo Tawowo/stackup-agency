@@ -4,6 +4,7 @@ import { CheckCircle, ChevronRight } from 'lucide-react'
 import { SITE } from '@/config/site'
 import MiniHero from '@/components/ui/MiniHero'
 import PricingCards from '@/components/tarifs/PricingCards'
+import EncartRentree from '@/components/rentree/EncartRentree'
 
 export const metadata = {
   title: `Tarifs création site internet — À partir de ${SITE.pricing.vitrine}€`,
@@ -84,6 +85,8 @@ export default function TarifsPage() {
             },
           ]} />
         </section>
+
+        <EncartRentree />
 
         {/* Système de gestion */}
         <section className="rounded-2xl border border-electric/30 bg-blue-500/5 p-6 lg:p-8">
