@@ -65,7 +65,7 @@ function ServiceCard({
             {s.titre}
           </h3>
           <span className="shrink-0 font-bold text-sm text-navy dark:text-white">
-            À partir de {s.prix}&thinsp;{s.unite}
+            {s.prix ? <>À partir de {s.prix}&thinsp;{s.unite}</> : 'Sur devis'}
           </span>
         </div>
 

@@ -139,6 +139,7 @@ export default function Footer() {
                 { href: '/faq', label: 'FAQ' },
                 { href: '/contact', label: 'Contact' },
                 { href: '/parrainage', label: 'Parrainage' },
+                { href: '/outils', label: 'Outils gratuits' },
                 { href: '/ressources/documents', label: 'Documents officiels' },
                 { href: '/plan-du-site', label: 'Plan du site' },
               ].map(l => (

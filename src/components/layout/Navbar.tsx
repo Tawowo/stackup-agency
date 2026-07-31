@@ -118,7 +118,7 @@ export default function Navbar() {
                 className={`p-2 rounded-lg transition-colors ${!isHome ? 'text-white/80 hover:text-white' : scrolled ? 'text-ink/70 dark:text-white/70 hover:text-electric-ink' : 'text-white/80 hover:text-white'}`}>
                 {dark ? <Sun size={18} /> : <Moon size={18} />}
               </button>
-              <Link href="/contact" className="px-5 py-2.5 bg-gold hover:bg-gold/80 text-ink text-sm font-semibold rounded-xl shadow-lg shadow-amber-500/30 transition-all hover:-translate-y-0.5">
+              <Link href="/devis" className="px-5 py-2.5 bg-gold hover:bg-gold/80 text-ink text-sm font-semibold rounded-xl shadow-lg shadow-amber-500/30 transition-all hover:-translate-y-0.5">
                 Devis gratuit →
               </Link>
             </div>

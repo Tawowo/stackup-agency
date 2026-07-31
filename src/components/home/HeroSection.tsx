@@ -158,7 +158,7 @@ export default function HeroSection() {
                     {word}
                   </span>
                 </span>
-              ))}
+              )).reduce<React.ReactNode[]>((acc, el, i) => i === 0 ? [el] : [...acc, ' ', el], [])}
             </h1>
 
             <p className="text-white/80 text-lg lg:text-xl mb-6 max-w-xl leading-relaxed">

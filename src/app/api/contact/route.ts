@@ -1,39 +1,48 @@
 import { Resend } from 'resend'
 import { NextResponse } from 'next/server'
 
-const resend = new Resend('re_fKNfkhxL_88xFyednhBqBy24b43Vh29xV')
-
 export async function POST(req: Request) {
+  const resend = new Resend(process.env.RESEND_API_KEY!)
   try {
     const body = await req.json()
-    console.log('Body reçu:', JSON.stringify(body))
 
-    const { name, email, phone, project, message } = body
+    const { name, email, phone, project, message, subject, html, confirmHtml, src } = body
 
-    const { data, error } = await resend.emails.send({
+    // Email interne (équipe)
+    const internalHtml = html || `
+      <h2>Nouveau message depuis stackup-agency.fr</h2>
+      <p><strong>Nom :</strong> ${name}</p>
+      <p><strong>Email :</strong> ${email}</p>
+      <p><strong>Téléphone :</strong> ${phone || 'Non renseigné'}</p>
+      <p><strong>Type de projet :</strong> ${project || 'Non précisé'}</p>
+      <p><strong>Message :</strong><br>${message}</p>
+      ${src ? `<p><strong>Source :</strong> ${src}</p>` : ''}
+    `
+
+    const { error } = await resend.emails.send({
       from: 'Stackup Agency <contact@stackup-agency.fr>',
       to: 'contact@stackup-agency.fr',
       replyTo: email,
-      subject: `Nouveau contact — ${project || 'Non précisé'} — ${name}`,
-      html: `
-        <h2>Nouveau message depuis stackup-agency.fr</h2>
-        <p><strong>Nom :</strong> ${name}</p>
-        <p><strong>Email :</strong> ${email}</p>
-        <p><strong>Téléphone :</strong> ${phone || 'Non renseigné'}</p>
-        <p><strong>Type de projet :</strong> ${project || 'Non précisé'}</p>
-        <p><strong>Message :</strong><br>${message}</p>
-      `,
+      subject: subject || `Nouveau contact — ${project || 'Non précisé'} — ${name}`,
+      html: internalHtml,
     })
 
     if (error) {
-      console.error('Resend error détaillé:', JSON.stringify(error))
       return NextResponse.json({ error }, { status: 400 })
     }
 
-    console.log('Email envoyé avec succès, id:', data?.id)
+    // Email de confirmation au prospect
+    if (email && confirmHtml) {
+      await resend.emails.send({
+        from: 'Stackup Agency <contact@stackup-agency.fr>',
+        to: email,
+        subject: 'Votre demande a bien été reçue — Stackup Agency',
+        html: confirmHtml,
+      }).catch(() => { /* non bloquant */ })
+    }
+
     return NextResponse.json({ ok: true })
   } catch (err) {
-    console.error('Contact error (catch):', String(err))
     return NextResponse.json({ error: String(err) }, { status: 500 })
   }
 }

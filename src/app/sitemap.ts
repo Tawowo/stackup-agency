@@ -91,6 +91,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     // Pages statiques principales
     { url: `${base}/blog`, lastModified: now, changeFrequency: 'weekly', priority: 0.8 },
+    { url: `${base}/devis`, lastModified: now, changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${base}/offre-rentree`, lastModified: now, changeFrequency: 'weekly', priority: 0.8 },
+    { url: `${base}/outils`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${base}/outils/audit-site`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${base}/outils/studio-de-style`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${base}/ressources/cahier-des-charges`, lastModified: now, changeFrequency: 'monthly', priority: 0.6 },
+    { url: `${base}/comparatif/wix-wordpress-sur-mesure`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
     { url: `${base}/parrainage`, lastModified: now, changeFrequency: 'monthly', priority: 0.6 },
     { url: `${base}/cgv`, lastModified: now, changeFrequency: 'yearly', priority: 0.4 },
     { url: `${base}/ressources/documents`, lastModified: now, changeFrequency: 'monthly', priority: 0.5 },

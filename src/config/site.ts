@@ -24,7 +24,7 @@ export const SITE = {
     association: 149,
     gestion: 1447,
     ecommerce: 1647,
-    marketingMensuel: 299,
+    marketingMensuel: 0, // sur devis — ne pas afficher
     redactionArticle: 25,
     maintenanceStarter: 29,
     maintenancePro: 44,
@@ -95,8 +95,8 @@ export const SERVICES = [
   {
     id: 'marketing-digital',
     titre: 'Marketing digital',
-    prix: 299,
-    unite: '€/mois',
+    prix: null,
+    unite: null,
     delai: null,
     desc: 'Stratégie SEO, Google Ads, réseaux sociaux et reporting mensuel pour booster votre visibilité.',
     href: '/services',

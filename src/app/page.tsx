@@ -224,7 +224,7 @@ export default function Home() {
             <div className="space-y-3">
               {[
                 { q: 'Combien coûte un site internet professionnel ?', a: `Un site vitrine complet démarre à ${SITE.pricing.vitrine} €, livraison et hébergement 12 mois inclus. Pas de frais cachés.` },
-                { q: 'Combien de temps dure la réalisation ?', a: `Un site vitrine est livré en ${SITE.delais.vitrine} ouvrés à compter de la validation du design. Les délais sont contractuels.` },
+                { q: 'Combien de temps dure la réalisation ?', a: `Un site vitrine est livré en ${SITE.delais.vitrine} à compter de la validation du design. Les délais sont contractuels.` },
                 { q: 'Suis-je propriétaire de mon site ?', a: 'Oui, à 100 %. Vous recevez tous les accès (hébergement, nom de domaine, code source) à la livraison.' },
               ].map(({ q, a }) => (
                 <details key={q} className="group rounded-xl border border-white/10 bg-white/3 p-5 open:bg-white/5 transition-colors">

@@ -10,7 +10,7 @@ const serviceData = [
   { icon: ShoppingCart,   slug: 'site-ecommerce',     color: 'from-gold to-amber-400', bg: 'bg-gold/10 dark:bg-gold/10',         price: 'À partir de 1 647€',  border: 'border-gold/40      hover:border-gold'      },
   { icon: LayoutDashboard,slug: 'systeme-gestion',    color: 'from-electric to-navy',  bg: 'bg-electric/10 dark:bg-electric/10', price: 'À partir de 1 447€',  border: 'border-electric/40  hover:border-electric'  },
   { icon: Palette,        slug: 'site-association',   color: 'from-navy to-electric',  bg: 'bg-navy/10 dark:bg-navy/20',         price: 'À partir de 149€',    border: 'border-navy/30      hover:border-electric'  },
-  { icon: TrendingUp,     slug: 'marketing-digital',  color: 'from-gold to-amber-400', bg: 'bg-gold/10 dark:bg-gold/10',         price: 'À partir de 299€/mois', border: 'border-gold/40    hover:border-gold'      },
+  { icon: TrendingUp,     slug: 'marketing-digital',  color: 'from-gold to-amber-400', bg: 'bg-gold/10 dark:bg-gold/10',         price: 'Sur devis', border: 'border-gold/40    hover:border-gold'      },
 ]
 
 export default function Services() {
