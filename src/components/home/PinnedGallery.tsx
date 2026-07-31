@@ -8,13 +8,20 @@ import { realisations } from '@/lib/realisations'
 const PANELS = realisations  // all 6
 const N = PANELS.length
 
-export default function PinnedGallery() {
-  const wrapRef  = useRef<HTMLElement>(null)
-  const trackRef = useRef<HTMLDivElement>(null)
-  const rafRef   = useRef<number>(0)
+// SVG noise grain ID (inline, unique)
+const GRAIN_ID = 'gallery-grain'
 
-  const [active, setActive]     = useState(0)
-  const [progress, setProgress] = useState(0)
+export default function PinnedGallery() {
+  const wrapRef    = useRef<HTMLElement>(null)
+  const trackRef   = useRef<HTMLDivElement>(null)
+  const tintRef    = useRef<HTMLDivElement>(null)
+  const progBarRef = useRef<HTMLDivElement>(null)
+  const rafRef     = useRef<number>(0)
+  // refs pour le parallax du filigrane (un par panneau)
+  const watermarkRefs = useRef<(HTMLSpanElement | null)[]>([])
+
+  const [active, setActive]       = useState(0)
+  const [progress, setProgress]   = useState(0)
   const [isDesktop, setIsDesktop] = useState(false)
   const [reducedMotion, setReducedMotion] = useState(false)
 
@@ -33,22 +40,45 @@ export default function PinnedGallery() {
     return () => mqDesk.removeEventListener('change', onChange)
   }, [])
 
-  // Desktop: CSS-sticky progress via scroll listener (passive, rAF-throttled)
+  // Desktop: CSS-sticky progress + décor reactif
   const updateProgress = useCallback(() => {
-    const wrap = wrapRef.current
+    const wrap  = wrapRef.current
     const track = trackRef.current
     if (!wrap || !track) return
 
     const { top, height } = wrap.getBoundingClientRect()
     const vh = window.innerHeight
-    // scrollable distance = wrapper height - 1 viewport
     const scrollable = height - vh
     const p = Math.max(0, Math.min(1, -top / scrollable))
 
-    // Horizontal translation: -(N-1) × 100vw when p=1
+    // Track horizontal
     track.style.transform = `translateX(${-p * (N - 1) * 100}vw)`
 
-    setActive(Math.min(N - 1, Math.floor(p * N)))
+    // Parallax filigrane : décale de -15 % par rapport au panneau
+    // Chaque watermark est relatif à son panneau → offset = +15% de la tx globale - 15% de son propre panel offset
+    const globalTx = p * (N - 1) * 100  // vw positif (track va à gauche)
+    watermarkRefs.current.forEach((el, i) => {
+      if (!el) return
+      // panneau i commence à i*100vw depuis le début du track
+      // parallax : se déplace seulement 85 % aussi vite → +15 % de recul
+      const offset = globalTx * 0.15 - i * 100 * 0.15
+      el.style.transform = `translateX(${offset.toFixed(3)}vw)`
+    })
+
+    // Teinte réactive : voile radial couleur du panneau actif
+    const activeIdx = Math.min(N - 1, Math.floor(p * N))
+    if (tintRef.current) {
+      const col = PANELS[activeIdx].couleur
+      tintRef.current.style.background =
+        `radial-gradient(ellipse 70% 60% at 50% 50%, ${col}18 0%, transparent 70%)`
+    }
+
+    // Barre de progression
+    if (progBarRef.current) {
+      progBarRef.current.style.transform = `scaleX(${p})`
+    }
+
+    setActive(activeIdx)
     setProgress(p)
   }, [])
 
@@ -113,6 +143,18 @@ export default function PinnedGallery() {
   return (
     <section id="realisations">
 
+      {/* Filtre grain SVG (inline, 0 Ko réseau) */}
+      <svg width="0" height="0" style={{ position: 'absolute' }} aria-hidden="true">
+        <defs>
+          <filter id={GRAIN_ID} x="0%" y="0%" width="100%" height="100%" colorInterpolationFilters="sRGB">
+            <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch" result="noise" />
+            <feColorMatrix type="saturate" values="0" in="noise" result="greyNoise" />
+            <feBlend in="SourceGraphic" in2="greyNoise" mode="overlay" result="blended" />
+            <feComposite in="blended" in2="SourceGraphic" operator="in" />
+          </filter>
+        </defs>
+      </svg>
+
       {/* Header */}
       <div className="max-w-5xl mx-auto px-4 sm:px-6 pt-20 pb-10">
         <div className="flex items-end justify-between">
@@ -142,7 +184,39 @@ export default function PinnedGallery() {
         aria-label="Galerie de réalisations"
       >
         {/* Sticky scene */}
-        <div className="sticky top-0 h-screen overflow-hidden bg-background dark:bg-[#0A0F1C]">
+        <div className="sticky top-0 h-screen overflow-hidden" style={{
+          background: 'linear-gradient(160deg, #F0F4F8 0%, #E8EEF5 100%)',
+        }}>
+          {/* Dark mode background override via CSS variable (Tailwind dark won't work on inline styles) */}
+          <style>{`
+            @media (prefers-color-scheme: dark) { .gallery-scene-bg { background: linear-gradient(160deg, #080E1A 0%, #0A1525 100%) !important; } }
+            :root[class~="dark"] .gallery-scene-bg { background: linear-gradient(160deg, #080E1A 0%, #0A1525 100%) !important; }
+          `}</style>
+          <div className="gallery-scene-bg absolute inset-0" style={{
+            background: 'linear-gradient(160deg, #F0F4F8 0%, #E8EEF5 100%)',
+          }} />
+
+          {/* Grain 3 % — appliqué sur un div semi-transparent */}
+          <div
+            className="absolute inset-0 pointer-events-none"
+            style={{
+              opacity: 0.03,
+              filter: `url(#${GRAIN_ID})`,
+              background: '#888',
+            }}
+            aria-hidden="true"
+          />
+
+          {/* Teinte réactive : voile radial couleur du panneau actif */}
+          <div
+            ref={tintRef}
+            className="absolute inset-0 pointer-events-none"
+            style={{
+              transition: 'background 400ms ease',
+              background: `radial-gradient(ellipse 70% 60% at 50% 50%, ${PANELS[0].couleur}18 0%, transparent 70%)`,
+            }}
+            aria-hidden="true"
+          />
 
           {/* Counter */}
           <div className="absolute top-6 right-8 z-20 flex items-center gap-4" aria-hidden="true">
@@ -160,12 +234,25 @@ export default function PinnedGallery() {
 
           {/* Scroll hint */}
           <div
-            className="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-1.5 transition-opacity duration-500 pointer-events-none"
+            className="absolute bottom-14 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-1.5 transition-opacity duration-500 pointer-events-none"
             style={{ opacity: progress < 0.06 ? 1 : 0 }}
             aria-hidden="true"
           >
             <span className="text-foreground/30 dark:text-white/30 text-xs tracking-widest uppercase">Défiler</span>
             <div className="w-px h-10 bg-gradient-to-b from-foreground/20 dark:from-white/20 to-transparent" />
+          </div>
+
+          {/* Barre de progression — en bas de la scène */}
+          <div className="absolute bottom-0 left-0 right-0 z-20 h-px bg-navy/10 dark:bg-white/10" aria-hidden="true">
+            <div
+              ref={progBarRef}
+              className="h-full origin-left"
+              style={{
+                background: 'linear-gradient(90deg, #2D7DD2, #F59E0B)',
+                transform: 'scaleX(0)',
+                transition: 'none',
+              }}
+            />
           </div>
 
           {/* Track — N panels side by side, slides horizontally */}
@@ -174,19 +261,44 @@ export default function PinnedGallery() {
             className="flex h-full will-change-transform"
             style={{ width: `${N * 100}vw`, transition: 'none' }}
           >
+            {/* Veines SVG horizontales qui traversent toute la largeur du track */}
+            <svg
+              className="absolute top-0 left-0 pointer-events-none"
+              style={{ width: `${N * 100}vw`, height: '100%' }}
+              preserveAspectRatio="none"
+              aria-hidden="true"
+            >
+              <defs>
+                <linearGradient id="vein-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%"   stopColor="#2D7DD2" stopOpacity="0" />
+                  <stop offset="20%"  stopColor="#2D7DD2" stopOpacity="0.15" />
+                  <stop offset="50%"  stopColor="#F59E0B" stopOpacity="0.15" />
+                  <stop offset="80%"  stopColor="#2D7DD2" stopOpacity="0.15" />
+                  <stop offset="100%" stopColor="#F59E0B" stopOpacity="0" />
+                </linearGradient>
+              </defs>
+              {/* Veine 1 — 30 % du haut */}
+              <line x1="0" y1="30%" x2="100%" y2="30%"
+                stroke="url(#vein-grad)" strokeWidth="1" />
+              {/* Veine 2 — 68 % du haut */}
+              <line x1="0" y1="68%" x2="100%" y2="68%"
+                stroke="url(#vein-grad)" strokeWidth="1" />
+            </svg>
+
             {PANELS.map((r, i) => (
               <div
                 key={r.slug}
                 className="relative flex-shrink-0 h-full overflow-hidden"
                 style={{ width: '100vw' }}
               >
-                {/* Filigrane */}
+                {/* Filigrane avec parallax -15 % */}
                 <div
                   className="absolute inset-0 flex items-center justify-center pointer-events-none select-none overflow-hidden"
                   aria-hidden="true"
                 >
                   <span
-                    className="font-display font-bold whitespace-nowrap"
+                    ref={el => { watermarkRefs.current[i] = el }}
+                    className="font-display font-bold whitespace-nowrap will-change-transform"
                     style={{
                       fontSize: 'clamp(6rem, 14vw, 13rem)',
                       lineHeight: 1,
