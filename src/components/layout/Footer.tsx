@@ -43,27 +43,37 @@ const VILLES_PRINCIPALES = [
 
 export default function Footer() {
   return (
-    <footer className="bg-[#060D1A] text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <footer className="bg-[#060D1A] text-white relative overflow-hidden">
+      {/* Subtle top border gradient */}
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" aria-hidden="true" />
+      {/* Background halo */}
+      <div className="pointer-events-none absolute top-0 left-1/4 w-96 h-48 rounded-full"
+        aria-hidden="true"
+        style={{ background: 'radial-gradient(ellipse, rgba(45,125,210,0.05) 0%, transparent 70%)' }} />
+
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-10 mb-12">
 
           {/* Col 1 — Marque */}
           <div className="lg:col-span-1">
-            <Link href="/" className="flex items-center gap-2 mb-4">
-              <Image src="/logo-icon.png" alt="Stackup Agency" width={36} height={36} quality={100} className="object-contain brightness-0 invert" />
-              <span className="font-bold text-white">Stackup Agency</span>
+            <Link href="/" className="flex items-center gap-2 mb-4 group">
+              <Image src="/logo-icon.png" alt="Stackup Agency" width={36} height={36} quality={100} className="object-contain brightness-0 invert group-hover:brightness-0 group-hover:invert transition-all" />
+              <div className="flex flex-col leading-tight">
+                <span className="font-bold text-white text-base">Stackup</span>
+                <span className="font-light text-[9px] tracking-[0.2em] uppercase text-white/50">Agency</span>
+              </div>
             </Link>
-            <p className="text-white/50 text-sm mb-5 leading-relaxed">
+            <p className="text-white/45 text-sm mb-5 leading-relaxed">
               Agence web à Tours. Sites internet professionnels pour TPE et artisans, livrés en 10 jours.
             </p>
-            <div className="flex gap-3">
+            <div className="flex gap-2.5">
               {[
                 { Icon: LinkedinIcon, href: SITE.social.linkedin, label: 'LinkedIn' },
                 { Icon: InstagramIcon, href: SITE.social.instagram, label: 'Instagram' },
                 { Icon: FacebookIcon, href: SITE.social.facebook, label: 'Facebook' },
               ].map(({ Icon, href, label }) => (
                 <a key={label} href={href} aria-label={label} target="_blank" rel="noopener noreferrer"
-                  className="w-9 h-9 rounded-xl bg-white/10 hover:bg-electric flex items-center justify-center transition-colors">
+                  className="w-9 h-9 rounded-xl bg-white/8 border border-white/10 hover:bg-electric hover:border-electric/50 flex items-center justify-center transition-all duration-200">
                   <Icon />
                 </a>
               ))}
@@ -85,7 +95,7 @@ export default function Footer() {
                 { href: '/tarifs', label: 'Tarifs' },
               ].map(l => (
                 <li key={l.href}>
-                  <Link href={l.href} className="text-white/50 hover:text-white text-sm transition-colors block py-0.5">{l.label}</Link>
+                  <Link href={l.href} className="text-white/45 hover:text-white text-sm transition-colors duration-150 block py-0.5 hover:translate-x-0.5 transform">{l.label}</Link>
                 </li>
               ))}
             </ul>
@@ -105,7 +115,7 @@ export default function Footer() {
                 { href: '/creation-site-internet/artisan', label: 'Site artisan' },
               ].map(l => (
                 <li key={l.href}>
-                  <Link href={l.href} className="text-white/50 hover:text-white text-sm transition-colors block py-0.5">{l.label}</Link>
+                  <Link href={l.href} className="text-white/45 hover:text-white text-sm transition-colors duration-150 block py-0.5 hover:translate-x-0.5 transform">{l.label}</Link>
                 </li>
               ))}
             </ul>
@@ -144,7 +154,7 @@ export default function Footer() {
                 { href: '/plan-du-site', label: 'Plan du site' },
               ].map(l => (
                 <li key={l.href}>
-                  <Link href={l.href} className="text-white/50 hover:text-white text-sm transition-colors block py-0.5">{l.label}</Link>
+                  <Link href={l.href} className="text-white/45 hover:text-white text-sm transition-colors duration-150 block py-0.5 hover:translate-x-0.5 transform">{l.label}</Link>
                 </li>
               ))}
               <li className="pt-1 border-t border-white/10 mt-2">
@@ -157,11 +167,11 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-white/10 pt-8 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p className="text-white/60 text-xs">
+        <div className="border-t border-white/8 pt-8 flex flex-col sm:flex-row items-center justify-between gap-3">
+          <p className="text-white/40 text-xs">
             © {new Date().getFullYear()} Stackup Agency — Tours (37), France
           </p>
-          <p className="text-white/50 text-xs">
+          <p className="text-white/35 text-xs">
             Agence web à Tours — devis gratuit sous 72h
           </p>
         </div>

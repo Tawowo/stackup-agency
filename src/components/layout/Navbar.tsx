@@ -30,13 +30,24 @@ export default function Navbar() {
   const [servicesOpen, setServicesOpen] = useState(false)
   const [outilsOpen, setOutilsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+  const [navHidden, setNavHidden] = useState(false)
+  const lastScrollY = useRef(0)
   const pathname = usePathname()
   const servicesRef = useRef<HTMLDivElement>(null)
   const outilsRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 20)
-    window.addEventListener('scroll', onScroll)
+    const onScroll = () => {
+      const curr = window.scrollY
+      const prev = lastScrollY.current
+      lastScrollY.current = curr
+      setScrolled(curr > 20)
+      // Hide on scroll down (past 120px), reveal on scroll up
+      if (curr > 120 && curr > prev + 4) setNavHidden(true)
+      else if (curr < prev - 4) setNavHidden(false)
+      if (curr < 80) setNavHidden(false)
+    }
+    window.addEventListener('scroll', onScroll, { passive: true })
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
@@ -62,7 +73,7 @@ export default function Navbar() {
   const navBg = !isHome
     ? 'bg-[#1E3A5F]'
     : scrolled
-    ? 'bg-white/95 dark:bg-gray-900/95 backdrop-blur-md shadow-lg shadow-black/5 border-b border-navy/10 dark:border-white/10'
+    ? 'glass-panel'
     : 'bg-transparent'
 
   const linkClass = !isHome
@@ -74,11 +85,11 @@ export default function Navbar() {
   const barColor = open ? 'bg-white' : !isHome || scrolled ? 'bg-gray-900 dark:bg-white' : 'bg-white'
 
   const dropdownCls = (isOpen: boolean) =>
-    `absolute top-full left-1/2 -translate-x-1/2 mt-2 rounded-xl bg-white dark:bg-gray-900 shadow-xl border border-gray-100 dark:border-white/10 py-1 transition-all duration-150 ${isOpen ? 'opacity-100 pointer-events-auto translate-y-0' : 'opacity-0 pointer-events-none -translate-y-1'}`
+    `absolute top-full left-1/2 -translate-x-1/2 mt-2 rounded-2xl bg-white dark:bg-[#0D1626] shadow-lift border border-gray-100/80 dark:border-white/8 py-2 transition-all duration-200 dropdown-stagger ${isOpen ? 'opacity-100 pointer-events-auto translate-y-0 open' : 'opacity-0 pointer-events-none -translate-y-2'}`
 
   return (
     <>
-      <nav className={`fixed left-0 right-0 z-50 transition-all duration-300 ${navBg} top-0 ${banniereActive ? 'lg:top-9' : ''}`} role="navigation" aria-label="Navigation principale">
+      <nav className={`fixed left-0 right-0 z-50 nav-slide ${navBg} top-0 ${banniereActive ? 'lg:top-9' : ''} ${navHidden ? 'nav-hidden' : 'nav-visible'}`} role="navigation" aria-label="Navigation principale">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-6 xl:px-8">
           <div className="flex items-center justify-between h-16 lg:h-20">
             <Link href="/" className="flex items-center gap-2.5 shrink-0" aria-label="Stackup Agency — Accueil">
@@ -105,14 +116,14 @@ export default function Navbar() {
                 <div className={`${dropdownCls(servicesOpen)} w-52`} role="menu">
                   {SERVICES_LINKS.map(l => (
                     <Link key={l.href} href={l.href} role="menuitem" onClick={() => setServicesOpen(false)}
-                      className="block px-4 py-2.5 text-sm text-gray-700 dark:text-white/80 hover:bg-blue-50 dark:hover:bg-white/5 hover:text-electric-ink dark:hover:text-electric transition-colors">
+                      className="dropdown-item flex items-center gap-2 px-4 py-2.5 text-sm text-gray-700 dark:text-white/80 hover:bg-blue-50/70 dark:hover:bg-white/5 hover:text-electric-ink dark:hover:text-electric transition-colors rounded-lg mx-1">
                       {l.label}
                     </Link>
                   ))}
                   <div className="border-t border-gray-100 dark:border-white/10 my-1" />
                   <Link href="/services" role="menuitem" onClick={() => setServicesOpen(false)}
-                    className="block px-4 py-2.5 text-sm font-semibold text-electric-ink dark:text-electric hover:bg-blue-50 dark:hover:bg-white/5 transition-colors">
-                    Voir tous les services →
+                    className="dropdown-item flex items-center gap-1.5 px-4 py-2.5 text-sm font-semibold text-electric-ink dark:text-electric hover:bg-blue-50/70 dark:hover:bg-white/5 transition-colors rounded-lg mx-1">
+                    Voir tous les services <span className="arrow-slide">→</span>
                   </Link>
                 </div>
               </div>
@@ -136,14 +147,14 @@ export default function Navbar() {
                 <div className={`${dropdownCls(outilsOpen)} w-56`} role="menu">
                   {OUTILS_LINKS.map(l => (
                     <Link key={l.href} href={l.href} role="menuitem" onClick={() => setOutilsOpen(false)}
-                      className="block px-4 py-2.5 text-sm text-gray-700 dark:text-white/80 hover:bg-blue-50 dark:hover:bg-white/5 hover:text-electric-ink dark:hover:text-electric transition-colors">
+                      className="dropdown-item flex items-center gap-2 px-4 py-2.5 text-sm text-gray-700 dark:text-white/80 hover:bg-blue-50/70 dark:hover:bg-white/5 hover:text-electric-ink dark:hover:text-electric transition-colors rounded-lg mx-1">
                       {l.label}
                     </Link>
                   ))}
-                  <div className="border-t border-gray-100 dark:border-white/10 my-1" />
+                  <div className="border-t border-gray-100 dark:border-white/10 my-1 mx-3" />
                   <Link href="/outils" role="menuitem" onClick={() => setOutilsOpen(false)}
-                    className="block px-4 py-2.5 text-sm font-semibold text-electric-ink dark:text-electric hover:bg-blue-50 dark:hover:bg-white/5 transition-colors">
-                    Tous les outils →
+                    className="dropdown-item flex items-center gap-1.5 px-4 py-2.5 text-sm font-semibold text-electric-ink dark:text-electric hover:bg-blue-50/70 dark:hover:bg-white/5 transition-colors rounded-lg mx-1">
+                    Tous les outils <span className="arrow-slide">→</span>
                   </Link>
                 </div>
               </div>

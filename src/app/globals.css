@@ -566,3 +566,345 @@ blockquote.bq-gold {
   transition: background-size 0.3s ease;
 }
 .link-gradient:hover { background-size: 100% 1.5px; }
+
+/* ━━━ REFONTE VISUELLE — SYSTÈME PREMIUM ━━━━━━━━━━━━━━━━━━━━━━━ */
+
+/* ─── Text selection brand ───────────────────────────────── */
+::selection {
+  background: rgba(45,125,210,0.25);
+  color: inherit;
+}
+.dark ::selection {
+  background: rgba(45,125,210,0.40);
+}
+
+/* ─── Cursor text on selectable content ─────────────────── */
+p, h1, h2, h3, h4, li, blockquote { cursor: default; }
+a, button, [role="button"] { cursor: pointer; }
+
+/* ─── Elevation tokens (multi-layer shadows) ─────────────── */
+.shadow-lift-sm {
+  box-shadow:
+    0 1px 2px rgba(15,23,42,0.06),
+    0 4px 12px rgba(15,23,42,0.08);
+}
+.shadow-lift {
+  box-shadow:
+    0 2px 4px rgba(15,23,42,0.04),
+    0 8px 24px rgba(15,23,42,0.10),
+    0 24px 48px rgba(15,23,42,0.06);
+}
+.shadow-lift-lg {
+  box-shadow:
+    0 4px 8px rgba(15,23,42,0.04),
+    0 16px 40px rgba(15,23,42,0.12),
+    0 40px 80px rgba(15,23,42,0.08);
+}
+.dark .shadow-lift-sm {
+  box-shadow:
+    0 1px 2px rgba(0,0,0,0.4),
+    0 4px 12px rgba(0,0,0,0.3);
+}
+.dark .shadow-lift {
+  box-shadow:
+    0 2px 4px rgba(0,0,0,0.3),
+    0 8px 24px rgba(0,0,0,0.4),
+    0 24px 48px rgba(0,0,0,0.2);
+}
+
+/* ─── Gradient signature utility ─────────────────────────── */
+.gradient-sig {
+  background: linear-gradient(135deg, #2D7DD2 0%, #1E3A5F 50%, #F59E0B 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.gradient-sig-h {
+  background: linear-gradient(90deg, #2D7DD2, #F59E0B);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ─── Glass panel (navbar + cards at scroll) ─────────────── */
+.glass-panel {
+  background: rgba(248,250,252,0.90);
+  backdrop-filter: saturate(180%) blur(16px);
+  -webkit-backdrop-filter: saturate(180%) blur(16px);
+  border-bottom: 1px solid rgba(30,58,95,0.08);
+  box-shadow: 0 1px 0 rgba(255,255,255,0.6), 0 4px 24px rgba(15,23,42,0.06);
+}
+.dark .glass-panel {
+  background: rgba(10,15,28,0.88);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  box-shadow: 0 1px 0 rgba(255,255,255,0.03), 0 4px 24px rgba(0,0,0,0.3);
+}
+
+/* ─── Navbar hide / show on scroll direction ─────────────── */
+.nav-slide {
+  transition: transform 0.35s cubic-bezier(0.4,0,0.2,1), background 0.3s ease, box-shadow 0.3s ease;
+}
+.nav-slide.nav-hidden {
+  transform: translateY(-110%);
+}
+.nav-slide.nav-visible {
+  transform: translateY(0);
+}
+
+/* ─── Dropdown stagger ───────────────────────────────────── */
+.dropdown-item {
+  transition: opacity 0.15s ease, transform 0.15s ease;
+}
+.dropdown-item:nth-child(1) { transition-delay: 0ms; }
+.dropdown-item:nth-child(2) { transition-delay: 30ms; }
+.dropdown-item:nth-child(3) { transition-delay: 60ms; }
+.dropdown-item:nth-child(4) { transition-delay: 90ms; }
+.dropdown-item:nth-child(5) { transition-delay: 120ms; }
+.dropdown-item:nth-child(6) { transition-delay: 150ms; }
+
+/* Stagger in: items start shifted up, animate in when menu opens */
+.dropdown-stagger .dropdown-item {
+  opacity: 0;
+  transform: translateY(-4px);
+}
+.dropdown-stagger.open .dropdown-item {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ─── FAQ accordion (grid-rows animation) ────────────────── */
+.faq-body {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.35s cubic-bezier(0.4,0,0.2,1);
+}
+.faq-body.open {
+  grid-template-rows: 1fr;
+}
+.faq-body > div {
+  overflow: hidden;
+}
+.faq-chevron {
+  transition: transform 0.3s cubic-bezier(0.4,0,0.2,1);
+}
+.faq-chevron.open {
+  transform: rotate(180deg);
+}
+/* FAQ active underline */
+.faq-underline {
+  position: relative;
+}
+.faq-underline::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0;
+  height: 1.5px;
+  width: 0;
+  background: linear-gradient(90deg, #2D7DD2, #F59E0B);
+  transition: width 0.4s cubic-bezier(0.16,1,0.3,1);
+}
+.faq-underline.open::after {
+  width: 100%;
+}
+
+/* ─── Typing cursor blink ────────────────────────────────── */
+@keyframes cursor-blink {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+.cursor-blink {
+  display: inline-block;
+  width: 2px;
+  height: 1em;
+  background: #60a5fa;
+  vertical-align: text-bottom;
+  animation: cursor-blink 0.8s step-end infinite;
+}
+
+/* ─── Deploy progress bar ────────────────────────────────── */
+@keyframes deploy-progress {
+  0%   { width: 0%; }
+  15%  { width: 20%; }
+  40%  { width: 55%; }
+  70%  { width: 78%; }
+  88%  { width: 92%; }
+  100% { width: 100%; }
+}
+.deploy-bar {
+  height: 3px;
+  background: linear-gradient(90deg, #2D7DD2, #10B981);
+  border-radius: 2px;
+  animation: deploy-progress 1.6s cubic-bezier(0.4,0,0.2,1) forwards;
+}
+
+/* ─── Halo pulsing CTA ───────────────────────────────────── */
+@keyframes halo-pulse {
+  0%   { transform: scale(1); opacity: 0.15; }
+  50%  { transform: scale(1.15); opacity: 0.06; }
+  100% { transform: scale(1); opacity: 0.15; }
+}
+.cta-halo::before {
+  content: '';
+  position: absolute;
+  inset: -40px;
+  background: radial-gradient(ellipse at center, rgba(45,125,210,0.25) 0%, transparent 70%);
+  animation: halo-pulse 3s ease-in-out infinite;
+  pointer-events: none;
+}
+
+/* ─── Badge pulse (micro animation) ─────────────────────── */
+@keyframes badge-dot-pulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.4); opacity: 0.7; }
+}
+.badge-dot-pulse {
+  animation: badge-dot-pulse 2s ease-in-out infinite;
+}
+
+/* ─── Odometer step numbers ──────────────────────────────── */
+@keyframes odometer-in {
+  from { transform: translateY(100%); opacity: 0; }
+  to   { transform: translateY(0); opacity: 1; }
+}
+.odometer-digit {
+  display: inline-block;
+  overflow: hidden;
+  line-height: 1;
+}
+.is-visible .odometer-digit-inner {
+  animation: odometer-in 0.5s cubic-bezier(0.16,1,0.3,1) both;
+}
+.is-visible .odometer-digit-inner:nth-child(1) { animation-delay: 0ms; }
+.is-visible .odometer-digit-inner:nth-child(2) { animation-delay: 60ms; }
+
+/* ─── Reveal from left / right ───────────────────────────── */
+.reveal-from-left {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 0.6s ease, transform 0.6s cubic-bezier(0.16,1,0.3,1);
+}
+.reveal-from-left.reveal-pending {
+  opacity: 0;
+  transform: translateX(-32px);
+}
+.reveal-from-right {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 0.6s ease, transform 0.6s cubic-bezier(0.16,1,0.3,1);
+}
+.reveal-from-right.reveal-pending {
+  opacity: 0;
+  transform: translateX(32px);
+}
+.reveal-from-left.is-visible,
+.reveal-from-right.is-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ─── Stagger delays extended ────────────────────────────── */
+.reveal-item:nth-child(8) { transition-delay: 560ms; }
+.reveal-item:nth-child(9) { transition-delay: 640ms; }
+.reveal-item:nth-child(10) { transition-delay: 720ms; }
+[style*="--delay-0"] { transition-delay: 0ms !important; }
+[style*="--delay-1"] { transition-delay: 100ms !important; }
+[style*="--delay-2"] { transition-delay: 200ms !important; }
+[style*="--delay-3"] { transition-delay: 300ms !important; }
+
+/* ─── Process step upgraded circles ─────────────────────── */
+.step-circle {
+  position: relative;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #1E3A5F, #2D7DD2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.9rem;
+  box-shadow: 0 4px 12px rgba(45,125,210,0.3);
+  flex-shrink: 0;
+}
+.step-circle::after {
+  content: '';
+  position: absolute;
+  inset: -3px;
+  border-radius: 50%;
+  background: conic-gradient(from 0deg, rgba(45,125,210,0.4), transparent);
+  z-index: -1;
+}
+.is-visible .step-circle {
+  animation: icon-pulse 0.5s cubic-bezier(0.16,1,0.3,1) both;
+}
+
+/* ─── Marquee keyword gradient ───────────────────────────── */
+.marquee-keyword {
+  background: linear-gradient(90deg, #2D7DD2, #F59E0B);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+}
+
+/* ─── Card border gradient (on hover) ───────────────────── */
+.card-border-gradient {
+  position: relative;
+  border: 1px solid transparent;
+  background-clip: padding-box;
+}
+.card-border-gradient::after {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  background: linear-gradient(135deg, rgba(45,125,210,0), rgba(45,125,210,0.35), rgba(245,158,11,0));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+}
+.card-border-gradient:hover::after { opacity: 1; }
+
+/* ─── Arrow slide on hover ───────────────────────────────── */
+.arrow-slide {
+  transition: transform 0.2s cubic-bezier(0.16,1,0.3,1);
+  display: inline-block;
+}
+.group:hover .arrow-slide { transform: translateX(4px); }
+
+/* ─── Page voile transition (≤350ms) ─────────────────────── */
+@keyframes voile-in {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes voile-out {
+  from { opacity: 1; }
+  to   { opacity: 0; }
+}
+.page-voile-in {
+  animation: voile-in 0.3s cubic-bezier(0.16,1,0.3,1) both;
+}
+
+/* ─── Focus ring premium ─────────────────────────────────── */
+:focus-visible {
+  outline: 2px solid rgba(45,125,210,0.8);
+  outline-offset: 3px;
+  border-radius: 4px;
+  box-shadow: 0 0 0 4px rgba(45,125,210,0.12);
+}
+
+/* ─── Prefers-reduced-motion — all new animations ─────────── */
+@media (prefers-reduced-motion: reduce) {
+  .cursor-blink { animation: none; opacity: 1; }
+  .deploy-bar { animation: none; width: 100%; }
+  .cta-halo::before { animation: none; }
+  .badge-dot-pulse { animation: none; }
+  .is-visible .odometer-digit-inner { animation: none; }
+  .reveal-from-left, .reveal-from-right { opacity: 1; transform: none; transition: none; }
+  .card-gradient-border::before { animation: none; }
+  .nav-slide { transition: background 0.3s ease; }
+  .faq-body { transition: none; }
+  .faq-chevron { transition: none; }
+  .marquee-track { animation: none; }
+}
