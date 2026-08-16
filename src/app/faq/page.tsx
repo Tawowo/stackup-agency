@@ -1,8 +1,8 @@
 /* eslint-disable react/no-unescaped-entities */
 import Link from 'next/link'
-import { ChevronRight } from 'lucide-react'
 import { SITE } from '@/config/site'
 import Breadcrumb from '@/components/ui/Breadcrumb'
+import FaqAccordion from '@/components/ui/FaqAccordion'
 
 export const metadata = {
   title: 'FAQ — Questions fréquentes création de site',
@@ -101,18 +101,8 @@ export default function FAQPage() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 py-16 space-y-12">
         {FAQ_ITEMS.map(cat => (
           <section key={cat.cat}>
-            <h2 className="text-xl font-bold text-foreground dark:text-white mb-4">{cat.cat}</h2>
-            <div className="space-y-3">
-              {cat.faqs.map(faq => (
-                <details key={faq.q} className="group rounded-xl border border-navy/20 dark:border-white/10 overflow-hidden">
-                  <summary className="flex items-center justify-between p-4 cursor-pointer font-medium text-foreground dark:text-white list-none">
-                    {faq.q}
-                    <ChevronRight size={16} className="text-white/40 group-open:rotate-90 transition-transform flex-shrink-0" />
-                  </summary>
-                  <div className="px-4 pb-4 text-foreground/70 dark:text-white/70 text-sm leading-relaxed">{faq.a}</div>
-                </details>
-              ))}
-            </div>
+            <h2 className="text-xl font-bold text-foreground dark:text-white mb-4 pb-2 border-b border-navy/10 dark:border-white/8">{cat.cat}</h2>
+            <FaqAccordion items={cat.faqs} />
           </section>
         ))}
 

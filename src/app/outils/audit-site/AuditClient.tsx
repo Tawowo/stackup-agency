@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 'use client'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { Search, Loader2, CheckCircle, AlertTriangle, XCircle, ChevronDown, ChevronUp } from 'lucide-react'
 
@@ -12,12 +12,28 @@ interface AuditResult {
 }
 
 function ScoreGauge({ label, score }: { label: string; score: number }) {
+  const [displayed, setDisplayed] = useState(0)
   const color = score >= 90 ? 'text-success' : score >= 50 ? 'text-gold' : 'text-red-500'
   const ring = score >= 90 ? 'stroke-success' : score >= 50 ? 'stroke-gold' : 'stroke-red-500'
   const Icon = score >= 90 ? CheckCircle : score >= 50 ? AlertTriangle : XCircle
   const r = 28
   const circ = 2 * Math.PI * r
-  const dash = (score / 100) * circ
+  const dash = (displayed / 100) * circ
+
+  useEffect(() => {
+    let start: number
+    let raf: number
+    const duration = 900
+    const tick = (now: number) => {
+      if (!start) start = now
+      const p = Math.min((now - start) / duration, 1)
+      const eased = 1 - Math.pow(1 - p, 3)
+      setDisplayed(Math.round(eased * score))
+      if (p < 1) raf = requestAnimationFrame(tick)
+    }
+    raf = requestAnimationFrame(tick)
+    return () => cancelAnimationFrame(raf)
+  }, [score])
 
   return (
     <div className="flex flex-col items-center gap-2">
@@ -25,10 +41,10 @@ function ScoreGauge({ label, score }: { label: string; score: number }) {
         <svg className="w-full h-full -rotate-90" viewBox="0 0 72 72">
           <circle cx="36" cy="36" r={r} fill="none" className="stroke-navy/10 dark:stroke-white/10" strokeWidth="6" />
           <circle cx="36" cy="36" r={r} fill="none" className={ring} strokeWidth="6"
-            strokeDasharray={`${dash} ${circ}`} strokeLinecap="round" style={{ transition: 'stroke-dasharray 0.6s ease' }} />
+            strokeDasharray={`${dash} ${circ}`} strokeLinecap="round" style={{ transition: 'stroke-dasharray 0.05s linear' }} />
         </svg>
         <div className="absolute inset-0 flex items-center justify-center">
-          <span className={`text-xl font-bold tabular-nums ${color}`}>{score}</span>
+          <span className={`text-xl font-bold tabular-nums ${color}`}>{displayed}</span>
         </div>
       </div>
       <div className="flex items-center gap-1 text-xs text-foreground/70 dark:text-white/60">
@@ -126,8 +142,22 @@ export default function AuditClient() {
         </div>
       )}
 
+      {loading && (
+        <div className="flex flex-col items-center gap-4 py-12">
+          <div className="relative w-16 h-16">
+            <svg className="w-full h-full animate-spin" viewBox="0 0 64 64">
+              <circle cx="32" cy="32" r="28" fill="none" className="stroke-navy/10 dark:stroke-white/10" strokeWidth="4" />
+              <circle cx="32" cy="32" r="28" fill="none" className="stroke-electric" strokeWidth="4"
+                strokeDasharray="44 132" strokeLinecap="round" />
+            </svg>
+          </div>
+          <p className="text-foreground/60 dark:text-white/50 text-sm">Analyse en cours via Google PageSpeed…</p>
+          <p className="text-foreground/40 dark:text-white/30 text-xs">Cela peut prendre 10 à 20 secondes</p>
+        </div>
+      )}
+
       {result && (
-        <div className="space-y-8">
+        <div className="space-y-8 reveal-item">
           {/* URL analysée */}
           <div className="text-xs text-foreground/40 dark:text-white/30 truncate">
             Résultats pour : <span className="font-mono text-foreground/60 dark:text-white/50">{result.url}</span>

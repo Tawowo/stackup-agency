@@ -332,7 +332,7 @@ export default function PinnedGallery() {
                     </div>
 
                     {/* Screenshot */}
-                    <div className="relative overflow-hidden" style={{ height: 'clamp(280px, 38vh, 420px)' }}>
+                    <div className="gallery-screenshot-wrap relative overflow-hidden" style={{ height: 'clamp(280px, 38vh, 420px)' }}>
                       <Image
                         src={r.image}
                         alt={`Capture d'écran ${r.nom}`}

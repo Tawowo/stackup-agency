@@ -46,17 +46,18 @@ export default function RealisationsPage() {
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 py-16">
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
-          {realisations.map(r => (
+          {realisations.map((r, idx) => (
             <Link key={r.slug} href={`/realisations/${r.slug}`}
-              className="group rounded-2xl border border-navy/20 dark:border-white/10 overflow-hidden hover:border-electric/30 transition-colors">
-              <div className="h-40 relative overflow-hidden" style={{ background: r.couleur }}>
+              className={`reveal-item real-card group rounded-2xl border border-navy/20 dark:border-white/10 overflow-hidden hover:border-electric/30 hover:shadow-xl hover:-translate-y-1 transition-all duration-300`}
+              style={{ animationDelay: `${idx * 60}ms` }}>
+              <div className="h-44 relative overflow-hidden real-thumb" style={{ background: r.couleur }}>
                 {'image' in r && r.image ? (
                   <Image
                     src={(r as { image: string }).image}
                     alt={`Capture d'écran ${r.nom}`}
                     fill
                     sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-                    className="object-cover object-top"
+                    className="object-cover object-top transition-transform duration-500 group-hover:scale-[1.04]"
                     loading="lazy"
                   />
                 ) : (
@@ -65,20 +66,27 @@ export default function RealisationsPage() {
                     <span className="absolute inset-0 flex items-center justify-center text-white/80 font-bold text-2xl tracking-tight">{r.nom.charAt(0)}</span>
                   </>
                 )}
-                <div className="absolute top-3 right-3">
-                  <span className="px-2 py-1 bg-black/40 text-white/80 text-xs rounded-full font-medium">Démonstration</span>
+                {/* Overlay reveal */}
+                <div className="real-card-overlay" />
+                {/* CTA reveal on hover */}
+                <div className="real-card-actions flex items-center gap-2">
+                  <span className="px-3 py-1.5 bg-white text-navy font-semibold text-xs rounded-lg">Voir la fiche →</span>
+                </div>
+                <div className="absolute top-3 right-3 z-10">
+                  <span className="px-2 py-1 bg-black/50 text-white/80 text-xs rounded-full font-medium">Démonstration</span>
                 </div>
               </div>
               <div className="p-5">
                 <div className="flex items-start justify-between mb-2">
                   <h2 className="font-bold text-foreground dark:text-white group-hover:text-electric transition-colors">{r.nom}</h2>
-                  <ChevronRight size={16} className="text-white/30 group-hover:text-electric transition-colors flex-shrink-0 mt-0.5" />
+                  <ChevronRight size={16} className="text-white/30 group-hover:text-electric transition-all group-hover:translate-x-0.5 flex-shrink-0 mt-0.5" />
                 </div>
                 <p className="text-xs text-foreground/70 dark:text-white/50 mb-2">{r.type}</p>
                 <p className="text-sm text-foreground/70 dark:text-white/70 line-clamp-2">{r.description}</p>
                 <div className="flex flex-wrap gap-1.5 mt-3">
                   {r.tags.slice(0, 3).map(tag => (
-                    <span key={tag} className="px-2 py-0.5 rounded-full text-xs border border-white/10 text-foreground/70 dark:text-white/50">{tag}</span>
+                    <span key={tag} className="px-2 py-0.5 rounded-full text-xs border"
+                      style={{ background: `${r.couleur}12`, color: r.accent, borderColor: `${r.accent}30` }}>{tag}</span>
                   ))}
                 </div>
               </div>

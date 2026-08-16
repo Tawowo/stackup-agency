@@ -93,9 +93,10 @@ export default function AProposPage() {
         <section>
           <h2 className="text-2xl font-bold text-foreground dark:text-white mb-8">Notre méthode en 5 étapes</h2>
           <div className="space-y-4">
-            {METHODE.map(step => (
-              <div key={step.n} className="flex items-start gap-5 p-5 rounded-2xl border border-white/10 bg-white/2">
-                <div className="w-10 h-10 rounded-xl bg-blue-500/20 flex items-center justify-center flex-shrink-0 text-navy dark:text-electric font-bold text-sm">
+            {METHODE.map((step, i) => (
+              <div key={step.n} className={`reveal-item step-line flex items-start gap-5 p-5 rounded-2xl border border-navy/10 dark:border-white/10 bg-white dark:bg-white/2 hover:border-electric/30 transition-colors duration-200`}
+                style={{ animationDelay: `${i * 80}ms` }}>
+                <div className="step-circle w-10 h-10 flex-shrink-0 text-sm font-bold flex items-center justify-center">
                   {step.n}
                 </div>
                 <div>
@@ -112,14 +113,16 @@ export default function AProposPage() {
           <h2 className="text-2xl font-bold text-foreground dark:text-white mb-6">Technologies</h2>
           <div className="grid sm:grid-cols-2 gap-3">
             {[
-              { label: 'Next.js', desc: 'Performance, SEO natif, déploiement edge' },
-              { label: 'TypeScript', desc: 'Fiabilité, maintenabilité, zéro bug silencieux' },
-              { label: 'Tailwind CSS', desc: 'Interfaces précises, cohérentes, rapides' },
-              { label: 'PostgreSQL / Prisma', desc: 'Bases de données robustes pour applications métier' },
-            ].map(t => (
-              <div key={t.label} className="p-4 rounded-xl border border-white/10 bg-white/3">
-                <div className="font-semibold text-foreground dark:text-white text-sm mb-1">{t.label}</div>
-                <div className="text-foreground/70 dark:text-white/50 text-xs">{t.desc}</div>
+              { label: 'Next.js', desc: 'Performance, SEO natif, déploiement edge', icon: '⚡' },
+              { label: 'TypeScript', desc: 'Fiabilité, maintenabilité, zéro bug silencieux', icon: '🛡️' },
+              { label: 'Tailwind CSS', desc: 'Interfaces précises, cohérentes, rapides', icon: '🎨' },
+              { label: 'PostgreSQL / Prisma', desc: 'Bases de données robustes pour applications métier', icon: '🗄️' },
+            ].map((tech, i) => (
+              <div key={tech.label} className="reveal-item p-4 rounded-xl border border-navy/10 dark:border-white/10 bg-white dark:bg-white/3 hover:border-electric/30 hover:-translate-y-0.5 transition-all duration-200 group"
+                style={{ animationDelay: `${i * 60}ms` }}>
+                <div className="text-xl mb-2">{tech.icon}</div>
+                <div className="font-semibold text-foreground dark:text-white text-sm mb-1 group-hover:text-electric transition-colors">{tech.label}</div>
+                <div className="text-foreground/70 dark:text-white/50 text-xs">{tech.desc}</div>
               </div>
             ))}
           </div>
@@ -136,8 +139,8 @@ export default function AProposPage() {
               'La maintenance et l\'hébergement font partie du service, pas une option cachée',
               'Votre site vous appartient — export et accès complets garantis',
               'Pas de clients fictifs, pas de témoignages inventés : uniquement ce que nous avons réellement fait',
-            ].map(item => (
-              <div key={item} className="flex items-start gap-3">
+            ].map((item, i) => (
+              <div key={item} className="reveal-item flex items-start gap-3" style={{ animationDelay: `${i * 50}ms` }}>
                 <CheckCircle size={18} className="text-success mt-0.5 flex-shrink-0" />
                 <span className="text-foreground/80 dark:text-white/80">{item}</span>
               </div>

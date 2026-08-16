@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { Clock, Tag, Home, ChevronRight } from 'lucide-react'
 import RelatedPosts from '@/components/blog/RelatedPosts'
 import AuthorByline from '@/components/blog/AuthorByline'
+import ReadingProgress from '@/components/blog/ReadingProgress'
 
 export async function generateStaticParams() {
   const posts = getAllPosts()
@@ -84,6 +85,7 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
 
   return (
     <div className="min-h-screen bg-background dark:bg-[#0A0F1C]">
+      <ReadingProgress />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(blogPostingSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 

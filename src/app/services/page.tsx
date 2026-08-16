@@ -103,32 +103,35 @@ export default function ServicesPage() {
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 py-16 space-y-8">
         <EncartRentree />
-        {SERVICES.map(s => (
-          <div key={s.slug} className="rounded-2xl border border-navy/20 dark:border-white/10 p-6 lg:p-8 hover:border-electric/30 transition-colors">
+        {SERVICES.map((s, idx) => (
+          <div key={s.slug} className="reveal-item group rounded-2xl border border-navy/20 dark:border-white/10 p-6 lg:p-8 hover:border-electric/30 hover:shadow-lg hover:shadow-electric/5 transition-all duration-300 relative overflow-hidden"
+            style={{ animationDelay: `${idx * 60}ms` }}>
+            {/* Accent top line */}
+            <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-electric/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 mb-4">
               <div>
-                <h2 className="text-2xl font-bold text-foreground dark:text-white mb-1">{s.titre}</h2>
+                <h2 className="text-2xl font-bold text-foreground dark:text-white mb-1 group-hover:text-electric transition-colors">{s.titre}</h2>
                 <p className="text-foreground/60 dark:text-white/60 text-sm">Idéal pour : {s.ideal}</p>
               </div>
               <div className="text-right flex-shrink-0">
-                <div className="text-3xl font-bold text-navy dark:text-gold">{s.prix}€</div>
+                <div className="text-3xl font-bold text-navy dark:text-gold tabular-nums">{s.prix}€</div>
                 <div className="text-xs text-foreground/70 dark:text-white/50 mt-0.5">Livraison : {s.delai}</div>
               </div>
             </div>
             <p className="text-foreground/80 dark:text-white/80 mb-5">{s.desc}</p>
             <div className="grid sm:grid-cols-2 gap-2 mb-6">
-              {s.inclus.map(item => (
-                <div key={item} className="flex items-center gap-2">
+              {s.inclus.map((item, ci) => (
+                <div key={item} className="check-item flex items-center gap-2" style={{ transitionDelay: `${ci * 40}ms` }}>
                   <CheckCircle size={15} className="text-success flex-shrink-0" />
                   <span className="text-sm text-foreground/70 dark:text-white/70">{item}</span>
                 </div>
               ))}
             </div>
             <div className="flex flex-wrap gap-3">
-              <Link href={`/services/${s.slug}`} className="flex items-center gap-1 px-5 py-2.5 bg-navy hover:bg-electric text-white text-sm font-semibold rounded-xl transition-colors">
-                Voir l'offre <ChevronRight size={14} />
+              <Link href={`/services/${s.slug}`} className="flex items-center gap-1.5 px-5 py-2.5 bg-navy hover:bg-electric text-white text-sm font-semibold rounded-xl transition-all hover:-translate-y-0.5">
+                Voir l&apos;offre <ChevronRight size={14} />
               </Link>
-              <Link href="/contact" className="px-5 py-2.5 border border-foreground/20 dark:border-white/20 text-foreground dark:text-white hover:bg-foreground/5 dark:hover:bg-white/10 text-sm font-semibold rounded-xl transition-colors">
+              <Link href="/contact" className="px-5 py-2.5 border border-foreground/20 dark:border-white/20 text-foreground dark:text-white hover:bg-foreground/5 dark:hover:bg-white/10 text-sm font-semibold rounded-xl transition-all hover:-translate-y-0.5">
                 Demander un devis
               </Link>
             </div>

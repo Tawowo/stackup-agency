@@ -35,11 +35,16 @@ export default function MiniHero({ title, subtitle, breadcrumb, children }: Prop
         />
       </svg>
 
+      {/* Halo radial */}
+      <div className="pointer-events-none absolute top-0 right-1/4 w-96 h-48 rounded-full"
+        aria-hidden="true"
+        style={{ background: 'radial-gradient(ellipse, rgba(45,125,210,0.06) 0%, transparent 70%)' }} />
+
       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6">
         {breadcrumb && <Breadcrumb items={breadcrumb} />}
-        <h1 className="font-display text-white mt-2">{title}</h1>
+        <h1 className="reveal-item font-display text-white mt-2">{title}</h1>
         {subtitle && (
-          <p className="text-white/70 text-lg max-w-2xl mt-3">{subtitle}</p>
+          <p className="reveal-item text-white/70 text-lg max-w-2xl mt-3" style={{ animationDelay: '80ms' }}>{subtitle}</p>
         )}
         {children}
       </div>

@@ -104,12 +104,13 @@ export default function ParrainagePage() {
         <section>
           <h2 className="text-2xl font-bold text-foreground dark:text-white mb-8">Comment ça fonctionne</h2>
           <div className="grid sm:grid-cols-3 gap-6">
-            {STEPS.map(({ Icon, num, titre, desc }) => (
-              <div key={num} className="relative p-6 rounded-2xl border border-navy/10 dark:border-white/10 bg-white dark:bg-[#0D1626]">
-                <div className="absolute -top-3 -left-3 w-8 h-8 rounded-full bg-gold flex items-center justify-center text-ink font-bold text-xs">
+            {STEPS.map(({ Icon, num, titre, desc }, i) => (
+              <div key={num} className="reveal-item relative p-6 rounded-2xl border border-navy/10 dark:border-white/10 bg-white dark:bg-[#0D1626] hover:border-gold/30 hover:-translate-y-0.5 transition-all duration-200"
+                style={{ animationDelay: `${i * 80}ms` }}>
+                <div className="absolute -top-3 -left-3 w-8 h-8 rounded-full bg-gold flex items-center justify-center text-ink font-bold text-xs shadow-md shadow-gold/30">
                   {num}
                 </div>
-                <div className="w-10 h-10 rounded-xl bg-gold/10 flex items-center justify-center mb-4">
+                <div className="w-10 h-10 rounded-xl bg-gold/10 flex items-center justify-center mb-4 group-hover:bg-gold/20 transition-colors">
                   <Icon size={20} className="text-gold" />
                 </div>
                 <h3 className="font-bold text-foreground dark:text-white mb-2">{titre}</h3>

@@ -158,7 +158,7 @@ export default function AgenceWebVillePage({ params }: { params: { ville: string
           </p>
           <div className="grid sm:grid-cols-2 gap-3">
             {v.secteurs.map(s => (
-              <div key={s} className="flex items-center gap-3 p-3 rounded-xl bg-blue-950/20 border border-blue-900/20">
+              <div key={s} className="reveal-item flex items-center gap-3 p-3 rounded-xl bg-blue-950/20 border border-blue-900/20">
                 <TrendingUp size={16} className="text-electric flex-shrink-0" />
                 <span className="text-foreground/80 dark:text-white/80 text-sm font-medium">{s}</span>
               </div>
@@ -178,7 +178,7 @@ export default function AgenceWebVillePage({ params }: { params: { ville: string
               { titre: 'Boutique en ligne', prix: `${SITE.pricing.ecommerce}€`, delai: SITE.delais.ecommerce, desc: 'E-commerce complet, paiement sécurisé, gestion des stocks', href: '/services/site-ecommerce' },
               { titre: 'Application métier', prix: `${SITE.pricing.gestion}€`, delai: SITE.delais.gestion, desc: 'Logiciel sur mesure : caisse, RDV, commandes, CRM', href: '/services/systeme-gestion' },
             ].map(s => (
-              <Link key={s.titre} href={s.href} className="p-5 rounded-2xl border border-navy/20 dark:border-white/10 hover:border-electric/40 transition-colors group">
+              <Link key={s.titre} href={s.href} className="reveal-item p-5 rounded-2xl border border-navy/20 dark:border-white/10 hover:border-electric/40 hover:-translate-y-0.5 transition-all duration-200 group">
                 <div className="flex items-start justify-between mb-2">
                   <h3 className="font-semibold text-foreground dark:text-white group-hover:text-electric transition-colors">{s.titre}</h3>
                   <span className="text-gold font-bold text-sm">{s.prix}</span>
