@@ -192,52 +192,82 @@ export default function Navbar() {
         <span className={`block w-6 h-0.5 transition-all duration-300 ${barColor} ${open ? '-rotate-45 -translate-y-[7px]' : ''}`} />
       </button>
 
-      {/* Mobile menu */}
-      {open && (
-        <div className="fixed inset-0 z-[90] bg-[#1E3A5F] overflow-y-auto lg:hidden">
-          <div className="pt-20 px-6 pb-6 flex flex-col gap-1">
-            <div className="py-2 px-4 text-xs font-semibold text-white/40 uppercase tracking-wider">Services</div>
-            {SERVICES_LINKS.map(l => (
-              <Link key={l.href} href={l.href} onClick={() => setOpen(false)}
-                className="py-3 px-4 text-base font-medium text-white/80 hover:text-amber-400 rounded-xl hover:bg-white/10 transition-colors min-h-[48px] flex items-center">
-                {l.label}
-              </Link>
-            ))}
-            <div className="border-t border-white/10 my-2" />
-            <div className="py-2 px-4 text-xs font-semibold text-white/40 uppercase tracking-wider">Outils gratuits</div>
-            {OUTILS_LINKS.map(l => (
-              <Link key={l.href} href={l.href} onClick={() => setOpen(false)}
-                className="py-3 px-4 text-base font-medium text-white/80 hover:text-amber-400 rounded-xl hover:bg-white/10 transition-colors min-h-[48px] flex items-center">
-                {l.label}
-              </Link>
-            ))}
-            <Link href="/outils" onClick={() => setOpen(false)}
-              className="py-3 px-4 text-sm font-semibold text-electric hover:text-amber-400 rounded-xl hover:bg-white/10 transition-colors min-h-[48px] flex items-center">
-              Tous les outils →
-            </Link>
-            <div className="border-t border-white/10 my-2" />
-            {[
-              { href: '/tarifs', label: 'Tarifs' },
-              { href: '/realisations', label: 'Réalisations' },
-              { href: '/blog', label: 'Blog' },
-              { href: '/a-propos', label: 'À propos' },
-              { href: '/faq', label: 'FAQ' },
-              { href: '/parrainage', label: 'Parrainage' },
-            ].map(l => (
-              <Link key={l.href} href={l.href} onClick={() => setOpen(false)}
-                className="py-4 px-4 text-lg font-medium text-white hover:text-amber-400 rounded-xl hover:bg-white/10 transition-colors min-h-[56px] flex items-center">
-                {l.label}
-              </Link>
-            ))}
-            <div className="pt-4 mt-3 border-t border-white/10">
-              <Link href="/devis" onClick={() => setOpen(false)}
-                className="flex items-center justify-center py-3 bg-gold text-ink text-sm font-semibold rounded-xl min-h-[48px] hover:bg-gold/80 transition-colors">
-                Devis gratuit →
+      {/* Mobile menu — fullscreen premium avec stagger */}
+      <div className={`mobile-menu-overlay lg:hidden ${open ? 'menu-open' : ''}`} aria-hidden={!open}>
+        {/* Hairline top gradient */}
+        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-electric/30 to-transparent" aria-hidden="true" />
+        {/* Background halo */}
+        <div className="pointer-events-none absolute bottom-0 right-0 w-72 h-72 rounded-full"
+          style={{ background: 'radial-gradient(ellipse, rgba(45,125,210,0.08) 0%, transparent 70%)' }} aria-hidden="true" />
+
+        <div className="pt-20 px-6 pb-10 flex flex-col min-h-full">
+          {/* Section Services */}
+          <div className="mobile-menu-section mb-1">
+            <p className="py-2 px-2 text-[10px] font-bold text-white/30 uppercase tracking-[0.2em] mb-1">Services</p>
+            <div className="flex flex-col gap-0.5">
+              {SERVICES_LINKS.map((l, i) => (
+                <Link key={l.href} href={l.href} onClick={() => setOpen(false)}
+                  className={`mobile-menu-item py-3 px-3 text-base font-medium text-white/75 hover:text-white hover:bg-white/6 rounded-xl min-h-[48px] flex items-center gap-2 border border-transparent hover:border-white/8`}
+                  style={{ transitionDelay: `${60 + i * 30}ms` }}>
+                  <span className="w-1 h-1 rounded-full bg-electric/60 flex-shrink-0" aria-hidden="true" />
+                  {l.label}
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          <div className="my-4 h-px bg-white/8" />
+
+          {/* Section Outils */}
+          <div className="mobile-menu-section mb-1">
+            <p className="py-2 px-2 text-[10px] font-bold text-white/30 uppercase tracking-[0.2em] mb-1">Outils gratuits</p>
+            <div className="flex flex-col gap-0.5">
+              {OUTILS_LINKS.map((l, i) => (
+                <Link key={l.href} href={l.href} onClick={() => setOpen(false)}
+                  className={`mobile-menu-item py-3 px-3 text-base font-medium text-white/75 hover:text-white hover:bg-white/6 rounded-xl min-h-[48px] flex items-center gap-2 border border-transparent hover:border-white/8`}
+                  style={{ transitionDelay: `${200 + i * 30}ms` }}>
+                  <span className="w-1 h-1 rounded-full bg-gold/60 flex-shrink-0" aria-hidden="true" />
+                  {l.label}
+                </Link>
+              ))}
+              <Link href="/outils" onClick={() => setOpen(false)}
+                className="mobile-menu-item py-2.5 px-3 text-sm font-semibold text-electric hover:text-electric/80 rounded-xl min-h-[44px] flex items-center"
+                style={{ transitionDelay: '350ms' }}>
+                Tous les outils →
               </Link>
             </div>
           </div>
+
+          <div className="my-4 h-px bg-white/8" />
+
+          {/* Nav principale */}
+          <div className="mobile-menu-section flex flex-col gap-0.5">
+            {[
+              { href: '/tarifs', label: 'Tarifs', emoji: '💰' },
+              { href: '/realisations', label: 'Réalisations', emoji: '🎯' },
+              { href: '/blog', label: 'Blog', emoji: '📝' },
+              { href: '/a-propos', label: 'À propos', emoji: '👋' },
+              { href: '/faq', label: 'FAQ', emoji: '❓' },
+              { href: '/parrainage', label: 'Parrainage', emoji: '🎁' },
+            ].map((l, i) => (
+              <Link key={l.href} href={l.href} onClick={() => setOpen(false)}
+                className="mobile-menu-item py-3.5 px-3 text-lg font-semibold text-white hover:text-electric hover:bg-white/5 rounded-xl min-h-[56px] flex items-center gap-3 border border-transparent hover:border-electric/15"
+                style={{ transitionDelay: `${360 + i * 35}ms` }}>
+                <span className="text-base">{l.emoji}</span>
+                {l.label}
+              </Link>
+            ))}
+          </div>
+
+          <div className="mt-auto pt-8">
+            <Link href="/devis" onClick={() => setOpen(false)}
+              className="mobile-menu-cta flex items-center justify-center py-4 bg-gradient-to-r from-gold to-amber-400 text-ink text-base font-bold rounded-2xl min-h-[56px] shadow-lg shadow-gold/20 hover:opacity-90 transition-opacity">
+              Devis gratuit →
+            </Link>
+            <p className="text-center text-white/25 text-xs mt-4">Réponse sous 72h · Sans engagement</p>
+          </div>
         </div>
-      )}
+      </div>
     </>
   )
 }
