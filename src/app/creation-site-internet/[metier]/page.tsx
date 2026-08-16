@@ -151,7 +151,7 @@ export default function MetierPage({ params }: { params: { metier: string } }) {
           </p>
           <div className="space-y-3">
             {PROBLEMES_SANS_SITE(m.metier).map((pb, i) => (
-              <div key={i} className="flex items-start gap-3 p-4 rounded-xl bg-red-950/20 border border-red-900/30">
+              <div key={i} className="reveal-item flex items-start gap-3 p-4 rounded-xl bg-red-950/20 border border-red-900/30">
                 <AlertCircle size={18} className="text-red-400 mt-0.5 flex-shrink-0" />
                 <span className="text-foreground/80 dark:text-white/80 text-sm">{pb}</span>
               </div>
@@ -207,7 +207,7 @@ export default function MetierPage({ params }: { params: { metier: string } }) {
               'Optimisation SEO local pour votre ville et département',
               ...m.inclus,
             ].map(item => (
-              <div key={item} className="flex items-start gap-3 p-3 rounded-xl bg-green-950/20 border border-green-900/20">
+              <div key={item} className="reveal-item flex items-start gap-3 p-3 rounded-xl bg-green-950/20 border border-green-900/20">
                 <CheckCircle size={16} className="text-success mt-0.5 flex-shrink-0" />
                 <span className="text-foreground/80 dark:text-white/80 text-sm">{item}</span>
               </div>
@@ -222,7 +222,7 @@ export default function MetierPage({ params }: { params: { metier: string } }) {
           </h2>
           <div className="grid sm:grid-cols-2 gap-4">
             {AVANTAGES_STACKUP.map(({ icon: Icon, titre, desc }) => (
-              <div key={titre} className="flex items-start gap-4 p-4 rounded-xl border border-white/10 bg-white/5">
+              <div key={titre} className="reveal-item flex items-start gap-4 p-4 rounded-xl border border-white/10 bg-white/5 hover:border-electric/30 transition-colors">
                 <div className="w-10 h-10 rounded-xl bg-blue-500/20 flex items-center justify-center flex-shrink-0">
                   <Icon size={20} className="text-electric" />
                 </div>
