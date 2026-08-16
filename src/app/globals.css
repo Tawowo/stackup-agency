@@ -1189,3 +1189,114 @@ a, button, [role="button"] { cursor: pointer; }
   .not-found-4, .not-found-0, .not-found-4b { animation: none; }
   .reading-progress { transition: transform 0.1s linear; }
 }
+
+/* ─── Gallery screenshot hover-scroll ────────────────────── */
+@keyframes gallery-scroll-down {
+  from { object-position: top; transform: translateY(0); }
+  to   { transform: translateY(-30%); }
+}
+.gallery-screenshot-wrap {
+  overflow: hidden;
+}
+.gallery-screenshot-wrap img {
+  transition: transform 0.4s ease;
+}
+.gallery-screenshot-wrap:hover img {
+  animation: gallery-scroll-down 4s linear forwards;
+}
+
+/* ─── Outils SaaS — stepper + gauge ──────────────────────── */
+.tool-step-active {
+  background: linear-gradient(135deg, rgba(45,125,210,0.15), rgba(45,125,210,0.05));
+  border-color: rgba(45,125,210,0.4) !important;
+}
+.tool-gauge-bar {
+  transform-origin: left;
+  transform: scaleX(0);
+  transition: transform 1.2s cubic-bezier(0.16,1,0.3,1);
+}
+.tool-gauge-bar.is-filled {
+  transform: scaleX(1);
+}
+/* Gauge segments animation */
+@keyframes gauge-fill {
+  from { transform: scaleX(0); }
+  to   { transform: scaleX(1); }
+}
+.gauge-segment {
+  transform-origin: left;
+  transform: scaleX(0);
+  transition: transform 0.8s cubic-bezier(0.16,1,0.3,1);
+}
+.gauge-segment.is-filled {
+  transform: scaleX(1);
+}
+
+/* ─── Parrainage card ─────────────────────────────────────── */
+.parrainage-step {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.parrainage-step.is-visible { opacity: 1; transform: translateY(0); }
+.parrainage-step:nth-child(1) { transition-delay: 0ms; }
+.parrainage-step:nth-child(2) { transition-delay: 100ms; }
+.parrainage-step:nth-child(3) { transition-delay: 200ms; }
+
+/* ─── Service page hero animated accent ───────────────────── */
+.service-hero-accent {
+  position: relative;
+}
+.service-hero-accent::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  height: 2px;
+  width: 0;
+  background: linear-gradient(90deg, #2D7DD2, #F59E0B);
+  border-radius: 2px;
+  transition: width 0.6s cubic-bezier(0.16,1,0.3,1);
+}
+.service-hero-accent.is-visible::after {
+  width: 100%;
+}
+
+/* ─── RealisationsPage — overlay reveal ───────────────────── */
+.real-card {
+  position: relative;
+  overflow: hidden;
+}
+.real-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(6,13,26,0.85) 0%, transparent 60%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.real-card:hover .real-card-overlay {
+  opacity: 1;
+}
+.real-card-actions {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem;
+  transform: translateY(8px);
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.real-card:hover .real-card-actions {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* ─── Reduced motion — phase 3 ───────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  .gallery-screenshot-wrap:hover img { animation: none; }
+  .tool-gauge-bar, .gauge-segment { transition: none; }
+  .parrainage-step { transition: none; opacity: 1; transform: none; }
+  .service-hero-accent::after { transition: none; }
+  .real-card-overlay, .real-card-actions { transition: none; }
+}
