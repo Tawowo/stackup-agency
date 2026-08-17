@@ -1627,3 +1627,23 @@ a, button, [role="button"] { cursor: pointer; }
   .devis-success-circle { animation: none; stroke-dashoffset: 0; }
   .devis-success-check  { animation: none; stroke-dashoffset: 0; }
 }
+
+/* ─── Countdown digit slide animation ───────────────────── */
+@keyframes cd-exit {
+  from { opacity: 1; transform: translateY(0); }
+  to   { opacity: 0; transform: translateY(-40%); }
+}
+@keyframes cd-enter {
+  from { opacity: 0; transform: translateY(40%); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.cd-digit-exit {
+  animation: cd-exit 0.1s ease-in both;
+}
+.cd-digit-enter {
+  animation: cd-enter 0.2s cubic-bezier(0.16,1,0.3,1) both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .cd-digit-exit, .cd-digit-enter { animation: none; opacity: 1; transform: none; }
+}
+
