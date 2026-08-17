@@ -37,6 +37,12 @@ const nextConfig = {
       destination: '/blog/seo-local-google-maps-2026',
       permanent: true,
     },
+    {
+      // Phase 5 (volet B) : fusion de deux articles quasi-doublons sur la même requête
+      source: '/blog/seo-local-artisan',
+      destination: '/blog/seo-local-artisan-batiment-2026',
+      permanent: true,
+    },
     // Phase 3: migration articles ville -> /agence-web/[ville]
     { source: '/blog/agence-web-amboise', destination: '/agence-web/amboise', permanent: true },
     { source: '/blog/agence-web-anet', destination: '/agence-web/anet', permanent: true },

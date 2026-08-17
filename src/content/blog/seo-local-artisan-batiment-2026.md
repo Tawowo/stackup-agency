@@ -1,15 +1,15 @@
 ---
-title: "SEO local pour artisans du bâtiment : dominer Google en 2026"
-excerpt: "Plombier, électricien, maçon, menuisier — les artisans du bâtiment font face à une concurrence locale intense. Ce guide présente les 5 leviers qui font la différence sur Google en 2026."
+title: "SEO local artisan : dominer sa ville et ses alentours"
+excerpt: "Fiche Google Business, pages géolocalisées, certifications, avis : les 5 leviers qui font dominer Google à un artisan du bâtiment sur sa ville et les communes voisines en 2026."
 date: "2026-07-27"
-updated: "2026-07-30"
-readTime: 7
-tag: "SEO Local"
+updated: "2026-08-17"
+readTime: 9
+tag: "Artisans"
 category: "seo-local"
-keywords: ["SEO artisan bâtiment 2026", "référencement plombier électricien local", "Google artisan BTP local", "Local Pack artisan"]
+keywords: ["seo local artisan", "SEO artisan bâtiment 2026", "référencement plombier électricien local", "dominer google artisan ville"]
 ---
 
-**Pour un plombier ou un électricien, les 3 premières positions Google sur "plombier urgence [ville]" représentent 60 à 70% des appels reçus.** Les artisans du bâtiment sont dans l'un des secteurs les plus compétitifs du SEO local en France — et parmi les plus rentables pour ceux qui y parviennent.
+**Réponse directe :** dominer Google sur sa ville en tant qu'artisan repose sur cinq leviers combinés : une fiche Google Business Profile complète (catégorie précise, zone de service, 20+ photos, avis récents), des pages de service géolocalisées sur le site pour chaque commune couverte, un blog ciblé sur les requêtes à forte intention (prix, diagnostics), des liens depuis les organismes de certification du secteur (Qualibat, Qualifelec, CAPEB), et l'affichage visible des certifications et de l'assurance décennale. Pour un plombier ou un électricien, les 3 premières positions Google sur « plombier urgence + ville » représentent la majorité des appels reçus — les artisans du bâtiment sont dans l'un des secteurs les plus compétitifs du SEO local en France, et parmi les plus rentables pour ceux qui y parviennent.
 
 ---
 
@@ -101,6 +101,8 @@ Chaque certification obtenue génère un lien depuis un site d'autorité dans le
 
 Chacune de ces certifications génère un lien + votre inscription dans un annuaire professionnel visité par des particuliers et des professionnels.
 
+**Autres sources de liens locaux à ne pas négliger** : l'adhésion à la Chambre des Métiers (avec inscription dans son annuaire en ligne), les associations locales d'entreprises ou de commerçants, les annuaires de mairie ou d'office de tourisme, et les partenariats avec des professionnels complémentaires (un plombier et un électricien peuvent s'échanger des liens, et des clients).
+
 ---
 
 ## Levier 5 : Afficher les certifications et la décennale en évidence
@@ -135,6 +137,13 @@ Les visiteurs qui cherchent à bénéficier de MaPrimeRénov' ou des CEE filtren
 
 ---
 
+## En résumé
+
+- Le SEO local d'un artisan repose sur cinq leviers combinés : fiche Google Business, pages géolocalisées, blog ciblé, liens de certification, certifications affichées.
+- La fiche Google Business Profile reste le levier n°1 : catégorie précise, zone de service complète, 20+ photos, avis récents et réguliers.
+- Une page par commune couverte, avec un contenu réellement distinct (pas de copier-coller), capte des recherches que la page d'accueil seule ne peut pas cibler.
+- Les certifications sectorielles (Qualibat, Qualifelec, RGE) génèrent à la fois des liens de qualité et une conversion directe auprès des clients éligibles aux aides.
+
 ## FAQ
 
 **Dois-je créer une fiche Google par commune où j'interviens ?**
@@ -152,4 +161,6 @@ Un artisan du bâtiment en position 1-3 sur "plombier [ville]" reçoit en moyenn
 **Les horaires d'urgence sur Google Business doivent-ils être différents des horaires normaux ?**
 Oui. Google Business permet d'indiquer des "horaires spéciaux". Pour les urgences (plomberie, électricité), indiquez 24h/24 dans les horaires principaux si c'est vraiment le cas — mais assurez-vous d'être disponible, sinon c'est contre-productif.
 
-Voir aussi : [site web pour plombier](/blog/site-web-plombier), [site web pour électricien](/blog/site-web-artisan-electricien), [guide netlinking TPE](/blog/netlinking-tpe-guide) et nos [tarifs création site artisan](/tarifs).
+---
+
+*Pour aller plus loin : [Site électricien : les pages indispensables](/blog/site-web-artisan-electricien) · [Guide netlinking pour TPE](/blog/netlinking-tpe-guide) · [Avis clients : la stratégie pour artisans](/blog/avis-clients-artisan-strategie) · [Créer un site de plombier](/creation-site-internet/plombier)*
