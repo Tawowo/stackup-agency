@@ -1,19 +1,21 @@
 ---
-title: "10 erreurs SEO qui plombent votre site (et comment les corriger vite)"
-excerpt: "Votre site n'apparaît pas sur Google ? Ces 10 erreurs SEO en sont presque toujours la cause. Diagnostic simple et corrections concrètes, exemples à l'appui."
+title: "SEO : les 15 erreurs qui plombent les sites de petites entreprises"
+excerpt: "Mots-clés ignorés, site lent, pas de mobile, zéro backlink : les 15 erreurs SEO les plus fréquentes chez les petites entreprises, avec la correction pour chacune."
 date: "2026-07-04"
-updated: "2026-07-29"
-readTime: 7
+updated: "2026-08-17"
+readTime: 9
 tag: "SEO"
 category: "seo"
-keywords: ["erreurs SEO", "problèmes référencement", "améliorer SEO site"]
+keywords: ["erreurs seo", "erreurs seo petite entreprise", "problèmes référencement", "améliorer SEO site"]
 ---
+
+**Un site qui n'apparaît pas sur Google souffre presque toujours d'une combinaison de causes identifiables : mots-clés jamais recherchés, balises title vides, lenteur, absence de mobile, contenu dupliqué, zéro backlink.** Voici les 15 erreurs SEO les plus fréquentes chez les petites entreprises et TPE françaises, avec le diagnostic et la correction pour chacune.
 
 ## Avoir un site web ne suffit pas
 
 C'est une réalité que beaucoup de propriétaires de sites web découvrent avec amertume : lancer un site web ne garantit pas d'être visible sur Google. Le référencement naturel (SEO) est une discipline à part entière, avec ses règles, ses bonnes pratiques, et ses erreurs classiques.
 
-Si votre site peine à attirer du trafic organique, il y a de fortes chances qu'il soit victime d'une ou plusieurs de ces 10 erreurs. La bonne nouvelle : la plupart se corrigent sans expertise technique poussée.
+Si votre site peine à attirer du trafic organique, il y a de fortes chances qu'il soit victime d'une ou plusieurs de ces 15 erreurs. La bonne nouvelle : la plupart se corrigent sans expertise technique poussée.
 
 ## Erreur n°1 : Ignorer la recherche de mots-clés
 
@@ -87,8 +89,61 @@ Si vous ne mesurez pas, vous ne pouvez pas améliorer. Beaucoup de propriétaire
 
 **Comment corriger :** Installez Google Search Console (gratuit) et Google Analytics (gratuit). Consultez ces outils au moins une fois par mois pour suivre votre progression et identifier les opportunités.
 
+## Erreur n°11 : Une fiche Google Business Profile négligée
+
+Pour une entreprise locale, ignorer sa fiche Google Business Profile revient à laisser vide la vitrine la plus visitée de son commerce. Une fiche incomplète, sans photos récentes ni réponses aux avis, se classe systématiquement derrière des concurrents mieux tenus dans le Local Pack.
+
+**Comment corriger :** Complétez chaque section de la fiche (catégorie précise, horaires, photos, description), publiez un post par semaine, et répondez à tous les avis sous 48 heures.
+
+## Erreur n°12 : Des URLs illisibles pour les humains comme pour Google
+
+Une URL du type `site.fr/?p=4821&cat=12` n'indique rien ni au visiteur ni à Google sur le contenu de la page. Les URLs générées automatiquement par certains CMS sans réécriture propre sont un frein SEO discret mais réel.
+
+**Comment corriger :** Utilisez des URLs courtes en kebab-case qui contiennent le mot-clé principal de la page, par exemple `site.fr/creation-site-internet-plombier` plutôt qu'un identifiant numérique.
+
+## Erreur n°13 : Aucune donnée structurée (Schema.org)
+
+Les balises Schema.org (LocalBusiness, FAQPage, BlogPosting) sont invisibles pour le visiteur mais lisibles par Google et les IA génératives. Leur absence prive votre site d'extraits enrichis (étoiles d'avis, FAQ dépliable) dans les résultats de recherche — des éléments qui augmentent significativement le taux de clic.
+
+**Comment corriger :** Ajoutez au minimum le balisage LocalBusiness sur votre page de contact et FAQPage sur vos pages avec une section de questions fréquentes.
+
+## Erreur n°14 : Cannibalisation entre plusieurs pages du même site
+
+Deux pages qui ciblent la même requête se concurrencent l'une l'autre au lieu de se renforcer — Google doit choisir laquelle classer, et le signal dilué pénalise souvent les deux.
+
+**Comment corriger :** Avant de créer un nouveau contenu, vérifiez qu'aucune page existante ne cible déjà la même intention de recherche. En cas de doublon, fusionnez le meilleur des deux contenus sous une seule URL et redirigez l'autre en 301.
+
+## Erreur n°15 : Négliger le maillage interne
+
+Des pages orphelines, jamais liées depuis aucune autre page du site, sont difficiles à découvrir pour Google et pour les visiteurs. Un site sans liens internes cohérents dilue l'autorité qu'il pourrait transmettre entre ses propres pages.
+
+**Comment corriger :** Chaque nouvel article doit être lié depuis au moins 2-3 pages existantes pertinentes (articles frères, page de service associée), et inversement pointer vers elles.
+
 ## Conclusion : le SEO, c'est une course de fond
 
-Corriger ces 10 erreurs ne vous propulsera pas numéro 1 sur Google du jour au lendemain. Le SEO demande du temps et de la régularité. Mais chaque correction apporte une amélioration mesurable, et l'effet cumulatif sur 6 à 12 mois peut transformer votre visibilité en ligne.
+Corriger ces 15 erreurs ne vous propulsera pas numéro 1 sur Google du jour au lendemain. Le SEO demande du temps et de la régularité. Mais chaque correction apporte une amélioration mesurable, et l'effet cumulatif sur 6 à 12 mois peut transformer votre visibilité en ligne.
 
-Chez **Stackup Agency**, nous réalisons des audits SEO complets pour identifier les freins techniques et éditoriaux de votre site, et nous vous accompagnons dans leur correction prioritaire. Commençons par votre audit gratuit.
+## En résumé
+
+- Les erreurs les plus fréquentes se regroupent en trois familles : contenu (mots-clés, duplication, maillage), technique (vitesse, mobile, URLs, données structurées) et autorité (backlinks, fiche Google Business).
+- La plupart des 15 erreurs se corrigent sans expertise technique poussée, avec des outils gratuits (Search Console, PageSpeed Insights, Mobile-Friendly Test).
+- La cannibalisation entre pages internes et le maillage interne négligé sont des erreurs souvent invisibles mais coûteuses.
+- L'effet des corrections se mesure sur 6 à 12 mois : le SEO récompense la régularité, pas les corrections ponctuelles.
+
+## Questions fréquentes
+
+**Par quelle erreur commencer si mon site cumule plusieurs problèmes ?**
+Commencez par les fondations techniques (vitesse, mobile, indexation dans Search Console) avant le contenu : un excellent article sur un site trop lent ou non indexé ne se positionnera pas.
+
+**Combien de temps avant de voir l'effet des corrections ?**
+Les corrections techniques (vitesse, mobile) peuvent avoir un effet visible en quelques semaines. Les corrections de contenu (mots-clés, structure) prennent généralement 2 à 4 mois pour se refléter dans le classement.
+
+**Un audit SEO est-il nécessaire pour identifier ces erreurs ?**
+Pas systématiquement pour les erreurs évidentes (vitesse, mobile, title vides), détectables avec des outils gratuits. Un audit complet devient utile pour les erreurs plus subtiles : cannibalisation, maillage interne, données structurées.
+
+**Ces erreurs s'appliquent-elles à un site vitrine simple, sans blog ?**
+Oui, la majorité s'applique à toute page web : vitesse, mobile, title/meta description, structure de titres, fiche Google Business. Seules les erreurs liées à la fréquence de publication ne concernent que les sites avec blog.
+
+---
+
+*Pour aller plus loin : [Audit SEO technique : la checklist en 50 points](/blog/audit-seo-technique-checklist-50-points) · [Core Web Vitals 2026 : le guide technique](/blog/core-web-vitals-2026-guide-technique) · [Google Business Profile : le guide complet](/blog/fiche-google-business-optimisation) · [Rédaction de blog SEO](/services/redaction-blog-seo)*

@@ -1,10 +1,12 @@
 ---
-title: "Google Business Profile : le guide complet pour dominer les recherches locales"
+title: "Fiche Google Business : l'optimisation complète en 20 points"
 date: "2026-05-30"
-excerpt: "Votre fiche Google Business Profile est votre vitrine numéro 1 sur internet. Ce guide détaille chaque paramètre à optimiser pour dominer les recherches locales."
+updated: "2026-08-17"
+excerpt: "Nom, catégorie, photos, posts, avis, messagerie : les 20 points à optimiser sur votre fiche Google Business Profile pour dominer les recherches locales."
 tag: "SEO Local"
 category: "seo-local"
 readTime: 9
+keywords: ["optimiser fiche google", "fiche google business 20 points", "google business profile optimisation"]
 ---
 
 **Une fiche Google Business Profile complète et optimisée génère en moyenne 7 fois plus de clics qu'une fiche incomplète.** C'est Google lui-même qui publie cette statistique — et dans la pratique, on observe des écarts encore plus importants entre une fiche bien travaillée et une fiche abandonnée après création.
@@ -136,4 +138,50 @@ Google propose une fonction de messagerie directe depuis votre fiche. Si vous l'
 
 Google Business Profile est probablement l'outil marketing local le plus puissant et le plus sous-utilisé en France. Il est gratuit, visible par des milliers de clients potentiels chaque mois, et peut être optimisé sans budget publicitaire. La différence entre une fiche médiocre et une fiche optimisée se traduit directement en appels reçus, en demandes de devis et en clients qui poussent votre porte.
 
-Besoin d'aide pour votre référencement local ? [Contactez Stackup Agency](/contact) — réponse garantie sous 72h.
+## La checklist des 20 points
+
+1. Nom d'entreprise exact, sans mots-clés ajoutés
+2. Catégorie principale la plus précise possible
+3. Catégories secondaires pertinentes (jusqu'à 9)
+4. Adresse identique sur toutes les plateformes
+5. Zone de service configurée si vous vous déplacez
+6. Numéro de téléphone local
+7. Lien vers le site web (page pertinente, pas systématiquement l'accueil)
+8. Horaires habituels à jour
+9. Horaires spéciaux (jours fériés) anticipés
+10. Description de 750 caractères structurée sans superlatifs vides
+11. Photo de couverture professionnelle
+12. Logo sur fond neutre
+13. Photos de l'intérieur sous plusieurs angles
+14. Photos d'équipe authentiques
+15. Photos de produits ou réalisations
+16. Ajout régulier de nouvelles photos (2-3/mois)
+17. Vidéo de présentation courte
+18. Section Services ou Produits complète avec prix
+19. Posts Google réguliers (1-2/semaine)
+20. Q&R proactif et messagerie activée avec réponse sous 24h
+
+## En résumé
+
+- La catégorie principale est le levier de classement le plus puissant sur Google Business Profile.
+- La complétude de la fiche (les 20 points ci-dessus) est un signal de classement direct mesuré par Google.
+- Les photos fraîches et les posts réguliers signalent une activité continue, favorisée par l'algorithme.
+- Le temps de réponse aux avis et aux messages est mesuré par Google et influence votre visibilité.
+
+## Questions fréquentes
+
+**Combien de temps prend l'optimisation complète d'une fiche ?**
+Compter 2 à 3 heures pour une première optimisation complète des 20 points, puis un entretien régulier de 30 minutes par semaine (photos, posts, réponses aux avis).
+
+**La fiche Google Business Profile est-elle vraiment gratuite ?**
+Oui, entièrement gratuite. Aucune fonctionnalité de classement (catégorie, photos, posts, avis) ne nécessite de paiement. Seules les annonces Google Maps, distinctes du classement organique, sont payantes.
+
+**Faut-il une fiche par établissement si j'ai plusieurs adresses ?**
+Oui. Chaque établissement physique doit avoir sa propre fiche avec son adresse exacte. Une seule fiche pour plusieurs adresses est une violation des règles de Google qui peut entraîner une suspension.
+
+**Peut-on perdre sa fiche Google Business Profile ?**
+Oui, en cas de violation des règles (nom avec mots-clés, fausses adresses, avis achetés) ou de signalement par des concurrents. Respecter scrupuleusement les règles d'utilisation évite ce risque.
+
+---
+
+*Pour aller plus loin : [Apparaître sur Google Maps en premier](/blog/seo-local-google-maps-2026) · [SEO local : le guide complet pour les TPE](/blog/seo-local-commerce) · [Avis Google : stratégie complète](/blog/avis-google-strategie-complete) · [Rédaction de blog SEO](/services/redaction-blog-seo)*
