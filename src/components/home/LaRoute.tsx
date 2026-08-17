@@ -8,7 +8,7 @@
 import { useRef, useState, useEffect } from 'react'
 import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
-import SectionDepth from '@/components/ui/SectionDepth'
+import DecorProfondeur from '@/components/ui/DecorProfondeur'
 
 const STEPS = [
   {
@@ -131,7 +131,7 @@ export default function LaRoute() {
   return (
     <section ref={sectionRef} className="py-24 bg-white relative overflow-hidden">
       <span className="section-number select-none" aria-hidden="true">04</span>
-      <SectionDepth variant="warm" />
+      <DecorProfondeur variant="warm" seed={3} />
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 relative">
         <div className="section-marker mb-2 reveal-item" aria-hidden="true">[ 04 / LA ROUTE ]</div>

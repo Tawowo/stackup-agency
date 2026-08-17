@@ -14,6 +14,7 @@ import LaRoute from '@/components/home/LaRoute'
 import StatPills from '@/components/home/StatPills'
 import ManifestoSection from '@/components/home/ManifestoSection'
 import ScrollBackground from '@/components/home/ScrollBackground'
+import DecorProfondeur from '@/components/ui/DecorProfondeur'
 
 export const metadata: Metadata = {
   title: "Agence web Tours — Site internet en 10 jours",
@@ -125,12 +126,7 @@ export default function Home() {
 
         {/* ── 04 — Blog ─────────────────────────────────────────────────────── */}
         <section id="blog" className="py-24 bg-white relative overflow-hidden">
-          {/* Décor de profondeur */}
-          <div className="pointer-events-none absolute inset-0" aria-hidden="true">
-            <div className="absolute top-0 right-0 w-[700px] h-[450px]" style={{ background: 'radial-gradient(ellipse at 80% 10%, rgba(45,125,210,0.18) 0%, transparent 65%)' }} />
-            <div className="absolute bottom-0 left-0 w-[500px] h-[350px]" style={{ background: 'radial-gradient(ellipse at 20% 90%, rgba(245,158,11,0.14) 0%, transparent 65%)' }} />
-            <div className="absolute inset-0" style={{ backgroundImage: 'linear-gradient(rgba(30,58,95,0.045) 1px, transparent 1px), linear-gradient(90deg, rgba(30,58,95,0.045) 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
-          </div>
+          <DecorProfondeur variant="mixte" seed={1} />
           <div className="max-w-5xl mx-auto px-4 sm:px-6 relative">
             <div className="flex items-end justify-between mb-12">
               <div>
@@ -225,10 +221,7 @@ export default function Home() {
         {/* ── 05 — Maintenance ──────────────────────────────────────────────── */}
         <section className="py-24 bg-[#FFFDF9] relative overflow-hidden">
           {/* Halo or doux */}
-          <div className="pointer-events-none absolute top-0 left-0 w-[600px] h-[400px]" aria-hidden="true"
-            style={{ background: 'radial-gradient(ellipse at 20% 10%, rgba(245,158,11,0.16) 0%, transparent 65%)' }} />
-          <div className="pointer-events-none absolute bottom-0 right-0 w-[400px] h-[300px]" aria-hidden="true"
-            style={{ background: 'radial-gradient(ellipse at 80% 90%, rgba(45,125,210,0.12) 0%, transparent 65%)' }} />
+          <DecorProfondeur variant="warm" seed={2} />
           <div className="max-w-5xl mx-auto px-4 sm:px-6 relative">
             <div className="mb-10">
               <div className="section-marker mb-2" aria-hidden="true">[ 05 / MAINTENANCE ]</div>

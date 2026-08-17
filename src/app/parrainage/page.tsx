@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import { Gift, Users, Check, ChevronRight, FileText } from 'lucide-react'
+import DecorProfondeur from '@/components/ui/DecorProfondeur'
 import MiniHero from '@/components/ui/MiniHero'
 
 const faqSchema = {
@@ -89,7 +90,8 @@ export default function ParrainagePage() {
   }
 
   return (
-    <main className="min-h-screen bg-[#FFFDF9]">
+    <main className="min-h-screen bg-[#FFFDF9] relative overflow-hidden">
+      <DecorProfondeur variant="gold" seed={1} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       <MiniHero

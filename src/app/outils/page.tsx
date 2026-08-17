@@ -2,6 +2,7 @@ import { SITE } from '@/config/site'
 import Link from 'next/link'
 import Breadcrumb from '@/components/ui/Breadcrumb'
 import { Search, Palette, FileText, BarChart3 } from 'lucide-react'
+import DecorProfondeur from '@/components/ui/DecorProfondeur'
 
 export const metadata = {
   title: { absolute: 'Outils gratuits — Audit, studio de style, documents | Stackup' },
@@ -65,7 +66,8 @@ const OUTILS = [
 
 export default function OutilsPage() {
   return (
-    <div className="min-h-screen bg-[#FFFDF9]">
+    <div className="min-h-screen bg-[#FFFDF9] relative overflow-hidden">
+      <DecorProfondeur variant="mixte" seed={3} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
       <div className="bg-gradient-to-b from-[#060D1A] to-[#0A0F1C] pt-24 pb-16">

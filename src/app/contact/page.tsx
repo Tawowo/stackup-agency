@@ -3,6 +3,7 @@ import Link from 'next/link'
 import MiniHero from '@/components/ui/MiniHero'
 import ContactFormV4 from '@/components/contact/ContactFormV4'
 import EncartRentree from '@/components/rentree/EncartRentree'
+import DecorProfondeur from '@/components/ui/DecorProfondeur'
 
 export const metadata = {
   title: 'Contact — Devis gratuit sous 72h',
@@ -46,7 +47,8 @@ const breadcrumbSchema = {
 
 export default function ContactPage() {
   return (
-    <div className="min-h-screen bg-[#FFFDF9]">
+    <div className="min-h-screen bg-[#FFFDF9] relative overflow-hidden">
+      <DecorProfondeur variant="cool" seed={3} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(contactPageSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 

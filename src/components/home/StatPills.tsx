@@ -4,7 +4,7 @@
  * Bounce animation CSS + IntersectionObserver count-up
  */
 import { useRef, useState, useEffect } from 'react'
-import SectionDepth from '@/components/ui/SectionDepth'
+import DecorProfondeur from '@/components/ui/DecorProfondeur'
 
 const STATS = [
   { value: 10, suffix: 'j', label: 'Délai de livraison', emoji: '⚡', color: 'bg-amber-50 border-amber-200 text-amber-700' },
@@ -67,7 +67,7 @@ export default function StatPills() {
 
   return (
     <section ref={ref} className="py-16 bg-[#FFFDF9] relative overflow-hidden">
-      <SectionDepth variant="gold" />
+      <DecorProfondeur variant="gold" seed={2} />
       <div className="max-w-5xl mx-auto px-4 sm:px-6 relative">
         <div className="flex flex-wrap justify-center gap-4">
           {STATS.map((s, i) => (

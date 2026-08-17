@@ -7,7 +7,7 @@ import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { ArrowRight, CheckCircle } from 'lucide-react'
 import { SERVICES } from '@/config/site'
-import SectionDepth from '@/components/ui/SectionDepth'
+import DecorProfondeur from '@/components/ui/DecorProfondeur'
 
 // ─── Utilitaire d'animation par step ─────────────────────────────────────────
 function useLoopSteps(total: number, interval = 480) {
@@ -547,7 +547,7 @@ export default function Atelier() {
 
   return (
     <section id="services" className="py-20 bg-[#FFFDF9] relative overflow-hidden">
-      <SectionDepth variant="warm" />
+      <DecorProfondeur variant="warm" seed={0} />
       <span className="section-number select-none" aria-hidden="true">01</span>
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 relative">

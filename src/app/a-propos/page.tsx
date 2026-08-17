@@ -4,6 +4,7 @@ import Image from 'next/image'
 import { CheckCircle, ArrowRight } from 'lucide-react'
 import { SITE } from '@/config/site'
 import MiniHero from '@/components/ui/MiniHero'
+import DecorProfondeur from '@/components/ui/DecorProfondeur'
 
 export const metadata = {
   title: 'À propos — Notre agence web à Tours',
@@ -50,7 +51,8 @@ export default function AProposPage() {
   ]
 
   return (
-    <div className="min-h-screen bg-[#FFFDF9]">
+    <div className="min-h-screen bg-[#FFFDF9] relative overflow-hidden">
+      <DecorProfondeur variant="mixte" seed={0} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutPageSchema) }} />
 
       <MiniHero

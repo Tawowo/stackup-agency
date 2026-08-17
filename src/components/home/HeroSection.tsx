@@ -203,15 +203,7 @@ export default function HeroSection() {
     >
       {/* ── [PIÈCE 1] Fond vidéo + image parallax ─────────────────── */}
       <div ref={imgRef} className="absolute inset-0 will-change-transform" aria-hidden="true">
-        {/* Vidéo H.264 — 1.6 Mo, compatible Chrome/Safari/FF */}
-        <video
-          className="absolute inset-0 w-full h-full object-cover object-[68%_center]"
-          autoPlay muted loop playsInline disablePictureInPicture preload="none"
-          poster="/images/hero-monument-s.webp" aria-hidden="true"
-        >
-          <source src="/hero-accueil.mp4" type="video/mp4" />
-        </video>
-        {/* Image fallback (no-JS / poster avant load) */}
+        {/* Image fallback — z:0, derrière la vidéo */}
         <Image
           src="/images/hero-monument-s.webp"
           alt=""
@@ -220,10 +212,20 @@ export default function HeroSection() {
           fetchPriority="high"
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
           className="object-cover object-[72%_center] md:object-[68%_center]"
+          style={{ zIndex: 0 }}
           placeholder="blur"
           blurDataURL={HERO_BLUR_DATA_URL}
           quality={60}
         />
+        {/* Vidéo H.264 — z:1, par-dessus l'image statique */}
+        <video
+          className="absolute inset-0 w-full h-full object-cover object-[68%_center]"
+          style={{ zIndex: 1 }}
+          autoPlay muted loop playsInline disablePictureInPicture preload="auto"
+          aria-hidden="true"
+        >
+          <source src="/hero-accueil.mp4" type="video/mp4" />
+        </video>
       </div>
 
       {/* ── [PIÈCE 2b] Trame perspective au sol ──────────────────── */}

@@ -4,6 +4,7 @@ import { ChevronRight } from 'lucide-react'
 import { realisations } from '@/lib/realisations'
 import { SITE } from '@/config/site'
 import MiniHero from '@/components/ui/MiniHero'
+import DecorProfondeur from '@/components/ui/DecorProfondeur'
 
 export const metadata = {
   title: 'Réalisations — Sites de démonstration web',
@@ -31,7 +32,8 @@ const itemListSchema = {
 
 export default function RealisationsPage() {
   return (
-    <div className="min-h-screen bg-[#FFFDF9]">
+    <div className="min-h-screen bg-[#FFFDF9] relative overflow-hidden">
+      <DecorProfondeur variant="cool" seed={2} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} />
 
       <MiniHero
