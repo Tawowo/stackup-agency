@@ -82,11 +82,12 @@ export default function Home() {
         <div className="section-divider" aria-hidden="true" />
 
         {/* ── 01 — Services ─────────────────────────────────────────────────── */}
-        <section id="services" className="py-24 bg-background dark:bg-[#0A0F1C] relative overflow-hidden">
+        <section id="services" className="py-24 dark:bg-[#070B16] bg-background relative overflow-hidden scanline-section">
           {/* XXL decorative number */}
           <span className="section-number select-none" aria-hidden="true">01</span>
           <div className="max-w-5xl mx-auto px-4 sm:px-6 relative">
             <div className="mb-12 max-w-2xl">
+              <div className="section-marker mb-2 reveal-item" aria-hidden="true">[ 01 / SERVICES ]</div>
               <div className="text-xs font-bold text-electric uppercase tracking-[0.2em] mb-3 reveal-item">Services web</div>
               <h2 className="text-3xl lg:text-5xl font-bold text-foreground dark:text-white mb-4 reveal-item heading-underline-animated in-view" style={{ lineHeight: 1.15 }}>
                 Nos services web
@@ -111,6 +112,7 @@ export default function Home() {
             aria-hidden="true"
             style={{ background: 'radial-gradient(ellipse, rgba(45,125,210,0.08) 0%, transparent 70%)' }} />
           <div className="relative max-w-5xl mx-auto px-4 sm:px-6">
+            <div className="section-marker mb-2 reveal-item" aria-hidden="true">[ 02 / POURQUOI ]</div>
             <div className="text-xs font-bold text-electric uppercase tracking-[0.2em] mb-3 reveal-item">Pourquoi nous</div>
             <h2 className="text-3xl lg:text-5xl font-bold text-white mb-16 reveal-item" style={{ lineHeight: 1.15 }}>
               Pourquoi Stackup Agency ?
@@ -256,12 +258,11 @@ export default function Home() {
                 { nom: 'Premium', prix: SITE.pricing.maintenancePremium, delai: '24h ouvrées', inclus: ['Tout Pro', '5h modifications/mois', 'Rapport mensuel SEO', 'Réponse prioritaire'], highlight: false },
               ].map((f, i) => (
                 <div key={f.nom}
-                  className={`maintenance-card reveal-item relative rounded-2xl border p-5 ${f.highlight ? 'highlight border-electric/40 bg-electric/5 shadow-lift' : 'border-navy/20 dark:border-white/10'}`}
+                  className={`maintenance-card reveal-item relative rounded-2xl p-5 glass-panel ${f.highlight ? 'highlight liseré-border liseré-permanent hud-corners' : 'hud-4corners'}`}
                   style={{ animationDelay: `${i * 80}ms` }}>
-                  <div className={`absolute top-0 left-0 right-0 h-0.5 rounded-t-2xl ${f.highlight ? 'bg-gradient-to-r from-electric to-electric/40' : 'bg-gradient-to-r from-navy/30 to-electric/20'}`} />
-                  {f.highlight && <div className="text-xs font-semibold text-electric-ink dark:text-electric mb-2 uppercase tracking-wide">★ Le plus populaire</div>}
+                  {f.highlight && <div className="text-xs font-semibold text-electric-ink dark:text-electric mb-2 uppercase tracking-wide data-mono">★ Le plus populaire</div>}
                   <div className="flex items-baseline gap-1 mb-1">
-                    <span className={`text-2xl font-bold ${f.highlight ? 'text-electric-ink dark:text-electric' : 'text-navy dark:text-gold'}`}>{f.prix}€</span>
+                    <span className={`text-2xl font-bold data-mono ${f.highlight ? 'text-electric-ink dark:text-electric' : 'text-navy dark:text-gold'}`}>{f.prix}€</span>
                     <span className="text-sm text-foreground/60 dark:text-white/60">/mois</span>
                   </div>
                   <div className="font-semibold text-foreground dark:text-white mb-1">{f.nom}</div>
@@ -293,22 +294,27 @@ export default function Home() {
         <div className="section-divider" aria-hidden="true" />
 
         {/* ── CTA final ──────────────────────────────────────────────────────── */}
-        <section className="py-28 animated-gradient relative overflow-hidden">
+        <section className="py-28 bg-[#070B16] relative overflow-hidden">
+          {/* Star field */}
+          <div className="star-field" aria-hidden="true">
+            {Array.from({ length: 30 }).map((_, i) => (
+              <div key={i} className="star" style={{
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`,
+                '--dur': `${2 + Math.random() * 4}s`,
+                '--delay': `${Math.random() * 3}s`,
+              } as React.CSSProperties} />
+            ))}
+          </div>
           {/* Halo animé */}
           <div className="pointer-events-none absolute inset-0 flex items-center justify-center" aria-hidden="true">
-            <div className="w-[600px] h-[600px] rounded-full"
+            <div className="halo-breathe w-[600px] h-[600px] rounded-full"
               style={{
-                background: 'radial-gradient(ellipse, rgba(45,125,210,0.18) 0%, rgba(245,158,11,0.06) 40%, transparent 70%)',
-                animation: 'halo-pulse 4s ease-in-out infinite',
+                background: 'radial-gradient(ellipse, rgba(45,125,210,0.15) 0%, rgba(245,158,11,0.05) 40%, transparent 70%)',
               }} />
-            {/* Orbiting particles */}
-            <div className="absolute w-0 h-0" style={{ top: '50%', left: '50%' }}>
-              <div className="halo-particle" />
-              <div className="halo-particle" />
-              <div className="halo-particle" />
-            </div>
           </div>
           <div className="relative max-w-3xl mx-auto px-4 sm:px-6 text-center">
+            <div className="section-marker mb-3 text-center" aria-hidden="true">[ 06 / DÉMARRONS ]</div>
             <div className="overline-label !text-white/60 mb-4">Démarrons</div>
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               Votre site internet vous attend
@@ -318,7 +324,7 @@ export default function Home() {
               Livraison garantie en {SITE.delais.vitrine}.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Link href="/contact" className="relative overflow-hidden px-8 py-4 bg-gold hover:bg-gold/90 text-ink font-bold rounded-xl shadow-lg shadow-amber-500/30 transition-all hover:-translate-y-0.5">
+              <Link href="/contact" className="btn-magnetic cta-glow relative overflow-hidden px-8 py-4 bg-gold hover:bg-gold/90 text-ink font-bold rounded-xl shadow-lg shadow-amber-500/30 transition-all hover:-translate-y-0.5">
                 Démarrer mon projet <span className="arrow-slide ml-1">→</span>
               </Link>
               <Link href="/tarifs" className="px-8 py-4 border border-white/25 text-white hover:bg-white/10 hover:border-white/40 font-semibold rounded-xl transition-all">
