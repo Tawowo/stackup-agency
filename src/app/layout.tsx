@@ -9,6 +9,7 @@ import CookieBanner from '@/components/ui/CookieBanner'
 import RevealObserver from '@/components/ui/RevealObserver'
 import BrandPreloader from '@/components/ui/BrandPreloader'
 import PageProgressBar from '@/components/ui/PageProgressBar'
+import SectionProgressBar from '@/components/ui/SectionProgressBar'
 
 import { SITE } from '@/config/site'
 import { BanniereProvider } from '@/contexts/BanniereContext'
@@ -180,6 +181,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               {isRentreeActive() && <BanniereRentree />}
               {isRentreeActive() && <MobileBannerSpacer />}
               <PageProgressBar />
+              <SectionProgressBar />
               <BrandPreloader />
               <RevealObserver />
               <Navbar />
