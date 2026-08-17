@@ -160,7 +160,7 @@ export default function AProposPage() {
               'Votre site vous appartient — export et accès complets garantis',
               'Pas de clients fictifs, pas de témoignages inventés : uniquement ce que nous avons réellement fait',
             ].map((item, i) => (
-              <div key={item} className="reveal-item flex items-start gap-3 p-4 bg-white rounded-xl border border-gray-100" style={{ animationDelay: `${i * 50}ms` }}>
+              <div key={item} className="reveal-item flex items-start gap-3 p-4 bg-white rounded-xl border border-gray-100 hover:border-gold/30 hover:shadow-md hover:-translate-y-0.5 transition-all duration-200" style={{ animationDelay: `${i * 50}ms` }}>
                 <CheckCircle size={16} className="text-gold mt-0.5 flex-shrink-0" />
                 <span className="text-navy/70 text-sm leading-relaxed">{item}</span>
               </div>

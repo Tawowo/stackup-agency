@@ -3,6 +3,7 @@ import { useState } from 'react'
 import Link from 'next/link'
 import { ChevronDown, ArrowRight } from 'lucide-react'
 import { SITE } from '@/config/site'
+import SectionDepth from '@/components/ui/SectionDepth'
 
 const FAQ_ITEMS = [
   { q: 'Combien coûte un site internet professionnel ?', a: `Un site vitrine complet démarre à ${SITE.pricing.vitrine} €, livraison et hébergement 12 mois inclus. Pas de frais cachés.` },
@@ -15,9 +16,7 @@ export default function HomeFaq() {
 
   return (
     <section className="py-16 bg-[#FFFDF9] relative overflow-hidden">
-      {/* Halo doux */}
-      <div className="pointer-events-none absolute top-0 right-0 w-64 h-64 rounded-full" aria-hidden="true"
-        style={{ background: 'radial-gradient(circle, rgba(245,158,11,0.06) 0%, transparent 70%)' }} />
+      <SectionDepth variant="gold" />
       <div className="max-w-3xl mx-auto px-4 sm:px-6 relative">
         <div className="section-marker mb-2" aria-hidden="true">[ FAQ ]</div>
         <h2 className="text-2xl font-bold text-navy mb-6">Questions fréquentes</h2>

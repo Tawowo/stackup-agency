@@ -245,7 +245,7 @@ export default function Home() {
                 <div key={f.nom}
                   className={`maintenance-card reveal-item relative rounded-2xl p-5 ${f.highlight
                     ? 'bg-navy text-white liseré-border hud-corners shadow-[0_24px_60px_rgba(30,58,95,0.20)]'
-                    : 'bg-white border border-gray-100 hover:shadow-[0_12px_40px_rgba(30,58,95,0.08)] hud-4corners'} transition-all`}
+                    : 'bg-white border border-gray-100 hover:border-navy/20 hover:shadow-[0_12px_40px_rgba(30,58,95,0.10)] hover:-translate-y-1 hud-4corners'} transition-all duration-300`}
                   style={{ animationDelay: `${i * 80}ms` }}>
                   {f.highlight && <div className="text-xs font-semibold text-gold mb-2 uppercase tracking-wide data-mono">★ Le plus populaire</div>}
                   <div className="flex items-baseline gap-1 mb-1">

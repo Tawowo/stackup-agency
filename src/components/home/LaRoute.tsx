@@ -1,11 +1,14 @@
 'use client'
 /**
- * LA ROUTE — Concept V4
- * Chemin serpentin du process avec mini-illustrations et scroll-driven fill
+ * LA ROUTE V4.2 — Scrub parfait
+ * - Trait SVG : scrub direct, strokeDashoffset = f(scrollY), ZERO transition CSS
+ * - Étapes : IntersectionObserver avec rootMargin "-50% 0px -50% 0px"
+ *   → chaque card s'active quand son CENTRE franchit le CENTRE du viewport
  */
 import { useRef, useState, useEffect } from 'react'
 import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
+import SectionDepth from '@/components/ui/SectionDepth'
 
 const STEPS = [
   {
@@ -34,7 +37,7 @@ const STEPS = [
     id: 3,
     label: 'Design',
     title: 'On dessine',
-    desc: 'Maquette de votre site en 48h. Vous validez avant qu\'on code.',
+    desc: "Maquette de votre site en 48h. Vous validez avant qu'on code.",
     emoji: '🎨',
     color: '#7C3AED',
     bg: 'bg-purple-50',
@@ -65,89 +68,70 @@ const STEPS = [
   },
 ]
 
-function StepCard({ step, index, fillPct }: { step: typeof STEPS[0]; index: number; fillPct: number }) {
-  const visible = fillPct > index * (100 / STEPS.length)
-  return (
-    <div
-      className={`flex items-start gap-4 transition-all duration-500 ${
-        step.side === 'right' ? 'flex-row-reverse text-right' : ''
-      } ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}
-      style={{ transitionDelay: `${index * 80}ms` }}
-    >
-      {/* Icon bubble */}
-      <div
-        className="flex-shrink-0 w-14 h-14 rounded-2xl flex items-center justify-center text-2xl shadow-md transition-all duration-500"
-        style={{
-          background: visible ? step.color : '#F3F4F6',
-          transform: visible ? 'scale(1)' : 'scale(0.8)',
-        }}
-      >
-        {step.emoji}
-      </div>
-
-      {/* Card */}
-      <div className={`flex-1 p-4 rounded-xl border transition-all duration-500 ${step.bg} ${step.border} ${
-        visible ? 'shadow-sm' : ''
-      }`}>
-        <div className="text-[10px] font-bold uppercase tracking-widest mb-0.5" style={{ color: step.color }}>
-          Étape {step.id} — {step.label}
-        </div>
-        <div className="font-bold text-navy text-base mb-1">{step.title}</div>
-        <div className="text-navy/60 text-sm leading-relaxed">{step.desc}</div>
-      </div>
-    </div>
-  )
-}
+const pathD =
+  'M 100 0 C 100 60, 300 60, 300 120 C 300 180, 100 180, 100 240 C 100 300, 300 300, 300 360 C 300 420, 100 420, 100 480 C 100 540, 300 540, 300 600'
 
 export default function LaRoute() {
-  const ref = useRef<HTMLDivElement>(null)
+  const sectionRef = useRef<HTMLDivElement>(null)
   const pathRef = useRef<SVGPathElement>(null)
-  const [fillPct, setFillPct] = useState(0)
+  const pathLenRef = useRef(0)
+  const [visible, setVisible] = useState<boolean[]>(Array(STEPS.length).fill(false))
+  const cardRefs = useRef<(HTMLDivElement | null)[]>([])
 
+  /* ── Path scrub : ScrollY direct, 0 transition ── */
   useEffect(() => {
-    const el = ref.current
-    if (!el) return
+    const path = pathRef.current
+    if (!path) return
+    const len = path.getTotalLength()
+    pathLenRef.current = len
+    path.style.strokeDasharray = String(len)
+    path.style.strokeDashoffset = String(len)
 
-    const handleScroll = () => {
-      const rect = el.getBoundingClientRect()
-      const windowH = window.innerHeight
-      // Start filling when element enters, full when bottom at 20% from top
-      const start = rect.top - windowH * 0.9
-      const end = rect.bottom - windowH * 0.2
-      const range = end - start
-      const progress = Math.max(0, Math.min(1, (-start) / range))
-      setFillPct(Math.round(progress * 100))
-
-      if (pathRef.current) {
-        const length = pathRef.current.getTotalLength()
-        pathRef.current.style.strokeDashoffset = String(length * (1 - progress))
-      }
+    const onScroll = () => {
+      const section = sectionRef.current
+      if (!section) return
+      const rect = section.getBoundingClientRect()
+      const wh = window.innerHeight
+      // Scrub: commence quand le haut entre dans le bas de la fenêtre,
+      // termine quand le bas sort par le haut de la fenêtre.
+      const scrollable = rect.height + wh
+      const scrolled = wh - rect.top
+      const progress = Math.max(0, Math.min(1, scrolled / scrollable))
+      path.style.strokeDashoffset = String(len * (1 - progress))
     }
 
-    window.addEventListener('scroll', handleScroll, { passive: true })
-    handleScroll()
-    return () => window.removeEventListener('scroll', handleScroll)
+    window.addEventListener('scroll', onScroll, { passive: true })
+    onScroll()
+    return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
-  // SVG serpentine path (zigzag between left and right cards)
-  // Positions: L top, R, L, R, L bottom — snake path
-  const pathD = 'M 100 0 C 100 60, 300 60, 300 120 C 300 180, 100 180, 100 240 C 100 300, 300 300, 300 360 C 300 420, 100 420, 100 480 C 100 540, 300 540, 300 600'
-
+  /* ── Cards : IntersectionObserver, centre → centre ── */
   useEffect(() => {
-    if (pathRef.current) {
-      const length = pathRef.current.getTotalLength()
-      pathRef.current.style.strokeDasharray = String(length)
-      pathRef.current.style.strokeDashoffset = String(length)
-    }
+    const obs = new IntersectionObserver(
+      (entries) => {
+        setVisible((prev) => {
+          const next = [...prev]
+          entries.forEach((e) => {
+            const idx = Number((e.target as HTMLElement).dataset.stepIdx)
+            if (!isNaN(idx)) next[idx] = e.isIntersecting
+          })
+          return next
+        })
+      },
+      {
+        // Déclenche quand la carte croise la ligne médiane du viewport
+        rootMargin: '-50% 0px -50% 0px',
+      }
+    )
+    cardRefs.current.forEach((el) => el && obs.observe(el))
+    return () => obs.disconnect()
   }, [])
 
   return (
-    <section ref={ref} className="py-24 bg-white relative overflow-hidden">
+    <section ref={sectionRef} className="py-24 bg-white relative overflow-hidden">
       <span className="section-number select-none" aria-hidden="true">04</span>
-      <div className="pointer-events-none absolute top-0 left-0 w-96 h-96 rounded-full" aria-hidden="true"
-        style={{ background: 'radial-gradient(ellipse, rgba(245,158,11,0.07) 0%, transparent 70%)' }} />
-      <div className="pointer-events-none absolute bottom-0 right-0 w-96 h-96 rounded-full" aria-hidden="true"
-        style={{ background: 'radial-gradient(ellipse, rgba(45,125,210,0.06) 0%, transparent 70%)' }} />
+
+      <SectionDepth variant="warm" />
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 relative">
         <div className="section-marker mb-2 reveal-item" aria-hidden="true">[ 04 / LA ROUTE ]</div>
@@ -159,15 +143,13 @@ export default function LaRoute() {
           Un chemin balisé, sans mauvaise surprise. Du brief à la livraison en 10 jours.
         </p>
 
-        {/* Desktop: 2-column snake */}
+        {/* ── Desktop : snake 2 colonnes ── */}
         <div className="hidden lg:block">
           <div className="relative">
-            {/* SVG path */}
+            {/* SVG path serpentine */}
             <div className="absolute left-1/2 -translate-x-1/2 top-8 bottom-8 w-[400px] pointer-events-none" aria-hidden="true">
               <svg viewBox="0 0 400 620" className="w-full h-full" fill="none">
-                {/* Background track */}
                 <path d={pathD} stroke="#E5E7EB" strokeWidth="3" fill="none" strokeLinecap="round" />
-                {/* Animated fill */}
                 <path
                   ref={pathRef}
                   d={pathD}
@@ -175,7 +157,7 @@ export default function LaRoute() {
                   strokeWidth="3"
                   fill="none"
                   strokeLinecap="round"
-                  style={{ transition: 'stroke-dashoffset 0.1s linear' }}
+                  /* PAS de transition CSS — scrub direct via JS */
                 />
                 <defs>
                   <linearGradient id="routeGrad" x1="0" y1="0" x2="0" y2="620" gradientUnits="userSpaceOnUse">
@@ -188,48 +170,76 @@ export default function LaRoute() {
             </div>
 
             <div className="space-y-16 relative z-10">
-              {STEPS.map((step, i) => (
-                <div
-                  key={step.id}
-                  className={`flex items-center ${step.side === 'right' ? 'justify-end' : 'justify-start'}`}
-                >
-                  <div className="w-5/12">
-                    <StepCard step={step} index={i} fillPct={fillPct} />
+              {STEPS.map((step, i) => {
+                const on = visible[i]
+                return (
+                  <div
+                    key={step.id}
+                    ref={(el) => { cardRefs.current[i] = el }}
+                    data-step-idx={i}
+                    className={`flex items-center ${step.side === 'right' ? 'justify-end' : 'justify-start'}`}
+                  >
+                    <div className="w-5/12">
+                      <div className={`flex items-start gap-4 transition-all duration-500 ${step.side === 'right' ? 'flex-row-reverse text-right' : ''} ${on ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
+                        {/* Icône */}
+                        <div
+                          className="flex-shrink-0 w-14 h-14 rounded-2xl flex items-center justify-center text-2xl shadow-md transition-all duration-500"
+                          style={{
+                            background: on ? step.color : '#F3F4F6',
+                            transform: on ? 'scale(1)' : 'scale(0.8)',
+                          }}
+                        >
+                          {step.emoji}
+                        </div>
+                        {/* Carte */}
+                        <div className={`flex-1 p-4 rounded-xl border transition-all duration-500 ${step.bg} ${step.border} ${on ? 'shadow-sm' : ''}`}>
+                          <div className="text-[10px] font-bold uppercase tracking-widest mb-0.5" style={{ color: step.color }}>
+                            Étape {step.id} — {step.label}
+                          </div>
+                          <div className="font-bold text-navy text-base mb-1">{step.title}</div>
+                          <div className="text-navy/60 text-sm leading-relaxed">{step.desc}</div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              ))}
+                )
+              })}
             </div>
           </div>
         </div>
 
-        {/* Mobile: single column */}
+        {/* ── Mobile : colonne unique ── */}
         <div className="lg:hidden space-y-4">
-          {STEPS.map((step, i) => (
-            <div
-              key={step.id}
-              className={`flex items-start gap-4 transition-all duration-500 ${fillPct > i * 20 ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-4'}`}
-              style={{ transitionDelay: `${i * 60}ms` }}
-            >
-              <div className="flex-shrink-0 flex flex-col items-center">
-                <div
-                  className="w-12 h-12 rounded-xl flex items-center justify-center text-xl shadow transition-all duration-300"
-                  style={{ background: fillPct > i * 20 ? step.color : '#F3F4F6' }}
-                >
-                  {step.emoji}
+          {STEPS.map((step, i) => {
+            const on = visible[i]
+            return (
+              <div
+                key={step.id}
+                ref={(el) => { cardRefs.current[i] = el }}
+                data-step-idx={i}
+                className={`flex items-start gap-4 transition-all duration-500 ${on ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-4'}`}
+              >
+                <div className="flex-shrink-0 flex flex-col items-center">
+                  <div
+                    className="w-12 h-12 rounded-xl flex items-center justify-center text-xl shadow transition-all duration-300"
+                    style={{ background: on ? step.color : '#F3F4F6' }}
+                  >
+                    {step.emoji}
+                  </div>
+                  {i < STEPS.length - 1 && (
+                    <div className="w-0.5 h-6 mt-1" style={{ background: visible[i + 1] ? step.color : '#E5E7EB', transition: 'background 0.3s' }} />
+                  )}
                 </div>
-                {i < STEPS.length - 1 && (
-                  <div className="w-0.5 h-6 mt-1" style={{ background: fillPct > (i + 1) * 20 ? step.color : '#E5E7EB', transition: 'background 0.3s' }} />
-                )}
-              </div>
-              <div className={`flex-1 p-4 rounded-xl border mb-2 ${step.bg} ${step.border}`}>
-                <div className="text-[10px] font-bold uppercase tracking-wider mb-0.5" style={{ color: step.color }}>
-                  {step.label}
+                <div className={`flex-1 p-4 rounded-xl border mb-2 ${step.bg} ${step.border}`}>
+                  <div className="text-[10px] font-bold uppercase tracking-wider mb-0.5" style={{ color: step.color }}>
+                    {step.label}
+                  </div>
+                  <div className="font-bold text-navy text-sm mb-1">{step.title}</div>
+                  <div className="text-navy/60 text-xs leading-relaxed">{step.desc}</div>
                 </div>
-                <div className="font-bold text-navy text-sm mb-1">{step.title}</div>
-                <div className="text-navy/60 text-xs leading-relaxed">{step.desc}</div>
               </div>
-            </div>
-          ))}
+            )
+          })}
         </div>
 
         {/* CTA */}

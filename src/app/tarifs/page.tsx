@@ -136,7 +136,7 @@ export default function TarifsPage() {
               { titre: 'Pro', prix: SITE.pricing.maintenancePro, inclus: ['Tout Starter', 'Sauvegardes quotidiennes', '2h modifications/mois', 'Réponse sous 48 h ouvrées'] },
               { titre: 'Premium', prix: SITE.pricing.maintenancePremium, inclus: ['Tout Pro', '5h modifications/mois', 'Rapport mensuel SEO', 'Réponse sous 24 h ouvrées'] },
             ].map(m => (
-              <div key={m.titre} className="rounded-2xl border border-navy/20 dark:border-white/10 p-5">
+              <div key={m.titre} className="rounded-2xl border border-navy/20 dark:border-white/10 p-5 hover:border-electric/30 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
                 <div className="flex items-center justify-between mb-3">
                   <h3 className="font-bold text-foreground dark:text-white">{m.titre}</h3>
                   <span className="text-xl font-bold text-navy dark:text-gold">{m.prix}€<span className="text-sm font-normal text-foreground/70 dark:text-white/50">/mois</span></span>
@@ -201,10 +201,10 @@ export default function TarifsPage() {
               { q: 'Proposez-vous des facilités de paiement ?', a: "Oui, pour les projets supérieurs à 500€, un échelonnement sur 3 mensualités sans frais est possible. Mentionnez-le dans votre demande." },
               { q: 'Puis-je bénéficier d\'aides pour financer mon site ?', a: "Certaines aides régionales et dispositifs comme France Num peuvent couvrir une partie des frais. Renseignez-vous auprès de votre chambre de commerce locale." },
             ].map(faq => (
-              <details key={faq.q} className="group rounded-xl border border-navy/20 dark:border-white/10 overflow-hidden">
-                <summary className="flex items-center justify-between p-4 cursor-pointer font-medium text-foreground dark:text-white list-none">
+              <details key={faq.q} className="group rounded-xl border border-navy/20 dark:border-white/10 overflow-hidden hover:border-gold/30 transition-colors duration-200">
+                <summary className="flex items-center justify-between p-4 cursor-pointer font-medium text-foreground dark:text-white list-none hover:bg-amber-50/30 transition-colors">
                   {faq.q}
-                  <ChevronRight size={16} className="text-white/40 group-open:rotate-90 transition-transform flex-shrink-0" />
+                  <ChevronRight size={16} className="text-navy/40 group-open:rotate-90 transition-transform flex-shrink-0 group-hover:text-gold" />
                 </summary>
                 <div className="px-4 pb-4 text-foreground/70 dark:text-white/70 text-sm">{faq.a}</div>
               </details>
