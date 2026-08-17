@@ -1,15 +1,15 @@
 ---
-title: "Site web pour coach sportif : attirer des clients en ligne et se démarquer"
-excerpt: "Le marché du coaching sportif en ligne a explosé. Un coach qui a un site web optimisé génère 3 à 5 fois plus de demandes qu'un coach qui s'appuie uniquement sur les réseaux sociaux."
+title: "Coach sportif : vendre des programmes et des séances en ligne"
+excerpt: "Séances en présentiel, programmes PDF, abonnement à du contenu mensuel : un coach sportif peut vendre au-delà de son temps disponible avec le bon site. Structure et modèles de vente."
 date: "2026-07-23"
-updated: "2026-07-30"
-readTime: 6
+updated: "2026-08-17"
+readTime: 8
 tag: "Création de site"
 category: "creation"
-keywords: ["site web coach sportif", "site internet coach fitness", "coach personnel site internet", "coaching sportif en ligne site"]
+keywords: ["site coach sportif", "vendre programme sportif en ligne", "coach sportif boutique en ligne", "coaching sportif en ligne site"]
 ---
 
-**Le marché du coaching sportif personnel représente 1,5 milliard d'euros en France en 2026, dont une part croissante en ligne.** Pourtant, la majorité des coachs sportifs indépendants n'ont qu'une présence Instagram — sans site web propre, sans formulaire de contact, sans positionnement SEO local. C'est une opportunité pour ceux qui investissent dans leur présence en ligne.
+**Un coach sportif peut vendre en ligne au-delà de son temps de présence physique disponible : programmes d'entraînement en PDF ou vidéo, abonnement à du contenu mensuel, ou séances de coaching en visio — chacun de ces formats se vend directement depuis un site propre, sans dépendre d'une plateforme tierce ni de ses commissions.** Le marché du coaching sportif personnel représente 1,5 milliard d'euros en France en 2026, dont une part croissante en ligne — la majorité des coachs indépendants restent pourtant limités à Instagram, sans structure de vente propre.
 
 ---
 
@@ -121,6 +121,18 @@ Pour un coach qui démarre, la formule vitrine à 449€ est suffisante. Elle pe
 
 ---
 
+## Vendre au-delà du temps disponible : les trois formats qui fonctionnent
+
+Un coach sportif en présentiel est limité par ses heures disponibles. Trois formats permettent de générer un revenu complémentaire sans cette contrainte de temps :
+
+| Format | Ce qu'il apporte | Contrainte |
+|---|---|---|
+| Programme PDF ou vidéo à l'achat unique | Revenu passif, vente illimitée sans temps supplémentaire | Nécessite un contenu bien structuré et actualisé |
+| Abonnement mensuel à du contenu | Revenu récurrent prévisible, fidélisation | Demande un renouvellement régulier du contenu |
+| Séances individuelles en visio | Étend la zone géographique de clientèle | Reste limité par le temps disponible, comme le présentiel |
+
+Une boutique intégrée au site permet de vendre ces programmes directement, sans commission prélevée par une plateforme tierce — contrairement à certaines marketplaces de coaching en ligne qui prennent une part significative de chaque vente.
+
 ## FAQ
 
 **Un coach sportif a-t-il besoin d'un site si Instagram fonctionne bien ?**
@@ -134,5 +146,12 @@ Oui, via une boutique intégrée (WooCommerce). Vous pouvez vendre des programme
 
 **Les réglementations sur le coaching sportif s'appliquent-elles au contenu publié en ligne ?**
 Oui. Si vous donnez des conseils nutritionnels ou médicaux sans les qualifications requises, vous engagez votre responsabilité. Les coachs sportifs non diététiciens doivent s'en tenir aux conseils d'hygiène alimentaire générale et orienter vers un professionnel de santé pour les questions médicales.
+
+## En résumé
+
+- Un coach sportif peut vendre au-delà de son temps disponible via des programmes PDF/vidéo, un abonnement mensuel ou des séances en visio.
+- Une boutique intégrée au site évite les commissions des marketplaces de coaching, contrairement à la vente via une plateforme tierce.
+- Le positionnement clair (public visé, méthode, résultats concrets) qualifie les prospects avant même le premier contact.
+- Le SEO local reste prioritaire pour un coach en présentiel ; les requêtes de niche (spécialité + public) captent une demande complémentaire qualifiée.
 
 Voir aussi : [site web pour coach professionnel](/blog/site-web-coach-professionnel), [Instagram pour artisans](/blog/instagram-artisan-guide), [création de site vitrine à partir de 449€](/tarifs).
