@@ -10,6 +10,8 @@ export default function BrandPreloader() {
 
   useEffect(() => {
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
+    // Ne pas afficher le préchargeur sur mobile (trop lent, nuit au LCP)
+    if (window.innerWidth < 1024) return
     if (sessionStorage.getItem('preloader-v3-shown')) return
     sessionStorage.setItem('preloader-v3-shown', '1')
 

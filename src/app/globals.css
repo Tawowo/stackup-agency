@@ -2479,3 +2479,34 @@ select:focus-visible {
   .cta-glow { animation: none; }
   .volet-in, .volet-out { animation: none; clip-path: none; }
 }
+
+/* ─── PERF MOBILE : désactivation GPU-heavy sur petits écrans ──
+   backdrop-filter sur mobile = recalcul compositing à chaque frame
+   persp-grid + liseré-border::before = animations continues coûteuses
+   On garde le look glass via fond semi-opaque sans blur.           ─── */
+@media (max-width: 1023px) {
+  .glass-panel {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    background: rgba(12, 18, 34, 0.94) !important;
+  }
+  .glass-panel-light {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+  /* Cacher persp-grid sur mobile — animation continue trop coûteuse */
+  .persp-grid::before { display: none; }
+  /* Désactiver liseré-border animé sur mobile */
+  .liseré-border::before { display: none; }
+  .liseré-permanent::before { display: none; }
+  /* Désactiver scanline mobile */
+  .scanline-section::after { display: none; }
+  /* Désactiver circuit dots mobile */
+  .circuit-line::after, .circuit-h::after { display: none; }
+}
+
+/* ─── PERF MOBILE : star-field + will-change limités ─── */
+@media (max-width: 1023px) {
+  .star-field { display: none; }
+  .will-change-transform { will-change: auto; }
+}

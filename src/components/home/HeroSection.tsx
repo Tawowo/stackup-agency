@@ -205,20 +205,14 @@ export default function HeroSection() {
       <div ref={imgRef} className="absolute inset-0 will-change-transform" aria-hidden="true">
         {/* Video hero — brancher hero-accueil.mp4 quand disponible */}
         {/* Le poster (LCP) est toujours servi, la vidéo prend le relais après first paint */}
-        <video
+        {/* Vidéo câblée — décommenter <source> + autoPlay/loop quand hero-accueil.mp4 est disponible */}
+        {/* <video
           className="absolute inset-0 w-full h-full object-cover object-[68%_center]"
-          autoPlay
-          muted
-          loop
-          playsInline
-          disablePictureInPicture
-          preload="none"
-          poster="/images/hero-monument-s.webp"
-          aria-hidden="true"
-          // brancher src="/hero-accueil.mp4" quand le fichier est disponible
+          autoPlay muted loop playsInline disablePictureInPicture preload="none"
+          poster="/images/hero-monument-s.webp" aria-hidden="true"
         >
-          {/* <source src="/hero-accueil.mp4" type="video/mp4" /> */}
-        </video>
+          <source src="/hero-accueil.mp4" type="video/mp4" />
+        </video> */}
         {/* Fallback image si la vidéo n'est pas encore disponible */}
         <Image
           src="/images/hero-monument-s.webp"

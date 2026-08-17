@@ -1,9 +1,9 @@
 'use client'
-import { useEffect, useRef } from 'react'
+import { useEffect } from 'react'
 import Link from 'next/link'
 import { X } from 'lucide-react'
 import { useBanniere } from '@/contexts/BanniereContext'
-import { isRentreeActive, getRemainingTime } from '@/config/rentree'
+import { isRentreeActive } from '@/config/rentree'
 import CountdownInline from './CountdownInline'
 
 const LS_KEY = 'banner-rentree-dismissed'
@@ -18,7 +18,7 @@ function isDismissed(): boolean {
 
 export default function BanniereRentree() {
   const { banniereActive, setBanniereActive } = useBanniere()
-  const initialTime = useRef(getRemainingTime())
+
 
   useEffect(() => {
     if (!isRentreeActive() || isDismissed()) {
@@ -53,7 +53,7 @@ export default function BanniereRentree() {
       >
         <span className="truncate text-center">🎒 Maquette offerte jusqu&apos;au 13/09 →</span>
         <span className="hidden xl:inline shrink-0 opacity-80">
-          · <CountdownInline initialTime={initialTime.current} />
+          · <CountdownInline />
         </span>
       </Link>
 

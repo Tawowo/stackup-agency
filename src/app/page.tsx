@@ -296,14 +296,21 @@ export default function Home() {
 
         {/* ── CTA final ──────────────────────────────────────────────────────── */}
         <section className="py-28 bg-[#070B16] relative overflow-hidden">
-          {/* Star field */}
+          {/* Star field — positions déterministes pour éviter l'hydration mismatch */}
           <div className="star-field" aria-hidden="true">
-            {Array.from({ length: 30 }).map((_, i) => (
+            {[
+              [8,12,3.1,0.5],[17,67,2.8,1.2],[23,34,4.2,0.0],[31,89,3.7,2.1],[42,21,2.5,1.8],
+              [51,55,3.9,0.3],[63,78,2.2,2.5],[72,43,4.8,0.8],[81,11,3.3,1.5],[91,66,2.7,0.1],
+              [6,82,4.1,2.8],[15,47,3.5,0.6],[26,93,2.9,1.9],[35,28,4.5,0.9],[47,71,3.2,2.3],
+              [56,16,2.6,1.1],[68,60,4.0,0.4],[76,85,3.8,2.0],[86,37,2.4,1.6],[95,52,4.6,0.7],
+              [4,29,3.0,2.9],[19,74,2.3,0.2],[29,48,4.3,1.4],[39,91,3.6,2.6],[49,13,2.8,0.0],
+              [59,57,4.7,1.7],[69,32,3.1,2.4],[79,77,2.5,0.5],[88,22,4.4,1.3],[97,68,3.9,2.2],
+            ].map(([left, top, dur, delay], i) => (
               <div key={i} className="star" style={{
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
-                '--dur': `${2 + Math.random() * 4}s`,
-                '--delay': `${Math.random() * 3}s`,
+                left: `${left}%`,
+                top: `${top}%`,
+                '--dur': `${dur}s`,
+                '--delay': `${delay}s`,
               } as React.CSSProperties} />
             ))}
           </div>
