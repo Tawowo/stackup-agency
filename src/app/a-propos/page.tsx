@@ -120,7 +120,7 @@ export default function AProposPage() {
             ].map((tech, i) => (
               <div key={tech.label} className="reveal-item p-4 rounded-xl border border-navy/10 dark:border-white/10 bg-white dark:bg-white/3 hover:border-electric/30 hover:-translate-y-0.5 transition-all duration-200 group"
                 style={{ animationDelay: `${i * 60}ms` }}>
-                <div className="text-xl mb-2">{tech.icon}</div>
+                <div className="service-icon-wrap text-xl mb-2 inline-block">{tech.icon}</div>
                 <div className="font-semibold text-foreground dark:text-white text-sm mb-1 group-hover:text-electric transition-colors">{tech.label}</div>
                 <div className="text-foreground/70 dark:text-white/50 text-xs">{tech.desc}</div>
               </div>

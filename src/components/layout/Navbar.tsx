@@ -128,10 +128,10 @@ export default function Navbar() {
                 </div>
               </div>
 
-              <Link href="/tarifs" aria-current={pathname === '/tarifs' ? 'page' : undefined} className={`text-sm font-medium transition-colors ${linkClass}`}>Tarifs</Link>
-              <Link href="/realisations" aria-current={pathname === '/realisations' ? 'page' : undefined} className={`text-sm font-medium transition-colors ${linkClass}`}>Réalisations</Link>
-              <Link href="/blog" aria-current={pathname.startsWith('/blog') ? 'page' : undefined} className={`text-sm font-medium transition-colors ${linkClass}`}>Blog</Link>
-              <Link href="/a-propos" aria-current={pathname === '/a-propos' ? 'page' : undefined} className={`text-sm font-medium transition-colors ${linkClass}`}>À propos</Link>
+              <Link href="/tarifs" aria-current={pathname === '/tarifs' ? 'page' : undefined} className={`nav-link-animated text-sm font-medium transition-colors ${linkClass}`}>Tarifs</Link>
+              <Link href="/realisations" aria-current={pathname === '/realisations' ? 'page' : undefined} className={`nav-link-animated text-sm font-medium transition-colors ${linkClass}`}>Réalisations</Link>
+              <Link href="/blog" aria-current={pathname.startsWith('/blog') ? 'page' : undefined} className={`nav-link-animated text-sm font-medium transition-colors ${linkClass}`}>Blog</Link>
+              <Link href="/a-propos" aria-current={pathname === '/a-propos' ? 'page' : undefined} className={`nav-link-animated text-sm font-medium transition-colors ${linkClass}`}>À propos</Link>
 
               {/* Outils dropdown */}
               <div className="relative" ref={outilsRef}>

@@ -98,7 +98,7 @@ function CardItem({ card, index, isVisible }: { card: Card; index: number; isVis
 
       <Link
         href={card.href}
-        className={`flex items-center justify-center gap-1 py-2.5 rounded-xl text-sm font-semibold transition-all hover:-translate-y-0.5 ${
+        className={`btn-lift flex items-center justify-center gap-1 py-2.5 rounded-xl text-sm font-semibold transition-all hover:-translate-y-0.5 ${
           card.highlight
             ? 'bg-gold hover:bg-gold/90 text-ink shadow-md shadow-gold/20'
             : variant === 'starter'

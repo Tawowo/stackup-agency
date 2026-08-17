@@ -2,7 +2,7 @@
 import { useEffect } from 'react'
 import { usePathname } from 'next/navigation'
 
-const SELECTORS = '.reveal-item, .reveal-scale, .heading-underline'
+const SELECTORS = '.reveal-item, .reveal-scale, .heading-underline, .clip-reveal, .check-list'
 
 export default function RevealObserver() {
   const pathname = usePathname()

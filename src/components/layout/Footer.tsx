@@ -52,7 +52,7 @@ export default function Footer() {
         style={{ background: 'radial-gradient(ellipse, rgba(45,125,210,0.05) 0%, transparent 70%)' }} />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-10 mb-12">
+        <div className="footer-stagger in-view grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-10 mb-12">
 
           {/* Col 1 — Marque */}
           <div className="lg:col-span-1">
