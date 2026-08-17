@@ -73,9 +73,11 @@ function getBlogPosts(): { slug: string; date: Date }[] {
         const raw = fs.readFileSync(path.join(dir, f), 'utf8')
         const { data } = matter(raw)
         const d = data.updated ?? data.date
-        return { slug, date: d ? new Date(d) : new Date() }
+        const publishAt = data.publishAt ? new Date(data.publishAt) : null
+        return { slug, date: d ? new Date(d) : new Date(), publishAt }
       })
       .filter(({ slug }) => !REDIRECTED_BLOG_SLUGS.has(slug))
+      .filter(({ publishAt }) => !publishAt || publishAt.getTime() <= Date.now())
       .sort((a, b) => b.date.getTime() - a.date.getTime())
   } catch {
     return []
