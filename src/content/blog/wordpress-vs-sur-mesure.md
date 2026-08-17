@@ -1,13 +1,15 @@
 ---
-title: "WordPress ou développement sur mesure : comment choisir en 2026 ?"
+title: "WordPress ou sur mesure : lequel choisir selon votre projet ?"
 date: "2026-01-05"
-excerpt: "WordPress ou développement sur mesure ? Ce comparatif honnête vous aide à faire le bon choix selon votre projet, votre budget et vos ambitions."
+updated: "2026-08-17"
+excerpt: "WordPress ou développement sur mesure ? Le bon choix dépend de vos besoins réels : plugins prêts à l'emploi côté WordPress, performances et propriété totale côté sur mesure."
 tag: "Création de sites"
 category: "creation-sites"
-readTime: 7
+readTime: 8
+keywords: ["wordpress ou sur mesure", "wordpress vs sur mesure", "choisir wordpress ou developpement sur mesure", "wordpress performances seo"]
 ---
 
-**WordPress propulse encore 43 % des sites internet dans le monde en 2026.** C'est à la fois sa force et sa faiblesse : une plateforme universelle, mais dont les limites sont bien connues des développeurs. Face à elle, le développement sur mesure (Next.js, Astro, Symfony, Laravel...) gagne du terrain, notamment parce que les performances web sont devenues un critère déterminant pour le référencement et la conversion. Comment choisir ? Ce guide vous donne les clés.
+**WordPress convient aux projets qui ont besoin de nombreux plugins prêts à l'emploi et d'une prise en main autonome immédiate ; le sur mesure s'impose dès que la performance, la sécurité ou la différenciation deviennent des enjeux stratégiques.** WordPress propulse encore 43 % des sites internet dans le monde en 2026 — une plateforme universelle, mais dont les limites sont bien connues des développeurs. Ce guide compare les deux options sans parti pris, avec le vrai coût de chacune sur la durée.
 
 ## Pourquoi c'est important en 2026
 
@@ -64,6 +66,18 @@ Enfin, la sécurité est devenue un enjeu majeur : WordPress est la cible de 90 
 - **Dépendance aux développeurs** : les modifications requièrent souvent une intervention technique (même si les CMS headless modernes réduisent ce problème)
 - **Pool de prestataires plus restreint** : moins de développeurs disponibles, donc potentiellement plus chers
 
+## Le comparatif en un coup d'œil
+
+| Critère | WordPress optimisé | Sur mesure |
+|---|---|---|
+| Coût de création | Généralement 20 à 40 % moins cher à fonctionnalité égale | 449 € à 1 647 € selon le type de site |
+| Performances (PageSpeed mobile) | 60-85 selon l'optimisation | 90-100 en standard |
+| Sécurité | Cible n°1 des attaques sur CMS, maintenance nécessaire | Surface d'attaque minimale, pas de plugins tiers |
+| Prise en main autonome | Excellente (éditeur Gutenberg) | Bonne, via CMS headless ou interface dédiée |
+| Écosystème d'extensions | Plus de 60 000 plugins | Développé sur mesure selon le besoin réel |
+| Propriété du site | Oui (mais dépendant de l'écosystème de plugins) | Oui, sans aucune dépendance tierce |
+| Coût de maintenance annuel | 50 à 300 €/mois pour une maintenance sérieuse | 29 à 89 €/mois selon le palier, mises à jour techniques incluses dès le premier |
+
 ## Les erreurs les plus courantes
 
 ### 1. Choisir WordPress "par défaut" sans évaluer les besoins réels
@@ -100,14 +114,30 @@ Avant de valider un choix technologique, demandez au prestataire de vous montrer
 
 Avant de valider un projet, demandez une démonstration de l'interface que vous utiliserez au quotidien. Elle doit être intuitive pour vous — pas pour le développeur.
 
-> **À retenir :**
-> - WordPress reste excellent pour les blogs, sites vitrine standards et e-commerce WooCommerce si bien optimisé
-> - Le développement sur mesure est supérieur en performances, sécurité et évolutivité — à budget équivalent sur 3 ans
-> - Le bon choix dépend de vos besoins réels, pas d'une préférence par défaut
-> - Quelle que soit la techno, une interface d'administration intuitive est indispensable
+## En résumé
 
-## Conclusion
+- WordPress reste pertinent pour les projets qui ont besoin de nombreux plugins prêts à l'emploi et d'une autonomie totale sur la gestion de contenu au quotidien.
+- Le sur mesure l'emporte dès que la performance (Core Web Vitals, SEO), la sécurité ou la différenciation visuelle sont des enjeux réels pour l'activité.
+- Le bon indicateur n'est jamais le prix de création seul, mais le coût total de possession sur 3 à 5 ans (création + maintenance + évolutions).
+- Un site sur mesure bien conçu peut tout à fait offrir une interface d'administration aussi simple qu'un WordPress — "sur mesure" ne signifie pas "réservé aux développeurs".
 
-En 2026, la question n'est plus "lequel est le meilleur ?" mais "lequel est le mieux adapté à mon projet ?" WordPress reste une excellente solution pour de nombreux cas d'usage, à condition d'être bien configuré et maintenu. Le sur mesure s'impose quand les performances, la sécurité ou la différenciation sont des enjeux stratégiques.
+## Questions fréquentes
 
-Besoin d'un site web professionnel ? [Contactez Stackup Agency](/contact) — devis gratuit en 24h.
+**WordPress est-il un mauvais choix pour le SEO ?**
+Non, à condition d'être bien optimisé (thème léger, peu de plugins, hébergement performant). Sans cette optimisation, les Core Web Vitals en pâtissent — un facteur de classement Google officiel.
+
+**Un site sur mesure permet-il vraiment de tout modifier soi-même ensuite ?**
+Oui, si le prestataire livre une interface d'administration pensée pour un non-développeur (CMS headless comme Sanity ou Strapi, ou back-office dédié). La question à poser avant de signer : demander une démonstration de cette interface.
+
+**Le sur mesure est-il toujours plus cher que WordPress ?**
+Au moment de la création, généralement oui. Sur 3 à 5 ans, en intégrant les coûts de maintenance, de plugins premium et de sécurité de WordPress, l'écart se resserre fortement, voire s'inverse.
+
+**Peut-on migrer un site WordPress vers du sur mesure sans perdre son SEO ?**
+Oui, à condition de mettre en place des redirections 301 propres de chaque ancienne URL vers la nouvelle. Le [guide complet sur la refonte sans perdre son SEO](/blog/refonte-site-web-seo-redirections-301) détaille la méthode.
+
+**WooCommerce est-il une bonne option pour vendre en ligne ?**
+Pour un petit catalogue, WooCommerce fonctionne correctement. Pour une boutique avec un volume de commandes important, un système e-commerce sur mesure évite l'accumulation de plugins et les problèmes de performance qui en découlent.
+
+---
+
+*Pour aller plus loin : [WordPress ou agence web : que choisir pour son site en 2026 ?](/blog/paa-wordpress-vs-agence) · [Wix vs WordPress vs sur-mesure — Comparatif complet](/comparatif/wix-wordpress-sur-mesure) · [Nos tarifs](/tarifs)*
