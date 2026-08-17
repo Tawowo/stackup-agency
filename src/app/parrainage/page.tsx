@@ -89,7 +89,7 @@ export default function ParrainagePage() {
   }
 
   return (
-    <main className="min-h-screen bg-background dark:bg-[#0A0F1C]">
+    <main className="min-h-screen bg-[#070B16]">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       <MiniHero
