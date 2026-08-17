@@ -51,12 +51,10 @@ function CardItem({ card, index, isVisible }: { card: Card; index: number; isVis
 
   return (
     <div
-      className={`reveal-item rounded-2xl p-6 flex flex-col relative overflow-hidden transition-all duration-300 hover:-translate-y-1 glass-panel ${
+      className={`reveal-item rounded-2xl p-6 flex flex-col relative overflow-hidden transition-all duration-300 hover:-translate-y-1 ${
         variant === 'premium'
-          ? 'liseré-border liseré-permanent hud-4corners'
-          : variant === 'starter'
-          ? 'liseré-border hud-corners'
-          : 'hud-4corners'
+          ? 'bg-navy text-white liseré-border liseré-permanent hud-4corners shadow-[0_24px_60px_rgba(30,58,95,0.25)]'
+          : 'bg-white border border-gray-100 hover:shadow-[0_16px_48px_rgba(30,58,95,0.10)] hud-4corners'
       }`}
       style={{ animationDelay: `${index * 80}ms` }}
     >
@@ -67,7 +65,7 @@ function CardItem({ card, index, isVisible }: { card: Card; index: number; isVis
       )}
 
       <div className="flex items-start justify-between mb-3">
-        <h3 className="text-lg font-bold text-white">{card.titre}</h3>
+        <h3 className={`text-lg font-bold ${card.highlight ? 'text-white' : 'text-navy'}`}>{card.titre}</h3>
         <span className={`text-2xl font-bold ml-3 tabular-nums data-mono ${card.highlight ? 'text-gold' : 'text-electric'}`}>
           <span className="price-reveal is-visible">
             <span className="price-reveal-inner">{price}&thinsp;€</span>
@@ -75,11 +73,11 @@ function CardItem({ card, index, isVisible }: { card: Card; index: number; isVis
         </span>
       </div>
 
-      <p className="text-sm text-white/60 mb-4">{card.desc}</p>
+      <p className={`text-sm mb-4 ${card.highlight ? 'text-white/65' : 'text-navy/55'}`}>{card.desc}</p>
 
       <ul className={`space-y-1.5 mb-5 flex-1 ${checksVisible ? 'checks-visible' : ''}`}>
         {card.inclus.map((item, ci) => (
-          <li key={item} className="check-item flex items-center gap-2 text-sm text-white/70"
+          <li key={item} className={`check-item flex items-center gap-2 text-sm ${card.highlight ? 'text-white/75' : 'text-navy/65'}`}
             style={{ transitionDelay: `${ci * 60}ms` }}>
             <CheckCircle size={13} className={card.highlight ? 'text-gold flex-shrink-0' : 'text-electric flex-shrink-0'} />
             {item}
@@ -87,7 +85,7 @@ function CardItem({ card, index, isVisible }: { card: Card; index: number; isVis
         ))}
       </ul>
 
-      <div className="text-xs text-white/50 mb-4 data-mono">Livraison : {card.delai}</div>
+      <div className={`text-xs mb-4 data-mono ${card.highlight ? 'text-white/50' : 'text-navy/45'}`}>Livraison : {card.delai}</div>
 
       <Link
         href={card.href}
@@ -96,7 +94,7 @@ function CardItem({ card, index, isVisible }: { card: Card; index: number; isVis
             ? 'bg-gold hover:bg-gold/90 text-ink'
             : variant === 'starter'
             ? 'bg-electric hover:bg-electric-ink text-white'
-            : 'border border-white/15 text-white hover:bg-white/10'
+            : 'border border-navy/15 text-navy hover:bg-navy/5'
         }`}
       >
         Voir l&apos;offre <ChevronRight size={14} />

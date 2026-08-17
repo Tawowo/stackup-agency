@@ -72,7 +72,7 @@ export default function BlogCategoriePage({ params }: { params: { cat: string } 
   }
 
   return (
-    <div className="min-h-screen bg-[#070B16]">
+    <div className="min-h-screen bg-[#FFFDF9]">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
       <div className="bg-gradient-to-b from-[#060D1A] to-[#0A0F1C] pt-24 pb-16">

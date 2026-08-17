@@ -184,7 +184,7 @@ function Calculator() {
 
 export default function RedactionBlogSEOPage() {
   return (
-    <div className="min-h-screen bg-[#070B16]">
+    <div className="min-h-screen bg-[#FFFDF9]">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
