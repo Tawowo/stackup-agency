@@ -19,6 +19,28 @@ export interface Post {
   category?: string
   keywords?: string[]
   content?: string
+  faq?: { q: string; a: string }[]
+}
+
+const MD_INLINE = /\[([^\]]+)\]\([^)]+\)|[*_]{1,2}([^*_]+)[*_]{1,2}/g
+
+function stripMarkdown(s: string): string {
+  return s.replace(MD_INLINE, (_m, link, em) => link ?? em ?? '').trim()
+}
+
+/** Extrait les paires Q/R du bloc "## Questions fréquentes" (ou FAQ) d'un article, pour le schema FAQPage. */
+export function extractFaq(markdown: string): { q: string; a: string }[] {
+  const section = markdown.match(/##\s*(?:Questions fréquentes|FAQ|Questions récurrentes)[^\n]*\n([\s\S]*?)(?:\n##\s|\n---\s*\n|$)/i)
+  if (!section) return []
+  const pairs: { q: string; a: string }[] = []
+  const re = /\*\*(.+?\?)\*\*[ \t]*\n((?:(?!\*\*)[^\n]+\n?)+)/g
+  let m: RegExpExecArray | null
+  while ((m = re.exec(section[1]))) {
+    const q = stripMarkdown(m[1])
+    const a = stripMarkdown(m[2].replace(/\n/g, ' '))
+    if (q && a) pairs.push({ q, a })
+  }
+  return pairs
 }
 
 function normalizePost(slug: string, data: Record<string, unknown>): Post {
@@ -54,5 +76,5 @@ export async function getPost(slug: string): Promise<Post | null> {
   const pre = normalizePost(slug, data as Record<string, unknown>)
   if (!isPublished(pre)) return null
   const processed = await remark().use(html).process(content)
-  return { ...pre, content: processed.toString() }
+  return { ...pre, content: processed.toString(), faq: extractFaq(content) }
 }
