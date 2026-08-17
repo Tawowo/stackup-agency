@@ -1,15 +1,15 @@
 ---
-title: "Site web pour électricien : attirer des chantiers via Google"
-excerpt: "Un électricien référencé localement reçoit des demandes de devis qualifiées. Ce que doit contenir son site et comment le positionner."
+title: "Site web pour électricien : les pages indispensables"
+excerpt: "Page d'accueil, services, réalisations, certifications : les pages qu'un site d'électricien doit avoir pour transformer les recherches Google en demandes de devis."
 date: "2026-07-26"
-updated: "2026-07-28"
-readTime: 7
-tag: "SEO Local"
+updated: "2026-08-17"
+readTime: 9
+tag: "Artisans"
 category: "seo-local"
-keywords: ["site web électricien", "référencement électricien local", "Google électricien", "site internet électricien"]
+keywords: ["site electricien", "site web électricien", "pages indispensables site electricien", "référencement électricien local"]
 ---
 
-**Un électricien qui apparaît en premier sur Google pour "électricien [sa ville]" reçoit 3 à 6 fois plus de demandes qu'un confrère invisible en ligne.** En 2026, la majorité des clients cherchent un électricien sur internet avant d'appeler — même pour une urgence.
+**Réponse directe :** un site d'électricien efficace repose sur six pages précises — accueil avec proposition claire et téléphone visible, une page par type d'intervention (installation, mise aux normes, domotique, urgences), une galerie de réalisations, une page certifications et garanties (Qualifelec, RGE, décennale), des témoignages clients, et un contact avec formulaire de devis et carte de zone d'intervention. Un électricien qui apparaît en premier sur Google pour « électricien + sa ville » reçoit nettement plus de demandes qu'un confrère invisible en ligne — même pour une urgence, la plupart des clients cherchent désormais en ligne avant d'appeler.
 
 Voici comment construire une présence en ligne efficace.
 
@@ -126,6 +126,24 @@ Pour les requêtes locales, la fiche Google + carte est souvent le premier résu
 
 ---
 
+## Le tableau des pages, par priorité
+
+| Page | Contenu essentiel | Priorité |
+|---|---|---|
+| Accueil | Proposition claire, téléphone visible, zone d'intervention, certifications | Indispensable |
+| Pages de services | Une page par type d'intervention, formulaire de devis intégré | Indispensable |
+| Réalisations | Photos de chantiers avec description (type, ville, résultat) | Très élevée |
+| Certifications | SIRET, Qualifelec, RGE, IRVE, assurance décennale | Élevée |
+| Témoignages | 3 à 5 avis avec prénom, ville, type de travaux | Élevée |
+| Contact | Formulaire qualifiant, téléphone, carte de zone d'intervention | Indispensable |
+
+## En résumé
+
+- Un site d'électricien doit répondre en priorité aux recherches de devis qualifiées et aux urgences.
+- La fiche Google Business Profile reste le premier réflexe à optimiser, avant même le site.
+- Une page par type d'intervention capte des recherches plus précises qu'une page générique unique.
+- Les certifications (Qualifelec, RGE, décennale) et les avis récents renforcent directement la conversion.
+
 ## FAQ
 
 **Faut-il être sur Habitissimo ou Houzz en plus d'avoir son propre site ?**
@@ -142,3 +160,7 @@ Indirectement. La certification RGE permet d'apparaître dans les annuaires offi
 
 **Comment obtenir mes premiers avis Google ?**
 Après chaque chantier terminé, envoyez un message à votre client avec un lien direct vers votre fiche Google pour laisser un avis. Le taux de conversion d'une demande directe par message est bien supérieur à un simple "laissez-nous un avis" verbal.
+
+---
+
+*Pour aller plus loin : [Avis clients : la stratégie pour artisans](/blog/avis-clients-artisan-strategie) · [Devis en ligne pour artisans](/blog/devis-en-ligne-artisan) · [Créer un site d'électricien](/creation-site-internet/electricien)*

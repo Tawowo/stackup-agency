@@ -1,15 +1,15 @@
 ---
-title: "Site web pour menuisier : valoriser son savoir-faire et capter des clients"
-excerpt: "Un site vitrine bien conçu permet à un menuisier de montrer ses réalisations et d'attirer des clients locaux qualifiés."
+title: "Site menuisier : montrer ses réalisations en ligne (portfolio qui vend)"
+excerpt: "Cuisines sur mesure, escaliers, dressings : comment un menuisier construit un portfolio en ligne qui convertit les visiteurs en demandes de devis qualifiées."
 date: "2026-07-29"
-updated: "2026-07-28"
-readTime: 6
-tag: "SEO Local"
+updated: "2026-08-17"
+readTime: 9
+tag: "Artisans"
 category: "seo-local"
-keywords: ["site web menuisier", "référencement menuisier local", "site internet menuiserie", "site menuisier aluminium bois"]
+keywords: ["site menuisier", "portfolio menuisier en ligne", "site web menuisier", "montrer realisations menuisier"]
 ---
 
-**La menuiserie est l'un des métiers où les photos de réalisations convertissent le mieux.** Un site avec une belle galerie de cuisines sur mesure, d'escaliers en bois ou de fenêtres aluminium génère des demandes de clients qui veulent exactement ce qu'ils ont vu.
+**Réponse directe :** la menuiserie est l'un des métiers où les photos de réalisations convertissent le mieux — un site organisé autour d'un portfolio par catégorie (fenêtres, cuisines, escaliers, dressings) génère des demandes de clients qui veulent précisément ce qu'ils ont vu. Une belle galerie en ligne remplace des pages entières de description : en quelques secondes, un visiteur juge si votre style et votre niveau de finition correspondent à son projet.
 
 ---
 
@@ -85,6 +85,23 @@ Notre [formule site vitrine à 449€](/tarifs) est adaptée pour un site de men
 
 ---
 
+## Le tableau des priorités pour un portfolio qui vend
+
+| Élément | Pourquoi il compte | Priorité |
+|---|---|---|
+| Galerie organisée par catégorie | Le visiteur trouve directement ce qu'il cherche | Indispensable |
+| Photo la plus forte en ouverture de chaque catégorie | Décide si le visiteur continue à regarder | Élevée |
+| Description courte par réalisation (matériau, essence, ville) | Aide à se projeter, renforce le SEO local | Élevée |
+| Certifications (RGE, Qualibat) | Accès aux aides pour le client (MaPrimeRénov') | Élevée |
+| Formulaire de devis avec type de projet | Filtre les demandes sérieuses | Indispensable |
+
+## En résumé
+
+- La galerie de réalisations est le cœur d'un site de menuisier — mieux vaut une sélection organisée qu'une accumulation de photos.
+- Chaque catégorie (fenêtres, cuisines, escaliers, dressings) mérite sa propre section avec ses meilleures photos en premier.
+- La certification RGE, quand elle s'applique, est un argument commercial direct pour les clients éligibles aux aides.
+- Un « devis gratuit sur mesure » vaut mieux qu'un prix affiché, tant les projets varient d'un client à l'autre.
+
 ## FAQ
 
 **Faut-il séparer un site pour la menuiserie intérieure et extérieure ?**
@@ -101,3 +118,7 @@ Pour la menuiserie sur mesure, les prix varient tellement que les fourchettes pe
 
 **Est-ce que les plateformes comme ALLOVOISINS ou Houzz valent le coup pour un menuisier ?**
 Ces plateformes génèrent des leads mais avec des commissions. Votre propre site référencé génère des leads gratuits à long terme. Les deux peuvent coexister, mais investissez d'abord dans votre site.
+
+---
+
+*Pour aller plus loin : [Portfolio en ligne pour créatifs](/blog/portfolio-digital-creatif) · [Devis en ligne pour artisans](/blog/devis-en-ligne-artisan) · [Créer un site de menuisier](/creation-site-internet/menuisier-ebeniste)*
