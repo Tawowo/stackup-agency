@@ -769,48 +769,68 @@ function ProfileCard({ config }: { config: Config }) {
   }, [config])
 
   const exportStyleGuide = useCallback(() => {
-    const lines = [
-      '═══════════════════════════════════════════════════',
-      '  GUIDE DE STYLE — Généré par Stackup Studio',
-      `  Code: ${code}`,
-      '═══════════════════════════════════════════════════',
-      '',
-      '📐 ARCHITECTURE',
-      `  ${arch.label} (${arch.id})`,
-      `  Idéal pour : ${arch.ideal}`,
-      `  Tags : ${arch.tags.join(', ')}`,
-      '',
-      '🎨 PALETTE DE COULEURS',
-      `  Nom : ${pal.name} (${pal.fam})`,
-      `  Dominante : ${pal.dom}`,
-      `  Secondaire : ${pal.sec}`,
-      `  Fond : ${pal.bg}`,
-      `  Texte : ${pal.txt}`,
-      `  Accent : ${pal.acc}`,
-      '',
-      '✍️  TYPOGRAPHIE',
-      `  Titres : ${font.title} — ${font.titleStack}`,
-      `  Corps : ${font.body} — ${font.bodyStack}`,
-      `  Style : ${font.style}`,
-      '',
-      '⚙️  FINITIONS',
-      `  Ton / Personnalité : ${config.tone}`,
-      `  Thème : ${config.theme}`,
-      `  Densité : ${['Aéré','Équilibré','Dense'][config.density]}`,
-      `  Coins : ${['Anguleux (0px)','Doux (8px)','Très arrondi (20px)'][config.corners]}`,
-      `  Animations : ${['Aucune','Subtile','Marquée','Spectaculaire'][config.anim]}`,
-      '',
-      '───────────────────────────────────────────────────',
-      '  Transmettez ce guide à Stackup pour votre devis.',
-      `  ${typeof window !== 'undefined' ? window.location.origin : 'https://stackup.agency'}/devis`,
-      '═══════════════════════════════════════════════════',
-    ]
-    const blob = new Blob([lines.join('\n')], { type: 'text/plain;charset=utf-8' })
-    const a = document.createElement('a')
-    a.href = URL.createObjectURL(blob)
-    a.download = `stackup-style-guide-${code}.txt`
-    a.click()
-    URL.revokeObjectURL(a.href)
+    const swatches = [pal.dom, pal.sec, pal.bg, pal.txt, pal.acc]
+    const swatchHtml = swatches.map(c => `
+      <div style="display:inline-block;margin-right:8px;text-align:center">
+        <div style="width:48px;height:48px;border-radius:8px;background:${c};border:1px solid #e0e0e0;margin-bottom:4px"></div>
+        <div style="font-size:10px;color:#555;font-family:monospace">${c}</div>
+      </div>`).join('')
+    const html = `<!DOCTYPE html><html lang="fr"><head><meta charset="UTF-8">
+    <title>Guide de style — ${code}</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+      * { box-sizing: border-box; margin: 0; padding: 0; }
+      body { font-family: 'Inter', sans-serif; color: #111; background: #fff; padding: 32px; max-width: 780px; margin: 0 auto; }
+      h1 { font-size: 22px; font-weight: 700; color: #1E3A5F; margin-bottom: 4px; }
+      .meta { font-size: 12px; color: #999; margin-bottom: 32px; border-bottom: 1px solid #e0e0e0; padding-bottom: 16px; }
+      .code-badge { display: inline-block; background: #1E3A5F; color: #fff; font-family: monospace; padding: 4px 12px; border-radius: 6px; font-size: 14px; }
+      h2 { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: #1E3A5F; margin: 28px 0 12px; border-left: 3px solid #1E3A5F; padding-left: 10px; }
+      .row { display: flex; gap: 12px; margin-bottom: 6px; }
+      .label { font-size: 12px; color: #777; min-width: 110px; }
+      .value { font-size: 13px; font-weight: 600; }
+      .pill { display: inline-block; background: #f0f4ff; color: #1E3A5F; border-radius: 4px; padding: 2px 8px; font-size: 11px; font-weight: 600; margin-right: 4px; margin-bottom: 4px; }
+      .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid #e0e0e0; font-size: 12px; color: #999; text-align: center; }
+      .footer a { color: #1E3A5F; }
+      @media print {
+        body { padding: 16px; }
+        @page { margin: 1.5cm; size: A4; }
+      }
+    </style></head><body>
+    <h1>Guide de style — Stackup Studio</h1>
+    <div class="meta">
+      Code de style&nbsp;: <span class="code-badge">${code}</span>
+      &nbsp;&nbsp;•&nbsp;&nbsp;Généré le ${new Date().toLocaleDateString('fr-FR', { day:'2-digit', month:'long', year:'numeric' })}
+    </div>
+    <h2>Architecture du site</h2>
+    <div class="row"><span class="label">Type</span><span class="value">${arch.label}</span></div>
+    <div class="row"><span class="label">Idéal pour</span><span class="value">${arch.ideal}</span></div>
+    <div>${arch.tags.map(t => `<span class="pill">${t}</span>`).join('')}</div>
+    <h2>Palette de couleurs</h2>
+    <div style="margin-bottom:16px">${swatchHtml}</div>
+    <div class="row"><span class="label">Famille</span><span class="value">${pal.fam} — ${pal.name}</span></div>
+    <div class="row"><span class="label">Couleur dominante</span><span class="value" style="font-family:monospace">${pal.dom}</span></div>
+    <div class="row"><span class="label">Secondaire</span><span class="value" style="font-family:monospace">${pal.sec}</span></div>
+    <div class="row"><span class="label">Fond</span><span class="value" style="font-family:monospace">${pal.bg}</span></div>
+    <div class="row"><span class="label">Texte</span><span class="value" style="font-family:monospace">${pal.txt}</span></div>
+    <div class="row"><span class="label">Accent</span><span class="value" style="font-family:monospace">${pal.acc}</span></div>
+    <h2>Typographie</h2>
+    <div class="row"><span class="label">Titres</span><span class="value">${font.title}</span></div>
+    <div class="row"><span class="label">Corps de texte</span><span class="value">${font.body}</span></div>
+    <div class="row"><span class="label">Style</span><span class="value">${font.style}</span></div>
+    <h2>Finitions & personnalité</h2>
+    <div class="row"><span class="label">Ton</span><span class="value capitalize">${config.tone}</span></div>
+    <div class="row"><span class="label">Thème</span><span class="value capitalize">${config.theme}</span></div>
+    <div class="row"><span class="label">Densité</span><span class="value">${['Aéré','Équilibré','Dense'][config.density]}</span></div>
+    <div class="row"><span class="label">Coins</span><span class="value">${['Anguleux (0px)','Doux (8px)','Très arrondi (20px)'][config.corners]}</span></div>
+    <div class="row"><span class="label">Animations</span><span class="value">${['Aucune','Subtile','Marquée','Spectaculaire'][config.anim]}</span></div>
+    <div class="footer">
+      Transmettez ce guide à votre agence pour votre devis.<br>
+      <a href="${typeof window !== 'undefined' ? window.location.origin : 'https://stackup.agency'}/devis">stackup.agency/devis</a>
+    </div>
+    <script>window.onload = () => { window.print() }<\/script>
+    </body></html>`
+    const w = window.open('', '_blank', 'width=900,height=700')
+    if (w) { w.document.write(html); w.document.close() }
     setExported(true)
     setTimeout(() => setExported(false), 2000)
   }, [code, arch, pal, font, config])
@@ -862,7 +882,7 @@ function ProfileCard({ config }: { config: Config }) {
         <button onClick={exportStyleGuide}
           className={`flex-1 flex items-center justify-center gap-1.5 py-2 rounded-xl text-xs font-medium transition-all border border-white/10 hover:border-white/20 hover:bg-white/5 ${exported ? 'text-green-400' : 'text-white/60'}`}>
           {exported ? <Check size={13} /> : <Download size={13} />}
-          {exported ? 'Téléchargé !' : 'Exporter .txt'}
+          {exported ? 'PDF ouvert !' : 'Exporter PDF'}
         </button>
       </div>
 
@@ -1032,7 +1052,7 @@ export default function StudioClient() {
         </div>
 
         {/* Right: live preview + profile */}
-        <div className="space-y-5 lg:sticky lg:top-24 self-start">
+        <div className="space-y-5 lg:sticky lg:top-24 self-start" id="studio-preview-panel">
           <div>
             <div className="flex items-center justify-between mb-2">
               <div className="text-xs font-semibold text-gray-500 dark:text-white/40 uppercase tracking-wider">Aperçu en direct</div>
@@ -1052,6 +1072,199 @@ export default function StudioClient() {
           <ProfileCard config={config} />
         </div>
       </div>
+
+      {/* ── Galerie des courants de style ───────────────────────────── */}
+      <StyleCurrentsGallery />
     </div>
+  )
+}
+
+// ─── Style Currents Gallery ───────────────────────────────────────────────────
+
+const STYLE_CURRENTS = [
+  {
+    id: 'minimaliste',
+    name: 'Minimaliste Scandinave',
+    desc: 'Blanc, beaucoup d\'espace, typographie épurée, zéro décoration superflue. Le contenu est roi.',
+    refs: [
+      { name: 'Linear', url: 'https://linear.app' },
+      { name: 'Notion', url: 'https://notion.so' },
+    ],
+    bg: '#FAFAFA', header: '#F0F0F0', accent: '#111111',
+    preview: 'minimal',
+  },
+  {
+    id: 'editorial',
+    name: 'Éditorial Bold',
+    desc: 'Contrastes marqués, typographies expressives XXL, compositions asymétriques. Le layout EST le message.',
+    refs: [
+      { name: 'Pentagram', url: 'https://pentagram.com' },
+      { name: 'It\'s Nice That', url: 'https://itsnicethat.com' },
+    ],
+    bg: '#FFFFFF', header: '#000000', accent: '#FF2D2D',
+    preview: 'editorial',
+  },
+  {
+    id: 'dark-premium',
+    name: 'Dark Premium',
+    desc: 'Fond sombre profond, couleurs lumineuses, effets de lumière, verre dépoli. La sophistication nocturne.',
+    refs: [
+      { name: 'Stripe', url: 'https://stripe.com' },
+      { name: 'Vercel', url: 'https://vercel.com' },
+    ],
+    bg: '#0A0F1C', header: '#161E34', accent: '#4F9CF9',
+    preview: 'dark',
+  },
+  {
+    id: 'artisanal',
+    name: 'Artisanal & Chaleureux',
+    desc: 'Textures organiques, tons terre, polices expressives à empattements. L\'authenticité du fait-main.',
+    refs: [
+      { name: 'Mailchimp', url: 'https://mailchimp.com' },
+      { name: 'Basecamp', url: 'https://basecamp.com' },
+    ],
+    bg: '#FAF6F1', header: '#F0E8D8', accent: '#C67C3C',
+    preview: 'artisan',
+  },
+  {
+    id: 'tech-saas',
+    name: 'Tech & SaaS',
+    desc: 'Interface dense et efficace, données mises en avant, grilles structurées, CTAs clairs. L\'outil d\'abord.',
+    refs: [
+      { name: 'Figma', url: 'https://figma.com' },
+      { name: 'Airtable', url: 'https://airtable.com' },
+    ],
+    bg: '#F8FAFC', header: '#1E3A5F', accent: '#2563EB',
+    preview: 'saas',
+  },
+  {
+    id: 'luxe',
+    name: 'Luxe & Prestige',
+    desc: 'Fond noir, or, silence habité, typographies fines, photos plein-écran. La rareté comme esthétique.',
+    refs: [
+      { name: 'Rolex', url: 'https://rolex.com' },
+      { name: 'Net-a-Porter', url: 'https://net-a-porter.com' },
+    ],
+    bg: '#0C0C0C', header: '#161610', accent: '#C9A84C',
+    preview: 'luxe',
+  },
+]
+
+type StyleCurrent = typeof STYLE_CURRENTS[0]
+
+function StyleMockup({ c }: { c: StyleCurrent }) {
+  const isDark = c.bg < '#500000'
+  const textMain = isDark ? '#FFFFFF' : '#111111'
+  const textMuted = isDark ? 'rgba(255,255,255,0.38)' : 'rgba(0,0,0,0.32)'
+  const cardBg = isDark ? 'rgba(255,255,255,0.07)' : 'rgba(0,0,0,0.04)'
+
+  return (
+    <svg viewBox="0 0 280 180" xmlns="http://www.w3.org/2000/svg" className="w-full block" role="img" aria-label={`Maquette originale — courant ${c.name}`}>
+      <rect width="280" height="180" fill={c.bg} />
+      <rect width="280" height="28" fill={c.header} />
+      <rect x="10" y="9" width="30" height="10" rx="2" fill={c.accent} opacity="0.9" />
+      <rect x="160" y="11" width="28" height="6" rx="1" fill={textMuted} />
+      <rect x="196" y="11" width="28" height="6" rx="1" fill={textMuted} />
+      <rect x="232" y="8" width="38" height="12" rx="2" fill={c.accent} />
+      {c.preview === 'editorial' && <>
+        <text x="10" y="74" fill={textMain} fontSize="28" fontFamily="Georgia,serif" fontWeight="700">BOLD</text>
+        <text x="10" y="102" fill={c.accent} fontSize="28" fontFamily="Georgia,serif" fontWeight="700">TYPE</text>
+        <rect x="185" y="36" width="84" height="72" rx="4" fill={cardBg} />
+        <rect x="192" y="44" width="70" height="56" rx="2" fill={textMuted} opacity="0.25" />
+      </>}
+      {c.preview === 'dark' && <>
+        <circle cx="140" cy="76" r="44" fill={c.accent} opacity="0.07" />
+        <circle cx="140" cy="76" r="28" fill={c.accent} opacity="0.06" />
+        <text x="140" y="71" fill={textMain} fontSize="12" fontFamily="sans-serif" fontWeight="700" textAnchor="middle">STACKUP</text>
+        <text x="140" y="86" fill={c.accent} fontSize="6.5" fontFamily="sans-serif" textAnchor="middle" letterSpacing="1">PERFORMANCE · DESIGN</text>
+        <rect x="112" y="96" width="56" height="10" rx="5" fill={c.accent} />
+      </>}
+      {c.preview === 'artisan' && <>
+        <rect x="10" y="38" width="120" height="78" rx="6" fill={cardBg} />
+        <text x="70" y="66" fill={c.accent} fontSize="11" fontFamily="Georgia,serif" fontWeight="700" textAnchor="middle">Fait à la main</text>
+        <text x="70" y="81" fill={textMuted} fontSize="6.5" fontFamily="Georgia,serif" textAnchor="middle">Authenticité · Savoir-faire</text>
+        <rect x="46" y="91" width="48" height="8" rx="4" fill={c.accent} opacity="0.7" />
+        <circle cx="195" cy="77" r="36" fill={cardBg} />
+        <rect x="179" y="63" width="32" height="28" rx="2" fill={c.accent} opacity="0.18" />
+      </>}
+      {c.preview === 'saas' && <>
+        <rect x="10" y="36" width="78" height="100" rx="4" fill={cardBg} />
+        <rect x="14" y="42" width="40" height="4" rx="1" fill={c.accent} opacity="0.6" />
+        {[0,1,2,3,4].map(i => <rect key={i} x="14" y={52+i*14} width={58} height="7" rx="1" fill={textMuted} opacity="0.35" />)}
+        <rect x="98" y="36" width="172" height="48" rx="4" fill={cardBg} />
+        <rect x="104" y="44" width="58" height="6" rx="1" fill={textMain} opacity="0.7" />
+        <rect x="104" y="56" width="100" height="4" rx="1" fill={textMuted} opacity="0.4" />
+        <rect x="104" y="66" width="78" height="4" rx="1" fill={textMuted} opacity="0.3" />
+        <rect x="98" y="92" width="82" height="44" rx="4" fill={c.accent} opacity="0.1" />
+        <rect x="188" y="92" width="82" height="44" rx="4" fill={cardBg} />
+      </>}
+      {c.preview === 'luxe' && <>
+        <rect x="40" y="38" width="200" height="80" rx="2" fill={cardBg} />
+        <line x1="140" y1="42" x2="140" y2="115" stroke={c.accent} strokeWidth="0.5" opacity="0.4" />
+        <text x="90" y="72" fill={c.accent} fontSize="8" fontFamily="Georgia,serif" textAnchor="middle" letterSpacing="3">MAISON</text>
+        <text x="90" y="88" fill={textMain} fontSize="14" fontFamily="Georgia,serif" textAnchor="middle" fontWeight="700">STACKUP</text>
+        <text x="190" y="72" fill={textMuted} fontSize="6.5" fontFamily="sans-serif" textAnchor="middle" letterSpacing="1">EST. 2020</text>
+        <rect x="116" y="104" width="48" height="5" rx="0" fill={c.accent} opacity="0.8" />
+      </>}
+      {c.preview === 'minimal' && <>
+        <text x="30" y="66" fill={textMain} fontSize="13" fontFamily="sans-serif" fontWeight="700">Titre principal</text>
+        <text x="30" y="80" fill={textMuted} fontSize="6.5" fontFamily="sans-serif">Sous-titre descriptif en gris clair</text>
+        <rect x="30" y="89" width="48" height="10" rx="2" fill={textMain} />
+        <rect x="84" y="89" width="48" height="10" rx="2" fill={cardBg} stroke={textMuted} strokeWidth="0.5" />
+        <rect x="158" y="40" width="112" height="80" rx="6" fill={cardBg} />
+        <rect x="166" y="50" width="96" height="56" rx="2" fill={textMuted} opacity="0.14" />
+      </>}
+      <rect y="160" width="280" height="20" fill={c.header} opacity="0.65" />
+      <rect x="10" y="166" width="56" height="4" rx="1" fill={textMuted} opacity="0.5" />
+      <rect x="100" y="166" width="38" height="4" rx="1" fill={textMuted} opacity="0.3" />
+      <rect x="198" y="166" width="70" height="4" rx="1" fill={textMuted} opacity="0.3" />
+    </svg>
+  )
+}
+
+function StyleCurrentsGallery() {
+  return (
+    <section className="border-t border-gray-100 dark:border-white/10 mt-6 pt-12 pb-4">
+      <div className="mb-8">
+        <div className="text-xs font-semibold text-electric-ink dark:text-electric uppercase tracking-widest mb-2">Inspiration</div>
+        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">Courants de style</h2>
+        <p className="text-gray-500 dark:text-white/40 text-sm max-w-2xl">
+          Six grandes directions esthétiques illustrées par des maquettes originales.
+          Cliquez « Voir le site » pour vous inspirer.
+        </p>
+      </div>
+
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        {STYLE_CURRENTS.map(c => (
+          <article key={c.id}
+            className="group bg-white dark:bg-white/3 rounded-2xl overflow-hidden border border-gray-100 dark:border-white/8 hover:border-electric-ink/40 dark:hover:border-electric/30 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+            <div className="relative overflow-hidden rounded-t-2xl">
+              <StyleMockup c={c} />
+              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/8 pointer-events-none" />
+            </div>
+            <div className="p-4">
+              <h3 className="font-bold text-gray-900 dark:text-white text-sm mb-1.5">{c.name}</h3>
+              <p className="text-gray-500 dark:text-white/40 text-xs leading-relaxed mb-3">{c.desc}</p>
+              <div className="flex flex-wrap gap-2">
+                {c.refs.map(r => (
+                  <a key={r.name} href={r.url} target="_blank" rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 text-xs text-electric-ink dark:text-electric hover:underline font-medium">
+                    {r.name}
+                    <svg className="w-3 h-3 opacity-60" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="1.5">
+                      <path d="M2 10L10 2M10 2H5M10 2V7" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                  </a>
+                ))}
+              </div>
+            </div>
+          </article>
+        ))}
+      </div>
+
+      <p className="mt-8 text-center text-xs text-gray-400 dark:text-white/20 px-4">
+        Sites cités à titre de référence et d&apos;inspiration — aucune affiliation ni partenariat avec ces marques.
+        Les maquettes présentées ci-dessus sont des créations originales Stackup.
+      </p>
+    </section>
   )
 }
