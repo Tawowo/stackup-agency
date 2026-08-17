@@ -56,7 +56,7 @@ function ServiceCard({ s, index }: { s: (typeof SERVICES)[number]; index: number
       href={s.href}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
-      className={`service-card card-accent card-accent-${accent} card-halo-${accent} card-3d-enter group reveal-item block rounded-2xl p-5 transition-all duration-300 hover:-translate-y-1 hud-4corners glass-panel`}
+      className={`service-card card-accent card-accent-${accent} card-halo-${accent} card-3d-enter group reveal-item block rounded-2xl p-5 transition-all duration-300 hover:-translate-y-1 glass-panel`}
       style={{ animationDelay: `${index * 80}ms`, '--sx': '50%', '--sy': '50%' } as React.CSSProperties}
     >
       {/* Spotlight radial */}
@@ -81,7 +81,7 @@ function ServiceCard({ s, index }: { s: (typeof SERVICES)[number]; index: number
           )}
           {rentreeBadge && (
             <span className="inline-block rounded-full bg-gold/20 px-2.5 py-0.5 text-xs font-semibold text-amber-700 dark:text-gold">
-              🎒 Maquette offerte
+              Maquette offerte
             </span>
           )}
         </div>

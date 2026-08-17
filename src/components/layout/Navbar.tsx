@@ -2,7 +2,7 @@
 import { useState, useEffect, useRef } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { ChevronDown } from 'lucide-react'
+import { ChevronDown, DollarSign, Layers, PenSquare, User, HelpCircle, Gift } from 'lucide-react'
 import { usePathname } from 'next/navigation'
 import { useBanniere } from '@/contexts/BanniereContext'
 
@@ -234,17 +234,17 @@ export default function Navbar() {
           {/* Nav principale */}
           <div className="mobile-menu-section flex flex-col gap-0.5">
             {[
-              { href: '/tarifs', label: 'Tarifs', emoji: '💰' },
-              { href: '/realisations', label: 'Réalisations', emoji: '🎯' },
-              { href: '/blog', label: 'Blog', emoji: '📝' },
-              { href: '/a-propos', label: 'À propos', emoji: '👋' },
-              { href: '/faq', label: 'FAQ', emoji: '❓' },
-              { href: '/parrainage', label: 'Parrainage', emoji: '🎁' },
+              { href: '/tarifs', label: 'Tarifs', Icon: DollarSign },
+              { href: '/realisations', label: 'Réalisations', Icon: Layers },
+              { href: '/blog', label: 'Blog', Icon: PenSquare },
+              { href: '/a-propos', label: 'À propos', Icon: User },
+              { href: '/faq', label: 'FAQ', Icon: HelpCircle },
+              { href: '/parrainage', label: 'Parrainage', Icon: Gift },
             ].map((l, i) => (
               <Link key={l.href} href={l.href} onClick={() => setOpen(false)}
                 className="mobile-menu-item py-3.5 px-3 text-lg font-semibold text-navy hover:text-electric-ink hover:bg-blue-50/50 rounded-xl min-h-[56px] flex items-center gap-3 border border-transparent hover:border-electric/15"
                 style={{ transitionDelay: `${360 + i * 35}ms` }}>
-                <span className="text-base">{l.emoji}</span>
+                <l.Icon size={18} strokeWidth={1.5} className="text-navy/40 flex-shrink-0" aria-hidden="true" />
                 {l.label}
               </Link>
             ))}

@@ -7,10 +7,10 @@
  * 3. Timeline 10 jours (barres qui se remplissent jour par jour)
  */
 import { useState, useEffect, useRef } from 'react'
-import { CheckCircle, Code2, Globe } from 'lucide-react'
+import { CheckCircle, Code2, Globe, BarChart3, Clock } from 'lucide-react'
 import { SITE } from '@/config/site'
-import DecorProfondeur from '@/components/ui/DecorProfondeur'
 import ComparateurPrix from '@/components/home/ComparateurPrix'
+
 
 // ─── Panel 2 : Morph code → site ─────────────────────────────────────────────
 function CodeMorph({ isVisible }: { isVisible: boolean }) {
@@ -87,7 +87,7 @@ const DAYS = [
   { label: 'J7', desc: 'Tests & corrections', color: 'bg-navy' },
   { label: 'J8', desc: 'Recette client', color: 'bg-navy' },
   { label: 'J9', desc: 'Ajustements finaux', color: 'bg-navy' },
-  { label: 'J10', desc: '🚀 Mise en ligne !', color: 'bg-green-500' },
+  { label: 'J10', desc: 'Mise en ligne', color: 'bg-green-500' },
 ]
 
 function Timeline({ isVisible }: { isVisible: boolean }) {
@@ -113,7 +113,7 @@ function Timeline({ isVisible }: { isVisible: boolean }) {
             <div className={`w-8 h-8 rounded-lg flex items-center justify-center text-xs font-bold transition-all duration-300 flex-shrink-0 ${
               i < filled ? `${d.color} text-white scale-100` : 'bg-gray-100 text-navy/30 scale-95'
             }`}>
-              {i < filled ? (i === DAYS.length - 1 ? '🚀' : <CheckCircle size={14} />) : d.label}
+              {i < filled ? <CheckCircle size={14} /> : d.label}
             </div>
             <div className={`flex-1 h-1.5 rounded-full overflow-hidden bg-gray-100`}>
               <div
@@ -121,7 +121,7 @@ function Timeline({ isVisible }: { isVisible: boolean }) {
                 style={{ width: i < filled ? '100%' : '0%' }}
               />
             </div>
-            <span className={`text-xs transition-all duration-300 flex-shrink-0 w-44 ${i < filled ? 'text-navy/70' : 'text-navy/45'}`}>{d.desc}</span>
+            <span className={`text-xs transition-all duration-300 flex-shrink-0 w-44 ${i < filled ? 'text-navy/70' : 'text-navy/25'}`}>{d.desc}</span>
           </div>
         ))}
       </div>
@@ -138,9 +138,9 @@ function Timeline({ isVisible }: { isVisible: boolean }) {
 
 // ─── Composant principal ──────────────────────────────────────────────────────
 const TABS = [
-  { id: 'prix', label: 'Prix comparés', icon: '💰', sub: 'Jusqu\'à 80% moins cher' },
-  { id: 'code', label: 'Code → Site', icon: '⚡', sub: 'La magie en direct' },
-  { id: 'delai', label: '10 jours', icon: '📅', sub: 'La vraie timeline' },
+  { id: 'prix', label: 'Prix comparés', Icon: BarChart3, sub: "Jusqu'à 80% moins cher" },
+  { id: 'code', label: 'Code → Site',   Icon: Code2,     sub: 'La magie en direct' },
+  { id: 'delai', label: '10 jours',     Icon: Clock,     sub: 'La vraie timeline' },
 ]
 
 export default function PreuvePar3() {
@@ -169,7 +169,8 @@ export default function PreuvePar3() {
   return (
     <section ref={ref} className="py-24 bg-white relative overflow-hidden">
       <span className="section-number select-none" aria-hidden="true">02</span>
-      <DecorProfondeur variant="cool" seed={1} />
+      <div className="pointer-events-none absolute top-0 right-0 w-[500px] h-96 rounded-full" aria-hidden="true"
+        style={{ background: 'radial-gradient(ellipse at 80% 0%, rgba(45,125,210,0.07) 0%, transparent 70%)' }} />
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 relative">
         <div className="section-marker mb-2 reveal-item" aria-hidden="true">[ 02 / PREUVE ]</div>
@@ -193,7 +194,7 @@ export default function PreuvePar3() {
                   : 'bg-white text-navy/60 border-gray-200 hover:border-gold/30 hover:text-navy'
               }`}
             >
-              <span>{t.icon}</span>
+              <t.Icon size={15} strokeWidth={1.5} aria-hidden="true" />
               <span className="hidden sm:inline">{t.label}</span>
               <span className="sm:hidden">{t.sub}</span>
             </button>

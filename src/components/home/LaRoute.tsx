@@ -1,254 +1,202 @@
 'use client'
 /**
- * LA ROUTE V4.3 — Scrub SVG direct + bulles toujours visibles
- * - SVG path : strokeDashoffset = f(scrollY) DIRECT, zéro transition CSS
- * - Cards : IntersectionObserver "sticky" (once visible = always visible)
- *   + fallback scroll % pour les items déjà dépassés
+ * LA MÉTHODE — V5
+ * Timeline verticale 6 étapes · SVG trait qui se dessine au scrub
+ * Trait 2px centré-gauche · numéros mono · icônes SVG trait
  */
 import { useRef, useState, useEffect } from 'react'
 import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
-import DecorProfondeur from '@/components/ui/DecorProfondeur'
 
 const STEPS = [
   {
-    id: 1,
-    label: 'Brief',
-    title: 'On écoute',
-    desc: 'Un appel de 30 min pour comprendre votre projet, vos objectifs, votre budget.',
-    emoji: '🎯',
-    color: '#F59E0B',
-    bg: 'bg-amber-50',
-    border: 'border-amber-200',
-    side: 'left' as const,
+    num: '01',
+    title: 'Démo offerte',
+    desc: 'On vous montre avant de vous vendre — une démo réelle de votre futur site.',
   },
   {
-    id: 2,
-    label: 'Devis',
-    title: 'On chiffre',
-    desc: 'Devis détaillé sous 72h. Prix fixe, sans surprise, avec planning précis.',
-    emoji: '📋',
-    color: '#2D7DD2',
-    bg: 'bg-blue-50',
-    border: 'border-blue-200',
-    side: 'right' as const,
+    num: '02',
+    title: 'Devis sur mesure',
+    desc: 'Devis détaillé sous 72h. Prix fixe, planning précis, aucune surprise.',
   },
   {
-    id: 3,
-    label: 'Design',
-    title: 'On dessine',
-    desc: "Maquette de votre site en 48h. Vous validez avant qu'on code.",
-    emoji: '🎨',
-    color: '#7C3AED',
-    bg: 'bg-purple-50',
-    border: 'border-purple-200',
-    side: 'left' as const,
+    num: '03',
+    title: 'Signature',
+    desc: 'Rien ne démarre avant votre accord. Vous validez chaque étape.',
   },
   {
-    id: 4,
-    label: 'Dev',
-    title: 'On code',
-    desc: 'Développement rapide avec les meilleures technologies. Code propre, performant.',
-    emoji: '⚡',
-    color: '#1E3A5F',
-    bg: 'bg-slate-50',
-    border: 'border-slate-200',
-    side: 'right' as const,
+    num: '04',
+    title: 'Développement & livraison',
+    desc: 'Code propre, performant, livré en 10 jours ouvrés avec formation.',
   },
   {
-    id: 5,
-    label: 'Livraison',
-    title: 'On livre',
-    desc: 'Mise en ligne, formation, support 30 jours inclus. Vous prenez le contrôle.',
-    emoji: '🚀',
-    color: '#059669',
-    bg: 'bg-emerald-50',
-    border: 'border-emerald-200',
-    side: 'left' as const,
+    num: '05',
+    title: 'Ajustements inclus',
+    desc: 'Support 30 jours post-livraison. Les retouches sont dans le prix.',
+  },
+  {
+    num: '06',
+    title: 'Croissance',
+    desc: 'Blog SEO, maintenance mensuelle et suivi pour faire grandir votre activité.',
   },
 ]
 
-const pathD =
-  'M 100 0 C 100 60, 300 60, 300 120 C 300 180, 100 180, 100 240 C 100 300, 300 300, 300 360 C 300 420, 100 420, 100 480 C 100 540, 300 540, 300 600'
+function StepSVG({ num }: { num: string }) {
+  const n = parseInt(num, 10)
+  // Simple SVG trait micro-illustration per step
+  return (
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      {n === 1 && <><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></>}
+      {n === 2 && <><path d="M9 7h6l-1 5H10L9 7z"/><path d="M12 12v5"/><path d="M9 17h6"/></>}
+      {n === 3 && <><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></>}
+      {n === 4 && <><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></>}
+      {n === 5 && <><path d="M12 2v20M2 12h20"/></>}
+      {n === 6 && <><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></>}
+    </svg>
+  )
+}
 
 export default function LaRoute() {
-  const sectionRef = useRef<HTMLDivElement>(null)
+  const sectionRef = useRef<HTMLElement>(null)
   const pathRef = useRef<SVGPathElement>(null)
-  // "sticky" — une fois visible, reste à true
-  const [visible, setVisible] = useState<boolean[]>(Array(STEPS.length).fill(false))
-  const cardRefs = useRef<(HTMLDivElement | null)[]>([])
+  const [visible, setVisible] = useState<boolean[]>(STEPS.map(() => false))
+  const stepRefs = useRef<(HTMLDivElement | null)[]>([])
 
-  /* ── SVG scrub direct ── */
+  // SVG path scrub — direct manipulation, no CSS transition
   useEffect(() => {
-    const path = pathRef.current
-    if (!path) return
-    const len = path.getTotalLength()
-    path.style.strokeDasharray = String(len)
-    path.style.strokeDashoffset = String(len)
+    const handleScroll = () => {
+      const el = sectionRef.current
+      const path = pathRef.current
+      if (!el || !path) return
 
-    const onScroll = () => {
-      const section = sectionRef.current
-      if (!section) return
-      const rect = section.getBoundingClientRect()
+      const rect = el.getBoundingClientRect()
       const wh = window.innerHeight
-      const scrollable = rect.height + wh
-      const scrolled = wh - rect.top
-      const progress = Math.max(0, Math.min(1, scrolled / scrollable))
+      const start = rect.top - wh * 0.85
+      const end = rect.bottom - wh * 0.15
+      const range = end - start
+      const progress = Math.max(0, Math.min(1, -start / range))
+
+      const len = path.getTotalLength()
       path.style.strokeDashoffset = String(len * (1 - progress))
     }
 
-    window.addEventListener('scroll', onScroll, { passive: true })
-    onScroll()
-    return () => window.removeEventListener('scroll', onScroll)
+    // Init dasharray
+    const path = pathRef.current
+    if (path) {
+      const len = path.getTotalLength()
+      path.style.strokeDasharray = String(len)
+      path.style.strokeDashoffset = String(len)
+    }
+
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    handleScroll()
+    return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  /* ── IntersectionObserver sticky — never goes back to false ── */
+  // Sticky step visibility — once true, stays true
   useEffect(() => {
-    const obs = new IntersectionObserver(
-      (entries) => {
-        setVisible((prev) => {
-          const next = [...prev]
-          let changed = false
-          entries.forEach((e) => {
-            if (e.isIntersecting) {
-              const idx = Number((e.target as HTMLElement).dataset.stepIdx)
-              if (!isNaN(idx) && !next[idx]) {
-                next[idx] = true
-                changed = true
-              }
-            }
-          })
-          return changed ? next : prev
+    const obs = new IntersectionObserver((entries) => {
+      setVisible(prev => {
+        let changed = false
+        const next = [...prev]
+        entries.forEach(e => {
+          if (e.isIntersecting) {
+            const idx = Number((e.target as HTMLElement).dataset.stepIdx)
+            if (!isNaN(idx) && !next[idx]) { next[idx] = true; changed = true }
+          }
         })
-      },
-      // Déclenche quand la carte arrive dans les 70% inférieurs du viewport
-      { rootMargin: '0px 0px -20% 0px' }
-    )
-    cardRefs.current.forEach((el) => el && obs.observe(el))
+        return changed ? next : prev
+      })
+    }, { rootMargin: '0px 0px -20% 0px', threshold: 0 })
+
+    stepRefs.current.forEach(el => { if (el) obs.observe(el) })
     return () => obs.disconnect()
   }, [])
 
+  // Vertical SVG path height matches content ~ 6 steps × 110px
+  const pathD = 'M 24 0 L 24 660'
+
   return (
-    <section ref={sectionRef} className="py-24 bg-white relative overflow-hidden">
-      <span className="section-number select-none" aria-hidden="true">04</span>
-      <DecorProfondeur variant="warm" seed={3} />
+    <section ref={sectionRef} id="methode" className="py-24 bg-[#FFFDF9] relative overflow-hidden">
+      {/* Single gentle halo */}
+      <div className="pointer-events-none absolute top-1/2 left-0 -translate-y-1/2 w-[500px] h-[500px]" aria-hidden="true"
+        style={{ background: 'radial-gradient(ellipse, rgba(245,158,11,0.07) 0%, transparent 70%)' }} />
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 relative">
-        <div className="section-marker mb-2 reveal-item" aria-hidden="true">[ 04 / LA ROUTE ]</div>
-        <div className="text-xs font-bold text-gold uppercase tracking-[0.2em] mb-3 reveal-item">Notre process</div>
-        <h2 className="text-3xl lg:text-5xl font-bold text-navy mb-4 reveal-item" style={{ lineHeight: 1.15 }}>
-          De l&apos;idée à la mise en ligne
-        </h2>
-        <p className="text-navy/55 max-w-xl mb-16 reveal-item" style={{ animationDelay: '80ms' }}>
-          Un chemin balisé, sans mauvaise surprise. Du brief à la livraison en 10 jours.
-        </p>
+        {/* Header */}
+        <div className="mb-16">
+          <div className="section-marker mb-2" aria-hidden="true">[ 05 / LA MÉTHODE ]</div>
+          <p className="text-xs font-bold text-gold uppercase tracking-[0.2em] mb-3">Notre process</p>
+          <h2 className="text-3xl lg:text-5xl font-bold text-navy mb-4" style={{ lineHeight: 1.15 }}>
+            Comment ça se passe ?
+          </h2>
+          <p className="text-navy/55 max-w-xl">
+            Six étapes claires. Aucune mauvaise surprise. De la démo à la croissance.
+          </p>
+        </div>
 
-        {/* ── Desktop : snake 2 colonnes ── */}
-        <div className="hidden lg:block">
-          <div className="relative">
-            <div className="absolute left-1/2 -translate-x-1/2 top-8 bottom-8 w-[400px] pointer-events-none" aria-hidden="true">
-              <svg viewBox="0 0 400 620" className="w-full h-full" fill="none">
-                <path d={pathD} stroke="#E5E7EB" strokeWidth="3" fill="none" strokeLinecap="round" />
-                <path
-                  ref={pathRef}
-                  d={pathD}
-                  stroke="url(#routeGrad)"
-                  strokeWidth="3"
-                  fill="none"
-                  strokeLinecap="round"
-                />
-                <defs>
-                  <linearGradient id="routeGrad" x1="0" y1="0" x2="0" y2="620" gradientUnits="userSpaceOnUse">
-                    <stop offset="0%" stopColor="#F59E0B" />
-                    <stop offset="50%" stopColor="#2D7DD2" />
-                    <stop offset="100%" stopColor="#059669" />
-                  </linearGradient>
-                </defs>
-              </svg>
-            </div>
+        {/* Timeline */}
+        <div className="relative">
+          {/* SVG vertical track */}
+          <div className="absolute left-6 top-0 bottom-0 w-12 pointer-events-none hidden md:block" aria-hidden="true" style={{ height: '660px' }}>
+            <svg viewBox="0 0 48 660" className="w-full h-full" fill="none">
+              {/* Background track */}
+              <path d={pathD} stroke="#E5E7EB" strokeWidth="2" strokeLinecap="round" />
+              {/* Animated fill */}
+              <path
+                ref={pathRef}
+                d={pathD}
+                stroke="#F59E0B"
+                strokeWidth="2"
+                strokeLinecap="round"
+              />
+            </svg>
+          </div>
 
-            <div className="space-y-16 relative z-10">
-              {STEPS.map((step, i) => {
-                const on = visible[i]
-                return (
-                  <div
-                    key={step.id}
-                    ref={(el) => { cardRefs.current[i] = el }}
-                    data-step-idx={i}
-                    className={`flex items-center ${step.side === 'right' ? 'justify-end' : 'justify-start'}`}
-                  >
-                    <div className="w-5/12">
-                      <div className={`flex items-start gap-4 transition-all duration-600 ${step.side === 'right' ? 'flex-row-reverse text-right' : ''} ${on ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-                        {/* Bulle emoji */}
-                        <div
-                          className="flex-shrink-0 w-14 h-14 rounded-2xl flex items-center justify-center text-2xl shadow-md transition-all duration-500"
-                          style={{
-                            background: on ? step.color : '#F3F4F6',
-                            transform: on ? 'scale(1)' : 'scale(0.75)',
-                          }}
-                        >
-                          {step.emoji}
-                        </div>
-                        {/* Carte texte */}
-                        <div className={`flex-1 p-4 rounded-xl border transition-all duration-500 ${step.bg} ${step.border} ${on ? 'shadow-sm' : ''}`}>
-                          <div className="text-[10px] font-bold uppercase tracking-widest mb-0.5" style={{ color: step.color }}>
-                            Étape {step.id} — {step.label}
-                          </div>
-                          <div className="font-bold text-navy text-base mb-1">{step.title}</div>
-                          <div className="text-navy/60 text-sm leading-relaxed">{step.desc}</div>
-                        </div>
-                      </div>
-                    </div>
+          {/* Steps */}
+          <div className="space-y-12 md:pl-20">
+            {STEPS.map((step, i) => (
+              <div
+                key={step.num}
+                ref={el => { stepRefs.current[i] = el }}
+                data-step-idx={i}
+                className="flex items-start gap-5 transition-all duration-700"
+                style={{
+                  opacity: visible[i] ? 1 : 0,
+                  transform: visible[i] ? 'translateY(0) scale(1)' : 'translateY(24px) scale(0.98)',
+                  transitionDelay: `${i * 70}ms`,
+                  transitionTimingFunction: 'cubic-bezier(0.22,1,0.36,1)',
+                }}
+              >
+                {/* Step icon */}
+                <div className={`flex-shrink-0 w-11 h-11 rounded-xl flex items-center justify-center transition-colors duration-500 ${
+                  visible[i] ? 'bg-navy text-white' : 'bg-gray-100 text-navy/30'
+                }`}>
+                  <StepSVG num={step.num} />
+                </div>
+
+                {/* Content */}
+                <div className="flex-1 pt-1.5">
+                  <div className="text-[11px] font-bold text-gold uppercase tracking-[0.18em] mb-1 data-mono">
+                    {step.num}
                   </div>
-                )
-              })}
-            </div>
+                  <h3 className="font-bold text-navy text-lg mb-1">{step.title}</h3>
+                  <p className="text-navy/55 text-sm leading-relaxed max-w-lg">{step.desc}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
 
-        {/* ── Mobile : colonne unique ── */}
-        <div className="lg:hidden space-y-4">
-          {STEPS.map((step, i) => {
-            const on = visible[i]
-            return (
-              <div
-                key={step.id}
-                ref={(el) => { if (!cardRefs.current[i]) cardRefs.current[i] = el }}
-                data-step-idx={i}
-                className={`flex items-start gap-4 transition-all duration-500 ${on ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-4'}`}
-              >
-                <div className="flex-shrink-0 flex flex-col items-center">
-                  <div
-                    className="w-12 h-12 rounded-xl flex items-center justify-center text-xl shadow transition-all duration-300"
-                    style={{ background: on ? step.color : '#F3F4F6' }}
-                  >
-                    {step.emoji}
-                  </div>
-                  {i < STEPS.length - 1 && (
-                    <div className="w-0.5 h-6 mt-1 transition-colors duration-500" style={{ background: visible[i + 1] ? step.color : '#E5E7EB' }} />
-                  )}
-                </div>
-                <div className={`flex-1 p-4 rounded-xl border mb-2 ${step.bg} ${step.border}`}>
-                  <div className="text-[10px] font-bold uppercase tracking-wider mb-0.5" style={{ color: step.color }}>
-                    {step.label}
-                  </div>
-                  <div className="font-bold text-navy text-sm mb-1">{step.title}</div>
-                  <div className="text-navy/60 text-xs leading-relaxed">{step.desc}</div>
-                </div>
-              </div>
-            )
-          })}
-        </div>
-
         {/* CTA */}
-        <div className="mt-16 text-center">
+        <div className="mt-16 md:pl-20">
           <Link
             href="/contact"
-            className="inline-flex items-center gap-2 bg-gold hover:bg-gold/90 text-ink font-bold px-8 py-3.5 rounded-xl transition-all hover:-translate-y-0.5 shadow-md shadow-gold/20"
+            className="inline-flex items-center gap-2 bg-gold hover:bg-gold/90 text-ink font-bold px-8 py-3.5 rounded-xl transition-all hover:-translate-y-0.5 shadow-md shadow-amber-500/20"
           >
-            Démarrer mon projet <ArrowRight size={16} />
+            Commencer par la démo offerte <ArrowRight size={16} />
           </Link>
-          <p className="text-navy/40 text-sm mt-3">Devis gratuit sous 72h</p>
+          <p className="text-navy/40 text-sm mt-3">Sans engagement · Devis sous 72h</p>
         </div>
       </div>
     </section>

@@ -203,7 +203,17 @@ export default function HeroSection() {
     >
       {/* ── [PIÈCE 1] Fond vidéo + image parallax ─────────────────── */}
       <div ref={imgRef} className="absolute inset-0 will-change-transform" aria-hidden="true">
-        {/* Image fallback — z:0, derrière la vidéo */}
+        {/* Video hero — brancher hero-accueil.mp4 quand disponible */}
+        {/* Le poster (LCP) est toujours servi, la vidéo prend le relais après first paint */}
+        {/* Vidéo câblée — décommenter <source> + autoPlay/loop quand hero-accueil.mp4 est disponible */}
+        {/* <video
+          className="absolute inset-0 w-full h-full object-cover object-[68%_center]"
+          autoPlay muted loop playsInline disablePictureInPicture preload="none"
+          poster="/images/hero-monument-s.webp" aria-hidden="true"
+        >
+          <source src="/hero-accueil.mp4" type="video/mp4" />
+        </video> */}
+        {/* Fallback image si la vidéo n'est pas encore disponible */}
         <Image
           src="/images/hero-monument-s.webp"
           alt=""
@@ -212,24 +222,13 @@ export default function HeroSection() {
           fetchPriority="high"
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
           className="object-cover object-[72%_center] md:object-[68%_center]"
-          style={{ zIndex: 0 }}
           placeholder="blur"
           blurDataURL={HERO_BLUR_DATA_URL}
           quality={60}
         />
-        {/* Vidéo H.264 — z:1, par-dessus l'image statique */}
-        <video
-          className="absolute inset-0 w-full h-full object-cover object-[68%_center]"
-          style={{ zIndex: 1 }}
-          autoPlay muted loop playsInline disablePictureInPicture preload="auto"
-          aria-hidden="true"
-        >
-          <source src="/hero-accueil.mp4" type="video/mp4" />
-        </video>
       </div>
 
-      {/* ── [PIÈCE 2b] Trame perspective au sol ──────────────────── */}
-      <div className="persp-grid z-[2]" aria-hidden="true" />
+      {/* futur: montage screen-recording des démos réelles */}
 
       {/* ── [PIÈCE 2] Cinematic dark overlay — s'efface à l'ouverture ── */}
       <div
@@ -256,7 +255,6 @@ export default function HeroSection() {
         <div className="absolute inset-x-0 bottom-0 h-[180px]"
           style={{ background: 'linear-gradient(0deg, rgba(6,13,26,.85), transparent)' }}
         />
-        <div className="grain-overlay" />
       </div>
 
       {/* ── [PIÈCE 3] Contenu orchestré ───────────────────────────── */}
@@ -368,7 +366,7 @@ export default function HeroSection() {
               transition: 'opacity 0.8s ease 0ms, transform 0.8s cubic-bezier(0.16,1,0.3,1) 0ms',
             }}
           >
-            <div className="liseré-border w-80 rounded-2xl overflow-hidden shadow-lift-lg hud-corners" style={{ background: '#0D1626', isolation: 'isolate', willChange: 'transform' }}>
+            <div className="w-80 rounded-2xl overflow-hidden shadow-lift-lg border border-white/10" style={{ background: '#0D1626' }}>
 
               {/* Editor chrome */}
               <div style={{ background: '#111827' }} className="border-b border-white/5">
@@ -506,7 +504,7 @@ export default function HeroSection() {
           ].map((s, i) => (
             <div
               key={s.label}
-              className="text-center p-4 rounded-xl glass-panel hud-4corners reveal-item hover:bg-white/8 transition-colors"
+              className="text-center p-4 rounded-xl glass-panel reveal-item hover:bg-white/8 transition-colors"
               style={{ transitionDelay: `${i * 80}ms` }}
             >
               <div className="text-xl font-bold text-white mb-0.5 price-ticker">

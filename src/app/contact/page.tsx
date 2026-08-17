@@ -75,14 +75,14 @@ export default function ContactPage() {
               <div className="text-xs font-bold text-gold uppercase tracking-widest mb-4">Pourquoi nous écrire ?</div>
               <div className="space-y-3">
                 {[
-                  { emoji: '⚡', text: 'Réponse sous 72h garantie' },
-                  { emoji: '🎯', text: 'Devis personnalisé gratuit' },
-                  { emoji: '📞', text: 'Appel de découverte offert' },
-                  { emoji: '🔒', text: 'Aucun engagement' },
-                ].map(item => (
-                  <div key={item.text} className="flex items-center gap-3 text-sm text-navy/70">
-                    <span>{item.emoji}</span>
-                    <span>{item.text}</span>
+                  'Réponse sous 72h garantie',
+                  'Devis personnalisé gratuit',
+                  'Appel de découverte offert',
+                  'Aucun engagement',
+                ].map(text => (
+                  <div key={text} className="flex items-center gap-3 text-sm text-navy/70">
+                    <span className="w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0" aria-hidden="true" />
+                    <span>{text}</span>
                   </div>
                 ))}
               </div>

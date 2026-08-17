@@ -83,7 +83,7 @@ export default async function RealisationPage({ params }: { params: Promise<{ sl
 
           {r.projectType === 'demo' && (
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-gold/20 border border-amber-500/40 rounded-full text-amber-300 text-sm font-medium mb-5">
-              <span>⚡</span> Projet de démonstration — ce que nous pouvons construire pour vous
+              Projet de démonstration — ce que nous pouvons construire pour vous
             </div>
           )}
 

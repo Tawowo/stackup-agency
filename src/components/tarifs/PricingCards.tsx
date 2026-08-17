@@ -53,8 +53,8 @@ function CardItem({ card, index, isVisible }: { card: Card; index: number; isVis
     <div
       className={`reveal-item rounded-2xl p-6 flex flex-col relative overflow-hidden transition-all duration-300 hover:-translate-y-1 ${
         variant === 'premium'
-          ? 'bg-navy text-white liseré-border liseré-permanent hud-4corners shadow-[0_24px_60px_rgba(30,58,95,0.25)]'
-          : 'bg-white border border-gray-100 hover:shadow-[0_16px_48px_rgba(30,58,95,0.10)] hud-4corners'
+          ? 'bg-navy text-white liseré-border liseré-permanent shadow-[0_24px_60px_rgba(30,58,95,0.25)]'
+          : 'bg-white border border-gray-100 hover:shadow-[0_16px_48px_rgba(30,58,95,0.10)]'
       }`}
       style={{ animationDelay: `${index * 80}ms` }}
     >

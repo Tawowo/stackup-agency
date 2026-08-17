@@ -57,7 +57,7 @@ export default function NotFound() {
         style={{ background: 'radial-gradient(ellipse, rgba(245,158,11,0.05) 0%, transparent 70%)' }} />
 
       {/* Terminal box */}
-      <div className="relative z-10 w-full max-w-lg mb-10 glass-panel hud-4corners rounded-xl overflow-hidden text-left">
+      <div className="relative z-10 w-full max-w-lg mb-10 glass-panel rounded-xl overflow-hidden text-left">
         {/* Terminal chrome */}
         <div className="flex items-center gap-2 px-4 py-3 border-b border-white/[0.06] bg-black/30">
           <span className="w-3 h-3 rounded-full bg-red-400/70" aria-hidden="true" />
@@ -108,7 +108,7 @@ export default function NotFound() {
         </Link>
         <Link
           href="/contact"
-          className="px-6 py-3 glass-panel hud-corners text-white/70 hover:text-white font-medium rounded-xl transition-all hover:-translate-y-0.5"
+          className="px-6 py-3 glass-panel text-white/70 hover:text-white font-medium rounded-xl transition-all hover:-translate-y-0.5"
         >
           Nous contacter
         </Link>

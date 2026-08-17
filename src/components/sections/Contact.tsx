@@ -169,7 +169,7 @@ export default function Contact() {
 
           {/* ── Sidebar info — glass panel ── */}
           <div className="lg:col-span-2 reveal-item" style={{ animationDelay: '120ms' }}>
-            <div className="glass-panel hud-4corners rounded-2xl p-6 sticky top-28 circuit-h">
+            <div className="glass-panel rounded-2xl p-6 sticky top-28 circuit-h">
               <div className="w-10 h-10 rounded-xl bg-electric/10 border border-electric/20 flex items-center justify-center mb-5">
                 <Mail size={20} className="text-electric" />
               </div>

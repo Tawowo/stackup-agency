@@ -317,7 +317,7 @@ export default function PinnedGallery() {
                 {/* Browser frame card — XXL glass */}
                 <div className="relative z-10 h-full flex items-center justify-center px-16">
                   <div
-                    className="w-full max-w-4xl rounded-2xl overflow-hidden glass-panel liseré-border hud-4corners"
+                    className="w-full max-w-4xl rounded-2xl overflow-hidden glass-panel liseré-border"
                     style={{ boxShadow: `0 32px 80px ${r.couleur}33, 0 0 0 1px rgba(255,255,255,0.06)` }}
                   >
                     {/* Browser chrome */}
@@ -418,7 +418,7 @@ export default function PinnedGallery() {
         >
           {PANELS.map((r, i) => (
             <div key={r.slug} className="snap-center shrink-0 w-[85vw] max-w-sm mx-2 first:ml-[7.5vw] last:mr-[7.5vw]">
-              <div className="rounded-2xl overflow-hidden glass-panel hud-4corners shadow-lg">
+              <div className="rounded-2xl overflow-hidden glass-panel shadow-lg">
                 <div className="flex items-center gap-1.5 px-4 py-3 border-b border-white/[0.06]"
                   style={{ background: 'rgba(7,11,22,0.9)' }}>
                   <span className="w-2.5 h-2.5 rounded-full bg-red-400/70" aria-hidden="true" />
