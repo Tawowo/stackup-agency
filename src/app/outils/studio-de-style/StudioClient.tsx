@@ -2,7 +2,7 @@
 'use client'
 import { useState, useEffect, useRef, useCallback } from 'react'
 import Link from 'next/link'
-import { Copy, Check, Shuffle, ChevronRight } from 'lucide-react'
+import { Copy, Check, Shuffle, ChevronRight, Monitor, Smartphone, Columns2, Share2, Download } from 'lucide-react'
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
@@ -351,9 +351,100 @@ function ArchWireframe({ archId, pal }: { archId: string; pal: Palette5 }) {
   return wireframes[archId] ?? fallback
 }
 
-// ─── LivePreview ──────────────────────────────────────────────────────────────
+// ─── LivePreview (multi-screen) ───────────────────────────────────────────────
 
-function LivePreview({ config }: { config: Config }) {
+type PreviewMode = 'desktop' | 'mobile' | 'ab'
+
+function DesktopMockup({ pal, font, arch, borderRadius, padding, isDark }: {
+  pal: Palette5; font: FontDuo; arch: Architecture
+  borderRadius: string; padding: string; isDark: boolean
+}) {
+  return (
+    <div className="device-frame" style={{ background: pal.bg, fontFamily: font.bodyStack, color: pal.txt, borderRadius: 10, overflow: 'hidden', border: `1px solid ${pal.dom}22` }}>
+      {/* Browser chrome */}
+      <div style={{ background: '#e8e8e8', padding: '5px 8px', display: 'flex', alignItems: 'center', gap: 4 }}>
+        {['#ff5f57','#febc2e','#28c840'].map((c, i) => <div key={i} style={{ width: 8, height: 8, borderRadius: '50%', background: c }} />)}
+        <div style={{ flex: 1, background: '#fff', borderRadius: 3, height: 14, margin: '0 8px', display: 'flex', alignItems: 'center', padding: '0 6px' }}>
+          <span style={{ fontSize: 8, color: '#999' }}>monsite.fr</span>
+        </div>
+      </div>
+      {/* Header */}
+      <div style={{ background: pal.dom, padding: '8px 14px', display: 'flex', alignItems: 'center', gap: 8 }}>
+        <div style={{ fontFamily: font.titleStack, color: '#fff', fontSize: 11, fontWeight: 700 }}>MonSite.fr</div>
+        <div style={{ flex: 1, display: 'flex', gap: 8, justifyContent: 'center' }}>
+          {['Accueil','Services','Contact'].map(n => <span key={n} style={{ fontSize: 8, color: 'rgba(255,255,255,0.7)' }}>{n}</span>)}
+        </div>
+        <div style={{ background: pal.acc, color: pal.bg.slice(1,3) < '80' ? '#fff' : '#000', padding: '3px 8px', borderRadius, fontSize: 8, fontWeight: 600 }}>CTA</div>
+      </div>
+      {/* Hero */}
+      <div style={{ padding, display: 'flex', gap: 8, background: isDark ? pal.sec + '22' : pal.bg, borderBottom: `1px solid ${pal.dom}11`, alignItems: 'center' }}>
+        <div style={{ flex: 1 }}>
+          <div style={{ fontFamily: font.titleStack, color: pal.dom, fontSize: 16, fontWeight: 700, marginBottom: 4, lineHeight: 1.2 }}>{arch.label}</div>
+          <div style={{ fontSize: 9, opacity: 0.65, marginBottom: 8, lineHeight: 1.4 }}>{arch.ideal} — votre site sur-mesure</div>
+          <div style={{ background: pal.acc, color: '#fff', padding: '4px 10px', borderRadius, fontSize: 9, fontWeight: 600, display: 'inline-block' }}>Découvrir →</div>
+        </div>
+        <div style={{ width: 60, height: 48, background: pal.dom + '33', borderRadius, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 18, flexShrink: 0 }}>🖼️</div>
+      </div>
+      {/* 3 cards */}
+      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 6, padding: '8px 10px' }}>
+        {['Services','À propos','Contact'].map((t, i) => (
+          <div key={i} style={{ background: isDark ? pal.dom + '22' : pal.sec + '11', padding: 6, borderRadius, border: `1px solid ${pal.dom}22` }}>
+            <div style={{ fontFamily: font.titleStack, fontWeight: 600, fontSize: 8, marginBottom: 2, color: pal.dom }}>{t}</div>
+            <div style={{ width: '80%', height: 4, background: pal.txt + '22', borderRadius: 2, marginBottom: 2 }} />
+            <div style={{ width: '60%', height: 4, background: pal.txt + '15', borderRadius: 2 }} />
+          </div>
+        ))}
+      </div>
+      {/* Footer */}
+      <div style={{ background: pal.dom, padding: '6px 10px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+        <span style={{ fontSize: 8, color: 'rgba(255,255,255,0.5)' }}>© 2025 MonSite.fr</span>
+        <div style={{ display: 'flex', gap: 4 }}>
+          {[pal.dom, pal.acc, pal.sec].map((c, i) => <div key={i} style={{ width: 10, height: 10, borderRadius: '50%', background: c, border: '1px solid rgba(255,255,255,0.2)' }} />)}
+        </div>
+      </div>
+    </div>
+  )
+}
+
+function MobileMockup({ pal, font, arch, borderRadius, isDark }: {
+  pal: Palette5; font: FontDuo; arch: Architecture
+  borderRadius: string; isDark: boolean
+}) {
+  return (
+    <div className="device-frame" style={{ maxWidth: 140, margin: '0 auto', background: '#1a1a1a', borderRadius: 16, padding: '8px 4px', boxShadow: '0 8px 24px rgba(0,0,0,0.3)' }}>
+      {/* notch */}
+      <div style={{ width: 40, height: 6, background: '#333', borderRadius: 3, margin: '0 auto 6px' }} />
+      {/* screen */}
+      <div style={{ background: pal.bg, borderRadius: 8, overflow: 'hidden', fontFamily: font.bodyStack, color: pal.txt }}>
+        <div style={{ background: pal.dom, padding: '6px 8px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+          <span style={{ fontFamily: font.titleStack, color: '#fff', fontSize: 9, fontWeight: 700 }}>MonSite</span>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
+            {[0,1,2].map(i => <div key={i} style={{ width: 12, height: 1.5, background: 'rgba(255,255,255,0.7)', borderRadius: 1 }} />)}
+          </div>
+        </div>
+        <div style={{ padding: 8 }}>
+          <div style={{ fontFamily: font.titleStack, color: pal.dom, fontSize: 12, fontWeight: 700, marginBottom: 3, lineHeight: 1.2 }}>{arch.label}</div>
+          <div style={{ fontSize: 7, opacity: 0.6, marginBottom: 6, lineHeight: 1.4 }}>{arch.ideal}</div>
+          <div style={{ background: pal.acc, color: '#fff', padding: '3px 8px', borderRadius, fontSize: 7, fontWeight: 600, display: 'inline-block', marginBottom: 6 }}>En savoir plus →</div>
+          {[0,1].map(i => (
+            <div key={i} style={{ background: isDark ? pal.dom + '22' : pal.sec + '11', padding: 5, borderRadius, border: `1px solid ${pal.dom}22`, marginBottom: 4 }}>
+              <div style={{ width: '70%', height: 4, background: pal.dom + '66', borderRadius: 2, marginBottom: 2 }} />
+              <div style={{ width: '90%', height: 3, background: pal.txt + '33', borderRadius: 2 }} />
+            </div>
+          ))}
+        </div>
+        <div style={{ background: pal.dom, padding: '5px 8px', textAlign: 'center' }}>
+          <span style={{ fontSize: 7, color: 'rgba(255,255,255,0.5)' }}>© MonSite.fr</span>
+        </div>
+      </div>
+      {/* home bar */}
+      <div style={{ width: 40, height: 3, background: '#555', borderRadius: 2, margin: '6px auto 0' }} />
+    </div>
+  )
+}
+
+function LivePreview({ config, abConfig }: { config: Config; abConfig?: Config }) {
+  const [mode, setMode] = useState<PreviewMode>('desktop')
   const pal = PALETTES.find(p => p.id === config.pal) ?? PALETTES[0]
   const font = FONTS.find(f => f.id === config.font) ?? FONTS[0]
   const arch = ARCHS.find(a => a.id === config.arch) ?? ARCHS[0]
@@ -362,52 +453,58 @@ function LivePreview({ config }: { config: Config }) {
   const padding = config.density === 0 ? '8px' : config.density === 1 ? '14px' : '22px'
   const isDark = config.theme === 'dark' || (config.theme === 'auto' && pal.bg.length > 1 && parseInt(pal.bg.slice(1,3),16) < 100)
 
+  const palB = abConfig ? (PALETTES.find(p => p.id === abConfig.pal) ?? PALETTES[1]) : null
+  const fontB = abConfig ? (FONTS.find(f => f.id === abConfig.font) ?? FONTS[1]) : null
+  const archB = abConfig ? (ARCHS.find(a => a.id === abConfig.arch) ?? ARCHS[0]) : null
+  const brB = abConfig ? (abConfig.corners === 0 ? '0px' : abConfig.corners === 1 ? '8px' : '20px') : '8px'
+  const padB = abConfig ? (abConfig.density === 0 ? '8px' : abConfig.density === 1 ? '14px' : '22px') : '14px'
+  const isDarkB = abConfig ? (abConfig.theme === 'dark' || (abConfig.theme === 'auto' && (palB?.bg ?? '#fff').slice(1,3) < '80')) : false
+
+  const btnCls = (m: PreviewMode) =>
+    `flex items-center gap-1 px-2 py-1 rounded-lg text-xs font-medium transition-colors ${mode === m ? 'bg-electric-ink text-white' : 'text-gray-500 dark:text-white/40 hover:bg-gray-100 dark:hover:bg-white/10'}`
+
   return (
-    <div style={{ background: pal.bg, fontFamily: font.bodyStack, color: pal.txt, borderRadius: 12, overflow: 'hidden', border: `1px solid ${pal.dom}22`, minHeight: 320 }}>
-      {/* Header */}
-      <div style={{ background: pal.dom, padding: '10px 16px', display: 'flex', alignItems: 'center', gap: 8 }}>
-        <div style={{ fontFamily: font.titleStack, color: '#fff', fontSize: 14, fontWeight: 700 }}>MonSite.fr</div>
-        <div style={{ flex: 1 }} />
-        <div style={{ background: pal.acc, color: pal.bg, padding: '4px 10px', borderRadius, fontSize: 11, fontWeight: 600 }}>Contact</div>
+    <div>
+      {/* Mode tabs */}
+      <div className="flex items-center gap-1 mb-3 p-1 bg-gray-100 dark:bg-white/5 rounded-xl w-fit">
+        <button className={btnCls('desktop')} onClick={() => setMode('desktop')}>
+          <Monitor size={11} /> Bureau
+        </button>
+        <button className={btnCls('mobile')} onClick={() => setMode('mobile')}>
+          <Smartphone size={11} /> Mobile
+        </button>
+        {abConfig && (
+          <button className={btnCls('ab')} onClick={() => setMode('ab')}>
+            <Columns2 size={11} /> A/B
+          </button>
+        )}
       </div>
 
-      {/* Hero */}
-      <div style={{ padding, display: 'flex', flexDirection: 'column', gap: 8, background: isDark ? pal.sec + '22' : pal.bg, borderBottom: `1px solid ${pal.dom}11` }}>
-        <h2 style={{ fontFamily: font.titleStack, color: pal.dom, fontSize: 20, fontWeight: 700, margin: 0, lineHeight: 1.2 }}>
-          {arch.label}
-        </h2>
-        <p style={{ fontSize: 12, opacity: 0.7, margin: 0, lineHeight: 1.5 }}>
-          {arch.ideal} — {arch.tags.join(', ')}
-        </p>
-        <div style={{ background: pal.acc, color: '#fff', padding: '6px 14px', borderRadius, fontSize: 12, fontWeight: 600, display: 'inline-block', alignSelf: 'flex-start' }}>
-          Découvrir →
-        </div>
-      </div>
-
-      {/* Content blocks */}
-      <div style={{ padding, display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 8 }}>
-        {[
-          { title: 'À propos', text: 'Quelques mots sur votre activité...' },
-          { title: 'Services', text: 'Ce que vous proposez à vos clients' },
-        ].map((block, i) => (
-          <div key={i} style={{ background: isDark ? pal.dom + '22' : pal.sec + '11', padding: 10, borderRadius, border: `1px solid ${pal.dom}22` }}>
-            <div style={{ fontFamily: font.titleStack, fontWeight: 600, fontSize: 12, marginBottom: 4, color: pal.dom }}>{block.title}</div>
-            <div style={{ fontSize: 10, opacity: 0.6, lineHeight: 1.4 }}>{block.text}</div>
+      {mode === 'desktop' && (
+        <DesktopMockup pal={pal} font={font} arch={arch} borderRadius={borderRadius} padding={padding} isDark={isDark} />
+      )}
+      {mode === 'mobile' && (
+        <MobileMockup pal={pal} font={font} arch={arch} borderRadius={borderRadius} isDark={isDark} />
+      )}
+      {mode === 'ab' && abConfig && palB && fontB && archB && (
+        <div className="grid grid-cols-2 gap-3">
+          <div>
+            <div className="text-[10px] font-bold text-center mb-1 text-gray-500 dark:text-white/40 uppercase tracking-widest">Version A</div>
+            <DesktopMockup pal={pal} font={font} arch={arch} borderRadius={borderRadius} padding={padding} isDark={isDark} />
           </div>
-        ))}
-      </div>
+          <div>
+            <div className="text-[10px] font-bold text-center mb-1 text-electric-ink uppercase tracking-widest">Version B</div>
+            <DesktopMockup pal={palB} font={fontB} arch={archB} borderRadius={brB} padding={padB} isDark={isDarkB} />
+          </div>
+        </div>
+      )}
 
-      {/* Palette chips */}
-      <div style={{ padding: '6px 14px', display: 'flex', gap: 4, alignItems: 'center', borderTop: `1px solid ${pal.dom}11` }}>
+      {/* Palette bar */}
+      <div className="flex items-center gap-1.5 mt-2 px-1">
         {[pal.dom, pal.sec, pal.acc, pal.bg, pal.txt].map((c, i) => (
-          <div key={i} style={{ width: 14, height: 14, background: c, borderRadius: 3, border: `1px solid ${pal.dom}33`, flexShrink: 0 }} title={c} />
+          <div key={i} title={c} className="studio-color-swatch" style={{ width: 16, height: 16, background: c, borderRadius: 4, border: `1px solid ${pal.dom}33`, flexShrink: 0 }} />
         ))}
-        <span style={{ fontSize: 9, opacity: 0.5, marginLeft: 4 }}>{pal.name}</span>
-      </div>
-
-      {/* Font info */}
-      <div style={{ padding: '4px 14px 10px', fontSize: 9, opacity: 0.45 }}>
-        Titres : {font.title} · Corps : {font.body}
+        <span className="text-[9px] text-gray-400 dark:text-white/30 ml-1">{pal.name} · {font.title}</span>
       </div>
     </div>
   )
@@ -644,6 +741,8 @@ function Section4Finitions({ config, setConfig }: { config: Config; setConfig: (
 
 function ProfileCard({ config }: { config: Config }) {
   const [copied, setCopied] = useState(false)
+  const [sharedUrl, setSharedUrl] = useState(false)
+  const [exported, setExported] = useState(false)
   const pal = PALETTES.find(p => p.id === config.pal) ?? PALETTES[0]
   const font = FONTS.find(f => f.id === config.font) ?? FONTS[0]
   const arch = ARCHS.find(a => a.id === config.arch) ?? ARCHS[0]
@@ -661,38 +760,109 @@ function ProfileCard({ config }: { config: Config }) {
     }
   }, [code])
 
+  const shareUrl = useCallback(() => {
+    const url = `${window.location.origin}/outils/studio-de-style?arch=${config.arch}&pal=${config.pal}&font=${config.font}&anim=${config.anim}&density=${config.density}&corners=${config.corners}&theme=${config.theme}&tone=${encodeURIComponent(config.tone)}`
+    navigator.clipboard.writeText(url).then(() => {
+      setSharedUrl(true)
+      setTimeout(() => setSharedUrl(false), 2500)
+    })
+  }, [config])
+
+  const exportStyleGuide = useCallback(() => {
+    const lines = [
+      '═══════════════════════════════════════════════════',
+      '  GUIDE DE STYLE — Généré par Stackup Studio',
+      `  Code: ${code}`,
+      '═══════════════════════════════════════════════════',
+      '',
+      '📐 ARCHITECTURE',
+      `  ${arch.label} (${arch.id})`,
+      `  Idéal pour : ${arch.ideal}`,
+      `  Tags : ${arch.tags.join(', ')}`,
+      '',
+      '🎨 PALETTE DE COULEURS',
+      `  Nom : ${pal.name} (${pal.fam})`,
+      `  Dominante : ${pal.dom}`,
+      `  Secondaire : ${pal.sec}`,
+      `  Fond : ${pal.bg}`,
+      `  Texte : ${pal.txt}`,
+      `  Accent : ${pal.acc}`,
+      '',
+      '✍️  TYPOGRAPHIE',
+      `  Titres : ${font.title} — ${font.titleStack}`,
+      `  Corps : ${font.body} — ${font.bodyStack}`,
+      `  Style : ${font.style}`,
+      '',
+      '⚙️  FINITIONS',
+      `  Ton / Personnalité : ${config.tone}`,
+      `  Thème : ${config.theme}`,
+      `  Densité : ${['Aéré','Équilibré','Dense'][config.density]}`,
+      `  Coins : ${['Anguleux (0px)','Doux (8px)','Très arrondi (20px)'][config.corners]}`,
+      `  Animations : ${['Aucune','Subtile','Marquée','Spectaculaire'][config.anim]}`,
+      '',
+      '───────────────────────────────────────────────────',
+      '  Transmettez ce guide à Stackup pour votre devis.',
+      `  ${typeof window !== 'undefined' ? window.location.origin : 'https://stackup.agency'}/devis`,
+      '═══════════════════════════════════════════════════',
+    ]
+    const blob = new Blob([lines.join('\n')], { type: 'text/plain;charset=utf-8' })
+    const a = document.createElement('a')
+    a.href = URL.createObjectURL(blob)
+    a.download = `stackup-style-guide-${code}.txt`
+    a.click()
+    URL.revokeObjectURL(a.href)
+    setExported(true)
+    setTimeout(() => setExported(false), 2000)
+  }, [code, arch, pal, font, config])
+
   return (
     <div className="bg-gradient-to-br from-[#1E3A5F] to-[#0A0F1C] rounded-2xl p-6 text-white">
       <div className="text-sm font-semibold text-white/50 uppercase tracking-wider mb-4">Votre profil de style</div>
       <div className="grid grid-cols-2 gap-3 mb-6">
-        <div className="bg-white/5 rounded-xl p-3">
+        <div className="bg-white/5 rounded-xl p-3 transition-all hover:bg-white/10">
           <div className="text-[10px] text-white/40 mb-1">Architecture</div>
           <div className="text-sm font-semibold">{arch.label}</div>
+          <div className="text-[10px] text-white/30 mt-0.5">{arch.id}</div>
         </div>
-        <div className="bg-white/5 rounded-xl p-3">
+        <div className="bg-white/5 rounded-xl p-3 transition-all hover:bg-white/10">
           <div className="text-[10px] text-white/40 mb-1">Palette</div>
           <div className="flex gap-1 mb-1">
-            {[pal.dom, pal.sec, pal.acc].map((c, i) => <div key={i} style={{ background: c }} className="w-4 h-4 rounded-full" />)}
+            {[pal.dom, pal.sec, pal.acc].map((c, i) => <div key={i} style={{ background: c }} className="studio-color-swatch w-4 h-4 rounded-full" />)}
           </div>
           <div className="text-sm font-semibold">{pal.name}</div>
         </div>
-        <div className="bg-white/5 rounded-xl p-3">
+        <div className="bg-white/5 rounded-xl p-3 transition-all hover:bg-white/10">
           <div className="text-[10px] text-white/40 mb-1">Typographie</div>
           <div className="text-sm font-semibold">{font.title}</div>
           <div className="text-[10px] text-white/40">{font.body}</div>
         </div>
-        <div className="bg-white/5 rounded-xl p-3">
+        <div className="bg-white/5 rounded-xl p-3 transition-all hover:bg-white/10">
           <div className="text-[10px] text-white/40 mb-1">Finitions</div>
           <div className="text-sm font-semibold capitalize">{config.tone}</div>
           <div className="text-[10px] text-white/40 capitalize">{config.theme} · {['Aéré','Équilibré','Dense'][config.density]}</div>
         </div>
       </div>
 
-      <div className="bg-white/10 rounded-xl p-3 mb-5 flex items-center justify-between">
+      {/* Code */}
+      <div className="bg-white/10 rounded-xl p-3 mb-4 flex items-center justify-between">
         <span className="font-mono text-sm text-white/90 tracking-wider">{code}</span>
         <button onClick={copy} className="flex items-center gap-1.5 text-xs text-white/60 hover:text-white transition-colors">
-          {copied ? <Check size={14} /> : <Copy size={14} />}
-          {copied ? 'Copié !' : 'Copier'}
+          {copied ? <Check size={14} className="text-green-400" /> : <Copy size={14} />}
+          {copied ? 'Copié !' : 'Code'}
+        </button>
+      </div>
+
+      {/* Share + Export */}
+      <div className="flex gap-2 mb-4">
+        <button onClick={shareUrl}
+          className={`flex-1 flex items-center justify-center gap-1.5 py-2 rounded-xl text-xs font-medium transition-all border border-white/10 hover:border-white/20 hover:bg-white/5 ${sharedUrl ? 'text-green-400' : 'text-white/60'}`}>
+          {sharedUrl ? <Check size={13} /> : <Share2 size={13} />}
+          {sharedUrl ? 'URL copiée !' : 'Partager'}
+        </button>
+        <button onClick={exportStyleGuide}
+          className={`flex-1 flex items-center justify-center gap-1.5 py-2 rounded-xl text-xs font-medium transition-all border border-white/10 hover:border-white/20 hover:bg-white/5 ${exported ? 'text-green-400' : 'text-white/60'}`}>
+          {exported ? <Check size={13} /> : <Download size={13} />}
+          {exported ? 'Téléchargé !' : 'Exporter .txt'}
         </button>
       </div>
 
@@ -701,7 +871,7 @@ function ProfileCard({ config }: { config: Config }) {
           (window as Window & { gtag?: Function }).gtag?.('event', 'studio_cta_maquette', { profile_code: code })
         }
       }}
-        className="block w-full text-center py-3.5 bg-gold hover:bg-gold/90 text-ink font-bold rounded-xl transition-all hover:-translate-y-0.5 shadow-lg shadow-amber-500/30 text-sm">
+        className="btn-lift block w-full text-center py-3.5 bg-gold hover:bg-gold/90 text-ink font-bold rounded-xl shadow-lg shadow-amber-500/30 text-sm">
         Recevoir MA MAQUETTE →
       </Link>
     </div>
@@ -719,6 +889,8 @@ const SECTIONS = [
 
 export default function StudioClient() {
   const [config, setConfigState] = useState<Config>(DEFAULT_CONFIG)
+  const [abConfig, setAbConfig] = useState<Config | null>(null)
+  const [abMode, setAbMode] = useState(false)
   const [section, setSection] = useState(0)
   const [mounted, setMounted] = useState(false)
   const wrapperRef = useRef<HTMLDivElement>(null)
@@ -736,7 +908,20 @@ export default function StudioClient() {
   }, [])
 
   useEffect(() => {
-    setConfigState(loadConfig())
+    // Load from URL params first, then sessionStorage
+    const params = new URLSearchParams(window.location.search)
+    const urlConfig: Partial<Config> = {}
+    if (params.get('arch')) urlConfig.arch = params.get('arch')!
+    if (params.get('pal'))  urlConfig.pal  = params.get('pal')!
+    if (params.get('font')) urlConfig.font = params.get('font')!
+    if (params.get('anim') !== null) urlConfig.anim = Number(params.get('anim'))
+    if (params.get('density') !== null) urlConfig.density = Number(params.get('density'))
+    if (params.get('corners') !== null) urlConfig.corners = Number(params.get('corners'))
+    if (params.get('theme')) urlConfig.theme = params.get('theme')!
+    if (params.get('tone'))  urlConfig.tone  = decodeURIComponent(params.get('tone')!)
+    const fromUrl = Object.keys(urlConfig).length > 0
+    const saved = fromUrl ? { ...DEFAULT_CONFIG, ...urlConfig } : loadConfig()
+    setConfigState(saved)
     setMounted(true)
   }, [])
 
@@ -849,8 +1034,20 @@ export default function StudioClient() {
         {/* Right: live preview + profile */}
         <div className="space-y-5 lg:sticky lg:top-24 self-start">
           <div>
-            <div className="text-xs font-semibold text-gray-500 dark:text-white/40 uppercase tracking-wider mb-2">Aperçu en direct</div>
-            <LivePreview config={config} />
+            <div className="flex items-center justify-between mb-2">
+              <div className="text-xs font-semibold text-gray-500 dark:text-white/40 uppercase tracking-wider">Aperçu en direct</div>
+              <button
+                type="button"
+                onClick={() => {
+                  if (abMode) { setAbConfig(null); setAbMode(false) }
+                  else { setAbConfig(randomConfig()); setAbMode(true) }
+                }}
+                className={`flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-xs font-medium transition-all border ${abMode ? 'bg-electric-ink text-white border-electric-ink' : 'border-gray-200 dark:border-white/10 text-gray-600 dark:text-white/50 hover:border-gray-300'}`}
+              >
+                <Columns2 size={11} /> {abMode ? 'Quitter A/B' : 'Mode A/B'}
+              </button>
+            </div>
+            <LivePreview config={config} abConfig={abMode && abConfig ? abConfig : undefined} />
           </div>
           <ProfileCard config={config} />
         </div>
