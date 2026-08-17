@@ -1,11 +1,12 @@
 ---
-title: "SEO et IA générative : survivre aux AI Overviews Google"
-excerpt: "Comment adapter votre stratégie SEO aux AI Overviews de Google et à l'IA générative en 2026. Méthodes concrètes pour continuer à attirer des visiteurs."
+title: "Le SEO est-il mort avec l'IA ? Ce qui change vraiment en 2026"
+excerpt: "AI Overviews, ChatGPT, Perplexity : le SEO n'est pas mort, il se transforme. Ce qui change vraiment en 2026 et ce qui reste identique pour les TPE."
 date: "2026-06-01"
+updated: "2026-08-17"
 readTime: 8
 tag: "SEO"
 category: "strategie"
-keywords: ["AI Overviews", "SEO IA générative", "ChatGPT SEO", "SGE", "AIO", "search generative experience"]
+keywords: ["seo mort ia", "seo et intelligence artificielle 2026", "AI Overviews", "SEO IA générative"]
 ---
 
 
@@ -104,26 +105,30 @@ Dans Google Search Console, filtrez par type de résultat pour identifier les re
 
 Pour le trafic depuis ChatGPT et Perplexity, Google Analytics 4 peut partiellement l'identifier via les sources de trafic — mais une partie reste invisible (dark social). Notre guide sur la [mesure du ROI SEO](/blog/mesurer-roi-seo-kpis-tableau-bord-tpe) couvre les méthodes de tracking adaptées.
 
-## FAQ
+## En résumé
 
-### Dois-je optimiser mon site pour ChatGPT en priorité ?
+- Le SEO n'est pas mort : environ 70% des recherches Google ne déclenchent aucun AI Overview, notamment les requêtes locales et transactionnelles.
+- Ce qui change : le contenu superficiel optimisé uniquement pour des mots-clés perd du terrain face au contenu structuré, chiffré et réellement expert.
+- Le GEO (Generative Engine Optimization) recoupe largement le SEO classique : mêmes signaux de qualité, sources différentes à convaincre.
+- La priorité pour une TPE reste la même qu'avant l'IA générative : dominer ses requêtes locales et transactionnelles, là où l'impact de l'IA est le plus faible.
 
-En France en 2026, Google représente encore 90 %+ des recherches. ChatGPT et Perplexity gagnent du terrain, notamment sur les requêtes informationnelles, mais restent minoritaires pour les requêtes avec intention commerciale locale. Priorisez Google, mais les bonnes pratiques SEO (contenu de qualité, autorité, structure claire) vous rendent automatiquement plus visible dans les IA génératives.
+## Questions fréquentes
 
-### Qu'est-ce qu'un AI Overview exactement ?
+**Dois-je optimiser mon site pour ChatGPT en priorité ?**
+En France en 2026, Google représente encore 90%+ des recherches. ChatGPT et Perplexity gagnent du terrain sur les requêtes informationnelles, mais restent minoritaires sur les requêtes à intention commerciale locale. Priorisez Google — les bonnes pratiques SEO vous rendent automatiquement plus visible dans les IA génératives aussi.
 
-Un AI Overview (ou AIO) est un encadré généré par Gemini, l'IA de Google, qui apparaît au-dessus des résultats organiques classiques pour certaines requêtes. Il présente une synthèse directe avec des liens vers les sources. Anciennement appelé SGE (Search Generative Experience) en phase de test, il est désormais déployé dans plusieurs pays.
+**Qu'est-ce qu'un AI Overview exactement ?**
+Un AI Overview est un encadré généré par l'IA de Google qui apparaît au-dessus des résultats organiques classiques pour certaines requêtes, avec une synthèse directe et des liens vers les sources. Anciennement appelé SGE (Search Generative Experience) en phase de test, il est désormais déployé dans plusieurs pays.
 
-### Les AI Overviews remplacent-ils le référencement classique ?
+**Les AI Overviews remplacent-ils le référencement classique ?**
+Non. Environ 70% des recherches Google en 2026 ne déclenchent pas d'AI Overview — notamment les requêtes locales, transactionnelles et navigationnelles. Ce qui change, c'est la nature du contenu qui performe : approfondi et structuré plutôt que superficiel.
 
-Non. Environ 70 % des recherches Google en 2026 ne déclenchent pas d'AI Overview — notamment les requêtes locales, transactionnelles et navigationnelles. Le SEO classique reste pertinent et même crucial pour ces requêtes. Ce qui change : la nature du contenu qui performe. Le contenu approfondi, structuré et faisant autorité s'en sort mieux que le contenu superficiel optimisé uniquement pour les mots-clés.
+**Comment tracker le trafic qui vient de l'IA générative ?**
+C'est le défi principal. Google Analytics 4 identifie Perplexity comme source de référence ; pour ChatGPT, le trafic apparaît souvent en "direct". Une méthode imparfaite mais utile : des paramètres UTM sur vos URLs partagées, et des dashboards "AI visibility" que proposent désormais certains outils SEO.
 
-### Comment tracker le trafic qui vient de l'IA générative ?
-
-C'est le défi principal. Google Analytics 4 identifie Perplexity et d'autres IA comme sources de référence. Pour ChatGPT, le trafic apparaît souvent en "direct" ou "referral" selon la version utilisée. Une méthode imparfaite mais utile : créer des UTM parameters sur vos URLs, les partager sur vos profils publics et surveiller les clics. Des outils comme Semrush commencent à proposer des dashboards "AI visibility" en 2025-2026.
+**Faut-il arrêter d'investir en SEO à cause de l'IA générative ?**
+Non, l'inverse : les sites qui investissent maintenant dans un contenu réellement expert et structuré prennent une avance qui sera plus difficile à rattraper à mesure que la concurrence se densifie sur ces mêmes signaux de qualité.
 
 ---
 
-L'ère des AI Overviews ne sonne pas le glas du SEO — elle en redéfinit les règles. Les sites qui produisent du contenu authentiquement expert, structuré et axé sur les besoins réels de leurs lecteurs sont précisément ceux que les IA choisissent de citer.
-
-[Prendre rendez-vous gratuitement](/contact)
+*Pour aller plus loin : [Google AI Overviews : comment être cité par l'IA de Google](/blog/ai-overviews-seo-tpe) · [Être recommandé par ChatGPT](/blog/chatgpt-apparence-resultats-google) · [SEO local : le guide complet pour les TPE](/blog/seo-local-commerce) · [Rédaction de blog SEO](/services/redaction-blog-seo)*
