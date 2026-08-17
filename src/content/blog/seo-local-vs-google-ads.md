@@ -1,10 +1,12 @@
 ---
-title: "SEO local vs Google Ads : que choisir pour votre business ?"
+title: "Référencement payant ou naturel : où mettre son budget en premier ?"
 date: "2026-04-16"
-excerpt: "SEO local ou Google Ads ? La vraie réponse dépend de votre secteur, votre budget et votre horizon. Ce guide compare les deux canaux honnêtement."
+updated: "2026-08-17"
+excerpt: "SEO ou Google Ads en premier quand le budget est limité ? La vraie réponse dépend de votre secteur, votre trésorerie et votre horizon — ce guide compare honnêtement."
 tag: "SEO Local"
 category: "seo-local"
 readTime: 8
+keywords: ["seo ou google ads", "referencement payant ou naturel", "budget seo ou publicite", "seo local vs google ads"]
 ---
 
 **C'est l'une des questions les plus fréquentes que l'on reçoit des TPE et PME locales : "J'ai 500€ par mois à investir en marketing digital — est-ce que je fais du SEO local ou de la pub Google ?"** La vraie réponse est plus nuancée que "faites les deux" — parce que selon votre situation, l'un des deux canaux est clairement plus adapté.
@@ -113,4 +115,27 @@ Pour la majorité des PME locales avec un budget raisonnable (700-1 500€/mois 
 
 Choisir entre SEO local et Google Ads, c'est souvent une fausse alternative. Les deux canaux répondent à des besoins différents et se complètent efficacement. La vraie question est : quelle proportion de votre budget allouer à chacun, en fonction de votre situation, votre secteur et votre horizon temporel ?
 
-Besoin d'aide pour votre référencement local ? [Contactez Stackup Agency](/contact) — réponse garantie sous 72h.
+## En résumé
+
+- Le SEO local est un investissement de fond : gratuit une fois les positions acquises, mais 3 à 9 mois avant des résultats significatifs.
+- Google Ads génère des leads dès la première semaine, mais le trafic s'arrête net si le budget s'arrête.
+- Sur un budget limité et un horizon de plusieurs mois, priorisez le SEO local ; sur un besoin de résultats immédiats ou une activité saisonnière courte, priorisez Google Ads.
+- La stratégie hybride (les deux en parallèle, avec une transition progressive vers le SEO) est souvent la plus rentable pour une PME locale.
+
+## Questions fréquentes
+
+**Avec 300€/mois, dois-je faire du SEO ou de la publicité ?**
+Avec un budget serré et un horizon de plusieurs mois devant vous, le SEO local offre généralement un meilleur retour cumulé : le budget publicitaire s'épuise chaque mois, tandis que le travail SEO se capitalise.
+
+**Combien de temps le SEO local met-il à rentabiliser l'investissement initial ?**
+Généralement entre 6 et 12 mois selon la concurrence locale, après quoi le coût par lead continue de baisser puisque les positions acquises ne nécessitent qu'un entretien léger.
+
+**Peut-on arrêter Google Ads une fois le SEO installé ?**
+Oui, c'est la logique de la stratégie hybride : réduire progressivement le budget Ads sur les requêtes où le SEO performe bien, en le maintenant uniquement sur les requêtes les plus compétitives ou les pics saisonniers.
+
+**Le SEO local fonctionne-t-il dans un secteur très concurrentiel ?**
+Oui, mais plus lentement. Dans les secteurs à forte concurrence (avocat, médecin en grande ville), Google Ads permet souvent d'exister à court terme pendant que le travail SEO progresse en parallèle.
+
+---
+
+*Pour aller plus loin : [SEO local : le guide complet pour les TPE](/blog/seo-local-commerce) · [Google Ads avec petit budget : est-ce que ça vaut le coup ?](/blog/google-ads-petit-budget) · [Apparaître sur Google Maps en premier](/blog/seo-local-google-maps-2026) · [Rédaction de blog SEO](/services/redaction-blog-seo)*
