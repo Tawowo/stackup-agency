@@ -62,7 +62,7 @@ export default function ProcessSection() {
               <div
                 key={s.n}
                 ref={el => { stepRefs.current[i] = el }}
-                className="reveal-item bg-white border border-gray-100 hud-corners rounded-xl p-5 hover:shadow-[0_12px_40px_rgba(30,58,95,0.08)] transition-shadow"
+                className="reveal-item bg-white border border-gray-100 rounded-xl p-5 hover:shadow-[0_12px_40px_rgba(30,58,95,0.08)] transition-shadow"
               >
                 {/* Numéro coloré */}
                 <div className={`step-circle mb-5 data-mono w-10 h-10 rounded-xl border flex items-center justify-center text-sm font-bold ${s.color}`}>

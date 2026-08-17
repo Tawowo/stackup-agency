@@ -228,8 +228,7 @@ export default function HeroSection() {
         />
       </div>
 
-      {/* ── [PIÈCE 2b] Trame perspective au sol ──────────────────── */}
-      <div className="persp-grid z-[2]" aria-hidden="true" />
+      {/* futur: montage screen-recording des démos réelles */}
 
       {/* ── [PIÈCE 2] Cinematic dark overlay — s'efface à l'ouverture ── */}
       <div
@@ -256,7 +255,6 @@ export default function HeroSection() {
         <div className="absolute inset-x-0 bottom-0 h-[180px]"
           style={{ background: 'linear-gradient(0deg, rgba(6,13,26,.85), transparent)' }}
         />
-        <div className="grain-overlay" />
       </div>
 
       {/* ── [PIÈCE 3] Contenu orchestré ───────────────────────────── */}
@@ -368,7 +366,7 @@ export default function HeroSection() {
               transition: 'opacity 0.8s ease 0ms, transform 0.8s cubic-bezier(0.16,1,0.3,1) 0ms',
             }}
           >
-            <div className="liseré-border w-80 rounded-2xl overflow-hidden shadow-lift-lg hud-corners" style={{ background: '#0D1626' }}>
+            <div className="w-80 rounded-2xl overflow-hidden shadow-lift-lg border border-white/10" style={{ background: '#0D1626' }}>
 
               {/* Editor chrome */}
               <div style={{ background: '#111827' }} className="border-b border-white/5">
@@ -506,7 +504,7 @@ export default function HeroSection() {
           ].map((s, i) => (
             <div
               key={s.label}
-              className="text-center p-4 rounded-xl glass-panel hud-4corners reveal-item hover:bg-white/8 transition-colors"
+              className="text-center p-4 rounded-xl glass-panel reveal-item hover:bg-white/8 transition-colors"
               style={{ transitionDelay: `${i * 80}ms` }}
             >
               <div className="text-xl font-bold text-white mb-0.5 price-ticker">
