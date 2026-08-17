@@ -2,7 +2,7 @@
 title: "Site internet pour food truck : guide pratique 2026"
 excerpt: "Menu en ligne, géolocalisation, prise de commande : ce qu'un site web peut vraiment apporter à un food truck. Guide pratique avec tarifs."
 date: "2026-07-14"
-updated: "2026-07-28"
+updated: "2026-08-17"
 readTime: 7
 tag: "Création de site"
 category: "creation"
@@ -162,3 +162,7 @@ Créez une page dédiée avec un formulaire qui demande : date, lieu, nombre de 
 
 **Combien de photos faut-il pour bien présenter mon food truck ?**
 Au minimum : 3 à 5 photos des plats (bien éclairées), 1 photo de l'extérieur du camion, 1 photo de l'équipe. La qualité prime sur la quantité — une belle photo vaut mieux que dix médiocres.
+
+---
+
+*Pour aller plus loin : [Site web pour traiteur](/blog/site-web-traiteur) · [SEO local pour restaurants](/blog/seo-local-restaurant) · [Sites internet par métier](/creation-site-internet/restaurant)*

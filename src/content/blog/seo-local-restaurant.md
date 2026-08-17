@@ -1,15 +1,15 @@
 ---
 title: "SEO local pour restaurants : remplir votre salle grâce à Google"
 date: "2026-04-18"
-excerpt: "90% des gens cherchent un restaurant sur leur téléphone avant de réserver. Voici comment faire en sorte que ce soit le vôtre qui apparaît en premier."
-tag: "SEO Local"
+updated: "2026-08-17"
+excerpt: "90% des gens cherchent un restaurant sur leur téléphone avant de réserver. Voici comment faire en sorte que ce soit le vôtre qui apparaît en premier sur Google."
+tag: "Restaurants"
 category: "seo-local"
-readTime: 8
+readTime: 9
+keywords: ["seo restaurant", "referencement local restaurant", "restaurant premier sur google"]
 ---
 
-**90% des consommateurs recherchent un restaurant en ligne avant de s'y rendre.** Et parmi ceux qui font cette recherche sur mobile, plus de la moitié visitent l'établissement dans les 24 heures. Le restaurant qui apparaît en premier sur Google Maps pour "restaurant [votre cuisine] [votre ville]" a un avantage concurrentiel structurel sur celui qui n'apparaît pas.
-
-La restauration est l'un des secteurs où le SEO local a le retour sur investissement le plus rapide et le plus mesurable. Ce guide explique comment le mettre en place, du plus basique au plus avancé.
+**Réponse directe :** 90 % des consommateurs recherchent un restaurant en ligne avant de s'y rendre, la plupart sur mobile. Pour sortir en tête sur "restaurant [cuisine] [ville]", trois leviers comptent le plus : une fiche Google Business Profile précise et complète (catégorie, menu, photos, avis), un menu en texte HTML lisible par Google (jamais en PDF), et des avis récents auxquels vous répondez sous 48h. Ce guide détaille comment les mettre en place, du plus basique au plus avancé.
 
 ---
 
@@ -108,16 +108,39 @@ Anticipez ces pics de recherche :
 
 ---
 
-> **À retenir :**
-> - Menu en texte HTML sur votre site ET renseigné dans GBP = indexation par Google
-> - Photos de plats professionnelles : le ROI le plus rapide en restauration
-> - Avis Google : formez votre équipe de salle à les demander naturellement
-> - Contenu saisonnier publié 4-6 semaines à l'avance pour capter les recherches anticipées
+## Les leviers SEO local par ordre de priorité
+
+| Levier | Action concrète | Délai avant premiers effets |
+|---|---|---|
+| Fiche Google Business Profile | Catégorie précise, menu intégré, attributs, photos récentes | 2 à 6 semaines |
+| Menu en texte HTML | Remplacer tout menu en PDF ou image par du texte indexable | 4 à 8 semaines |
+| Avis Google | Formation de l'équipe de salle, réponse sous 48h | Continu, effet cumulatif |
+| Site web optimisé | Pages menu/réservation/contact avec mots-clés locaux | 2 à 4 mois |
+| Contenu saisonnier | Pages dédiées publiées 4 à 6 semaines à l'avance | Selon la saisonnalité visée |
+
+## En résumé
+
+- Menu en texte HTML sur votre site ET renseigné dans la fiche Google Business Profile = contenu indexable par Google.
+- Photos de plats professionnelles : l'investissement au retour sur investissement le plus rapide en restauration.
+- Avis Google : formez votre équipe de salle à les demander naturellement, répondez sous 48h.
+- Contenu saisonnier publié 4 à 6 semaines à l'avance pour capter les recherches anticipées ("menu Saint-Valentin", "brunch Pâques").
+
+Avec une fiche GBP optimisée, un site web bien construit et une politique d'avis active, des résultats concrets apparaissent généralement en 3 à 6 mois.
+
+## Questions fréquentes
+
+**Combien de temps avant d'apparaître en tête sur "restaurant + ma ville" ?**
+Pour une ville moyenne avec une concurrence modérée, comptez 3 à 6 mois avec une stratégie combinant fiche GBP optimisée, site web et avis réguliers. Les grandes villes très concurrentielles demandent davantage de patience.
+
+**Le SEO local remplace-t-il TripAdvisor et TheFork ?**
+Non, ces plateformes restent complémentaires pour la notoriété. Mais un bon référencement local sur Google réduit la dépendance à leur visibilité et aux commissions associées.
+
+**Faut-il un blog pour bien référencer un restaurant ?**
+Pas indispensable au démarrage, mais un article mensuel sur les nouveautés de carte, les producteurs locaux ou les événements crée du contenu frais qui renforce le référencement sur la durée.
+
+**Les avis négatifs pénalisent-ils le classement Google ?**
+Un avis négatif isolé n'a pas d'impact fort. C'est l'absence de réponse et l'accumulation d'avis sans suivi qui pèsent sur la perception — et indirectement sur le taux de clic vers votre fiche.
 
 ---
 
-## Conclusion
-
-Le SEO local pour les restaurants n'est pas un investissement optionnel en 2026. C'est une composante essentielle de votre stratégie d'acquisition client, au même titre que votre carte ou votre service en salle. La bonne nouvelle : avec une fiche GBP optimisée, un site web bien construit et une politique d'avis active, vous pouvez voir des résultats concrets en 3 à 6 mois.
-
-Besoin d'aide pour votre référencement local ? [Contactez Stackup Agency](/contact) — réponse garantie sous 72h.
+*Pour aller plus loin : [Pourquoi votre restaurant a besoin d'un site web](/blog/blog-restaurant-site-web) · [No-show en restauration : comment les réduire de 80 %](/blog/no-show-reservation-restaurant) · [Menu digital vs menu papier](/blog/menu-digital-vs-menu-papier) · [Sites internet par métier](/creation-site-internet/restaurant)*
