@@ -4,6 +4,7 @@ import { CheckCircle, ChevronRight } from 'lucide-react'
 import { SITE } from '@/config/site'
 import MiniHero from '@/components/ui/MiniHero'
 import PricingCards from '@/components/tarifs/PricingCards'
+import TarifsShelf from '@/components/tarifs/TarifsShelf'
 import EncartRentree from '@/components/rentree/EncartRentree'
 
 export const metadata = {
@@ -43,9 +44,12 @@ export default function TarifsPage() {
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 py-16 space-y-16">
 
+        {/* Étagères */}
+        <TarifsShelf />
+
         {/* Création */}
         <section>
-          <h2 className="text-2xl font-bold text-foreground dark:text-white mb-6">Création de site internet</h2>
+          <h2 className="text-2xl font-bold text-navy mb-6">Création de site internet</h2>
           <PricingCards cards={[
             {
               titre: 'Site vitrine',

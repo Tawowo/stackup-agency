@@ -1,6 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import Link from 'next/link'
-import { CheckCircle } from 'lucide-react'
+import Image from 'next/image'
+import { CheckCircle, ArrowRight } from 'lucide-react'
 import { SITE } from '@/config/site'
 import MiniHero from '@/components/ui/MiniHero'
 
@@ -40,98 +41,117 @@ export default function AProposPage() {
     },
   }
 
-  const breadcrumbSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Accueil', item: SITE.url },
-      { '@type': 'ListItem', position: 2, name: 'À propos', item: url },
-    ],
-  }
-
-  const METHODE = [
-    { n: '01', titre: 'Écoute', desc: 'Un entretien de 30 minutes pour comprendre vos objectifs, vos clients et vos contraintes.' },
-    { n: '02', titre: 'Proposition', desc: 'Un devis clair, un délai précis, une liste de livrables. Pas de surprise.' },
-    { n: '03', titre: 'Design', desc: 'Maquette validée par vos soins avant une seule ligne de code.' },
-    { n: '04', titre: 'Développement', desc: 'Next.js, TypeScript, Tailwind. Code propre, performant, votre propriété.' },
-    { n: '05', titre: 'Livraison', desc: 'Mise en ligne, formation à l\'administration, transfert complet des accès.' },
+  const TIMELINE = [
+    { year: '2018', label: 'Premiers projets web', desc: 'Sites vitrines pour commerçants locaux. L\'envie de bien faire naît là.' },
+    { year: '2020', label: 'Freelance full-time', desc: 'Transition vers le développement professionnel. Next.js, TypeScript, design system.' },
+    { year: '2022', label: 'Naissance de Stackup', desc: 'Structuration de la méthode : 10 jours, prix fixes, code propre.' },
+    { year: '2024', label: 'Expansion services', desc: 'Ajout e-commerce, systèmes de gestion, marketing digital.' },
+    { year: '2026', label: 'Aujourd\'hui', desc: 'Des dizaines de clients satisfaits. Le même engagement qualité.' },
   ]
 
   return (
     <div className="min-h-screen bg-[#FFFDF9]">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutPageSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
       <MiniHero
-        title="L'agence qui rend le digital de qualité accessible."
-        subtitle="Stackup Agency est née d'un constat simple : les indépendants, commerçants et TPE méritent le même niveau d'exigence digitale que les grandes entreprises — sans les tarifs des grandes agences."
+        title="L'agence qui rend le digital accessible."
+        subtitle="Stackup Agency est née d'un constat simple : les indépendants méritent le même niveau d'exigence digitale que les grandes entreprises — sans les tarifs des grandes agences."
         breadcrumb={[{ name: 'À propos' }]}
       />
 
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 py-16 space-y-16">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 py-16">
 
-        {/* Corps principal */}
-        <section className="space-y-5 text-white/80 text-lg leading-relaxed">
-          <p>
-            Nous avons choisi une autre voie : une structure légère, des processus précis,
-            une stack moderne (Next.js, TypeScript), et des centaines d'heures investies
-            dans la méthode plutôt que dans les bureaux. Résultat : des sites et des applications
-            sur mesure, livrés en 10 jours ouvrés, à des prix qu'aucune agence classique
-            ne peut proposer à qualité égale.
-          </p>
-          <p>
-            Notre conviction : les meilleurs clients ne cherchent pas le moins cher — ils cherchent
-            le meilleur rapport qualité, vision, exécution. C'est exactement ce que nous construisons,
-            projet après projet.
-          </p>
-          <p className="text-xl font-semibold text-foreground dark:text-white">
-            Votre vision. Notre code.
-          </p>
-        </section>
-
-        {/* Méthode */}
-        <section>
-          <h2 className="text-2xl font-bold text-foreground dark:text-white mb-8">Notre méthode en 5 étapes</h2>
-          <div className="space-y-4">
-            {METHODE.map((step, i) => (
-              <div key={step.n} className="reveal-item flex items-start gap-5 p-5 rounded-2xl glass-panel hud-corners hover:border-electric/30 transition-colors duration-200"
-                style={{ animationDelay: `${i * 80}ms` }}>
-                <div className="step-circle w-10 h-10 flex-shrink-0 text-sm data-mono font-bold flex items-center justify-center">
-                  {step.n}
-                </div>
-                <div>
-                  <h3 className="font-semibold text-white mb-1">{step.titre}</h3>
-                  <p className="text-white/60 text-sm">{step.desc}</p>
+        {/* Portrait + intro */}
+        <section className="grid lg:grid-cols-2 gap-12 items-center mb-20">
+          {/* Portrait */}
+          <div className="relative">
+            <div className="relative rounded-3xl overflow-hidden aspect-[4/5] max-w-sm mx-auto lg:mx-0">
+              {/* Fallback gradient si image absente */}
+              <div className="absolute inset-0 bg-gradient-to-br from-navy via-electric to-gold opacity-20 rounded-3xl" />
+              <Image
+                src="/images/portrait-fondateur.webp"
+                alt="Fondateur de Stackup Agency"
+                fill
+                className="object-cover rounded-3xl"
+                priority
+              />
+              {/* Overlay subtle */}
+              <div className="absolute inset-0 bg-gradient-to-t from-navy/30 via-transparent to-transparent rounded-3xl" />
+              {/* Badge */}
+              <div className="absolute bottom-4 left-4 right-4">
+                <div className="bg-white/90 backdrop-blur-sm rounded-xl px-4 py-3 flex items-center gap-3">
+                  <div className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
+                  <div>
+                    <div className="font-bold text-navy text-sm">Fondateur</div>
+                    <div className="text-navy/55 text-xs">Tours (37) · Disponible</div>
+                  </div>
                 </div>
               </div>
-            ))}
+            </div>
+            {/* Halo décoratif */}
+            <div className="pointer-events-none absolute -top-8 -left-8 w-48 h-48 rounded-full"
+              style={{ background: 'radial-gradient(circle, rgba(245,158,11,0.12) 0%, transparent 70%)' }} />
+          </div>
+
+          {/* Texte intro */}
+          <div>
+            <div className="section-marker mb-3" aria-hidden="true">[ FONDATEUR ]</div>
+            <h2 className="text-3xl font-bold text-navy mb-5" style={{ lineHeight: 1.2 }}>
+              Une conviction, une méthode,<br />un engagement.
+            </h2>
+            <div className="space-y-4 text-navy/65 leading-relaxed">
+              <p>
+                Nous avons choisi une autre voie : une structure légère, des processus précis,
+                une stack moderne (Next.js, TypeScript), et des centaines d'heures investies
+                dans la méthode plutôt que dans les bureaux.
+              </p>
+              <p>
+                Résultat : des sites et des applications sur mesure, livrés en 10 jours ouvrés,
+                à des prix qu'aucune agence classique ne peut proposer à qualité égale.
+              </p>
+              <p className="text-lg font-bold text-navy">
+                Votre vision. Notre code.
+              </p>
+            </div>
+            <Link href="/contact" className="inline-flex items-center gap-2 mt-6 bg-gold hover:bg-gold/90 text-ink font-bold px-6 py-3 rounded-xl transition-all hover:-translate-y-0.5 shadow-md shadow-gold/20">
+              Démarrer mon projet <ArrowRight size={16} />
+            </Link>
           </div>
         </section>
 
-        {/* Technologies */}
-        <section>
-          <h2 className="text-2xl font-bold text-foreground dark:text-white mb-6">Technologies</h2>
-          <div className="grid sm:grid-cols-2 gap-3">
-            {[
-              { label: 'Next.js', desc: 'Performance, SEO natif, déploiement edge', icon: '⚡' },
-              { label: 'TypeScript', desc: 'Fiabilité, maintenabilité, zéro bug silencieux', icon: '🛡️' },
-              { label: 'Tailwind CSS', desc: 'Interfaces précises, cohérentes, rapides', icon: '🎨' },
-              { label: 'PostgreSQL / Prisma', desc: 'Bases de données robustes pour applications métier', icon: '🗄️' },
-            ].map((tech, i) => (
-              <div key={tech.label} className="reveal-item p-4 rounded-xl glass-panel hud-corners hover:border-electric/30 hover:-translate-y-0.5 transition-all duration-200 group"
-                style={{ animationDelay: `${i * 60}ms` }}>
-                <div className="text-xl mb-2 inline-block">{tech.icon}</div>
-                <div className="font-semibold text-white text-sm mb-1 group-hover:text-electric transition-colors data-mono">{tech.label}</div>
-                <div className="text-white/50 text-xs">{tech.desc}</div>
-              </div>
-            ))}
+        {/* Timeline narrative */}
+        <section className="mb-20">
+          <div className="section-marker mb-3" aria-hidden="true">[ HISTOIRE ]</div>
+          <h2 className="text-2xl font-bold text-navy mb-10">Notre parcours</h2>
+          <div className="relative">
+            {/* Ligne centrale */}
+            <div className="absolute left-[60px] top-4 bottom-4 w-0.5 bg-gradient-to-b from-gold via-electric to-navy hidden sm:block" aria-hidden="true" />
+            <div className="space-y-6">
+              {TIMELINE.map((t, i) => (
+                <div key={t.year} className="reveal-item flex items-start gap-6" style={{ animationDelay: `${i * 80}ms` }}>
+                  {/* Année */}
+                  <div className="flex-shrink-0 w-[60px] text-right hidden sm:block">
+                    <span className="text-xs font-black text-navy/30 data-mono">{t.year}</span>
+                  </div>
+                  {/* Dot */}
+                  <div className="hidden sm:flex flex-shrink-0 w-4 h-4 rounded-full border-2 border-gold bg-white mt-0.5 relative z-10" />
+                  {/* Card */}
+                  <div className="flex-1 bg-white border border-gray-100 rounded-xl p-4 hover:border-gold/30 hover:shadow-[0_4px_24px_rgba(30,58,95,0.08)] transition-all duration-200">
+                    <div className="sm:hidden text-xs font-black text-navy/30 data-mono mb-1">{t.year}</div>
+                    <div className="font-bold text-navy text-sm mb-1">{t.label}</div>
+                    <div className="text-navy/55 text-sm">{t.desc}</div>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </section>
 
         {/* Ce en quoi nous croyons */}
-        <section>
-          <h2 className="text-2xl font-bold text-foreground dark:text-white mb-6">Ce en quoi nous croyons</h2>
-          <div className="space-y-3">
+        <section className="mb-20">
+          <div className="section-marker mb-3" aria-hidden="true">[ VALEURS ]</div>
+          <h2 className="text-2xl font-bold text-navy mb-8">Ce en quoi nous croyons</h2>
+          <div className="grid sm:grid-cols-2 gap-3">
             {[
               'Les prix doivent être affichés clairement, sans mauvaise surprise',
               'Un site livré en 10 jours vaut mieux qu\'un projet qui traîne 6 mois',
@@ -140,49 +160,45 @@ export default function AProposPage() {
               'Votre site vous appartient — export et accès complets garantis',
               'Pas de clients fictifs, pas de témoignages inventés : uniquement ce que nous avons réellement fait',
             ].map((item, i) => (
-              <div key={item} className="reveal-item flex items-start gap-3" style={{ animationDelay: `${i * 50}ms` }}>
-                <CheckCircle size={18} className="text-success mt-0.5 flex-shrink-0" />
-                <span className="text-foreground/80 dark:text-white/80">{item}</span>
+              <div key={item} className="reveal-item flex items-start gap-3 p-4 bg-white rounded-xl border border-gray-100" style={{ animationDelay: `${i * 50}ms` }}>
+                <CheckCircle size={16} className="text-gold mt-0.5 flex-shrink-0" />
+                <span className="text-navy/70 text-sm leading-relaxed">{item}</span>
               </div>
             ))}
           </div>
         </section>
 
-        {/* Cadre contractuel */}
-        <section className="rounded-2xl p-6 bg-gradient-to-br from-navy/20 to-blue-950/20 border border-white/10">
-          <h2 className="text-xl font-bold text-foreground dark:text-white mb-3">Cadre contractuel</h2>
-          <p className="text-foreground/70 dark:text-white/70 mb-4">
-            Devis, contrat de prestation, CGV, mentions légales et tous les documents officiels
-            sont disponibles en téléchargement.
-          </p>
-          <Link href="/ressources/documents" className="inline-flex items-center gap-2 text-electric text-sm font-medium hover:text-electric/80 transition-colors">
-            Consulter les documents officiels →
-          </Link>
-        </section>
-
-        {/* Jugez sur pièce */}
-        <section className="rounded-2xl p-6 bg-gradient-to-br from-navy/20 to-blue-950/20 border border-white/10">
-          <h2 className="text-xl font-bold text-foreground dark:text-white mb-3">Jugez sur pièce</h2>
-          <p className="text-foreground/70 dark:text-white/70 mb-4">
-            Toutes nos démonstrations sont des projets complets, construits par nos soins et consultables en ligne.
-            Ce que vous voyez est exactement ce que nous livrons.
-          </p>
-          <Link href="/realisations" className="inline-flex items-center gap-2 text-electric text-sm font-medium hover:text-electric/80 transition-colors">
-            Explorer nos démonstrations →
-          </Link>
+        {/* Technologies */}
+        <section className="mb-20">
+          <div className="section-marker mb-3" aria-hidden="true">[ STACK ]</div>
+          <h2 className="text-2xl font-bold text-navy mb-6">Technologies</h2>
+          <div className="grid sm:grid-cols-2 gap-3">
+            {[
+              { label: 'Next.js', desc: 'Performance, SEO natif, déploiement edge', icon: '⚡' },
+              { label: 'TypeScript', desc: 'Fiabilité, maintenabilité, zéro bug silencieux', icon: '🛡️' },
+              { label: 'Tailwind CSS', desc: 'Interfaces précises, cohérentes, rapides', icon: '🎨' },
+              { label: 'PostgreSQL / Prisma', desc: 'Bases de données robustes pour applications métier', icon: '🗄️' },
+            ].map((tech, i) => (
+              <div key={tech.label} className="reveal-item p-4 rounded-xl bg-white border border-gray-100 hover:border-electric/30 hover:-translate-y-0.5 transition-all duration-200 group"
+                style={{ animationDelay: `${i * 60}ms` }}>
+                <div className="text-xl mb-2 inline-block">{tech.icon}</div>
+                <div className="font-bold text-navy text-sm mb-1 group-hover:text-electric transition-colors data-mono">{tech.label}</div>
+                <div className="text-navy/50 text-xs">{tech.desc}</div>
+              </div>
+            ))}
+          </div>
         </section>
 
         {/* CTA */}
-        <div className="rounded-2xl p-6 bg-gradient-to-br from-navy to-electric text-center">
+        <div className="rounded-2xl p-8 bg-gradient-to-br from-navy to-electric/90 text-center">
           <h3 className="text-white font-bold text-xl mb-2">Votre vision. Notre code.</h3>
-          <p className="text-white/70 mb-4">Premier rendez-vous gratuit, devis sous 72h, sans engagement.</p>
-          <Link href="/contact" className="inline-block px-6 py-3 bg-gold hover:bg-gold/80 text-ink font-semibold rounded-xl transition-all hover:-translate-y-0.5">
-            Démarrer mon projet →
+          <p className="text-white/70 mb-6">Premier rendez-vous gratuit, devis sous 72h, sans engagement.</p>
+          <Link href="/contact" className="inline-flex items-center gap-2 px-6 py-3 bg-gold hover:bg-gold/80 text-ink font-semibold rounded-xl transition-all hover:-translate-y-0.5">
+            Démarrer mon projet <ArrowRight size={16} />
           </Link>
         </div>
 
-        {/* Signature */}
-        <p className="text-center text-foreground/60 dark:text-white/60 text-sm">{SITE.signature}</p>
+        <p className="text-center text-navy/35 text-sm mt-10">{SITE.signature}</p>
       </div>
     </div>
   )

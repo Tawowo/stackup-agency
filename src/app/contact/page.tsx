@@ -1,7 +1,7 @@
 import { SITE } from '@/config/site'
 import Link from 'next/link'
 import MiniHero from '@/components/ui/MiniHero'
-import ContactForm from '@/components/sections/Contact'
+import ContactFormV4 from '@/components/contact/ContactFormV4'
 import EncartRentree from '@/components/rentree/EncartRentree'
 
 export const metadata = {
@@ -59,7 +59,44 @@ export default function ContactPage() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6">
         <EncartRentree />
       </div>
-      <ContactForm />
+
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 py-12">
+        <div className="grid lg:grid-cols-5 gap-10">
+          {/* Form */}
+          <div className="lg:col-span-3">
+            <ContactFormV4 />
+          </div>
+
+          {/* Sidebar */}
+          <div className="lg:col-span-2 space-y-6">
+            <div className="bg-white border border-gray-100 rounded-2xl p-6">
+              <div className="text-xs font-bold text-gold uppercase tracking-widest mb-4">Pourquoi nous écrire ?</div>
+              <div className="space-y-3">
+                {[
+                  { emoji: '⚡', text: 'Réponse sous 72h garantie' },
+                  { emoji: '🎯', text: 'Devis personnalisé gratuit' },
+                  { emoji: '📞', text: 'Appel de découverte offert' },
+                  { emoji: '🔒', text: 'Aucun engagement' },
+                ].map(item => (
+                  <div key={item.text} className="flex items-center gap-3 text-sm text-navy/70">
+                    <span>{item.emoji}</span>
+                    <span>{item.text}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="bg-navy rounded-2xl p-6 text-white">
+              <div className="text-xs font-bold text-gold uppercase tracking-widest mb-3">Contact direct</div>
+              <a href={`mailto:${process.env.NEXT_PUBLIC_EMAIL || 'contact@stackup-agency.fr'}`}
+                className="text-white/80 hover:text-white text-sm transition-colors break-all">
+                contact@stackup-agency.fr
+              </a>
+              <div className="text-white/40 text-xs mt-2">Tours (37) · Toute la France</div>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 pb-16">
         <p className="text-center text-sm text-foreground/70 dark:text-white/40">

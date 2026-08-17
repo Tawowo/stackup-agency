@@ -1,16 +1,18 @@
 /* eslint-disable react/no-unescaped-entities */
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { CheckCircle, ArrowRight, Clock, Zap, Shield } from 'lucide-react'
+import { CheckCircle, ArrowRight } from 'lucide-react'
 import MarqueeSeparator from '@/components/home/MarqueeSeparator'
 import HomeFaq from '@/components/home/HomeFaq'
 import { SITE } from '@/config/site'
 import HeroSection from '@/components/home/HeroSection'
 import BlocRentreeHome from '@/components/rentree/BlocRentreeHome'
-import ServiceCards from '@/components/home/ServiceCards'
-import ProcessSection from '@/components/home/ProcessSection'
+import Atelier from '@/components/home/Atelier'
+import PreuvePar3 from '@/components/home/PreuvePar3'
+import Showroom from '@/components/home/Showroom'
+import LaRoute from '@/components/home/LaRoute'
+import StatPills from '@/components/home/StatPills'
 import ManifestoSection from '@/components/home/ManifestoSection'
-import PinnedGallery from '@/components/home/PinnedGallery'
 import ScrollBackground from '@/components/home/ScrollBackground'
 
 export const metadata: Metadata = {
@@ -81,94 +83,22 @@ export default function Home() {
         {/* Section divider */}
         <div className="section-divider" aria-hidden="true" />
 
-        {/* ── 01 — Services ─────────────────────────────────────────────────── */}
-        <section id="services" className="py-24 bg-[#FFFDF9] relative overflow-hidden">
-          {/* Halos de fond chauds */}
-          <div className="pointer-events-none absolute top-0 right-0 w-[500px] h-[400px]" aria-hidden="true"
-            style={{ background: 'radial-gradient(ellipse, rgba(245,158,11,0.07) 0%, transparent 70%)' }} />
-          <div className="pointer-events-none absolute bottom-0 left-0 w-[400px] h-[300px]" aria-hidden="true"
-            style={{ background: 'radial-gradient(ellipse, rgba(45,125,210,0.05) 0%, transparent 70%)' }} />
-          <span className="section-number select-none" aria-hidden="true">01</span>
-          <div className="max-w-5xl mx-auto px-4 sm:px-6 relative">
-            <div className="mb-12 max-w-2xl">
-              <div className="section-marker mb-2 reveal-item" aria-hidden="true">[ 01 / SERVICES ]</div>
-              <div className="text-xs font-bold text-gold uppercase tracking-[0.2em] mb-3 reveal-item">Services web</div>
-              <h2 className="text-3xl lg:text-5xl font-bold text-navy mb-4 reveal-item" style={{ lineHeight: 1.15 }}>
-                Nos services web
-              </h2>
-              <p className="text-navy/55 max-w-xl reveal-item" style={{ animationDelay: '80ms' }}>
-                Du site vitrine à l'application sur mesure — une solution adaptée à chaque budget et chaque activité.
-              </p>
-            </div>
-            <ServiceCards />
-            <Link href="/services" className="inline-flex items-center gap-2 text-electric-ink hover:text-navy font-medium transition-colors mt-8">
-              Voir tous nos services <ArrowRight size={16} />
-            </Link>
-          </div>
-        </section>
+        {/* ── 01 — L'Atelier (services vivants) ─────────────────────────── */}
+        <Atelier />
 
         <div className="section-divider" aria-hidden="true" />
 
-        {/* ── 02 — Pourquoi Stackup ──────────────────────────────────────────── */}
-        <section className="py-24 bg-white relative overflow-hidden">
-          <span className="section-number select-none" aria-hidden="true">02</span>
-          {/* Halo doux */}
-          <div className="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-64 rounded-full" aria-hidden="true"
-            style={{ background: 'radial-gradient(ellipse, rgba(245,158,11,0.07) 0%, transparent 70%)' }} />
-          <div className="relative max-w-5xl mx-auto px-4 sm:px-6">
-            <div className="section-marker mb-2 reveal-item" aria-hidden="true">[ 02 / POURQUOI ]</div>
-            <div className="text-xs font-bold text-gold uppercase tracking-[0.2em] mb-3 reveal-item">Pourquoi nous</div>
-            <h2 className="text-3xl lg:text-5xl font-bold text-navy mb-16 reveal-item" style={{ lineHeight: 1.15 }}>
-              Pourquoi Stackup Agency ?
-            </h2>
-            {/* 3 cartes lumineuses */}
-            <div className="grid lg:grid-cols-5 gap-4">
-              {/* Large left — Prix */}
-              <div className="reveal-item lg:col-span-2 group relative p-8 rounded-2xl bg-white border border-gray-100 hover:border-gold/30 hover:shadow-[0_16px_48px_rgba(30,58,95,0.10)] transition-all duration-300 hover:-translate-y-1 overflow-hidden">
-                <div className="absolute top-0 left-0 right-0 h-0.5 rounded-t-2xl bg-gradient-to-r from-gold to-amber-300 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <div className="text-5xl font-black text-gold mb-4 tabular-nums" style={{ lineHeight: 1 }}>3–5×</div>
-                <div className="w-10 h-10 rounded-xl bg-amber-50 border border-gold/20 flex items-center justify-center mb-5">
-                  <Zap size={20} className="text-gold" />
-                </div>
-                <h3 className="font-bold text-navy text-lg mb-3">Le prix d'un indépendant</h3>
-                <p className="text-navy/55 text-sm leading-relaxed">Des tarifs 3 à 5 fois inférieurs aux agences classiques, à périmètre égal. Pas de bureaux à amortir, pas de couches commerciales : vous payez le travail, pas la structure.</p>
-              </div>
-              {/* Right: 2 stacked */}
-              <div className="lg:col-span-3 grid sm:grid-rows-2 gap-4">
-                <div className="reveal-item group relative p-6 rounded-2xl bg-white border border-gray-100 hover:border-electric/30 hover:shadow-[0_16px_48px_rgba(30,58,95,0.10)] transition-all duration-300 hover:-translate-y-1 overflow-hidden"
-                  style={{ animationDelay: '120ms' }}>
-                  <div className="absolute top-0 left-0 right-0 h-0.5 rounded-t-2xl bg-gradient-to-r from-electric to-blue-300 opacity-0 group-hover:opacity-100 transition-opacity" />
-                  <div className="flex items-start gap-4">
-                    <div className="w-10 h-10 rounded-xl bg-blue-50 border border-electric/20 flex items-center justify-center flex-shrink-0">
-                      <Shield size={20} className="text-electric" />
-                    </div>
-                    <div>
-                      <h3 className="font-bold text-navy mb-1">La qualité d'une grande agence</h3>
-                      <p className="text-navy/55 text-sm leading-relaxed">Code sur mesure en Next.js et TypeScript, performance et SEO intégrés dès la conception. Jugez sur pièce : toutes nos démonstrations sont en ligne.</p>
-                    </div>
-                  </div>
-                </div>
-                <div className="reveal-item group relative p-6 rounded-2xl bg-white border border-gray-100 hover:border-navy/20 hover:shadow-[0_16px_48px_rgba(30,58,95,0.10)] transition-all duration-300 hover:-translate-y-1 overflow-hidden"
-                  style={{ animationDelay: '240ms' }}>
-                  <div className="absolute top-0 left-0 right-0 h-0.5 rounded-t-2xl bg-gradient-to-r from-navy to-electric opacity-0 group-hover:opacity-100 transition-opacity" />
-                  <div className="flex items-start gap-4">
-                    <div className="w-10 h-10 rounded-xl bg-blue-50 border border-navy/15 flex items-center justify-center flex-shrink-0">
-                      <Clock size={20} className="text-navy" />
-                    </div>
-                    <div>
-                      <h3 className="font-bold text-navy mb-1">Une rapidité assumée</h3>
-                      <p className="text-navy/55 text-sm leading-relaxed">Votre site vitrine en ligne en 10 jours ouvrés, contractuellement. Chaque étape est cadrée, chaque délai est écrit.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+        {/* ── 02 — La Preuve par 3 ───────────────────────────────────────────── */}
+        <PreuvePar3 />
 
-        <PinnedGallery />
+        {/* ── 03 — Le Showroom ───────────────────────────────────────────────── */}
+        <Showroom />
 
-        <ProcessSection />
+        {/* ── 04 — La Route (process) ────────────────────────────────────────── */}
+        <LaRoute />
+
+        {/* ── Stat pills rebondissantes ──────────────────────────────────────── */}
+        <StatPills />
 
         {/* Jugez sur pièce — mini CTA sur fond ivoire */}
         <section className="py-16 bg-[#FFFDF9]">
