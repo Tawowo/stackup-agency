@@ -1300,3 +1300,330 @@ a, button, [role="button"] { cursor: pointer; }
   .service-hero-accent::after { transition: none; }
   .real-card-overlay, .real-card-actions { transition: none; }
 }
+
+/* ─── AUDIT TOOL ─────────────────────────────────────────────────────────── */
+@keyframes audit-spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+.audit-gauge-card { will-change: transform; }
+
+/* ─── WIZARD / DEVIS ────────────────────────────────────────────────────── */
+@keyframes wizard-slide-in {
+  from { opacity: 0; transform: translateX(32px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes wizard-slide-out {
+  from { opacity: 1; transform: translateX(0); }
+  to   { opacity: 0; transform: translateX(-32px); }
+}
+.wizard-step-enter { animation: wizard-slide-in 0.35s cubic-bezier(0.16,1,0.3,1) both; }
+.wizard-choice-card {
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+.wizard-choice-card:hover { transform: translateY(-2px); }
+.wizard-choice-card.selected {
+  border-color: #2D7DD2 !important;
+  box-shadow: 0 0 0 1px #2D7DD2, 0 8px 24px rgba(45,125,210,0.2);
+}
+.wizard-price-counter {
+  font-variant-numeric: tabular-nums;
+  transition: transform 0.15s ease;
+}
+.wizard-progress-segment {
+  transition: width 0.4s cubic-bezier(0.16,1,0.3,1), opacity 0.3s ease;
+}
+
+/* ─── COMPARATEUR ────────────────────────────────────────────────────────── */
+.compare-row {
+  transition: background-color 0.2s ease, opacity 0.3s ease;
+}
+.compare-row:hover { background: rgba(45,125,210,0.04); }
+.compare-cell-enter {
+  animation: cell-pop 0.4s cubic-bezier(0.34,1.56,0.64,1) both;
+}
+@keyframes cell-pop {
+  from { opacity: 0; transform: scale(0.6); }
+  to   { opacity: 1; transform: scale(1); }
+}
+.compare-verdict {
+  animation: verdict-reveal 0.6s cubic-bezier(0.16,1,0.3,1) both;
+}
+@keyframes verdict-reveal {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ─── STUDIO LIVE PREVIEW ────────────────────────────────────────────────── */
+.studio-preview-transition {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+.studio-palette-swatch {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+.studio-palette-swatch:hover { transform: scale(1.1); }
+.studio-palette-swatch.selected {
+  transform: scale(1.15);
+  box-shadow: 0 0 0 3px white, 0 0 0 5px currentColor;
+}
+
+/* ─── CAHIER DES CHARGES ────────────────────────────────────────────────── */
+.cdc-step-card {
+  transition: opacity 0.4s ease, transform 0.4s cubic-bezier(0.16,1,0.3,1);
+}
+.cdc-step-active { opacity: 1; transform: translateX(0); }
+.cdc-step-hidden { opacity: 0; transform: translateX(20px); pointer-events: none; }
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   HOME — IDENTITÉ SPECTACULAIRE STACKUP
+   ══════════════════════════════════════════════════════════════════════════ */
+
+/* — Section numbering (XXL decorative) ─────────────────────────────────── */
+.section-number {
+  position: absolute;
+  top: -0.15em;
+  right: -0.05em;
+  font-size: clamp(6rem, 14vw, 12rem);
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(255,255,255,0.06);
+  pointer-events: none;
+  user-select: none;
+  font-variant-numeric: tabular-nums;
+}
+
+/* — Split-word headline reveal ─────────────────────────────────────────── */
+@keyframes split-word-up {
+  from { opacity: 0; transform: translateY(60%) skewY(3deg); }
+  to   { opacity: 1; transform: translateY(0) skewY(0deg); }
+}
+.split-reveal .split-word {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: bottom;
+  margin-right: 0.22em;
+}
+.split-reveal .split-word-inner {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(60%) skewY(3deg);
+}
+.split-reveal.in-view .split-word-inner {
+  animation: split-word-up 0.7s cubic-bezier(0.16,1,0.3,1) both;
+}
+
+/* — Ligne de séparation animée entre sections ───────────────────────────── */
+.section-divider {
+  position: relative;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(45,125,210,0.3), rgba(245,158,11,0.2), transparent);
+  overflow: visible;
+}
+.section-divider::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -5%;
+  width: 50%;
+  height: 5px;
+  background: linear-gradient(90deg, transparent, #2D7DD2, transparent);
+  border-radius: 2px;
+  animation: divider-scan 3s ease-in-out infinite;
+}
+@keyframes divider-scan {
+  0%   { left: -5%; opacity: 0; }
+  10%  { opacity: 1; }
+  90%  { opacity: 1; }
+  100% { left: 100%; opacity: 0; }
+}
+
+/* — Service card stagger asymétrique ─────────────────────────────────────── */
+@keyframes service-enter-left {
+  from { opacity: 0; transform: translateX(-40px) translateY(20px); }
+  to   { opacity: 1; transform: translateX(0) translateY(0); }
+}
+@keyframes service-enter-right {
+  from { opacity: 0; transform: translateX(40px) translateY(20px); }
+  to   { opacity: 1; transform: translateX(0) translateY(0); }
+}
+.service-asym-left.in-view  { animation: service-enter-left  0.6s cubic-bezier(0.16,1,0.3,1) both; }
+.service-asym-right.in-view { animation: service-enter-right 0.6s cubic-bezier(0.16,1,0.3,1) both; }
+
+/* — Pourquoi cards — stat rise ──────────────────────────────────────────── */
+@keyframes stat-rise {
+  from { opacity: 0; transform: translateY(48px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.stat-card { opacity: 0; }
+.stats-visible .stat-card {
+  animation: stat-rise 0.7s cubic-bezier(0.16,1,0.3,1) both;
+}
+.stats-visible .stat-card:nth-child(1) { animation-delay: 0ms; }
+.stats-visible .stat-card:nth-child(2) { animation-delay: 120ms; }
+.stats-visible .stat-card:nth-child(3) { animation-delay: 240ms; }
+
+/* — Process step line draw ─────────────────────────────────────────────── */
+@keyframes line-draw {
+  from { transform: scaleX(0); }
+  to   { transform: scaleX(1); }
+}
+.process-line-draw {
+  transform-origin: left center;
+  transform: scaleX(0);
+}
+.process-visible .process-line-draw {
+  animation: line-draw 0.8s cubic-bezier(0.16,1,0.3,1) both;
+}
+
+/* — Blog card shimmer hover ─────────────────────────────────────────────── */
+.blog-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(115deg, transparent 40%, rgba(45,125,210,0.06) 50%, transparent 60%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  border-radius: inherit;
+}
+.blog-card:hover::after { opacity: 1; }
+
+/* — Carousel volets (PinnedGallery panel transitions) ──────────────────── */
+.panel-volet {
+  position: absolute;
+  inset: 0;
+  background: #060D1A;
+  transform-origin: right center;
+  animation: volet-open 0.7s cubic-bezier(0.87,0,0.13,1) both;
+}
+@keyframes volet-open {
+  from { transform: scaleX(1); }
+  to   { transform: scaleX(0); }
+}
+
+/* — Maintenance cards hover glow ────────────────────────────────────────── */
+.maintenance-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.maintenance-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(45,125,210,0.15);
+}
+.maintenance-card.highlight:hover {
+  box-shadow: 0 20px 40px rgba(45,125,210,0.3);
+}
+
+/* — CTA final — particle halo ───────────────────────────────────────────── */
+@keyframes halo-orbit {
+  from { transform: rotate(0deg) translateX(200px) rotate(0deg); }
+  to   { transform: rotate(360deg) translateX(200px) rotate(-360deg); }
+}
+.halo-particle {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: rgba(245,158,11,0.6);
+  top: 50%;
+  left: 50%;
+  margin: -1.5px 0 0 -1.5px;
+}
+.halo-particle:nth-child(1) { animation: halo-orbit 8s linear infinite; }
+.halo-particle:nth-child(2) { animation: halo-orbit 8s linear infinite 2.67s; opacity: 0.5; }
+.halo-particle:nth-child(3) { animation: halo-orbit 8s linear infinite 5.33s; opacity: 0.3; }
+
+/* — Hero word-mask XXL ─────────────────────────────────────────────────── */
+.hero-overline {
+  animation: hero-overline-in 0.5s cubic-bezier(0.16,1,0.3,1) 0.1s both;
+}
+@keyframes hero-overline-in {
+  from { opacity: 0; transform: translateX(-20px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+/* — Asymmetric layout helpers ───────────────────────────────────────────── */
+.asym-pull-right {
+  margin-left: auto;
+  margin-right: -2vw;
+}
+.asym-indent-l {
+  padding-left: clamp(1.5rem, 6vw, 6rem);
+  border-left: 2px solid rgba(45,125,210,0.3);
+}
+
+/* — Ticker label for active carousel panel ─────────────────────────────── */
+@keyframes ticker-label {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.panel-label-in {
+  animation: ticker-label 0.4s cubic-bezier(0.16,1,0.3,1) both;
+}
+
+/* — Heading underline draw ─────────────────────────────────────────────── */
+.heading-underline-animated {
+  position: relative;
+  display: inline-block;
+}
+.heading-underline-animated::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background: linear-gradient(90deg, #2D7DD2, #F59E0B);
+  border-radius: 1px;
+  transition: width 0.8s cubic-bezier(0.16,1,0.3,1);
+}
+.heading-underline-animated.in-view::after { width: 100%; }
+
+/* ─ prefers-reduced-motion ─────────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  .split-reveal .split-word-inner,
+  .stat-card,
+  .halo-particle,
+  .section-divider::before { animation: none !important; opacity: 1 !important; transform: none !important; }
+}
+
+/* ─── Devis wizard — step slide transitions ──────────────── */
+@keyframes devis-slide-right {
+  from { transform: translateX(52px); opacity: 0; }
+  to   { transform: translateX(0);    opacity: 1; }
+}
+@keyframes devis-slide-left {
+  from { transform: translateX(-52px); opacity: 0; }
+  to   { transform: translateX(0);     opacity: 1; }
+}
+.devis-enter-right {
+  animation: devis-slide-right 0.32s cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+.devis-enter-left {
+  animation: devis-slide-left 0.32s cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+
+/* ─── Devis success — SVG checkmark draw ─────────────────── */
+@keyframes devis-circle-draw {
+  to { stroke-dashoffset: 0; }
+}
+@keyframes devis-check-draw {
+  to { stroke-dashoffset: 0; }
+}
+.devis-success-circle {
+  animation: devis-circle-draw 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0.1s forwards;
+}
+.devis-success-check {
+  animation: devis-check-draw 0.4s cubic-bezier(0.4, 0, 0.2, 1) 0.65s forwards;
+}
+
+/* ─── Reduced motion — devis ─────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  .devis-enter-right,
+  .devis-enter-left { animation: none; }
+  .devis-success-circle { animation: none; stroke-dashoffset: 0; }
+  .devis-success-check  { animation: none; stroke-dashoffset: 0; }
+}

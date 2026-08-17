@@ -78,68 +78,84 @@ export default function Home() {
 
         <BlocRentreeHome />
 
-        {/* Services */}
-        <section id="services" className="py-24 bg-background dark:bg-[#0A0F1C]">
-          <div className="max-w-5xl mx-auto px-4 sm:px-6">
-            <div className="mb-12">
-              <h2 className="text-3xl lg:text-4xl font-bold text-foreground dark:text-white mb-4 reveal-item heading-underline">
+        {/* Section divider */}
+        <div className="section-divider" aria-hidden="true" />
+
+        {/* ── 01 — Services ─────────────────────────────────────────────────── */}
+        <section id="services" className="py-24 bg-background dark:bg-[#0A0F1C] relative overflow-hidden">
+          {/* XXL decorative number */}
+          <span className="section-number select-none" aria-hidden="true">01</span>
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 relative">
+            <div className="mb-12 max-w-2xl">
+              <div className="text-xs font-bold text-electric uppercase tracking-[0.2em] mb-3 reveal-item">Services web</div>
+              <h2 className="text-3xl lg:text-5xl font-bold text-foreground dark:text-white mb-4 reveal-item heading-underline-animated in-view" style={{ lineHeight: 1.15 }}>
                 Nos services web
               </h2>
-              <p className="text-foreground/60 dark:text-white/60 max-w-xl">
+              <p className="text-foreground/60 dark:text-white/60 max-w-xl reveal-item" style={{ animationDelay: '80ms' }}>
                 Du site vitrine à l'application sur mesure — une solution adaptée à chaque budget et chaque activité.
               </p>
             </div>
             <ServiceCards />
-            <Link href="/services" className="inline-flex items-center gap-2 text-electric-ink dark:text-electric hover:text-navy dark:hover:text-electric font-medium transition-colors">
+            <Link href="/services" className="inline-flex items-center gap-2 text-electric-ink dark:text-electric hover:text-navy dark:hover:text-electric font-medium transition-colors mt-8">
               Voir tous nos services <ArrowRight size={16} />
             </Link>
           </div>
         </section>
 
-        {/* Pourquoi Stackup */}
+        <div className="section-divider" aria-hidden="true" />
+
+        {/* ── 02 — Pourquoi Stackup ──────────────────────────────────────────── */}
         <section className="py-24 bg-[#060D1A] relative overflow-hidden">
+          <span className="section-number !text-white/[0.04]" aria-hidden="true">02</span>
           <div className="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-64 rounded-full"
             aria-hidden="true"
             style={{ background: 'radial-gradient(ellipse, rgba(45,125,210,0.08) 0%, transparent 70%)' }} />
           <div className="relative max-w-5xl mx-auto px-4 sm:px-6">
-            <div className="overline-label mb-3 !text-electric">Pourquoi nous</div>
-            <h2 className="text-white mb-12">
+            <div className="text-xs font-bold text-electric uppercase tracking-[0.2em] mb-3 reveal-item">Pourquoi nous</div>
+            <h2 className="text-3xl lg:text-5xl font-bold text-white mb-16 reveal-item" style={{ lineHeight: 1.15 }}>
               Pourquoi Stackup Agency ?
             </h2>
-            <div className="grid sm:grid-cols-3 gap-6">
-              {[
-                {
-                  Icon: Zap,
-                  titre: "Le prix d'un indépendant",
-                  desc: "Des tarifs 3 à 5 fois inférieurs aux agences classiques, à périmètre égal. Pas de bureaux à amortir, pas de couches commerciales : vous payez le travail, pas la structure.",
-                  accent: 'from-electric to-electric/40',
-                },
-                {
-                  Icon: Shield,
-                  titre: "La qualité d'une grande agence",
-                  desc: "Code sur mesure en Next.js et TypeScript, performance et SEO intégrés dès la conception. Jugez sur pièce : toutes nos démonstrations sont en ligne.",
-                  accent: 'from-gold to-gold/40',
-                },
-                {
-                  Icon: Clock,
-                  titre: 'Une rapidité assumée',
-                  desc: 'Votre site vitrine en ligne en 10 jours ouvrés, contractuellement. Chaque étape est cadrée, chaque délai est écrit.',
-                  accent: 'from-electric/80 to-navy',
-                },
-              ].map(({ Icon, titre, desc, accent }, i) => (
-                <div key={titre}
-                  className="reveal-item group relative p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-white/20 hover:bg-white/8 transition-all duration-300 hover:-translate-y-1 shadow-lift-sm"
-                  style={{ transitionDelay: `${i * 80}ms` }}
-                >
-                  {/* Top accent line */}
-                  <div className={`absolute top-0 left-0 right-0 h-px rounded-t-2xl bg-gradient-to-r ${accent} opacity-0 group-hover:opacity-100 transition-opacity duration-300`} />
-                  <div className="w-10 h-10 rounded-xl bg-blue-500/15 border border-blue-500/20 flex items-center justify-center mb-4 group-hover:bg-blue-500/25 transition-colors">
-                    <Icon size={20} className="text-electric" />
-                  </div>
-                  <h3 className="font-semibold text-white mb-2">{titre}</h3>
-                  <p className="text-white/55 text-sm leading-relaxed">{desc}</p>
+            {/* Asymmetric 3-column layout: large left card + 2 stacked right */}
+            <div className="grid lg:grid-cols-5 gap-4">
+              {/* Large left card */}
+              <div className="reveal-item stat-card lg:col-span-2 group relative p-8 rounded-2xl bg-white/5 border border-white/10 hover:border-electric/30 hover:bg-white/8 transition-all duration-300 hover:-translate-y-1 shadow-lift-sm overflow-hidden">
+                <div className="absolute top-0 left-0 right-0 h-px rounded-t-2xl bg-gradient-to-r from-electric to-electric/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="text-5xl font-black text-electric mb-4 tabular-nums" style={{ lineHeight: 1 }}>3–5×</div>
+                <div className="w-10 h-10 rounded-xl bg-blue-500/15 border border-blue-500/20 flex items-center justify-center mb-5">
+                  <Zap size={20} className="text-electric" />
                 </div>
-              ))}
+                <h3 className="font-bold text-white text-lg mb-3">Le prix d'un indépendant</h3>
+                <p className="text-white/55 text-sm leading-relaxed">Des tarifs 3 à 5 fois inférieurs aux agences classiques, à périmètre égal. Pas de bureaux à amortir, pas de couches commerciales : vous payez le travail, pas la structure.</p>
+              </div>
+              {/* Right: 2 stacked */}
+              <div className="lg:col-span-3 grid sm:grid-rows-2 gap-4">
+                <div className="reveal-item stat-card group relative p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-gold/30 hover:bg-white/8 transition-all duration-300 hover:-translate-y-1 shadow-lift-sm overflow-hidden"
+                  style={{ animationDelay: '120ms' }}>
+                  <div className="absolute top-0 left-0 right-0 h-px rounded-t-2xl bg-gradient-to-r from-gold to-gold/40 opacity-0 group-hover:opacity-100 transition-opacity" />
+                  <div className="flex items-start gap-4">
+                    <div className="w-10 h-10 rounded-xl bg-gold/15 border border-gold/20 flex items-center justify-center flex-shrink-0">
+                      <Shield size={20} className="text-gold" />
+                    </div>
+                    <div>
+                      <h3 className="font-bold text-white mb-1">La qualité d'une grande agence</h3>
+                      <p className="text-white/55 text-sm leading-relaxed">Code sur mesure en Next.js et TypeScript, performance et SEO intégrés dès la conception. Jugez sur pièce : toutes nos démonstrations sont en ligne.</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="reveal-item stat-card group relative p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-white/25 hover:bg-white/8 transition-all duration-300 hover:-translate-y-1 shadow-lift-sm overflow-hidden"
+                  style={{ animationDelay: '240ms' }}>
+                  <div className="absolute top-0 left-0 right-0 h-px rounded-t-2xl bg-gradient-to-r from-electric/80 to-navy opacity-0 group-hover:opacity-100 transition-opacity" />
+                  <div className="flex items-start gap-4">
+                    <div className="w-10 h-10 rounded-xl bg-blue-500/15 border border-blue-500/20 flex items-center justify-center flex-shrink-0">
+                      <Clock size={20} className="text-electric" />
+                    </div>
+                    <div>
+                      <h3 className="font-bold text-white mb-1">Une rapidité assumée</h3>
+                      <p className="text-white/55 text-sm leading-relaxed">Votre site vitrine en ligne en 10 jours ouvrés, contractuellement. Chaque étape est cadrée, chaque délai est écrit.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -171,31 +187,48 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Blog preview */}
-        <section id="blog" className="py-24 bg-[#060D1A]">
-          <div className="max-w-5xl mx-auto px-4 sm:px-6">
+        <div className="section-divider" aria-hidden="true" />
+
+        {/* ── 04 — Blog ─────────────────────────────────────────────────────── */}
+        <section id="blog" className="py-24 bg-[#060D1A] relative overflow-hidden">
+          <span className="section-number !text-white/[0.04]" aria-hidden="true">04</span>
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 relative">
             <div className="flex items-end justify-between mb-12">
-              <h2 className="text-3xl lg:text-4xl font-bold text-white">Du concret sur le blog</h2>
+              <div>
+                <div className="text-xs font-bold text-electric uppercase tracking-[0.2em] mb-3 reveal-item">Blog</div>
+                <h2 className="text-3xl lg:text-5xl font-bold text-white reveal-item">Du concret sur le blog</h2>
+              </div>
               <Link href="/blog" className="hidden sm:flex items-center gap-1 text-electric hover:text-electric/80 font-medium text-sm transition-colors">
                 Tous les articles <ArrowRight size={14} />
               </Link>
             </div>
-            <div className="grid sm:grid-cols-3 gap-5">
-              {[
-                { href: '/blog/creation-site-internet-prix', titre: 'Combien coûte un site internet en 2026 ?', cat: 'Tarifs' },
-                { href: '/blog/vitesse-site-web-core-web-vitals', titre: 'Core Web Vitals : guide pratique pour les TPE', cat: 'Technique' },
-                { href: '/blog/seo-local-google-business', titre: 'SEO local : comment apparaître en tête sur Google Maps', cat: 'SEO' },
-              ].map((a, i) => (
-                <Link key={a.href} href={a.href}
-                  className="reveal-item group relative p-5 rounded-2xl bg-white/5 border border-white/10 hover:border-electric/30 hover:bg-white/8 transition-all duration-300 hover:-translate-y-0.5"
-                  style={{ transitionDelay: `${i * 80}ms` }}>
-                  <div className="text-xs text-electric/80 mb-2 font-semibold uppercase tracking-wide">{a.cat}</div>
-                  <h3 className="font-semibold text-white group-hover:text-electric/80 transition-colors text-sm leading-snug mb-3">{a.titre}</h3>
-                  <span className="text-xs text-white/30 group-hover:text-electric/50 transition-colors flex items-center gap-1">
-                    Lire l&apos;article <span className="arrow-slide">→</span>
-                  </span>
-                </Link>
-              ))}
+            {/* Asymmetric: 1 large card + 2 small */}
+            <div className="grid sm:grid-cols-5 gap-4">
+              <Link href="/blog/creation-site-internet-prix"
+                className="blog-card reveal-item group relative sm:col-span-3 p-7 rounded-2xl bg-white/5 border border-white/10 hover:border-electric/30 hover:bg-white/[0.07] transition-all duration-300 hover:-translate-y-1 overflow-hidden"
+                style={{ animationDelay: '0ms' }}>
+                <div className="text-xs text-electric font-bold uppercase tracking-widest mb-3">Tarifs</div>
+                <h3 className="font-bold text-white text-xl group-hover:text-electric transition-colors leading-snug mb-4">Combien coûte un site internet en 2026 ?</h3>
+                <span className="text-xs text-white/30 group-hover:text-electric/60 transition-colors flex items-center gap-1">
+                  Lire l'article <span className="arrow-slide">→</span>
+                </span>
+              </Link>
+              <div className="sm:col-span-2 flex flex-col gap-4">
+                {[
+                  { href: '/blog/vitesse-site-web-core-web-vitals', titre: 'Core Web Vitals : guide pratique pour les TPE', cat: 'Technique' },
+                  { href: '/blog/seo-local-google-business', titre: 'SEO local : comment apparaître en tête sur Google Maps', cat: 'SEO' },
+                ].map((a, i) => (
+                  <Link key={a.href} href={a.href}
+                    className="blog-card reveal-item group relative flex-1 p-5 rounded-2xl bg-white/5 border border-white/10 hover:border-electric/30 hover:bg-white/[0.07] transition-all duration-300 hover:-translate-y-0.5 overflow-hidden"
+                    style={{ animationDelay: `${(i + 1) * 100}ms` }}>
+                    <div className="text-xs text-electric font-bold uppercase tracking-widest mb-2">{a.cat}</div>
+                    <h3 className="font-semibold text-white group-hover:text-electric/80 transition-colors text-sm leading-snug mb-3">{a.titre}</h3>
+                    <span className="text-xs text-white/30 group-hover:text-electric/50 transition-colors flex items-center gap-1">
+                      Lire l'article <span className="arrow-slide">→</span>
+                    </span>
+                  </Link>
+                ))}
+              </div>
             </div>
             <Link href="/blog" className="sm:hidden mt-6 inline-flex items-center gap-1 text-electric hover:text-electric/80 font-medium text-sm transition-colors">
               Tous les articles <ArrowRight size={14} />
@@ -203,14 +236,18 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Maintenance */}
-        <section className="py-24 bg-background dark:bg-[#0A0F1C]">
-          <div className="max-w-5xl mx-auto px-4 sm:px-6">
+        <div className="section-divider" aria-hidden="true" />
+
+        {/* ── 05 — Maintenance ──────────────────────────────────────────────── */}
+        <section className="py-24 bg-background dark:bg-[#0A0F1C] relative overflow-hidden">
+          <span className="section-number" aria-hidden="true">05</span>
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 relative">
             <div className="mb-10">
-              <h2 className="text-3xl lg:text-4xl font-bold text-foreground dark:text-white mb-3">
+              <div className="text-xs font-bold text-electric uppercase tracking-[0.2em] mb-3 reveal-item">Formules mensuelles</div>
+              <h2 className="text-3xl lg:text-5xl font-bold text-foreground dark:text-white mb-3 reveal-item">
                 Maintenance & hébergement
               </h2>
-              <p className="text-foreground/60 dark:text-white/60">Après la première année incluse, une formule mensuelle pour que votre site reste rapide, sécurisé et à jour.</p>
+              <p className="text-foreground/60 dark:text-white/60 reveal-item" style={{ animationDelay: '80ms' }}>Après la première année incluse, une formule mensuelle pour que votre site reste rapide, sécurisé et à jour.</p>
             </div>
             <div className="grid sm:grid-cols-3 gap-5">
               {[
@@ -218,9 +255,9 @@ export default function Home() {
                 { nom: 'Pro', prix: SITE.pricing.maintenancePro, delai: '48h ouvrées', inclus: ['Tout Starter', 'Sauvegardes quotidiennes', '2h modifications/mois', 'Rapport mensuel SEO'], highlight: true },
                 { nom: 'Premium', prix: SITE.pricing.maintenancePremium, delai: '24h ouvrées', inclus: ['Tout Pro', '5h modifications/mois', 'Rapport mensuel SEO', 'Réponse prioritaire'], highlight: false },
               ].map((f, i) => (
-                <div key={f.nom} className={`reveal-item relative rounded-2xl border p-5 transition-all duration-300 hover:-translate-y-0.5 ${f.highlight ? 'border-electric/40 bg-electric/5 shadow-lift' : 'border-navy/20 dark:border-white/10 hover:border-navy/30 dark:hover:border-white/20'}`}
-                  style={{ transitionDelay: `${i * 80}ms` }}>
-                  {/* Top accent */}
+                <div key={f.nom}
+                  className={`maintenance-card reveal-item relative rounded-2xl border p-5 ${f.highlight ? 'highlight border-electric/40 bg-electric/5 shadow-lift' : 'border-navy/20 dark:border-white/10'}`}
+                  style={{ animationDelay: `${i * 80}ms` }}>
                   <div className={`absolute top-0 left-0 right-0 h-0.5 rounded-t-2xl ${f.highlight ? 'bg-gradient-to-r from-electric to-electric/40' : 'bg-gradient-to-r from-navy/30 to-electric/20'}`} />
                   {f.highlight && <div className="text-xs font-semibold text-electric-ink dark:text-electric mb-2 uppercase tracking-wide">★ Le plus populaire</div>}
                   <div className="flex items-baseline gap-1 mb-1">
@@ -253,7 +290,9 @@ export default function Home() {
 
         <ManifestoSection />
 
-        {/* CTA final */}
+        <div className="section-divider" aria-hidden="true" />
+
+        {/* ── CTA final ──────────────────────────────────────────────────────── */}
         <section className="py-28 animated-gradient relative overflow-hidden">
           {/* Halo animé */}
           <div className="pointer-events-none absolute inset-0 flex items-center justify-center" aria-hidden="true">
@@ -262,6 +301,12 @@ export default function Home() {
                 background: 'radial-gradient(ellipse, rgba(45,125,210,0.18) 0%, rgba(245,158,11,0.06) 40%, transparent 70%)',
                 animation: 'halo-pulse 4s ease-in-out infinite',
               }} />
+            {/* Orbiting particles */}
+            <div className="absolute w-0 h-0" style={{ top: '50%', left: '50%' }}>
+              <div className="halo-particle" />
+              <div className="halo-particle" />
+              <div className="halo-particle" />
+            </div>
           </div>
           <div className="relative max-w-3xl mx-auto px-4 sm:px-6 text-center">
             <div className="overline-label !text-white/60 mb-4">Démarrons</div>

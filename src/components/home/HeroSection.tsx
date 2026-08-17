@@ -191,11 +191,11 @@ export default function HeroSection() {
           fill
           priority
           fetchPriority="high"
-          sizes="100vw"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
           className="object-cover object-[72%_center] md:object-[68%_center]"
           placeholder="blur"
           blurDataURL={HERO_BLUR_DATA_URL}
-          quality={85}
+          quality={60}
         />
       </div>
 
