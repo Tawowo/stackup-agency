@@ -94,7 +94,7 @@ La prise de commande en ligne pour un food truck est techniquement possible mais
 
 **Inconvénients :**
 - Délai de récupération à gérer
-- Intégration d'un système de paiement (Stripe, PayPal, SumUp)
+- Intégration d'un système de paiement en ligne sécurisé (CB, PayPal, SumUp)
 - Temps de développement supplémentaire
 
 Pour un food truck qui commence, un formulaire de demande de privatisation suffit. La commande en ligne peut être ajoutée dans un second temps.

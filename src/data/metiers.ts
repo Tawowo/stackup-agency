@@ -65,7 +65,7 @@ export const METIERS: Metier[] = [
     intro: "Une pizzeria qui n'accepte que les commandes téléphoniques rate une part croissante de sa clientèle, celle qui veut commander en deux clics depuis son canapé. Un site avec commande en ligne et click & collect change radicalement le volume de commandes.",
     inclus: [
       'Carte des pizzas avec photos et options personnalisables',
-      'Commande en ligne avec paiement sécurisé (Stripe)',
+      'Commande en ligne avec paiement sécurisé',
       'Click & collect avec horaire de retrait',
       'Suivi de commande en temps réel',
       'Module de fidélité intégré (tampons numériques)',

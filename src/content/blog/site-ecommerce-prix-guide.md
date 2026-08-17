@@ -59,7 +59,7 @@ Souvent négligé, ce poste peut représenter des dizaines d'heures de travail :
 
 ### 4. Les solutions de paiement
 
-- Stripe : 1,4 % + 0,25 € par transaction pour les cartes européennes
+- Paiement par carte : environ 1,4 % + 0,25 € par transaction pour les cartes européennes (frais du prestataire de paiement)
 - PayPal : 3,4 % + 0,35 € par transaction
 - Alma (paiement en 3x) : 1,5 à 3,5 % selon le plan
 - Mise en place technique des modules de paiement : 500 à 2 000 €

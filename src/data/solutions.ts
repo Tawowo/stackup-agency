@@ -51,7 +51,7 @@ export const SOLUTIONS: Solution[] = [
     exempleContexte: "Un cabinet d'ostéopathie de 2 praticiens reçoit en moyenne 80 appels téléphoniques par semaine pour des prises de rendez-vous. Chaque appel dure entre 2 et 4 minutes — soit jusqu'à 5 heures perdues par semaine à gérer l'agenda.",
     exempleFonctionnement: "Avec un système de prise de rendez-vous sur mesure, 70 à 80% des réservations se font en ligne, hors heures d'ouverture. Les rappels automatiques réduisent les no-shows de 40 à 60%. Les praticiens retrouvent du temps pour se concentrer sur leur cœur de métier.",
     faq: [
-      { q: 'Combien coûte un système de prise de rendez-vous sur mesure ?', a: "Le développement d'un système de prise de rendez-vous sur mesure chez Stackup Agency démarre à 1 447€. Ce montant couvre l'interface client, le tableau de bord professionnel, les rappels automatiques et l'intégration sur votre site." },
+      { q: 'Combien coûte un système de prise de rendez-vous sur mesure ?', a: "Le développement d'un système de prise de rendez-vous sur mesure chez Stackup Agency démarre à 1 447€ — le prix s'affine selon le périmètre (± 500 € autour de ce tarif dans la majorité des projets). Ce montant couvre l'interface client, le tableau de bord professionnel, les rappels automatiques et l'intégration sur votre site." },
       { q: 'Quelle est la différence avec Doctolib ou Calendly ?', a: 'Doctolib facture une commission sur chaque rendez-vous ou un abonnement mensuel élevé. Calendly est générique et non adapté à votre activité spécifique. Notre solution est développée pour votre métier, sans commission, et vos données restent en France.' },
       { q: 'Les clients peuvent-ils annuler leur rendez-vous en ligne ?', a: "Oui. Les clients reçoivent un lien d'annulation dans leur email de confirmation. Vous pouvez configurer un délai minimal d'annulation (ex : pas d'annulation moins de 2h avant). En cas d'annulation, le créneau se libère automatiquement." },
       { q: 'Peut-on gérer plusieurs praticiens ou points de vente ?', a: "Oui. Le système peut gérer autant d'agendas que nécessaire. Chaque praticien ou espace dispose de son propre agenda avec ses créneaux, ses services et sa durée de rendez-vous." },
@@ -137,7 +137,7 @@ export const SOLUTIONS: Solution[] = [
     exempleContexte: "Une boulangerie artisanale réalise 30% de son chiffre d'affaires via Uber Eats et Deliveroo. Après commission (28%), la marge nette sur ces commandes est quasi nulle. En parallèle, les appels téléphoniques pour les commandes de gâteaux d'anniversaire saturent la ligne le matin.",
     exempleFonctionnement: "Avec un module click et collect sur mesure, les clients commandent leurs pains spéciaux, viennoiseries et gâteaux la veille pour un retrait le matin. Le boulanger voit les commandes du lendemain dès 20h et peut organiser sa production. Aucune commission prélevée.",
     faq: [
-      { q: 'Le paiement en ligne est-il obligatoire ?', a: 'Non. Vous avez le choix : paiement en ligne à la commande (Stripe, 1,4% + 0,25€ par transaction), paiement sur place à la remise, ou les deux. Beaucoup de commerces de proximité préfèrent le paiement sur place.' },
+      { q: 'Le paiement en ligne est-il obligatoire ?', a: 'Non. Vous avez le choix : paiement en ligne sécurisé à la commande, paiement sur place à la remise, ou les deux. Beaucoup de commerces de proximité préfèrent le paiement sur place.' },
       { q: 'Comment gérer les commandes spéciales ou les produits épuisés ?', a: "Chaque produit peut avoir un stock défini. Quand le stock est épuisé, le produit n'est plus commandable. Pour les commandes spéciales, vous pouvez créer des produits configurables avec champs personnalisés (parfum, inscription, etc.)." },
       { q: "Les clients peuvent-ils modifier ou annuler leur commande ?", a: "Vous définissez les règles : délai maximum pour modifier, délai minimum avant retrait, politique d'annulation. Chaque modification envoie une notification au client et met à jour votre tableau de bord." },
       { q: 'Peut-on gérer plusieurs points de retrait ?', a: 'Oui. Si vous avez plusieurs boutiques, chaque point de retrait est indépendant avec son propre stock et ses propres créneaux. Le client choisit son point de retrait préféré.' },
@@ -181,7 +181,7 @@ export const SOLUTIONS: Solution[] = [
     exempleFonctionnement: "Avec un système de réservation sur mesure, le restaurateur intègre le formulaire sur son site et ses réseaux sociaux. Les convives réservent, reçoivent un SMS de rappel la veille, et confirment leur présence d'un clic. Le taux de no-show descend à moins de 5%.",
     faq: [
       { q: 'Comment réduire les no-shows concrètement ?', a: 'Notre système envoie un SMS de rappel J-1 et un rappel H-2. Le convive peut confirmer sa présence d\'un clic. Sans confirmation, vous pouvez décider de libérer la table. En moyenne, les restaurants observent une réduction de 40 à 60% des no-shows.' },
-      { q: 'Peut-on prendre des acomptes ou des empreintes bancaires ?', a: 'Oui. Pour les grandes tablées ou les événements, vous pouvez demander un acompte (paiement Stripe) ou une empreinte bancaire lors de la réservation. En cas de no-show, vous pouvez facturer les frais définis.' },
+      { q: 'Peut-on prendre des acomptes ou des empreintes bancaires ?', a: 'Oui. Pour les grandes tablées ou les événements, vous pouvez demander un acompte par paiement en ligne sécurisé ou une empreinte bancaire lors de la réservation. En cas de no-show, vous pouvez facturer les frais définis.' },
       { q: 'Comment gérer les services du midi et du soir séparément ?', a: 'Le système gère plusieurs services par jour avec des plages horaires distinctes, des capacités d\'accueil différentes et des durées de table configurables selon le service.' },
       { q: 'Peut-on gérer des événements spéciaux (soirées, mariages) ?', a: 'Oui. Des formulaires de réservation spécifiques peuvent être créés pour les événements avec des champs personnalisés (nombre de convives, menu choisi, budget, demandes particulières).' },
       { q: 'Le système s\'intègre-t-il à mon site existant ?', a: "Oui. Le formulaire de réservation s'intègre sur n'importe quel site web via un simple code d'intégration ou un bouton de redirection. Vous pouvez aussi le partager directement sur vos réseaux sociaux." },
@@ -205,7 +205,7 @@ export const SOLUTIONS: Solution[] = [
     fonctionnalites: [
       'Carte digitale avec photos et descriptions',
       'Choix livraison ou à emporter',
-      'Paiement en ligne (Stripe) ou à la livraison',
+      'Paiement en ligne sécurisé ou à la livraison',
       'Estimation du temps de préparation en temps réel',
       'Bon de commande imprimé en cuisine automatiquement',
       'Suivi de livraison pour le client',
@@ -310,7 +310,7 @@ export const SOLUTIONS: Solution[] = [
     exempleFonctionnement: "Avec une caisse sur mesure, l'interface est organisée exactement comme les rayons du magasin. La gestion des variantes (taille S/M/L, coloris) est native. Le rapport journalier est envoyé automatiquement par email au gérant chaque soir à la fermeture.",
     faq: [
       { q: 'Le logiciel est-il conforme à la loi anti-fraude TVA 2018 ?', a: 'Oui. Notre système de caisse est conçu pour être conforme : inaltérabilité des données, sécurisation, conservation et archivage. Une attestation de conformité vous est remise à la livraison.' },
-      { q: 'Fonctionne-t-il avec mon terminal de paiement actuel ?', a: "Dans la plupart des cas, oui. Nous pouvons intégrer les principaux terminaux (SumUp, Square, Stripe Terminal, Ingenico) pour un rapprochement automatique entre les encaissements CB et la caisse." },
+      { q: 'Fonctionne-t-il avec mon terminal de paiement actuel ?', a: "Dans la plupart des cas, oui. Nous pouvons intégrer les principaux terminaux (SumUp, Square, Ingenico) pour un rapprochement automatique entre les encaissements CB et la caisse." },
       { q: "Que se passe-t-il en cas de panne internet ?", a: "Le logiciel fonctionne en mode hors ligne pour les paiements en espèces. Les encaissements sont synchronisés dès la restauration de la connexion. Les données ne sont jamais perdues." },
       { q: "Peut-on gérer plusieurs caisses ou points de vente ?", a: "Oui. Chaque caisse est une instance indépendante mais les stocks et les rapports sont consolidés dans un tableau de bord central accessible depuis n'importe où." },
       { q: "Comment se passe la formation du personnel ?", a: "Une formation de 2 à 4 heures est incluse. L'interface est conçue pour être apprise en moins d'une heure par un nouvel employé. Un guide d'utilisation PDF est fourni." },
@@ -612,7 +612,7 @@ export const SOLUTIONS: Solution[] = [
     faq: [
       { q: "Peut-on bloquer des périodes pour un usage personnel ?", a: "Oui. Vous pouvez bloquer n'importe quelle période depuis votre tableau de bord (travaux, usage personnel, entretien). Ces périodes apparaissent comme indisponibles pour les clients." },
       { q: 'Peut-on configurer des durées minimales de location ?', a: "Oui. Des durées minimales peuvent être configurées par période : 2 nuits minimum en semaine, 3 nuits minimum en week-end, 7 nuits minimum en juillet et août." },
-      { q: 'Comment gérer les arrhes et la caution ?', a: "L'acompte (en % ou montant fixe) est prélevé à la réservation via Stripe. La caution peut être prélevée ou simplement préautorisée (empreinte bancaire). Elle est libérée après vérification à la fin du séjour." },
+      { q: 'Comment gérer les arrhes et la caution ?', a: "L'acompte (en % ou montant fixe) est prélevé à la réservation par paiement en ligne sécurisé. La caution peut être prélevée ou simplement préautorisée (empreinte bancaire). Elle est libérée après vérification à la fin du séjour." },
       { q: 'Le système se synchronise-t-il avec Airbnb ou Booking ?', a: "Une synchronisation iCal est possible pour éviter les doubles réservations si vous maintenez une présence sur ces plateformes. Les réservations venant de ces plateformes bloquent automatiquement votre calendrier." },
       { q: 'Peut-on gérer plusieurs biens (plusieurs gîtes ou véhicules) ?', a: "Oui. Chaque bien a son propre calendrier et ses propres tarifs. Un tableau de bord centralisé donne une vue sur l'ensemble de votre parc." },
     ],

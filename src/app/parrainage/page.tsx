@@ -13,22 +13,22 @@ const faqSchema = {
     {
       '@type': 'Question',
       name: 'Quelle est la récompense du parrain ?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Le parrain reçoit 1 mois de maintenance offert, d\'une valeur maximale de 89€ (valeur du plan Premium), lorsque le filleul signe un contrat avec Stackup Agency ET règle intégralement son premier acompte.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'À la signature du projet de votre filleul, vous choisissez votre récompense : 1 mois d\'abonnement Premium (89 €) offert OU −10 % sur votre propre prestation non encore signée. Une récompense par filleul signé, cumulable sur plusieurs filleuls.' },
     },
     {
       '@type': 'Question',
       name: 'Quelle est la réduction du filleul ?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Le filleul bénéficie de −10% sur son premier projet, à condition de mentionner le nom du parrain au moment de sa demande de devis. La réduction s\'applique au montant HT du projet.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'Le filleul bénéficie de −10 % sur son premier projet, à condition que la mise en relation soit signalée avant la signature de son devis. Le filleul doit être un nouveau client. La réduction s\'applique au montant HT du projet.' },
     },
     {
       '@type': 'Question',
       name: 'Le parrainage est-il cumulable ?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Non. L\'avantage filleul (−10%) n\'est pas cumulable avec d\'autres offres promotionnelles. L\'avantage parrain (1 mois offert) est accordé une seule fois par nouveau client signé et réglé.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'Oui pour le parrain : une récompense par filleul signé, cumulable sur plusieurs filleuls. L\'avantage filleul (−10 %) n\'est en revanche pas cumulable avec d\'autres offres promotionnelles.' },
     },
     {
       '@type': 'Question',
-      name: 'Le mois de maintenance est-il versé immédiatement ?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Non. L\'avantage parrain est activé après le règlement intégral du premier acompte par le filleul. Le mois de maintenance offert est appliqué sur la prochaine échéance de maintenance du parrain.' },
+      name: 'Quand la récompense est-elle activée ?',
+      acceptedAnswer: { '@type': 'Answer', text: 'La mise en relation doit être signalée AVANT la signature du devis du filleul. La récompense est activée à la signature de son projet. La réduction de −10 % s\'applique uniquement à une prestation non encore signée ni payée du parrain — si vous avez déjà tout réglé, la récompense est le mois Premium offert.' },
     },
     {
       '@type': 'Question',
@@ -42,20 +42,20 @@ const STEPS = [
   {
     Icon: Users,
     num: '01',
-    titre: 'Vous recommandez',
-    desc: 'Parlez de Stackup Agency à un proche qui a besoin d\'un site web ou d\'une application. Transmettez-lui votre nom pour qu\'il le mentionne dans son devis.',
+    titre: 'Vous nous signalez la mise en relation',
+    desc: 'Parlez de Stackup Agency à un professionnel qui a besoin d\'un site ou d\'une application, et signalez-nous la mise en relation AVANT la signature de son devis (formulaire ci-dessous).',
   },
   {
     Icon: Check,
     num: '02',
-    titre: 'Il signe et règle',
-    desc: 'Votre filleul signe son contrat avec Stackup Agency en mentionnant votre parrainage, et règle son premier acompte. C\'est à ce moment que l\'avantage parrain est déclenché.',
+    titre: 'Votre filleul signe son projet',
+    desc: 'Votre filleul — un nouveau client — signe son devis avec Stackup Agency. C\'est la signature qui déclenche votre récompense.',
   },
   {
     Icon: Gift,
     num: '03',
-    titre: 'Vous profitez tous les deux',
-    desc: 'Vous recevez 1 mois de maintenance offert (≤ 89€). Votre filleul a bénéficié de −10% sur son projet dès la signature.',
+    titre: 'Vous choisissez votre récompense',
+    desc: '1 mois d\'abonnement Premium (89 €) offert OU −10 % sur votre propre prestation non encore signée. Une récompense par filleul, cumulable sur plusieurs filleuls.',
   },
 ]
 
@@ -96,8 +96,8 @@ export default function ParrainagePage() {
 
       <MiniHero
         breadcrumb={[{ name: 'Parrainage', href: '/parrainage' }]}
-        title="Recommandez Stackup, gagnez un mois de maintenance"
-        subtitle="Programme de parrainage — Conditions contractuelles CGV art. 23"
+        title="Parrainez un professionnel, choisissez votre récompense"
+        subtitle="À la signature de son projet : 1 mois d'abonnement Premium (89 €) offert OU −10 % sur votre propre prestation. Cumulable sur plusieurs filleuls."
       />
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 py-16 space-y-16">
@@ -128,20 +128,19 @@ export default function ParrainagePage() {
           <div className="grid sm:grid-cols-2 gap-6">
             {/* Parrain */}
             <div className="rounded-2xl border border-gold/30 bg-gradient-to-br from-navy to-[#0F172A] p-8 text-white">
-              <div className="text-xs font-semibold text-gold/70 uppercase tracking-widest mb-4">Pour vous — le parrain</div>
+              <div className="text-xs font-semibold text-gold/70 uppercase tracking-widest mb-4">Pour vous — le parrain, au choix</div>
               <div className="flex items-baseline gap-2 mb-1">
-                <span className="font-display font-bold text-5xl text-gold">1</span>
-                <span className="text-white/70 text-lg">mois de maintenance</span>
+                <span className="font-display font-bold text-3xl text-gold">1 mois Premium (89 €)</span>
               </div>
-              <div className="text-white/50 text-sm mb-6">
-                Valeur : jusqu'à <span className="text-gold font-semibold">89&thinsp;€</span>
-                <span className="ml-1">(plan Premium)</span>
+              <div className="text-white/60 text-base mb-1">offert sur votre abonnement</div>
+              <div className="text-white/50 text-sm mb-4">
+                <span className="text-gold font-semibold">OU −10 %</span> sur votre propre prestation non encore signée
               </div>
               <ul className="space-y-2 text-sm">
                 {[
-                  'Déclenché à la signature + règlement filleul',
-                  'Appliqué sur votre prochaine échéance',
-                  'Non convertible en avoir monétaire',
+                  'Mise en relation signalée avant la signature du devis du filleul',
+                  'Une récompense par filleul signé — cumulable sur plusieurs filleuls',
+                  'Si tout est déjà réglé de votre côté : le mois Premium offert',
                 ].map(item => (
                   <li key={item} className="flex items-start gap-2 text-white/70">
                     <Check size={14} className="text-gold flex-shrink-0 mt-0.5" />

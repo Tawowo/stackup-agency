@@ -20,7 +20,7 @@ export async function POST(req: NextRequest) {
         <p><strong>Email :</strong> ${filleul_email}</p>
         ${message ? `<h3>Message</h3><p>${message}</p>` : ''}
         <hr>
-        <p><em>Rappel : le parrain reçoit 1 mois de maintenance offert, le filleul bénéficie de -10% sur son projet.</em></p>
+        <p><em>Rappel : à la signature du projet du filleul, le parrain choisit sa récompense — 1 mois d'abonnement Premium (89 €) offert ou −10 % sur sa propre prestation non encore signée. Le filleul bénéficie de −10 % sur son projet.</em></p>
       `,
     })
 

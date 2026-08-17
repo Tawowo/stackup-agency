@@ -166,7 +166,7 @@ export const translations = {
         },
         {
           q: 'Quels modes de paiement acceptez-vous ?',
-          a: "Virement bancaire, PayPal ou carte bancaire via Stripe. Pour les projets, un acompte de 30% au démarrage, le solde à la livraison. Plans mensuels prélevés automatiquement.",
+          a: "Virement bancaire, PayPal ou carte bancaire (paiement en ligne sécurisé). Pour les projets, un acompte de 30% au démarrage, le solde à la livraison. Plans mensuels prélevés automatiquement.",
         },
         {
           q: "Qu'est-ce qui est inclus dans la maintenance ?",
@@ -385,7 +385,7 @@ export const translations = {
         },
         {
           q: 'What payment methods do you accept?',
-          a: 'Bank transfer, PayPal or credit card via Stripe. For projects, a 30% deposit at start, balance at delivery. Monthly plans billed automatically.',
+          a: 'Bank transfer, PayPal or secure online card payment. For projects, a 30% deposit at start, balance at delivery. Monthly plans billed automatically.',
         },
         {
           q: "What's included in maintenance?",

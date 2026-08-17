@@ -46,7 +46,7 @@ Pour les entreprises avec plusieurs services à présenter, une galerie de réal
 
 **Prix chez Stackup Agency : 1 647€**
 
-Paiement sécurisé (Stripe), gestion des stocks et des commandes, livraison configurable, jusqu'à 100 produits au départ, design sur mesure, SEO e-commerce.
+Paiement en ligne sécurisé, gestion des stocks et des commandes, livraison configurable, jusqu'à 100 produits au départ, design sur mesure, SEO e-commerce.
 
 **Fourchette marché :** 1 000€ à 10 000€+ selon la complexité.
 

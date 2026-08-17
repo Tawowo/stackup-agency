@@ -42,7 +42,7 @@ const SERVICES = [
     prix: SITE.pricing.ecommerce,
     delai: SITE.delais.ecommerce,
     desc: 'E-commerce complet avec paiement sécurisé, gestion des stocks et des commandes.',
-    inclus: ['Catalogue produits illimité', 'Paiement sécurisé (Stripe)', 'Gestion des stocks', 'Click & Collect', 'Tableau de bord commandes', 'Emails automatiques'],
+    inclus: ['Catalogue produits illimité', 'Paiement en ligne sécurisé', 'Gestion des stocks', 'Click & Collect', 'Tableau de bord commandes', 'Emails automatiques'],
     ideal: 'Commerçants, artisans, créateurs',
   },
   {
@@ -192,7 +192,7 @@ export default function ServicesPage() {
               { q: 'Quels sont les délais de livraison ?', a: `Site vitrine : ${SITE.delais.vitrine}. Site multi-pages : ${SITE.delais.multipages}. Boutique en ligne : ${SITE.delais.ecommerce}. Système de gestion : ${SITE.delais.gestion}. Délais garantis contractuellement.` },
               { q: 'Le prix est-il tout inclus ?', a: 'Oui. Le prix affiché inclut le design, le développement, le SEO de base, l\'hébergement 12 mois, le certificat SSL et la formation à la prise en main. Pas de surprise.' },
               { q: 'Est-ce que je suis propriétaire du code ?', a: 'Oui, à 100%. Une fois le projet livré et payé, le code vous appartient entièrement. Vous êtes libre de le modifier ou de changer d\'hébergeur.' },
-              { q: 'Que se passe-t-il après les 12 mois d\'hébergement inclus ?', a: `Après la première année, vous pouvez opter pour l'une de nos offres de maintenance (à partir de ${SITE.pricing.maintenanceStarter}€/mois) ou récupérer votre code et gérer l'hébergement vous-même.` },
+              { q: 'Que se passe-t-il après les 12 mois d\'hébergement inclus ?', a: `Après la première année, vous pouvez opter pour l'une de nos offres de maintenance (à partir de ${SITE.pricing.maintenanceStarter}€/mois) ou récupérer votre code et gérer l'hébergement vous-même. Le nom de domaine, offert la première année, reste ensuite à votre charge sauf abonnement de maintenance actif (il y est inclus).` },
             ].map(faq => (
               <details key={faq.q} className="group rounded-xl border border-navy/20 dark:border-white/10 overflow-hidden">
                 <summary className="flex items-center justify-between p-4 cursor-pointer font-medium text-foreground dark:text-white list-none">

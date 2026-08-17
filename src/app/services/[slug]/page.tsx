@@ -9,6 +9,7 @@ type ServiceData = {
   metaDesc: string
   description: string
   price: string
+  priceNote?: string
   duration: string
   features: string[]
   included: string[]
@@ -113,7 +114,7 @@ Le rendu final est un site professionnel, rapide, sécurisé et optimisé pour l
   'site-ecommerce': {
     title: 'Site E-commerce',
     subtitle: 'Vendez en ligne 24h/24 avec une boutique performante.',
-    metaDesc: 'Boutique en ligne sur mesure à partir de 1 647 €, livrée en 21 jours. Paiement sécurisé Stripe/PayPal, SEO produits, gestion des stocks. Devis gratuit.',
+    metaDesc: 'Boutique en ligne sur mesure à partir de 1 647 €, livrée en 21 jours. Paiement en ligne sécurisé, SEO produits, gestion des stocks. Devis gratuit.',
     description: `Le commerce en ligne ne s'improvise pas. Un site e-commerce mal conçu, lent ou peu sécurisé génère des paniers abandonnés, de la méfiance et des ventes perdues. Chez Stackup Agency, nous développons des boutiques en ligne qui inspirent confiance, simplifient le parcours d'achat et maximisent les conversions.
 
 Chaque e-commerce que nous créons est pensé du point de vue de l'acheteur. Parcours d'achat fluide, pages produits optimisées, paiement sécurisé multi-méthodes (carte, virement, PayPal), gestion des stocks intuitive et tableau de bord administrateur complet pour piloter votre activité.
@@ -127,7 +128,7 @@ Que vous vendiez 10 ou 10 000 produits, nous adaptons la solution à votre catal
     duration: '21 jours ouvrés',
     features: [
       'Catalogue produits illimité',
-      'Paiement sécurisé (Stripe, PayPal)',
+      'Paiement en ligne sécurisé (CB, PayPal)',
       'Emails transactionnels automatiques',
       'Gestion des promotions & codes promo',
       'Dashboard administrateur complet',
@@ -150,7 +151,7 @@ Que vous vendiez 10 ou 10 000 produits, nous adaptons la solution à votre catal
       { step: 'Lancement & Formation', desc: 'Mise en ligne, formation à l\'administration et premier suivi des ventes.' },
     ],
     faq: [
-      { q: 'Quels moyens de paiement peuvent être intégrés ?', a: 'Carte bancaire via Stripe, PayPal, virement bancaire, et d\'autres solutions sur demande.' },
+      { q: 'Quels moyens de paiement peuvent être intégrés ?', a: 'Carte bancaire, PayPal, virement bancaire, et d\'autres solutions sur demande.' },
       { q: 'Puis-je gérer les stocks moi-même ?', a: 'Oui, vous avez un accès complet à l\'interface d\'administration pour gérer stocks, commandes et clients.' },
       { q: 'Le site est-il sécurisé pour les paiements ?', a: 'Absolument. Nous utilisons uniquement des solutions de paiement certifiées PCI DSS avec cryptage SSL.' },
     ],
@@ -170,6 +171,7 @@ Le résultat : moins d'erreurs, moins de temps perdu, plus de satisfaction clien
 
 Nous analysons vos flux de travail, nous concevons l'architecture, nous développons, nous testons et nous formons vos équipes. Et nous restons disponibles pour faire évoluer l'outil avec votre activité.`,
     price: 'À partir de 1 447€',
+    priceNote: 'Le prix s\'affine selon le périmètre (± 500 € autour de ce tarif dans la majorité des projets).',
     duration: '21 jours ouvrés',
     features: [
       'Application web sur mesure',
@@ -380,8 +382,9 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
           <h1 className="font-display text-white mb-4">{service.title}</h1>
           <p className="text-base sm:text-xl text-white/70">{service.subtitle}</p>
           <div className="mt-6 flex flex-wrap gap-4 text-sm text-white/60">
-            <span>Délai : {service.duration}</span>
+            <span>Délai : à partir de {service.duration}</span>
             {service.price !== 'Sur devis' && <span>{service.price}</span>}
+            {service.priceNote && <span className="block text-sm text-white/60 mt-1">{service.priceNote}</span>}
           </div>
           <p className="mt-3 text-xs text-white/40 max-w-xl">Délais détaillés dans nos <a href="/cgv" className="underline hover:text-white/60 transition-colors">CGV</a>.</p>
         </div>

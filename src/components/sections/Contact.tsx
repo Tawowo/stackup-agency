@@ -134,7 +134,7 @@ export default function Contact() {
                       <Link href="/parrainage" className="font-semibold text-gold hover:underline">
                         Recommandez-nous
                       </Link>{' '}
-                      et gagnez 1 mois de maintenance offert.
+                      et choisissez votre récompense : 1 mois d’abonnement Premium (89 €) offert ou −10 % sur votre propre prestation.
                     </p>
                   </div>
                 </div>

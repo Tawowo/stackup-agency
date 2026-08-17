@@ -26,7 +26,7 @@ const faqSchema = {
   mainEntity: [
     { '@type': 'Question', name: 'Combien coûte un site internet professionnel ?', acceptedAnswer: { '@type': 'Answer', text: `Chez Stackup Agency, un site vitrine professionnel coûte ${SITE.pricing.vitrine}€. Un site multi-pages coûte ${SITE.pricing.multipages}€. Une boutique en ligne coûte ${SITE.pricing.ecommerce}€. Un système de gestion sur mesure coûte à partir de ${SITE.pricing.gestion}€. Ces prix sont tout inclus : design, développement, SEO, hébergement 12 mois et SSL.` } },
     { '@type': 'Question', name: "Y a-t-il des frais cachés ?", acceptedAnswer: { '@type': 'Answer', text: "Non, le prix affiché est le prix final. L'hébergement, le SSL et la formation de base sont inclus la première année. À partir de la 2e année, une maintenance optionnelle est proposée." } },
-    { '@type': 'Question', name: "Comment se déroule le paiement ?", acceptedAnswer: { '@type': 'Answer', text: "Le paiement se fait en deux fois : 30% d'acompte au démarrage du projet, 70% à la livraison. Modes acceptés : virement bancaire, Stripe (carte bancaire)." } },
+    { '@type': 'Question', name: "Comment se déroule le paiement ?", acceptedAnswer: { '@type': 'Answer', text: "Le paiement se fait en deux fois : 30% d'acompte au démarrage du projet, 70% à la livraison. Modes acceptés : virement bancaire ou carte bancaire (paiement en ligne sécurisé)." } },
     { '@type': 'Question', name: "Proposez-vous des facilités de paiement ?", acceptedAnswer: { '@type': 'Answer', text: "Oui, pour les projets supérieurs à 500€, nous pouvons étudier un échelonnement sur 3 mensualités sans frais. Mentionnez-le dans votre demande de devis." } },
     { '@type': 'Question', name: "Puis-je bénéficier d'aides pour financer mon site ?", acceptedAnswer: { '@type': 'Answer', text: "Certaines aides régionales et dispositifs comme France Num peuvent couvrir une partie des frais de création de site internet pour les TPE. Renseignez-vous auprès de votre chambre de commerce." } },
   ],
@@ -76,7 +76,7 @@ export default function TarifsPage() {
               prix: SITE.pricing.ecommerce,
               delai: SITE.delais.ecommerce,
               desc: 'E-commerce complet avec paiement sécurisé, gestion des stocks et tableau de bord.',
-              inclus: ['Catalogue illimité', 'Paiement Stripe', 'Gestion stocks', 'Emails auto', 'Click & Collect', 'Hébergement 12 mois'],
+              inclus: ['Catalogue illimité', 'Paiement en ligne sécurisé', 'Gestion stocks', 'Emails auto', 'Click & Collect', 'Hébergement 12 mois'],
               href: '/services/site-ecommerce',
               highlight: true,
             },
@@ -131,10 +131,11 @@ export default function TarifsPage() {
         {/* Maintenance */}
         <section>
           <h2 className="text-2xl font-bold text-foreground dark:text-white mb-2">Maintenance & hébergement</h2>
-          <p className="text-foreground/60 dark:text-white/60 mb-6">Après la première année d'hébergement incluse, optez pour une maintenance mensuelle.</p>
+          <p className="text-foreground/60 dark:text-white/60 mb-3">Après la première année d'hébergement incluse, optez pour une maintenance mensuelle.</p>
+          <p className="text-foreground/55 dark:text-white/55 text-sm mb-6 max-w-2xl">Le nom de domaine est offert la première année sur toutes les créations de site. Ensuite, il reste à votre charge — sauf si vous avez un abonnement de maintenance actif : il y est inclus.</p>
           <div className="grid sm:grid-cols-3 gap-4">
             {[
-              { titre: 'Starter', prix: SITE.pricing.maintenanceStarter, inclus: ['Hébergement', 'SSL', 'Sauvegardes hebdo', 'Mises à jour sécurité', 'Réponse sous 72 h ouvrées'] },
+              { titre: 'Starter', prix: SITE.pricing.maintenanceStarter, inclus: ['Hébergement + nom de domaine inclus', 'SSL', 'Sauvegardes hebdo', 'Mises à jour techniques (navigateurs, exigences Google, sécurité)', 'Réponse sous 72 h ouvrées'] },
               { titre: 'Pro', prix: SITE.pricing.maintenancePro, inclus: ['Tout Starter', 'Sauvegardes quotidiennes', '2h modifications/mois', 'Réponse sous 48 h ouvrées'] },
               { titre: 'Premium', prix: SITE.pricing.maintenancePremium, inclus: ['Tout Pro', '5h modifications/mois', 'Rapport mensuel SEO', 'Réponse sous 24 h ouvrées'] },
             ].map(m => (
@@ -199,7 +200,7 @@ export default function TarifsPage() {
             {[
               { q: 'Combien coûte un site internet professionnel ?', a: `Chez Stackup Agency, un site vitrine professionnel coûte ${SITE.pricing.vitrine}€, tout inclus. Un site multi-pages coûte ${SITE.pricing.multipages}€. Une boutique en ligne coûte ${SITE.pricing.ecommerce}€. Un système de gestion sur mesure coûte à partir de ${SITE.pricing.gestion}€.` },
               { q: 'Y a-t-il des frais cachés ?', a: "Non, le prix affiché est le prix final. L'hébergement, le SSL et la formation de base sont inclus la première année. Pas de mauvaise surprise." },
-              { q: 'Comment se déroule le paiement ?', a: "30% d'acompte au démarrage, 70% à la livraison. Virement bancaire ou carte bancaire (Stripe)." },
+              { q: 'Comment se déroule le paiement ?', a: "30% d'acompte au démarrage, 70% à la livraison. Virement bancaire ou carte bancaire (paiement en ligne sécurisé)." },
               { q: 'Proposez-vous des facilités de paiement ?', a: "Oui, pour les projets supérieurs à 500€, un échelonnement sur 3 mensualités sans frais est possible. Mentionnez-le dans votre demande." },
               { q: 'Puis-je bénéficier d\'aides pour financer mon site ?', a: "Certaines aides régionales et dispositifs comme France Num peuvent couvrir une partie des frais. Renseignez-vous auprès de votre chambre de commerce locale." },
             ].map(faq => (
@@ -227,7 +228,7 @@ export default function TarifsPage() {
           <div className="flex-1">
             <div className="text-xs font-semibold text-gold uppercase tracking-widest mb-1">Programme parrainage</div>
             <h3 className="font-bold text-foreground dark:text-white mb-1">
-              Recommandez Stackup et gagnez 1 mois de maintenance offert
+              Parrainez un professionnel : 1 mois Premium (89 €) offert ou −10 % sur votre prestation
             </h3>
             <p className="text-sm text-foreground/60 dark:text-white/60">
               Votre filleul bénéficie de −10% sur son premier projet. Valeur jusqu'à 89€ pour vous.

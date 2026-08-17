@@ -151,7 +151,7 @@ Un processus documenté est reproductible, professionnel, et réduit le stress.
 - **Notion** : gestion de projet, documentation
 - **Canva** : création de visuels sans compétences en design
 - **Calendly** : gestion des rendez-vous en ligne
-- **Stripe ou Sumeria** : paiement en ligne
+- **Solution de paiement en ligne sécurisé** (CB, virement)
 - **Brevo (ex-Sendinblue)** : emailing et newsletter (gratuit jusqu'à 300 emails/jour)
 
 ## Conclusion

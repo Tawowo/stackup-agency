@@ -1109,7 +1109,6 @@ const STYLE_CURRENTS = [
     name: 'Dark Premium',
     desc: 'Fond sombre profond, couleurs lumineuses, effets de lumière, verre dépoli. La sophistication nocturne.',
     refs: [
-      { name: 'Stripe', url: 'https://stripe.com' },
       { name: 'Vercel', url: 'https://vercel.com' },
     ],
     bg: '#0A0F1C', header: '#161E34', accent: '#4F9CF9',

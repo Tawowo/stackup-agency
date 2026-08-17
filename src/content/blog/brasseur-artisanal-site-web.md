@@ -159,7 +159,7 @@ Articles sur la brasserie (process de brassage, houblons utilisés, événements
 Vous devez être déclaré comme débitant de boissons ou avoir le statut de producteur vendant sa propre production. Consultez la DGCCRF ou votre chambre d'agriculture/commerce pour les obligations précises à votre situation.
 
 **Puis-je vendre des abonnements à des box de bières ?**
-Oui. Les abonnements mensuels (3 bières, 6 bières...) fidélisent les amateurs et lissent votre trésorerie. Techniquement, cela nécessite une intégration de paiement récurrent (Stripe Subscriptions). C'est gérable dans un [site e-commerce sur mesure](/services/site-ecommerce).
+Oui. Les abonnements mensuels (3 bières, 6 bières...) fidélisent les amateurs et lissent votre trésorerie. Techniquement, cela nécessite une intégration de paiement récurrent sécurisé. C'est gérable dans un [site e-commerce sur mesure](/services/site-ecommerce).
 
 **Comment obtenir des revendeurs (bars, restaurants) via mon site ?**
 Créez une page "Devenir revendeur" avec vos conditions (minimum de commande, tarifs HT, zone de livraison) et un formulaire de contact B2B. Ce type de page est souvent la plus visitée par les professionnels.

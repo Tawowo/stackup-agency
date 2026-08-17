@@ -80,7 +80,7 @@ const sections = [
           <li><strong>40 %</strong> du montant total à la signature du devis</li>
           <li><strong>60 %</strong> du solde à la livraison du projet — payable dans un délai de <strong>30 jours</strong> à compter de la date de livraison</li>
         </ul>
-        <p>Paiement par virement bancaire, PayPal ou carte bancaire via Stripe.</p>
+        <p>Paiement par virement bancaire, PayPal ou carte bancaire (paiement en ligne sécurisé).</p>
         <p>En cas de retard de paiement : pénalités au taux légal en vigueur (3 fois le taux d&apos;intérêt légal) + indemnité forfaitaire de <strong>40 €</strong> pour frais de recouvrement (Art. L441-10 du Code de commerce).</p>
       </div>
     ),
@@ -131,7 +131,7 @@ const sections = [
       <div className="space-y-2">
         <p>Le programme de parrainage de Stackup Agency fonctionne comme suit :</p>
         <ul className="list-disc pl-5 space-y-1">
-          <li><strong>Pour le parrain :</strong> 1 mois de maintenance offert (valeur jusqu&apos;à 89 €) pour chaque nouveau client signé grâce à sa recommandation</li>
+          <li><strong>Pour le parrain :</strong> au choix, 1 mois d&apos;abonnement Premium (89 €) offert OU −10 % sur sa propre prestation non encore signée, pour chaque nouveau client signé grâce à sa recommandation (mise en relation signalée avant la signature du devis du filleul ; une récompense par filleul, cumulable)</li>
           <li><strong>Pour le filleul :</strong> 10 % de réduction sur son premier projet</li>
         </ul>
         <p>Cette offre est cumulable et activée sur mention du nom du parrain lors de la prise de contact.</p>

@@ -51,7 +51,7 @@ type ProjetDef = {
 const PROJETS: ProjetDef[] = [
   { id: 'site-vitrine',     label: 'Site vitrine',       icon: Monitor,      prix: SITE.pricing.vitrine,    delai: SITE.delais.vitrine,    desc: 'Présence pro, SEO local, formulaire contact' },
   { id: 'site-multi-pages', label: 'Site multi-pages',   icon: Layers,       prix: SITE.pricing.multipages, delai: SITE.delais.multipages, desc: "Jusqu'à 10 pages, blog, galerie" },
-  { id: 'site-ecommerce',   label: 'Boutique en ligne',  icon: ShoppingCart, prix: SITE.pricing.ecommerce,  delai: SITE.delais.ecommerce,  desc: 'Catalogue, paiement Stripe, commandes' },
+  { id: 'site-ecommerce',   label: 'Boutique en ligne',  icon: ShoppingCart, prix: SITE.pricing.ecommerce,  delai: SITE.delais.ecommerce,  desc: 'Catalogue, paiement en ligne, commandes' },
   { id: 'site-association', label: 'Site association',   icon: Heart,        prix: SITE.pricing.association, delai: SITE.delais.association, desc: 'Loi 1901, adhésion, agenda' },
   { id: 'systeme-gestion',  label: 'Système de gestion', icon: Settings2,    prix: null,                     delai: SITE.delais.gestion,    desc: 'CRM, RDV, caisse, planning — sur devis' },
 ]

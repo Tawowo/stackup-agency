@@ -34,7 +34,7 @@ const SHELVES: Shelf[] = [
     color: 'text-purple-600',
     border: 'border-purple-300',
     bg: 'bg-purple-50',
-    items: ['Tout Pro +', 'Paiement Stripe', 'Gestion stocks', 'Emails automatiques', 'Tableau de bord', 'Click & Collect'],
+    items: ['Tout Pro +', 'Paiement en ligne', 'Gestion stocks', 'Emails automatiques', 'Tableau de bord', 'Click & Collect'],
   },
 ]
 

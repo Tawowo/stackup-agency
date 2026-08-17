@@ -114,7 +114,7 @@ Listez toutes les façons dont vous collectez des données : formulaire de conta
 
 ### Audit de vos outils et prestataires
 
-Si vous utilisez des outils tiers (MailChimp, Google Analytics, Stripe, Calendly...), assurez-vous qu'ils offrent des garanties RGPD (DPA - Data Processing Agreement disponible, hébergement en Europe ou garanties équivalentes).
+Si vous utilisez des outils tiers (MailChimp, Google Analytics, votre prestataire de paiement, Calendly...), assurez-vous qu'ils offrent des garanties RGPD (DPA - Data Processing Agreement disponible, hébergement en Europe ou garanties équivalentes).
 
 ### Formation de votre équipe
 

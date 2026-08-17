@@ -68,7 +68,7 @@ export const SERVICES = [
     prix: 1647,
     unite: '€',
     delai: '21 jours ouvrés',
-    desc: 'E-commerce complet avec catalogue, paiement Stripe, gestion des stocks et tableau de bord.',
+    desc: 'E-commerce complet avec catalogue, paiement en ligne sécurisé, gestion des stocks et tableau de bord.',
     href: '/services/site-ecommerce',
     badge: 'Le plus populaire',
   },

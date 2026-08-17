@@ -46,7 +46,7 @@ Si votre tunnel a 6 étapes avec des formulaires complexes, simplifiez.
 **Signaux de confiance à afficher sur la page de paiement :**
 - Cadenas HTTPS visible dans l'URL
 - Logos des moyens de paiement acceptés (Visa, Mastercard, PayPal, Apple Pay)
-- Mention "Paiement 100% sécurisé" avec le logo de votre prestataire (Stripe, PayPal)
+- Mention "Paiement 100% sécurisé" avec le logo de votre prestataire de paiement (CB, PayPal)
 - Politique de retour rappelée en bref
 
 ### 5. Délais de livraison trop longs ou flous

@@ -97,10 +97,10 @@ function PreviewEcommerce() {
           </div>
         ))}
       </div>
-      {/* Paiement Stripe */}
+      {/* Paiement en ligne */}
       <div className={`transition-all duration-500 delay-[600ms] ${step >= 3 ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
         <div className="bg-[#635BFF] rounded p-2 text-[7px] text-white font-medium text-center">
-          💳 Paiement sécurisé Stripe — 133 €
+          Paiement sécurisé — 133 €
         </div>
       </div>
       {/* Confirmation */}

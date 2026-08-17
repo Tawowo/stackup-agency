@@ -172,8 +172,8 @@ const pages: Record<string, PageData> = {
 
   'creation-boutique-en-ligne': {
     title: 'Création de boutique en ligne',
-    metaTitle: 'Boutique en ligne sur mesure — dès 1 147€',
-    metaDesc: 'Lancez votre boutique en ligne sur mesure : paiement sécurisé, gestion des stocks, livraison, SEO e-commerce. Développement professionnel dès 1 147€.',
+    metaTitle: 'Boutique en ligne sur mesure — dès 1 647 €',
+    metaDesc: 'Lancez votre boutique en ligne sur mesure : paiement sécurisé, gestion des stocks, livraison, SEO e-commerce. Développement professionnel dès 1 647 €.',
     hero: {
       headline: 'Votre boutique en ligne livrée en 10 jours',
       subheadline: 'Paiement sécurisé, gestion des stocks, livraison automatisée, SEO e-commerce — tout pour vendre en ligne sans dépendre d\'Amazon ou d\'Etsy.',
@@ -191,10 +191,10 @@ const pages: Record<string, PageData> = {
     },
     solution: {
       title: 'Votre boutique en ligne, 100% à vous',
-      desc: 'Nous développons des boutiques e-commerce sur mesure avec Next.js et Stripe : rapides, sécurisées, référencées sur Google. Zéro commission sur vos ventes, vos clients vous appartiennent.',
+      desc: 'Nous développons des boutiques e-commerce sur mesure avec Next.js et paiement en ligne sécurisé : rapides, sécurisées, référencées sur Google. Zéro commission sur vos ventes, vos clients vous appartiennent.',
     },
     features: [
-      { title: 'Paiement sécurisé Stripe', desc: 'CB, Apple Pay, Google Pay. Argent viré directement sur votre compte. Aucune commission Stackup.', icon: '💳' },
+      { title: 'Paiement en ligne sécurisé', desc: 'CB, Apple Pay, Google Pay. Argent viré directement sur votre compte. Aucune commission Stackup.', icon: '💳' },
       { title: 'Gestion des stocks', desc: 'Alertes de rupture, variants (tailles, couleurs), stock en temps réel. Simple à administrer.', icon: '📦' },
       { title: 'Livraison automatisée', desc: 'Calcul automatique des frais selon le poids et la destination. Intégration Colissimo, Mondial Relay.', icon: '🚚' },
       { title: 'SEO e-commerce', desc: 'Pages produits optimisées pour Google. Vos produits apparaissent dans les résultats de recherche.', icon: '🔍' },
@@ -204,12 +204,12 @@ const pages: Record<string, PageData> = {
     steps: [
       { num: '01', title: 'Définition du catalogue', desc: 'On structure votre catalogue, vos catégories et vos pages produits avec vous.' },
       { num: '02', title: 'Design sur mesure', desc: 'Maquette de votre boutique adaptée à votre univers de marque. Validée avant développement.' },
-      { num: '03', title: 'Développement & intégration', desc: 'Développement complet, intégration Stripe, configuration livraison, SEO produits.' },
+      { num: '03', title: 'Développement & intégration', desc: 'Développement complet, intégration du paiement en ligne, configuration livraison, SEO produits.' },
       { num: '04', title: 'Formation & lancement', desc: 'On vous forme à la gestion des commandes, du catalogue et des promotions.' },
     ],
-    price: { from: 'À partir de 1 147€', details: 'Boutique complète, paiement Stripe, livraison, SEO. Formation à la gestion incluse.' },
+    price: { from: 'À partir de 1 647 €', details: 'Boutique complète, paiement en ligne sécurisé, livraison, SEO. Formation à la gestion incluse.' },
     faq: [
-      { q: 'Combien prend Stripe de commission ?', a: 'Stripe prend 1,5% + 0,25€ par transaction (cartes européennes). C\'est tout. Stackup ne prend aucune commission.' },
+      { q: 'Y a-t-il des commissions sur mes ventes ?', a: 'Seuls les frais bancaires du prestataire de paiement s\'appliquent (de l\'ordre de 1,5% + 0,25€ par transaction pour les cartes européennes). Stackup ne prend aucune commission.' },
       { q: 'Combien de produits puis-je avoir ?', a: 'Autant que vous voulez. Notre boutique gère des catalogues de 10 à 10 000 produits.' },
       { q: 'Puis-je gérer les promotions et codes promo ?', a: 'Oui, depuis votre espace d\'administration vous créez des promotions, codes de réduction et ventes flash.' },
       { q: 'Et si je veux vendre en France et en Europe ?', a: 'Votre boutique peut être multilingue et gérer plusieurs devises. TVA par pays incluse.' },
@@ -258,7 +258,7 @@ const pages: Record<string, PageData> = {
       { num: '03', title: 'Développement itératif', desc: 'Développement par sprints avec démonstrations régulières. Vous voyez avancer le projet.' },
       { num: '04', title: 'Déploiement & formation', desc: 'Mise en production, formation de vos équipes, documentation. Support 3 mois inclus.' },
     ],
-    price: { from: 'À partir de 1 447€', details: 'Application sur mesure, hébergement sécurisé, formation équipe, support 3 mois. Devis précis après atelier de cadrage.' },
+    price: { from: 'À partir de 1 447€', details: 'Application sur mesure, hébergement sécurisé, formation équipe, support 3 mois. Le prix s\'affine selon le périmètre (± 500 € autour de ce tarif dans la majorité des projets).' },
     faq: [
       { q: 'Combien de temps pour développer mon application ?', a: 'Entre 4 et 12 semaines selon la complexité. Nous définissons ensemble le planning lors du cadrage.' },
       { q: 'Est-ce que mes données sont sécurisées ?', a: 'Oui. Hébergement en France, chiffrement des données, sauvegardes quotidiennes, conformité RGPD.' },

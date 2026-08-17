@@ -37,7 +37,7 @@ const FAQ_ITEMS = [
     faqs: [
       { q: 'Quels sont les tarifs ?', a: `Site vitrine : ${SITE.pricing.vitrine}€. Site multi-pages : ${SITE.pricing.multipages}€. Boutique en ligne : ${SITE.pricing.ecommerce}€. Système de gestion : à partir de ${SITE.pricing.gestion}€. Site association : ${SITE.pricing.association}€. Ces prix sont tout inclus (design, développement, SEO, hébergement 12 mois, SSL).` },
       { q: 'Y a-t-il des frais cachés ?', a: "Non. Le prix affiché est le prix final. Hébergement, SSL et formation de base sont inclus la première année." },
-      { q: 'Comment se déroule le paiement ?', a: "30% d'acompte au démarrage, 70% à la livraison. Virement bancaire ou carte bancaire via Stripe." },
+      { q: 'Comment se déroule le paiement ?', a: "30% d'acompte au démarrage, 70% à la livraison. Virement bancaire ou carte bancaire (paiement en ligne sécurisé)." },
       { q: 'Proposez-vous des facilités de paiement ?', a: "Pour les projets supérieurs à 500€, un échelonnement sur 3 mensualités sans frais est possible. Mentionnez-le lors de votre demande." },
       { q: 'Puis-je bénéficier d\'aides pour financer mon site ?', a: "Des dispositifs comme France Num peuvent aider les TPE à financer leur présence numérique. Renseignez-vous auprès de votre chambre de commerce locale." },
     ],
@@ -47,7 +47,7 @@ const FAQ_ITEMS = [
     faqs: [
       { q: 'Est-ce que je suis propriétaire du code ?', a: "Oui, à 100%. Une fois le projet livré et payé, le code vous appartient entièrement. Vous êtes libre de le modifier, de le transférer ou de changer d'hébergeur." },
       { q: 'Où est hébergé mon site ?', a: "Nos sites sont hébergés sur des serveurs français ou européens (OVH, Vercel, Scaleway). Vos données ne partent pas aux États-Unis." },
-      { q: 'Que se passe-t-il après les 12 mois d\'hébergement inclus ?', a: `Vous pouvez opter pour l'une de nos offres de maintenance (à partir de ${SITE.pricing.maintenanceStarter}€/mois) ou récupérer votre code et gérer l'hébergement vous-même.` },
+      { q: 'Que se passe-t-il après les 12 mois d\'hébergement inclus ?', a: `Vous pouvez opter pour l'une de nos offres de maintenance (à partir de ${SITE.pricing.maintenanceStarter}€/mois) ou récupérer votre code et gérer l'hébergement vous-même. Le nom de domaine, offert la première année, reste ensuite à votre charge sauf abonnement de maintenance actif (il y est inclus).` },
       { q: 'Mon site sera-t-il sécurisé ?', a: "Oui. Chaque site est livré avec un certificat SSL (HTTPS), des mises à jour de sécurité régulières et des sauvegardes automatiques." },
       { q: 'Mon site sera-t-il visible sur mobile ?', a: "Oui. Tous nos sites sont 100% responsive, optimisés pour mobile, tablette et desktop. Les performances mobiles sont testées avant livraison." },
     ],
