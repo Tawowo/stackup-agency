@@ -1,15 +1,15 @@
 ---
-title: "Site web pour salon de coiffure : prise de RDV et SEO local"
-excerpt: "Un salon de coiffure avec prise de RDV en ligne attire plus de clients. Voici comment construire ce site efficacement."
+title: "Site de coiffeur : réserver en ligne sans Planity (et sans commission)"
+excerpt: "Planity et les marketplaces de réservation prennent une commission sur chaque créneau réservé. Un site propre avec réservation intégrée élimine ce coût, sans perdre en simplicité pour la cliente."
 date: "2026-07-25"
-updated: "2026-07-28"
-readTime: 6
+updated: "2026-08-17"
+readTime: 7
 tag: "SEO Local"
 category: "seo-local"
-keywords: ["site web coiffeur", "site internet salon de coiffure", "référencement coiffeur", "prise RDV coiffeur en ligne"]
+keywords: ["site coiffeur", "reservation en ligne coiffeur sans commission", "alternative planity", "site salon de coiffure"]
 ---
 
-**En 2026, 64% des clients de salons de coiffure préfèrent réserver en ligne plutôt que par téléphone.** Un salon sans prise de RDV en ligne perd des réservations au profit de salons plus accessibles — y compris pendant les horaires de fermeture.
+**Un salon de coiffure peut proposer une réservation en ligne aussi simple que Planity, directement sur son propre site, sans commission ni visibilité partagée avec des salons concurrents sur un même annuaire.** 64 % des clients de salons de coiffure préfèrent réserver en ligne plutôt que par téléphone — un salon sans réservation en ligne perd ces demandes au profit d'un concurrent plus accessible, y compris pendant les horaires de fermeture.
 
 ---
 
@@ -57,12 +57,16 @@ Vos plus belles réalisations avant/après ou résultats finaux. Instagram peut 
 
 Présentez chaque coiffeur ou coiffeuse avec leur spécialité. Les clients fidèles choisissent souvent "leur" coiffeuse — la personnalisation commence sur le site.
 
-### Réservation en ligne
+### Réservation en ligne : propriétaire ou marketplace
 
-La page de réservation doit être accessible depuis toutes les pages (bouton persistant dans le header). Les solutions les plus utilisées pour les salons :
-- **Planity** : spécialisé salons de beauté, intégration simple
-- **Fresha** : gratuit pour les salons, commission sur paiement en ligne
-- **Treatwell** : marketplace + site de réservation
+La page de réservation doit être accessible depuis toutes les pages (bouton persistant dans le header). Deux logiques s'opposent : les marketplaces comme Planity ou Treatwell, qui affichent le salon aux côtés de concurrents sur leur propre annuaire contre une commission, et un système de réservation propriétaire intégré au site, sans commission ni concurrent visible au moment de la réservation.
+
+| Critère | Planity / Treatwell | Réservation propriétaire |
+|---|---|---|
+| Commission par réservation | Oui, ou abonnement avec visibilité partagée | Aucune |
+| Visibilité aux côtés de concurrents | Oui, sur l'annuaire de la plateforme | Non |
+| Trafic apporté | Immédiat via l'annuaire | À construire (SEO local, Google Business) |
+| Personnalisation de l'expérience | Limitée au gabarit de la plateforme | Totale, à l'image du salon |
 
 ### Contact
 
@@ -111,3 +115,14 @@ Mentionner des marques reconnues (L'Oréal Professionnel, Kérastase, Wella...) 
 
 **Peut-on intégrer une boutique pour vendre des produits capillaires en ligne ?**
 Oui. Certains salons vendent leurs produits en ligne entre les rendez-vous. Notre [formule e-commerce à partir de 1 647€](/tarifs) est adaptée si vous souhaitez une boutique complète.
+
+## En résumé
+
+- 64 % des clients de salons préfèrent réserver en ligne plutôt que par téléphone — un salon sans réservation en ligne perd ces demandes.
+- Planity et les marketplaces apportent un trafic immédiat contre une commission et une visibilité partagée avec des concurrents.
+- Un système de réservation propriétaire, intégré au site, élimine la commission et affiche uniquement la marque du salon.
+- Le SEO local (fiche Google Business, avis, mentions de quartier) reste le principal levier pour générer son propre trafic sans dépendre d'une marketplace.
+
+---
+
+*Pour aller plus loin : [Prise de rendez-vous en ligne : Calendly, Planity ou le vôtre ?](/blog/application-gestion-rdv) · [Nos tarifs](/tarifs) · [Nos services](/services)*
