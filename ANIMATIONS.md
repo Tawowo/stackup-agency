@@ -1,232 +1,154 @@
-# ANIMATIONS — Inventaire & Système Stackup
+# ANIMATIONS.md — Stackup Agency V3
 
-> Baseline : 60fps constant, transform/opacity uniquement, prefers-reduced-motion couvert, état initial safe (visible sans JS).
-
----
-
-## Partie 1 — Recherche mondiale (15–20 techniques de référence)
-
-Sources : Awwwards, FWA, Codrops, GSAP, Lenis, CSS-Tricks
-
-### 1. Stagger Text Reveal (Codrops / GSAP SplitText)
-Chaque mot/caractère animé indépendamment avec délai croissant (`stagger: 0.04s`).  
-Source: https://tympanus.net/codrops/2020/06/17/making-stagger-reveal-animations-for-text/
-
-### 2. Scroll-Driven Animations CSS native (`@keyframes` + `animation-timeline: scroll()`)
-Sans JavaScript, déclenchement pur CSS via `scroll()` et `view()`.  
-Source: https://tympanus.net/codrops/2024/01/17/a-practical-introduction-to-scroll-driven-animations-with-css-scroll-and-view/
-
-### 3. Clip-Path Morphing Reveal
-Image ou card révélée par `clip-path: inset(100% 0 0 0) → inset(0%)`.  
-Source: https://tympanus.net/codrops/tag/clip-path/
-
-### 4. SVG Stroke Draw (DrawSVG / stroke-dasharray)
-Tracé progressif d'un SVG sur l'écran, synchronisé avec le scroll ou l'entrée viewport.  
-Utilisé ici : ScoreGauge (audit), success-check (devis).
-
-### 5. Text Scramble / ScrambleText
-Lettres aléatoires qui convergent vers le texte final. Effet terminal / decode.  
-Source: https://gsapify.com/gsap-text-animations/
-
-### 6. Magnetic Button Effect
-Bouton attire légèrement la souris dans son rayon (`translate` proportionnel à cursor distance).  
-Source: Awwwards nominees — https://www.awwwards.com/inspiration_search/gsap-animation/
-
-### 7. Smooth Scroll + ScrollTrigger (Lenis + GSAP)
-`Lenis` normalise la vélocité de scroll, GSAP ScrollTrigger s'y accroche pour des animations millimétrées.  
-Source: https://madewithgsap.com/
-
-### 8. Parallax SVG/image layers (transform uniquement)
-Couches multiples se déplacent à vitesses différentes via `translateY` proportionnel au scroll. Pas de `background-attachment: fixed` (perf).
-
-### 9. Grid Explosion / Formation on Scroll
-Cards réparties en grille explosée qui se rassemblent au scroll.  
-Source: https://tympanus.net/codrops/hub/ (Creative Hub)
-
-### 10. Page View Transitions API
-`document.startViewTransition()` pour des transitions fluides entre pages sans rechargement visible.  
-Source: https://css-tricks.com/unleash-the-power-of-scroll-driven-animations/
-
-### 11. Counting / Odometer (RAF CountUp)
-Chiffres qui s'incrémentent sur entrée viewport, courbe ease-out-quart.  
-Implémenté: `useCountUp` hook, `1 - Math.pow(1-p, 4)`, ~800ms.
-
-### 12. SVG Mask Reveal (SVG clipPath scroll-driven)
-Image révélée via masque SVG qui s'efface au scroll.  
-Source: https://tympanus.net/codrops/tag/scroll/
-
-### 13. Loading Sequence Orchestrée
-Étapes qui s'allument l'une après l'autre avec délais croissants, simulation de "travail".  
-Implémenté: AuditClient 5-step sequence.
-
-### 14. Accordion CSS `grid-template-rows: 0fr → 1fr`
-Animation de hauteur sans JS via grid rows. 60fps garanti.  
-Source: technique CSS moderne, 0 reflow.
-
-### 15. Reading Progress Bar (`scaleX 0→1`)
-Barre de progression de lecture fixée en haut, animée `scaleX` sur scroll passif.  
-Implémenté: `reading-progress` dans globals.css.
-
-### 16. Halo Particle Orbit
-Particules en orbite autour d'un CTA, CSS `rotate + translateX + rotate` opposé.  
-Source: technique Awwwards premium sites.
-
-### 17. Blog Card Shimmer Hover
-`::after` pseudo-élément avec gradient diagonal glisse au hover, `background-position` animée.
-
-### 18. Section Divider Scanline
-`::before` pseudo-élément qui balaie la largeur en 3s en boucle.  
-Signale les transitions de section sans rupture visuelle brutale.
-
-### 19. Wizard Step Slide
-Form multi-étapes : slide right/left selon direction de navigation, `translateX(-100%→0)`.  
-Implémenté: DevisForm, CahierClient.
-
-### 20. Intersection Observer Cascade
-Éléments révélés en cascade via IntersectionObserver, délai CSS `--delay` per-item.  
-Pattern universel Stackup: `reveal-item`, `in-view` class toggle.
+> Inventaire des animations implémentées — uniquement ce qui existe dans le code.
+> Format : Page / Fichier / Classe ou composant
 
 ---
 
-## Partie 2 — Inventaire complet des animations Stackup
+## Système global (`src/app/globals.css`)
 
-### LÉGENDE
-- 🔵 **MAJEURE** — pièce dominante, mémorable
-- 🟢 Mineure — micro-interaction ou subtilité
-- Pages : H=Home, S=Services, D=Devis, A=Audit, C=Comparatif, CDC=Cahier, Blog, SS=Studio Style, T=Templates, R=Réalisations, P=Parrainage, DOC=Documents, 404
-
----
-
-### 🔵 PIÈCES MAJEURES (objectif 60+)
-
-| # | Nom | Description | Pages | CSS/JS | Status |
-|---|-----|-------------|-------|--------|--------|
-| 1 | Hero Film Opening | Hero entre avec `opacity:0,scale:0.96 → 1,1` + titre stagger par mot | H | CSS reveal-item | ✅ |
-| 2 | Section Numbers XXL | `01–05` fantômes débordants, `clamp(6rem,14vw,12rem)`, text-stroke blanc 6% | H | CSS | ✅ |
-| 3 | Heading Underline Draw | `::after width:0→100%` au scroll, 600ms | H,S,R,Blog | CSS+IO | ✅ |
-| 4 | Divider Scanline | Balayage lumineux entre sections, 3s infini | H,S,D,A,C | CSS keyframe | ✅ |
-| 5 | Halo Particle Orbit | 3 particules en orbite autour du CTA final | H | CSS keyframe | ✅ |
-| 6 | Stat Rise Cascade | Stats montent de bas, délai 100ms/item | H,S | CSS+IO | ✅ |
-| 7 | Blog Card Shimmer | Gradient diagonal glisse au hover | H | CSS hover | ✅ |
-| 8 | Audit Score Gauge | SVG stroke-dasharray CountUp + glow électrique | A | JS+SVG | ✅ |
-| 9 | Audit Loading Sequence | 5 étapes s'allument progressivement | A | JS orchestré | ✅ |
-| 10 | Audit Section Reveal | Sections apparaissent phase 0→6, délais setTimeout | A | JS | ✅ |
-| 11 | Devis Wizard Slide | Slide left/right entre étapes, transform:translateX | D | CSS+JS | ✅ |
-| 12 | Devis Price CountUp | RAF ease-out-quart, 400ms, chiffre en direct | D | JS RAF | ✅ |
-| 13 | Devis Success Draw | SVG cercle + coche tracés progressivement | D | CSS SVG | ✅ |
-| 14 | Devis Card Selection | Cards avec scale+glow au select, auto-advance | D | CSS+JS | ✅ |
-| 15 | Devis Recap Stagger | Lignes de recap apparaissent une par une | D | CSS stagger | ✅ |
-| 16 | Comparatif Score Bar | Barres de score s'étendent `width:0→N%` au reveal | C | CSS+IO | ✅ |
-| 17 | Comparatif Table Reveal | Rangées du tableau révélées en cascade | C | CSS+IO | ✅ |
-| 18 | Comparatif Cell Pulse | Cellule sélectionnée pulse avec scale | C | CSS+JS | ✅ |
-| 19 | Cahier Progress Bar | Barre de progression gradient, 5 étapes | CDC | CSS+JS | ✅ |
-| 20 | Cahier Chip Toggle | Chips basculent avec scale+couleur | CDC | CSS+JS | ✅ |
-| 21 | Cahier Form Slide | Glissement entre étapes du formulaire | CDC | CSS+JS | ✅ |
-| 22 | Gallery Hover Scroll | Image défile sur hover (4s scroll-down) | R,T | CSS | ✅ |
-| 23 | Maintenance Card Hover | TranslateY -4px + glow 40px électrique/15% | H | CSS | ✅ |
-| 24 | Reading Progress Bar | scaleX 0→1 scroll passif, top fixed | Blog,CDC | CSS+JS | ✅ |
-| 25 | Odometer Countdown | Chiffres flip style odometer | P | CSS+JS | ✅ |
-| 26 | Hero Asymmetric Layout | Composition 5/7 col, débordement intentionnel | H | CSS grid | ✅ |
-| 27 | Services Hub Reveal | Cards services reveal en cascade | S | CSS+IO | ✅ |
-| 28 | MiniHero Reveal | Titre + soustitre reveal staggeré sur toutes sous-pages | ALL | CSS | ✅ |
-| 29 | Parrainage Stagger | Étapes stagger reveal 150ms/item | P | CSS+IO | ✅ |
-| 30 | 404 Animated | Illustration 404 + bouton retour animé | 404 | CSS | ✅ |
-| 31 | **[NEW] Hero Word-by-Word** | Chaque mot du titre H1 hero entre avec `translateY(60px)→0` + stagger 80ms | H | CSS+IO | 🔄 |
-| 32 | **[NEW] Nav Scroll Shrink** | Header réduit (padding + blur) après 80px de scroll | ALL | JS scroll | 🔄 |
-| 33 | **[NEW] Card 3D Tilt** | Cards légèrement inclinées au hover (CSS perspective 1000px, rotateX/Y ±3°) | S,T | CSS | 🔄 |
-| 34 | **[NEW] Number Flip Counter** | Chiffres stats flippent verticalement (rotateX 90°→0°) | H,S | CSS+IO | 🔄 |
-| 35 | **[NEW] Blog Post Clip Reveal** | Image blog révélée `clip-path: inset(100%→0)` sur scroll | Blog | CSS+IO | 🔄 |
-| 36 | **[NEW] CTA Magnetic** | Bouton CTA se déplace légèrement vers la souris (±8px) | H | JS | 🔄 |
-| 37 | **[NEW] Timeline Draw** | Ligne verticale du processus se trace au scroll | S,D | CSS+IO | 🔄 |
-| 38 | **[NEW] Toast Notification** | Feedback toast slide-in depuis le bas | D,SS | CSS+JS | 🔄 |
-| 39 | **[NEW] Accordion Smooth** | `grid-template-rows: 0fr→1fr` pour FAQ | S,A | CSS | 🔄 |
-| 40 | **[NEW] Studio Color Preview** | Aperçu couleur morphe en temps réel | SS | JS | 🔄 |
-| 41 | **[NEW] Studio Screen Mockup** | Maquette live multi-screen animée | SS | JS | 🔄 |
-| 42 | **[NEW] Export PDF Spin** | Icône PDF tourne pendant génération | SS | CSS | 🔄 |
-| 43 | **[NEW] Palette Harmony Gen** | Bulles de couleur apparaissent en stagger | SS | CSS+JS | 🔄 |
-| 44 | **[NEW] Typography Preview** | Police preview glisse en fondu-enchaîné | SS | CSS+JS | 🔄 |
-| 45 | **[NEW] A/B Split Slide** | Mode A/B: les deux versions glissent côte à côte | SS | CSS+JS | 🔄 |
-| 46 | **[NEW] URL Share Pulse** | Bouton share pulse (scale 1→1.06→1) après copie | SS | CSS+JS | 🔄 |
-| 47 | **[NEW] Preset Card Hover** | Cards preset lèvent + ombre électrique | SS | CSS | 🔄 |
-| 48 | **[NEW] Input Focus Glow** | Input/textarea glow électrique au focus | ALL | CSS | 🔄 |
-| 49 | **[NEW] Nav Link Hover** | Underline slide depuis gauche `::after width:0→100%` | ALL | CSS | 🔄 |
-| 50 | **[NEW] Hero Badge Float** | Badge "Agence certifiée" flotte légèrement (translateY ±4px, 3s) | H | CSS | 🔄 |
-| 51 | **[NEW] Service Icon Spin** | Icône service tourne 15° au hover | S | CSS | 🔄 |
-| 52 | **[NEW] Price Card Highlight** | Card prix sélectionnée scale 1.02 + border glow | D | CSS | 🔄 |
-| 53 | **[NEW] Tabs Indicator Slide** | Indicateur tab glisse horizontalement | C,SS | CSS+JS | 🔄 |
-| 54 | **[NEW] Scroll Progress Dots** | Points de progression de section (dots latéraux) | SS | JS | 🔄 |
-| 55 | **[NEW] Hero CTA Pulse** | Bouton CTA pulse très subtilement (scale 1→1.02) | H | CSS | 🔄 |
-| 56 | **[NEW] Blog Tag Hover** | Tags blog scale 1.05 + bg électrique | Blog | CSS | 🔄 |
-| 57 | **[NEW] Image Reveal Wipe** | Images révélées avec wipe horizontal (clip-path) | R,T,Blog | CSS+IO | 🔄 |
-| 58 | **[NEW] Footer Link Stagger** | Liens footer apparaissent en cascade au scroll | ALL | CSS+IO | 🔄 |
-| 59 | **[NEW] Check Animation Stagger** | ✓ apparaissent un par un dans les listes features | S,D | CSS | 🔄 |
-| 60 | **[NEW] Section Background Shift** | Fond navy↔nuit alterne avec transition douce | H | CSS | 🔄 |
-| 61 | **[NEW] Studio Panel Slide** | Sidebar et panels du studio glissent à l'ouverture | SS | CSS+JS | 🔄 |
-| 62 | **[NEW] Mockup Device Animate** | Les maquettes de devices dans le studio entrent en slide | SS | CSS | 🔄 |
-| 63 | **[NEW] Success Confetti** | Particules colorées au succès formulaire | D | CSS+JS | 🔄 |
-| 64 | **[NEW] Hero Subtitle Typewriter** | Sous-titre du hero tapé caractère par caractère | H | JS | 🔄 |
-| 65 | **[NEW] Scroll Indicator Arrow** | Flèche "scroll" du hero rebondit doucement | H | CSS | 🔄 |
+| Classe CSS | Animation | Notes |
+|---|---|---|
+| `.dark body` | Background `#070B16` | Dark-first via ThemeContext |
+| `.persp-grid` | `@keyframes grid-scroll` — translateY infini 20s | Grille perspective 1px, opacité <6% |
+| `.scanline-section` | `@keyframes scanline-move` — translateY 0→100% 6s | Liseré lumineux horizontal lent |
+| `.liseré-border::before` | `@keyframes liseré-rotate` — `--liseré-angle` 0→360° 4s | Point lumineux conic-gradient sur la bordure |
+| `.liseré-permanent` | même animation à `8s linear infinite` | Variante lente (cartes Pro/Premium) |
+| `.marquee-track` | `@keyframes marquee` — translateX -33.33% 24s | Défilement texte avant |
+| `.marquee-track-rev` | `@keyframes marquee-rev` — translateX +33.33% 28s | Défilement texte inverse |
+| `.marquee-wrap:hover .marquee-track` | `animation-play-state: paused` | Pause au survol |
+| `.card-3d-enter` | `@keyframes card-3d-enter` — rotateX(8°)→0 + translateY(32px)→0 | Cascade services au scroll |
+| `.reveal-item` | `@keyframes reveal-fade` — opacity+translateY — IntersectionObserver | Apparition au scroll |
+| `.section-marker-type` | `@keyframes type-in` — width 0→auto | Labels mono qui s'écrivent |
+| `.step-circle` | `@keyframes step-pop` — scale+opacity | Cercles numérotés du process |
+| `.process-line` | `@keyframes draw-line` — scaleX 0→1 | Ligne circuit horizontale |
+| `.circuit-h::after` | `@keyframes circuit-dot-h` — translateX 0→100% 3s | Point lumineux horizontal |
+| `.circuit-v::after` | `@keyframes circuit-dot` — translateY 0→100% 4s | Point lumineux vertical |
+| `.star-twinkle` | `@keyframes star-twinkle` — opacity+scale cyclique | Étoiles du fond CTA |
+| `.halo-breathe` | `@keyframes halo-breathe` — scale 1→1.2 4s | Halo CTA pulsant |
+| `.arrow-slide` | `@keyframes arrow-slide` — translateX boucle | Flèche → sur hover |
+| `.gradient-sig` | `gradient-sig` — dégradé electric→gold sur text | Mots-clés marquee |
+| `.faq-body.open` | `max-height` transition 300ms | Accordion FAQ |
+| `.price-reveal-inner` | `@keyframes odometer-up` — translateY -100%→0 | Compteur de prix |
 
 ---
 
-### 🟢 MICRO-INTERACTIONS SYSTÉMATIQUES (objectif 400+)
+## Préchargeur (`src/components/ui/BrandPreloader.tsx`)
 
-> Appliquées à chaque instance du composant concerné sur toutes les pages.
-
-| Composant | Type | Pages concernées | Instances est. |
-|-----------|------|-----------------|----------------|
-| Bouton primaire | scale 1.03 + glow | ALL | ~45 |
-| Bouton secondaire | translateY -1px | ALL | ~30 |
-| Lien texte inline | underline slide | ALL | ~80 |
-| Card (tout type) | translateY -4px | ALL | ~60 |
-| Input/textarea | border glow + label float | D,A,CDC,SS | ~40 |
-| Checkbox | scale 1.1 + check draw | D,CDC | ~25 |
-| Select/dropdown | border + chevron rotate | D,CDC,SS | ~15 |
-| Badge/chip | scale 1.05 + border elect | C,CDC,SS | ~35 |
-| Image (hover) | scale 1.02 container | R,T,Blog | ~30 |
-| Icône nav | scale 1.1 | ALL | ~20 |
-| Tag blog | bg + scale | Blog | ~25 |
-| Accordion toggle | chevron rotate 180° | S,A | ~15 |
-| Pagination | scale + color | Blog | ~10 |
-| Share button | pulse after click | SS | ~5 |
-| Copy button | checkmark swap | CDC,SS | ~8 |
-| Breadcrumb link | color transition | ALL | ~40 |
-| **Total estimé** | | | **~483** |
+- **Deux bandes** : `.preloader-panel-top` (translateY(-100%)) + `.preloader-panel-bottom` (translateY(100%)) — décalage 60ms
+- **Compteur RAF** : 0→100 avec easing `ease-in-out`, durée 1000ms
+- **Condition** : `sessionStorage.getItem('preloader-v3-shown')` — s'affiche 1× par session
+- **Aucune dépendance GSAP**
 
 ---
 
-## Partie 3 — Règles d'implémentation
+## Accueil (`src/app/page.tsx` + composants)
 
-### ✅ Autorisé
-- `transform` (translate, scale, rotate, skew)
-- `opacity`
-- `filter` (blur, drop-shadow) — avec précaution (GPU)
-- `clip-path` — performances correctes sur GPU
-- `stroke-dasharray/offset` — SVG uniquement
+### HeroSection (`src/components/home/HeroSection.tsx`)
+- `.section-marker-type` : `[ 01 / ACCUEIL ]` qui s'écrit
+- `<video>` wired (source commentée — attente fichier `hero-accueil.mp4`)
+- `.persp-grid` derrière la vidéo
+- `liseré-border` sur l'éditeur glass panel
+- Stat cards : `glass-panel hud-4corners`
 
-### ❌ Interdit (layout thrashing)
-- `width`, `height` animés (sauf `grid-template-rows: 0fr→1fr`)
-- `top`, `left`, `right`, `bottom`
-- `margin`, `padding` animés
-- `background-color` en transition directe (ok via opacity d'un pseudo-élément)
+### ServiceCards (`src/components/home/ServiceCards.tsx`)
+- `.card-3d-enter` : cascade rotateX 4° → 0 + translateY 32px → 0
+- `.glass-panel hud-4corners` sur chaque carte
+- Spotlight radial `radial-gradient` au mousemove
+- `animationDelay: ${index * 80}ms`
 
-### 🔄 Prefers-reduced-motion
-```css
-@media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-  }
-}
-```
-→ Toujours déclaré. État final visible sans animation.
+### PinnedGallery (`src/components/home/PinnedGallery.tsx`)
+- Sticky scroll horizontal — N panneaux × 100vw
+- `UrlTyper` : frappe caractère par caractère (28ms/char) à chaque changement de projet actif
+- Parallax filigrane -15% via `watermarkRefs`
+- Barre de progression `scaleX(progress)` en bas
+- `liseré-border` + `glass-panel` sur le browser frame XXL
+- Mobile : snap carousel + dots
 
-### 🖥️ Règle des 2 lourdes
-- Jamais 2 animations "lourdes" dans le même viewport simultané.
-- "Lourde" = filter blur, clip-path complexe, SVG animé, particle system.
-- Une lourde + N légères (transform/opacity) = OK.
+### ProcessSection (`src/components/home/ProcessSection.tsx`)
+- `.process-line` : tracé horizontal `scaleX(0→1)` au scroll
+- `.circuit-h` : point lumineux horizontal sur fond
+- `.step-circle` : `step-pop` staggeré 180ms/step
+- Cartes desktop : `glass-panel hud-corners`
+- IntersectionObserver `threshold: 0.25`
+
+### MarqueeSeparator (`src/components/home/MarqueeSeparator.tsx`)
+- Rangée 1 : `.marquee-track` (fwd, 24s)
+- Rangée 2 : `.marquee-track-rev` (reverse, 28s)
+- Mots surlignés : `.gradient-sig`
+- Pause au hover
+
+### HomeFaq (`src/components/home/HomeFaq.tsx`)
+- `.faq-body.open` : `max-height` transition
+- `[ Q ]` préfixe mono par question
+- `glass-panel` sur chaque item
+
+### Maintenance cards (`src/app/page.tsx` ~l.254)
+- Carte Pro : `.liseré-permanent .liseré-border hud-corners`
+- Autres cartes : `.glass-panel hud-4corners`
+- Prix : `data-mono`
+
+### Blog cards (`src/app/page.tsx` ~l.209)
+- `.glass-panel hud-4corners` / `.hud-corners`
+- `data-mono` sur tags catégorie
+- `animationDelay` stagger 100ms
+
+### CTA section (`src/app/page.tsx` ~l.298)
+- `star-field` : 30 `.star` avec `star-twinkle` aléatoires
+- `.halo-breathe` sur le halo radial
+- `.btn-magnetic .cta-glow` sur le bouton principal
 
 ---
 
-*Inventaire mis à jour à chaque sprint — les ✅ sont implémentés, les 🔄 sont en cours.*
+## Barres de navigation
+
+### PageProgressBar (`src/components/ui/PageProgressBar.tsx`)
+- Barre horizontale top — `scaleX(scrollY/maxScroll)`
+
+### SectionProgressBar (`src/components/ui/SectionProgressBar.tsx`)
+- Barre verticale droite — dots cliquables
+- Dot actif : `bg-electric shadow-[0_0_8px_rgba(45,125,210,0.8)]`
+- Tooltip au hover sur chaque dot
+- Visible après 200px scroll
+
+---
+
+## Pages secondaires
+
+### 404 (`src/app/not-found.tsx`)
+- Terminal animé : 7 lignes tapées en stagger (setTimeout 0→2300ms)
+- `.persp-grid` fond
+- `.glass-panel hud-4corners` sur le terminal
+- `btn-magnetic cta-glow` sur retour accueil
+
+### Contact (`src/components/sections/Contact.tsx`)
+- `.persp-grid` fond
+- Sidebar : `glass-panel hud-4corners circuit-h`
+- Champs : transitions de focus
+
+### MiniHero (`src/components/ui/MiniHero.tsx`)
+- `.persp-grid` fond (toutes les pages secondaires)
+- `.scanline-section`
+- Prop `marker` optionnelle pour `section-marker`
+
+### PricingCards (`src/components/tarifs/PricingCards.tsx`)
+- `useCountUp` odomètre prix (RAF, ease-out quart, 900ms)
+- `checks-visible` : coches qui se dessinent en stagger 60ms
+- `glass-panel` + `liseré-border` / `liseré-permanent` selon variante
+
+---
+
+## Footer (`src/components/layout/Footer.tsx`)
+- Watermark `STACKUP` outline (`-webkit-text-stroke: 1px rgba(255,255,255,0.04)`)
+- `.footer-stagger` colonnes stagger au scroll
+
+---
+
+## Réduit / accessibilité
+
+Tout bloc V3 est protégé par `@media (prefers-reduced-motion: reduce)` :
+- Marquees stoppés
+- `card-3d-enter`, `process-line`, `circuit-*`, `star-twinkle`, `halo-breathe` : désactivés
+- `reveal-item` : affichage immédiat sans animation
+- ProcessSection : `IntersectionObserver` → classes ajoutées immédiatement sans timeout
+- PinnedGallery : fallback grille statique
