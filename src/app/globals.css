@@ -378,11 +378,12 @@ body {
 /* ─── Section seams (smooth colour transitions) ─────────── */
 .seam-to-light {
   /* V4 : transition hero sombre → fond ivoire clair */
-  background: linear-gradient(180deg, transparent 0%, #FFFDF9 100%);
-  height: 160px;
+  background: linear-gradient(180deg, #070B16 0%, #FFFDF9 100%);
+  height: 80px;
+  margin-top: -80px;
   pointer-events: none;
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 .seam-to-deep {
   background: linear-gradient(180deg, transparent 0%, #0B1A2E 100%);
@@ -2147,6 +2148,9 @@ select:focus-visible {
   animation: liseré-travel 4s linear infinite;
   z-index: 0;
   pointer-events: none;
+  will-change: transform;
+  backface-visibility: hidden;
+  transform: translateZ(0);
 }
 .liseré-border > * { position: relative; z-index: 1; }
 

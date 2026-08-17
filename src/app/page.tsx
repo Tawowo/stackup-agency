@@ -125,9 +125,12 @@ export default function Home() {
 
         {/* ── 04 — Blog ─────────────────────────────────────────────────────── */}
         <section id="blog" className="py-24 bg-white relative overflow-hidden">
-          {/* Halo bleu doux */}
-          <div className="pointer-events-none absolute bottom-0 right-0 w-[400px] h-[400px]" aria-hidden="true"
-            style={{ background: 'radial-gradient(ellipse, rgba(45,125,210,0.05) 0%, transparent 70%)' }} />
+          {/* Décor de profondeur */}
+          <div className="pointer-events-none absolute inset-0" aria-hidden="true">
+            <div className="absolute top-0 right-0 w-[600px] h-[400px]" style={{ background: 'radial-gradient(ellipse at 80% 10%, rgba(45,125,210,0.08) 0%, transparent 65%)' }} />
+            <div className="absolute bottom-0 left-0 w-[400px] h-[300px]" style={{ background: 'radial-gradient(ellipse at 20% 90%, rgba(245,158,11,0.06) 0%, transparent 65%)' }} />
+            <div className="absolute inset-0" style={{ backgroundImage: 'linear-gradient(rgba(30,58,95,0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(30,58,95,0.02) 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
+          </div>
           <div className="max-w-5xl mx-auto px-4 sm:px-6 relative">
             <div className="flex items-end justify-between mb-12">
               <div>
@@ -135,38 +138,78 @@ export default function Home() {
                 <p className="overline-label mb-3">Blog</p>
                 <h2 className="text-3xl lg:text-5xl font-bold text-navy reveal-item">Du concret sur le blog</h2>
               </div>
-              <Link href="/blog" className="hidden sm:flex items-center gap-1 text-electric-ink hover:text-navy font-medium text-sm transition-colors">
-                Tous les articles <ArrowRight size={14} />
+              <Link href="/blog" className="hidden sm:flex items-center gap-2 text-electric-ink hover:text-navy font-medium text-sm transition-colors group">
+                Tous les articles <ArrowRight size={14} className="transition-transform group-hover:translate-x-0.5" />
               </Link>
             </div>
-            {/* Asymmetric: 1 large card + 2 small */}
-            <div className="grid sm:grid-cols-5 gap-4">
+            {/* Asymmetric magazine: 1 large + 2 small */}
+            <div className="grid sm:grid-cols-5 gap-5">
+              {/* Grande carte magazine */}
               <Link href="/blog/creation-site-internet-prix"
-                className="reveal-item group relative sm:col-span-3 p-7 rounded-2xl bg-white border border-gray-100 hud-4corners hover:border-gold/30 hover:shadow-[0_16px_48px_rgba(30,58,95,0.10)] transition-all duration-300 hover:-translate-y-1 overflow-hidden"
+                className="reveal-item group relative sm:col-span-3 rounded-2xl bg-white border border-gray-100 overflow-hidden hover:border-gold/30 hover:shadow-[0_24px_60px_rgba(30,58,95,0.12)] transition-all duration-300 hover:-translate-y-1.5"
                 style={{ animationDelay: '0ms' }}>
-                <div className="absolute top-0 left-0 right-0 h-0.5 rounded-t-2xl bg-gradient-to-r from-gold to-amber-300 opacity-0 group-hover:opacity-100 transition-opacity" />
-                <div className="text-xs text-gold font-bold uppercase tracking-widest mb-3 data-mono">Tarifs</div>
-                <h3 className="font-bold text-navy text-xl transition-colors leading-snug mb-4 group-hover:text-electric-ink">
-                  Combien coûte un site internet en 2026 ?
-                </h3>
-                <span className="text-xs text-navy/30 group-hover:text-gold transition-colors flex items-center gap-1">
-                  Lire l'article <span className="arrow-slide">→</span>
-                </span>
+                {/* Image éditoriale SVG */}
+                <div className="relative h-44 overflow-hidden" style={{ background: 'linear-gradient(135deg, #1E3A5F 0%, #2D7DD2 60%, #F59E0B 100%)' }}>
+                  <div className="absolute inset-0 flex items-center justify-center gap-4 px-6">
+                    {/* Mini-illustration : prix comparés */}
+                    <div className="space-y-2 flex-1">
+                      {[['Agence','6000€','bg-gray-300/40'],['Stackup','490€','bg-gold']].map(([l,p,c]) => (
+                        <div key={l} className="flex items-center gap-2">
+                          <div className="text-[9px] text-white/70 w-12">{l}</div>
+                          <div className={`h-4 rounded-sm ${c} flex items-center px-1.5`} style={{ width: l === 'Agence' ? '80%' : '18%' }}>
+                            <span className="text-[8px] font-bold text-white">{p}</span>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                    <div className="text-4xl font-black text-white/20 select-none">€</div>
+                  </div>
+                  <div className="absolute top-3 left-3">
+                    <span className="text-[9px] font-bold bg-gold text-ink px-2 py-0.5 rounded-full uppercase tracking-wider">Tarifs</span>
+                  </div>
+                  <div className="absolute inset-x-0 bottom-0 h-12 bg-gradient-to-t from-white/10 to-transparent" />
+                </div>
+                <div className="p-6">
+                  <div className="text-xs text-gold font-bold uppercase tracking-widest mb-2 data-mono flex items-center gap-2">
+                    Tarifs · 5 min de lecture
+                  </div>
+                  <h3 className="font-bold text-navy text-xl transition-colors leading-snug mb-4 group-hover:text-electric">
+                    Combien coûte un site internet en 2026 ?
+                  </h3>
+                  <div className="flex items-center gap-2">
+                    <span className="text-xs text-navy/35 group-hover:text-gold transition-colors flex items-center gap-1">
+                      Lire l&apos;article <span className="inline-block transition-transform group-hover:translate-x-1">→</span>
+                    </span>
+                  </div>
+                </div>
+                {/* Top border accent */}
+                <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-gold to-amber-300 opacity-0 group-hover:opacity-100 transition-opacity" />
               </Link>
-              <div className="sm:col-span-2 flex flex-col gap-4">
+
+              <div className="sm:col-span-2 flex flex-col gap-5">
                 {[
-                  { href: '/blog/vitesse-site-web-core-web-vitals', titre: 'Core Web Vitals : guide pratique pour les TPE', cat: 'Technique' },
-                  { href: '/blog/seo-local-google-business', titre: 'SEO local : comment apparaître en tête sur Google Maps', cat: 'SEO' },
+                  { href: '/blog/vitesse-site-web-core-web-vitals', titre: 'Core Web Vitals : guide pratique pour les TPE', cat: 'Technique', color: '#2D7DD2', bg: 'linear-gradient(135deg, #2D7DD2, #1E3A5F)', emoji: '⚡', read: '4 min' },
+                  { href: '/blog/seo-local-google-business', titre: 'SEO local : apparaître en tête sur Google Maps', cat: 'SEO', color: '#059669', bg: 'linear-gradient(135deg, #059669, #047857)', emoji: '📍', read: '6 min' },
                 ].map((a, i) => (
                   <Link key={a.href} href={a.href}
-                    className="reveal-item group relative flex-1 p-5 rounded-2xl bg-white border border-gray-100 hud-corners hover:border-electric/30 hover:shadow-[0_12px_32px_rgba(30,58,95,0.08)] transition-all duration-300 hover:-translate-y-0.5 overflow-hidden"
+                    className="reveal-item group relative flex-1 rounded-2xl bg-white border border-gray-100 overflow-hidden hover:border-electric/30 hover:shadow-[0_16px_40px_rgba(30,58,95,0.10)] transition-all duration-300 hover:-translate-y-1"
                     style={{ animationDelay: `${(i + 1) * 100}ms` }}>
-                    <div className="absolute top-0 left-0 right-0 h-0.5 rounded-t-2xl bg-gradient-to-r from-electric to-blue-300 opacity-0 group-hover:opacity-100 transition-opacity" />
-                    <div className="text-xs text-electric font-bold uppercase tracking-widest mb-2 data-mono">{a.cat}</div>
-                    <h3 className="font-semibold text-navy group-hover:text-electric-ink transition-colors text-sm leading-snug mb-3">{a.titre}</h3>
-                    <span className="text-xs text-navy/30 group-hover:text-electric/60 transition-colors flex items-center gap-1">
-                      Lire l'article <span className="arrow-slide">→</span>
-                    </span>
+                    {/* Image éditoriale */}
+                    <div className="h-24 relative flex items-center justify-center overflow-hidden" style={{ background: a.bg }}>
+                      <span className="text-3xl opacity-60">{a.emoji}</span>
+                      <div className="absolute top-2 left-3">
+                        <span className="text-[8px] font-bold bg-white/20 text-white backdrop-blur-sm px-2 py-0.5 rounded-full uppercase tracking-wider border border-white/20">{a.cat}</span>
+                      </div>
+                      <div className="absolute inset-x-0 bottom-0 h-8 bg-gradient-to-t from-white/10 to-transparent" />
+                    </div>
+                    <div className="p-4">
+                      <div className="text-[10px] font-bold uppercase tracking-widest mb-1.5 data-mono" style={{ color: a.color }}>{a.cat} · {a.read}</div>
+                      <h3 className="font-semibold text-navy group-hover:text-electric transition-colors text-sm leading-snug mb-2">{a.titre}</h3>
+                      <span className="text-xs text-navy/30 group-hover:text-electric/60 transition-colors flex items-center gap-1">
+                        Lire <span className="inline-block transition-transform group-hover:translate-x-0.5">→</span>
+                      </span>
+                    </div>
+                    <div className="absolute top-0 left-0 right-0 h-0.5 opacity-0 group-hover:opacity-100 transition-opacity" style={{ background: `linear-gradient(90deg, ${a.color}, ${a.color}50)` }} />
                   </Link>
                 ))}
               </div>

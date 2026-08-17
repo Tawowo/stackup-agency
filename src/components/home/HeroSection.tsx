@@ -203,17 +203,15 @@ export default function HeroSection() {
     >
       {/* ── [PIÈCE 1] Fond vidéo + image parallax ─────────────────── */}
       <div ref={imgRef} className="absolute inset-0 will-change-transform" aria-hidden="true">
-        {/* Video hero — brancher hero-accueil.mp4 quand disponible */}
-        {/* Le poster (LCP) est toujours servi, la vidéo prend le relais après first paint */}
-        {/* Vidéo câblée — décommenter <source> + autoPlay/loop quand hero-accueil.mp4 est disponible */}
-        {/* <video
+        {/* Vidéo H.264 — 1.6 Mo, compatible Chrome/Safari/FF */}
+        <video
           className="absolute inset-0 w-full h-full object-cover object-[68%_center]"
           autoPlay muted loop playsInline disablePictureInPicture preload="none"
           poster="/images/hero-monument-s.webp" aria-hidden="true"
         >
           <source src="/hero-accueil.mp4" type="video/mp4" />
-        </video> */}
-        {/* Fallback image si la vidéo n'est pas encore disponible */}
+        </video>
+        {/* Image fallback (no-JS / poster avant load) */}
         <Image
           src="/images/hero-monument-s.webp"
           alt=""
@@ -368,7 +366,7 @@ export default function HeroSection() {
               transition: 'opacity 0.8s ease 0ms, transform 0.8s cubic-bezier(0.16,1,0.3,1) 0ms',
             }}
           >
-            <div className="liseré-border w-80 rounded-2xl overflow-hidden shadow-lift-lg hud-corners" style={{ background: '#0D1626' }}>
+            <div className="liseré-border w-80 rounded-2xl overflow-hidden shadow-lift-lg hud-corners" style={{ background: '#0D1626', isolation: 'isolate', willChange: 'transform' }}>
 
               {/* Editor chrome */}
               <div style={{ background: '#111827' }} className="border-b border-white/5">
