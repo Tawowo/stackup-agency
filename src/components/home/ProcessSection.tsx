@@ -37,7 +37,7 @@ export default function ProcessSection() {
   }, [])
 
   return (
-    <section className="py-24 bg-[#060D1A] relative overflow-hidden">
+    <section className="py-24 bg-[#0C1222] relative overflow-hidden circuit-h scanline-section">
       {/* Subtle background halo */}
       <div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
         <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-96 h-96 rounded-full"
@@ -46,6 +46,7 @@ export default function ProcessSection() {
 
       <div className="relative max-w-5xl mx-auto px-4 sm:px-6">
         <div className="mb-12">
+          <div className="section-marker mb-2" aria-hidden="true">[ 03 / PROCESSUS ]</div>
           <p className="overline-label !text-electric mb-3">Processus</p>
           <h2 className="text-3xl lg:text-4xl font-bold text-white">Comment ça marche ?</h2>
         </div>
@@ -62,12 +63,12 @@ export default function ProcessSection() {
               <div
                 key={s.n}
                 ref={el => { stepRefs.current[i] = el }}
-                className="reveal-item"
+                className="reveal-item glass-panel hud-corners rounded-xl p-5"
               >
                 {/* Number circle */}
                 <div
                   ref={el => { circleRefs.current[i] = el }}
-                  className="step-circle mb-5"
+                  className="step-circle mb-5 data-mono"
                 >
                   {s.n}
                 </div>

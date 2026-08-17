@@ -65,7 +65,7 @@ const OUTILS = [
 
 export default function OutilsPage() {
   return (
-    <div className="min-h-screen bg-background dark:bg-[#0A0F1C]">
+    <div className="min-h-screen bg-[#070B16]">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
       <div className="bg-gradient-to-b from-[#060D1A] to-[#0A0F1C] pt-24 pb-16">

@@ -11,6 +11,43 @@ const N = PANELS.length
 // SVG noise grain ID (inline, unique)
 const GRAIN_ID = 'gallery-grain'
 
+/** Inline URL typer — animates the URL string character-by-character when `url` changes */
+function UrlTyper({ url }: { url: string }) {
+  const [displayed, setDisplayed] = useState(url)
+  const rafRef = useRef<ReturnType<typeof setTimeout> | null>(null)
+
+  useEffect(() => {
+    // Start from empty and type the new URL
+    setDisplayed('')
+    let i = 0
+    function tick() {
+      i++
+      setDisplayed(url.slice(0, i))
+      if (i < url.length) {
+        rafRef.current = setTimeout(tick, 28)
+      }
+    }
+    rafRef.current = setTimeout(tick, 80)
+    return () => { if (rafRef.current) clearTimeout(rafRef.current) }
+  }, [url])
+
+  return (
+    <span className="text-white/60 text-xs font-mono tracking-tight">
+      {displayed}
+      <span className="inline-block w-px h-3 bg-white/50 align-middle ml-px animate-pulse" aria-hidden="true" />
+    </span>
+  )
+}
+
+/** Odometer-style counter digit */
+function OdometerNum({ n, total }: { n: number; total: number }) {
+  return (
+    <span className="data-mono text-xs text-foreground/60 dark:text-white/60 tabular-nums">
+      {String(n + 1).padStart(2, '0')}&thinsp;/&thinsp;{String(total).padStart(2, '0')}
+    </span>
+  )
+}
+
 export default function PinnedGallery() {
   const wrapRef    = useRef<HTMLElement>(null)
   const trackRef   = useRef<HTMLDivElement>(null)
@@ -54,18 +91,15 @@ export default function PinnedGallery() {
     // Track horizontal
     track.style.transform = `translateX(${-p * (N - 1) * 100}vw)`
 
-    // Parallax filigrane : décale de -15 % par rapport au panneau
-    // Chaque watermark est relatif à son panneau → offset = +15% de la tx globale - 15% de son propre panel offset
-    const globalTx = p * (N - 1) * 100  // vw positif (track va à gauche)
+    // Parallax filigrane
+    const globalTx = p * (N - 1) * 100
     watermarkRefs.current.forEach((el, i) => {
       if (!el) return
-      // panneau i commence à i*100vw depuis le début du track
-      // parallax : se déplace seulement 85 % aussi vite → +15 % de recul
       const offset = globalTx * 0.15 - i * 100 * 0.15
       el.style.transform = `translateX(${offset.toFixed(3)}vw)`
     })
 
-    // Teinte réactive : voile radial couleur du panneau actif
+    // Teinte réactive
     const activeIdx = Math.min(N - 1, Math.floor(p * N))
     if (tintRef.current) {
       const col = PANELS[activeIdx].couleur
@@ -117,21 +151,22 @@ export default function PinnedGallery() {
   // Reduced motion: static grid
   if (reducedMotion) {
     return (
-      <section id="realisations">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 pt-20 pb-10">
-          <p className="overline-label mb-2">Démonstrations</p>
-          <h2 className="text-foreground dark:text-white heading-underline reveal-item">Nos réalisations</h2>
+      <section id="realisations" className="py-16 bg-[#0C1222] scanline-section">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 pb-10">
+          <div className="section-marker mb-2" aria-hidden="true">[ 02 / RÉALISATIONS ]</div>
+          <p className="overline-label !text-electric mb-2">Démonstrations</p>
+          <h2 className="text-white heading-underline reveal-item">Nos réalisations</h2>
         </div>
         <div className="max-w-6xl mx-auto px-4 sm:px-6 pb-20 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {PANELS.map((r) => (
             <Link key={r.slug} href={`/realisations/${r.slug}`}
-              className="rounded-2xl overflow-hidden border border-navy/10 dark:border-white/10 bg-white dark:bg-[#0D1626] hover:shadow-lg transition-shadow">
+              className="rounded-2xl overflow-hidden glass-panel hover:shadow-lg transition-shadow">
               <div className="relative h-40">
                 <Image src={r.image} alt={r.nom} fill className="object-cover object-top" />
               </div>
               <div className="p-4">
-                <h3 className="font-bold text-foreground dark:text-white">{r.nom}</h3>
-                <p className="text-xs text-foreground/60 dark:text-white/50">{r.type}</p>
+                <h3 className="font-bold text-white">{r.nom}</h3>
+                <p className="text-xs text-white/50">{r.type}</p>
               </div>
             </Link>
           ))}
@@ -156,20 +191,21 @@ export default function PinnedGallery() {
       </svg>
 
       {/* Header */}
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 pt-20 pb-10">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 pt-20 pb-10 bg-[#0C1222] scanline-section">
+        <div className="section-marker mb-2" aria-hidden="true">[ 02 / RÉALISATIONS ]</div>
         <div className="flex items-end justify-between">
           <div>
-            <p className="overline-label mb-2">Démonstrations</p>
-            <h2 className="text-foreground dark:text-white heading-underline reveal-item">
+            <p className="overline-label !text-electric mb-2">Démonstrations</p>
+            <h2 className="text-white heading-underline reveal-item">
               Nos réalisations
             </h2>
-            <p className="text-foreground/60 dark:text-white/60 mt-3 max-w-xl text-sm">
+            <p className="text-white/55 mt-3 max-w-xl text-sm">
               Projets complets construits par nos soins. Ce que vous voyez est exactement ce que nous livrons.
             </p>
           </div>
           <Link
             href="/realisations"
-            className="hidden sm:flex items-center gap-1 text-electric-ink dark:text-electric hover:text-navy dark:hover:text-electric font-medium text-sm transition-colors shrink-0"
+            className="hidden sm:flex items-center gap-1 text-electric hover:text-electric/80 font-medium text-sm transition-colors shrink-0"
           >
             Voir tout <ArrowRight size={14} />
           </Link>
@@ -183,34 +219,23 @@ export default function PinnedGallery() {
         style={{ height: `${(N + 1) * 100}vh` }}
         aria-label="Galerie de réalisations"
       >
-        {/* Sticky scene */}
-        <div className="sticky top-0 h-screen overflow-hidden" style={{
-          background: 'linear-gradient(160deg, #F0F4F8 0%, #E8EEF5 100%)',
-        }}>
-          {/* Dark mode background override via CSS variable (Tailwind dark won't work on inline styles) */}
-          <style>{`
-            @media (prefers-color-scheme: dark) { .gallery-scene-bg { background: linear-gradient(160deg, #080E1A 0%, #0A1525 100%) !important; } }
-            :root[class~="dark"] .gallery-scene-bg { background: linear-gradient(160deg, #080E1A 0%, #0A1525 100%) !important; }
-          `}</style>
-          <div className="gallery-scene-bg absolute inset-0" style={{
-            background: 'linear-gradient(160deg, #F0F4F8 0%, #E8EEF5 100%)',
-          }} />
+        {/* Sticky scene — forced dark */}
+        <div className="sticky top-0 h-screen overflow-hidden" style={{ background: '#070B16' }}>
 
-          {/* Grain 3 % — appliqué sur un div semi-transparent */}
+          {/* Perspective grid layer */}
+          <div className="persp-grid absolute inset-0 z-[1]" aria-hidden="true" />
+
+          {/* Grain 3 % */}
           <div
-            className="absolute inset-0 pointer-events-none"
-            style={{
-              opacity: 0.03,
-              filter: `url(#${GRAIN_ID})`,
-              background: '#888',
-            }}
+            className="absolute inset-0 pointer-events-none z-[2]"
+            style={{ opacity: 0.03, filter: `url(#${GRAIN_ID})`, background: '#888' }}
             aria-hidden="true"
           />
 
-          {/* Teinte réactive : voile radial couleur du panneau actif */}
+          {/* Teinte réactive */}
           <div
             ref={tintRef}
-            className="absolute inset-0 pointer-events-none"
+            className="absolute inset-0 pointer-events-none z-[3]"
             style={{
               transition: 'background 400ms ease',
               background: `radial-gradient(ellipse 70% 60% at 50% 50%, ${PANELS[0].couleur}18 0%, transparent 70%)`,
@@ -218,18 +243,20 @@ export default function PinnedGallery() {
             aria-hidden="true"
           />
 
-          {/* Counter */}
+          {/* Counter — top right — odometer style */}
           <div className="absolute top-6 right-8 z-20 flex items-center gap-4" aria-hidden="true">
             <div className="flex gap-1.5">
               {PANELS.map((_, i) => (
-                <span key={i} className={`block h-0.5 rounded-full transition-all duration-300 ${
-                  i === active ? 'w-8 bg-electric' : 'w-2 bg-navy/20 dark:bg-white/20'
-                }`} />
+                <button
+                  key={i}
+                  aria-label={`Projet ${i + 1}`}
+                  className={`block h-0.5 rounded-full transition-all duration-300 ${
+                    i === active ? 'w-8 bg-electric' : 'w-2 bg-white/20'
+                  }`}
+                />
               ))}
             </div>
-            <span className="font-mono text-xs text-foreground/60 dark:text-white/60 tabular-nums">
-              {String(active + 1).padStart(2, '0')}&thinsp;/&thinsp;{String(N).padStart(2, '0')}
-            </span>
+            <OdometerNum n={active} total={N} />
           </div>
 
           {/* Scroll hint */}
@@ -238,12 +265,12 @@ export default function PinnedGallery() {
             style={{ opacity: progress < 0.06 ? 1 : 0 }}
             aria-hidden="true"
           >
-            <span className="text-foreground/30 dark:text-white/30 text-xs tracking-widest uppercase">Défiler</span>
-            <div className="w-px h-10 bg-gradient-to-b from-foreground/20 dark:from-white/20 to-transparent" />
+            <span className="text-white/30 text-xs tracking-widest uppercase data-mono">Défiler</span>
+            <div className="w-px h-10 bg-gradient-to-b from-white/20 to-transparent" />
           </div>
 
-          {/* Barre de progression — en bas de la scène */}
-          <div className="absolute bottom-0 left-0 right-0 z-20 h-px bg-navy/10 dark:bg-white/10" aria-hidden="true">
+          {/* Barre de progression */}
+          <div className="absolute bottom-0 left-0 right-0 z-20 h-px bg-white/10" aria-hidden="true">
             <div
               ref={progBarRef}
               className="h-full origin-left"
@@ -255,36 +282,12 @@ export default function PinnedGallery() {
             />
           </div>
 
-          {/* Track — N panels side by side, slides horizontally */}
+          {/* Track — N panels side by side */}
           <div
             ref={trackRef}
-            className="flex h-full will-change-transform"
+            className="flex h-full will-change-transform z-[4] relative"
             style={{ width: `${N * 100}vw`, transition: 'none' }}
           >
-            {/* Veines SVG horizontales qui traversent toute la largeur du track */}
-            <svg
-              className="absolute top-0 left-0 pointer-events-none"
-              style={{ width: `${N * 100}vw`, height: '100%' }}
-              preserveAspectRatio="none"
-              aria-hidden="true"
-            >
-              <defs>
-                <linearGradient id="vein-grad" x1="0%" y1="0%" x2="100%" y2="0%">
-                  <stop offset="0%"   stopColor="#2D7DD2" stopOpacity="0" />
-                  <stop offset="20%"  stopColor="#2D7DD2" stopOpacity="0.15" />
-                  <stop offset="50%"  stopColor="#F59E0B" stopOpacity="0.15" />
-                  <stop offset="80%"  stopColor="#2D7DD2" stopOpacity="0.15" />
-                  <stop offset="100%" stopColor="#F59E0B" stopOpacity="0" />
-                </linearGradient>
-              </defs>
-              {/* Veine 1 — 30 % du haut */}
-              <line x1="0" y1="30%" x2="100%" y2="30%"
-                stroke="url(#vein-grad)" strokeWidth="1" />
-              {/* Veine 2 — 68 % du haut */}
-              <line x1="0" y1="68%" x2="100%" y2="68%"
-                stroke="url(#vein-grad)" strokeWidth="1" />
-            </svg>
-
             {PANELS.map((r, i) => (
               <div
                 key={r.slug}
@@ -311,28 +314,34 @@ export default function PinnedGallery() {
                   </span>
                 </div>
 
-                {/* Card */}
+                {/* Browser frame card — XXL glass */}
                 <div className="relative z-10 h-full flex items-center justify-center px-16">
                   <div
-                    className="w-full max-w-4xl rounded-2xl overflow-hidden border border-white/10 bg-white dark:bg-[#0D1626] shadow-2xl"
-                    style={{ boxShadow: `0 32px 80px ${r.couleur}33` }}
+                    className="w-full max-w-4xl rounded-2xl overflow-hidden glass-panel liseré-border hud-4corners"
+                    style={{ boxShadow: `0 32px 80px ${r.couleur}33, 0 0 0 1px rgba(255,255,255,0.06)` }}
                   >
                     {/* Browser chrome */}
-                    <div className="flex items-center gap-1.5 px-5 py-3.5 border-b border-white/5"
-                      style={{ background: `${r.couleur}CC` }}>
+                    <div className="flex items-center gap-1.5 px-5 py-3.5 border-b border-white/[0.06]"
+                      style={{ background: `rgba(7,11,22,0.9)` }}>
                       <span className="w-3 h-3 rounded-full bg-red-400/70" aria-hidden="true" />
                       <span className="w-3 h-3 rounded-full bg-amber-400/70" aria-hidden="true" />
                       <span className="w-3 h-3 rounded-full bg-green-400/70" aria-hidden="true" />
+                      {/* URL bar — typing animation on active */}
                       <div className="ml-4 flex flex-1 items-center justify-between gap-4">
-                        <span className="text-white/60 text-xs font-mono">{new URL(r.url).hostname}</span>
-                        <span className="badge-shimmer px-2.5 py-0.5 bg-white/10 text-white/70 text-xs rounded-full">
+                        <div className="flex-1 px-3 py-1 rounded-md bg-white/[0.05] border border-white/[0.08]">
+                          {i === active
+                            ? <UrlTyper url={r.url} />
+                            : <span className="text-white/30 text-xs font-mono tracking-tight">{r.url}</span>
+                          }
+                        </div>
+                        <span className="px-2.5 py-0.5 bg-white/10 text-white/60 text-xs rounded-full data-mono">
                           Démonstration
                         </span>
                       </div>
                     </div>
 
                     {/* Screenshot */}
-                    <div className="gallery-screenshot-wrap relative overflow-hidden" style={{ height: 'clamp(280px, 38vh, 420px)' }}>
+                    <div className="relative overflow-hidden" style={{ height: 'clamp(280px, 38vh, 420px)' }}>
                       <Image
                         src={r.image}
                         alt={`Capture d'écran ${r.nom}`}
@@ -345,20 +354,20 @@ export default function PinnedGallery() {
                       {/* Bottom fade */}
                       <div
                         className="absolute inset-x-0 bottom-0 h-24 pointer-events-none"
-                        style={{ background: `linear-gradient(to top, ${r.couleur}, transparent)` }}
+                        style={{ background: `linear-gradient(to top, #070B16, transparent)` }}
                       />
                     </div>
 
                     {/* Card body */}
                     <div className="p-8 flex items-start justify-between gap-6">
                       <div className="flex-1">
-                        <h3 className="font-display font-bold text-2xl text-foreground dark:text-white mb-1">{r.nom}</h3>
-                        <p className="text-sm text-foreground/60 dark:text-white/50 mb-3">{r.type}</p>
-                        <p className="text-sm text-foreground/70 dark:text-white/60 leading-relaxed max-w-xl">{r.description}</p>
+                        <h3 className="font-display font-bold text-2xl text-white mb-1">{r.nom}</h3>
+                        <p className="text-sm text-white/50 mb-3">{r.type}</p>
+                        <p className="text-sm text-white/60 leading-relaxed max-w-xl">{r.description}</p>
                         <div className="flex flex-wrap gap-2 mt-4">
                           {r.tags.slice(0, 3).map(tag => (
-                            <span key={tag} className="px-2.5 py-0.5 rounded-full text-xs font-medium border"
-                              style={{ background: `${r.couleur}18`, color: r.accent, borderColor: `${r.accent}40` }}>
+                            <span key={tag} className="px-2.5 py-0.5 rounded-full text-xs font-medium data-mono"
+                              style={{ background: `${r.couleur}18`, color: r.accent, border: `1px solid ${r.accent}40` }}>
                               {tag}
                             </span>
                           ))}
@@ -377,7 +386,7 @@ export default function PinnedGallery() {
                         </Link>
                         <Link
                           href={`/realisations/${r.slug}`}
-                          className="text-xs text-foreground/50 dark:text-white/40 hover:text-electric transition-colors"
+                          className="text-xs text-white/40 hover:text-electric transition-colors"
                         >
                           Voir la fiche →
                         </Link>
@@ -386,9 +395,9 @@ export default function PinnedGallery() {
                   </div>
                 </div>
 
-                {/* Panel index */}
+                {/* Panel index — odometer */}
                 <div className="absolute bottom-8 left-8 z-20" aria-hidden="true">
-                  <span className="font-mono font-bold text-7xl leading-none select-none"
+                  <span className="data-mono font-bold text-7xl leading-none select-none"
                     style={{ color: r.couleur, opacity: 0.12 }}>
                     {String(i + 1).padStart(2, '0')}
                   </span>
@@ -400,7 +409,7 @@ export default function PinnedGallery() {
       </section>
 
       {/* ══ MOBILE: snap carousel ══ */}
-      <div className="lg:hidden">
+      <div className="lg:hidden bg-[#0C1222] pb-10 scanline-section">
         <div
           ref={snapRef}
           className="flex overflow-x-auto snap-x snap-mandatory scrollbar-hide"
@@ -409,13 +418,13 @@ export default function PinnedGallery() {
         >
           {PANELS.map((r, i) => (
             <div key={r.slug} className="snap-center shrink-0 w-[85vw] max-w-sm mx-2 first:ml-[7.5vw] last:mr-[7.5vw]">
-              <div className="rounded-2xl overflow-hidden border border-navy/20 dark:border-white/10 bg-white dark:bg-[#0D1626] shadow-lg">
-                <div className="flex items-center gap-1.5 px-4 py-3 border-b border-white/5"
-                  style={{ background: `${r.couleur}CC` }}>
+              <div className="rounded-2xl overflow-hidden glass-panel hud-4corners shadow-lg">
+                <div className="flex items-center gap-1.5 px-4 py-3 border-b border-white/[0.06]"
+                  style={{ background: 'rgba(7,11,22,0.9)' }}>
                   <span className="w-2.5 h-2.5 rounded-full bg-red-400/70" aria-hidden="true" />
                   <span className="w-2.5 h-2.5 rounded-full bg-amber-400/70" aria-hidden="true" />
                   <span className="w-2.5 h-2.5 rounded-full bg-green-400/70" aria-hidden="true" />
-                  <span className="ml-3 text-white/60 text-xs font-mono truncate">{new URL(r.url).hostname}</span>
+                  <span className="ml-3 text-white/55 text-xs font-mono truncate">{new URL(r.url).hostname}</span>
                 </div>
                 <div className="relative h-40">
                   <Image
@@ -425,16 +434,16 @@ export default function PinnedGallery() {
                     className="object-cover object-top"
                     loading={i < 2 ? 'eager' : 'lazy'}
                   />
-                  <span className="absolute top-2 right-2 badge-shimmer px-2 py-0.5 bg-black/30 text-white/60 text-xs rounded-full">
-                    Démonstration
+                  <span className="absolute top-2 right-2 px-2 py-0.5 bg-black/40 text-white/60 text-xs rounded-full data-mono">
+                    Démo
                   </span>
                 </div>
                 <div className="p-4">
-                  <div className="text-xs text-foreground/50 dark:text-white/40 font-mono mb-1">
+                  <div className="text-xs text-white/40 data-mono mb-1">
                     {String(i + 1).padStart(2, '0')}&thinsp;/&thinsp;{String(N).padStart(2, '0')}
                   </div>
-                  <h3 className="font-display font-bold text-foreground dark:text-white mb-0.5">{r.nom}</h3>
-                  <p className="text-xs text-foreground/60 dark:text-white/50 mb-3">{r.type}</p>
+                  <h3 className="font-display font-bold text-white mb-0.5">{r.nom}</h3>
+                  <p className="text-xs text-white/50 mb-3">{r.type}</p>
                   <Link
                     href={r.url}
                     target="_blank"
@@ -451,14 +460,14 @@ export default function PinnedGallery() {
         </div>
 
         {/* Mobile dots */}
-        <div className="flex items-center justify-center gap-2 mt-5 pb-10">
+        <div className="flex items-center justify-center gap-2 mt-5">
           {PANELS.map((_, i) => (
             <button
               key={i}
               onClick={() => snapTo(i)}
               aria-label={`Réalisation ${i + 1}`}
               className={`rounded-full transition-all duration-300 ${
-                snapActive === i ? 'w-6 h-2 bg-electric' : 'w-2 h-2 bg-navy/20 dark:bg-white/20'
+                snapActive === i ? 'w-6 h-2 bg-electric' : 'w-2 h-2 bg-white/20'
               }`}
             />
           ))}

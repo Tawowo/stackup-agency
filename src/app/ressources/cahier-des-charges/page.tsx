@@ -2,7 +2,8 @@
 import { SITE } from '@/config/site'
 import Link from 'next/link'
 import Breadcrumb from '@/components/ui/Breadcrumb'
-import { CheckCircle, Download, FileText } from 'lucide-react'
+import { CheckCircle, FileText } from 'lucide-react'
+import CahierClient from './CahierClient'
 
 export const metadata = {
   title: { absolute: 'Cahier des charges site internet — Modèle gratuit | Stackup' },
@@ -16,14 +17,6 @@ export const metadata = {
   },
 }
 
-const SECTIONS = [
-  { titre: 'Présentation de votre activité', desc: 'Secteur, positionnement, concurrents, cible client' },
-  { titre: 'Objectifs du site', desc: 'Générer des leads, vendre en ligne, informer, recruter…' },
-  { titre: 'Fonctionnalités requises', desc: 'Pages, formulaires, boutique, espace client…' },
-  { titre: 'Charte graphique', desc: 'Logo, couleurs, typographie, exemples de sites aimés' },
-  { titre: 'Contenus', desc: 'Textes fournis ou à rédiger, photos, vidéos' },
-  { titre: 'Budget et délais', desc: 'Enveloppe indicative, date de mise en ligne souhaitée' },
-]
 
 const breadcrumbSchema = {
   '@context': 'https://schema.org',
@@ -37,7 +30,7 @@ const breadcrumbSchema = {
 
 export default function CahierDesChargesPage() {
   return (
-    <div className="min-h-screen bg-background dark:bg-[#0A0F1C]">
+    <div className="min-h-screen bg-[#070B16]">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
       <div className="bg-gradient-to-b from-[#060D1A] to-[#0A0F1C] pt-24 pb-16">
@@ -48,13 +41,15 @@ export default function CahierDesChargesPage() {
         </div>
       </div>
 
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 py-16 space-y-12">
+      {/* Interactive guided form */}
+      <CahierClient />
 
+      {/* Static SEO content below */}
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 pb-16 space-y-10 border-t border-white/5 pt-10">
         <section>
-          <h2 className="text-2xl font-bold text-foreground dark:text-white mb-4">Pourquoi rédiger un cahier des charges ?</h2>
+          <h2 className="text-xl font-bold text-foreground dark:text-white mb-4">Pourquoi rédiger un cahier des charges ?</h2>
           <p className="text-foreground/70 dark:text-white/70 mb-4">
             Un cahier des charges bien rédigé évite les malentendus, accélère la phase de brief et vous permet d'obtenir des devis comparables d'une agence à l'autre.
-            C'est votre référence tout au long du projet.
           </p>
           <p className="text-foreground/70 dark:text-white/70">
             Il n'a pas besoin d'être exhaustif pour être utile. L'essentiel : définir vos objectifs, votre cible et vos contraintes de budget et délai.
@@ -62,41 +57,7 @@ export default function CahierDesChargesPage() {
         </section>
 
         <section>
-          <h2 className="text-2xl font-bold text-foreground dark:text-white mb-6">Les 6 sections essentielles</h2>
-          <div className="space-y-3">
-            {SECTIONS.map((s, i) => (
-              <div key={s.titre} className="flex items-start gap-4 p-4 rounded-xl border border-navy/15 dark:border-white/10">
-                <div className="w-8 h-8 rounded-full bg-electric/10 text-electric flex items-center justify-center font-bold text-sm flex-shrink-0">{i + 1}</div>
-                <div>
-                  <div className="font-semibold text-foreground dark:text-white text-sm">{s.titre}</div>
-                  <div className="text-xs text-foreground/50 dark:text-white/40 mt-0.5">{s.desc}</div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* CTA téléchargement — le document officiel est sur /ressources/documents */}
-        <div className="rounded-2xl border border-electric/20 bg-electric/5 p-6 flex items-center gap-5">
-          <div className="w-14 h-14 rounded-xl bg-electric/10 flex items-center justify-center flex-shrink-0">
-            <FileText size={24} className="text-electric" />
-          </div>
-          <div className="flex-1">
-            <div className="font-bold text-foreground dark:text-white mb-1">Modèle complet disponible</div>
-            <p className="text-sm text-foreground/60 dark:text-white/50">
-              Notre modèle de cahier des charges est disponible parmi nos documents officiels, avec notre contrat de prestation et nos CGV.
-            </p>
-          </div>
-          <Link
-            href="/ressources/documents"
-            className="flex-shrink-0 flex items-center gap-2 px-5 py-2.5 bg-electric hover:bg-navy text-white font-semibold rounded-xl text-sm transition-colors"
-          >
-            <Download size={14} /> Télécharger
-          </Link>
-        </div>
-
-        <section>
-          <h2 className="text-2xl font-bold text-foreground dark:text-white mb-4">Conseils pratiques</h2>
+          <h2 className="text-xl font-bold text-foreground dark:text-white mb-4">Conseils pratiques</h2>
           <ul className="space-y-3">
             {[
               'Commencez par les objectifs, pas par la liste de fonctionnalités',
@@ -113,12 +74,11 @@ export default function CahierDesChargesPage() {
           </ul>
         </section>
 
-        <div className="rounded-2xl p-6 bg-gradient-to-br from-navy to-electric text-center">
-          <h2 className="text-white font-bold text-lg mb-2">Pas encore de cahier des charges ?</h2>
-          <p className="text-white/70 text-sm mb-4">Notre devis express vous pose les bonnes questions en 5 minutes.</p>
-          <Link href="/devis" className="inline-block px-8 py-3 bg-gold hover:bg-gold/90 text-ink font-bold rounded-xl transition-all hover:-translate-y-0.5 text-sm">
-            Devis express →
-          </Link>
+        <div className="rounded-2xl border border-electric/20 bg-electric/5 p-5 flex items-center gap-4">
+          <FileText size={20} className="text-electric flex-shrink-0" />
+          <div className="flex-1 text-sm text-foreground/60 dark:text-white/50">
+            Notre modèle de cahier des charges officiel est disponible parmi nos <Link href="/ressources/documents" className="text-electric hover:underline">documents à télécharger</Link>.
+          </div>
         </div>
 
         <div className="flex flex-wrap gap-4 text-sm border-t border-navy/10 dark:border-white/10 pt-6">

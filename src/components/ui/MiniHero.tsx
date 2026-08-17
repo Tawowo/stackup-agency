@@ -10,41 +10,29 @@ interface Props {
   subtitle?: string
   breadcrumb?: BreadcrumbItem[]
   children?: React.ReactNode
+  marker?: string  // e.g. "[ 01 / SERVICES ]"
 }
 
-export default function MiniHero({ title, subtitle, breadcrumb, children }: Props) {
+export default function MiniHero({ title, subtitle, breadcrumb, children, marker }: Props) {
   return (
-    <div className="relative bg-gradient-to-b from-[#060D1A] to-[#0A0F1C] pt-24 pb-16 overflow-hidden">
-      {/* Veine dorée décorative */}
-      <svg
-        aria-hidden="true"
-        className="gold-vein absolute bottom-0 left-0 w-full"
-        style={{ height: '120px' }}
-        viewBox="0 0 1440 120"
-        preserveAspectRatio="none"
-      >
-        <path
-          d="M0,120 C240,80 480,30 720,60 C960,90 1200,30 1440,50"
-          strokeWidth="1.5"
-          style={{ opacity: 0.25 }}
-        />
-        <path
-          d="M0,120 C360,70 700,50 1000,80 C1200,100 1360,60 1440,70"
-          strokeWidth="1"
-          style={{ opacity: 0.15 }}
-        />
-      </svg>
+    <div className="relative bg-[#070B16] pt-24 pb-16 overflow-hidden scanline-section">
+      {/* Perspective grid */}
+      <div className="persp-grid absolute inset-0 opacity-60" aria-hidden="true" />
 
       {/* Halo radial */}
       <div className="pointer-events-none absolute top-0 right-1/4 w-96 h-48 rounded-full"
         aria-hidden="true"
-        style={{ background: 'radial-gradient(ellipse, rgba(45,125,210,0.06) 0%, transparent 70%)' }} />
+        style={{ background: 'radial-gradient(ellipse, rgba(45,125,210,0.07) 0%, transparent 70%)' }} />
+
+      {/* Bottom border */}
+      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-electric/20 to-transparent" aria-hidden="true" />
 
       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6">
         {breadcrumb && <Breadcrumb items={breadcrumb} />}
+        {marker && <div className="section-marker mb-2 mt-1" aria-hidden="true">{marker}</div>}
         <h1 className="reveal-item font-display text-white mt-2">{title}</h1>
         {subtitle && (
-          <p className="reveal-item text-white/70 text-lg max-w-2xl mt-3" style={{ animationDelay: '80ms' }}>{subtitle}</p>
+          <p className="reveal-item text-white/60 text-lg max-w-2xl mt-3" style={{ animationDelay: '80ms' }}>{subtitle}</p>
         )}
         {children}
       </div>

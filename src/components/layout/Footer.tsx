@@ -43,16 +43,27 @@ const VILLES_PRINCIPALES = [
 
 export default function Footer() {
   return (
-    <footer className="bg-[#060D1A] text-white relative overflow-hidden">
-      {/* Subtle top border gradient */}
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" aria-hidden="true" />
+    <footer className="bg-[#060D1A] text-white relative overflow-hidden scanline-section">
+      {/* Liseré top border */}
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-electric/30 to-transparent" aria-hidden="true" />
       {/* Background halo */}
       <div className="pointer-events-none absolute top-0 left-1/4 w-96 h-48 rounded-full"
         aria-hidden="true"
         style={{ background: 'radial-gradient(ellipse, rgba(45,125,210,0.05) 0%, transparent 70%)' }} />
+      {/* STACKUP watermark outline */}
+      <div className="pointer-events-none select-none absolute bottom-0 left-1/2 -translate-x-1/2 overflow-hidden" aria-hidden="true">
+        <span className="data-mono font-bold whitespace-nowrap"
+          style={{
+            fontSize: 'clamp(4rem, 15vw, 12rem)',
+            lineHeight: 1,
+            WebkitTextStroke: '1px rgba(255,255,255,0.04)',
+            color: 'transparent',
+            letterSpacing: '-0.04em',
+          }}>STACKUP</span>
+      </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-10 mb-12">
+        <div className="footer-stagger in-view grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-10 mb-12">
 
           {/* Col 1 — Marque */}
           <div className="lg:col-span-1">

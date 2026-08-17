@@ -56,7 +56,7 @@ function ServiceCard({ s, index }: { s: (typeof SERVICES)[number]; index: number
       href={s.href}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
-      className={`service-card card-accent card-accent-${accent} card-halo-${accent} group reveal-item block rounded-2xl border border-navy/20 dark:border-white/10 p-5 transition-all duration-300 hover:-translate-y-1 bg-white dark:bg-gray-900/40`}
+      className={`service-card card-accent card-accent-${accent} card-halo-${accent} card-3d-enter group reveal-item block rounded-2xl p-5 transition-all duration-300 hover:-translate-y-1 hud-4corners glass-panel`}
       style={{ animationDelay: `${index * 80}ms`, '--sx': '50%', '--sy': '50%' } as React.CSSProperties}
     >
       {/* Spotlight radial */}

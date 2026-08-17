@@ -32,8 +32,11 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" ref={ref} className="py-20 lg:py-28">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="contact" ref={ref} className="py-20 lg:py-28 bg-[#070B16] scanline-section relative overflow-hidden">
+      {/* persp-grid background */}
+      <div className="persp-grid absolute inset-0 opacity-50" aria-hidden="true" />
+      <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="section-marker mb-4" aria-hidden="true">[ CONTACT ]</div>
 
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-10 lg:gap-16">
 
@@ -164,14 +167,14 @@ export default function Contact() {
             </form>
           </div>
 
-          {/* ── Sidebar info ── */}
+          {/* ── Sidebar info — glass panel ── */}
           <div className="lg:col-span-2 reveal-item" style={{ animationDelay: '120ms' }}>
-            <div className="rounded-2xl p-6 border border-navy/12 dark:border-white/10 bg-white dark:bg-white/4 shadow-lift-sm sticky top-28">
-              <div className="w-10 h-10 rounded-xl bg-electric/10 flex items-center justify-center mb-5">
+            <div className="glass-panel hud-4corners rounded-2xl p-6 sticky top-28 circuit-h">
+              <div className="w-10 h-10 rounded-xl bg-electric/10 border border-electric/20 flex items-center justify-center mb-5">
                 <Mail size={20} className="text-electric" />
               </div>
-              <h3 className="font-bold text-foreground dark:text-white mb-4">Nous contacter</h3>
-              <ul className="space-y-4 text-sm text-foreground/70 dark:text-white/60">
+              <h3 className="font-bold text-white mb-4">Nous contacter</h3>
+              <ul className="space-y-4 text-sm text-white/60">
                 <li className="flex items-center gap-3">
                   <span className="text-lg">📧</span>
                   <a href="mailto:contact@stackup-agency.fr" className="text-electric hover:underline font-medium">
@@ -193,10 +196,10 @@ export default function Contact() {
               </ul>
 
               {/* Mini trust */}
-              <div className="mt-6 pt-5 border-t border-navy/8 dark:border-white/8 space-y-2">
+              <div className="mt-6 pt-5 border-t border-white/[0.06] space-y-2">
                 {['Devis 100% gratuit', 'Sans engagement', 'Code vous appartient'].map(item => (
-                  <div key={item} className="flex items-center gap-2 text-xs text-foreground/70 dark:text-white/60">
-                    <CheckCircle size={12} className="text-success flex-shrink-0" />
+                  <div key={item} className="flex items-center gap-2 text-xs text-white/60">
+                    <CheckCircle size={12} className="text-electric flex-shrink-0" />
                     {item}
                   </div>
                 ))}
