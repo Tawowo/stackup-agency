@@ -174,14 +174,13 @@ export default function AProposPage() {
           <h2 className="text-2xl font-bold text-navy mb-6">Technologies</h2>
           <div className="grid sm:grid-cols-2 gap-3">
             {[
-              { label: 'Next.js', desc: 'Performance, SEO natif, déploiement edge', icon: '⚡' },
-              { label: 'TypeScript', desc: 'Fiabilité, maintenabilité, zéro bug silencieux', icon: '🛡️' },
-              { label: 'Tailwind CSS', desc: 'Interfaces précises, cohérentes, rapides', icon: '🎨' },
-              { label: 'PostgreSQL / Prisma', desc: 'Bases de données robustes pour applications métier', icon: '🗄️' },
+              { label: 'Next.js', desc: 'Performance, SEO natif, déploiement edge' },
+              { label: 'TypeScript', desc: 'Fiabilité, maintenabilité, zéro bug silencieux' },
+              { label: 'Tailwind CSS', desc: 'Interfaces précises, cohérentes, rapides' },
+              { label: 'PostgreSQL / Prisma', desc: 'Bases de données robustes pour applications métier' },
             ].map((tech, i) => (
               <div key={tech.label} className="reveal-item p-4 rounded-xl bg-white border border-gray-100 hover:border-electric/30 hover:-translate-y-0.5 transition-all duration-200 group"
                 style={{ animationDelay: `${i * 60}ms` }}>
-                <div className="text-xl mb-2 inline-block">{tech.icon}</div>
                 <div className="font-bold text-navy text-sm mb-1 group-hover:text-electric transition-colors data-mono">{tech.label}</div>
                 <div className="text-navy/50 text-xs">{tech.desc}</div>
               </div>

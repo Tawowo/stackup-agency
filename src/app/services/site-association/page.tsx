@@ -61,8 +61,8 @@ export default function SiteAssociationPage() {
           <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white mb-4">Site Web pour Associations</h1>
           <p className="text-base sm:text-xl text-white/70">Un site professionnel pour votre association, club ou structure à but non lucratif.</p>
           <div className="mt-6 flex flex-wrap gap-4 text-sm text-white/60">
-            <span>⏱ Délai : 7 jours ouvrés</span>
-            <span>💰 À partir de 149€</span>
+            <span>Délai : 7 jours ouvrés</span>
+            <span>À partir de 149€</span>
           </div>
           <p className="mt-3 text-xs text-white/40 max-w-xl">Délais détaillés dans nos <a href="/cgv" className="underline hover:text-white/60 transition-colors">CGV</a>.</p>
 
