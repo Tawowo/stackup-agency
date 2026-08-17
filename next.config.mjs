@@ -43,6 +43,12 @@ const nextConfig = {
       destination: '/blog/seo-local-artisan-batiment-2026',
       permanent: true,
     },
+    {
+      // Phase 5 (volet B, cluster 3) : fusion de deux articles quasi-doublons sur la fidélisation restaurant
+      source: '/blog/programme-fidelite-restaurant-guide',
+      destination: '/blog/fidelisation-clients-restaurant',
+      permanent: true,
+    },
     // Phase 3: migration articles ville -> /agence-web/[ville]
     { source: '/blog/agence-web-amboise', destination: '/agence-web/amboise', permanent: true },
     { source: '/blog/agence-web-anet', destination: '/agence-web/anet', permanent: true },
