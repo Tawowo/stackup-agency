@@ -273,10 +273,10 @@ body {
 }
 
 .dark body {
-  --background: #0A0F1C;
-  --foreground: #F1F5F9;
-  background: #0A0F1C;
-  color: #F1F5F9;
+  --background: #070B16;
+  --foreground: #F4F6FB;
+  background: #070B16;
+  color: #F4F6FB;
 }
 
 /* Custom scrollbar */
@@ -2010,4 +2010,472 @@ select:focus-visible {
   .check-list > li  { opacity: 1; transform: none; transition: none; }
   .accordion-body   { transition: none; }
   .timeline-line::before { transition: none; height: 100%; }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   V3 — SYSTÈME VISUEL « FUTURISTE MAÎTRISÉ »
+   Toutes les classes visuelles de la refonte dark-first.
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ─── 1. TYPOGRAPHIE DATA MONO ──────────────────────────────── */
+/* JetBrains Mono chargé via Google Fonts dans layout.tsx */
+.data-mono {
+  font-family: var(--font-mono, 'JetBrains Mono', 'Fira Code', ui-monospace, monospace);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.02em;
+}
+.section-marker {
+  font-family: var(--font-mono, 'JetBrains Mono', ui-monospace, monospace);
+  font-size: 0.6875rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #2D7DD2;
+  opacity: 0.7;
+}
+/* Écriture lettre à lettre via CSS typing */
+@keyframes marker-type {
+  from { width: 0; }
+  to   { width: 100%; }
+}
+.section-marker-type {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 0;
+  animation: marker-type 0.5s steps(20, end) forwards;
+}
+
+/* ─── 2. PANNEAU VERRE (glass-panel) ────────────────────────── */
+.glass-panel {
+  background: rgba(12, 18, 34, 0.72);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(255,255,255,0.06);
+}
+.glass-panel-light {
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+}
+
+/* ─── 3. COINS HUD ──────────────────────────────────────────── */
+.hud-corners {
+  position: relative;
+}
+.hud-corners::before,
+.hud-corners::after {
+  content: '';
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  opacity: 0.5;
+  pointer-events: none;
+}
+.hud-corners::before {
+  top: 4px; left: 4px;
+  border-top: 1px solid #2D7DD2;
+  border-left: 1px solid #2D7DD2;
+}
+.hud-corners::after {
+  bottom: 4px; right: 4px;
+  border-bottom: 1px solid #F59E0B;
+  border-right: 1px solid #F59E0B;
+}
+/* Variante 4 coins (nécessite un élément wrappant) */
+.hud-4corners {
+  position: relative;
+}
+.hud-4corners::before,
+.hud-4corners::after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  pointer-events: none;
+  opacity: 0.4;
+}
+.hud-4corners::before { top: 4px; left: 4px; border-top: 1px solid #2D7DD2; border-left: 1px solid #2D7DD2; }
+.hud-4corners::after  { top: 4px; right: 4px; border-top: 1px solid #2D7DD2; border-right: 1px solid #2D7DD2; }
+
+/* ─── 4. LISERÉ LUMINEUX ANIMÉ ──────────────────────────────── */
+/* Un point de lumière parcourt lentement la bordure — signature réutilisable */
+@property --liseré-angle {
+  syntax: '<angle>';
+  inherits: false;
+  initial-value: 0deg;
+}
+@keyframes liseré-travel {
+  to { --liseré-angle: 360deg; }
+}
+.liseré-border {
+  position: relative;
+  border-radius: inherit;
+}
+.liseré-border::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  background: conic-gradient(
+    from var(--liseré-angle),
+    transparent 0deg,
+    rgba(45, 125, 210, 0.8) 20deg,
+    rgba(245, 158, 11, 0.9) 40deg,
+    transparent 60deg
+  );
+  animation: liseré-travel 4s linear infinite;
+  z-index: 0;
+  pointer-events: none;
+}
+.liseré-border > * { position: relative; z-index: 1; }
+
+/* Variante permanente (toujours visible, plus lente) */
+.liseré-permanent::before {
+  animation: liseré-travel 6s linear infinite;
+  background: conic-gradient(
+    from var(--liseré-angle),
+    rgba(12,18,34,0.2) 0deg,
+    rgba(45, 125, 210, 0.6) 30deg,
+    rgba(245, 158, 11, 0.7) 60deg,
+    rgba(12,18,34,0.2) 90deg
+  );
+}
+
+/* Wrapper qui masque le conic derrière une surface interne */
+.liseré-wrap {
+  position: relative;
+  border-radius: inherit;
+  padding: 1px;
+  background: conic-gradient(
+    from var(--liseré-angle),
+    transparent 0deg,
+    rgba(45, 125, 210, 0.7) 25deg,
+    rgba(245, 158, 11, 0.8) 50deg,
+    transparent 75deg
+  );
+  animation: liseré-travel 4s linear infinite;
+}
+.liseré-inner {
+  border-radius: calc(var(--border-radius, 1rem) - 1px);
+  background: #0C1222;
+  height: 100%;
+}
+
+/* ─── 5. TRAME PERSPECTIVE (grille au sol) ───────────────────── */
+.persp-grid {
+  position: absolute;
+  inset-x: 0;
+  bottom: 0;
+  height: 55%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+.persp-grid::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    repeating-linear-gradient(0deg, rgba(45,125,210,0.04) 0px, rgba(45,125,210,0.04) 1px, transparent 1px, transparent 60px),
+    repeating-linear-gradient(90deg, rgba(45,125,210,0.04) 0px, rgba(45,125,210,0.04) 1px, transparent 1px, transparent 60px);
+  transform: perspective(400px) rotateX(55deg) translateY(20%);
+  transform-origin: center bottom;
+  animation: grid-scroll 12s linear infinite;
+}
+@keyframes grid-scroll {
+  from { background-position: 0 0, 0 0; }
+  to   { background-position: 0 60px, 0 0; }
+}
+
+/* ─── 6. SCANLINE ───────────────────────────────────────────── */
+.scanline-section {
+  position: relative;
+  overflow: hidden;
+}
+.scanline-section::after {
+  content: '';
+  position: absolute;
+  inset-x: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(45,125,210,0.15), rgba(245,158,11,0.15), transparent);
+  animation: scanline-pass 6s linear infinite;
+  pointer-events: none;
+  z-index: 10;
+}
+@keyframes scanline-pass {
+  0%   { top: -1px; opacity: 0; }
+  5%   { opacity: 1; }
+  95%  { opacity: 1; }
+  100% { top: 100%; opacity: 0; }
+}
+
+/* ─── 7. LIGNE-CIRCUIT (process / timeline) ─────────────────── */
+.circuit-line {
+  position: relative;
+}
+.circuit-line::before {
+  content: '';
+  position: absolute;
+  left: 20px;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: linear-gradient(180deg, transparent, rgba(45,125,210,0.3) 20%, rgba(45,125,210,0.3) 80%, transparent);
+}
+/* Point lumineux qui parcourt la ligne */
+@keyframes circuit-pulse {
+  0%   { top: 0; opacity: 0; }
+  5%   { opacity: 1; }
+  95%  { opacity: 1; }
+  100% { top: 100%; opacity: 0; }
+}
+.circuit-line::after {
+  content: '';
+  position: absolute;
+  left: 17px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #2D7DD2;
+  box-shadow: 0 0 8px 2px rgba(45,125,210,0.6);
+  animation: circuit-pulse 3s ease-in-out infinite;
+}
+/* Variante horizontale */
+.circuit-h::before {
+  top: 50%;
+  left: 0;
+  right: 0;
+  bottom: auto;
+  height: 1px;
+  width: auto;
+  background: linear-gradient(90deg, transparent, rgba(45,125,210,0.3) 20%, rgba(45,125,210,0.3) 80%, transparent);
+}
+.circuit-h::after {
+  top: calc(50% - 3.5px);
+  left: 0;
+  width: 7px;
+  height: 7px;
+  animation: circuit-pulse-h 3s ease-in-out infinite;
+}
+@keyframes circuit-pulse-h {
+  0%   { left: 0; opacity: 0; }
+  5%   { opacity: 1; }
+  95%  { opacity: 1; }
+  100% { left: 100%; opacity: 0; }
+}
+
+/* ─── 8. BARRE DE PROGRESSION VERTICALE (desktop) ───────────── */
+.section-progress-bar {
+  position: fixed;
+  right: 1.25rem;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  z-index: 40;
+}
+.section-progress-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.2);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.section-progress-dot.active {
+  background: #2D7DD2;
+  box-shadow: 0 0 8px rgba(45,125,210,0.7);
+  transform: scale(1.4);
+}
+
+/* ─── 9. CARDS 3D ENTRÉE (services) ────────────────────────── */
+@keyframes card-3d-enter {
+  from {
+    opacity: 0;
+    transform: translateY(32px) rotateX(8deg);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) rotateX(0deg);
+  }
+}
+.card-3d-enter {
+  animation: card-3d-enter 0.7s cubic-bezier(0.16,1,0.3,1) both;
+  transform-origin: center bottom;
+}
+
+/* ─── 10. PRELOADER V3 ──────────────────────────────────────── */
+@keyframes preloader-draw-v3 {
+  from { stroke-dashoffset: 160; }
+  to   { stroke-dashoffset: 0; }
+}
+@keyframes preloader-count {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes preloader-lift-top {
+  from { transform: translateY(0); }
+  to   { transform: translateY(-100%); }
+}
+@keyframes preloader-lift-bottom {
+  from { transform: translateY(0); }
+  to   { transform: translateY(100%); }
+}
+.preloader-panel-top { animation: preloader-lift-top 0.4s cubic-bezier(0.76,0,0.24,1) 0.9s both; }
+.preloader-panel-bottom { animation: preloader-lift-bottom 0.4s cubic-bezier(0.76,0,0.24,1) 1.0s both; }
+
+/* ─── 11. HALO PULSANT (CTA final) ─────────────────────────── */
+@keyframes halo-breathe {
+  0%, 100% { opacity: 0.06; transform: scale(1); }
+  50%       { opacity: 0.12; transform: scale(1.05); }
+}
+.halo-breathe {
+  animation: halo-breathe 5s ease-in-out infinite;
+  pointer-events: none;
+}
+
+/* ─── 12. TITRE OUTLINE (watermark) ────────────────────────── */
+.text-outline {
+  -webkit-text-stroke: 1px currentColor;
+  color: transparent;
+}
+
+/* ─── 13. MARQUEE DOUBLE SENS ───────────────────────────────── */
+@keyframes marquee-fwd  { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+@keyframes marquee-rev  { from { transform: translateX(-50%); } to { transform: translateX(0); } }
+.marquee-track { animation: marquee-fwd 24s linear infinite; }
+.marquee-track-rev { animation: marquee-rev 28s linear infinite; }
+.marquee-wrap:hover .marquee-track,
+.marquee-wrap:hover .marquee-track-rev { animation-play-state: paused; }
+
+/* ─── 14. BOUTON MAGNÉTIQUE CSS ─────────────────────────────── */
+.btn-magnetic {
+  transition: transform 0.3s cubic-bezier(0.16,1,0.3,1), box-shadow 0.3s ease;
+}
+.btn-magnetic:hover {
+  transform: scale(1.04);
+  box-shadow: 0 0 32px rgba(45,125,210,0.35), 0 0 64px rgba(45,125,210,0.15);
+}
+
+/* ─── 15. ODOMÈTRE MONO (animation chiffres, sans librairie) ── */
+@keyframes odometer-slide {
+  from { transform: translateY(100%); opacity: 0; }
+  to   { transform: translateY(0);    opacity: 1; }
+}
+.odometer-digit {
+  display: inline-block;
+  animation: odometer-slide 0.4s cubic-bezier(0.16,1,0.3,1) both;
+}
+
+/* ─── 16. LUEUR PULSANTE BOUTON CTA ─────────────────────────── */
+@keyframes cta-glow {
+  0%, 100% { box-shadow: 0 0 0px rgba(45,125,210,0); }
+  50%       { box-shadow: 0 0 24px 4px rgba(45,125,210,0.45); }
+}
+.cta-glow { animation: cta-glow 4s ease-in-out infinite; }
+
+/* ─── 17. BROWSER FRAME (carrousel réalisations) ────────────── */
+.browser-frame {
+  background: #111A30;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 32px 80px rgba(0,0,0,0.5);
+}
+.browser-bar {
+  background: #0C1222;
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+.browser-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+.browser-url {
+  flex: 1;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 6px;
+  padding: 4px 10px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: rgba(255,255,255,0.5);
+}
+
+/* ─── 18. VOLET DE TRANSITION ──────────────────────────────── */
+@keyframes volet-in {
+  from { clip-path: inset(0 100% 0 0); }
+  to   { clip-path: inset(0 0% 0 0); }
+}
+@keyframes volet-out {
+  from { clip-path: inset(0 0% 0 0); }
+  to   { clip-path: inset(0 0 0 100%); }
+}
+.volet-in  { animation: volet-in  0.5s cubic-bezier(0.76,0,0.24,1) both; }
+.volet-out { animation: volet-out 0.5s cubic-bezier(0.76,0,0.24,1) both; }
+
+/* ─── 19. LABEL MONO Q (FAQ) ─────────────────────────────────── */
+.faq-q-mono::before {
+  content: '[ Q ]';
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  color: #F59E0B;
+  margin-right: 8px;
+  opacity: 0.8;
+}
+
+/* ─── 20. LETTRINE ARTICLE BLOG ──────────────────────────────── */
+.article-dropcap > p:first-of-type::first-letter {
+  float: left;
+  font-size: 4rem;
+  line-height: 0.8;
+  margin: 0.05em 0.1em 0 0;
+  font-weight: 700;
+  color: #2D7DD2;
+  font-family: var(--font-space, 'Space Grotesk', sans-serif);
+}
+
+/* ─── 21. FORME DE FOND PARTICULES (CTA final) ───────────────── */
+@keyframes star-twinkle {
+  0%, 100% { opacity: 0.2; }
+  50%       { opacity: 0.8; }
+}
+.star-field {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+  background: white;
+  animation: star-twinkle var(--dur, 3s) ease-in-out infinite;
+  animation-delay: var(--delay, 0s);
+}
+
+/* ─── reduced-motion : désactive toutes les animations V3 ─────── */
+@media (prefers-reduced-motion: reduce) {
+  .section-marker-type { animation: none; width: auto; }
+  .liseré-border::before, .liseré-wrap, .liseré-permanent::before { animation: none; background: rgba(45,125,210,0.12); }
+  .persp-grid::before { animation: none; }
+  .scanline-section::after { animation: none; display: none; }
+  .circuit-line::after, .circuit-h::after { animation: none; }
+  .card-3d-enter { animation: none; opacity: 1; transform: none; }
+  .preloader-panel-top, .preloader-panel-bottom { animation: none; }
+  .halo-breathe { animation: none; }
+  .marquee-track, .marquee-track-rev { animation: none; }
+  .cta-glow { animation: none; }
+  .volet-in, .volet-out { animation: none; clip-path: none; }
 }

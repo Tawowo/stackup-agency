@@ -199,10 +199,27 @@ export default function HeroSection() {
     <section
       ref={sectionRef}
       className="relative min-h-screen flex items-center overflow-hidden"
-      style={{ background: 'linear-gradient(135deg,#1E3A5F,#0B1A2E)' }}
+      style={{ background: '#070B16' }}
     >
-      {/* ── [PIÈCE 1] Image hero avec parallax ───────────────────── */}
+      {/* ── [PIÈCE 1] Fond vidéo + image parallax ─────────────────── */}
       <div ref={imgRef} className="absolute inset-0 will-change-transform" aria-hidden="true">
+        {/* Video hero — brancher hero-accueil.mp4 quand disponible */}
+        {/* Le poster (LCP) est toujours servi, la vidéo prend le relais après first paint */}
+        <video
+          className="absolute inset-0 w-full h-full object-cover object-[68%_center]"
+          autoPlay
+          muted
+          loop
+          playsInline
+          disablePictureInPicture
+          preload="none"
+          poster="/images/hero-monument-s.webp"
+          aria-hidden="true"
+          // brancher src="/hero-accueil.mp4" quand le fichier est disponible
+        >
+          {/* <source src="/hero-accueil.mp4" type="video/mp4" /> */}
+        </video>
+        {/* Fallback image si la vidéo n'est pas encore disponible */}
         <Image
           src="/images/hero-monument-s.webp"
           alt=""
@@ -216,6 +233,9 @@ export default function HeroSection() {
           quality={60}
         />
       </div>
+
+      {/* ── [PIÈCE 2b] Trame perspective au sol ──────────────────── */}
+      <div className="persp-grid z-[2]" aria-hidden="true" />
 
       {/* ── [PIÈCE 2] Cinematic dark overlay — s'efface à l'ouverture ── */}
       <div
@@ -251,9 +271,21 @@ export default function HeroSection() {
 
           {/* Left — séquence orchestrée */}
           <div>
+            {/* Section marker mono [ 01 / HERO ] */}
+            <div
+              className="section-marker mb-4"
+              style={{
+                opacity: entrance.badge ? 1 : 0,
+                transition: 'opacity 0.4s ease',
+              }}
+              aria-hidden="true"
+            >
+              <span className="section-marker-type">[ 01 / ACCUEIL ]</span>
+            </div>
+
             {/* [PIÈCE 3a] Badge — float in t=150ms */}
             <div
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/6 border border-white/12 text-white/80 text-sm mb-8 shadow-lift-sm badge-float"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-panel text-white/80 text-sm mb-8 badge-float"
               style={{
                 opacity: entrance.badge ? 1 : 0,
                 transform: entrance.badge ? 'translateY(0)' : 'translateY(20px)',
@@ -261,7 +293,7 @@ export default function HeroSection() {
               }}
             >
               <span className="w-2 h-2 rounded-full bg-amber-400 badge-dot-pulse" aria-hidden="true" />
-              Agence web — Tours, France
+              <span className="data-mono text-xs tracking-widest">AGENCE WEB — TOURS</span>
             </div>
 
             {/* [PIÈCE 3b] Titre — word-by-word stagger t=350ms */}
@@ -342,7 +374,7 @@ export default function HeroSection() {
               transition: 'opacity 0.8s ease 0ms, transform 0.8s cubic-bezier(0.16,1,0.3,1) 0ms',
             }}
           >
-            <div className="w-80 rounded-2xl overflow-hidden border border-white/12 shadow-lift-lg" style={{ background: '#0D1626' }}>
+            <div className="liseré-border w-80 rounded-2xl overflow-hidden shadow-lift-lg hud-corners" style={{ background: '#0D1626' }}>
 
               {/* Editor chrome */}
               <div style={{ background: '#111827' }} className="border-b border-white/5">
@@ -480,7 +512,7 @@ export default function HeroSection() {
           ].map((s, i) => (
             <div
               key={s.label}
-              className="text-center p-4 rounded-xl bg-white/5 border border-white/10 reveal-item shadow-lift-sm hover:bg-white/8 transition-colors"
+              className="text-center p-4 rounded-xl glass-panel hud-4corners reveal-item hover:bg-white/8 transition-colors"
               style={{ transitionDelay: `${i * 80}ms` }}
             >
               <div className="text-xl font-bold text-white mb-0.5 price-ticker">

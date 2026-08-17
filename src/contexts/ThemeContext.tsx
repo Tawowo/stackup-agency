@@ -9,11 +9,13 @@ interface ThemeContextType {
 const ThemeContext = createContext<ThemeContextType>({ dark: false, toggleDark: () => {} })
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
-  const [dark, setDark] = useState(false)
+  const [dark, setDark] = useState(true) // V3 dark-first
 
   useEffect(() => {
     const saved = localStorage.getItem('theme')
-    if (saved === 'dark') setDark(true)
+    // Only switch to light if explicitly saved; default stays dark
+    if (saved === 'light') setDark(false)
+    else setDark(true)
   }, [])
 
   useEffect(() => {

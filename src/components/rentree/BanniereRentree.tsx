@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { X } from 'lucide-react'
 import { useBanniere } from '@/contexts/BanniereContext'
 import { isRentreeActive, getRemainingTime } from '@/config/rentree'
-import CountdownRentree from './CountdownRentree'
+import CountdownInline from './CountdownInline'
 
 const LS_KEY = 'banner-rentree-dismissed'
 const THIRTY_DAYS = 30 * 24 * 60 * 60 * 1000
@@ -53,7 +53,7 @@ export default function BanniereRentree() {
       >
         <span className="truncate text-center">🎒 Maquette offerte jusqu&apos;au 13/09 →</span>
         <span className="hidden xl:inline shrink-0 opacity-80">
-          · <CountdownRentree initialTime={initialTime.current} />
+          · <CountdownInline initialTime={initialTime.current} />
         </span>
       </Link>
 
