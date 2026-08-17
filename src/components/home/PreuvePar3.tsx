@@ -9,6 +9,7 @@
 import { useState, useEffect, useRef } from 'react'
 import { CheckCircle, Code2, Globe } from 'lucide-react'
 import { SITE } from '@/config/site'
+import SectionDepth from '@/components/ui/SectionDepth'
 
 // ─── Panel 1 : Comparateur de prix ───────────────────────────────────────────
 function PriceComparator({ isVisible }: { isVisible: boolean }) {
@@ -191,7 +192,7 @@ function Timeline({ isVisible }: { isVisible: boolean }) {
                 style={{ width: i < filled ? '100%' : '0%' }}
               />
             </div>
-            <span className={`text-xs transition-all duration-300 flex-shrink-0 w-44 ${i < filled ? 'text-navy/70' : 'text-navy/25'}`}>{d.desc}</span>
+            <span className={`text-xs transition-all duration-300 flex-shrink-0 w-44 ${i < filled ? 'text-navy/70' : 'text-navy/45'}`}>{d.desc}</span>
           </div>
         ))}
       </div>
@@ -239,8 +240,7 @@ export default function PreuvePar3() {
   return (
     <section ref={ref} className="py-24 bg-white relative overflow-hidden">
       <span className="section-number select-none" aria-hidden="true">02</span>
-      <div className="pointer-events-none absolute top-0 right-0 w-[500px] h-96 rounded-full" aria-hidden="true"
-        style={{ background: 'radial-gradient(ellipse at 80% 0%, rgba(45,125,210,0.07) 0%, transparent 70%)' }} />
+      <SectionDepth variant="cool" />
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 relative">
         <div className="section-marker mb-2 reveal-item" aria-hidden="true">[ 02 / PREUVE ]</div>

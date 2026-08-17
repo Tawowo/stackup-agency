@@ -147,9 +147,9 @@ export default function Showroom() {
 
       {/* Halo arrière-plan qui suit le projet actif */}
       <div className="pointer-events-none absolute inset-0 transition-all duration-700" aria-hidden="true"
-        style={{ background: `radial-gradient(ellipse at 50% 40%, ${p.accent}18 0%, transparent 60%)` }} />
+        style={{ background: `radial-gradient(ellipse at 50% 40%, ${p.accent}35 0%, transparent 60%)` }} />
       <div className="pointer-events-none absolute inset-0" aria-hidden="true"
-        style={{ backgroundImage: 'linear-gradient(rgba(30,58,95,0.015) 1px, transparent 1px), linear-gradient(90deg, rgba(30,58,95,0.015) 1px, transparent 1px)', backgroundSize: '48px 48px' }} />
+        style={{ backgroundImage: 'linear-gradient(rgba(30,58,95,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(30,58,95,0.04) 1px, transparent 1px)', backgroundSize: '44px 44px' }} />
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 relative">
         <div className="section-marker mb-2 reveal-item" aria-hidden="true">[ 03 / SHOWROOM ]</div>

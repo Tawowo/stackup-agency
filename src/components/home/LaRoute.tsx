@@ -1,9 +1,9 @@
 'use client'
 /**
- * LA ROUTE V4.2 — Scrub parfait
- * - Trait SVG : scrub direct, strokeDashoffset = f(scrollY), ZERO transition CSS
- * - Étapes : IntersectionObserver avec rootMargin "-50% 0px -50% 0px"
- *   → chaque card s'active quand son CENTRE franchit le CENTRE du viewport
+ * LA ROUTE V4.3 — Scrub SVG direct + bulles toujours visibles
+ * - SVG path : strokeDashoffset = f(scrollY) DIRECT, zéro transition CSS
+ * - Cards : IntersectionObserver "sticky" (once visible = always visible)
+ *   + fallback scroll % pour les items déjà dépassés
  */
 import { useRef, useState, useEffect } from 'react'
 import Link from 'next/link'
@@ -74,16 +74,15 @@ const pathD =
 export default function LaRoute() {
   const sectionRef = useRef<HTMLDivElement>(null)
   const pathRef = useRef<SVGPathElement>(null)
-  const pathLenRef = useRef(0)
+  // "sticky" — une fois visible, reste à true
   const [visible, setVisible] = useState<boolean[]>(Array(STEPS.length).fill(false))
   const cardRefs = useRef<(HTMLDivElement | null)[]>([])
 
-  /* ── Path scrub : ScrollY direct, 0 transition ── */
+  /* ── SVG scrub direct ── */
   useEffect(() => {
     const path = pathRef.current
     if (!path) return
     const len = path.getTotalLength()
-    pathLenRef.current = len
     path.style.strokeDasharray = String(len)
     path.style.strokeDashoffset = String(len)
 
@@ -92,8 +91,6 @@ export default function LaRoute() {
       if (!section) return
       const rect = section.getBoundingClientRect()
       const wh = window.innerHeight
-      // Scrub: commence quand le haut entre dans le bas de la fenêtre,
-      // termine quand le bas sort par le haut de la fenêtre.
       const scrollable = rect.height + wh
       const scrolled = wh - rect.top
       const progress = Math.max(0, Math.min(1, scrolled / scrollable))
@@ -105,23 +102,27 @@ export default function LaRoute() {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
-  /* ── Cards : IntersectionObserver, centre → centre ── */
+  /* ── IntersectionObserver sticky — never goes back to false ── */
   useEffect(() => {
     const obs = new IntersectionObserver(
       (entries) => {
         setVisible((prev) => {
           const next = [...prev]
+          let changed = false
           entries.forEach((e) => {
-            const idx = Number((e.target as HTMLElement).dataset.stepIdx)
-            if (!isNaN(idx)) next[idx] = e.isIntersecting
+            if (e.isIntersecting) {
+              const idx = Number((e.target as HTMLElement).dataset.stepIdx)
+              if (!isNaN(idx) && !next[idx]) {
+                next[idx] = true
+                changed = true
+              }
+            }
           })
-          return next
+          return changed ? next : prev
         })
       },
-      {
-        // Déclenche quand la carte croise la ligne médiane du viewport
-        rootMargin: '-50% 0px -50% 0px',
-      }
+      // Déclenche quand la carte arrive dans les 70% inférieurs du viewport
+      { rootMargin: '0px 0px -20% 0px' }
     )
     cardRefs.current.forEach((el) => el && obs.observe(el))
     return () => obs.disconnect()
@@ -130,7 +131,6 @@ export default function LaRoute() {
   return (
     <section ref={sectionRef} className="py-24 bg-white relative overflow-hidden">
       <span className="section-number select-none" aria-hidden="true">04</span>
-
       <SectionDepth variant="warm" />
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 relative">
@@ -146,7 +146,6 @@ export default function LaRoute() {
         {/* ── Desktop : snake 2 colonnes ── */}
         <div className="hidden lg:block">
           <div className="relative">
-            {/* SVG path serpentine */}
             <div className="absolute left-1/2 -translate-x-1/2 top-8 bottom-8 w-[400px] pointer-events-none" aria-hidden="true">
               <svg viewBox="0 0 400 620" className="w-full h-full" fill="none">
                 <path d={pathD} stroke="#E5E7EB" strokeWidth="3" fill="none" strokeLinecap="round" />
@@ -157,7 +156,6 @@ export default function LaRoute() {
                   strokeWidth="3"
                   fill="none"
                   strokeLinecap="round"
-                  /* PAS de transition CSS — scrub direct via JS */
                 />
                 <defs>
                   <linearGradient id="routeGrad" x1="0" y1="0" x2="0" y2="620" gradientUnits="userSpaceOnUse">
@@ -180,18 +178,18 @@ export default function LaRoute() {
                     className={`flex items-center ${step.side === 'right' ? 'justify-end' : 'justify-start'}`}
                   >
                     <div className="w-5/12">
-                      <div className={`flex items-start gap-4 transition-all duration-500 ${step.side === 'right' ? 'flex-row-reverse text-right' : ''} ${on ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
-                        {/* Icône */}
+                      <div className={`flex items-start gap-4 transition-all duration-600 ${step.side === 'right' ? 'flex-row-reverse text-right' : ''} ${on ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+                        {/* Bulle emoji */}
                         <div
                           className="flex-shrink-0 w-14 h-14 rounded-2xl flex items-center justify-center text-2xl shadow-md transition-all duration-500"
                           style={{
                             background: on ? step.color : '#F3F4F6',
-                            transform: on ? 'scale(1)' : 'scale(0.8)',
+                            transform: on ? 'scale(1)' : 'scale(0.75)',
                           }}
                         >
                           {step.emoji}
                         </div>
-                        {/* Carte */}
+                        {/* Carte texte */}
                         <div className={`flex-1 p-4 rounded-xl border transition-all duration-500 ${step.bg} ${step.border} ${on ? 'shadow-sm' : ''}`}>
                           <div className="text-[10px] font-bold uppercase tracking-widest mb-0.5" style={{ color: step.color }}>
                             Étape {step.id} — {step.label}
@@ -215,7 +213,7 @@ export default function LaRoute() {
             return (
               <div
                 key={step.id}
-                ref={(el) => { cardRefs.current[i] = el }}
+                ref={(el) => { if (!cardRefs.current[i]) cardRefs.current[i] = el }}
                 data-step-idx={i}
                 className={`flex items-start gap-4 transition-all duration-500 ${on ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-4'}`}
               >
@@ -227,7 +225,7 @@ export default function LaRoute() {
                     {step.emoji}
                   </div>
                   {i < STEPS.length - 1 && (
-                    <div className="w-0.5 h-6 mt-1" style={{ background: visible[i + 1] ? step.color : '#E5E7EB', transition: 'background 0.3s' }} />
+                    <div className="w-0.5 h-6 mt-1 transition-colors duration-500" style={{ background: visible[i + 1] ? step.color : '#E5E7EB' }} />
                   )}
                 </div>
                 <div className={`flex-1 p-4 rounded-xl border mb-2 ${step.bg} ${step.border}`}>

@@ -7,6 +7,7 @@ import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { ArrowRight, CheckCircle } from 'lucide-react'
 import { SERVICES } from '@/config/site'
+import SectionDepth from '@/components/ui/SectionDepth'
 
 // ─── Utilitaire d'animation par step ─────────────────────────────────────────
 function useLoopSteps(total: number, interval = 480) {
@@ -546,11 +547,7 @@ export default function Atelier() {
 
   return (
     <section id="services" className="py-20 bg-[#FFFDF9] relative overflow-hidden">
-      {/* Halos */}
-      <div className="pointer-events-none absolute top-0 right-0 w-[600px] h-[500px]" aria-hidden="true"
-        style={{ background: 'radial-gradient(ellipse, rgba(245,158,11,0.07) 0%, transparent 65%)' }} />
-      <div className="pointer-events-none absolute bottom-0 left-0 w-[400px] h-[400px]" aria-hidden="true"
-        style={{ background: 'radial-gradient(ellipse, rgba(45,125,210,0.05) 0%, transparent 65%)' }} />
+      <SectionDepth variant="warm" />
       <span className="section-number select-none" aria-hidden="true">01</span>
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 relative">
@@ -588,7 +585,7 @@ export default function Atelier() {
                   </div>
                   <div className="flex-1 min-w-0">
                     <div className={`font-bold text-sm transition-colors ${i === active ? 'text-navy' : 'text-navy/60'}`}>{s.titre}</div>
-                    <div className="text-xs text-navy/35 truncate">{s.prix ? `${s.prix} ${s.unite}` : 'Sur devis'}</div>
+                    <div className="text-xs text-navy/55 truncate">{s.prix ? `${s.prix} ${s.unite}` : 'Sur devis'}</div>
                   </div>
                   {i === active && (
                     <div className="w-1.5 h-8 rounded-full flex-shrink-0" style={{ background: accent }} />

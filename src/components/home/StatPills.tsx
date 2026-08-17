@@ -4,9 +4,10 @@
  * Bounce animation CSS + IntersectionObserver count-up
  */
 import { useRef, useState, useEffect } from 'react'
+import SectionDepth from '@/components/ui/SectionDepth'
 
 const STATS = [
-  { value: 10, suffix: 'j', label: 'Délai de livraison', emoji: '⚡', color: 'bg-gold/10 border-gold/25 text-gold' },
+  { value: 10, suffix: 'j', label: 'Délai de livraison', emoji: '⚡', color: 'bg-amber-50 border-amber-200 text-amber-700' },
   { value: 80, suffix: '%', label: 'Moins cher qu\'une agence', emoji: '💸', color: 'bg-emerald-50 border-emerald-200 text-emerald-600' },
   { value: 100, suffix: '%', label: 'Code sur mesure', emoji: '🎯', color: 'bg-blue-50 border-blue-200 text-electric' },
   { value: 72, suffix: 'h', label: 'Devis gratuit', emoji: '📋', color: 'bg-purple-50 border-purple-200 text-purple-600' },
@@ -66,9 +67,7 @@ export default function StatPills() {
 
   return (
     <section ref={ref} className="py-16 bg-[#FFFDF9] relative overflow-hidden">
-      <div className="pointer-events-none absolute inset-0 flex items-center justify-center" aria-hidden="true">
-        <div className="w-[600px] h-48 rounded-full" style={{ background: 'radial-gradient(ellipse, rgba(245,158,11,0.06) 0%, transparent 70%)' }} />
-      </div>
+      <SectionDepth variant="gold" />
       <div className="max-w-5xl mx-auto px-4 sm:px-6 relative">
         <div className="flex flex-wrap justify-center gap-4">
           {STATS.map((s, i) => (

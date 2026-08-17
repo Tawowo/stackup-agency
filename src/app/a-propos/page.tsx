@@ -131,7 +131,7 @@ export default function AProposPage() {
                 <div key={t.year} className="reveal-item flex items-start gap-6" style={{ animationDelay: `${i * 80}ms` }}>
                   {/* Année */}
                   <div className="flex-shrink-0 w-[60px] text-right hidden sm:block">
-                    <span className="text-xs font-black text-navy/30 data-mono">{t.year}</span>
+                    <span className="text-xs font-black text-navy/50 data-mono">{t.year}</span>
                   </div>
                   {/* Dot */}
                   <div className="hidden sm:flex flex-shrink-0 w-4 h-4 rounded-full border-2 border-gold bg-white mt-0.5 relative z-10" />
@@ -198,7 +198,7 @@ export default function AProposPage() {
           </Link>
         </div>
 
-        <p className="text-center text-navy/35 text-sm mt-10">{SITE.signature}</p>
+        <p className="text-center text-navy/55 text-sm mt-10">{SITE.signature}</p>
       </div>
     </div>
   )
