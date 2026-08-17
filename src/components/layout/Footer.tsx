@@ -144,7 +144,7 @@ export default function Footer() {
                 </li>
               ))}
               <li>
-                <Link href="/agence-web" className="text-electric hover:text-electric/80 text-sm transition-colors block py-0.5 font-medium">Toutes les villes →</Link>
+                <Link href="/zones-intervention" className="text-electric hover:text-electric/80 text-sm transition-colors block py-0.5 font-medium">Toutes nos zones d\u2019intervention →</Link>
               </li>
             </ul>
           </div>

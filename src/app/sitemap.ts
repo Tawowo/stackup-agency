@@ -5,6 +5,7 @@ import matter from 'gray-matter'
 import { VILLES } from '@/data/villes'
 import { METIERS } from '@/data/metiers'
 import { SOLUTIONS } from '@/data/solutions'
+import { DEPARTEMENTS } from '@/data/departements'
 
 const base = 'https://stackup-agency.fr'
 
@@ -163,6 +164,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     // Cocons sémantiques — hubs
     { url: `${base}/agence-web`, lastModified: now, changeFrequency: 'weekly', priority: 0.9 },
+    { url: `${base}/zones-intervention`, lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
+
+    // Hubs départementaux
+    ...DEPARTEMENTS.map(d => ({
+      url: `${base}/agence-web/departement/${d.slug}`,
+      lastModified: now,
+      changeFrequency: 'monthly' as const,
+      priority: 0.8,
+    })),
     { url: `${base}/creation-site-internet`, lastModified: now, changeFrequency: 'weekly', priority: 0.9 },
     { url: `${base}/solutions`, lastModified: now, changeFrequency: 'weekly', priority: 0.8 },
     { url: `${base}/a-propos`, lastModified: now, changeFrequency: 'monthly', priority: 0.6 },

@@ -32,3 +32,9 @@ restaurants et artisans.
 ## Contact
 Email : contact@stackup-agency.fr
 Site : https://stackup-agency.fr
+
+## Pages clés supplémentaires
+- https://stackup-agency.fr/zones-intervention — plus de 1 000 communes couvertes (annuaire région → département → communes)
+- https://stackup-agency.fr/agence-web/departement/indre-et-loire — hub Indre-et-Loire (37), département d'origine
+- https://stackup-agency.fr/solutions/galerie-client-photographe — l'alternative à Pixieset : payez une fois, possédez votre outil de galeries clients
+- https://stackup-agency.fr/parrainage — parrainage : 1 mois Premium (89 €) offert ou −10 % sur votre prestation
