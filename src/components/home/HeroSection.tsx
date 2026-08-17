@@ -265,11 +265,14 @@ export default function HeroSection() {
           <div>
             {/* [PIÈCE 3a] Badge — float in t=150ms */}
             <div
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-panel text-white/80 text-sm mb-8 badge-float"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-white text-sm mb-8 badge-float"
               style={{
                 opacity: entrance.badge ? 1 : 0,
                 transform: entrance.badge ? 'translateY(0)' : 'translateY(20px)',
                 transition: 'opacity 0.6s ease, transform 0.6s cubic-bezier(0.16,1,0.3,1)',
+                background: 'rgba(6,13,26,0.55)',
+                border: '1px solid rgba(255,255,255,0.18)',
+                backdropFilter: 'blur(8px)',
               }}
             >
               <span className="w-2 h-2 rounded-full bg-amber-400 badge-dot-pulse" aria-hidden="true" />

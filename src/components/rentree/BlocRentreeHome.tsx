@@ -12,7 +12,7 @@ export default function BlocRentreeHome() {
     <section className="relative overflow-hidden bg-gradient-to-r from-navy via-[#1a3a6e] to-navy border-y border-gold/20 py-10">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
         <div className="inline-flex items-center gap-2 px-3 py-1 bg-gold/20 text-gold rounded-full text-xs font-semibold mb-4 uppercase tracking-wider">
-          🎒 Offre rentrée — jusqu'au 15 septembre 2026
+          Offre rentrée — jusqu'au 15 septembre 2026
         </div>
         <h2 className="text-2xl sm:text-3xl font-bold text-white mb-2">
           Votre maquette de site <span className="text-gold">offerte</span>

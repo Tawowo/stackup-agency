@@ -51,7 +51,7 @@ export default function BanniereRentree() {
         className="flex-1 flex items-center justify-center gap-1.5 h-full hover:underline underline-offset-2 min-w-0 px-2"
         aria-label="Offre rentrée — maquette offerte jusqu&apos;au 13 septembre. En savoir plus."
       >
-        <span className="truncate text-center">🎒 Maquette offerte jusqu&apos;au 13/09 →</span>
+        <span className="truncate text-center">Maquette offerte jusqu&apos;au 13/09 →</span>
         <span className="hidden xl:inline shrink-0 opacity-80">
           · <CountdownInline />
         </span>

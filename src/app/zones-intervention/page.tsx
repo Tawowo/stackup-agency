@@ -109,7 +109,7 @@ export default function ZonesInterventionPage() {
                         ))}
                       </div>
                     )}
-                    <p className="text-navy/55 text-sm leading-relaxed columns-2 sm:columns-3 gap-6">
+                    <p className="text-navy/70 text-sm leading-relaxed columns-2 sm:columns-3 gap-6">
                       {d.communes.join(' · ')}
                     </p>
                   </div>
@@ -126,7 +126,7 @@ export default function ZonesInterventionPage() {
             Au-delà de notre région d’origine, nous accompagnons des entreprises dans toutes les grandes villes françaises.
             La distance ne change ni le prix, ni le délai, ni la qualité du suivi.
           </p>
-          <p className="text-navy/60 text-sm leading-relaxed">
+          <p className="text-navy/70 text-sm leading-relaxed">
             {GRANDES_VILLES_FRANCE.join(' · ')}
           </p>
         </section>

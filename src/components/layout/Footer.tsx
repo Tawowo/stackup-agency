@@ -118,12 +118,12 @@ export default function Footer() {
             <ul className="space-y-2.5">
               {[
                 { href: '/solutions', label: 'Toutes les solutions' },
-                { href: '/solutions/logiciel-gestion-stocks', label: 'Gestion des stocks' },
-                { href: '/solutions/systeme-reservation', label: 'Réservation en ligne' },
+                { href: '/solutions/gestion-stocks', label: 'Gestion des stocks' },
+                { href: '/solutions/prise-rendez-vous-en-ligne', label: 'Réservation en ligne' },
                 { href: '/solutions/caisse-enregistreuse', label: 'Caisse enregistreuse' },
                 { href: '/creation-site-internet', label: 'Par métier' },
                 { href: '/creation-site-internet/restaurant', label: 'Site restaurant' },
-                { href: '/creation-site-internet/artisan', label: 'Site artisan' },
+                { href: '/creation-site-internet/plombier', label: 'Site artisan' },
               ].map(l => (
                 <li key={l.href}>
                   <Link href={l.href} className="text-white/45 hover:text-white text-sm transition-colors duration-150 block py-0.5 hover:translate-x-0.5 transform">{l.label}</Link>

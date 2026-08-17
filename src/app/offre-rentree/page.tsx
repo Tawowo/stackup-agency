@@ -99,7 +99,7 @@ export default function OffreRentreePage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <Breadcrumb items={[{ name: 'Offre rentrée' }]} />
           <div className="inline-flex items-center gap-2 px-3 py-1 bg-gold/20 text-gold rounded-full text-xs font-semibold mb-4 uppercase tracking-wider">
-            🎒 Offre de rentrée — jusqu'au 15 septembre 2026
+            Offre de rentrée — jusqu'au 15 septembre 2026
           </div>
           <h1 className="text-3xl lg:text-5xl font-bold text-white leading-tight mb-4">
             Votre maquette de site <span className="text-gold">offerte</span>

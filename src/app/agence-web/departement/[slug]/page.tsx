@@ -115,7 +115,7 @@ export default function DepartementPage({ params }: { params: { slug: string } }
           <p className="text-navy/55 text-sm mb-5">
             Nous créons des sites internet pour les entreprises de toutes les communes du département, notamment :
           </p>
-          <p className="text-navy/60 text-sm leading-relaxed columns-2 sm:columns-3 gap-6">
+          <p className="text-navy/70 text-sm leading-relaxed columns-2 sm:columns-3 gap-6">
             {d.communes.join(' · ')}
           </p>
           <p className="text-navy/45 text-xs mt-4">

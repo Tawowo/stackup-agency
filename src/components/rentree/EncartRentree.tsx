@@ -8,7 +8,6 @@ export default function EncartRentree() {
 
   return (
     <div className="rounded-xl border border-gold/30 bg-gold/5 p-4 flex items-center gap-4 my-6">
-      <div className="text-2xl">🎒</div>
       <div className="flex-1 min-w-0">
         <div className="font-semibold text-foreground dark:text-white text-sm mb-0.5">
           Offre rentrée — maquette offerte
