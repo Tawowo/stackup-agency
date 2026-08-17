@@ -3,14 +3,18 @@
 @tailwind utilities;
 
 :root {
-  --background: #F8FAFC;
-  --foreground: #0F172A;
+  /* V4 — Thème unique CLAIR, lumineux et vivant */
+  --background: #FFFDF9;        /* blanc ivoire chaud */
+  --foreground: #1E293B;        /* navy/ink */
   --navy: #1E3A5F;
   --electric: #2D7DD2;
   --electric-ink: #1B5A9E;
   --gold: #F59E0B;
   --ink: #1E293B;
   --muted: #94A3B8;
+  /* Halos de fond */
+  --halo-gold: rgba(245, 158, 11, 0.08);
+  --halo-blue: rgba(45, 125, 210, 0.06);
 }
 
 html {
@@ -918,7 +922,8 @@ a, button, [role="button"] { cursor: pointer; }
   position: fixed;
   inset: 0;
   z-index: 90;
-  background: linear-gradient(160deg, #0B1628 0%, #1A2B4A 60%, #0F1E3A 100%);
+  /* V4 : fond blanc chaud */
+  background: linear-gradient(160deg, #FFFDF9 0%, #FEF9EF 60%, #FFFDF9 100%);
   overflow-y: auto;
   opacity: 0;
   transform: translateY(-8px);
@@ -2045,9 +2050,18 @@ select:focus-visible {
   animation: marker-type 0.5s steps(20, end) forwards;
 }
 
-/* ─── 2. PANNEAU VERRE (glass-panel) ────────────────────────── */
+/* ─── 2. PANNEAU VERRE (glass-panel) — V4 clair ─────────────── */
 .glass-panel {
-  background: rgba(12, 18, 34, 0.72);
+  /* V4 : verre blanc chaud */
+  background: rgba(255, 253, 249, 0.82);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(245, 158, 11, 0.12);
+  box-shadow: 0 8px 32px rgba(30, 58, 95, 0.08), inset 0 1px 0 rgba(255,255,255,0.7);
+}
+.glass-panel-dark {
+  /* Pour les 1-2 sections accent sombres autorisées */
+  background: rgba(14, 22, 45, 0.82);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
   border: 1px solid rgba(255, 255, 255, 0.07);
@@ -2160,7 +2174,7 @@ select:focus-visible {
 }
 .liseré-inner {
   border-radius: calc(var(--border-radius, 1rem) - 1px);
-  background: #0C1222;
+  background: #FFFDF9; /* V4 : fond ivoire */
   height: 100%;
 }
 
@@ -2488,7 +2502,12 @@ select:focus-visible {
   .glass-panel {
     backdrop-filter: none !important;
     -webkit-backdrop-filter: none !important;
-    background: rgba(12, 18, 34, 0.94) !important;
+    background: rgba(255, 253, 249, 0.97) !important; /* V4 : ivoire opaque sur mobile */
+  }
+  .glass-panel-dark {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    background: rgba(14, 22, 45, 0.97) !important;
   }
   .glass-panel-light {
     backdrop-filter: none !important;
@@ -2509,4 +2528,148 @@ select:focus-visible {
 @media (max-width: 1023px) {
   .star-field { display: none; }
   .will-change-transform { will-change: auto; }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   V4 — SYSTÈME VISUEL « LUMINEUX & VIVANT »
+   Fond ivoire chaud, énergie or, bleu électrique secondaire.
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ─── V4.1 FOND & HALOS ─────────────────────────────────────── */
+body {
+  background: var(--background, #FFFDF9);
+  color: var(--foreground, #1E293B);
+}
+
+/* Halos de fond chauds (placés absolus, pointer-events none) */
+.halo-gold-bg {
+  background: radial-gradient(ellipse 60% 40% at 50% 0%, rgba(245,158,11,0.10) 0%, transparent 70%);
+  pointer-events: none;
+}
+.halo-blue-bg {
+  background: radial-gradient(ellipse 50% 35% at 80% 50%, rgba(45,125,210,0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+.halo-warm-bg {
+  background: radial-gradient(ellipse 70% 50% at 20% 100%, rgba(255,180,90,0.07) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* ─── V4.2 SECTION ACCENT SOMBRE (max 2/page — CTA final) ───── */
+.section-dark-accent {
+  background: linear-gradient(135deg, #0B1628 0%, #1A2B4A 100%);
+  color: #F4F6FB;
+}
+
+/* ─── V4.3 LISERÉ COLORÉ CLAIR ──────────────────────────────── */
+/* Variante liseré sur fond clair — couleurs chaudes et vives */
+.liseré-gold::before {
+  background: conic-gradient(
+    from var(--liseré-angle),
+    transparent 0deg,
+    rgba(245, 158, 11, 0.85) 20deg,
+    rgba(251, 191, 36, 0.9)  40deg,
+    transparent 60deg
+  );
+  animation: liseré-travel 4s linear infinite;
+}
+.liseré-electric::before {
+  background: conic-gradient(
+    from var(--liseré-angle),
+    transparent 0deg,
+    rgba(45, 125, 210, 0.8) 20deg,
+    rgba(96, 165, 250, 0.85) 40deg,
+    transparent 60deg
+  );
+  animation: liseré-travel 5s linear infinite;
+}
+
+/* ─── V4.4 COINS HUD CLAIRS ─────────────────────────────────── */
+/* Variante coins HUD sur fond clair */
+.hud-corners-light::before {
+  border-color: rgba(245,158,11,0.5);
+}
+.hud-corners-light::after {
+  border-color: rgba(45,125,210,0.5);
+}
+
+/* ─── V4.5 PASTILLE COMPTEUR REBONDISSANTE ───────────────────── */
+@keyframes pill-bounce {
+  0%, 100% { transform: translateY(0) scale(1); }
+  40%       { transform: translateY(-8px) scale(1.04); }
+  60%       { transform: translateY(-4px) scale(1.02); }
+}
+.stat-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  padding: 0.5rem 1.25rem;
+  font-weight: 700;
+  animation: pill-bounce 3s ease-in-out infinite;
+}
+.stat-pill:nth-child(2) { animation-delay: 0.4s; }
+.stat-pill:nth-child(3) { animation-delay: 0.8s; }
+.stat-pill:nth-child(4) { animation-delay: 1.2s; }
+
+/* ─── V4.6 BROWSER FRAME CLAIR (L'ATELIER) ──────────────────── */
+.browser-frame-light {
+  background: #ffffff;
+  border: 1px solid rgba(30,58,95,0.10);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 24px 60px rgba(30,58,95,0.14), 0 4px 12px rgba(30,58,95,0.06);
+}
+.browser-bar-light {
+  background: #F3F4F6;
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-bottom: 1px solid rgba(30,58,95,0.06);
+}
+.browser-url-light {
+  flex: 1;
+  background: #ffffff;
+  border: 1px solid rgba(30,58,95,0.10);
+  border-radius: 6px;
+  padding: 4px 10px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: rgba(30,58,95,0.45);
+}
+
+/* ─── V4.7 SECTION PROGRESS BAR — points clairs ─────────────── */
+.section-progress-dot {
+  background: rgba(30, 58, 95, 0.15); /* était rgba(255,255,255,0.2) */
+}
+.section-progress-dot.active {
+  background: #F59E0B;
+  box-shadow: 0 0 8px rgba(245,158,11,0.6);
+}
+
+/* ─── V4.8 GRADIENT TEXTE OR (titres) ───────────────────────── */
+.gradient-text-gold {
+  background: linear-gradient(135deg, #D97706, #F59E0B 50%, #FBBF24);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ─── V4.9 CARTE LUMINEUSE (card hover lift clair) ──────────── */
+.card-light {
+  background: #ffffff;
+  border: 1px solid rgba(30,58,95,0.07);
+  border-radius: 1rem;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+.card-light:hover {
+  box-shadow: 0 16px 48px rgba(30,58,95,0.12);
+  transform: translateY(-3px);
+}
+
+/* ─── V4 reduced-motion ──────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  .stat-pill { animation: none; }
+  .pill-bounce { animation: none; }
 }
