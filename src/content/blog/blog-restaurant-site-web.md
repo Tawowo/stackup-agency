@@ -1,15 +1,15 @@
 ---
-title: "Pourquoi votre restaurant a besoin d'un site web (et pas seulement d'une page Facebook)"
-excerpt: "3 restaurants sur 4 n'ont pas de site web en France. Ceux qui en ont convertissent 3 fois plus de recherches en réservations. Ce qu'un site de restaurant doit contenir."
+title: "Restaurant : site internet ou réseaux sociaux, où investir en premier ?"
+excerpt: "3 restaurants sur 4 n'ont pas de site web en France. Voici pourquoi Instagram et Facebook ne suffisent pas seuls, et comment répartir votre budget entre site et réseaux sociaux."
 date: "2026-07-28"
-updated: "2026-07-30"
-readTime: 6
-tag: "Création de site"
-category: "creation"
-keywords: ["site web restaurant", "site internet restaurant France", "réservation en ligne restaurant", "référencement restaurant Google"]
+updated: "2026-08-17"
+readTime: 7
+tag: "Restaurants"
+category: "creation-sites"
+keywords: ["restaurant site ou reseaux", "site web restaurant", "instagram ou site restaurant", "référencement restaurant Google"]
 ---
 
-**Un client qui cherche "restaurant [votre ville]" sur Google en 2026 prend une décision en moins de 30 secondes.** Ce qu'il voit dans ces 30 secondes détermine s'il réserve chez vous ou chez votre concurrent. Une page Facebook ne remplace pas un site web — voici pourquoi.
+**Réponse directe :** les réseaux sociaux et le site web ne jouent pas le même rôle et se complètent plutôt qu'ils ne s'opposent. Instagram et Facebook servent à créer l'envie et fidéliser une communauté déjà conquise ; le site web capte les recherches Google ("restaurant [ville]") où se prend la décision de réserver, et reste votre seule vitrine que vous possédez et contrôlez entièrement. Pour un budget serré, un site vitrine à partir de 449 € doit précéder ou accompagner l'investissement en réseaux sociaux, pas le suivre.
 
 ---
 
@@ -117,6 +117,29 @@ Pour la grande majorité des restaurants indépendants, le site vitrine (449€)
 
 ---
 
+## Site web ou réseaux sociaux : où mettre son budget en premier ?
+
+Les deux outils répondent à des besoins différents — la question n'est pas lequel choisir, mais dans quel ordre investir.
+
+| Critère | Réseaux sociaux (Instagram, Facebook) | Site web |
+|---|---|---|
+| Rôle principal | Créer l'envie, fidéliser une communauté déjà acquise | Capter les recherches Google au moment de la décision |
+| Propriété | Dépendant de la plateforme (algorithme, changement de règles) | 100 % possédé et contrôlé |
+| Visible sur "restaurant [ville]" | Rarement | C'est son rôle premier |
+| Menu, horaires, réservation | Difficiles à structurer clairement | Toujours accessibles et à jour |
+| Budget de départ | Temps (contenu régulier) ou budget pub | À partir de 449 €, une fois |
+
+**Pour un restaurant qui démarre avec un budget limité**, le site vitrine à 449 € reste prioritaire : c'est lui qui capte les recherches Google où se prend la décision finale de réserver, et il fonctionne même sans production de contenu régulière. Les réseaux sociaux viennent ensuite, en complément, pour construire la fidélité et le bouche-à-oreille digital — un sujet détaillé dans notre [stratégie Instagram pour restaurant](/blog/instagram-restaurant-strategie).
+
+## En résumé
+
+- Le site web et les réseaux sociaux répondent à des besoins différents : conversion sur Google d'un côté, fidélisation d'une communauté de l'autre.
+- Un site web reste votre seule vitrine réellement possédée, non soumise aux changements d'algorithme d'une plateforme tierce.
+- Pour un budget de départ limité, le site vitrine à 449 € est prioritaire sur l'investissement en réseaux sociaux.
+- Les deux canaux se renforcent mutuellement une fois en place : le site convertit les recherches, les réseaux entretiennent la relation entre deux visites.
+
+---
+
 ## FAQ
 
 **TripAdvisor et TheFork suffisent-ils sans site web ?**
@@ -134,4 +157,6 @@ Oui, via des widgets tiers (Elfsight, ReviewsOnMyWebsite) ou en copiant manuelle
 **Faut-il un site différent pour les commandes à emporter ?**
 Pas nécessairement un site séparé, mais une section dédiée sur votre site existant. Les commandes à emporter peuvent être gérées via une page dédiée avec un lien vers votre système de commande (Uber Eats, Deliveroo, ou un système propriétaire comme Sunday ou Zelty).
 
-Voir aussi : [site web pour traiteur](/blog/site-web-traiteur), [tarifs agence web France](/blog/tarif-agence-web-france) et nos [formules de création de site à partir de 449€](/tarifs).
+---
+
+*Pour aller plus loin : [Instagram pour restaurant : stratégie complète](/blog/instagram-restaurant-strategie) · [SEO local pour restaurants](/blog/seo-local-restaurant) · [Site web pour traiteur](/blog/site-web-traiteur) · [Sites internet par métier](/creation-site-internet/restaurant)*
