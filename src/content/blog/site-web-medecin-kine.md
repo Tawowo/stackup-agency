@@ -1,15 +1,19 @@
 ---
-title: "Site web pour médecin ou kinésithérapeute : règles, fonctionnalités et coûts"
-excerpt: "Les professionnels de santé ont des contraintes déontologiques strictes pour leur site web. Ce guide explique ce qui est autorisé, ce qui est interdit, et les fonctionnalités indispensables."
+title: "Professions réglementées santé : les règles de communication en ligne"
+excerpt: "Médecins, kinés, dentistes, infirmiers, sages-femmes : chaque profession de santé réglementée a son ordre et son code de déontologie, mais les grandes lignes interdites se recoupent largement."
 date: "2026-07-29"
-updated: "2026-07-30"
-readTime: 7
+updated: "2026-08-17"
+readTime: 9
 tag: "Création de site"
 category: "creation"
-keywords: ["site web médecin", "site internet kinésithérapeute", "site professionnel santé", "déontologie site médecin"]
+keywords: ["site professionnel sante regles", "deontologie site medical", "communication professions sante reglementees", "site web medecin kine dentiste"]
 ---
 
-**En France, les professionnels de santé réglementés (médecins, kinés, dentistes, infirmiers) sont soumis à des règles déontologiques strictes pour leur communication digitale.** Un site web qui ne respecte pas ces règles expose son titulaire à des sanctions ordinales. Ce guide présente ce qui est autorisé, ce qui est interdit, et les fonctionnalités qui font vraiment la différence.
+**Toutes les professions de santé réglementées en France (médecins, kinésithérapeutes, dentistes, infirmiers, sages-femmes, pharmaciens) sont soumises à un code de déontologie propre à leur ordre professionnel, avec des interdictions communes : pas de publicité comparative, pas de témoignages de patients, pas de garantie de résultat, pas de publicité payante.** Un site web qui ne respecte pas ces règles expose son titulaire à des sanctions ordinales, quelle que soit la profession exacte concernée. Ce guide présente les règles communes et les spécificités selon la profession.
+
+## Ce qui varie (peu) d'une profession réglementée à l'autre
+
+Chaque ordre professionnel (Ordre des médecins, Ordre des masseurs-kinésithérapeutes, Ordre des chirurgiens-dentistes, Ordre des infirmiers, Ordre des sages-femmes, Ordre des pharmaciens) publie son propre code de déontologie, avec des nuances de formulation. Mais les grandes interdictions restent remarquablement similaires d'une profession à l'autre : aucune n'autorise la publicité comparative, les garanties de résultat, ou les témoignages patients affichés comme argument commercial. C'est cette base commune, plus que les nuances entre professions, qui doit guider la conception d'un site pour n'importe quelle profession de santé réglementée.
 
 ---
 
@@ -157,5 +161,31 @@ En B2B/B2C classique, oui. Pour un professionnel de santé, les pages par pathol
 
 **Comment rester visible sur Google sans faire de publicité payante ?**
 Via le SEO organique : fiche Google Business Profile complète (horaires, photos, catégories), données structurées `MedicalBusiness` ou `Physician` sur le site, contenu éducatif régulier, et citations dans les annuaires de santé (Doctolib, Maiia, PagesJaunes Santé).
+
+## En résumé
+
+- Toutes les professions de santé réglementées partagent des interdictions communes : publicité comparative, témoignages patients, garantie de résultat, publicité payante sur des mots-clés de pathologies.
+- Le contenu autorisé reste factuel et éducatif : diplômes réels, méthodes de prise en charge, informations de santé générale sans promesse commerciale.
+- Doctolib (ou une alternative) reste la fonctionnalité la plus demandée par les patients, avec une commission mensuelle à intégrer au budget.
+- Le SEO organique (fiche Google Business, données structurées, contenu éducatif) reste la seule voie de visibilité, la publicité payante étant interdite pour ces professions.
+
+## Questions fréquentes
+
+**Toutes les professions de santé réglementées ont-elles exactement les mêmes règles ?**
+Les grandes interdictions se recoupent largement, mais chaque ordre publie son propre code — en cas de doute sur un point précis, vérifier directement auprès de l'ordre professionnel concerné reste la démarche la plus sûre.
+
+**Un infirmier libéral peut-il avoir un site web ?**
+Oui, avec les mêmes principes que les autres professions réglementées : présentation factuelle de l'activité, zone d'intervention, modalités de prise de rendez-vous, sans formulation commerciale ni témoignage patient.
+
+**Une sage-femme peut-elle publier un blog sur sa spécialité ?**
+Oui, à condition que le contenu reste strictement informatif et éducatif, sans promotion directe ou indirecte de ses propres services au sein des articles.
+
+**Un pharmacien titulaire peut-il faire de la publicité pour son officine ?**
+Non, les mêmes restrictions s'appliquent : information factuelle sur les services proposés (préparation, conseil, dépistage) mais aucune publicité comparative ou promotionnelle.
+
+**Que risque un professionnel de santé qui ne respecte pas ces règles sur son site ?**
+Un risque de sanction ordinale, allant de l'avertissement à des mesures disciplinaires plus sévères selon la gravité et la répétition du manquement constaté.
+
+---
 
 Voir aussi : [site web pour avocat](/blog/site-web-avocat), [SEO local pour TPE](/blog/paa-seo-local-gratuit) et nos [tarifs de création de site web](/tarifs).
