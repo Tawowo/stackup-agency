@@ -222,6 +222,11 @@ function Results({ result }: { result: AuditResult }) {
             <ScoreGauge label="Accessibilité" score={result.scores.accessibility} icon={Eye} delay={400} active={phase >= 2} />
             <ScoreGauge label="SEO" score={result.scores.seo} icon={TrendingUp} delay={600} active={phase >= 2} />
           </div>
+          <div className="grid sm:grid-cols-3 gap-4 mt-6 text-xs text-white/40 leading-relaxed">
+            <p><strong className="text-white/60">Performance :</strong> la vitesse perçue par vos visiteurs sur mobile. En dessous de 50, une partie des visiteurs part avant d'avoir vu la page — et Google le sait.</p>
+            <p><strong className="text-white/60">Accessibilité :</strong> la lisibilité pour tous (contrastes, tailles de texte, navigation clavier). Un site accessible convertit mieux et évite les risques légaux.</p>
+            <p><strong className="text-white/60">SEO :</strong> les fondations techniques du référencement (titres, metadata, structure). Un bon score ne garantit pas la 1re place, mais un mauvais score l'interdit.</p>
+          </div>
         </div>
       </div>
 
@@ -315,8 +320,22 @@ function Results({ result }: { result: AuditResult }) {
         </div>
       </div>
 
+      {/* Honnêteté + export */}
+      <div className={`transition-all duration-700 ${phase >= 6 ? 'opacity-100' : 'opacity-0'}`}>
+        <div className="flex flex-wrap items-center justify-between gap-3 rounded-xl border border-white/10 bg-white/[0.02] p-4">
+          <p className="text-white/40 text-xs leading-relaxed max-w-xl">
+            Ce rapport est un pré-diagnostic indicatif fondé sur les données publiques de Google PageSpeed Insights.
+            Il ne remplace pas un audit complet (crawl, maillage, contenus, logs serveur) mais donne une photographie honnête de l'état technique de votre site.
+          </p>
+          <button onClick={() => window.print()}
+            className="px-4 py-2 rounded-lg border border-white/15 text-white/70 hover:text-white hover:bg-white/5 text-xs font-medium transition-colors print:hidden">
+            Imprimer / Exporter en PDF
+          </button>
+        </div>
+      </div>
+
       {/* Nav links */}
-      <div className="flex flex-wrap gap-4 text-sm pt-2 border-t border-white/5">
+      <div className="flex flex-wrap gap-4 text-sm pt-2 border-t border-white/5 print:hidden">
         <Link href="/outils" className="text-electric hover:underline">Nos outils gratuits →</Link>
         <Link href="/services" className="text-electric hover:underline">Nos services →</Link>
         <Link href="/tarifs" className="text-electric hover:underline">Voir les tarifs →</Link>

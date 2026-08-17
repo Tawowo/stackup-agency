@@ -21,7 +21,7 @@ interface Config {
 interface Architecture { id: string; label: string; ideal: string; tags: string[] }
 interface Palette5 { id: string; name: string; fam: string; dom: string; sec: string; bg: string; txt: string; acc: string }
 interface FontDuo { id: string; name: string; style: string; title: string; body: string; titleStack: string; bodyStack: string }
-interface Preset { id: string; label: string; emoji: string; config: Partial<Config> }
+interface Preset { id: string; label: string; config: Partial<Config> }
 
 // ─── Architectures ────────────────────────────────────────────────────────────
 
@@ -174,16 +174,16 @@ const FONTS: FontDuo[] = [
 // ─── Presets métiers ──────────────────────────────────────────────────────────
 
 const PRESETS: Preset[] = [
-  { id:'restaurant', label:'Restaurant', emoji:'🍽️', config:{ arch:'A09', pal:'P11', font:'F07', anim:1, corners:1, imagery:'photos', tone:'chaleureux', theme:'light' } },
-  { id:'artisan',    label:'Artisan',    emoji:'🔨', config:{ arch:'A04', pal:'P12', font:'F13', anim:0, corners:0, imagery:'atelier', tone:'authentique', theme:'light' } },
-  { id:'cabinet',    label:'Cabinet pro',emoji:'⚖️', config:{ arch:'A07', pal:'P07', font:'F08', anim:0, corners:0, imagery:'bureau', tone:'expert', theme:'light' } },
-  { id:'startup',    label:'Startup',    emoji:'🚀', config:{ arch:'A03', pal:'P16', font:'F03', anim:2, corners:2, imagery:'abstract', tone:'innovant', theme:'dark' } },
-  { id:'boutique',   label:'Boutique',   emoji:'🛍️', config:{ arch:'A06', pal:'P31', font:'F15', anim:1, corners:1, imagery:'produits', tone:'tendance', theme:'light' } },
-  { id:'luxe',       label:'Luxe',       emoji:'💎', config:{ arch:'A14', pal:'P21', font:'F35', anim:0, corners:0, imagery:'minimaliste', tone:'prestige', theme:'dark' } },
-  { id:'sante',      label:'Santé',      emoji:'🏥', config:{ arch:'A07', pal:'P48', font:'F01', anim:0, corners:1, imagery:'soin', tone:'rassurant', theme:'light' } },
-  { id:'coach',      label:'Coach',      emoji:'🎯', config:{ arch:'A01', pal:'P26', font:'F14', anim:1, corners:2, imagery:'personnes', tone:'motivant', theme:'light' } },
-  { id:'association',label:'Association',emoji:'🤝', config:{ arch:'A08', pal:'P50', font:'F13', anim:0, corners:1, imagery:'communauté', tone:'engagé', theme:'light' } },
-  { id:'hotel',      label:'Hôtel',      emoji:'🏨', config:{ arch:'A12', pal:'P22', font:'F36', anim:1, corners:0, imagery:'ambiance', tone:'accueillant', theme:'dark' } },
+  { id:'restaurant', label:'Restaurant', config:{ arch:'A09', pal:'P11', font:'F07', anim:1, corners:1, imagery:'photos', tone:'chaleureux', theme:'light' } },
+  { id:'artisan',    label:'Artisan',    config:{ arch:'A04', pal:'P12', font:'F13', anim:0, corners:0, imagery:'atelier', tone:'authentique', theme:'light' } },
+  { id:'cabinet',    label:'Cabinet pro',config:{ arch:'A07', pal:'P07', font:'F08', anim:0, corners:0, imagery:'bureau', tone:'expert', theme:'light' } },
+  { id:'startup',    label:'Startup',    config:{ arch:'A03', pal:'P16', font:'F03', anim:2, corners:2, imagery:'abstract', tone:'innovant', theme:'dark' } },
+  { id:'boutique',   label:'Boutique',   config:{ arch:'A06', pal:'P31', font:'F15', anim:1, corners:1, imagery:'produits', tone:'tendance', theme:'light' } },
+  { id:'luxe',       label:'Luxe',       config:{ arch:'A14', pal:'P21', font:'F35', anim:0, corners:0, imagery:'minimaliste', tone:'prestige', theme:'dark' } },
+  { id:'sante',      label:'Santé',      config:{ arch:'A07', pal:'P48', font:'F01', anim:0, corners:1, imagery:'soin', tone:'rassurant', theme:'light' } },
+  { id:'coach',      label:'Coach',      config:{ arch:'A01', pal:'P26', font:'F14', anim:1, corners:2, imagery:'personnes', tone:'motivant', theme:'light' } },
+  { id:'association',label:'Association',config:{ arch:'A08', pal:'P50', font:'F13', anim:0, corners:1, imagery:'communauté', tone:'engagé', theme:'light' } },
+  { id:'hotel',      label:'Hôtel',      config:{ arch:'A12', pal:'P22', font:'F36', anim:1, corners:0, imagery:'ambiance', tone:'accueillant', theme:'dark' } },
 ]
 
 // ─── Default config ───────────────────────────────────────────────────────────
@@ -984,7 +984,7 @@ export default function StudioClient() {
           {PRESETS.map(p => (
             <button key={p.id} type="button" onClick={() => applyPreset(p)}
               className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white dark:bg-gray-900/60 border border-gray-200 dark:border-white/10 hover:border-electric-ink dark:hover:border-electric text-xs font-medium text-gray-700 dark:text-white/70 transition-colors whitespace-nowrap">
-              <span>{p.emoji}</span> {p.label}
+              {p.label}
             </button>
           ))}
           <button type="button" onClick={surprise}
