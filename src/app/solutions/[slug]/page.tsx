@@ -73,7 +73,7 @@ export default function SolutionPage({ params }: { params: { slug: string } }) {
   }
 
   return (
-    <div className="min-h-screen bg-background dark:bg-[#0A0F1C]">
+    <div className="min-h-screen bg-[#070B16]">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />

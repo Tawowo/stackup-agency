@@ -88,7 +88,7 @@ export default function PlanDuSitePage() {
   const solutionsLinks = SOLUTIONS.map(s => ({ href: `/solutions/${s.slug}`, label: s.nom }))
 
   return (
-    <div className="min-h-screen bg-background dark:bg-[#0A0F1C]">
+    <div className="min-h-screen bg-[#070B16]">
       <div className="bg-gradient-to-b from-[#060D1A] to-[#0A0F1C] pt-24 pb-12">
         <div className="max-w-5xl mx-auto px-4 sm:px-6">
           <h1 className="text-3xl lg:text-4xl font-bold text-white mb-4">Plan du site</h1>
