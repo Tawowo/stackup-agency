@@ -58,7 +58,7 @@ export default function AProposPage() {
   ]
 
   return (
-    <div className="min-h-screen bg-background dark:bg-[#0A0F1C]">
+    <div className="min-h-screen bg-[#070B16]">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutPageSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
@@ -71,7 +71,7 @@ export default function AProposPage() {
       <div className="max-w-3xl mx-auto px-4 sm:px-6 py-16 space-y-16">
 
         {/* Corps principal */}
-        <section className="space-y-5 text-foreground/80 dark:text-white/80 text-lg leading-relaxed">
+        <section className="space-y-5 text-white/80 text-lg leading-relaxed">
           <p>
             Nous avons choisi une autre voie : une structure légère, des processus précis,
             une stack moderne (Next.js, TypeScript), et des centaines d'heures investies
@@ -94,14 +94,14 @@ export default function AProposPage() {
           <h2 className="text-2xl font-bold text-foreground dark:text-white mb-8">Notre méthode en 5 étapes</h2>
           <div className="space-y-4">
             {METHODE.map((step, i) => (
-              <div key={step.n} className={`reveal-item step-line flex items-start gap-5 p-5 rounded-2xl border border-navy/10 dark:border-white/10 bg-white dark:bg-white/2 hover:border-electric/30 transition-colors duration-200`}
+              <div key={step.n} className="reveal-item flex items-start gap-5 p-5 rounded-2xl glass-panel hud-corners hover:border-electric/30 transition-colors duration-200"
                 style={{ animationDelay: `${i * 80}ms` }}>
-                <div className="step-circle w-10 h-10 flex-shrink-0 text-sm font-bold flex items-center justify-center">
+                <div className="step-circle w-10 h-10 flex-shrink-0 text-sm data-mono font-bold flex items-center justify-center">
                   {step.n}
                 </div>
                 <div>
-                  <h3 className="font-semibold text-foreground dark:text-white mb-1">{step.titre}</h3>
-                  <p className="text-foreground/60 dark:text-white/60 text-sm">{step.desc}</p>
+                  <h3 className="font-semibold text-white mb-1">{step.titre}</h3>
+                  <p className="text-white/60 text-sm">{step.desc}</p>
                 </div>
               </div>
             ))}
@@ -118,11 +118,11 @@ export default function AProposPage() {
               { label: 'Tailwind CSS', desc: 'Interfaces précises, cohérentes, rapides', icon: '🎨' },
               { label: 'PostgreSQL / Prisma', desc: 'Bases de données robustes pour applications métier', icon: '🗄️' },
             ].map((tech, i) => (
-              <div key={tech.label} className="reveal-item p-4 rounded-xl border border-navy/10 dark:border-white/10 bg-white dark:bg-white/3 hover:border-electric/30 hover:-translate-y-0.5 transition-all duration-200 group"
+              <div key={tech.label} className="reveal-item p-4 rounded-xl glass-panel hud-corners hover:border-electric/30 hover:-translate-y-0.5 transition-all duration-200 group"
                 style={{ animationDelay: `${i * 60}ms` }}>
-                <div className="service-icon-wrap text-xl mb-2 inline-block">{tech.icon}</div>
-                <div className="font-semibold text-foreground dark:text-white text-sm mb-1 group-hover:text-electric transition-colors">{tech.label}</div>
-                <div className="text-foreground/70 dark:text-white/50 text-xs">{tech.desc}</div>
+                <div className="text-xl mb-2 inline-block">{tech.icon}</div>
+                <div className="font-semibold text-white text-sm mb-1 group-hover:text-electric transition-colors data-mono">{tech.label}</div>
+                <div className="text-white/50 text-xs">{tech.desc}</div>
               </div>
             ))}
           </div>
