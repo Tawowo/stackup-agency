@@ -143,15 +143,12 @@ export default function Showroom() {
   return (
     <section className="py-24 relative overflow-hidden transition-colors duration-700"
       style={{ background: `linear-gradient(180deg, #FFFDF9 0%, ${p.couleur}18 40%, #FFFDF9 100%)` }}>
-      <span className="section-number select-none" aria-hidden="true">03</span>
-
       {/* Halo arrière-plan qui suit le projet actif */}
       <div className="pointer-events-none absolute inset-0 transition-all duration-700" aria-hidden="true"
         style={{ background: `radial-gradient(ellipse at 50% 40%, ${p.accent}35 0%, transparent 60%)` }} />
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 relative">
-        <div className="section-marker mb-2 reveal-item" aria-hidden="true">[ 03 / SHOWROOM ]</div>
-        <div className="text-xs font-bold text-gold uppercase tracking-[0.2em] mb-3 reveal-item">Le Showroom</div>
+        <p className="text-[13px] font-semibold text-gold uppercase tracking-[0.18em] mb-3 reveal-item">Nos réalisations</p>
         <h2 className="text-3xl lg:text-5xl font-bold text-navy mb-4 reveal-item" style={{ lineHeight: 1.15 }}>
           Nos vraies réalisations
         </h2>

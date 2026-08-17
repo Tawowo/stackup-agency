@@ -18,7 +18,7 @@ export default function HomeFaq() {
     <section className="py-16 bg-[#FFFDF9] relative overflow-hidden">
       <DecorProfondeur variant="gold" seed={0} />
       <div className="max-w-3xl mx-auto px-4 sm:px-6 relative">
-        <div className="section-marker mb-2" aria-hidden="true">[ FAQ ]</div>
+        <p className="text-[13px] font-semibold text-gold uppercase tracking-[0.18em] mb-3">FAQ</p>
         <h2 className="text-2xl font-bold text-navy mb-6">Questions fréquentes</h2>
         <div className="space-y-2">
           {FAQ_ITEMS.map(({ q, a }, i) => (

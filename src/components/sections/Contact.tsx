@@ -36,7 +36,7 @@ export default function Contact() {
       {/* persp-grid background */}
       <div className="persp-grid absolute inset-0 opacity-50" aria-hidden="true" />
       <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="section-marker mb-4" aria-hidden="true">[ CONTACT ]</div>
+        <p className="text-[13px] font-semibold text-gold uppercase tracking-[0.18em] mb-4">Contact</p>
 
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-10 lg:gap-16">
 

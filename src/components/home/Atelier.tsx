@@ -379,14 +379,11 @@ export default function Atelier() {
         style={{ background: 'radial-gradient(ellipse, rgba(245,158,11,0.07) 0%, transparent 70%)' }} />
       <div className="pointer-events-none absolute bottom-0 left-0 w-[400px] h-[300px]" aria-hidden="true"
         style={{ background: 'radial-gradient(ellipse, rgba(45,125,210,0.05) 0%, transparent 70%)' }} />
-      <span className="section-number select-none" aria-hidden="true">01</span>
-
       <div className="max-w-6xl mx-auto px-4 sm:px-6 relative">
         {/* Header */}
         <div className="mb-12 max-w-2xl">
-          <div className="section-marker mb-2" aria-hidden="true">[ 01 / L&apos;ATELIER ]</div>
-          <div className="text-xs font-bold text-gold uppercase tracking-[0.2em] mb-3">L&apos;Atelier</div>
-          <h2 className="text-3xl lg:text-5xl font-bold text-navy mb-4" style={{ lineHeight: 1.15 }}>
+          <p className="text-[13px] font-semibold text-gold uppercase tracking-[0.18em] mb-3 reveal-item">Nos services</p>
+          <h2 className="text-3xl lg:text-5xl font-bold text-navy mb-4 reveal-item" style={{ lineHeight: 1.15 }}>
             Nos services web
           </h2>
           <p className="text-navy/55 max-w-xl">

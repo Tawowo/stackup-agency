@@ -263,18 +263,6 @@ export default function HeroSection() {
 
           {/* Left — séquence orchestrée */}
           <div>
-            {/* Section marker mono [ 01 / HERO ] */}
-            <div
-              className="section-marker mb-4"
-              style={{
-                opacity: entrance.badge ? 1 : 0,
-                transition: 'opacity 0.4s ease',
-              }}
-              aria-hidden="true"
-            >
-              <span className="section-marker-type">[ 01 / ACCUEIL ]</span>
-            </div>
-
             {/* [PIÈCE 3a] Badge — float in t=150ms */}
             <div
               className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-panel text-white/80 text-sm mb-8 badge-float"

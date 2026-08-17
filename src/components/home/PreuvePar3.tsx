@@ -168,13 +168,11 @@ export default function PreuvePar3() {
 
   return (
     <section ref={ref} className="py-24 bg-white relative overflow-hidden">
-      <span className="section-number select-none" aria-hidden="true">02</span>
       <div className="pointer-events-none absolute top-0 right-0 w-[500px] h-96 rounded-full" aria-hidden="true"
         style={{ background: 'radial-gradient(ellipse at 80% 0%, rgba(45,125,210,0.07) 0%, transparent 70%)' }} />
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 relative">
-        <div className="section-marker mb-2 reveal-item" aria-hidden="true">[ 02 / PREUVE ]</div>
-        <div className="text-xs font-bold text-gold uppercase tracking-[0.2em] mb-3 reveal-item">La preuve par 3</div>
+        <p className="text-[13px] font-semibold text-gold uppercase tracking-[0.18em] mb-3 reveal-item">La preuve par 3</p>
         <h2 className="text-3xl lg:text-5xl font-bold text-navy mb-4 reveal-item" style={{ lineHeight: 1.15 }}>
           Pourquoi Stackup Agency ?
         </h2>

@@ -11,6 +11,7 @@ import PreuvePar3 from '@/components/home/PreuvePar3'
 import Showroom from '@/components/home/Showroom'
 import LaRoute from '@/components/home/LaRoute'
 import StatPills from '@/components/home/StatPills'
+import RaisonDetre from '@/components/home/RaisonDetre'
 import ScrollBackground from '@/components/home/ScrollBackground'
 
 export const metadata: Metadata = {
@@ -67,45 +68,38 @@ export default function Home() {
 
         {/* 01 — Hero */}
         <HeroSection />
-
-        {/* Couture hero → light */}
         <div className="seam-to-light" aria-hidden="true" />
-
         <MarqueeSeparator />
-
         <div className="section-divider" aria-hidden="true" />
 
-        {/* 02 — Showroom (« montrez-moi » — 1re question du prospect) */}
-        <Showroom />
-
-        <div className="section-divider" aria-hidden="true" />
-
-        {/* 03 — L'Atelier (services vivants) */}
+        {/* 02 — L'Atelier — Nos services web */}
         <Atelier />
-
         <div className="section-divider" aria-hidden="true" />
 
-        {/* 04 — La Preuve par 3 / Comparateur prix */}
+        {/* 03 — Pourquoi Stackup Agency */}
         <PreuvePar3 />
-
         <div className="section-divider" aria-hidden="true" />
 
-        {/* 05 — La Méthode (process en 6 étapes) */}
+        {/* 04 — Notre raison d'être */}
+        <RaisonDetre />
+        <div className="section-divider" aria-hidden="true" />
+
+        {/* 05 — Comment ça se passe — La Méthode */}
         <LaRoute />
 
-        {/* 06 — Preuves de sérieux (stats) */}
+        {/* 06 — Nos réalisations — Showroom */}
+        <Showroom />
+
+        {/* 07 — Chiffres clés */}
         <StatPills />
-
         <div className="section-divider" aria-hidden="true" />
 
-        {/* 07 — FAQ */}
+        {/* 08 — FAQ */}
         <HomeFaq />
-
         <div className="section-divider" aria-hidden="true" />
 
-        {/* 08 — CTA final */}
+        {/* 09 — CTA final */}
         <section className="py-28 bg-[#070B16] relative overflow-hidden">
-          {/* Star field — positions déterministes pour éviter l'hydration mismatch */}
           <div className="star-field" aria-hidden="true">
             {[
               [8,12,3.1,0.5],[17,67,2.8,1.2],[23,34,4.2,0.0],[31,89,3.7,2.1],[42,21,2.5,1.8],
@@ -123,16 +117,12 @@ export default function Home() {
               } as React.CSSProperties} />
             ))}
           </div>
-          {/* Halo animé */}
           <div className="pointer-events-none absolute inset-0 flex items-center justify-center" aria-hidden="true">
             <div className="halo-breathe w-[600px] h-[600px] rounded-full"
-              style={{
-                background: 'radial-gradient(ellipse, rgba(45,125,210,0.15) 0%, rgba(245,158,11,0.05) 40%, transparent 70%)',
-              }} />
+              style={{ background: 'radial-gradient(ellipse, rgba(45,125,210,0.15) 0%, rgba(245,158,11,0.05) 40%, transparent 70%)' }} />
           </div>
           <div className="relative max-w-3xl mx-auto px-4 sm:px-6 text-center">
-            <div className="section-marker mb-3 text-center" aria-hidden="true">[ 08 / DÉMARRONS ]</div>
-            <div className="overline-label !text-white/60 mb-4">Démarrons</div>
+            <p className="text-[13px] font-semibold text-gold/70 uppercase tracking-[0.18em] mb-4">Démarrons</p>
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               Votre site internet vous attend
             </h2>

@@ -97,22 +97,19 @@ export default function AProposPage() {
 
           {/* Texte intro */}
           <div>
-            <div className="section-marker mb-3" aria-hidden="true">[ FONDATEUR ]</div>
-            <h2 className="text-3xl font-bold text-navy mb-5" style={{ lineHeight: 1.2 }}>
-              Une conviction, une méthode,<br />un engagement.
+            <p className="text-[13px] font-semibold text-gold uppercase tracking-[0.18em] mb-4">Notre raison d&apos;être</p>
+            <h2 className="text-3xl font-bold text-navy mb-6" style={{ lineHeight: 1.2 }}>
+              Des sites d&apos;exception,<br />accessibles à tous.
             </h2>
-            <div className="space-y-4 text-navy/65 leading-relaxed">
+            <div className="space-y-4 text-navy/65 leading-relaxed text-[15px]">
               <p>
-                Nous avons choisi une autre voie : une structure légère, des processus précis,
-                une stack moderne (Next.js, TypeScript), et des centaines d'heures investies
-                dans la méthode plutôt que dans les bureaux.
+                Stackup Agency est née d&apos;un constat simple : les indépendants et les petites entreprises méritent le même niveau de site web que les grands groupes — mais les tarifs des agences classiques les en excluent presque toujours.
               </p>
               <p>
-                Résultat : des sites et des applications sur mesure, livrés en 10 jours ouvrés,
-                à des prix qu'aucune agence classique ne peut proposer à qualité égale.
+                Nous avons donc construit l&apos;agence autrement : des prix pensés pour les auto-entrepreneurs, les artisans, les commerçants et toutes les structures qui n&apos;ont pas les moyens d&apos;une multinationale. Sans jamais toucher à la qualité — le prix bas n&apos;est pas une concession, c&apos;est le projet.
               </p>
-              <p className="text-lg font-bold text-navy">
-                Votre vision. Notre code.
+              <p>
+                Parce qu&apos;entre petites entreprises, on se doit ce soutien-là. Certaines n&apos;existeraient plus sans un site qui travaille pour elles. Et ce qui est un droit d&apos;accès pour les petites structures devient, pour les plus grandes, un avantage économique évident.
               </p>
             </div>
             <Link href="/contact" className="inline-flex items-center gap-2 mt-6 bg-gold hover:bg-gold/90 text-ink font-bold px-6 py-3 rounded-xl transition-all hover:-translate-y-0.5 shadow-md shadow-gold/20">
@@ -123,7 +120,7 @@ export default function AProposPage() {
 
         {/* Timeline narrative */}
         <section className="mb-20">
-          <div className="section-marker mb-3" aria-hidden="true">[ HISTOIRE ]</div>
+          <p className="text-[13px] font-semibold text-gold uppercase tracking-[0.18em] mb-4">Notre parcours</p>
           <h2 className="text-2xl font-bold text-navy mb-10">Notre parcours</h2>
           <div className="relative">
             {/* Ligne centrale */}
@@ -151,7 +148,7 @@ export default function AProposPage() {
 
         {/* Ce en quoi nous croyons */}
         <section className="mb-20">
-          <div className="section-marker mb-3" aria-hidden="true">[ VALEURS ]</div>
+          <p className="text-[13px] font-semibold text-gold uppercase tracking-[0.18em] mb-4">Nos engagements</p>
           <h2 className="text-2xl font-bold text-navy mb-8">Ce en quoi nous croyons</h2>
           <div className="grid sm:grid-cols-2 gap-3">
             {[
@@ -172,7 +169,7 @@ export default function AProposPage() {
 
         {/* Technologies */}
         <section className="mb-20">
-          <div className="section-marker mb-3" aria-hidden="true">[ STACK ]</div>
+          <p className="text-[13px] font-semibold text-gold uppercase tracking-[0.18em] mb-4">Stack technique</p>
           <h2 className="text-2xl font-bold text-navy mb-6">Technologies</h2>
           <div className="grid sm:grid-cols-2 gap-3">
             {[

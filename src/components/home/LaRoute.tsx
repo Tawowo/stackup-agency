@@ -125,8 +125,7 @@ export default function LaRoute() {
       <div className="max-w-5xl mx-auto px-4 sm:px-6 relative">
         {/* Header */}
         <div className="mb-16">
-          <div className="section-marker mb-2" aria-hidden="true">[ 05 / LA MÉTHODE ]</div>
-          <p className="text-xs font-bold text-gold uppercase tracking-[0.2em] mb-3">Notre process</p>
+          <p className="text-[13px] font-semibold text-gold uppercase tracking-[0.18em] mb-3">Notre process</p>
           <h2 className="text-3xl lg:text-5xl font-bold text-navy mb-4" style={{ lineHeight: 1.15 }}>
             Comment ça se passe ?
           </h2>

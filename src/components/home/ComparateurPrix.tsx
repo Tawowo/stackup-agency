@@ -124,10 +124,22 @@ export default function ComparateurPrix() {
         .cp-row-head strong.gold { color: #d97706; }
         .cp-track { background: rgba(22,35,63,0.06); border-radius: 12px; overflow: hidden; height: 40px; }
         .cp-bar { height: 100%; display: flex; align-items: center; justify-content: flex-end; padding: 0 12px;
-          border-radius: 12px; transition: width 1.1s cubic-bezier(.22,1,.36,1); min-width: 0; }
+          border-radius: 12px; transition: width 1.1s cubic-bezier(.22,1,.36,1); min-width: 0; position: relative; }
         .cp-bar em { font-style: normal; font-size: 12.5px; font-weight: 700; white-space: nowrap; }
-        .cp-bar.grey { background: linear-gradient(90deg, #cbd5e1, #94a3b8); color: #1f2937; }
-        .cp-bar.gold { background: linear-gradient(90deg, #fbbf24, #f59e0b); color: #3a2a05; box-shadow: 0 6px 16px rgba(245,158,11,0.35); }
+        .cp-bar.grey { background: linear-gradient(90deg, #cbd5e1, #94a3b8); color: #1f2937; overflow: hidden; }
+        .cp-bar.gold { background: linear-gradient(90deg, #fbbf24, #f59e0b); color: #3a2a05; box-shadow: 0 6px 16px rgba(245,158,11,0.35); overflow: hidden; }
+        .cp-bar.grey::after, .cp-bar.gold::after {
+          content: '';
+          position: absolute;
+          top: 0; left: -60%;
+          width: 45%; height: 100%;
+          background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.30) 50%, transparent 100%);
+          pointer-events: none;
+          animation: cpShine 1.4s cubic-bezier(0.22,1,0.36,1) 1.3s both;
+          border-radius: inherit;
+        }
+        @keyframes cpShine { 0%{left:-60%} 100%{left:130%} }
+        @media(prefers-reduced-motion:reduce){.cp-bar::after{animation:none}}
         .cp-note { font-size: 13.5px; color: rgba(22,35,63,0.7); background: #fff7ea; border: 1px solid rgba(217,119,6,0.25); border-radius: 10px; padding: 10px 12px; }
         .cp-legende { font-size: 12px; color: rgba(22,35,63,0.5); }
         @media (prefers-reduced-motion: reduce) { .cp-bar { transition: none; } }
