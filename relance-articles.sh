@@ -9,7 +9,7 @@ while [ $N -le 30 ]; do
     break
   fi
   echo "$(date) — Cycle $N : lancement session…" >> logs/relance.log
-  claude -p "Lis PROGRESSION.md et MISSION-ARTICLES.md à la racine (et plan-contenu-volet-B-150-articles.md pour la liste), et continue la Phase 5 exactement là où elle s'est arrêtée, en respectant toutes les règles du fichier mission : gabarit complet, déduplication contre les 204 articles existants, publishAt échelonné 4-6/semaine, mise à jour de PROGRESSION.md après chaque article, commit + push sur main tous les 5 articles, build 0/0 avant chaque push. Aucune question." \
+  IS_SANDBOX=1 claude -p "Lis PROGRESSION.md et MISSION-ARTICLES.md à la racine (et plan-contenu-volet-B-150-articles.md pour la liste), et continue la Phase 5 exactement là où elle s'est arrêtée, en respectant toutes les règles du fichier mission : gabarit complet, déduplication contre les 204 articles existants, publishAt échelonné 4-6/semaine, mise à jour de PROGRESSION.md après chaque article, commit + push sur main tous les 5 articles, build 0/0 avant chaque push. Aucune question." \
     --dangerously-skip-permissions \
     --add-dir /home/user/stackup-agency \
     > "logs/nuit-$N.log" 2>&1
