@@ -81,7 +81,7 @@ function ServiceCard({ s, index }: { s: (typeof SERVICES)[number]; index: number
           )}
           {rentreeBadge && (
             <span className="inline-block rounded-full bg-gold/20 px-2.5 py-0.5 text-xs font-semibold text-amber-700 dark:text-gold">
-              🎒 Maquette offerte
+              Maquette offerte
             </span>
           )}
         </div>

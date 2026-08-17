@@ -6,7 +6,7 @@
  */
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
-import { ArrowRight, ExternalLink } from 'lucide-react'
+import { ArrowRight, ExternalLink, Monitor, LayoutGrid, ShoppingCart, Settings, Users, PenLine, BarChart2 } from 'lucide-react'
 import { SERVICES } from '@/config/site'
 
 // ─── Mini-prévisualisations animées par service ───────────────────────────
@@ -289,7 +289,7 @@ function PreviewMarketing() {
       {/* Rapport */}
       <div className={`transition-all duration-500 delay-[800ms] ${step >= 4 ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
         <div className="bg-navy rounded p-1.5 text-[7px] text-white font-medium text-center">
-          📊 Rapport mensuel envoyé · 47 prospects générés
+          Rapport mensuel · 47 prospects générés
         </div>
       </div>
     </div>
@@ -344,9 +344,15 @@ const PREVIEW_MAP: Record<string, { Component: () => JSX.Element; accent: string
 }
 
 // ─── Service list item ────────────────────────────────────────────────────
-const SERVICE_ICONS: Record<string, string> = {
-  'site-vitrine': '🖥️', 'site-multi-pages': '📄', 'site-ecommerce': '🛍️',
-  'systeme-gestion': '⚙️', 'site-association': '🤝', 'redaction-blog-seo': '✍️', 'marketing-digital': '📈',
+import type { LucideIcon } from 'lucide-react'
+const SERVICE_ICONS: Record<string, LucideIcon> = {
+  'site-vitrine':       Monitor,
+  'site-multi-pages':   LayoutGrid,
+  'site-ecommerce':     ShoppingCart,
+  'systeme-gestion':    Settings,
+  'site-association':   Users,
+  'redaction-blog-seo': PenLine,
+  'marketing-digital':  BarChart2,
 }
 
 export default function Atelier() {
@@ -406,9 +412,8 @@ export default function Atelier() {
                   }`}
                 >
                   <div className="flex items-center gap-3">
-                    <span className={`text-2xl transition-transform duration-300 ${isActive ? 'scale-110' : 'group-hover:scale-105'}`}>
-                      {SERVICE_ICONS[s.id]}
-                    </span>
+                    {(() => { const Icon = SERVICE_ICONS[s.id]; return Icon ? <Icon size={20} strokeWidth={1.5} className={`flex-shrink-0 transition-colors ${isActive ? 'text-navy' : 'text-navy/45 group-hover:text-navy'}`} aria-hidden="true" /> : null })()}
+
                     <div className="flex-1 min-w-0">
                       <div className="flex items-center gap-2 mb-0.5">
                         <span className={`font-bold text-sm transition-colors ${isActive ? 'text-navy' : 'text-navy/70 group-hover:text-navy'}`}>
@@ -544,7 +549,7 @@ export default function Atelier() {
                 }`}
               >
                 <div className="flex items-center gap-3">
-                  <span className="text-xl">{SERVICE_ICONS[s.id]}</span>
+                  {(() => { const Icon = SERVICE_ICONS[s.id]; return Icon ? <Icon size={16} strokeWidth={1.5} className="text-navy/50 flex-shrink-0" aria-hidden="true" /> : null })()}
                   <div>
                     <div className="font-bold text-sm text-navy">{s.titre}</div>
                     <div className="text-xs text-navy/45">{s.prix ? `${s.prix} ${s.unite}` : 'Sur devis'}</div>

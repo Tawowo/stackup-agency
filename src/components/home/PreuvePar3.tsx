@@ -7,80 +7,10 @@
  * 3. Timeline 10 jours (barres qui se remplissent jour par jour)
  */
 import { useState, useEffect, useRef } from 'react'
-import { CheckCircle, Code2, Globe } from 'lucide-react'
+import { CheckCircle, Code2, Globe, BarChart3, Clock } from 'lucide-react'
 import { SITE } from '@/config/site'
+import ComparateurPrix from '@/components/home/ComparateurPrix'
 
-// ─── Panel 1 : Comparateur de prix ───────────────────────────────────────────
-function PriceComparator({ isVisible }: { isVisible: boolean }) {
-  const [pct, setPct] = useState(0)
-
-  useEffect(() => {
-    if (!isVisible) return
-    let frame = 0
-    const dur = 1400
-    const start = performance.now()
-    const tick = (now: number) => {
-      const p = Math.min((now - start) / dur, 1)
-      const eased = 1 - Math.pow(1 - p, 3)
-      setPct(Math.round(eased * 100))
-      if (p < 1) frame = requestAnimationFrame(tick)
-    }
-    frame = requestAnimationFrame(tick)
-    return () => cancelAnimationFrame(frame)
-  }, [isVisible])
-
-  const agencePrice = 6000
-  const stackupPrice = SITE.pricing.vitrine
-  const agenceRatio = 100
-  const stackupRatio = Math.round((stackupPrice / agencePrice) * 100)
-
-  return (
-    <div className="max-w-2xl mx-auto">
-      <div className="space-y-6">
-        {/* Agence classique */}
-        <div>
-          <div className="flex justify-between items-end mb-2">
-            <span className="text-sm font-medium text-navy/60">Agence classique</span>
-            <span className="text-xl font-black text-navy/40 tabular-nums data-mono">
-              {isVisible ? Math.round((pct / 100) * agencePrice).toLocaleString('fr-FR') : 0}&thinsp;€
-            </span>
-          </div>
-          <div className="h-10 bg-gray-100 rounded-xl overflow-hidden relative">
-            <div
-              className="h-full rounded-xl transition-none bg-gradient-to-r from-gray-300 to-gray-400 flex items-center justify-end pr-3"
-              style={{ width: `${pct * agenceRatio / 100}%`, transition: isVisible ? 'width 1.4s cubic-bezier(0.16,1,0.3,1)' : 'none' }}
-            >
-              {pct > 50 && <span className="text-white text-xs font-bold">3–8 mois</span>}
-            </div>
-          </div>
-        </div>
-        {/* Stackup */}
-        <div>
-          <div className="flex justify-between items-end mb-2">
-            <span className="text-sm font-bold text-navy">Stackup Agency</span>
-            <span className="text-xl font-black text-gold tabular-nums data-mono">
-              {isVisible ? Math.round((pct / 100) * stackupPrice).toLocaleString('fr-FR') : 0}&thinsp;€
-            </span>
-          </div>
-          <div className="h-10 bg-gold/10 rounded-xl overflow-hidden relative">
-            <div
-              className="h-full rounded-xl bg-gradient-to-r from-gold to-amber-400 flex items-center justify-end pr-3"
-              style={{ width: `${pct * stackupRatio / 100}%`, transition: isVisible ? 'width 1.4s cubic-bezier(0.16,1,0.3,1)' : 'none' }}
-            >
-              {pct > 30 && <span className="text-ink text-xs font-bold">10 jours</span>}
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="mt-6 flex items-center gap-3 bg-gold/8 border border-gold/20 rounded-xl p-4">
-        <div className="text-3xl font-black text-gold data-mono tabular-nums">
-          {Math.round((1 - stackupRatio / 100) * 100)}%
-        </div>
-        <p className="text-sm text-navy/70">moins cher, avec le même niveau de qualité et bien plus de réactivité.</p>
-      </div>
-    </div>
-  )
-}
 
 // ─── Panel 2 : Morph code → site ─────────────────────────────────────────────
 function CodeMorph({ isVisible }: { isVisible: boolean }) {
@@ -157,7 +87,7 @@ const DAYS = [
   { label: 'J7', desc: 'Tests & corrections', color: 'bg-navy' },
   { label: 'J8', desc: 'Recette client', color: 'bg-navy' },
   { label: 'J9', desc: 'Ajustements finaux', color: 'bg-navy' },
-  { label: 'J10', desc: '🚀 Mise en ligne !', color: 'bg-green-500' },
+  { label: 'J10', desc: 'Mise en ligne', color: 'bg-green-500' },
 ]
 
 function Timeline({ isVisible }: { isVisible: boolean }) {
@@ -183,7 +113,7 @@ function Timeline({ isVisible }: { isVisible: boolean }) {
             <div className={`w-8 h-8 rounded-lg flex items-center justify-center text-xs font-bold transition-all duration-300 flex-shrink-0 ${
               i < filled ? `${d.color} text-white scale-100` : 'bg-gray-100 text-navy/30 scale-95'
             }`}>
-              {i < filled ? (i === DAYS.length - 1 ? '🚀' : <CheckCircle size={14} />) : d.label}
+              {i < filled ? <CheckCircle size={14} /> : d.label}
             </div>
             <div className={`flex-1 h-1.5 rounded-full overflow-hidden bg-gray-100`}>
               <div
@@ -208,9 +138,9 @@ function Timeline({ isVisible }: { isVisible: boolean }) {
 
 // ─── Composant principal ──────────────────────────────────────────────────────
 const TABS = [
-  { id: 'prix', label: 'Prix comparés', icon: '💰', sub: 'Jusqu\'à 80% moins cher' },
-  { id: 'code', label: 'Code → Site', icon: '⚡', sub: 'La magie en direct' },
-  { id: 'delai', label: '10 jours', icon: '📅', sub: 'La vraie timeline' },
+  { id: 'prix', label: 'Prix comparés', Icon: BarChart3, sub: "Jusqu'à 80% moins cher" },
+  { id: 'code', label: 'Code → Site',   Icon: Code2,     sub: 'La magie en direct' },
+  { id: 'delai', label: '10 jours',     Icon: Clock,     sub: 'La vraie timeline' },
 ]
 
 export default function PreuvePar3() {
@@ -264,7 +194,7 @@ export default function PreuvePar3() {
                   : 'bg-white text-navy/60 border-gray-200 hover:border-gold/30 hover:text-navy'
               }`}
             >
-              <span>{t.icon}</span>
+              <t.Icon size={15} strokeWidth={1.5} aria-hidden="true" />
               <span className="hidden sm:inline">{t.label}</span>
               <span className="sm:hidden">{t.sub}</span>
             </button>
@@ -276,7 +206,7 @@ export default function PreuvePar3() {
           {/* Tab sub-label */}
           <div className="text-xs font-bold text-gold uppercase tracking-widest mb-6 data-mono">{TABS[activeTab].sub}</div>
 
-          {activeTab === 0 && <PriceComparator isVisible={wasVisible[0]} />}
+          {activeTab === 0 && <ComparateurPrix />}
           {activeTab === 1 && <CodeMorph isVisible={wasVisible[1]} />}
           {activeTab === 2 && <Timeline isVisible={wasVisible[2]} />}
         </div>
