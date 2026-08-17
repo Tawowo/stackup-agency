@@ -14,16 +14,19 @@ export default function HomeFaq() {
   const [open, setOpen] = useState<number | null>(null)
 
   return (
-    <section className="py-16 bg-[#060D1A] scanline-section">
-      <div className="max-w-3xl mx-auto px-4 sm:px-6">
+    <section className="py-16 bg-[#FFFDF9] relative overflow-hidden">
+      {/* Halo doux */}
+      <div className="pointer-events-none absolute top-0 right-0 w-64 h-64 rounded-full" aria-hidden="true"
+        style={{ background: 'radial-gradient(circle, rgba(245,158,11,0.06) 0%, transparent 70%)' }} />
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 relative">
         <div className="section-marker mb-2" aria-hidden="true">[ FAQ ]</div>
-        <h2 className="text-2xl font-bold text-white mb-6">Questions fréquentes</h2>
+        <h2 className="text-2xl font-bold text-navy mb-6">Questions fréquentes</h2>
         <div className="space-y-2">
           {FAQ_ITEMS.map(({ q, a }, i) => (
             <div
               key={q}
-              className={`rounded-xl transition-colors duration-200 overflow-hidden glass-panel ${
-                open === i ? 'border-electric/30' : 'hover:border-white/15'
+              className={`rounded-xl transition-all duration-200 overflow-hidden bg-white border ${
+                open === i ? 'border-gold/40 shadow-[0_4px_24px_rgba(245,158,11,0.10)]' : 'border-gray-100 hover:border-gold/20'
               }`}
             >
               <button
@@ -32,25 +35,24 @@ export default function HomeFaq() {
                 aria-expanded={open === i}
                 className="w-full text-left px-5 py-4 flex items-center justify-between gap-4 group"
               >
-                {/* [ Q ] mono marker per spec §2.10 */}
-                <span className="faq-q-mono shrink-0 text-electric/60 data-mono text-xs mr-1" aria-hidden="true">[ Q ]</span>
-                <span className={`flex-1 font-semibold text-sm leading-snug transition-colors ${open === i ? 'text-white' : 'text-white/80 group-hover:text-white'}`}>
+                <span className="shrink-0 text-gold/70 data-mono text-xs mr-1 font-bold" aria-hidden="true">[ Q ]</span>
+                <span className={`flex-1 font-semibold text-sm leading-snug transition-colors ${open === i ? 'text-navy' : 'text-navy/80 group-hover:text-navy'}`}>
                   {q}
                 </span>
                 <ChevronDown
                   size={16}
-                  className={`shrink-0 text-electric/70 transition-transform duration-300 ${open === i ? 'rotate-180' : ''}`}
+                  className={`shrink-0 text-gold/60 transition-transform duration-300 ${open === i ? 'rotate-180' : ''}`}
                 />
               </button>
               <div className={`faq-body ${open === i ? 'open' : ''}`}>
                 <div>
-                  <p className="px-5 pb-4 text-white/60 text-sm leading-relaxed">{a}</p>
+                  <p className="px-5 pb-4 text-navy/60 text-sm leading-relaxed">{a}</p>
                 </div>
               </div>
             </div>
           ))}
         </div>
-        <Link href="/faq" className="mt-6 inline-flex items-center gap-2 text-electric font-medium text-sm hover:text-electric/80 transition-colors">
+        <Link href="/faq" className="mt-6 inline-flex items-center gap-2 text-electric-ink font-medium text-sm hover:text-navy transition-colors">
           Toutes les questions <ArrowRight size={14} className="arrow-slide" />
         </Link>
       </div>

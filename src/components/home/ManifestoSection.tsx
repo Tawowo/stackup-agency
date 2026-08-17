@@ -81,12 +81,12 @@ export default function ManifestoSection() {
           style={{ fontSize: 'clamp(2rem, 5vw, 3.8rem)', letterSpacing: '-0.025em' }}
         >
           <span className="sr-only">Stratégie rigoureuse. Design soigné. Code sur mesure. Performance.</span>
-          {WORDS.map((w, i) => {
+          {WORDS.map((w, _i) => {
             const isLast = w.highlight
             return (
-              <span key={i} className="inline-block mr-[0.25em]">
+              <span key={_i} className="inline-block mr-[0.25em]">
                 <span
-                  ref={el => { wordsRef.current[i] = el }}
+                  ref={el => { wordsRef.current[_i] = el }}
                   className="inline-block text-white transition-none"
                   aria-hidden="true"
                   style={{ opacity: 1 }}

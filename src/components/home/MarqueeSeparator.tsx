@@ -33,7 +33,7 @@ function Row({ items, cls }: { items: Item[]; cls: string }) {
         <span
           key={i}
           className={`mx-5 text-sm font-medium tracking-wide select-none whitespace-nowrap ${
-            item.highlight ? 'marquee-keyword gradient-sig' : 'text-foreground/40 dark:text-white/25'
+            item.highlight ? 'marquee-keyword text-gold font-bold' : 'text-navy/30'
           }`}
         >
           {item.text}
@@ -56,7 +56,7 @@ function Row({ items, cls }: { items: Item[]; cls: string }) {
 export default function MarqueeSeparator() {
   return (
     <div
-      className="py-4 dark:bg-[#0C1222] bg-background border-y border-navy/8 dark:border-white/5 scanline-section space-y-2 overflow-hidden"
+      className="py-4 bg-[#FFFDF9] border-y border-navy/8 space-y-2 overflow-hidden"
       aria-hidden="true"
     >
       <Row items={ITEMS_FWD} cls="marquee-track" />

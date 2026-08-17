@@ -377,9 +377,12 @@ body {
 
 /* ─── Section seams (smooth colour transitions) ─────────── */
 .seam-to-light {
-  background: linear-gradient(180deg, transparent 0%, #F8FAFC 100%);
+  /* V4 : transition hero sombre → fond ivoire clair */
+  background: linear-gradient(180deg, transparent 0%, #FFFDF9 100%);
   height: 160px;
   pointer-events: none;
+  position: relative;
+  z-index: 1;
 }
 .seam-to-deep {
   background: linear-gradient(180deg, transparent 0%, #0B1A2E 100%);
@@ -1395,7 +1398,8 @@ a, button, [role="button"] { cursor: pointer; }
   line-height: 1;
   letter-spacing: -0.04em;
   color: transparent;
-  -webkit-text-stroke: 1px rgba(255,255,255,0.06);
+  /* V4 : trait navy très discret sur fond clair */
+  -webkit-text-stroke: 1px rgba(30,58,95,0.05);
   pointer-events: none;
   user-select: none;
   font-variant-numeric: tabular-nums;

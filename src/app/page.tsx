@@ -72,7 +72,7 @@ export default function Home() {
         <HeroSection />
 
         {/* Couture hero → light */}
-        <div className="seam-to-light dark:hidden" aria-hidden="true" />
+        <div className="seam-to-light" aria-hidden="true" />
 
         <MarqueeSeparator />
 
@@ -82,22 +82,26 @@ export default function Home() {
         <div className="section-divider" aria-hidden="true" />
 
         {/* ── 01 — Services ─────────────────────────────────────────────────── */}
-        <section id="services" className="py-24 dark:bg-[#070B16] bg-background relative overflow-hidden scanline-section">
-          {/* XXL decorative number */}
+        <section id="services" className="py-24 bg-[#FFFDF9] relative overflow-hidden">
+          {/* Halos de fond chauds */}
+          <div className="pointer-events-none absolute top-0 right-0 w-[500px] h-[400px]" aria-hidden="true"
+            style={{ background: 'radial-gradient(ellipse, rgba(245,158,11,0.07) 0%, transparent 70%)' }} />
+          <div className="pointer-events-none absolute bottom-0 left-0 w-[400px] h-[300px]" aria-hidden="true"
+            style={{ background: 'radial-gradient(ellipse, rgba(45,125,210,0.05) 0%, transparent 70%)' }} />
           <span className="section-number select-none" aria-hidden="true">01</span>
           <div className="max-w-5xl mx-auto px-4 sm:px-6 relative">
             <div className="mb-12 max-w-2xl">
               <div className="section-marker mb-2 reveal-item" aria-hidden="true">[ 01 / SERVICES ]</div>
-              <div className="text-xs font-bold text-electric uppercase tracking-[0.2em] mb-3 reveal-item">Services web</div>
-              <h2 className="text-3xl lg:text-5xl font-bold text-foreground dark:text-white mb-4 reveal-item heading-underline-animated in-view" style={{ lineHeight: 1.15 }}>
+              <div className="text-xs font-bold text-gold uppercase tracking-[0.2em] mb-3 reveal-item">Services web</div>
+              <h2 className="text-3xl lg:text-5xl font-bold text-navy mb-4 reveal-item" style={{ lineHeight: 1.15 }}>
                 Nos services web
               </h2>
-              <p className="text-foreground/60 dark:text-white/60 max-w-xl reveal-item" style={{ animationDelay: '80ms' }}>
+              <p className="text-navy/55 max-w-xl reveal-item" style={{ animationDelay: '80ms' }}>
                 Du site vitrine à l'application sur mesure — une solution adaptée à chaque budget et chaque activité.
               </p>
             </div>
             <ServiceCards />
-            <Link href="/services" className="inline-flex items-center gap-2 text-electric-ink dark:text-electric hover:text-navy dark:hover:text-electric font-medium transition-colors mt-8">
+            <Link href="/services" className="inline-flex items-center gap-2 text-electric-ink hover:text-navy font-medium transition-colors mt-8">
               Voir tous nos services <ArrowRight size={16} />
             </Link>
           </div>
@@ -106,54 +110,54 @@ export default function Home() {
         <div className="section-divider" aria-hidden="true" />
 
         {/* ── 02 — Pourquoi Stackup ──────────────────────────────────────────── */}
-        <section className="py-24 bg-[#060D1A] relative overflow-hidden">
-          <span className="section-number !text-white/[0.04]" aria-hidden="true">02</span>
-          <div className="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-64 rounded-full"
-            aria-hidden="true"
-            style={{ background: 'radial-gradient(ellipse, rgba(45,125,210,0.08) 0%, transparent 70%)' }} />
+        <section className="py-24 bg-white relative overflow-hidden">
+          <span className="section-number select-none" aria-hidden="true">02</span>
+          {/* Halo doux */}
+          <div className="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-64 rounded-full" aria-hidden="true"
+            style={{ background: 'radial-gradient(ellipse, rgba(245,158,11,0.07) 0%, transparent 70%)' }} />
           <div className="relative max-w-5xl mx-auto px-4 sm:px-6">
             <div className="section-marker mb-2 reveal-item" aria-hidden="true">[ 02 / POURQUOI ]</div>
-            <div className="text-xs font-bold text-electric uppercase tracking-[0.2em] mb-3 reveal-item">Pourquoi nous</div>
-            <h2 className="text-3xl lg:text-5xl font-bold text-white mb-16 reveal-item" style={{ lineHeight: 1.15 }}>
+            <div className="text-xs font-bold text-gold uppercase tracking-[0.2em] mb-3 reveal-item">Pourquoi nous</div>
+            <h2 className="text-3xl lg:text-5xl font-bold text-navy mb-16 reveal-item" style={{ lineHeight: 1.15 }}>
               Pourquoi Stackup Agency ?
             </h2>
-            {/* Asymmetric 3-column layout: large left card + 2 stacked right */}
+            {/* 3 cartes lumineuses */}
             <div className="grid lg:grid-cols-5 gap-4">
-              {/* Large left card */}
-              <div className="reveal-item stat-card lg:col-span-2 group relative p-8 rounded-2xl bg-white/5 border border-white/10 hover:border-electric/30 hover:bg-white/8 transition-all duration-300 hover:-translate-y-1 shadow-lift-sm overflow-hidden">
-                <div className="absolute top-0 left-0 right-0 h-px rounded-t-2xl bg-gradient-to-r from-electric to-electric/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <div className="text-5xl font-black text-electric mb-4 tabular-nums" style={{ lineHeight: 1 }}>3–5×</div>
-                <div className="w-10 h-10 rounded-xl bg-blue-500/15 border border-blue-500/20 flex items-center justify-center mb-5">
-                  <Zap size={20} className="text-electric" />
+              {/* Large left — Prix */}
+              <div className="reveal-item lg:col-span-2 group relative p-8 rounded-2xl bg-white border border-gray-100 hover:border-gold/30 hover:shadow-[0_16px_48px_rgba(30,58,95,0.10)] transition-all duration-300 hover:-translate-y-1 overflow-hidden">
+                <div className="absolute top-0 left-0 right-0 h-0.5 rounded-t-2xl bg-gradient-to-r from-gold to-amber-300 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="text-5xl font-black text-gold mb-4 tabular-nums" style={{ lineHeight: 1 }}>3–5×</div>
+                <div className="w-10 h-10 rounded-xl bg-amber-50 border border-gold/20 flex items-center justify-center mb-5">
+                  <Zap size={20} className="text-gold" />
                 </div>
-                <h3 className="font-bold text-white text-lg mb-3">Le prix d'un indépendant</h3>
-                <p className="text-white/55 text-sm leading-relaxed">Des tarifs 3 à 5 fois inférieurs aux agences classiques, à périmètre égal. Pas de bureaux à amortir, pas de couches commerciales : vous payez le travail, pas la structure.</p>
+                <h3 className="font-bold text-navy text-lg mb-3">Le prix d'un indépendant</h3>
+                <p className="text-navy/55 text-sm leading-relaxed">Des tarifs 3 à 5 fois inférieurs aux agences classiques, à périmètre égal. Pas de bureaux à amortir, pas de couches commerciales : vous payez le travail, pas la structure.</p>
               </div>
               {/* Right: 2 stacked */}
               <div className="lg:col-span-3 grid sm:grid-rows-2 gap-4">
-                <div className="reveal-item stat-card group relative p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-gold/30 hover:bg-white/8 transition-all duration-300 hover:-translate-y-1 shadow-lift-sm overflow-hidden"
+                <div className="reveal-item group relative p-6 rounded-2xl bg-white border border-gray-100 hover:border-electric/30 hover:shadow-[0_16px_48px_rgba(30,58,95,0.10)] transition-all duration-300 hover:-translate-y-1 overflow-hidden"
                   style={{ animationDelay: '120ms' }}>
-                  <div className="absolute top-0 left-0 right-0 h-px rounded-t-2xl bg-gradient-to-r from-gold to-gold/40 opacity-0 group-hover:opacity-100 transition-opacity" />
+                  <div className="absolute top-0 left-0 right-0 h-0.5 rounded-t-2xl bg-gradient-to-r from-electric to-blue-300 opacity-0 group-hover:opacity-100 transition-opacity" />
                   <div className="flex items-start gap-4">
-                    <div className="w-10 h-10 rounded-xl bg-gold/15 border border-gold/20 flex items-center justify-center flex-shrink-0">
-                      <Shield size={20} className="text-gold" />
+                    <div className="w-10 h-10 rounded-xl bg-blue-50 border border-electric/20 flex items-center justify-center flex-shrink-0">
+                      <Shield size={20} className="text-electric" />
                     </div>
                     <div>
-                      <h3 className="font-bold text-white mb-1">La qualité d'une grande agence</h3>
-                      <p className="text-white/55 text-sm leading-relaxed">Code sur mesure en Next.js et TypeScript, performance et SEO intégrés dès la conception. Jugez sur pièce : toutes nos démonstrations sont en ligne.</p>
+                      <h3 className="font-bold text-navy mb-1">La qualité d'une grande agence</h3>
+                      <p className="text-navy/55 text-sm leading-relaxed">Code sur mesure en Next.js et TypeScript, performance et SEO intégrés dès la conception. Jugez sur pièce : toutes nos démonstrations sont en ligne.</p>
                     </div>
                   </div>
                 </div>
-                <div className="reveal-item stat-card group relative p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-white/25 hover:bg-white/8 transition-all duration-300 hover:-translate-y-1 shadow-lift-sm overflow-hidden"
+                <div className="reveal-item group relative p-6 rounded-2xl bg-white border border-gray-100 hover:border-navy/20 hover:shadow-[0_16px_48px_rgba(30,58,95,0.10)] transition-all duration-300 hover:-translate-y-1 overflow-hidden"
                   style={{ animationDelay: '240ms' }}>
-                  <div className="absolute top-0 left-0 right-0 h-px rounded-t-2xl bg-gradient-to-r from-electric/80 to-navy opacity-0 group-hover:opacity-100 transition-opacity" />
+                  <div className="absolute top-0 left-0 right-0 h-0.5 rounded-t-2xl bg-gradient-to-r from-navy to-electric opacity-0 group-hover:opacity-100 transition-opacity" />
                   <div className="flex items-start gap-4">
-                    <div className="w-10 h-10 rounded-xl bg-blue-500/15 border border-blue-500/20 flex items-center justify-center flex-shrink-0">
-                      <Clock size={20} className="text-electric" />
+                    <div className="w-10 h-10 rounded-xl bg-blue-50 border border-navy/15 flex items-center justify-center flex-shrink-0">
+                      <Clock size={20} className="text-navy" />
                     </div>
                     <div>
-                      <h3 className="font-bold text-white mb-1">Une rapidité assumée</h3>
-                      <p className="text-white/55 text-sm leading-relaxed">Votre site vitrine en ligne en 10 jours ouvrés, contractuellement. Chaque étape est cadrée, chaque délai est écrit.</p>
+                      <h3 className="font-bold text-navy mb-1">Une rapidité assumée</h3>
+                      <p className="text-navy/55 text-sm leading-relaxed">Votre site vitrine en ligne en 10 jours ouvrés, contractuellement. Chaque étape est cadrée, chaque délai est écrit.</p>
                     </div>
                   </div>
                 </div>
@@ -166,21 +170,20 @@ export default function Home() {
 
         <ProcessSection />
 
-        {/* Jugez sur pièce */}
-        <section className="py-16 bg-[#070B16] scanline-section">
+        {/* Jugez sur pièce — mini CTA sur fond ivoire */}
+        <section className="py-16 bg-[#FFFDF9]">
           <div className="max-w-3xl mx-auto px-4 sm:px-6">
-            <div className="reveal-item relative rounded-2xl p-8 text-center overflow-hidden glass-panel liseré-border hud-4corners">
-              {/* Background halo */}
+            <div className="reveal-item relative rounded-2xl p-8 text-center overflow-hidden bg-white border border-gray-100 shadow-[0_8px_32px_rgba(30,58,95,0.08)] hud-4corners">
               <div className="pointer-events-none absolute inset-0 flex items-center justify-center" aria-hidden="true">
-                <div className="w-64 h-64 rounded-full" style={{ background: 'radial-gradient(circle, rgba(45,125,210,0.10) 0%, transparent 70%)' }} />
+                <div className="w-64 h-64 rounded-full" style={{ background: 'radial-gradient(circle, rgba(245,158,11,0.06) 0%, transparent 70%)' }} />
               </div>
               <div className="relative">
-                <h3 className="font-bold text-white text-xl mb-3">Jugez sur pièce</h3>
-                <p className="text-white/60 mb-6 max-w-md mx-auto">
+                <h3 className="font-bold text-navy text-xl mb-3">Jugez sur pièce</h3>
+                <p className="text-navy/55 mb-6 max-w-md mx-auto">
                   Nos démonstrations sont des projets complets, construits par nos soins et consultables en ligne.
                   Ce que vous voyez est exactement ce que nous livrons.
                 </p>
-                <Link href="/realisations" className="btn-magnetic cta-glow inline-flex items-center gap-2 px-6 py-3 bg-navy hover:bg-electric text-white font-semibold rounded-xl text-sm transition-all hover:-translate-y-0.5">
+                <Link href="/realisations" className="btn-magnetic inline-flex items-center gap-2 px-6 py-3 bg-gold hover:bg-gold/80 text-ink font-semibold rounded-xl text-sm shadow-lg shadow-amber-500/20 transition-all hover:-translate-y-0.5">
                   Explorer nos démonstrations <span className="arrow-slide">→</span>
                 </Link>
               </div>
@@ -191,28 +194,32 @@ export default function Home() {
         <div className="section-divider" aria-hidden="true" />
 
         {/* ── 04 — Blog ─────────────────────────────────────────────────────── */}
-        <section id="blog" className="py-24 bg-[#060D1A] scanline-section relative overflow-hidden">
+        <section id="blog" className="py-24 bg-white relative overflow-hidden">
+          {/* Halo bleu doux */}
+          <div className="pointer-events-none absolute bottom-0 right-0 w-[400px] h-[400px]" aria-hidden="true"
+            style={{ background: 'radial-gradient(ellipse, rgba(45,125,210,0.05) 0%, transparent 70%)' }} />
           <div className="max-w-5xl mx-auto px-4 sm:px-6 relative">
             <div className="flex items-end justify-between mb-12">
               <div>
                 <div className="section-marker mb-2" aria-hidden="true">[ 04 / BLOG ]</div>
-                <p className="overline-label !text-electric mb-3">Blog</p>
-                <h2 className="text-3xl lg:text-5xl font-bold text-white reveal-item">Du concret sur le blog</h2>
+                <p className="overline-label mb-3">Blog</p>
+                <h2 className="text-3xl lg:text-5xl font-bold text-navy reveal-item">Du concret sur le blog</h2>
               </div>
-              <Link href="/blog" className="hidden sm:flex items-center gap-1 text-electric hover:text-electric/80 font-medium text-sm transition-colors">
+              <Link href="/blog" className="hidden sm:flex items-center gap-1 text-electric-ink hover:text-navy font-medium text-sm transition-colors">
                 Tous les articles <ArrowRight size={14} />
               </Link>
             </div>
             {/* Asymmetric: 1 large card + 2 small */}
             <div className="grid sm:grid-cols-5 gap-4">
               <Link href="/blog/creation-site-internet-prix"
-                className="reveal-item group relative sm:col-span-3 p-7 rounded-2xl glass-panel hud-4corners hover:border-electric/30 transition-all duration-300 hover:-translate-y-1 overflow-hidden"
+                className="reveal-item group relative sm:col-span-3 p-7 rounded-2xl bg-white border border-gray-100 hud-4corners hover:border-gold/30 hover:shadow-[0_16px_48px_rgba(30,58,95,0.10)] transition-all duration-300 hover:-translate-y-1 overflow-hidden"
                 style={{ animationDelay: '0ms' }}>
-                <div className="text-xs text-electric font-bold uppercase tracking-widest mb-3 data-mono">Tarifs</div>
-                <h3 className="font-bold text-white text-xl transition-colors leading-snug mb-4">
-                  <span className="blog-title-highlight group-hover:text-electric transition-colors">Combien coûte un site internet en 2026 ?</span>
+                <div className="absolute top-0 left-0 right-0 h-0.5 rounded-t-2xl bg-gradient-to-r from-gold to-amber-300 opacity-0 group-hover:opacity-100 transition-opacity" />
+                <div className="text-xs text-gold font-bold uppercase tracking-widest mb-3 data-mono">Tarifs</div>
+                <h3 className="font-bold text-navy text-xl transition-colors leading-snug mb-4 group-hover:text-electric-ink">
+                  Combien coûte un site internet en 2026 ?
                 </h3>
-                <span className="text-xs text-white/30 group-hover:text-electric/60 transition-colors flex items-center gap-1">
+                <span className="text-xs text-navy/30 group-hover:text-gold transition-colors flex items-center gap-1">
                   Lire l'article <span className="arrow-slide">→</span>
                 </span>
               </Link>
@@ -222,18 +229,19 @@ export default function Home() {
                   { href: '/blog/seo-local-google-business', titre: 'SEO local : comment apparaître en tête sur Google Maps', cat: 'SEO' },
                 ].map((a, i) => (
                   <Link key={a.href} href={a.href}
-                    className="reveal-item group relative flex-1 p-5 rounded-2xl glass-panel hud-corners hover:border-electric/30 transition-all duration-300 hover:-translate-y-0.5 overflow-hidden"
+                    className="reveal-item group relative flex-1 p-5 rounded-2xl bg-white border border-gray-100 hud-corners hover:border-electric/30 hover:shadow-[0_12px_32px_rgba(30,58,95,0.08)] transition-all duration-300 hover:-translate-y-0.5 overflow-hidden"
                     style={{ animationDelay: `${(i + 1) * 100}ms` }}>
+                    <div className="absolute top-0 left-0 right-0 h-0.5 rounded-t-2xl bg-gradient-to-r from-electric to-blue-300 opacity-0 group-hover:opacity-100 transition-opacity" />
                     <div className="text-xs text-electric font-bold uppercase tracking-widest mb-2 data-mono">{a.cat}</div>
-                    <h3 className="font-semibold text-white group-hover:text-electric/80 transition-colors text-sm leading-snug mb-3">{a.titre}</h3>
-                    <span className="text-xs text-white/30 group-hover:text-electric/50 transition-colors flex items-center gap-1">
+                    <h3 className="font-semibold text-navy group-hover:text-electric-ink transition-colors text-sm leading-snug mb-3">{a.titre}</h3>
+                    <span className="text-xs text-navy/30 group-hover:text-electric/60 transition-colors flex items-center gap-1">
                       Lire l'article <span className="arrow-slide">→</span>
                     </span>
                   </Link>
                 ))}
               </div>
             </div>
-            <Link href="/blog" className="sm:hidden mt-6 inline-flex items-center gap-1 text-electric hover:text-electric/80 font-medium text-sm transition-colors">
+            <Link href="/blog" className="sm:hidden mt-6 inline-flex items-center gap-1 text-electric-ink hover:text-navy font-medium text-sm transition-colors">
               Tous les articles <ArrowRight size={14} />
             </Link>
           </div>
@@ -242,15 +250,18 @@ export default function Home() {
         <div className="section-divider" aria-hidden="true" />
 
         {/* ── 05 — Maintenance ──────────────────────────────────────────────── */}
-        <section className="py-24 bg-[#0C1222] scanline-section relative overflow-hidden">
+        <section className="py-24 bg-[#FFFDF9] relative overflow-hidden">
+          {/* Halo or doux */}
+          <div className="pointer-events-none absolute top-0 left-0 w-[500px] h-[350px]" aria-hidden="true"
+            style={{ background: 'radial-gradient(ellipse, rgba(245,158,11,0.06) 0%, transparent 70%)' }} />
           <div className="max-w-5xl mx-auto px-4 sm:px-6 relative">
             <div className="mb-10">
               <div className="section-marker mb-2" aria-hidden="true">[ 05 / MAINTENANCE ]</div>
-              <p className="overline-label !text-electric mb-3">Formules mensuelles</p>
-              <h2 className="text-3xl lg:text-5xl font-bold text-white mb-3 reveal-item">
+              <p className="overline-label mb-3">Formules mensuelles</p>
+              <h2 className="text-3xl lg:text-5xl font-bold text-navy mb-3 reveal-item">
                 Maintenance & hébergement
               </h2>
-              <p className="text-white/60 reveal-item" style={{ animationDelay: '80ms' }}>Après la première année incluse, une formule mensuelle pour que votre site reste rapide, sécurisé et à jour.</p>
+              <p className="text-navy/55 reveal-item" style={{ animationDelay: '80ms' }}>Après la première année incluse, une formule mensuelle pour que votre site reste rapide, sécurisé et à jour.</p>
             </div>
             <div className="grid sm:grid-cols-3 gap-5">
               {[
@@ -259,19 +270,21 @@ export default function Home() {
                 { nom: 'Premium', prix: SITE.pricing.maintenancePremium, delai: '24h ouvrées', inclus: ['Tout Pro', '5h modifications/mois', 'Rapport mensuel SEO', 'Réponse prioritaire'], highlight: false },
               ].map((f, i) => (
                 <div key={f.nom}
-                  className={`maintenance-card reveal-item relative rounded-2xl p-5 glass-panel ${f.highlight ? 'highlight liseré-border liseré-permanent hud-corners' : 'hud-4corners'}`}
+                  className={`maintenance-card reveal-item relative rounded-2xl p-5 ${f.highlight
+                    ? 'bg-navy text-white liseré-border hud-corners shadow-[0_24px_60px_rgba(30,58,95,0.20)]'
+                    : 'bg-white border border-gray-100 hover:shadow-[0_12px_40px_rgba(30,58,95,0.08)] hud-4corners'} transition-all`}
                   style={{ animationDelay: `${i * 80}ms` }}>
-                  {f.highlight && <div className="text-xs font-semibold text-electric-ink dark:text-electric mb-2 uppercase tracking-wide data-mono">★ Le plus populaire</div>}
+                  {f.highlight && <div className="text-xs font-semibold text-gold mb-2 uppercase tracking-wide data-mono">★ Le plus populaire</div>}
                   <div className="flex items-baseline gap-1 mb-1">
-                    <span className={`text-2xl font-bold data-mono ${f.highlight ? 'text-electric-ink dark:text-electric' : 'text-navy dark:text-gold'}`}>{f.prix}€</span>
-                    <span className="text-sm text-foreground/60 dark:text-white/60">/mois</span>
+                    <span className={`text-2xl font-bold data-mono ${f.highlight ? 'text-gold' : 'text-navy'}`}>{f.prix}€</span>
+                    <span className={`text-sm ${f.highlight ? 'text-white/60' : 'text-navy/50'}`}>/mois</span>
                   </div>
-                  <div className="font-semibold text-foreground dark:text-white mb-1">{f.nom}</div>
-                  <div className="text-xs text-electric-ink dark:text-electric mb-4">Réponse {f.delai}</div>
+                  <div className={`font-semibold mb-1 ${f.highlight ? 'text-white' : 'text-navy'}`}>{f.nom}</div>
+                  <div className={`text-xs mb-4 ${f.highlight ? 'text-gold/80' : 'text-electric-ink'}`}>Réponse {f.delai}</div>
                   <ul className="space-y-1.5">
                     {f.inclus.map(item => (
-                      <li key={item} className="flex items-center gap-2 text-sm text-foreground/70 dark:text-white/70">
-                        <CheckCircle size={12} className={`flex-shrink-0 ${f.highlight ? 'text-electric' : 'text-success'}`} />
+                      <li key={item} className={`flex items-center gap-2 text-sm ${f.highlight ? 'text-white/70' : 'text-navy/60'}`}>
+                        <CheckCircle size={12} className={`flex-shrink-0 ${f.highlight ? 'text-gold' : 'text-electric'}`} />
                         {item}
                       </li>
                     ))}
@@ -280,7 +293,7 @@ export default function Home() {
               ))}
             </div>
             <div className="mt-6">
-              <Link href="/tarifs" className="inline-flex items-center gap-2 text-electric-ink dark:text-electric font-medium text-sm transition-colors hover:text-navy dark:hover:text-electric/80">
+              <Link href="/tarifs" className="inline-flex items-center gap-2 text-electric-ink hover:text-navy font-medium text-sm transition-colors">
                 Voir toutes les formules <ArrowRight size={14} />
               </Link>
             </div>
