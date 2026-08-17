@@ -1,15 +1,15 @@
 ---
-title: "CGV boutique en ligne : ce qui est obligatoire en France"
-excerpt: "Les Conditions Générales de Vente sont obligatoires pour toute boutique en ligne française. Ce guide liste les mentions obligatoires et les clauses qui vous protègent réellement."
+title: "E-commerce : les obligations légales françaises (CGV, rétractation…)"
+excerpt: "CGV, droit de rétractation de 14 jours, garanties légales, médiation : ce que la loi française impose à toute boutique en ligne, avec les sanctions encourues en cas de manquement."
 date: "2026-07-26"
-updated: "2026-07-30"
-readTime: 6
+updated: "2026-08-17"
+readTime: 8
 tag: "E-commerce"
 category: "ecommerce"
-keywords: ["CGV boutique en ligne", "conditions générales de vente e-commerce", "mentions obligatoires site vente", "légal e-commerce France"]
+keywords: ["obligations legales ecommerce", "cgv boutique en ligne", "droit retractation ecommerce", "mentions obligatoires site vente"]
 ---
 
-**Vendre en ligne sans CGV valides expose à des sanctions allant jusqu'à 3 000€ d'amende** (article L113-3 du Code de la consommation) et à l'annulation de ventes en cas de litige. Les CGV ne sont pas qu'un document légal — elles définissent les règles du jeu entre vous et vos clients et vous protègent en cas de désaccord.
+**Une boutique en ligne française doit obligatoirement disposer de CGV conformes (identité du vendeur, prix TTC, droit de rétractation de 14 jours, garanties légales, médiation), sous peine de sanctions allant jusqu'à 3 000 € d'amende (article L113-3 du Code de la consommation) et d'annulation de ventes en cas de litige.** Les CGV ne sont pas qu'un document légal — elles définissent les règles du jeu entre le vendeur et ses clients et le protègent en cas de désaccord.
 
 ---
 
@@ -133,5 +133,12 @@ Non, sauf si vous l'acceptez volontairement (certaines boutiques proposent 30 jo
 
 **Est-ce que les CGV s'appliquent aux ventes B2B ?**
 Les CGV B2C s'appliquent uniquement aux consommateurs (particuliers). Pour les ventes B2B, vous pouvez avoir des CGV différentes avec des conditions distinctes. L'obligation de droit de rétractation de 14 jours ne s'applique pas aux transactions B2B.
+
+## En résumé
+
+- Des CGV conformes sont obligatoires pour toute boutique en ligne française, sous peine d'amende et de risque d'annulation de ventes en cas de litige.
+- Le droit de rétractation de 14 jours, les garanties légales (conformité 2 ans, vices cachés) et la mention d'un médiateur sont des obligations non négociables.
+- Certaines clauses (exclusion totale de responsabilité, modification unilatérale du prix) sont réputées abusives et nulles même si le client les a acceptées.
+- Un générateur en ligne convient pour une boutique standard ; un avocat spécialisé devient pertinent pour un CA important ou des produits à risque (alcool, alimentaire, cosmétiques).
 
 Voir aussi : [RGPD et site web](/blog/rgpd-site-web-2026), [site e-commerce création](/services/site-ecommerce) et nos [tarifs boutique en ligne](/tarifs).

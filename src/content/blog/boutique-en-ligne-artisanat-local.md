@@ -1,13 +1,15 @@
 ---
-title: "Boutique en ligne pour artisanat local : vendre sans intermédiaire"
+title: "Créateurs & artisanat : Etsy ou sa propre boutique ?"
 date: "2026-06-14"
-excerpt: "Comment un artisan local peut créer sa boutique en ligne pour vendre directement ses créations, sans dépendre d'Etsy ou des marketplaces, et construire une relation client durable."
+updated: "2026-08-17"
+excerpt: "Etsy prend 15 à 20 % de commission et impose ses règles, mais apporte du trafic immédiat. Une boutique propre coûte plus cher à construire mais élimine la commission à vie. Le comparatif."
 tag: "Commerce"
 category: "commerce"
-readTime: 7
+readTime: 8
+keywords: ["etsy ou site", "etsy vs boutique propre", "quitter etsy", "vendre creations sans etsy"]
 ---
 
-**En France, plus de 600 000 artisans exercent leur métier**, de la potière au ébéniste en passant par le brodeur, le savonnier ou le maroquinier. La plupart vendent en local — marchés, foires artisanales, ateliers ouverts — et certains se sont tournés vers Etsy pour toucher une clientèle plus large. Mais Etsy prend des commissions importantes, impose ses règles et rend les artisans dépendants d'une plateforme qu'ils ne contrôlent pas. La solution ? Leur propre boutique en ligne. Simple à dire, mais comment la rendre efficace ?
+**Etsy prend 15 à 20 % de commission sur chaque vente (frais de mise en ligne, commission sur transaction, publicité Etsy Offsite Ads quasi obligatoire) en échange d'un trafic immédiat ; une boutique propre élimine cette commission à vie, au prix de devoir construire soi-même sa visibilité.** En France, plus de 600 000 artisans exercent leur métier — la plupart vendent en local, certains se sont tournés vers Etsy pour toucher une clientèle plus large, sans toujours mesurer le coût réel de cette dépendance.
 
 ## Pourquoi c'est important en 2026
 
@@ -69,14 +71,41 @@ Votre liste email est l'actif le plus précieux de votre boutique en ligne — b
 
 Envoyez une newsletter régulière (une fois par mois suffit) présentant vos créations récentes, vos projets en cours et vos dates de marchés ou événements.
 
-> **À retenir :**
-> - Votre propre boutique en ligne vous affranchit des commissions et des règles d'Etsy
-> - Les photos et le storytelling sont les deux leviers les plus puissants pour convertir en artisanat
-> - La commande sur-mesure est un avantage concurrentiel unique que votre site doit valoriser
-> - La newsletter est votre actif digital le plus précieux — construisez votre liste dès le premier jour
+## Etsy ou boutique propre : le comparatif
 
-## Conclusion
+| Critère | Etsy | Boutique propre |
+|---|---|---|
+| Coût par vente | 15 à 20 % (frais + commission + publicité Offsite) | 0 % (hors frais de paiement bancaire standards ~2,9 %) |
+| Trafic | Immédiat, marché déjà existant | À construire (SEO, réseaux sociaux, bouche-à-oreille) |
+| Concurrence directe visible | Oui, sur le même annuaire | Non |
+| Propriété de la relation client | Non — chez Etsy | Oui, entièrement |
+| Personnalisation de la boutique | Limitée au gabarit Etsy | Totale |
+| Coût de création | Gratuit (mais commission à vie) | 449 € à 1 647 € une fois |
 
-Une boutique en ligne bien conçue est pour un artisan ce qu'une belle enseigne lumineuse est pour un commerce physique : elle rend votre travail visible à ceux qui cherchent exactement ce que vous faites. Mais elle fait plus encore : elle vous permet de construire une relation directe avec vos clients, sans intermédiaire, sans commission, sans dépendre d'un algorithme de plateforme. C'est un investissement en temps et en argent qui se rentabilise rapidement — et qui devient un actif durable pour votre activité.
+## En résumé
 
-Prêt à digitaliser votre commerce ? [Contactez Stackup Agency](/contact) — devis gratuit en 24h.
+- Etsy prend 15 à 20 % de commission tous frais compris, en échange d'un trafic immédiat sur un marché déjà constitué.
+- Une boutique propre élimine cette commission à vie, mais demande de construire sa propre visibilité (SEO, réseaux sociaux, newsletter).
+- Les photos et le storytelling autour du processus de création sont les deux leviers les plus puissants pour convertir en artisanat, sur les deux canaux.
+- La stratégie la plus fréquente : utiliser Etsy pour démarrer et se faire connaître, puis construire en parallèle sa boutique propre pour réduire la dépendance à la commission.
+
+## Questions fréquentes
+
+**Faut-il choisir entre Etsy et sa propre boutique, ou peut-on faire les deux ?**
+Les deux peuvent coexister : Etsy pour capter de nouveaux clients grâce à son trafic, la boutique propre pour fidéliser sans commission et construire une relation directe.
+
+**Combien de temps avant qu'une boutique propre génère un trafic comparable à Etsy ?**
+Cela dépend du travail de référencement local et de contenu engagé, généralement plusieurs mois à un an pour une audience significative, contre un trafic immédiat sur Etsy.
+
+**Etsy convient-il à tous les types de créations artisanales ?**
+Etsy fonctionne bien pour les produits facilement photographiables et standardisables. Les pièces très personnalisées ou sur-mesure trouvent souvent un meilleur écrin sur une boutique propre, sans les contraintes de gabarit d'Etsy.
+
+**Peut-on migrer sa boutique Etsy vers un site propre ?**
+Oui, le catalogue produit (photos, descriptions) peut être repris et enrichi pour la nouvelle boutique, sans export technique automatique mais sans perte de contenu créatif.
+
+**Une boutique propre est-elle plus difficile à référencer que de vendre sur Etsy ?**
+Le référencement demande un travail actif (SEO, contenu régulier), mais une boutique propre bien optimisée peut capter des requêtes précises ("poterie faite main [région]") qu'Etsy, en tant que marketplace généraliste, ne cible pas spécifiquement pour chaque vendeur.
+
+---
+
+*Pour aller plus loin : [Vendre en ligne sans Amazon : reprendre le contrôle de ses marges](/blog/amazon-marketplace-vs-site-propre) · [Vendre ses créations en ligne : guide complet pour artisans](/blog/vendre-creations-en-ligne-artisans) · [Nos tarifs boutique en ligne](/tarifs)*

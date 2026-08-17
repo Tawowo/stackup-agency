@@ -1,15 +1,15 @@
 ---
-title: "Amazon vs votre propre boutique : ce que les chiffres disent vraiment"
-excerpt: "Vendre sur Amazon ou créer sa boutique en ligne ? Pour une TPE, ce n'est pas une question de l'un ou l'autre — c'est une question de stratégie combinée. Analyse chiffrée."
+title: "Vendre en ligne sans Amazon : reprendre le contrôle de ses marges"
+excerpt: "Amazon prélève 25 à 40 % du prix de vente tous frais compris (commission, FBA, publicité). Une boutique propre élimine cette ponction. Les chiffres réels et la stratégie combinée."
 date: "2026-07-29"
-updated: "2026-07-30"
-readTime: 6
+updated: "2026-08-17"
+readTime: 7
 tag: "E-commerce"
 category: "ecommerce"
-keywords: ["Amazon vs boutique propre", "vendre Amazon TPE", "marketplace Amazon France", "avantages inconvénients Amazon vendeur"]
+keywords: ["vendre sans amazon", "reprendre marge amazon", "amazon vs boutique propre", "quitter amazon marketplace"]
 ---
 
-**Amazon représente 40% des ventes e-commerce en France en 2026.** Ignorer cette plateforme est difficile. Mais dépendre exclusivement d'Amazon est risqué. Ce guide présente les chiffres réels et la stratégie d'un vendeur TPE intelligent.
+**Vendre sans Amazon signifie récupérer les 25 à 40 % du prix de vente qu'Amazon prélève en moyenne (commission, frais FBA, publicité sponsorisée) — au prix de devoir construire soi-même son propre trafic, ce qu'Amazon apporte immédiatement.** Amazon représente 40 % des ventes e-commerce en France en 2026 : l'ignorer complètement est difficile, mais en dépendre exclusivement est risqué. Ce guide présente les chiffres réels et la stratégie combinée la plus rentable pour une TPE.
 
 ---
 
@@ -94,6 +94,13 @@ Un changement de politique tarifaire Amazon (comme la hausse des frais FBA en 20
 - Les deux canaux se renforcent mutuellement (notoriété Amazon → crédibilité boutique propre)
 
 ---
+
+## En résumé
+
+- Vendre sur Amazon coûte réellement 25 à 40 % du prix de vente une fois commission, frais FBA et publicité sponsorisée cumulés.
+- Amazon apporte un trafic immédiat (25 millions de visites/mois en France) mais ne donne aucune donnée client, ce qui empêche toute fidélisation directe.
+- Une boutique propre offre une meilleure marge et la propriété totale de la relation client, au prix de devoir construire son propre trafic.
+- La stratégie la plus rentable pour une TPE combine les deux canaux : Amazon pour acquérir, la boutique propre pour fidéliser et préserver la marge.
 
 ## FAQ
 

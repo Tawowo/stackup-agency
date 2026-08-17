@@ -1,15 +1,15 @@
 ---
-title: "Tunnel d'achat e-commerce : réduire les abandons de panier"
-excerpt: "70% des paniers e-commerce sont abandonnés avant la finalisation. Ce guide identifie les 6 causes les plus fréquentes et les solutions concrètes pour chaque étape du tunnel."
+title: "Abandon de panier : récupérer les ventes perdues"
+excerpt: "70 % des paniers e-commerce sont abandonnés avant la finalisation. Frais de livraison surprise, compte obligatoire, tunnel trop long : les causes et les solutions concrètes, chiffrées."
 date: "2026-07-30"
-updated: "2026-07-30"
-readTime: 7
+updated: "2026-08-17"
+readTime: 8
 tag: "E-commerce"
 category: "ecommerce"
-keywords: ["tunnel achat ecommerce", "abandon panier réduire", "optimiser checkout boutique", "conversion tunnel commande"]
+keywords: ["abandon panier", "recuperer paniers abandonnes", "reduire abandon panier ecommerce", "tunnel achat ecommerce"]
 ---
 
-**Le taux d'abandon de panier moyen en e-commerce est de 70%.** Pour 100 visiteurs qui ajoutent un produit au panier, 70 partent sans acheter. Chaque point de friction éliminé dans votre tunnel d'achat se traduit directement en chiffre d'affaires supplémentaire — sans dépenser un euro de plus en acquisition.
+**Le taux d'abandon de panier moyen en e-commerce est de 70 % — pour 100 visiteurs qui ajoutent un produit au panier, 70 partent sans acheter.** Les frais de livraison découverts en fin de commande sont la première cause (48 % des abandons), suivis de l'obligation de créer un compte et d'un tunnel trop long. Chaque point de friction éliminé se traduit directement en chiffre d'affaires supplémentaire, sans dépenser un euro de plus en acquisition.
 
 ---
 
@@ -133,5 +133,12 @@ Le one-page checkout (tout sur une seule page) peut augmenter la conversion sur 
 
 **Peut-on afficher des promotions dans le tunnel sans distraire l'acheteur ?**
 Avec modération. Un up-sell ou cross-sell pertinent ("les clients ont aussi acheté...") avant la confirmation peut augmenter le panier moyen. Mais trop de distractions dans le tunnel font sortir l'acheteur avant la finalisation.
+
+## En résumé
+
+- 70 % des paniers e-commerce sont abandonnés — les frais de livraison surprise (48 %) et l'obligation de créer un compte (24 %) sont les deux premières causes.
+- Afficher les frais de livraison dès la fiche produit et proposer le paiement en tant qu'invité éliminent déjà la majorité des abandons évitables.
+- Une séquence d'e-mails de récupération (1h, 24h, 48-72h) peut récupérer 5 à 15 % des paniers abandonnés.
+- Un tunnel court, avec barre de progression et récapitulatif toujours visible, réduit la friction à chaque étape.
 
 Voir aussi : [photos produits e-commerce](/blog/photos-produits-ecommerce), [SEO e-commerce guide](/blog/seo-ecommerce-guide) et nos [tarifs création boutique e-commerce](/tarifs).
