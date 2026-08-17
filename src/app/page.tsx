@@ -167,21 +167,20 @@ export default function Home() {
         <ProcessSection />
 
         {/* Jugez sur pièce */}
-        <section className="py-16 bg-background dark:bg-[#0A0F1C]">
+        <section className="py-16 bg-[#070B16] scanline-section">
           <div className="max-w-3xl mx-auto px-4 sm:px-6">
-            <div className="reveal-item relative rounded-2xl p-8 border border-white/10 text-center overflow-hidden"
-              style={{ background: 'linear-gradient(135deg, rgba(30,58,95,0.4), rgba(45,125,210,0.15), rgba(11,26,46,0.5))' }}>
+            <div className="reveal-item relative rounded-2xl p-8 text-center overflow-hidden glass-panel liseré-border hud-4corners">
               {/* Background halo */}
               <div className="pointer-events-none absolute inset-0 flex items-center justify-center" aria-hidden="true">
-                <div className="w-64 h-64 rounded-full" style={{ background: 'radial-gradient(circle, rgba(45,125,210,0.12) 0%, transparent 70%)' }} />
+                <div className="w-64 h-64 rounded-full" style={{ background: 'radial-gradient(circle, rgba(45,125,210,0.10) 0%, transparent 70%)' }} />
               </div>
               <div className="relative">
                 <h3 className="font-bold text-white text-xl mb-3">Jugez sur pièce</h3>
-                <p className="text-white/65 mb-6 max-w-md mx-auto">
+                <p className="text-white/60 mb-6 max-w-md mx-auto">
                   Nos démonstrations sont des projets complets, construits par nos soins et consultables en ligne.
                   Ce que vous voyez est exactement ce que nous livrons.
                 </p>
-                <Link href="/realisations" className="inline-flex items-center gap-2 px-6 py-3 bg-navy hover:bg-electric text-white font-semibold rounded-xl text-sm transition-all hover:-translate-y-0.5 shadow-lift-sm">
+                <Link href="/realisations" className="btn-magnetic cta-glow inline-flex items-center gap-2 px-6 py-3 bg-navy hover:bg-electric text-white font-semibold rounded-xl text-sm transition-all hover:-translate-y-0.5">
                   Explorer nos démonstrations <span className="arrow-slide">→</span>
                 </Link>
               </div>
@@ -192,12 +191,12 @@ export default function Home() {
         <div className="section-divider" aria-hidden="true" />
 
         {/* ── 04 — Blog ─────────────────────────────────────────────────────── */}
-        <section id="blog" className="py-24 bg-[#060D1A] relative overflow-hidden">
-          <span className="section-number !text-white/[0.04]" aria-hidden="true">04</span>
+        <section id="blog" className="py-24 bg-[#060D1A] scanline-section relative overflow-hidden">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 relative">
             <div className="flex items-end justify-between mb-12">
               <div>
-                <div className="text-xs font-bold text-electric uppercase tracking-[0.2em] mb-3 reveal-item">Blog</div>
+                <div className="section-marker mb-2" aria-hidden="true">[ 04 / BLOG ]</div>
+                <p className="overline-label !text-electric mb-3">Blog</p>
                 <h2 className="text-3xl lg:text-5xl font-bold text-white reveal-item">Du concret sur le blog</h2>
               </div>
               <Link href="/blog" className="hidden sm:flex items-center gap-1 text-electric hover:text-electric/80 font-medium text-sm transition-colors">
@@ -207,10 +206,12 @@ export default function Home() {
             {/* Asymmetric: 1 large card + 2 small */}
             <div className="grid sm:grid-cols-5 gap-4">
               <Link href="/blog/creation-site-internet-prix"
-                className="blog-card reveal-item group relative sm:col-span-3 p-7 rounded-2xl bg-white/5 border border-white/10 hover:border-electric/30 hover:bg-white/[0.07] transition-all duration-300 hover:-translate-y-1 overflow-hidden"
+                className="reveal-item group relative sm:col-span-3 p-7 rounded-2xl glass-panel hud-4corners hover:border-electric/30 transition-all duration-300 hover:-translate-y-1 overflow-hidden"
                 style={{ animationDelay: '0ms' }}>
-                <div className="text-xs text-electric font-bold uppercase tracking-widest mb-3">Tarifs</div>
-                <h3 className="font-bold text-white text-xl group-hover:text-electric transition-colors leading-snug mb-4">Combien coûte un site internet en 2026 ?</h3>
+                <div className="text-xs text-electric font-bold uppercase tracking-widest mb-3 data-mono">Tarifs</div>
+                <h3 className="font-bold text-white text-xl transition-colors leading-snug mb-4">
+                  <span className="blog-title-highlight group-hover:text-electric transition-colors">Combien coûte un site internet en 2026 ?</span>
+                </h3>
                 <span className="text-xs text-white/30 group-hover:text-electric/60 transition-colors flex items-center gap-1">
                   Lire l'article <span className="arrow-slide">→</span>
                 </span>
@@ -221,9 +222,9 @@ export default function Home() {
                   { href: '/blog/seo-local-google-business', titre: 'SEO local : comment apparaître en tête sur Google Maps', cat: 'SEO' },
                 ].map((a, i) => (
                   <Link key={a.href} href={a.href}
-                    className="blog-card reveal-item group relative flex-1 p-5 rounded-2xl bg-white/5 border border-white/10 hover:border-electric/30 hover:bg-white/[0.07] transition-all duration-300 hover:-translate-y-0.5 overflow-hidden"
+                    className="reveal-item group relative flex-1 p-5 rounded-2xl glass-panel hud-corners hover:border-electric/30 transition-all duration-300 hover:-translate-y-0.5 overflow-hidden"
                     style={{ animationDelay: `${(i + 1) * 100}ms` }}>
-                    <div className="text-xs text-electric font-bold uppercase tracking-widest mb-2">{a.cat}</div>
+                    <div className="text-xs text-electric font-bold uppercase tracking-widest mb-2 data-mono">{a.cat}</div>
                     <h3 className="font-semibold text-white group-hover:text-electric/80 transition-colors text-sm leading-snug mb-3">{a.titre}</h3>
                     <span className="text-xs text-white/30 group-hover:text-electric/50 transition-colors flex items-center gap-1">
                       Lire l'article <span className="arrow-slide">→</span>
@@ -241,15 +242,15 @@ export default function Home() {
         <div className="section-divider" aria-hidden="true" />
 
         {/* ── 05 — Maintenance ──────────────────────────────────────────────── */}
-        <section className="py-24 bg-background dark:bg-[#0A0F1C] relative overflow-hidden">
-          <span className="section-number" aria-hidden="true">05</span>
+        <section className="py-24 bg-[#0C1222] scanline-section relative overflow-hidden">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 relative">
             <div className="mb-10">
-              <div className="text-xs font-bold text-electric uppercase tracking-[0.2em] mb-3 reveal-item">Formules mensuelles</div>
-              <h2 className="text-3xl lg:text-5xl font-bold text-foreground dark:text-white mb-3 reveal-item">
+              <div className="section-marker mb-2" aria-hidden="true">[ 05 / MAINTENANCE ]</div>
+              <p className="overline-label !text-electric mb-3">Formules mensuelles</p>
+              <h2 className="text-3xl lg:text-5xl font-bold text-white mb-3 reveal-item">
                 Maintenance & hébergement
               </h2>
-              <p className="text-foreground/60 dark:text-white/60 reveal-item" style={{ animationDelay: '80ms' }}>Après la première année incluse, une formule mensuelle pour que votre site reste rapide, sécurisé et à jour.</p>
+              <p className="text-white/60 reveal-item" style={{ animationDelay: '80ms' }}>Après la première année incluse, une formule mensuelle pour que votre site reste rapide, sécurisé et à jour.</p>
             </div>
             <div className="grid sm:grid-cols-3 gap-5">
               {[
