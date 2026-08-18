@@ -2,7 +2,11 @@
 'use client'
 import { useState, useEffect, useRef, useCallback } from 'react'
 import Link from 'next/link'
-import { Copy, Check, Shuffle, ChevronRight, Monitor, Smartphone, Columns2, Share2, Download } from 'lucide-react'
+import { SITE } from '@/config/site'
+import {
+  Copy, Check, Shuffle, ChevronRight, Monitor, Smartphone, Tablet, Columns2, Share2, Download,
+  Undo2, Redo2, Save, Trash2, Maximize2, X, Wand2, Store, ShoppingBag, UtensilsCrossed, Camera,
+} from 'lucide-react'
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
@@ -16,12 +20,16 @@ interface Config {
   imagery: string
   theme: string     // light|dark|auto
   tone: string
+  buttonStyle: string  // plein|contour|pilule|carre
+  shadowStyle: string  // plat|doux|prononce
+  headerStyle: string  // clair|sombre|transparent
+  customPal: Palette5 | null
 }
 
 interface Architecture { id: string; label: string; ideal: string; tags: string[] }
 interface Palette5 { id: string; name: string; fam: string; dom: string; sec: string; bg: string; txt: string; acc: string }
 interface FontDuo { id: string; name: string; style: string; title: string; body: string; titleStack: string; bodyStack: string }
-interface Preset { id: string; label: string; config: Partial<Config> }
+interface Preset { id: string; label: string; config: Partial<Config>; previewTemplate?: string }
 
 // ─── Architectures ────────────────────────────────────────────────────────────
 
@@ -174,21 +182,36 @@ const FONTS: FontDuo[] = [
 // ─── Presets métiers ──────────────────────────────────────────────────────────
 
 const PRESETS: Preset[] = [
-  { id:'restaurant', label:'Restaurant', config:{ arch:'A09', pal:'P11', font:'F07', anim:1, corners:1, imagery:'photos', tone:'chaleureux', theme:'light' } },
-  { id:'artisan',    label:'Artisan',    config:{ arch:'A04', pal:'P12', font:'F13', anim:0, corners:0, imagery:'atelier', tone:'authentique', theme:'light' } },
-  { id:'cabinet',    label:'Cabinet pro',config:{ arch:'A07', pal:'P07', font:'F08', anim:0, corners:0, imagery:'bureau', tone:'expert', theme:'light' } },
-  { id:'startup',    label:'Startup',    config:{ arch:'A03', pal:'P16', font:'F03', anim:2, corners:2, imagery:'abstract', tone:'innovant', theme:'dark' } },
-  { id:'boutique',   label:'Boutique',   config:{ arch:'A06', pal:'P31', font:'F15', anim:1, corners:1, imagery:'produits', tone:'tendance', theme:'light' } },
-  { id:'luxe',       label:'Luxe',       config:{ arch:'A14', pal:'P21', font:'F35', anim:0, corners:0, imagery:'minimaliste', tone:'prestige', theme:'dark' } },
-  { id:'sante',      label:'Santé',      config:{ arch:'A07', pal:'P48', font:'F01', anim:0, corners:1, imagery:'soin', tone:'rassurant', theme:'light' } },
-  { id:'coach',      label:'Coach',      config:{ arch:'A01', pal:'P26', font:'F14', anim:1, corners:2, imagery:'personnes', tone:'motivant', theme:'light' } },
-  { id:'association',label:'Association',config:{ arch:'A08', pal:'P50', font:'F13', anim:0, corners:1, imagery:'communauté', tone:'engagé', theme:'light' } },
-  { id:'hotel',      label:'Hôtel',      config:{ arch:'A12', pal:'P22', font:'F36', anim:1, corners:0, imagery:'ambiance', tone:'accueillant', theme:'dark' } },
+  { id:'restaurant', label:'Restaurant', previewTemplate:'restaurant', config:{ arch:'A09', pal:'P11', font:'F07', anim:1, corners:1, imagery:'photos', tone:'chaleureux', theme:'light' } },
+  { id:'artisan',    label:'Artisan',    previewTemplate:'artisan',    config:{ arch:'A04', pal:'P12', font:'F13', anim:0, corners:0, imagery:'atelier', tone:'authentique', theme:'light' } },
+  { id:'cabinet',    label:'Cabinet pro',previewTemplate:'cabinet',    config:{ arch:'A07', pal:'P07', font:'F08', anim:0, corners:0, imagery:'bureau', tone:'expert', theme:'light' } },
+  { id:'startup',    label:'Startup',    previewTemplate:'cabinet',    config:{ arch:'A03', pal:'P16', font:'F03', anim:2, corners:2, imagery:'abstract', tone:'innovant', theme:'dark' } },
+  { id:'boutique',   label:'Boutique',   previewTemplate:'ecommerce',  config:{ arch:'A06', pal:'P31', font:'F15', anim:1, corners:1, imagery:'produits', tone:'tendance', theme:'light' } },
+  { id:'luxe',       label:'Luxe',       previewTemplate:'ecommerce',  config:{ arch:'A14', pal:'P21', font:'F35', anim:0, corners:0, imagery:'minimaliste', tone:'prestige', theme:'dark' } },
+  { id:'sante',      label:'Santé',      previewTemplate:'cabinet',    config:{ arch:'A07', pal:'P48', font:'F01', anim:0, corners:1, imagery:'soin', tone:'rassurant', theme:'light' } },
+  { id:'coach',      label:'Coach',      previewTemplate:'cabinet',    config:{ arch:'A01', pal:'P26', font:'F14', anim:1, corners:2, imagery:'personnes', tone:'motivant', theme:'light' } },
+  { id:'association',label:'Association',previewTemplate:'cabinet',    config:{ arch:'A08', pal:'P50', font:'F13', anim:0, corners:1, imagery:'communauté', tone:'engagé', theme:'light' } },
+  { id:'hotel',      label:'Hôtel',      previewTemplate:'restaurant', config:{ arch:'A12', pal:'P22', font:'F36', anim:1, corners:0, imagery:'ambiance', tone:'accueillant', theme:'dark' } },
+  { id:'photographe',label:'Photographe',previewTemplate:'photographe',config:{ arch:'A05', pal:'P45', font:'F46', anim:1, corners:0, imagery:'photo', tone:'expert', theme:'dark', buttonStyle:'contour', shadowStyle:'plat' } },
+  { id:'immobilier', label:'Immobilier', previewTemplate:'cabinet',    config:{ arch:'A10', pal:'P05', font:'F19', anim:0, corners:1, imagery:'photo', tone:'rassurant', theme:'light', buttonStyle:'plein', shadowStyle:'doux' } },
+]
+
+// ─── Ambiances (1 clic, transverses aux presets métier) ───────────────────────
+
+const MOODS: Preset[] = [
+  { id:'epure',    label:'Épuré',    config:{ pal:'P42', font:'F23', corners:0, density:0, buttonStyle:'carre',  shadowStyle:'plat',    headerStyle:'clair',  imagery:'minimaliste', anim:0 } },
+  { id:'chaleureux',label:'Chaleureux',config:{ pal:'P13', font:'F47', corners:1, density:1, buttonStyle:'pilule', shadowStyle:'doux',    headerStyle:'clair',  imagery:'photo',       anim:1 } },
+  { id:'premium',  label:'Premium',  config:{ pal:'P21', font:'F35', corners:0, density:1, buttonStyle:'contour', shadowStyle:'plat',    headerStyle:'sombre', imagery:'minimaliste', anim:1, theme:'dark' } },
+  { id:'vif',      label:'Vif',      config:{ pal:'P32', font:'F21', corners:2, density:1, buttonStyle:'pilule', shadowStyle:'prononce',headerStyle:'clair',  imagery:'illustration',anim:2 } },
+  { id:'editorial',label:'Éditorial',config:{ pal:'P08', font:'F07', corners:0, density:2, buttonStyle:'carre',  shadowStyle:'plat',    headerStyle:'sombre', imagery:'photo',       anim:0 } },
 ]
 
 // ─── Default config ───────────────────────────────────────────────────────────
 
-const DEFAULT_CONFIG: Config = { arch:'A01', pal:'P01', font:'F01', anim:1, density:1, corners:1, imagery:'photo', theme:'light', tone:'professionnel' }
+const DEFAULT_CONFIG: Config = {
+  arch:'A01', pal:'P01', font:'F01', anim:1, density:1, corners:1, imagery:'photo', theme:'light', tone:'professionnel',
+  buttonStyle:'plein', shadowStyle:'doux', headerStyle:'clair', customPal:null,
+}
 
 function loadConfig(): Config {
   if (typeof window === 'undefined') return DEFAULT_CONFIG
@@ -205,7 +228,8 @@ function saveConfig(c: Config) {
 function genProfileCode(c: Config): string {
   const f = FONTS.find(x => x.id === c.font)
   const fs = f?.style.charAt(0) || 'M'
-  return `STK-${c.arch}-${c.pal}-${c.font}-${fs}${c.anim}${c.density}${c.corners}`
+  const palCode = c.customPal ? 'CUS' : c.pal
+  return `STK-${c.arch}-${palCode}-${c.font}-${fs}${c.anim}${c.density}${c.corners}`
 }
 
 function randomConfig(): Config {
@@ -220,7 +244,100 @@ function randomConfig(): Config {
     imagery: pick(['photo', 'illustration', 'abstract', 'minimaliste']),
     theme: pick(['light', 'dark', 'auto']),
     tone: pick(['professionnel', 'chaleureux', 'innovant', 'prestige', 'engagé']),
+    buttonStyle: pick(['plein', 'contour', 'pilule', 'carre']),
+    shadowStyle: pick(['plat', 'doux', 'prononce']),
+    headerStyle: pick(['clair', 'sombre', 'transparent']),
+    customPal: null,
   }
+}
+
+// ─── Couleur : conversions + harmonie + contraste AA ──────────────────────────
+
+function hexToHsl(hex: string): [number, number, number] {
+  const h = hex.replace('#', '')
+  const r = parseInt(h.slice(0, 2), 16) / 255
+  const g = parseInt(h.slice(2, 4), 16) / 255
+  const b = parseInt(h.slice(4, 6), 16) / 255
+  const max = Math.max(r, g, b), min = Math.min(r, g, b)
+  let hue = 0, s = 0
+  const l = (max + min) / 2
+  if (max !== min) {
+    const d = max - min
+    s = l > 0.5 ? d / (2 - max - min) : d / (max + min)
+    if (max === r) hue = (g - b) / d + (g < b ? 6 : 0)
+    else if (max === g) hue = (b - r) / d + 2
+    else hue = (r - g) / d + 4
+    hue *= 60
+  }
+  return [hue, s * 100, l * 100]
+}
+
+function hslToHex(h: number, s: number, l: number): string {
+  h = ((h % 360) + 360) % 360
+  s /= 100; l /= 100
+  const c = (1 - Math.abs(2 * l - 1)) * s
+  const x = c * (1 - Math.abs((h / 60) % 2 - 1))
+  const m = l - c / 2
+  let r = 0, g = 0, b = 0
+  if (h < 60) [r, g, b] = [c, x, 0]
+  else if (h < 120) [r, g, b] = [x, c, 0]
+  else if (h < 180) [r, g, b] = [0, c, x]
+  else if (h < 240) [r, g, b] = [0, x, c]
+  else if (h < 300) [r, g, b] = [x, 0, c]
+  else [r, g, b] = [c, 0, x]
+  const toHex = (v: number) => Math.round((v + m) * 255).toString(16).padStart(2, '0')
+  return `#${toHex(r)}${toHex(g)}${toHex(b)}`
+}
+
+function relLuminance(hex: string): number {
+  const h = hex.replace('#', '')
+  if (h.length !== 6) return 0
+  const [r, g, b] = [0, 2, 4].map(i => {
+    const c = parseInt(h.slice(i, i + 2), 16) / 255
+    return c <= 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4)
+  })
+  return 0.2126 * r + 0.7152 * g + 0.0722 * b
+}
+
+function contrastRatio(hex1: string, hex2: string): number {
+  const l1 = relLuminance(hex1), l2 = relLuminance(hex2)
+  const [light, dark] = l1 > l2 ? [l1, l2] : [l2, l1]
+  return (light + 0.05) / (dark + 0.05)
+}
+
+function isValidHex(hex: string): boolean {
+  return /^#[0-9a-fA-F]{6}$/.test(hex)
+}
+
+/** Éclaircit/assombrit `hex` jusqu'à obtenir un contraste AA (4.5:1) avec `against`. */
+function fixContrast(hex: string, against: string): string {
+  if (!isValidHex(hex) || !isValidHex(against)) return hex
+  if (contrastRatio(hex, against) >= 4.5) return hex
+  const [h, s] = hexToHsl(hex)
+  const targetDark = relLuminance(against) > 0.5 // fond clair -> assombrir le texte
+  for (let step = 1; step <= 50; step++) {
+    const l = targetDark ? Math.max(0, 50 - step) : Math.min(100, 50 + step)
+    const candidate = hslToHex(h, s, l)
+    if (contrastRatio(candidate, against) >= 4.5) return candidate
+  }
+  return targetDark ? '#000000' : '#FFFFFF'
+}
+
+function harmonize(baseHex: string, type: 'complementaire' | 'analogue' | 'triade' | 'monochrome'): Palette5 {
+  const [h, s, l] = hexToHsl(baseHex)
+  const bg = l > 50 ? hslToHex(h, Math.max(s - 60, 5), 97) : hslToHex(h, Math.max(s - 40, 5), 8)
+  const txt = fixContrast(l > 50 ? '#141414' : '#F5F5F5', bg)
+  if (type === 'complementaire') {
+    return { id: 'CUSTOM', name: 'Complémentaire', fam: 'Personnalisé', dom: baseHex, sec: hslToHex(h, s, Math.max(l - 15, 10)), bg, txt, acc: hslToHex(h + 180, s, l) }
+  }
+  if (type === 'analogue') {
+    return { id: 'CUSTOM', name: 'Analogue', fam: 'Personnalisé', dom: baseHex, sec: hslToHex(h + 30, s, l), bg, txt, acc: hslToHex(h - 30, s, l) }
+  }
+  if (type === 'triade') {
+    return { id: 'CUSTOM', name: 'Triade', fam: 'Personnalisé', dom: baseHex, sec: hslToHex(h + 120, s, l), bg, txt, acc: hslToHex(h + 240, s, l) }
+  }
+  // monochrome
+  return { id: 'CUSTOM', name: 'Monochrome', fam: 'Personnalisé', dom: baseHex, sec: hslToHex(h, s, Math.max(l - 20, 8)), bg, txt, acc: hslToHex(h, Math.max(s - 30, 0), Math.min(l + 25, 92)) }
 }
 
 // ─── ArchWireframe ────────────────────────────────────────────────────────────
@@ -351,156 +468,330 @@ function ArchWireframe({ archId, pal }: { archId: string; pal: Palette5 }) {
   return wireframes[archId] ?? fallback
 }
 
-// ─── LivePreview (multi-screen) ───────────────────────────────────────────────
+// ─── LivePreview : 5 maquettes réalistes × 3 appareils ────────────────────────
 
-type PreviewMode = 'desktop' | 'mobile' | 'ab'
+type PreviewMode = 'desktop' | 'tablet' | 'mobile' | 'ab'
 
-function DesktopMockup({ pal, font, arch, borderRadius, padding, isDark }: {
-  pal: Palette5; font: FontDuo; arch: Architecture
-  borderRadius: string; padding: string; isDark: boolean
-}) {
+interface TemplateSpec {
+  id: string
+  label: string
+  Icon: typeof Store
+  brand: string
+  nav: string[]
+  heroTitle: string
+  heroSub: string
+  heroCta: string
+  kind: 'grid-services' | 'product' | 'menu' | 'gallery' | 'services'
+  items: { title: string; desc?: string; price?: string }[]
+  testimonial: { text: string; author: string }
+  footerNote: string
+}
+
+const TEMPLATES: TemplateSpec[] = [
+  {
+    id: 'artisan', label: 'Artisan', Icon: Store, brand: 'Menuiserie Lefèvre',
+    nav: ['Accueil', 'Prestations', 'Réalisations', 'Contact'],
+    heroTitle: 'Artisan menuisier à Tours depuis 2012',
+    heroSub: 'Pose, rénovation et sur-mesure bois pour particuliers et professionnels.',
+    heroCta: 'Demander un devis', kind: 'grid-services',
+    items: [
+      { title: 'Pose de cuisine', desc: 'Installation complète, prise de mesure incluse' },
+      { title: 'Rénovation intérieure', desc: 'Parquet, placards, escaliers sur mesure' },
+      { title: 'Mobilier sur-mesure', desc: 'Conception et fabrication en atelier' },
+      { title: 'Dépannage urgent', desc: 'Intervention sous 48 h ouvrées' },
+    ],
+    testimonial: { text: 'Intervention rapide et travail soigné, je recommande sans hésiter.', author: 'Sophie M. — avis Google' },
+    footerNote: 'Tours et alentours · Devis gratuit sous 72 h',
+  },
+  {
+    id: 'ecommerce', label: 'E-commerce', Icon: ShoppingBag, brand: 'Atelier Laine',
+    nav: ['Boutique', 'Nouveautés', 'Promotions', 'Panier'],
+    heroTitle: 'Veste en laine mérinos', heroSub: '129 € — coupe ajustée, fabriquée en France',
+    heroCta: 'Ajouter au panier', kind: 'product',
+    items: [
+      { title: 'Coupe ajustée' }, { title: 'Laine mérinos 100 %' },
+      { title: 'Fabriqué en France' }, { title: 'Livraison en 48 h' },
+    ],
+    testimonial: { text: 'Qualité au rendez-vous, la coupe est parfaite.', author: '4,8/5 — 212 avis vérifiés' },
+    footerNote: 'Livraison et retours offerts en France métropolitaine',
+  },
+  {
+    id: 'restaurant', label: 'Restaurant', Icon: UtensilsCrossed, brand: 'Le Comptoir',
+    nav: ['Menu', 'Réserver', 'À propos', 'Contact'],
+    heroTitle: 'Cuisine de saison à Tours', heroSub: 'Produits frais, carte renouvelée chaque semaine',
+    heroCta: 'Réserver une table', kind: 'menu',
+    items: [
+      { title: 'Velouté de saison', price: '9 €' },
+      { title: 'Filet de volaille fermière', price: '19 €' },
+      { title: 'Tarte fine aux pommes', price: '8 €' },
+    ],
+    testimonial: { text: 'Une adresse incontournable, produits frais et service impeccable.', author: '4,9/5 — avis Google' },
+    footerNote: 'Ouvert du mardi au samedi · 12h-14h / 19h-22h',
+  },
+  {
+    id: 'photographe', label: 'Photographe', Icon: Camera, brand: 'Camille Rousseau',
+    nav: ['Galeries', 'Prestations', 'Tarifs', 'Contact'],
+    heroTitle: 'Photographe mariage & portrait', heroSub: 'Reportages naturels, basée à Tours, disponible partout en France',
+    heroCta: 'Vérifier mes disponibilités', kind: 'gallery',
+    items: [{ title: 'Mariage' }, { title: 'Portrait' }, { title: 'Corporate' }, { title: 'Famille' }, { title: 'Grossesse' }, { title: 'Événement' }],
+    testimonial: { text: 'Des photos qui nous ressemblent, un moment de grâce du début à la fin.', author: 'Marie & Julien' },
+    footerNote: 'Galerie privée livrée sous 3 semaines',
+  },
+  {
+    id: 'cabinet', label: 'Cabinet pro', Icon: Columns2, brand: 'Cabinet Bertrand',
+    nav: ['Accueil', 'Expertise', 'Équipe', 'Contact'],
+    heroTitle: 'Conseil en gestion de patrimoine', heroSub: 'Un accompagnement personnalisé, indépendant et transparent',
+    heroCta: 'Prendre rendez-vous', kind: 'services',
+    items: [
+      { title: 'Bilan patrimonial', desc: 'Analyse complète et gratuite' },
+      { title: 'Investissement locatif', desc: 'Sélection et montage du dossier' },
+      { title: 'Retraite & transmission', desc: 'Stratégie sur mesure' },
+    ],
+    testimonial: { text: 'Un accompagnement clair et sans jargon, je recommande.', author: 'Marc D. — client depuis 2021' },
+    footerNote: 'Sur rendez-vous, à Tours ou en visioconférence',
+  },
+]
+
+interface Look { radius: number; shadow: string; headerBg: string; headerFg: string; headerTransparent: boolean; padding: number }
+
+function deriveLook(config: Config, pal: Palette5): Look {
+  const radius = config.corners === 0 ? 0 : config.corners === 1 ? 8 : 20
+  const padding = config.density === 0 ? 8 : config.density === 1 ? 14 : 22
+  const shadow = config.shadowStyle === 'plat' ? 'none' : config.shadowStyle === 'doux' ? '0 4px 14px rgba(0,0,0,0.10)' : '0 14px 30px rgba(0,0,0,0.22)'
+  const headerTransparent = config.headerStyle === 'transparent'
+  const headerBg = config.headerStyle === 'sombre' ? '#12141c' : config.headerStyle === 'clair' ? '#ffffff' : 'transparent'
+  const headerFg = config.headerStyle === 'clair' ? pal.dom : '#ffffff'
+  return { radius, shadow, headerBg, headerFg, headerTransparent, padding }
+}
+
+function btnRadius(style: string, radius: number) {
+  if (style === 'pilule') return 999
+  if (style === 'carre') return 0
+  return radius
+}
+
+function MiniBtn({ children, config, pal, font, size = 9 }: { children: string; config: Config; pal: Palette5; font: FontDuo; size?: number }) {
+  const r = btnRadius(config.buttonStyle, Math.min(config.corners === 0 ? 0 : config.corners === 1 ? 6 : 16, 16))
+  const isContour = config.buttonStyle === 'contour'
+  const fg = isContour ? pal.acc : (relLuminance(pal.acc) > 0.55 ? '#111111' : '#ffffff')
   return (
-    <div className="device-frame" style={{ background: pal.bg, fontFamily: font.bodyStack, color: pal.txt, borderRadius: 10, overflow: 'hidden', border: `1px solid ${pal.dom}22` }}>
-      {/* Browser chrome */}
-      <div style={{ background: '#e8e8e8', padding: '5px 8px', display: 'flex', alignItems: 'center', gap: 4 }}>
-        {['#ff5f57','#febc2e','#28c840'].map((c, i) => <div key={i} style={{ width: 8, height: 8, borderRadius: '50%', background: c }} />)}
-        <div style={{ flex: 1, background: '#fff', borderRadius: 3, height: 14, margin: '0 8px', display: 'flex', alignItems: 'center', padding: '0 6px' }}>
-          <span style={{ fontSize: 8, color: '#999' }}>monsite.fr</span>
-        </div>
-      </div>
-      {/* Header */}
-      <div style={{ background: pal.dom, padding: '8px 14px', display: 'flex', alignItems: 'center', gap: 8 }}>
-        <div style={{ fontFamily: font.titleStack, color: '#fff', fontSize: 11, fontWeight: 700 }}>MonSite.fr</div>
-        <div style={{ flex: 1, display: 'flex', gap: 8, justifyContent: 'center' }}>
-          {['Accueil','Services','Contact'].map(n => <span key={n} style={{ fontSize: 8, color: 'rgba(255,255,255,0.7)' }}>{n}</span>)}
-        </div>
-        <div style={{ background: pal.acc, color: pal.bg.slice(1,3) < '80' ? '#fff' : '#000', padding: '3px 8px', borderRadius, fontSize: 8, fontWeight: 600 }}>CTA</div>
-      </div>
+    <span style={{
+      fontFamily: font.bodyStack, fontSize: size, fontWeight: 700, borderRadius: r,
+      padding: size <= 8 ? '4px 10px' : '6px 15px', display: 'inline-block', whiteSpace: 'nowrap',
+      background: isContour ? 'transparent' : pal.acc, color: fg,
+      border: isContour ? `1.5px solid ${pal.acc}` : 'none',
+    }}>{children}</span>
+  )
+}
+
+function TemplateBody({ spec, pal, font, look, compact }: { spec: TemplateSpec; pal: Palette5; font: FontDuo; look: Look; compact: boolean }) {
+  const muted = pal.txt + '66'
+  const cardBg = pal.sec + (compact ? '14' : '11')
+  const cols = compact ? 2 : spec.kind === 'gallery' ? 3 : spec.kind === 'menu' ? 3 : spec.kind === 'product' ? 4 : spec.kind === 'grid-services' ? 2 : 3
+
+  return (
+    <div style={{ background: pal.bg, color: pal.txt }}>
       {/* Hero */}
-      <div style={{ padding, display: 'flex', gap: 8, background: isDark ? pal.sec + '22' : pal.bg, borderBottom: `1px solid ${pal.dom}11`, alignItems: 'center' }}>
-        <div style={{ flex: 1 }}>
-          <div style={{ fontFamily: font.titleStack, color: pal.dom, fontSize: 16, fontWeight: 700, marginBottom: 4, lineHeight: 1.2 }}>{arch.label}</div>
-          <div style={{ fontSize: 9, opacity: 0.65, marginBottom: 8, lineHeight: 1.4 }}>{arch.ideal} — votre site sur-mesure</div>
-          <div style={{ background: pal.acc, color: '#fff', padding: '4px 10px', borderRadius, fontSize: 9, fontWeight: 600, display: 'inline-block' }}>Découvrir →</div>
-        </div>
-        <div style={{ width: 60, height: 48, background: pal.dom + '33', borderRadius, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 18, flexShrink: 0 }}>🖼️</div>
+      <div style={{ padding: look.padding, background: pal.dom + '0d' }}>
+        <div style={{ fontFamily: font.titleStack, color: pal.dom, fontSize: compact ? 13 : 17, fontWeight: 700, lineHeight: 1.2, marginBottom: 4 }}>{spec.heroTitle}</div>
+        <div style={{ fontSize: compact ? 8 : 9.5, opacity: 0.68, lineHeight: 1.4, marginBottom: 8, maxWidth: compact ? '100%' : '80%' }}>{spec.heroSub}</div>
+        <MiniBtn config={{ buttonStyle: 'plein' } as Config} pal={pal} font={font} size={compact ? 8 : 9.5}>{spec.heroCta}</MiniBtn>
       </div>
-      {/* 3 cards */}
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 6, padding: '8px 10px' }}>
-        {['Services','À propos','Contact'].map((t, i) => (
-          <div key={i} style={{ background: isDark ? pal.dom + '22' : pal.sec + '11', padding: 6, borderRadius, border: `1px solid ${pal.dom}22` }}>
-            <div style={{ fontFamily: font.titleStack, fontWeight: 600, fontSize: 8, marginBottom: 2, color: pal.dom }}>{t}</div>
-            <div style={{ width: '80%', height: 4, background: pal.txt + '22', borderRadius: 2, marginBottom: 2 }} />
-            <div style={{ width: '60%', height: 4, background: pal.txt + '15', borderRadius: 2 }} />
+
+      {/* Corps selon le type de site */}
+      {spec.kind === 'product' ? (
+        <div style={{ padding: look.padding, display: 'flex', gap: 8, flexDirection: compact ? 'column' : 'row' }}>
+          <div style={{ display: 'flex', gap: 4, flex: compact ? undefined : 1 }}>
+            <div style={{ flex: 1, aspectRatio: '3/4', background: pal.dom + '22', borderRadius: look.radius }} />
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 4, width: 18 }}>
+              {[0, 1, 2].map(i => <div key={i} style={{ flex: 1, background: pal.dom + '33', borderRadius: 3 }} />)}
+            </div>
           </div>
-        ))}
+          <div style={{ flex: 1, display: 'flex', flexDirection: 'column', gap: 5 }}>
+            <div style={{ display: 'flex', gap: 4 }}>
+              {['S', 'M', 'L', 'XL'].map(s => (
+                <span key={s} style={{ fontSize: 7, border: `1px solid ${pal.dom}44`, borderRadius: 3, padding: '2px 5px' }}>{s}</span>
+              ))}
+            </div>
+            {spec.items.map((it, i) => (
+              <div key={i} style={{ fontSize: 7.5, opacity: 0.7, display: 'flex', alignItems: 'center', gap: 4 }}>
+                <span style={{ width: 3, height: 3, borderRadius: 999, background: pal.acc, flexShrink: 0 }} /> {it.title}
+              </div>
+            ))}
+          </div>
+        </div>
+      ) : spec.kind === 'menu' ? (
+        <div style={{ padding: look.padding, display: 'flex', flexDirection: 'column', gap: 6 }}>
+          {spec.items.map((it, i) => (
+            <div key={i} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', borderBottom: `1px dashed ${pal.dom}22`, paddingBottom: 4 }}>
+              <span style={{ fontFamily: font.titleStack, fontSize: compact ? 8 : 9, fontWeight: 600 }}>{it.title}</span>
+              <span style={{ fontSize: compact ? 8 : 9, color: pal.dom, fontWeight: 700 }}>{it.price}</span>
+            </div>
+          ))}
+        </div>
+      ) : spec.kind === 'gallery' ? (
+        <div style={{ padding: look.padding, display: 'grid', gridTemplateColumns: `repeat(${cols},1fr)`, gap: 5 }}>
+          {spec.items.map((it, i) => (
+            <div key={i} style={{ aspectRatio: '1', background: pal.dom + (i % 2 === 0 ? '2c' : '1c'), borderRadius: look.radius, display: 'flex', alignItems: 'flex-end', padding: 3 }}>
+              <span style={{ fontSize: 6, color: pal.dom, fontWeight: 700, opacity: 0.8 }}>{it.title}</span>
+            </div>
+          ))}
+        </div>
+      ) : (
+        <div style={{ padding: look.padding, display: 'grid', gridTemplateColumns: `repeat(${cols},1fr)`, gap: 6 }}>
+          {spec.items.map((it, i) => (
+            <div key={i} style={{ background: cardBg, padding: 6, borderRadius: look.radius, border: `1px solid ${pal.dom}1a`, boxShadow: look.shadow }}>
+              <div style={{ fontFamily: font.titleStack, fontWeight: 700, fontSize: compact ? 7.5 : 8, color: pal.dom, marginBottom: 2 }}>{it.title}</div>
+              {it.desc && <div style={{ fontSize: compact ? 6.5 : 7, opacity: 0.6, lineHeight: 1.3 }}>{it.desc}</div>}
+            </div>
+          ))}
+        </div>
+      )}
+
+      {/* Témoignage */}
+      <div style={{ margin: `0 ${look.padding}px ${look.padding}px`, padding: 8, borderLeft: `2px solid ${pal.acc}`, background: pal.acc + '0d' }}>
+        <div style={{ fontSize: compact ? 7 : 7.5, fontStyle: 'italic', color: pal.txt, opacity: 0.85, lineHeight: 1.4, marginBottom: 3 }}>« {spec.testimonial.text} »</div>
+        <div style={{ fontSize: 6.5, color: muted, fontWeight: 600 }}>{spec.testimonial.author}</div>
       </div>
+
       {/* Footer */}
-      <div style={{ background: pal.dom, padding: '6px 10px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-        <span style={{ fontSize: 8, color: 'rgba(255,255,255,0.5)' }}>© 2025 MonSite.fr</span>
+      <div style={{ background: pal.dom, padding: '7px 10px', display: 'flex', flexDirection: compact ? 'column' : 'row', gap: 3, justifyContent: 'space-between', alignItems: compact ? 'flex-start' : 'center' }}>
+        <span style={{ fontSize: 7, color: 'rgba(255,255,255,0.55)' }}>{spec.footerNote}</span>
         <div style={{ display: 'flex', gap: 4 }}>
-          {[pal.dom, pal.acc, pal.sec].map((c, i) => <div key={i} style={{ width: 10, height: 10, borderRadius: '50%', background: c, border: '1px solid rgba(255,255,255,0.2)' }} />)}
+          {[pal.dom, pal.acc, pal.sec].map((c, i) => <div key={i} style={{ width: 9, height: 9, borderRadius: '50%', background: c, border: '1px solid rgba(255,255,255,0.25)' }} />)}
         </div>
       </div>
     </div>
   )
 }
 
-function MobileMockup({ pal, font, arch, borderRadius, isDark }: {
-  pal: Palette5; font: FontDuo; arch: Architecture
-  borderRadius: string; isDark: boolean
-}) {
+function SiteHeader({ spec, pal, font, look, compact }: { spec: TemplateSpec; pal: Palette5; font: FontDuo; look: Look; compact: boolean }) {
   return (
-    <div className="device-frame" style={{ maxWidth: 140, margin: '0 auto', background: '#1a1a1a', borderRadius: 16, padding: '8px 4px', boxShadow: '0 8px 24px rgba(0,0,0,0.3)' }}>
-      {/* notch */}
-      <div style={{ width: 40, height: 6, background: '#333', borderRadius: 3, margin: '0 auto 6px' }} />
-      {/* screen */}
-      <div style={{ background: pal.bg, borderRadius: 8, overflow: 'hidden', fontFamily: font.bodyStack, color: pal.txt }}>
-        <div style={{ background: pal.dom, padding: '6px 8px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-          <span style={{ fontFamily: font.titleStack, color: '#fff', fontSize: 9, fontWeight: 700 }}>MonSite</span>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
-            {[0,1,2].map(i => <div key={i} style={{ width: 12, height: 1.5, background: 'rgba(255,255,255,0.7)', borderRadius: 1 }} />)}
-          </div>
+    <div style={{
+      background: look.headerTransparent ? `linear-gradient(180deg, ${pal.dom}cc, ${pal.dom}55)` : look.headerBg,
+      padding: compact ? '7px 8px' : '8px 14px', display: 'flex', alignItems: 'center', gap: 8,
+      borderBottom: look.headerBg === '#ffffff' ? `1px solid ${pal.dom}14` : 'none',
+    }}>
+      <div style={{ fontFamily: font.titleStack, color: look.headerFg, fontSize: compact ? 9 : 11, fontWeight: 700, whiteSpace: 'nowrap' }}>{spec.brand}</div>
+      {!compact && (
+        <div style={{ flex: 1, display: 'flex', gap: 9, justifyContent: 'center' }}>
+          {spec.nav.map(n => <span key={n} style={{ fontSize: 8, color: look.headerFg, opacity: 0.75 }}>{n}</span>)}
         </div>
-        <div style={{ padding: 8 }}>
-          <div style={{ fontFamily: font.titleStack, color: pal.dom, fontSize: 12, fontWeight: 700, marginBottom: 3, lineHeight: 1.2 }}>{arch.label}</div>
-          <div style={{ fontSize: 7, opacity: 0.6, marginBottom: 6, lineHeight: 1.4 }}>{arch.ideal}</div>
-          <div style={{ background: pal.acc, color: '#fff', padding: '3px 8px', borderRadius, fontSize: 7, fontWeight: 600, display: 'inline-block', marginBottom: 6 }}>En savoir plus →</div>
-          {[0,1].map(i => (
-            <div key={i} style={{ background: isDark ? pal.dom + '22' : pal.sec + '11', padding: 5, borderRadius, border: `1px solid ${pal.dom}22`, marginBottom: 4 }}>
-              <div style={{ width: '70%', height: 4, background: pal.dom + '66', borderRadius: 2, marginBottom: 2 }} />
-              <div style={{ width: '90%', height: 3, background: pal.txt + '33', borderRadius: 2 }} />
-            </div>
-          ))}
+      )}
+      {compact && <div style={{ flex: 1 }} />}
+      {compact ? (
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
+          {[0, 1, 2].map(i => <div key={i} style={{ width: 12, height: 1.5, background: look.headerFg, opacity: 0.8, borderRadius: 1 }} />)}
         </div>
-        <div style={{ background: pal.dom, padding: '5px 8px', textAlign: 'center' }}>
-          <span style={{ fontSize: 7, color: 'rgba(255,255,255,0.5)' }}>© MonSite.fr</span>
+      ) : (
+        <MiniBtn config={{ buttonStyle: 'plein' } as Config} pal={pal} font={font}>Devis</MiniBtn>
+      )}
+    </div>
+  )
+}
+
+function DesktopMockup({ spec, pal, font, look, tablet }: { spec: TemplateSpec; pal: Palette5; font: FontDuo; look: Look; tablet?: boolean }) {
+  return (
+    <div className="device-frame" style={{ maxWidth: tablet ? 340 : '100%', margin: tablet ? '0 auto' : undefined, fontFamily: font.bodyStack, borderRadius: 10, overflow: 'hidden', border: `1px solid ${pal.dom}22`, boxShadow: look.shadow }}>
+      {/* Browser chrome */}
+      <div style={{ background: '#e8e8e8', padding: '5px 8px', display: 'flex', alignItems: 'center', gap: 4 }}>
+        {['#ff5f57', '#febc2e', '#28c840'].map((c, i) => <div key={i} style={{ width: 7, height: 7, borderRadius: '50%', background: c }} />)}
+        <div style={{ flex: 1, background: '#fff', borderRadius: 3, height: 13, margin: '0 8px', display: 'flex', alignItems: 'center', padding: '0 6px' }}>
+          <span style={{ fontSize: 7.5, color: '#999' }}>monsite.fr</span>
         </div>
       </div>
-      {/* home bar */}
+      <SiteHeader spec={spec} pal={pal} font={font} look={look} compact={!!tablet} />
+      <TemplateBody spec={spec} pal={pal} font={font} look={look} compact={!!tablet} />
+    </div>
+  )
+}
+
+function MobileMockup({ spec, pal, font, look }: { spec: TemplateSpec; pal: Palette5; font: FontDuo; look: Look }) {
+  return (
+    <div className="device-frame" style={{ maxWidth: 160, margin: '0 auto', background: '#1a1a1a', borderRadius: 18, padding: '8px 5px', boxShadow: '0 8px 24px rgba(0,0,0,0.3)' }}>
+      <div style={{ width: 40, height: 6, background: '#333', borderRadius: 3, margin: '0 auto 6px' }} />
+      <div style={{ borderRadius: 10, overflow: 'hidden', fontFamily: font.bodyStack }}>
+        <SiteHeader spec={spec} pal={pal} font={font} look={look} compact />
+        <TemplateBody spec={spec} pal={pal} font={font} look={look} compact />
+      </div>
       <div style={{ width: 40, height: 3, background: '#555', borderRadius: 2, margin: '6px auto 0' }} />
     </div>
   )
 }
 
-function LivePreview({ config, abConfig }: { config: Config; abConfig?: Config }) {
+function LivePreview({ config, abConfig, fullscreen, onToggleFullscreen, templateId, setTemplateId }: {
+  config: Config; abConfig?: Config; fullscreen?: boolean; onToggleFullscreen?: () => void
+  templateId: string; setTemplateId: (id: string) => void
+}) {
   const [mode, setMode] = useState<PreviewMode>('desktop')
-  const pal = PALETTES.find(p => p.id === config.pal) ?? PALETTES[0]
+  const pal = config.customPal ?? PALETTES.find(p => p.id === config.pal) ?? PALETTES[0]
   const font = FONTS.find(f => f.id === config.font) ?? FONTS[0]
-  const arch = ARCHS.find(a => a.id === config.arch) ?? ARCHS[0]
+  const spec = TEMPLATES.find(t => t.id === templateId) ?? TEMPLATES[0]
+  const look = deriveLook(config, pal)
 
-  const borderRadius = config.corners === 0 ? '0px' : config.corners === 1 ? '8px' : '20px'
-  const padding = config.density === 0 ? '8px' : config.density === 1 ? '14px' : '22px'
-  const isDark = config.theme === 'dark' || (config.theme === 'auto' && pal.bg.length > 1 && parseInt(pal.bg.slice(1,3),16) < 100)
-
-  const palB = abConfig ? (PALETTES.find(p => p.id === abConfig.pal) ?? PALETTES[1]) : null
+  const palB = abConfig ? (abConfig.customPal ?? PALETTES.find(p => p.id === abConfig.pal) ?? PALETTES[1]) : null
+  const lookB = abConfig ? deriveLook(abConfig, palB!) : null
   const fontB = abConfig ? (FONTS.find(f => f.id === abConfig.font) ?? FONTS[1]) : null
-  const archB = abConfig ? (ARCHS.find(a => a.id === abConfig.arch) ?? ARCHS[0]) : null
-  const brB = abConfig ? (abConfig.corners === 0 ? '0px' : abConfig.corners === 1 ? '8px' : '20px') : '8px'
-  const padB = abConfig ? (abConfig.density === 0 ? '8px' : abConfig.density === 1 ? '14px' : '22px') : '14px'
-  const isDarkB = abConfig ? (abConfig.theme === 'dark' || (abConfig.theme === 'auto' && (palB?.bg ?? '#fff').slice(1,3) < '80')) : false
 
   const btnCls = (m: PreviewMode) =>
     `flex items-center gap-1 px-2 py-1 rounded-lg text-xs font-medium transition-colors ${mode === m ? 'bg-electric-ink text-white' : 'text-gray-500 dark:text-white/40 hover:bg-gray-100 dark:hover:bg-white/10'}`
 
   return (
     <div>
+      {/* Choix de la maquette */}
+      <div className="flex items-center gap-1.5 mb-3 overflow-x-auto pb-1">
+        {TEMPLATES.map(t => (
+          <button key={t.id} onClick={() => setTemplateId(t.id)}
+            className={`flex items-center gap-1 px-2.5 py-1.5 rounded-lg text-[11px] font-medium whitespace-nowrap transition-colors ${templateId === t.id ? 'bg-electric-ink text-white' : 'bg-gray-100 dark:bg-white/10 text-gray-600 dark:text-white/50 hover:bg-gray-200 dark:hover:bg-white/15'}`}>
+            <t.Icon size={11} /> {t.label}
+          </button>
+        ))}
+      </div>
+
       {/* Mode tabs */}
-      <div className="flex items-center gap-1 mb-3 p-1 bg-gray-100 dark:bg-white/5 rounded-xl w-fit">
-        <button className={btnCls('desktop')} onClick={() => setMode('desktop')}>
-          <Monitor size={11} /> Bureau
-        </button>
-        <button className={btnCls('mobile')} onClick={() => setMode('mobile')}>
-          <Smartphone size={11} /> Mobile
-        </button>
-        {abConfig && (
-          <button className={btnCls('ab')} onClick={() => setMode('ab')}>
-            <Columns2 size={11} /> A/B
+      <div className="flex items-center justify-between mb-3 flex-wrap gap-2">
+        <div className="flex items-center gap-1 p-1 bg-gray-100 dark:bg-white/5 rounded-xl w-fit">
+          <button className={btnCls('desktop')} onClick={() => setMode('desktop')}>
+            <Monitor size={11} /> Bureau
+          </button>
+          <button className={btnCls('tablet')} onClick={() => setMode('tablet')}>
+            <Tablet size={11} /> Tablette
+          </button>
+          <button className={btnCls('mobile')} onClick={() => setMode('mobile')}>
+            <Smartphone size={11} /> Mobile
+          </button>
+          {abConfig && (
+            <button className={btnCls('ab')} onClick={() => setMode('ab')}>
+              <Columns2 size={11} /> A/B
+            </button>
+          )}
+        </div>
+        {onToggleFullscreen && (
+          <button onClick={onToggleFullscreen} title="Plein écran immersif (touche F)"
+            className="flex items-center gap-1 px-2 py-1 rounded-lg text-xs font-medium text-gray-500 dark:text-white/40 hover:bg-gray-100 dark:hover:bg-white/10 transition-colors">
+            {fullscreen ? <X size={13} /> : <Maximize2 size={13} />}
           </button>
         )}
       </div>
 
-      {mode === 'desktop' && (
-        <DesktopMockup pal={pal} font={font} arch={arch} borderRadius={borderRadius} padding={padding} isDark={isDark} />
-      )}
-      {mode === 'mobile' && (
-        <MobileMockup pal={pal} font={font} arch={arch} borderRadius={borderRadius} isDark={isDark} />
-      )}
-      {mode === 'ab' && abConfig && palB && fontB && archB && (
+      {mode === 'desktop' && <DesktopMockup spec={spec} pal={pal} font={font} look={look} />}
+      {mode === 'tablet' && <DesktopMockup spec={spec} pal={pal} font={font} look={look} tablet />}
+      {mode === 'mobile' && <MobileMockup spec={spec} pal={pal} font={font} look={look} />}
+      {mode === 'ab' && abConfig && palB && fontB && lookB && (
         <div className="grid grid-cols-2 gap-3">
           <div>
             <div className="text-[10px] font-bold text-center mb-1 text-gray-500 dark:text-white/40 uppercase tracking-widest">Version A</div>
-            <DesktopMockup pal={pal} font={font} arch={arch} borderRadius={borderRadius} padding={padding} isDark={isDark} />
+            <DesktopMockup spec={spec} pal={pal} font={font} look={look} tablet />
           </div>
           <div>
             <div className="text-[10px] font-bold text-center mb-1 text-electric-ink uppercase tracking-widest">Version B</div>
-            <DesktopMockup pal={palB} font={fontB} arch={archB} borderRadius={brB} padding={padB} isDark={isDarkB} />
+            <DesktopMockup spec={spec} pal={palB} font={fontB} look={lookB} tablet />
           </div>
         </div>
       )}
 
       {/* Palette bar */}
-      <div className="flex items-center gap-1.5 mt-2 px-1">
+      <div className="flex items-center gap-1.5 mt-3 px-1">
         {[pal.dom, pal.sec, pal.acc, pal.bg, pal.txt].map((c, i) => (
           <div key={i} title={c} className="studio-color-swatch" style={{ width: 16, height: 16, background: c, borderRadius: 4, border: `1px solid ${pal.dom}33`, flexShrink: 0 }} />
         ))}
@@ -592,40 +883,133 @@ function Section1Arch({ config, setConfig }: { config: Config; setConfig: (c: Co
 }
 
 const PAL_FAMILIES = ['Bleu pro','Neutre','Chaleureux','Tech dark','Luxe','Nature','Vif & pop','Pastel','Mono','Institutionnel']
+const HARMONY_TYPES: { id: 'complementaire'|'analogue'|'triade'|'monochrome'; label: string }[] = [
+  { id: 'complementaire', label: 'Complémentaire' },
+  { id: 'analogue', label: 'Analogue' },
+  { id: 'triade', label: 'Triade' },
+  { id: 'monochrome', label: 'Monochrome' },
+]
+const ROLE_LABELS: { key: keyof Palette5; label: string }[] = [
+  { key: 'dom', label: 'Dominante' }, { key: 'sec', label: 'Secondaire' },
+  { key: 'bg', label: 'Fond' }, { key: 'txt', label: 'Texte' }, { key: 'acc', label: 'Accent' },
+]
+
+function ContrastLine({ pal, setCustom }: { pal: Palette5; setCustom: (p: Palette5) => void }) {
+  const ratioTxt = contrastRatio(pal.txt, pal.bg)
+  const okTxt = ratioTxt >= 4.5
+  return (
+    <div className="flex items-center justify-between gap-2 px-3 py-2 rounded-lg bg-gray-50 dark:bg-white/5 text-xs">
+      <span className={okTxt ? 'text-green-600 dark:text-green-400' : 'text-amber-600 dark:text-amber-400'}>
+        Contraste texte/fond : {ratioTxt.toFixed(1)}:1 {okTxt ? '— AA conforme' : '— sous le seuil AA (4.5:1)'}
+      </span>
+      {!okTxt && (
+        <button type="button" onClick={() => setCustom({ ...pal, txt: fixContrast(pal.txt, pal.bg) })}
+          className="text-electric-ink dark:text-electric font-semibold hover:underline whitespace-nowrap">Corriger</button>
+      )}
+    </div>
+  )
+}
 
 function Section2Pal({ config, setConfig }: { config: Config; setConfig: (c: Config) => void }) {
   const [fam, setFam] = useState<string|null>(null)
+  const [customizing, setCustomizing] = useState(!!config.customPal)
   const visible = fam ? PALETTES.filter(p => p.fam === fam) : PALETTES
+  const activePal = config.customPal ?? PALETTES.find(p => p.id === config.pal) ?? PALETTES[0]
+
+  const startCustom = () => {
+    const seed = config.customPal ?? PALETTES.find(p => p.id === config.pal) ?? PALETTES[0]
+    setCustomizing(true)
+    setConfig({ ...config, customPal: { ...seed, id: 'CUSTOM', name: 'Personnalisé', fam: 'Personnalisé' } })
+  }
+
+  const setRole = (key: keyof Palette5, value: string) => {
+    if (!config.customPal) return
+    setConfig({ ...config, customPal: { ...config.customPal, [key]: value } })
+  }
+
+  const applyHarmony = (type: 'complementaire'|'analogue'|'triade'|'monochrome') => {
+    setConfig({ ...config, customPal: harmonize(activePal.dom, type) })
+  }
 
   return (
     <div>
       <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-1">Palette de couleurs</h2>
-      <p className="text-sm text-gray-500 dark:text-white/50 mb-4">50 palettes, 9 univers. Choisissez celle qui vous ressemble.</p>
-      <div className="flex flex-wrap gap-2 mb-5">
-        <button onClick={() => setFam(null)} className={`px-3 py-1 rounded-full text-xs font-medium transition-colors ${!fam ? 'bg-electric-ink text-white' : 'bg-gray-100 dark:bg-white/10 text-gray-700 dark:text-white/60 hover:bg-gray-200'}`}>Toutes</button>
-        {PAL_FAMILIES.map(f => (
-          <button key={f} onClick={() => setFam(f === fam ? null : f)} className={`px-3 py-1 rounded-full text-xs font-medium transition-colors ${fam === f ? 'bg-electric-ink text-white' : 'bg-gray-100 dark:bg-white/10 text-gray-700 dark:text-white/60 hover:bg-gray-200'}`}>{f}</button>
-        ))}
+      <p className="text-sm text-gray-500 dark:text-white/50 mb-4">50 palettes curées, 9 univers — ou composez la vôtre au pixel près.</p>
+
+      <div className="flex gap-2 mb-5">
+        <button onClick={() => setCustomizing(false)}
+          className={`flex-1 py-2 rounded-xl text-xs font-semibold transition-colors ${!customizing ? 'bg-electric-ink text-white' : 'bg-gray-100 dark:bg-white/10 text-gray-600 dark:text-white/50'}`}>
+          Palettes curées
+        </button>
+        <button onClick={startCustom}
+          className={`flex-1 py-2 rounded-xl text-xs font-semibold transition-colors flex items-center justify-center gap-1.5 ${customizing ? 'bg-electric-ink text-white' : 'bg-gray-100 dark:bg-white/10 text-gray-600 dark:text-white/50'}`}>
+          <Wand2 size={12} /> Personnaliser
+        </button>
       </div>
-      <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
-        {visible.map(pal => {
-          const sel = config.pal === pal.id
-          return (
-            <button key={pal.id} onClick={() => setConfig({ ...config, pal: pal.id })}
-              className={`rounded-xl border-2 overflow-hidden transition-all ${sel ? 'border-electric-ink dark:border-electric' : 'border-transparent hover:border-gray-300 dark:hover:border-white/20'}`}>
-              <div className="flex h-12">
-                {[pal.dom, pal.sec, pal.acc, pal.bg, pal.txt].map((c, i) => (
-                  <div key={i} style={{ flex: 1, background: c }} />
-                ))}
+
+      {customizing ? (
+        <div className="space-y-5">
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+            {ROLE_LABELS.map(r => (
+              <div key={r.key} className="p-2.5 rounded-xl border border-gray-200 dark:border-white/10 bg-white dark:bg-gray-900/60">
+                <div className="text-[10px] text-gray-400 dark:text-white/30 mb-1.5">{r.label}</div>
+                <div className="flex items-center gap-2">
+                  <label className="relative w-7 h-7 rounded-lg overflow-hidden border border-gray-200 dark:border-white/10 shrink-0 cursor-pointer" style={{ background: activePal[r.key] }}>
+                    <input type="color" value={/^#[0-9a-fA-F]{6}$/.test(activePal[r.key]) ? activePal[r.key] : '#000000'}
+                      onChange={e => setRole(r.key, e.target.value)}
+                      className="absolute inset-0 opacity-0 cursor-pointer w-full h-full" aria-label={`Couleur ${r.label} (roue chromatique)`} />
+                  </label>
+                  <input type="text" value={activePal[r.key]} onChange={e => setRole(r.key, e.target.value)}
+                    spellCheck={false}
+                    className="flex-1 min-w-0 text-xs font-mono px-2 py-1.5 rounded-lg border border-gray-200 dark:border-white/10 bg-transparent text-gray-800 dark:text-white/80" />
+                </div>
               </div>
-              <div className="px-2 py-1.5 bg-white dark:bg-gray-900 text-left">
-                <div className="text-xs font-medium text-gray-900 dark:text-white truncate">{pal.name}</div>
-                <div className="text-[10px] text-gray-400 dark:text-white/30">{pal.fam}</div>
-              </div>
-            </button>
-          )
-        })}
-      </div>
+            ))}
+          </div>
+
+          <div>
+            <div className="text-xs font-semibold text-gray-700 dark:text-white/60 mb-2">Palettes harmoniques générées (à partir de la dominante)</div>
+            <div className="flex flex-wrap gap-2">
+              {HARMONY_TYPES.map(h => (
+                <button key={h.id} onClick={() => applyHarmony(h.id)}
+                  className="px-3 py-1.5 rounded-full text-xs font-medium bg-gray-100 dark:bg-white/10 text-gray-700 dark:text-white/60 hover:bg-electric-ink hover:text-white dark:hover:bg-electric-ink transition-colors">
+                  {h.label}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          <ContrastLine pal={activePal} setCustom={p => setConfig({ ...config, customPal: p })} />
+        </div>
+      ) : (
+        <>
+          <div className="flex flex-wrap gap-2 mb-5">
+            <button onClick={() => setFam(null)} className={`px-3 py-1 rounded-full text-xs font-medium transition-colors ${!fam ? 'bg-electric-ink text-white' : 'bg-gray-100 dark:bg-white/10 text-gray-700 dark:text-white/60 hover:bg-gray-200'}`}>Toutes</button>
+            {PAL_FAMILIES.map(f => (
+              <button key={f} onClick={() => setFam(f === fam ? null : f)} className={`px-3 py-1 rounded-full text-xs font-medium transition-colors ${fam === f ? 'bg-electric-ink text-white' : 'bg-gray-100 dark:bg-white/10 text-gray-700 dark:text-white/60 hover:bg-gray-200'}`}>{f}</button>
+            ))}
+          </div>
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+            {visible.map(pal => {
+              const sel = !config.customPal && config.pal === pal.id
+              return (
+                <button key={pal.id} onClick={() => setConfig({ ...config, pal: pal.id, customPal: null })}
+                  className={`rounded-xl border-2 overflow-hidden transition-all ${sel ? 'border-electric-ink dark:border-electric' : 'border-transparent hover:border-gray-300 dark:hover:border-white/20'}`}>
+                  <div className="flex h-12">
+                    {[pal.dom, pal.sec, pal.acc, pal.bg, pal.txt].map((c, i) => (
+                      <div key={i} style={{ flex: 1, background: c }} />
+                    ))}
+                  </div>
+                  <div className="px-2 py-1.5 bg-white dark:bg-gray-900 text-left">
+                    <div className="text-xs font-medium text-gray-900 dark:text-white truncate">{pal.name}</div>
+                    <div className="text-[10px] text-gray-400 dark:text-white/30">{pal.fam}</div>
+                  </div>
+                </button>
+              )
+            })}
+          </div>
+        </>
+      )}
     </div>
   )
 }
@@ -664,6 +1048,9 @@ function Section4Finitions({ config, setConfig }: { config: Config; setConfig: (
   const imageryOpts = ['photo', 'illustration', 'abstract', 'minimaliste', 'icônes']
   const themeOpts = ['light', 'dark', 'auto']
   const toneOpts = ['professionnel', 'chaleureux', 'innovant', 'prestige', 'engagé', 'ludique', 'rassurant']
+  const buttonOpts = [{ id: 'plein', label: 'Plein' }, { id: 'contour', label: 'Contour' }, { id: 'pilule', label: 'Pilule' }, { id: 'carre', label: 'Carré' }]
+  const shadowOpts = [{ id: 'plat', label: 'Plat' }, { id: 'doux', label: 'Doux' }, { id: 'prononce', label: 'Prononcé' }]
+  const headerOpts = [{ id: 'clair', label: 'Clair' }, { id: 'sombre', label: 'Sombre' }, { id: 'transparent', label: 'Transparent' }]
 
   return (
     <div className="space-y-8">
@@ -701,6 +1088,37 @@ function Section4Finitions({ config, setConfig }: { config: Config; setConfig: (
                 style={{ borderRadius: r }}>{l}</button>
             )
           })}
+        </div>
+      </div>
+
+      <div>
+        <div className="font-semibold text-sm text-gray-800 dark:text-white/80 mb-3">Style de boutons</div>
+        <div className="flex gap-2">
+          {buttonOpts.map(o => (
+            <button key={o.id} onClick={() => set('buttonStyle', o.id)}
+              className={`flex-1 py-2 text-xs font-semibold transition-all border-2 ${config.buttonStyle === o.id ? 'border-electric-ink bg-blue-50 dark:bg-white/5 text-gray-900 dark:text-white' : 'border-gray-200 dark:border-white/10 text-gray-600 dark:text-white/50 hover:border-gray-300'}`}
+              style={{ borderRadius: o.id === 'pilule' ? 999 : o.id === 'carre' ? 0 : 8 }}>{o.label}</button>
+          ))}
+        </div>
+      </div>
+
+      <div>
+        <div className="font-semibold text-sm text-gray-800 dark:text-white/80 mb-3">Style d'ombres</div>
+        <div className="flex gap-2">
+          {shadowOpts.map(o => (
+            <button key={o.id} onClick={() => set('shadowStyle', o.id)}
+              className={`flex-1 py-2 rounded-lg text-xs font-medium transition-colors ${config.shadowStyle === o.id ? 'bg-electric-ink text-white' : 'bg-gray-100 dark:bg-white/10 text-gray-700 dark:text-white/60 hover:bg-gray-200'}`}>{o.label}</button>
+          ))}
+        </div>
+      </div>
+
+      <div>
+        <div className="font-semibold text-sm text-gray-800 dark:text-white/80 mb-3">En-tête</div>
+        <div className="flex gap-2">
+          {headerOpts.map(o => (
+            <button key={o.id} onClick={() => set('headerStyle', o.id)}
+              className={`flex-1 py-2 rounded-lg text-xs font-medium transition-colors ${config.headerStyle === o.id ? 'bg-electric-ink text-white' : 'bg-gray-100 dark:bg-white/10 text-gray-700 dark:text-white/60 hover:bg-gray-200'}`}>{o.label}</button>
+          ))}
         </div>
       </div>
 
@@ -743,7 +1161,7 @@ function ProfileCard({ config }: { config: Config }) {
   const [copied, setCopied] = useState(false)
   const [sharedUrl, setSharedUrl] = useState(false)
   const [exported, setExported] = useState(false)
-  const pal = PALETTES.find(p => p.id === config.pal) ?? PALETTES[0]
+  const pal = config.customPal ?? PALETTES.find(p => p.id === config.pal) ?? PALETTES[0]
   const font = FONTS.find(f => f.id === config.font) ?? FONTS[0]
   const arch = ARCHS.find(a => a.id === config.arch) ?? ARCHS[0]
   const code = genProfileCode(config)
@@ -761,7 +1179,16 @@ function ProfileCard({ config }: { config: Config }) {
   }, [code])
 
   const shareUrl = useCallback(() => {
-    const url = `${window.location.origin}/outils/studio-de-style?arch=${config.arch}&pal=${config.pal}&font=${config.font}&anim=${config.anim}&density=${config.density}&corners=${config.corners}&theme=${config.theme}&tone=${encodeURIComponent(config.tone)}`
+    const params = new URLSearchParams({
+      arch: config.arch, pal: config.pal, font: config.font,
+      anim: String(config.anim), density: String(config.density), corners: String(config.corners),
+      theme: config.theme, tone: config.tone,
+      buttonStyle: config.buttonStyle, shadowStyle: config.shadowStyle, headerStyle: config.headerStyle,
+    })
+    if (config.customPal) {
+      params.set('custom', [config.customPal.dom, config.customPal.sec, config.customPal.bg, config.customPal.txt, config.customPal.acc].join(','))
+    }
+    const url = `${window.location.origin}/outils/studio-de-style?${params.toString()}`
     navigator.clipboard.writeText(url).then(() => {
       setSharedUrl(true)
       setTimeout(() => setSharedUrl(false), 2500)
@@ -823,6 +1250,25 @@ function ProfileCard({ config }: { config: Config }) {
     <div class="row"><span class="label">Densité</span><span class="value">${['Aéré','Équilibré','Dense'][config.density]}</span></div>
     <div class="row"><span class="label">Coins</span><span class="value">${['Anguleux (0px)','Doux (8px)','Très arrondi (20px)'][config.corners]}</span></div>
     <div class="row"><span class="label">Animations</span><span class="value">${['Aucune','Subtile','Marquée','Spectaculaire'][config.anim]}</span></div>
+    <h2 style="page-break-before: always; padding-top: 8px;">Composants dans le style</h2>
+    <div style="display:flex; gap:12px; align-items:center; margin-bottom:16px; flex-wrap:wrap;">
+      <span style="display:inline-block; padding:10px 20px; font-weight:700; font-size:13px; border-radius:${btnRadius(config.buttonStyle, config.corners === 0 ? 0 : config.corners === 1 ? 8 : 16)}px; background:${config.buttonStyle === 'contour' ? '#fff' : pal.acc}; color:${config.buttonStyle === 'contour' ? pal.acc : (relLuminance(pal.acc) > 0.55 ? '#111' : '#fff')}; border:${config.buttonStyle === 'contour' ? `2px solid ${pal.acc}` : 'none'};">Bouton principal</span>
+      <span style="display:inline-block; padding:10px 20px; font-weight:700; font-size:13px; border-radius:${btnRadius(config.buttonStyle, config.corners === 0 ? 0 : config.corners === 1 ? 8 : 16)}px; background:transparent; color:${pal.dom}; border:1.5px solid ${pal.dom}55;">Bouton secondaire</span>
+    </div>
+    <div style="display:flex; gap:14px; margin-bottom:16px; flex-wrap:wrap;">
+      <div style="flex:1; min-width:200px; padding:16px; border-radius:${config.corners === 0 ? 0 : config.corners === 1 ? 8 : 20}px; background:${pal.bg}; border:1px solid ${pal.dom}22; box-shadow:${config.shadowStyle === 'plat' ? 'none' : config.shadowStyle === 'doux' ? '0 4px 14px rgba(0,0,0,0.08)' : '0 12px 28px rgba(0,0,0,0.16)'};">
+        <div style="font-weight:700; color:${pal.dom}; font-size:13px; margin-bottom:6px;">Carte — Titre du service</div>
+        <div style="font-size:11px; color:#666; line-height:1.5;">Description courte illustrant le style de carte utilisé sur le site : coins, ombre et hiérarchie typographique.</div>
+      </div>
+      <div style="flex:1; min-width:200px; padding:16px; border-radius:${config.corners === 0 ? 0 : config.corners === 1 ? 8 : 20}px; background:${pal.dom}; box-shadow:${config.shadowStyle === 'plat' ? 'none' : config.shadowStyle === 'doux' ? '0 4px 14px rgba(0,0,0,0.08)' : '0 12px 28px rgba(0,0,0,0.16)'};">
+        <div style="font-weight:700; color:#fff; font-size:13px; margin-bottom:6px;">Carte foncée — Mise en avant</div>
+        <div style="font-size:11px; color:rgba(255,255,255,0.7); line-height:1.5;">Variante sur fond de couleur dominante, pour un encart ou une bannière.</div>
+      </div>
+    </div>
+    <div style="max-width:320px;">
+      <div style="font-size:11px; color:#666; margin-bottom:4px;">Champ de formulaire</div>
+      <div style="padding:10px 14px; border-radius:${config.corners === 0 ? 0 : config.corners === 1 ? 6 : 14}px; border:1.5px solid ${pal.dom}33; font-size:12px; color:#999;">Votre adresse email</div>
+    </div>
     <div class="footer">
       Transmettez ce guide à votre agence pour votre devis.<br>
       <a href="${typeof window !== 'undefined' ? window.location.origin : 'https://stackup.agency'}/devis">stackup.agency/devis</a>
@@ -894,6 +1340,107 @@ function ProfileCard({ config }: { config: Config }) {
         className="btn-lift block w-full text-center py-3.5 bg-gold hover:bg-gold/90 text-ink font-bold rounded-xl shadow-lg shadow-amber-500/30 text-sm">
         Recevoir MA MAQUETTE →
       </Link>
+      <p className="text-center text-[11px] text-white/35 mt-3 leading-relaxed">
+        Ce configurateur est offert — l'agence réalise votre site dans ce style dès {SITE.pricing.vitrine} €.
+      </p>
+    </div>
+  )
+}
+
+// ─── Styles enregistrés (localStorage, nommés) ─────────────────────────────────
+
+interface SavedStyle { name: string; config: Config; savedAt: string }
+
+function loadSavedStyles(): SavedStyle[] {
+  if (typeof window === 'undefined') return []
+  try { return JSON.parse(localStorage.getItem('studioSavedStyles') || '[]') } catch { return [] }
+}
+
+function persistSavedStyles(styles: SavedStyle[]) {
+  try { localStorage.setItem('studioSavedStyles', JSON.stringify(styles)) } catch {}
+}
+
+function SavedStyles({ config, setConfig }: { config: Config; setConfig: (c: Config) => void }) {
+  const [styles, setStyles] = useState<SavedStyle[]>([])
+  const [name, setName] = useState('')
+  const [open, setOpen] = useState(false)
+
+  useEffect(() => { setStyles(loadSavedStyles()) }, [])
+
+  const save = () => {
+    const trimmed = name.trim() || `Style ${styles.length + 1}`
+    const next = [...styles.filter(s => s.name !== trimmed), { name: trimmed, config, savedAt: new Date().toISOString() }].slice(-12)
+    setStyles(next)
+    persistSavedStyles(next)
+    setName('')
+  }
+
+  const remove = (n: string) => {
+    const next = styles.filter(s => s.name !== n)
+    setStyles(next)
+    persistSavedStyles(next)
+  }
+
+  return (
+    <div className="bg-white dark:bg-gray-900/60 border border-gray-100 dark:border-white/10 rounded-2xl p-4">
+      <button type="button" onClick={() => setOpen(o => !o)} className="w-full flex items-center justify-between text-xs font-semibold text-gray-700 dark:text-white/70">
+        <span className="flex items-center gap-1.5"><Save size={13} /> Mes styles enregistrés {styles.length > 0 && `(${styles.length})`}</span>
+        <ChevronRight size={13} className={`transition-transform ${open ? 'rotate-90' : ''}`} />
+      </button>
+      {open && (
+        <div className="mt-3 space-y-3">
+          <div className="flex gap-2">
+            <input value={name} onChange={e => setName(e.target.value)} placeholder="Nom du style"
+              className="flex-1 min-w-0 text-xs px-2.5 py-2 rounded-lg border border-gray-200 dark:border-white/10 bg-transparent text-gray-800 dark:text-white/80" />
+            <button type="button" onClick={save} className="px-3 py-2 rounded-lg bg-electric-ink text-white text-xs font-semibold hover:bg-electric-ink/90 transition-colors">Enregistrer</button>
+          </div>
+          {styles.length === 0 ? (
+            <p className="text-[11px] text-gray-400 dark:text-white/30">Aucun style enregistré pour l'instant.</p>
+          ) : (
+            <div className="space-y-1.5">
+              {styles.slice().reverse().map(s => (
+                <div key={s.name} className="flex items-center justify-between gap-2 px-2.5 py-2 rounded-lg bg-gray-50 dark:bg-white/5">
+                  <button type="button" onClick={() => setConfig(s.config)} className="text-xs font-medium text-gray-700 dark:text-white/70 hover:text-electric-ink dark:hover:text-electric text-left truncate flex-1">
+                    {s.name}
+                  </button>
+                  <button type="button" onClick={() => remove(s.name)} aria-label={`Supprimer ${s.name}`} className="text-gray-300 dark:text-white/20 hover:text-red-500 transition-colors shrink-0">
+                    <Trash2 size={13} />
+                  </button>
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
+      )}
+    </div>
+  )
+}
+
+// ─── Onboarding (3 bulles, première visite) ────────────────────────────────────
+
+const ONBOARDING_STEPS = [
+  { title: '1. Choisissez un point de départ', text: 'Un preset métier ou une ambiance en un clic — tout se règle ensuite finement.' },
+  { title: '2. Ajustez chaque détail', text: 'Architecture, palette (même personnalisée), typographie, boutons, ombres… tout s\'applique en direct dans l\'aperçu.' },
+  { title: '3. Repartez avec votre style', text: 'Partagez le lien, exportez le guide PDF, ou envoyez-le directement dans un devis.' },
+]
+
+function Onboarding({ onDone }: { onDone: () => void }) {
+  const [step, setStep] = useState(0)
+  const last = step === ONBOARDING_STEPS.length - 1
+  return (
+    <div className="mb-6 rounded-2xl border border-electric-ink/20 bg-blue-50/60 dark:bg-electric-ink/10 p-4 flex items-start gap-3">
+      <div className="w-7 h-7 rounded-full bg-electric-ink text-white flex items-center justify-center text-xs font-bold shrink-0">{step + 1}</div>
+      <div className="flex-1 min-w-0">
+        <div className="text-sm font-bold text-gray-900 dark:text-white">{ONBOARDING_STEPS[step].title}</div>
+        <p className="text-xs text-gray-600 dark:text-white/50 mt-0.5">{ONBOARDING_STEPS[step].text}</p>
+      </div>
+      <div className="flex items-center gap-2 shrink-0">
+        <button type="button" onClick={onDone} className="text-xs text-gray-400 dark:text-white/30 hover:text-gray-600">Passer</button>
+        <button type="button" onClick={() => last ? onDone() : setStep(s => s + 1)}
+          className="px-3 py-1.5 rounded-lg bg-electric-ink text-white text-xs font-semibold hover:bg-electric-ink/90 transition-colors">
+          {last ? 'Terminer' : 'Suivant'}
+        </button>
+      </div>
     </div>
   )
 }
@@ -913,8 +1460,15 @@ export default function StudioClient() {
   const [abMode, setAbMode] = useState(false)
   const [section, setSection] = useState(0)
   const [mounted, setMounted] = useState(false)
+  const [showOnboarding, setShowOnboarding] = useState(false)
+  const [fullscreen, setFullscreen] = useState(false)
+  const [templateId, setTemplateId] = useState('artisan')
   const wrapperRef = useRef<HTMLDivElement>(null)
   const sectionTitleRef = useRef<HTMLSpanElement>(null)
+
+  // Historique annuler/rétablir
+  const historyRef = useRef<Config[]>([])
+  const futureRef = useRef<Config[]>([])
 
   const goToSection = useCallback((next: number | ((s: number) => number)) => {
     setSection(prev => {
@@ -939,57 +1493,135 @@ export default function StudioClient() {
     if (params.get('corners') !== null) urlConfig.corners = Number(params.get('corners'))
     if (params.get('theme')) urlConfig.theme = params.get('theme')!
     if (params.get('tone'))  urlConfig.tone  = decodeURIComponent(params.get('tone')!)
+    if (params.get('buttonStyle')) urlConfig.buttonStyle = params.get('buttonStyle')!
+    if (params.get('shadowStyle')) urlConfig.shadowStyle = params.get('shadowStyle')!
+    if (params.get('headerStyle')) urlConfig.headerStyle = params.get('headerStyle')!
+    const customParam = params.get('custom')
+    if (customParam) {
+      const [dom, sec, bg, txt, acc] = customParam.split(',')
+      if (dom && sec && bg && txt && acc) urlConfig.customPal = { id: 'CUSTOM', name: 'Personnalisé', fam: 'Personnalisé', dom, sec, bg, txt, acc }
+    }
     const fromUrl = Object.keys(urlConfig).length > 0
     const saved = fromUrl ? { ...DEFAULT_CONFIG, ...urlConfig } : loadConfig()
     setConfigState(saved)
     setMounted(true)
+    try {
+      if (!localStorage.getItem('studioOnboardingSeen')) setShowOnboarding(true)
+    } catch {}
   }, [])
 
   const setConfig = useCallback((c: Config) => {
+    historyRef.current = [...historyRef.current, config].slice(-40)
+    futureRef.current = []
     setConfigState(c)
     saveConfig(c)
     if (typeof window !== 'undefined' && (window as Window & { gtag?: Function }).gtag) {
       (window as Window & { gtag?: Function }).gtag?.('event', 'studio_section', { section: SECTIONS[section].label })
     }
-  }, [section])
+  }, [section, config])
+
+  const undo = useCallback(() => {
+    const prev = historyRef.current.pop()
+    if (!prev) return
+    futureRef.current = [...futureRef.current, config]
+    setConfigState(prev)
+    saveConfig(prev)
+  }, [config])
+
+  const redo = useCallback(() => {
+    const next = futureRef.current.pop()
+    if (!next) return
+    historyRef.current = [...historyRef.current, config]
+    setConfigState(next)
+    saveConfig(next)
+  }, [config])
 
   const applyPreset = useCallback((preset: Preset) => {
+    historyRef.current = [...historyRef.current, config].slice(-40)
+    futureRef.current = []
     const newConfig = { ...config, ...preset.config }
     setConfigState(newConfig)
     saveConfig(newConfig)
+    if (preset.previewTemplate) setTemplateId(preset.previewTemplate)
     if (typeof window !== 'undefined' && (window as Window & { gtag?: Function }).gtag) {
       (window as Window & { gtag?: Function }).gtag?.('event', 'studio_preset', { preset_id: preset.id })
     }
   }, [config])
 
   const surprise = useCallback(() => {
+    historyRef.current = [...historyRef.current, config].slice(-40)
+    futureRef.current = []
     const newConfig = randomConfig()
     setConfigState(newConfig)
     saveConfig(newConfig)
     if (typeof window !== 'undefined' && (window as Window & { gtag?: Function }).gtag) {
       (window as Window & { gtag?: Function }).gtag?.('event', 'studio_surprise')
     }
+  }, [config])
+
+  // Raccourcis clavier : Ctrl/Cmd+Z annuler, Ctrl/Cmd+Maj+Z ou Ctrl+Y rétablir, F plein écran, Échap ferme
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      const tag = (e.target as HTMLElement)?.tagName
+      if (tag === 'INPUT' || tag === 'TEXTAREA') return
+      const mod = e.ctrlKey || e.metaKey
+      if (mod && e.key.toLowerCase() === 'z' && !e.shiftKey) { e.preventDefault(); undo() }
+      else if (mod && ((e.key.toLowerCase() === 'z' && e.shiftKey) || e.key.toLowerCase() === 'y')) { e.preventDefault(); redo() }
+      else if (!mod && e.key.toLowerCase() === 'f') { setFullscreen(f => !f) }
+      else if (e.key === 'Escape') { setFullscreen(false) }
+    }
+    window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
+  }, [undo, redo])
+
+  const dismissOnboarding = useCallback(() => {
+    setShowOnboarding(false)
+    try { localStorage.setItem('studioOnboardingSeen', '1') } catch {}
   }, [])
 
   if (!mounted) return <div className="h-96 animate-pulse bg-gray-100 dark:bg-gray-900/50 rounded-2xl m-8" />
 
   const progress = ((section + 1) / SECTIONS.length) * 100
+  const canUndo = historyRef.current.length > 0
+  const canRedo = futureRef.current.length > 0
 
   return (
     <div ref={wrapperRef} className="max-w-5xl mx-auto px-4 sm:px-6 py-8" style={{ scrollMarginTop: '5rem' }}>
-      {/* Presets bandeau */}
-      <div className="mb-6 overflow-x-auto">
+      {showOnboarding && <Onboarding onDone={dismissOnboarding} />}
+
+      {/* Presets + ambiances + historique */}
+      <div className="mb-3 overflow-x-auto">
         <div className="flex gap-2 min-w-max pb-1">
-          <span className="text-xs text-gray-500 dark:text-white/40 self-center mr-1 shrink-0">Démarrer avec :</span>
+          <span className="text-xs text-gray-500 dark:text-white/40 self-center mr-1 shrink-0">Métier :</span>
           {PRESETS.map(p => (
             <button key={p.id} type="button" onClick={() => applyPreset(p)}
               className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white dark:bg-gray-900/60 border border-gray-200 dark:border-white/10 hover:border-electric-ink dark:hover:border-electric text-xs font-medium text-gray-700 dark:text-white/70 transition-colors whitespace-nowrap">
               {p.label}
             </button>
           ))}
+        </div>
+      </div>
+      <div className="mb-6 overflow-x-auto">
+        <div className="flex gap-2 min-w-max pb-1 items-center">
+          <span className="text-xs text-gray-500 dark:text-white/40 self-center mr-1 shrink-0">Ambiance :</span>
+          {MOODS.map(m => (
+            <button key={m.id} type="button" onClick={() => applyPreset(m)}
+              className="px-3 py-1.5 rounded-full bg-gray-100 dark:bg-white/5 border border-gray-200 dark:border-white/10 hover:border-electric-ink dark:hover:border-electric text-xs font-medium text-gray-700 dark:text-white/70 transition-colors whitespace-nowrap">
+              {m.label}
+            </button>
+          ))}
           <button type="button" onClick={surprise}
             className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-electric-ink text-white text-xs font-medium hover:bg-electric-ink/80 transition-colors whitespace-nowrap">
             <Shuffle size={12} /> Surprends-moi
+          </button>
+          <div className="w-px h-5 bg-gray-200 dark:bg-white/10 mx-1 shrink-0" />
+          <button type="button" onClick={undo} disabled={!canUndo} title="Annuler (Ctrl+Z)"
+            className="flex items-center gap-1 px-2.5 py-1.5 rounded-full text-xs font-medium text-gray-500 dark:text-white/40 hover:bg-gray-100 dark:hover:bg-white/10 disabled:opacity-30 disabled:hover:bg-transparent transition-colors whitespace-nowrap">
+            <Undo2 size={12} /> Annuler
+          </button>
+          <button type="button" onClick={redo} disabled={!canRedo} title="Rétablir (Ctrl+Maj+Z)"
+            className="flex items-center gap-1 px-2.5 py-1.5 rounded-full text-xs font-medium text-gray-500 dark:text-white/40 hover:bg-gray-100 dark:hover:bg-white/10 disabled:opacity-30 disabled:hover:bg-transparent transition-colors whitespace-nowrap">
+            <Redo2 size={12} /> Rétablir
           </button>
         </div>
       </div>
@@ -1067,11 +1699,28 @@ export default function StudioClient() {
                 <Columns2 size={11} /> {abMode ? 'Quitter A/B' : 'Mode A/B'}
               </button>
             </div>
-            <LivePreview config={config} abConfig={abMode && abConfig ? abConfig : undefined} />
+            <LivePreview config={config} abConfig={abMode && abConfig ? abConfig : undefined} onToggleFullscreen={() => setFullscreen(f => !f)} templateId={templateId} setTemplateId={setTemplateId} />
           </div>
           <ProfileCard config={config} />
+          <SavedStyles config={config} setConfig={setConfig} />
         </div>
       </div>
+
+      {/* Plein écran immersif */}
+      {fullscreen && (
+        <div className="fixed inset-0 z-[100] bg-black/90 backdrop-blur-sm flex items-center justify-center p-6" onClick={() => setFullscreen(false)}>
+          <div className="max-w-2xl w-full max-h-full overflow-auto" onClick={e => e.stopPropagation()}>
+            <div className="flex justify-end mb-2">
+              <button type="button" onClick={() => setFullscreen(false)} className="text-white/60 hover:text-white flex items-center gap-1.5 text-xs">
+                <X size={16} /> Fermer (Échap)
+              </button>
+            </div>
+            <div className="bg-white dark:bg-gray-900 rounded-2xl p-5">
+              <LivePreview config={config} abConfig={abMode && abConfig ? abConfig : undefined} fullscreen onToggleFullscreen={() => setFullscreen(false)} templateId={templateId} setTemplateId={setTemplateId} />
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* ── Galerie des courants de style ───────────────────────────── */}
       <StyleCurrentsGallery />

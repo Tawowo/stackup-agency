@@ -6,12 +6,12 @@ import Link from 'next/link'
 
 export const metadata = {
   title: { absolute: 'Studio de style — Identité visuelle de votre site | Stackup' },
-  description: 'Explorez 5 univers visuels pour votre site internet. Aperçu en direct, profil de style personnalisé, jonction vers votre devis express. Outil gratuit.',
+  description: 'Configurateur gratuit de style pour votre site internet : 12 presets métier, 50 palettes (ou personnalisées au pixel près), 50 typographies, aperçu ultra-réaliste sur 5 maquettes. Devis pré-rempli avec votre direction artistique.',
   alternates: { canonical: `${SITE.url}/outils/studio-de-style` },
   openGraph: {
     url: `${SITE.url}/outils/studio-de-style`,
     title: 'Studio de style — Choisissez votre identité visuelle',
-    description: '5 univers visuels, aperçu en direct, profil personnalisé. Gratuit et sans inscription.',
+    description: '12 presets métier, 50 palettes personnalisables, 50 typographies, aperçu en direct. Gratuit et sans inscription.',
     type: 'website',
   },
 }
@@ -21,6 +21,7 @@ const FAQ = [
   { q: 'Puis-je utiliser le style choisi pour mon devis ?', a: 'Oui, c\'est le but : le CTA en fin de parcours pré-remplit votre devis express avec le style sélectionné. Notre équipe part alors de cette base pour la maquette.' },
   { q: 'Les combinaisons proposées sont-elles professionnelles ?', a: 'Les palettes et paires typographiques sont curées à la main : chaque preset métier correspond à des conventions éprouvées de son secteur (confiance pour un cabinet, appétence pour un restaurant, prestige pour le luxe…).' },
   { q: 'Que se passe-t-il après avoir choisi un style ?', a: 'Rien d\'obligatoire. Si vous demandez un devis, la maquette reprend votre direction artistique — vous validez avant tout développement. La maquette est offerte, le devis gratuit sous 72 h.' },
+  { q: 'Puis-je créer ma propre palette de couleurs ?', a: 'Oui. Le mode « Personnaliser » permet de saisir chaque couleur en hexadécimal ou via un sélecteur, de générer des palettes harmoniques (complémentaire, analogue, triade, monochrome) à partir d\'une couleur de base, et de vérifier en direct le contraste texte/fond selon les critères d\'accessibilité AA.' },
 ]
 
 const faqSchema = {
@@ -49,7 +50,7 @@ export default function StudioPage() {
         <div className="max-w-5xl mx-auto px-4 sm:px-6">
           <Breadcrumb items={[{ name: 'Outils', href: '/outils' }, { name: 'Studio de style' }]} />
           <h1 className="text-3xl lg:text-4xl font-bold text-white mb-2">Studio de style</h1>
-          <p className="text-white/60">Le studio de style est un configurateur gratuit d'identité visuelle : presets métier, palettes et typographies curées, aperçu en direct — puis un devis pré-rempli avec votre direction artistique si vous souhaitez la faire construire. Sans inscription.</p>
+          <p className="text-white/60">Le studio de style est un configurateur gratuit d'identité visuelle : 12 presets métier, 50 palettes curées (ou personnalisées au pixel près avec vérification de contraste AA), 50 typographies, aperçu ultra-réaliste sur 5 maquettes (artisan, e-commerce, restaurant, photographe, cabinet pro) — puis un devis pré-rempli avec votre direction artistique si vous souhaitez la faire construire. Sans inscription.</p>
         </div>
       </div>
 
