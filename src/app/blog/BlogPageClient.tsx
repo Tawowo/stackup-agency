@@ -21,7 +21,6 @@ export default function BlogPageClient({ posts }: { posts: Post[] }) {
           </div>
         </div>
         <div className="max-w-3xl mx-auto px-4 sm:px-6 py-20 text-center">
-          <div className="text-5xl mb-6">🇫🇷</div>
           <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
             Our blog is in French
           </h2>
@@ -48,6 +47,7 @@ export default function BlogPageClient({ posts }: { posts: Post[] }) {
           </Link>
           <h1 className="text-4xl lg:text-6xl font-bold text-white mb-4">{t.blog.title}</h1>
           <p className="text-white/60 text-lg">{t.blog.subtitle}</p>
+          <p className="text-gold/80 text-sm font-semibold mt-3">{posts.length} articles publiés — guides, prix et conseils concrets pour les TPE</p>
         </div>
       </div>
       <div className="max-w-5xl mx-auto px-4 sm:px-6 py-16">

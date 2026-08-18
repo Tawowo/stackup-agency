@@ -16,7 +16,7 @@
 | Phase | Statut | Notes |
 |---|---|---|
 | 1 — Corrections visuelles | ✅ FAIT | Pastilles hero : panneaux navy translucides (rgba(13,22,38,.72) + bordure blanche 16%), chiffres 2xl font-black or/blanc, libellés white/85 — vérifié par capture desktop 2x. Contact ajouté nav desktop (avant CTA) + menu mobile (icône Mail) ; tous les items présents. Showroom : cause du flou = sizes sous-dimensionnés (téléphone servait un fichier 256w upscalé 2,3×) + crop 16/9 forcé sur source 1200×558 → aspect natif 1200/558, sizes 900px/640px, quality 90 — captures vérifiées nettes. NOTE : sources limitées à 1200px (proxy réseau bloque les domaines de démo Vercel, régénération 2x impossible depuis ce conteneur — à refaire en local pour une netteté parfaite retina). |
-| 2 — Blog hub repensé + compteurs dynamiques | ⏳ | |
+| 2 — Blog hub repensé + compteurs dynamiques | ✅ FAIT | Hub /blog : recherche instantanée (titre+tag+extrait), pilules catégories avec compteurs dynamiques triées par volume, section « À la une » (3 piliers), grille 2 col cartes gradient/icône par catégorie avec hover 3 couches, pagination lazy 24/page (« Afficher plus »), compteur total dynamique dans le hero (205 publiés — les programmés ne comptent pas). Emoji 🇫🇷 supprimé (page EN). 2.3 déjà en place (breadcrumb + schema + RelatedPosts par catégorie). Capture vérifiée, console propre. |
 | 3 — Crawl intégral liens/pages | ⏳ | |
 | 4 — Géographie 800+ communes (hubs enrichis + 4-6 nouveaux hubs) | ⏳ | |
 | 4bis — Studio de style niveau produit | ⏳ | |
