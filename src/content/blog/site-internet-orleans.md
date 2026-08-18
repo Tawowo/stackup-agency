@@ -132,4 +132,4 @@ Pour des requêtes peu concurrentielles (votre activité + "Orléans"), les prem
 WordPress fonctionne bien mais demande une maintenance régulière (mises à jour, sécurité). Pour un site vitrine, un code sur mesure en Next.js est souvent plus rapide et plus sécurisé, avec des coûts d'hébergement inférieurs. Voir notre comparatif [WordPress vs sur mesure](/blog/wordpress-vs-sur-mesure).
 
 **Peut-on créer une boutique en ligne pour livrer dans tout le Loiret ?**
-Oui. Une boutique e-commerce avec zones de livraison configurées peut desservir Orléans, Montargis, Pithiviers et tout le Loiret. Les [options de livraison](/blog/livraison-ecommerce-options) (Colissimo, Mondial Relay, retrait en magasin) sont configurables selon vos besoins.
+Oui. Une boutique e-commerce avec zones de livraison configurées peut desservir Orléans, Montargis, Pithiviers et tout le Loiret. Les [options de livraison](/blog/livraison-ecommerce-guide) (Colissimo, Mondial Relay, retrait en magasin) sont configurables selon vos besoins.

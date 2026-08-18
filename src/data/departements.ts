@@ -8,7 +8,7 @@ export interface Departement {
   economie: string
   metiersPhares: { metier: string; besoin: string }[]
   communesPrincipales: string[] // avec page ville éventuelle
-  communes: string[] // texte indexable
+  communes: string[] // texte indexable (échantillon court, utilisé en résumé)
   faq: { q: string; a: string }[]
 }
 
@@ -338,8 +338,189 @@ export const DEPARTEMENTS: Departement[] = [
       { q: 'Quels tarifs pour les Deux-Sèvres ?', a: 'Les mêmes qu’ailleurs, affichés publiquement : site vitrine dès 449 €, e-commerce dès 1 647 €, système de gestion dès 1 447 €. Devis gratuit sous 72 h.' },
     ],
   },
+  {
+    slug: 'yonne',
+    nom: 'Yonne',
+    code: '89',
+    region: 'Bourgogne-Franche-Comté',
+    chefLieu: 'Auxerre',
+    intro:
+      "Aux confins nord du Loiret, l'Yonne prolonge notre zone d'intervention naturelle vers la Bourgogne. Stackup Agency y crée des sites internet pour les vignerons, artisans et commerces d'Auxerre, Sens et de tout le département, intégralement à distance.",
+    economie:
+      "L'Yonne vit d'une identité viticole mondialement connue — le vignoble de Chablis exporte ses blancs sur toute la planète, et Auxerre, Tonnerre et le Sénonais gravitent autour de cette économie de la vigne, du tourisme œnologique et de la vente directe. Sens, aux portes de l'Île-de-France, attire une économie logistique et tertiaire portée par l'A6 ; le sud du département, plus rural, vit d'agriculture et d'un artisanat dense entre Avallon et le Morvan. Les besoins sont concrets : les domaines viticoles ont besoin de vente en ligne et de réservation de dégustations, les commerces d'Auxerre et Sens d'un SEO local solide, et les artisans des bourgs d'une visibilité que les annuaires payants ne fournissent plus.",
+    metiersPhares: [
+      { metier: 'Vignerons de Chablis & du Tonnerrois', besoin: 'vente directe en ligne, réservation de dégustations, export' },
+      { metier: 'Commerces d’Auxerre & Sens', besoin: 'SEO local, click & collect' },
+      { metier: 'Artisans du bâtiment', besoin: 'devis en ligne, chantiers en photos' },
+      { metier: 'Hébergement & tourisme (Morvan, vallée de l’Yonne)', besoin: 'réservation directe sans commission' },
+      { metier: 'PME logistiques (axe A6)', besoin: 'site B2B crédible' },
+    ],
+    communesPrincipales: ['Auxerre', 'Sens', 'Joigny', 'Migennes', 'Avallon', 'Villeneuve-sur-Yonne', 'Tonnerre'],
+    communes: [
+      'Auxerre', 'Monéteau', 'Saint-Georges-sur-Baulche', 'Sens', 'Villeneuve-sur-Yonne', 'Paron', 'Charny Orée de Puisaye',
+      'Toucy', 'Saint-Fargeau', 'Villeneuve-la-Guyard', 'Pont-sur-Yonne', 'Saint-Florentin', 'Brienon-sur-Armançon',
+      'Joigny', 'Saint-Julien-du-Sault', 'Avallon', 'Chéroy', 'Tonnerre', 'Flogny-la-Chapelle', 'Tanlay', 'Chablis',
+      'Vermenton', 'Migennes', 'Coulanges-sur-Yonne', 'Fleury-la-Vallée', 'Villeneuve-l’Archevêque', 'Cerisiers',
+      'Joux-la-Ville', 'Noyers', 'Ligny-le-Châtel', 'Cruzy-le-Châtel', 'Ancy-le-Franc', 'Chéu', 'Champs-sur-Yonne',
+      'Escamps', 'Courson-les-Carrières', 'Chemilly-sur-Yonne', 'Seignelay',
+    ],
+    faq: [
+      { q: 'Créez-vous des sites pour les vignerons de Chablis ?', a: 'Oui. Vente directe en ligne, présentation des cuvées, réservation de dégustations et export : notre offre e-commerce à partir de 1 647 € couvre ces besoins, avec les mentions légales alcool intégrées.' },
+      { q: 'L’Yonne est-elle dans votre zone d’intervention habituelle ?', a: 'L’Yonne prolonge notre zone d’intervention Centre-Val de Loire vers le nord-est. Les projets se mènent intégralement à distance (visio, téléphone, partage d’écran), aux mêmes tarifs affichés partout en France.' },
+      { q: 'Quels tarifs pour une entreprise de l’Yonne ?', a: 'Les mêmes que partout : site vitrine dès 449 €, e-commerce dès 1 647 €, système de gestion dès 1 447 €. Devis gratuit sous 72 h, livraison en 10 jours ouvrés pour un site vitrine.' },
+    ],
+  },
+  {
+    slug: 'nievre',
+    nom: 'Nièvre',
+    code: '58',
+    region: 'Bourgogne-Franche-Comté',
+    chefLieu: 'Nevers',
+    intro:
+      "Voisine du Cher au-delà de la Loire, la Nièvre est un département rural et attachant où Stackup Agency accompagne commerces, artisans et acteurs du tourisme vert, à distance, aux mêmes tarifs fixes que partout en France.",
+    economie:
+      "La Nièvre s'organise autour de Nevers — connue pour sa faïence traditionnelle et son tertiaire administratif — et d'un vaste arrière-pays rural où le Morvan (parc naturel régional) porte un tourisme vert en croissance : randonnée, la Loire à vélo, lacs et forêts. Le circuit de Magny-Cours, ancien haut lieu de la Formule 1 devenu pôle d'essais automobiles, ancre une activité économique singulière. Le reste du département vit d'élevage bovin charolais, d'un artisanat dense et de commerces qui, loin des métropoles, ont un besoin criant de visibilité en ligne : les gîtes du Morvan ont besoin de réservation directe, les artisans de Nevers, Cosne et Clamecy de devis en ligne, et les petits commerces d'une fiche Google bien tenue.",
+    metiersPhares: [
+      { metier: 'Hébergement & tourisme du Morvan', besoin: 'réservation directe, visibilité saisonnière' },
+      { metier: 'Artisans du bâtiment', besoin: 'devis en ligne, SEO local' },
+      { metier: 'Commerces de Nevers & Cosne', besoin: 'fiche Google, click & collect' },
+      { metier: 'Élevage & producteurs charolais', besoin: 'vente directe en ligne' },
+      { metier: 'Professions libérales', besoin: 'site vitrine, prise de rendez-vous' },
+    ],
+    communesPrincipales: ['Nevers', 'Cosne-Cours-sur-Loire', 'Varennes-Vauzelles', 'Decize', 'La Charité-sur-Loire', 'Clamecy', 'Château-Chinon (Ville)'],
+    communes: [
+      'Nevers', 'Varennes-Vauzelles', 'Fourchambault', 'Guérigny', 'Cosne-Cours-sur-Loire', 'Pouilly-sur-Loire', 'Donzy',
+      'Decize', 'La Machine', 'Imphy', 'La Charité-sur-Loire', 'Prémery', 'Luzy', 'Cercy-la-Tour', 'Moulins-Engilbert',
+      'Château-Chinon (Ville)', 'Lormes', 'Clamecy', 'Varzy', 'Corbigny', 'Tannay', 'Saint-Benin-d’Azy', 'Saint-Saulge',
+      'Saint-Pierre-le-Moûtier', 'Magny-Cours', 'Saint-Amand-en-Puisaye', 'Entrains-sur-Nohain', 'Dornes',
+      'Saint-Parize-en-Viry', 'Rouy', 'Chantenay-Saint-Imbert', 'Saint-Parize-le-Châtel', 'Arleuf', 'Cervon', 'Nolay',
+    ],
+    faq: [
+      { q: 'Travaillez-vous avec les gîtes du Morvan ?', a: 'Oui : un site avec réservation directe (calendrier, acompte en ligne) permet aux hébergements du Morvan de capter les randonneurs et cyclistes de la Loire à vélo sans commission de plateforme.' },
+      { q: 'Intervenez-vous dans toute la Nièvre à distance ?', a: 'Oui, intégralement à distance : visio, téléphone, partage d’écran. C’est le même modèle qui nous permet de servir Nevers, Cosne ou Clamecy aux tarifs affichés publiquement.' },
+      { q: 'Combien coûte un site vitrine dans la Nièvre ?', a: 'À partir de 449 €, tout inclus (design sur mesure, SEO de base, hébergement 12 mois, nom de domaine offert la première année). Devis gratuit sous 72 h.' },
+    ],
+  },
+  {
+    slug: 'allier',
+    nom: 'Allier',
+    code: '03',
+    region: 'Auvergne-Rhône-Alpes',
+    chefLieu: 'Moulins',
+    intro:
+      "Département thermal et industriel entre Bourbonnais et Auvergne, l'Allier accueille Vichy, Montluçon et Moulins. Stackup Agency y crée des sites internet pour les entreprises du département, à distance et aux mêmes tarifs fixes que partout en France.",
+    economie:
+      "L'Allier repose sur trois pôles bien distincts : Vichy, ville thermale de renommée internationale dont l'économie tourne autour du bien-être, de l'eau minérale et d'une clientèle touristique fidèle ; Montluçon, ancien bastion industriel en reconversion ; et Moulins, préfecture administrative et commerçante au cœur du Bourbonnais agricole. Entre ces pôles, un tissu rural d'éleveurs (bœuf charolais), d'artisans et de petits commerces cherche une présence en ligne solide. Les instituts et acteurs du bien-être vichyssois ont besoin de prise de rendez-vous en ligne, les commerces des centres-villes de visibilité Google, et les artisans du bocage bourbonnais de devis qualifiés.",
+    metiersPhares: [
+      { metier: 'Thermalisme & bien-être (Vichy)', besoin: 'prise de rendez-vous en ligne, réservation de soins' },
+      { metier: 'Artisans du bâtiment', besoin: 'devis en ligne, SEO local' },
+      { metier: 'Commerces de Moulins & Montluçon', besoin: 'fiche Google, click & collect' },
+      { metier: 'Élevage & producteurs charolais', besoin: 'vente directe en ligne' },
+      { metier: 'Professions libérales', besoin: 'site rassurant, prise de rendez-vous' },
+    ],
+    communesPrincipales: ['Montluçon', 'Vichy', 'Moulins', 'Cusset', 'Yzeure', 'Gannat', 'Saint-Pourçain-sur-Sioule'],
+    communes: [
+      'Vichy', 'Cusset', 'Bellerive-sur-Allier', 'Moulins', 'Yzeure', 'Avermes', 'Montluçon', 'Domérat', 'Désertines',
+      'Gannat', 'Saint-Pourçain-sur-Sioule', 'Ébreuil', 'Commentry', 'Néris-les-Bains', 'Cosne-d’Allier',
+      'Varennes-sur-Allier', 'Dompierre-sur-Besbre', 'Beaulon', 'Bourbon-l’Archambault', 'Saint-Menoux',
+      'Buxières-les-Mines', 'Lapalisse', 'Isserpent', 'Cérilly', 'Ainay-le-Château', 'Huriel', 'Vallon-en-Sully',
+      'Estivareilles', 'Le Donjon', 'Jaligny-sur-Besbre', 'Chevagnes', 'Souvigny', 'Toulon-sur-Allier', 'Villeneuve-sur-Allier',
+      'Tronget',
+    ],
+    faq: [
+      { q: 'Créez-vous des sites pour les instituts et thermes de Vichy ?', a: 'Oui : prise de rendez-vous en ligne, présentation des soins, avis clients mis en avant. Un site vitrine à partir de 449 € ou un système de réservation sur mesure selon vos besoins.' },
+      { q: 'Intervenez-vous dans tout l’Allier à distance ?', a: 'Oui, intégralement à distance : visio, téléphone, partage d’écran. Même qualité de suivi et mêmes tarifs affichés qu’ailleurs en France, pour Vichy, Montluçon ou Moulins.' },
+      { q: 'Quel budget pour un site internet dans l’Allier ?', a: 'Site vitrine à partir de 449 €, multi-pages à partir de 749 €, e-commerce à partir de 1 647 €. Devis gratuit sous 72 h, livraison en 10 jours ouvrés pour un site vitrine.' },
+    ],
+  },
+  {
+    slug: 'creuse',
+    nom: 'Creuse',
+    code: '23',
+    region: 'Nouvelle-Aquitaine',
+    chefLieu: 'Guéret',
+    intro:
+      "La Creuse est l'un des départements les moins couverts par les agences web traditionnelles — c'est précisément là que notre modèle 100 % à distance prend tout son sens. Stackup Agency y crée des sites pour artisans, commerces et hébergements, aux mêmes tarifs et délais qu'en métropole.",
+    economie:
+      "La Creuse est le département le moins densément peuplé de France métropolitaine, mais son économie a une identité forte : la tapisserie d'Aubusson, classée au patrimoine culturel immatériel de l'UNESCO, fait rayonner l'artisanat d'art à l'international ; les maçons creusois ont historiquement essaimé leur savoir-faire dans toute la France ; et l'élevage bovin limousin structure l'agriculture. Le tourisme vert (lacs, monts de Guéret, Bénévent-l'Abbaye) se développe pour une clientèle en quête de calme. Face à une offre de prestataires web rare et souvent distante, les artisans, commerces et hébergements de la Creuse ont un besoin direct d'un partenaire fiable qui travaille à distance, sans surcoût lié à l'éloignement.",
+    metiersPhares: [
+      { metier: 'Artisanat d’art (tapisserie d’Aubusson)', besoin: 'portfolio en ligne, vente d’œuvres' },
+      { metier: 'Artisans du bâtiment (maçons, couvreurs)', besoin: 'devis en ligne, zone d’intervention claire' },
+      { metier: 'Hébergement & tourisme vert', besoin: 'réservation directe sans commission' },
+      { metier: 'Élevage & producteurs limousins', besoin: 'vente directe en ligne' },
+      { metier: 'Commerces de Guéret', besoin: 'fiche Google, SEO local' },
+    ],
+    communesPrincipales: ['Guéret', 'La Souterraine', 'Aubusson', 'Bourganeuf', 'Boussac', 'Auzances', 'Felletin'],
+    communes: [
+      'Guéret', 'Sainte-Feyre', 'Saint-Sulpice-le-Guérétois', 'Saint-Vaury', 'La Souterraine', 'Saint-Maurice-la-Souterraine',
+      'Dun-le-Palestel', 'Le Grand-Bourg', 'Bénévent-l’Abbaye', 'Bonnat', 'Aubusson', 'Felletin', 'Vallière', 'Gouzon',
+      'Évaux-les-Bains', 'Boussac', 'Ahun', 'Auzances', 'Chénérailles', 'Bourganeuf', 'Royère-de-Vassivière',
+      'Pontarion', 'Jarnages', 'Genouillac', 'Chambon-sur-Voueize', 'Bosmoreau-les-Mines', 'Chatelus-Malvaleix',
+      'Crocq', 'Bellegarde-en-Marche', 'Peyrat-la-Nonière', 'Anzême', 'Sardent',
+    ],
+    faq: [
+      { q: 'Pourquoi si peu d’agences travaillent-elles en Creuse ?', a: 'La faible densité et l’éloignement des métropoles découragent les agences traditionnelles, organisées autour du rendez-vous physique. Notre méthode 100 % à distance supprime cette barrière : mêmes tarifs, même délai, même qualité qu’ailleurs en France.' },
+      { q: 'Créez-vous des sites pour les artisans d’art (tapisserie) ?', a: 'Oui : portfolio soigné, présentation des créations, vente en ligne si besoin. Un site vitrine dès 449 € ou une boutique en ligne dès 1 647 € selon votre activité.' },
+      { q: 'Quel délai pour un site en Creuse ?', a: 'Le même que partout : à partir de 10 jours ouvrés après validation de la maquette, devis gratuit sous 72 h, suivi intégral à distance.' },
+    ],
+  },
+  {
+    slug: 'orne',
+    nom: 'Orne',
+    code: '61',
+    region: 'Normandie',
+    chefLieu: 'Alençon',
+    intro:
+      "L'Orne, entre Perche et Normandie bocagère, prolonge notre zone d'intervention vers le nord-ouest. Stackup Agency y crée des sites internet pour artisans, commerces et hébergements d'Alençon, Flers, Argentan et de tout le département, à distance.",
+    economie:
+      "L'Orne conjugue un savoir-faire artisanal d'exception — la dentelle d'Alençon, classée à l'UNESCO — et une économie rurale structurée par l'élevage (le haras du Pin, berceau du cheval de sport français) et l'agroalimentaire, notamment autour du camembert. Alençon, Flers et Argentan forment trois pôles économiques modestes mais actifs, entourés d'un parc naturel régional (Normandie-Maine) qui porte un tourisme vert croissant. Pour les entreprises du département, souvent loin des agences web de Caen ou Rouen, un partenaire à distance et à prix fixes répond à un besoin réel : les artisans ont besoin de devis en ligne, les hébergements du Perche de réservation directe, et les commerces des centres-villes d'un SEO local efficace.",
+    metiersPhares: [
+      { metier: 'Artisanat d’art & dentelle', besoin: 'portfolio en ligne, vente de créations' },
+      { metier: 'Artisans du bâtiment', besoin: 'devis en ligne, SEO local' },
+      { metier: 'Hébergement & tourisme (Perche, Normandie-Maine)', besoin: 'réservation directe sans commission' },
+      { metier: 'Élevage & filière équine', besoin: 'site vitrine, catalogue' },
+      { metier: 'Commerces d’Alençon, Flers, Argentan', besoin: 'fiche Google, click & collect' },
+    ],
+    communesPrincipales: ['Alençon', 'Flers', 'Argentan', 'L’Aigle', 'La Ferté Macé', 'Mortagne-au-Perche', 'Sées'],
+    communes: [
+      'Alençon', 'Saint-Germain-du-Corbéis', 'Condé-sur-Sarthe', 'Flers', 'La Ferté Macé', 'Athis-Val de Rouvre',
+      'Argentan', 'Gouffern en Auge', 'Écouché-les-Vallées', 'L’Aigle', 'La Ferté-en-Ouche', 'Tinchebray-Bocage',
+      'Domfront en Poiraie', 'Vimoutiers', 'Gacé', 'Mortagne-au-Perche', 'Bagnoles de l’Orne Normandie',
+      'Rives d’Andaine', 'Sées', 'Mortrée', 'Chailloué', 'Ceton', 'Belforêt-en-Perche', 'Perche en Nocé',
+      'Rémalard en Perche', 'Tourouvre au Perche', 'Longny les Villages', 'Courtomer', 'Le Mêle-sur-Sarthe',
+      'Putanges-le-Lac', 'Juvigny Val d’Andaine', 'Trun', 'Vimoutiers',
+    ],
+    faq: [
+      { q: 'Créez-vous des sites pour les artisans d’art de l’Orne ?', a: 'Oui : dentelliers, créateurs et artisans d’art bénéficient d’un site portfolio soigné pour présenter leur savoir-faire et vendre en ligne si besoin, à partir de 449 € en vitrine ou 1 647 € en boutique.' },
+      { q: 'Intervenez-vous à Alençon et dans tout le département ?', a: 'Oui, intégralement à distance (visio, téléphone, partage d’écran), aux mêmes tarifs affichés partout en France, pour Alençon, Flers, Argentan ou les communes du Perche.' },
+      { q: 'Quel budget pour un site internet dans l’Orne ?', a: 'Site vitrine à partir de 449 €, multi-pages à partir de 749 €, e-commerce à partir de 1 647 €. Devis gratuit sous 72 h, livraison en 10 jours ouvrés pour un site vitrine.' },
+    ],
+  },
 ]
 
 export function getDepartement(slug: string): Departement | undefined {
   return DEPARTEMENTS.find(d => d.slug === slug)
+}
+
+// Articles grammaticaux (« dans l'Yonne », « du Loiret »…) — trop irrégulier pour être déduit de la première lettre.
+const ARTICLES: Record<string, { dans: string; de: string }> = {
+  'indre-et-loire': { dans: "l'", de: "de l'" },
+  'loiret': { dans: 'le ', de: 'du ' },
+  'loir-et-cher': { dans: 'le ', de: 'du ' },
+  'eure-et-loir': { dans: "l'", de: "de l'" },
+  'cher': { dans: 'le ', de: 'du ' },
+  'indre': { dans: "l'", de: "de l'" },
+  'sarthe': { dans: 'la ', de: 'de la ' },
+  'maine-et-loire': { dans: 'le ', de: 'du ' },
+  'vienne': { dans: 'la ', de: 'de la ' },
+  'deux-sevres': { dans: 'les ', de: 'des ' },
+  'yonne': { dans: "l'", de: "de l'" },
+  'nievre': { dans: 'la ', de: 'de la ' },
+  'allier': { dans: "l'", de: "de l'" },
+  'creuse': { dans: 'la ', de: 'de la ' },
+  'orne': { dans: "l'", de: "de l'" },
+}
+
+export function getArticles(slug: string): { dans: string; de: string } {
+  return ARTICLES[slug] || { dans: 'le ', de: 'du ' }
 }

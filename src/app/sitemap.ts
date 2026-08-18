@@ -52,7 +52,7 @@ const REDIRECTED_BLOG_SLUGS = new Set([
   'site-web-cafe-salon-the','site-web-carreleur-sol','site-web-cave-vins-spiritueux',
   'site-web-chauffagiste-climatisation','site-web-cosmetiques-naturels','site-web-couvreur-charpentier',
   'site-web-electricien','site-web-epicerie-fine','site-web-fleuriste-vente-en-ligne',
-  'site-web-food-truck','site-web-hotel-chambres-hotes','site-web-informatique-telephonie',
+  'site-web-hotel-chambres-hotes','site-web-informatique-telephonie',
   'site-web-jardinerie-animalerie','site-web-jouets-loisirs-creatifs','site-web-kebab-fast-food',
   'site-web-librairie-independante','site-web-librairie-papeterie','site-web-macon-renovateur',
   'site-web-magasin-sport-loisirs','site-web-maison-decoration','site-web-menuisier-ebeniste',

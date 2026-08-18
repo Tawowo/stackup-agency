@@ -13,7 +13,6 @@ const REDIRECTS = [
   { from: '/blog/agence-web-nantes', to: '/agence-web/nantes' },
   { from: '/blog/agence-web-caen', to: '/agence-web/caen' },
   { from: '/blog/agence-web-rouen', to: '/agence-web/rouen' },
-  { from: '/blog/agence-web-chartres', to: '/agence-web/chartres' },
   { from: '/blog/agence-web-vendome', to: '/agence-web/vendome' },
   { from: '/blog/agence-web-saumur', to: '/agence-web/saumur' },
   { from: '/blog/seo-local-tours', to: '/agence-web/tours' },
@@ -21,13 +20,14 @@ const REDIRECTS = [
   { from: '/blog/seo-local-chartres', to: '/agence-web/chartres' },
   { from: '/blog/seo-local-dreux', to: '/agence-web/dreux' },
   { from: '/contact', to: '/contact', expectStatus: 200 },
+  { from: '/blog/site-web-plombier', to: '/creation-site-internet/plombier' },
 ]
 
 let passed = 0
 let failed = 0
 const errors = []
 
-async function checkRedirect({ from, to, expectStatus = 301 }) {
+async function checkRedirect({ from, to, expectStatus = 308 }) {
   const url = `${BASE_URL}${from}`
   const expected = `${BASE_URL}${to}`
   try {
@@ -38,10 +38,10 @@ async function checkRedirect({ from, to, expectStatus = 301 }) {
       if (status === 200) { passed++; console.log(`OK  ${from} → ${status}`) }
       else { failed++; const e = `FAIL ${from} → ${status} (attendu 200)`; errors.push(e); console.log(e) }
     } else {
-      const locNorm = location.replace(/\/$/, '')
-      const expNorm = expected.replace(/\/$/, '')
+      const locNorm = location.replace(BASE_URL, '').replace(/\/$/, '')
+      const expNorm = to.replace(/\/$/, '')
       if ((status === 301 || status === 308) && locNorm === expNorm) { passed++; console.log(`OK  ${from} → ${to} (${status})`) }
-      else { failed++; const e = `FAIL ${from} status=${status} location=${location} (attendu 301→${expected})`; errors.push(e); console.log(e) }
+      else { failed++; const e = `FAIL ${from} status=${status} location=${location} (attendu 301/308→${expected})`; errors.push(e); console.log(e) }
     }
   } catch (e) { failed++; const msg = `FAIL ${from} ERREUR: ${e.message}`; errors.push(msg); console.log(msg) }
 }

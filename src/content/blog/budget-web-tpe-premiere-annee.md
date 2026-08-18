@@ -31,7 +31,7 @@ Pour l'artisan ou l'indépendant qui démarre :
 | Poste | Coût |
 |---|---|
 | Site vitrine sur mesure (4-5 pages, SEO de base, hébergement + domaine 1re année inclus) | 449 € |
-| Fiche Google Business optimisée | 0 € (2 h de votre temps, [notre guide gratuit](/blog/seo-local-google-business)) |
+| Fiche Google Business optimisée | 0 € (2 h de votre temps, [notre guide gratuit](/blog/fiche-google-business-optimisation)) |
 | Demandes d'avis aux premiers clients | 0 € |
 | **Total année 1** | **≈ 449 €** |
 

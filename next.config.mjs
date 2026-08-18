@@ -86,7 +86,6 @@ const nextConfig = {
     { source: '/blog/site-web-electricien', destination: '/creation-site-internet/electricien', permanent: true },
     { source: '/blog/site-web-epicerie-fine', destination: '/creation-site-internet/epicerie-fine', permanent: true },
     { source: '/blog/site-web-fleuriste-vente-en-ligne', destination: '/creation-site-internet/fleuriste', permanent: true },
-    { source: '/blog/site-web-food-truck', destination: '/creation-site-internet/food-truck', permanent: true },
     { source: '/blog/site-web-hotel-chambres-hotes', destination: '/creation-site-internet/hotel-chambres-hotes', permanent: true },
     { source: '/blog/site-web-informatique-telephonie', destination: '/creation-site-internet/magasin-informatique', permanent: true },
     { source: '/blog/site-web-jardinerie-animalerie', destination: '/creation-site-internet/jardinerie-animalerie', permanent: true },

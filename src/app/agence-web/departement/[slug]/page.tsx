@@ -1,4 +1,5 @@
-import { DEPARTEMENTS, getDepartement } from '@/data/departements'
+import { DEPARTEMENTS, getDepartement, getArticles } from '@/data/departements'
+import { COMMUNES_PAR_DEPARTEMENT, getCommunesTotal } from '@/data/communes-groupes'
 import { VILLES } from '@/data/villes'
 import { SITE } from '@/config/site'
 import { notFound } from 'next/navigation'
@@ -13,9 +14,10 @@ export function generateStaticParams() {
 export function generateMetadata({ params }: { params: { slug: string } }) {
   const d = getDepartement(params.slug)
   if (!d) return {}
+  const art = getArticles(d.slug)
   return {
     title: { absolute: `Agence web ${d.nom} (${d.code}) — Création de site internet | Stackup` },
-    description: `Création de sites internet dans ${d.nom.startsWith('E') || d.nom.startsWith('I') ? "l'" : 'le '}${d.nom} : ${d.communesPrincipales.slice(0, 4).join(', ')}… Site vitrine dès ${SITE.pricing.vitrine} €, livré en 10 jours ouvrés. Devis gratuit sous 72 h.`,
+    description: `Création de sites internet dans ${art.dans}${d.nom} : ${d.communesPrincipales.slice(0, 4).join(', ')}… Site vitrine dès ${SITE.pricing.vitrine} €, livré en 10 jours ouvrés. Devis gratuit sous 72 h.`,
     alternates: { canonical: `${SITE.url}/agence-web/departement/${d.slug}` },
     openGraph: {
       url: `${SITE.url}/agence-web/departement/${d.slug}`,
@@ -29,9 +31,13 @@ export function generateMetadata({ params }: { params: { slug: string } }) {
 export default function DepartementPage({ params }: { params: { slug: string } }) {
   const d = getDepartement(params.slug)
   if (!d) notFound()
+  const art = getArticles(d.slug)
 
   const villesAvecPage = VILLES.filter(v => d.communesPrincipales.some(c =>
     c.localeCompare(v.ville, 'fr', { sensitivity: 'base' }) === 0))
+
+  const groupes = COMMUNES_PAR_DEPARTEMENT[d.slug] || []
+  const totalCommunes = getCommunesTotal(d.slug)
 
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
@@ -67,7 +73,7 @@ export default function DepartementPage({ params }: { params: { slug: string } }
           </h1>
           {/* Réponse directe (format IA) */}
           <p className="text-white/70 text-lg max-w-2xl">
-            Stackup Agency crée des sites internet pour les entreprises {d.nom === 'Indre' || d.nom === 'Indre-et-Loire' || d.nom === 'Eure-et-Loir' ? "de l'" : d.nom === 'Sarthe' || d.nom === 'Vienne' ? 'de la ' : d.nom === 'Deux-Sèvres' ? 'des ' : 'du '}{d.nom} — site vitrine à partir de {SITE.pricing.vitrine} €, livré en 10 jours ouvrés, devis gratuit sous 72 h. Basée à Tours, l’agence travaille à distance ou en rendez-vous selon la proximité.
+            Stackup Agency crée des sites internet pour les entreprises {art.de}{d.nom} — site vitrine à partir de {SITE.pricing.vitrine} €, livré en 10 jours ouvrés, devis gratuit sous 72 h. Basée à Tours, l’agence travaille à distance ou en rendez-vous selon la proximité.
           </p>
         </div>
       </div>
@@ -77,7 +83,7 @@ export default function DepartementPage({ params }: { params: { slug: string } }
         {/* Intro + économie */}
         <section>
           <p className="text-navy/75 leading-relaxed mb-5">{d.intro}</p>
-          <h2 className="text-2xl font-bold text-navy mb-4">Le tissu économique {d.nom === 'Sarthe' || d.nom === 'Vienne' ? 'de la ' : d.nom === 'Deux-Sèvres' ? 'des ' : d.nom.match(/^[EIA]/) ? "de l'" : 'du '}{d.nom}</h2>
+          <h2 className="text-2xl font-bold text-navy mb-4">Le tissu économique {art.de}{d.nom}</h2>
           <p className="text-navy/65 leading-relaxed">{d.economie}</p>
         </section>
 
@@ -109,17 +115,36 @@ export default function DepartementPage({ params }: { params: { slug: string } }
           </section>
         )}
 
-        {/* Toutes les communes */}
+        {/* Toutes les communes, organisées par intercommunalité */}
         <section>
-          <h2 className="text-2xl font-bold text-navy mb-3">Communes couvertes en {d.nom} ({d.code})</h2>
-          <p className="text-navy/55 text-sm mb-5">
-            Nous créons des sites internet pour les entreprises de toutes les communes du département, notamment :
+          <h2 className="text-2xl font-bold text-navy mb-3">
+            Les {totalCommunes > 0 ? totalCommunes.toLocaleString('fr-FR') : ''} communes couvertes en {d.nom} ({d.code})
+          </h2>
+          <p className="text-navy/55 text-sm mb-8 max-w-2xl">
+            Nous créons des sites internet pour les entreprises de {art.de}{d.nom} entier, quelle que soit la taille de la commune —
+            de {d.chefLieu} au plus petit village. Liste complète, organisée par intercommunalité :
           </p>
-          <p className="text-navy/70 text-sm leading-relaxed columns-2 sm:columns-3 gap-6">
-            {d.communes.join(' · ')}
-          </p>
-          <p className="text-navy/45 text-xs mt-4">
-            Votre commune n’apparaît pas ? Nous intervenons partout dans le {d.code} — la création de site se fait à distance, aux mêmes tarifs.
+          {groupes.length > 0 ? (
+            <div className="space-y-6">
+              {groupes.map(g => (
+                <div key={g.epci}>
+                  <h3 className="text-sm font-bold text-navy mb-2 flex items-center gap-2">
+                    <MapPin size={13} className="text-gold flex-shrink-0" />
+                    Autour de {g.epci} — {g.communes.length} commune{g.communes.length > 1 ? 's' : ''}
+                  </h3>
+                  <p className="text-navy/60 text-[13px] leading-relaxed pl-5">
+                    {g.communes.join(' · ')}
+                  </p>
+                </div>
+              ))}
+            </div>
+          ) : (
+            <p className="text-navy/70 text-sm leading-relaxed columns-2 sm:columns-3 gap-6">
+              {d.communes.join(' · ')}
+            </p>
+          )}
+          <p className="text-navy/45 text-xs mt-6">
+            Votre commune n’apparaît pas ou vous avez un doute ? Nous intervenons partout dans le {d.code} — la création de site se fait à distance, aux mêmes tarifs.
           </p>
         </section>
 

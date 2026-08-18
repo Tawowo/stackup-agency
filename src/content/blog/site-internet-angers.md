@@ -131,7 +131,7 @@ Oui. La vente de vin en ligne est réglementée (mentions obligatoires, interdic
 WordPress est un CMS populaire mais qui demande une maintenance régulière. Un site sur mesure en Next.js est plus rapide, plus sécurisé et ne dépend pas de plugins tiers. Voir [WordPress vs sur mesure](/blog/wordpress-vs-sur-mesure).
 
 **Comment mesurer si mon site génère vraiment des clients ?**
-Installez [Google Analytics 4](/blog/google-analytics-4-tpe) et configurez des objectifs (formulaire rempli, appel tracké, commande passée). Sans mesure, vous ne savez pas ce qui fonctionne.
+Installez [Google Analytics 4](/blog/google-analytics-4-guide-tpe) et configurez des objectifs (formulaire rempli, appel tracké, commande passée). Sans mesure, vous ne savez pas ce qui fonctionne.
 
 **Est-ce que le SEO local fonctionne vraiment pour les petites entreprises à Angers ?**
 Oui. Les requêtes locales ("votre activité + Angers ou Maine-et-Loire") sont souvent moins concurrentielles que les requêtes nationales. Avec un site optimisé et une fiche Google complète, des résultats apparaissent en 4 à 10 semaines.

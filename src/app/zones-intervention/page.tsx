@@ -1,19 +1,22 @@
 import { DEPARTEMENTS } from '@/data/departements'
+import { getCommunesGrandTotal } from '@/data/communes-groupes'
 import { VILLES } from '@/data/villes'
 import { SITE } from '@/config/site'
 import Link from 'next/link'
 import { MapPin, ArrowRight } from 'lucide-react'
 import Breadcrumb from '@/components/ui/Breadcrumb'
 
+const TOTAL_COMMUNES = getCommunesGrandTotal()
+
 export const metadata = {
   title: { absolute: 'Zones d’intervention — Création de site internet partout en France | Stackup' },
   description:
-    'Stackup Agency crée des sites internet dans plus de 1 000 communes : Centre-Val de Loire (Tours, Orléans, Blois, Chartres, Bourges, Châteauroux), régions limitrophes et toute la France. À distance, aux mêmes tarifs partout.',
+    `Stackup Agency crée des sites internet dans plus de ${Math.floor(TOTAL_COMMUNES / 100) * 100} communes : Centre-Val de Loire (Tours, Orléans, Blois, Chartres, Bourges, Châteauroux), régions limitrophes et toute la France. À distance, aux mêmes tarifs partout.`,
   alternates: { canonical: `${SITE.url}/zones-intervention` },
   openGraph: {
     url: `${SITE.url}/zones-intervention`,
     title: 'Zones d’intervention — Stackup Agency',
-    description: 'Plus de 1 000 communes couvertes. Création de sites internet à distance, aux mêmes tarifs partout en France.',
+    description: `Plus de ${Math.floor(TOTAL_COMMUNES / 100) * 100} communes couvertes. Création de sites internet à distance, aux mêmes tarifs partout en France.`,
     type: 'website',
   },
 }
@@ -28,7 +31,10 @@ const GRANDES_VILLES_FRANCE = [
 const REGIONS: { nom: string; deps: string[] }[] = [
   { nom: 'Centre-Val de Loire', deps: ['indre-et-loire', 'loiret', 'loir-et-cher', 'eure-et-loir', 'cher', 'indre'] },
   { nom: 'Pays de la Loire', deps: ['sarthe', 'maine-et-loire'] },
-  { nom: 'Nouvelle-Aquitaine', deps: ['vienne', 'deux-sevres'] },
+  { nom: 'Nouvelle-Aquitaine', deps: ['vienne', 'deux-sevres', 'creuse'] },
+  { nom: 'Bourgogne-Franche-Comté', deps: ['yonne', 'nievre'] },
+  { nom: 'Auvergne-Rhône-Alpes', deps: ['allier'] },
+  { nom: 'Normandie', deps: ['orne'] },
 ]
 
 export default function ZonesInterventionPage() {
@@ -52,7 +58,7 @@ export default function ZonesInterventionPage() {
           <p className="text-[13px] font-semibold text-gold uppercase tracking-[0.18em] mb-3">Partout en France</p>
           <h1 className="text-3xl lg:text-5xl font-bold text-white mb-4">Nos zones d’intervention</h1>
           <p className="text-white/70 text-lg max-w-2xl">
-            Basée à Tours, Stackup Agency crée des sites internet pour les entreprises de <strong className="text-gold">plus de 1 000 communes</strong> :
+            Basée à Tours, Stackup Agency crée des sites internet pour les entreprises de <strong className="text-gold">plus de {Math.floor(TOTAL_COMMUNES / 100) * 100} communes</strong> :
             tout le Centre-Val de Loire, les départements limitrophes et les grandes villes de France.
             La création se fait à distance — visio, téléphone, partage d’écran — aux mêmes tarifs affichés partout.
           </p>
@@ -133,7 +139,7 @@ export default function ZonesInterventionPage() {
 
         {/* Compteur + CTA */}
         <section className="rounded-2xl p-8 bg-gradient-to-br from-navy to-electric text-center">
-          <div className="text-4xl font-black text-gold mb-1">Plus de 1 000</div>
+          <div className="text-4xl font-black text-gold mb-1">Plus de {Math.floor(TOTAL_COMMUNES / 100) * 100}</div>
           <p className="text-white/80 font-semibold mb-1">communes couvertes en France</p>
           <p className="text-white/60 text-sm mb-6">Mêmes tarifs partout : site vitrine dès {SITE.pricing.vitrine} €, devis gratuit sous 72 h.</p>
           <div className="flex flex-wrap justify-center gap-3">
