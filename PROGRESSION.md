@@ -21,4 +21,4 @@
 | 4 — Géographie 800+ communes (hubs enrichis + 4-6 nouveaux hubs) | ⏳ | |
 | 4bis — Studio de style niveau produit | ⏳ | |
 | 5 — Articles | ✅ 150/150 (mission précédente) | |
-| 6 — Clôture (« MISSION 3H30 : TERMINÉ » arrête la boucle) | ⏳ | |
+| 6 — Clôture (le marqueur final en début de ligne arrête la boucle) | ⏳ | |
