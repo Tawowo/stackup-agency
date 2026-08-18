@@ -81,13 +81,14 @@ function DesktopFrame({ project, transitioning }: { project: Project; transition
           <ExternalLink size={11} className="text-gray-400" />
         </div>
         {/* Screenshot desktop */}
-        <div className="relative bg-gray-900 overflow-hidden" style={{ aspectRatio: '16/9' }}>
+        <div className="relative bg-gray-900 overflow-hidden" style={{ aspectRatio: '1200/558' }}>
           <Image
             src={project.image}
             alt={`Capture ${project.nom}`}
             fill
+            quality={90}
             className="object-cover object-top transition-opacity duration-300"
-            sizes="(max-width: 768px) 100vw, 60vw"
+            sizes="(max-width: 768px) 100vw, 900px"
           />
           {/* Overlay léger pour profondeur */}
           <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
@@ -113,8 +114,9 @@ function PhoneFrame({ project, transitioning }: { project: Project; transitionin
             src={project.image}
             alt={`Mobile ${project.nom}`}
             fill
+            quality={90}
             className="object-cover object-top"
-            sizes="130px"
+            sizes="640px"
           />
         </div>
         {/* Bottom bar */}

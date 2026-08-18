@@ -2,7 +2,7 @@
 import { useState, useEffect, useRef } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { ChevronDown, DollarSign, Layers, PenSquare, User, HelpCircle, Gift } from 'lucide-react'
+import { ChevronDown, DollarSign, Layers, PenSquare, User, HelpCircle, Gift, Mail } from 'lucide-react'
 import { usePathname } from 'next/navigation'
 import { useBanniere } from '@/contexts/BanniereContext'
 
@@ -162,6 +162,7 @@ export default function Navbar() {
               </div>
 
               <Link href="/parrainage" aria-current={pathname === '/parrainage' ? 'page' : undefined} className={`text-sm font-medium transition-colors ${linkClass}`}>Parrainage</Link>
+              <Link href="/contact" aria-current={pathname === '/contact' ? 'page' : undefined} className={`nav-link-animated text-sm font-medium transition-colors ${linkClass}`}>Contact</Link>
             </div>
 
             {/* Desktop CTA */}
@@ -240,6 +241,7 @@ export default function Navbar() {
               { href: '/a-propos', label: 'À propos', Icon: User },
               { href: '/faq', label: 'FAQ', Icon: HelpCircle },
               { href: '/parrainage', label: 'Parrainage', Icon: Gift },
+              { href: '/contact', label: 'Contact', Icon: Mail },
             ].map((l, i) => (
               <Link key={l.href} href={l.href} onClick={() => setOpen(false)}
                 className="mobile-menu-item py-3.5 px-3 text-lg font-semibold text-navy hover:text-electric-ink hover:bg-blue-50/50 rounded-xl min-h-[56px] flex items-center gap-3 border border-transparent hover:border-electric/15"

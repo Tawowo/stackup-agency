@@ -488,23 +488,28 @@ export default function HeroSection() {
           }}
         >
           {[
-            { num: 10, suffix: ' j', label: "de l'idée à la mise en ligne" },
-            { num: 100, suffix: ' %', label: 'sur mesure — zéro template' },
-            { num: 72, suffix: ' h', label: 'réponse garantie' },
-            { num: null, text: 'Code livré', label: 'vous êtes propriétaire' },
+            { num: 10, suffix: ' j', label: "de l'idée à la mise en ligne", gold: true },
+            { num: 100, suffix: ' %', label: 'sur mesure — zéro template', gold: false },
+            { num: 72, suffix: ' h', label: 'réponse garantie', gold: true },
+            { num: null, text: 'Code livré', label: 'vous êtes propriétaire', gold: false },
           ].map((s, i) => (
             <div
               key={s.label}
-              className="text-center p-4 rounded-xl glass-panel reveal-item hover:bg-white/8 transition-colors"
-              style={{ transitionDelay: `${i * 80}ms` }}
+              className="text-center p-4 rounded-xl reveal-item transition-colors"
+              style={{
+                transitionDelay: `${i * 80}ms`,
+                background: 'rgba(13,22,38,0.72)',
+                border: '1px solid rgba(255,255,255,0.16)',
+                backdropFilter: 'blur(8px)',
+              }}
             >
-              <div className="text-xl font-bold text-white mb-0.5 price-ticker">
+              <div className={`text-2xl font-black mb-1 price-ticker ${s.gold ? 'text-amber-400' : 'text-white'}`}>
                 {s.num !== null
                   ? <CountUp target={s.num} suffix={s.suffix} duration={1200} className="price-ticker-inner" />
                   : <span>{s.text}</span>
                 }
               </div>
-              <div className="text-xs text-white/55">{s.label}</div>
+              <div className="text-xs text-white/85 font-medium">{s.label}</div>
             </div>
           ))}
         </div>
