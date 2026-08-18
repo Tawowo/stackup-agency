@@ -10,3 +10,15 @@
 
 # PHASE 5 : 150/150 — TERMINÉ
 | 6 — Clôture | ✅ FAIT | Routes 200 vérifiées (home, tarifs, zones, hub 45, solution Pixieset, 2 articles, parrainage, audit, sitemap, RSS, robots). Gating publishAt vérifié en réel : article programmé → 404 + absent du sitemap (388 URLs). Build 0/0 (403 pages). SEO préexistant intact (aucune URL supprimée/modifiée — uniquement des ajouts). 5 commits poussés sur main. | Lighthouse formel non re-mesuré cette session (aucun changement de code perf-sensible ; perf à re-vérifier au prochain audit) |
+
+# MISSION 3H30 (2026-08-18)
+
+| Phase | Statut | Notes |
+|---|---|---|
+| 1 — Corrections visuelles (pastilles hero, showroom net, Contact nav) | ⏳ EN COURS (session interactive) | |
+| 2 — Blog hub repensé + compteurs dynamiques | ⏳ | |
+| 3 — Crawl intégral liens/pages | ⏳ | |
+| 4 — Géographie 800+ communes (hubs enrichis + 4-6 nouveaux hubs) | ⏳ | |
+| 4bis — Studio de style niveau produit | ⏳ | |
+| 5 — Articles | ✅ 150/150 (mission précédente) | |
+| 6 — Clôture (« MISSION 3H30 : TERMINÉ » arrête la boucle) | ⏳ | |
