@@ -5,14 +5,17 @@ import { CheckCircle } from 'lucide-react'
 import MarqueeSeparator from '@/components/home/MarqueeSeparator'
 import HomeFaq from '@/components/home/HomeFaq'
 import { SITE } from '@/config/site'
+import dynamic from 'next/dynamic'
 import HeroSection from '@/components/home/HeroSection'
-import Atelier from '@/components/home/Atelier'
-import PreuvePar3 from '@/components/home/PreuvePar3'
-import Showroom from '@/components/home/Showroom'
-import LaRoute from '@/components/home/LaRoute'
-import StatPills from '@/components/home/StatPills'
-import RaisonDetre from '@/components/home/RaisonDetre'
 import ScrollBackground from '@/components/home/ScrollBackground'
+
+// Sections sous la fold — code-splitting pour étaler l'hydratation (TBT)
+const Atelier = dynamic(() => import('@/components/home/Atelier'))
+const PreuvePar3 = dynamic(() => import('@/components/home/PreuvePar3'))
+const Showroom = dynamic(() => import('@/components/home/Showroom'))
+const LaRoute = dynamic(() => import('@/components/home/LaRoute'))
+const StatPills = dynamic(() => import('@/components/home/StatPills'))
+const RaisonDetre = dynamic(() => import('@/components/home/RaisonDetre'))
 
 export const metadata: Metadata = {
   title: "Agence web Tours — Site internet en 10 jours",

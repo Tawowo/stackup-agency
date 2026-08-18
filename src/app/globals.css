@@ -2780,3 +2780,31 @@ body {
 @media (prefers-reduced-motion: reduce) {
   .cta-word { opacity: 1; transform: none; transition: none; }
 }
+
+/* ══════════════════════════════════════════════════════════════
+   PERF HOME — Entrée hero 100 % CSS (indépendante de l'hydratation)
+   Le contenu est peint au premier paint ; les animations se jouent
+   en CSS avec les mêmes délais visuels qu'avant. LCP-safe.
+   ══════════════════════════════════════════════════════════════ */
+@keyframes heroOverlayOut { from { opacity: 0.88; } to { opacity: 0; } }
+@keyframes heroRise { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes heroWordIn { from { opacity: 0; transform: translateY(110%); } to { opacity: 1; transform: translateY(0); } }
+@keyframes heroEditorIn { from { opacity: 0; transform: translateY(32px) scale(0.96); } to { opacity: 1; transform: translateY(0) scale(1); } }
+
+.hero-css-overlay { animation: heroOverlayOut 0.45s cubic-bezier(0.4,0,0.2,1) both; }
+.hero-css-badge   { animation: heroRise 0.6s cubic-bezier(0.16,1,0.3,1) 0.15s both; }
+.hero-css-word    { animation: heroWordIn 0.4s cubic-bezier(0.16,1,0.3,1) both; } /* delay par mot en inline (court : LCP) */
+.hero-css-subtitle{ animation: heroRise 0.4s ease 0.12s both; }
+.hero-css-ctas    { animation: heroRise 0.6s cubic-bezier(0.16,1,0.3,1) 0.6s both; }
+.hero-css-note    { animation: heroRise 0.6s ease 0.8s both; }
+.hero-css-editor  { animation: heroEditorIn 0.8s cubic-bezier(0.16,1,0.3,1) 0.4s both; }
+.hero-css-trust   { animation: heroRise 0.8s cubic-bezier(0.16,1,0.3,1) 0.9s both; }
+.hero-css-scroll  { animation: heroRise 1s ease 1.4s both; }
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-css-overlay { animation: none; opacity: 0; }
+  .hero-css-badge, .hero-css-word, .hero-css-subtitle, .hero-css-ctas,
+  .hero-css-note, .hero-css-editor, .hero-css-trust, .hero-css-scroll {
+    animation: none; opacity: 1; transform: none;
+  }
+}

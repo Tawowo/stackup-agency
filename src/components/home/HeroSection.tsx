@@ -61,24 +61,10 @@ const CHAR_LIST = buildCharList()
 const TOTAL_CHARS = CHAR_LIST.length
 
 // Orchestrated entrance phases
-type EntranceState = {
-  overlay: boolean     // cinematic dark overlay visible
-  badge: boolean       // badge floated in
-  title: boolean       // title words staggering
-  subtitle: boolean    // subtitle
-  ctas: boolean        // CTA buttons
-  trustbar: boolean    // trust bar
-  editor: boolean      // code editor visible
-}
-
 export default function HeroSection() {
   const [charCount, setCharCount] = useState(0)
   const [phase, setPhase] = useState<'typing' | 'deploying' | 'preview'>('typing')
   const [deployProgress, setDeployProgress] = useState(0)
-  const [entrance, setEntrance] = useState<EntranceState>({
-    overlay: true, badge: false, title: false, subtitle: false,
-    ctas: false, trustbar: false, editor: false,
-  })
   const sectionRef = useRef<HTMLElement>(null)
   const imgRef = useRef<HTMLDivElement>(null)
   const timerRefs = useRef<ReturnType<typeof setTimeout>[]>([])
@@ -90,28 +76,11 @@ export default function HeroSection() {
   useEffect(() => {
     const mq = window.matchMedia('(prefers-reduced-motion: reduce)')
     if (mq.matches) {
-      setEntrance({ overlay: false, badge: true, title: true, subtitle: true, ctas: true, trustbar: true, editor: true })
       setCharCount(TOTAL_CHARS)
       setPhase('preview')
       setDeployProgress(100)
       return
     }
-
-    // ── Orchestrated cinematic entrance ──────────────────────────
-    // t=0:   overlay starts fading
-    addTimer(() => setEntrance(e => ({ ...e, overlay: false })), 0)
-    // t=150: badge floats in
-    addTimer(() => setEntrance(e => ({ ...e, badge: true })), 150)
-    // t=350: title words start staggering (each word has its own delay via CSS)
-    addTimer(() => setEntrance(e => ({ ...e, title: true })), 350)
-    // t=400: editor appears
-    addTimer(() => setEntrance(e => ({ ...e, editor: true })), 400)
-    // t=900: subtitle fades in
-    addTimer(() => setEntrance(e => ({ ...e, subtitle: true })), 900)
-    // t=1100: CTAs slide up
-    addTimer(() => setEntrance(e => ({ ...e, ctas: true })), 1100)
-    // t=1300: trust bar rises
-    addTimer(() => setEntrance(e => ({ ...e, trustbar: true })), 1300)
 
     // ── Typing cycle (starts after editor appears) ──────────────
     const runCycle = () => {
@@ -233,12 +202,8 @@ export default function HeroSection() {
       {/* ── [PIÈCE 2] Cinematic dark overlay — s'efface à l'ouverture ── */}
       <div
         aria-hidden="true"
-        className="absolute inset-0 z-[1] pointer-events-none"
-        style={{
-          background: '#060D1A',
-          opacity: entrance.overlay ? 1 : 0,
-          transition: 'opacity 1.2s cubic-bezier(0.4, 0, 0.2, 1)',
-        }}
+        className="absolute inset-0 z-[1] pointer-events-none hero-css-overlay"
+        style={{ background: '#060D1A' }}
       />
 
       {/* ── Voiles permanents ──────────────────────────────────────── */}
@@ -265,11 +230,8 @@ export default function HeroSection() {
           <div>
             {/* [PIÈCE 3a] Badge — float in t=150ms */}
             <div
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-white text-sm mb-8 badge-float"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-white text-sm mb-8 badge-float hero-css-badge"
               style={{
-                opacity: entrance.badge ? 1 : 0,
-                transform: entrance.badge ? 'translateY(0)' : 'translateY(20px)',
-                transition: 'opacity 0.6s ease, transform 0.6s cubic-bezier(0.16,1,0.3,1)',
                 background: 'rgba(6,13,26,0.55)',
                 border: '1px solid rgba(255,255,255,0.18)',
                 backdropFilter: 'blur(8px)',
@@ -287,11 +249,8 @@ export default function HeroSection() {
               {words.map((word, i) => (
                 <span key={i} className="word-mask" style={{ marginRight: '0.28em' }}>
                   <span
-                    className="word-inner"
-                    style={{
-                      transitionDelay: entrance.title ? `${i * 80}ms` : '0ms',
-                      ...(entrance.title ? { transform: 'translateY(0)', opacity: 1 } : {}),
-                    }}
+                    className="word-inner hero-css-word"
+                    style={{ animationDelay: `${i * 35}ms` }}
                   >
                     {i === 2
                       ? <span className="gradient-sig-h">{word}</span>
@@ -303,12 +262,7 @@ export default function HeroSection() {
 
             {/* [PIÈCE 3c] Subtitle — t=900ms */}
             <p
-              className="text-white/80 text-lg lg:text-xl mb-6 max-w-xl leading-relaxed"
-              style={{
-                opacity: entrance.subtitle ? 1 : 0,
-                transform: entrance.subtitle ? 'translateY(0)' : 'translateY(16px)',
-                transition: 'opacity 0.7s ease 0ms, transform 0.7s cubic-bezier(0.16,1,0.3,1) 0ms',
-              }}
+              className="text-white/80 text-lg lg:text-xl mb-6 max-w-xl leading-relaxed hero-css-subtitle"
             >
               Sites vitrines, e-commerce et applications sur mesure — conçus, développés et mis en
               ligne en 10 jours ouvrés.
@@ -316,12 +270,7 @@ export default function HeroSection() {
 
             {/* [PIÈCE 3d] CTAs — t=1100ms */}
             <div
-              className="flex flex-wrap gap-4 mb-5"
-              style={{
-                opacity: entrance.ctas ? 1 : 0,
-                transform: entrance.ctas ? 'translateY(0)' : 'translateY(20px)',
-                transition: 'opacity 0.6s ease 0ms, transform 0.6s cubic-bezier(0.16,1,0.3,1) 0ms',
-              }}
+              className="flex flex-wrap gap-4 mb-5 hero-css-ctas"
             >
               <Link
                 href="/contact"
@@ -336,12 +285,7 @@ export default function HeroSection() {
                 Découvrir nos services
               </Link>
             </div>
-            <div
-              style={{
-                opacity: entrance.ctas ? 1 : 0,
-                transition: 'opacity 0.6s ease 200ms',
-              }}
-            >
+            <div className="hero-css-note">
               <span className="inline-block px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-white/55 text-xs">
                 À partir de {SITE.pricing.vitrine} € · Devis gratuit sous 72 h
               </span>
@@ -350,12 +294,7 @@ export default function HeroSection() {
 
           {/* [PIÈCE 4] Code editor — t=400ms, animation propre ──── */}
           <div
-            className="hidden lg:flex justify-center"
-            style={{
-              opacity: entrance.editor ? 1 : 0,
-              transform: entrance.editor ? 'translateY(0) scale(1)' : 'translateY(32px) scale(0.96)',
-              transition: 'opacity 0.8s ease 0ms, transform 0.8s cubic-bezier(0.16,1,0.3,1) 0ms',
-            }}
+            className="hidden lg:flex justify-center hero-css-editor"
           >
             <div className="w-80 rounded-2xl overflow-hidden shadow-lift-lg border border-white/10" style={{ background: '#0D1626' }}>
 
@@ -480,12 +419,7 @@ export default function HeroSection() {
 
         {/* [PIÈCE 5] Trust bar — t=1300ms, rise animation ──────── */}
         <div
-          className="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-16"
-          style={{
-            opacity: entrance.trustbar ? 1 : 0,
-            transform: entrance.trustbar ? 'translateY(0)' : 'translateY(24px)',
-            transition: 'opacity 0.8s ease 0ms, transform 0.8s cubic-bezier(0.16,1,0.3,1) 0ms',
-          }}
+          className="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-16 hero-css-trust"
         >
           {[
             { num: 10, suffix: ' j', label: "de l'idée à la mise en ligne", gold: true },
@@ -516,12 +450,7 @@ export default function HeroSection() {
       </div>
 
       {/* [PIÈCE 6] Scroll indicator bounce ─────────────────────── */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1.5" aria-hidden="true"
-        style={{
-          opacity: entrance.trustbar ? 1 : 0,
-          transition: 'opacity 1s ease 0.5s',
-        }}
-      >
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1.5 hero-css-scroll" aria-hidden="true">
         <span className="text-white/35 text-xs tracking-widest uppercase">Défiler</span>
         <div className="scroll-indicator w-px h-12 bg-gradient-to-b from-white/40 to-transparent" />
       </div>
@@ -538,8 +467,6 @@ export default function HeroSection() {
         style={{
           background: 'radial-gradient(ellipse, rgba(45,125,210,0.12) 0%, transparent 70%)',
           animation: 'halo-pulse 5s ease-in-out infinite',
-          opacity: entrance.title ? 1 : 0,
-          transition: 'opacity 1.5s ease 0.5s',
         }}
       />
     </section>

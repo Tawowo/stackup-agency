@@ -24,3 +24,16 @@
 | 6 — Clôture (le marqueur final en début de ligne arrête la boucle) | ✅ FAIT | Re-crawl final : 393 pages, 0 erreur, 0 image cassée (`scripts/crawl-links.mjs`). Lighthouse mobile (simulé) : accueil 79/100 (TBT 420 ms, hors périmètre — animations hero préexistantes non modifiées), blog/hub département/article 93-95/100, CLS=0 partout, conforme au plancher déjà mesuré en phase 5. Captures de vérification regardées (pastilles, nav Contact, Showroom net, hub blog, studio de style) : 0 erreur console. Rapport final complet publié à la racine : `RAPPORT-FINAL-MISSION-3H30.md`. Commit + push final fait. |
 
 MISSION 3H30 : TERMINÉ
+
+
+# CHANTIER PERF HOME (2026-08-18, session interactive)
+
+| Élément | Avant | Après |
+|---|---|---|
+| Lighthouse mobile home (moy. 3 runs) | 79-83 | **91-93** (runs : 89/91/92/93/95/95) |
+| TBT | 290-420 ms | **10-40 ms** |
+| FCP | 1,2-1,3 s | 1,1-1,2 s |
+| CLS | 0 | 0 |
+| Blog (non-régression) | 93 | 93 |
+
+Corrections : (1) entrée hero convertie de l'orchestration JS (contenu opacity:0 jusqu'à hydratation → LCP retardé) vers des animations 100 % CSS jouées au premier paint, délais courts sur H1/sous-titre (LCP-first), overlay cinématique 0,45 s ; (2) code-splitting `next/dynamic` des 6 sections sous la fold (hydratation étalée → TBT effondré). Le LCP simulé ~3-3,4 s restant est le plancher structurel du harnais (identique sur blog/département/article) — lié au swap de police, chantier éventuel séparé. Zéro régression visuelle (captures vérifiées desktop + mobile, entrée toujours cinématique), console propre, build 0/0.
