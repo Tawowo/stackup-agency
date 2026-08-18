@@ -2,12 +2,15 @@
 title: "Refonte de site web sans perdre son SEO : guide complet"
 excerpt: "Comment refondre votre site web sans perdre vos positions Google ? Plan de redirections 301, migration SEO, Search Console : la méthode pas à pas."
 date: "2026-05-25"
+updated: "2027-01-25"
 readTime: 9
 tag: "SEO Technique"
 category: "creation-sites"
 keywords: ["refonte site web SEO", "redirections 301", "migration SEO", "refonte sans perte SEO", "plan de redirections"]
 ---
 
+
+**Garder son SEO en changeant de site repose sur un plan de redirections 301 complet (chaque ancienne URL vers sa nouvelle adresse), un audit préalable des pages les plus performantes, et le retrait vérifié de tout `noindex` au lancement — sans cette méthode, une refonte fait généralement chuter le trafic organique de 30 à 70 % en quelques semaines.** Ce guide détaille la marche à suivre, phase par phase, pour éviter cette perte.
 
 Une refonte de site web est souvent synonyme de catastrophe SEO pour les PME qui ne s'y préparent pas. Trois mois après le lancement du nouveau site, le trafic organique a chuté de 40 %, les positions sur les mots-clés stratégiques ont disparu, et le téléphone ne sonne plus comme avant. Ce scénario, nous l'avons vu des dizaines de fois. Il est entièrement évitable avec une planification rigoureuse.
 
@@ -154,26 +157,34 @@ Une refonte n'est pas toujours nécessaire. Elle se justifie quand :
 
 En revanche, si votre site performe bien en SEO mais que vous voulez juste rafraîchir le design, envisagez une mise à jour graphique incrémentale plutôt qu'une refonte complète. Consultez notre gamme de [sites multi-pages](/services/site-multi-pages) si vous cherchez à évoluer progressivement.
 
-## FAQ
+## En résumé
 
-### Peut-on vraiment perdre ses positions Google lors d'une refonte ?
+- Un plan de redirections 301 complet (chaque ancienne URL vers sa nouvelle adresse) est la mesure la plus déterminante pour préserver le SEO lors d'une refonte.
+- Un audit préalable (crawl, export Search Console, backlinks, positions actuelles) sert de référence pour mesurer l'impact de la migration après lancement.
+- Le retrait du `noindex` et la vérification des redirections actives sont les toutes premières actions à effectuer le jour du lancement.
+- Une baisse temporaire de 10-20 % du trafic est normale après une refonte ; au-delà de 30 % de façon persistante, un problème doit être investigué.
 
+## Questions fréquentes
+
+**Peut-on vraiment perdre ses positions Google lors d'une refonte ?**
 Oui, et c'est fréquent. Une refonte mal planifiée peut faire chuter le trafic organique de 30 à 70 % en quelques semaines. Les causes sont presque toujours les mêmes : URLs modifiées sans redirections, contenu supprimé, noindex non retiré, ou perte de backlinks pointant vers des pages inexistantes. Avec un plan de migration rigoureux, ces pertes sont largement évitables.
 
-### Qu'est-ce qu'une redirection 301 ?
-
+**Qu'est-ce qu'une redirection 301 ?**
 Une redirection 301 est une instruction serveur qui indique aux navigateurs et à Google qu'une URL a définitivement déménagé vers une nouvelle adresse. Le code 301 signifie "déplacement permanent". Google transfère environ 90-99 % de l'autorité de l'ancienne page vers la nouvelle via cette redirection, ce qui préserve le SEO accumulé. À l'inverse, une redirection 302 (temporaire) ne transfère pas d'autorité.
 
-### Combien de temps Google met-il à traiter les redirections 301 ?
-
+**Combien de temps Google met-il à traiter les redirections 301 ?**
 Google commence à suivre les nouvelles redirections dès que Googlebot recrawle les pages concernées. Pour les pages importantes, cela peut prendre quelques heures à quelques jours. La mise à jour des positions dans les SERP peut prendre 2 à 8 semaines selon la popularité des pages. Dans Search Console, vous pouvez accélérer en demandant une inspection et une indexation manuelle pour les pages prioritaires.
 
-### À quel moment envisager une refonte de site web ?
-
+**À quel moment envisager une refonte de site web ?**
 Envisagez une refonte quand : votre site a plus de 5 ans et son design nuit à la crédibilité, les performances mobile sont mauvaises (score < 50 sur PageSpeed), le taux de rebond dépasse 75 % sur mobile, ou votre CMS ne vous permet plus d'optimiser le SEO correctement. Un audit SEO et UX préalable vous permettra de distinguer ce qui mérite d'être conservé de ce qui doit être repensé.
+
+**Faut-il un accompagnement d'agence pour ce type de migration, ou peut-on le faire seul ?**
+Un plan de redirections simple est réalisable seul avec de la rigueur ; pour un site de grande taille ou des enjeux SEO importants, un accompagnement réduit sensiblement le risque d'erreur sur les points les plus critiques (noindex, chaînes de redirections, priorisation des pages à forte valeur).
 
 ---
 
 Une refonte bien préparée n'est pas seulement sans risque pour le SEO — c'est souvent l'occasion d'améliorer significativement votre architecture de contenu, votre maillage interne et votre expérience utilisateur, avec des gains SEO à la clé.
+
+*Pour aller plus loin : [Guide Google Search Console avancé](/blog/google-search-console-guide-avance-seo) · [Nos tarifs](/tarifs)*
 
 [Prendre rendez-vous gratuitement](/contact)
