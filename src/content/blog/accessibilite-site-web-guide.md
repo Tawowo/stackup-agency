@@ -1,28 +1,28 @@
 ---
-title: "Accessibilité web pour TPE : l'essentiel sans se noyer dans les normes"
-excerpt: "Un site accessible touche plus de clients et améliore le SEO. Les 8 points d'accessibilité les plus impactants pour une TPE, sans jargon technique inutile."
+title: "Site accessible (RGAA) : obligations et bonnes pratiques pour une TPE"
+excerpt: "Le RGAA est le référentiel français d'accessibilité numérique, et son périmètre d'obligation s'étend progressivement au-delà du seul secteur public. Les 8 points d'accessibilité les plus impactants pour une TPE."
 date: "2026-07-26"
-updated: "2026-07-30"
-readTime: 6
+updated: "2027-02-01"
+readTime: 7
 tag: "Performance Web"
 category: "technique"
-keywords: ["accessibilité web site", "WCAG TPE", "site internet accessible", "accessibilité numérique PME"]
+keywords: ["accessibilité web site", "RGAA obligations TPE", "WCAG TPE", "site internet accessible"]
 ---
 
-**15% de la population mondiale vit avec un handicap.** L'accessibilité web n'est pas seulement une obligation légale (pour les sites publics et certaines entreprises) — c'est un levier de reach commercial. Un site accessible est aussi mieux compris par Google.
+**Le RGAA (Référentiel Général d'Amélioration de l'Accessibilité) est le référentiel français qui décline les standards internationaux WCAG pour les sites web — obligatoire pour le secteur public et les grandes entreprises, il s'étend progressivement à un périmètre plus large avec la directive européenne sur l'accessibilité (EAA), et reste une bonne pratique fortement recommandée pour toute TPE, même hors obligation légale directe.** Un site accessible touche plus de clients, améliore le SEO, et anticipe un cadre réglementaire qui continue de s'élargir.
 
 ---
 
-## Ce que dit la loi en France
+## Ce que dit la loi en France, et ce qu'est le RGAA
 
-L'accessibilité web est obligatoire pour :
+Le RGAA est le référentiel officiel qui définit, en France, les critères techniques concrets à respecter pour qu'un site soit considéré comme accessible — il s'appuie sur les standards internationaux WCAG (Web Content Accessibility Guidelines) et les adapte au cadre réglementaire français. L'accessibilité web au sens du RGAA est obligatoire pour :
 - Les sites du secteur public
 - Les grandes entreprises (CA > 250M€) depuis la loi ELAN
 - Les ETI sont concernées depuis 2025
 
-Pour les TPE et PME, l'accessibilité n'est pas encore légalement obligatoire en France. Mais la directive européenne sur l'accessibilité (EAA — European Accessibility Act) entre en vigueur en juin 2025 pour les services numériques — son périmètre s'étend progressivement.
+Pour les TPE et PME, l'accessibilité au sens strict du RGAA n'est pas encore légalement obligatoire en France. Mais la directive européenne sur l'accessibilité (EAA — European Accessibility Act) entre en vigueur pour les services numériques et son périmètre d'application s'étend progressivement — une TPE qui vend en ligne ou propose certains services numériques peut se retrouver concernée plus tôt qu'elle ne l'anticipe.
 
-**La bonne raison de s'y intéresser maintenant :** Un site accessible améliore l'expérience pour tous vos utilisateurs, pas seulement ceux en situation de handicap. Et Google lit votre site comme un lecteur d'écran — optimiser pour l'accessibilité améliore mécaniquement votre SEO.
+**La bonne raison de s'y intéresser maintenant :** Un site accessible améliore l'expérience pour tous vos utilisateurs, pas seulement ceux en situation de handicap. Et Google lit votre site comme un lecteur d'écran — optimiser pour l'accessibilité améliore mécaniquement votre SEO, indépendamment de toute obligation légale.
 
 ---
 
@@ -120,7 +120,14 @@ Google crawle votre site comme un lecteur d'écran. Les mêmes bonnes pratiques 
 
 ---
 
-## FAQ
+## En résumé
+
+- Le RGAA décline les standards WCAG internationaux dans le cadre réglementaire français ; il est déjà obligatoire pour le secteur public et les grandes entreprises, et son périmètre s'élargit progressivement avec la directive européenne EAA.
+- 8 points concentrent l'essentiel de l'impact accessibilité pour une TPE : texte alternatif, contraste, navigation clavier, structure des titres, formulaires labellisés, liens explicites, sous-titres vidéo, messages d'erreur clairs.
+- Les outils automatiques (WAVE, Axe, Lighthouse) détectent 30 à 40 % des problèmes ; corriger les 8 points prioritaires reste l'approche la plus efficace pour une TPE sans budget dédié à l'accessibilité.
+- Les mêmes bonnes pratiques qui améliorent l'accessibilité (structure, alt, liens explicites) améliorent mécaniquement le SEO du site.
+
+## Questions fréquentes
 
 **Mon site WordPress est-il accessible par défaut ?**
 Non. L'accessibilité dépend du thème et des plugins utilisés. Certains thèmes premium mettent en avant leur conformité WCAG — vérifiez avant de choisir. Les plugins de constructeur de page (Elementor, Divi) génèrent souvent du code peu accessible.
