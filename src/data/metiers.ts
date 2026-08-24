@@ -6,12 +6,36 @@ export interface Metier {
   requetePrincipale: string
   variantes: string[]
   serviceLie: string
+  demoUrl?: string
   intro: string
   inclus: string[]
   faq: { q: string; a: string }[]
 }
 
 export const METIERS: Metier[] = [
+  {
+    slug: 'videaste',
+    metier: 'vidéaste',
+    categorie: 'creatifs',
+    priorite: 'P1',
+    requetePrincipale: 'site internet vidéaste',
+    variantes: ['site web videaste', 'création site vidéaste', 'portfolio vidéaste en ligne', 'site vidéaste mariage', 'livraison vidéo client'],
+    serviceLie: 'systeme-gestion',
+    demoUrl: 'https://demo-videaste-vitrine.vercel.app',
+    intro: "Un vidéaste vend de l'émotion et de la précision — son site doit prouver les deux. Portfolio cinématographique qui met vos films en avant, et surtout : un espace de livraison client intégré (commentaires horodatés sur la timeline, versions V1/V2/V3, liens privés) qui remplace les abonnements Frame.io ou Vimeo Pro. Payez une fois, possédez votre outil.",
+    inclus: [
+      'Portfolio de films avec lecture immersive et showreel',
+      'Espace de livraison client : liens privés par destinataire, QR code',
+      'Commentaires horodatés directement sur la timeline vidéo',
+      'Versions de montage V1/V2/V3 avec suivi des validations',
+      'Pages prestations (mariage, entreprise, clip) optimisées SEO',
+    ],
+    faq: [
+      { q: 'Puis-je remplacer Frame.io ou Vimeo Pro avec ce site ?', a: "C'est exactement l'objet de notre offre vidéaste : l'espace de livraison intégré couvre les commentaires timecodés, les versions successives et les liens privés — sans abonnement mensuel, sur votre propre domaine, à votre marque." },
+      { q: 'Comment mes clients laissent-ils leurs retours sur une vidéo ?', a: "Ils cliquent à l'instant précis de la timeline et écrivent leur commentaire : vous voyez « 1:24 — couper ce plan ». Chaque version de montage garde son fil de retours, jusqu'à la validation finale." },
+      { q: 'Peut-on tester avant de s\'engager ?', a: 'Oui : notre démonstration complète est en ligne et entièrement visitable, espace de gestion inclus (accès affiché sur la fiche). Entreprise fictive, fonctionnalités réelles.' },
+    ],
+  },
   {
     slug: 'agence-immobiliere',
     metier: 'agence immobilière',

@@ -1,5 +1,48 @@
 export const realisations = [
   {
+    nom: 'Cadence Studio',
+    type: 'Site vitrine + espace de livraison — Vidéaste',
+    projectType: 'demo' as const,
+    slug: 'demo-videaste',
+    image: '/images/realisations/demo-videaste.webp',
+    url: 'https://demo-videaste-vitrine.vercel.app',
+    couleur: '#0C1017',
+    accent: '#E8B84B',
+    description: "La vitrine complète de notre offre vidéaste : site portfolio cinématographique + espace de livraison client avec commentaires horodatés sur la timeline vidéo, versions de montage V1/V2/V3, liens privés par destinataire et espace de gestion. Entièrement visitable, accès admin inclus.",
+    tags: ['Vidéaste', 'Livraison client', 'Timeline', 'Espace admin'],
+    services: ['Développement web', 'Système de livraison vidéo', 'Design cinématographique'],
+    fonctionnalites: [
+      'Portfolio de films avec lecture immersive',
+      'Espace de livraison client par lien privé',
+      'Commentaires horodatés sur la timeline vidéo',
+      'Versions de montage V1 / V2 / V3 comparables',
+      'Liens privés par destinataire avec QR code',
+      'Espace de gestion des projets et livraisons',
+      'Suivi des validations par version',
+      'Pages prestations (mariage, entreprise, clip)',
+      'Formulaire de demande de projet qualifié',
+      'Design sombre cinématographique sur mesure',
+    ],
+    filterType: 'Site vitrine',
+    caseStudy: {
+      contexte: "Un vidéaste indépendant vit deux métiers à la fois : convaincre les futurs clients avec un portfolio à la hauteur de ses films, et livrer les clients existants sans friction — versions successives, retours précis, validation finale. Les outils par abonnement (Vimeo Pro, WeTransfer, Frame.io) règlent ce second métier au prix d'une rente mensuelle, sur la marque d'un tiers. Cadence Studio démontre l'alternative : tout est intégré au site du vidéaste, acheté une fois, possédé pour toujours.",
+      construit: [
+        'Un site vitrine cinématographique : portfolio de films, prestations, tarifs, demande de projet',
+        "Un espace de livraison client : chaque projet a son lien privé par destinataire (avec QR code), ses versions de montage V1/V2/V3, et des commentaires horodatés directement sur la timeline de la vidéo — le client clique à 1:24, écrit « couper ce plan », le vidéaste voit exactement où",
+        "Un espace de gestion : création des projets, upload des versions, suivi des retours et des validations",
+      ],
+      tester: [
+        "Parcourez le site public librement — portfolio, prestations, tarifs",
+        "Ouvrez l'espace de livraison depuis le site et explorez un projet de démonstration : timeline, commentaires, versions",
+        "Connectez-vous à l'espace de gestion avec l'accès admin ci-dessous et regardez l'envers du décor",
+      ],
+    },
+    demoAccess: {
+      password: 'demo2026',
+      note: 'Démonstration complète — entreprise fictive, fonctionnalités réelles.',
+    },
+  },
+  {
     nom: 'Château des Lumières',
     type: 'Site vitrine — Hôtel boutique',
     projectType: 'demo' as const,

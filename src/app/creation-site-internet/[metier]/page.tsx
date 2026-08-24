@@ -235,6 +235,25 @@ export default function MetierPage({ params }: { params: { metier: string } }) {
           </div>
         </section>
 
+        {/* Démo complète (si le métier en a une) */}
+        {m.demoUrl && (
+          <section className="rounded-2xl p-6 bg-gradient-to-br from-amber-500/15 to-amber-600/5 border border-amber-500/30">
+            <h3 className="font-bold text-white mb-2">Visitez une démonstration complète</h3>
+            <p className="text-white/70 text-sm mb-4">
+              Notre démo {m.metier} est en ligne et entièrement visitable — site public, espace de livraison client et espace de gestion (accès affiché sur la fiche). Démonstration complète — entreprise fictive, fonctionnalités réelles.
+            </p>
+            <div className="flex flex-wrap gap-4">
+              <a href={m.demoUrl} target="_blank" rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-gold text-sm font-semibold hover:underline">
+                Visiter la démonstration complète <ArrowRight size={14} />
+              </a>
+              <Link href="/realisations/demo-videaste" className="inline-flex items-center gap-2 text-white/60 text-sm font-medium hover:text-white transition-colors">
+                Lire la fiche projet <ArrowRight size={14} />
+              </Link>
+            </div>
+          </section>
+        )}
+
         {/* Jugez sur pièce */}
         <section className="rounded-2xl p-6 bg-gradient-to-br from-navy/20 to-blue-950/20 border border-white/10">
           <h3 className="font-bold text-white mb-2">Jugez sur pièce</h3>

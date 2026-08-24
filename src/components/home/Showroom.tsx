@@ -21,6 +21,16 @@ interface Project {
 
 const PROJECTS: Project[] = [
   {
+    nom: 'Cadence Studio',
+    type: 'Vitrine + livraison client — Vidéaste',
+    slug: 'demo-videaste',
+    image: '/images/realisations/demo-videaste.webp',
+    couleur: '#0C1017',
+    accent: '#E8B84B',
+    url: 'https://demo-videaste-vitrine.vercel.app',
+    tags: ['Vidéaste', 'Livraison', 'Timeline'],
+  },
+  {
     nom: 'Château des Lumières',
     type: 'Site vitrine — Hôtel boutique',
     slug: 'chateau-lumieres',
@@ -200,7 +210,7 @@ export default function Showroom() {
             <a href={p.url} target="_blank" rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-sm font-semibold px-5 py-2.5 rounded-xl text-white transition-all hover:-translate-y-0.5 shadow-md"
               style={{ background: p.accent }}>
-              <ExternalLink size={14} /> Voir en ligne
+              <ExternalLink size={14} /> Visiter la démo complète →
             </a>
             <Link href={`/realisations/${p.slug}`}
               className="inline-flex items-center gap-2 text-sm font-semibold px-5 py-2.5 rounded-xl border border-gray-200 text-navy hover:border-navy/30 hover:bg-gray-50 transition-all hover:-translate-y-0.5">

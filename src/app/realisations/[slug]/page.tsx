@@ -4,6 +4,8 @@ import Image from 'next/image'
 import { ArrowLeft, ExternalLink, Check, ArrowRight, Mail } from 'lucide-react'
 import { realisations } from '@/lib/realisations'
 
+type CaseStudy = { contexte: string; construit: string[]; tester: string[] }
+
 export function generateStaticParams() {
   return realisations.map(r => ({ slug: r.slug }))
 }
@@ -103,10 +105,72 @@ export default async function RealisationPage({ params }: { params: Promise<{ sl
             style={{ background: r.accent }}
           >
             <ExternalLink size={18} />
-            Voir la démo en live
+            Visiter la démo complète →
           </a>
+          {'demoAccess' in r && (r as { demoAccess?: { note: string } }).demoAccess && (
+            <p className="text-white/45 text-sm mt-4 italic">
+              {(r as { demoAccess: { note: string } }).demoAccess.note}
+            </p>
+          )}
         </div>
       </div>
+
+      {/* Cas d'étude — contexte → construit → à tester */}
+      {'caseStudy' in r && (r as { caseStudy?: CaseStudy }).caseStudy && (() => {
+        const cs = (r as { caseStudy: CaseStudy }).caseStudy
+        const access = (r as { demoAccess?: { password: string; note: string } }).demoAccess
+        return (
+          <section className="py-16 px-4">
+            <div className="max-w-4xl mx-auto space-y-12">
+              <div>
+                <p className="text-[13px] font-semibold uppercase tracking-[0.18em] mb-3" style={{ color: r.accent }}>Le contexte</p>
+                <p className="text-gray-700 dark:text-white/75 leading-relaxed text-lg">{cs.contexte}</p>
+              </div>
+              <div>
+                <p className="text-[13px] font-semibold uppercase tracking-[0.18em] mb-4" style={{ color: r.accent }}>Ce qui a été construit</p>
+                <div className="space-y-3">
+                  {cs.construit.map((c, i) => (
+                    <div key={i} className="flex items-start gap-3 p-4 rounded-xl bg-gray-50 dark:bg-white/5 border border-gray-100 dark:border-white/10">
+                      <span className="flex-shrink-0 w-7 h-7 rounded-lg flex items-center justify-center text-xs font-bold text-white" style={{ background: r.couleur }}>{i + 1}</span>
+                      <p className="text-gray-700 dark:text-white/80 text-sm leading-relaxed">{c}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              <div>
+                <p className="text-[13px] font-semibold uppercase tracking-[0.18em] mb-4" style={{ color: r.accent }}>À tester soi-même</p>
+                <ol className="space-y-2 mb-8">
+                  {cs.tester.map((t, i) => (
+                    <li key={i} className="flex items-start gap-3 text-gray-700 dark:text-white/75 text-sm leading-relaxed">
+                      <ArrowRight size={14} className="flex-shrink-0 mt-1" style={{ color: r.accent }} />
+                      {t}
+                    </li>
+                  ))}
+                </ol>
+                {access && (
+                  <div className="rounded-2xl border p-6" style={{ borderColor: `${r.accent}40`, background: `${r.accent}0D` }}>
+                    <h3 className="font-bold text-gray-900 dark:text-white mb-2">Testez tout, librement</h3>
+                    <p className="text-gray-600 dark:text-white/65 text-sm mb-4">
+                      L&apos;espace de gestion est ouvert à la visite — connectez-vous et explorez l&apos;envers du décor comme si le site était le vôtre.
+                    </p>
+                    <div className="inline-flex items-center gap-3 px-4 py-2.5 rounded-xl bg-white dark:bg-white/10 border border-gray-200 dark:border-white/15 font-mono text-sm">
+                      <span className="text-gray-500 dark:text-white/50">Mot de passe admin :</span>
+                      <strong className="text-gray-900 dark:text-white tracking-wider">{access.password}</strong>
+                    </div>
+                    <div className="mt-4">
+                      <a href={r.url} target="_blank" rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 text-sm font-semibold hover:underline" style={{ color: r.accent }}>
+                        Ouvrir l&apos;espace de livraison <ExternalLink size={13} />
+                      </a>
+                    </div>
+                    <p className="text-gray-400 dark:text-white/35 text-xs mt-4 italic">{access.note}</p>
+                  </div>
+                )}
+              </div>
+            </div>
+          </section>
+        )
+      })()}
 
       {/* Services */}
       <section className="py-16 px-4 bg-gray-50 dark:bg-white/5">
