@@ -6,6 +6,7 @@ import { ThemeProvider } from '@/contexts/ThemeContext'
 import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
 import CookieBanner from '@/components/ui/CookieBanner'
+import Palette from '@/components/ui/Palette'
 import RevealObserver from '@/components/ui/RevealObserver'
 import BrandPreloader from '@/components/ui/BrandPreloader'
 import PageProgressBar from '@/components/ui/PageProgressBar'
@@ -169,6 +170,16 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="fr" suppressHydrationWarning>
       <head>
+        {/* Marque la disponibilité de JavaScript AVANT le premier rendu.
+            Les primitives de révélation (.su-ligne-interne) ne masquent leur
+            contenu que sous `.su-js` : sans JavaScript le texte reste
+            simplement visible, et comme la classe est posée de façon
+            synchrone dans <head>, il n'y a aucun scintillement. */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: "document.documentElement.classList.add('su-js')",
+          }}
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaOrg) }}
@@ -188,6 +199,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               {children}
               <Footer />
               <CookieBanner />
+              <Palette />
             </BanniereProvider>
           </LanguageProvider>
         </ThemeProvider>

@@ -8,14 +8,15 @@
     "start": "next start",
     "lint": "next lint",
     "indexnow": "node scripts/indexnow.mjs",
-    "indexnow:dry": "node scripts/indexnow.mjs --dry-run"
+    "indexnow:dry": "node scripts/indexnow.mjs --dry-run",
+    "verif:calculs": "node --experimental-strip-types --test tests/calculs.test.mjs",
+    "mesure:monolithe": "node scripts/mesure-monolithe.mjs",
+    "captures": "node scripts/capture-site.mjs"
   },
   "dependencies": {
     "@tailwindcss/typography": "^0.5.20",
     "feed": "^6.0.0",
-    "framer-motion": "^12.40.0",
     "gray-matter": "^4.0.3",
-    "gsap": "^3.15.0",
     "lucide-react": "^1.21.0",
     "next": "14.2.35",
     "react": "^18",
@@ -23,6 +24,7 @@
     "remark": "^15.0.1",
     "remark-html": "^16.0.1",
     "resend": "^6.16.0",
+    "three": "^0.186.1",
     "twilio": "^6.0.2"
   },
   "devDependencies": {
@@ -31,6 +33,7 @@
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "@types/three": "^0.186.0",
     "eslint": "^8",
     "eslint-config-next": "14.2.35",
     "jsdom": "^30.0.1",

@@ -96,6 +96,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/blog`, lastModified: now, changeFrequency: 'weekly', priority: 0.8 },
     { url: `${base}/devis`, lastModified: now, changeFrequency: 'monthly', priority: 0.9 },
     { url: `${base}/offre-rentree`, lastModified: now, changeFrequency: 'weekly', priority: 0.8 },
+    // Démonstration logicielle et configurateur : deux pages à forte valeur
+    // commerciale, priorité alignée sur celle des pages de service.
+    { url: `${base}/laboratoire`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${base}/configurateur`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${base}/outils`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
     { url: `${base}/outils/audit-site`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
     { url: `${base}/outils/studio-de-style`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },

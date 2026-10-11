@@ -1,0 +1,580 @@
+/* ============================================================================
+   STACKUP — SYSTÈME « LA STRATE »
+   Tokens, grammaire de mouvement et primitives de profondeur.
+   Référence : docs/STACKUP_CREATIVE_DIRECTION.md
+   ========================================================================== */
+
+:root {
+  /* ---- Matière ---------------------------------------------------------- */
+  --su-ivoire: #fffdf9;
+  --su-ivoire-creuse: #f6f2ea;
+  --su-navy: #1e3a5f;
+  --su-encre: #0c1626;
+  --su-or: #f59e0b;
+  --su-or-clair: #fbbf24;
+  --su-electrique: #2d7dd2;
+  --su-ardoise: #64748b;
+
+  --su-navy-rgb: 30 58 95;
+  --su-or-rgb: 245 158 11;
+  --su-encre-rgb: 12 22 38;
+
+  /* ---- Lumière rasante : angle constant sur tout le site ----------------- */
+  --su-angle-lumiere: -18deg;
+
+  /* ---- Profondeur : 5 plans, rien entre ---------------------------------- */
+  --su-z-substrat: 0;
+  --su-z-strate: 1;
+  --su-z-arete: 2;
+  --su-z-signal: 3;
+  --su-z-action: 4;
+
+  /* ---- Ombres : 3 niveaux, teintées navy (jamais de noir pur) ------------ */
+  --su-ombre-pose: 0 1px 2px rgb(var(--su-navy-rgb) / 0.06),
+                   0 2px 6px rgb(var(--su-navy-rgb) / 0.04);
+  --su-ombre-levee: 0 2px 4px rgb(var(--su-navy-rgb) / 0.05),
+                    0 8px 20px rgb(var(--su-navy-rgb) / 0.08),
+                    0 1px 0 rgb(255 255 255 / 0.6) inset;
+  --su-ombre-suspendue: 0 4px 8px rgb(var(--su-navy-rgb) / 0.06),
+                        0 18px 44px rgb(var(--su-navy-rgb) / 0.13),
+                        0 1px 0 rgb(255 255 255 / 0.7) inset;
+
+  /* ---- Mouvement : « l'assemblage » ------------------------------------- */
+  /* Les éléments ne surgissent pas, ils se posent. Décélération franche,
+     sans rebond élastique : une plaque qu'on dépose sur une pile.          */
+  --su-pose: cubic-bezier(0.16, 0.84, 0.28, 1);
+  --su-glisse: cubic-bezier(0.33, 0, 0.1, 1);
+  --su-sortie: cubic-bezier(0.5, 0, 0.75, 0);
+
+  --su-t-reflexe: 140ms;
+  --su-t-geste: 320ms;
+  --su-t-pose: 620ms;
+  --su-t-scene: 1100ms;
+  --su-decalage: 70ms;
+
+  /* ---- Rythme : échelle 8 px --------------------------------------------- */
+  --su-e1: 0.5rem;
+  --su-e2: 1rem;
+  --su-e3: 1.5rem;
+  --su-e4: 2rem;
+  --su-e6: 3rem;
+  --su-e8: 4rem;
+  --su-e12: 6rem;
+  --su-e16: 8rem;
+
+  --su-rayon-s: 8px;
+  --su-rayon-m: 14px;
+  --su-rayon-l: 22px;
+
+  --su-conteneur: 1200px;
+}
+
+/* ============================================================================
+   1. LA STRATE — primitive de surface
+   ========================================================================== */
+
+.su-strate {
+  position: relative;
+  background: #fff;
+  border: 1px solid rgb(var(--su-navy-rgb) / 0.08);
+  border-radius: var(--su-rayon-m);
+  box-shadow: var(--su-ombre-pose);
+  transition: transform var(--su-t-geste) var(--su-pose),
+              box-shadow var(--su-t-geste) var(--su-pose),
+              border-color var(--su-t-reflexe) linear;
+}
+
+.su-strate--levee {
+  box-shadow: var(--su-ombre-levee);
+}
+
+/* Arête éclairée : la lumière rasante touche le bord supérieur de la strate */
+.su-strate--aretee::before {
+  content: '';
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 1px;
+  border-radius: var(--su-rayon-m) var(--su-rayon-m) 0 0;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgb(var(--su-or-rgb) / 0.55) 30%,
+    rgb(var(--su-or-rgb) / 0.75) 50%,
+    rgb(var(--su-or-rgb) / 0.35) 70%,
+    transparent
+  );
+  opacity: 0;
+  transition: opacity var(--su-t-geste) var(--su-pose);
+  pointer-events: none;
+}
+
+.su-strate--aretee:hover::before,
+.su-strate--aretee:focus-within::before {
+  opacity: 1;
+}
+
+/* Élévation au survol : la strate se soulève de la pile */
+.su-strate--interactive:hover,
+.su-strate--interactive:focus-within {
+  transform: translateY(-3px);
+  box-shadow: var(--su-ombre-suspendue);
+  border-color: rgb(var(--su-or-rgb) / 0.3);
+}
+
+/* ============================================================================
+   2. ENTRÉE « POSE » — la grammaire d'apparition unique du site
+   ========================================================================== */
+
+@keyframes su-pose-entree {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 18px, 0) scale(0.985);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+/* Même précaution que pour la révélation typographique : l'état masqué
+   n'existe que si JavaScript est là pour le lever. */
+.su-js .su-pose-attente {
+  opacity: 0;
+}
+
+.su-pose-active {
+  animation: su-pose-entree var(--su-t-pose) var(--su-pose) both;
+}
+
+/* Décalage dans un groupe — maximum 6 éléments, au-delà l'attente se voit */
+.su-groupe > .su-pose-active:nth-child(1) { animation-delay: 0ms; }
+.su-groupe > .su-pose-active:nth-child(2) { animation-delay: var(--su-decalage); }
+.su-groupe > .su-pose-active:nth-child(3) { animation-delay: calc(var(--su-decalage) * 2); }
+.su-groupe > .su-pose-active:nth-child(4) { animation-delay: calc(var(--su-decalage) * 3); }
+.su-groupe > .su-pose-active:nth-child(5) { animation-delay: calc(var(--su-decalage) * 4); }
+.su-groupe > .su-pose-active:nth-child(n+6) { animation-delay: calc(var(--su-decalage) * 5); }
+
+/* ============================================================================
+   3. RÉVÉLATION TYPOGRAPHIQUE PAR MASQUE
+   Le texte reste intégralement dans le DOM, sélectionnable et lisible par
+   les lecteurs d'écran. Seul le rendu visuel est masqué.
+   ========================================================================== */
+
+.su-ligne-masque {
+  display: block;
+  overflow: hidden;
+}
+
+.su-ligne-interne {
+  display: block;
+  /* État par défaut : visible. Sans JavaScript, rien n'est jamais masqué. */
+  transform: none;
+}
+
+/* Le masquage n'existe que si JavaScript peut le lever (.su-js posée dans
+   <head>). C'est ce qui rend l'effet sûr : une erreur de script laisse le
+   texte lisible au lieu de vider la page. */
+.su-js .su-ligne-interne {
+  transform: translate3d(0, 110%, 0);
+  transition: transform var(--su-t-pose) var(--su-pose);
+}
+
+.su-js .su-revele .su-ligne-interne {
+  transform: translate3d(0, 0, 0);
+}
+
+/* ============================================================================
+   4. LUMIÈRE RASANTE — signature transversale
+   ========================================================================== */
+
+.su-rasante {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.su-rasante::after {
+  content: '';
+  position: absolute;
+  inset: -40%;
+  z-index: var(--su-z-substrat);
+  background: linear-gradient(
+    calc(90deg + var(--su-angle-lumiere)),
+    transparent 35%,
+    rgb(var(--su-or-rgb) / 0.08) 48%,
+    rgb(var(--su-or-rgb) / 0.14) 52%,
+    transparent 65%
+  );
+  transform: translate3d(-35%, 0, 0);
+  transition: transform var(--su-t-scene) var(--su-glisse);
+  pointer-events: none;
+}
+
+.su-rasante:hover::after,
+.su-rasante--balaye::after {
+  transform: translate3d(35%, 0, 0);
+}
+
+/* ============================================================================
+   5. SURTITRE MONO — ouverture de section
+   ========================================================================== */
+
+.su-surtitre {
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--su-or);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6em;
+}
+
+.su-surtitre::before {
+  content: '';
+  width: 1.6em;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.55;
+}
+
+/* ============================================================================
+   6. ACTIONS
+   ========================================================================== */
+
+.su-action {
+  --_fond: var(--su-or);
+  --_texte: var(--su-encre);
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+  padding: 0.95rem 1.6rem;
+  min-height: 48px;
+  border-radius: var(--su-rayon-s);
+  background: var(--_fond);
+  color: var(--_texte);
+  font-weight: 700;
+  font-size: 0.95rem;
+  border: 1px solid transparent;
+  cursor: pointer;
+  overflow: hidden;
+  transition: transform var(--su-t-reflexe) var(--su-pose),
+              box-shadow var(--su-t-reflexe) var(--su-pose),
+              background var(--su-t-reflexe) linear;
+}
+
+.su-action::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    calc(90deg + var(--su-angle-lumiere)),
+    transparent 40%,
+    rgb(255 255 255 / 0.28) 50%,
+    transparent 60%
+  );
+  transform: translate3d(-120%, 0, 0);
+  transition: transform 620ms var(--su-glisse);
+  pointer-events: none;
+}
+
+.su-action:hover::after { transform: translate3d(120%, 0, 0); }
+
+.su-action:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgb(var(--su-or-rgb) / 0.3);
+}
+
+.su-action:active { transform: translateY(0); }
+
+.su-action--fantome {
+  /* Pas `transparent` : ce bouton peut se superposer à la scène 3D. Un fond
+     ivoire presque opaque garantit la lisibilité sans ressembler à un caisson. */
+  --_fond: rgb(255 253 249 / 0.86);
+  --_texte: var(--su-navy);
+  border-color: rgb(var(--su-navy-rgb) / 0.22);
+  backdrop-filter: blur(6px);
+}
+
+.su-action--fantome:hover {
+  border-color: var(--su-or);
+  color: var(--su-or);
+  box-shadow: var(--su-ombre-levee);
+}
+
+/* Focus clavier visible et cohérent partout */
+.su-action:focus-visible,
+.su-strate--interactive:focus-visible,
+a:focus-visible,
+button:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--su-or);
+  outline-offset: 3px;
+  border-radius: var(--su-rayon-s);
+}
+
+/* ============================================================================
+   7. SCÈNE WEBGL — réservation d'espace (CLS = 0)
+   ========================================================================== */
+
+.su-scene {
+  position: absolute;
+  inset: 0;
+  z-index: var(--su-z-substrat);
+  pointer-events: none;
+  contain: strict;
+}
+
+.su-scene canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* Repli sans WebGL : strates en CSS pur, même grammaire visuelle */
+.su-repli {
+  position: absolute;
+  inset: 0;
+  z-index: var(--su-z-substrat);
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.su-repli__strate {
+  position: absolute;
+  left: 50%;
+  border-radius: 4px;
+  background: linear-gradient(
+    calc(90deg + var(--su-angle-lumiere)),
+    rgb(var(--su-navy-rgb) / 0.5),
+    rgb(var(--su-navy-rgb) / 0.78)
+  );
+  border-top: 1px solid rgb(var(--su-or-rgb) / 0.3);
+  transform: translateX(-50%);
+}
+
+/* ============================================================================
+   8. ACCESSIBILITÉ — réduction des animations
+   Le mouvement non essentiel disparaît ; rien ne devient invisible.
+   ========================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .su-pose-attente,
+  .su-pose-active {
+    opacity: 1 !important;
+    animation: none !important;
+    transform: none !important;
+  }
+
+  .su-js .su-ligne-interne {
+    transform: none !important;
+    transition: none !important;
+  }
+
+  .su-rasante::after,
+  .su-action::after {
+    display: none;
+  }
+
+  .su-strate,
+  .su-strate--interactive:hover,
+  .su-action:hover {
+    transition: none !important;
+    transform: none !important;
+  }
+}
+
+/* ============================================================================
+   9. HERO — composition du MONOLITHE
+   ========================================================================== */
+
+.su-hero {
+  position: relative;
+  background: var(--su-ivoire);
+  overflow: hidden;
+  isolation: isolate;
+}
+
+/* Trame technique très discrète : donne une assise au fond ivoire, qui sinon
+   paraît « vide » derrière un objet aussi dense que le monolithe. */
+.su-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-image: linear-gradient(rgb(var(--su-navy-rgb) / 0.045) 1px, transparent 1px),
+                    linear-gradient(90deg, rgb(var(--su-navy-rgb) / 0.045) 1px, transparent 1px);
+  background-size: 68px 68px;
+  mask-image: radial-gradient(ellipse 85% 70% at 62% 45%, #000 20%, transparent 78%);
+  pointer-events: none;
+}
+
+/* Zone de la scène : dimensions réservées en pourcentage du hero, donc
+   aucune réservation d'espace supplémentaire et CLS inchangé. */
+.su-hero__scene {
+  position: absolute;
+  z-index: 0;
+  inset: 0 0 0 auto;
+  width: 58%;
+  pointer-events: none;
+}
+
+@media (max-width: 1023px) {
+  .su-hero__scene {
+    inset: auto 0 0 0;
+    width: 100%;
+    height: 38%;
+    /* Une capture à 390 px a montré le monolithe passant derrière le second
+       appel à l'action et la mention tarifaire. Il est donc repoussé vers le
+       bas, atténué, et fondu longuement : il reste perceptible comme
+       profondeur sans jamais concurrencer un texte. */
+    opacity: 0.6;
+    mask-image: linear-gradient(180deg, transparent, #000 38%);
+  }
+}
+
+
+/* ============================================================================
+   10. LA PALETTE — navigation clavier
+   ========================================================================== */
+
+@keyframes su-palette-fond {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes su-palette-boite {
+  from { opacity: 0; transform: translate3d(0, -10px, 0) scale(0.985); }
+  to   { opacity: 1; transform: translate3d(0, 0, 0) scale(1); }
+}
+
+.su-palette {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: clamp(1rem, 12vh, 7rem) 1rem 1rem;
+  background: rgb(var(--su-encre-rgb) / 0.42);
+  backdrop-filter: blur(5px);
+  animation: su-palette-fond var(--su-t-reflexe) linear both;
+}
+
+.su-palette__boite {
+  width: min(620px, 100%);
+  max-height: min(68vh, 560px);
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border: 1px solid rgb(var(--su-navy-rgb) / 0.1);
+  border-radius: var(--su-rayon-l);
+  box-shadow: var(--su-ombre-suspendue);
+  overflow: hidden;
+  animation: su-palette-boite var(--su-t-geste) var(--su-pose) both;
+}
+
+.su-palette__champ {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 1rem 1.15rem;
+  border-bottom: 1px solid rgb(var(--su-navy-rgb) / 0.08);
+}
+
+.su-palette__champ input {
+  flex: 1;
+  min-width: 0;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  font-size: 1rem;
+  color: var(--su-encre);
+}
+
+.su-palette__champ input::placeholder { color: var(--su-ardoise); }
+
+.su-palette__kbd {
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 0.68rem;
+  padding: 0.15rem 0.42rem;
+  border-radius: 5px;
+  color: var(--su-ardoise);
+  background: rgb(var(--su-navy-rgb) / 0.05);
+  border: 1px solid rgb(var(--su-navy-rgb) / 0.1);
+}
+
+.su-palette__liste {
+  flex: 1;
+  overflow-y: auto;
+  padding: 0.4rem;
+  margin: 0;
+  list-style: none;
+  overscroll-behavior: contain;
+}
+
+.su-palette__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.68rem 0.85rem;
+  border-radius: var(--su-rayon-s);
+  cursor: pointer;
+  /* Pas de transition : au clavier, la surbrillance doit suivre la touche
+     instantanément. Une transition de 140 ms donne l'impression d'un retard. */
+}
+
+.su-palette__item.est-actif {
+  background: rgb(var(--su-or-rgb) / 0.11);
+  box-shadow: inset 2px 0 0 var(--su-or);
+}
+
+.su-palette__titre {
+  color: var(--su-encre);
+  font-weight: 500;
+  font-size: 0.94rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.su-palette__cat {
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 0.66rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--su-ardoise);
+  flex-shrink: 0;
+}
+
+.su-palette__vide {
+  padding: 2rem 1rem;
+  text-align: center;
+  color: var(--su-ardoise);
+  font-size: 0.9rem;
+}
+
+.su-palette__pied {
+  display: flex;
+  gap: 1.1rem;
+  padding: 0.6rem 1.15rem;
+  border-top: 1px solid rgb(var(--su-navy-rgb) / 0.08);
+  background: var(--su-ivoire);
+  font-size: 0.7rem;
+  color: var(--su-ardoise);
+}
+
+.su-palette__pied span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.28rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .su-palette,
+  .su-palette__boite { animation: none; }
+}

@@ -4,6 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { ChevronDown, DollarSign, Layers, PenSquare, User, HelpCircle, Gift, Mail } from 'lucide-react'
 import { usePathname } from 'next/navigation'
+import PaletteBouton from '@/components/ui/PaletteBouton'
 import { useBanniere } from '@/contexts/BanniereContext'
 
 const SERVICES_LINKS = [
@@ -64,20 +65,21 @@ export default function Navbar() {
 
   const isHome = pathname === '/'
 
-  // V4 : navbar toujours claire
-  // - Sur home non scrollée : fond transparent sur hero (texte blanc car hero sombre/coloré)
-  // - Scrollée ou hors home : fond blanc/ivoire, texte navy
+  // Le hero est désormais sur fond ivoire, comme le reste du site : la variante
+  // « texte blanc sur hero sombre » n'a plus de raison d'être et rendait la
+  // navigation illisible. Les libellés sont donc navy en permanence.
+  //
+  // Seul le fond de la barre varie : transparent en haut de l'accueil pour
+  // laisser respirer le monolithe, opaque dès le premier défilement.
   const navBg = scrolled || !isHome
-    ? 'bg-white/95 backdrop-blur-md shadow-sm border-b border-gray-100'
-    : 'bg-transparent'
+    ? 'bg-[#FFFDF9]/92 backdrop-blur-md shadow-sm border-b border-[#1E3A5F]/8'
+    : 'bg-[#FFFDF9]/70 backdrop-blur-[6px]'
 
-  const linkClass = scrolled || !isHome
-    ? 'text-navy hover:text-gold'
-    : 'text-white hover:text-white/80'
+  const linkClass = 'text-navy hover:text-gold'
 
-  const logoTextClass = scrolled || !isHome ? 'text-navy' : 'text-white'
-  const logoSubClass  = scrolled || !isHome ? 'text-navy/60' : 'text-white/70'
-  const barColor      = open ? 'bg-navy' : scrolled || !isHome ? 'bg-navy' : 'bg-white'
+  const logoTextClass = 'text-navy'
+  const logoSubClass  = 'text-navy/60'
+  const barColor      = 'bg-navy'
 
   const dropdownCls = (isOpen: boolean) =>
     `absolute top-full left-1/2 -translate-x-1/2 mt-2 rounded-2xl bg-white shadow-lift border border-gray-100 py-2 transition-all duration-200 dropdown-stagger ${isOpen ? 'opacity-100 pointer-events-auto translate-y-0 open' : 'opacity-0 pointer-events-none -translate-y-2'}`
@@ -167,6 +169,7 @@ export default function Navbar() {
 
             {/* Desktop CTA */}
             <div className="hidden lg:flex items-center gap-3 shrink-0">
+              <PaletteBouton />
               <Link href="/devis" className="px-4 py-2.5 bg-gold hover:bg-gold/80 text-ink text-sm font-semibold rounded-xl shadow-lg shadow-amber-500/30 transition-all hover:-translate-y-0.5 whitespace-nowrap">
                 Devis gratuit →
               </Link>

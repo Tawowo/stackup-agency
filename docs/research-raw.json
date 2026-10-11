@@ -1,0 +1,3602 @@
+{
+ "npm": [
+  {
+   "pkg": "three",
+   "verified": true,
+   "latest": "0.186.1",
+   "license": "MIT",
+   "description": "JavaScript 3D library",
+   "repository": "git+https://github.com/mrdoob/three.js.git",
+   "homepage": "https://threejs.org/",
+   "unpackedSize": 20443256,
+   "fileCount": 1263,
+   "deps": 0,
+   "peerDeps": [],
+   "modified": "2026-09-24T14:42:21.613Z"
+  },
+  {
+   "pkg": "@react-three/fiber",
+   "verified": true,
+   "latest": "9.8.1",
+   "license": "MIT",
+   "description": "A React renderer for Threejs",
+   "repository": "git+https://github.com/pmndrs/react-three-fiber.git",
+   "homepage": "https://github.com/pmndrs/react-three-fiber#readme",
+   "unpackedSize": 2378458,
+   "fileCount": 40,
+   "deps": 10,
+   "peerDeps": [
+    "expo",
+    "react",
+    "three",
+    "expo-gl",
+    "react-dom",
+    "expo-asset",
+    "react-native",
+    "expo-file-system"
+   ],
+   "modified": "2026-10-11T14:08:07.941Z"
+  },
+  {
+   "pkg": "@react-three/drei",
+   "verified": true,
+   "latest": "10.7.9",
+   "license": "MIT",
+   "description": "useful add-ons for react-three-fiber",
+   "repository": "git+https://github.com/pmndrs/drei.git",
+   "homepage": "https://github.com/pmndrs/drei",
+   "unpackedSize": 1753692,
+   "fileCount": 483,
+   "deps": 21,
+   "peerDeps": [
+    "react",
+    "three",
+    "react-dom",
+    "@react-three/fiber"
+   ],
+   "modified": "2026-09-25T15:34:14.083Z"
+  },
+  {
+   "pkg": "@react-three/postprocessing",
+   "verified": true,
+   "latest": "3.2.0",
+   "license": "MIT",
+   "description": "postprocessing wrapper for React and @react-three/fiber",
+   "repository": "git+https://github.com/pmndrs/react-postprocessing.git",
+   "homepage": "https://github.com/pmndrs/react-postprocessing#readme",
+   "unpackedSize": 500447,
+   "fileCount": 129,
+   "deps": 2,
+   "peerDeps": [
+    "react",
+    "three",
+    "postprocessing",
+    "@react-three/fiber"
+   ],
+   "modified": "2026-10-10T09:46:28.037Z"
+  },
+  {
+   "pkg": "postprocessing",
+   "verified": true,
+   "latest": "6.39.5",
+   "license": "Zlib",
+   "description": "A post processing library for three.js.",
+   "repository": "git+https://github.com/pmndrs/postprocessing.git",
+   "homepage": "https://github.com/pmndrs/postprocessing",
+   "unpackedSize": 2773683,
+   "fileCount": 9,
+   "deps": 0,
+   "peerDeps": [
+    "three"
+   ],
+   "modified": "2026-09-09T19:34:43.902Z"
+  },
+  {
+   "pkg": "three-stdlib",
+   "verified": true,
+   "latest": "2.36.1",
+   "license": "MIT",
+   "description": "stand-alone library of threejs examples",
+   "repository": "git+https://github.com/pmndrs/three-stdlib.git",
+   "homepage": "https://github.com/pmndrs/three-stdlib",
+   "unpackedSize": 26405702,
+   "fileCount": 1399,
+   "deps": 6,
+   "peerDeps": [
+    "three"
+   ],
+   "modified": "2025-11-10T21:21:28.270Z"
+  },
+  {
+   "pkg": "troika-three-text",
+   "verified": true,
+   "latest": "0.52.5",
+   "license": "MIT",
+   "description": "SDF-based text rendering for Three.js",
+   "repository": "git+https://github.com/protectwise/troika.git",
+   "homepage": "https://github.com/protectwise/troika#readme",
+   "unpackedSize": 842992,
+   "fileCount": 49,
+   "deps": 4,
+   "peerDeps": [
+    "three"
+   ],
+   "modified": "2026-07-24T15:25:58.173Z"
+  },
+  {
+   "pkg": "maath",
+   "verified": true,
+   "latest": "0.10.8",
+   "license": "MIT",
+   "description": "[![Discord Shield](https://img.shields.io/discord/740090768164651008?style=flat&colorA=000000&colorB=000000&label=&logo=discord&logoColor=ffffff)](https://discord.gg/poim",
+   "repository": "",
+   "homepage": "",
+   "unpackedSize": 304666,
+   "fileCount": 119,
+   "deps": 0,
+   "peerDeps": [
+    "three",
+    "@types/three"
+   ],
+   "modified": "2026-08-17T15:44:10.707Z"
+  },
+  {
+   "pkg": "leva",
+   "verified": true,
+   "latest": "0.10.1",
+   "license": "MIT",
+   "description": "",
+   "repository": "git+https://github.com/pmndrs/leva.git",
+   "homepage": "https://github.com/pmndrs/leva#readme",
+   "unpackedSize": 677017,
+   "fileCount": 210,
+   "deps": 11,
+   "peerDeps": [
+    "react",
+    "react-dom"
+   ],
+   "modified": "2025-10-31T18:39:54.476Z"
+  },
+  {
+   "pkg": "ogl",
+   "verified": true,
+   "latest": "1.0.11",
+   "license": "Unlicense",
+   "description": "WebGL Library",
+   "repository": "git+https://gordonnl@github.com/oframe/ogl.git",
+   "homepage": "https://github.com/oframe/ogl#readme",
+   "unpackedSize": 423239,
+   "fileCount": 121,
+   "deps": 0,
+   "peerDeps": [],
+   "modified": "2025-01-27T09:59:29.836Z"
+  },
+  {
+   "pkg": "regl",
+   "verified": true,
+   "latest": "2.1.1",
+   "license": "MIT",
+   "description": "regl is a fast functional WebGL framework.",
+   "repository": "git+https://github.com/regl-project/regl.git",
+   "homepage": "https://regl-project.github.io/regl",
+   "unpackedSize": 1213228,
+   "fileCount": 48,
+   "deps": 0,
+   "peerDeps": [],
+   "modified": "2024-11-12T20:15:46.161Z"
+  },
+  {
+   "pkg": "twgl.js",
+   "verified": true,
+   "latest": "7.0.0",
+   "license": "MIT",
+   "description": "A Tiny WebGL helper library",
+   "repository": "git+https://github.com/greggman/twgl.js.git",
+   "homepage": "https://github.com/greggman/twgl.js",
+   "unpackedSize": 1528326,
+   "fileCount": 8,
+   "deps": 0,
+   "peerDeps": [],
+   "modified": "2025-07-16T06:33:05.690Z"
+  },
+  {
+   "pkg": "pixi.js",
+   "verified": true,
+   "latest": "8.22.0",
+   "license": "MIT",
+   "description": "<p align=\"center\">   <a href=\"https://pixijs.com\" target=\"_blank\" rel=\"noopener noreferrer\">     <img height=\"150\" src=\"https://files.pixijs.download/branding/pixijs-logo",
+   "repository": "git+https://github.com/pixijs/pixijs.git",
+   "homepage": "http://pixijs.com/",
+   "unpackedSize": 76274721,
+   "fileCount": 3745,
+   "deps": 10,
+   "peerDeps": [],
+   "modified": "2026-10-10T15:29:40.242Z"
+  },
+  {
+   "pkg": "babylonjs",
+   "verified": true,
+   "latest": "9.30.0",
+   "license": "Apache-2.0",
+   "description": "> We recommend using the [ES6 package `@babylonjs/core`](https://www.npmjs.com/package/@babylonjs/core) for new projects. This UMD package is provided for compatibility.",
+   "repository": "git+https://github.com/BabylonJS/Babylon.js.git",
+   "homepage": "https://www.babylonjs.com",
+   "unpackedSize": 113500150,
+   "fileCount": 19,
+   "deps": 0,
+   "peerDeps": [],
+   "modified": "2026-10-08T07:54:54.876Z"
+  },
+  {
+   "pkg": "@use-gesture/react",
+   "verified": true,
+   "latest": "10.3.1",
+   "license": "MIT",
+   "description": "React target for @use-gesture",
+   "repository": "git+https://github.com/pmndrs/use-gesture.git",
+   "homepage": "https://use-gesture.netlify.app",
+   "unpackedSize": 37189,
+   "fileCount": 32,
+   "deps": 1,
+   "peerDeps": [
+    "react"
+   ],
+   "modified": "2024-03-21T16:16:20.794Z"
+  },
+  {
+   "pkg": "r3f-perf",
+   "verified": true,
+   "latest": "7.2.3",
+   "license": "MIT",
+   "description": "Easily monitor your ThreeJS performances.",
+   "repository": "git+https://github.com/utsuboco/r3f-perf.git",
+   "homepage": "https://github.com/utsuboco/r3f-perf",
+   "unpackedSize": 365572,
+   "fileCount": 83,
+   "deps": 5,
+   "peerDeps": [
+    "@react-three/fiber",
+    "react",
+    "react-dom",
+    "three"
+   ],
+   "modified": "2024-11-08T00:30:31.454Z"
+  },
+  {
+   "pkg": "three-mesh-bvh",
+   "verified": true,
+   "latest": "0.9.16",
+   "license": "MIT",
+   "description": "A BVH implementation to speed up raycasting against three.js meshes.",
+   "repository": "git+https://github.com/gkjohnson/three-mesh-bvh.git",
+   "homepage": "https://github.com/gkjohnson/three-mesh-bvh#readme",
+   "unpackedSize": 2331285,
+   "fileCount": 104,
+   "deps": 0,
+   "peerDeps": [
+    "three"
+   ],
+   "modified": "2026-10-08T05:46:08.286Z"
+  },
+  {
+   "pkg": "meshoptimizer",
+   "verified": true,
+   "latest": "1.3.0",
+   "license": "MIT",
+   "description": "Mesh optimization library that makes meshes smaller and faster to render",
+   "repository": "git+https://github.com/zeux/meshoptimizer.git",
+   "homepage": "https://github.com/zeux/meshoptimizer",
+   "unpackedSize": 313134,
+   "fileCount": 24,
+   "deps": 0,
+   "peerDeps": [],
+   "modified": "2026-09-25T15:42:07.278Z"
+  },
+  {
+   "pkg": "draco3d",
+   "verified": true,
+   "latest": "1.5.7",
+   "license": "Apache-2.0",
+   "description": "Draco is a library for compressing and decompressing 3D geometric meshes and point clouds. It is intended to improve the storage and transmission of 3D graphics.",
+   "repository": "git+https://github.com/google/draco.git",
+   "homepage": "https://github.com/google/draco#readme",
+   "unpackedSize": 873175,
+   "fileCount": 12,
+   "deps": 0,
+   "peerDeps": [],
+   "modified": "2024-01-17T21:57:56.794Z"
+  },
+  {
+   "pkg": "gltfpack",
+   "verified": true,
+   "latest": "1.3.0",
+   "license": "MIT",
+   "description": "A command-line tool that can optimize glTF files for size and speed",
+   "repository": "git+https://github.com/zeux/meshoptimizer.git",
+   "homepage": "https://github.com/zeux/meshoptimizer",
+   "unpackedSize": 348461,
+   "fileCount": 6,
+   "deps": 0,
+   "peerDeps": [],
+   "modified": "2026-09-25T15:42:46.617Z"
+  },
+  {
+   "pkg": "@gltf-transform/core",
+   "verified": true,
+   "latest": "4.5.1",
+   "license": "MIT",
+   "description": "glTF 2.0 SDK for JavaScript and TypeScript, on Web and Node.js.",
+   "repository": "",
+   "homepage": "https://gltf-transform.dev/",
+   "unpackedSize": 1842648,
+   "fileCount": 56,
+   "deps": 1,
+   "peerDeps": [],
+   "modified": "2026-09-28T12:51:13.453Z"
+  },
+  {
+   "pkg": "camera-controls",
+   "verified": true,
+   "latest": "3.1.2",
+   "license": "MIT",
+   "description": "A camera control for three.js, similar to THREE.OrbitControls yet supports smooth transitions and more features.",
+   "repository": "git+https://github.com/yomotsu/camera-controls.git",
+   "homepage": "https://github.com/yomotsu/camera-controls#readme",
+   "unpackedSize": 376206,
+   "fileCount": 7,
+   "deps": 0,
+   "peerDeps": [
+    "three"
+   ],
+   "modified": "2025-11-17T01:53:06.292Z"
+  },
+  {
+   "pkg": "zustand",
+   "verified": true,
+   "latest": "5.0.15",
+   "license": "MIT",
+   "description": "🐻 Bear necessities for state management in React",
+   "repository": "git+https://github.com/pmndrs/zustand.git",
+   "homepage": "https://github.com/pmndrs/zustand",
+   "unpackedSize": 95173,
+   "fileCount": 52,
+   "deps": 0,
+   "peerDeps": [
+    "immer",
+    "react",
+    "@types/react",
+    "use-sync-external-store"
+   ],
+   "modified": "2026-08-13T00:39:55.791Z"
+  },
+  {
+   "pkg": "glslify",
+   "verified": true,
+   "latest": "7.1.1",
+   "license": "MIT",
+   "description": "A node.js-style module system for GLSL!",
+   "repository": "git://github.com/stackgl/glslify.git",
+   "homepage": "https://github.com/stackgl/glslify",
+   "unpackedSize": 36905,
+   "fileCount": 9,
+   "deps": 15,
+   "peerDeps": [],
+   "modified": "2024-12-29T00:47:26.983Z"
+  },
+  {
+   "pkg": "simplex-noise",
+   "verified": true,
+   "latest": "4.0.3",
+   "license": "MIT",
+   "description": "simplex-noise is a fast simplex noise implementation in Javascript. Works in node and in the browser.",
+   "repository": "git+https://github.com/jwagner/simplex-noise.js.git",
+   "homepage": "https://github.com/jwagner/simplex-noise.js",
+   "unpackedSize": 108997,
+   "fileCount": 11,
+   "deps": 0,
+   "peerDeps": [],
+   "modified": "2024-07-26T17:06:41.050Z"
+  },
+  {
+   "pkg": "glsl-noise",
+   "verified": true,
+   "latest": "0.0.0",
+   "license": "MIT",
+   "description": "webgl-noise shaders ported to work with glslify",
+   "repository": "git://github.com/hughsk/glsl-noise.git",
+   "homepage": "",
+   "unpackedSize": null,
+   "fileCount": null,
+   "deps": 0,
+   "peerDeps": [],
+   "modified": "2022-06-18T13:01:09.924Z"
+  },
+  {
+   "pkg": "gl-matrix",
+   "verified": true,
+   "latest": "3.4.4",
+   "license": "MIT",
+   "description": "Javascript Matrix and Vector library for High Performance WebGL apps",
+   "repository": "git+https://github.com/toji/gl-matrix.git",
+   "homepage": "http://glmatrix.net",
+   "unpackedSize": 780912,
+   "fileCount": 38,
+   "deps": 0,
+   "peerDeps": [],
+   "modified": "2025-08-08T20:11:53.993Z"
+  },
+  {
+   "pkg": "lygia",
+   "verified": true,
+   "latest": "1.4.1",
+   "license": "Prosperity License & Patron License (https://lygia.xyz/license)",
+   "description": "lygia, it's a granular and multi-language shader library designed for performance and flexibility",
+   "repository": "git+https://github.com/patriciogonzalezvivo/lygia.git",
+   "homepage": "https://lygia.xyz",
+   "unpackedSize": 4125169,
+   "fileCount": 2740,
+   "deps": 0,
+   "peerDeps": [],
+   "modified": "2026-02-07T18:28:09.772Z"
+  },
+  {
+   "pkg": "gsap",
+   "verified": true,
+   "latest": "3.15.0",
+   "license": "Standard 'no charge' license: https://gsap.com/standard-license.",
+   "description": "GSAP is a framework-agnostic JavaScript animation library that turns developers into animation superheroes. Build high-performance animations that work in **every** major",
+   "repository": "git+https://github.com/greensock/GSAP.git",
+   "homepage": "https://gsap.com",
+   "unpackedSize": 6258071,
+   "fileCount": 179,
+   "deps": 0,
+   "peerDeps": [],
+   "modified": "2026-04-13T13:15:35.906Z"
+  },
+  {
+   "pkg": "framer-motion",
+   "verified": true,
+   "latest": "14.1.0",
+   "license": "MIT",
+   "description": "A simple and powerful JavaScript animation library",
+   "repository": "git+https://github.com/motiondivision/motion.git",
+   "homepage": "https://github.com/motiondivision/motion#readme",
+   "unpackedSize": 5993831,
+   "fileCount": 391,
+   "deps": 3,
+   "peerDeps": [
+    "react",
+    "react-dom"
+   ],
+   "modified": "2026-10-09T19:39:33.049Z"
+  },
+  {
+   "pkg": "motion",
+   "verified": true,
+   "latest": "14.1.0",
+   "license": "MIT",
+   "description": "An animation library for JavaScript and React.",
+   "repository": "git+https://github.com/motiondivision/motion.git",
+   "homepage": "https://github.com/motiondivision/motion#readme",
+   "unpackedSize": 757064,
+   "fileCount": 40,
+   "deps": 2,
+   "peerDeps": [
+    "react",
+    "react-dom"
+   ],
+   "modified": "2026-10-09T19:38:44.022Z"
+  },
+  {
+   "pkg": "@theatre/core",
+   "verified": true,
+   "latest": "0.7.2",
+   "license": "Apache-2.0",
+   "description": "Motion design editor for the web",
+   "repository": "https://github.com/AriaMinaei/theatre",
+   "homepage": "",
+   "unpackedSize": 903189,
+   "fileCount": 6,
+   "deps": 1,
+   "peerDeps": [],
+   "modified": "2024-05-19T14:29:57.804Z"
+  },
+  {
+   "pkg": "@theatre/studio",
+   "verified": true,
+   "latest": "0.7.2",
+   "license": "AGPL-3.0-only",
+   "description": "Motion design editor for the web",
+   "repository": "https://github.com/AriaMinaei/theatre",
+   "homepage": "",
+   "unpackedSize": 22283657,
+   "fileCount": 6,
+   "deps": 1,
+   "peerDeps": [
+    "@theatre/core"
+   ],
+   "modified": "2024-05-19T14:30:39.587Z"
+  },
+  {
+   "pkg": "lenis",
+   "verified": true,
+   "latest": "1.3.26",
+   "license": "MIT",
+   "description": "How smooth scroll should be",
+   "repository": "git+https://github.com/darkroomengineering/lenis.git",
+   "homepage": "https://github.com/darkroomengineering/lenis",
+   "unpackedSize": 457528,
+   "fileCount": 26,
+   "deps": 0,
+   "peerDeps": [
+    "vue",
+    "react",
+    "@nuxt/kit"
+   ],
+   "modified": "2026-09-18T10:04:56.009Z"
+  },
+  {
+   "pkg": "@studio-freight/lenis",
+   "verified": true,
+   "latest": "1.0.42",
+   "license": "MIT",
+   "description": "Lenis is a smooth scroll library to normalize and smooth the scrolling experience across devices",
+   "repository": "git+https://github.com/darkroomengineering/lenis.git",
+   "homepage": "https://github.com/darkroomengineering/lenis#readme",
+   "unpackedSize": 214564,
+   "fileCount": 17,
+   "deps": 0,
+   "peerDeps": [],
+   "modified": "2025-04-25T13:30:08.098Z"
+  },
+  {
+   "pkg": "locomotive-scroll",
+   "verified": true,
+   "latest": "5.0.1",
+   "license": "MIT",
+   "description": "Detection of elements in viewport & smooth scrolling with parallax effects.",
+   "repository": "git+https://github.com/locomotivemtl/locomotive-scroll.git",
+   "homepage": "https://github.com/locomotivemtl/locomotive-scroll",
+   "unpackedSize": 525942,
+   "fileCount": 26,
+   "deps": 1,
+   "peerDeps": [],
+   "modified": "2026-01-15T21:43:54.235Z"
+  },
+  {
+   "pkg": "scrollama",
+   "verified": true,
+   "latest": "3.2.0",
+   "license": "MIT",
+   "description": "Lightweight scrollytelling library using IntersectionObserver",
+   "repository": "git+https://github.com/russellgoldenberg/scrollama.git",
+   "homepage": "https://github.com/russellgoldenberg/scrollama#readme",
+   "unpackedSize": 369697,
+   "fileCount": 40,
+   "deps": 0,
+   "peerDeps": [],
+   "modified": "2022-10-14T13:55:53.302Z"
+  },
+  {
+   "pkg": "animejs",
+   "verified": true,
+   "latest": "4.5.0",
+   "license": "MIT",
+   "description": "JavaScript animation engine",
+   "repository": "git+https://github.com/juliangarnier/anime.git",
+   "homepage": "https://animejs.com",
+   "unpackedSize": 2126307,
+   "fileCount": 215,
+   "deps": 0,
+   "peerDeps": [
+    "three",
+    "@types/three"
+   ],
+   "modified": "2026-08-17T22:21:22.481Z"
+  },
+  {
+   "pkg": "popmotion",
+   "verified": true,
+   "latest": "11.0.5",
+   "license": "MIT",
+   "description": "The animator's toolbox",
+   "repository": "https://github.com/Popmotion/popmotion/tree/master/packages/popmotion",
+   "homepage": "https://popmotion.io/",
+   "unpackedSize": 304115,
+   "fileCount": 156,
+   "deps": 4,
+   "peerDeps": [],
+   "modified": "2022-08-15T12:37:19.940Z"
+  },
+  {
+   "pkg": "tween.js",
+   "verified": true,
+   "latest": "16.6.0",
+   "license": "MIT",
+   "description": "Super simple, fast and easy to use tweening engine which incorporates optimised Robert Penner's equations.",
+   "repository": "git+https://github.com/tweenjs/tween.js.git",
+   "homepage": "https://github.com/tweenjs/tween.js",
+   "unpackedSize": null,
+   "fileCount": null,
+   "deps": 0,
+   "peerDeps": [],
+   "modified": "2023-11-07T05:03:14.818Z"
+  },
+  {
+   "pkg": "@tweenjs/tween.js",
+   "verified": true,
+   "latest": "25.0.0",
+   "license": "MIT",
+   "description": "Simple and fast tweening engine with optimised Robert Penner's equations.",
+   "repository": "git+https://github.com/tweenjs/tween.js.git",
+   "homepage": "https://github.com/tweenjs/tween.js",
+   "unpackedSize": 223658,
+   "fileCount": 8,
+   "deps": 0,
+   "peerDeps": [],
+   "modified": "2024-07-26T04:45:13.838Z"
+  },
+  {
+   "pkg": "react-spring",
+   "verified": true,
+   "latest": "10.0.4",
+   "license": "MIT",
+   "description": "<p align=\"center\">   <img src=\"https://i.imgur.com/QZownhg.png\" width=\"240\" /> </p>",
+   "repository": "git+https://github.com/pmndrs/react-spring.git",
+   "homepage": "https://github.com/pmndrs/react-spring#readme",
+   "unpackedSize": 7228,
+   "fileCount": 12,
+   "deps": 6,
+   "peerDeps": [
+    "react",
+    "react-dom"
+   ],
+   "modified": "2026-05-22T15:20:17.102Z"
+  },
+  {
+   "pkg": "@react-spring/web",
+   "verified": true,
+   "latest": "10.1.2",
+   "license": "MIT",
+   "description": "`react-dom` support",
+   "repository": "git+https://github.com/pmndrs/react-spring.git",
+   "homepage": "https://github.com/pmndrs/react-spring#readme",
+   "unpackedSize": 56188,
+   "fileCount": 12,
+   "deps": 5,
+   "peerDeps": [
+    "react",
+    "react-dom"
+   ],
+   "modified": "2026-10-01T07:43:47.159Z"
+  },
+  {
+   "pkg": "react-use-gesture",
+   "verified": true,
+   "latest": "9.1.3",
+   "license": "MIT",
+   "description": "React hook for receiving gestures https://use-gesture.netlify.app",
+   "repository": "git+https://github.com/pmndrs/react-use-gesture.git",
+   "homepage": "https://use-gesture.netlify.app",
+   "unpackedSize": 1066653,
+   "fileCount": 45,
+   "deps": 0,
+   "peerDeps": [
+    "react"
+   ],
+   "modified": "2022-05-15T07:04:27.644Z"
+  },
+  {
+   "pkg": "split-type",
+   "verified": true,
+   "latest": "0.3.4",
+   "license": "ISC",
+   "description": "A javascript library that splits plain text into individual lines, words, and characters.",
+   "repository": "git+https://github.com/lukePeavey/SplitType.git",
+   "homepage": "https://github.com/lukePeavey/SplitType#readme",
+   "unpackedSize": 158805,
+   "fileCount": 30,
+   "deps": 0,
+   "peerDeps": [],
+   "modified": "2023-10-22T10:44:44.508Z"
+  },
+  {
+   "pkg": "splitting",
+   "verified": true,
+   "latest": "1.1.0",
+   "license": "MIT",
+   "description": "Micro-library to split a DOM element's words & chars into elements populated with CSS vars.",
+   "repository": "git+https://github.com/shshaw/splitting.git",
+   "homepage": "https://splitting.js.org",
+   "unpackedSize": 37442,
+   "fileCount": 9,
+   "deps": 0,
+   "peerDeps": [],
+   "modified": "2024-05-31T19:00:06.186Z"
+  },
+  {
+   "pkg": "rematrix",
+   "verified": true,
+   "latest": "0.7.2",
+   "license": "MIT",
+   "description": "Matrix transformations made easy",
+   "repository": "git+https://github.com/jlmakes/rematrix.git",
+   "homepage": "https://github.com/jlmakes/rematrix#readme",
+   "unpackedSize": 45769,
+   "fileCount": 8,
+   "deps": 0,
+   "peerDeps": [],
+   "modified": "2022-06-26T11:04:47.473Z"
+  },
+  {
+   "pkg": "framer-motion-3d",
+   "verified": true,
+   "latest": "12.4.13",
+   "license": "MIT",
+   "description": "A simple and powerful React animation library for @react-three/fiber",
+   "repository": "git+https://github.com/motiondivision/motion.git",
+   "homepage": "https://github.com/motiondivision/motion#readme",
+   "unpackedSize": 51235,
+   "fileCount": 20,
+   "deps": 2,
+   "peerDeps": [
+    "react",
+    "three",
+    "react-dom",
+    "@react-three/fiber"
+   ],
+   "modified": "2026-09-14T13:45:33.556Z"
+  },
+  {
+   "pkg": "auto-animate",
+   "verified": false,
+   "status": 404
+  },
+  {
+   "pkg": "@formkit/auto-animate",
+   "verified": true,
+   "latest": "0.10.0",
+   "license": "MIT",
+   "description": "Add motion to your apps with a single line of code.",
+   "repository": "git+https://github.com/formkit/auto-animate.git",
+   "homepage": "https://github.com/formkit/auto-animate#readme",
+   "unpackedSize": 59207,
+   "fileCount": 27,
+   "deps": 0,
+   "peerDeps": [],
+   "modified": "2026-07-10T16:00:46.331Z"
+  },
+  {
+   "pkg": "next-view-transitions",
+   "verified": true,
+   "latest": "0.3.5",
+   "license": "MIT",
+   "description": "View Transitions API for Next.js App Router",
+   "repository": "",
+   "homepage": "https://next-view-transitions.vercel.app",
+   "unpackedSize": 13260,
+   "fileCount": 5,
+   "deps": 0,
+   "peerDeps": [
+    "next",
+    "react",
+    "react-dom"
+   ],
+   "modified": "2025-12-05T20:37:07.181Z"
+  },
+  {
+   "pkg": "@barba/core",
+   "verified": true,
+   "latest": "2.10.3",
+   "license": "MIT",
+   "description": "Create badass, fluid and smooth transition between your website's pages",
+   "repository": "git+ssh://git@github.com/barbajs/barba.git",
+   "homepage": "https://github.com/barbajs/barba#readme",
+   "unpackedSize": 704833,
+   "fileCount": 87,
+   "deps": 2,
+   "peerDeps": [],
+   "modified": "2024-08-12T08:28:16.732Z"
+  },
+  {
+   "pkg": "swup",
+   "verified": true,
+   "latest": "4.10.0",
+   "license": "MIT",
+   "description": "Versatile and extensible page transition library for server-rendered websites",
+   "repository": "git+https://github.com/swup/swup.git",
+   "homepage": "https://swup.js.org",
+   "unpackedSize": 705208,
+   "fileCount": 92,
+   "deps": 2,
+   "peerDeps": [],
+   "modified": "2026-09-03T12:32:32.071Z"
+  },
+  {
+   "pkg": "highway.js",
+   "verified": true,
+   "latest": "1.0.10",
+   "license": "MIT",
+   "description": "Highway is an light-weight JS Page Loader",
+   "repository": "git+https://github.com/Anthodpnt/Highway.git",
+   "homepage": "https://github.com/Anthodpnt/Highway#readme",
+   "unpackedSize": null,
+   "fileCount": null,
+   "deps": 0,
+   "peerDeps": [],
+   "modified": "2022-06-18T20:44:47.656Z"
+  },
+  {
+   "pkg": "@radix-ui/react-dialog",
+   "verified": true,
+   "latest": "1.2.0",
+   "license": "MIT",
+   "description": "",
+   "repository": "git+https://github.com/radix-ui/primitives.git",
+   "homepage": "https://radix-ui.com/primitives",
+   "unpackedSize": 106332,
+   "fileCount": 9,
+   "deps": 15,
+   "peerDeps": [
+    "react",
+    "react-dom",
+    "@types/react",
+    "@types/react-dom"
+   ],
+   "modified": "2026-10-11T18:25:23.216Z"
+  },
+  {
+   "pkg": "@radix-ui/react-tabs",
+   "verified": true,
+   "latest": "1.1.22",
+   "license": "MIT",
+   "description": "",
+   "repository": "git+https://github.com/radix-ui/primitives.git",
+   "homepage": "https://radix-ui.com/primitives",
+   "unpackedSize": 55159,
+   "fileCount": 9,
+   "deps": 8,
+   "peerDeps": [
+    "react",
+    "react-dom",
+    "@types/react",
+    "@types/react-dom"
+   ],
+   "modified": "2026-10-11T18:26:15.062Z"
+  },
+  {
+   "pkg": "@radix-ui/react-accordion",
+   "verified": true,
+   "latest": "1.2.21",
+   "license": "MIT",
+   "description": "",
+   "repository": "git+https://github.com/radix-ui/primitives.git",
+   "homepage": "https://radix-ui.com/primitives",
+   "unpackedSize": 94158,
+   "fileCount": 9,
+   "deps": 9,
+   "peerDeps": [
+    "react",
+    "react-dom",
+    "@types/react",
+    "@types/react-dom"
+   ],
+   "modified": "2026-10-11T18:24:42.940Z"
+  },
+  {
+   "pkg": "cmdk",
+   "verified": true,
+   "latest": "1.1.1",
+   "license": "MIT",
+   "description": "<p align=\"center\"> <img src=\"./website/public/og.png\" /> </p>",
+   "repository": "git+https://github.com/pacocoursey/cmdk.git",
+   "homepage": "https://github.com/pacocoursey/cmdk#readme",
+   "unpackedSize": 81852,
+   "fileCount": 13,
+   "deps": 4,
+   "peerDeps": [
+    "react",
+    "react-dom"
+   ],
+   "modified": "2025-08-27T19:56:17.142Z"
+  },
+  {
+   "pkg": "vaul",
+   "verified": true,
+   "latest": "1.1.2",
+   "license": "MIT",
+   "description": "Drawer component for React.",
+   "repository": "git+https://github.com/emilkowalski/vaul.git",
+   "homepage": "https://vaul.emilkowal.ski/",
+   "unpackedSize": 184301,
+   "fileCount": 8,
+   "deps": 1,
+   "peerDeps": [
+    "react",
+    "react-dom"
+   ],
+   "modified": "2024-12-14T00:56:01.059Z"
+  },
+  {
+   "pkg": "sonner",
+   "verified": true,
+   "latest": "2.0.8",
+   "license": "MIT",
+   "description": "An opinionated toast component for React.",
+   "repository": "git+https://github.com/emilkowalski/sonner.git",
+   "homepage": "https://sonner.emilkowal.ski/",
+   "unpackedSize": 174012,
+   "fileCount": 8,
+   "deps": 0,
+   "peerDeps": [
+    "react",
+    "react-dom",
+    "@types/react"
+   ],
+   "modified": "2026-08-09T08:46:10.361Z"
+  },
+  {
+   "pkg": "react-aria",
+   "verified": true,
+   "latest": "3.53.1",
+   "license": "Apache-2.0",
+   "description": "Spectrum UI components in React",
+   "repository": "git+https://github.com/adobe/react-spectrum.git",
+   "homepage": "https://github.com/adobe/react-spectrum#readme",
+   "unpackedSize": 15746744,
+   "fileCount": 7258,
+   "deps": 9,
+   "peerDeps": [
+    "react",
+    "react-dom"
+   ],
+   "modified": "2026-10-09T20:26:20.102Z"
+  },
+  {
+   "pkg": "@react-aria/focus",
+   "verified": true,
+   "latest": "3.22.1",
+   "license": "Apache-2.0",
+   "description": "Spectrum UI components in React",
+   "repository": "git+https://github.com/adobe/react-spectrum.git",
+   "homepage": "https://github.com/adobe/react-spectrum#readme",
+   "unpackedSize": 30950,
+   "fileCount": 10,
+   "deps": 2,
+   "peerDeps": [
+    "react",
+    "react-dom"
+   ],
+   "modified": "2026-10-08T09:08:38.872Z"
+  },
+  {
+   "pkg": "focus-trap",
+   "verified": true,
+   "latest": "8.2.3",
+   "license": "MIT",
+   "description": "Trap focus within a DOM node.",
+   "repository": "git+https://github.com/focus-trap/focus-trap.git",
+   "homepage": "https://github.com/focus-trap/focus-trap#readme",
+   "unpackedSize": 835448,
+   "fileCount": 19,
+   "deps": 1,
+   "peerDeps": [],
+   "modified": "2026-10-04T22:26:18.891Z"
+  },
+  {
+   "pkg": "tailwind-merge",
+   "verified": true,
+   "latest": "3.7.0",
+   "license": "MIT",
+   "description": "Merge Tailwind CSS classes without style conflicts",
+   "repository": "https://github.com/dcastil/tailwind-merge.git",
+   "homepage": "https://github.com/dcastil/tailwind-merge",
+   "unpackedSize": 1052654,
+   "fileCount": 36,
+   "deps": 0,
+   "peerDeps": [],
+   "modified": "2026-10-11T13:28:51.500Z"
+  },
+  {
+   "pkg": "clsx",
+   "verified": true,
+   "latest": "2.1.1",
+   "license": "MIT",
+   "description": "A tiny (239B) utility for constructing className strings conditionally.",
+   "repository": "git+https://github.com/lukeed/clsx.git",
+   "homepage": "https://github.com/lukeed/clsx#readme",
+   "unpackedSize": 8555,
+   "fileCount": 10,
+   "deps": 0,
+   "peerDeps": [],
+   "modified": "2026-09-18T13:52:35.035Z"
+  },
+  {
+   "pkg": "class-variance-authority",
+   "verified": true,
+   "latest": "0.7.1",
+   "license": "Apache-2.0",
+   "description": "Class Variance Authority 🧬",
+   "repository": "git+https://github.com/joe-bell/cva.git",
+   "homepage": "https://github.com/joe-bell/cva#readme",
+   "unpackedSize": 22073,
+   "fileCount": 9,
+   "deps": 1,
+   "peerDeps": [],
+   "modified": "2024-11-26T08:20:34.776Z"
+  },
+  {
+   "pkg": "d3",
+   "verified": true,
+   "latest": "7.9.0",
+   "license": "ISC",
+   "description": "Data-Driven Documents",
+   "repository": "git+https://github.com/d3/d3.git",
+   "homepage": "https://d3js.org",
+   "unpackedSize": 871285,
+   "fileCount": 6,
+   "deps": 30,
+   "peerDeps": [],
+   "modified": "2025-05-17T15:07:03.565Z"
+  },
+  {
+   "pkg": "d3-scale",
+   "verified": true,
+   "latest": "4.0.2",
+   "license": "ISC",
+   "description": "Encodings that map abstract data to visual representation.",
+   "repository": "git+https://github.com/d3/d3-scale.git",
+   "homepage": "https://d3js.org/d3-scale/",
+   "unpackedSize": 174363,
+   "fileCount": 29,
+   "deps": 5,
+   "peerDeps": [],
+   "modified": "2023-04-12T04:39:57.280Z"
+  },
+  {
+   "pkg": "d3-shape",
+   "verified": true,
+   "latest": "3.2.0",
+   "license": "ISC",
+   "description": "Graphical primitives for visualization, such as lines and areas.",
+   "repository": "git+https://github.com/d3/d3-shape.git",
+   "homepage": "https://d3js.org/d3-shape/",
+   "unpackedSize": 247267,
+   "fileCount": 65,
+   "deps": 1,
+   "peerDeps": [],
+   "modified": "2023-04-12T04:39:59.194Z"
+  },
+  {
+   "pkg": "d3-force",
+   "verified": true,
+   "latest": "3.0.0",
+   "license": "ISC",
+   "description": "Force-directed graph layout using velocity Verlet integration.",
+   "repository": "git+https://github.com/d3/d3-force.git",
+   "homepage": "https://d3js.org/d3-force/",
+   "unpackedSize": 89551,
+   "fileCount": 17,
+   "deps": 3,
+   "peerDeps": [],
+   "modified": "2022-06-14T07:40:53.381Z"
+  },
+  {
+   "pkg": "visx",
+   "verified": false,
+   "status": 404
+  },
+  {
+   "pkg": "recharts",
+   "verified": true,
+   "latest": "3.10.1",
+   "license": "MIT",
+   "description": "React charts",
+   "repository": "git+https://github.com/recharts/recharts.git",
+   "homepage": "https://github.com/recharts/recharts",
+   "unpackedSize": 7452998,
+   "fileCount": 839,
+   "deps": 11,
+   "peerDeps": [
+    "react",
+    "react-is",
+    "react-dom"
+   ],
+   "modified": "2026-10-03T12:07:42.139Z"
+  },
+  {
+   "pkg": "flubber",
+   "verified": true,
+   "latest": "0.4.2",
+   "license": "MIT",
+   "description": "Best-guess methods for smoothly interpolating and animating between shapes.",
+   "repository": "git+https://github.com/veltman/flubber.git",
+   "homepage": "https://github.com/veltman/flubber#readme",
+   "unpackedSize": 88120,
+   "fileCount": 17,
+   "deps": 6,
+   "peerDeps": [],
+   "modified": "2022-06-18T02:23:48.156Z"
+  },
+  {
+   "pkg": "rough-notation",
+   "verified": true,
+   "latest": "0.5.1",
+   "license": "MIT",
+   "description": "Create and animate hand-drawn annotations on a web page",
+   "repository": "git+https://github.com/pshihn/rough-notation.git",
+   "homepage": "https://github.com/pshihn/rough-notation#readme",
+   "unpackedSize": 63172,
+   "fileCount": 16,
+   "deps": 0,
+   "peerDeps": [],
+   "modified": "2022-05-16T05:26:41.077Z"
+  },
+  {
+   "pkg": "web-vitals",
+   "verified": true,
+   "latest": "6.2.3",
+   "license": "Apache-2.0",
+   "description": "Easily measure performance metrics in JavaScript",
+   "repository": "git+https://github.com/GoogleChrome/web-vitals.git",
+   "homepage": "https://github.com/GoogleChrome/web-vitals#readme",
+   "unpackedSize": 1194321,
+   "fileCount": 177,
+   "deps": 0,
+   "peerDeps": [],
+   "modified": "2026-10-05T10:03:40.735Z"
+  },
+  {
+   "pkg": "stats.js",
+   "verified": true,
+   "latest": "0.17.0",
+   "license": "MIT",
+   "description": "JavaScript Performance Monitor",
+   "repository": "git+https://github.com/mrdoob/stats.js.git",
+   "homepage": "https://github.com/mrdoob/stats.js",
+   "unpackedSize": null,
+   "fileCount": null,
+   "deps": 0,
+   "peerDeps": [],
+   "modified": "2022-06-27T00:07:44.614Z"
+  },
+  {
+   "pkg": "detect-gpu",
+   "verified": true,
+   "latest": "5.0.70",
+   "license": "MIT",
+   "description": "Classify GPU's based on their benchmark score in order to provide an adaptive experience.",
+   "repository": "git+https://github.com/pmndrs/detect-gpu.git",
+   "homepage": "https://github.com/pmndrs/detect-gpu#readme",
+   "unpackedSize": 979135,
+   "fileCount": 38,
+   "deps": 1,
+   "peerDeps": [],
+   "modified": "2025-02-26T15:49:49.718Z"
+  },
+  {
+   "pkg": "comlink",
+   "verified": true,
+   "latest": "4.4.2",
+   "license": "Apache-2.0",
+   "description": "Comlink makes WebWorkers enjoyable",
+   "repository": "git+https://github.com/GoogleChromeLabs/comlink.git",
+   "homepage": "https://github.com/GoogleChromeLabs/comlink#readme",
+   "unpackedSize": 252242,
+   "fileCount": 82,
+   "deps": 0,
+   "peerDeps": [],
+   "modified": "2024-11-07T12:34:03.384Z"
+  },
+  {
+   "pkg": "workerpool",
+   "verified": true,
+   "latest": "10.0.3",
+   "license": "Apache-2.0",
+   "description": "Offload tasks to a pool of workers on node.js and in the browser",
+   "repository": "git://github.com/josdejong/workerpool.git",
+   "homepage": "https://github.com/josdejong/workerpool",
+   "unpackedSize": 619361,
+   "fileCount": 52,
+   "deps": 0,
+   "peerDeps": [],
+   "modified": "2026-07-01T08:31:34.038Z"
+  },
+  {
+   "pkg": "partytown",
+   "verified": true,
+   "latest": "0.0.0",
+   "license": "ISC",
+   "description": "",
+   "repository": "",
+   "homepage": "",
+   "unpackedSize": 205,
+   "fileCount": 1,
+   "deps": 0,
+   "peerDeps": [],
+   "modified": "2024-11-19T22:31:55.322Z"
+  },
+  {
+   "pkg": "@builder.io/partytown",
+   "verified": true,
+   "latest": "0.10.3",
+   "license": "MIT",
+   "description": "Relocate resource intensive third-party scripts off of the main thread and into a web worker.",
+   "repository": "git+https://github.com/BuilderIO/partytown.git",
+   "homepage": "https://github.com/BuilderIO/partytown#readme",
+   "unpackedSize": 393984,
+   "fileCount": 31,
+   "deps": 0,
+   "peerDeps": [],
+   "modified": "2026-09-09T09:16:52.556Z"
+  },
+  {
+   "pkg": "sharp",
+   "verified": true,
+   "latest": "0.35.5",
+   "license": "Apache-2.0",
+   "description": "High performance Node.js image processing, the fastest module to resize JPEG, PNG, WebP, GIF, AVIF and TIFF images",
+   "repository": "git+https://github.com/lovell/sharp.git",
+   "homepage": "https://sharp.pixelplumbing.com",
+   "unpackedSize": 962168,
+   "fileCount": 47,
+   "deps": 3,
+   "peerDeps": [],
+   "modified": "2026-09-27T13:46:24.838Z"
+  },
+  {
+   "pkg": "blurhash",
+   "verified": true,
+   "latest": "2.0.5",
+   "license": "MIT",
+   "description": "Encoder and decoder for the Wolt BlurHash algorithm.",
+   "repository": "https://github.com/woltapp/blurhash/tree/master/TypeScript",
+   "homepage": "https://blurha.sh/",
+   "unpackedSize": 58793,
+   "fileCount": 13,
+   "deps": 0,
+   "peerDeps": [],
+   "modified": "2024-10-28T09:52:01.081Z"
+  },
+  {
+   "pkg": "thumbhash",
+   "verified": true,
+   "latest": "0.1.1",
+   "license": "MIT",
+   "description": "A very compact representation of an image placeholder",
+   "repository": "git+https://github.com/evanw/thumbhash.git",
+   "homepage": "https://github.com/evanw/thumbhash#readme",
+   "unpackedSize": 12852,
+   "fileCount": 4,
+   "deps": 0,
+   "peerDeps": [],
+   "modified": "2023-03-22T07:35:37.217Z"
+  },
+  {
+   "pkg": "plaiceholder",
+   "verified": true,
+   "latest": "3.0.0",
+   "license": "Apache-2.0",
+   "description": "Beautiful image placeholders, without the hassle.",
+   "repository": "git+https://github.com/joe-bell/plaiceholder.git",
+   "homepage": "https://github.com/joe-bell/plaiceholder#readme",
+   "unpackedSize": 43259,
+   "fileCount": 6,
+   "deps": 0,
+   "peerDeps": [
+    "sharp"
+   ],
+   "modified": "2023-05-24T08:17:42.402Z"
+  },
+  {
+   "pkg": "hotkeys-js",
+   "verified": true,
+   "latest": "4.0.8",
+   "license": "MIT",
+   "description": "A simple micro-library for defining and dispatching keyboard shortcuts. It has no dependencies.",
+   "repository": "git+https://github.com/jaywcjlove/hotkeys-js.git",
+   "homepage": "https://jaywcjlove.github.io/hotkeys-js",
+   "unpackedSize": 4932456,
+   "fileCount": 40,
+   "deps": 0,
+   "peerDeps": [],
+   "modified": "2026-09-09T16:35:22.440Z"
+  },
+  {
+   "pkg": "tinykeys",
+   "verified": true,
+   "latest": "4.0.1",
+   "license": "MIT",
+   "description": "A tiny (~1KB) & modern library for keybindings.",
+   "repository": "git+https://github.com/jamiebuilds/tinykeys.git",
+   "homepage": "https://github.com/jamiebuilds/tinykeys#readme",
+   "unpackedSize": 77523,
+   "fileCount": 11,
+   "deps": 0,
+   "peerDeps": [],
+   "modified": "2026-09-25T21:05:04.606Z"
+  },
+  {
+   "pkg": "embla-carousel",
+   "verified": true,
+   "latest": "8.6.0",
+   "license": "MIT",
+   "description": "A lightweight carousel library with fluid motion and great swipe precision",
+   "repository": "git+https://github.com/davidjerleke/embla-carousel",
+   "homepage": "https://www.embla-carousel.com",
+   "unpackedSize": 489743,
+   "fileCount": 123,
+   "deps": 0,
+   "peerDeps": [],
+   "modified": "2026-10-08T11:32:41.104Z"
+  },
+  {
+   "pkg": "keen-slider",
+   "verified": true,
+   "latest": "6.8.6",
+   "license": "MIT",
+   "description": "The HTML touch slider carousel with the most native feeling you will get.",
+   "repository": "git+https://github.com/rcbyr/keen-slider.git",
+   "homepage": "https://keen-slider.io",
+   "unpackedSize": 169641,
+   "fileCount": 21,
+   "deps": 0,
+   "peerDeps": [],
+   "modified": "2023-07-05T14:31:25.648Z"
+  },
+  {
+   "pkg": "matter-js",
+   "verified": true,
+   "latest": "0.20.0",
+   "license": "MIT",
+   "description": "a 2D rigid body physics engine for the web",
+   "repository": "git+https://github.com/liabru/matter-js.git",
+   "homepage": "http://brm.io/matter-js/",
+   "unpackedSize": 926734,
+   "fileCount": 38,
+   "deps": 0,
+   "peerDeps": [],
+   "modified": "2024-06-23T22:26:35.538Z"
+  },
+  {
+   "pkg": "cannon-es",
+   "verified": true,
+   "latest": "0.20.0",
+   "license": "MIT",
+   "description": "A lightweight 3D physics engine written in JavaScript.",
+   "repository": "https://github.com/pmndrs/cannon-es.git",
+   "homepage": "https://github.com/schteppe/cannon.js",
+   "unpackedSize": 773946,
+   "fileCount": 8,
+   "deps": 0,
+   "peerDeps": [],
+   "modified": "2022-08-12T16:46:01.002Z"
+  },
+  {
+   "pkg": "rapier2d",
+   "verified": false,
+   "status": 404
+  },
+  {
+   "pkg": "@dimforge/rapier3d-compat",
+   "verified": true,
+   "latest": "0.21.0",
+   "license": "Apache-2.0",
+   "description": "3-dimensional physics engine in Rust - official JS bindings. Compatibility package with inlined webassembly as base64.",
+   "repository": "git+https://github.com/dimforge/rapier.git",
+   "homepage": "https://rapier.rs",
+   "unpackedSize": 15038573,
+   "fileCount": 54,
+   "deps": 0,
+   "peerDeps": [],
+   "modified": "2026-09-25T08:46:24.048Z"
+  }
+ ],
+ "github": [
+  {
+   "owner": "mrdoob",
+   "repo": "three.js",
+   "url": "https://github.com/mrdoob/three.js",
+   "branch": "dev",
+   "filesRead": [
+    {
+     "path": "README.md",
+     "bytes": 2969,
+     "head": "# three.js [![NPM Package][npm]][npm-url] [![Build Size][build-size]][build-size-url] [![NPM Downloads][npm-downloads]][npmtrends-url] [![jsDelivr Downloads][jsdelivr-downloads]][jsdelivr-url] [![Discord][discord]][discord-url] #### JavaScript 3D library Th"
+    },
+    {
+     "path": "LICENSE",
+     "bytes": 1080,
+     "head": "The MIT License Copyright © 2010-2026 three.js authors Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including w"
+    },
+    {
+     "path": "package.json",
+     "bytes": 3812,
+     "head": "{ \"name\": \"three\", \"version\": \"0.186.0\", \"description\": \"JavaScript 3D library\", \"type\": \"module\", \"main\": \"./build/three.cjs\", \"module\": \"./build/three.module.js\", \"exports\": { \".\": { \"import\": \"./build/three.module.js\", \"require"
+    }
+   ],
+   "filesFailed": [],
+   "licenseDetected": "MIT",
+   "pkgLicense": "MIT",
+   "pkgVersion": "0.186.0",
+   "pkgName": "three",
+   "verified": true
+  },
+  {
+   "owner": "pmndrs",
+   "repo": "react-three-fiber",
+   "url": "https://github.com/pmndrs/react-three-fiber",
+   "branch": "master",
+   "filesRead": [
+    {
+     "path": "LICENSE",
+     "bytes": 1072,
+     "head": "MIT License Copyright (c) 2019-2025 Poimandres Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without l"
+    },
+    {
+     "path": "package.json",
+     "bytes": 2933,
+     "head": "{ \"name\": \"react-three-fiber--root\", \"version\": \"0.0.0\", \"license\": \"MIT\", \"private\": true, \"workspaces\": [ \"packages/*\", \"example\" ], \"husky\": { \"hooks\": { \"pre-commit\": \"lint-staged\" } }, \"preconstruct\": { \"package"
+    }
+   ],
+   "filesFailed": [
+    {
+     "path": "README.md",
+     "status": 404
+    }
+   ],
+   "licenseDetected": "MIT",
+   "pkgLicense": "MIT",
+   "pkgVersion": "0.0.0",
+   "pkgName": "react-three-fiber--root",
+   "verified": true
+  },
+  {
+   "owner": "pmndrs",
+   "repo": "drei",
+   "url": "https://github.com/pmndrs/drei",
+   "branch": "master",
+   "filesRead": [
+    {
+     "path": "README.md",
+     "bytes": 27833,
+     "head": "[![Storybook](https://img.shields.io/static/v1?message=Storybook&style=flat&colorA=000000&colorB=000000&label=&logo=storybook&logoColor=ffffff)](https://drei.pmnd.rs/) [![](https://img.shields.io/badge/chromatic-171c23.svg?style=flat&colorA=000000&colorB=00000"
+    },
+    {
+     "path": "LICENSE",
+     "bytes": 1069,
+     "head": "MIT License Copyright (c) 2020 react-spring Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limi"
+    }
+   ],
+   "filesFailed": [],
+   "licenseDetected": "MIT",
+   "verified": true
+  },
+  {
+   "owner": "pmndrs",
+   "repo": "postprocessing",
+   "url": "https://github.com/pmndrs/postprocessing",
+   "branch": "main",
+   "filesRead": [
+    {
+     "path": "README.md",
+     "bytes": 7526,
+     "head": "# Post Processing [![CI](https://github.com/pmndrs/postprocessing/actions/workflows/ci.yml/badge.svg)](https://github.com/pmndrs/postprocessing/actions/workflows/ci.yml) [![Version](https://badgen.net/npm/v/postprocessing?color=green)](https://www.npmjs.com/p"
+    }
+   ],
+   "filesFailed": [],
+   "verified": true
+  },
+  {
+   "owner": "pmndrs",
+   "repo": "maath",
+   "url": "https://github.com/pmndrs/maath",
+   "branch": "main",
+   "filesRead": [
+    {
+     "path": "README.md",
+     "bytes": 11320,
+     "head": "<p align=\"center\"> <img src=\"./assets/readme-header.gif\" alt=\"npm i math, surrounded by softly shimmering stars\" width=\"100%\" /> </p> # math Math is the playful web's math engine. - **High performance**: allocation-free, monomorphic, benchmarked - **Tiny*"
+    },
+    {
+     "path": "LICENSE",
+     "bytes": 1070,
+     "head": "The MIT License Copyright © 2026 Isaac Mason Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without lim"
+    }
+   ],
+   "filesFailed": [],
+   "licenseDetected": "MIT",
+   "verified": true
+  },
+  {
+   "owner": "pmndrs",
+   "repo": "zustand",
+   "url": "https://github.com/pmndrs/zustand",
+   "branch": "main",
+   "filesRead": [
+    {
+     "path": "LICENSE",
+     "bytes": 1070,
+     "head": "MIT License Copyright (c) 2019 Paul Henschel Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without lim"
+    }
+   ],
+   "filesFailed": [
+    {
+     "path": "readme.md",
+     "status": 404
+    }
+   ],
+   "licenseDetected": "MIT",
+   "verified": true
+  },
+  {
+   "owner": "pmndrs",
+   "repo": "detect-gpu",
+   "url": "https://github.com/pmndrs/detect-gpu",
+   "branch": "master",
+   "filesRead": [
+    {
+     "path": "README.md",
+     "bytes": 5809,
+     "head": "# @pmndrs/detect-gpu [![npm version](https://img.shields.io/npm/v/@pmndrs/detect-gpu.svg)](https://www.npmjs.com/package/@pmndrs/detect-gpu) [![npm downloads](https://img.shields.io/npm/dm/@pmndrs/detect-gpu.svg)](https://www.npmjs.com/package/@pmndrs/detect-"
+    },
+    {
+     "path": "LICENSE",
+     "bytes": 1077,
+     "head": "MIT License Copyright (c) 2020 Tim van Scherpenzeel Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including with"
+    }
+   ],
+   "filesFailed": [],
+   "licenseDetected": "MIT",
+   "verified": true
+  },
+  {
+   "owner": "oframe",
+   "repo": "ogl",
+   "url": "https://github.com/oframe/ogl",
+   "branch": "master",
+   "filesRead": [
+    {
+     "path": "README.md",
+     "bytes": 8335,
+     "head": "<p align=\"center\"> <img src=\"https://github.com/oframe/ogl/raw/master/examples/assets/ogl.png\" alt=\"OGL\" width=\"510\" /> </p> <h1 align=\"center\">OGL</h1> <p align=\"center\"> <a href=\"https://npmjs.org/package/ogl\"> <img src=\"https://img.shields.i"
+    }
+   ],
+   "filesFailed": [
+    {
+     "path": "LICENSE",
+     "status": 404
+    }
+   ],
+   "verified": true
+  },
+  {
+   "owner": "regl-project",
+   "repo": "regl",
+   "url": "https://github.com/regl-project/regl",
+   "branch": "master",
+   "filesRead": [
+    {
+     "path": "README.md",
+     "bytes": 12464,
+     "head": "<div align=\"center\"> 👑 </div> <h1 align=\"center\"> regl </h1> <div align=\"center\"> Fast functional WebGL </div> <br /> <div align=\"center\"> [![NPM Version](https://img.shields.io/npm/v/regl.svg?style=flat-square)](https://npmjs.org/package/regl)"
+    },
+    {
+     "path": "LICENSE",
+     "bytes": 1082,
+     "head": "The MIT License (MIT) Copyright (c) 2016 Mikola Lysenko Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including"
+    }
+   ],
+   "filesFailed": [],
+   "licenseDetected": "MIT",
+   "verified": true
+  },
+  {
+   "owner": "greggman",
+   "repo": "twgl.js",
+   "url": "https://github.com/greggman/twgl.js",
+   "branch": "master",
+   "filesRead": [
+    {
+     "path": "README.md",
+     "bytes": 20693,
+     "head": "TWGL: A Tiny WebGL helper Library<div id=\"pronounce\" style=\"font-size: xx-small;\">[rhymes with wiggle]</div> ===================================================== [![Build Status](https://github.com/greggman/twgl.js/actions/workflows/test.yml/badge.svg)](http"
+    }
+   ],
+   "filesFailed": [
+    {
+     "path": "LICENSE",
+     "status": 404
+    }
+   ],
+   "verified": true
+  },
+  {
+   "owner": "BabylonJS",
+   "repo": "Babylon.js",
+   "url": "https://github.com/BabylonJS/Babylon.js",
+   "branch": "master",
+   "filesRead": [
+    {
+     "path": "readme.md",
+     "bytes": 6510,
+     "head": "# Babylon.js Getting started? Play directly with the Babylon.js API using our [playground](https://playground.babylonjs.com/). It also contains a lot of samples to learn how to use it. [![npm version](https://badge.fury.io/js/babylonjs.svg)](https://badg"
+    },
+    {
+     "path": "license.md",
+     "bytes": 9226,
+     "head": "# Apache License 2.0 (Apache) Apache License Version 2.0, January 2004 <http://www.apache.org/licenses/> TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION ## Definitions \"License\" shall mean the terms and conditions for use, reproducti"
+    }
+   ],
+   "filesFailed": [],
+   "licenseDetected": "Apache-2.0",
+   "verified": true
+  },
+  {
+   "owner": "pixijs",
+   "repo": "pixijs",
+   "url": "https://github.com/pixijs/pixijs",
+   "branch": "dev",
+   "filesRead": [
+    {
+     "path": "README.md",
+     "bytes": 4974,
+     "head": "<p align=\"center\"> <a href=\"https://pixijs.com\" target=\"_blank\" rel=\"noopener noreferrer\"> <img height=\"150\" src=\"https://files.pixijs.download/branding/pixijs-logo-transparent-dark.svg?v=1\" alt=\"PixiJS logo\"> </a> </p> <br/> <p align=\"center\"> <a hr"
+    },
+    {
+     "path": "LICENSE",
+     "bytes": 1092,
+     "head": "The MIT License Copyright (c) 2013-2023 Mathew Groves, Chad Engler Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction,"
+    }
+   ],
+   "filesFailed": [],
+   "licenseDetected": "MIT",
+   "verified": true
+  },
+  {
+   "owner": "patriciogonzalezvivo",
+   "repo": "lygia",
+   "url": "https://github.com/patriciogonzalezvivo/lygia",
+   "branch": "main",
+   "filesRead": [
+    {
+     "path": "README.md",
+     "bytes": 16023,
+     "head": "<img src=\"https://lygia.xyz/imgs/lygia.svg\" alt=\"LYGIA\" width=\"200\" style=\"display: block; margin-left: auto; margin-right: auto; filter: drop-shadow(2px 3px 4px gray);\"> # LYGIA Shader Library LYGIA is the biggest shader library. Battle proof, cross-platfor"
+    }
+   ],
+   "filesFailed": [
+    {
+     "path": "LICENSE",
+     "status": 404
+    }
+   ],
+   "verified": true
+  },
+  {
+   "owner": "ashima",
+   "repo": "webgl-noise",
+   "url": "https://github.com/ashima/webgl-noise",
+   "branch": "master",
+   "filesRead": [
+    {
+     "path": "LICENSE",
+     "bytes": 1145,
+     "head": "Copyright (C) 2011 by Ashima Arts (Simplex noise) Copyright (C) 2011-2016 by Stefan Gustavson (Classic noise and others) Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Sof"
+    }
+   ],
+   "filesFailed": [
+    {
+     "path": "README.md",
+     "status": 404
+    }
+   ],
+   "licenseDetected": "autre/à vérifier",
+   "verified": true
+  },
+  {
+   "owner": "stegu",
+   "repo": "webgl-noise",
+   "url": "https://github.com/stegu/webgl-noise",
+   "branch": "master",
+   "filesRead": [
+    {
+     "path": "README.md",
+     "bytes": 10679,
+     "head": "# Noise for GLSL 1.20 Note that newer, faster and more versatile versions of 2-D and 3-D simplex noise were published in 2022. They can be found on https://github.com/stegu/psrdnoise/. This repository is still relevant, though, because it has 4-D noise, class"
+    },
+    {
+     "path": "LICENSE",
+     "bytes": 1145,
+     "head": "Copyright (C) 2011 by Ashima Arts (Simplex noise) Copyright (C) 2011-2016 by Stefan Gustavson (Classic noise and others) Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Sof"
+    }
+   ],
+   "filesFailed": [],
+   "licenseDetected": "autre/à vérifier",
+   "verified": true
+  },
+  {
+   "owner": "jwagner",
+   "repo": "simplex-noise.js",
+   "url": "https://github.com/jwagner/simplex-noise.js",
+   "branch": "main",
+   "filesRead": [
+    {
+     "path": "README.md",
+     "bytes": 6861,
+     "head": "[![Tests](https://github.com/jwagner/simplex-noise.js/actions/workflows/tests.yml/badge.svg)](https://github.com/jwagner/simplex-noise.js/actions/workflows/tests.yml) [![TypeScript](https://img.shields.io/badge/%3C%2F%3E-TypeScript-%230074c1.svg)](http://www.t"
+    },
+    {
+     "path": "LICENSE",
+     "bytes": 1069,
+     "head": "MIT License Copyright (c) 2018 Jonas Wagner Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limi"
+    }
+   ],
+   "filesFailed": [],
+   "licenseDetected": "MIT",
+   "verified": true
+  },
+  {
+   "owner": "glslify",
+   "repo": "glslify",
+   "url": "https://github.com/glslify/glslify",
+   "branch": "master",
+   "filesRead": [
+    {
+     "path": "README.md",
+     "bytes": 17305,
+     "head": "# glslify [![stability][0]][1] [![npm version][2]][3] [![downloads][4]][5] [![travis][6]][7] A node.js-style module system for GLSL! This module contains: * glslify's command-line interface (CLI) * glslify node/electron interface * [browserify](http://brows"
+    }
+   ],
+   "filesFailed": [
+    {
+     "path": "LICENSE",
+     "status": 404
+    }
+   ],
+   "verified": true
+  },
+  {
+   "owner": "toji",
+   "repo": "gl-matrix",
+   "url": "https://github.com/toji/gl-matrix",
+   "branch": "master",
+   "filesRead": [
+    {
+     "path": "README.md",
+     "bytes": 1641,
+     "head": "glMatrix ======================= [![NPM Version](https://img.shields.io/npm/v/gl-matrix.svg)](https://www.npmjs.com/package/gl-matrix) [![Build Status](https://travis-ci.org/toji/gl-matrix.svg)](https://travis-ci.org/toji/gl-matrix) JavaScript has evolve"
+    },
+    {
+     "path": "LICENSE.md",
+     "bytes": 1083,
+     "head": "Copyright (c) 2015-2025, Brandon Jones, Colin MacKenzie IV. Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, includi"
+    }
+   ],
+   "filesFailed": [],
+   "licenseDetected": "autre/à vérifier",
+   "verified": true
+  },
+  {
+   "owner": "protectwise",
+   "repo": "troika",
+   "url": "https://github.com/protectwise/troika",
+   "branch": "main",
+   "filesRead": [
+    {
+     "path": "README.md",
+     "bytes": 1834,
+     "head": "# Troika JS Troika is a collection of JavaScript tools for creating interactive graphics in the browser, with a focus on 3D/WebGL, and optimized for data visualization use cases. The provided tools fall into two main categories: - The [_Troika Framework_](h"
+    },
+    {
+     "path": "LICENSE",
+     "bytes": 1102,
+     "head": "MIT License Copyright (c) 2019 ProtectWise Copyright (c) 2021 Jason Johnston Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without re"
+    }
+   ],
+   "filesFailed": [],
+   "licenseDetected": "MIT",
+   "verified": true
+  },
+  {
+   "owner": "greensock",
+   "repo": "GSAP",
+   "url": "https://github.com/greensock/GSAP",
+   "branch": "master",
+   "filesRead": [
+    {
+     "path": "README.md",
+     "bytes": 6197,
+     "head": "# GSAP (GreenSock Animation Platform) [![GSAP - Animate anything](https://gsap.com/GSAP-share-image.png)](https://gsap.com) GSAP is a **framework-agnostic** JavaScript animation library that turns developers into animation superheroes. Build high-performance"
+    },
+    {
+     "path": "package.json",
+     "bytes": 2255,
+     "head": "{ \"name\": \"gsap\", \"version\": \"3.15.0\", \"description\": \"GSAP is a robust JavaScript toolset that turns developers into animation superheroes. Build high-performance animations that work in **every** major browser. Animate CSS, SVG, canvas, React, Vu"
+    }
+   ],
+   "filesFailed": [
+    {
+     "path": "LICENSE.md",
+     "status": 404
+    }
+   ],
+   "pkgLicense": "Standard 'no charge' license: https://gsap.com/standard-license.",
+   "pkgVersion": "3.15.0",
+   "pkgName": "gsap",
+   "verified": true
+  },
+  {
+   "owner": "motiondivision",
+   "repo": "motion",
+   "url": "https://github.com/motiondivision/motion",
+   "branch": "main",
+   "filesRead": [
+    {
+     "path": "README.md",
+     "bytes": 7423,
+     "head": "<h1 align=\"center\"> <img width=\"35\" height=\"35\" alt=\"Motion logo\" src=\"https://github.com/user-attachments/assets/00d6d1c3-72c4-4c2f-a664-69da13182ffc\" /><br />Motion</h1> <h3 align=\"center\"> An open source animation library<br />for JavaScript, React and Vu"
+    },
+    {
+     "path": "LICENSE.md",
+     "bytes": 1100,
+     "head": "The MIT License (MIT) Copyright (c) 2024 [Motion](https://motion.dev) B.V. Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without rest"
+    }
+   ],
+   "filesFailed": [],
+   "licenseDetected": "MIT",
+   "verified": true
+  },
+  {
+   "owner": "theatre-js",
+   "repo": "theatre",
+   "url": "https://github.com/theatre-js/theatre",
+   "branch": "main",
+   "filesRead": [
+    {
+     "path": "README.md",
+     "bytes": 5028,
+     "head": "<h1 align=\"center\"> <a href=\"https://github.com/theatre-js/theatre#gh-dark-mode-only\"><img src=\"https://raw.githubusercontent.com/theatre-js/theatre-docs/main/docs/.vuepress/public/public/theatrejs-logo-white.svg\" alt=\"Theatre.js\" width=\"200\"></a><a href=\"ht"
+    }
+   ],
+   "filesFailed": [
+    {
+     "path": "LICENSE.md",
+     "status": 404
+    }
+   ],
+   "verified": true
+  },
+  {
+   "owner": "darkroomengineering",
+   "repo": "lenis",
+   "url": "https://github.com/darkroomengineering/lenis",
+   "branch": "main",
+   "filesRead": [
+    {
+     "path": "README.md",
+     "bytes": 34536,
+     "head": "[![LENIS](https://assets.darkroom.engineering/lenis/banner.gif)](https://github.com/darkroomengineering/lenis) [![npm](https://img.shields.io/npm/v/lenis?colorA=E30613&colorB=000000 )](https://www.npmjs.com/package/lenis) [![downloads](https://img.shields.io/"
+    },
+    {
+     "path": "LICENSE",
+     "bytes": 1080,
+     "head": "The MIT License Copyright (c) 2024 darkroom.engineering Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including"
+    }
+   ],
+   "filesFailed": [],
+   "licenseDetected": "MIT",
+   "verified": true
+  },
+  {
+   "owner": "locomotivemtl",
+   "repo": "locomotive-scroll",
+   "url": "https://github.com/locomotivemtl/locomotive-scroll",
+   "branch": "master",
+   "filesRead": [
+    {
+     "path": "README.md",
+     "bytes": 1561,
+     "head": "# Locomotive Scroll [![npm version](https://img.shields.io/npm/v/locomotive-scroll.svg)](https://www.npmjs.com/package/locomotive-scroll) [![npm downloads](https://img.shields.io/npm/dm/locomotive-scroll.svg)](https://www.npmjs.com/package/locomotive-scroll)"
+    },
+    {
+     "path": "LICENSE",
+     "bytes": 1072,
+     "head": "MIT License Copyright (c) 2026 Locomotive Inc. Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without l"
+    }
+   ],
+   "filesFailed": [],
+   "licenseDetected": "MIT",
+   "verified": true
+  },
+  {
+   "owner": "russellsamora",
+   "repo": "scrollama",
+   "url": "https://github.com/russellsamora/scrollama",
+   "branch": "main",
+   "filesRead": [
+    {
+     "path": "README.md",
+     "bytes": 11617,
+     "head": "<img src=\"https://russellsamora.github.io/scrollama/logo.png\" width=\"160\" alt=\"scrollama.js\"/> **Scrollama** is a modern & lightweight JavaScript library for scrollytelling using [IntersectionObserver](https://developer.mozilla.org/en-US/docs/Web/API/Intersec"
+    },
+    {
+     "path": "LICENSE",
+     "bytes": 1070,
+     "head": "MIT License Copyright (c) 2022 Russell Samora Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without li"
+    }
+   ],
+   "filesFailed": [],
+   "licenseDetected": "MIT",
+   "verified": true
+  },
+  {
+   "owner": "juliangarnier",
+   "repo": "anime",
+   "url": "https://github.com/juliangarnier/anime",
+   "branch": "master",
+   "filesRead": [
+    {
+     "path": "README.md",
+     "bytes": 5336,
+     "head": "# Anime.js <p align=\"center\"> <picture align=\"center\"> <source media=\"(prefers-color-scheme: dark)\" srcset=\"./assets/images/animejs-v4-logo-animation-dark.gif\"> <img align=\"center\" alt=\"Anime.js V4 logo animation\" src=\"./assets/images/animejs-v4-log"
+    },
+    {
+     "path": "LICENSE.md",
+     "bytes": 1075,
+     "head": "The MIT License Copyright (c) 2025 Julian Garnier Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including withou"
+    }
+   ],
+   "filesFailed": [],
+   "licenseDetected": "MIT",
+   "verified": true
+  },
+  {
+   "owner": "pmndrs",
+   "repo": "react-spring",
+   "url": "https://github.com/pmndrs/react-spring",
+   "branch": "main",
+   "filesRead": [
+    {
+     "path": "README.md",
+     "bytes": 3513,
+     "head": "<p align=\"center\"> <img src=\"https://i.imgur.com/QZownhg.png\" width=\"240\" /> </p> <br /> <h1 align=\"center\">react-spring</h1> <h3 align=\"center\">A spring-physics first animation library <br>giving you flexible tools to confidently cast your ideas</h3> <br"
+    },
+    {
+     "path": "LICENSE",
+     "bytes": 1110,
+     "head": "MIT License Copyright (c) 2018-present Paul Henschel, react-spring, all contributors Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software wi"
+    }
+   ],
+   "filesFailed": [],
+   "licenseDetected": "MIT",
+   "verified": true
+  },
+  {
+   "owner": "tweenjs",
+   "repo": "tween.js",
+   "url": "https://github.com/tweenjs/tween.js",
+   "branch": "main",
+   "filesRead": [
+    {
+     "path": "README.md",
+     "bytes": 16049,
+     "head": "# tween.js JavaScript (TypeScript) tweening engine for easy animations, incorporating optimised Robert Penner's equations. [![NPM Version][npm-image]][npm-url] [![CDNJS][cdnjs-image]][cdnjs-url] [![NPM Downloads][downloads-image]][downloads-url] [![Build and"
+    },
+    {
+     "path": "LICENSE",
+     "bytes": 1166,
+     "head": "The MIT License Copyright (c) 2010-2012 Tween.js authors. Easing equations Copyright (c) 2001 Robert Penner http://robertpenner.com/easing/ Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated document"
+    }
+   ],
+   "filesFailed": [],
+   "licenseDetected": "MIT",
+   "verified": true
+  },
+  {
+   "owner": "lukePeavey",
+   "repo": "SplitType",
+   "url": "https://github.com/lukePeavey/SplitType",
+   "branch": "master",
+   "filesRead": [
+    {
+     "path": "README.md",
+     "bytes": 11588,
+     "head": "# SplitType [![npm version](https://badge.fury.io/js/split-type.svg)](https://www.npmjs.com/package/split-type) SplitType is a small javascript library that splits HTML text into elements so that lines, words, and characters can be animated independently. It"
+    }
+   ],
+   "filesFailed": [
+    {
+     "path": "LICENSE",
+     "status": 404
+    }
+   ],
+   "verified": true
+  },
+  {
+   "owner": "shshaw",
+   "repo": "Splitting",
+   "url": "https://github.com/shshaw/Splitting",
+   "branch": "master",
+   "filesRead": [
+    {
+     "path": "README.md",
+     "bytes": 1618,
+     "head": "# [<img src=\"https://splitting.js.org/splitting.gif\" alt=\"Splitting.js\" style=\"max-width: 100%; height:auto\" />](https://splitting.js.org) ### _CSS Vars for split words, chars & more!_ ![The current build status based on whether tests are passing](https://ap"
+    }
+   ],
+   "filesFailed": [
+    {
+     "path": "LICENSE",
+     "status": 404
+    }
+   ],
+   "verified": true
+  },
+  {
+   "owner": "formkit",
+   "repo": "auto-animate",
+   "url": "https://github.com/formkit/auto-animate",
+   "branch": "master",
+   "filesRead": [
+    {
+     "path": "README.md",
+     "bytes": 1943,
+     "head": "<img width=\"300\" height=\"37\" alt=\"AutoAnimate Logo\" src=\"https://cdn.formk.it/web-assets/logo-auto-animate.svg\" > ![Latest Build](https://github.com/formkit/auto-animate/actions/workflows/main.yml/badge.svg) ![GitHub Sponsors](https://img.shields.io/github/sp"
+    },
+    {
+     "path": "LICENSE",
+     "bytes": 1052,
+     "head": "Copyright 2022 FormKit Inc. Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights"
+    }
+   ],
+   "filesFailed": [],
+   "licenseDetected": "autre/à vérifier",
+   "verified": true
+  },
+  {
+   "owner": "barbajs",
+   "repo": "barba",
+   "url": "https://github.com/barbajs/barba",
+   "branch": "master",
+   "filesRead": [
+    {
+     "path": "README.md",
+     "bytes": 34474,
+     "head": "# barba.js – ![Stability](https://img.shields.io/badge/stability-stable-brightgreen.svg?style=flat-square) [![CircleCI](https://img.shields.io/circleci/project/github/barbajs/barba/main.svg?style=flat-square)](https://circleci.com/gh/barbajs/barba/tree/main) ["
+    }
+   ],
+   "filesFailed": [
+    {
+     "path": "LICENSE",
+     "status": 404
+    }
+   ],
+   "verified": true
+  },
+  {
+   "owner": "swup",
+   "repo": "swup",
+   "url": "https://github.com/swup/swup",
+   "branch": "master",
+   "filesRead": [
+    {
+     "path": "README.md",
+     "bytes": 4821,
+     "head": "<div align=\"center\"> **swup 4 is released 🎉 Check out the [release notes](https://swup.js.org/announcements/swup-4/) and [upgrade guide](https://swup.js.org/getting-started/upgrading/).** </div> <br> <p align=\"center\"> <img width=\"280\" alt=\"swup\" src="
+    },
+    {
+     "path": "LICENSE",
+     "bytes": 1071,
+     "head": "MIT License Copyright (c) 2017 Georgy Marchuk Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without li"
+    }
+   ],
+   "filesFailed": [],
+   "licenseDetected": "MIT",
+   "verified": true
+  },
+  {
+   "owner": "shuding",
+   "repo": "next-view-transitions",
+   "url": "https://github.com/shuding/next-view-transitions",
+   "branch": "main",
+   "filesRead": [
+    {
+     "path": "README.md",
+     "bytes": 1780,
+     "head": "# next-view-transitions Use [View Transitions API](https://developer.mozilla.org/en-US/docs/Web/API/View_Transitions_API) in Next.js App Router. [**Demo**](https://next-view-transitions.vercel.app). ## Disclaimer This library is aimed at basic use cases of"
+    }
+   ],
+   "filesFailed": [
+    {
+     "path": "license",
+     "status": 404
+    }
+   ],
+   "verified": true
+  },
+  {
+   "owner": "radix-ui",
+   "repo": "primitives",
+   "url": "https://github.com/radix-ui/primitives",
+   "branch": "main",
+   "filesRead": [
+    {
+     "path": "README.md",
+     "bytes": 1703,
+     "head": "[![Radix Primitives Logo](primitives.png)](https://radix-ui.com/primitives) # Radix Primitives **An open-source UI component library for building high-quality, accessible design systems and web apps.** Radix Primitives is a low-level UI component library wi"
+    },
+    {
+     "path": "LICENSE",
+     "bytes": 1063,
+     "head": "MIT License Copyright (c) 2022 WorkOS Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation"
+    }
+   ],
+   "filesFailed": [],
+   "licenseDetected": "MIT",
+   "verified": true
+  },
+  {
+   "owner": "pacocoursey",
+   "repo": "cmdk",
+   "url": "https://github.com/pacocoursey/cmdk",
+   "branch": "main",
+   "filesRead": [
+    {
+     "path": "README.md",
+     "bytes": 13955,
+     "head": "<p align=\"center\"> <img src=\"./website/public/og.png\" /> </p> # ⌘K [![cmdk minzip package size](https://img.shields.io/bundlephobia/minzip/cmdk)](https://www.npmjs.com/package/cmdk?activeTab=code) [![cmdk package version](https://img.shields.io/npm/v/cmdk.svg"
+    },
+    {
+     "path": "LICENSE.md",
+     "bytes": 1069,
+     "head": "MIT License Copyright (c) 2022 Paco Coursey Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limi"
+    }
+   ],
+   "filesFailed": [],
+   "licenseDetected": "MIT",
+   "verified": true
+  },
+  {
+   "owner": "emilkowalski",
+   "repo": "vaul",
+   "url": "https://github.com/emilkowalski/vaul",
+   "branch": "main",
+   "filesRead": [
+    {
+     "path": "README.md",
+     "bytes": 220,
+     "head": "> **Note** > This repo is unmaintained. I might come back to it at some point, but not in the near future. This was and always will be a hobby project and I simply don't have the time or will to work on it right now."
+    }
+   ],
+   "filesFailed": [
+    {
+     "path": "LICENSE",
+     "status": 404
+    }
+   ],
+   "verified": true
+  },
+  {
+   "owner": "emilkowalski",
+   "repo": "sonner",
+   "url": "https://github.com/emilkowalski/sonner",
+   "branch": "main",
+   "filesRead": [
+    {
+     "path": "README.md",
+     "bytes": 1075,
+     "head": "https://github.com/vallezw/sonner/assets/50796600/59b95cb7-9068-4f3e-8469-0b35d9de5cf0 [Sonner](https://sonner.emilkowal.ski/) is an opinionated toast component for React. You can read more about why and how it was built [here](https://emilkowal.ski/ui/buildi"
+    }
+   ],
+   "filesFailed": [
+    {
+     "path": "LICENSE",
+     "status": 404
+    }
+   ],
+   "verified": true
+  },
+  {
+   "owner": "adobe",
+   "repo": "react-spectrum",
+   "url": "https://github.com/adobe/react-spectrum",
+   "branch": "main",
+   "filesRead": [
+    {
+     "path": "README.md",
+     "bytes": 4457,
+     "head": "# [React Spectrum Libraries](https://react-spectrum.adobe.com/) A collection of libraries and tools that help you build adaptive, accessible, and robust user experiences. ### React Spectrum A React implementation of Spectrum, Adobe’s design system. Spectru"
+    },
+    {
+     "path": "LICENSE",
+     "bytes": 11335,
+     "head": "Apache License Version 2.0, January 2004 http://www.apache.org/licenses/ TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION 1. Definitions. \"License\" s"
+    }
+   ],
+   "filesFailed": [],
+   "licenseDetected": "Apache-2.0",
+   "verified": true
+  },
+  {
+   "owner": "focus-trap",
+   "repo": "focus-trap",
+   "url": "https://github.com/focus-trap/focus-trap",
+   "branch": "master",
+   "filesRead": [
+    {
+     "path": "README.md",
+     "bytes": 54733,
+     "head": "# focus-trap [![CI](https://github.com/focus-trap/focus-trap/workflows/CI/badge.svg?branch=master&event=push)](https://github.com/focus-trap/focus-trap/actions?query=workflow:CI+branch:master) [![license](https://badgen.now.sh/badge/license/MIT)](./LICENSE) <"
+    },
+    {
+     "path": "LICENSE",
+     "bytes": 1083,
+     "head": "The MIT License (MIT) Copyright (c) 2015-2016 David Clark Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, includin"
+    }
+   ],
+   "filesFailed": [],
+   "licenseDetected": "MIT",
+   "verified": true
+  },
+  {
+   "owner": "jamiebuilds",
+   "repo": "tinykeys",
+   "url": "https://github.com/jamiebuilds/tinykeys",
+   "branch": "main",
+   "filesRead": [
+    {
+     "path": "README.md",
+     "bytes": 9546,
+     "head": "# `tinykeys` > A tiny (~1KB) & modern library for keybindings. > [See Demo](https://jamiebuilds.github.io/tinykeys/) ## Install ```sh npm install --save tinykeys ``` Or for a CDN version, you can use it on [unpkg.com](https://unpkg.com/tinykeys) ## Usage"
+    },
+    {
+     "path": "LICENSE",
+     "bytes": 1067,
+     "head": "MIT License Copyright (c) 2020 Jamie Kyle Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limita"
+    }
+   ],
+   "filesFailed": [],
+   "licenseDetected": "MIT",
+   "verified": true
+  },
+  {
+   "owner": "davidjerleke",
+   "repo": "embla-carousel",
+   "url": "https://github.com/davidjerleke/embla-carousel",
+   "branch": "master",
+   "filesRead": [
+    {
+     "path": "README.md",
+     "bytes": 19404,
+     "head": "<br /> <div align=\"center\"> <p align=\"center\"> <a href=\"https://www.embla-carousel.com/\"><img width=\"110\" src=\"https://www.embla-carousel.com/embla-logo.svg\" alt=\"Embla Carousel\"> </a> </p> <p align=\"center\"> <a href=\"https://opensource.org/"
+    },
+    {
+     "path": "LICENSE",
+     "bytes": 1066,
+     "head": "MIT License Copyright (c) David Jerleke. Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitat"
+    }
+   ],
+   "filesFailed": [],
+   "licenseDetected": "MIT",
+   "verified": true
+  },
+  {
+   "owner": "d3",
+   "repo": "d3",
+   "url": "https://github.com/d3/d3",
+   "branch": "main",
+   "filesRead": [
+    {
+     "path": "README.md",
+     "bytes": 1215,
+     "head": "# D3: Data-Driven Documents <a href=\"https://d3js.org\"><img src=\"./docs/public/logo.svg\" width=\"256\" height=\"256\"></a> **D3** (or **D3.js**) is a free, open-source JavaScript library for visualizing data. Its low-level approach built on web standards offers"
+    },
+    {
+     "path": "LICENSE",
+     "bytes": 731,
+     "head": "Copyright 2010-2023 Mike Bostock Permission to use, copy, modify, and/or distribute this software for any purpose with or without fee is hereby granted, provided that the above copyright notice and this permission notice appear in all copies. THE SOFTWARE IS"
+    }
+   ],
+   "filesFailed": [],
+   "licenseDetected": "autre/à vérifier",
+   "verified": true
+  },
+  {
+   "owner": "d3",
+   "repo": "d3-force",
+   "url": "https://github.com/d3/d3-force",
+   "branch": "main",
+   "filesRead": [
+    {
+     "path": "README.md",
+     "bytes": 879,
+     "head": "# d3-force <a href=\"https://d3js.org\"><img src=\"https://github.com/d3/d3/raw/main/docs/public/logo.svg\" width=\"256\" height=\"256\"></a> This module implements a [velocity Verlet](https://en.wikipedia.org/wiki/Verlet_integration) numerical integrator for simula"
+    },
+    {
+     "path": "LICENSE",
+     "bytes": 731,
+     "head": "Copyright 2010-2021 Mike Bostock Permission to use, copy, modify, and/or distribute this software for any purpose with or without fee is hereby granted, provided that the above copyright notice and this permission notice appear in all copies. THE SOFTWARE IS"
+    }
+   ],
+   "filesFailed": [],
+   "licenseDetected": "autre/à vérifier",
+   "verified": true
+  },
+  {
+   "owner": "d3",
+   "repo": "d3-shape",
+   "url": "https://github.com/d3/d3-shape",
+   "branch": "main",
+   "filesRead": [
+    {
+     "path": "README.md",
+     "bytes": 603,
+     "head": "# d3-shape <a href=\"https://d3js.org\"><img src=\"https://github.com/d3/d3/raw/main/docs/public/logo.svg\" width=\"256\" height=\"256\"></a> This module provides a variety of shape generators for your convenience. As with other aspects of D3, these shapes are drive"
+    },
+    {
+     "path": "LICENSE",
+     "bytes": 731,
+     "head": "Copyright 2010-2022 Mike Bostock Permission to use, copy, modify, and/or distribute this software for any purpose with or without fee is hereby granted, provided that the above copyright notice and this permission notice appear in all copies. THE SOFTWARE IS"
+    }
+   ],
+   "filesFailed": [],
+   "licenseDetected": "autre/à vérifier",
+   "verified": true
+  },
+  {
+   "owner": "airbnb",
+   "repo": "visx",
+   "url": "https://github.com/airbnb/visx",
+   "branch": "master",
+   "filesRead": [
+    {
+     "path": "README.md",
+     "bytes": 5611,
+     "head": "<p align=\"center\"> <img src=\"./assets/visx-geometry.png\" /> </p> <p align=\"center\"> <a title=\"npm version\" href=\"https://www.npmjs.com/~visx\"> <img src=\"https://img.shields.io/npm/v/@visx/demo.svg?style=flat-square\" /> </a> <a title=\"@visx/shape n"
+    },
+    {
+     "path": "LICENSE",
+     "bytes": 1076,
+     "head": "MIT License Copyright (c) 2017-2018 Harrison Shoff Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including witho"
+    }
+   ],
+   "filesFailed": [],
+   "licenseDetected": "MIT",
+   "verified": true
+  },
+  {
+   "owner": "veltman",
+   "repo": "flubber",
+   "url": "https://github.com/veltman/flubber",
+   "branch": "master",
+   "filesRead": [
+    {
+     "path": "README.md",
+     "bytes": 11899,
+     "head": "[![Build Status](https://travis-ci.org/veltman/flubber.svg?branch=master)](https://travis-ci.org/veltman/flubber) # flubber Some best-guess methods for smoothly interpolating between 2-D shapes. ![Flubber in action](https://user-images.githubusercontent.com"
+    },
+    {
+     "path": "LICENSE",
+     "bytes": 1069,
+     "head": "MIT License Copyright (c) 2017 Noah Veltman Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limi"
+    }
+   ],
+   "filesFailed": [],
+   "licenseDetected": "MIT",
+   "verified": true
+  },
+  {
+   "owner": "rough-stuff",
+   "repo": "rough-notation",
+   "url": "https://github.com/rough-stuff/rough-notation",
+   "branch": "master",
+   "filesRead": [
+    {
+     "path": "README.md",
+     "bytes": 8677,
+     "head": "![Rough Notation logo](https://roughnotation.com/images/social.png) # Rough Notation A small JavaScript library to create and animate annotations on a web page. Rough Notation uses [RoughJS](https://roughjs.com) to create a hand-drawn look and feel. Element"
+    },
+    {
+     "path": "LICENSE",
+     "bytes": 1068,
+     "head": "MIT License Copyright (c) 2020 Preet Shihn Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limit"
+    }
+   ],
+   "filesFailed": [],
+   "licenseDetected": "MIT",
+   "verified": true
+  },
+  {
+   "owner": "GoogleChrome",
+   "repo": "web-vitals",
+   "url": "https://github.com/GoogleChrome/web-vitals",
+   "branch": "main",
+   "filesRead": [
+    {
+     "path": "README.md",
+     "bytes": 58413,
+     "head": "# `web-vitals` - [Overview](#overview) - [Install and load the library](#installation) - [From npm](#import-web-vitals-from-npm) - [From a CDN](#load-web-vitals-from-a-cdn) - [Usage](#usage) - [Basic usage](#basic-usage) - [Report the value on every c"
+    },
+    {
+     "path": "LICENSE",
+     "bytes": 11342,
+     "head": "Apache License Version 2.0, January 2004 http://www.apache.org/licenses/ TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION 1. Definitions. \"License\""
+    }
+   ],
+   "filesFailed": [],
+   "licenseDetected": "Apache-2.0",
+   "verified": true
+  },
+  {
+   "owner": "mrdoob",
+   "repo": "stats.js",
+   "url": "https://github.com/mrdoob/stats.js",
+   "branch": "master",
+   "filesRead": [
+    {
+     "path": "README.md",
+     "bytes": 1616,
+     "head": "stats.js ======== #### JavaScript Performance Monitor #### This class provides a simple info box that will help you monitor your code performance. * **FPS** Frames rendered in the last second. The higher the number the better. * **MS** Milliseconds needed t"
+    },
+    {
+     "path": "LICENSE",
+     "bytes": 1082,
+     "head": "The MIT License Copyright (c) 2009-2016 stats.js authors Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including"
+    }
+   ],
+   "filesFailed": [],
+   "licenseDetected": "MIT",
+   "verified": true
+  },
+  {
+   "owner": "GoogleChromeLabs",
+   "repo": "comlink",
+   "url": "https://github.com/GoogleChromeLabs/comlink",
+   "branch": "main",
+   "filesRead": [
+    {
+     "path": "README.md",
+     "bytes": 12244,
+     "head": "# Comlink Comlink makes [WebWorkers][webworker] enjoyable. Comlink is a **tiny library (1.1kB)**, that removes the mental barrier of thinking about `postMessage` and hides the fact that you are working with workers. At a more abstract level it is an RPC impl"
+    },
+    {
+     "path": "LICENSE",
+     "bytes": 11341,
+     "head": "Apache License Version 2.0, January 2004 http://www.apache.org/licenses/ TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION 1. Definitions. \"License\""
+    }
+   ],
+   "filesFailed": [],
+   "licenseDetected": "Apache-2.0",
+   "verified": true
+  },
+  {
+   "owner": "BuilderIO",
+   "repo": "partytown",
+   "url": "https://github.com/BuilderIO/partytown",
+   "branch": "main",
+   "filesRead": [
+    {
+     "path": "README.md",
+     "bytes": 3479,
+     "head": "# Partytown 🎉 <img width=\"838\" alt=\"Partytown github fit 2x\" src=\"https://user-images.githubusercontent.com/452425/134568488-f36f4640-9ada-4a78-a969-2b8315cf7f47.png\"> - [Introducing Partytown: Run Third-Party Scripts From a Web Worker](https://dev.to/adamd"
+    },
+    {
+     "path": "LICENSE",
+     "bytes": 1067,
+     "head": "MIT License Copyright (c) 2021 Builder.io Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limita"
+    }
+   ],
+   "filesFailed": [],
+   "licenseDetected": "MIT",
+   "verified": true
+  },
+  {
+   "owner": "GoogleChromeLabs",
+   "repo": "quicklink",
+   "url": "https://github.com/GoogleChromeLabs/quicklink",
+   "branch": "main",
+   "filesRead": [
+    {
+     "path": "README.md",
+     "bytes": 20455,
+     "head": "<p align=\"center\"> <img src=\"https://raw.githubusercontent.com/GoogleChromeLabs/quicklink/HEAD/assets/images/logos/banner-white-bg.png\" alt=\"\" width=\"640\"> <br> <a href=\"https://www.npmjs.com/package/quicklink\"> <img src=\"https://img.shields.io/npm/v"
+    },
+    {
+     "path": "LICENSE",
+     "bytes": 11357,
+     "head": "Apache License Version 2.0, January 2004 http://www.apache.org/licenses/ TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION 1. Definitions. \"License\" s"
+    }
+   ],
+   "filesFailed": [],
+   "licenseDetected": "Apache-2.0",
+   "verified": true
+  },
+  {
+   "owner": "KhronosGroup",
+   "repo": "glTF",
+   "url": "https://github.com/KhronosGroup/glTF",
+   "branch": "main",
+   "filesRead": [
+    {
+     "path": "README.md",
+     "bytes": 25676,
+     "head": "<!-- Copyright 2014-2021 The Khronos Group Inc. SPDX-License-Identifier: CC-BY-4.0 --> <p align=\"center\"> <img src=\"specification/figures/glTF_RGB_June16.svg\" width=\"340\" height=\"170\" /> </p> [![Join glTF Discord](https://img.shields.io/badge/discuss-on%20di"
+    }
+   ],
+   "filesFailed": [
+    {
+     "path": "LICENSE",
+     "status": 404
+    }
+   ],
+   "verified": true
+  },
+  {
+   "owner": "donmccurdy",
+   "repo": "glTF-Transform",
+   "url": "https://github.com/donmccurdy/glTF-Transform",
+   "branch": "main",
+   "filesRead": [
+    {
+     "path": "README.md",
+     "bytes": 6636,
+     "head": "# glTF Transform [![Latest NPM release](https://img.shields.io/npm/v/@gltf-transform/core.svg)](https://www.npmjs.com/package/@gltf-transform/core) [![License](https://img.shields.io/badge/license-MIT-007ec6.svg)](https://github.com/donmccurdy/glTF-Transform/"
+    }
+   ],
+   "filesFailed": [
+    {
+     "path": "LICENSE",
+     "status": 404
+    }
+   ],
+   "verified": true
+  },
+  {
+   "owner": "zeux",
+   "repo": "meshoptimizer",
+   "url": "https://github.com/zeux/meshoptimizer",
+   "branch": "master",
+   "filesRead": [
+    {
+     "path": "README.md",
+     "bytes": 107228,
+     "head": "# 🐇 meshoptimizer [![Actions Status](https://github.com/zeux/meshoptimizer/workflows/build/badge.svg)](https://github.com/zeux/meshoptimizer/actions) [![codecov.io](https://codecov.io/github/zeux/meshoptimizer/coverage.svg?branch=master)](https://codecov.io/g"
+    },
+    {
+     "path": "LICENSE.md",
+     "bytes": 1079,
+     "head": "MIT License Copyright (c) 2016-2026 Arseny Kapoulkine Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including wi"
+    }
+   ],
+   "filesFailed": [],
+   "licenseDetected": "MIT",
+   "verified": true
+  },
+  {
+   "owner": "google",
+   "repo": "draco",
+   "url": "https://github.com/google/draco",
+   "branch": "main",
+   "filesRead": [
+    {
+     "path": "README.md",
+     "bytes": 24920,
+     "head": "<p align=\"center\"> <img width=\"350px\" src=\"docs/artwork/draco3d-vert.svg\" /> </p> [![draco-ci](https://github.com/google/draco/workflows/draco-ci/badge.svg?branch=main)](https://github.com/google/draco/actions/workflows/ci.yml) News ======= Attention GStati"
+    },
+    {
+     "path": "LICENSE",
+     "bytes": 13898,
+     "head": "Apache License Version 2.0, January 2004 http://www.apache.org/licenses/ TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION 1. Definitions. \"License\" s"
+    }
+   ],
+   "filesFailed": [],
+   "licenseDetected": "Apache-2.0",
+   "verified": true
+  },
+  {
+   "owner": "google",
+   "repo": "model-viewer",
+   "url": "https://github.com/google/model-viewer",
+   "branch": "master",
+   "filesRead": [
+    {
+     "path": "README.md",
+     "bytes": 5975,
+     "head": "# The `<model-viewer>` project This is the main GitHub repository for the `<model-viewer>` web component and all of its related projects. **Getting started?** Check out the [`<model-viewer>`](packages/model-viewer) project! The repository is organized into"
+    },
+    {
+     "path": "LICENSE",
+     "bytes": 11358,
+     "head": "Apache License Version 2.0, January 2004 http://www.apache.org/licenses/ TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION 1. Definitions. \"License\""
+    }
+   ],
+   "filesFailed": [],
+   "licenseDetected": "Apache-2.0",
+   "verified": true
+  },
+  {
+   "owner": "liabru",
+   "repo": "matter-js",
+   "url": "https://github.com/liabru/matter-js",
+   "branch": "master",
+   "filesRead": [
+    {
+     "path": "README.md",
+     "bytes": 9034,
+     "head": "<img alt=\"Matter.js\" src=\"https://brm.io/matter-js/img/matter-js.svg\" width=\"300\"> > *Matter.js* is a JavaScript 2D rigid body physics engine for the web [brm.io/matter-js](https://brm.io/matter-js/) [Demos](#demos) ・ [Gallery](#gallery) ・ [Features](#featu"
+    },
+    {
+     "path": "LICENSE",
+     "bytes": 1092,
+     "head": "The MIT License (MIT) Copyright (c) Liam Brummitt and contributors. Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction"
+    }
+   ],
+   "filesFailed": [],
+   "licenseDetected": "MIT",
+   "verified": true
+  },
+  {
+   "owner": "pmndrs",
+   "repo": "cannon-es",
+   "url": "https://github.com/pmndrs/cannon-es",
+   "branch": "master",
+   "filesRead": [
+    {
+     "path": "LICENSE",
+     "bytes": 1125,
+     "head": "/* * Copyright (c) 2015 cannon.js Authors * * Permission is hereby granted, free of charge, to any person * obtaining a copy of this software and associated documentation * files (the \"Software\"), to deal in the Software without * restriction, including"
+    }
+   ],
+   "filesFailed": [
+    {
+     "path": "README.md",
+     "status": 404
+    }
+   ],
+   "licenseDetected": "autre/à vérifier",
+   "verified": true
+  },
+  {
+   "owner": "dimforge",
+   "repo": "rapier",
+   "url": "https://github.com/dimforge/rapier",
+   "branch": "master",
+   "filesRead": [
+    {
+     "path": "README.md",
+     "bytes": 6543,
+     "head": "<p align=\"center\"> <img src=\"./assets/rapier-logo.jpg\" alt=\"crates.io\"> </p> <p align=\"center\"> <a href=\"https://discord.gg/vt9DJSW\"> <img src=\"https://img.shields.io/discord/507548572338880513.svg?logo=discord&colorB=7289DA\"> </a> <a hre"
+    },
+    {
+     "path": "LICENSE",
+     "bytes": 11346,
+     "head": "Apache License Version 2.0, January 2004 http://www.apache.org/licenses/ TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION 1. Definitions. \"License\" s"
+    }
+   ],
+   "filesFailed": [],
+   "licenseDetected": "Apache-2.0",
+   "verified": true
+  },
+  {
+   "owner": "lovell",
+   "repo": "sharp",
+   "url": "https://github.com/lovell/sharp",
+   "branch": "main",
+   "filesRead": [
+    {
+     "path": "README.md",
+     "bytes": 3162,
+     "head": "# sharp <picture><img src=\"https://sharp.pixelplumbing.com/sharp-logo.svg\" width=\"160\" height=\"160\" alt=\"sharp logo\" align=\"right\"></picture> The typical use case for this high speed Node-API module is to convert large images in common formats to smaller, we"
+    },
+    {
+     "path": "LICENSE",
+     "bytes": 10273,
+     "head": "Apache License Version 2.0, January 2004 http://www.apache.org/licenses/ TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION 1. Definitions. \"License\" shall mean the terms and conditions for use, reproduction, and distribution as defined by Section"
+    }
+   ],
+   "filesFailed": [],
+   "licenseDetected": "Apache-2.0",
+   "verified": true
+  },
+  {
+   "owner": "woltapp",
+   "repo": "blurhash",
+   "url": "https://github.com/woltapp/blurhash",
+   "branch": "master",
+   "filesRead": [],
+   "filesFailed": [
+    {
+     "path": "README.md",
+     "status": 404
+    },
+    {
+     "path": "LICENSE",
+     "status": 404
+    }
+   ],
+   "verified": false
+  },
+  {
+   "owner": "evanw",
+   "repo": "thumbhash",
+   "url": "https://github.com/evanw/thumbhash",
+   "branch": "main",
+   "filesRead": [
+    {
+     "path": "README.md",
+     "bytes": 1309,
+     "head": "# ThumbHash A very compact representation of a placeholder for an image. Store it inline with your data and show it while the real image is loading for a smoother loading experience. It's similar to [BlurHash](https://github.com/woltapp/blurhash) but with th"
+    }
+   ],
+   "filesFailed": [
+    {
+     "path": "LICENSE",
+     "status": 404
+    }
+   ],
+   "verified": true
+  },
+  {
+   "owner": "joe-bell",
+   "repo": "plaiceholder",
+   "url": "https://github.com/joe-bell/plaiceholder",
+   "branch": "main",
+   "filesRead": [
+    {
+     "path": "README.md",
+     "bytes": 2658,
+     "head": "> **Note** > > The `plaiceholder` project is feature complete and will now be kept in maintenance mode. > > [**Read the migration guide**](https://plaiceholder.co/docs/upgrading-to-3) for further information. > > If this project has been useful to you, please"
+    },
+    {
+     "path": "LICENSE",
+     "bytes": 10756,
+     "head": "Apache License Version 2.0, January 2004 http://www.apache.org/licenses/ TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION 1. Definitions. \"License\" s"
+    }
+   ],
+   "filesFailed": [],
+   "licenseDetected": "Apache-2.0",
+   "verified": true
+  },
+  {
+   "owner": "vercel",
+   "repo": "next.js",
+   "url": "https://github.com/vercel/next.js",
+   "branch": "canary",
+   "filesRead": [
+    {
+     "path": "packages/next/package.json",
+     "bytes": 11220,
+     "head": "{ \"name\": \"next\", \"version\": \"16.5.0-canary.8\", \"description\": \"The React Framework\", \"main\": \"./dist/server/next.js\", \"license\": \"MIT\", \"repository\": \"vercel/next.js\", \"bugs\": \"https://github.com/vercel/next.js/issues\", \"homepage\": \"https://ne"
+    },
+    {
+     "path": "license.md",
+     "bytes": 1079,
+     "head": "The MIT License (MIT) Copyright (c) 2025 Vercel, Inc. Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including wi"
+    }
+   ],
+   "filesFailed": [],
+   "pkgLicense": "MIT",
+   "pkgVersion": "16.5.0-canary.8",
+   "pkgName": "next",
+   "licenseDetected": "MIT",
+   "verified": true
+  },
+  {
+   "owner": "tailwindlabs",
+   "repo": "tailwindcss",
+   "url": "https://github.com/tailwindlabs/tailwindcss",
+   "branch": "main",
+   "filesRead": [
+    {
+     "path": "README.md",
+     "bytes": 1838,
+     "head": "<p align=\"center\"> <a href=\"https://tailwindcss.com\" target=\"_blank\"> <picture> <source media=\"(prefers-color-scheme: dark)\" srcset=\"https://raw.githubusercontent.com/tailwindlabs/tailwindcss/HEAD/.github/logo-dark.svg\"> <source media=\"(prefe"
+    },
+    {
+     "path": "LICENSE",
+     "bytes": 1071,
+     "head": "MIT License Copyright (c) Tailwind Labs, Inc. Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without li"
+    }
+   ],
+   "filesFailed": [],
+   "licenseDetected": "MIT",
+   "verified": true
+  },
+  {
+   "owner": "microsoft",
+   "repo": "playwright",
+   "url": "https://github.com/microsoft/playwright",
+   "branch": "main",
+   "filesRead": [
+    {
+     "path": "README.md",
+     "bytes": 11262,
+     "head": "# 🎭 Playwright [![npm version](https://img.shields.io/npm/v/playwright.svg)](https://www.npmjs.com/package/playwright) <!-- GEN:chromium-version-badge -->[![Chromium version](https://img.shields.io/badge/chromium-156.0.8078.12-blue.svg?logo=google-chrome)](h"
+    },
+    {
+     "path": "LICENSE",
+     "bytes": 11601,
+     "head": "Apache License Version 2.0, January 2004 http://www.apache.org/licenses/ TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION 1. Definitions. \"Li"
+    }
+   ],
+   "filesFailed": [],
+   "licenseDetected": "Apache-2.0",
+   "verified": true
+  },
+  {
+   "owner": "GoogleChrome",
+   "repo": "lighthouse",
+   "url": "https://github.com/GoogleChrome/lighthouse",
+   "branch": "main",
+   "filesRead": [
+    {
+     "path": "readme.md",
+     "bytes": 36043,
+     "head": "# Lighthouse [![GitHub Actions Status Badge](https://github.com/GoogleChrome/lighthouse/workflows/CI/badge.svg)](https://github.com/GoogleChrome/lighthouse/actions/workflows/ci.yml) [![GitHub Actions Status Badge](https://github.com/GoogleChrome/lighthouse/wo"
+    },
+    {
+     "path": "LICENSE",
+     "bytes": 11358,
+     "head": "Apache License Version 2.0, January 2004 http://www.apache.org/licenses/ TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION 1. Definitions. \"License\""
+    }
+   ],
+   "filesFailed": [],
+   "licenseDetected": "Apache-2.0",
+   "verified": true
+  },
+  {
+   "owner": "pmndrs",
+   "repo": "react-postprocessing",
+   "url": "https://github.com/pmndrs/react-postprocessing",
+   "branch": "main",
+   "filesRead": [],
+   "filesFailed": [
+    {
+     "path": "README.md",
+     "status": 404
+    },
+    {
+     "path": "LICENSE",
+     "status": 404
+    }
+   ],
+   "verified": false
+  },
+  {
+   "owner": "pmndrs",
+   "repo": "gltfjsx",
+   "url": "https://github.com/pmndrs/gltfjsx",
+   "branch": "master",
+   "filesRead": [
+    {
+     "path": "LICENSE",
+     "bytes": 1070,
+     "head": "MIT License Copyright (c) 2020 Paul Henschel Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without lim"
+    }
+   ],
+   "filesFailed": [
+    {
+     "path": "README.md",
+     "status": 404
+    }
+   ],
+   "licenseDetected": "MIT",
+   "verified": true
+  },
+  {
+   "owner": "pmndrs",
+   "repo": "uikit",
+   "url": "https://github.com/pmndrs/uikit",
+   "branch": "main",
+   "filesRead": [
+    {
+     "path": "README.md",
+     "bytes": 4867,
+     "head": "<p align=\"center\"> <img src=\"./docs/getting-started/logo.svg\" width=\"100\" /> </p> <h1 align=\"center\">uikit</h1> <h3 align=\"center\">Build performant 3D user interfaces for threejs.</h3> <br/> <p align=\"center\"> <a href=\"https://npmjs.com/package/@react-th"
+    },
+    {
+     "path": "LICENSE",
+     "bytes": 2110,
+     "head": "Copyright 2024 Bela Bohlender Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the righ"
+    }
+   ],
+   "filesFailed": [],
+   "licenseDetected": "autre/à vérifier",
+   "verified": true
+  },
+  {
+   "owner": "pmndrs",
+   "repo": "react-three-rapier",
+   "url": "https://github.com/pmndrs/react-three-rapier",
+   "branch": "main",
+   "filesRead": [
+    {
+     "path": "LICENSE",
+     "bytes": 1067,
+     "head": "MIT License Copyright (c) 2022 Poimandres Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limita"
+    }
+   ],
+   "filesFailed": [
+    {
+     "path": "README.md",
+     "status": 404
+    }
+   ],
+   "licenseDetected": "MIT",
+   "verified": true
+  },
+  {
+   "owner": "verekia",
+   "repo": "majestic-nextjs-threejs-starter",
+   "url": "https://github.com/verekia/majestic-nextjs-threejs-starter",
+   "branch": "main",
+   "filesRead": [],
+   "filesFailed": [
+    {
+     "path": "README.md",
+     "status": 404
+    }
+   ],
+   "verified": false
+  },
+  {
+   "owner": "ektogamat",
+   "repo": "r3f-ultimate-boilerplate",
+   "url": "https://github.com/ektogamat/r3f-ultimate-boilerplate",
+   "branch": "main",
+   "filesRead": [],
+   "filesFailed": [
+    {
+     "path": "README.md",
+     "status": 404
+    }
+   ],
+   "verified": false
+  },
+  {
+   "owner": "ektogamat",
+   "repo": "threejs-andy-boilerplate",
+   "url": "https://github.com/ektogamat/threejs-andy-boilerplate",
+   "branch": "main",
+   "filesRead": [],
+   "filesFailed": [
+    {
+     "path": "README.md",
+     "status": 404
+    }
+   ],
+   "verified": false
+  },
+  {
+   "owner": "brunosimon",
+   "repo": "folio-2019",
+   "url": "https://github.com/brunosimon/folio-2019",
+   "branch": "master",
+   "filesRead": [],
+   "filesFailed": [
+    {
+     "path": "README.md",
+     "status": 404
+    },
+    {
+     "path": "LICENSE",
+     "status": 404
+    }
+   ],
+   "verified": false
+  },
+  {
+   "owner": "brunosimon",
+   "repo": "my-room-in-3d",
+   "url": "https://github.com/brunosimon/my-room-in-3d",
+   "branch": "main",
+   "filesRead": [],
+   "filesFailed": [
+    {
+     "path": "README.md",
+     "status": 404
+    },
+    {
+     "path": "LICENSE",
+     "status": 404
+    }
+   ],
+   "verified": false
+  },
+  {
+   "owner": "brunosimon",
+   "repo": "threejs-journey",
+   "url": "https://github.com/brunosimon/threejs-journey",
+   "branch": "main",
+   "filesRead": [],
+   "filesFailed": [
+    {
+     "path": "README.md",
+     "status": 404
+    }
+   ],
+   "verified": false
+  },
+  {
+   "owner": "lusionltd",
+   "repo": "lusion-threejs-experiments",
+   "url": "https://github.com/lusionltd/lusion-threejs-experiments",
+   "branch": "main",
+   "filesRead": [],
+   "filesFailed": [
+    {
+     "path": "README.md",
+     "status": 404
+    }
+   ],
+   "verified": false
+  },
+  {
+   "owner": "edankwan",
+   "repo": "the-spirit",
+   "url": "https://github.com/edankwan/the-spirit",
+   "branch": "master",
+   "filesRead": [
+    {
+     "path": "README.md",
+     "bytes": 752,
+     "head": "## The Spirit ![](https://raw.githubusercontent.com/edankwan/The-Spirit/master/app/images/screenshot.jpg) [Live demo](http://www.edankwan.com/experiments/the-spirit/) | [Video](https://www.youtube.com/watch?v=lcHAtTGzQE8) **The Spirit** is a WebGL experienc"
+    }
+   ],
+   "filesFailed": [
+    {
+     "path": "LICENSE",
+     "status": 404
+    }
+   ],
+   "verified": true
+  },
+  {
+   "owner": "mattdesl",
+   "repo": "canvas-sketch",
+   "url": "https://github.com/mattdesl/canvas-sketch",
+   "branch": "master",
+   "filesRead": [
+    {
+     "path": "README.md",
+     "bytes": 3506,
+     "head": "### canvas-sketch `canvas-sketch` is a loose collection of tools, modules and resources for creating generative art in JavaScript and the browser. - :closed_book: [Documentation](./docs/README.md) - :wrench: [Examples](./examples/) # <p align=\"center\">"
+    },
+    {
+     "path": "LICENSE.md",
+     "bytes": 1083,
+     "head": "The MIT License (MIT) Copyright (c) 2017 Matt DesLauriers Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including"
+    }
+   ],
+   "filesFailed": [],
+   "licenseDetected": "MIT",
+   "verified": true
+  },
+  {
+   "owner": "spite",
+   "repo": "ccapture.js",
+   "url": "https://github.com/spite/ccapture.js",
+   "branch": "master",
+   "filesRead": [
+    {
+     "path": "README.md",
+     "bytes": 24853,
+     "head": "# CCapture Capture canvas-based animations at a **fixed framerate**, with motion blur and modern encoders — a ground-up rewrite of [CCapture.js](https://github.com/spite/ccapture.js) (ES modules, WebCodecs, GPU motion blur, `async`/`await`). Your animation r"
+    },
+    {
+     "path": "LICENSE",
+     "bytes": 1084,
+     "head": "The MIT License Copyright (c) 2012-2026 Jaume Sanchez Elias Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, includ"
+    }
+   ],
+   "filesFailed": [],
+   "licenseDetected": "MIT",
+   "verified": true
+  },
+  {
+   "owner": "spite",
+   "repo": "THREE.MeshLine",
+   "url": "https://github.com/spite/THREE.MeshLine",
+   "branch": "master",
+   "filesRead": [
+    {
+     "path": "README.md",
+     "bytes": 7770,
+     "head": "# MeshLine Mesh replacement for ```THREE.Line``` Instead of using GL_LINE, it uses a strip of triangles billboarded. Some examples: [![Demo](screenshots/demo.jpg)](http://spite.github.io/THREE.MeshLine/demo/index.html) [![Graph](screenshots/graph.jpg)](http:"
+    },
+    {
+     "path": "LICENSE",
+     "bytes": 1070,
+     "head": "MIT License Copyright (c) 2016 Jaume Sanchez Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without lim"
+    }
+   ],
+   "filesFailed": [],
+   "licenseDetected": "MIT",
+   "verified": true
+  },
+  {
+   "owner": "vaneenige",
+   "repo": "phenomenon",
+   "url": "https://github.com/vaneenige/phenomenon",
+   "branch": "master",
+   "filesRead": [
+    {
+     "path": "README.md",
+     "bytes": 9561,
+     "head": "# Phenomenon [![npm version](https://img.shields.io/npm/v/phenomenon.svg)](https://www.npmjs.com/package/phenomenon) [![travis build](https://img.shields.io/travis/vaneenige/phenomenon.svg)](https://travis-ci.org/vaneenige/phenomenon) [![gzip size](http://im"
+    },
+    {
+     "path": "LICENSE",
+     "bytes": 1073,
+     "head": "MIT License Copyright (c) 2019 Colin van Eenige Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without"
+    }
+   ],
+   "filesFailed": [],
+   "licenseDetected": "MIT",
+   "verified": true
+  },
+  {
+   "owner": "luruke",
+   "repo": "barba.js",
+   "url": "https://github.com/luruke/barba.js",
+   "branch": "master",
+   "filesRead": [
+    {
+     "path": "README.md",
+     "bytes": 34474,
+     "head": "# barba.js – ![Stability](https://img.shields.io/badge/stability-stable-brightgreen.svg?style=flat-square) [![CircleCI](https://img.shields.io/circleci/project/github/barbajs/barba/main.svg?style=flat-square)](https://circleci.com/gh/barbajs/barba/tree/main) ["
+    }
+   ],
+   "filesFailed": [],
+   "verified": true
+  },
+  {
+   "owner": "winkerVSbecks",
+   "repo": "sketches",
+   "url": "https://github.com/winkerVSbecks/sketches",
+   "branch": "master",
+   "filesRead": [],
+   "filesFailed": [
+    {
+     "path": "README.md",
+     "status": 404
+    }
+   ],
+   "verified": false
+  },
+  {
+   "owner": "jagracar",
+   "repo": "webgl-shader-examples",
+   "url": "https://github.com/jagracar/webgl-shader-examples",
+   "branch": "master",
+   "filesRead": [
+    {
+     "path": "README.md",
+     "bytes": 934,
+     "head": "# WebGL shader examples Some simple examples of WebGL shaders. They can be seen live at [webgl-shaders.com](https://webgl-shaders.com). # Build the project Install [Node.js](https://nodejs.org) (for Ubuntu): ``` bash sudo apt-get install curl curl -sL http"
+    }
+   ],
+   "filesFailed": [],
+   "verified": true
+  },
+  {
+   "owner": "Experience-Monks",
+   "repo": "three-glsl-sandbox",
+   "url": "https://github.com/Experience-Monks/three-glsl-sandbox",
+   "branch": "master",
+   "filesRead": [],
+   "filesFailed": [
+    {
+     "path": "README.md",
+     "status": 404
+    }
+   ],
+   "verified": false
+  },
+  {
+   "owner": "marcofugaro",
+   "repo": "three-projected-material",
+   "url": "https://github.com/marcofugaro/three-projected-material",
+   "branch": "master",
+   "filesRead": [
+    {
+     "path": "README.md",
+     "bytes": 10357,
+     "head": "# three-projected-material > Three.js Material which lets you do [Texture Projection](https://en.wikipedia.org/wiki/Projective_texture_mapping) on a 3d Model. <p align=\"center\"> <a href=\"https://marcofugaro.github.io/three-projected-material/\"><img src=\"sc"
+    },
+    {
+     "path": "LICENSE",
+     "bytes": 1069,
+     "head": "MIT License Copyright (c) 2022 Marco Fugaro Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limi"
+    }
+   ],
+   "filesFailed": [],
+   "licenseDetected": "MIT",
+   "verified": true
+  },
+  {
+   "owner": "gsimone",
+   "repo": "r3f-stage",
+   "url": "https://github.com/gsimone/r3f-stage",
+   "branch": "main",
+   "filesRead": [],
+   "filesFailed": [
+    {
+     "path": "README.md",
+     "status": 404
+    }
+   ],
+   "verified": false
+  },
+  {
+   "owner": "emmelleppi",
+   "repo": "r3f-animated-mesh",
+   "url": "https://github.com/emmelleppi/r3f-animated-mesh",
+   "branch": "main",
+   "filesRead": [],
+   "filesFailed": [
+    {
+     "path": "README.md",
+     "status": 404
+    }
+   ],
+   "verified": false
+  },
+  {
+   "owner": "FarazzShaikh",
+   "repo": "THREE-CustomShaderMaterial",
+   "url": "https://github.com/FarazzShaikh/THREE-CustomShaderMaterial",
+   "branch": "master",
+   "filesRead": [
+    {
+     "path": "README.md",
+     "bytes": 18668,
+     "head": "<h1 align=\"center\">Custom Shader Material</h1> <h3 align=\"center\">Extend Three.js standard materials with your own shaders!</h3> <br> <p align=\"center\"> <a href=\"https://farazzshaikh.github.io/THREE-CustomShaderMaterial/#/waves\" target=\"_blank\"><img"
+    }
+   ],
+   "filesFailed": [
+    {
+     "path": "LICENSE",
+     "status": 404
+    }
+   ],
+   "verified": true
+  },
+  {
+   "owner": "CodyJasonBennett",
+   "repo": "four",
+   "url": "https://github.com/CodyJasonBennett/four",
+   "branch": "main",
+   "filesRead": [
+    {
+     "path": "README.md",
+     "bytes": 19194,
+     "head": "[![Size](https://img.shields.io/badge/dynamic/json?label=gzip&style=flat&colorA=000000&colorB=000000&query=$.size.compressedSize&url=https://deno.bundlejs.com/?q=fourwastaken)](https://unpkg.com/fourwastaken) [![Version](https://img.shields.io/npm/v/fourwastak"
+    },
+    {
+     "path": "LICENSE",
+     "bytes": 1074,
+     "head": "MIT License Copyright (c) 2021-2026 Cody Bennett Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without"
+    }
+   ],
+   "filesFailed": [],
+   "licenseDetected": "MIT",
+   "verified": true
+  },
+  {
+   "owner": "gkjohnson",
+   "repo": "three-mesh-bvh",
+   "url": "https://github.com/gkjohnson/three-mesh-bvh",
+   "branch": "master",
+   "filesRead": [
+    {
+     "path": "README.md",
+     "bytes": 13658,
+     "head": "# three-mesh-bvh [![npm version](https://img.shields.io/npm/v/three-mesh-bvh.svg?style=flat-square)](https://www.npmjs.com/package/three-mesh-bvh) [![build](https://img.shields.io/github/actions/workflow/status/gkjohnson/three-mesh-bvh/node.js.yml?style=flat-"
+    },
+    {
+     "path": "LICENSE",
+     "bytes": 1072,
+     "head": "MIT License Copyright (c) 2018 Garrett Johnson Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without l"
+    }
+   ],
+   "filesFailed": [],
+   "licenseDetected": "MIT",
+   "verified": true
+  },
+  {
+   "owner": "gkjohnson",
+   "repo": "three-gpu-pathtracer",
+   "url": "https://github.com/gkjohnson/three-gpu-pathtracer",
+   "branch": "main",
+   "filesRead": [
+    {
+     "path": "README.md",
+     "bytes": 5346,
+     "head": "# three-gpu-pathtracer [![npm version](https://img.shields.io/npm/v/three-gpu-pathtracer.svg?style=flat-square)](https://www.npmjs.com/package/three-gpu-pathtracer) [![build](https://img.shields.io/github/actions/workflow/status/gkjohnson/three-gpu-pathtracer"
+    },
+    {
+     "path": "LICENSE",
+     "bytes": 1072,
+     "head": "MIT License Copyright (c) 2021 Garrett Johnson Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without l"
+    }
+   ],
+   "filesFailed": [],
+   "licenseDetected": "MIT",
+   "verified": true
+  },
+  {
+   "owner": "nicolaspanel",
+   "repo": "node-opencv",
+   "url": "https://github.com/nicolaspanel/node-opencv",
+   "branch": "master",
+   "filesRead": [],
+   "filesFailed": [
+    {
+     "path": "README.md",
+     "status": 404
+    }
+   ],
+   "verified": false
+  },
+  {
+   "owner": "mrdoob",
+   "repo": "glsl-sandbox",
+   "url": "https://github.com/mrdoob/glsl-sandbox",
+   "branch": "master",
+   "filesRead": [
+    {
+     "path": "README.md",
+     "bytes": 3004,
+     "head": "# glsl-sandbox ## Server development ### Setup * Fork repository * Download repository and create new development branch: ``` $ git clone git@github.com:<your user>/glsl-sandbox $ cd glsl-sandbox $ git checkout -b <feature name> ``` * Download and uncompr"
+    }
+   ],
+   "filesFailed": [],
+   "verified": true
+  },
+  {
+   "owner": "pixijs",
+   "repo": "filters",
+   "url": "https://github.com/pixijs/filters",
+   "branch": "main",
+   "filesRead": [
+    {
+     "path": "README.md",
+     "bytes": 16832,
+     "head": "# PixiJS Filters [![Node.js CI](https://github.com/pixijs/filters/workflows/Node.js%20CI/badge.svg)](https://github.com/pixijs/filters/actions/workflows/nodejs.yml?query=branch%3Amain) [![npm version](https://badge.fury.io/js/pixi-filters.svg)](https://www.np"
+    },
+    {
+     "path": "LICENSE",
+     "bytes": 1092,
+     "head": "The MIT License Copyright (c) 2013-2025 Mathew Groves, Chad Engler Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction,"
+    }
+   ],
+   "filesFailed": [],
+   "licenseDetected": "MIT",
+   "verified": true
+  },
+  {
+   "owner": "konvajs",
+   "repo": "konva",
+   "url": "https://github.com/konvajs/konva",
+   "branch": "master",
+   "filesRead": [
+    {
+     "path": "README.md",
+     "bytes": 10015,
+     "head": "<p align=\"center\"> <img src=\"https://konvajs.org/img/icon.png\" alt=\"Konva logo\" height=\"60\" /> </p> <h1 align=\"center\">Konva</h1> <p align=\"center\"><strong>Build interactive graphics, editors, and diagrams for the web.</strong></p> [![npm downloads](https"
+    },
+    {
+     "path": "LICENSE",
+     "bytes": 1172,
+     "head": "MIT License Original work Copyright (C) 2011 - 2013 by Eric Rowell (KineticJS) Modified work Copyright (C) 2014 - present by Anton Lavrenov (Konva) Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated d"
+    }
+   ],
+   "filesFailed": [],
+   "licenseDetected": "MIT",
+   "verified": true
+  },
+  {
+   "owner": "fabricjs",
+   "repo": "fabric.js",
+   "url": "https://github.com/fabricjs/fabric.js",
+   "branch": "master",
+   "filesRead": [
+    {
+     "path": "README.md",
+     "bytes": 12321,
+     "head": "# Fabric.js <a href=\"http://fabricjs.com/kitchensink\" target=\"_blank\"><img align=\"right\" src=\"/lib/screenshot.png\" width=\"400\"></a> A **simple and powerful Javascript HTML5 canvas library**. - [**Website**][website] - [**Old V5 documentation**](https://fabr"
+    },
+    {
+     "path": "LICENSE",
+     "bytes": 1243,
+     "head": "MIT License Copyright (c) 2008-2015 Printio (Juriy Zaytsev, Maxim Chernyak) Copyright (c) 2016-present Andrea Bogazzi, Shachar Nen and Fabric.js contributors (https://github.com/fabricjs/fabric.js/graphs/contributors) Permission is hereby granted, free of ch"
+    }
+   ],
+   "filesFailed": [],
+   "licenseDetected": "MIT",
+   "verified": true
+  },
+  {
+   "owner": "paperjs",
+   "repo": "paper.js",
+   "url": "https://github.com/paperjs/paper.js",
+   "branch": "develop",
+   "filesRead": [
+    {
+     "path": "README.md",
+     "bytes": 15043,
+     "head": "# Paper.js - The Swiss Army Knife of Vector Graphics Scripting [![Build Status](https://travis-ci.org/paperjs/paper.js.svg?branch=develop)](https://travis-ci.org/paperjs/paper.js) [![NPM](https://img.shields.io/npm/v/paper.svg)](https://www.npmjs.com/package/p"
+    },
+    {
+     "path": "LICENSE.txt",
+     "bytes": 1172,
+     "head": "Copyright (c) 2011 - 2020, Jürg Lehni & Jonathan Puckey http://juerglehni.com/ & https://puckey.studio/ All rights reserved. The MIT License (MIT) Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated do"
+    }
+   ],
+   "filesFailed": [],
+   "licenseDetected": "MIT",
+   "verified": true
+  },
+  {
+   "owner": "processing",
+   "repo": "p5.js",
+   "url": "https://github.com/processing/p5.js",
+   "branch": "main",
+   "filesRead": [
+    {
+     "path": "README.md",
+     "bytes": 10135,
+     "head": "[![npm version](https://badge.fury.io/js/p5.svg)](https://www.npmjs.com/package/p5) [![All Contributors](https://img.shields.io/github/all-contributors/processing/p5.js?color=ee8449)](#contributors) [![Total Downloads](https://img.shields.io/npm/dt/p5)](https:"
+    }
+   ],
+   "filesFailed": [
+    {
+     "path": "LICENSE",
+     "status": 404
+    }
+   ],
+   "verified": true
+  },
+  {
+   "owner": "hughsk",
+   "repo": "glsl-hsv2rgb",
+   "url": "https://github.com/hughsk/glsl-hsv2rgb",
+   "branch": "master",
+   "filesRead": [],
+   "filesFailed": [
+    {
+     "path": "readme.md",
+     "status": 404
+    },
+    {
+     "path": "LICENSE.md",
+     "status": 404
+    }
+   ],
+   "verified": false
+  },
+  {
+   "owner": "dmnsgn",
+   "repo": "glsl-rotate",
+   "url": "https://github.com/dmnsgn/glsl-rotate",
+   "branch": "main",
+   "filesRead": [
+    {
+     "path": "README.md",
+     "bytes": 3156,
+     "head": "# glsl-rotate [![npm version](https://img.shields.io/npm/v/glsl-rotate)](https://www.npmjs.com/package/glsl-rotate) [![stability-frozen](https://img.shields.io/badge/stability-frozen-brightgreen.svg)](https://www.npmjs.com/package/glsl-rotate) [![npm minzippe"
+    }
+   ],
+   "filesFailed": [
+    {
+     "path": "LICENSE.md",
+     "status": 404
+    }
+   ],
+   "verified": true
+  },
+  {
+   "owner": "w3c",
+   "repo": "csswg-drafts",
+   "url": "https://github.com/w3c/csswg-drafts",
+   "branch": "main",
+   "filesRead": [],
+   "filesFailed": [
+    {
+     "path": "README.md",
+     "status": 404
+    }
+   ],
+   "verified": false
+  },
+  {
+   "owner": "gpuweb",
+   "repo": "gpuweb",
+   "url": "https://github.com/gpuweb/gpuweb",
+   "branch": "main",
+   "filesRead": [
+    {
+     "path": "README.md",
+     "bytes": 2568,
+     "head": "# W3C _GPU for the Web_ Community Group <img alt=\"WebGPU logo\" src=\"logo/webgpu-responsive.svg\" width=\"400\"> This is the repository for the W3C [GPU for the Web Community Group](https://www.w3.org/community/gpu/) WebGPU API and WebGPU Shading Language (WGSL)"
+    },
+    {
+     "path": "LICENSE.md",
+     "bytes": 3851,
+     "head": "All documents in this Repository are licensed by contributors under the [W3C Software and Document license](https://www.w3.org/copyright/software-license-2023/). Contributions to Software are made under the [GPU for the Web 3-Clause BSD License](https://githu"
+    }
+   ],
+   "filesFailed": [],
+   "licenseDetected": "autre/à vérifier",
+   "verified": true
+  },
+  {
+   "owner": "w3c",
+   "repo": "wcag",
+   "url": "https://github.com/w3c/wcag",
+   "branch": "main",
+   "filesRead": [
+    {
+     "path": "README.md",
+     "bytes": 21432,
+     "head": "WCAG (Web Content Accessibility Guidelines) 2 === This repository is used to develop content for WCAG 2, as well as associated understanding documents and techniques. See [Onboarding for working in Github](https://www.w3.org/WAI/GL/wiki/Onboarding_for_workin"
+    }
+   ],
+   "filesFailed": [],
+   "verified": true
+  },
+  {
+   "owner": "argyleink",
+   "repo": "open-props",
+   "url": "https://github.com/argyleink/open-props",
+   "branch": "main",
+   "filesRead": [
+    {
+     "path": "LICENSE",
+     "bytes": 1068,
+     "head": "MIT License Copyright (c) 2021 Adam Argyle Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limit"
+    }
+   ],
+   "filesFailed": [
+    {
+     "path": "README.md",
+     "status": 404
+    }
+   ],
+   "licenseDetected": "MIT",
+   "verified": true
+  },
+  {
+   "owner": "system-fonts",
+   "repo": "modern-font-stacks",
+   "url": "https://github.com/system-fonts/modern-font-stacks",
+   "branch": "main",
+   "filesRead": [
+    {
+     "path": "README.md",
+     "bytes": 33850,
+     "head": "<p align=\"center\"> <a href=\"https://modernfontstacks.com/\"> <img src=\"img/logo-mfs.svg\" width=\"128\" height=\"128\" alt=\"Modern Font Stacks\"> </a> </p> <h1 align=\"center\">Modern Font Stacks</h1> <h3 align=\"center\">System font stack CSS organized by typef"
+    },
+    {
+     "path": "LICENSE",
+     "bytes": 7047,
+     "head": "Creative Commons Legal Code CC0 1.0 Universal CREATIVE COMMONS CORPORATION IS NOT A LAW FIRM AND DOES NOT PROVIDE LEGAL SERVICES. DISTRIBUTION OF THIS DOCUMENT DOES NOT CREATE AN ATTORNEY-CLIENT RELATIONSHIP. CREATIVE COMMONS PROVIDES THIS IN"
+    }
+   ],
+   "filesFailed": [],
+   "licenseDetected": "CC",
+   "verified": true
+  }
+ ],
+ "meta": {
+  "startedAt": "2026-10-11T21:43:34.297Z",
+  "finishedAt": "2026-10-11T21:44:12.926Z",
+  "npmVerified": 90,
+  "npmTotal": 93,
+  "ghVerified": 94,
+  "ghTotal": 110,
+  "ghFilesRead": 160
+ }
+}

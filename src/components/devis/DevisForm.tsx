@@ -741,6 +741,21 @@ function DevisFormInner() {
     }
   }, [searchParams])
 
+  // Reprise de la synthèse du configurateur.
+  // Ne s'applique que si le message est encore vide : une synthèse ne doit
+  // jamais écraser ce que le visiteur a déjà écrit lui-même. La clé est
+  // consommée dans tous les cas, pour ne pas réapparaître à la visite suivante.
+  useEffect(() => {
+    try {
+      const synthese = sessionStorage.getItem('su:configurateur')
+      if (!synthese) return
+      sessionStorage.removeItem('su:configurateur')
+      setState(s => (s.message.trim() ? s : { ...s, message: synthese, src: s.src || 'configurateur' }))
+    } catch {
+      // Stockage indisponible : le formulaire reste utilisable tel quel.
+    }
+  }, [])
+
   useEffect(() => {
     setRentreeActive(Date.now() < new Date('2026-09-15T21:59:59Z').getTime())
   }, [])

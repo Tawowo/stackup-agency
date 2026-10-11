@@ -1,3 +1,9 @@
+/* Système « LA STRATE » — tokens, mouvement, primitives de profondeur.
+   Placé avant tout le reste : la spécification CSS exige que @import précède
+   les autres règles, et cet ordre laisse les utilitaires Tailwind surcharger
+   les primitives sans recourir à !important. */
+@import '../styles/stackup.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

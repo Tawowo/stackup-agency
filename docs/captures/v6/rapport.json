@@ -1,0 +1,26 @@
+[
+  {
+    "chemin": "/",
+    "largeur": "mobile",
+    "fichier": "docs/captures/v6/accueil-mobile.png",
+    "erreurs": [],
+    "debordement": false,
+    "scrollWidth": 390,
+    "innerWidth": 390,
+    "canvas": 1,
+    "h1": "Le site web qui faitdécoller votre activité.",
+    "titre": "Agence web Tours — Site internet en 10 jours"
+  },
+  {
+    "chemin": "/",
+    "largeur": "desktop",
+    "fichier": "docs/captures/v6/accueil-desktop.png",
+    "erreurs": [],
+    "debordement": false,
+    "scrollWidth": 1440,
+    "innerWidth": 1440,
+    "canvas": 1,
+    "h1": "Le site web qui faitdécoller votre activité.",
+    "titre": "Agence web Tours — Site internet en 10 jours"
+  }
+]

@@ -71,7 +71,8 @@ export default function Home() {
 
         {/* 01 — Hero */}
         <HeroSection />
-        <div className="seam-to-light" aria-hidden="true" />
+        {/* La couture sombre→clair n'a plus d'objet : le hero est désormais
+            sur fond ivoire, comme la section qui le suit. */}
         <MarqueeSeparator />
         <div className="section-divider" aria-hidden="true" />
 
