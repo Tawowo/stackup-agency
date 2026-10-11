@@ -78,7 +78,7 @@ export default function ZonesInterventionPage() {
             ].map(s => (
               <div key={s.titre} className="p-5 rounded-xl bg-white border border-gray-100">
                 <div className="font-bold text-navy text-sm mb-2">{s.titre}</div>
-                <div className="text-navy/55 text-sm leading-relaxed">{s.desc}</div>
+                <div className="text-[#475569] text-sm leading-relaxed">{s.desc}</div>
               </div>
             ))}
           </div>
@@ -128,7 +128,7 @@ export default function ZonesInterventionPage() {
         {/* Grandes villes de France */}
         <section>
           <h2 className="text-2xl font-bold text-navy mb-3">Grandes villes — toute la France</h2>
-          <p className="text-navy/55 text-sm mb-5 max-w-2xl">
+          <p className="text-[#475569] text-sm mb-5 max-w-2xl">
             Au-delà de notre région d’origine, nous accompagnons des entreprises dans toutes les grandes villes françaises.
             La distance ne change ni le prix, ni le délai, ni la qualité du suivi.
           </p>

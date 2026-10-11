@@ -32,7 +32,7 @@ function Digit({ value }: { value: string }) {
         {display}
       </span>
       {/* shine */}
-      <span className="pointer-events-none absolute inset-x-0 top-0 h-1/3 bg-gradient-to-b from-white/8 to-transparent" />
+      <span className="pointer-events-none absolute inset-x-0 top-0 h-1/3 bg-gradient-to-b from-white/10 to-transparent" />
     </div>
   )
 }
@@ -45,7 +45,7 @@ function TimeUnit({ tens, units, label }: { tens: string; units: string; label: 
         <Digit value={tens} />
         <Digit value={units} />
       </div>
-      <span className="text-[9px] font-semibold uppercase tracking-widest text-foreground/40 dark:text-white/30">
+      <span className="text-[9px] font-semibold uppercase tracking-widest text-[#64748B] dark:text-white/65">
         {label}
       </span>
     </div>
@@ -79,11 +79,11 @@ export default function CountdownRentree({ initialTime }: { initialTime: ReturnT
       aria-label={`${time.j} jours ${time.h}h ${time.m}m ${time.s}s restants`}
     >
       <TimeUnit tens={j[0]} units={j[1]} label="j" />
-      <span className="text-white/30 font-bold text-lg mt-1.5" aria-hidden="true">:</span>
+      <span className="text-white/65 font-bold text-lg mt-1.5" aria-hidden="true">:</span>
       <TimeUnit tens={h[0]} units={h[1]} label="h" />
-      <span className="text-white/30 font-bold text-lg mt-1.5" aria-hidden="true">:</span>
+      <span className="text-white/65 font-bold text-lg mt-1.5" aria-hidden="true">:</span>
       <TimeUnit tens={m[0]} units={m[1]} label="m" />
-      <span className="text-white/30 font-bold text-lg mt-1.5" aria-hidden="true">:</span>
+      <span className="text-white/65 font-bold text-lg mt-1.5" aria-hidden="true">:</span>
       <TimeUnit tens={s[0]} units={s[1]} label="s" />
     </span>
   )

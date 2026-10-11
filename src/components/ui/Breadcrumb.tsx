@@ -29,7 +29,7 @@ export default function Breadcrumb({ items, baseUrl = 'https://stackup-agency.fr
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       {/* V4 : breadcrumb sur fond clair */}
-      <nav className="flex items-center gap-1.5 text-navy/35 text-xs mb-6" aria-label="Fil d'Ariane">
+      <nav className="flex items-center gap-1.5 text-[#64748B] text-xs mb-6" aria-label="Fil d'Ariane">
         {allItems.map((item, i) => (
           <span key={i} className="flex items-center gap-1.5">
             {i > 0 && <ChevronRight size={11} />}
@@ -40,7 +40,7 @@ export default function Breadcrumb({ items, baseUrl = 'https://stackup-agency.fr
             ) : item.href ? (
               <Link href={item.href} className="hover:text-navy transition-colors">{item.name}</Link>
             ) : (
-              <span className="text-navy/55">{item.name}</span>
+              <span className="text-[#475569]">{item.name}</span>
             )}
           </span>
         ))}

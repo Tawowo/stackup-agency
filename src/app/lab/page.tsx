@@ -138,7 +138,7 @@ export default function Lab() {
                 ['cadence', `${releve.fps} fps`],
                 ['écoulé', `${(releve.ecoule / 1000).toFixed(1)} s`],
               ] as const).map(([cle, valeur]) => (
-                <div key={cle} className="flex justify-between gap-4 border-b border-[#1E3A5F]/8 pb-1.5">
+                <div key={cle} className="flex justify-between gap-4 border-b border-[#1E3A5F]/10 pb-1.5">
                   <dt className="text-[#64748B]">{cle}</dt>
                   <dd className="font-semibold text-[#1E3A5F]">{valeur}</dd>
                 </div>

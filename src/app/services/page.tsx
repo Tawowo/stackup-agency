@@ -4,6 +4,7 @@ import { CheckCircle, ChevronRight } from 'lucide-react'
 import { SITE } from '@/config/site'
 import MiniHero from '@/components/ui/MiniHero'
 import EncartRentree from '@/components/rentree/EncartRentree'
+import StrateService, { type Morphologie } from '@/components/services/StrateService'
 
 export const metadata = {
   title: 'Nos services — Vitrine, e-commerce, gestion web',
@@ -20,6 +21,8 @@ export const metadata = {
 const SERVICES = [
   {
     slug: 'site-vitrine',
+    morphologie: 'socle' as Morphologie,
+    structure: '3 couches · fondation stable',
     titre: 'Site vitrine',
     prix: SITE.pricing.vitrine,
     delai: SITE.delais.vitrine,
@@ -29,6 +32,8 @@ const SERVICES = [
   },
   {
     slug: 'site-multi-pages',
+    morphologie: 'etage' as Morphologie,
+    structure: '5 couches · sections ramifiées',
     titre: 'Site multi-pages',
     prix: SITE.pricing.multipages,
     delai: SITE.delais.multipages,
@@ -38,6 +43,8 @@ const SERVICES = [
   },
   {
     slug: 'site-ecommerce',
+    morphologie: 'flux' as Morphologie,
+    structure: 'un flux traverse les couches',
     titre: 'Boutique en ligne',
     prix: SITE.pricing.ecommerce,
     delai: SITE.delais.ecommerce,
@@ -47,6 +54,8 @@ const SERVICES = [
   },
   {
     slug: 'systeme-gestion',
+    morphologie: 'profond' as Morphologie,
+    structure: '6 couches · liaisons latérales',
     titre: 'Système de gestion',
     prix: SITE.pricing.gestion,
     delai: SITE.delais.gestion,
@@ -56,6 +65,8 @@ const SERVICES = [
   },
   {
     slug: 'site-association',
+    morphologie: 'compact' as Morphologie,
+    structure: '2 couches · périmètre resserré',
     titre: 'Site association',
     prix: SITE.pricing.association,
     delai: SITE.delais.association,
@@ -65,6 +76,8 @@ const SERVICES = [
   },
   {
     slug: 'redaction-blog-seo',
+    morphologie: 'cycle' as Morphologie,
+    structure: 'cycle · publication récurrente',
     titre: 'Rédaction blog SEO',
     prix: 25,
     delai: '5 jours ouvrés',
@@ -111,21 +124,35 @@ export default function ServicesPage() {
             <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 mb-4">
               <div>
                 <h2 className="text-2xl font-bold text-foreground dark:text-white mb-1 group-hover:text-electric transition-colors">{s.titre}</h2>
-                <p className="text-foreground/60 dark:text-white/60 text-sm">Idéal pour : {s.ideal}</p>
+                <p className="text-[#475569] dark:text-white/60 text-sm">Idéal pour : {s.ideal}</p>
               </div>
               <div className="text-right flex-shrink-0">
-                <div className="text-3xl font-bold text-navy dark:text-gold tabular-nums">{s.prix}€</div>
-                <div className="text-xs text-foreground/70 dark:text-white/50 mt-0.5">Livraison : {s.delai}</div>
+                <div className="text-3xl font-bold text-navy dark:text-[#B45309] tabular-nums">{s.prix}€</div>
+                <div className="text-xs text-foreground/70 dark:text-white/65 mt-0.5">Livraison : {s.delai}</div>
               </div>
             </div>
-            <p className="text-foreground/80 dark:text-white/80 mb-5">{s.desc}</p>
-            <div className="grid sm:grid-cols-2 gap-2 mb-6">
-              {s.inclus.map((item, ci) => (
-                <div key={item} className="check-item flex items-center gap-2" style={{ transitionDelay: `${ci * 40}ms` }}>
-                  <CheckCircle size={15} className="text-success flex-shrink-0" />
-                  <span className="text-sm text-foreground/70 dark:text-white/70">{item}</span>
+            <div className="grid lg:grid-cols-[1fr_250px] gap-6 lg:gap-9 items-start mb-6">
+              <div>
+                <p className="text-foreground/80 mb-5">{s.desc}</p>
+                <div className="grid sm:grid-cols-2 gap-2">
+                  {s.inclus.map((item, ci) => (
+                    <div key={item} className="check-item flex items-center gap-2" style={{ transitionDelay: `${ci * 40}ms` }}>
+                      <CheckCircle size={15} className="text-success flex-shrink-0" />
+                      <span className="text-sm text-foreground/70">{item}</span>
+                    </div>
+                  ))}
                 </div>
-              ))}
+              </div>
+
+              {/* La structure de l'offre, dessinée. Chaque offre a sa propre
+                  morphologie de pile : c'est la même métaphore que le hero,
+                  déclinée six fois plutôt que répétée à l'identique. */}
+              <div className="hidden lg:block pt-1">
+                <StrateService morphologie={s.morphologie} />
+                <p className="mt-3 text-[11.5px] font-mono uppercase tracking-[0.1em] text-[#475569] text-center">
+                  {s.structure}
+                </p>
+              </div>
             </div>
             <div className="flex flex-wrap gap-3">
               <Link href={`/services/${s.slug}`} className="flex items-center gap-1.5 px-5 py-2.5 bg-navy hover:bg-electric text-white text-sm font-semibold rounded-xl transition-all hover:-translate-y-0.5">
@@ -145,11 +172,11 @@ export default function ServicesPage() {
             <table className="w-full text-sm border-collapse">
               <thead>
                 <tr className="border-b border-white/10">
-                  <th className="text-left py-3 pr-4 text-foreground/60 dark:text-white/60 font-medium">Fonctionnalité</th>
+                  <th className="text-left py-3 pr-4 text-[#475569] dark:text-white/60 font-medium">Fonctionnalité</th>
                   <th className="text-center py-3 px-3 text-foreground dark:text-white font-semibold">Vitrine</th>
                   <th className="text-center py-3 px-3 text-foreground dark:text-white font-semibold">Multi-pages</th>
-                  <th className="text-center py-3 px-3 text-navy dark:text-gold font-semibold">E-commerce</th>
-                  <th className="text-center py-3 px-3 text-electric-ink dark:text-electric font-semibold">Gestion</th>
+                  <th className="text-center py-3 px-3 text-navy dark:text-[#B45309] font-semibold">E-commerce</th>
+                  <th className="text-center py-3 px-3 text-electric font-semibold">Gestion</th>
                 </tr>
               </thead>
               <tbody>
@@ -167,17 +194,17 @@ export default function ServicesPage() {
                     <td className="py-3 pr-4 text-foreground/70 dark:text-white/70">{feat}</td>
                     {values.map((v, i) => (
                       <td key={i} className="text-center py-3 px-3">
-                        {v ? <span className="text-success">✓</span> : <span className="text-white/20">—</span>}
+                        {v ? <span className="text-success">✓</span> : <span className="text-white/65">—</span>}
                       </td>
                     ))}
                   </tr>
                 ))}
                 <tr>
-                  <td className="py-3 pr-4 text-foreground/60 dark:text-white/60 font-medium">Prix à partir de</td>
+                  <td className="py-3 pr-4 text-[#475569] dark:text-white/60 font-medium">Prix à partir de</td>
                   <td className="text-center py-3 px-3 font-bold text-foreground dark:text-white">{SITE.pricing.vitrine}€</td>
                   <td className="text-center py-3 px-3 font-bold text-foreground dark:text-white">{SITE.pricing.multipages}€</td>
-                  <td className="text-center py-3 px-3 font-bold text-navy dark:text-gold">{SITE.pricing.ecommerce}€</td>
-                  <td className="text-center py-3 px-3 font-bold text-electric-ink dark:text-electric">{SITE.pricing.gestion}€</td>
+                  <td className="text-center py-3 px-3 font-bold text-navy dark:text-[#B45309]">{SITE.pricing.ecommerce}€</td>
+                  <td className="text-center py-3 px-3 font-bold text-electric">{SITE.pricing.gestion}€</td>
                 </tr>
               </tbody>
             </table>
@@ -197,7 +224,7 @@ export default function ServicesPage() {
               <details key={faq.q} className="group rounded-xl border border-navy/20 dark:border-white/10 overflow-hidden">
                 <summary className="flex items-center justify-between p-4 cursor-pointer font-medium text-foreground dark:text-white list-none">
                   {faq.q}
-                  <ChevronRight size={16} className="text-white/40 group-open:rotate-90 transition-transform flex-shrink-0" />
+                  <ChevronRight size={16} className="text-white/65 group-open:rotate-90 transition-transform flex-shrink-0" />
                 </summary>
                 <div className="px-4 pb-4 text-foreground/70 dark:text-white/70 text-sm">{faq.a}</div>
               </details>

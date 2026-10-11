@@ -85,7 +85,7 @@ export default function AProposPage() {
                   <div className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
                   <div>
                     <div className="font-bold text-navy text-sm">Fondateur</div>
-                    <div className="text-navy/55 text-xs">Tours (37) · Disponible</div>
+                    <div className="text-[#475569] text-xs">Tours (37) · Disponible</div>
                   </div>
                 </div>
               </div>
@@ -97,7 +97,7 @@ export default function AProposPage() {
 
           {/* Texte intro */}
           <div>
-            <p className="text-[13px] font-semibold text-gold uppercase tracking-[0.18em] mb-4">Notre raison d&apos;être</p>
+            <p className="text-[13px] font-semibold text-[#B45309] uppercase tracking-[0.18em] mb-4">Notre raison d&apos;être</p>
             <h2 className="text-3xl font-bold text-navy mb-6" style={{ lineHeight: 1.2 }}>
               Des sites d&apos;exception,<br />accessibles à tous.
             </h2>
@@ -120,7 +120,7 @@ export default function AProposPage() {
 
         {/* Timeline narrative */}
         <section className="mb-20">
-          <p className="text-[13px] font-semibold text-gold uppercase tracking-[0.18em] mb-4">Notre parcours</p>
+          <p className="text-[13px] font-semibold text-[#B45309] uppercase tracking-[0.18em] mb-4">Notre parcours</p>
           <h2 className="text-2xl font-bold text-navy mb-10">Notre parcours</h2>
           <div className="relative">
             {/* Ligne centrale */}
@@ -130,15 +130,15 @@ export default function AProposPage() {
                 <div key={t.year} className="reveal-item flex items-start gap-6" style={{ animationDelay: `${i * 80}ms` }}>
                   {/* Année */}
                   <div className="flex-shrink-0 w-[60px] text-right hidden sm:block">
-                    <span className="text-xs font-black text-navy/50 data-mono">{t.year}</span>
+                    <span className="text-xs font-black text-[#64748B] data-mono">{t.year}</span>
                   </div>
                   {/* Dot */}
                   <div className="hidden sm:flex flex-shrink-0 w-4 h-4 rounded-full border-2 border-gold bg-white mt-0.5 relative z-10" />
                   {/* Card */}
                   <div className="flex-1 bg-white border border-gray-100 rounded-xl p-4 hover:border-gold/30 hover:shadow-[0_4px_24px_rgba(30,58,95,0.08)] transition-all duration-200">
-                    <div className="sm:hidden text-xs font-black text-navy/30 data-mono mb-1">{t.year}</div>
+                    <div className="sm:hidden text-xs font-black text-[#64748B] data-mono mb-1">{t.year}</div>
                     <div className="font-bold text-navy text-sm mb-1">{t.label}</div>
-                    <div className="text-navy/55 text-sm">{t.desc}</div>
+                    <div className="text-[#475569] text-sm">{t.desc}</div>
                   </div>
                 </div>
               ))}
@@ -148,7 +148,7 @@ export default function AProposPage() {
 
         {/* Ce en quoi nous croyons */}
         <section className="mb-20">
-          <p className="text-[13px] font-semibold text-gold uppercase tracking-[0.18em] mb-4">Nos engagements</p>
+          <p className="text-[13px] font-semibold text-[#B45309] uppercase tracking-[0.18em] mb-4">Nos engagements</p>
           <h2 className="text-2xl font-bold text-navy mb-8">Ce en quoi nous croyons</h2>
           <div className="grid sm:grid-cols-2 gap-3">
             {[
@@ -169,7 +169,7 @@ export default function AProposPage() {
 
         {/* Technologies */}
         <section className="mb-20">
-          <p className="text-[13px] font-semibold text-gold uppercase tracking-[0.18em] mb-4">Stack technique</p>
+          <p className="text-[13px] font-semibold text-[#B45309] uppercase tracking-[0.18em] mb-4">Stack technique</p>
           <h2 className="text-2xl font-bold text-navy mb-6">Technologies</h2>
           <div className="grid sm:grid-cols-2 gap-3">
             {[
@@ -181,7 +181,7 @@ export default function AProposPage() {
               <div key={tech.label} className="reveal-item p-4 rounded-xl bg-white border border-gray-100 hover:border-electric/30 hover:-translate-y-0.5 transition-all duration-200 group"
                 style={{ animationDelay: `${i * 60}ms` }}>
                 <div className="font-bold text-navy text-sm mb-1 group-hover:text-electric transition-colors data-mono">{tech.label}</div>
-                <div className="text-navy/50 text-xs">{tech.desc}</div>
+                <div className="text-[#64748B] text-xs">{tech.desc}</div>
               </div>
             ))}
           </div>
@@ -196,7 +196,7 @@ export default function AProposPage() {
           </Link>
         </div>
 
-        <p className="text-center text-navy/55 text-sm mt-10">{SITE.signature}</p>
+        <p className="text-center text-[#475569] text-sm mt-10">{SITE.signature}</p>
       </div>
     </div>
   )

@@ -125,11 +125,11 @@ export default function LaRoute() {
       <div className="max-w-5xl mx-auto px-4 sm:px-6 relative">
         {/* Header */}
         <div className="mb-16">
-          <p className="text-[13px] font-semibold text-gold uppercase tracking-[0.18em] mb-3">Notre process</p>
+          <p className="text-[13px] font-semibold text-[#B45309] uppercase tracking-[0.18em] mb-3">Notre process</p>
           <h2 className="text-3xl lg:text-5xl font-bold text-navy mb-4" style={{ lineHeight: 1.15 }}>
             Comment ça se passe ?
           </h2>
-          <p className="text-navy/55 max-w-xl">
+          <p className="text-[#475569] max-w-xl">
             Six étapes claires. Aucune mauvaise surprise. De la démo à la croissance.
           </p>
         </div>
@@ -169,18 +169,18 @@ export default function LaRoute() {
               >
                 {/* Step icon */}
                 <div className={`flex-shrink-0 w-11 h-11 rounded-xl flex items-center justify-center transition-colors duration-500 ${
-                  visible[i] ? 'bg-navy text-white' : 'bg-gray-100 text-navy/30'
+                  visible[i] ? 'bg-navy text-white' : 'bg-gray-100 text-[#64748B]'
                 }`}>
                   <StepSVG num={step.num} />
                 </div>
 
                 {/* Content */}
                 <div className="flex-1 pt-1.5">
-                  <div className="text-[11px] font-bold text-gold uppercase tracking-[0.18em] mb-1 data-mono">
+                  <div className="text-[11px] font-bold text-[#B45309] uppercase tracking-[0.18em] mb-1 data-mono">
                     {step.num}
                   </div>
                   <h3 className="font-bold text-navy text-lg mb-1">{step.title}</h3>
-                  <p className="text-navy/55 text-sm leading-relaxed max-w-lg">{step.desc}</p>
+                  <p className="text-[#475569] text-sm leading-relaxed max-w-lg">{step.desc}</p>
                 </div>
               </div>
             ))}
@@ -195,7 +195,7 @@ export default function LaRoute() {
           >
             Commencer par la démo offerte <ArrowRight size={16} />
           </Link>
-          <p className="text-navy/40 text-sm mt-3">Sans engagement · Devis sous 72h</p>
+          <p className="text-[#64748B] text-sm mt-3">Sans engagement · Devis sous 72h</p>
         </div>
       </div>
     </section>

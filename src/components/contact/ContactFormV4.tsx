@@ -40,8 +40,8 @@ function Field({ id, label, value, onChange, type = 'text', required, as = 'inpu
 
   return (
     <div className="relative">
-      <label htmlFor={id} className="block text-xs font-bold text-navy/50 uppercase tracking-wider mb-1.5">
-        {label}{required && <span className="text-gold ml-1">*</span>}
+      <label htmlFor={id} className="block text-xs font-bold text-[#64748B] uppercase tracking-wider mb-1.5">
+        {label}{required && <span className="text-[#B45309] ml-1">*</span>}
       </label>
 
       {as === 'textarea' ? (
@@ -95,7 +95,7 @@ function Field({ id, label, value, onChange, type = 'text', required, as = 'inpu
         }`}
       >
         <Smile size={12} className="text-gold flex-shrink-0" />
-        <span className="text-xs text-gold font-medium">{encouragement}</span>
+        <span className="text-xs text-[#B45309] font-medium">{encouragement}</span>
       </div>
     </div>
   )
@@ -135,7 +135,7 @@ export default function ContactFormV4() {
       <div className="mb-6">
         <div className="flex items-center justify-between mb-2">
           <div className="text-sm font-bold text-navy">Votre demande</div>
-          <div className="text-xs font-bold text-navy/40 data-mono">{filledCount}/5 champs</div>
+          <div className="text-xs font-bold text-[#64748B] data-mono">{filledCount}/5 champs</div>
         </div>
         <div className="h-1.5 bg-gray-100 rounded-full overflow-hidden">
           <div
@@ -144,7 +144,7 @@ export default function ContactFormV4() {
           />
         </div>
         {progress === 100 && (
-          <div className="flex items-center gap-1.5 mt-2 text-xs text-gold font-bold">
+          <div className="flex items-center gap-1.5 mt-2 text-xs text-[#B45309] font-bold">
             <CheckCircle size={12} /> Parfait, vous êtes prêt·e à envoyer !
           </div>
         )}
@@ -154,7 +154,7 @@ export default function ContactFormV4() {
         <div className="text-center py-10">
           <div className="text-5xl mb-4">🎉</div>
           <h3 className="font-bold text-navy text-xl mb-2">Message envoyé !</h3>
-          <p className="text-navy/55">On vous répond dans les 72h. En attendant, consultez nos réalisations.</p>
+          <p className="text-[#475569]">On vous répond dans les 72h. En attendant, consultez nos réalisations.</p>
         </div>
       ) : (
         <form onSubmit={handleSubmit} className="space-y-4" noValidate>
@@ -210,7 +210,7 @@ export default function ContactFormV4() {
             )}
           </button>
 
-          <p className="text-xs text-navy/35 text-center">Devis gratuit · Réponse sous 72h · Sans engagement</p>
+          <p className="text-xs text-[#64748B] text-center">Devis gratuit · Réponse sous 72h · Sans engagement</p>
         </form>
       )}
     </div>

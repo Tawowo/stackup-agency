@@ -13,7 +13,9 @@
   --background: #FFFDF9;        /* blanc ivoire chaud */
   --foreground: #1E293B;        /* navy/ink */
   --navy: #1E3A5F;
-  --electric: #2D7DD2;
+  --electric: #1B5A9E;      /* lisible comme texte sur fond clair */
+  --electric-clair: #7DB3EA; /* lisible comme texte sur fond sombre */
+  --electric-vif: #2D7DD2;   /* décoratif : bordures, lueurs */
   --electric-ink: #1B5A9E;
   --gold: #F59E0B;
   --ink: #1E293B;

@@ -7,6 +7,7 @@ import { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { ExternalLink } from 'lucide-react'
+import { texteLisibleSur } from '@/lib/contraste'
 
 interface Project {
   nom: string
@@ -84,11 +85,11 @@ function DesktopFrame({ project, transitioning }: { project: Project; transition
             <div className="w-2.5 h-2.5 rounded-full bg-yellow-400" />
             <div className="w-2.5 h-2.5 rounded-full bg-green-400" />
           </div>
-          <div className="flex-1 bg-white rounded-md px-2.5 py-1 text-[10px] text-gray-400 font-mono flex items-center gap-1.5 border border-gray-200">
+          <div className="flex-1 bg-white rounded-md px-2.5 py-1 text-[10px] text-gray-500 font-mono flex items-center gap-1.5 border border-gray-200">
             <div className="w-2 h-2 rounded-full flex-shrink-0" style={{ background: project.accent }} />
             {project.url.replace('https://', '')}
           </div>
-          <ExternalLink size={11} className="text-gray-400" />
+          <ExternalLink size={11} className="text-gray-500" />
         </div>
         {/* Screenshot desktop */}
         <div className="relative bg-gray-900 overflow-hidden" style={{ aspectRatio: '1200/558' }}>
@@ -160,11 +161,11 @@ export default function Showroom() {
         style={{ background: `radial-gradient(ellipse at 50% 40%, ${p.accent}35 0%, transparent 60%)` }} />
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 relative">
-        <p className="text-[13px] font-semibold text-gold uppercase tracking-[0.18em] mb-3 reveal-item">Nos réalisations</p>
+        <p className="text-[13px] font-semibold text-[#B45309] uppercase tracking-[0.18em] mb-3 reveal-item">Nos réalisations</p>
         <h2 className="text-3xl lg:text-5xl font-bold text-navy mb-4 reveal-item" style={{ lineHeight: 1.15 }}>
           Nos vraies réalisations
         </h2>
-        <p className="text-navy/55 max-w-xl mb-10 reveal-item" style={{ animationDelay: '80ms' }}>
+        <p className="text-[#475569] max-w-xl mb-10 reveal-item" style={{ animationDelay: '80ms' }}>
           Sites de démonstration complets — consultables en ligne. Ce que vous voyez est exactement ce que nous livrons.
         </p>
 
@@ -174,12 +175,15 @@ export default function Showroom() {
             <button key={proj.slug} onClick={() => handleSelect(i)}
               className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-sm font-semibold transition-all duration-200 border ${
                 i === active
-                  ? 'text-white border-transparent shadow-md shadow-black/15'
-                  : 'bg-white text-navy/60 border-gray-200 hover:border-gray-300 hover:text-navy hover:-translate-y-0.5'
+                  ? 'border-transparent shadow-md shadow-black/15'
+                  : 'bg-white text-[#475569] border-gray-200 hover:border-gray-300 hover:text-navy hover:-translate-y-0.5'
               }`}
-              style={i === active ? { background: p.accent } : {}}
+              style={i === active ? { background: proj.accent, color: texteLisibleSur(proj.accent) } : {}}
             >
-              <div className="w-2 h-2 rounded-full flex-shrink-0" style={{ background: i === active ? 'rgba(255,255,255,0.7)' : proj.accent }} />
+              <div
+                className="w-2 h-2 rounded-full flex-shrink-0"
+                style={{ background: i === active ? 'currentColor' : proj.accent, opacity: i === active ? 0.7 : 1 }}
+              />
               <span className="hidden sm:inline">{proj.nom}</span>
               <span className="sm:hidden text-xs">{proj.type.split('—')[0].trim()}</span>
             </button>
@@ -196,7 +200,7 @@ export default function Showroom() {
         <div className="mt-8 flex items-start justify-between flex-wrap gap-4">
           <div>
             <h3 className="font-bold text-navy text-lg mb-0.5">{p.nom}</h3>
-            <p className="text-navy/50 text-sm mb-2">{p.type}</p>
+            <p className="text-[#64748B] text-sm mb-2">{p.type}</p>
             <div className="flex flex-wrap gap-1.5">
               {p.tags.map(t => (
                 <span key={t} className="text-[11px] px-2.5 py-1 rounded-full font-medium border"
@@ -208,8 +212,8 @@ export default function Showroom() {
           </div>
           <div className="flex gap-3">
             <a href={p.url} target="_blank" rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-sm font-semibold px-5 py-2.5 rounded-xl text-white transition-all hover:-translate-y-0.5 shadow-md"
-              style={{ background: p.accent }}>
+              className="inline-flex items-center gap-2 text-sm font-semibold px-5 py-2.5 rounded-xl transition-all hover:-translate-y-0.5 shadow-md"
+              style={{ background: p.accent, color: texteLisibleSur(p.accent) }}>
               <ExternalLink size={14} /> Visiter la démo complète →
             </a>
             <Link href={`/realisations/${p.slug}`}

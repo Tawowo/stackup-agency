@@ -187,7 +187,7 @@ export default function SolutionPage({ params }: { params: { slug: string } }) {
               <details key={faq.q} className="group rounded-xl border border-navy/20 dark:border-white/10 overflow-hidden">
                 <summary className="flex items-center justify-between p-4 cursor-pointer font-medium text-foreground dark:text-white list-none">
                   {faq.q}
-                  <ChevronRight size={16} className="text-white/40 group-open:rotate-90 transition-transform flex-shrink-0" />
+                  <ChevronRight size={16} className="text-white/65 group-open:rotate-90 transition-transform flex-shrink-0" />
                 </summary>
                 <div className="px-4 pb-4 text-foreground/70 dark:text-white/70 text-sm leading-relaxed">{faq.a}</div>
               </details>
@@ -199,7 +199,7 @@ export default function SolutionPage({ params }: { params: { slug: string } }) {
           <h3 className="text-lg font-semibold text-foreground dark:text-white mb-3">Recherches associées</h3>
           <div className="flex flex-wrap gap-2">
             {s.variantes.map(v => (
-              <span key={v} className="px-3 py-1.5 rounded-full text-xs border border-white/10 text-foreground/60 dark:text-white/60">{v}</span>
+              <span key={v} className="px-3 py-1.5 rounded-full text-xs border border-white/10 text-[#475569] dark:text-white/60">{v}</span>
             ))}
           </div>
         </section>

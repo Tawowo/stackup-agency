@@ -57,11 +57,11 @@ const TRIS: { valeur: Tri; libelle: string }[] = [
 ]
 
 const COULEUR_STATUT: Record<Statut, string> = {
-  brouillon: 'bg-[#64748B]/12 text-[#475569]',
-  envoye: 'bg-[#2D7DD2]/12 text-[#1B5A9E]',
-  accepte: 'bg-[#F59E0B]/15 text-[#B45309]',
-  planifie: 'bg-[#8B5CF6]/12 text-[#6D28D9]',
-  termine: 'bg-[#10B981]/14 text-[#047857]',
+  brouillon: 'bg-[#64748B]/10 text-[#475569]',
+  envoye: 'bg-[#2D7DD2]/10 text-[#1B5A9E]',
+  accepte: 'bg-[#F59E0B]/15 text-[#92400E]',
+  planifie: 'bg-[#8B5CF6]/10 text-[#6D28D9]',
+  termine: 'bg-[#10B981]/15 text-[#047857]',
 }
 
 export default function Laboratoire() {
@@ -107,7 +107,7 @@ export default function Laboratoire() {
       </div>
 
       {/* ── Synthèse ── */}
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-px bg-[#1E3A5F]/8">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-px bg-[#1E3A5F]/10">
         {[
           { cle: 'Interventions', valeur: String(synthese.nombre) },
           { cle: 'Total TTC', valeur: formaterEuros(synthese.totalTTC) },
@@ -130,7 +130,7 @@ export default function Laboratoire() {
       </div>
 
       {/* ── Contrôles ── */}
-      <div className="px-4 sm:px-5 py-4 border-y border-[#1E3A5F]/8 bg-[#FFFDF9] space-y-3">
+      <div className="px-4 sm:px-5 py-4 border-y border-[#1E3A5F]/10 bg-[#FFFDF9] space-y-3">
         <div className="flex flex-wrap gap-3">
           <div className="relative flex-1 min-w-[200px]">
             <Search
@@ -178,6 +178,7 @@ export default function Laboratoire() {
                 type="button"
                 onClick={() => basculerStatut(statut)}
                 aria-pressed={actif}
+                data-filtre-statut={statut}
                 className={`inline-flex items-center gap-1.5 px-3 h-8 rounded-full text-[12.5px] font-medium border transition-colors ${
                   actif
                     ? 'bg-[#1E3A5F] text-white border-[#1E3A5F]'
@@ -208,7 +209,7 @@ export default function Laboratoire() {
             Aucune intervention ne correspond à ces critères.
           </p>
         ) : (
-          <ul className="divide-y divide-[#1E3A5F]/8">
+          <ul className="divide-y divide-[#1E3A5F]/10">
             {visibles.map((i) => {
               const ouvert = deplie === i.id
               return (
@@ -273,7 +274,7 @@ export default function Laboratoire() {
                             <th scope="col" className="text-right font-normal py-2 w-28">Total HT</th>
                           </tr>
                         </thead>
-                        <tbody className="divide-y divide-[#1E3A5F]/8">
+                        <tbody className="divide-y divide-[#1E3A5F]/10">
                           {i.lignes.map((l, k) => (
                             <tr key={k}>
                               <td className="py-2 text-[#0C1626]">{l.designation}</td>
@@ -317,7 +318,7 @@ export default function Laboratoire() {
         )}
       </div>
 
-      <div className="flex flex-wrap items-center justify-between gap-3 px-4 sm:px-5 py-3 border-t border-[#1E3A5F]/8 bg-[#FFFDF9] text-[12.5px] text-[#64748B]">
+      <div className="flex flex-wrap items-center justify-between gap-3 px-4 sm:px-5 py-3 border-t border-[#1E3A5F]/10 bg-[#FFFDF9] text-[12.5px] text-[#64748B]">
         <span>
           {visibles.length} sur {interventions.length} intervention
           {interventions.length > 1 ? 's' : ''} · dont {formaterEuros(synthese.enAttente)} encore

@@ -372,7 +372,7 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
           <path d="M0,100 C240,60 480,20 720,50 C960,80 1200,20 1440,40" strokeWidth="1.5" style={{ opacity: 0.22 }} />
         </svg>
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6">
-          <nav className="flex items-center gap-1.5 text-white/40 text-xs mb-6" aria-label="Fil d'Ariane">
+          <nav className="flex items-center gap-1.5 text-white/65 text-xs mb-6" aria-label="Fil d'Ariane">
             <Link href="/" className="hover:text-white transition-colors">Accueil</Link>
             <span>›</span>
             <Link href="/services" className="hover:text-white transition-colors">Services</Link>
@@ -386,7 +386,7 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
             {service.price !== 'Sur devis' && <span>{service.price}</span>}
             {service.priceNote && <span className="block text-sm text-white/60 mt-1">{service.priceNote}</span>}
           </div>
-          <p className="mt-3 text-xs text-white/40 max-w-xl">Délais détaillés dans nos <a href="/cgv" className="underline hover:text-white/60 transition-colors">CGV</a>.</p>
+          <p className="mt-3 text-xs text-white/65 max-w-xl">Délais détaillés dans nos <a href="/cgv" className="underline hover:text-white/60 transition-colors">CGV</a>.</p>
         </div>
       </section>
 
@@ -488,11 +488,11 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
             </Link>
           </section>
           <section>
-            <p className="text-sm text-white/40 mb-3">Pour aller plus loin</p>
+            <p className="text-sm text-white/65 mb-3">Pour aller plus loin</p>
             <div className="flex flex-wrap gap-3">
-              <Link href="/tarifs" className="text-sm text-electric hover:underline">Voir les tarifs →</Link>
-              <Link href="/realisations" className="text-sm text-electric hover:underline">Nos réalisations →</Link>
-              <Link href="/faq" className="text-sm text-electric hover:underline">Questions fréquentes →</Link>
+              <Link href="/tarifs" className="text-sm text-electric-clair hover:underline">Voir les tarifs →</Link>
+              <Link href="/realisations" className="text-sm text-electric-clair hover:underline">Nos réalisations →</Link>
+              <Link href="/faq" className="text-sm text-electric-clair hover:underline">Questions fréquentes →</Link>
             </div>
           </section>
         </div>

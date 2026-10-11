@@ -3,6 +3,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { ArrowLeft, ExternalLink, Check, ArrowRight, Mail } from 'lucide-react'
 import { realisations } from '@/lib/realisations'
+import { assombrirJusquAu, texteLisibleSur, IVOIRE } from '@/lib/contraste'
 
 type CaseStudy = { contexte: string; construit: string[]; tester: string[] }
 
@@ -44,6 +45,11 @@ export default async function RealisationPage({ params }: { params: Promise<{ sl
     ],
   }
 
+  // Dérivées accessibles de l'accent du projet. L'accent brut reste utilisé
+  // pour les aplats, les lueurs et les bordures, où il ne porte aucun texte.
+  const accentTexte = assombrirJusquAu(r.accent, IVOIRE)
+  const surAccent = texteLisibleSur(r.accent)
+
   return (
     <div className="min-h-screen bg-white dark:bg-[#0A0F1C]">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
@@ -66,7 +72,7 @@ export default async function RealisationPage({ params }: { params: Promise<{ sl
         <div className="relative z-10 max-w-4xl mx-auto">
           <Link
             href="/#realisations"
-            className="inline-flex items-center gap-2 text-white/50 hover:text-white text-sm mb-10 transition-colors"
+            className="inline-flex items-center gap-2 text-white/75 hover:text-white text-sm mb-10 transition-colors"
           >
             <ArrowLeft size={14} /> Retour aux réalisations
           </Link>
@@ -76,7 +82,7 @@ export default async function RealisationPage({ params }: { params: Promise<{ sl
               <span
                 key={tag}
                 className="px-3 py-1 rounded-full text-xs font-semibold"
-                style={{ background: `${r.accent}30`, color: r.accent, border: `1px solid ${r.accent}50` }}
+                style={{ background: `${r.accent}30`, color: accentTexte, border: `1px solid ${r.accent}50` }}
               >
                 {tag}
               </span>
@@ -92,7 +98,7 @@ export default async function RealisationPage({ params }: { params: Promise<{ sl
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-3 leading-tight">
             {r.nom}
           </h1>
-          <p className="text-white/60 text-lg mb-8">{r.type}</p>
+          <p className="text-white/75 text-lg mb-8">{r.type}</p>
           <p className="text-white/80 text-xl leading-relaxed max-w-2xl mb-10">
             {r.description}
           </p>
@@ -101,14 +107,14 @@ export default async function RealisationPage({ params }: { params: Promise<{ sl
             href={r.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-8 py-4 text-white font-semibold rounded-lg transition-all hover:scale-105 shadow-lg min-h-[52px]"
-            style={{ background: r.accent }}
+            className="inline-flex items-center gap-2 px-8 py-4 font-semibold rounded-lg transition-all hover:scale-105 shadow-lg min-h-[52px]"
+            style={{ background: r.accent, color: surAccent }}
           >
             <ExternalLink size={18} />
             Visiter la démo complète →
           </a>
           {'demoAccess' in r && (r as { demoAccess?: { note: string } }).demoAccess && (
-            <p className="text-white/45 text-sm mt-4 italic">
+            <p className="text-white/65 text-sm mt-4 italic">
               {(r as { demoAccess: { note: string } }).demoAccess.note}
             </p>
           )}
@@ -123,11 +129,11 @@ export default async function RealisationPage({ params }: { params: Promise<{ sl
           <section className="py-16 px-4">
             <div className="max-w-4xl mx-auto space-y-12">
               <div>
-                <p className="text-[13px] font-semibold uppercase tracking-[0.18em] mb-3" style={{ color: r.accent }}>Le contexte</p>
+                <p className="text-[13px] font-semibold uppercase tracking-[0.18em] mb-3" style={{ color: accentTexte }}>Le contexte</p>
                 <p className="text-gray-700 dark:text-white/75 leading-relaxed text-lg">{cs.contexte}</p>
               </div>
               <div>
-                <p className="text-[13px] font-semibold uppercase tracking-[0.18em] mb-4" style={{ color: r.accent }}>Ce qui a été construit</p>
+                <p className="text-[13px] font-semibold uppercase tracking-[0.18em] mb-4" style={{ color: accentTexte }}>Ce qui a été construit</p>
                 <div className="space-y-3">
                   {cs.construit.map((c, i) => (
                     <div key={i} className="flex items-start gap-3 p-4 rounded-xl bg-gray-50 dark:bg-white/5 border border-gray-100 dark:border-white/10">
@@ -138,11 +144,11 @@ export default async function RealisationPage({ params }: { params: Promise<{ sl
                 </div>
               </div>
               <div>
-                <p className="text-[13px] font-semibold uppercase tracking-[0.18em] mb-4" style={{ color: r.accent }}>À tester soi-même</p>
+                <p className="text-[13px] font-semibold uppercase tracking-[0.18em] mb-4" style={{ color: accentTexte }}>À tester soi-même</p>
                 <ol className="space-y-2 mb-8">
                   {cs.tester.map((t, i) => (
                     <li key={i} className="flex items-start gap-3 text-gray-700 dark:text-white/75 text-sm leading-relaxed">
-                      <ArrowRight size={14} className="flex-shrink-0 mt-1" style={{ color: r.accent }} />
+                      <ArrowRight size={14} className="flex-shrink-0 mt-1" style={{ color: accentTexte }} />
                       {t}
                     </li>
                   ))}
@@ -154,16 +160,16 @@ export default async function RealisationPage({ params }: { params: Promise<{ sl
                       L&apos;espace de gestion est ouvert à la visite — connectez-vous et explorez l&apos;envers du décor comme si le site était le vôtre.
                     </p>
                     <div className="inline-flex items-center gap-3 px-4 py-2.5 rounded-xl bg-white dark:bg-white/10 border border-gray-200 dark:border-white/15 font-mono text-sm">
-                      <span className="text-gray-500 dark:text-white/50">Mot de passe admin :</span>
+                      <span className="text-gray-500 dark:text-white/65">Mot de passe admin :</span>
                       <strong className="text-gray-900 dark:text-white tracking-wider">{access.password}</strong>
                     </div>
                     <div className="mt-4">
                       <a href={r.url} target="_blank" rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 text-sm font-semibold hover:underline" style={{ color: r.accent }}>
+                        className="inline-flex items-center gap-2 text-sm font-semibold hover:underline" style={{ color: accentTexte }}>
                         Ouvrir l&apos;espace de livraison <ExternalLink size={13} />
                       </a>
                     </div>
-                    <p className="text-gray-400 dark:text-white/35 text-xs mt-4 italic">{access.note}</p>
+                    <p className="text-gray-500 dark:text-white/65 text-xs mt-4 italic">{access.note}</p>
                   </div>
                 )}
               </div>
@@ -203,7 +209,7 @@ export default async function RealisationPage({ params }: { params: Promise<{ sl
                   className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5"
                   style={{ background: `${r.accent}20` }}
                 >
-                  <Check size={13} style={{ color: r.accent }} />
+                  <Check size={13} style={{ color: accentTexte }} />
                 </div>
                 <span className="text-gray-700 dark:text-white/80 text-sm leading-relaxed">{f}</span>
               </div>
@@ -230,7 +236,7 @@ export default async function RealisationPage({ params }: { params: Promise<{ sl
             <a
               href="mailto:contact@stackup-agency.fr"
               className="inline-flex items-center justify-center gap-2 px-8 py-4 text-white font-semibold rounded-xl transition-all hover:scale-105 min-h-[52px]"
-              style={{ background: r.accent }}
+              style={{ background: r.accent, color: surAccent }}
             >
               <Mail size={18} />
               Démarrer mon projet

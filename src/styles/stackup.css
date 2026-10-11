@@ -11,6 +11,8 @@
   --su-navy: #1e3a5f;
   --su-encre: #0c1626;
   --su-or: #f59e0b;
+  /* Déclinaison lisible de l'or, pour tout texte ambré sur fond clair. */
+  --su-or-texte: #b45309;
   --su-or-clair: #fbbf24;
   --su-electrique: #2d7dd2;
   --su-ardoise: #64748b;
@@ -225,7 +227,10 @@
   font-weight: 600;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--su-or);
+  /* Pas --su-or : #F59E0B sur ivoire ne donne que 2,11:1, mesuré par axe-core.
+     #B45309 donne 4,94:1 et conserve l'identité ambrée. L'or pur reste réservé
+     aux aplats (boutons) et à la lumière, où il n'a pas à porter de texte. */
+  color: var(--su-or-texte);
   display: inline-flex;
   align-items: center;
   gap: 0.6em;
@@ -577,4 +582,91 @@ button:focus-visible,
 @media (prefers-reduced-motion: reduce) {
   .su-palette,
   .su-palette__boite { animation: none; }
+}
+
+/* ============================================================================
+   11. L'ATELIER DES STRATES — schémas de service
+   ========================================================================== */
+
+.su-strate-svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+/* Les plaques se posent une à une, de bas en haut : la même grammaire que
+   l'assemblage du monolithe, transposée en 2D. */
+@keyframes su-plaque-pose {
+  from { opacity: 0; transform: translate3d(6px, -14px, 0); }
+  to   { opacity: 1; transform: translate3d(0, 0, 0); }
+}
+
+.su-strate-svg__plaque {
+  opacity: 0;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+/* L'animation ne part qu'une fois la carte visible : sinon six schémas
+   s'animent hors écran pendant que le visiteur regarde ailleurs. */
+.su-vu .su-strate-svg__plaque {
+  animation: su-plaque-pose var(--su-t-pose) var(--su-pose) both;
+  animation-delay: calc(var(--i) * 85ms);
+}
+
+@keyframes su-trait-tracer {
+  from { stroke-dashoffset: var(--long); }
+  to   { stroke-dashoffset: 0; }
+}
+
+.su-strate-svg__flux,
+.su-strate-svg__liaison {
+  --long: 220;
+  stroke-dasharray: var(--long);
+  stroke-dashoffset: var(--long);
+}
+
+.su-vu .su-strate-svg__flux {
+  animation: su-trait-tracer 900ms var(--su-glisse) 420ms both;
+}
+
+.su-vu .su-strate-svg__liaison {
+  --long: 120;
+  animation: su-trait-tracer 620ms var(--su-glisse) both;
+  animation-delay: calc(360ms + var(--i) * 110ms);
+}
+
+@keyframes su-cycle-tourner {
+  to { stroke-dashoffset: -64; }
+}
+
+.su-vu .su-strate-svg__cycle {
+  animation: su-cycle-tourner 2.4s linear infinite;
+}
+
+/* L'arête dorée s'allume à la lecture de la carte, pas en permanence :
+   un filet doré constant sur six cartes redeviendrait de la décoration. */
+.su-strate-svg__arete { opacity: 0; }
+
+.su-vu .su-strate-svg__arete {
+  animation: su-arete-allumer 520ms var(--su-pose) both;
+  animation-delay: calc(240ms + var(--i, 0) * 85ms);
+}
+
+@keyframes su-arete-allumer {
+  from { opacity: 0; }
+  to   { opacity: 0.85; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .su-strate-svg__plaque,
+  .su-vu .su-strate-svg__plaque { opacity: 1; animation: none; transform: none; }
+  .su-strate-svg__flux,
+  .su-strate-svg__liaison,
+  .su-vu .su-strate-svg__flux,
+  .su-vu .su-strate-svg__liaison { stroke-dashoffset: 0; animation: none; }
+  .su-vu .su-strate-svg__cycle { animation: none; }
+  .su-strate-svg__arete,
+  .su-vu .su-strate-svg__arete { opacity: 0.85; animation: none; }
 }

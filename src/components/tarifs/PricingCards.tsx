@@ -66,26 +66,26 @@ function CardItem({ card, index, isVisible }: { card: Card; index: number; isVis
 
       <div className="flex items-start justify-between mb-3">
         <h3 className={`text-lg font-bold ${card.highlight ? 'text-white' : 'text-navy'}`}>{card.titre}</h3>
-        <span className={`text-2xl font-bold ml-3 tabular-nums data-mono ${card.highlight ? 'text-gold' : 'text-electric'}`}>
+        <span className={`text-2xl font-bold ml-3 tabular-nums data-mono ${card.highlight ? 'text-[#B45309]' : 'text-electric'}`}>
           <span className="price-reveal is-visible">
             <span className="price-reveal-inner">{price}&thinsp;€</span>
           </span>
         </span>
       </div>
 
-      <p className={`text-sm mb-4 ${card.highlight ? 'text-white/65' : 'text-navy/55'}`}>{card.desc}</p>
+      <p className={`text-sm mb-4 ${card.highlight ? 'text-white/65' : 'text-[#475569]'}`}>{card.desc}</p>
 
       <ul className={`space-y-1.5 mb-5 flex-1 ${checksVisible ? 'checks-visible' : ''}`}>
         {card.inclus.map((item, ci) => (
           <li key={item} className={`check-item flex items-center gap-2 text-sm ${card.highlight ? 'text-white/75' : 'text-navy/65'}`}
             style={{ transitionDelay: `${ci * 60}ms` }}>
-            <CheckCircle size={13} className={card.highlight ? 'text-gold flex-shrink-0' : 'text-electric flex-shrink-0'} />
+            <CheckCircle size={13} className={card.highlight ? 'text-[#B45309] flex-shrink-0' : 'text-electric flex-shrink-0'} />
             {item}
           </li>
         ))}
       </ul>
 
-      <div className={`text-xs mb-4 data-mono ${card.highlight ? 'text-white/50' : 'text-navy/45'}`}>Livraison : {card.delai}</div>
+      <div className={`text-xs mb-4 data-mono ${card.highlight ? 'text-white/65' : 'text-[#64748B]'}`}>Livraison : {card.delai}</div>
 
       <Link
         href={card.href}

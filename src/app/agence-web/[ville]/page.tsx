@@ -103,7 +103,7 @@ export default function AgenceWebVillePage({ params }: { params: { ville: string
       {/* Hero */}
       <div className="bg-gradient-to-b from-[#060D1A] to-[#0A0F1C] pt-24 pb-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
-          <nav className="flex items-center gap-1.5 text-white/40 text-xs mb-6" aria-label="Fil d'Ariane">
+          <nav className="flex items-center gap-1.5 text-white/65 text-xs mb-6" aria-label="Fil d'Ariane">
             <Link href="/" className="hover:text-white transition-colors flex items-center gap-1"><Home size={11} /> Accueil</Link>
             <ChevronRight size={11} />
             <Link href="/agence-web" className="hover:text-white transition-colors">Agence web</Link>
@@ -112,8 +112,8 @@ export default function AgenceWebVillePage({ params }: { params: { ville: string
           </nav>
 
           <div className="flex items-center gap-2 mb-4">
-            <MapPin size={16} className="text-electric" />
-            <span className="text-electric text-sm font-medium">{v.departement} — {v.region}</span>
+            <MapPin size={16} className="text-electric-clair" />
+            <span className="text-electric-clair text-sm font-medium">{v.departement} — {v.region}</span>
           </div>
 
           <h1 className="text-3xl lg:text-5xl font-bold text-white leading-tight mb-4">
@@ -181,10 +181,10 @@ export default function AgenceWebVillePage({ params }: { params: { ville: string
               <Link key={s.titre} href={s.href} className="reveal-item p-5 rounded-2xl border border-navy/20 dark:border-white/10 hover:border-electric/40 hover:-translate-y-0.5 transition-all duration-200 group">
                 <div className="flex items-start justify-between mb-2">
                   <h3 className="font-semibold text-foreground dark:text-white group-hover:text-electric transition-colors">{s.titre}</h3>
-                  <span className="text-gold font-bold text-sm">{s.prix}</span>
+                  <span className="text-[#B45309] font-bold text-sm">{s.prix}</span>
                 </div>
-                <p className="text-foreground/60 dark:text-white/60 text-sm mb-2">{s.desc}</p>
-                <span className="text-xs text-electric-ink dark:text-electric">Livraison : {s.delai}</span>
+                <p className="text-[#475569] dark:text-white/60 text-sm mb-2">{s.desc}</p>
+                <span className="text-xs text-electric">Livraison : {s.delai}</span>
               </Link>
             ))}
           </div>
@@ -226,10 +226,10 @@ export default function AgenceWebVillePage({ params }: { params: { ville: string
               { n: '04', titre: 'Mise en ligne', desc: 'Votre site est mis en ligne, référencé sur Google et livré clé en main avec hébergement 12 mois inclus.' },
             ].map(step => (
               <div key={step.n} className="flex items-start gap-4 p-4 rounded-xl border border-white/10">
-                <span className="text-2xl font-bold text-electric/40 font-mono flex-shrink-0 w-10">{step.n}</span>
+                <span className="text-2xl font-bold text-electric/80 font-mono flex-shrink-0 w-10">{step.n}</span>
                 <div>
                   <h3 className="font-semibold text-foreground dark:text-white mb-1">{step.titre}</h3>
-                  <p className="text-foreground/60 dark:text-white/60 text-sm">{step.desc}</p>
+                  <p className="text-[#475569] dark:text-white/60 text-sm">{step.desc}</p>
                 </div>
               </div>
             ))}
@@ -255,7 +255,7 @@ export default function AgenceWebVillePage({ params }: { params: { ville: string
               <details key={faq.q} className="group rounded-xl border border-navy/20 dark:border-white/10 overflow-hidden">
                 <summary className="flex items-center justify-between p-4 cursor-pointer font-medium text-foreground dark:text-white list-none">
                   {faq.q}
-                  <ChevronRight size={16} className="text-white/40 group-open:rotate-90 transition-transform flex-shrink-0 ml-3" />
+                  <ChevronRight size={16} className="text-white/65 group-open:rotate-90 transition-transform flex-shrink-0 ml-3" />
                 </summary>
                 <div className="px-4 pb-4 text-foreground/70 dark:text-white/70 text-sm leading-relaxed">{faq.a}</div>
               </details>
@@ -283,7 +283,7 @@ export default function AgenceWebVillePage({ params }: { params: { ville: string
         <div className="rounded-2xl p-8 bg-gradient-to-br from-navy to-electric text-center">
           <h3 className="text-white font-bold text-2xl mb-2">Vous êtes à {v.ville} ? Parlons de votre projet.</h3>
           <p className="text-white/70 mb-2">Premier rendez-vous gratuit, devis sous 72h, sans engagement.</p>
-          <p className="text-white/50 text-sm mb-6">Tout se passe à distance — aussi efficace qu'en présentiel, plus rapide.</p>
+          <p className="text-white/65 text-sm mb-6">Tout se passe à distance — aussi efficace qu'en présentiel, plus rapide.</p>
           <Link href="/contact" className="inline-block px-8 py-3 bg-gold hover:bg-gold/80 text-ink font-semibold rounded-xl transition-all hover:-translate-y-0.5">
             Demander un devis gratuit →
           </Link>

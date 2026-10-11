@@ -76,7 +76,7 @@ export default function CahierDesChargesPage() {
 
         <div className="rounded-2xl border border-electric/20 bg-electric/5 p-5 flex items-center gap-4">
           <FileText size={20} className="text-electric flex-shrink-0" />
-          <div className="flex-1 text-sm text-foreground/60 dark:text-white/50">
+          <div className="flex-1 text-sm text-[#475569] dark:text-white/65">
             Notre modèle de cahier des charges officiel est disponible parmi nos <Link href="/ressources/documents" className="text-electric hover:underline">documents à télécharger</Link>.
           </div>
         </div>

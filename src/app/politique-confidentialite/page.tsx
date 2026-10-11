@@ -28,7 +28,7 @@ export default function PolitiqueConfidentialite() {
             Télécharger la version PDF officielle
           </a>
         </div>
-        <p className="text-gray-500 dark:text-white/50 text-sm mb-12">Dernière mise à jour : juin 2026</p>
+        <p className="text-gray-500 dark:text-white/65 text-sm mb-12">Dernière mise à jour : juin 2026</p>
 
         <div className="prose dark:prose-invert prose-sm max-w-none space-y-10">
           <section>

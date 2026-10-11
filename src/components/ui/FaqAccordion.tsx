@@ -15,8 +15,8 @@ export default function FaqAccordion({ items, dark = false, defaultOpen }: Props
   const [open, setOpen] = useState<number | null>(defaultOpen ?? null)
 
   const cardBase = dark
-    ? 'border-white/8 bg-white/3 hover:border-white/15 data-[open]:border-electric/25 data-[open]:bg-white/6'
-    : 'border-navy/12 bg-white dark:border-white/8 dark:bg-white/3 hover:border-navy/25 dark:hover:border-white/15 data-[open]:border-electric/30 data-[open]:bg-blue-50/50 dark:data-[open]:bg-white/6'
+    ? 'border-white/10 bg-white/5 hover:border-white/15 data-[open]:border-electric/25 data-[open]:bg-white/5'
+    : 'border-navy/10 bg-white dark:border-white/10 dark:bg-white/5 hover:border-navy/25 dark:hover:border-white/15 data-[open]:border-electric/30 data-[open]:bg-blue-50/50 dark:data-[open]:bg-white/5'
 
   const questionText = dark
     ? 'text-white/80 group-hover:text-white data-[open]:text-white'
@@ -24,7 +24,7 @@ export default function FaqAccordion({ items, dark = false, defaultOpen }: Props
 
   const answerText = dark
     ? 'text-white/55'
-    : 'text-foreground/60 dark:text-white/55'
+    : 'text-[#475569] dark:text-white/55'
 
   return (
     <div className="space-y-2">

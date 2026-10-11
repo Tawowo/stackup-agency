@@ -94,7 +94,7 @@ export default function DepartementPage({ params }: { params: { slug: string } }
             {d.metiersPhares.map(m => (
               <div key={m.metier} className="p-4 rounded-xl bg-white border border-gray-100">
                 <div className="font-bold text-navy text-sm mb-1">{m.metier}</div>
-                <div className="text-navy/55 text-sm">{m.besoin}</div>
+                <div className="text-[#475569] text-sm">{m.besoin}</div>
               </div>
             ))}
           </div>
@@ -120,7 +120,7 @@ export default function DepartementPage({ params }: { params: { slug: string } }
           <h2 className="text-2xl font-bold text-navy mb-3">
             Les {totalCommunes > 0 ? totalCommunes.toLocaleString('fr-FR') : ''} communes couvertes en {d.nom} ({d.code})
           </h2>
-          <p className="text-navy/55 text-sm mb-8 max-w-2xl">
+          <p className="text-[#475569] text-sm mb-8 max-w-2xl">
             Nous créons des sites internet pour les entreprises de {art.de}{d.nom} entier, quelle que soit la taille de la commune —
             de {d.chefLieu} au plus petit village. Liste complète, organisée par intercommunalité :
           </p>
@@ -132,7 +132,7 @@ export default function DepartementPage({ params }: { params: { slug: string } }
                     <MapPin size={13} className="text-gold flex-shrink-0" />
                     Autour de {g.epci} — {g.communes.length} commune{g.communes.length > 1 ? 's' : ''}
                   </h3>
-                  <p className="text-navy/60 text-[13px] leading-relaxed pl-5">
+                  <p className="text-[#475569] text-[13px] leading-relaxed pl-5">
                     {g.communes.join(' · ')}
                   </p>
                 </div>
@@ -143,7 +143,7 @@ export default function DepartementPage({ params }: { params: { slug: string } }
               {d.communes.join(' · ')}
             </p>
           )}
-          <p className="text-navy/45 text-xs mt-6">
+          <p className="text-[#64748B] text-xs mt-6">
             Votre commune n’apparaît pas ou vous avez un doute ? Nous intervenons partout dans le {d.code} — la création de site se fait à distance, aux mêmes tarifs.
           </p>
         </section>
@@ -160,8 +160,8 @@ export default function DepartementPage({ params }: { params: { slug: string } }
             ].map(o => (
               <Link key={o.nom} href={o.href} className="p-4 rounded-xl bg-white border border-gray-100 hover:border-gold/40 hover:-translate-y-0.5 transition-all block">
                 <div className="font-bold text-navy text-sm mb-1">{o.nom}</div>
-                <div className="text-gold font-bold">à partir de {o.prix.toLocaleString('fr-FR')} €</div>
-                <div className="text-navy/45 text-xs mt-1">à partir de {o.delai}</div>
+                <div className="text-[#B45309] font-bold">à partir de {o.prix.toLocaleString('fr-FR')} €</div>
+                <div className="text-[#64748B] text-xs mt-1">à partir de {o.delai}</div>
               </Link>
             ))}
           </div>
@@ -175,7 +175,7 @@ export default function DepartementPage({ params }: { params: { slug: string } }
               <details key={f.q} className="group rounded-xl border border-gray-200 bg-white overflow-hidden">
                 <summary className="flex items-center justify-between p-4 cursor-pointer font-medium text-navy list-none">
                   {f.q}
-                  <ArrowRight size={14} className="text-navy/30 group-open:rotate-90 transition-transform flex-shrink-0" />
+                  <ArrowRight size={14} className="text-[#64748B] group-open:rotate-90 transition-transform flex-shrink-0" />
                 </summary>
                 <div className="px-4 pb-4 text-navy/65 text-sm leading-relaxed">{f.a}</div>
               </details>

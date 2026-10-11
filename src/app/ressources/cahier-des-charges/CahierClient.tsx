@@ -75,7 +75,7 @@ const BUDGETS = ['< 500€', '500 – 1 000€', '1 000 – 2 000€', '2 000 �
 function ProgressBar({ step, total }: { step: number; total: number }) {
   return (
     <div className="mb-12">
-      <div className="flex justify-between text-xs text-white/30 mb-3">
+      <div className="flex justify-between text-xs text-white/65 mb-3">
         <span>Étape {step}/{total}</span>
         <span>{Math.round((step / total) * 100)}% complété</span>
       </div>
@@ -85,7 +85,7 @@ function ProgressBar({ step, total }: { step: number; total: number }) {
       </div>
       <div className="flex justify-between mt-3">
         {['Activité', 'Objectifs', 'Fonctionnalités', 'Charte', 'Budget'].map((s, i) => (
-          <div key={s} className={`text-xs transition-colors duration-200 ${i < step ? 'text-electric' : i === step - 1 ? 'text-white font-medium' : 'text-white/20'}`}>
+          <div key={s} className={`text-xs transition-colors duration-200 ${i < step ? 'text-electric' : i === step - 1 ? 'text-white font-medium' : 'text-white/65'}`}>
             {i < step - 1 ? '✓' : ''} <span className="hidden sm:inline">{s}</span>
           </div>
         ))}
@@ -101,7 +101,7 @@ function Chip({ label, selected, onToggle }: { label: string; selected: boolean;
       className={`px-4 py-2 rounded-xl text-sm font-medium border transition-all duration-200 ${
         selected
           ? 'bg-electric/20 border-electric text-white'
-          : 'bg-white/[0.03] border-white/10 text-white/50 hover:border-white/30 hover:text-white'
+          : 'bg-white/[0.03] border-white/10 text-white/65 hover:border-white/30 hover:text-white'
       }`}>
       {selected && <CheckCircle size={12} className="inline mr-1.5 text-electric" />}
       {label}
@@ -176,7 +176,7 @@ export default function CahierClient() {
             <CheckCircle size={28} className="text-success" />
           </div>
           <h2 className="text-2xl font-bold text-white mb-2">Cahier des charges complété !</h2>
-          <p className="text-white/50 text-sm">Exportez-le ou copiez-le pour l'envoyer avec votre demande de devis.</p>
+          <p className="text-white/65 text-sm">Exportez-le ou copiez-le pour l'envoyer avec votre demande de devis.</p>
         </div>
 
         <div className="rounded-2xl border border-white/10 bg-white/[0.02] p-6 mb-6">
@@ -198,7 +198,7 @@ export default function CahierClient() {
         </div>
 
         <div className="text-center">
-          <p className="text-white/40 text-sm mb-4">Prêt à démarrer votre projet ?</p>
+          <p className="text-white/65 text-sm mb-4">Prêt à démarrer votre projet ?</p>
           <Link href="/devis"
             className="inline-flex items-center gap-2 px-8 py-3 bg-gold hover:bg-gold/90 text-ink font-bold rounded-xl transition-all hover:-translate-y-0.5 text-sm">
             Demander un devis → <ChevronRight size={14} />
@@ -232,10 +232,10 @@ export default function CahierClient() {
                     onChange={e => set(f.k as keyof FormData, e.target.value)}
                     className="w-full px-4 pt-6 pb-3 rounded-xl border border-white/10 bg-white/[0.04] text-white placeholder:text-transparent focus:outline-none focus:border-electric/60 text-sm transition-colors"
                   />
-                  <label className="absolute left-4 top-4 text-white/40 text-sm pointer-events-none transition-all duration-200">
+                  <label className="absolute left-4 top-4 text-white/65 text-sm pointer-events-none transition-all duration-200">
                     {f.label}
                   </label>
-                  <p className="text-xs text-white/20 mt-1 pl-1">{f.ph}</p>
+                  <p className="text-xs text-white/65 mt-1 pl-1">{f.ph}</p>
                 </div>
               ))}
             </div>
@@ -247,7 +247,7 @@ export default function CahierClient() {
           <div className="space-y-6">
             <h2 className="text-xl font-bold text-white">Objectifs du site</h2>
             <div>
-              <p className="text-sm text-white/50 mb-3">Que doit accomplir votre site ? (plusieurs choix)</p>
+              <p className="text-sm text-white/65 mb-3">Que doit accomplir votre site ? (plusieurs choix)</p>
               <div className="flex flex-wrap gap-2">
                 {OBJECTIFS_LIST.map(o => (
                   <Chip key={o} label={o} selected={data.objectifs.includes(o)} onToggle={() => toggleArr('objectifs', o)} />
@@ -262,7 +262,7 @@ export default function CahierClient() {
                 onChange={e => set('resultatAttendu', e.target.value)}
                 className="w-full px-4 pt-6 pb-3 rounded-xl border border-white/10 bg-white/[0.04] text-white placeholder:text-transparent focus:outline-none focus:border-electric/60 text-sm resize-none transition-colors"
               />
-              <label className="absolute left-4 top-4 text-white/40 text-sm pointer-events-none transition-all duration-200">
+              <label className="absolute left-4 top-4 text-white/65 text-sm pointer-events-none transition-all duration-200">
                 Résultat attendu dans 6 mois
               </label>
             </div>
@@ -274,7 +274,7 @@ export default function CahierClient() {
           <div className="space-y-6">
             <h2 className="text-xl font-bold text-white">Fonctionnalités requises</h2>
             <div>
-              <p className="text-sm text-white/50 mb-3">Cochez ce dont vous avez besoin</p>
+              <p className="text-sm text-white/65 mb-3">Cochez ce dont vous avez besoin</p>
               <div className="flex flex-wrap gap-2">
                 {FONCT_LIST.map(f => (
                   <Chip key={f} label={f} selected={data.fonctionnalites.includes(f)} onToggle={() => toggleArr('fonctionnalites', f)} />
@@ -289,7 +289,7 @@ export default function CahierClient() {
                 onChange={e => set('pagesSpeciales', e.target.value)}
                 className="w-full px-4 pt-6 pb-3 rounded-xl border border-white/10 bg-white/[0.04] text-white placeholder:text-transparent focus:outline-none focus:border-electric/60 text-sm resize-none transition-colors"
               />
-              <label className="absolute left-4 top-4 text-white/40 text-sm pointer-events-none transition-all duration-200">
+              <label className="absolute left-4 top-4 text-white/65 text-sm pointer-events-none transition-all duration-200">
                 Pages ou sections spéciales à prévoir
               </label>
             </div>
@@ -312,13 +312,13 @@ export default function CahierClient() {
                     onChange={e => set(f.k as keyof FormData, e.target.value)}
                     className="w-full px-4 pt-6 pb-3 rounded-xl border border-white/10 bg-white/[0.04] text-white placeholder:text-transparent focus:outline-none focus:border-electric/60 text-sm transition-colors"
                   />
-                  <label className="absolute left-4 top-4 text-white/40 text-sm pointer-events-none transition-all duration-200">{f.label}</label>
-                  <p className="text-xs text-white/20 mt-1 pl-1">{f.ph}</p>
+                  <label className="absolute left-4 top-4 text-white/65 text-sm pointer-events-none transition-all duration-200">{f.label}</label>
+                  <p className="text-xs text-white/65 mt-1 pl-1">{f.ph}</p>
                 </div>
               ))}
             </div>
             <div>
-              <p className="text-sm text-white/50 mb-3">Style visuel</p>
+              <p className="text-sm text-white/65 mb-3">Style visuel</p>
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
                 {STYLES.map(s => (
                   <button key={s.id} type="button"
@@ -326,7 +326,7 @@ export default function CahierClient() {
                     className={`p-4 rounded-xl border text-left transition-all duration-200 ${
                       data.style === s.id
                         ? 'border-electric bg-electric/10 text-white'
-                        : 'border-white/10 bg-white/[0.02] text-white/50 hover:border-white/25'
+                        : 'border-white/10 bg-white/[0.02] text-white/65 hover:border-white/25'
                     }`}>
                     <div className="text-xl mb-1">{s.emoji}</div>
                     <div className="text-xs font-medium">{s.label}</div>
@@ -352,13 +352,13 @@ export default function CahierClient() {
                     onChange={e => set(f.k as keyof FormData, e.target.value)}
                     className="w-full px-4 pt-6 pb-3 rounded-xl border border-white/10 bg-white/[0.04] text-white placeholder:text-transparent focus:outline-none focus:border-electric/60 text-sm transition-colors"
                   />
-                  <label className="absolute left-4 top-4 text-white/40 text-sm pointer-events-none transition-all duration-200">{f.label}</label>
-                  <p className="text-xs text-white/20 mt-1 pl-1">{f.ph}</p>
+                  <label className="absolute left-4 top-4 text-white/65 text-sm pointer-events-none transition-all duration-200">{f.label}</label>
+                  <p className="text-xs text-white/65 mt-1 pl-1">{f.ph}</p>
                 </div>
               ))}
             </div>
             <div>
-              <p className="text-sm text-white/50 mb-3">Budget indicatif</p>
+              <p className="text-sm text-white/65 mb-3">Budget indicatif</p>
               <div className="flex flex-wrap gap-2">
                 {BUDGETS.map(b => (
                   <button key={b} type="button"
@@ -366,7 +366,7 @@ export default function CahierClient() {
                     className={`px-4 py-2 rounded-xl text-sm border transition-all ${
                       data.budget === b
                         ? 'border-electric bg-electric/15 text-white font-medium'
-                        : 'border-white/10 text-white/50 hover:border-white/25'
+                        : 'border-white/10 text-white/65 hover:border-white/25'
                     }`}>{b}</button>
                 ))}
               </div>
@@ -377,10 +377,10 @@ export default function CahierClient() {
                 onChange={e => set('dateVoulue', e.target.value)}
                 className="w-full px-4 pt-6 pb-3 rounded-xl border border-white/10 bg-white/[0.04] text-white placeholder:text-transparent focus:outline-none focus:border-electric/60 text-sm transition-colors"
               />
-              <label className="absolute left-4 top-4 text-white/40 text-sm pointer-events-none transition-all duration-200">
+              <label className="absolute left-4 top-4 text-white/65 text-sm pointer-events-none transition-all duration-200">
                 Date souhaitée de mise en ligne
               </label>
-              <p className="text-xs text-white/20 mt-1 pl-1">Ex : Avant le 1er septembre, pas de contrainte…</p>
+              <p className="text-xs text-white/65 mt-1 pl-1">Ex : Avant le 1er septembre, pas de contrainte…</p>
             </div>
           </div>
         )}

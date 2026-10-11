@@ -107,7 +107,7 @@ export default function OffreRentreePage() {
           <p className="text-white/70 text-lg mb-6 max-w-2xl">
             Commandez votre site vitrine ({SITE.pricing.vitrine}€) ou multi-pages ({SITE.pricing.multipages}€) avant le 15 septembre et recevez votre maquette Figma (desktop + mobile) sans surcoût.
           </p>
-          <div className="flex items-center gap-2 text-white/50 text-sm mb-8">
+          <div className="flex items-center gap-2 text-white/65 text-sm mb-8">
             Offre expire dans&nbsp;<span className="text-gold"><CountdownRentree initialTime={initialTime} /></span>
           </div>
           <Link
@@ -147,7 +147,7 @@ export default function OffreRentreePage() {
                   {step.num}
                 </div>
                 <h3 className="font-semibold text-foreground dark:text-white mb-2">{step.title}</h3>
-                <p className="text-sm text-foreground/60 dark:text-white/60">{step.desc}</p>
+                <p className="text-sm text-[#475569] dark:text-white/60">{step.desc}</p>
               </div>
             ))}
           </div>
@@ -195,7 +195,7 @@ export default function OffreRentreePage() {
               <details key={faq.q} className="group rounded-xl border border-navy/20 dark:border-white/10 overflow-hidden">
                 <summary className="flex items-center justify-between p-4 cursor-pointer font-medium text-foreground dark:text-white list-none">
                   {faq.q}
-                  <ChevronRight size={16} className="text-white/40 group-open:rotate-90 transition-transform flex-shrink-0" />
+                  <ChevronRight size={16} className="text-white/65 group-open:rotate-90 transition-transform flex-shrink-0" />
                 </summary>
                 <div className="px-4 pb-4 text-foreground/70 dark:text-white/70 text-sm leading-relaxed">{faq.a}</div>
               </details>

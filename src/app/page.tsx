@@ -16,6 +16,7 @@ const Showroom = dynamic(() => import('@/components/home/Showroom'))
 const LaRoute = dynamic(() => import('@/components/home/LaRoute'))
 const StatPills = dynamic(() => import('@/components/home/StatPills'))
 const RaisonDetre = dynamic(() => import('@/components/home/RaisonDetre'))
+const PreuveLogicielle = dynamic(() => import('@/components/home/PreuveLogicielle'))
 
 export const metadata: Metadata = {
   title: "Agence web Tours — Site internet en 10 jours",
@@ -82,6 +83,10 @@ export default function Home() {
 
         {/* 03 — Pourquoi Stackup Agency */}
         <PreuvePar3 />
+        <div className="section-divider" aria-hidden="true" />
+
+        {/* 03bis — La preuve : un logiciel réellement manipulable */}
+        <PreuveLogicielle />
         <div className="section-divider" aria-hidden="true" />
 
         {/* 04 — Notre raison d'être */}

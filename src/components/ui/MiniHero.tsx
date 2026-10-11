@@ -36,7 +36,7 @@ export default function MiniHero({ title, subtitle, breadcrumb, children, marker
         {marker && <div className="section-marker mb-2 mt-1" aria-hidden="true">{marker}</div>}
         <h1 className="reveal-item font-display text-navy mt-2">{title}</h1>
         {subtitle && (
-          <p className="reveal-item text-navy/55 text-lg max-w-2xl mt-3" style={{ animationDelay: '80ms' }}>{subtitle}</p>
+          <p className="reveal-item text-[#475569] text-lg max-w-2xl mt-3" style={{ animationDelay: '80ms' }}>{subtitle}</p>
         )}
         {children}
       </div>

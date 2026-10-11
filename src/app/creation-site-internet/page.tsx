@@ -37,7 +37,7 @@ export default function CreationSiteInternetPage() {
 
       <div className="bg-gradient-to-b from-[#060D1A] to-[#0A0F1C] pt-24 pb-16">
         <div className="max-w-5xl mx-auto px-4 sm:px-6">
-          <nav className="flex items-center gap-1.5 text-white/40 text-xs mb-6" aria-label="Fil d'Ariane">
+          <nav className="flex items-center gap-1.5 text-white/65 text-xs mb-6" aria-label="Fil d'Ariane">
             <Link href="/" className="hover:text-white transition-colors flex items-center gap-1"><Home size={11} /> Accueil</Link>
             <ChevronRight size={11} />
             <span className="text-white/60">Création site internet</span>
@@ -63,7 +63,7 @@ export default function CreationSiteInternetPage() {
                 {metiersOfCat.map(m => (
                   <Link key={m.slug} href={`/creation-site-internet/${m.slug}`} className="flex items-center justify-between p-4 rounded-xl border border-navy/20 dark:border-white/10 hover:border-blue-400/40 transition-colors group">
                     <span className="font-medium text-foreground dark:text-white group-hover:text-electric transition-colors capitalize">{m.metier}</span>
-                    <ChevronRight size={16} className="text-white/30 group-hover:text-electric transition-colors" />
+                    <ChevronRight size={16} className="text-white/65 group-hover:text-electric transition-colors" />
                   </Link>
                 ))}
               </div>

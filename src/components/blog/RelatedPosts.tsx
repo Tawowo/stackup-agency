@@ -33,7 +33,7 @@ export default function RelatedPosts({ currentSlug, currentCategory, currentTag,
             href={`/blog/${post.slug}`}
             className="group p-4 rounded-xl border border-white/10 hover:border-electric/30 transition-colors"
           >
-            <div className="flex items-center gap-2 mb-2 text-xs text-white/40">
+            <div className="flex items-center gap-2 mb-2 text-xs text-white/65">
               <span className="px-2 py-0.5 rounded-full bg-white/10 text-white/60">{post.tag}</span>
               <span className="flex items-center gap-1"><Clock size={10} /> {post.readTime} min</span>
             </div>

@@ -68,7 +68,7 @@ export default function HeroSection() {
                 >
                   {i === 1 ? (
                     <>
-                      <span className="text-[#F59E0B]">décoller</span> votre activité.
+                      <span className="text-[#B45309]">décoller</span> votre activité.
                     </>
                   ) : (
                     ligne

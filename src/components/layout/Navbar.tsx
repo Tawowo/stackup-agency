@@ -69,16 +69,22 @@ export default function Navbar() {
   // « texte blanc sur hero sombre » n'a plus de raison d'être et rendait la
   // navigation illisible. Les libellés sont donc navy en permanence.
   //
-  // Seul le fond de la barre varie : transparent en haut de l'accueil pour
-  // laisser respirer le monolithe, opaque dès le premier défilement.
+  // Seule la bordure varie : la barre reste posée sur un fond ivoire opaque
+  // en permanence. Une barre translucide se composite avec ce qui passe
+  // dessous, et sur les pages à fond sombre (404, offre de rentrée) les
+  // libellés navy y tombaient à 1,7:1.
+  //
+  // L'opacité doit appartenir à l'échelle Tailwind (…, 90, 95, 100) : un
+  // `bg-[#FFFDF9]/90` ne génère aucune règle, et la barre se retrouve alors
+  // sans fond du tout — c'est exactement ce qui s'était produit ici.
   const navBg = scrolled || !isHome
-    ? 'bg-[#FFFDF9]/92 backdrop-blur-md shadow-sm border-b border-[#1E3A5F]/8'
-    : 'bg-[#FFFDF9]/70 backdrop-blur-[6px]'
+    ? 'bg-[#FFFDF9]/95 backdrop-blur-md shadow-sm border-b border-[#1E3A5F]/10'
+    : 'bg-[#FFFDF9]/95 backdrop-blur-md'
 
-  const linkClass = 'text-navy hover:text-gold'
+  const linkClass = 'text-navy hover:text-[#B45309]'
 
   const logoTextClass = 'text-navy'
-  const logoSubClass  = 'text-navy/60'
+  const logoSubClass  = 'text-[#475569]'
   const barColor      = 'bg-navy'
 
   const dropdownCls = (isOpen: boolean) =>
@@ -126,7 +132,7 @@ export default function Navbar() {
                   ))}
                   <div className="border-t border-gray-100 my-1" />
                   <Link href="/services" role="menuitem" onClick={() => setServicesOpen(false)}
-                    className="dropdown-item flex items-center gap-1.5 px-4 py-2.5 text-sm font-semibold text-electric-ink hover:bg-blue-50/70 transition-colors rounded-lg mx-1">
+                    className="dropdown-item flex items-center gap-1.5 px-4 py-2.5 text-sm font-semibold text-electric hover:bg-blue-50/70 transition-colors rounded-lg mx-1">
                     Voir tous les services <span className="arrow-slide">→</span>
                   </Link>
                 </div>
@@ -157,7 +163,7 @@ export default function Navbar() {
                   ))}
                   <div className="border-t border-gray-100 my-1 mx-3" />
                   <Link href="/outils" role="menuitem" onClick={() => setOutilsOpen(false)}
-                    className="dropdown-item flex items-center gap-1.5 px-4 py-2.5 text-sm font-semibold text-electric-ink hover:bg-blue-50/70 transition-colors rounded-lg mx-1">
+                    className="dropdown-item flex items-center gap-1.5 px-4 py-2.5 text-sm font-semibold text-electric hover:bg-blue-50/70 transition-colors rounded-lg mx-1">
                     Tous les outils <span className="arrow-slide">→</span>
                   </Link>
                 </div>
@@ -198,7 +204,7 @@ export default function Navbar() {
         <div className="pt-20 px-6 pb-10 flex flex-col min-h-full">
           {/* Services */}
           <div className="mobile-menu-section mb-1">
-            <p className="py-2 px-2 text-[10px] font-bold text-navy/30 uppercase tracking-[0.2em] mb-1">Services</p>
+            <p className="py-2 px-2 text-[10px] font-bold text-[#64748B] uppercase tracking-[0.2em] mb-1">Services</p>
             <div className="flex flex-col gap-0.5">
               {SERVICES_LINKS.map((l, i) => (
                 <Link key={l.href} href={l.href} onClick={() => setOpen(false)}
@@ -211,11 +217,11 @@ export default function Navbar() {
             </div>
           </div>
 
-          <div className="my-4 h-px bg-navy/8" />
+          <div className="my-4 h-px bg-navy/10" />
 
           {/* Outils */}
           <div className="mobile-menu-section mb-1">
-            <p className="py-2 px-2 text-[10px] font-bold text-navy/30 uppercase tracking-[0.2em] mb-1">Outils gratuits</p>
+            <p className="py-2 px-2 text-[10px] font-bold text-[#64748B] uppercase tracking-[0.2em] mb-1">Outils gratuits</p>
             <div className="flex flex-col gap-0.5">
               {OUTILS_LINKS.map((l, i) => (
                 <Link key={l.href} href={l.href} onClick={() => setOpen(false)}
@@ -226,14 +232,14 @@ export default function Navbar() {
                 </Link>
               ))}
               <Link href="/outils" onClick={() => setOpen(false)}
-                className="mobile-menu-item py-2.5 px-3 text-sm font-semibold text-electric-ink hover:text-electric rounded-xl min-h-[44px] flex items-center"
+                className="mobile-menu-item py-2.5 px-3 text-sm font-semibold text-electric hover:text-electric rounded-xl min-h-[44px] flex items-center"
                 style={{ transitionDelay: '350ms' }}>
                 Tous les outils →
               </Link>
             </div>
           </div>
 
-          <div className="my-4 h-px bg-navy/8" />
+          <div className="my-4 h-px bg-navy/10" />
 
           {/* Nav principale */}
           <div className="mobile-menu-section flex flex-col gap-0.5">
@@ -247,9 +253,9 @@ export default function Navbar() {
               { href: '/contact', label: 'Contact', Icon: Mail },
             ].map((l, i) => (
               <Link key={l.href} href={l.href} onClick={() => setOpen(false)}
-                className="mobile-menu-item py-3.5 px-3 text-lg font-semibold text-navy hover:text-electric-ink hover:bg-blue-50/50 rounded-xl min-h-[56px] flex items-center gap-3 border border-transparent hover:border-electric/15"
+                className="mobile-menu-item py-3.5 px-3 text-lg font-semibold text-navy hover:text-electric hover:bg-blue-50/50 rounded-xl min-h-[56px] flex items-center gap-3 border border-transparent hover:border-electric/15"
                 style={{ transitionDelay: `${360 + i * 35}ms` }}>
-                <l.Icon size={18} strokeWidth={1.5} className="text-navy/40 flex-shrink-0" aria-hidden="true" />
+                <l.Icon size={18} strokeWidth={1.5} className="text-[#64748B] flex-shrink-0" aria-hidden="true" />
                 {l.label}
               </Link>
             ))}
@@ -260,7 +266,7 @@ export default function Navbar() {
               className="mobile-menu-cta flex items-center justify-center py-4 bg-gradient-to-r from-gold to-amber-400 text-ink text-base font-bold rounded-2xl min-h-[56px] shadow-lg shadow-gold/20 hover:opacity-90 transition-opacity">
               Devis gratuit →
             </Link>
-            <p className="text-center text-navy/30 text-xs mt-4">Réponse sous 72h · Sans engagement</p>
+            <p className="text-center text-[#64748B] text-xs mt-4">Réponse sous 72h · Sans engagement</p>
           </div>
         </div>
       </div>

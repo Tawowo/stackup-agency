@@ -239,7 +239,7 @@ export default function TarifPage({ params }: { params: { plan: string } }) {
       <section className="bg-gradient-to-b from-[#1E3A5F] to-[#0F172A] py-24 pt-32">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           {/* Breadcrumb */}
-          <nav className="flex items-center gap-1.5 text-white/40 text-xs mb-6" aria-label="Fil d'Ariane">
+          <nav className="flex items-center gap-1.5 text-white/65 text-xs mb-6" aria-label="Fil d'Ariane">
             <Link href="/" className="hover:text-white transition-colors">Accueil</Link>
             <span>›</span>
             <Link href="/#tarifs" className="hover:text-white transition-colors">Tarifs</Link>
@@ -294,7 +294,7 @@ export default function TarifPage({ params }: { params: { plan: string } }) {
                   <div className="mt-0.5 w-5 h-5 rounded-full bg-red-100 dark:bg-red-900/20 flex items-center justify-center flex-shrink-0">
                     <X size={12} className="text-red-400" />
                   </div>
-                  <span className="text-gray-500 dark:text-white/50 text-sm">{f}</span>
+                  <span className="text-gray-500 dark:text-white/65 text-sm">{f}</span>
                 </li>
               ))}
             </ul>
@@ -308,25 +308,25 @@ export default function TarifPage({ params }: { params: { plan: string } }) {
             <table className="w-full">
               <thead>
                 <tr className="border-b border-gray-100 dark:border-white/10">
-                  <th className="text-left p-4 text-gray-500 dark:text-white/50 text-sm font-medium">Fonctionnalité</th>
+                  <th className="text-left p-4 text-gray-500 dark:text-white/65 text-sm font-medium">Fonctionnalité</th>
                   {planKeys.map(key => (
-                    <th key={key} className={`p-4 text-sm font-bold ${key === params.plan ? 'text-electric' : 'text-gray-500 dark:text-white/50'}`}>
+                    <th key={key} className={`p-4 text-sm font-bold ${key === params.plan ? 'text-electric' : 'text-gray-500 dark:text-white/65'}`}>
                       {key.charAt(0).toUpperCase() + key.slice(1)}
-                      {key === params.plan && <div className="text-xs font-normal text-electric/70">Votre plan</div>}
+                      {key === params.plan && <div className="text-xs font-normal text-electric">Votre plan</div>}
                     </th>
                   ))}
                 </tr>
               </thead>
               <tbody>
                 {plan.compare.map((row, i) => (
-                  <tr key={i} className={i % 2 === 0 ? 'bg-gray-50 dark:bg-white/2' : ''}>
+                  <tr key={i} className={i % 2 === 0 ? 'bg-gray-50 dark:bg-white/0' : ''}>
                     <td className="p-4 text-gray-700 dark:text-white/70 text-sm">{row.feature}</td>
                     {planKeys.map(key => (
                       <td key={key} className="p-4 text-center">
                         {row[key] ? (
                           <Check size={16} className={key === params.plan ? 'text-electric mx-auto' : 'text-green-500 mx-auto'} />
                         ) : (
-                          <X size={16} className="text-gray-300 dark:text-white/20 mx-auto" />
+                          <X size={16} className="text-gray-300 dark:text-white/65 mx-auto" />
                         )}
                       </td>
                     ))}
@@ -364,7 +364,7 @@ export default function TarifPage({ params }: { params: { plan: string } }) {
         </section>
 
         <section className="pt-4">
-          <p className="text-sm text-gray-500 dark:text-white/40 mb-3">Pour aller plus loin</p>
+          <p className="text-sm text-gray-500 dark:text-white/65 mb-3">Pour aller plus loin</p>
           <div className="flex flex-wrap gap-3">
             <Link href="/tarifs" className="text-sm text-electric hover:underline">Comparer les formules →</Link>
             <Link href="/services" className="text-sm text-electric hover:underline">Nos services →</Link>

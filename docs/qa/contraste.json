@@ -1,0 +1,15 @@
+[
+  {
+    "classe": "text-center text-white/25 text-xs",
+    "nombre": 1,
+    "ratio": "2.17",
+    "fg": "#444a53",
+    "bg": "#060d1a",
+    "taille": "12",
+    "graisse": "normal",
+    "pages": [
+      "/outils/audit-site"
+    ],
+    "exemple": "<p class=\"text-center text-white/25 text-xs mt-4\">Analyse via Google PageSpeed Insights (mobile) · Données rée"
+  }
+]

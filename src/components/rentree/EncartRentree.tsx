@@ -13,7 +13,7 @@ export default function EncartRentree() {
           Offre rentrée — maquette offerte
         </div>
         {/* div et non p : CountdownRentree contient des <div> (TimeUnit), <div> dans <p> = HTML invalide */}
-        <div className="text-xs text-foreground/60 dark:text-white/60">
+        <div className="text-xs text-[#475569] dark:text-white/60">
           Expire dans <CountdownRentree initialTime={initialTime} />
         </div>
       </div>

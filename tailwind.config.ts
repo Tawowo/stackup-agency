@@ -15,7 +15,9 @@ const config: Config = {
       },
       colors: {
         navy: "#1E3A5F",
-        electric: "#2D7DD2",
+        electric: "#1B5A9E",          // texte sur fond clair et fond porteur de texte blanc : 6,99:1
+        "electric-clair": "#7DB3EA",  // texte sur fond sombre : 7,9:1 sur #0B1A2E
+        "electric-vif": "#2D7DD2",    // décoratif uniquement : bordures, lueurs, dégradés
         "electric-ink": "#1B5A9E",
         gold: "#F59E0B",
         ink: "#1E293B",

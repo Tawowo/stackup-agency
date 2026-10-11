@@ -24,7 +24,7 @@ const SHELVES: Shelf[] = [
   },
   {
     label: 'Pro',
-    color: 'text-gold',
+    color: 'text-[#B45309]',
     border: 'border-gold/40',
     bg: 'bg-amber-50',
     items: ['Tout Starter +', 'Blog intégré', 'Google Analytics', 'Galerie photos', 'Formulaires avancés', 'Pages multiples'],
@@ -82,7 +82,7 @@ function ShelfRow({ shelf, isVisible, shelfIndex }: { shelf: Shelf; isVisible: b
               size={15}
               className={`flex-shrink-0 transition-all duration-300 ${i < filled ? shelf.color : 'text-gray-300'}`}
             />
-            <span className={`text-sm font-medium transition-all duration-300 ${i < filled ? 'text-navy' : 'text-navy/30'}`}>
+            <span className={`text-sm font-medium transition-all duration-300 ${i < filled ? 'text-navy' : 'text-[#64748B]'}`}>
               {item}
             </span>
           </div>
@@ -113,7 +113,7 @@ export default function TarifsShelf() {
 
   return (
     <div ref={ref} className="space-y-4 mb-12">
-      <div className="text-sm text-navy/40 font-mono mb-6">{'// Ce qui est inclus dans chaque formule'}</div>
+      <div className="text-sm text-[#64748B] font-mono mb-6">{'// Ce qui est inclus dans chaque formule'}</div>
       {SHELVES.map((s, i) => (
         <ShelfRow key={s.label} shelf={s} isVisible={isVisible} shelfIndex={i} />
       ))}

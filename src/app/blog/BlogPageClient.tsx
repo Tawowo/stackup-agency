@@ -13,7 +13,7 @@ export default function BlogPageClient({ posts }: { posts: Post[] }) {
       <div className="min-h-screen bg-[#F8FAFC] dark:bg-[#0A0F1C]">
         <div className="bg-gradient-to-b from-[#060D1A] to-[#0A0F1C] pt-24 pb-16">
           <div className="max-w-5xl mx-auto px-4 sm:px-6">
-            <Link href="/" className="inline-flex items-center gap-2 text-white/50 hover:text-white text-sm mb-8 transition-colors">
+            <Link href="/" className="inline-flex items-center gap-2 text-white/65 hover:text-white text-sm mb-8 transition-colors">
               <ArrowLeft size={16} /> Back to site
             </Link>
             <h1 className="text-4xl lg:text-6xl font-bold text-white mb-4">Blog</h1>
@@ -42,7 +42,7 @@ export default function BlogPageClient({ posts }: { posts: Post[] }) {
     <div className="min-h-screen bg-[#F8FAFC] dark:bg-[#0A0F1C]">
       <div className="bg-gradient-to-b from-[#060D1A] to-[#0A0F1C] pt-24 pb-16">
         <div className="max-w-5xl mx-auto px-4 sm:px-6">
-          <Link href="/" className="inline-flex items-center gap-2 text-white/50 hover:text-white text-sm mb-8 transition-colors">
+          <Link href="/" className="inline-flex items-center gap-2 text-white/65 hover:text-white text-sm mb-8 transition-colors">
             <ArrowLeft size={16} /> Retour au site
           </Link>
           <h1 className="text-4xl lg:text-6xl font-bold text-white mb-4">{t.blog.title}</h1>

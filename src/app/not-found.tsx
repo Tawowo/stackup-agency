@@ -17,11 +17,11 @@ function TerminalLine({ text, error, visible }: { text: string; error?: boolean;
     <div
       className={`transition-all duration-300 data-mono text-xs sm:text-sm ${
         visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-1'
-      } ${error ? 'text-red-400' : 'text-electric/80'}`}
+      } ${error ? 'text-red-300' : 'text-electric-clair'}`}
     >
       {text}
       {visible && text === TERMINAL_LINES[TERMINAL_LINES.length - 1].text && (
-        <span className="inline-block w-2 h-3.5 bg-electric/80 align-middle ml-1 animate-pulse" />
+        <span className="inline-block w-2 h-3.5 bg-electric-clair align-middle ml-1 animate-pulse" />
       )}
     </div>
   )
@@ -57,13 +57,16 @@ export default function NotFound() {
         style={{ background: 'radial-gradient(ellipse, rgba(245,158,11,0.05) 0%, transparent 70%)' }} />
 
       {/* Terminal box */}
-      <div className="relative z-10 w-full max-w-lg mb-10 glass-panel rounded-xl overflow-hidden text-left">
+      <div
+        className="relative z-10 w-full max-w-lg mb-10 rounded-xl overflow-hidden text-left"
+        style={{ background: 'rgba(12,22,38,0.72)', backdropFilter: 'blur(16px)', WebkitBackdropFilter: 'blur(16px)', border: '1px solid rgba(255,255,255,0.1)' }}
+      >
         {/* Terminal chrome */}
         <div className="flex items-center gap-2 px-4 py-3 border-b border-white/[0.06] bg-black/30">
           <span className="w-3 h-3 rounded-full bg-red-400/70" aria-hidden="true" />
           <span className="w-3 h-3 rounded-full bg-amber-400/70" aria-hidden="true" />
           <span className="w-3 h-3 rounded-full bg-green-400/70" aria-hidden="true" />
-          <span className="ml-3 text-white/40 text-xs data-mono">stackup — terminal — 80×24</span>
+          <span className="ml-3 text-white/65 text-xs data-mono">stackup — terminal — 80×24</span>
         </div>
         {/* Terminal body */}
         <div className="p-5 space-y-2 min-h-[180px]">
@@ -93,7 +96,7 @@ export default function NotFound() {
       <h1 className="relative z-10 text-xl sm:text-2xl font-bold text-white mb-3">
         Cette page s&apos;est évaporée dans les internets.
       </h1>
-      <p className="relative z-10 text-white/50 text-sm max-w-sm mb-10">
+      <p className="relative z-10 text-white/75 text-sm max-w-sm mb-10">
         Peut-être une faute de frappe, un lien expiré, ou simplement la magie du web.<br />
         On vous ramène sur quelque chose de solide.
       </p>
@@ -102,29 +105,30 @@ export default function NotFound() {
       <div className="relative z-10 flex flex-col sm:flex-row gap-3 mb-12">
         <Link
           href="/"
-          className="btn-magnetic cta-glow px-6 py-3 bg-electric hover:bg-electric-ink text-white font-semibold rounded-xl transition-all hover:-translate-y-0.5"
+          className="btn-magnetic cta-glow px-6 py-3 bg-electric hover:bg-[#15487E] text-white font-semibold rounded-xl transition-all hover:-translate-y-0.5"
         >
           ← Retour à l&apos;accueil
         </Link>
         <Link
           href="/contact"
-          className="px-6 py-3 glass-panel text-white/70 hover:text-white font-medium rounded-xl transition-all hover:-translate-y-0.5"
+          className="px-6 py-3 text-white hover:text-white font-medium rounded-xl transition-all hover:-translate-y-0.5"
+          style={{ background: 'rgba(12,22,38,0.72)', backdropFilter: 'blur(16px)', WebkitBackdropFilter: 'blur(16px)', border: '1px solid rgba(255,255,255,0.1)' }}
         >
           Nous contacter
         </Link>
       </div>
 
       {/* Quick links */}
-      <div className="relative z-10 flex flex-wrap items-center justify-center gap-4 text-sm text-white/40">
-        <Link href="/services" className="hover:text-electric transition-colors">Services</Link>
+      <div className="relative z-10 flex flex-wrap items-center justify-center gap-4 text-sm text-white/65">
+        <Link href="/services" className="hover:text-electric-clair transition-colors">Services</Link>
         <span>·</span>
-        <Link href="/tarifs" className="hover:text-electric transition-colors">Tarifs</Link>
+        <Link href="/tarifs" className="hover:text-electric-clair transition-colors">Tarifs</Link>
         <span>·</span>
-        <Link href="/realisations" className="hover:text-electric transition-colors">Réalisations</Link>
+        <Link href="/realisations" className="hover:text-electric-clair transition-colors">Réalisations</Link>
         <span>·</span>
-        <Link href="/blog" className="hover:text-electric transition-colors">Blog</Link>
+        <Link href="/blog" className="hover:text-electric-clair transition-colors">Blog</Link>
         <span>·</span>
-        <Link href="/faq" className="hover:text-electric transition-colors">FAQ</Link>
+        <Link href="/faq" className="hover:text-electric-clair transition-colors">FAQ</Link>
       </div>
     </div>
   )

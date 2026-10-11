@@ -43,7 +43,7 @@ function ScoreGauge({ label, score, icon: Icon, delay = 0, active }: {
   const circ = 2 * Math.PI * r
   const dash = pct * circ
   const color = score >= 90 ? '#22c55e' : score >= 50 ? '#F59E0B' : '#ef4444'
-  const textColor = score >= 90 ? 'text-success' : score >= 50 ? 'text-gold' : 'text-red-500'
+  const textColor = score >= 90 ? 'text-success' : score >= 50 ? 'text-[#B45309]' : 'text-red-500'
   const grade = score >= 90 ? 'Excellent' : score >= 50 ? 'À améliorer' : 'Critique'
 
   return (
@@ -60,7 +60,7 @@ function ScoreGauge({ label, score, icon: Icon, delay = 0, active }: {
         </svg>
         <div className="absolute inset-0 flex flex-col items-center justify-center">
           <span className={`text-3xl font-bold tabular-nums ${textColor}`}>{displayed}</span>
-          <span className="text-white/30 text-xs">/100</span>
+          <span className="text-white/65 text-xs">/100</span>
         </div>
       </div>
       <div className="text-center">
@@ -136,14 +136,14 @@ function LoadingSequence({ done }: { done: boolean }) {
                   <div className="w-1.5 h-1.5 rounded-full bg-white/20" />
                 )}
               </div>
-              <span className={`text-sm ${state === 'done' ? 'text-white/70' : state === 'active' ? 'text-white font-medium' : 'text-white/30'}`}>
+              <span className={`text-sm ${state === 'done' ? 'text-white/70' : state === 'active' ? 'text-white font-medium' : 'text-white/65'}`}>
                 {step.label}
               </span>
             </div>
           )
         })}
       </div>
-      <p className="text-center text-white/30 text-xs mt-8">10 à 20 secondes • Données réelles Google</p>
+      <p className="text-center text-white/65 text-xs mt-8">10 à 20 secondes • Données réelles Google</p>
     </div>
   )
 }
@@ -170,11 +170,11 @@ function Opportunity({ opp, index, visible }: {
           {opp.displayValue && (
             <span className="text-xs text-gold font-mono bg-gold/10 px-2 py-0.5 rounded-md">{opp.displayValue}</span>
           )}
-          {open ? <ChevronUp size={14} className="text-white/30" /> : <ChevronDown size={14} className="text-white/30" />}
+          {open ? <ChevronUp size={14} className="text-white/65" /> : <ChevronDown size={14} className="text-white/65" />}
         </div>
       </button>
       {open && (
-        <div className="px-4 pb-4 text-xs text-white/50 leading-relaxed border-t border-white/5 pt-3">
+        <div className="px-4 pb-4 text-xs text-white/65 leading-relaxed border-t border-white/5 pt-3">
           {opp.description}
         </div>
       )}
@@ -215,14 +215,14 @@ function Results({ result }: { result: AuditResult }) {
         <div className="rounded-2xl border border-white/10 bg-gradient-to-br from-white/[0.03] to-white/[0.01] p-8">
           <div className="flex items-center gap-2 mb-8">
             <div className="w-1 h-5 bg-electric rounded-full" />
-            <h2 className="text-xs font-semibold text-white/50 uppercase tracking-widest">Scores Lighthouse (mobile)</h2>
+            <h2 className="text-xs font-semibold text-white/65 uppercase tracking-widest">Scores Lighthouse (mobile)</h2>
           </div>
           <div className="grid grid-cols-3 gap-4">
             <ScoreGauge label="Performance" score={result.scores.performance} icon={Zap} delay={200} active={phase >= 2} />
             <ScoreGauge label="Accessibilité" score={result.scores.accessibility} icon={Eye} delay={400} active={phase >= 2} />
             <ScoreGauge label="SEO" score={result.scores.seo} icon={TrendingUp} delay={600} active={phase >= 2} />
           </div>
-          <div className="grid sm:grid-cols-3 gap-4 mt-6 text-xs text-white/40 leading-relaxed">
+          <div className="grid sm:grid-cols-3 gap-4 mt-6 text-xs text-white/65 leading-relaxed">
             <p><strong className="text-white/60">Performance :</strong> la vitesse perçue par vos visiteurs sur mobile. En dessous de 50, une partie des visiteurs part avant d'avoir vu la page — et Google le sait.</p>
             <p><strong className="text-white/60">Accessibilité :</strong> la lisibilité pour tous (contrastes, tailles de texte, navigation clavier). Un site accessible convertit mieux et évite les risques légaux.</p>
             <p><strong className="text-white/60">SEO :</strong> les fondations techniques du référencement (titres, metadata, structure). Un bon score ne garantit pas la 1re place, mais un mauvais score l'interdit.</p>
@@ -236,7 +236,7 @@ function Results({ result }: { result: AuditResult }) {
           <div className="rounded-2xl border border-white/10 p-6">
             <div className="flex items-center gap-2 mb-6">
               <div className="w-1 h-5 bg-gold rounded-full" />
-              <h2 className="text-xs font-semibold text-white/50 uppercase tracking-widest">Core Web Vitals</h2>
+              <h2 className="text-xs font-semibold text-white/65 uppercase tracking-widest">Core Web Vitals</h2>
             </div>
             <div className="grid grid-cols-3 gap-4">
               {[
@@ -247,7 +247,7 @@ function Results({ result }: { result: AuditResult }) {
                 <div key={m.label} className="text-center p-4 rounded-xl bg-white/[0.03] border border-white/[0.06]">
                   <div className="text-2xl font-bold font-mono text-white mb-1">{m.value}</div>
                   <div className="text-xs font-semibold text-white/60 mb-1">{m.label}</div>
-                  <div className="text-xs text-white/25 hidden sm:block">{m.hint}</div>
+                  <div className="text-xs text-white/65 hidden sm:block">{m.hint}</div>
                   <div className="text-xs text-success/70 hidden sm:block mt-1">Cible : {m.good}</div>
                 </div>
               ))}
@@ -261,7 +261,7 @@ function Results({ result }: { result: AuditResult }) {
         <div className={`transition-all duration-700 ${phase >= 4 ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
           <div className="flex items-center gap-2 mb-4">
             <div className="w-1 h-5 bg-gold/60 rounded-full" />
-            <h2 className="text-xs font-semibold text-white/50 uppercase tracking-widest">
+            <h2 className="text-xs font-semibold text-white/65 uppercase tracking-widest">
               {result.opportunities.length} opportunité{result.opportunities.length > 1 ? 's' : ''} d'amélioration
             </h2>
           </div>
@@ -323,7 +323,7 @@ function Results({ result }: { result: AuditResult }) {
       {/* Honnêteté + export */}
       <div className={`transition-all duration-700 ${phase >= 6 ? 'opacity-100' : 'opacity-0'}`}>
         <div className="flex flex-wrap items-center justify-between gap-3 rounded-xl border border-white/10 bg-white/[0.02] p-4">
-          <p className="text-white/40 text-xs leading-relaxed max-w-xl">
+          <p className="text-white/65 text-xs leading-relaxed max-w-xl">
             Ce rapport est un pré-diagnostic indicatif fondé sur les données publiques de Google PageSpeed Insights.
             Il ne remplace pas un audit complet (crawl, maillage, contenus, logs serveur) mais donne une photographie honnête de l'état technique de votre site.
           </p>
@@ -382,14 +382,14 @@ export default function AuditClient() {
       <div className="max-w-3xl mx-auto px-4 sm:px-6 py-10">
         <div className="flex gap-3">
           <div className="flex-1 relative">
-            <Search size={18} className="absolute left-4 top-1/2 -translate-y-1/2 text-white/30" />
+            <Search size={18} className="absolute left-4 top-1/2 -translate-y-1/2 text-white/65" />
             <input
               type="url"
               value={url}
               onChange={e => setUrl(e.target.value)}
               onKeyDown={e => e.key === 'Enter' && run()}
               placeholder="https://mon-site.fr"
-              className="w-full pl-12 pr-4 py-4 rounded-2xl border border-white/10 bg-white/5 text-white placeholder:text-white/25 focus:outline-none focus:ring-2 focus:ring-electric/50 focus:border-electric/50 text-base transition-all"
+              className="w-full pl-12 pr-4 py-4 rounded-2xl border border-white/10 bg-white/5 text-white placeholder:text-white/65 focus:outline-none focus:ring-2 focus:ring-electric/50 focus:border-electric/50 text-base transition-all"
             />
           </div>
           <button
@@ -407,7 +407,7 @@ export default function AuditClient() {
         </div>
 
         {!loading && !result && (
-          <p className="text-center text-white/25 text-xs mt-4">
+          <p className="text-center text-white/65 text-xs mt-4">
             Analyse via Google PageSpeed Insights (mobile) · Données réelles, jamais simulées
           </p>
         )}

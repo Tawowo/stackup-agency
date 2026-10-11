@@ -76,7 +76,7 @@ export default function CookieBanner() {
         <div className="fixed inset-0 z-[10000] flex items-end sm:items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
           <div className="bg-white dark:bg-gray-900 rounded-2xl shadow-2xl w-full max-w-md p-6">
             <h2 className="text-lg font-bold text-gray-900 dark:text-white mb-1">{t.cookie.manageTitle}</h2>
-            <p className="text-gray-500 dark:text-white/50 text-sm mb-5">
+            <p className="text-gray-500 dark:text-white/65 text-sm mb-5">
               {t.cookie.manageDesc}
             </p>
 
@@ -89,9 +89,9 @@ export default function CookieBanner() {
                 <div>
                   <div className="font-semibold text-sm text-gray-900 dark:text-white flex items-center gap-2">
                     {t.cookie.technical}
-                    <span className="text-xs font-normal text-muted dark:text-white/40">{t.cookie.technicalRequired}</span>
+                    <span className="text-xs font-normal text-muted dark:text-white/65">{t.cookie.technicalRequired}</span>
                   </div>
-                  <p className="text-xs text-gray-500 dark:text-white/50 mt-0.5">{t.cookie.technicalDesc}</p>
+                  <p className="text-xs text-gray-500 dark:text-white/65 mt-0.5">{t.cookie.technicalDesc}</p>
                 </div>
               </div>
 
@@ -105,7 +105,7 @@ export default function CookieBanner() {
                 />
                 <div>
                   <div className="font-semibold text-sm text-gray-900 dark:text-white">{t.cookie.analytics}</div>
-                  <p className="text-xs text-gray-500 dark:text-white/50 mt-0.5">{t.cookie.analyticsDesc}</p>
+                  <p className="text-xs text-gray-500 dark:text-white/65 mt-0.5">{t.cookie.analyticsDesc}</p>
                 </div>
               </label>
 
@@ -119,7 +119,7 @@ export default function CookieBanner() {
                 />
                 <div>
                   <div className="font-semibold text-sm text-gray-900 dark:text-white">{t.cookie.marketing}</div>
-                  <p className="text-xs text-gray-500 dark:text-white/50 mt-0.5">{t.cookie.marketingDesc}</p>
+                  <p className="text-xs text-gray-500 dark:text-white/65 mt-0.5">{t.cookie.marketingDesc}</p>
                 </div>
               </label>
             </div>

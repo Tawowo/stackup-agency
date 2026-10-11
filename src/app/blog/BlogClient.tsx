@@ -126,13 +126,13 @@ export default function BlogClient({ posts }: { posts: Post[] }) {
     <>
       {/* Recherche instantanée */}
       <div className="relative mb-8 max-w-xl">
-        <SearchIcon size={16} className="absolute left-4 top-1/2 -translate-y-1/2 text-navy/30" />
+        <SearchIcon size={16} className="absolute left-4 top-1/2 -translate-y-1/2 text-[#64748B]" />
         <input
           type="search"
           value={query}
           onChange={e => { setQuery(e.target.value); setLimit(PAGE_SIZE) }}
           placeholder={`Rechercher parmi ${posts.length} articles…`}
-          className="w-full pl-11 pr-4 py-3 rounded-xl border border-gray-200 bg-white text-navy placeholder:text-navy/35 focus:outline-none focus:border-electric/50 focus:ring-2 focus:ring-electric/20 text-sm transition-all"
+          className="w-full pl-11 pr-4 py-3 rounded-xl border border-gray-200 bg-white text-navy placeholder:text-[#64748B] focus:outline-none focus:border-electric/50 focus:ring-2 focus:ring-electric/20 text-sm transition-all"
         />
       </div>
 
@@ -153,7 +153,7 @@ export default function BlogClient({ posts }: { posts: Post[] }) {
             >
               {Icon && <Icon size={13} />}
               {categoryLabels[f]}
-              <span className={`text-xs tabular-nums ${active === f ? 'text-white/70' : 'text-navy/40'}`}>{n}</span>
+              <span className={`text-xs tabular-nums ${active === f ? 'text-white' : 'text-[#64748B]'}`}>{n}</span>
             </button>
           )
         })}
@@ -179,9 +179,9 @@ export default function BlogClient({ posts }: { posts: Post[] }) {
                     <IconComp size={32} className="text-white/80" strokeWidth={1.5} />
                   </div>
                   <div className="p-5">
-                    <div className="text-xs text-gold font-bold uppercase tracking-wider mb-2">{categoryLabels[cat] || post.tag}</div>
+                    <div className="text-xs text-[#B45309] font-bold uppercase tracking-wider mb-2">{categoryLabels[cat] || post.tag}</div>
                     <h3 className="font-bold text-navy text-sm leading-snug group-hover:text-electric transition-colors line-clamp-2 mb-2">{post.title}</h3>
-                    <span className="text-xs text-navy/40 flex items-center gap-1"><Clock size={10} /> {post.readTime} min</span>
+                    <span className="text-xs text-[#64748B] flex items-center gap-1"><Clock size={10} /> {post.readTime} min</span>
                   </div>
                 </Link>
               )
@@ -191,7 +191,7 @@ export default function BlogClient({ posts }: { posts: Post[] }) {
       )}
 
       {/* Compteur résultat */}
-      <p className="text-muted text-sm mb-6" aria-live="polite">
+      <p className="text-[#64748B] text-sm mb-6" aria-live="polite">
         {filtered.length} article{filtered.length > 1 ? 's' : ''}
         {active !== 'tous' ? ` dans « ${categoryLabels[active]} »` : ''}
         {query.trim() ? ` pour « ${query.trim()} »` : ''}
@@ -213,7 +213,7 @@ export default function BlogClient({ posts }: { posts: Post[] }) {
               <div className="p-5 flex flex-col justify-center flex-1 min-w-0">
                 <div className="flex flex-wrap items-center gap-2.5 mb-2">
                   <span className="px-2 py-0.5 bg-electric/10 text-electric rounded-md text-xs font-semibold">{post.tag}</span>
-                  <span className="flex items-center gap-1 text-muted text-xs"><Clock size={10} /> {post.readTime} min</span>
+                  <span className="flex items-center gap-1 text-[#64748B] text-xs"><Clock size={10} /> {post.readTime} min</span>
                 </div>
                 <h2 className="text-base font-bold text-gray-900 mb-1.5 group-hover:text-electric transition-colors line-clamp-2 leading-snug">
                   <Link href={`/blog/${post.slug}`} className="before:absolute before:inset-0">{post.title}</Link>
@@ -233,7 +233,7 @@ export default function BlogClient({ posts }: { posts: Post[] }) {
         <div className="text-center mt-10">
           <button
             onClick={() => setLimit(l => l + PAGE_SIZE)}
-            className="px-8 py-3 rounded-xl border border-navy/20 text-navy font-semibold text-sm hover:border-gold hover:text-gold hover:-translate-y-0.5 transition-all"
+            className="px-8 py-3 rounded-xl border border-navy/20 text-navy font-semibold text-sm hover:border-gold hover:text-[#B45309] hover:-translate-y-0.5 transition-all"
           >
             Afficher plus d&apos;articles ({filtered.length - limit} restants)
           </button>
@@ -241,7 +241,7 @@ export default function BlogClient({ posts }: { posts: Post[] }) {
       )}
 
       {filtered.length === 0 && (
-        <div className="text-center py-16 text-muted">
+        <div className="text-center py-16 text-[#64748B]">
           Aucun article ne correspond à cette recherche.
         </div>
       )}

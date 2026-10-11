@@ -94,10 +94,10 @@ export default function OutilsPage() {
                   <div className={`w-11 h-11 rounded-xl ${o.bg} flex items-center justify-center`}>
                     <Icon size={20} className={o.color} />
                   </div>
-                  <span className="text-xs font-semibold px-2.5 py-1 bg-navy/5 dark:bg-white/5 text-foreground/50 dark:text-white/40 rounded-full">{o.badge}</span>
+                  <span className="text-xs font-semibold px-2.5 py-1 bg-navy/5 dark:bg-white/5 text-[#475569] dark:text-white/65 rounded-full">{o.badge}</span>
                 </div>
                 <h2 className="font-bold text-foreground dark:text-white mb-2 group-hover:text-electric transition-colors">{o.title}</h2>
-                <p className="text-sm text-foreground/60 dark:text-white/50 leading-relaxed">{o.desc}</p>
+                <p className="text-sm text-[#475569] dark:text-white/65 leading-relaxed">{o.desc}</p>
               </Link>
             )
           })}

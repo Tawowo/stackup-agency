@@ -116,7 +116,7 @@ export default function ParrainagePage() {
                   <Icon size={20} className="text-gold" />
                 </div>
                 <h3 className="font-bold text-foreground dark:text-white mb-2">{titre}</h3>
-                <p className="text-sm text-foreground/60 dark:text-white/60 leading-relaxed">{desc}</p>
+                <p className="text-sm text-[#475569] dark:text-white/60 leading-relaxed">{desc}</p>
               </div>
             ))}
           </div>
@@ -133,7 +133,7 @@ export default function ParrainagePage() {
                 <span className="font-display font-bold text-3xl text-gold">1 mois Premium (89 €)</span>
               </div>
               <div className="text-white/60 text-base mb-1">offert sur votre abonnement</div>
-              <div className="text-white/50 text-sm mb-4">
+              <div className="text-white/65 text-sm mb-4">
                 <span className="text-gold font-semibold">OU −10 %</span> sur votre propre prestation non encore signée
               </div>
               <ul className="space-y-2 text-sm">
@@ -152,12 +152,12 @@ export default function ParrainagePage() {
 
             {/* Filleul */}
             <div className="rounded-2xl border border-electric/20 bg-white dark:bg-[#0D1626] p-8">
-              <div className="text-xs font-semibold text-electric-ink dark:text-electric uppercase tracking-widest mb-4">Pour votre filleul</div>
+              <div className="text-xs font-semibold text-electric uppercase tracking-widest mb-4">Pour votre filleul</div>
               <div className="flex items-baseline gap-2 mb-1">
-                <span className="font-display font-bold text-5xl text-navy dark:text-gold">−10%</span>
-                <span className="text-foreground/60 dark:text-white/60 text-lg">premier projet</span>
+                <span className="font-display font-bold text-5xl text-navy dark:text-[#B45309]">−10%</span>
+                <span className="text-[#475569] dark:text-white/60 text-lg">premier projet</span>
               </div>
-              <div className="text-foreground/60 dark:text-white/60 text-sm mb-6">Sur tous nos services, HT, à la signature</div>
+              <div className="text-[#475569] dark:text-white/60 text-sm mb-6">Sur tous nos services, HT, à la signature</div>
               <ul className="space-y-2 text-sm">
                 {[
                   'Valable sur site vitrine, e-commerce, gestion…',
@@ -177,7 +177,7 @@ export default function ParrainagePage() {
         {/* Formulaire */}
         <section id="formulaire">
           <h2 className="text-2xl font-bold text-foreground dark:text-white mb-2">Soumettre un parrainage</h2>
-          <p className="text-foreground/60 dark:text-white/60 text-sm mb-8">
+          <p className="text-[#475569] dark:text-white/60 text-sm mb-8">
             Remplissez vos coordonnées et celles de votre filleul. Nous lui enverrons une confirmation avec le code de réduction.
           </p>
           <div className="bg-white dark:bg-[#0D1626] rounded-2xl border border-navy/10 dark:border-white/10 p-8">
@@ -187,10 +187,10 @@ export default function ParrainagePage() {
                   <Check size={32} className="text-green-500" />
                 </div>
                 <h3 className="text-xl font-bold text-foreground dark:text-white mb-2">Parrainage enregistré !</h3>
-                <p className="text-foreground/60 dark:text-white/60 mb-6">
+                <p className="text-[#475569] dark:text-white/60 mb-6">
                   Nous revenons vers vous et votre filleul sous 72h pour confirmer le parrainage.
                 </p>
-                <Link href="/services" className="inline-flex items-center gap-2 text-electric-ink dark:text-electric font-medium text-sm">
+                <Link href="/services" className="inline-flex items-center gap-2 text-electric font-medium text-sm">
                   Explorer nos services <ChevronRight size={14} />
                 </Link>
               </div>
@@ -270,7 +270,7 @@ export default function ParrainagePage() {
               <details key={item.name} className="group rounded-xl border border-navy/20 dark:border-white/10 overflow-hidden">
                 <summary className="flex items-center justify-between p-4 cursor-pointer font-medium text-foreground dark:text-white list-none">
                   {item.name}
-                  <ChevronRight size={16} className="text-foreground/30 dark:text-white/30 group-open:rotate-90 transition-transform flex-shrink-0" />
+                  <ChevronRight size={16} className="text-[#64748B] dark:text-white/65 group-open:rotate-90 transition-transform flex-shrink-0" />
                 </summary>
                 <div className="px-4 pb-4 text-foreground/70 dark:text-white/70 text-sm leading-relaxed">
                   {item.acceptedAnswer.text}
@@ -291,7 +291,7 @@ export default function ParrainagePage() {
           <h3 className="font-bold text-foreground dark:text-white text-xl mb-2">
             Pas encore client ? Découvrez nos offres
           </h3>
-          <p className="text-foreground/60 dark:text-white/60 text-sm mb-6">
+          <p className="text-[#475569] dark:text-white/60 text-sm mb-6">
             Demandez votre devis gratuit sous 72h. Premier site vitrine à partir de 449€.
           </p>
           <div className="flex flex-wrap justify-center gap-4">

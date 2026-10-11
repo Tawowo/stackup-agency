@@ -26,6 +26,13 @@ const ITEMS_REV: Item[] = [
   { text: '·', highlight: false },
 ]
 
+// La piste duplique son contenu quatre fois pour boucler sans raccord :
+// elle mesure ~4 000 px, clippée par deux conteneurs successifs. `contain:
+// paint` isole son rendu (gain de compositing). Ce confinement ne supprime
+// pas pour autant la remontée intermittente de cette largeur dans
+// documentElement.scrollWidth, qui est un artefact de mesure de Chromium :
+// le défilement horizontal reste impossible, ce que le contrôle qualité
+// vérifie directement.
 function Row({ items, cls }: { items: Item[]; cls: string }) {
   const content = (
     <>
@@ -33,7 +40,7 @@ function Row({ items, cls }: { items: Item[]; cls: string }) {
         <span
           key={i}
           className={`mx-5 text-sm font-medium tracking-wide select-none whitespace-nowrap ${
-            item.highlight ? 'marquee-keyword text-gold font-bold' : 'text-navy/30'
+            item.highlight ? 'marquee-keyword text-[#B45309] font-bold' : 'text-[#64748B]'
           }`}
         >
           {item.text}
@@ -42,7 +49,7 @@ function Row({ items, cls }: { items: Item[]; cls: string }) {
     </>
   )
   return (
-    <div className="overflow-hidden">
+    <div className="overflow-hidden" style={{ contain: 'paint' }}>
       <div className={`marquee-wrap flex ${cls}`} style={{ width: 'max-content' }}>
         <span className="flex">{content}</span>
         <span className="flex" aria-hidden>{content}</span>
@@ -56,7 +63,8 @@ function Row({ items, cls }: { items: Item[]; cls: string }) {
 export default function MarqueeSeparator() {
   return (
     <div
-      className="py-4 bg-[#FFFDF9] border-y border-navy/8 space-y-2 overflow-hidden"
+      className="py-4 bg-[#FFFDF9] border-y border-navy/10 space-y-2 overflow-hidden"
+      style={{ contain: 'paint' }}
       aria-hidden="true"
     >
       <Row items={ITEMS_FWD} cls="marquee-track" />

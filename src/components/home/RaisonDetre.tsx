@@ -66,7 +66,7 @@ export default function RaisonDetre() {
           <div className="order-1 lg:order-2">
             {/* Surtitre */}
             <p
-              className="text-[13px] font-semibold text-gold uppercase tracking-[0.18em] mb-5"
+              className="text-[13px] font-semibold text-[#B45309] uppercase tracking-[0.18em] mb-5"
               style={{
                 opacity: visible ? 1 : 0,
                 transform: visible ? 'translateY(0)' : 'translateY(16px)',
@@ -130,7 +130,7 @@ export default function RaisonDetre() {
             >
               <Link
                 href="/a-propos"
-                className="inline-flex items-center gap-2 text-navy font-semibold text-sm border-b border-navy/25 hover:border-gold hover:text-gold transition-all duration-200 pb-0.5"
+                className="inline-flex items-center gap-2 text-navy font-semibold text-sm border-b border-navy/25 hover:border-gold hover:text-[#B45309] transition-all duration-200 pb-0.5"
               >
                 Notre histoire <ArrowRight size={14} />
               </Link>

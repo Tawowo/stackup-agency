@@ -121,7 +121,7 @@ export default function ComparateurPrix() {
         .cp-rows { display: grid; gap: 14px; margin-top: 6px; }
         .cp-row-head { display: flex; justify-content: space-between; align-items: baseline; font-size: 14px; color: rgba(22,35,63,0.8); margin-bottom: 6px; }
         .cp-row-head strong { font-variant-numeric: tabular-nums; color: #16233f; }
-        .cp-row-head strong.gold { color: #d97706; }
+        .cp-row-head strong.gold { color: #b45309; }
         .cp-track { background: rgba(22,35,63,0.06); border-radius: 12px; overflow: hidden; height: 40px; }
         .cp-bar { height: 100%; display: flex; align-items: center; justify-content: flex-end; padding: 0 12px;
           border-radius: 12px; transition: width 1.1s cubic-bezier(.22,1,.36,1); min-width: 0; position: relative; }
@@ -141,7 +141,7 @@ export default function ComparateurPrix() {
         @keyframes cpShine { 0%{left:-60%} 100%{left:130%} }
         @media(prefers-reduced-motion:reduce){.cp-bar::after{animation:none}}
         .cp-note { font-size: 13.5px; color: rgba(22,35,63,0.7); background: #fff7ea; border: 1px solid rgba(217,119,6,0.25); border-radius: 10px; padding: 10px 12px; }
-        .cp-legende { font-size: 12px; color: rgba(22,35,63,0.5); }
+        .cp-legende { font-size: 12px; color: rgba(22,35,63,0.78); }
         @media (prefers-reduced-motion: reduce) { .cp-bar { transition: none; } }
       `}</style>
     </div>

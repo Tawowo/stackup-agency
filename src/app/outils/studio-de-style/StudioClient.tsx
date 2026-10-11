@@ -734,7 +734,7 @@ function LivePreview({ config, abConfig, fullscreen, onToggleFullscreen, templat
   const fontB = abConfig ? (FONTS.find(f => f.id === abConfig.font) ?? FONTS[1]) : null
 
   const btnCls = (m: PreviewMode) =>
-    `flex items-center gap-1 px-2 py-1 rounded-lg text-xs font-medium transition-colors ${mode === m ? 'bg-electric-ink text-white' : 'text-gray-500 dark:text-white/40 hover:bg-gray-100 dark:hover:bg-white/10'}`
+    `flex items-center gap-1 px-2 py-1 rounded-lg text-xs font-medium transition-colors ${mode === m ? 'bg-electric-ink text-white' : 'text-gray-500 dark:text-white/65 hover:bg-gray-100 dark:hover:bg-white/10'}`
 
   return (
     <div>
@@ -742,7 +742,7 @@ function LivePreview({ config, abConfig, fullscreen, onToggleFullscreen, templat
       <div className="flex items-center gap-1.5 mb-3 overflow-x-auto pb-1">
         {TEMPLATES.map(t => (
           <button key={t.id} onClick={() => setTemplateId(t.id)}
-            className={`flex items-center gap-1 px-2.5 py-1.5 rounded-lg text-[11px] font-medium whitespace-nowrap transition-colors ${templateId === t.id ? 'bg-electric-ink text-white' : 'bg-gray-100 dark:bg-white/10 text-gray-600 dark:text-white/50 hover:bg-gray-200 dark:hover:bg-white/15'}`}>
+            className={`flex items-center gap-1 px-2.5 py-1.5 rounded-lg text-[11px] font-medium whitespace-nowrap transition-colors ${templateId === t.id ? 'bg-electric-ink text-white' : 'bg-gray-100 dark:bg-white/10 text-gray-600 dark:text-white/65 hover:bg-gray-200 dark:hover:bg-white/15'}`}>
             <t.Icon size={11} /> {t.label}
           </button>
         ))}
@@ -768,7 +768,7 @@ function LivePreview({ config, abConfig, fullscreen, onToggleFullscreen, templat
         </div>
         {onToggleFullscreen && (
           <button onClick={onToggleFullscreen} title="Plein écran immersif (touche F)"
-            className="flex items-center gap-1 px-2 py-1 rounded-lg text-xs font-medium text-gray-500 dark:text-white/40 hover:bg-gray-100 dark:hover:bg-white/10 transition-colors">
+            className="flex items-center gap-1 px-2 py-1 rounded-lg text-xs font-medium text-gray-500 dark:text-white/65 hover:bg-gray-100 dark:hover:bg-white/10 transition-colors">
             {fullscreen ? <X size={13} /> : <Maximize2 size={13} />}
           </button>
         )}
@@ -780,11 +780,11 @@ function LivePreview({ config, abConfig, fullscreen, onToggleFullscreen, templat
       {mode === 'ab' && abConfig && palB && fontB && lookB && (
         <div className="grid grid-cols-2 gap-3">
           <div>
-            <div className="text-[10px] font-bold text-center mb-1 text-gray-500 dark:text-white/40 uppercase tracking-widest">Version A</div>
+            <div className="text-[10px] font-bold text-center mb-1 text-gray-500 dark:text-white/65 uppercase tracking-widest">Version A</div>
             <DesktopMockup spec={spec} pal={pal} font={font} look={look} tablet />
           </div>
           <div>
-            <div className="text-[10px] font-bold text-center mb-1 text-electric-ink uppercase tracking-widest">Version B</div>
+            <div className="text-[10px] font-bold text-center mb-1 text-electric uppercase tracking-widest">Version B</div>
             <DesktopMockup spec={spec} pal={palB} font={fontB} look={lookB} tablet />
           </div>
         </div>
@@ -795,7 +795,7 @@ function LivePreview({ config, abConfig, fullscreen, onToggleFullscreen, templat
         {[pal.dom, pal.sec, pal.acc, pal.bg, pal.txt].map((c, i) => (
           <div key={i} title={c} className="studio-color-swatch" style={{ width: 16, height: 16, background: c, borderRadius: 4, border: `1px solid ${pal.dom}33`, flexShrink: 0 }} />
         ))}
-        <span className="text-[9px] text-gray-400 dark:text-white/30 ml-1">{pal.name} · {font.title}</span>
+        <span className="text-[9px] text-gray-500 dark:text-white/65 ml-1">{pal.name} · {font.title}</span>
       </div>
     </div>
   )
@@ -847,7 +847,7 @@ function FontCard({ font, selected, onSelect }: { font: FontDuo; selected: boole
       className={`text-left p-3 rounded-xl border-2 transition-all ${selected ? 'border-electric-ink bg-blue-50 dark:bg-white/5' : 'border-transparent bg-white dark:bg-gray-900/60 hover:border-gray-200 dark:hover:border-white/20'}`}>
       <div style={{ fontFamily: font.titleStack, fontSize: 17, fontWeight: 700, lineHeight: 1.2, marginBottom: 2 }}>Titre exemple</div>
       <div style={{ fontFamily: font.bodyStack, fontSize: 11, lineHeight: 1.4, opacity: 0.65, marginBottom: 6 }}>Corps du texte en {font.body}</div>
-      <div className="text-[10px] text-gray-500 dark:text-white/40">{font.name}</div>
+      <div className="text-[10px] text-gray-500 dark:text-white/65">{font.name}</div>
     </button>
   )
 }
@@ -858,7 +858,7 @@ function Section1Arch({ config, setConfig }: { config: Config; setConfig: (c: Co
   return (
     <div>
       <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-1">Architecture</h2>
-      <p className="text-sm text-gray-500 dark:text-white/50 mb-6">Quelle est la structure principale de votre site ?</p>
+      <p className="text-sm text-gray-500 dark:text-white/65 mb-6">Quelle est la structure principale de votre site ?</p>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
         {ARCHS.map(arch => {
           const pal = PALETTES.find(p => p.id === config.pal) ?? PALETTES[0]
@@ -870,9 +870,9 @@ function Section1Arch({ config, setConfig }: { config: Config; setConfig: (c: Co
                 <ArchWireframe archId={arch.id} pal={pal} />
               </div>
               <div className="font-semibold text-sm text-gray-900 dark:text-white">{arch.label}</div>
-              <div className="text-xs text-gray-500 dark:text-white/40 mt-0.5">{arch.ideal}</div>
+              <div className="text-xs text-gray-500 dark:text-white/65 mt-0.5">{arch.ideal}</div>
               <div className="flex flex-wrap gap-1 mt-2">
-                {arch.tags.map(t => <span key={t} className="px-1.5 py-0.5 bg-gray-100 dark:bg-white/10 text-[9px] rounded-full text-gray-600 dark:text-white/50">{t}</span>)}
+                {arch.tags.map(t => <span key={t} className="px-1.5 py-0.5 bg-gray-100 dark:bg-white/10 text-[9px] rounded-full text-gray-600 dark:text-white/65">{t}</span>)}
               </div>
             </button>
           )
@@ -904,7 +904,7 @@ function ContrastLine({ pal, setCustom }: { pal: Palette5; setCustom: (p: Palett
       </span>
       {!okTxt && (
         <button type="button" onClick={() => setCustom({ ...pal, txt: fixContrast(pal.txt, pal.bg) })}
-          className="text-electric-ink dark:text-electric font-semibold hover:underline whitespace-nowrap">Corriger</button>
+          className="text-electric font-semibold hover:underline whitespace-nowrap">Corriger</button>
       )}
     </div>
   )
@@ -934,15 +934,15 @@ function Section2Pal({ config, setConfig }: { config: Config; setConfig: (c: Con
   return (
     <div>
       <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-1">Palette de couleurs</h2>
-      <p className="text-sm text-gray-500 dark:text-white/50 mb-4">50 palettes curées, 9 univers — ou composez la vôtre au pixel près.</p>
+      <p className="text-sm text-gray-500 dark:text-white/65 mb-4">50 palettes curées, 9 univers — ou composez la vôtre au pixel près.</p>
 
       <div className="flex gap-2 mb-5">
         <button onClick={() => setCustomizing(false)}
-          className={`flex-1 py-2 rounded-xl text-xs font-semibold transition-colors ${!customizing ? 'bg-electric-ink text-white' : 'bg-gray-100 dark:bg-white/10 text-gray-600 dark:text-white/50'}`}>
+          className={`flex-1 py-2 rounded-xl text-xs font-semibold transition-colors ${!customizing ? 'bg-electric-ink text-white' : 'bg-gray-100 dark:bg-white/10 text-gray-600 dark:text-white/65'}`}>
           Palettes curées
         </button>
         <button onClick={startCustom}
-          className={`flex-1 py-2 rounded-xl text-xs font-semibold transition-colors flex items-center justify-center gap-1.5 ${customizing ? 'bg-electric-ink text-white' : 'bg-gray-100 dark:bg-white/10 text-gray-600 dark:text-white/50'}`}>
+          className={`flex-1 py-2 rounded-xl text-xs font-semibold transition-colors flex items-center justify-center gap-1.5 ${customizing ? 'bg-electric-ink text-white' : 'bg-gray-100 dark:bg-white/10 text-gray-600 dark:text-white/65'}`}>
           <Wand2 size={12} /> Personnaliser
         </button>
       </div>
@@ -952,7 +952,7 @@ function Section2Pal({ config, setConfig }: { config: Config; setConfig: (c: Con
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
             {ROLE_LABELS.map(r => (
               <div key={r.key} className="p-2.5 rounded-xl border border-gray-200 dark:border-white/10 bg-white dark:bg-gray-900/60">
-                <div className="text-[10px] text-gray-400 dark:text-white/30 mb-1.5">{r.label}</div>
+                <div className="text-[10px] text-gray-500 dark:text-white/65 mb-1.5">{r.label}</div>
                 <div className="flex items-center gap-2">
                   <label className="relative w-7 h-7 rounded-lg overflow-hidden border border-gray-200 dark:border-white/10 shrink-0 cursor-pointer" style={{ background: activePal[r.key] }}>
                     <input type="color" value={/^#[0-9a-fA-F]{6}$/.test(activePal[r.key]) ? activePal[r.key] : '#000000'}
@@ -1002,7 +1002,7 @@ function Section2Pal({ config, setConfig }: { config: Config; setConfig: (c: Con
                   </div>
                   <div className="px-2 py-1.5 bg-white dark:bg-gray-900 text-left">
                     <div className="text-xs font-medium text-gray-900 dark:text-white truncate">{pal.name}</div>
-                    <div className="text-[10px] text-gray-400 dark:text-white/30">{pal.fam}</div>
+                    <div className="text-[10px] text-gray-500 dark:text-white/65">{pal.fam}</div>
                   </div>
                 </button>
               )
@@ -1023,7 +1023,7 @@ function Section3Font({ config, setConfig }: { config: Config; setConfig: (c: Co
   return (
     <div>
       <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-1">Typographie</h2>
-      <p className="text-sm text-gray-500 dark:text-white/50 mb-4">50 duos titre/corps. Les polices se chargent à la volée.</p>
+      <p className="text-sm text-gray-500 dark:text-white/65 mb-4">50 duos titre/corps. Les polices se chargent à la volée.</p>
       <div className="flex flex-wrap gap-2 mb-5">
         <button onClick={() => setStyle(null)} className={`px-3 py-1 rounded-full text-xs font-medium transition-colors ${!style ? 'bg-electric-ink text-white' : 'bg-gray-100 dark:bg-white/10 text-gray-700 dark:text-white/60 hover:bg-gray-200'}`}>Tous</button>
         {FONT_STYLES.map(s => (
@@ -1056,19 +1056,19 @@ function Section4Finitions({ config, setConfig }: { config: Config; setConfig: (
     <div className="space-y-8">
       <div>
         <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-1">Finitions</h2>
-        <p className="text-sm text-gray-500 dark:text-white/50 mb-6">Les derniers ajustements qui font la différence.</p>
+        <p className="text-sm text-gray-500 dark:text-white/65 mb-6">Les derniers ajustements qui font la différence.</p>
       </div>
 
       <div>
-        <div className="font-semibold text-sm text-gray-800 dark:text-white/80 mb-3">Animations <span className="font-normal text-gray-500 dark:text-white/40">— {animLabels[config.anim]}</span></div>
+        <div className="font-semibold text-sm text-gray-800 dark:text-white/80 mb-3">Animations <span className="font-normal text-gray-500 dark:text-white/65">— {animLabels[config.anim]}</span></div>
         <input type="range" min={0} max={3} value={config.anim} onChange={e => set('anim', +e.target.value)} className="w-full accent-electric-ink" />
-        <div className="flex justify-between text-[10px] text-gray-400 dark:text-white/30 mt-1">
+        <div className="flex justify-between text-[10px] text-gray-500 dark:text-white/65 mt-1">
           {animLabels.map(l => <span key={l}>{l}</span>)}
         </div>
       </div>
 
       <div>
-        <div className="font-semibold text-sm text-gray-800 dark:text-white/80 mb-3">Densité <span className="font-normal text-gray-500 dark:text-white/40">— {densityLabels[config.density]}</span></div>
+        <div className="font-semibold text-sm text-gray-800 dark:text-white/80 mb-3">Densité <span className="font-normal text-gray-500 dark:text-white/65">— {densityLabels[config.density]}</span></div>
         <div className="flex gap-2">
           {densityLabels.map((l, i) => (
             <button key={l} onClick={() => set('density', i)}
@@ -1078,7 +1078,7 @@ function Section4Finitions({ config, setConfig }: { config: Config; setConfig: (
       </div>
 
       <div>
-        <div className="font-semibold text-sm text-gray-800 dark:text-white/80 mb-3">Coins <span className="font-normal text-gray-500 dark:text-white/40">— {cornerLabels[config.corners]}</span></div>
+        <div className="font-semibold text-sm text-gray-800 dark:text-white/80 mb-3">Coins <span className="font-normal text-gray-500 dark:text-white/65">— {cornerLabels[config.corners]}</span></div>
         <div className="flex gap-3">
           {cornerLabels.map((l, i) => {
             const r = i === 0 ? '0px' : i === 1 ? '8px' : '20px'
@@ -1096,7 +1096,7 @@ function Section4Finitions({ config, setConfig }: { config: Config; setConfig: (
         <div className="flex gap-2">
           {buttonOpts.map(o => (
             <button key={o.id} onClick={() => set('buttonStyle', o.id)}
-              className={`flex-1 py-2 text-xs font-semibold transition-all border-2 ${config.buttonStyle === o.id ? 'border-electric-ink bg-blue-50 dark:bg-white/5 text-gray-900 dark:text-white' : 'border-gray-200 dark:border-white/10 text-gray-600 dark:text-white/50 hover:border-gray-300'}`}
+              className={`flex-1 py-2 text-xs font-semibold transition-all border-2 ${config.buttonStyle === o.id ? 'border-electric-ink bg-blue-50 dark:bg-white/5 text-gray-900 dark:text-white' : 'border-gray-200 dark:border-white/10 text-gray-600 dark:text-white/65 hover:border-gray-300'}`}
               style={{ borderRadius: o.id === 'pilule' ? 999 : o.id === 'carre' ? 0 : 8 }}>{o.label}</button>
           ))}
         </div>
@@ -1283,29 +1283,29 @@ function ProfileCard({ config }: { config: Config }) {
 
   return (
     <div className="bg-gradient-to-br from-[#1E3A5F] to-[#0A0F1C] rounded-2xl p-6 text-white">
-      <div className="text-sm font-semibold text-white/50 uppercase tracking-wider mb-4">Votre profil de style</div>
+      <div className="text-sm font-semibold text-white/65 uppercase tracking-wider mb-4">Votre profil de style</div>
       <div className="grid grid-cols-2 gap-3 mb-6">
         <div className="bg-white/5 rounded-xl p-3 transition-all hover:bg-white/10">
-          <div className="text-[10px] text-white/40 mb-1">Architecture</div>
+          <div className="text-[10px] text-white/65 mb-1">Architecture</div>
           <div className="text-sm font-semibold">{arch.label}</div>
-          <div className="text-[10px] text-white/30 mt-0.5">{arch.id}</div>
+          <div className="text-[10px] text-white/65 mt-0.5">{arch.id}</div>
         </div>
         <div className="bg-white/5 rounded-xl p-3 transition-all hover:bg-white/10">
-          <div className="text-[10px] text-white/40 mb-1">Palette</div>
+          <div className="text-[10px] text-white/65 mb-1">Palette</div>
           <div className="flex gap-1 mb-1">
             {[pal.dom, pal.sec, pal.acc].map((c, i) => <div key={i} style={{ background: c }} className="studio-color-swatch w-4 h-4 rounded-full" />)}
           </div>
           <div className="text-sm font-semibold">{pal.name}</div>
         </div>
         <div className="bg-white/5 rounded-xl p-3 transition-all hover:bg-white/10">
-          <div className="text-[10px] text-white/40 mb-1">Typographie</div>
+          <div className="text-[10px] text-white/65 mb-1">Typographie</div>
           <div className="text-sm font-semibold">{font.title}</div>
-          <div className="text-[10px] text-white/40">{font.body}</div>
+          <div className="text-[10px] text-white/65">{font.body}</div>
         </div>
         <div className="bg-white/5 rounded-xl p-3 transition-all hover:bg-white/10">
-          <div className="text-[10px] text-white/40 mb-1">Finitions</div>
+          <div className="text-[10px] text-white/65 mb-1">Finitions</div>
           <div className="text-sm font-semibold capitalize">{config.tone}</div>
-          <div className="text-[10px] text-white/40 capitalize">{config.theme} · {['Aéré','Équilibré','Dense'][config.density]}</div>
+          <div className="text-[10px] text-white/65 capitalize">{config.theme} · {['Aéré','Équilibré','Dense'][config.density]}</div>
         </div>
       </div>
 
@@ -1340,7 +1340,7 @@ function ProfileCard({ config }: { config: Config }) {
         className="btn-lift block w-full text-center py-3.5 bg-gold hover:bg-gold/90 text-ink font-bold rounded-xl shadow-lg shadow-amber-500/30 text-sm">
         Recevoir MA MAQUETTE →
       </Link>
-      <p className="text-center text-[11px] text-white/35 mt-3 leading-relaxed">
+      <p className="text-center text-[11px] text-white/65 mt-3 leading-relaxed">
         Ce configurateur est offert — l'agence réalise votre site dans ce style dès {SITE.pricing.vitrine} €.
       </p>
     </div>
@@ -1395,15 +1395,15 @@ function SavedStyles({ config, setConfig }: { config: Config; setConfig: (c: Con
             <button type="button" onClick={save} className="px-3 py-2 rounded-lg bg-electric-ink text-white text-xs font-semibold hover:bg-electric-ink/90 transition-colors">Enregistrer</button>
           </div>
           {styles.length === 0 ? (
-            <p className="text-[11px] text-gray-400 dark:text-white/30">Aucun style enregistré pour l'instant.</p>
+            <p className="text-[11px] text-gray-500 dark:text-white/65">Aucun style enregistré pour l'instant.</p>
           ) : (
             <div className="space-y-1.5">
               {styles.slice().reverse().map(s => (
                 <div key={s.name} className="flex items-center justify-between gap-2 px-2.5 py-2 rounded-lg bg-gray-50 dark:bg-white/5">
-                  <button type="button" onClick={() => setConfig(s.config)} className="text-xs font-medium text-gray-700 dark:text-white/70 hover:text-electric-ink dark:hover:text-electric text-left truncate flex-1">
+                  <button type="button" onClick={() => setConfig(s.config)} className="text-xs font-medium text-gray-700 dark:text-white/70 hover:text-electric dark:hover:text-electric text-left truncate flex-1">
                     {s.name}
                   </button>
-                  <button type="button" onClick={() => remove(s.name)} aria-label={`Supprimer ${s.name}`} className="text-gray-300 dark:text-white/20 hover:text-red-500 transition-colors shrink-0">
+                  <button type="button" onClick={() => remove(s.name)} aria-label={`Supprimer ${s.name}`} className="text-gray-300 dark:text-white/65 hover:text-red-500 transition-colors shrink-0">
                     <Trash2 size={13} />
                   </button>
                 </div>
@@ -1432,10 +1432,10 @@ function Onboarding({ onDone }: { onDone: () => void }) {
       <div className="w-7 h-7 rounded-full bg-electric-ink text-white flex items-center justify-center text-xs font-bold shrink-0">{step + 1}</div>
       <div className="flex-1 min-w-0">
         <div className="text-sm font-bold text-gray-900 dark:text-white">{ONBOARDING_STEPS[step].title}</div>
-        <p className="text-xs text-gray-600 dark:text-white/50 mt-0.5">{ONBOARDING_STEPS[step].text}</p>
+        <p className="text-xs text-gray-600 dark:text-white/65 mt-0.5">{ONBOARDING_STEPS[step].text}</p>
       </div>
       <div className="flex items-center gap-2 shrink-0">
-        <button type="button" onClick={onDone} className="text-xs text-gray-400 dark:text-white/30 hover:text-gray-600">Passer</button>
+        <button type="button" onClick={onDone} className="text-xs text-gray-500 dark:text-white/65 hover:text-gray-600">Passer</button>
         <button type="button" onClick={() => last ? onDone() : setStep(s => s + 1)}
           className="px-3 py-1.5 rounded-lg bg-electric-ink text-white text-xs font-semibold hover:bg-electric-ink/90 transition-colors">
           {last ? 'Terminer' : 'Suivant'}
@@ -1592,7 +1592,7 @@ export default function StudioClient() {
       {/* Presets + ambiances + historique */}
       <div className="mb-3 overflow-x-auto">
         <div className="flex gap-2 min-w-max pb-1">
-          <span className="text-xs text-gray-500 dark:text-white/40 self-center mr-1 shrink-0">Métier :</span>
+          <span className="text-xs text-gray-500 dark:text-white/65 self-center mr-1 shrink-0">Métier :</span>
           {PRESETS.map(p => (
             <button key={p.id} type="button" onClick={() => applyPreset(p)}
               className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white dark:bg-gray-900/60 border border-gray-200 dark:border-white/10 hover:border-electric-ink dark:hover:border-electric text-xs font-medium text-gray-700 dark:text-white/70 transition-colors whitespace-nowrap">
@@ -1603,7 +1603,7 @@ export default function StudioClient() {
       </div>
       <div className="mb-6 overflow-x-auto">
         <div className="flex gap-2 min-w-max pb-1 items-center">
-          <span className="text-xs text-gray-500 dark:text-white/40 self-center mr-1 shrink-0">Ambiance :</span>
+          <span className="text-xs text-gray-500 dark:text-white/65 self-center mr-1 shrink-0">Ambiance :</span>
           {MOODS.map(m => (
             <button key={m.id} type="button" onClick={() => applyPreset(m)}
               className="px-3 py-1.5 rounded-full bg-gray-100 dark:bg-white/5 border border-gray-200 dark:border-white/10 hover:border-electric-ink dark:hover:border-electric text-xs font-medium text-gray-700 dark:text-white/70 transition-colors whitespace-nowrap">
@@ -1616,11 +1616,11 @@ export default function StudioClient() {
           </button>
           <div className="w-px h-5 bg-gray-200 dark:bg-white/10 mx-1 shrink-0" />
           <button type="button" onClick={undo} disabled={!canUndo} title="Annuler (Ctrl+Z)"
-            className="flex items-center gap-1 px-2.5 py-1.5 rounded-full text-xs font-medium text-gray-500 dark:text-white/40 hover:bg-gray-100 dark:hover:bg-white/10 disabled:opacity-30 disabled:hover:bg-transparent transition-colors whitespace-nowrap">
+            className="flex items-center gap-1 px-2.5 py-1.5 rounded-full text-xs font-medium text-gray-500 dark:text-white/65 hover:bg-gray-100 dark:hover:bg-white/10 disabled:opacity-30 disabled:hover:bg-transparent transition-colors whitespace-nowrap">
             <Undo2 size={12} /> Annuler
           </button>
           <button type="button" onClick={redo} disabled={!canRedo} title="Rétablir (Ctrl+Maj+Z)"
-            className="flex items-center gap-1 px-2.5 py-1.5 rounded-full text-xs font-medium text-gray-500 dark:text-white/40 hover:bg-gray-100 dark:hover:bg-white/10 disabled:opacity-30 disabled:hover:bg-transparent transition-colors whitespace-nowrap">
+            className="flex items-center gap-1 px-2.5 py-1.5 rounded-full text-xs font-medium text-gray-500 dark:text-white/65 hover:bg-gray-100 dark:hover:bg-white/10 disabled:opacity-30 disabled:hover:bg-transparent transition-colors whitespace-nowrap">
             <Redo2 size={12} /> Rétablir
           </button>
         </div>
@@ -1638,7 +1638,7 @@ export default function StudioClient() {
           <div className="mb-6">
             <div className="flex items-center justify-between mb-2">
               <span className="text-sm font-medium text-gray-700 dark:text-white/70">Étape {section + 1} / {SECTIONS.length}</span>
-              <span className="text-xs text-gray-400 dark:text-white/30">{Math.round(progress)}%</span>
+              <span className="text-xs text-gray-500 dark:text-white/65">{Math.round(progress)}%</span>
             </div>
             <div className="h-1.5 bg-gray-100 dark:bg-white/10 rounded-full overflow-hidden mb-3">
               <div className="h-full bg-electric-ink rounded-full transition-all duration-300" style={{ width: `${progress}%` }} />
@@ -1646,7 +1646,7 @@ export default function StudioClient() {
             <div className="flex gap-1">
               {SECTIONS.map((s, i) => (
                 <button key={s.id} type="button" onClick={() => goToSection(i)}
-                  className={`flex-1 py-2 text-xs font-medium rounded-lg transition-colors ${i === section ? 'bg-electric-ink text-white' : i < section ? 'bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400' : 'bg-gray-100 dark:bg-white/10 text-gray-500 dark:text-white/40'}`}>
+                  className={`flex-1 py-2 text-xs font-medium rounded-lg transition-colors ${i === section ? 'bg-electric-ink text-white' : i < section ? 'bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400' : 'bg-gray-100 dark:bg-white/10 text-gray-500 dark:text-white/65'}`}>
                   {i < section ? '✓ ' : ''}{s.label}
                 </button>
               ))}
@@ -1687,14 +1687,14 @@ export default function StudioClient() {
         <div className="space-y-5 lg:sticky lg:top-24 self-start" id="studio-preview-panel">
           <div>
             <div className="flex items-center justify-between mb-2">
-              <div className="text-xs font-semibold text-gray-500 dark:text-white/40 uppercase tracking-wider">Aperçu en direct</div>
+              <div className="text-xs font-semibold text-gray-500 dark:text-white/65 uppercase tracking-wider">Aperçu en direct</div>
               <button
                 type="button"
                 onClick={() => {
                   if (abMode) { setAbConfig(null); setAbMode(false) }
                   else { setAbConfig(randomConfig()); setAbMode(true) }
                 }}
-                className={`flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-xs font-medium transition-all border ${abMode ? 'bg-electric-ink text-white border-electric-ink' : 'border-gray-200 dark:border-white/10 text-gray-600 dark:text-white/50 hover:border-gray-300'}`}
+                className={`flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-xs font-medium transition-all border ${abMode ? 'bg-electric-ink text-white border-electric-ink' : 'border-gray-200 dark:border-white/10 text-gray-600 dark:text-white/65 hover:border-gray-300'}`}
               >
                 <Columns2 size={11} /> {abMode ? 'Quitter A/B' : 'Mode A/B'}
               </button>
@@ -1874,9 +1874,9 @@ function StyleCurrentsGallery() {
   return (
     <section className="border-t border-gray-100 dark:border-white/10 mt-6 pt-12 pb-4">
       <div className="mb-8">
-        <div className="text-xs font-semibold text-electric-ink dark:text-electric uppercase tracking-widest mb-2">Inspiration</div>
+        <div className="text-xs font-semibold text-electric uppercase tracking-widest mb-2">Inspiration</div>
         <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">Courants de style</h2>
-        <p className="text-gray-500 dark:text-white/40 text-sm max-w-2xl">
+        <p className="text-gray-500 dark:text-white/65 text-sm max-w-2xl">
           Six grandes directions esthétiques illustrées par des maquettes originales.
           Cliquez « Voir le site » pour vous inspirer.
         </p>
@@ -1885,18 +1885,18 @@ function StyleCurrentsGallery() {
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
         {STYLE_CURRENTS.map(c => (
           <article key={c.id}
-            className="group bg-white dark:bg-white/3 rounded-2xl overflow-hidden border border-gray-100 dark:border-white/8 hover:border-electric-ink/40 dark:hover:border-electric/30 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+            className="group bg-white dark:bg-white/5 rounded-2xl overflow-hidden border border-gray-100 dark:border-white/10 hover:border-electric-ink/40 dark:hover:border-electric/30 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
             <div className="relative overflow-hidden rounded-t-2xl">
               <StyleMockup c={c} />
-              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/8 pointer-events-none" />
+              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/10 pointer-events-none" />
             </div>
             <div className="p-4">
               <h3 className="font-bold text-gray-900 dark:text-white text-sm mb-1.5">{c.name}</h3>
-              <p className="text-gray-500 dark:text-white/40 text-xs leading-relaxed mb-3">{c.desc}</p>
+              <p className="text-gray-500 dark:text-white/65 text-xs leading-relaxed mb-3">{c.desc}</p>
               <div className="flex flex-wrap gap-2">
                 {c.refs.map(r => (
                   <a key={r.name} href={r.url} target="_blank" rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1 text-xs text-electric-ink dark:text-electric hover:underline font-medium">
+                    className="inline-flex items-center gap-1 text-xs text-electric hover:underline font-medium">
                     {r.name}
                     <svg className="w-3 h-3 opacity-60" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="1.5">
                       <path d="M2 10L10 2M10 2H5M10 2V7" strokeLinecap="round" strokeLinejoin="round" />
@@ -1909,7 +1909,7 @@ function StyleCurrentsGallery() {
         ))}
       </div>
 
-      <p className="mt-8 text-center text-xs text-gray-400 dark:text-white/20 px-4">
+      <p className="mt-8 text-center text-xs text-gray-500 dark:text-white/65 px-4">
         Sites cités à titre de référence et d&apos;inspiration — aucune affiliation ni partenariat avec ces marques.
         Les maquettes présentées ci-dessus sont des créations originales Stackup.
       </p>

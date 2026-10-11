@@ -55,7 +55,7 @@ function ScoreBar({ solution, score, color }: { solution: string; score: number;
     <div ref={ref} className="mb-4">
       <div className="flex justify-between text-sm mb-1.5">
         <span className="font-semibold text-white">{solution}</span>
-        <span className="text-white/50 tabular-nums">{score}/100</span>
+        <span className="text-white/65 tabular-nums">{score}/100</span>
       </div>
       <div className="h-2 rounded-full bg-white/5 overflow-hidden">
         <div className={`h-full rounded-full ${color}`}
@@ -94,7 +94,7 @@ export default function ComparatifClient() {
 
       {/* Filtres */}
       <div>
-        <p className="text-xs text-white/40 uppercase tracking-widest mb-4 font-medium">Filtrer par catégorie</p>
+        <p className="text-xs text-white/65 uppercase tracking-widest mb-4 font-medium">Filtrer par catégorie</p>
         <div className="flex flex-wrap gap-2">
           {FILTERS.map(f => (
             <button
@@ -103,7 +103,7 @@ export default function ComparatifClient() {
               className={`px-4 py-1.5 rounded-full text-sm font-medium transition-all duration-200 ${
                 filter === f
                   ? 'bg-electric text-white shadow-lg shadow-electric/30'
-                  : 'bg-white/5 text-white/50 hover:bg-white/10 hover:text-white'
+                  : 'bg-white/5 text-white/65 hover:bg-white/10 hover:text-white'
               }`}
             >
               {f}
@@ -117,7 +117,7 @@ export default function ComparatifClient() {
         <table className="w-full">
           <thead>
             <tr className="border-b border-white/10">
-              <th className="text-left py-4 px-4 text-xs font-semibold text-white/40 uppercase tracking-widest w-2/5">Critère</th>
+              <th className="text-left py-4 px-4 text-xs font-semibold text-white/65 uppercase tracking-widest w-2/5">Critère</th>
               <th className="text-center py-4 px-4 text-sm font-bold text-white/70 w-1/5">Wix</th>
               <th className="text-center py-4 px-4 text-sm font-bold text-white/70 w-1/5">WordPress</th>
               <th className="text-center py-4 px-4 text-sm font-bold text-electric w-1/5">
@@ -141,12 +141,12 @@ export default function ComparatifClient() {
               >
                 <td className="py-4 px-4">
                   <div className="flex items-start gap-2">
-                    <span className="text-xs text-white/25 font-mono mt-0.5 hidden sm:block w-6 flex-shrink-0">
+                    <span className="text-xs text-white/65 font-mono mt-0.5 hidden sm:block w-6 flex-shrink-0">
                       {String(i + 1).padStart(2, '0')}
                     </span>
                     <div>
                       <div className="text-sm font-medium text-white">{row.label}</div>
-                      <div className="text-xs text-white/30 mt-0.5 hidden sm:block">{row.cat}</div>
+                      <div className="text-xs text-white/65 mt-0.5 hidden sm:block">{row.cat}</div>
                     </div>
                   </div>
                 </td>
@@ -162,7 +162,7 @@ export default function ComparatifClient() {
       {/* Note tooltip */}
       <div className="h-12">
         {selectedNote && (
-          <p className="compare-verdict text-sm text-white/50 italic border-l-2 border-electric/40 pl-4">
+          <p className="compare-verdict text-sm text-white/65 italic border-l-2 border-electric/40 pl-4">
             {selectedNote}
           </p>
         )}
@@ -170,14 +170,14 @@ export default function ComparatifClient() {
 
       {/* Légende */}
       <div className="flex gap-6 text-xs flex-wrap">
-        <span className="flex items-center gap-1.5"><CheckCircle size={13} className="text-success" /> <span className="text-white/50">Oui / Bien</span></span>
-        <span className="flex items-center gap-1.5"><Minus size={13} className="text-gold" /> <span className="text-white/50">Partiel / Limité</span></span>
-        <span className="flex items-center gap-1.5"><XCircle size={13} className="text-red-400" /> <span className="text-white/50">Non / Mauvais</span></span>
+        <span className="flex items-center gap-1.5"><CheckCircle size={13} className="text-success" /> <span className="text-white/65">Oui / Bien</span></span>
+        <span className="flex items-center gap-1.5"><Minus size={13} className="text-gold" /> <span className="text-white/65">Partiel / Limité</span></span>
+        <span className="flex items-center gap-1.5"><XCircle size={13} className="text-red-400" /> <span className="text-white/65">Non / Mauvais</span></span>
       </div>
 
       {/* Score synthèse */}
       <section className="rounded-2xl border border-white/10 p-8 bg-white/[0.02]">
-        <h2 className="text-xs font-semibold text-white/40 uppercase tracking-widest mb-8">Score global sur {ROWS.length * 10} points</h2>
+        <h2 className="text-xs font-semibold text-white/65 uppercase tracking-widest mb-8">Score global sur {ROWS.length * 10} points</h2>
         <div className="space-y-3">
           <ScoreBar solution="Sur-mesure (Next.js)" score={scores.mesure} color="bg-electric" />
           <ScoreBar solution="Wix"                  score={scores.wix}    color="bg-white/30" />
@@ -198,7 +198,7 @@ export default function ComparatifClient() {
               style={{ animationDelay: `${i * 100}ms` }}>
               <div className="text-2xl mb-3">{c.icon}</div>
               <div className="font-bold text-white mb-2">{c.title}</div>
-              <div className="text-sm text-white/50 leading-relaxed">{c.when}</div>
+              <div className="text-sm text-white/65 leading-relaxed">{c.when}</div>
             </div>
           ))}
         </div>

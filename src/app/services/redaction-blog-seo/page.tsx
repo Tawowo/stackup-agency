@@ -126,7 +126,7 @@ function Calculator() {
             onChange={e => setArticles(Number(e.target.value))}
             className="w-full accent-electric"
           />
-          <div className="flex justify-between text-xs text-foreground/40 dark:text-white/30 mt-1">
+          <div className="flex justify-between text-xs text-[#64748B] dark:text-white/65 mt-1">
             <span>1</span><span>5</span><span>10</span>
           </div>
         </div>
@@ -146,7 +146,7 @@ function Calculator() {
         <div className="rounded-xl bg-white dark:bg-[#0D1626] border border-navy/10 dark:border-white/10 p-5">
           {recommandation ? (
             <>
-              <div className="text-xs text-electric-ink dark:text-electric font-semibold uppercase tracking-wide mb-1">
+              <div className="text-xs text-electric font-semibold uppercase tracking-wide mb-1">
                 Formule recommandée
               </div>
               <div className="text-2xl font-bold text-foreground dark:text-white mb-0.5">
@@ -154,20 +154,20 @@ function Calculator() {
               </div>
               <div className="text-electric text-sm mb-3">{recommandation.detail}</div>
               <div className="flex items-baseline gap-2">
-                <span className="text-3xl font-bold text-navy dark:text-gold">{prixFinal}€</span>
-                <span className="text-foreground/50 dark:text-white/40 text-sm">/mois</span>
+                <span className="text-3xl font-bold text-navy dark:text-[#B45309]">{prixFinal}€</span>
+                <span className="text-[#475569] dark:text-white/65 text-sm">/mois</span>
               </div>
-              <div className="text-xs text-foreground/50 dark:text-white/40 mt-1">
+              <div className="text-xs text-[#475569] dark:text-white/65 mt-1">
                 soit {coutParArticle}€/article — économie vs à l'unité
               </div>
             </>
           ) : (
             <>
-              <div className="text-xs text-foreground/50 dark:text-white/40 uppercase tracking-wide mb-1">
+              <div className="text-xs text-[#475569] dark:text-white/65 uppercase tracking-wide mb-1">
                 Estimation
               </div>
-              <div className="text-3xl font-bold text-navy dark:text-gold">{unitaire}€</div>
-              <div className="text-sm text-foreground/50 dark:text-white/40 mt-1">{articles} article{articles > 1 ? 's' : ''} × 25€</div>
+              <div className="text-3xl font-bold text-navy dark:text-[#B45309]">{unitaire}€</div>
+              <div className="text-sm text-[#475569] dark:text-white/65 mt-1">{articles} article{articles > 1 ? 's' : ''} × 25€</div>
             </>
           )}
           <Link
@@ -251,13 +251,13 @@ export default function RedactionBlogSEOPage() {
               { n: '03', titre: 'Relecture et personnalisation humaines', Icon: CheckCircle, desc: 'Chaque article est relu et ajusté à votre voix avant livraison. Vous recevez un texte qui vous ressemble, pas un copier-coller de formules génériques. Un aller-retour de corrections est inclus.' },
               { n: '04', titre: 'Intégration et maillage', Icon: Clock, desc: 'En pack, nous publions directement sur votre site et ajoutons les liens internes vers vos pages de service. Le maillage interne est un levier SEO souvent négligé — nous l\'intégrons dès la rédaction.' },
             ].map(step => (
-              <div key={step.n} className="flex items-start gap-4 p-5 rounded-xl border border-navy/10 dark:border-white/8 bg-white dark:bg-[#0D1626]">
+              <div key={step.n} className="flex items-start gap-4 p-5 rounded-xl border border-navy/10 dark:border-white/10 bg-white dark:bg-[#0D1626]">
                 <div className="w-9 h-9 rounded-full bg-navy flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
                   {step.n}
                 </div>
                 <div>
                   <h3 className="font-semibold text-foreground dark:text-white mb-1">{step.titre}</h3>
-                  <p className="text-foreground/60 dark:text-white/60 text-sm leading-relaxed">{step.desc}</p>
+                  <p className="text-[#475569] dark:text-white/60 text-sm leading-relaxed">{step.desc}</p>
                 </div>
               </div>
             ))}
@@ -289,7 +289,7 @@ export default function RedactionBlogSEOPage() {
           <h2 className="text-2xl font-bold text-foreground dark:text-white mb-2">
             Au forfait ou à l'article ?
           </h2>
-          <p className="text-foreground/60 dark:text-white/60 text-sm mb-8">
+          <p className="text-[#475569] dark:text-white/60 text-sm mb-8">
             Si vous publiez moins de 3 articles par mois, l'unité est plus souple. Au-delà, le forfait
             devient systématiquement moins cher et vous garantit une fréquence régulière.
           </p>
@@ -299,7 +299,7 @@ export default function RedactionBlogSEOPage() {
             <table className="w-full text-sm border-collapse">
               <thead>
                 <tr className="border-b border-navy/10 dark:border-white/10">
-                  <th className="text-left py-3 pr-4 text-foreground/60 dark:text-white/50 font-medium"></th>
+                  <th className="text-left py-3 pr-4 text-[#475569] dark:text-white/65 font-medium"></th>
                   <th className="py-3 px-4 text-center text-foreground dark:text-white font-semibold">À l'unité</th>
                   <th className="py-3 px-4 text-center text-foreground dark:text-white font-semibold bg-gold/5 rounded-t-xl">Pack Visibilité</th>
                   <th className="py-3 px-4 text-center text-foreground dark:text-white font-semibold">Pack Autorité</th>
@@ -332,17 +332,17 @@ export default function RedactionBlogSEOPage() {
             {PACKS.map(p => (
               <div key={p.nom} className={`rounded-2xl border p-6 flex flex-col ${p.highlight ? 'border-amber-500/40 bg-gold/5' : 'border-navy/20 dark:border-white/10 bg-white dark:bg-[#0D1626]'}`}>
                 {p.highlight && (
-                  <div className="text-xs font-semibold text-navy dark:text-gold mb-3 uppercase tracking-wide">Le plus populaire</div>
+                  <div className="text-xs font-semibold text-navy dark:text-[#B45309] mb-3 uppercase tracking-wide">Le plus populaire</div>
                 )}
                 <h3 className="text-lg font-bold text-foreground dark:text-white mb-1">{p.nom}</h3>
                 {'detail' in p && p.detail && (
-                  <div className="text-electric-ink dark:text-electric text-xs font-medium mb-2">{p.detail}</div>
+                  <div className="text-electric text-xs font-medium mb-2">{p.detail}</div>
                 )}
                 <div className="mb-3">
-                  <span className="text-3xl font-bold text-navy dark:text-gold">{p.prix}€</span>
-                  <span className="text-foreground/60 dark:text-white/50 text-sm ml-1">{p.unite}</span>
+                  <span className="text-3xl font-bold text-navy dark:text-[#B45309]">{p.prix}€</span>
+                  <span className="text-[#475569] dark:text-white/65 text-sm ml-1">{p.unite}</span>
                 </div>
-                <p className="text-sm text-foreground/60 dark:text-white/60 mb-4">{p.desc}</p>
+                <p className="text-sm text-[#475569] dark:text-white/60 mb-4">{p.desc}</p>
                 <ul className="space-y-2 mb-6 flex-1">
                   {p.inclus.map(item => (
                     <li key={item} className="flex items-start gap-2">
@@ -369,11 +369,11 @@ export default function RedactionBlogSEOPage() {
           <div className="flex items-start justify-between gap-4 mb-3">
             <div>
               <h3 className="text-lg font-bold text-foreground dark:text-white">Accès technique blog</h3>
-              <p className="text-electric-ink dark:text-electric text-sm mt-0.5">Pour les sites existants sans blog</p>
+              <p className="text-electric text-sm mt-0.5">Pour les sites existants sans blog</p>
             </div>
             <div className="text-right flex-shrink-0">
-              <span className="text-2xl font-bold text-navy dark:text-gold">49€</span>
-              <div className="text-xs text-foreground/60 dark:text-white/50">une fois</div>
+              <span className="text-2xl font-bold text-navy dark:text-[#B45309]">49€</span>
+              <div className="text-xs text-[#475569] dark:text-white/65">une fois</div>
             </div>
           </div>
           <p className="text-foreground/70 dark:text-white/70 text-sm mb-4">
@@ -388,7 +388,7 @@ export default function RedactionBlogSEOPage() {
               </div>
             ))}
           </div>
-          <Link href="/contact?projet=redaction" className="inline-flex items-center gap-1 text-electric-ink dark:text-electric hover:text-electric font-medium text-sm transition-colors">
+          <Link href="/contact?projet=redaction" className="inline-flex items-center gap-1 text-electric hover:text-electric font-medium text-sm transition-colors">
             Demander l'accès technique <ChevronRight size={14} />
           </Link>
         </section>
@@ -401,14 +401,14 @@ export default function RedactionBlogSEOPage() {
               <details key={faq.name} className="group rounded-xl border border-navy/20 dark:border-white/10 overflow-hidden">
                 <summary className="flex items-center justify-between p-4 cursor-pointer font-medium text-foreground dark:text-white list-none">
                   {faq.name}
-                  <ChevronRight size={16} className="text-white/40 group-open:rotate-90 transition-transform flex-shrink-0" />
+                  <ChevronRight size={16} className="text-white/65 group-open:rotate-90 transition-transform flex-shrink-0" />
                 </summary>
                 <div className="px-4 pb-4 text-foreground/70 dark:text-white/70 text-sm leading-relaxed">{faq.acceptedAnswer.text}</div>
               </details>
             ))}
           </div>
           <div className="mt-4">
-            <Link href="/cgv" className="text-xs text-foreground/40 dark:text-white/30 hover:text-electric transition-colors">
+            <Link href="/cgv" className="text-xs text-[#64748B] dark:text-white/65 hover:text-electric transition-colors">
               Voir nos CGV complètes →
             </Link>
           </div>

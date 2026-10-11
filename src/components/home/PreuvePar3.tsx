@@ -55,7 +55,7 @@ function CodeMorph({ isVisible }: { isVisible: boolean }) {
           </div>
           <div className="text-center py-4">
             <div className="text-2xl font-black text-navy mb-2">Bienvenue</div>
-            <div className="text-sm text-navy/55 mb-4">Votre site web pro</div>
+            <div className="text-sm text-[#475569] mb-4">Votre site web pro</div>
             <div className="inline-block bg-gold text-ink text-sm font-bold px-5 py-2 rounded-xl">Devis gratuit</div>
           </div>
           <div className="absolute bottom-3 right-3">
@@ -69,7 +69,7 @@ function CodeMorph({ isVisible }: { isVisible: boolean }) {
           </div>
         )}
       </div>
-      <div className="mt-4 text-center text-sm text-navy/50">
+      <div className="mt-4 text-center text-sm text-[#64748B]">
         Du code propre à un site qui performe — en {SITE.delais.vitrine}
       </div>
     </div>
@@ -111,7 +111,7 @@ function Timeline({ isVisible }: { isVisible: boolean }) {
         {DAYS.map((d, i) => (
           <div key={d.label} className="flex items-center gap-3">
             <div className={`w-8 h-8 rounded-lg flex items-center justify-center text-xs font-bold transition-all duration-300 flex-shrink-0 ${
-              i < filled ? `${d.color} text-white scale-100` : 'bg-gray-100 text-navy/30 scale-95'
+              i < filled ? `${d.color} text-white scale-100` : 'bg-gray-100 text-[#64748B] scale-95'
             }`}>
               {i < filled ? <CheckCircle size={14} /> : d.label}
             </div>
@@ -172,11 +172,11 @@ export default function PreuvePar3() {
         style={{ background: 'radial-gradient(ellipse at 80% 0%, rgba(45,125,210,0.07) 0%, transparent 70%)' }} />
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 relative">
-        <p className="text-[13px] font-semibold text-gold uppercase tracking-[0.18em] mb-3 reveal-item">La preuve par 3</p>
+        <p className="text-[13px] font-semibold text-[#B45309] uppercase tracking-[0.18em] mb-3 reveal-item">La preuve par 3</p>
         <h2 className="text-3xl lg:text-5xl font-bold text-navy mb-4 reveal-item" style={{ lineHeight: 1.15 }}>
           Pourquoi Stackup Agency ?
         </h2>
-        <p className="text-navy/55 max-w-xl mb-10 reveal-item" style={{ animationDelay: '80ms' }}>
+        <p className="text-[#475569] max-w-xl mb-10 reveal-item" style={{ animationDelay: '80ms' }}>
           Pas des promesses — des démonstrations.
         </p>
 
@@ -189,7 +189,7 @@ export default function PreuvePar3() {
               className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-sm font-semibold transition-all border ${
                 i === activeTab
                   ? 'bg-navy text-white border-navy shadow-md shadow-navy/15'
-                  : 'bg-white text-navy/60 border-gray-200 hover:border-gold/30 hover:text-navy'
+                  : 'bg-white text-[#475569] border-gray-200 hover:border-gold/30 hover:text-navy'
               }`}
             >
               <t.Icon size={15} strokeWidth={1.5} aria-hidden="true" />
@@ -202,7 +202,7 @@ export default function PreuvePar3() {
         {/* Panel */}
         <div className="bg-[#FFFDF9] rounded-2xl border border-gray-100 p-6 sm:p-10 min-h-[320px] relative">
           {/* Tab sub-label */}
-          <div className="text-xs font-bold text-gold uppercase tracking-widest mb-6 data-mono">{TABS[activeTab].sub}</div>
+          <div className="text-xs font-bold text-[#B45309] uppercase tracking-widest mb-6 data-mono">{TABS[activeTab].sub}</div>
 
           {activeTab === 0 && <ComparateurPrix />}
           {activeTab === 1 && <CodeMorph isVisible={wasVisible[1]} />}

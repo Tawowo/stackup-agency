@@ -22,7 +22,7 @@ export default function Cookies() {
           <ArrowLeft size={16} /> Retour à l&apos;accueil
         </Link>
         <h1 className="text-4xl font-extrabold text-gray-900 dark:text-white mb-4">Politique de cookies</h1>
-        <p className="text-gray-500 dark:text-white/50 text-sm mb-12">Dernière mise à jour : juin 2026</p>
+        <p className="text-gray-500 dark:text-white/65 text-sm mb-12">Dernière mise à jour : juin 2026</p>
 
         <div className="prose dark:prose-invert prose-sm max-w-none space-y-10">
           <section>

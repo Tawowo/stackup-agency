@@ -127,7 +127,7 @@ function PreviewGestion() {
         {/* Sidebar */}
         <div className={`w-14 bg-navy rounded space-y-1 p-1.5 transition-all duration-500 ${step >= 1 ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-4'}`}>
           {['Tableau','Clients','Devis','Stock','Rapports'].map((l, i) => (
-            <div key={l} className={`h-4 rounded text-[5px] flex items-center px-1 transition-colors ${i === 0 ? 'bg-gold text-ink font-bold' : 'text-white/50'}`}>
+            <div key={l} className={`h-4 rounded text-[5px] flex items-center px-1 transition-colors ${i === 0 ? 'bg-gold text-ink font-bold' : 'text-white/65'}`}>
               {l}
             </div>
           ))}
@@ -138,17 +138,17 @@ function PreviewGestion() {
           <div className={`grid grid-cols-2 gap-1 transition-all duration-500 delay-200 ${step >= 2 ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
             {[
               { label: 'CA / mois', val: '12 480 €', c: 'text-electric' },
-              { label: 'Devis ouverts', val: '7', c: 'text-gold' },
+              { label: 'Devis ouverts', val: '7', c: 'text-[#B45309]' },
             ].map(k => (
               <div key={k.label} className="bg-white border border-gray-100 rounded p-1.5">
-                <div className="text-[5px] text-navy/40 uppercase tracking-wide">{k.label}</div>
+                <div className="text-[5px] text-[#64748B] uppercase tracking-wide">{k.label}</div>
                 <div className={`text-[9px] font-bold ${k.c}`}>{k.val}</div>
               </div>
             ))}
           </div>
           {/* Chart bars */}
           <div className={`bg-white border border-gray-100 rounded p-1.5 transition-all duration-500 delay-400 ${step >= 3 ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
-            <div className="text-[5px] text-navy/40 mb-1">CHIFFRE D&apos;AFFAIRES</div>
+            <div className="text-[5px] text-[#64748B] mb-1">CHIFFRE D&apos;AFFAIRES</div>
             <div className="flex items-end gap-0.5 h-8">
               {bars.map((h, i) => (
                 <div key={i} className="flex-1 bg-electric/20 rounded-sm relative overflow-hidden">
@@ -244,7 +244,7 @@ function PreviewBlog() {
             <div className="h-full bg-gold/60 rounded-full transition-all duration-700" style={{ width: step >= 3 ? `${w}%` : '0%', transitionDelay: `${i * 120 + 500}ms` }} />
           </div>
         ))}
-        <div className="text-[6px] text-navy/40 uppercase tracking-wide">Densité mots-clés · Lisibilité · Score SEO</div>
+        <div className="text-[6px] text-[#64748B] uppercase tracking-wide">Densité mots-clés · Lisibilité · Score SEO</div>
       </div>
       <div className={`transition-all duration-500 delay-[800ms] ${step >= 4 ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2'}`}>
         <div className="bg-gold/10 border border-gold/30 rounded p-1 text-[7px] text-navy font-semibold">
@@ -273,7 +273,7 @@ function PreviewMarketing() {
       </div>
       {/* Analytics chart */}
       <div className={`bg-white border border-gray-100 rounded p-2 transition-all duration-500 delay-300 ${step >= 2 ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
-        <div className="text-[5px] text-navy/40 uppercase mb-1">VISITES / SEMAINE</div>
+        <div className="text-[5px] text-[#64748B] uppercase mb-1">VISITES / SEMAINE</div>
         <div className="flex items-end gap-0.5 h-10">
           {[30,45,40,60,55,80,95].map((h, i) => (
             <div key={i} className="flex-1 relative">
@@ -324,7 +324,7 @@ function PreviewMultiPages() {
         ].map(k => (
           <div key={k.l} className="bg-electric/10 rounded p-1 text-center">
             <div className="text-[9px] font-bold text-electric">{k.v}</div>
-            <div className="text-[5px] text-navy/50">{k.l}</div>
+            <div className="text-[5px] text-[#64748B]">{k.l}</div>
           </div>
         ))}
       </div>
@@ -382,11 +382,11 @@ export default function Atelier() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 relative">
         {/* Header */}
         <div className="mb-12 max-w-2xl">
-          <p className="text-[13px] font-semibold text-gold uppercase tracking-[0.18em] mb-3 reveal-item">Nos services</p>
+          <p className="text-[13px] font-semibold text-[#B45309] uppercase tracking-[0.18em] mb-3 reveal-item">Nos services</p>
           <h2 className="text-3xl lg:text-5xl font-bold text-navy mb-4 reveal-item" style={{ lineHeight: 1.15 }}>
             Nos services web
           </h2>
-          <p className="text-navy/55 max-w-xl">
+          <p className="text-[#475569] max-w-xl">
             Survolez chaque service — et voyez-le se construire en direct.
           </p>
         </div>
@@ -409,7 +409,7 @@ export default function Atelier() {
                   }`}
                 >
                   <div className="flex items-center gap-3">
-                    {(() => { const Icon = SERVICE_ICONS[s.id]; return Icon ? <Icon size={20} strokeWidth={1.5} className={`flex-shrink-0 transition-colors ${isActive ? 'text-navy' : 'text-navy/45 group-hover:text-navy'}`} aria-hidden="true" /> : null })()}
+                    {(() => { const Icon = SERVICE_ICONS[s.id]; return Icon ? <Icon size={20} strokeWidth={1.5} className={`flex-shrink-0 transition-colors ${isActive ? 'text-navy' : 'text-[#64748B] group-hover:text-navy'}`} aria-hidden="true" /> : null })()}
 
                     <div className="flex-1 min-w-0">
                       <div className="flex items-center gap-2 mb-0.5">
@@ -417,17 +417,17 @@ export default function Atelier() {
                           {s.titre}
                         </span>
                         {s.badge && (
-                          <span className="text-[10px] font-bold px-2 py-0.5 bg-gold/15 text-amber-700 rounded-full">
+                          <span className="text-[10px] font-bold px-2 py-0.5 bg-[#FEF3C7] text-[#92400E] rounded-full">
                             {s.badge}
                           </span>
                         )}
                       </div>
-                      <p className={`text-xs transition-colors line-clamp-1 ${isActive ? 'text-navy/55' : 'text-navy/35 group-hover:text-navy/50'}`}>
+                      <p className={`text-xs transition-colors line-clamp-1 ${isActive ? 'text-[#475569]' : 'text-[#64748B] group-hover:text-[#64748B]'}`}>
                         {s.desc}
                       </p>
                     </div>
                     {s.prix && (
-                      <span className={`text-sm font-bold tabular-nums data-mono shrink-0 transition-colors ${isActive ? 'text-gold' : 'text-navy/40 group-hover:text-gold/70'}`}>
+                      <span className={`text-sm font-bold tabular-nums data-mono shrink-0 transition-colors ${isActive ? 'text-[#B45309]' : 'text-[#64748B] group-hover:text-[#B45309]/70'}`}>
                         {s.prix} {s.unite}
                       </span>
                     )}
@@ -439,7 +439,7 @@ export default function Atelier() {
                 </button>
               )
             })}
-            <Link href="/services" className="inline-flex items-center gap-2 text-electric-ink hover:text-navy font-medium transition-colors mt-4 text-sm">
+            <Link href="/services" className="inline-flex items-center gap-2 text-electric hover:text-navy font-medium transition-colors mt-4 text-sm">
               Voir tous nos services <ArrowRight size={14} />
             </Link>
           </div>
@@ -458,7 +458,7 @@ export default function Atelier() {
                 </div>
                 <div className="browser-url-light mx-2 flex items-center gap-1">
                   <span className="text-green-600 text-[10px]">🔒</span>
-                  <span className="text-xs text-navy/40 font-mono truncate">stackup-demo.fr / {svc.id}</span>
+                  <span className="text-xs text-[#64748B] font-mono truncate">stackup-demo.fr / {svc.id}</span>
                 </div>
                 <ExternalLink size={11} className="text-navy/25" />
               </div>
@@ -473,7 +473,7 @@ export default function Atelier() {
               >
                 {/* Titre du service en construction */}
                 <div className="absolute top-3 left-4 right-4 flex items-center justify-between z-10">
-                  <span className="text-[9px] font-bold text-navy/40 uppercase tracking-widest data-mono">
+                  <span className="text-[9px] font-bold text-[#64748B] uppercase tracking-widest data-mono">
                     {svc.titre} — en construction…
                   </span>
                   <span className="flex items-center gap-1">
@@ -490,15 +490,15 @@ export default function Atelier() {
 
               {/* Footer browser */}
               <div className="bg-gray-50 border-t border-gray-100 px-4 py-2 flex items-center justify-between">
-                <span className="text-[10px] text-navy/35 data-mono">
+                <span className="text-[10px] text-[#64748B] data-mono">
                   Délai : {svc.delai ?? 'Sur devis'}
                 </span>
                 {svc.prix ? (
-                  <span className="text-[10px] font-bold text-gold data-mono">
+                  <span className="text-[10px] font-bold text-[#B45309] data-mono">
                     À partir de {svc.prix} {svc.unite}
                   </span>
                 ) : (
-                  <span className="text-[10px] font-bold text-navy/40 data-mono">Sur devis</span>
+                  <span className="text-[10px] font-bold text-[#64748B] data-mono">Sur devis</span>
                 )}
               </div>
             </div>
@@ -525,7 +525,7 @@ export default function Atelier() {
                 {['bg-red-400','bg-yellow-400','bg-green-400'].map(c => <div key={c} className={`w-2.5 h-2.5 rounded-full ${c}`} />)}
               </div>
               <div className="browser-url-light mx-2 flex items-center">
-                <span className="text-[10px] text-navy/40 truncate">{svc.id}</span>
+                <span className="text-[10px] text-[#64748B] truncate">{svc.id}</span>
               </div>
             </div>
             <div className="transition-all duration-500" style={{ background: `linear-gradient(135deg, ${meta.bgFrom}, ${meta.bgTo})`, minHeight: '200px' }}>
@@ -546,10 +546,10 @@ export default function Atelier() {
                 }`}
               >
                 <div className="flex items-center gap-3">
-                  {(() => { const Icon = SERVICE_ICONS[s.id]; return Icon ? <Icon size={16} strokeWidth={1.5} className="text-navy/50 flex-shrink-0" aria-hidden="true" /> : null })()}
+                  {(() => { const Icon = SERVICE_ICONS[s.id]; return Icon ? <Icon size={16} strokeWidth={1.5} className="text-[#64748B] flex-shrink-0" aria-hidden="true" /> : null })()}
                   <div>
                     <div className="font-bold text-sm text-navy">{s.titre}</div>
-                    <div className="text-xs text-navy/45">{s.prix ? `${s.prix} ${s.unite}` : 'Sur devis'}</div>
+                    <div className="text-xs text-[#64748B]">{s.prix ? `${s.prix} ${s.unite}` : 'Sur devis'}</div>
                   </div>
                   {i === active && <div className="ml-auto w-1.5 h-1.5 rounded-full bg-gold" />}
                 </div>
@@ -557,7 +557,7 @@ export default function Atelier() {
             ))}
           </div>
 
-          <Link href="/services" className="inline-flex items-center gap-2 text-electric-ink font-medium text-sm">
+          <Link href="/services" className="inline-flex items-center gap-2 text-electric font-medium text-sm">
             Voir tous nos services <ArrowRight size={14} />
           </Link>
         </div>

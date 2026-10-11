@@ -72,7 +72,7 @@ export default function ContactPage() {
           {/* Sidebar */}
           <div className="lg:col-span-2 space-y-6">
             <div className="bg-white border border-gray-100 rounded-2xl p-6">
-              <div className="text-xs font-bold text-gold uppercase tracking-widest mb-4">Pourquoi nous écrire ?</div>
+              <div className="text-xs font-bold text-[#B45309] uppercase tracking-widest mb-4">Pourquoi nous écrire ?</div>
               <div className="space-y-3">
                 {[
                   'Réponse sous 72h garantie',
@@ -94,14 +94,14 @@ export default function ContactPage() {
                 className="text-white/80 hover:text-white text-sm transition-colors break-all">
                 contact@stackup-agency.fr
               </a>
-              <div className="text-white/40 text-xs mt-2">Tours (37) · Toute la France</div>
+              <div className="text-white/65 text-xs mt-2">Tours (37) · Toute la France</div>
             </div>
           </div>
         </div>
       </div>
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 pb-16">
-        <p className="text-center text-sm text-foreground/70 dark:text-white/40">
+        <p className="text-center text-sm text-foreground/70 dark:text-white/65">
           Nos documents contractuels (CGV, contrat de prestation, devis type…) sont consultables{' '}
           <a href="/ressources/documents" className="text-electric hover:text-electric/80 transition-colors underline underline-offset-2">
             sur la page Documents officiels

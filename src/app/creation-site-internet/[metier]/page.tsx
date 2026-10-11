@@ -105,7 +105,7 @@ export default function MetierPage({ params }: { params: { metier: string } }) {
       {/* Hero */}
       <div className="bg-gradient-to-b from-[#060D1A] to-[#0A0F1C] pt-24 pb-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
-          <nav className="flex items-center gap-1.5 text-white/40 text-xs mb-6" aria-label="Fil d'Ariane">
+          <nav className="flex items-center gap-1.5 text-white/65 text-xs mb-6" aria-label="Fil d'Ariane">
             <Link href="/" className="hover:text-white transition-colors flex items-center gap-1"><Home size={11} /> Accueil</Link>
             <ChevronRight size={11} />
             <Link href="/creation-site-internet" className="hover:text-white transition-colors">Création site internet</Link>
@@ -146,7 +146,7 @@ export default function MetierPage({ params }: { params: { metier: string } }) {
           <h2 className="text-2xl font-bold text-foreground dark:text-white mb-2">
             Sans site internet professionnel, vous perdez des clients chaque jour
           </h2>
-          <p className="text-foreground/60 dark:text-white/60 mb-6">
+          <p className="text-[#475569] dark:text-white/60 mb-6">
             En 2026, 76% des consommateurs cherchent un prestataire en ligne avant de prendre contact. Voici ce que vous laissez à vos concurrents :
           </p>
           <div className="space-y-3">
@@ -170,7 +170,7 @@ export default function MetierPage({ params }: { params: { metier: string } }) {
                 <h3 className="text-xl font-bold text-foreground dark:text-white">{service.label}</h3>
                 <p className="text-electric text-sm mt-0.5">Solution recommandée pour les {m.metier}s</p>
               </div>
-              <span className="text-2xl font-bold text-navy dark:text-gold">{service.prix}€</span>
+              <span className="text-2xl font-bold text-navy dark:text-[#B45309]">{service.prix}€</span>
             </div>
             <p className="text-foreground/70 dark:text-white/70 mb-5">
               Solution adaptée à la grande majorité des {m.metier}s. Inclut SEO local optimisé pour votre ville,
@@ -196,7 +196,7 @@ export default function MetierPage({ params }: { params: { metier: string } }) {
           <h2 className="text-2xl font-bold text-foreground dark:text-white mb-2">
             Ce qu'inclut votre site de {m.metier}
           </h2>
-          <p className="text-foreground/60 dark:text-white/60 mb-6">
+          <p className="text-[#475569] dark:text-white/60 mb-6">
             En plus des fonctionnalités communes à tous nos sites (SEO, mobile, hébergement), votre site inclut des éléments spécifiques à votre métier :
           </p>
           <div className="grid sm:grid-cols-2 gap-3">
@@ -228,7 +228,7 @@ export default function MetierPage({ params }: { params: { metier: string } }) {
                 </div>
                 <div>
                   <h3 className="font-semibold text-foreground dark:text-white mb-1">{titre}</h3>
-                  <p className="text-foreground/60 dark:text-white/60 text-sm">{desc}</p>
+                  <p className="text-[#475569] dark:text-white/60 text-sm">{desc}</p>
                 </div>
               </div>
             ))}
@@ -298,7 +298,7 @@ export default function MetierPage({ params }: { params: { metier: string } }) {
                 <span className="text-2xl font-bold text-electric/40 font-mono flex-shrink-0 w-10">{step.n}</span>
                 <div>
                   <h3 className="font-semibold text-foreground dark:text-white mb-1">{step.titre}</h3>
-                  <p className="text-foreground/60 dark:text-white/60 text-sm">{step.desc}</p>
+                  <p className="text-[#475569] dark:text-white/60 text-sm">{step.desc}</p>
                 </div>
               </div>
             ))}
@@ -315,7 +315,7 @@ export default function MetierPage({ params }: { params: { metier: string } }) {
               <details key={faq.q} className="group rounded-xl border border-navy/20 dark:border-white/10 overflow-hidden">
                 <summary className="flex items-center justify-between p-4 cursor-pointer font-medium text-foreground dark:text-white list-none">
                   {faq.q}
-                  <ChevronRight size={16} className="text-white/40 group-open:rotate-90 transition-transform flex-shrink-0 ml-3" />
+                  <ChevronRight size={16} className="text-white/65 group-open:rotate-90 transition-transform flex-shrink-0 ml-3" />
                 </summary>
                 <div className="px-4 pb-4 text-foreground/70 dark:text-white/70 text-sm leading-relaxed">{faq.a}</div>
               </details>
@@ -344,7 +344,7 @@ export default function MetierPage({ params }: { params: { metier: string } }) {
           <h3 className="text-lg font-semibold text-foreground dark:text-white mb-3">Recherches associées</h3>
           <div className="flex flex-wrap gap-2">
             {m.variantes.map(v => (
-              <span key={v} className="px-3 py-1.5 rounded-full text-xs border border-white/10 text-foreground/60 dark:text-white/60">
+              <span key={v} className="px-3 py-1.5 rounded-full text-xs border border-white/10 text-[#475569] dark:text-white/60">
                 {v}
               </span>
             ))}
@@ -355,7 +355,7 @@ export default function MetierPage({ params }: { params: { metier: string } }) {
         <div className="rounded-2xl p-8 bg-gradient-to-br from-navy to-electric text-center">
           <h3 className="text-white font-bold text-2xl mb-2">Prêt à créer votre site de {m.metier} ?</h3>
           <p className="text-white/70 mb-2">Premier RDV gratuit, devis sous 72h, livraison garantie en {delai}.</p>
-          <p className="text-white/50 text-sm mb-6">Pas d'abonnement, pas de commission, pas de frais cachés.</p>
+          <p className="text-white/65 text-sm mb-6">Pas d'abonnement, pas de commission, pas de frais cachés.</p>
           <Link href="/contact" className="inline-block px-8 py-3 bg-gold hover:bg-gold/80 text-ink font-semibold rounded-xl transition-all hover:-translate-y-0.5">
             Demander un devis gratuit →
           </Link>

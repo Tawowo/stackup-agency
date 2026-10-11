@@ -61,9 +61,9 @@ export default function RessourcesPage() {
           {RESSOURCES.map(r => (
             <Link key={r.href} href={r.href}
               className="group p-6 rounded-2xl bg-white border border-gray-100 hover:border-gold/40 hover:-translate-y-1 transition-all">
-              <r.icon size={22} className="text-gold mb-4" />
+              <r.icon size={22} className="text-[#B45309] mb-4" />
               <h2 className="font-bold text-navy text-lg mb-2">{r.titre}</h2>
-              <p className="text-navy/60 text-sm leading-relaxed mb-4">{r.desc}</p>
+              <p className="text-[#475569] text-sm leading-relaxed mb-4">{r.desc}</p>
               <span className="inline-flex items-center gap-1 text-electric text-sm font-medium">
                 Consulter <ArrowRight size={13} className="group-hover:translate-x-0.5 transition-transform" />
               </span>

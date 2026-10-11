@@ -103,7 +103,7 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
       <div className="bg-gradient-to-b from-[#060D1A] to-[#0A0F1C] pt-24 pb-16">
         <div className="max-w-3xl mx-auto px-4 sm:px-6">
           {/* Breadcrumb */}
-          <nav className="flex items-center gap-1.5 text-white/40 text-xs mb-6" aria-label="Fil d'Ariane">
+          <nav className="flex items-center gap-1.5 text-white/65 text-xs mb-6" aria-label="Fil d'Ariane">
             <Link href="/" className="hover:text-white transition-colors flex items-center gap-1"><Home size={11} /> Accueil</Link>
             <ChevronRight size={11} />
             <Link href="/blog" className="hover:text-white transition-colors">Blog</Link>
@@ -114,10 +114,10 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
             <span className="flex items-center gap-1 px-3 py-1.5 bg-white/10 text-white/80 rounded-full text-xs font-medium">
               <Tag size={11} /> {post.tag}
             </span>
-            <span className="flex items-center gap-1 text-white/40 text-xs">
+            <span className="flex items-center gap-1 text-white/65 text-xs">
               <Clock size={11} /> {post.readTime} min de lecture
             </span>
-            <span className="text-white/40 text-xs">
+            <span className="text-white/65 text-xs">
               {post.updated
                 ? `Mis à jour le ${new Date(post.updated).toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' })}`
                 : new Date(post.date).toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' })}

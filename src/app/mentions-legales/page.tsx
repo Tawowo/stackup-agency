@@ -32,7 +32,7 @@ export default function MentionsLegales() {
             Télécharger la version PDF officielle
           </a>
         </div>
-        <p className="text-sm text-gray-500 dark:text-white/40 mb-12">Stackup Agency — Dernière mise à jour : 30 juin 2026</p>
+        <p className="text-sm text-gray-500 dark:text-white/65 mb-12">Stackup Agency — Dernière mise à jour : 30 juin 2026</p>
 
         <div className="prose dark:prose-invert prose-sm max-w-none space-y-10">
           <section>

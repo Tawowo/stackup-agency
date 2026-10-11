@@ -18,7 +18,7 @@ export default function HomeFaq() {
     <section className="py-16 bg-[#FFFDF9] relative overflow-hidden">
       <DecorProfondeur variant="gold" seed={0} />
       <div className="max-w-3xl mx-auto px-4 sm:px-6 relative">
-        <p className="text-[13px] font-semibold text-gold uppercase tracking-[0.18em] mb-3">FAQ</p>
+        <p className="text-[13px] font-semibold text-[#B45309] uppercase tracking-[0.18em] mb-3">FAQ</p>
         <h2 className="text-2xl font-bold text-navy mb-6">Questions fréquentes</h2>
         <div className="space-y-2">
           {FAQ_ITEMS.map(({ q, a }, i) => (
@@ -34,24 +34,24 @@ export default function HomeFaq() {
                 aria-expanded={open === i}
                 className="w-full text-left px-5 py-4 flex items-center justify-between gap-4 group"
               >
-                <span className="shrink-0 text-gold/70 data-mono text-xs mr-1 font-bold" aria-hidden="true">[ Q ]</span>
+                <span className="shrink-0 text-[#B45309]/70 data-mono text-xs mr-1 font-bold" aria-hidden="true">[ Q ]</span>
                 <span className={`flex-1 font-semibold text-sm leading-snug transition-colors ${open === i ? 'text-navy' : 'text-navy/80 group-hover:text-navy'}`}>
                   {q}
                 </span>
                 <ChevronDown
                   size={16}
-                  className={`shrink-0 text-gold/60 transition-transform duration-300 ${open === i ? 'rotate-180' : ''}`}
+                  className={`shrink-0 text-[#B45309]/60 transition-transform duration-300 ${open === i ? 'rotate-180' : ''}`}
                 />
               </button>
               <div className={`faq-body ${open === i ? 'open' : ''}`}>
                 <div>
-                  <p className="px-5 pb-4 text-navy/60 text-sm leading-relaxed">{a}</p>
+                  <p className="px-5 pb-4 text-[#475569] text-sm leading-relaxed">{a}</p>
                 </div>
               </div>
             </div>
           ))}
         </div>
-        <Link href="/faq" className="mt-6 inline-flex items-center gap-2 text-electric-ink font-medium text-sm hover:text-navy transition-colors">
+        <Link href="/faq" className="mt-6 inline-flex items-center gap-2 text-electric font-medium text-sm hover:text-navy transition-colors">
           Toutes les questions <ArrowRight size={14} className="arrow-slide" />
         </Link>
       </div>

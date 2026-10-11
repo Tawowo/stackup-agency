@@ -81,9 +81,9 @@ export default function RealisationsPage() {
               <div className="p-5">
                 <div className="flex items-start justify-between mb-2">
                   <h2 className="font-bold text-foreground dark:text-white group-hover:text-electric transition-colors">{r.nom}</h2>
-                  <ChevronRight size={16} className="text-white/30 group-hover:text-electric transition-all group-hover:translate-x-0.5 flex-shrink-0 mt-0.5" />
+                  <ChevronRight size={16} className="text-white/65 group-hover:text-electric transition-all group-hover:translate-x-0.5 flex-shrink-0 mt-0.5" />
                 </div>
-                <p className="text-xs text-foreground/70 dark:text-white/50 mb-2">{r.type}</p>
+                <p className="text-xs text-foreground/70 dark:text-white/65 mb-2">{r.type}</p>
                 <p className="text-sm text-foreground/70 dark:text-white/70 line-clamp-2">{r.description}</p>
                 <div className="flex flex-wrap gap-1.5 mt-3">
                   {r.tags.slice(0, 3).map(tag => (

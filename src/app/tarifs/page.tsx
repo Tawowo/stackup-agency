@@ -99,11 +99,11 @@ export default function TarifsPage() {
           <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 mb-4">
             <div>
               <h2 className="text-2xl font-bold text-foreground dark:text-white">Système de gestion sur mesure</h2>
-              <p className="text-foreground/60 dark:text-white/60 text-sm mt-1">Application métier 100% personnalisée</p>
+              <p className="text-[#475569] dark:text-white/60 text-sm mt-1">Application métier 100% personnalisée</p>
             </div>
             <div className="text-right flex-shrink-0">
-              <div className="text-3xl font-bold text-electric-ink dark:text-electric">à partir de {SITE.pricing.gestion}€</div>
-              <div className="text-xs text-foreground/70 dark:text-white/50 mt-0.5">Livraison : {SITE.delais.gestion}</div>
+              <div className="text-3xl font-bold text-electric">à partir de {SITE.pricing.gestion}€</div>
+              <div className="text-xs text-foreground/70 dark:text-white/65 mt-0.5">Livraison : {SITE.delais.gestion}</div>
             </div>
           </div>
           <p className="text-foreground/80 dark:text-white/80 mb-5">
@@ -131,8 +131,8 @@ export default function TarifsPage() {
         {/* Maintenance */}
         <section>
           <h2 className="text-2xl font-bold text-foreground dark:text-white mb-2">Maintenance & hébergement</h2>
-          <p className="text-foreground/60 dark:text-white/60 mb-3">Après la première année d'hébergement incluse, optez pour une maintenance mensuelle.</p>
-          <p className="text-foreground/55 dark:text-white/55 text-sm mb-6 max-w-2xl">Le nom de domaine est offert la première année sur toutes les créations de site. Ensuite, il reste à votre charge — sauf si vous avez un abonnement de maintenance actif : il y est inclus.</p>
+          <p className="text-[#475569] dark:text-white/60 mb-3">Après la première année d'hébergement incluse, optez pour une maintenance mensuelle.</p>
+          <p className="text-[#475569] dark:text-white/55 text-sm mb-6 max-w-2xl">Le nom de domaine est offert la première année sur toutes les créations de site. Ensuite, il reste à votre charge — sauf si vous avez un abonnement de maintenance actif : il y est inclus.</p>
           <div className="grid sm:grid-cols-3 gap-4">
             {[
               { titre: 'Starter', prix: SITE.pricing.maintenanceStarter, inclus: ['Hébergement + nom de domaine inclus', 'SSL', 'Sauvegardes hebdo', 'Mises à jour techniques (navigateurs, exigences Google, sécurité)', 'Réponse sous 72 h ouvrées'] },
@@ -142,11 +142,11 @@ export default function TarifsPage() {
               <div key={m.titre} className="rounded-2xl border border-navy/20 dark:border-white/10 p-5 hover:border-electric/30 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
                 <div className="flex items-center justify-between mb-3">
                   <h3 className="font-bold text-foreground dark:text-white">{m.titre}</h3>
-                  <span className="text-xl font-bold text-navy dark:text-gold">{m.prix}€<span className="text-sm font-normal text-foreground/70 dark:text-white/50">/mois</span></span>
+                  <span className="text-xl font-bold text-navy dark:text-[#B45309]">{m.prix}€<span className="text-sm font-normal text-foreground/70 dark:text-white/65">/mois</span></span>
                 </div>
                 <ul className="space-y-1.5">
                   {m.inclus.map(item => (
-                    <li key={item} className="flex items-center gap-2 text-sm text-foreground/60 dark:text-white/60">
+                    <li key={item} className="flex items-center gap-2 text-sm text-[#475569] dark:text-white/60">
                       <CheckCircle size={12} className="text-success flex-shrink-0" />
                       {item}
                     </li>
@@ -160,7 +160,7 @@ export default function TarifsPage() {
         {/* Rédaction blog SEO */}
         <section>
           <h2 className="text-2xl font-bold text-foreground dark:text-white mb-2">Rédaction blog SEO</h2>
-          <p className="text-foreground/60 dark:text-white/60 mb-6">Des articles optimisés pour Google, rédigés par des professionnels. Boostez votre référencement naturel sans écrire une ligne.</p>
+          <p className="text-[#475569] dark:text-white/60 mb-6">Des articles optimisés pour Google, rédigés par des professionnels. Boostez votre référencement naturel sans écrire une ligne.</p>
           <div className="grid sm:grid-cols-3 gap-4 mb-4">
             {[
               { titre: 'Article à l\'unité', prix: '25', unite: '/article', inclus: ['Article 800–1 200 mots', 'Recherche de mots-clés', 'Structure Hn optimisée', 'Méta-titre & description', 'Livraison 5 jours ouvrés'] },
@@ -168,14 +168,14 @@ export default function TarifsPage() {
               { titre: 'Pack Autorité', prix: '159', unite: '/mois', inclus: ['8 articles/mois', 'Stratégie contenu 3 mois', 'Mots-clés longue traîne', 'Cocon sémantique', 'Rapport mensuel détaillé'] },
             ].map(p => (
               <div key={p.titre} className={`rounded-2xl border p-5 ${('highlight' in p && p.highlight) ? 'border-amber-500/40 bg-gold/5' : 'border-navy/20 dark:border-white/10'}`}>
-                {('highlight' in p && p.highlight) && <div className="text-xs font-semibold text-navy dark:text-gold mb-2 uppercase tracking-wide">Le plus populaire</div>}
+                {('highlight' in p && p.highlight) && <div className="text-xs font-semibold text-navy dark:text-[#B45309] mb-2 uppercase tracking-wide">Le plus populaire</div>}
                 <div className="flex items-center justify-between mb-3">
                   <h3 className="font-bold text-foreground dark:text-white">{p.titre}</h3>
-                  <span className="text-xl font-bold text-navy dark:text-gold">{p.prix}€<span className="text-sm font-normal text-foreground/70 dark:text-white/50">{p.unite}</span></span>
+                  <span className="text-xl font-bold text-navy dark:text-[#B45309]">{p.prix}€<span className="text-sm font-normal text-foreground/70 dark:text-white/65">{p.unite}</span></span>
                 </div>
                 <ul className="space-y-1.5">
                   {p.inclus.map(item => (
-                    <li key={item} className="flex items-center gap-2 text-sm text-foreground/60 dark:text-white/60">
+                    <li key={item} className="flex items-center gap-2 text-sm text-[#475569] dark:text-white/60">
                       <CheckCircle size={12} className="text-success flex-shrink-0" />
                       {item}
                     </li>
@@ -187,9 +187,9 @@ export default function TarifsPage() {
           <div className="rounded-xl border border-electric/20 bg-blue-500/5 p-4 flex items-center justify-between gap-4">
             <div>
               <span className="font-semibold text-foreground dark:text-white text-sm">Accès technique blog</span>
-              <span className="text-foreground/60 dark:text-white/60 text-sm ml-2">— Installation du blog sur votre site existant</span>
+              <span className="text-[#475569] dark:text-white/60 text-sm ml-2">— Installation du blog sur votre site existant</span>
             </div>
-            <span className="font-bold text-navy dark:text-gold flex-shrink-0">49€ <span className="text-foreground/60 dark:text-white/50 font-normal text-xs">une fois</span></span>
+            <span className="font-bold text-navy dark:text-[#B45309] flex-shrink-0">49€ <span className="text-[#475569] dark:text-white/65 font-normal text-xs">une fois</span></span>
           </div>
         </section>
 
@@ -207,7 +207,7 @@ export default function TarifsPage() {
               <details key={faq.q} className="group rounded-xl border border-navy/20 dark:border-white/10 overflow-hidden hover:border-gold/30 transition-colors duration-200">
                 <summary className="flex items-center justify-between p-4 cursor-pointer font-medium text-foreground dark:text-white list-none hover:bg-amber-50/30 transition-colors">
                   {faq.q}
-                  <ChevronRight size={16} className="text-navy/40 group-open:rotate-90 transition-transform flex-shrink-0 group-hover:text-gold" />
+                  <ChevronRight size={16} className="text-[#64748B] group-open:rotate-90 transition-transform flex-shrink-0 group-hover:text-gold" />
                 </summary>
                 <div className="px-4 pb-4 text-foreground/70 dark:text-white/70 text-sm">{faq.a}</div>
               </details>
@@ -230,7 +230,7 @@ export default function TarifsPage() {
             <h3 className="font-bold text-foreground dark:text-white mb-1">
               Parrainez un professionnel : 1 mois Premium (89 €) offert ou −10 % sur votre prestation
             </h3>
-            <p className="text-sm text-foreground/60 dark:text-white/60">
+            <p className="text-sm text-[#475569] dark:text-white/60">
               Votre filleul bénéficie de −10% sur son premier projet. Valeur jusqu'à 89€ pour vous.
             </p>
           </div>

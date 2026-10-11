@@ -351,7 +351,7 @@ export default async function ServicesLocauxPage({ params }: { params: Promise<{
       {/* Hero */}
       <div className="bg-[#050A14] pt-28 pb-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <Link href="/" className="inline-flex items-center gap-2 text-white/40 hover:text-white text-sm mb-10 transition-colors">
+          <Link href="/" className="inline-flex items-center gap-2 text-white/65 hover:text-white text-sm mb-10 transition-colors">
             <ArrowLeft size={14} /> Retour au site
           </Link>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
@@ -454,7 +454,7 @@ export default async function ServicesLocauxPage({ params }: { params: Promise<{
             &ldquo;{page.testimonial.quote}&rdquo;
           </blockquote>
           <div className="font-semibold text-gray-900 dark:text-white">{page.testimonial.author}</div>
-          <div className="text-sm text-muted dark:text-white/40">{page.testimonial.company}</div>
+          <div className="text-sm text-muted dark:text-white/65">{page.testimonial.company}</div>
         </div>
       </section>
 

@@ -79,7 +79,7 @@ export default function Configurateur() {
   return (
     <div className="su-strate su-strate--levee overflow-hidden">
       {/* ── Progression ── */}
-      <ol className="flex border-b border-[#1E3A5F]/8 bg-[#FFFDF9]" aria-label="Étapes">
+      <ol className="flex border-b border-[#1E3A5F]/10 bg-[#FFFDF9]" aria-label="Étapes">
         {ETAPES.map((titre, i) => {
           const fait = i < etape
           const courante = i === etape
@@ -141,7 +141,7 @@ export default function Configurateur() {
                     className={`text-left p-4 rounded-xl border transition-all ${
                       actif
                         ? 'border-[#F59E0B] bg-[#F59E0B]/[0.06] shadow-[0_0_0_1px_#F59E0B]'
-                        : 'border-[#1E3A5F]/12 hover:border-[#1E3A5F]/30 bg-white'
+                        : 'border-[#1E3A5F]/10 hover:border-[#1E3A5F]/30 bg-white'
                     }`}
                   >
                     <span className="flex items-start justify-between gap-3 mb-1.5">
@@ -178,7 +178,7 @@ export default function Configurateur() {
                     className={`flex items-start gap-3 p-3.5 rounded-xl border cursor-pointer transition-all ${
                       actif
                         ? 'border-[#F59E0B] bg-[#F59E0B]/[0.06]'
-                        : 'border-[#1E3A5F]/12 hover:border-[#1E3A5F]/30 bg-white'
+                        : 'border-[#1E3A5F]/10 hover:border-[#1E3A5F]/30 bg-white'
                     }`}
                   >
                     <input
@@ -230,7 +230,7 @@ export default function Configurateur() {
                     className={`text-left p-4 rounded-xl border transition-all ${
                       actif
                         ? 'border-[#F59E0B] bg-[#F59E0B]/[0.06] shadow-[0_0_0_1px_#F59E0B]'
-                        : 'border-[#1E3A5F]/12 hover:border-[#1E3A5F]/30 bg-white'
+                        : 'border-[#1E3A5F]/10 hover:border-[#1E3A5F]/30 bg-white'
                     }`}
                   >
                     <span className="block font-semibold text-[#0C1626] mb-1">{e.titre}</span>
@@ -301,20 +301,20 @@ export default function Configurateur() {
       </div>
 
       {/* ── Estimation persistante ── */}
-      <div className="px-5 sm:px-7 py-4 border-t border-[#1E3A5F]/8 bg-[#1E3A5F] text-white">
+      <div className="px-5 sm:px-7 py-4 border-t border-[#1E3A5F]/10 bg-[#1E3A5F] text-white">
         <div className="flex flex-wrap items-center justify-between gap-4">
           <div>
-            <p className="text-[10.5px] font-mono tracking-[0.14em] uppercase text-white/55 mb-1">
+            <p className="text-[10.5px] font-mono tracking-[0.14em] uppercase text-white/75 mb-1">
               Point de départ indicatif
             </p>
             <p className="font-display font-bold text-[1.6rem] leading-none tabular-nums">
               {estimation.planchePonctuel > 0 ? (
                 <>
-                  <span className="text-[0.62em] font-semibold text-white/70">à partir de </span>
+                  <span className="text-[0.62em] font-semibold text-white/80">à partir de </span>
                   <span className="text-[#FBBF24]">{estimation.planchePonctuel} €</span>
                 </>
               ) : (
-                <span className="text-white/45 text-[0.68em] font-semibold">
+                <span className="text-white/75 text-[0.68em] font-semibold">
                   Choisissez un projet
                 </span>
               )}
@@ -325,7 +325,7 @@ export default function Configurateur() {
               )}
             </p>
             {estimation.surDevis.length > 0 && (
-              <p className="text-[12px] text-white/65 mt-1.5">
+              <p className="text-[12px] text-white/75 mt-1.5">
                 + {estimation.surDevis.length} élément
                 {estimation.surDevis.length > 1 ? 's' : ''} à chiffrer ensemble
               </p>

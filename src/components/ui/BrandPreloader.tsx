@@ -82,7 +82,7 @@ export default function BrandPreloader() {
 
         {/* Counter */}
         <div
-          className="font-mono text-xs tracking-[0.4em] text-white/30"
+          className="font-mono text-xs tracking-[0.4em] text-white/65"
           style={{ fontFamily: 'var(--font-mono, ui-monospace, monospace)' }}
         >
           {String(count).padStart(3, '0')}
