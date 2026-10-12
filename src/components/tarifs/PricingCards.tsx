@@ -79,7 +79,7 @@ function CardItem({ card, index, isVisible }: { card: Card; index: number; isVis
         {card.inclus.map((item, ci) => (
           <li key={item} className={`check-item flex items-center gap-2 text-sm ${card.highlight ? 'text-white/75' : 'text-navy/75'}`}
             style={{ transitionDelay: `${ci * 60}ms` }}>
-            <CheckCircle size={13} className={card.highlight ? 'text-[#B45309] flex-shrink-0' : 'text-electric flex-shrink-0'} />
+            <CheckCircle size={13} className={card.highlight ? 'text-[#FBBF24] flex-shrink-0' : 'text-electric flex-shrink-0'} />
             {item}
           </li>
         ))}

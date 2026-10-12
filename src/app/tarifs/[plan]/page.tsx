@@ -324,7 +324,7 @@ export default function TarifPage({ params }: { params: { plan: string } }) {
                     {planKeys.map(key => (
                       <td key={key} className="p-4 text-center">
                         {row[key] ? (
-                          <Check size={16} className={key === params.plan ? 'text-electric mx-auto' : 'text-green-500 mx-auto'} />
+                          <Check size={16} className={key === params.plan ? 'text-electric mx-auto' : 'text-[#15803D] mx-auto'} />
                         ) : (
                           <X size={16} className="text-gray-300 mx-auto" />
                         )}

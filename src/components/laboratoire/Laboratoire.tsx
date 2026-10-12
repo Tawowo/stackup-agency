@@ -144,7 +144,7 @@ export default function Laboratoire() {
               onChange={(e) => setCriteres((c) => ({ ...c, recherche: e.target.value }))}
               placeholder="Client, commune, prestation…"
               aria-label="Rechercher une intervention"
-              className="w-full h-10 pl-9 pr-3 text-sm rounded-lg border border-[#1E3A5F]/15 bg-white text-[#0C1626] placeholder:text-[#94A3B8] focus:border-[#F59E0B] focus:outline-none"
+              className="w-full h-10 pl-9 pr-3 text-sm rounded-lg border border-[#1E3A5F]/15 bg-white text-[#0C1626] placeholder:text-[#64748B] focus:border-[#F59E0B] focus:outline-none"
             />
           </div>
 
@@ -186,7 +186,7 @@ export default function Laboratoire() {
                 }`}
               >
                 {LIBELLES_STATUT[statut]}
-                <span className={actif ? 'text-white/55' : 'text-[#94A3B8]'}>{compte}</span>
+                <span className={actif ? 'text-white/55' : 'text-[#64748B]'}>{compte}</span>
               </button>
             )
           })}
@@ -225,7 +225,7 @@ export default function Laboratoire() {
                       <ChevronDown
                         size={15}
                         aria-hidden="true"
-                        className={`text-[#94A3B8] shrink-0 transition-transform duration-200 ${
+                        className={`text-[#64748B] shrink-0 transition-transform duration-200 ${
                           ouvert ? 'rotate-180' : ''
                         }`}
                       />

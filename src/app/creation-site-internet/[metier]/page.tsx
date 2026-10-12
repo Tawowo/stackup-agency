@@ -270,7 +270,7 @@ export default function MetierPage({ params }: { params: { metier: string } }) {
               <h3 className="font-bold text-white">Rendez votre site encore plus visible avec un blog SEO</h3>
               <p className="text-electric text-xs font-medium mt-0.5">À partir de 25€ l'article</p>
             </div>
-            <span className="text-gold font-bold text-xl flex-shrink-0">25€</span>
+            <span className="text-[#B45309] font-bold text-xl flex-shrink-0">25€</span>
           </div>
           <p className="text-white/70 text-sm mb-4">
             Un site web seul ne suffit pas toujours à dominer Google. Des articles de blog optimisés SEO
@@ -315,7 +315,7 @@ export default function MetierPage({ params }: { params: { metier: string } }) {
               <details key={faq.q} className="group rounded-xl border border-navy/20 overflow-hidden">
                 <summary className="flex items-center justify-between p-4 cursor-pointer font-medium text-foreground list-none">
                   {faq.q}
-                  <ChevronRight size={16} className="text-white/65 group-open:rotate-90 transition-transform flex-shrink-0 ml-3" />
+                  <ChevronRight size={16} className="text-[#64748B] group-open:rotate-90 transition-transform flex-shrink-0 ml-3" />
                 </summary>
                 <div className="px-4 pb-4 text-foreground/70 text-sm leading-relaxed">{faq.a}</div>
               </details>

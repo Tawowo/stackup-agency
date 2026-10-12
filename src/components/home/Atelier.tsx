@@ -460,7 +460,7 @@ export default function Atelier() {
                   <span className="text-green-600 text-[10px]">🔒</span>
                   <span className="text-xs text-[#64748B] font-mono truncate">stackup-demo.fr / {svc.id}</span>
                 </div>
-                <ExternalLink size={11} className="text-navy/25" />
+                <ExternalLink size={11} className="text-[#64748B]" />
               </div>
 
               {/* Preview area */}

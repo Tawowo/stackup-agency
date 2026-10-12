@@ -163,7 +163,7 @@ export default function BlogClient({ posts }: { posts: Post[] }) {
       {active === 'tous' && !query.trim() && featured.length > 0 && (
         <section className="mb-12">
           <div className="flex items-center gap-2 mb-5">
-            <Star size={15} className="text-gold" />
+            <Star size={15} className="text-[#B45309]" />
             <h2 className="text-sm font-bold text-navy uppercase tracking-wider">À la une</h2>
           </div>
           <div className="grid sm:grid-cols-3 gap-4">

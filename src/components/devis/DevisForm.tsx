@@ -528,7 +528,7 @@ function RecapView({
   return (
     <div className="max-w-2xl mx-auto">
       <div className="text-center mb-8">
-        <div className="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-electric/60 mb-3">
+        <div className="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-electric mb-3">
           <span className="w-8 h-px bg-electric/35 block" />
           Récapitulatif
           <span className="w-8 h-px bg-electric/35 block" />

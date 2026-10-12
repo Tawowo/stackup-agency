@@ -40,7 +40,7 @@ export default function HomeFaq() {
                 </span>
                 <ChevronDown
                   size={16}
-                  className={`shrink-0 text-[#B45309]/60 transition-transform duration-300 ${open === i ? 'rotate-180' : ''}`}
+                  className={`shrink-0 text-[#B45309] transition-transform duration-300 ${open === i ? 'rotate-180' : ''}`}
                 />
               </button>
               <div className={`faq-body ${open === i ? 'open' : ''}`}>

@@ -73,7 +73,7 @@ export default function AgenceWebPage() {
                       <span className="font-medium text-foreground group-hover:text-electric transition-colors">Agence web {v.ville}</span>
                       <p className="text-xs text-foreground/70 mt-0.5">{v.departement}</p>
                     </div>
-                    <ChevronRight size={16} className="text-white/65 group-hover:text-electric transition-colors" />
+                    <ChevronRight size={16} className="text-[#64748B] group-hover:text-electric transition-colors" />
                   </Link>
                 ))}
               </div>

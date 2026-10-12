@@ -108,7 +108,7 @@ export default function DepartementPage({ params }: { params: { slug: string } }
               {villesAvecPage.map(v => (
                 <Link key={v.slug} href={`/agence-web/${v.slug}`}
                   className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-white border border-gray-200 text-navy text-sm font-medium hover:border-gold/40 hover:-translate-y-0.5 transition-all">
-                  <MapPin size={13} className="text-gold" /> {v.ville}
+                  <MapPin size={13} className="text-[#B45309]" /> {v.ville}
                 </Link>
               ))}
             </div>
@@ -129,7 +129,7 @@ export default function DepartementPage({ params }: { params: { slug: string } }
               {groupes.map(g => (
                 <div key={g.epci}>
                   <h3 className="text-sm font-bold text-navy mb-2 flex items-center gap-2">
-                    <MapPin size={13} className="text-gold flex-shrink-0" />
+                    <MapPin size={13} className="text-[#B45309] flex-shrink-0" />
                     Autour de {g.epci} — {g.communes.length} commune{g.communes.length > 1 ? 's' : ''}
                   </h3>
                   <p className="text-[#475569] text-[13px] leading-relaxed pl-5">

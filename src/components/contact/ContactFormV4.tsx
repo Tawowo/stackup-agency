@@ -94,7 +94,7 @@ function Field({ id, label, value, onChange, type = 'text', required, as = 'inpu
           showEncouragement ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-1 pointer-events-none'
         }`}
       >
-        <Smile size={12} className="text-gold flex-shrink-0" />
+        <Smile size={12} className="text-[#B45309] flex-shrink-0" />
         <span className="text-xs text-[#B45309] font-medium">{encouragement}</span>
       </div>
     </div>

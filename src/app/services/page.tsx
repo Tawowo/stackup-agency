@@ -224,7 +224,7 @@ export default function ServicesPage() {
               <details key={faq.q} className="group rounded-xl border border-navy/20 overflow-hidden">
                 <summary className="flex items-center justify-between p-4 cursor-pointer font-medium text-foreground list-none">
                   {faq.q}
-                  <ChevronRight size={16} className="text-white/65 group-open:rotate-90 transition-transform flex-shrink-0" />
+                  <ChevronRight size={16} className="text-[#64748B] group-open:rotate-90 transition-transform flex-shrink-0" />
                 </summary>
                 <div className="px-4 pb-4 text-foreground/70 text-sm">{faq.a}</div>
               </details>

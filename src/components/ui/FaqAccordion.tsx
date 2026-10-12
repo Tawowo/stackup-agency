@@ -48,7 +48,7 @@ export default function FaqAccordion({ items, dark = false, defaultOpen }: Props
             </span>
             <ChevronDown
               size={16}
-              className={`shrink-0 text-electric/60 transition-transform duration-300 ${open === i ? 'rotate-180' : ''}`}
+              className={`shrink-0 text-electric transition-transform duration-300 ${open === i ? 'rotate-180' : ''}`}
             />
           </button>
           <div className={`faq-body ${open === i ? 'open' : ''}`}>

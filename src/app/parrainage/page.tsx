@@ -113,7 +113,7 @@ export default function ParrainagePage() {
                   {num}
                 </div>
                 <div className="w-10 h-10 rounded-xl bg-gold/10 flex items-center justify-center mb-4 group-hover:bg-gold/20 transition-colors">
-                  <Icon size={20} className="text-gold" />
+                  <Icon size={20} className="text-[#B45309]" />
                 </div>
                 <h3 className="font-bold text-foreground mb-2">{titre}</h3>
                 <p className="text-sm text-[#475569] leading-relaxed">{desc}</p>
@@ -128,13 +128,13 @@ export default function ParrainagePage() {
           <div className="grid sm:grid-cols-2 gap-6">
             {/* Parrain */}
             <div className="rounded-2xl border border-gold/30 bg-gradient-to-br from-navy to-[#0F172A] p-8 text-white">
-              <div className="text-xs font-semibold text-gold/70 uppercase tracking-widest mb-4">Pour vous — le parrain, au choix</div>
+              <div className="text-xs font-semibold text-[#B45309]/70 uppercase tracking-widest mb-4">Pour vous — le parrain, au choix</div>
               <div className="flex items-baseline gap-2 mb-1">
-                <span className="font-display font-bold text-3xl text-gold">1 mois Premium (89 €)</span>
+                <span className="font-display font-bold text-3xl text-[#B45309]">1 mois Premium (89 €)</span>
               </div>
               <div className="text-white/60 text-base mb-1">offert sur votre abonnement</div>
               <div className="text-white/65 text-sm mb-4">
-                <span className="text-gold font-semibold">OU −10 %</span> sur votre propre prestation non encore signée
+                <span className="text-[#B45309] font-semibold">OU −10 %</span> sur votre propre prestation non encore signée
               </div>
               <ul className="space-y-2 text-sm">
                 {[
@@ -143,7 +143,7 @@ export default function ParrainagePage() {
                   'Si tout est déjà réglé de votre côté : le mois Premium offert',
                 ].map(item => (
                   <li key={item} className="flex items-start gap-2 text-white/70">
-                    <Check size={14} className="text-gold flex-shrink-0 mt-0.5" />
+                    <Check size={14} className="text-[#B45309] flex-shrink-0 mt-0.5" />
                     {item}
                   </li>
                 ))}
@@ -165,7 +165,7 @@ export default function ParrainagePage() {
                   'Non cumulable avec d\'autres offres',
                 ].map(item => (
                   <li key={item} className="flex items-start gap-2 text-foreground/70">
-                    <Check size={14} className="text-green-500 flex-shrink-0 mt-0.5" />
+                    <Check size={14} className="text-[#15803D] flex-shrink-0 mt-0.5" />
                     {item}
                   </li>
                 ))}
@@ -184,7 +184,7 @@ export default function ParrainagePage() {
             {status === 'success' ? (
               <div className="text-center py-8">
                 <div className="w-16 h-16 rounded-full bg-green-500/10 flex items-center justify-center mx-auto mb-4">
-                  <Check size={32} className="text-green-500" />
+                  <Check size={32} className="text-[#15803D]" />
                 </div>
                 <h3 className="text-xl font-bold text-foreground mb-2">Parrainage enregistré !</h3>
                 <p className="text-[#475569] mb-6">

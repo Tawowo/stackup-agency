@@ -77,7 +77,7 @@ export default function SolutionsPage() {
             {p2p3.map(s => (
               <Link key={s.slug} href={`/solutions/${s.slug}`} className="flex items-center justify-between p-4 rounded-xl border border-navy/20 hover:border-blue-400/40 transition-colors group">
                 <span className="font-medium text-foreground group-hover:text-electric transition-colors">{s.nom}</span>
-                <ChevronRight size={16} className="text-white/65 group-hover:text-electric transition-colors" />
+                <ChevronRight size={16} className="text-[#64748B] group-hover:text-electric transition-colors" />
               </Link>
             ))}
           </div>

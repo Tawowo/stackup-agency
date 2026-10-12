@@ -100,14 +100,14 @@ export default function Configurateur() {
               >
                 <span
                   className={`block text-[10.5px] font-mono tracking-[0.12em] uppercase mb-0.5 ${
-                    courante ? 'text-[#B45309]' : 'text-[#94A3B8]'
+                    courante ? 'text-[#B45309]' : 'text-[#64748B]'
                   }`}
                 >
                   Étape {i + 1}
                 </span>
                 <span
                   className={`block text-[13px] font-semibold truncate ${
-                    courante || fait ? 'text-[#0C1626]' : 'text-[#94A3B8]'
+                    courante || fait ? 'text-[#0C1626]' : 'text-[#64748B]'
                   }`}
                 >
                   {titre}
@@ -250,7 +250,7 @@ export default function Configurateur() {
                 rows={3}
                 maxLength={600}
                 placeholder="Ex. : je dois pouvoir modifier mes tarifs moi-même, j’ai déjà un logo, mon agenda est sur Google…"
-                className="w-full p-3 text-sm rounded-xl border border-[#1E3A5F]/15 bg-white text-[#0C1626] placeholder:text-[#94A3B8] focus:border-[#F59E0B] focus:outline-none resize-y"
+                className="w-full p-3 text-sm rounded-xl border border-[#1E3A5F]/15 bg-white text-[#0C1626] placeholder:text-[#64748B] focus:border-[#F59E0B] focus:outline-none resize-y"
               />
             </label>
           </fieldset>

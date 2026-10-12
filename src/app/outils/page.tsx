@@ -41,7 +41,7 @@ const OUTILS = [
     desc: 'Explorez 5 univers visuels et trouvez l\'identité graphique qui correspond à votre activité. Aperçu en direct.',
     href: '/outils/studio-de-style',
     badge: 'Gratuit',
-    color: 'text-gold',
+    color: 'text-[#B45309]',
     bg: 'bg-gold/10',
   },
   {
@@ -59,7 +59,7 @@ const OUTILS = [
     desc: 'Wix, WordPress ou site sur-mesure ? Comparaison honnête des avantages et limites pour décider en connaissance de cause.',
     href: '/comparatif/wix-wordpress-sur-mesure',
     badge: 'Guide',
-    color: 'text-muted',
+    color: 'text-[#64748B]',
     bg: 'bg-muted/10',
   },
 ]
@@ -96,7 +96,7 @@ export default function OutilsPage() {
                   </div>
                   <span className="text-xs font-semibold px-2.5 py-1 bg-navy/5 text-[#475569] rounded-full">{o.badge}</span>
                 </div>
-                <h2 className="font-bold text-foreground mb-2 group-hover:text-electric transition-colors">{o.title}</h2>
+                <h2 className="text-[1.15rem] leading-snug font-bold text-foreground mb-2 group-hover:text-electric transition-colors">{o.title}</h2>
                 <p className="text-sm text-[#475569] leading-relaxed">{o.desc}</p>
               </Link>
             )

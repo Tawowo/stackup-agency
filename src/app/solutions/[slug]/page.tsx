@@ -154,7 +154,7 @@ export default function SolutionPage({ params }: { params: { slug: string } }) {
           </div>
           <div className="p-5 rounded-xl bg-gold/10 border border-amber-500/20">
             <div className="flex items-start gap-3">
-              <Star size={18} className="text-gold mt-0.5 flex-shrink-0" />
+              <Star size={18} className="text-[#B45309] mt-0.5 flex-shrink-0" />
               <p className="text-foreground/80 text-sm">
                 <strong className="text-foreground">Prix à partir de {SITE.pricing.gestion}€</strong> — à comparer avec 50 à 300€/mois d'abonnement SaaS. La solution est amortie en 6 à 18 mois selon votre volume d'activité.
               </p>
@@ -187,7 +187,7 @@ export default function SolutionPage({ params }: { params: { slug: string } }) {
               <details key={faq.q} className="group rounded-xl border border-navy/20 overflow-hidden">
                 <summary className="flex items-center justify-between p-4 cursor-pointer font-medium text-foreground list-none">
                   {faq.q}
-                  <ChevronRight size={16} className="text-white/65 group-open:rotate-90 transition-transform flex-shrink-0" />
+                  <ChevronRight size={16} className="text-[#64748B] group-open:rotate-90 transition-transform flex-shrink-0" />
                 </summary>
                 <div className="px-4 pb-4 text-foreground/70 text-sm leading-relaxed">{faq.a}</div>
               </details>

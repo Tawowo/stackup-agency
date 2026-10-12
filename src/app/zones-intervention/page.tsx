@@ -98,7 +98,7 @@ export default function ZonesInterventionPage() {
                   <div key={d.slug} id={d.slug} className="rounded-2xl bg-white border border-gray-100 p-6 scroll-mt-24">
                     <div className="flex items-start justify-between gap-4 flex-wrap mb-3">
                       <h3 className="text-lg font-bold text-navy flex items-center gap-2">
-                        <MapPin size={16} className="text-gold" /> {d.nom} ({d.code})
+                        <MapPin size={16} className="text-[#B45309]" /> {d.nom} ({d.code})
                       </h3>
                       <Link href={`/agence-web/departement/${d.slug}`}
                         className="inline-flex items-center gap-1 text-electric text-sm font-medium hover:underline">

@@ -22,7 +22,8 @@ const config: Config = {
         gold: "#F59E0B",
         ink: "#1E293B",
         muted: "#94A3B8",
-        success: "#10B981",
+        success: "#047857",       // 5,48:1 sur blanc — #10B981 ne donnait que 2,54:1
+        "success-vif": "#10B981", // décoratif : fonds, lueurs, barres de progression
         danger: "#EF4444",
         background: "#F8FAFC",
         foreground: "#0F172A",

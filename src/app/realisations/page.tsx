@@ -49,19 +49,24 @@ export default function RealisationsPage() {
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 py-16">
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
-          {realisations.map((r, idx) => (
+          {realisations.map((r, idx) => {
+            const enAvant = idx === 0
+            return (
             <Link key={r.slug} href={`/realisations/${r.slug}`}
-              className={`reveal-item real-card group rounded-2xl border border-navy/20 overflow-hidden hover:border-electric/30 hover:shadow-xl hover:-translate-y-1 transition-all duration-300`}
+              className={`reveal-item real-card group rounded-2xl border border-navy/20 overflow-hidden hover:border-electric/30 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 ${
+                enAvant ? 'sm:col-span-2 lg:col-span-3 lg:grid lg:grid-cols-[1.25fr_1fr] lg:items-stretch' : ''
+              }`}
               style={{ animationDelay: `${idx * 60}ms` }}>
-              <div className="h-44 relative overflow-hidden real-thumb" style={{ background: r.couleur }}>
+              <div className={`relative overflow-hidden real-thumb ${enAvant ? 'h-56 lg:h-full lg:min-h-[280px]' : 'h-44'}`} style={{ background: r.couleur }}>
                 {'image' in r && r.image ? (
                   <Image
                     src={(r as { image: string }).image}
                     alt={`Capture d'écran ${r.nom}`}
                     fill
-                    sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                    sizes={enAvant ? '(min-width: 1024px) 56vw, 100vw' : '(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw'}
                     className="object-cover object-top transition-transform duration-500 group-hover:scale-[1.04]"
-                    loading="lazy"
+                    priority={enAvant}
+                    loading={enAvant ? undefined : 'lazy'}
                   />
                 ) : (
                   <>
@@ -79,13 +84,16 @@ export default function RealisationsPage() {
                   <span className="px-2 py-1 bg-black/50 text-white/80 text-xs rounded-full font-medium">Démonstration</span>
                 </div>
               </div>
-              <div className="p-5">
+              <div className={enAvant ? 'p-6 lg:p-8 flex flex-col justify-center' : 'p-5'}>
+                {enAvant && (
+                  <p className="su-surtitre mb-4">Projet mis en avant</p>
+                )}
                 <div className="flex items-start justify-between mb-2">
-                  <h2 className="font-bold text-foreground group-hover:text-electric transition-colors">{r.nom}</h2>
-                  <ChevronRight size={16} className="text-white/65 group-hover:text-electric transition-all group-hover:translate-x-0.5 flex-shrink-0 mt-0.5" />
+                  <h2 className={`leading-snug font-bold text-foreground group-hover:text-electric transition-colors ${enAvant ? 'text-[1.9rem]' : 'text-[1.15rem]'}`}>{r.nom}</h2>
+                  <ChevronRight size={16} className="text-[#64748B] group-hover:text-electric transition-all group-hover:translate-x-0.5 flex-shrink-0 mt-0.5" />
                 </div>
                 <p className="text-xs text-foreground/70 mb-2">{r.type}</p>
-                <p className="text-sm text-foreground/70 line-clamp-2">{r.description}</p>
+                <p className={`text-foreground/70 ${enAvant ? 'text-[15px] leading-relaxed' : 'text-sm line-clamp-2'}`}>{r.description}</p>
                 <div className="flex flex-wrap gap-1.5 mt-3">
                   {r.tags.slice(0, 3).map(tag => (
                     <span key={tag} className="px-2 py-0.5 rounded-full text-xs border"
@@ -94,7 +102,8 @@ export default function RealisationsPage() {
                 </div>
               </div>
             </Link>
-          ))}
+            )
+          })}
         </div>
 
         {/* Jugez sur pièce */}

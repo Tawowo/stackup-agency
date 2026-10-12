@@ -108,7 +108,7 @@ export default function SiteAssociationPage() {
               {included.map((f, i) => (
                 <li key={i} className="flex items-start gap-3">
                   <div className="mt-0.5 w-5 h-5 rounded-full bg-green-500/10 flex items-center justify-center flex-shrink-0">
-                    <Check size={12} className="text-green-500" />
+                    <Check size={12} className="text-[#15803D]" />
                   </div>
                   <span className="text-gray-700 text-sm">{f}</span>
                 </li>

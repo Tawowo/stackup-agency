@@ -163,7 +163,7 @@ function Opportunity({ opp, index, visible }: {
         onClick={() => setOpen(v => !v)}
       >
         <div className="flex items-start gap-3 flex-1 min-w-0">
-          <AlertTriangle size={14} className="text-gold flex-shrink-0 mt-0.5" />
+          <AlertTriangle size={14} className="text-[#B45309] flex-shrink-0 mt-0.5" />
           <span className="text-sm font-medium text-white">{opp.title}</span>
         </div>
         <div className="flex items-center gap-2 flex-shrink-0">
