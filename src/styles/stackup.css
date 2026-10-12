@@ -426,20 +426,18 @@ button:focus-visible,
 }
 
 /* Zone de la scène.
-   Sur mobile : bloc dans le flux, hauteur fixée en ligne (300 px), à pleine
-   intensité. Sur grand écran : calée à droite derrière le contenu.
-   Dans les deux cas la hauteur est connue avant le rendu, donc CLS inchangé. */
+   Sur mobile : bloc dans le flux, hauteur fixe. Sur grand écran : calée à
+   droite derrière le contenu. Dans les deux cas la hauteur est connue avant
+   le rendu, donc CLS inchangé.
+
+   Le positionnement est exprimé en utilitaires Tailwind sur le composant, et
+   non ici : cette feuille est importée AVANT `@tailwind utilities`, donc à
+   spécificité égale les utilitaires gagnent. Une règle `position: absolute`
+   posée ici était écrasée par le `relative` du composant, et la scène
+   disparaissait purement et simplement sur grand écran. */
 .su-hero__scene {
   z-index: 0;
   pointer-events: none;
-}
-
-@media (min-width: 1024px) {
-  .su-hero__scene {
-    position: absolute;
-    inset: 0 0 0 auto;
-    width: 58%;
-  }
 }
 
 /* ============================================================================

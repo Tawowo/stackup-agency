@@ -92,7 +92,7 @@ export default function HeroSection() {
             intensité : une capture à 390 px a montré qu'en fond atténué il
             ressemblait à une bavure grise plutôt qu'à un objet voulu.
             La hauteur est fixe dans les deux cas, donc rien ne se décale. */}
-        <div className="su-hero__scene relative h-[300px] -mx-4 sm:-mx-6 mt-10 lg:mt-0 lg:mx-0 lg:h-auto">
+        <div className="su-hero__scene relative h-[300px] -mx-4 sm:-mx-6 mt-10 lg:absolute lg:inset-y-0 lg:right-0 lg:left-auto lg:w-[58%] lg:h-auto lg:m-0">
           <Monolithe />
         </div>
 

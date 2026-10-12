@@ -15,111 +15,111 @@
   "releves": [
     {
       "palier": "basse",
-      "tempsTrame": 21.29,
-      "fps": 47,
-      "webgl": true,
-      "mouvementReduit": false,
-      "instances": 70,
-      "ecoule": 7120
-    },
-    {
-      "palier": "basse",
-      "tempsTrame": 20.46,
-      "fps": 49,
-      "webgl": true,
-      "mouvementReduit": false,
-      "instances": 70,
-      "ecoule": 7603
-    },
-    {
-      "palier": "basse",
-      "tempsTrame": 23.92,
-      "fps": 42,
-      "webgl": true,
-      "mouvementReduit": false,
-      "instances": 70,
-      "ecoule": 8112
-    },
-    {
-      "palier": "basse",
-      "tempsTrame": 27.75,
-      "fps": 36,
-      "webgl": true,
-      "mouvementReduit": false,
-      "instances": 70,
-      "ecoule": 8619
-    },
-    {
-      "palier": "basse",
-      "tempsTrame": 27.46,
-      "fps": 36,
-      "webgl": true,
-      "mouvementReduit": false,
-      "instances": 70,
-      "ecoule": 9141
-    },
-    {
-      "palier": "basse",
-      "tempsTrame": 24.37,
-      "fps": 41,
-      "webgl": true,
-      "mouvementReduit": false,
-      "instances": 70,
-      "ecoule": 10125
-    },
-    {
-      "palier": "basse",
-      "tempsTrame": 25,
-      "fps": 40,
-      "webgl": true,
-      "mouvementReduit": false,
-      "instances": 70,
-      "ecoule": 10614
-    },
-    {
-      "palier": "basse",
-      "tempsTrame": 24.56,
-      "fps": 41,
-      "webgl": true,
-      "mouvementReduit": false,
-      "instances": 70,
-      "ecoule": 11126
-    },
-    {
-      "palier": "basse",
-      "tempsTrame": 23.08,
+      "tempsTrame": 23.52,
       "fps": 43,
       "webgl": true,
       "mouvementReduit": false,
       "instances": 70,
-      "ecoule": 11598
+      "ecoule": 7655
     },
     {
       "palier": "basse",
-      "tempsTrame": 26.19,
-      "fps": 38,
+      "tempsTrame": 22.18,
+      "fps": 45,
       "webgl": true,
       "mouvementReduit": false,
       "instances": 70,
-      "ecoule": 12114
+      "ecoule": 8137
     },
     {
       "palier": "basse",
-      "tempsTrame": 28.73,
-      "fps": 35,
+      "tempsTrame": 21.95,
+      "fps": 46,
       "webgl": true,
       "mouvementReduit": false,
       "instances": 70,
-      "ecoule": 13121
+      "ecoule": 8655
     },
     {
       "palier": "basse",
-      "tempsTrame": 25,
-      "fps": 40,
+      "tempsTrame": 20.15,
+      "fps": 50,
       "webgl": true,
       "mouvementReduit": false,
       "instances": 70,
-      "ecoule": 13606
+      "ecoule": 9134
+    },
+    {
+      "palier": "basse",
+      "tempsTrame": 20.86,
+      "fps": 48,
+      "webgl": true,
+      "mouvementReduit": false,
+      "instances": 70,
+      "ecoule": 9641
+    },
+    {
+      "palier": "basse",
+      "tempsTrame": 20.29,
+      "fps": 49,
+      "webgl": true,
+      "mouvementReduit": false,
+      "instances": 70,
+      "ecoule": 10648
+    },
+    {
+      "palier": "basse",
+      "tempsTrame": 19.22,
+      "fps": 52,
+      "webgl": true,
+      "mouvementReduit": false,
+      "instances": 70,
+      "ecoule": 11140
+    },
+    {
+      "palier": "basse",
+      "tempsTrame": 21.13,
+      "fps": 47,
+      "webgl": true,
+      "mouvementReduit": false,
+      "instances": 70,
+      "ecoule": 11646
+    },
+    {
+      "palier": "basse",
+      "tempsTrame": 20.53,
+      "fps": 49,
+      "webgl": true,
+      "mouvementReduit": false,
+      "instances": 70,
+      "ecoule": 12136
+    },
+    {
+      "palier": "basse",
+      "tempsTrame": 20.65,
+      "fps": 48,
+      "webgl": true,
+      "mouvementReduit": false,
+      "instances": 70,
+      "ecoule": 12632
+    },
+    {
+      "palier": "basse",
+      "tempsTrame": 21.13,
+      "fps": 47,
+      "webgl": true,
+      "mouvementReduit": false,
+      "instances": 70,
+      "ecoule": 13630
+    },
+    {
+      "palier": "basse",
+      "tempsTrame": 21.22,
+      "fps": 47,
+      "webgl": true,
+      "mouvementReduit": false,
+      "instances": 70,
+      "ecoule": 14156
     }
   ],
   "webglActif": "scène active",
