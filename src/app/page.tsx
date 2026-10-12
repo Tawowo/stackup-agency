@@ -8,7 +8,7 @@ import dynamic from 'next/dynamic'
 import Ouverture from '@/components/home/Ouverture'
 
 // Sections sous la fold — code-splitting pour étaler l'hydratation (TBT)
-const Atelier = dynamic(() => import('@/components/home/Atelier'))
+const Offre = dynamic(() => import('@/components/home/Offre'))
 const Verdict = dynamic(() => import('@/components/home/Verdict'))
 const Showroom = dynamic(() => import('@/components/home/Showroom'))
 const LaRoute = dynamic(() => import('@/components/home/LaRoute'))
@@ -136,11 +136,11 @@ export default function Home() {
           <Anatomie />
         </div>
 
-        {/* 04 — LES SERVICES. L'anatomie vient d'ouvrir un site ; on dit
-            maintenant lesquels on construit. */}
-        <div data-scene="preuve" data-nuit="0">
-          <Atelier />
-        </div>
+        {/* 02 — L'OFFRE. Cinq onglets, et la bande prend la configuration
+            de l'offre choisie. Remplace « l'Atelier » : une grille de sept
+            vignettes et vingt-cinq fondus-translations, qui annonçait
+            « survolez » alors qu'elle ne réagissait qu'au clic. */}
+        <Offre />
 
         {/* 05 — LES RÉALISATIONS : îlot sombre autonome, indépendant de la
             traversée globale. Une salle de projection à l'intérieur d'une

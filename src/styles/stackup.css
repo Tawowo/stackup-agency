@@ -4610,3 +4610,244 @@ html[data-grille='oui'] .su-ouv__grille {
   display: block;
   white-space: nowrap;
 }
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   L'OFFRE — moment 02
+   Spécification : dossier §10.3. Section calme, non épinglée.
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+.su-offre {
+  position: relative;
+  padding: clamp(5rem, 11vh, 9rem) 0;
+  /* Pas de fond : le calque de la scène doit rester visible (voir la note
+     sur `.su-ouv`). */
+  background: transparent;
+}
+
+.su-offre__corps {
+  position: relative;
+  z-index: 2;
+  width: min(100% - 3rem, 86rem);
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: clamp(1.5rem, 3vw, 2.5rem);
+  align-items: start;
+}
+
+.su-offre__entete {
+  grid-column: 1 / -1;
+  margin-bottom: clamp(1rem, 3vh, 2rem);
+}
+
+.su-offre__titre {
+  margin: 1rem 0 0;
+  font-family: var(--font-space), Poppins, system-ui, sans-serif;
+  font-weight: 700;
+  font-size: clamp(1.9rem, 4.4vw, 3.2rem);
+  line-height: 1.04;
+  letter-spacing: -0.03em;
+  color: var(--su-encre);
+}
+
+/* ── Les onglets ───────────────────────────────────────────────────────── */
+
+.su-offre__onglets {
+  grid-column: 1 / span 4;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border-top: 1px solid rgb(var(--su-navy-rgb) / 0.14);
+}
+
+.su-offre__onglet {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: baseline;
+  gap: 0.5rem;
+  padding: 0.95rem 0.5rem 0.95rem 0;
+  border: 0;
+  border-bottom: 1px solid rgb(var(--su-navy-rgb) / 0.14);
+  background: none;
+  text-align: left;
+  cursor: pointer;
+  color: var(--su-navy);
+  transition: color 320ms var(--su-pose, cubic-bezier(0.16, 0.84, 0.28, 1));
+}
+
+/* Le filet d'activation se trace depuis la gauche : une découpe, pas un
+   fondu (vocabulaire §9.4). */
+.su-offre__onglet::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  height: 2px;
+  width: 100%;
+  background: var(--su-ambre-texte, #b45309);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 320ms var(--su-pose, cubic-bezier(0.16, 0.84, 0.28, 1));
+}
+.su-offre__onglet[aria-selected='true']::before {
+  transform: scaleX(1);
+}
+
+.su-offre__onglet-nom {
+  font-family: var(--font-space), Poppins, system-ui, sans-serif;
+  font-weight: 600;
+  font-size: clamp(1rem, 1.5vw, 1.25rem);
+}
+.su-offre__onglet[aria-selected='true'] .su-offre__onglet-nom {
+  color: var(--su-encre);
+}
+
+.su-offre__onglet-prix {
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 0.82rem;
+  font-variant-numeric: tabular-nums;
+  color: #51657e;
+}
+.su-offre__onglet-prix i {
+  font-style: normal;
+  font-size: 0.72rem;
+}
+
+.su-offre__onglet-rang {
+  position: absolute;
+  left: -1.6rem;
+  top: 1.05rem;
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 0.66rem;
+  color: #94a3b8;
+}
+
+/* ── La scène ──────────────────────────────────────────────────────────── */
+
+/* Une place, pas un contenu : la bande vient l'occuper. La hauteur est
+   déclarée ici, et c'est elle que la scène lit. */
+.su-offre__scene {
+  grid-column: 5 / span 4;
+  height: clamp(16rem, 38vh, 26rem);
+}
+
+/* ── La fiche ──────────────────────────────────────────────────────────── */
+
+.su-offre__fiche {
+  grid-column: 9 / span 4;
+}
+
+.su-offre__fiche h3 {
+  margin: 0 0 0.6rem;
+  font-family: var(--font-space), Poppins, system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: var(--su-encre);
+}
+
+.su-offre__perimetre {
+  margin: 0 0 1.2rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #475569;
+}
+
+.su-offre__donnees {
+  margin: 0 0 1.4rem;
+  display: grid;
+  gap: 0.55rem;
+  border-top: 1px solid rgb(var(--su-navy-rgb) / 0.12);
+  padding-top: 0.9rem;
+}
+.su-offre__donnees > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: baseline;
+}
+.su-offre__donnees dt {
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #51657e;
+}
+.su-offre__donnees dd {
+  margin: 0;
+  font-weight: 600;
+  font-size: 0.92rem;
+  color: var(--su-encre);
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+}
+
+.su-offre__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.9rem 1.2rem;
+}
+
+.su-offre__mention {
+  margin: 1.1rem 0 0;
+  font-size: 0.72rem;
+  line-height: 1.5;
+  color: #64748b;
+}
+
+/* ── Portrait ──────────────────────────────────────────────────────────── */
+
+@media (max-width: 899px) {
+  /* Onglets en bande balayable en haut, scène au centre, fiche dessous :
+     aucune superposition, et la zone du pouce reste libre (§10.3). */
+  .su-offre__corps {
+    grid-template-columns: 1fr;
+  }
+  .su-offre__onglets,
+  .su-offre__scene,
+  .su-offre__fiche,
+  .su-offre__entete {
+    grid-column: 1 / -1;
+  }
+  .su-offre__onglets {
+    flex-direction: row;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    border-top: 0;
+    border-bottom: 1px solid rgb(var(--su-navy-rgb) / 0.14);
+    gap: 0.4rem;
+    padding-bottom: 0.2rem;
+    -webkit-overflow-scrolling: touch;
+  }
+  .su-offre__onglet {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.2rem;
+    min-width: 9.5rem;
+    min-height: 44px;
+    padding: 0.7rem 0.9rem;
+    border: 1px solid rgb(var(--su-navy-rgb) / 0.16);
+    border-radius: 4px;
+  }
+  .su-offre__onglet::before {
+    inset: auto 0 -1px 0;
+  }
+  .su-offre__onglet-rang {
+    display: none;
+  }
+  .su-offre__scene {
+    height: clamp(13rem, 30vh, 18rem);
+    margin: 1.5rem 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .su-offre__onglet,
+  .su-offre__onglet::before {
+    transition: none;
+  }
+}

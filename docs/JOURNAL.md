@@ -134,3 +134,38 @@ que soit la formulation.
 **Pas fait en phase 1** : le repli SVG animé, l'ombre portée réelle sur
 l'ivoire, le drag à ± 20°, le cycle du mot porteur relié à la configuration
 de la bande (il change le texte et le store, pas encore la forme).
+
+## Phase 2 — L'offre ◐ (CONFIGURATION faite, STRATES non faite)
+
+**CONFIGURATION (fiche 11.3).** Cent vingt plaques instanciées, cinq
+configurations calculées par du code : une strate pour la vitrine, cinq pour
+le multi-pages, une grille de produits pour la boutique, huit modules en
+couronne pour le système de gestion, une page et un formulaire pour
+l'association. Rien n'est modelé — une forme modelée serait un fichier de
+plus à charger, versionner et re-modeler au premier changement d'offre.
+
+Le morph se fait plaque par plaque avec un retard tiré du rang (fenêtre de
+65 %) et un léger arc en Z. Sans le retard, les 120 plaques partent et
+arrivent ensemble et le mouvement se lit comme un bloc qui glisse ; sans
+l'arc, elles se traversent par le plus court chemin, ce qui se voit.
+
+Les deux pseudo-aléas (relief de la boutique, retard du morph) sont des
+hachages du rang, pas `Math.random()` : une forme qui change à chaque rendu
+rendrait toute comparaison de captures impossible.
+
+**La section L'OFFRE** remplace « l'Atelier » : une grille de sept vignettes
+et vingt-cinq fondus-translations, qui annonçait « survolez chaque service »
+alors qu'elle ne réagissait qu'au clic, et dont l'aperçu collait au-dessus de
+la liste sur mobile. Cinq onglets en `role="tablist"`, flèches et touches
+1–5, prix et délais lus dans `site.ts`, révisions et support lus dans les
+conditions uniques.
+
+**Un défaut vu sur capture :** les plaques ambrées retombaient toutes sur
+deux colonnes et dessinaient des rayures verticales — une plaque sur six
+dans une grille de douze. Passé à une sur sept, premier avec 12, 10, 8 et 3,
+les quatre largeurs de grille utilisées.
+
+**Pas fait en phase 2** : STRATES (la bande qui se découpe en cinq lamelles
+et envoie ses composants dans une maquette), les lignes entre modules de la
+configuration « gestion », la nav en strates, le menu mobile refait, le
+défilement automatique des offres, le verrou de 8 s.

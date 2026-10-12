@@ -31,6 +31,7 @@ import { Canvas } from '@react-three/fiber'
 import { useBande } from '@/store/bande'
 import CameraRig from './CameraRig'
 import Bande from './bande/Bande'
+import BandeInstanciee from './bande/BandeInstanciee'
 
 /** Angle de la lumière, partagé avec le CSS (`--su-angle-lumiere`). */
 const ANGLE_LUMIERE = -18
@@ -53,6 +54,7 @@ function contenuScene(mobile: boolean) {
           peu de lumière rebondie. */}
       <directionalLight position={[4, -3, -5]} intensity={0.4} />
       <Bande />
+      <BandeInstanciee />
     </>
   )
 }

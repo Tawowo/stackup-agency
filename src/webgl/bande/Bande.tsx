@@ -60,6 +60,13 @@ export default function Bande() {
     if (!g || !pr) return
     const { progression, etat, mouvement, accent } = useBande.getState()
 
+    /* Une seule forme à la fois. Quand la section de l'offre prend la main,
+       c'est la version en cent vingt plaques qui s'affiche : les deux se
+       superposeraient sinon, et on verrait deux rubans. */
+    const cache = etat === 'offre'
+    pr.visible = !cache
+    if (cache) return
+
     const fige = mouvement === 'aucun'
     const p = etat === 'logo' ? Math.min(1, progression / 0.25) : 1
 
