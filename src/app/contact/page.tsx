@@ -101,7 +101,7 @@ export default function ContactPage() {
       </div>
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 pb-16">
-        <p className="text-center text-sm text-foreground/70 dark:text-white/65">
+        <p className="text-center text-sm text-foreground/70">
           Nos documents contractuels (CGV, contrat de prestation, devis type…) sont consultables{' '}
           <a href="/ressources/documents" className="text-electric hover:text-electric/80 transition-colors underline underline-offset-2">
             sur la page Documents officiels

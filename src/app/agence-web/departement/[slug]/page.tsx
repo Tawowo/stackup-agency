@@ -84,7 +84,7 @@ export default function DepartementPage({ params }: { params: { slug: string } }
         <section>
           <p className="text-navy/75 leading-relaxed mb-5">{d.intro}</p>
           <h2 className="text-2xl font-bold text-navy mb-4">Le tissu économique {art.de}{d.nom}</h2>
-          <p className="text-navy/65 leading-relaxed">{d.economie}</p>
+          <p className="text-navy/75 leading-relaxed">{d.economie}</p>
         </section>
 
         {/* Métiers phares */}
@@ -177,7 +177,7 @@ export default function DepartementPage({ params }: { params: { slug: string } }
                   {f.q}
                   <ArrowRight size={14} className="text-[#64748B] group-open:rotate-90 transition-transform flex-shrink-0" />
                 </summary>
-                <div className="px-4 pb-4 text-navy/65 text-sm leading-relaxed">{f.a}</div>
+                <div className="px-4 pb-4 text-navy/75 text-sm leading-relaxed">{f.a}</div>
               </details>
             ))}
           </div>

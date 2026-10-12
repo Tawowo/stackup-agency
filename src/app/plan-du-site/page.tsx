@@ -68,11 +68,11 @@ const LEGALES = [
 function Section({ title, links }: { title: string; links: { href: string; label: string }[] }) {
   return (
     <div>
-      <h2 className="text-lg font-bold text-foreground dark:text-white mb-3 pb-2 border-b border-white/10">{title}</h2>
+      <h2 className="text-lg font-bold text-foreground mb-3 pb-2 border-b border-white/10">{title}</h2>
       <ul className="space-y-1.5">
         {links.map(l => (
           <li key={l.href}>
-            <Link href={l.href} className="text-sm text-foreground/70 dark:text-white/70 hover:text-electric transition-colors">
+            <Link href={l.href} className="text-sm text-foreground/70 hover:text-electric transition-colors">
               {l.label}
             </Link>
           </li>
@@ -122,11 +122,11 @@ export default function PlanDuSitePage() {
         <Section title="Villes desservies" links={villesLinks} />
 
         <div className="sm:col-span-2 lg:col-span-2">
-          <h2 className="text-lg font-bold text-foreground dark:text-white mb-3 pb-2 border-b border-white/10">Métiers ({METIERS.length})</h2>
+          <h2 className="text-lg font-bold text-foreground mb-3 pb-2 border-b border-white/10">Métiers ({METIERS.length})</h2>
           <ul className="grid grid-cols-2 gap-x-6 gap-y-1.5">
             {metiersLinks.map(l => (
               <li key={l.href}>
-                <Link href={l.href} className="text-sm text-foreground/70 dark:text-white/70 hover:text-electric transition-colors">
+                <Link href={l.href} className="text-sm text-foreground/70 hover:text-electric transition-colors">
                   {l.label}
                 </Link>
               </li>

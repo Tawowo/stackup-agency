@@ -99,64 +99,64 @@ export default function SolutionPage({ params }: { params: { slug: string } }) {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 py-16 space-y-16">
 
         <section>
-          <h2 className="text-2xl font-bold text-foreground dark:text-white mb-6">
+          <h2 className="text-2xl font-bold text-foreground mb-6">
             Les problèmes que cette solution résout
           </h2>
           <div className="space-y-3">
             {s.problemes.map(item => (
               <div key={item} className="flex items-start gap-3">
                 <AlertCircle size={17} className="text-red-400 mt-0.5 flex-shrink-0" />
-                <span className="text-foreground/80 dark:text-white/80">{item}</span>
+                <span className="text-foreground/80">{item}</span>
               </div>
             ))}
           </div>
         </section>
 
         <section>
-          <h2 className="text-2xl font-bold text-foreground dark:text-white mb-6">
+          <h2 className="text-2xl font-bold text-foreground mb-6">
             Ce que comprend la solution
           </h2>
           <div className="grid sm:grid-cols-2 gap-3">
             {s.fonctionnalites.map(item => (
               <div key={item} className="flex items-start gap-3">
                 <CheckCircle size={17} className="text-success mt-0.5 flex-shrink-0" />
-                <span className="text-foreground/80 dark:text-white/80">{item}</span>
+                <span className="text-foreground/80">{item}</span>
               </div>
             ))}
           </div>
         </section>
 
         <section className="rounded-2xl p-6 lg:p-8 bg-blue-500/5 border border-electric/20">
-          <h2 className="text-xl font-bold text-foreground dark:text-white mb-5">Exemple concret</h2>
+          <h2 className="text-xl font-bold text-foreground mb-5">Exemple concret</h2>
           <div className="space-y-5">
             <div>
               <p className="text-xs text-red-400 font-semibold mb-2 uppercase tracking-wider">Situation actuelle</p>
-              <p className="text-foreground/80 dark:text-white/80">{s.exempleContexte}</p>
+              <p className="text-foreground/80">{s.exempleContexte}</p>
             </div>
             <div>
               <p className="text-xs text-success font-semibold mb-2 uppercase tracking-wider">Avec la solution sur mesure</p>
-              <p className="text-foreground/80 dark:text-white/80">{s.exempleFonctionnement}</p>
+              <p className="text-foreground/80">{s.exempleFonctionnement}</p>
             </div>
           </div>
         </section>
 
         <section>
-          <h2 className="text-2xl font-bold text-foreground dark:text-white mb-6">
+          <h2 className="text-2xl font-bold text-foreground mb-6">
             Pourquoi une solution sur mesure plutôt qu'un SaaS ?
           </h2>
           <div className="grid sm:grid-cols-2 gap-3 mb-5">
             {s.avantages.map(item => (
               <div key={item} className="flex items-start gap-3">
                 <CheckCircle size={17} className="text-success mt-0.5 flex-shrink-0" />
-                <span className="text-foreground/80 dark:text-white/80">{item}</span>
+                <span className="text-foreground/80">{item}</span>
               </div>
             ))}
           </div>
           <div className="p-5 rounded-xl bg-gold/10 border border-amber-500/20">
             <div className="flex items-start gap-3">
               <Star size={18} className="text-gold mt-0.5 flex-shrink-0" />
-              <p className="text-foreground/80 dark:text-white/80 text-sm">
-                <strong className="text-foreground dark:text-white">Prix à partir de {SITE.pricing.gestion}€</strong> — à comparer avec 50 à 300€/mois d'abonnement SaaS. La solution est amortie en 6 à 18 mois selon votre volume d'activité.
+              <p className="text-foreground/80 text-sm">
+                <strong className="text-foreground">Prix à partir de {SITE.pricing.gestion}€</strong> — à comparer avec 50 à 300€/mois d'abonnement SaaS. La solution est amortie en 6 à 18 mois selon votre volume d'activité.
               </p>
             </div>
           </div>
@@ -164,13 +164,13 @@ export default function SolutionPage({ params }: { params: { slug: string } }) {
 
         {metiersLies.length > 0 && (
           <section>
-            <h2 className="text-2xl font-bold text-foreground dark:text-white mb-4">
+            <h2 className="text-2xl font-bold text-foreground mb-4">
               Secteurs concernés par cette solution
             </h2>
             <div className="flex flex-wrap gap-3">
               {metiersLies.map(m => (
                 <Link key={m.slug} href={`/creation-site-internet/${m.slug}`}
-                  className="px-4 py-2 rounded-xl border border-white/10 hover:border-blue-400/40 text-sm text-foreground/70 dark:text-white/70 hover:text-electric transition-colors capitalize">
+                  className="px-4 py-2 rounded-xl border border-white/10 hover:border-blue-400/40 text-sm text-foreground/70 hover:text-electric transition-colors capitalize">
                   {m.metier}
                 </Link>
               ))}
@@ -179,27 +179,27 @@ export default function SolutionPage({ params }: { params: { slug: string } }) {
         )}
 
         <section>
-          <h2 className="text-2xl font-bold text-foreground dark:text-white mb-6">
+          <h2 className="text-2xl font-bold text-foreground mb-6">
             Questions fréquentes
           </h2>
           <div className="space-y-3">
             {s.faq.map(faq => (
-              <details key={faq.q} className="group rounded-xl border border-navy/20 dark:border-white/10 overflow-hidden">
-                <summary className="flex items-center justify-between p-4 cursor-pointer font-medium text-foreground dark:text-white list-none">
+              <details key={faq.q} className="group rounded-xl border border-navy/20 overflow-hidden">
+                <summary className="flex items-center justify-between p-4 cursor-pointer font-medium text-foreground list-none">
                   {faq.q}
                   <ChevronRight size={16} className="text-white/65 group-open:rotate-90 transition-transform flex-shrink-0" />
                 </summary>
-                <div className="px-4 pb-4 text-foreground/70 dark:text-white/70 text-sm leading-relaxed">{faq.a}</div>
+                <div className="px-4 pb-4 text-foreground/70 text-sm leading-relaxed">{faq.a}</div>
               </details>
             ))}
           </div>
         </section>
 
         <section>
-          <h3 className="text-lg font-semibold text-foreground dark:text-white mb-3">Recherches associées</h3>
+          <h3 className="text-lg font-semibold text-foreground mb-3">Recherches associées</h3>
           <div className="flex flex-wrap gap-2">
             {s.variantes.map(v => (
-              <span key={v} className="px-3 py-1.5 rounded-full text-xs border border-white/10 text-[#475569] dark:text-white/60">{v}</span>
+              <span key={v} className="px-3 py-1.5 rounded-full text-xs border border-white/10 text-[#475569]">{v}</span>
             ))}
           </div>
         </section>

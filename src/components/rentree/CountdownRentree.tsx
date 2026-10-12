@@ -22,7 +22,7 @@ function Digit({ value }: { value: string }) {
 
   return (
     <div
-      className="relative w-9 h-11 rounded-lg overflow-hidden bg-navy dark:bg-white/10 border border-white/10 shadow-inner flex items-center justify-center"
+      className="relative w-9 h-11 rounded-lg overflow-hidden bg-navy border border-white/10 shadow-inner flex items-center justify-center"
       aria-hidden="true"
     >
       <span
@@ -45,7 +45,7 @@ function TimeUnit({ tens, units, label }: { tens: string; units: string; label: 
         <Digit value={tens} />
         <Digit value={units} />
       </div>
-      <span className="text-[9px] font-semibold uppercase tracking-widest text-[#64748B] dark:text-white/65">
+      <span className="text-[9px] font-semibold uppercase tracking-widest text-[#64748B]">
         {label}
       </span>
     </div>

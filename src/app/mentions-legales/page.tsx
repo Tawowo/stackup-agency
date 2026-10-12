@@ -16,13 +16,13 @@ export const metadata: Metadata = {
 
 export default function MentionsLegales() {
   return (
-    <div className="min-h-screen bg-[#F8FAFC] dark:bg-[#0A0F1C] py-24 pt-32">
+    <div className="min-h-screen bg-[#F8FAFC] py-24 pt-32">
       <div className="max-w-3xl mx-auto px-4 sm:px-6">
         <Link href="/" className="inline-flex items-center gap-2 text-electric hover:underline text-sm mb-8">
           <ArrowLeft size={16} /> Retour à l&apos;accueil
         </Link>
         <div className="flex items-start justify-between mb-3 gap-4">
-          <h1 className="text-4xl font-extrabold text-gray-900 dark:text-white">Mentions légales</h1>
+          <h1 className="text-4xl font-extrabold text-gray-900">Mentions légales</h1>
           <a
             href="/documents/mentions-legales.pdf"
             download
@@ -32,12 +32,12 @@ export default function MentionsLegales() {
             Télécharger la version PDF officielle
           </a>
         </div>
-        <p className="text-sm text-gray-500 dark:text-white/65 mb-12">Stackup Agency — Dernière mise à jour : 30 juin 2026</p>
+        <p className="text-sm text-gray-500 mb-12">Stackup Agency — Dernière mise à jour : 30 juin 2026</p>
 
-        <div className="prose dark:prose-invert prose-sm max-w-none space-y-10">
+        <div className="prose prose-sm max-w-none space-y-10">
           <section>
-            <h2 className="text-lg font-bold text-gray-900 dark:text-white mb-3">1. Éditeur du site</h2>
-            <div className="text-gray-700 dark:text-white/70 leading-relaxed space-y-1">
+            <h2 className="text-lg font-bold text-gray-900 mb-3">1. Éditeur du site</h2>
+            <div className="text-gray-700 leading-relaxed space-y-1">
               <p>Le site <strong>stackup-agency.fr</strong> est édité par Stackup Agency, micro-entreprise en cours d&apos;immatriculation, représentée par Valéry Reboul.</p>
               <ul className="list-disc pl-5 space-y-1 mt-3">
                 <li><strong>Représentant :</strong> Valéry Reboul</li>
@@ -51,13 +51,13 @@ export default function MentionsLegales() {
           </section>
 
           <section>
-            <h2 className="text-lg font-bold text-gray-900 dark:text-white mb-3">2. Directeur de la publication</h2>
-            <p className="text-gray-700 dark:text-white/70 leading-relaxed">Valéry Reboul</p>
+            <h2 className="text-lg font-bold text-gray-900 mb-3">2. Directeur de la publication</h2>
+            <p className="text-gray-700 leading-relaxed">Valéry Reboul</p>
           </section>
 
           <section>
-            <h2 className="text-lg font-bold text-gray-900 dark:text-white mb-3">3. Hébergeur du site</h2>
-            <div className="text-gray-700 dark:text-white/70 leading-relaxed">
+            <h2 className="text-lg font-bold text-gray-900 mb-3">3. Hébergeur du site</h2>
+            <div className="text-gray-700 leading-relaxed">
               <p>Le site stackup-agency.fr est hébergé par :</p>
               <ul className="list-disc pl-5 space-y-1 mt-3">
                 <li><strong>Vercel Inc.</strong></li>
@@ -68,8 +68,8 @@ export default function MentionsLegales() {
           </section>
 
           <section>
-            <h2 className="text-lg font-bold text-gray-900 dark:text-white mb-3">4. Hébergeur email</h2>
-            <div className="text-gray-700 dark:text-white/70 leading-relaxed">
+            <h2 className="text-lg font-bold text-gray-900 mb-3">4. Hébergeur email</h2>
+            <div className="text-gray-700 leading-relaxed">
               <p>Les emails professionnels de Stackup Agency sont hébergés par :</p>
               <ul className="list-disc pl-5 space-y-1 mt-3">
                 <li><strong>OVH SAS</strong></li>
@@ -80,37 +80,37 @@ export default function MentionsLegales() {
           </section>
 
           <section>
-            <h2 className="text-lg font-bold text-gray-900 dark:text-white mb-3">5. Propriété intellectuelle</h2>
-            <p className="text-gray-700 dark:text-white/70 leading-relaxed">
+            <h2 className="text-lg font-bold text-gray-900 mb-3">5. Propriété intellectuelle</h2>
+            <p className="text-gray-700 leading-relaxed">
               L&apos;ensemble des éléments composant ce site (textes, images, logos, code source, charte graphique) est la propriété exclusive de Stackup Agency, sauf mention contraire. Toute reproduction, représentation, modification, publication ou adaptation de tout ou partie des éléments du site, quel que soit le moyen ou le procédé utilisé, est interdite sans l&apos;autorisation préalable et écrite de Stackup Agency.
             </p>
           </section>
 
           <section>
-            <h2 className="text-lg font-bold text-gray-900 dark:text-white mb-3">6. Limitation de responsabilité</h2>
-            <div className="text-gray-700 dark:text-white/70 leading-relaxed space-y-3">
+            <h2 className="text-lg font-bold text-gray-900 mb-3">6. Limitation de responsabilité</h2>
+            <div className="text-gray-700 leading-relaxed space-y-3">
               <p>Stackup Agency s&apos;efforce d&apos;assurer l&apos;exactitude et la mise à jour des informations diffusées sur ce site. Cependant, Stackup Agency ne peut garantir l&apos;exactitude, la précision ou l&apos;exhaustivité des informations mises à disposition.</p>
               <p>Stackup Agency décline toute responsabilité pour toute imprécision, inexactitude ou omission portant sur des informations disponibles sur le site, ainsi que pour tout dommage direct ou indirect résultant de l&apos;accès au site ou de l&apos;utilisation des informations qui y sont contenues.</p>
             </div>
           </section>
 
           <section>
-            <h2 className="text-lg font-bold text-gray-900 dark:text-white mb-3">7. Droit applicable et juridiction compétente</h2>
-            <p className="text-gray-700 dark:text-white/70 leading-relaxed">
+            <h2 className="text-lg font-bold text-gray-900 mb-3">7. Droit applicable et juridiction compétente</h2>
+            <p className="text-gray-700 leading-relaxed">
               Les présentes mentions légales sont soumises au droit français. En cas de litige, et après tentative de résolution amiable, les tribunaux français seront seuls compétents.
             </p>
           </section>
 
           <section>
-            <h2 className="text-lg font-bold text-gray-900 dark:text-white mb-3">8. Contact</h2>
-            <p className="text-gray-700 dark:text-white/70 leading-relaxed">
+            <h2 className="text-lg font-bold text-gray-900 mb-3">8. Contact</h2>
+            <p className="text-gray-700 leading-relaxed">
               Pour toute question relative au site ou à son contenu :{' '}
               <a href="mailto:contact@stackup-agency.fr" className="text-electric hover:underline">contact@stackup-agency.fr</a>
             </p>
           </section>
         </div>
 
-        <div className="mt-12 pt-8 border-t border-gray-200 dark:border-white/10 flex flex-wrap gap-4 text-sm">
+        <div className="mt-12 pt-8 border-t border-gray-200 flex flex-wrap gap-4 text-sm">
           <Link href="/cgv" className="text-electric hover:underline">Conditions Générales de Vente →</Link>
           <Link href="/politique-confidentialite" className="text-electric hover:underline">Politique de confidentialité →</Link>
           <Link href="/contact" className="text-electric hover:underline">Nous contacter →</Link>

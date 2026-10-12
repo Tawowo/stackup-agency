@@ -94,7 +94,7 @@ export default function BlogCategoriePage({ params }: { params: { cat: string } 
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 py-16">
         {posts.length === 0 ? (
-          <p className="text-[#475569] dark:text-white/60">Aucun article dans cette catégorie pour le moment.</p>
+          <p className="text-[#475569]">Aucun article dans cette catégorie pour le moment.</p>
         ) : (
           <div className="grid gap-6">
             {posts.map(post => (
@@ -110,10 +110,10 @@ export default function BlogCategoriePage({ params }: { params: { cat: string } 
                     {new Date(post.updated ?? post.date).toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' })}
                   </span>
                 </div>
-                <h2 className="text-lg font-semibold text-foreground dark:text-white mb-2 group-hover:text-electric transition-colors">
+                <h2 className="text-lg font-semibold text-foreground mb-2 group-hover:text-electric transition-colors">
                   {post.title}
                 </h2>
-                <p className="text-[#475569] dark:text-white/60 text-sm mb-4 line-clamp-2">{post.excerpt}</p>
+                <p className="text-[#475569] text-sm mb-4 line-clamp-2">{post.excerpt}</p>
                 <span className="inline-flex items-center gap-1 text-electric text-sm font-medium">
                   Lire l'article <ArrowRight size={14} />
                 </span>
@@ -127,7 +127,7 @@ export default function BlogCategoriePage({ params }: { params: { cat: string } 
             <Link
               key={slug}
               href={`/blog/categorie/${slug}`}
-              className="px-4 py-2 rounded-xl border border-white/10 hover:border-blue-400/40 text-sm text-[#475569] dark:text-white/60 hover:text-electric transition-colors"
+              className="px-4 py-2 rounded-xl border border-white/10 hover:border-blue-400/40 text-sm text-[#475569] hover:text-electric transition-colors"
             >
               {data.label}
             </Link>

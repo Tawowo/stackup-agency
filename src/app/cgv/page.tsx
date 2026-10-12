@@ -39,13 +39,13 @@ const sections = [
         <p>Les tarifs sont indiqués TTC (TVA non applicable). Les délais sont indicatifs et exprimés en jours ouvrés :</p>
         <table className="w-full text-sm border-collapse">
           <thead>
-            <tr className="border-b border-gray-200 dark:border-white/10">
+            <tr className="border-b border-gray-200">
               <th className="text-left py-2 font-semibold">Service</th>
               <th className="text-left py-2 font-semibold">Tarif</th>
               <th className="text-left py-2 font-semibold">Délai</th>
             </tr>
           </thead>
-          <tbody className="divide-y divide-gray-100 dark:divide-white/5">
+          <tbody className="divide-y divide-gray-100">
             {[
               ['Site Association', '149 €', '7 jours ouvrés'],
               ['Site Vitrine', '449 €', '10 jours ouvrés'],
@@ -64,7 +64,7 @@ const sections = [
             ))}
           </tbody>
         </table>
-        <p className="text-sm text-gray-500 dark:text-white/65">Stackup Agency se réserve le droit de prolonger les délais de <strong>20 jours ouvrés maximum</strong> en cas de forte demande ou d&apos;imprévu, avec notification préalable par email.</p>
+        <p className="text-sm text-gray-500">Stackup Agency se réserve le droit de prolonger les délais de <strong>20 jours ouvrés maximum</strong> en cas de forte demande ou d&apos;imprévu, avec notification préalable par email.</p>
       </div>
     ),
   },
@@ -158,13 +158,13 @@ const sections = [
 
 export default function CGV() {
   return (
-    <div className="min-h-screen bg-[#F8FAFC] dark:bg-[#0A0F1C] py-24 pt-32">
+    <div className="min-h-screen bg-[#F8FAFC] py-24 pt-32">
       <div className="max-w-3xl mx-auto px-4 sm:px-6">
         <Link href="/" className="inline-flex items-center gap-2 text-electric hover:underline text-sm mb-8">
           <ArrowLeft size={16} /> Retour à l&apos;accueil
         </Link>
         <div className="flex items-start justify-between mb-3 gap-4">
-          <h1 className="text-4xl font-extrabold text-gray-900 dark:text-white">
+          <h1 className="text-4xl font-extrabold text-gray-900">
             Conditions Générales de Vente
           </h1>
           <a
@@ -176,18 +176,18 @@ export default function CGV() {
             Télécharger la version PDF officielle
           </a>
         </div>
-        <p className="text-sm text-gray-500 dark:text-white/65 mb-12">Stackup Agency — Dernière mise à jour : 30 juin 2026</p>
+        <p className="text-sm text-gray-500 mb-12">Stackup Agency — Dernière mise à jour : 30 juin 2026</p>
 
-        <div className="prose dark:prose-invert prose-sm max-w-none space-y-10">
+        <div className="prose prose-sm max-w-none space-y-10">
           {sections.map((section) => (
             <section key={section.title}>
-              <h2 className="text-lg font-bold text-gray-900 dark:text-white mb-3">{section.title}</h2>
-              <div className="text-gray-700 dark:text-white/70 leading-relaxed">{section.content}</div>
+              <h2 className="text-lg font-bold text-gray-900 mb-3">{section.title}</h2>
+              <div className="text-gray-700 leading-relaxed">{section.content}</div>
             </section>
           ))}
         </div>
 
-        <div className="mt-12 pt-8 border-t border-gray-200 dark:border-white/10 flex flex-wrap gap-4 text-sm">
+        <div className="mt-12 pt-8 border-t border-gray-200 flex flex-wrap gap-4 text-sm">
           <Link href="/tarifs" className="text-electric hover:underline">Voir les tarifs →</Link>
           <Link href="/contact" className="text-electric hover:underline">Nous contacter →</Link>
           <Link href="/mentions-legales" className="text-electric hover:underline">Mentions légales →</Link>

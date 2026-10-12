@@ -176,14 +176,22 @@
 /* Le masquage n'existe que si JavaScript peut le lever (.su-js posée dans
    <head>). C'est ce qui rend l'effet sûr : une erreur de script laisse le
    texte lisible au lieu de vider la page. */
-.su-js .su-ligne-interne {
-  transform: translate3d(0, 110%, 0);
-  transition: transform var(--su-t-pose) var(--su-pose);
+@keyframes su-ligne-monte {
+  from { transform: translate3d(0, 110%, 0); }
+  to   { transform: translate3d(0, 0, 0); }
 }
 
-.su-js .su-revele .su-ligne-interne {
-  transform: translate3d(0, 0, 0);
+/* L'animation démarre à la première peinture, sans attendre que React ait
+   hydraté. C'est ce qui permet au titre d'être un candidat LCP précoce :
+   tant que la révélation dépendait d'un état React, le H1 restait hors de
+   son masque et c'était le bandeau cookies qui devenait l'élément LCP. */
+.su-js .su-ligne-interne {
+  animation: su-ligne-monte var(--su-t-pose) var(--su-pose) both;
 }
+
+/* Les lignes suivantes se décalent légèrement, sans dépendre du script. */
+.su-js .su-ligne-masque:nth-of-type(2) .su-ligne-interne { animation-delay: 90ms; }
+.su-js .su-ligne-masque:nth-of-type(3) .su-ligne-interne { animation-delay: 180ms; }
 
 /* ============================================================================
    4. LUMIÈRE RASANTE — signature transversale
@@ -694,4 +702,16 @@ button:focus-visible,
 
 @media (prefers-reduced-motion: reduce) {
   .su-evitement { transition: none; }
+}
+
+/* ============================================================================
+   13. BANDEAU COOKIES
+   Rendu côté serveur pour ne pas provoquer une grande peinture tardive — il
+   était l'élément LCP de la page d'accueil, à 2,3 s. Pour qui a déjà répondu,
+   `su-consenti` (posée dans <head>, avant toute peinture) le retire sans
+   qu'il ait jamais été visible.
+   ========================================================================== */
+
+.su-consenti .su-bandeau-cookies {
+  display: none;
 }

@@ -62,16 +62,16 @@ export default function AgenceWebPage() {
         {villesByRegion.map(({ region, villes }) => (
           villes.length > 0 && (
             <section key={region}>
-              <h2 className="text-xl font-bold text-foreground dark:text-white mb-4 flex items-center gap-2">
+              <h2 className="text-xl font-bold text-foreground mb-4 flex items-center gap-2">
                 <MapPin size={18} className="text-electric" />
                 {region}
               </h2>
               <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
                 {villes.map(v => (
-                  <Link key={v.slug} href={`/agence-web/${v.slug}`} className="flex items-center justify-between p-4 rounded-xl border border-navy/20 dark:border-white/10 hover:border-blue-400/40 transition-colors group">
+                  <Link key={v.slug} href={`/agence-web/${v.slug}`} className="flex items-center justify-between p-4 rounded-xl border border-navy/20 hover:border-blue-400/40 transition-colors group">
                     <div>
-                      <span className="font-medium text-foreground dark:text-white group-hover:text-electric transition-colors">Agence web {v.ville}</span>
-                      <p className="text-xs text-foreground/70 dark:text-white/65 mt-0.5">{v.departement}</p>
+                      <span className="font-medium text-foreground group-hover:text-electric transition-colors">Agence web {v.ville}</span>
+                      <p className="text-xs text-foreground/70 mt-0.5">{v.departement}</p>
                     </div>
                     <ChevronRight size={16} className="text-white/65 group-hover:text-electric transition-colors" />
                   </Link>

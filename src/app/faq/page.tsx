@@ -101,15 +101,15 @@ export default function FAQPage() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 py-16 space-y-12">
         {FAQ_ITEMS.map(cat => (
           <section key={cat.cat}>
-            <h2 className="text-xl font-bold text-foreground dark:text-white mb-4 pb-2 border-b border-navy/10 dark:border-white/10">{cat.cat}</h2>
+            <h2 className="text-xl font-bold text-foreground mb-4 pb-2 border-b border-navy/10">{cat.cat}</h2>
             <FaqAccordion items={cat.faqs} />
           </section>
         ))}
 
-        <div className="rounded-xl border border-gold/20 bg-amber-50/30 dark:bg-gold/5 p-5 flex items-center gap-4 mb-6">
+        <div className="rounded-xl border border-gold/20 bg-amber-50/30 p-5 flex items-center gap-4 mb-6">
           <div className="flex-1">
-            <div className="font-semibold text-foreground dark:text-white text-sm mb-0.5">Programme de parrainage</div>
-            <p className="text-xs text-[#475569] dark:text-white/60">Recommandez-nous et gagnez 1 mois de maintenance. Votre filleul reçoit −10% sur son projet.</p>
+            <div className="font-semibold text-foreground text-sm mb-0.5">Programme de parrainage</div>
+            <p className="text-xs text-[#475569]">Recommandez-nous et gagnez 1 mois de maintenance. Votre filleul reçoit −10% sur son projet.</p>
           </div>
           <Link href="/parrainage" className="flex-shrink-0 px-4 py-2 bg-gold hover:bg-gold/80 text-ink text-xs font-semibold rounded-xl transition-colors">
             Découvrir →

@@ -142,20 +142,20 @@ function ProgressBar({ step }: { step: number }) {
                 <div className={[
                   'w-9 h-9 rounded-full flex items-center justify-center font-bold text-sm border-2 transition-all duration-300 flex-shrink-0',
                   done   ? 'bg-electric border-electric text-white shadow-[0_0_14px_rgba(45,125,210,0.45)]'
-                         : active ? 'bg-white dark:bg-[#0D1626] border-electric text-electric ring-4 ring-electric/15'
-                         : 'bg-white dark:bg-[#0D1626] border-navy/20 dark:border-white/10 text-[#64748B] dark:text-white/65',
+                         : active ? 'bg-white border-electric text-electric ring-4 ring-electric/15'
+                         : 'bg-white border-navy/20 text-[#64748B]',
                 ].join(' ')}>
                   {done ? <Check size={15} strokeWidth={3} /> : n}
                 </div>
                 <span className={[
                   'text-[10px] font-semibold tracking-wider uppercase hidden sm:block transition-colors',
-                  active ? 'text-electric' : done ? 'text-[#475569] dark:text-white/65' : 'text-[#64748B] dark:text-white/65',
+                  active ? 'text-electric' : done ? 'text-[#475569]' : 'text-[#64748B]',
                 ].join(' ')}>{label}</span>
               </div>
               {/* Connector */}
               {i < STEP_LABELS.length - 1 && (
                 <div className="flex-1 mx-2 mb-5 sm:mb-6">
-                  <div className="h-0.5 bg-navy/10 dark:bg-white/10 rounded-full overflow-hidden">
+                  <div className="h-0.5 bg-navy/10 rounded-full overflow-hidden">
                     <div
                       className="h-full rounded-full bg-gradient-to-r from-electric to-gold transition-all duration-500 ease-out"
                       style={{ width: done ? '100%' : '0%' }}
@@ -179,9 +179,9 @@ function LivePrice({ state }: { state: FormState }) {
   const projet   = PROJETS.find(p => p.id === state.projet)
 
   return (
-    <div className="flex items-center justify-between pt-5 border-t border-navy/10 dark:border-white/10 mt-8">
+    <div className="flex items-center justify-between pt-5 border-t border-navy/10 mt-8">
       <div>
-        <div className="text-[10px] font-semibold text-[#64748B] dark:text-white/65 uppercase tracking-widest mb-0.5">
+        <div className="text-[10px] font-semibold text-[#64748B] uppercase tracking-widest mb-0.5">
           Estimation
         </div>
         {surDevis ? (
@@ -192,7 +192,7 @@ function LivePrice({ state }: { state: FormState }) {
           <div className="text-2xl font-bold text-[#B45309] tabular-nums" style={{ fontFamily: 'var(--font-space, system-ui)', fontVariantNumeric: 'tabular-nums' }}>
             {animated.toLocaleString('fr-FR')} €
             {mensuel > 0 && (
-              <span className="text-sm font-normal text-[#64748B] dark:text-white/65 ml-2">
+              <span className="text-sm font-normal text-[#64748B] ml-2">
                 + {mensuel} €/mois
               </span>
             )}
@@ -201,8 +201,8 @@ function LivePrice({ state }: { state: FormState }) {
       </div>
       {projet?.delai && (
         <div className="hidden sm:block text-right">
-          <div className="text-[10px] text-[#64748B] dark:text-white/65 uppercase tracking-wider mb-0.5">Livraison</div>
-          <div className="text-xs font-medium text-[#475569] dark:text-white/65">{projet.delai}</div>
+          <div className="text-[10px] text-[#64748B] uppercase tracking-wider mb-0.5">Livraison</div>
+          <div className="text-xs font-medium text-[#475569]">{projet.delai}</div>
         </div>
       )}
     </div>
@@ -225,10 +225,10 @@ function Etape1({
 
   return (
     <div>
-      <h2 className="text-2xl font-bold text-foreground dark:text-white mb-2">
+      <h2 className="text-2xl font-bold text-foreground mb-2">
         Quel type de site souhaitez-vous ?
       </h2>
-      <p className="text-sm text-[#475569] dark:text-white/65 mb-8">
+      <p className="text-sm text-[#475569] mb-8">
         Sélectionnez votre projet — vous passerez automatiquement à l'étape suivante.
       </p>
 
@@ -244,8 +244,8 @@ function Etape1({
               className={[
                 'relative text-left p-5 rounded-2xl border-2 transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-electric',
                 selected
-                  ? 'border-electric bg-electric/[0.06] dark:bg-electric/[0.09] scale-[1.025] shadow-[0_0_0_4px_rgba(45,125,210,0.13)]'
-                  : 'border-navy/15 dark:border-white/10 bg-white dark:bg-white/[0.02] hover:border-electric/45 hover:scale-[1.01]',
+                  ? 'border-electric bg-electric/[0.06] scale-[1.025] shadow-[0_0_0_4px_rgba(45,125,210,0.13)]'
+                  : 'border-navy/15 bg-white hover:border-electric/45 hover:scale-[1.01]',
               ].join(' ')}
             >
               {/* Checkmark badge */}
@@ -258,14 +258,14 @@ function Etape1({
               {/* Icon chip */}
               <div className={[
                 'w-11 h-11 rounded-xl flex items-center justify-center mb-3 transition-colors duration-200',
-                selected ? 'bg-electric text-white' : 'bg-navy/[0.06] dark:bg-white/[0.06] text-navy dark:text-white/65',
+                selected ? 'bg-electric text-white' : 'bg-navy/[0.06] text-navy',
               ].join(' ')}>
                 <Icon size={22} />
               </div>
 
-              <div className="font-bold text-foreground dark:text-white text-sm leading-snug mb-1">{p.label}</div>
-              <div className="text-xs text-[#475569] dark:text-white/65 mb-3 leading-relaxed">{p.desc}</div>
-              <div className={['text-base font-bold transition-colors', selected ? 'text-electric' : 'text-navy dark:text-[#B45309]'].join(' ')}>
+              <div className="font-bold text-foreground text-sm leading-snug mb-1">{p.label}</div>
+              <div className="text-xs text-[#475569] mb-3 leading-relaxed">{p.desc}</div>
+              <div className={['text-base font-bold transition-colors', selected ? 'text-electric' : 'text-navy'].join(' ')}>
                 {p.prix !== null ? `${p.prix.toLocaleString('fr-FR')} €` : 'Sur devis'}
               </div>
             </button>
@@ -274,16 +274,16 @@ function Etape1({
       </div>
 
       <div>
-        <label className="block text-sm font-medium text-foreground dark:text-white mb-2">
+        <label className="block text-sm font-medium text-foreground mb-2">
           Votre secteur / métier{' '}
-          <span className="text-[#64748B] dark:text-white/65 font-normal">(optionnel)</span>
+          <span className="text-[#64748B] font-normal">(optionnel)</span>
         </label>
         <input
           type="text"
           value={state.metier}
           onChange={e => set('metier', e.target.value)}
           placeholder="ex. restaurant, plombier, coach sportif…"
-          className="w-full px-4 py-3 rounded-xl border border-navy/20 dark:border-white/10 bg-white dark:bg-white/[0.03] text-foreground dark:text-white placeholder:text-[#64748B] dark:placeholder:text-white/65 focus:outline-none focus:ring-2 focus:ring-electric/40 focus:border-electric/50 text-sm transition-all"
+          className="w-full px-4 py-3 rounded-xl border border-navy/20 bg-white text-foreground placeholder:text-[#64748B] focus:outline-none focus:ring-2 focus:ring-electric/40 focus:border-electric/50 text-sm transition-all"
         />
       </div>
     </div>
@@ -302,8 +302,8 @@ function Etape2({ state, set }: { state: FormState; set: (k: keyof FormState, v:
 
   return (
     <div>
-      <h2 className="text-2xl font-bold text-foreground dark:text-white mb-2">Contenus supplémentaires</h2>
-      <p className="text-sm text-[#475569] dark:text-white/65 mb-8">
+      <h2 className="text-2xl font-bold text-foreground mb-2">Contenus supplémentaires</h2>
+      <p className="text-sm text-[#475569] mb-8">
         Cochez ce dont vous avez besoin. Vous pouvez tout décocher si non concerné.
       </p>
       <div className="space-y-3">
@@ -315,23 +315,23 @@ function Etape2({ state, set }: { state: FormState; set: (k: keyof FormState, v:
               className={[
                 'flex items-center gap-4 p-5 rounded-2xl border-2 cursor-pointer transition-all duration-200 group',
                 on
-                  ? 'border-electric bg-electric/[0.06] dark:bg-electric/[0.09]'
-                  : 'border-navy/10 dark:border-white/10 hover:border-electric/40 hover:bg-navy/[0.015] dark:hover:bg-white/[0.015]',
+                  ? 'border-electric bg-electric/[0.06]'
+                  : 'border-navy/10 hover:border-electric/40 hover:bg-navy/[0.015]',
               ].join(' ')}
             >
               <div className={[
                 'w-5 h-5 rounded-md border-2 flex items-center justify-center flex-shrink-0 transition-all duration-200',
-                on ? 'bg-electric border-electric' : 'border-navy/25 dark:border-white/20 group-hover:border-electric/50',
+                on ? 'bg-electric border-electric' : 'border-navy/25 group-hover:border-electric/50',
               ].join(' ')}>
                 {on && <Check size={11} strokeWidth={3} className="text-white" />}
               </div>
               <input type="checkbox" checked={on} onChange={() => toggle(opt.id)} className="sr-only" />
-              <span className="flex-1 text-sm font-semibold text-foreground dark:text-white">{opt.label}</span>
+              <span className="flex-1 text-sm font-semibold text-foreground">{opt.label}</span>
               <span className={[
                 'text-xs font-semibold px-2.5 py-1 rounded-full flex-shrink-0',
                 opt.prix === null
-                  ? 'bg-gold/10 text-[#92400E] dark:text-gold dark:bg-gold/15'
-                  : 'bg-navy/[0.06] dark:bg-white/[0.06] text-[#475569] dark:text-white/65',
+                  ? 'bg-gold/10 text-[#92400E]'
+                  : 'bg-navy/[0.06] text-[#475569]',
               ].join(' ')}>
                 {opt.prix === null ? 'Sur devis' : opt.prix === 0 ? 'Inclus' : `+${opt.prix} €`}
               </span>
@@ -355,8 +355,8 @@ function Etape3({ state, set }: { state: FormState; set: (k: keyof FormState, v:
 
   return (
     <div>
-      <h2 className="text-2xl font-bold text-foreground dark:text-white mb-2">Fonctionnalités métier</h2>
-      <p className="text-sm text-[#475569] dark:text-white/65 mb-8">
+      <h2 className="text-2xl font-bold text-foreground mb-2">Fonctionnalités métier</h2>
+      <p className="text-sm text-[#475569] mb-8">
         Ces fonctionnalités sont tarifées sur devis selon la complexité de votre projet. Nous vous recontactons pour affiner.
       </p>
       <div className="flex flex-wrap gap-3">
@@ -371,7 +371,7 @@ function Etape3({ state, set }: { state: FormState; set: (k: keyof FormState, v:
                 'flex items-center gap-2 px-4 py-2.5 rounded-full border-2 text-sm font-semibold transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-electric',
                 on
                   ? 'border-electric bg-electric text-white shadow-[0_2px_14px_rgba(45,125,210,0.38)]'
-                  : 'border-navy/15 dark:border-white/10 bg-white dark:bg-white/[0.03] text-foreground/65 dark:text-white/55 hover:border-electric/45 hover:text-foreground dark:hover:text-white',
+                  : 'border-navy/15 bg-white text-foreground/65 hover:border-electric/45 hover:text-foreground',
               ].join(' ')}
             >
               {on && <Check size={13} strokeWidth={3} />}
@@ -381,7 +381,7 @@ function Etape3({ state, set }: { state: FormState; set: (k: keyof FormState, v:
         })}
       </div>
       {state.fonctionnalites.length > 0 && (
-        <p className="mt-6 text-xs text-[#64748B] dark:text-white/65 flex items-center gap-1.5">
+        <p className="mt-6 text-xs text-[#64748B] flex items-center gap-1.5">
           <span className="inline-flex w-4 h-4 rounded-full bg-gold/15 items-center justify-center text-[#92400E] text-[10px] font-bold flex-shrink-0">i</span>
           Ces fonctionnalités entraîneront un devis personnalisé —{' '}
           <Link href="/solutions" className="text-electric hover:underline">en savoir plus</Link>
@@ -402,8 +402,8 @@ function Etape4({
 }) {
   return (
     <div>
-      <h2 className="text-2xl font-bold text-foreground dark:text-white mb-2">Accompagnement après livraison</h2>
-      <p className="text-sm text-[#475569] dark:text-white/65 mb-8">
+      <h2 className="text-2xl font-bold text-foreground mb-2">Accompagnement après livraison</h2>
+      <p className="text-sm text-[#475569] mb-8">
         Choisissez votre formule de maintenance mensuelle.
       </p>
       <div className="space-y-3 mb-6">
@@ -415,26 +415,26 @@ function Etape4({
               className={[
                 'flex items-center gap-4 p-5 rounded-2xl border-2 cursor-pointer transition-all duration-200 group',
                 on
-                  ? 'border-electric bg-electric/[0.06] dark:bg-electric/[0.09] shadow-[0_0_0_3px_rgba(45,125,210,0.10)]'
-                  : 'border-navy/10 dark:border-white/10 hover:border-electric/40',
+                  ? 'border-electric bg-electric/[0.06] shadow-[0_0_0_3px_rgba(45,125,210,0.10)]'
+                  : 'border-navy/10 hover:border-electric/40',
               ].join(' ')}
             >
               {/* Custom radio */}
               <div className={[
                 'w-5 h-5 rounded-full border-2 flex items-center justify-center flex-shrink-0 transition-all duration-200',
-                on ? 'border-electric' : 'border-navy/25 dark:border-white/20 group-hover:border-electric/50',
+                on ? 'border-electric' : 'border-navy/25 group-hover:border-electric/50',
               ].join(' ')}>
                 {on && <div className="w-2.5 h-2.5 rounded-full bg-electric" />}
               </div>
               <input type="radio" name="maintenance" checked={on} onChange={() => set('maintenance', m.id)} className="sr-only" />
               <div className="flex-1">
-                <div className="text-sm font-bold text-foreground dark:text-white">{m.label}</div>
-                {m.desc && <div className="text-xs text-[#64748B] dark:text-white/65 mt-0.5">{m.desc}</div>}
+                <div className="text-sm font-bold text-foreground">{m.label}</div>
+                {m.desc && <div className="text-xs text-[#64748B] mt-0.5">{m.desc}</div>}
               </div>
               {m.prix > 0 && (
                 <div className="text-right flex-shrink-0">
-                  <div className={['text-base font-bold', on ? 'text-electric' : 'text-navy dark:text-[#B45309]'].join(' ')}>{m.prix} €</div>
-                  <div className="text-[10px] text-[#64748B] dark:text-white/65">/mois</div>
+                  <div className={['text-base font-bold', on ? 'text-electric' : 'text-navy'].join(' ')}>{m.prix} €</div>
+                  <div className="text-[10px] text-[#64748B]">/mois</div>
                 </div>
               )}
             </label>
@@ -445,7 +445,7 @@ function Etape4({
       {rentreeActive && (
         <label className={[
           'flex items-center gap-4 p-5 rounded-2xl border-2 cursor-pointer transition-all duration-200',
-          state.offreRentree ? 'border-gold bg-gold/[0.07] dark:bg-gold/[0.10]' : 'border-gold/30 hover:border-gold/55',
+          state.offreRentree ? 'border-gold bg-gold/[0.07]' : 'border-gold/30 hover:border-gold/55',
         ].join(' ')}>
           <div className={[
             'w-5 h-5 rounded-md border-2 flex items-center justify-center flex-shrink-0 transition-colors',
@@ -454,7 +454,7 @@ function Etape4({
             {state.offreRentree && <Check size={11} strokeWidth={3} className="text-white" />}
           </div>
           <input type="checkbox" checked={state.offreRentree} onChange={e => set('offreRentree', e.target.checked)} className="sr-only" />
-          <span className="text-sm text-foreground dark:text-white">
+          <span className="text-sm text-foreground">
             🎒 <strong>Offre rentrée</strong> — maquette offerte (valable jusqu'au 13 sept. 2026)
           </span>
         </label>
@@ -468,8 +468,8 @@ function Etape4({
 function Etape5({ state, set }: { state: FormState; set: (k: keyof FormState, v: unknown) => void }) {
   return (
     <div>
-      <h2 className="text-2xl font-bold text-foreground dark:text-white mb-2">Vos coordonnées</h2>
-      <p className="text-sm text-[#475569] dark:text-white/65 mb-8">
+      <h2 className="text-2xl font-bold text-foreground mb-2">Vos coordonnées</h2>
+      <p className="text-sm text-[#475569] mb-8">
         Nous vous enverrons votre devis personnalisé sous 72 h.
       </p>
       <div className="space-y-5">
@@ -492,12 +492,12 @@ function Etape5({ state, set }: { state: FormState; set: (k: keyof FormState, v:
         <label className="flex items-start gap-3 cursor-pointer group">
           <div className={[
             'mt-0.5 w-5 h-5 rounded-md border-2 flex items-center justify-center flex-shrink-0 transition-colors',
-            state.rgpd ? 'bg-electric border-electric' : 'border-navy/25 dark:border-white/20 group-hover:border-electric/50',
+            state.rgpd ? 'bg-electric border-electric' : 'border-navy/25 group-hover:border-electric/50',
           ].join(' ')}>
             {state.rgpd && <Check size={11} strokeWidth={3} className="text-white" />}
           </div>
           <input type="checkbox" checked={state.rgpd} onChange={e => set('rgpd', e.target.checked)} className="sr-only" />
-          <span className="text-xs text-[#475569] dark:text-white/65 leading-relaxed">
+          <span className="text-xs text-[#475569] leading-relaxed">
             J'accepte que mes données soient traitées pour répondre à ma demande. Voir notre{' '}
             <Link href="/mentions-legales" className="text-electric hover:underline">politique de confidentialité</Link>.
           </span>
@@ -533,11 +533,11 @@ function RecapView({
           Récapitulatif
           <span className="w-8 h-px bg-electric/35 block" />
         </div>
-        <h2 className="text-2xl font-bold text-foreground dark:text-white">Votre demande de devis</h2>
-        <p className="text-sm text-[#475569] dark:text-white/65 mt-1">Vérifiez vos informations avant d'envoyer</p>
+        <h2 className="text-2xl font-bold text-foreground">Votre demande de devis</h2>
+        <p className="text-sm text-[#475569] mt-1">Vérifiez vos informations avant d'envoyer</p>
       </div>
 
-      <div className="rounded-2xl border border-navy/10 dark:border-white/10 overflow-hidden shadow-lift">
+      <div className="rounded-2xl border border-navy/10 overflow-hidden shadow-lift">
         {/* Price header */}
         <div className="bg-gradient-to-br from-navy to-[#0B1A2E] px-6 py-6 text-white">
           <div className="flex items-center justify-between gap-4">
@@ -558,22 +558,22 @@ function RecapView({
         </div>
 
         {/* Rows */}
-        <div className="divide-y divide-navy/5 dark:divide-white/5 checks-visible">
+        <div className="divide-y divide-navy/5 checks-visible">
           <div className="px-6 py-4 check-item flex items-center justify-between">
-            <span className="text-[10px] font-bold uppercase tracking-wider text-[#64748B] dark:text-white/65">Projet</span>
-            <span className="text-sm font-semibold text-foreground dark:text-white">{projet?.label}</span>
+            <span className="text-[10px] font-bold uppercase tracking-wider text-[#64748B]">Projet</span>
+            <span className="text-sm font-semibold text-foreground">{projet?.label}</span>
           </div>
 
           {state.metier && (
             <div className="px-6 py-4 check-item flex items-center justify-between">
-              <span className="text-[10px] font-bold uppercase tracking-wider text-[#64748B] dark:text-white/65">Secteur</span>
-              <span className="text-sm text-foreground/65 dark:text-white/55">{state.metier}</span>
+              <span className="text-[10px] font-bold uppercase tracking-wider text-[#64748B]">Secteur</span>
+              <span className="text-sm text-foreground/65">{state.metier}</span>
             </div>
           )}
 
           {selOpts.length > 0 && (
             <div className="px-6 py-4 check-item">
-              <div className="text-[10px] font-bold uppercase tracking-wider text-[#64748B] dark:text-white/65 mb-2">Contenus</div>
+              <div className="text-[10px] font-bold uppercase tracking-wider text-[#64748B] mb-2">Contenus</div>
               <div className="flex flex-wrap gap-2">
                 {selOpts.map(o => o && (
                   <span key={o.id} className="text-xs px-2.5 py-1 rounded-full bg-electric/10 text-electric font-semibold">{o.label}</span>
@@ -584,10 +584,10 @@ function RecapView({
 
           {selFns.length > 0 && (
             <div className="px-6 py-4 check-item">
-              <div className="text-[10px] font-bold uppercase tracking-wider text-[#64748B] dark:text-white/65 mb-2">Fonctionnalités</div>
+              <div className="text-[10px] font-bold uppercase tracking-wider text-[#64748B] mb-2">Fonctionnalités</div>
               <div className="flex flex-wrap gap-2">
                 {selFns.map(f => f && (
-                  <span key={f.id} className="text-xs px-2.5 py-1 rounded-full bg-gold/10 text-amber-600 dark:text-gold font-semibold">{f.label}</span>
+                  <span key={f.id} className="text-xs px-2.5 py-1 rounded-full bg-gold/10 text-amber-600 font-semibold">{f.label}</span>
                 ))}
               </div>
             </div>
@@ -595,8 +595,8 @@ function RecapView({
 
           {maint && maint.id && (
             <div className="px-6 py-4 check-item flex items-center justify-between">
-              <span className="text-[10px] font-bold uppercase tracking-wider text-[#64748B] dark:text-white/65">Maintenance</span>
-              <span className="text-sm font-semibold text-foreground dark:text-white">
+              <span className="text-[10px] font-bold uppercase tracking-wider text-[#64748B]">Maintenance</span>
+              <span className="text-sm font-semibold text-foreground">
                 {maint.label} — {maint.prix} €/mois
               </span>
             </div>
@@ -610,10 +610,10 @@ function RecapView({
           )}
 
           <div className="px-6 py-4 check-item">
-            <div className="text-[10px] font-bold uppercase tracking-wider text-[#64748B] dark:text-white/65 mb-1.5">Contact</div>
-            <div className="text-sm font-semibold text-foreground dark:text-white">{state.nom}</div>
-            <div className="text-sm text-foreground/60 dark:text-white/65">{state.email}</div>
-            {state.telephone && <div className="text-sm text-foreground/60 dark:text-white/65">{state.telephone}</div>}
+            <div className="text-[10px] font-bold uppercase tracking-wider text-[#64748B] mb-1.5">Contact</div>
+            <div className="text-sm font-semibold text-foreground">{state.nom}</div>
+            <div className="text-sm text-foreground/60">{state.email}</div>
+            {state.telephone && <div className="text-sm text-foreground/60">{state.telephone}</div>}
           </div>
         </div>
       </div>
@@ -624,7 +624,7 @@ function RecapView({
         <button
           type="button"
           onClick={onBack}
-          className="flex items-center gap-1.5 px-4 py-2.5 text-sm font-medium text-[#475569] dark:text-white/65 hover:text-foreground dark:hover:text-white transition-colors rounded-xl hover:bg-navy/[0.04] dark:hover:bg-white/[0.04]"
+          className="flex items-center gap-1.5 px-4 py-2.5 text-sm font-medium text-[#475569] hover:text-foreground transition-colors rounded-xl hover:bg-navy/[0.04]"
         >
           <ChevronLeft size={16} /> Modifier
         </button>
@@ -669,18 +669,18 @@ function SuccessView({ email }: { email: string }) {
         </svg>
       </div>
 
-      <h2 className="text-2xl font-bold text-foreground dark:text-white mb-3">Devis bien reçu !</h2>
-      <p className="text-foreground/60 dark:text-white/65 mb-2">
+      <h2 className="text-2xl font-bold text-foreground mb-3">Devis bien reçu !</h2>
+      <p className="text-foreground/60 mb-2">
         Nous avons reçu votre demande et vous répondrons sous 72 h à <strong>{email}</strong>.
       </p>
-      <p className="text-sm text-[#64748B] dark:text-white/65 mb-10">
+      <p className="text-sm text-[#64748B] mb-10">
         Un email de confirmation vous a été envoyé.
       </p>
       <div className="flex flex-wrap justify-center gap-3">
         <Link href="/" className="px-6 py-3 bg-navy text-white rounded-xl text-sm font-semibold hover:bg-electric transition-colors">
           Retour à l'accueil
         </Link>
-        <Link href="/faq" className="px-6 py-3 border border-navy/20 dark:border-white/10 text-foreground dark:text-white rounded-xl text-sm font-semibold hover:bg-foreground/[0.04] dark:hover:bg-white/[0.04] transition-colors">
+        <Link href="/faq" className="px-6 py-3 border border-navy/20 text-foreground rounded-xl text-sm font-semibold hover:bg-foreground/[0.04] transition-colors">
           Questions fréquentes
         </Link>
       </div>
@@ -906,7 +906,7 @@ function DevisFormInner() {
           type="button"
           onClick={() => goToStep(step - 1, -1)}
           disabled={step === 1}
-          className="flex items-center gap-1.5 px-4 py-2.5 text-sm font-medium text-[#475569] dark:text-white/65 disabled:opacity-20 hover:text-foreground dark:hover:text-white transition-colors rounded-xl hover:bg-navy/[0.04] dark:hover:bg-white/[0.04]"
+          className="flex items-center gap-1.5 px-4 py-2.5 text-sm font-medium text-[#475569] disabled:opacity-20 hover:text-foreground transition-colors rounded-xl hover:bg-navy/[0.04]"
         >
           <ChevronLeft size={16} /> Précédent
         </button>
@@ -938,7 +938,7 @@ function DevisFormInner() {
 export default function DevisForm() {
   return (
     <Suspense fallback={
-      <div className="max-w-2xl mx-auto px-4 py-20 text-center text-[#475569] dark:text-white/65">
+      <div className="max-w-2xl mx-auto px-4 py-20 text-center text-[#475569]">
         Chargement…
       </div>
     }>

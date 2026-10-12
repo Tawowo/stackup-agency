@@ -231,7 +231,7 @@ export default function TarifPage({ params }: { params: { plan: string } }) {
   }
 
   return (
-    <div className="min-h-screen bg-[#F8FAFC] dark:bg-[#0A0F1C]">
+    <div className="min-h-screen bg-[#F8FAFC]">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(offerSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
@@ -262,7 +262,7 @@ export default function TarifPage({ params }: { params: { plan: string } }) {
         {/* Description */}
         <section>
           {plan.description.split('\n\n').map((para, i) => (
-            <p key={i} className="text-gray-700 dark:text-white/70 leading-relaxed mb-4">{para}</p>
+            <p key={i} className="text-gray-700 leading-relaxed mb-4">{para}</p>
           ))}
           <div className="mt-6 p-4 bg-electric/10 rounded-xl border border-electric/20">
             <p className="text-electric font-semibold text-sm">{plan.audience}</p>
@@ -271,30 +271,30 @@ export default function TarifPage({ params }: { params: { plan: string } }) {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Included */}
-          <section className="bg-white dark:bg-white/5 rounded-2xl p-8 border border-gray-100 dark:border-white/10">
-            <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-6">Ce qui est inclus</h2>
+          <section className="bg-white rounded-2xl p-8 border border-gray-100">
+            <h2 className="text-xl font-bold text-gray-900 mb-6">Ce qui est inclus</h2>
             <ul className="space-y-3">
               {plan.features.map((f, i) => (
                 <li key={i} className="flex items-start gap-3">
                   <div className="mt-0.5 w-5 h-5 rounded-full bg-electric/10 flex items-center justify-center flex-shrink-0">
                     <Check size={12} className="text-electric" />
                   </div>
-                  <span className="text-gray-700 dark:text-white/70 text-sm">{f}</span>
+                  <span className="text-gray-700 text-sm">{f}</span>
                 </li>
               ))}
             </ul>
           </section>
 
           {/* Not included */}
-          <section className="bg-white dark:bg-white/5 rounded-2xl p-8 border border-gray-100 dark:border-white/10">
-            <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-6">Non inclus</h2>
+          <section className="bg-white rounded-2xl p-8 border border-gray-100">
+            <h2 className="text-xl font-bold text-gray-900 mb-6">Non inclus</h2>
             <ul className="space-y-3">
               {plan.notIncluded.map((f, i) => (
                 <li key={i} className="flex items-start gap-3">
-                  <div className="mt-0.5 w-5 h-5 rounded-full bg-red-100 dark:bg-red-900/20 flex items-center justify-center flex-shrink-0">
+                  <div className="mt-0.5 w-5 h-5 rounded-full bg-red-100 flex items-center justify-center flex-shrink-0">
                     <X size={12} className="text-red-400" />
                   </div>
-                  <span className="text-gray-500 dark:text-white/65 text-sm">{f}</span>
+                  <span className="text-gray-500 text-sm">{f}</span>
                 </li>
               ))}
             </ul>
@@ -303,14 +303,14 @@ export default function TarifPage({ params }: { params: { plan: string } }) {
 
         {/* Comparison table */}
         <section>
-          <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-8">Comparaison des plans</h2>
-          <div className="bg-white dark:bg-white/5 rounded-2xl border border-gray-100 dark:border-white/10 overflow-hidden">
+          <h2 className="text-2xl font-bold text-gray-900 mb-8">Comparaison des plans</h2>
+          <div className="bg-white rounded-2xl border border-gray-100 overflow-hidden">
             <table className="w-full">
               <thead>
-                <tr className="border-b border-gray-100 dark:border-white/10">
-                  <th className="text-left p-4 text-gray-500 dark:text-white/65 text-sm font-medium">Fonctionnalité</th>
+                <tr className="border-b border-gray-100">
+                  <th className="text-left p-4 text-gray-500 text-sm font-medium">Fonctionnalité</th>
                   {planKeys.map(key => (
-                    <th key={key} className={`p-4 text-sm font-bold ${key === params.plan ? 'text-electric' : 'text-gray-500 dark:text-white/65'}`}>
+                    <th key={key} className={`p-4 text-sm font-bold ${key === params.plan ? 'text-electric' : 'text-gray-500'}`}>
                       {key.charAt(0).toUpperCase() + key.slice(1)}
                       {key === params.plan && <div className="text-xs font-normal text-electric">Votre plan</div>}
                     </th>
@@ -319,14 +319,14 @@ export default function TarifPage({ params }: { params: { plan: string } }) {
               </thead>
               <tbody>
                 {plan.compare.map((row, i) => (
-                  <tr key={i} className={i % 2 === 0 ? 'bg-gray-50 dark:bg-white/0' : ''}>
-                    <td className="p-4 text-gray-700 dark:text-white/70 text-sm">{row.feature}</td>
+                  <tr key={i} className={i % 2 === 0 ? 'bg-gray-50' : ''}>
+                    <td className="p-4 text-gray-700 text-sm">{row.feature}</td>
                     {planKeys.map(key => (
                       <td key={key} className="p-4 text-center">
                         {row[key] ? (
                           <Check size={16} className={key === params.plan ? 'text-electric mx-auto' : 'text-green-500 mx-auto'} />
                         ) : (
-                          <X size={16} className="text-gray-300 dark:text-white/65 mx-auto" />
+                          <X size={16} className="text-gray-300 mx-auto" />
                         )}
                       </td>
                     ))}
@@ -339,12 +339,12 @@ export default function TarifPage({ params }: { params: { plan: string } }) {
 
         {/* FAQ */}
         <section>
-          <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-8">Questions fréquentes</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-8">Questions fréquentes</h2>
           <div className="space-y-4">
             {plan.faq.map((item, i) => (
-              <div key={i} className="bg-white dark:bg-white/5 rounded-2xl p-6 border border-gray-100 dark:border-white/10">
-                <h3 className="font-semibold text-gray-900 dark:text-white mb-2">{item.q}</h3>
-                <p className="text-ink/70 dark:text-white/60 text-sm">{item.a}</p>
+              <div key={i} className="bg-white rounded-2xl p-6 border border-gray-100">
+                <h3 className="font-semibold text-gray-900 mb-2">{item.q}</h3>
+                <p className="text-ink/70 text-sm">{item.a}</p>
               </div>
             ))}
           </div>
@@ -364,7 +364,7 @@ export default function TarifPage({ params }: { params: { plan: string } }) {
         </section>
 
         <section className="pt-4">
-          <p className="text-sm text-gray-500 dark:text-white/65 mb-3">Pour aller plus loin</p>
+          <p className="text-sm text-gray-500 mb-3">Pour aller plus loin</p>
           <div className="flex flex-wrap gap-3">
             <Link href="/tarifs" className="text-sm text-electric hover:underline">Comparer les formules →</Link>
             <Link href="/services" className="text-sm text-electric hover:underline">Nos services →</Link>

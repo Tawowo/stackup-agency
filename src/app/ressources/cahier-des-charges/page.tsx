@@ -47,17 +47,17 @@ export default function CahierDesChargesPage() {
       {/* Static SEO content below */}
       <div className="max-w-3xl mx-auto px-4 sm:px-6 pb-16 space-y-10 border-t border-white/5 pt-10">
         <section>
-          <h2 className="text-xl font-bold text-foreground dark:text-white mb-4">Pourquoi rédiger un cahier des charges ?</h2>
-          <p className="text-foreground/70 dark:text-white/70 mb-4">
+          <h2 className="text-xl font-bold text-foreground mb-4">Pourquoi rédiger un cahier des charges ?</h2>
+          <p className="text-foreground/70 mb-4">
             Un cahier des charges bien rédigé évite les malentendus, accélère la phase de brief et vous permet d'obtenir des devis comparables d'une agence à l'autre.
           </p>
-          <p className="text-foreground/70 dark:text-white/70">
+          <p className="text-foreground/70">
             Il n'a pas besoin d'être exhaustif pour être utile. L'essentiel : définir vos objectifs, votre cible et vos contraintes de budget et délai.
           </p>
         </section>
 
         <section>
-          <h2 className="text-xl font-bold text-foreground dark:text-white mb-4">Conseils pratiques</h2>
+          <h2 className="text-xl font-bold text-foreground mb-4">Conseils pratiques</h2>
           <ul className="space-y-3">
             {[
               'Commencez par les objectifs, pas par la liste de fonctionnalités',
@@ -66,7 +66,7 @@ export default function CahierDesChargesPage() {
               'Indiquez une fourchette de budget — cela aide à proposer la bonne solution',
               'Mentionnez votre échéance : inauguration, événement, ouverture…',
             ].map(tip => (
-              <li key={tip} className="flex items-start gap-3 text-foreground/70 dark:text-white/60 text-sm">
+              <li key={tip} className="flex items-start gap-3 text-foreground/70 text-sm">
                 <CheckCircle size={15} className="text-success flex-shrink-0 mt-0.5" />
                 {tip}
               </li>
@@ -76,12 +76,12 @@ export default function CahierDesChargesPage() {
 
         <div className="rounded-2xl border border-electric/20 bg-electric/5 p-5 flex items-center gap-4">
           <FileText size={20} className="text-electric flex-shrink-0" />
-          <div className="flex-1 text-sm text-[#475569] dark:text-white/65">
+          <div className="flex-1 text-sm text-[#475569]">
             Notre modèle de cahier des charges officiel est disponible parmi nos <Link href="/ressources/documents" className="text-electric hover:underline">documents à télécharger</Link>.
           </div>
         </div>
 
-        <div className="flex flex-wrap gap-4 text-sm border-t border-navy/10 dark:border-white/10 pt-6">
+        <div className="flex flex-wrap gap-4 text-sm border-t border-navy/10 pt-6">
           <Link href="/outils" className="text-electric hover:underline">Nos outils gratuits →</Link>
           <Link href="/comparatif/wix-wordpress-sur-mesure" className="text-electric hover:underline">Comparatif solutions →</Link>
           <Link href="/services" className="text-electric hover:underline">Nos services →</Link>

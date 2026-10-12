@@ -17,7 +17,6 @@
  * barre de confiance.
  */
 
-import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import dynamic from 'next/dynamic'
 import { ArrowRight } from 'lucide-react'
@@ -40,28 +39,16 @@ const CONFIANCE = [
 ] as const
 
 export default function HeroSection() {
-  const [revele, setRevele] = useState(false)
-
-  // La révélation part au montage, pas à l'intersection : le hero est par
-  // définition déjà visible au chargement.
-  useEffect(() => {
-    const image = requestAnimationFrame(() => setRevele(true))
-    return () => cancelAnimationFrame(image)
-  }, [])
-
   return (
     <section className="su-hero min-h-[100svh] flex items-center">
       <div className="relative z-[3] w-full max-w-6xl mx-auto px-4 sm:px-6 pt-32 pb-16 lg:py-32">
-        <div className={`max-w-xl ${revele ? 'su-revele' : ''}`}>
+        <div className="max-w-xl">
           <p className="su-surtitre mb-7">Agence web — Tours</p>
 
           <h1 className="font-display font-bold text-[#0C1626] mb-6 text-[clamp(2.3rem,6.2vw,4.1rem)] leading-[1.04] tracking-[-0.03em]">
             {TITRE.map((ligne, i) => (
               <span key={ligne} className="su-ligne-masque">
-                <span
-                  className="su-ligne-interne"
-                  style={{ transitionDelay: `${i * 90}ms` }}
-                >
+                <span className="su-ligne-interne">
                   {i === 1 ? (
                     <>
                       <span className="text-[#B45309]">décoller</span> votre activité.
@@ -108,9 +95,7 @@ export default function HeroSection() {
           {CONFIANCE.map((item) => (
             <div
               key={item.libelle}
-              className={`su-strate su-strate--aretee px-4 py-3.5 ${
-                revele ? 'su-pose-active' : 'su-pose-attente'
-              }`}
+              className="su-strate su-strate--aretee px-4 py-3.5 su-pose-active"
             >
               <div
                 className={`text-[1.55rem] font-display font-bold leading-none mb-1.5 ${

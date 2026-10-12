@@ -110,12 +110,12 @@ function Calculator() {
     <div className="rounded-2xl border border-electric/20 bg-blue-500/5 p-6 lg:p-8">
       <div className="flex items-center gap-2 mb-6">
         <CalculatorIcon size={20} className="text-electric" />
-        <h3 className="font-bold text-foreground dark:text-white text-lg">Estimez votre formule</h3>
+        <h3 className="font-bold text-foreground text-lg">Estimez votre formule</h3>
       </div>
 
       <div className="space-y-6">
         <div>
-          <label className="block text-sm font-medium text-foreground dark:text-white mb-2">
+          <label className="block text-sm font-medium text-foreground mb-2">
             Articles par mois : <span className="text-electric font-bold">{articles}</span>
           </label>
           <input
@@ -126,7 +126,7 @@ function Calculator() {
             onChange={e => setArticles(Number(e.target.value))}
             className="w-full accent-electric"
           />
-          <div className="flex justify-between text-xs text-[#64748B] dark:text-white/65 mt-1">
+          <div className="flex justify-between text-xs text-[#64748B] mt-1">
             <span>1</span><span>5</span><span>10</span>
           </div>
         </div>
@@ -138,36 +138,36 @@ function Calculator() {
             onChange={e => setSiteExterne(e.target.checked)}
             className="w-4 h-4 accent-electric"
           />
-          <span className="text-sm text-foreground/80 dark:text-white/80">
+          <span className="text-sm text-foreground/80">
             Article(s) pour un site tiers (guest posting, client)
           </span>
         </label>
 
-        <div className="rounded-xl bg-white dark:bg-[#0D1626] border border-navy/10 dark:border-white/10 p-5">
+        <div className="rounded-xl bg-white border border-navy/10 p-5">
           {recommandation ? (
             <>
               <div className="text-xs text-electric font-semibold uppercase tracking-wide mb-1">
                 Formule recommandée
               </div>
-              <div className="text-2xl font-bold text-foreground dark:text-white mb-0.5">
+              <div className="text-2xl font-bold text-foreground mb-0.5">
                 {recommandation.nom}
               </div>
               <div className="text-electric text-sm mb-3">{recommandation.detail}</div>
               <div className="flex items-baseline gap-2">
-                <span className="text-3xl font-bold text-navy dark:text-[#B45309]">{prixFinal}€</span>
-                <span className="text-[#475569] dark:text-white/65 text-sm">/mois</span>
+                <span className="text-3xl font-bold text-navy">{prixFinal}€</span>
+                <span className="text-[#475569] text-sm">/mois</span>
               </div>
-              <div className="text-xs text-[#475569] dark:text-white/65 mt-1">
+              <div className="text-xs text-[#475569] mt-1">
                 soit {coutParArticle}€/article — économie vs à l'unité
               </div>
             </>
           ) : (
             <>
-              <div className="text-xs text-[#475569] dark:text-white/65 uppercase tracking-wide mb-1">
+              <div className="text-xs text-[#475569] uppercase tracking-wide mb-1">
                 Estimation
               </div>
-              <div className="text-3xl font-bold text-navy dark:text-[#B45309]">{unitaire}€</div>
-              <div className="text-sm text-[#475569] dark:text-white/65 mt-1">{articles} article{articles > 1 ? 's' : ''} × 25€</div>
+              <div className="text-3xl font-bold text-navy">{unitaire}€</div>
+              <div className="text-sm text-[#475569] mt-1">{articles} article{articles > 1 ? 's' : ''} × 25€</div>
             </>
           )}
           <Link
@@ -221,10 +221,10 @@ export default function RedactionBlogSEOPage() {
 
         {/* H2 — Rédacteur web, externalisation, plume d'entreprise */}
         <section>
-          <h2 className="text-2xl font-bold text-foreground dark:text-white mb-4">
+          <h2 className="text-2xl font-bold text-foreground mb-4">
             Rédacteur web, externalisation, plume d'entreprise : la même mission bien faite
           </h2>
-          <div className="prose dark:prose-invert prose-sm max-w-none text-foreground/70 dark:text-white/70 space-y-4">
+          <div className="prose prose-sm max-w-none text-foreground/70 space-y-4">
             <p>
               Que vous cherchiez un rédacteur web freelance, une agence de contenu ou simplement quelqu'un
               pour tenir votre blog à votre place, vous posez la même question : comment produire des articles
@@ -243,7 +243,7 @@ export default function RedactionBlogSEOPage() {
 
         {/* H2 — Méthode */}
         <section>
-          <h2 className="text-2xl font-bold text-foreground dark:text-white mb-6">Notre méthode, étape par étape</h2>
+          <h2 className="text-2xl font-bold text-foreground mb-6">Notre méthode, étape par étape</h2>
           <div className="space-y-4">
             {[
               { n: '01', titre: 'Brief SEO', Icon: FileText, desc: 'Analyse de votre secteur, de vos concurrents et des requêtes de vos clients. Nous identifions les sujets à fort potentiel et construisons un plan éditorial ciblé.' },
@@ -251,13 +251,13 @@ export default function RedactionBlogSEOPage() {
               { n: '03', titre: 'Relecture et personnalisation humaines', Icon: CheckCircle, desc: 'Chaque article est relu et ajusté à votre voix avant livraison. Vous recevez un texte qui vous ressemble, pas un copier-coller de formules génériques. Un aller-retour de corrections est inclus.' },
               { n: '04', titre: 'Intégration et maillage', Icon: Clock, desc: 'En pack, nous publions directement sur votre site et ajoutons les liens internes vers vos pages de service. Le maillage interne est un levier SEO souvent négligé — nous l\'intégrons dès la rédaction.' },
             ].map(step => (
-              <div key={step.n} className="flex items-start gap-4 p-5 rounded-xl border border-navy/10 dark:border-white/10 bg-white dark:bg-[#0D1626]">
+              <div key={step.n} className="flex items-start gap-4 p-5 rounded-xl border border-navy/10 bg-white">
                 <div className="w-9 h-9 rounded-full bg-navy flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
                   {step.n}
                 </div>
                 <div>
-                  <h3 className="font-semibold text-foreground dark:text-white mb-1">{step.titre}</h3>
-                  <p className="text-[#475569] dark:text-white/60 text-sm leading-relaxed">{step.desc}</p>
+                  <h3 className="font-semibold text-foreground mb-1">{step.titre}</h3>
+                  <p className="text-[#475569] text-sm leading-relaxed">{step.desc}</p>
                 </div>
               </div>
             ))}
@@ -265,20 +265,20 @@ export default function RedactionBlogSEOPage() {
         </section>
 
         {/* H2 — Content refresh */}
-        <section className="rounded-2xl border border-amber-500/20 bg-amber-50/30 dark:bg-amber-500/5 p-6 lg:p-8">
+        <section className="rounded-2xl border border-amber-500/20 bg-amber-50/30 p-6 lg:p-8">
           <div className="flex items-start gap-3 mb-4">
-            <RefreshCw size={20} className="text-amber-600 dark:text-gold mt-0.5 flex-shrink-0" />
-            <h2 className="text-xl font-bold text-foreground dark:text-white">
+            <RefreshCw size={20} className="text-amber-600 mt-0.5 flex-shrink-0" />
+            <h2 className="text-xl font-bold text-foreground">
               Content refresh : vos anciens articles valent de l'or
             </h2>
           </div>
-          <p className="text-foreground/70 dark:text-white/70 text-sm leading-relaxed mb-4">
+          <p className="text-foreground/70 text-sm leading-relaxed mb-4">
             Un article publié il y a 18 mois qui a perdu ses positions n'est pas mort — il est en attente
             de mise à jour. Le content refresh (ou optimisation d'articles existants) consiste à actualiser
             les informations, enrichir le champ sémantique et améliorer la structure pour regagner les
             premières pages de Google. C'est souvent plus rapide que de rédiger un article de zéro.
           </p>
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-amber-500/15 text-amber-700 dark:text-gold rounded-xl text-sm font-semibold">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-amber-500/15 text-amber-700 rounded-xl text-sm font-semibold">
             <CheckCircle size={14} />
             2 optimisations content-refresh/mois incluses dans le Pack Autorité (159€/mois)
           </div>
@@ -286,10 +286,10 @@ export default function RedactionBlogSEOPage() {
 
         {/* H2 — Au forfait ou à l'article + tableau comparatif */}
         <section id="packs">
-          <h2 className="text-2xl font-bold text-foreground dark:text-white mb-2">
+          <h2 className="text-2xl font-bold text-foreground mb-2">
             Au forfait ou à l'article ?
           </h2>
-          <p className="text-[#475569] dark:text-white/60 text-sm mb-8">
+          <p className="text-[#475569] text-sm mb-8">
             Si vous publiez moins de 3 articles par mois, l'unité est plus souple. Au-delà, le forfait
             devient systématiquement moins cher et vous garantit une fréquence régulière.
           </p>
@@ -298,14 +298,14 @@ export default function RedactionBlogSEOPage() {
           <div className="overflow-x-auto mb-10">
             <table className="w-full text-sm border-collapse">
               <thead>
-                <tr className="border-b border-navy/10 dark:border-white/10">
-                  <th className="text-left py-3 pr-4 text-[#475569] dark:text-white/65 font-medium"></th>
-                  <th className="py-3 px-4 text-center text-foreground dark:text-white font-semibold">À l'unité</th>
-                  <th className="py-3 px-4 text-center text-foreground dark:text-white font-semibold bg-gold/5 rounded-t-xl">Pack Visibilité</th>
-                  <th className="py-3 px-4 text-center text-foreground dark:text-white font-semibold">Pack Autorité</th>
+                <tr className="border-b border-navy/10">
+                  <th className="text-left py-3 pr-4 text-[#475569] font-medium"></th>
+                  <th className="py-3 px-4 text-center text-foreground font-semibold">À l'unité</th>
+                  <th className="py-3 px-4 text-center text-foreground font-semibold bg-gold/5 rounded-t-xl">Pack Visibilité</th>
+                  <th className="py-3 px-4 text-center text-foreground font-semibold">Pack Autorité</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-navy/5 dark:divide-white/5">
+              <tbody className="divide-y divide-navy/5">
                 {[
                   ['Prix', '25€', '89€/mois', '159€/mois'],
                   ['Articles/mois', '1 à la fois', '4', '8'],
@@ -317,10 +317,10 @@ export default function RedactionBlogSEOPage() {
                   ['Engagement', 'Aucun', 'Mensuel', 'Mensuel'],
                 ].map(([label, col1, col2, col3]) => (
                   <tr key={label}>
-                    <td className="py-3 pr-4 text-foreground/70 dark:text-white/60">{label}</td>
-                    <td className="py-3 px-4 text-center text-foreground/70 dark:text-white/60">{col1}</td>
-                    <td className="py-3 px-4 text-center text-foreground dark:text-white bg-gold/5 font-medium">{col2}</td>
-                    <td className="py-3 px-4 text-center text-foreground/70 dark:text-white/60">{col3}</td>
+                    <td className="py-3 pr-4 text-foreground/70">{label}</td>
+                    <td className="py-3 px-4 text-center text-foreground/70">{col1}</td>
+                    <td className="py-3 px-4 text-center text-foreground bg-gold/5 font-medium">{col2}</td>
+                    <td className="py-3 px-4 text-center text-foreground/70">{col3}</td>
                   </tr>
                 ))}
               </tbody>
@@ -330,24 +330,24 @@ export default function RedactionBlogSEOPage() {
           {/* Pack cards */}
           <div className="grid sm:grid-cols-3 gap-5">
             {PACKS.map(p => (
-              <div key={p.nom} className={`rounded-2xl border p-6 flex flex-col ${p.highlight ? 'border-amber-500/40 bg-gold/5' : 'border-navy/20 dark:border-white/10 bg-white dark:bg-[#0D1626]'}`}>
+              <div key={p.nom} className={`rounded-2xl border p-6 flex flex-col ${p.highlight ? 'border-amber-500/40 bg-gold/5' : 'border-navy/20 bg-white'}`}>
                 {p.highlight && (
-                  <div className="text-xs font-semibold text-navy dark:text-[#B45309] mb-3 uppercase tracking-wide">Le plus populaire</div>
+                  <div className="text-xs font-semibold text-navy mb-3 uppercase tracking-wide">Le plus populaire</div>
                 )}
-                <h3 className="text-lg font-bold text-foreground dark:text-white mb-1">{p.nom}</h3>
+                <h3 className="text-lg font-bold text-foreground mb-1">{p.nom}</h3>
                 {'detail' in p && p.detail && (
                   <div className="text-electric text-xs font-medium mb-2">{p.detail}</div>
                 )}
                 <div className="mb-3">
-                  <span className="text-3xl font-bold text-navy dark:text-[#B45309]">{p.prix}€</span>
-                  <span className="text-[#475569] dark:text-white/65 text-sm ml-1">{p.unite}</span>
+                  <span className="text-3xl font-bold text-navy">{p.prix}€</span>
+                  <span className="text-[#475569] text-sm ml-1">{p.unite}</span>
                 </div>
-                <p className="text-sm text-[#475569] dark:text-white/60 mb-4">{p.desc}</p>
+                <p className="text-sm text-[#475569] mb-4">{p.desc}</p>
                 <ul className="space-y-2 mb-6 flex-1">
                   {p.inclus.map(item => (
                     <li key={item} className="flex items-start gap-2">
                       <CheckCircle size={14} className={`mt-0.5 flex-shrink-0 text-success'}`} />
-                      <span className="text-sm text-foreground/70 dark:text-white/70">{item}</span>
+                      <span className="text-sm text-foreground/70">{item}</span>
                     </li>
                   ))}
                 </ul>
@@ -368,15 +368,15 @@ export default function RedactionBlogSEOPage() {
         <section className="rounded-2xl border border-electric/20 bg-blue-500/5 p-6">
           <div className="flex items-start justify-between gap-4 mb-3">
             <div>
-              <h3 className="text-lg font-bold text-foreground dark:text-white">Accès technique blog</h3>
+              <h3 className="text-lg font-bold text-foreground">Accès technique blog</h3>
               <p className="text-electric text-sm mt-0.5">Pour les sites existants sans blog</p>
             </div>
             <div className="text-right flex-shrink-0">
-              <span className="text-2xl font-bold text-navy dark:text-[#B45309]">49€</span>
-              <div className="text-xs text-[#475569] dark:text-white/65">une fois</div>
+              <span className="text-2xl font-bold text-navy">49€</span>
+              <div className="text-xs text-[#475569]">une fois</div>
             </div>
           </div>
-          <p className="text-foreground/70 dark:text-white/70 text-sm mb-4">
+          <p className="text-foreground/70 text-sm mb-4">
             Vous avez déjà un site web mais pas de section blog ? Nous installons et configurons le module blog
             sur votre site existant. Prêt à recevoir vos premiers articles.
           </p>
@@ -384,7 +384,7 @@ export default function RedactionBlogSEOPage() {
             {['Installation du module blog', 'Configuration SEO de base', 'Mise en page intégrée au design', 'Test et validation fonctionnelle'].map(f => (
               <div key={f} className="flex items-center gap-2">
                 <CheckCircle size={13} className="text-success flex-shrink-0" />
-                <span className="text-sm text-foreground/70 dark:text-white/70">{f}</span>
+                <span className="text-sm text-foreground/70">{f}</span>
               </div>
             ))}
           </div>
@@ -395,20 +395,20 @@ export default function RedactionBlogSEOPage() {
 
         {/* FAQ — 8 questions */}
         <section>
-          <h2 className="text-2xl font-bold text-foreground dark:text-white mb-6">Questions fréquentes</h2>
+          <h2 className="text-2xl font-bold text-foreground mb-6">Questions fréquentes</h2>
           <div className="space-y-3">
             {faqSchema.mainEntity.map(faq => (
-              <details key={faq.name} className="group rounded-xl border border-navy/20 dark:border-white/10 overflow-hidden">
-                <summary className="flex items-center justify-between p-4 cursor-pointer font-medium text-foreground dark:text-white list-none">
+              <details key={faq.name} className="group rounded-xl border border-navy/20 overflow-hidden">
+                <summary className="flex items-center justify-between p-4 cursor-pointer font-medium text-foreground list-none">
                   {faq.name}
                   <ChevronRight size={16} className="text-white/65 group-open:rotate-90 transition-transform flex-shrink-0" />
                 </summary>
-                <div className="px-4 pb-4 text-foreground/70 dark:text-white/70 text-sm leading-relaxed">{faq.acceptedAnswer.text}</div>
+                <div className="px-4 pb-4 text-foreground/70 text-sm leading-relaxed">{faq.acceptedAnswer.text}</div>
               </details>
             ))}
           </div>
           <div className="mt-4">
-            <Link href="/cgv" className="text-xs text-[#64748B] dark:text-white/65 hover:text-electric transition-colors">
+            <Link href="/cgv" className="text-xs text-[#64748B] hover:text-electric transition-colors">
               Voir nos CGV complètes →
             </Link>
           </div>
@@ -416,7 +416,7 @@ export default function RedactionBlogSEOPage() {
 
         {/* Articles liés */}
         <section>
-          <h2 className="text-xl font-bold text-foreground dark:text-white mb-4">Pour aller plus loin</h2>
+          <h2 className="text-xl font-bold text-foreground mb-4">Pour aller plus loin</h2>
           <div className="grid sm:grid-cols-2 gap-3">
             {[
               { href: '/blog/redacteur-web-freelance-ou-agence', titre: 'Rédacteur web freelance ou agence : que choisir ?' },
@@ -425,9 +425,9 @@ export default function RedactionBlogSEOPage() {
               { href: '/blog/content-refresh-anciens-articles', titre: 'Content refresh : comment redonner vie à vos anciens articles' },
             ].map(a => (
               <Link key={a.href} href={a.href}
-                className="flex items-center gap-3 p-4 rounded-xl border border-navy/10 dark:border-white/10 hover:border-electric/30 transition-colors group">
+                className="flex items-center gap-3 p-4 rounded-xl border border-navy/10 hover:border-electric/30 transition-colors group">
                 <FileText size={14} className="text-electric flex-shrink-0" />
-                <span className="text-sm text-foreground/80 dark:text-white/70 group-hover:text-electric transition-colors">{a.titre}</span>
+                <span className="text-sm text-foreground/80 group-hover:text-electric transition-colors">{a.titre}</span>
               </Link>
             ))}
           </div>

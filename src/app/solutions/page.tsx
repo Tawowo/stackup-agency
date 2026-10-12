@@ -55,12 +55,12 @@ export default function SolutionsPage() {
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 py-16 space-y-12">
         <section>
-          <h2 className="text-xl font-bold text-foreground dark:text-white mb-4">Solutions essentielles</h2>
+          <h2 className="text-xl font-bold text-foreground mb-4">Solutions essentielles</h2>
           <div className="grid sm:grid-cols-2 gap-4">
             {p1.map(s => (
-              <Link key={s.slug} href={`/solutions/${s.slug}`} className="p-5 rounded-2xl border border-navy/20 dark:border-white/10 hover:border-blue-400/40 transition-colors group">
-                <h3 className="font-bold text-foreground dark:text-white group-hover:text-electric transition-colors mb-2">{s.nom}</h3>
-                <p className="text-sm text-[#475569] dark:text-white/60 mb-3">{s.requetePrincipale}</p>
+              <Link key={s.slug} href={`/solutions/${s.slug}`} className="p-5 rounded-2xl border border-navy/20 hover:border-blue-400/40 transition-colors group">
+                <h3 className="font-bold text-foreground group-hover:text-electric transition-colors mb-2">{s.nom}</h3>
+                <p className="text-sm text-[#475569] mb-3">{s.requetePrincipale}</p>
                 <div className="flex flex-wrap gap-2">
                   {s.variantes.slice(0, 2).map(v => (
                     <span key={v} className="px-2 py-0.5 text-xs rounded-full bg-blue-500/10 text-electric">{v}</span>
@@ -72,11 +72,11 @@ export default function SolutionsPage() {
         </section>
 
         <section>
-          <h2 className="text-xl font-bold text-foreground dark:text-white mb-4">Autres solutions</h2>
+          <h2 className="text-xl font-bold text-foreground mb-4">Autres solutions</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
             {p2p3.map(s => (
-              <Link key={s.slug} href={`/solutions/${s.slug}`} className="flex items-center justify-between p-4 rounded-xl border border-navy/20 dark:border-white/10 hover:border-blue-400/40 transition-colors group">
-                <span className="font-medium text-foreground dark:text-white group-hover:text-electric transition-colors">{s.nom}</span>
+              <Link key={s.slug} href={`/solutions/${s.slug}`} className="flex items-center justify-between p-4 rounded-xl border border-navy/20 hover:border-blue-400/40 transition-colors group">
+                <span className="font-medium text-foreground group-hover:text-electric transition-colors">{s.nom}</span>
                 <ChevronRight size={16} className="text-white/65 group-hover:text-electric transition-colors" />
               </Link>
             ))}

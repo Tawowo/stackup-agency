@@ -130,11 +130,11 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
 
       <div className="max-w-3xl mx-auto px-4 sm:px-6 py-16">
         <div
-          className="prose prose-lg dark:prose-invert max-w-none prose-headings:text-foreground dark:prose-headings:text-white prose-p:text-foreground/70 dark:prose-p:text-white/70 prose-a:text-electric prose-strong:text-foreground dark:prose-strong:text-white prose-li:text-foreground/70 dark:prose-li:text-white/70"
+          className="prose prose-lg max-w-none prose-headings:text-foreground prose-p:text-foreground/70 prose-a:text-electric prose-strong:text-foreground prose-li:text-foreground/70"
           dangerouslySetInnerHTML={{ __html: post.content || '' }}
         />
 
-        <div className="mt-8 pt-6 border-t border-navy/10 dark:border-white/10 flex flex-wrap gap-3 text-sm">
+        <div className="mt-8 pt-6 border-t border-navy/10 flex flex-wrap gap-3 text-sm">
           <Link href="/tarifs" className="text-electric hover:underline">Nos tarifs →</Link>
           <Link href="/services" className="text-electric hover:underline">Nos services →</Link>
           <Link href="/realisations" className="text-electric hover:underline">Nos réalisations →</Link>
@@ -147,7 +147,7 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
           allPosts={allPosts}
         />
 
-        <div className="mt-12 pt-8 border-t border-navy/10 dark:border-white/10">
+        <div className="mt-12 pt-8 border-t border-navy/10">
           <div className="rounded-2xl p-6 bg-gradient-to-br from-navy to-electric">
             <h3 className="text-white font-bold text-lg mb-2">Prêt à démarrer votre projet ?</h3>
             <p className="text-white/70 text-sm mb-4">Premier RDV gratuit, devis sous 72h, sans engagement.</p>

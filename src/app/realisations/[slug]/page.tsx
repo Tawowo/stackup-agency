@@ -51,7 +51,7 @@ export default async function RealisationPage({ params }: { params: Promise<{ sl
   const surAccent = texteLisibleSur(r.accent)
 
   return (
-    <div className="min-h-screen bg-white dark:bg-[#0A0F1C]">
+    <div className="min-h-screen bg-white">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       {/* Hero */}
       <div className="relative pt-24 pb-20 px-4 overflow-hidden" style={{ background: r.couleur }}>
@@ -130,15 +130,15 @@ export default async function RealisationPage({ params }: { params: Promise<{ sl
             <div className="max-w-4xl mx-auto space-y-12">
               <div>
                 <p className="text-[13px] font-semibold uppercase tracking-[0.18em] mb-3" style={{ color: accentTexte }}>Le contexte</p>
-                <p className="text-gray-700 dark:text-white/75 leading-relaxed text-lg">{cs.contexte}</p>
+                <p className="text-gray-700 leading-relaxed text-lg">{cs.contexte}</p>
               </div>
               <div>
                 <p className="text-[13px] font-semibold uppercase tracking-[0.18em] mb-4" style={{ color: accentTexte }}>Ce qui a été construit</p>
                 <div className="space-y-3">
                   {cs.construit.map((c, i) => (
-                    <div key={i} className="flex items-start gap-3 p-4 rounded-xl bg-gray-50 dark:bg-white/5 border border-gray-100 dark:border-white/10">
+                    <div key={i} className="flex items-start gap-3 p-4 rounded-xl bg-gray-50 border border-gray-100">
                       <span className="flex-shrink-0 w-7 h-7 rounded-lg flex items-center justify-center text-xs font-bold text-white" style={{ background: r.couleur }}>{i + 1}</span>
-                      <p className="text-gray-700 dark:text-white/80 text-sm leading-relaxed">{c}</p>
+                      <p className="text-gray-700 text-sm leading-relaxed">{c}</p>
                     </div>
                   ))}
                 </div>
@@ -147,7 +147,7 @@ export default async function RealisationPage({ params }: { params: Promise<{ sl
                 <p className="text-[13px] font-semibold uppercase tracking-[0.18em] mb-4" style={{ color: accentTexte }}>À tester soi-même</p>
                 <ol className="space-y-2 mb-8">
                   {cs.tester.map((t, i) => (
-                    <li key={i} className="flex items-start gap-3 text-gray-700 dark:text-white/75 text-sm leading-relaxed">
+                    <li key={i} className="flex items-start gap-3 text-gray-700 text-sm leading-relaxed">
                       <ArrowRight size={14} className="flex-shrink-0 mt-1" style={{ color: accentTexte }} />
                       {t}
                     </li>
@@ -155,13 +155,13 @@ export default async function RealisationPage({ params }: { params: Promise<{ sl
                 </ol>
                 {access && (
                   <div className="rounded-2xl border p-6" style={{ borderColor: `${r.accent}40`, background: `${r.accent}0D` }}>
-                    <h3 className="font-bold text-gray-900 dark:text-white mb-2">Testez tout, librement</h3>
-                    <p className="text-gray-600 dark:text-white/65 text-sm mb-4">
+                    <h3 className="font-bold text-gray-900 mb-2">Testez tout, librement</h3>
+                    <p className="text-gray-600 text-sm mb-4">
                       L&apos;espace de gestion est ouvert à la visite — connectez-vous et explorez l&apos;envers du décor comme si le site était le vôtre.
                     </p>
-                    <div className="inline-flex items-center gap-3 px-4 py-2.5 rounded-xl bg-white dark:bg-white/10 border border-gray-200 dark:border-white/15 font-mono text-sm">
-                      <span className="text-gray-500 dark:text-white/65">Mot de passe admin :</span>
-                      <strong className="text-gray-900 dark:text-white tracking-wider">{access.password}</strong>
+                    <div className="inline-flex items-center gap-3 px-4 py-2.5 rounded-xl bg-white border border-gray-200 font-mono text-sm">
+                      <span className="text-gray-500">Mot de passe admin :</span>
+                      <strong className="text-gray-900 tracking-wider">{access.password}</strong>
                     </div>
                     <div className="mt-4">
                       <a href={r.url} target="_blank" rel="noopener noreferrer"
@@ -169,7 +169,7 @@ export default async function RealisationPage({ params }: { params: Promise<{ sl
                         Ouvrir l&apos;espace de livraison <ExternalLink size={13} />
                       </a>
                     </div>
-                    <p className="text-gray-500 dark:text-white/65 text-xs mt-4 italic">{access.note}</p>
+                    <p className="text-gray-500 text-xs mt-4 italic">{access.note}</p>
                   </div>
                 )}
               </div>
@@ -179,9 +179,9 @@ export default async function RealisationPage({ params }: { params: Promise<{ sl
       })()}
 
       {/* Services */}
-      <section className="py-16 px-4 bg-gray-50 dark:bg-white/5">
+      <section className="py-16 px-4 bg-gray-50">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">Services fournis</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-6">Services fournis</h2>
           <div className="flex flex-wrap gap-3">
             {r.services.map(s => (
               <span
@@ -199,19 +199,19 @@ export default async function RealisationPage({ params }: { params: Promise<{ sl
       {/* Fonctionnalités */}
       <section className="py-16 px-4">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-8">
+          <h2 className="text-2xl font-bold text-gray-900 mb-8">
             Fonctionnalités développées
           </h2>
           <div className="grid sm:grid-cols-2 gap-4">
             {r.fonctionnalites.map((f, i) => (
-              <div key={i} className="flex items-start gap-3 p-4 rounded-xl bg-gray-50 dark:bg-white/5 border border-gray-100 dark:border-white/10">
+              <div key={i} className="flex items-start gap-3 p-4 rounded-xl bg-gray-50 border border-gray-100">
                 <div
                   className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5"
                   style={{ background: `${r.accent}20` }}
                 >
                   <Check size={13} style={{ color: accentTexte }} />
                 </div>
-                <span className="text-gray-700 dark:text-white/80 text-sm leading-relaxed">{f}</span>
+                <span className="text-gray-700 text-sm leading-relaxed">{f}</span>
               </div>
             ))}
           </div>

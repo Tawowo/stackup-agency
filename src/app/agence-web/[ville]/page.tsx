@@ -149,18 +149,18 @@ export default function AgenceWebVillePage({ params }: { params: { ville: string
             <div className="w-10 h-10 rounded-xl bg-blue-500/20 flex items-center justify-center">
               <Building2 size={20} className="text-electric" />
             </div>
-            <h2 className="text-2xl font-bold text-foreground dark:text-white">
+            <h2 className="text-2xl font-bold text-foreground">
               Le digital à {v.ville}
             </h2>
           </div>
-          <p className="text-foreground/70 dark:text-white/70 leading-relaxed mb-6">
+          <p className="text-foreground/70 leading-relaxed mb-6">
             {v.economie} Dans cet environnement, un site internet professionnel n'est plus un luxe — c'est la condition pour exister aux yeux de vos futurs clients qui cherchent sur Google avant de prendre contact.
           </p>
           <div className="grid sm:grid-cols-2 gap-3">
             {v.secteurs.map(s => (
               <div key={s} className="reveal-item flex items-center gap-3 p-3 rounded-xl bg-blue-950/20 border border-blue-900/20">
                 <TrendingUp size={16} className="text-electric flex-shrink-0" />
-                <span className="text-foreground/80 dark:text-white/80 text-sm font-medium">{s}</span>
+                <span className="text-foreground/80 text-sm font-medium">{s}</span>
               </div>
             ))}
           </div>
@@ -168,7 +168,7 @@ export default function AgenceWebVillePage({ params }: { params: { ville: string
 
         {/* Services */}
         <section>
-          <h2 className="text-2xl font-bold text-foreground dark:text-white mb-8">
+          <h2 className="text-2xl font-bold text-foreground mb-8">
             Nos services pour les entreprises de {v.ville}
           </h2>
           <div className="grid sm:grid-cols-2 gap-4">
@@ -178,12 +178,12 @@ export default function AgenceWebVillePage({ params }: { params: { ville: string
               { titre: 'Boutique en ligne', prix: `${SITE.pricing.ecommerce}€`, delai: SITE.delais.ecommerce, desc: 'E-commerce complet, paiement sécurisé, gestion des stocks', href: '/services/site-ecommerce' },
               { titre: 'Application métier', prix: `${SITE.pricing.gestion}€`, delai: SITE.delais.gestion, desc: 'Logiciel sur mesure : caisse, RDV, commandes, CRM', href: '/services/systeme-gestion' },
             ].map(s => (
-              <Link key={s.titre} href={s.href} className="reveal-item p-5 rounded-2xl border border-navy/20 dark:border-white/10 hover:border-electric/40 hover:-translate-y-0.5 transition-all duration-200 group">
+              <Link key={s.titre} href={s.href} className="reveal-item p-5 rounded-2xl border border-navy/20 hover:border-electric/40 hover:-translate-y-0.5 transition-all duration-200 group">
                 <div className="flex items-start justify-between mb-2">
-                  <h3 className="font-semibold text-foreground dark:text-white group-hover:text-electric transition-colors">{s.titre}</h3>
+                  <h3 className="font-semibold text-foreground group-hover:text-electric transition-colors">{s.titre}</h3>
                   <span className="text-[#B45309] font-bold text-sm">{s.prix}</span>
                 </div>
-                <p className="text-[#475569] dark:text-white/60 text-sm mb-2">{s.desc}</p>
+                <p className="text-[#475569] text-sm mb-2">{s.desc}</p>
                 <span className="text-xs text-electric">Livraison : {s.delai}</span>
               </Link>
             ))}
@@ -192,7 +192,7 @@ export default function AgenceWebVillePage({ params }: { params: { ville: string
 
         {/* Pourquoi nous */}
         <section>
-          <h2 className="text-2xl font-bold text-foreground dark:text-white mb-6">
+          <h2 className="text-2xl font-bold text-foreground mb-6">
             Pourquoi choisir Stackup Agency pour votre site à {v.ville} ?
           </h2>
           <div className="space-y-3">
@@ -207,7 +207,7 @@ export default function AgenceWebVillePage({ params }: { params: { ville: string
             ].map(item => (
               <div key={item} className="flex items-start gap-3">
                 <CheckCircle size={18} className="text-success mt-0.5 flex-shrink-0" />
-                <span className="text-foreground/80 dark:text-white/80">{item}</span>
+                <span className="text-foreground/80">{item}</span>
               </div>
             ))}
           </div>
@@ -215,7 +215,7 @@ export default function AgenceWebVillePage({ params }: { params: { ville: string
 
         {/* Processus */}
         <section>
-          <h2 className="text-2xl font-bold text-foreground dark:text-white mb-6">
+          <h2 className="text-2xl font-bold text-foreground mb-6">
             Comment ça se passe pour une entreprise de {v.ville} ?
           </h2>
           <div className="space-y-4">
@@ -228,8 +228,8 @@ export default function AgenceWebVillePage({ params }: { params: { ville: string
               <div key={step.n} className="flex items-start gap-4 p-4 rounded-xl border border-white/10">
                 <span className="text-2xl font-bold text-electric/80 font-mono flex-shrink-0 w-10">{step.n}</span>
                 <div>
-                  <h3 className="font-semibold text-foreground dark:text-white mb-1">{step.titre}</h3>
-                  <p className="text-[#475569] dark:text-white/60 text-sm">{step.desc}</p>
+                  <h3 className="font-semibold text-foreground mb-1">{step.titre}</h3>
+                  <p className="text-[#475569] text-sm">{step.desc}</p>
                 </div>
               </div>
             ))}
@@ -247,17 +247,17 @@ export default function AgenceWebVillePage({ params }: { params: { ville: string
 
         {/* FAQ */}
         <section>
-          <h2 className="text-2xl font-bold text-foreground dark:text-white mb-6">
+          <h2 className="text-2xl font-bold text-foreground mb-6">
             Questions fréquentes — création de site à {v.ville}
           </h2>
           <div className="space-y-3">
             {faqItems.map(faq => (
-              <details key={faq.q} className="group rounded-xl border border-navy/20 dark:border-white/10 overflow-hidden">
-                <summary className="flex items-center justify-between p-4 cursor-pointer font-medium text-foreground dark:text-white list-none">
+              <details key={faq.q} className="group rounded-xl border border-navy/20 overflow-hidden">
+                <summary className="flex items-center justify-between p-4 cursor-pointer font-medium text-foreground list-none">
                   {faq.q}
                   <ChevronRight size={16} className="text-white/65 group-open:rotate-90 transition-transform flex-shrink-0 ml-3" />
                 </summary>
-                <div className="px-4 pb-4 text-foreground/70 dark:text-white/70 text-sm leading-relaxed">{faq.a}</div>
+                <div className="px-4 pb-4 text-foreground/70 text-sm leading-relaxed">{faq.a}</div>
               </details>
             ))}
           </div>
@@ -266,12 +266,12 @@ export default function AgenceWebVillePage({ params }: { params: { ville: string
         {/* Villes voisines */}
         {villesVoisines.length > 0 && (
           <section>
-            <h2 className="text-xl font-bold text-foreground dark:text-white mb-4">
+            <h2 className="text-xl font-bold text-foreground mb-4">
               Nous intervenons aussi dans les villes proches de {v.ville}
             </h2>
             <div className="flex flex-wrap gap-3">
               {villesVoisines.map(vi => (
-                <Link key={vi.slug} href={`/agence-web/${vi.slug}`} className="px-4 py-2 rounded-xl border border-white/10 hover:border-blue-400/40 text-sm text-foreground/70 dark:text-white/70 hover:text-electric transition-colors">
+                <Link key={vi.slug} href={`/agence-web/${vi.slug}`} className="px-4 py-2 rounded-xl border border-white/10 hover:border-blue-400/40 text-sm text-foreground/70 hover:text-electric transition-colors">
                   Agence web {vi.ville}
                 </Link>
               ))}

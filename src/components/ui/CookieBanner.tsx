@@ -10,13 +10,19 @@ type CookiePrefs = {
 
 export default function CookieBanner() {
   const { t } = useLanguage()
-  const [visible, setVisible] = useState(false)
+  // Visible dès le rendu serveur : c'est ce qui évite une grande peinture
+  // tardive. Le masquage pour les visiteurs déjà consentants est fait en CSS
+  // via la classe `su-consenti`, posée avant la première peinture.
+  const [visible, setVisible] = useState(true)
   const [showModal, setShowModal] = useState(false)
   const [prefs, setPrefs] = useState<CookiePrefs>({ analytics: false, marketing: false })
 
   useEffect(() => {
-    const consent = localStorage.getItem('cookie-consent')
-    if (!consent) setVisible(true)
+    try {
+      if (localStorage.getItem('cookie-consent')) setVisible(false)
+    } catch {
+      // Stockage refusé : on laisse le bandeau, c'est le comportement sûr.
+    }
   }, [])
 
   const acceptAll = () => {
@@ -42,7 +48,7 @@ export default function CookieBanner() {
   return (
     <>
       {/* Banner */}
-      <div className="fixed bottom-0 left-0 right-0 z-[9999] bg-gray-900 border-t border-white/10 px-4 py-4">
+      <div className="su-bandeau-cookies fixed bottom-0 left-0 right-0 z-[9999] bg-gray-900 border-t border-white/10 px-4 py-4">
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-start sm:items-center gap-4">
           <p className="text-white/80 text-sm flex-1">
             {t.cookie.message}{' '}
@@ -74,9 +80,9 @@ export default function CookieBanner() {
       {/* Preferences modal */}
       {showModal && (
         <div className="fixed inset-0 z-[10000] flex items-end sm:items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
-          <div className="bg-white dark:bg-gray-900 rounded-2xl shadow-2xl w-full max-w-md p-6">
-            <h2 className="text-lg font-bold text-gray-900 dark:text-white mb-1">{t.cookie.manageTitle}</h2>
-            <p className="text-gray-500 dark:text-white/65 text-sm mb-5">
+          <div className="bg-white rounded-2xl shadow-2xl w-full max-w-md p-6">
+            <h2 className="text-lg font-bold text-gray-900 mb-1">{t.cookie.manageTitle}</h2>
+            <p className="text-gray-500 text-sm mb-5">
               {t.cookie.manageDesc}
             </p>
 
@@ -87,11 +93,11 @@ export default function CookieBanner() {
                   <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
                 </div>
                 <div>
-                  <div className="font-semibold text-sm text-gray-900 dark:text-white flex items-center gap-2">
+                  <div className="font-semibold text-sm text-gray-900 flex items-center gap-2">
                     {t.cookie.technical}
-                    <span className="text-xs font-normal text-muted dark:text-white/65">{t.cookie.technicalRequired}</span>
+                    <span className="text-xs font-normal text-muted">{t.cookie.technicalRequired}</span>
                   </div>
-                  <p className="text-xs text-gray-500 dark:text-white/65 mt-0.5">{t.cookie.technicalDesc}</p>
+                  <p className="text-xs text-gray-500 mt-0.5">{t.cookie.technicalDesc}</p>
                 </div>
               </div>
 
@@ -104,8 +110,8 @@ export default function CookieBanner() {
                   className="mt-0.5 w-5 h-5 rounded accent-electric cursor-pointer flex-shrink-0"
                 />
                 <div>
-                  <div className="font-semibold text-sm text-gray-900 dark:text-white">{t.cookie.analytics}</div>
-                  <p className="text-xs text-gray-500 dark:text-white/65 mt-0.5">{t.cookie.analyticsDesc}</p>
+                  <div className="font-semibold text-sm text-gray-900">{t.cookie.analytics}</div>
+                  <p className="text-xs text-gray-500 mt-0.5">{t.cookie.analyticsDesc}</p>
                 </div>
               </label>
 
@@ -118,8 +124,8 @@ export default function CookieBanner() {
                   className="mt-0.5 w-5 h-5 rounded accent-electric cursor-pointer flex-shrink-0"
                 />
                 <div>
-                  <div className="font-semibold text-sm text-gray-900 dark:text-white">{t.cookie.marketing}</div>
-                  <p className="text-xs text-gray-500 dark:text-white/65 mt-0.5">{t.cookie.marketingDesc}</p>
+                  <div className="font-semibold text-sm text-gray-900">{t.cookie.marketing}</div>
+                  <p className="text-xs text-gray-500 mt-0.5">{t.cookie.marketingDesc}</p>
                 </div>
               </label>
             </div>
@@ -127,7 +133,7 @@ export default function CookieBanner() {
             <div className="flex gap-2 mt-6">
               <button
                 onClick={refuseAll}
-                className="flex-1 py-2.5 bg-gray-100 dark:bg-white/10 hover:bg-gray-200 dark:hover:bg-white/20 text-gray-700 dark:text-white text-sm font-medium rounded-xl transition-colors"
+                className="flex-1 py-2.5 bg-gray-100 hover:bg-gray-200 text-gray-700 text-sm font-medium rounded-xl transition-colors"
               >
                 {t.cookie.refuseAll}
               </button>

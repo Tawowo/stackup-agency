@@ -108,7 +108,7 @@ export default function RaisonDetre() {
               {PARAGRAPHS.map((p, i) => (
                 <p
                   key={i}
-                  className="text-navy/65 leading-relaxed text-[15px]"
+                  className="text-navy/75 leading-relaxed text-[15px]"
                   style={{
                     opacity: visible ? 1 : 0,
                     transform: visible ? 'translateY(0)' : 'translateY(16px)',

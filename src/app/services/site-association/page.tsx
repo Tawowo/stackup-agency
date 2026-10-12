@@ -50,7 +50,7 @@ const faq = [
 
 export default function SiteAssociationPage() {
   return (
-    <div className="min-h-screen bg-[#F8FAFC] dark:bg-[#0A0F1C]">
+    <div className="min-h-screen bg-[#F8FAFC]">
       {/* Hero */}
       <section className="bg-gradient-to-b from-[#1E3A5F] to-[#0F172A] py-24 pt-32">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
@@ -77,40 +77,40 @@ export default function SiteAssociationPage() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 py-16 space-y-16">
         {/* Description */}
         <section>
-          <div className="prose prose-lg dark:prose-invert max-w-none space-y-4">
-            <p className="text-gray-700 dark:text-white/70 leading-relaxed">Les associations méritent une présence digitale sérieuse. Trop souvent, faute de budget ou de compétences techniques, les associations se retrouvent avec des sites obsolètes, peu accessibles ou inexistants. Chez Stackup Agency, nous avons créé une offre spécifiquement pensée pour les structures associatives.</p>
-            <p className="text-gray-700 dark:text-white/70 leading-relaxed">Notre offre Site Association permet à votre structure de disposer d&apos;un site web professionnel, moderne et fonctionnel à un tarif adapté aux budgets associatifs. Adhérents, bénévoles, partenaires et donateurs potentiels trouveront toutes les informations dont ils ont besoin.</p>
-            <p className="text-gray-700 dark:text-white/70 leading-relaxed">Nous construisons un site qui présente clairement votre mission, vos activités, vos membres actifs et vos événements à venir. Le formulaire d&apos;adhésion en ligne simplifie le recrutement de nouveaux membres, et la page actualités vous permet de maintenir votre communauté informée.</p>
-            <p className="text-gray-700 dark:text-white/70 leading-relaxed">Le tout est livré en 7 jours ouvrés, hébergement inclus la première année, avec une formation à l&apos;administration pour que votre équipe puisse gérer le contenu en toute autonomie.</p>
+          <div className="prose prose-lg max-w-none space-y-4">
+            <p className="text-gray-700 leading-relaxed">Les associations méritent une présence digitale sérieuse. Trop souvent, faute de budget ou de compétences techniques, les associations se retrouvent avec des sites obsolètes, peu accessibles ou inexistants. Chez Stackup Agency, nous avons créé une offre spécifiquement pensée pour les structures associatives.</p>
+            <p className="text-gray-700 leading-relaxed">Notre offre Site Association permet à votre structure de disposer d&apos;un site web professionnel, moderne et fonctionnel à un tarif adapté aux budgets associatifs. Adhérents, bénévoles, partenaires et donateurs potentiels trouveront toutes les informations dont ils ont besoin.</p>
+            <p className="text-gray-700 leading-relaxed">Nous construisons un site qui présente clairement votre mission, vos activités, vos membres actifs et vos événements à venir. Le formulaire d&apos;adhésion en ligne simplifie le recrutement de nouveaux membres, et la page actualités vous permet de maintenir votre communauté informée.</p>
+            <p className="text-gray-700 leading-relaxed">Le tout est livré en 7 jours ouvrés, hébergement inclus la première année, avec une formation à l&apos;administration pour que votre équipe puisse gérer le contenu en toute autonomie.</p>
           </div>
         </section>
 
         <div className="grid md:grid-cols-2 gap-8">
           {/* Features */}
-          <section className="bg-white dark:bg-white/5 rounded-2xl p-8 border border-gray-100 dark:border-white/10">
-            <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-6">Ce qui est inclus</h2>
+          <section className="bg-white rounded-2xl p-8 border border-gray-100">
+            <h2 className="text-xl font-bold text-gray-900 mb-6">Ce qui est inclus</h2>
             <ul className="space-y-3">
               {features.map((f, i) => (
                 <li key={i} className="flex items-start gap-3">
                   <div className="mt-0.5 w-5 h-5 rounded-full bg-electric/10 flex items-center justify-center flex-shrink-0">
                     <Check size={12} className="text-electric" />
                   </div>
-                  <span className="text-gray-700 dark:text-white/70 text-sm">{f}</span>
+                  <span className="text-gray-700 text-sm">{f}</span>
                 </li>
               ))}
             </ul>
           </section>
 
           {/* Included */}
-          <section className="bg-white dark:bg-white/5 rounded-2xl p-8 border border-gray-100 dark:border-white/10">
-            <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-6">Détail de l&apos;offre</h2>
+          <section className="bg-white rounded-2xl p-8 border border-gray-100">
+            <h2 className="text-xl font-bold text-gray-900 mb-6">Détail de l&apos;offre</h2>
             <ul className="space-y-3">
               {included.map((f, i) => (
                 <li key={i} className="flex items-start gap-3">
                   <div className="mt-0.5 w-5 h-5 rounded-full bg-green-500/10 flex items-center justify-center flex-shrink-0">
                     <Check size={12} className="text-green-500" />
                   </div>
-                  <span className="text-gray-700 dark:text-white/70 text-sm">{f}</span>
+                  <span className="text-gray-700 text-sm">{f}</span>
                 </li>
               ))}
             </ul>
@@ -119,7 +119,7 @@ export default function SiteAssociationPage() {
 
         {/* Process */}
         <section>
-          <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-8">Notre processus</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-8">Notre processus</h2>
           <div className="space-y-4">
             {process.map((p, i) => (
               <div key={i} className="flex gap-4 items-start">
@@ -127,8 +127,8 @@ export default function SiteAssociationPage() {
                   {i + 1}
                 </div>
                 <div>
-                  <h3 className="font-semibold text-gray-900 dark:text-white mb-1">{p.step}</h3>
-                  <p className="text-ink/70 dark:text-white/60 text-sm">{p.desc}</p>
+                  <h3 className="font-semibold text-gray-900 mb-1">{p.step}</h3>
+                  <p className="text-ink/70 text-sm">{p.desc}</p>
                 </div>
               </div>
             ))}
@@ -137,12 +137,12 @@ export default function SiteAssociationPage() {
 
         {/* FAQ */}
         <section>
-          <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-8">Questions fréquentes</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-8">Questions fréquentes</h2>
           <div className="space-y-4">
             {faq.map((item, i) => (
-              <div key={i} className="bg-white dark:bg-white/5 rounded-2xl p-6 border border-gray-100 dark:border-white/10">
-                <h3 className="font-semibold text-gray-900 dark:text-white mb-2">{item.q}</h3>
-                <p className="text-ink/70 dark:text-white/60 text-sm leading-relaxed">{item.a}</p>
+              <div key={i} className="bg-white rounded-2xl p-6 border border-gray-100">
+                <h3 className="font-semibold text-gray-900 mb-2">{item.q}</h3>
+                <p className="text-ink/70 text-sm leading-relaxed">{item.a}</p>
               </div>
             ))}
           </div>

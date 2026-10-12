@@ -51,7 +51,7 @@ export default function RealisationsPage() {
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
           {realisations.map((r, idx) => (
             <Link key={r.slug} href={`/realisations/${r.slug}`}
-              className={`reveal-item real-card group rounded-2xl border border-navy/20 dark:border-white/10 overflow-hidden hover:border-electric/30 hover:shadow-xl hover:-translate-y-1 transition-all duration-300`}
+              className={`reveal-item real-card group rounded-2xl border border-navy/20 overflow-hidden hover:border-electric/30 hover:shadow-xl hover:-translate-y-1 transition-all duration-300`}
               style={{ animationDelay: `${idx * 60}ms` }}>
               <div className="h-44 relative overflow-hidden real-thumb" style={{ background: r.couleur }}>
                 {'image' in r && r.image ? (
@@ -81,11 +81,11 @@ export default function RealisationsPage() {
               </div>
               <div className="p-5">
                 <div className="flex items-start justify-between mb-2">
-                  <h2 className="font-bold text-foreground dark:text-white group-hover:text-electric transition-colors">{r.nom}</h2>
+                  <h2 className="font-bold text-foreground group-hover:text-electric transition-colors">{r.nom}</h2>
                   <ChevronRight size={16} className="text-white/65 group-hover:text-electric transition-all group-hover:translate-x-0.5 flex-shrink-0 mt-0.5" />
                 </div>
-                <p className="text-xs text-foreground/70 dark:text-white/65 mb-2">{r.type}</p>
-                <p className="text-sm text-foreground/70 dark:text-white/70 line-clamp-2">{r.description}</p>
+                <p className="text-xs text-foreground/70 mb-2">{r.type}</p>
+                <p className="text-sm text-foreground/70 line-clamp-2">{r.description}</p>
                 <div className="flex flex-wrap gap-1.5 mt-3">
                   {r.tags.slice(0, 3).map(tag => (
                     <span key={tag} className="px-2 py-0.5 rounded-full text-xs border"
@@ -99,8 +99,8 @@ export default function RealisationsPage() {
 
         {/* Jugez sur pièce */}
         <section className="rounded-2xl border border-electric/30 bg-blue-500/5 p-6 lg:p-8 mb-16">
-          <h2 className="text-xl font-bold text-foreground dark:text-white mb-2">Jugez sur pièce</h2>
-          <p className="text-foreground/70 dark:text-white/70">
+          <h2 className="text-xl font-bold text-foreground mb-2">Jugez sur pièce</h2>
+          <p className="text-foreground/70">
             Toutes nos démonstrations sont des projets complets, construits par nos soins et consultables en ligne.
             Ce que vous voyez est exactement ce que nous livrons.
           </p>

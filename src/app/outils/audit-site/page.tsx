@@ -61,13 +61,13 @@ export default function AuditPage() {
           {FAQ.map(f => (
             <details key={f.q} className="group rounded-xl border border-gray-200 bg-white overflow-hidden">
               <summary className="p-4 cursor-pointer font-medium text-navy list-none">{f.q}</summary>
-              <div className="px-4 pb-4 text-navy/65 text-sm leading-relaxed">{f.a}</div>
+              <div className="px-4 pb-4 text-navy/75 text-sm leading-relaxed">{f.a}</div>
             </details>
           ))}
         </div>
       </div>
 
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 pb-8 flex flex-wrap gap-4 text-sm border-t border-navy/10 dark:border-white/10 pt-6 mt-4">
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 pb-8 flex flex-wrap gap-4 text-sm border-t border-navy/10 pt-6 mt-4">
         <Link href="/outils/studio-de-style" className="text-electric hover:underline">Studio de style →</Link>
         <Link href="/devis" className="text-electric hover:underline">Devis express →</Link>
         <Link href="/services" className="text-electric hover:underline">Nos services →</Link>

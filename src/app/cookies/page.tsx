@@ -16,15 +16,15 @@ export const metadata: Metadata = {
 
 export default function Cookies() {
   return (
-    <div className="min-h-screen bg-[#F8FAFC] dark:bg-[#0A0F1C] py-24 pt-32">
+    <div className="min-h-screen bg-[#F8FAFC] py-24 pt-32">
       <div className="max-w-3xl mx-auto px-4 sm:px-6">
         <Link href="/" className="inline-flex items-center gap-2 text-electric hover:underline text-sm mb-8">
           <ArrowLeft size={16} /> Retour à l&apos;accueil
         </Link>
-        <h1 className="text-4xl font-extrabold text-gray-900 dark:text-white mb-4">Politique de cookies</h1>
-        <p className="text-gray-500 dark:text-white/65 text-sm mb-12">Dernière mise à jour : juin 2026</p>
+        <h1 className="text-4xl font-extrabold text-gray-900 mb-4">Politique de cookies</h1>
+        <p className="text-gray-500 text-sm mb-12">Dernière mise à jour : juin 2026</p>
 
-        <div className="prose dark:prose-invert prose-sm max-w-none space-y-10">
+        <div className="prose prose-sm max-w-none space-y-10">
           <section>
             <h2>1. Qu&apos;est-ce qu&apos;un cookie ?</h2>
             <p>Un cookie est un petit fichier texte déposé sur votre terminal (ordinateur, tablette, smartphone) lors de la visite d&apos;un site web. Il permet au site de mémoriser des informations sur votre visite.</p>
@@ -35,19 +35,19 @@ export default function Cookies() {
             <p>Ce site utilise <strong>uniquement des cookies techniques strictement nécessaires</strong> à son fonctionnement :</p>
             <table className="w-full text-sm border-collapse">
               <thead>
-                <tr className="border-b border-gray-200 dark:border-white/10">
+                <tr className="border-b border-gray-200">
                   <th className="text-left py-2 pr-4">Nom</th>
                   <th className="text-left py-2 pr-4">Finalité</th>
                   <th className="text-left py-2">Durée</th>
                 </tr>
               </thead>
               <tbody>
-                <tr className="border-b border-gray-100 dark:border-white/5">
+                <tr className="border-b border-gray-100">
                   <td className="py-2 pr-4 font-mono">theme</td>
                   <td className="py-2 pr-4">Mémorise votre préférence de thème (clair/sombre)</td>
                   <td className="py-2">Session</td>
                 </tr>
-                <tr className="border-b border-gray-100 dark:border-white/5">
+                <tr className="border-b border-gray-100">
                   <td className="py-2 pr-4 font-mono">cookie-consent</td>
                   <td className="py-2 pr-4">Mémorise votre acceptation de la politique de cookies</td>
                   <td className="py-2">1 an</td>
@@ -79,7 +79,7 @@ export default function Cookies() {
           </section>
         </div>
 
-        <div className="mt-12 pt-8 border-t border-gray-200 dark:border-white/10 flex flex-wrap gap-4 text-sm">
+        <div className="mt-12 pt-8 border-t border-gray-200 flex flex-wrap gap-4 text-sm">
           <Link href="/mentions-legales" className="text-electric hover:underline">Mentions légales →</Link>
           <Link href="/politique-confidentialite" className="text-electric hover:underline">Politique de confidentialité →</Link>
           <Link href="/contact" className="text-electric hover:underline">Nous contacter →</Link>

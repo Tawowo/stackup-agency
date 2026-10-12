@@ -88,16 +88,16 @@ export default function OutilsPage() {
               <Link
                 key={o.href}
                 href={o.href}
-                className="group rounded-2xl border border-navy/20 dark:border-white/10 p-6 hover:border-electric/40 transition-all hover:shadow-lg hover:shadow-electric/5 bg-white dark:bg-[#0D1626]"
+                className="group rounded-2xl border border-navy/20 p-6 hover:border-electric/40 transition-all hover:shadow-lg hover:shadow-electric/5 bg-white"
               >
                 <div className="flex items-start justify-between mb-4">
                   <div className={`w-11 h-11 rounded-xl ${o.bg} flex items-center justify-center`}>
                     <Icon size={20} className={o.color} />
                   </div>
-                  <span className="text-xs font-semibold px-2.5 py-1 bg-navy/5 dark:bg-white/5 text-[#475569] dark:text-white/65 rounded-full">{o.badge}</span>
+                  <span className="text-xs font-semibold px-2.5 py-1 bg-navy/5 text-[#475569] rounded-full">{o.badge}</span>
                 </div>
-                <h2 className="font-bold text-foreground dark:text-white mb-2 group-hover:text-electric transition-colors">{o.title}</h2>
-                <p className="text-sm text-[#475569] dark:text-white/65 leading-relaxed">{o.desc}</p>
+                <h2 className="font-bold text-foreground mb-2 group-hover:text-electric transition-colors">{o.title}</h2>
+                <p className="text-sm text-[#475569] leading-relaxed">{o.desc}</p>
               </Link>
             )
           })}
@@ -112,7 +112,7 @@ export default function OutilsPage() {
           </Link>
         </div>
 
-        <div className="mt-8 flex flex-wrap gap-4 text-sm pt-4 border-t border-navy/10 dark:border-white/10">
+        <div className="mt-8 flex flex-wrap gap-4 text-sm pt-4 border-t border-navy/10">
           <Link href="/services" className="text-electric hover:underline">Nos services →</Link>
           <Link href="/tarifs" className="text-electric hover:underline">Tarifs →</Link>
           <Link href="/faq" className="text-electric hover:underline">FAQ →</Link>

@@ -16,21 +16,21 @@ export const metadata: Metadata = {
 
 export default function PolitiqueConfidentialite() {
   return (
-    <div className="min-h-screen bg-[#F8FAFC] dark:bg-[#0A0F1C] py-24 pt-32">
+    <div className="min-h-screen bg-[#F8FAFC] py-24 pt-32">
       <div className="max-w-3xl mx-auto px-4 sm:px-6">
         <Link href="/" className="inline-flex items-center gap-2 text-electric hover:underline text-sm mb-8">
           <ArrowLeft size={16} /> Retour à l&apos;accueil
         </Link>
         <div className="flex items-start justify-between mb-3 gap-4">
-          <h1 className="text-4xl font-extrabold text-gray-900 dark:text-white">Politique de confidentialité</h1>
+          <h1 className="text-4xl font-extrabold text-gray-900">Politique de confidentialité</h1>
           <a href="/documents/politique-confidentialite.pdf" download className="flex-shrink-0 inline-flex items-center gap-2 px-4 py-2 bg-electric text-white text-sm font-semibold rounded-xl hover:bg-electric/90 transition-colors">
             <Download size={15} />
             Télécharger la version PDF officielle
           </a>
         </div>
-        <p className="text-gray-500 dark:text-white/65 text-sm mb-12">Dernière mise à jour : juin 2026</p>
+        <p className="text-gray-500 text-sm mb-12">Dernière mise à jour : juin 2026</p>
 
-        <div className="prose dark:prose-invert prose-sm max-w-none space-y-10">
+        <div className="prose prose-sm max-w-none space-y-10">
           <section>
             <h2>1. Responsable du traitement</h2>
             <p>Stackup Agency (micro-entreprise), Indre-et-Loire (37), France — <a href="mailto:contact@stackup-agency.fr" className="text-electric">contact@stackup-agency.fr</a></p>
@@ -115,7 +115,7 @@ export default function PolitiqueConfidentialite() {
           </section>
         </div>
 
-        <div className="mt-12 pt-8 border-t border-gray-200 dark:border-white/10 flex flex-wrap gap-4 text-sm">
+        <div className="mt-12 pt-8 border-t border-gray-200 flex flex-wrap gap-4 text-sm">
           <Link href="/mentions-legales" className="text-electric hover:underline">Mentions légales →</Link>
           <Link href="/cookies" className="text-electric hover:underline">Politique de cookies →</Link>
           <Link href="/contact" className="text-electric hover:underline">Nous contacter →</Link>

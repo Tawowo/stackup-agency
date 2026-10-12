@@ -10,7 +10,7 @@ export default function BlogPageClient({ posts }: { posts: Post[] }) {
 
   if (lang === 'en') {
     return (
-      <div className="min-h-screen bg-[#F8FAFC] dark:bg-[#0A0F1C]">
+      <div className="min-h-screen bg-[#F8FAFC]">
         <div className="bg-gradient-to-b from-[#060D1A] to-[#0A0F1C] pt-24 pb-16">
           <div className="max-w-5xl mx-auto px-4 sm:px-6">
             <Link href="/" className="inline-flex items-center gap-2 text-white/65 hover:text-white text-sm mb-8 transition-colors">
@@ -21,10 +21,10 @@ export default function BlogPageClient({ posts }: { posts: Post[] }) {
           </div>
         </div>
         <div className="max-w-3xl mx-auto px-4 sm:px-6 py-20 text-center">
-          <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">
             Our blog is in French
           </h2>
-          <p className="text-ink/70 dark:text-white/60 mb-8">
+          <p className="text-ink/70 mb-8">
             {t.blog.frOnly}
           </p>
           <Link
@@ -39,7 +39,7 @@ export default function BlogPageClient({ posts }: { posts: Post[] }) {
   }
 
   return (
-    <div className="min-h-screen bg-[#F8FAFC] dark:bg-[#0A0F1C]">
+    <div className="min-h-screen bg-[#F8FAFC]">
       <div className="bg-gradient-to-b from-[#060D1A] to-[#0A0F1C] pt-24 pb-16">
         <div className="max-w-5xl mx-auto px-4 sm:px-6">
           <Link href="/" className="inline-flex items-center gap-2 text-white/65 hover:text-white text-sm mb-8 transition-colors">

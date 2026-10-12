@@ -39,7 +39,7 @@ export default function DevisPage() {
 
       <DevisForm />
 
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 pb-8 flex flex-wrap gap-4 text-sm border-t border-navy/10 dark:border-white/10 pt-6 mt-4">
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 pb-8 flex flex-wrap gap-4 text-sm border-t border-navy/10 pt-6 mt-4">
         <Link href="/tarifs" className="text-electric hover:underline">Voir les tarifs →</Link>
         <Link href="/services" className="text-electric hover:underline">Nos services →</Link>
         <Link href="/faq" className="text-electric hover:underline">Questions fréquentes →</Link>

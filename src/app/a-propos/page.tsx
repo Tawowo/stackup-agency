@@ -101,7 +101,7 @@ export default function AProposPage() {
             <h2 className="text-3xl font-bold text-navy mb-6" style={{ lineHeight: 1.2 }}>
               Des sites d&apos;exception,<br />accessibles à tous.
             </h2>
-            <div className="space-y-4 text-navy/65 leading-relaxed text-[15px]">
+            <div className="space-y-4 text-navy/75 leading-relaxed text-[15px]">
               <p>
                 Stackup Agency est née d&apos;un constat simple : les indépendants et les petites entreprises méritent le même niveau de site web que les grands groupes — mais les tarifs des agences classiques les en excluent presque toujours.
               </p>

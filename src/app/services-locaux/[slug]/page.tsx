@@ -347,7 +347,7 @@ export default async function ServicesLocauxPage({ params }: { params: Promise<{
   if (!page) notFound()
 
   return (
-    <div className="min-h-screen bg-white dark:bg-[#0A0F1C]">
+    <div className="min-h-screen bg-white">
       {/* Hero */}
       <div className="bg-[#050A14] pt-28 pb-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
@@ -371,12 +371,12 @@ export default async function ServicesLocauxPage({ params }: { params: Promise<{
       </div>
 
       {/* Problem */}
-      <section className="py-20 px-4 bg-gray-50 dark:bg-white/5">
+      <section className="py-20 px-4 bg-gray-50">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8">{page.problem.title}</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-8">{page.problem.title}</h2>
           <ul className="space-y-4">
             {page.problem.points.map((p, i) => (
-              <li key={i} className="flex items-start gap-3 text-ink/70 dark:text-white/70">
+              <li key={i} className="flex items-start gap-3 text-ink/70">
                 <span className="text-red-500 mt-0.5 flex-shrink-0">✗</span>
                 {p}
               </li>
@@ -388,21 +388,21 @@ export default async function ServicesLocauxPage({ params }: { params: Promise<{
       {/* Solution */}
       <section className="py-20 px-4">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">{page.solution.title}</h2>
-          <p className="text-lg text-ink/70 dark:text-white/70 leading-relaxed">{page.solution.desc}</p>
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">{page.solution.title}</h2>
+          <p className="text-lg text-ink/70 leading-relaxed">{page.solution.desc}</p>
         </div>
       </section>
 
       {/* Features */}
-      <section className="py-20 px-4 bg-gray-50 dark:bg-white/5">
+      <section className="py-20 px-4 bg-gray-50">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-12 text-center">Ce que comprend votre projet</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Ce que comprend votre projet</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {page.features.map((f, i) => (
-              <div key={i} className="bg-white dark:bg-white/5 rounded-2xl p-6 border border-gray-100 dark:border-white/10">
+              <div key={i} className="bg-white rounded-2xl p-6 border border-gray-100">
                 <div className="text-3xl mb-4">{f.icon}</div>
-                <h3 className="font-bold text-gray-900 dark:text-white mb-2">{f.title}</h3>
-                <p className="text-gray-500 dark:text-white/60 text-sm leading-relaxed">{f.desc}</p>
+                <h3 className="font-bold text-gray-900 mb-2">{f.title}</h3>
+                <p className="text-gray-500 text-sm leading-relaxed">{f.desc}</p>
               </div>
             ))}
           </div>
@@ -412,16 +412,16 @@ export default async function ServicesLocauxPage({ params }: { params: Promise<{
       {/* Process */}
       <section className="py-20 px-4">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-12 text-center">Notre processus</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Notre processus</h2>
           <div className="space-y-8">
             {page.steps.map((s, i) => (
               <div key={i} className="flex gap-6 items-start">
-                <div className="w-14 h-14 rounded-2xl bg-[#050A14] dark:bg-white/10 flex items-center justify-center text-white font-black text-lg flex-shrink-0">
+                <div className="w-14 h-14 rounded-2xl bg-[#050A14] flex items-center justify-center text-white font-black text-lg flex-shrink-0">
                   {s.num}
                 </div>
                 <div>
-                  <h3 className="font-bold text-gray-900 dark:text-white mb-1">{s.title}</h3>
-                  <p className="text-gray-500 dark:text-white/60 text-sm">{s.desc}</p>
+                  <h3 className="font-bold text-gray-900 mb-1">{s.title}</h3>
+                  <p className="text-gray-500 text-sm">{s.desc}</p>
                 </div>
               </div>
             ))}
@@ -430,12 +430,12 @@ export default async function ServicesLocauxPage({ params }: { params: Promise<{
       </section>
 
       {/* Pricing */}
-      <section className="py-20 px-4 bg-gray-50 dark:bg-white/5">
+      <section className="py-20 px-4 bg-gray-50">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">Tarifs transparents</h2>
-          <div className="bg-white dark:bg-white/5 rounded-2xl p-10 border border-gray-100 dark:border-white/10 inline-block mt-6">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">Tarifs transparents</h2>
+          <div className="bg-white rounded-2xl p-10 border border-gray-100 inline-block mt-6">
             <div className="text-4xl font-black text-[#2D7DD2] mb-3">{page.price.from}</div>
-            <p className="text-gray-500 dark:text-white/60 mb-8">{page.price.details}</p>
+            <p className="text-gray-500 mb-8">{page.price.details}</p>
             <Link
               href="#contact"
               className="inline-flex items-center gap-2 px-8 py-4 bg-[#F59E0B] hover:bg-gold text-ink font-semibold rounded-xl transition-all hover:scale-105"
@@ -450,26 +450,26 @@ export default async function ServicesLocauxPage({ params }: { params: Promise<{
       {/* Testimonial */}
       <section className="py-20 px-4">
         <div className="max-w-2xl mx-auto text-center">
-          <blockquote className="text-xl text-ink/70 dark:text-white/70 italic leading-relaxed mb-6">
+          <blockquote className="text-xl text-ink/70 italic leading-relaxed mb-6">
             &ldquo;{page.testimonial.quote}&rdquo;
           </blockquote>
-          <div className="font-semibold text-gray-900 dark:text-white">{page.testimonial.author}</div>
-          <div className="text-sm text-muted dark:text-white/65">{page.testimonial.company}</div>
+          <div className="font-semibold text-gray-900">{page.testimonial.author}</div>
+          <div className="text-sm text-muted">{page.testimonial.company}</div>
         </div>
       </section>
 
       {/* FAQ */}
-      <section className="py-20 px-4 bg-gray-50 dark:bg-white/5">
+      <section className="py-20 px-4 bg-gray-50">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-12 text-center">Questions fréquentes</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Questions fréquentes</h2>
           <div className="space-y-6">
             {page.faq.map((item, i) => (
-              <div key={i} className="bg-white dark:bg-white/5 rounded-2xl p-6 border border-gray-100 dark:border-white/10">
+              <div key={i} className="bg-white rounded-2xl p-6 border border-gray-100">
                 <div className="flex items-start gap-3">
                   <CheckCircle size={20} className="text-[#2D7DD2] flex-shrink-0 mt-0.5" />
                   <div>
-                    <h3 className="font-bold text-gray-900 dark:text-white mb-2">{item.q}</h3>
-                    <p className="text-gray-500 dark:text-white/60 text-sm leading-relaxed">{item.a}</p>
+                    <h3 className="font-bold text-gray-900 mb-2">{item.q}</h3>
+                    <p className="text-gray-500 text-sm leading-relaxed">{item.a}</p>
                   </div>
                 </div>
               </div>

@@ -140,11 +140,11 @@ export default function DocumentsPage() {
             <h2 className="text-xs font-bold uppercase tracking-widest text-navy mb-5">{group.label}</h2>
             <div className="space-y-3">
               {group.docs.map(doc => (
-                <div key={doc.pdf} className="flex items-start gap-4 bg-white dark:bg-white/5 rounded-2xl border border-gray-200 dark:border-white/10 p-5">
+                <div key={doc.pdf} className="flex items-start gap-4 bg-white rounded-2xl border border-gray-200 p-5">
                   <div className="flex-1 min-w-0">
-                    <p className="font-semibold text-gray-900 dark:text-white text-sm mb-1">{doc.title}</p>
-                    <p className="text-xs text-gray-500 dark:text-white/65 leading-relaxed mb-3">{doc.desc}</p>
-                    <p className="text-xs text-foreground/70 dark:text-white/65 mb-0">{doc.size}</p>
+                    <p className="font-semibold text-gray-900 text-sm mb-1">{doc.title}</p>
+                    <p className="text-xs text-gray-500 leading-relaxed mb-3">{doc.desc}</p>
+                    <p className="text-xs text-foreground/70 mb-0">{doc.size}</p>
                   </div>
                   <div className="flex items-center gap-2 flex-shrink-0 mt-1">
                     {doc.slug && (
@@ -164,9 +164,9 @@ export default function DocumentsPage() {
           </section>
         ))}
 
-        <p className="text-xs text-foreground/70 dark:text-white/65 text-center">
+        <p className="text-xs text-foreground/70 text-center">
           Les modèles commerciaux sont fournis à titre indicatif. Votre exemplaire personnalisé vous sera remis lors de votre projet.{' '}
-          <Link href="/contact" className="text-electric underline hover:text-electric dark:hover:text-electric/80 transition-colors">Nous contacter →</Link>
+          <Link href="/contact" className="text-electric underline hover:text-electric transition-colors">Nous contacter →</Link>
         </p>
       </div>
     </div>

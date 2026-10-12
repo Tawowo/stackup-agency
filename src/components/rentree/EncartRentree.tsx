@@ -9,11 +9,11 @@ export default function EncartRentree() {
   return (
     <div className="rounded-xl border border-gold/30 bg-gold/5 p-4 flex items-center gap-4 my-6">
       <div className="flex-1 min-w-0">
-        <div className="font-semibold text-foreground dark:text-white text-sm mb-0.5">
+        <div className="font-semibold text-foreground text-sm mb-0.5">
           Offre rentrée — maquette offerte
         </div>
         {/* div et non p : CountdownRentree contient des <div> (TimeUnit), <div> dans <p> = HTML invalide */}
-        <div className="text-xs text-[#475569] dark:text-white/60">
+        <div className="text-xs text-[#475569]">
           Expire dans <CountdownRentree initialTime={initialTime} />
         </div>
       </div>

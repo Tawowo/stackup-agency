@@ -117,18 +117,18 @@ export default function ServicesPage() {
       <div className="max-w-5xl mx-auto px-4 sm:px-6 py-16 space-y-8">
         <EncartRentree />
         {SERVICES.map((s, idx) => (
-          <div key={s.slug} className="reveal-item group rounded-2xl border border-navy/20 dark:border-white/10 p-6 lg:p-8 hover:border-electric/30 hover:shadow-lg hover:shadow-electric/5 transition-all duration-300 relative overflow-hidden"
+          <div key={s.slug} className="reveal-item group rounded-2xl border border-navy/20 p-6 lg:p-8 hover:border-electric/30 hover:shadow-lg hover:shadow-electric/5 transition-all duration-300 relative overflow-hidden"
             style={{ animationDelay: `${idx * 60}ms` }}>
             {/* Accent top line */}
             <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-electric/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 mb-4">
               <div>
-                <h2 className="text-2xl font-bold text-foreground dark:text-white mb-1 group-hover:text-electric transition-colors">{s.titre}</h2>
-                <p className="text-[#475569] dark:text-white/60 text-sm">Idéal pour : {s.ideal}</p>
+                <h2 className="text-2xl font-bold text-foreground mb-1 group-hover:text-electric transition-colors">{s.titre}</h2>
+                <p className="text-[#475569] text-sm">Idéal pour : {s.ideal}</p>
               </div>
               <div className="text-right flex-shrink-0">
-                <div className="text-3xl font-bold text-navy dark:text-[#B45309] tabular-nums">{s.prix}€</div>
-                <div className="text-xs text-foreground/70 dark:text-white/65 mt-0.5">Livraison : {s.delai}</div>
+                <div className="text-3xl font-bold text-navy tabular-nums">{s.prix}€</div>
+                <div className="text-xs text-foreground/70 mt-0.5">Livraison : {s.delai}</div>
               </div>
             </div>
             <div className="grid lg:grid-cols-[1fr_290px] gap-6 lg:gap-10 items-start mb-6">
@@ -158,7 +158,7 @@ export default function ServicesPage() {
               <Link href={`/services/${s.slug}`} className="flex items-center gap-1.5 px-5 py-2.5 bg-navy hover:bg-electric text-white text-sm font-semibold rounded-xl transition-all hover:-translate-y-0.5">
                 Voir l&apos;offre <ChevronRight size={14} />
               </Link>
-              <Link href="/contact" className="px-5 py-2.5 border border-foreground/20 dark:border-white/20 text-foreground dark:text-white hover:bg-foreground/5 dark:hover:bg-white/10 text-sm font-semibold rounded-xl transition-all hover:-translate-y-0.5">
+              <Link href="/contact" className="px-5 py-2.5 border border-foreground/20 text-foreground hover:bg-foreground/5 text-sm font-semibold rounded-xl transition-all hover:-translate-y-0.5">
                 Demander un devis
               </Link>
             </div>
@@ -167,15 +167,15 @@ export default function ServicesPage() {
 
         {/* Comparison table */}
         <section className="mt-12">
-          <h2 className="text-2xl font-bold text-foreground dark:text-white mb-6">Comparatif des offres</h2>
+          <h2 className="text-2xl font-bold text-foreground mb-6">Comparatif des offres</h2>
           <div className="overflow-x-auto" tabIndex={0}>
             <table className="w-full text-sm border-collapse">
               <thead>
                 <tr className="border-b border-white/10">
-                  <th className="text-left py-3 pr-4 text-[#475569] dark:text-white/60 font-medium">Fonctionnalité</th>
-                  <th className="text-center py-3 px-3 text-foreground dark:text-white font-semibold">Vitrine</th>
-                  <th className="text-center py-3 px-3 text-foreground dark:text-white font-semibold">Multi-pages</th>
-                  <th className="text-center py-3 px-3 text-navy dark:text-[#B45309] font-semibold">E-commerce</th>
+                  <th className="text-left py-3 pr-4 text-[#475569] font-medium">Fonctionnalité</th>
+                  <th className="text-center py-3 px-3 text-foreground font-semibold">Vitrine</th>
+                  <th className="text-center py-3 px-3 text-foreground font-semibold">Multi-pages</th>
+                  <th className="text-center py-3 px-3 text-navy font-semibold">E-commerce</th>
                   <th className="text-center py-3 px-3 text-electric font-semibold">Gestion</th>
                 </tr>
               </thead>
@@ -191,7 +191,7 @@ export default function ServicesPage() {
                   ['Formation incluse', false, false, false, true],
                 ].map(([feat, ...values]) => (
                   <tr key={String(feat)} className="border-b border-white/5">
-                    <td className="py-3 pr-4 text-foreground/70 dark:text-white/70">{feat}</td>
+                    <td className="py-3 pr-4 text-foreground/70">{feat}</td>
                     {values.map((v, i) => (
                       <td key={i} className="text-center py-3 px-3">
                         {v ? <span className="text-success">✓</span> : <span className="text-white/65">—</span>}
@@ -200,10 +200,10 @@ export default function ServicesPage() {
                   </tr>
                 ))}
                 <tr>
-                  <td className="py-3 pr-4 text-[#475569] dark:text-white/60 font-medium">Prix à partir de</td>
-                  <td className="text-center py-3 px-3 font-bold text-foreground dark:text-white">{SITE.pricing.vitrine}€</td>
-                  <td className="text-center py-3 px-3 font-bold text-foreground dark:text-white">{SITE.pricing.multipages}€</td>
-                  <td className="text-center py-3 px-3 font-bold text-navy dark:text-[#B45309]">{SITE.pricing.ecommerce}€</td>
+                  <td className="py-3 pr-4 text-[#475569] font-medium">Prix à partir de</td>
+                  <td className="text-center py-3 px-3 font-bold text-foreground">{SITE.pricing.vitrine}€</td>
+                  <td className="text-center py-3 px-3 font-bold text-foreground">{SITE.pricing.multipages}€</td>
+                  <td className="text-center py-3 px-3 font-bold text-navy">{SITE.pricing.ecommerce}€</td>
                   <td className="text-center py-3 px-3 font-bold text-electric">{SITE.pricing.gestion}€</td>
                 </tr>
               </tbody>
@@ -213,7 +213,7 @@ export default function ServicesPage() {
 
         {/* FAQ */}
         <section>
-          <h2 className="text-2xl font-bold text-foreground dark:text-white mb-6">Questions fréquentes</h2>
+          <h2 className="text-2xl font-bold text-foreground mb-6">Questions fréquentes</h2>
           <div className="space-y-3">
             {[
               { q: 'Quels sont les délais de livraison ?', a: `Site vitrine : ${SITE.delais.vitrine}. Site multi-pages : ${SITE.delais.multipages}. Boutique en ligne : ${SITE.delais.ecommerce}. Système de gestion : ${SITE.delais.gestion}. Délais garantis contractuellement.` },
@@ -221,12 +221,12 @@ export default function ServicesPage() {
               { q: 'Est-ce que je suis propriétaire du code ?', a: 'Oui, à 100%. Une fois le projet livré et payé, le code vous appartient entièrement. Vous êtes libre de le modifier ou de changer d\'hébergeur.' },
               { q: 'Que se passe-t-il après les 12 mois d\'hébergement inclus ?', a: `Après la première année, vous pouvez opter pour l'une de nos offres de maintenance (à partir de ${SITE.pricing.maintenanceStarter}€/mois) ou récupérer votre code et gérer l'hébergement vous-même. Le nom de domaine, offert la première année, reste ensuite à votre charge sauf abonnement de maintenance actif (il y est inclus).` },
             ].map(faq => (
-              <details key={faq.q} className="group rounded-xl border border-navy/20 dark:border-white/10 overflow-hidden">
-                <summary className="flex items-center justify-between p-4 cursor-pointer font-medium text-foreground dark:text-white list-none">
+              <details key={faq.q} className="group rounded-xl border border-navy/20 overflow-hidden">
+                <summary className="flex items-center justify-between p-4 cursor-pointer font-medium text-foreground list-none">
                   {faq.q}
                   <ChevronRight size={16} className="text-white/65 group-open:rotate-90 transition-transform flex-shrink-0" />
                 </summary>
-                <div className="px-4 pb-4 text-foreground/70 dark:text-white/70 text-sm">{faq.a}</div>
+                <div className="px-4 pb-4 text-foreground/70 text-sm">{faq.a}</div>
               </details>
             ))}
           </div>

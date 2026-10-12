@@ -104,10 +104,10 @@ export default function ParrainagePage() {
 
         {/* 3 étapes */}
         <section>
-          <h2 className="text-2xl font-bold text-foreground dark:text-white mb-8">Comment ça fonctionne</h2>
+          <h2 className="text-2xl font-bold text-foreground mb-8">Comment ça fonctionne</h2>
           <div className="grid sm:grid-cols-3 gap-6">
             {STEPS.map(({ Icon, num, titre, desc }, i) => (
-              <div key={num} className="reveal-item relative p-6 rounded-2xl border border-navy/10 dark:border-white/10 bg-white dark:bg-[#0D1626] hover:border-gold/30 hover:-translate-y-0.5 transition-all duration-200"
+              <div key={num} className="reveal-item relative p-6 rounded-2xl border border-navy/10 bg-white hover:border-gold/30 hover:-translate-y-0.5 transition-all duration-200"
                 style={{ animationDelay: `${i * 80}ms` }}>
                 <div className="absolute -top-3 -left-3 w-8 h-8 rounded-full bg-gold flex items-center justify-center text-ink font-bold text-xs shadow-md shadow-gold/30">
                   {num}
@@ -115,8 +115,8 @@ export default function ParrainagePage() {
                 <div className="w-10 h-10 rounded-xl bg-gold/10 flex items-center justify-center mb-4 group-hover:bg-gold/20 transition-colors">
                   <Icon size={20} className="text-gold" />
                 </div>
-                <h3 className="font-bold text-foreground dark:text-white mb-2">{titre}</h3>
-                <p className="text-sm text-[#475569] dark:text-white/60 leading-relaxed">{desc}</p>
+                <h3 className="font-bold text-foreground mb-2">{titre}</h3>
+                <p className="text-sm text-[#475569] leading-relaxed">{desc}</p>
               </div>
             ))}
           </div>
@@ -124,7 +124,7 @@ export default function ParrainagePage() {
 
         {/* Cartes récompenses */}
         <section>
-          <h2 className="text-2xl font-bold text-foreground dark:text-white mb-6">Vos récompenses</h2>
+          <h2 className="text-2xl font-bold text-foreground mb-6">Vos récompenses</h2>
           <div className="grid sm:grid-cols-2 gap-6">
             {/* Parrain */}
             <div className="rounded-2xl border border-gold/30 bg-gradient-to-br from-navy to-[#0F172A] p-8 text-white">
@@ -151,20 +151,20 @@ export default function ParrainagePage() {
             </div>
 
             {/* Filleul */}
-            <div className="rounded-2xl border border-electric/20 bg-white dark:bg-[#0D1626] p-8">
+            <div className="rounded-2xl border border-electric/20 bg-white p-8">
               <div className="text-xs font-semibold text-electric uppercase tracking-widest mb-4">Pour votre filleul</div>
               <div className="flex items-baseline gap-2 mb-1">
-                <span className="font-display font-bold text-5xl text-navy dark:text-[#B45309]">−10%</span>
-                <span className="text-[#475569] dark:text-white/60 text-lg">premier projet</span>
+                <span className="font-display font-bold text-5xl text-navy">−10%</span>
+                <span className="text-[#475569] text-lg">premier projet</span>
               </div>
-              <div className="text-[#475569] dark:text-white/60 text-sm mb-6">Sur tous nos services, HT, à la signature</div>
+              <div className="text-[#475569] text-sm mb-6">Sur tous nos services, HT, à la signature</div>
               <ul className="space-y-2 text-sm">
                 {[
                   'Valable sur site vitrine, e-commerce, gestion…',
                   'Mention du parrain obligatoire au devis',
                   'Non cumulable avec d\'autres offres',
                 ].map(item => (
-                  <li key={item} className="flex items-start gap-2 text-foreground/70 dark:text-white/60">
+                  <li key={item} className="flex items-start gap-2 text-foreground/70">
                     <Check size={14} className="text-green-500 flex-shrink-0 mt-0.5" />
                     {item}
                   </li>
@@ -176,18 +176,18 @@ export default function ParrainagePage() {
 
         {/* Formulaire */}
         <section id="formulaire">
-          <h2 className="text-2xl font-bold text-foreground dark:text-white mb-2">Soumettre un parrainage</h2>
-          <p className="text-[#475569] dark:text-white/60 text-sm mb-8">
+          <h2 className="text-2xl font-bold text-foreground mb-2">Soumettre un parrainage</h2>
+          <p className="text-[#475569] text-sm mb-8">
             Remplissez vos coordonnées et celles de votre filleul. Nous lui enverrons une confirmation avec le code de réduction.
           </p>
-          <div className="bg-white dark:bg-[#0D1626] rounded-2xl border border-navy/10 dark:border-white/10 p-8">
+          <div className="bg-white rounded-2xl border border-navy/10 p-8">
             {status === 'success' ? (
               <div className="text-center py-8">
                 <div className="w-16 h-16 rounded-full bg-green-500/10 flex items-center justify-center mx-auto mb-4">
                   <Check size={32} className="text-green-500" />
                 </div>
-                <h3 className="text-xl font-bold text-foreground dark:text-white mb-2">Parrainage enregistré !</h3>
-                <p className="text-[#475569] dark:text-white/60 mb-6">
+                <h3 className="text-xl font-bold text-foreground mb-2">Parrainage enregistré !</h3>
+                <p className="text-[#475569] mb-6">
                   Nous revenons vers vous et votre filleul sous 72h pour confirmer le parrainage.
                 </p>
                 <Link href="/services" className="inline-flex items-center gap-2 text-electric font-medium text-sm">
@@ -198,7 +198,7 @@ export default function ParrainagePage() {
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid sm:grid-cols-2 gap-6">
                   <div>
-                    <h3 className="font-semibold text-foreground dark:text-white mb-4 text-xs uppercase tracking-wide">Vos informations (parrain)</h3>
+                    <h3 className="font-semibold text-foreground mb-4 text-xs uppercase tracking-wide">Vos informations (parrain)</h3>
                     <div className="space-y-3">
                       <input
                         type="text"
@@ -206,7 +206,7 @@ export default function ParrainagePage() {
                         placeholder="Votre nom"
                         value={form.parrain_nom}
                         onChange={e => setForm(f => ({ ...f, parrain_nom: e.target.value }))}
-                        className="w-full px-4 py-3 rounded-xl border border-navy/20 dark:border-white/10 bg-background dark:bg-white/5 text-foreground dark:text-white placeholder-foreground/30 dark:placeholder-white/30 focus:outline-none focus:border-electric transition-colors text-sm"
+                        className="w-full px-4 py-3 rounded-xl border border-navy/20 bg-background text-foreground placeholder-foreground/30 focus:outline-none focus:border-electric transition-colors text-sm"
                       />
                       <input
                         type="email"
@@ -214,12 +214,12 @@ export default function ParrainagePage() {
                         placeholder="Votre email"
                         value={form.parrain_email}
                         onChange={e => setForm(f => ({ ...f, parrain_email: e.target.value }))}
-                        className="w-full px-4 py-3 rounded-xl border border-navy/20 dark:border-white/10 bg-background dark:bg-white/5 text-foreground dark:text-white placeholder-foreground/30 dark:placeholder-white/30 focus:outline-none focus:border-electric transition-colors text-sm"
+                        className="w-full px-4 py-3 rounded-xl border border-navy/20 bg-background text-foreground placeholder-foreground/30 focus:outline-none focus:border-electric transition-colors text-sm"
                       />
                     </div>
                   </div>
                   <div>
-                    <h3 className="font-semibold text-foreground dark:text-white mb-4 text-xs uppercase tracking-wide">Votre filleul</h3>
+                    <h3 className="font-semibold text-foreground mb-4 text-xs uppercase tracking-wide">Votre filleul</h3>
                     <div className="space-y-3">
                       <input
                         type="text"
@@ -227,7 +227,7 @@ export default function ParrainagePage() {
                         placeholder="Son nom"
                         value={form.filleul_nom}
                         onChange={e => setForm(f => ({ ...f, filleul_nom: e.target.value }))}
-                        className="w-full px-4 py-3 rounded-xl border border-navy/20 dark:border-white/10 bg-background dark:bg-white/5 text-foreground dark:text-white placeholder-foreground/30 dark:placeholder-white/30 focus:outline-none focus:border-electric transition-colors text-sm"
+                        className="w-full px-4 py-3 rounded-xl border border-navy/20 bg-background text-foreground placeholder-foreground/30 focus:outline-none focus:border-electric transition-colors text-sm"
                       />
                       <input
                         type="email"
@@ -235,7 +235,7 @@ export default function ParrainagePage() {
                         placeholder="Son email"
                         value={form.filleul_email}
                         onChange={e => setForm(f => ({ ...f, filleul_email: e.target.value }))}
-                        className="w-full px-4 py-3 rounded-xl border border-navy/20 dark:border-white/10 bg-background dark:bg-white/5 text-foreground dark:text-white placeholder-foreground/30 dark:placeholder-white/30 focus:outline-none focus:border-electric transition-colors text-sm"
+                        className="w-full px-4 py-3 rounded-xl border border-navy/20 bg-background text-foreground placeholder-foreground/30 focus:outline-none focus:border-electric transition-colors text-sm"
                       />
                     </div>
                   </div>
@@ -245,7 +245,7 @@ export default function ParrainagePage() {
                   placeholder="Message optionnel (contexte du projet de votre filleul…)"
                   value={form.message}
                   onChange={e => setForm(f => ({ ...f, message: e.target.value }))}
-                  className="w-full px-4 py-3 rounded-xl border border-navy/20 dark:border-white/10 bg-background dark:bg-white/5 text-foreground dark:text-white placeholder-foreground/30 dark:placeholder-white/30 focus:outline-none focus:border-electric transition-colors text-sm resize-none"
+                  className="w-full px-4 py-3 rounded-xl border border-navy/20 bg-background text-foreground placeholder-foreground/30 focus:outline-none focus:border-electric transition-colors text-sm resize-none"
                 />
                 {status === 'error' && (
                   <p className="text-red-500 text-sm">Une erreur est survenue. Réessayez ou contactez-nous à contact@stackup-agency.fr.</p>
@@ -264,21 +264,21 @@ export default function ParrainagePage() {
 
         {/* FAQ */}
         <section>
-          <h2 className="text-2xl font-bold text-foreground dark:text-white mb-6">Questions fréquentes</h2>
+          <h2 className="text-2xl font-bold text-foreground mb-6">Questions fréquentes</h2>
           <div className="space-y-3">
             {faqSchema.mainEntity.map(item => (
-              <details key={item.name} className="group rounded-xl border border-navy/20 dark:border-white/10 overflow-hidden">
-                <summary className="flex items-center justify-between p-4 cursor-pointer font-medium text-foreground dark:text-white list-none">
+              <details key={item.name} className="group rounded-xl border border-navy/20 overflow-hidden">
+                <summary className="flex items-center justify-between p-4 cursor-pointer font-medium text-foreground list-none">
                   {item.name}
-                  <ChevronRight size={16} className="text-[#64748B] dark:text-white/65 group-open:rotate-90 transition-transform flex-shrink-0" />
+                  <ChevronRight size={16} className="text-[#64748B] group-open:rotate-90 transition-transform flex-shrink-0" />
                 </summary>
-                <div className="px-4 pb-4 text-foreground/70 dark:text-white/70 text-sm leading-relaxed">
+                <div className="px-4 pb-4 text-foreground/70 text-sm leading-relaxed">
                   {item.acceptedAnswer.text}
                 </div>
               </details>
             ))}
           </div>
-          <div className="mt-5 flex items-center gap-2 text-sm text-foreground/70 dark:text-white/60">
+          <div className="mt-5 flex items-center gap-2 text-sm text-foreground/70">
             <FileText size={14} />
             <Link href="/cgv" className="underline hover:text-electric transition-colors">
               Conditions complètes — CGV Stackup Agency, art. 23
@@ -287,18 +287,18 @@ export default function ParrainagePage() {
         </section>
 
         {/* CTA vers tarifs */}
-        <section className="rounded-2xl border border-gold/20 bg-gradient-to-br from-navy/5 to-gold/5 dark:from-navy/30 dark:to-gold/10 p-8 text-center">
-          <h3 className="font-bold text-foreground dark:text-white text-xl mb-2">
+        <section className="rounded-2xl border border-gold/20 bg-gradient-to-br from-navy/5 to-gold/5 p-8 text-center">
+          <h3 className="font-bold text-foreground text-xl mb-2">
             Pas encore client ? Découvrez nos offres
           </h3>
-          <p className="text-[#475569] dark:text-white/60 text-sm mb-6">
+          <p className="text-[#475569] text-sm mb-6">
             Demandez votre devis gratuit sous 72h. Premier site vitrine à partir de 449€.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link href="/tarifs" className="px-6 py-3 bg-navy hover:bg-electric text-white font-semibold rounded-xl transition-colors text-sm">
               Voir les tarifs
             </Link>
-            <Link href="/contact" className="px-6 py-3 border border-navy/20 dark:border-white/20 text-foreground dark:text-white hover:bg-navy/5 dark:hover:bg-white/5 font-semibold rounded-xl transition-colors text-sm">
+            <Link href="/contact" className="px-6 py-3 border border-navy/20 text-foreground hover:bg-navy/5 font-semibold rounded-xl transition-colors text-sm">
               Demander un devis
             </Link>
           </div>

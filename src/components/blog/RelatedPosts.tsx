@@ -24,8 +24,8 @@ export default function RelatedPosts({ currentSlug, currentCategory, currentTag,
   if (related.length === 0) return null
 
   return (
-    <div className="mt-12 pt-8 border-t border-navy/10 dark:border-white/10">
-      <h3 className="text-lg font-bold text-foreground dark:text-white mb-6">Articles qui pourraient vous intéresser</h3>
+    <div className="mt-12 pt-8 border-t border-navy/10">
+      <h3 className="text-lg font-bold text-foreground mb-6">Articles qui pourraient vous intéresser</h3>
       <div className="grid sm:grid-cols-3 gap-4">
         {related.map(post => (
           <Link
@@ -37,7 +37,7 @@ export default function RelatedPosts({ currentSlug, currentCategory, currentTag,
               <span className="px-2 py-0.5 rounded-full bg-white/10 text-white/60">{post.tag}</span>
               <span className="flex items-center gap-1"><Clock size={10} /> {post.readTime} min</span>
             </div>
-            <h4 className="text-sm font-semibold text-foreground dark:text-white mb-2 group-hover:text-electric transition-colors line-clamp-2">
+            <h4 className="text-sm font-semibold text-foreground mb-2 group-hover:text-electric transition-colors line-clamp-2">
               {post.title}
             </h4>
             <span className="inline-flex items-center gap-1 text-electric text-xs">

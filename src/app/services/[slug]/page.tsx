@@ -362,7 +362,7 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
   }
 
   return (
-    <div className="min-h-screen bg-[#F8FAFC] dark:bg-[#0A0F1C]">
+    <div className="min-h-screen bg-[#F8FAFC]">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       {faqSchema && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
@@ -391,11 +391,11 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
       </section>
 
       {/* SECTION 1 — Description (fond blanc) */}
-      <div className="bg-white dark:bg-[#0A0F1C]">
+      <div className="bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 py-16">
-          <div className="prose prose-lg dark:prose-invert max-w-none">
+          <div className="prose prose-lg max-w-none">
             {service.description.split('\n\n').map((para, i) => (
-              <p key={i} className="text-gray-700 dark:text-white/70 leading-relaxed mb-4">{para}</p>
+              <p key={i} className="text-gray-700 leading-relaxed mb-4">{para}</p>
             ))}
           </div>
         </div>
@@ -405,28 +405,28 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
       <div className="section-pale">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 py-16">
           <div className="grid md:grid-cols-2 gap-8">
-            <section className="bg-white dark:bg-navy/20 rounded-2xl p-8 border border-electric/10 dark:border-electric/20 card-accent card-accent-electric">
-              <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-6">Ce qui est inclus</h2>
+            <section className="bg-white rounded-2xl p-8 border border-electric/10 card-accent card-accent-electric">
+              <h2 className="text-xl font-bold text-gray-900 mb-6">Ce qui est inclus</h2>
               <ul className="space-y-3">
                 {service.features.map((f, i) => (
                   <li key={i} className="flex items-start gap-3">
                     <div className="mt-0.5 w-5 h-5 rounded-full bg-electric/10 flex items-center justify-center flex-shrink-0">
                       <Check size={12} className="text-electric" />
                     </div>
-                    <span className="text-gray-700 dark:text-white/70 text-sm">{f}</span>
+                    <span className="text-gray-700 text-sm">{f}</span>
                   </li>
                 ))}
               </ul>
             </section>
-            <section className="bg-white dark:bg-gold/5 rounded-2xl p-8 border border-gold/15 dark:border-gold/20 card-accent card-accent-gold">
-              <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-6">Notre engagement</h2>
+            <section className="bg-white rounded-2xl p-8 border border-gold/15 card-accent card-accent-gold">
+              <h2 className="text-xl font-bold text-gray-900 mb-6">Notre engagement</h2>
               <ul className="space-y-3">
                 {service.included.map((item, i) => (
                   <li key={i} className="flex items-start gap-3">
                     <div className="mt-0.5 w-5 h-5 rounded-full bg-gold/10 flex items-center justify-center flex-shrink-0">
-                      <Check size={12} className="text-amber-600 dark:text-gold" />
+                      <Check size={12} className="text-amber-600" />
                     </div>
-                    <span className="text-gray-700 dark:text-white/70 text-sm">{item}</span>
+                    <span className="text-gray-700 text-sm">{item}</span>
                   </li>
                 ))}
               </ul>
@@ -436,9 +436,9 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
       </div>
 
       {/* SECTION 3 — Processus (fond blanc) */}
-      <div className="bg-white dark:bg-[#0A0F1C]">
+      <div className="bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 py-16">
-          <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-8">Notre processus</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-8">Notre processus</h2>
           <div className="space-y-4">
             {service.process.map((step, i) => (
               <div key={i} className="flex gap-6">
@@ -449,8 +449,8 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
                   {i < service.process.length - 1 && <div className="w-0.5 h-full bg-electric/20 mt-2" />}
                 </div>
                 <div className="pb-6">
-                  <h3 className="font-semibold text-gray-900 dark:text-white mb-1">{step.step}</h3>
-                  <p className="text-ink/70 dark:text-white/60 text-sm">{step.desc}</p>
+                  <h3 className="font-semibold text-gray-900 mb-1">{step.step}</h3>
+                  <p className="text-ink/70 text-sm">{step.desc}</p>
                 </div>
               </div>
             ))}
@@ -461,12 +461,12 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
       {/* SECTION 4 — FAQ (fond bleuté pâle) */}
       <div className="section-pale">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 py-16">
-          <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-8">Questions fréquentes</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-8">Questions fréquentes</h2>
           <div className="space-y-4">
             {service.faq.map((item, i) => (
-              <div key={i} className="bg-white dark:bg-navy/20 rounded-2xl p-6 border border-electric/10 dark:border-white/10">
-                <h3 className="font-semibold text-gray-900 dark:text-white mb-2">{item.q}</h3>
-                <p className="text-ink/70 dark:text-white/60 text-sm">{item.a}</p>
+              <div key={i} className="bg-white rounded-2xl p-6 border border-electric/10">
+                <h3 className="font-semibold text-gray-900 mb-2">{item.q}</h3>
+                <p className="text-ink/70 text-sm">{item.a}</p>
               </div>
             ))}
           </div>
@@ -474,7 +474,7 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
       </div>
 
       {/* SECTION 5 — CTA (deep navy gradient) + liens */}
-      <div className="bg-[#0B1A2E] dark:bg-[#060D1A]">
+      <div className="bg-[#0B1A2E]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 py-16 space-y-12">
           <section className="bg-gradient-to-br from-navy to-electric rounded-2xl p-8 text-center">
             <h2 className="text-2xl font-bold text-white mb-3">{service.cta}</h2>

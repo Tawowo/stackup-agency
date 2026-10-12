@@ -143,17 +143,17 @@ export default function MetierPage({ params }: { params: { metier: string } }) {
 
         {/* Problèmes sans site */}
         <section>
-          <h2 className="text-2xl font-bold text-foreground dark:text-white mb-2">
+          <h2 className="text-2xl font-bold text-foreground mb-2">
             Sans site internet professionnel, vous perdez des clients chaque jour
           </h2>
-          <p className="text-[#475569] dark:text-white/60 mb-6">
+          <p className="text-[#475569] mb-6">
             En 2026, 76% des consommateurs cherchent un prestataire en ligne avant de prendre contact. Voici ce que vous laissez à vos concurrents :
           </p>
           <div className="space-y-3">
             {PROBLEMES_SANS_SITE(m.metier).map((pb, i) => (
               <div key={i} className="reveal-item flex items-start gap-3 p-4 rounded-xl bg-red-950/20 border border-red-900/30">
                 <AlertCircle size={18} className="text-red-400 mt-0.5 flex-shrink-0" />
-                <span className="text-foreground/80 dark:text-white/80 text-sm">{pb}</span>
+                <span className="text-foreground/80 text-sm">{pb}</span>
               </div>
             ))}
           </div>
@@ -161,18 +161,18 @@ export default function MetierPage({ params }: { params: { metier: string } }) {
 
         {/* Offre recommandée */}
         <section>
-          <h2 className="text-2xl font-bold text-foreground dark:text-white mb-6">
+          <h2 className="text-2xl font-bold text-foreground mb-6">
             Notre recommandation pour un {m.metier}
           </h2>
           <div className="p-6 rounded-2xl border border-electric/30 bg-blue-500/5">
             <div className="flex items-start justify-between mb-3">
               <div>
-                <h3 className="text-xl font-bold text-foreground dark:text-white">{service.label}</h3>
+                <h3 className="text-xl font-bold text-foreground">{service.label}</h3>
                 <p className="text-electric text-sm mt-0.5">Solution recommandée pour les {m.metier}s</p>
               </div>
-              <span className="text-2xl font-bold text-navy dark:text-[#B45309]">{service.prix}€</span>
+              <span className="text-2xl font-bold text-navy">{service.prix}€</span>
             </div>
-            <p className="text-foreground/70 dark:text-white/70 mb-5">
+            <p className="text-foreground/70 mb-5">
               Solution adaptée à la grande majorité des {m.metier}s. Inclut SEO local optimisé pour votre ville,
               formulaire de contact, design responsive mobile et hébergement haute disponibilité 12 mois inclus.
             </p>
@@ -185,7 +185,7 @@ export default function MetierPage({ params }: { params: { metier: string } }) {
                 '✓ Compatible mobile & tablette',
                 '✓ Formulaire de contact intégré',
               ].map(f => (
-                <span key={f} className="text-foreground/70 dark:text-white/60">{f}</span>
+                <span key={f} className="text-foreground/70">{f}</span>
               ))}
             </div>
           </div>
@@ -193,10 +193,10 @@ export default function MetierPage({ params }: { params: { metier: string } }) {
 
         {/* Ce qu'inclut votre site — fonctionnalités métier-spécifiques */}
         <section>
-          <h2 className="text-2xl font-bold text-foreground dark:text-white mb-2">
+          <h2 className="text-2xl font-bold text-foreground mb-2">
             Ce qu'inclut votre site de {m.metier}
           </h2>
-          <p className="text-[#475569] dark:text-white/60 mb-6">
+          <p className="text-[#475569] mb-6">
             En plus des fonctionnalités communes à tous nos sites (SEO, mobile, hébergement), votre site inclut des éléments spécifiques à votre métier :
           </p>
           <div className="grid sm:grid-cols-2 gap-3">
@@ -209,7 +209,7 @@ export default function MetierPage({ params }: { params: { metier: string } }) {
             ].map(item => (
               <div key={item} className="reveal-item flex items-start gap-3 p-3 rounded-xl bg-green-950/20 border border-green-900/20">
                 <CheckCircle size={16} className="text-success mt-0.5 flex-shrink-0" />
-                <span className="text-foreground/80 dark:text-white/80 text-sm">{item}</span>
+                <span className="text-foreground/80 text-sm">{item}</span>
               </div>
             ))}
           </div>
@@ -217,7 +217,7 @@ export default function MetierPage({ params }: { params: { metier: string } }) {
 
         {/* Pourquoi Stackup */}
         <section>
-          <h2 className="text-2xl font-bold text-foreground dark:text-white mb-6">
+          <h2 className="text-2xl font-bold text-foreground mb-6">
             Pourquoi choisir Stackup Agency pour votre site de {m.metier} ?
           </h2>
           <div className="grid sm:grid-cols-2 gap-4">
@@ -227,8 +227,8 @@ export default function MetierPage({ params }: { params: { metier: string } }) {
                   <Icon size={20} className="text-electric" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-foreground dark:text-white mb-1">{titre}</h3>
-                  <p className="text-[#475569] dark:text-white/60 text-sm">{desc}</p>
+                  <h3 className="font-semibold text-foreground mb-1">{titre}</h3>
+                  <p className="text-[#475569] text-sm">{desc}</p>
                 </div>
               </div>
             ))}
@@ -284,7 +284,7 @@ export default function MetierPage({ params }: { params: { metier: string } }) {
 
         {/* Processus en 4 étapes */}
         <section>
-          <h2 className="text-2xl font-bold text-foreground dark:text-white mb-6">
+          <h2 className="text-2xl font-bold text-foreground mb-6">
             Comment se passe la création de votre site ?
           </h2>
           <div className="space-y-4">
@@ -297,8 +297,8 @@ export default function MetierPage({ params }: { params: { metier: string } }) {
               <div key={step.n} className="flex items-start gap-4 p-4 rounded-xl border border-white/10">
                 <span className="text-2xl font-bold text-electric/40 font-mono flex-shrink-0 w-10">{step.n}</span>
                 <div>
-                  <h3 className="font-semibold text-foreground dark:text-white mb-1">{step.titre}</h3>
-                  <p className="text-[#475569] dark:text-white/60 text-sm">{step.desc}</p>
+                  <h3 className="font-semibold text-foreground mb-1">{step.titre}</h3>
+                  <p className="text-[#475569] text-sm">{step.desc}</p>
                 </div>
               </div>
             ))}
@@ -307,17 +307,17 @@ export default function MetierPage({ params }: { params: { metier: string } }) {
 
         {/* FAQ */}
         <section>
-          <h2 className="text-2xl font-bold text-foreground dark:text-white mb-6">
+          <h2 className="text-2xl font-bold text-foreground mb-6">
             Questions fréquentes — site internet pour {m.metier}
           </h2>
           <div className="space-y-3">
             {faqAll.map(faq => (
-              <details key={faq.q} className="group rounded-xl border border-navy/20 dark:border-white/10 overflow-hidden">
-                <summary className="flex items-center justify-between p-4 cursor-pointer font-medium text-foreground dark:text-white list-none">
+              <details key={faq.q} className="group rounded-xl border border-navy/20 overflow-hidden">
+                <summary className="flex items-center justify-between p-4 cursor-pointer font-medium text-foreground list-none">
                   {faq.q}
                   <ChevronRight size={16} className="text-white/65 group-open:rotate-90 transition-transform flex-shrink-0 ml-3" />
                 </summary>
-                <div className="px-4 pb-4 text-foreground/70 dark:text-white/70 text-sm leading-relaxed">{faq.a}</div>
+                <div className="px-4 pb-4 text-foreground/70 text-sm leading-relaxed">{faq.a}</div>
               </details>
             ))}
           </div>
@@ -326,12 +326,12 @@ export default function MetierPage({ params }: { params: { metier: string } }) {
         {/* Autres métiers de la même catégorie */}
         {metiersMemeCategorie.length > 0 && (
           <section>
-            <h2 className="text-xl font-bold text-foreground dark:text-white mb-4">
+            <h2 className="text-xl font-bold text-foreground mb-4">
               Autres métiers dans {categorieLbl}
             </h2>
             <div className="flex flex-wrap gap-3">
               {metiersMemeCategorie.map(mi => (
-                <Link key={mi.slug} href={`/creation-site-internet/${mi.slug}`} className="px-4 py-2 rounded-xl border border-white/10 hover:border-blue-400/40 text-sm text-foreground/70 dark:text-white/70 hover:text-electric transition-colors">
+                <Link key={mi.slug} href={`/creation-site-internet/${mi.slug}`} className="px-4 py-2 rounded-xl border border-white/10 hover:border-blue-400/40 text-sm text-foreground/70 hover:text-electric transition-colors">
                   Site internet {mi.metier}
                 </Link>
               ))}
@@ -341,10 +341,10 @@ export default function MetierPage({ params }: { params: { metier: string } }) {
 
         {/* Mots-clés associés */}
         <section>
-          <h3 className="text-lg font-semibold text-foreground dark:text-white mb-3">Recherches associées</h3>
+          <h3 className="text-lg font-semibold text-foreground mb-3">Recherches associées</h3>
           <div className="flex flex-wrap gap-2">
             {m.variantes.map(v => (
-              <span key={v} className="px-3 py-1.5 rounded-full text-xs border border-white/10 text-[#475569] dark:text-white/60">
+              <span key={v} className="px-3 py-1.5 rounded-full text-xs border border-white/10 text-[#475569]">
                 {v}
               </span>
             ))}

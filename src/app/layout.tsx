@@ -177,7 +177,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             synchrone dans <head>, il n'y a aucun scintillement. */}
         <script
           dangerouslySetInnerHTML={{
-            __html: "document.documentElement.classList.add('su-js')",
+            __html:
+              "document.documentElement.classList.add('su-js');" +
+              // Masque le bandeau cookies avant la première peinture pour qui
+              // a déjà répondu : sans cela, le bandeau rendu côté serveur
+              // clignoterait à chaque page.
+              "try{if(localStorage.getItem('cookie-consent'))document.documentElement.classList.add('su-consenti')}catch(e){}",
           }}
         />
         <script

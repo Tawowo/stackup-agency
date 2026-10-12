@@ -123,7 +123,7 @@ export default function OffreRentreePage() {
 
         {/* 3 étapes */}
         <section>
-          <h2 className="text-2xl font-bold text-foreground dark:text-white mb-8">Comment ça marche ?</h2>
+          <h2 className="text-2xl font-bold text-foreground mb-8">Comment ça marche ?</h2>
           <div className="grid sm:grid-cols-3 gap-6">
             {[
               {
@@ -142,12 +142,12 @@ export default function OffreRentreePage() {
                 desc: `Après validation, le développement démarre. Site vitrine livré en ${SITE.delais.vitrine}, multi-pages en ${SITE.delais.multipages}.`,
               },
             ].map(step => (
-              <div key={step.num} className="rounded-xl border border-navy/20 dark:border-white/10 p-6">
+              <div key={step.num} className="rounded-xl border border-navy/20 p-6">
                 <div className="w-10 h-10 rounded-full bg-gold/20 text-gold font-bold text-lg flex items-center justify-center mb-4">
                   {step.num}
                 </div>
-                <h3 className="font-semibold text-foreground dark:text-white mb-2">{step.title}</h3>
-                <p className="text-sm text-[#475569] dark:text-white/60">{step.desc}</p>
+                <h3 className="font-semibold text-foreground mb-2">{step.title}</h3>
+                <p className="text-sm text-[#475569]">{step.desc}</p>
               </div>
             ))}
           </div>
@@ -155,7 +155,7 @@ export default function OffreRentreePage() {
 
         {/* Ce qui est inclus */}
         <section>
-          <h2 className="text-2xl font-bold text-foreground dark:text-white mb-6">Ce qui est inclus dans l'offre</h2>
+          <h2 className="text-2xl font-bold text-foreground mb-6">Ce qui est inclus dans l'offre</h2>
           <div className="grid sm:grid-cols-2 gap-3">
             {[
               `Site vitrine à ${SITE.pricing.vitrine}€ tout inclus`,
@@ -167,7 +167,7 @@ export default function OffreRentreePage() {
               'SSL (HTTPS) inclus',
               'Formation à la prise en main',
             ].map(item => (
-              <div key={item} className="flex items-center gap-3 text-sm text-foreground/80 dark:text-white/70">
+              <div key={item} className="flex items-center gap-3 text-sm text-foreground/80">
                 <CheckCircle size={16} className="text-success flex-shrink-0" />
                 {item}
               </div>
@@ -176,9 +176,9 @@ export default function OffreRentreePage() {
         </section>
 
         {/* Conditions */}
-        <section className="rounded-xl border border-navy/20 dark:border-white/10 p-6 bg-navy/5 dark:bg-white/5">
-          <h2 className="text-lg font-bold text-foreground dark:text-white mb-3">Conditions de l'offre</h2>
-          <ul className="text-sm text-foreground/70 dark:text-white/60 space-y-1.5 list-disc list-inside">
+        <section className="rounded-xl border border-navy/20 p-6 bg-navy/5">
+          <h2 className="text-lg font-bold text-foreground mb-3">Conditions de l'offre</h2>
+          <ul className="text-sm text-foreground/70 space-y-1.5 list-disc list-inside">
             <li>Valable pour toute commande de site vitrine ou multi-pages signée avant le 15 septembre 2026 à 23h59 (heure de Paris).</li>
             <li>Non cumulable avec d'autres réductions.</li>
             <li>La maquette est livrée après versement de l'acompte de 30 % et validation du brief.</li>
@@ -189,15 +189,15 @@ export default function OffreRentreePage() {
 
         {/* FAQ */}
         <section>
-          <h2 className="text-2xl font-bold text-foreground dark:text-white mb-6">Questions fréquentes</h2>
+          <h2 className="text-2xl font-bold text-foreground mb-6">Questions fréquentes</h2>
           <div className="space-y-3">
             {FAQ_ITEMS.map(faq => (
-              <details key={faq.q} className="group rounded-xl border border-navy/20 dark:border-white/10 overflow-hidden">
-                <summary className="flex items-center justify-between p-4 cursor-pointer font-medium text-foreground dark:text-white list-none">
+              <details key={faq.q} className="group rounded-xl border border-navy/20 overflow-hidden">
+                <summary className="flex items-center justify-between p-4 cursor-pointer font-medium text-foreground list-none">
                   {faq.q}
                   <ChevronRight size={16} className="text-white/65 group-open:rotate-90 transition-transform flex-shrink-0" />
                 </summary>
-                <div className="px-4 pb-4 text-foreground/70 dark:text-white/70 text-sm leading-relaxed">{faq.a}</div>
+                <div className="px-4 pb-4 text-foreground/70 text-sm leading-relaxed">{faq.a}</div>
               </details>
             ))}
           </div>
@@ -216,7 +216,7 @@ export default function OffreRentreePage() {
         </div>
 
         {/* Internal links */}
-        <div className="flex flex-wrap gap-4 text-sm pt-4 border-t border-navy/10 dark:border-white/10">
+        <div className="flex flex-wrap gap-4 text-sm pt-4 border-t border-navy/10">
           <Link href="/tarifs" className="text-electric hover:underline">Voir les tarifs →</Link>
           <Link href="/services" className="text-electric hover:underline">Nos services →</Link>
           <Link href="/contact" className="text-electric hover:underline">Nous contacter →</Link>

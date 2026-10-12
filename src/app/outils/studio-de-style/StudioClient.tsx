@@ -734,7 +734,7 @@ function LivePreview({ config, abConfig, fullscreen, onToggleFullscreen, templat
   const fontB = abConfig ? (FONTS.find(f => f.id === abConfig.font) ?? FONTS[1]) : null
 
   const btnCls = (m: PreviewMode) =>
-    `flex items-center gap-1 px-2 py-1 rounded-lg text-xs font-medium transition-colors ${mode === m ? 'bg-electric-ink text-white' : 'text-gray-500 dark:text-white/65 hover:bg-gray-100 dark:hover:bg-white/10'}`
+    `flex items-center gap-1 px-2 py-1 rounded-lg text-xs font-medium transition-colors ${mode === m ? 'bg-electric-ink text-white' : 'text-gray-500 hover:bg-gray-100'}`
 
   return (
     <div>
@@ -742,7 +742,7 @@ function LivePreview({ config, abConfig, fullscreen, onToggleFullscreen, templat
       <div className="flex items-center gap-1.5 mb-3 overflow-x-auto pb-1">
         {TEMPLATES.map(t => (
           <button key={t.id} onClick={() => setTemplateId(t.id)}
-            className={`flex items-center gap-1 px-2.5 py-1.5 rounded-lg text-[11px] font-medium whitespace-nowrap transition-colors ${templateId === t.id ? 'bg-electric-ink text-white' : 'bg-gray-100 dark:bg-white/10 text-gray-600 dark:text-white/65 hover:bg-gray-200 dark:hover:bg-white/15'}`}>
+            className={`flex items-center gap-1 px-2.5 py-1.5 rounded-lg text-[11px] font-medium whitespace-nowrap transition-colors ${templateId === t.id ? 'bg-electric-ink text-white' : 'bg-gray-100 text-gray-600 hover:bg-gray-200'}`}>
             <t.Icon size={11} /> {t.label}
           </button>
         ))}
@@ -750,7 +750,7 @@ function LivePreview({ config, abConfig, fullscreen, onToggleFullscreen, templat
 
       {/* Mode tabs */}
       <div className="flex items-center justify-between mb-3 flex-wrap gap-2">
-        <div className="flex items-center gap-1 p-1 bg-gray-100 dark:bg-white/5 rounded-xl w-fit">
+        <div className="flex items-center gap-1 p-1 bg-gray-100 rounded-xl w-fit">
           <button className={btnCls('desktop')} onClick={() => setMode('desktop')}>
             <Monitor size={11} /> Bureau
           </button>
@@ -768,7 +768,7 @@ function LivePreview({ config, abConfig, fullscreen, onToggleFullscreen, templat
         </div>
         {onToggleFullscreen && (
           <button onClick={onToggleFullscreen} title="Plein écran immersif (touche F)"
-            className="flex items-center gap-1 px-2 py-1 rounded-lg text-xs font-medium text-gray-500 dark:text-white/65 hover:bg-gray-100 dark:hover:bg-white/10 transition-colors">
+            className="flex items-center gap-1 px-2 py-1 rounded-lg text-xs font-medium text-gray-500 hover:bg-gray-100 transition-colors">
             {fullscreen ? <X size={13} /> : <Maximize2 size={13} />}
           </button>
         )}
@@ -780,7 +780,7 @@ function LivePreview({ config, abConfig, fullscreen, onToggleFullscreen, templat
       {mode === 'ab' && abConfig && palB && fontB && lookB && (
         <div className="grid grid-cols-2 gap-3">
           <div>
-            <div className="text-[10px] font-bold text-center mb-1 text-gray-500 dark:text-white/65 uppercase tracking-widest">Version A</div>
+            <div className="text-[10px] font-bold text-center mb-1 text-gray-500 uppercase tracking-widest">Version A</div>
             <DesktopMockup spec={spec} pal={pal} font={font} look={look} tablet />
           </div>
           <div>
@@ -795,7 +795,7 @@ function LivePreview({ config, abConfig, fullscreen, onToggleFullscreen, templat
         {[pal.dom, pal.sec, pal.acc, pal.bg, pal.txt].map((c, i) => (
           <div key={i} title={c} className="studio-color-swatch" style={{ width: 16, height: 16, background: c, borderRadius: 4, border: `1px solid ${pal.dom}33`, flexShrink: 0 }} />
         ))}
-        <span className="text-[9px] text-gray-500 dark:text-white/65 ml-1">{pal.name} · {font.title}</span>
+        <span className="text-[9px] text-gray-500 ml-1">{pal.name} · {font.title}</span>
       </div>
     </div>
   )
@@ -844,10 +844,10 @@ function FontCard({ font, selected, onSelect }: { font: FontDuo; selected: boole
 
   return (
     <button ref={ref} onClick={onSelect}
-      className={`text-left p-3 rounded-xl border-2 transition-all ${selected ? 'border-electric-ink bg-blue-50 dark:bg-white/5' : 'border-transparent bg-white dark:bg-gray-900/60 hover:border-gray-200 dark:hover:border-white/20'}`}>
+      className={`text-left p-3 rounded-xl border-2 transition-all ${selected ? 'border-electric-ink bg-blue-50' : 'border-transparent bg-white hover:border-gray-200'}`}>
       <div style={{ fontFamily: font.titleStack, fontSize: 17, fontWeight: 700, lineHeight: 1.2, marginBottom: 2 }}>Titre exemple</div>
       <div style={{ fontFamily: font.bodyStack, fontSize: 11, lineHeight: 1.4, opacity: 0.65, marginBottom: 6 }}>Corps du texte en {font.body}</div>
-      <div className="text-[10px] text-gray-500 dark:text-white/65">{font.name}</div>
+      <div className="text-[10px] text-gray-500">{font.name}</div>
     </button>
   )
 }
@@ -857,22 +857,22 @@ function FontCard({ font, selected, onSelect }: { font: FontDuo; selected: boole
 function Section1Arch({ config, setConfig }: { config: Config; setConfig: (c: Config) => void }) {
   return (
     <div>
-      <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-1">Architecture</h2>
-      <p className="text-sm text-gray-500 dark:text-white/65 mb-6">Quelle est la structure principale de votre site ?</p>
+      <h2 className="text-xl font-bold text-gray-900 mb-1">Architecture</h2>
+      <p className="text-sm text-gray-500 mb-6">Quelle est la structure principale de votre site ?</p>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
         {ARCHS.map(arch => {
           const pal = PALETTES.find(p => p.id === config.pal) ?? PALETTES[0]
           const sel = config.arch === arch.id
           return (
             <button key={arch.id} onClick={() => setConfig({ ...config, arch: arch.id })}
-              className={`text-left p-4 rounded-xl border-2 transition-all ${sel ? 'border-electric-ink dark:border-electric bg-blue-50 dark:bg-white/5' : 'border-gray-100 dark:border-white/10 bg-white dark:bg-gray-900/60 hover:border-gray-300'}`}>
+              className={`text-left p-4 rounded-xl border-2 transition-all ${sel ? 'border-electric-ink bg-blue-50' : 'border-gray-100 bg-white hover:border-gray-300'}`}>
               <div className="mb-3 pointer-events-none">
                 <ArchWireframe archId={arch.id} pal={pal} />
               </div>
-              <div className="font-semibold text-sm text-gray-900 dark:text-white">{arch.label}</div>
-              <div className="text-xs text-gray-500 dark:text-white/65 mt-0.5">{arch.ideal}</div>
+              <div className="font-semibold text-sm text-gray-900">{arch.label}</div>
+              <div className="text-xs text-gray-500 mt-0.5">{arch.ideal}</div>
               <div className="flex flex-wrap gap-1 mt-2">
-                {arch.tags.map(t => <span key={t} className="px-1.5 py-0.5 bg-gray-100 dark:bg-white/10 text-[9px] rounded-full text-gray-600 dark:text-white/65">{t}</span>)}
+                {arch.tags.map(t => <span key={t} className="px-1.5 py-0.5 bg-gray-100 text-[9px] rounded-full text-gray-600">{t}</span>)}
               </div>
             </button>
           )
@@ -898,8 +898,8 @@ function ContrastLine({ pal, setCustom }: { pal: Palette5; setCustom: (p: Palett
   const ratioTxt = contrastRatio(pal.txt, pal.bg)
   const okTxt = ratioTxt >= 4.5
   return (
-    <div className="flex items-center justify-between gap-2 px-3 py-2 rounded-lg bg-gray-50 dark:bg-white/5 text-xs">
-      <span className={okTxt ? 'text-green-600 dark:text-green-400' : 'text-amber-600 dark:text-amber-400'}>
+    <div className="flex items-center justify-between gap-2 px-3 py-2 rounded-lg bg-gray-50 text-xs">
+      <span className={okTxt ? 'text-green-600' : 'text-amber-600'}>
         Contraste texte/fond : {ratioTxt.toFixed(1)}:1 {okTxt ? '— AA conforme' : '— sous le seuil AA (4.5:1)'}
       </span>
       {!okTxt && (
@@ -933,16 +933,16 @@ function Section2Pal({ config, setConfig }: { config: Config; setConfig: (c: Con
 
   return (
     <div>
-      <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-1">Palette de couleurs</h2>
-      <p className="text-sm text-gray-500 dark:text-white/65 mb-4">50 palettes curées, 9 univers — ou composez la vôtre au pixel près.</p>
+      <h2 className="text-xl font-bold text-gray-900 mb-1">Palette de couleurs</h2>
+      <p className="text-sm text-gray-500 mb-4">50 palettes curées, 9 univers — ou composez la vôtre au pixel près.</p>
 
       <div className="flex gap-2 mb-5">
         <button onClick={() => setCustomizing(false)}
-          className={`flex-1 py-2 rounded-xl text-xs font-semibold transition-colors ${!customizing ? 'bg-electric-ink text-white' : 'bg-gray-100 dark:bg-white/10 text-gray-600 dark:text-white/65'}`}>
+          className={`flex-1 py-2 rounded-xl text-xs font-semibold transition-colors ${!customizing ? 'bg-electric-ink text-white' : 'bg-gray-100 text-gray-600'}`}>
           Palettes curées
         </button>
         <button onClick={startCustom}
-          className={`flex-1 py-2 rounded-xl text-xs font-semibold transition-colors flex items-center justify-center gap-1.5 ${customizing ? 'bg-electric-ink text-white' : 'bg-gray-100 dark:bg-white/10 text-gray-600 dark:text-white/65'}`}>
+          className={`flex-1 py-2 rounded-xl text-xs font-semibold transition-colors flex items-center justify-center gap-1.5 ${customizing ? 'bg-electric-ink text-white' : 'bg-gray-100 text-gray-600'}`}>
           <Wand2 size={12} /> Personnaliser
         </button>
       </div>
@@ -951,28 +951,28 @@ function Section2Pal({ config, setConfig }: { config: Config; setConfig: (c: Con
         <div className="space-y-5">
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
             {ROLE_LABELS.map(r => (
-              <div key={r.key} className="p-2.5 rounded-xl border border-gray-200 dark:border-white/10 bg-white dark:bg-gray-900/60">
-                <div className="text-[10px] text-gray-500 dark:text-white/65 mb-1.5">{r.label}</div>
+              <div key={r.key} className="p-2.5 rounded-xl border border-gray-200 bg-white">
+                <div className="text-[10px] text-gray-500 mb-1.5">{r.label}</div>
                 <div className="flex items-center gap-2">
-                  <label className="relative w-7 h-7 rounded-lg overflow-hidden border border-gray-200 dark:border-white/10 shrink-0 cursor-pointer" style={{ background: activePal[r.key] }}>
+                  <label className="relative w-7 h-7 rounded-lg overflow-hidden border border-gray-200 shrink-0 cursor-pointer" style={{ background: activePal[r.key] }}>
                     <input type="color" value={/^#[0-9a-fA-F]{6}$/.test(activePal[r.key]) ? activePal[r.key] : '#000000'}
                       onChange={e => setRole(r.key, e.target.value)}
                       className="absolute inset-0 opacity-0 cursor-pointer w-full h-full" aria-label={`Couleur ${r.label} (roue chromatique)`} />
                   </label>
                   <input type="text" value={activePal[r.key]} onChange={e => setRole(r.key, e.target.value)}
                     spellCheck={false}
-                    className="flex-1 min-w-0 text-xs font-mono px-2 py-1.5 rounded-lg border border-gray-200 dark:border-white/10 bg-transparent text-gray-800 dark:text-white/80" />
+                    className="flex-1 min-w-0 text-xs font-mono px-2 py-1.5 rounded-lg border border-gray-200 bg-transparent text-gray-800" />
                 </div>
               </div>
             ))}
           </div>
 
           <div>
-            <div className="text-xs font-semibold text-gray-700 dark:text-white/60 mb-2">Palettes harmoniques générées (à partir de la dominante)</div>
+            <div className="text-xs font-semibold text-gray-700 mb-2">Palettes harmoniques générées (à partir de la dominante)</div>
             <div className="flex flex-wrap gap-2">
               {HARMONY_TYPES.map(h => (
                 <button key={h.id} onClick={() => applyHarmony(h.id)}
-                  className="px-3 py-1.5 rounded-full text-xs font-medium bg-gray-100 dark:bg-white/10 text-gray-700 dark:text-white/60 hover:bg-electric-ink hover:text-white dark:hover:bg-electric-ink transition-colors">
+                  className="px-3 py-1.5 rounded-full text-xs font-medium bg-gray-100 text-gray-700 hover:bg-electric-ink hover:text-white transition-colors">
                   {h.label}
                 </button>
               ))}
@@ -984,9 +984,9 @@ function Section2Pal({ config, setConfig }: { config: Config; setConfig: (c: Con
       ) : (
         <>
           <div className="flex flex-wrap gap-2 mb-5">
-            <button onClick={() => setFam(null)} className={`px-3 py-1 rounded-full text-xs font-medium transition-colors ${!fam ? 'bg-electric-ink text-white' : 'bg-gray-100 dark:bg-white/10 text-gray-700 dark:text-white/60 hover:bg-gray-200'}`}>Toutes</button>
+            <button onClick={() => setFam(null)} className={`px-3 py-1 rounded-full text-xs font-medium transition-colors ${!fam ? 'bg-electric-ink text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`}>Toutes</button>
             {PAL_FAMILIES.map(f => (
-              <button key={f} onClick={() => setFam(f === fam ? null : f)} className={`px-3 py-1 rounded-full text-xs font-medium transition-colors ${fam === f ? 'bg-electric-ink text-white' : 'bg-gray-100 dark:bg-white/10 text-gray-700 dark:text-white/60 hover:bg-gray-200'}`}>{f}</button>
+              <button key={f} onClick={() => setFam(f === fam ? null : f)} className={`px-3 py-1 rounded-full text-xs font-medium transition-colors ${fam === f ? 'bg-electric-ink text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`}>{f}</button>
             ))}
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
@@ -994,15 +994,15 @@ function Section2Pal({ config, setConfig }: { config: Config; setConfig: (c: Con
               const sel = !config.customPal && config.pal === pal.id
               return (
                 <button key={pal.id} onClick={() => setConfig({ ...config, pal: pal.id, customPal: null })}
-                  className={`rounded-xl border-2 overflow-hidden transition-all ${sel ? 'border-electric-ink dark:border-electric' : 'border-transparent hover:border-gray-300 dark:hover:border-white/20'}`}>
+                  className={`rounded-xl border-2 overflow-hidden transition-all ${sel ? 'border-electric-ink' : 'border-transparent hover:border-gray-300'}`}>
                   <div className="flex h-12">
                     {[pal.dom, pal.sec, pal.acc, pal.bg, pal.txt].map((c, i) => (
                       <div key={i} style={{ flex: 1, background: c }} />
                     ))}
                   </div>
-                  <div className="px-2 py-1.5 bg-white dark:bg-gray-900 text-left">
-                    <div className="text-xs font-medium text-gray-900 dark:text-white truncate">{pal.name}</div>
-                    <div className="text-[10px] text-gray-500 dark:text-white/65">{pal.fam}</div>
+                  <div className="px-2 py-1.5 bg-white text-left">
+                    <div className="text-xs font-medium text-gray-900 truncate">{pal.name}</div>
+                    <div className="text-[10px] text-gray-500">{pal.fam}</div>
                   </div>
                 </button>
               )
@@ -1022,12 +1022,12 @@ function Section3Font({ config, setConfig }: { config: Config; setConfig: (c: Co
 
   return (
     <div>
-      <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-1">Typographie</h2>
-      <p className="text-sm text-gray-500 dark:text-white/65 mb-4">50 duos titre/corps. Les polices se chargent à la volée.</p>
+      <h2 className="text-xl font-bold text-gray-900 mb-1">Typographie</h2>
+      <p className="text-sm text-gray-500 mb-4">50 duos titre/corps. Les polices se chargent à la volée.</p>
       <div className="flex flex-wrap gap-2 mb-5">
-        <button onClick={() => setStyle(null)} className={`px-3 py-1 rounded-full text-xs font-medium transition-colors ${!style ? 'bg-electric-ink text-white' : 'bg-gray-100 dark:bg-white/10 text-gray-700 dark:text-white/60 hover:bg-gray-200'}`}>Tous</button>
+        <button onClick={() => setStyle(null)} className={`px-3 py-1 rounded-full text-xs font-medium transition-colors ${!style ? 'bg-electric-ink text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`}>Tous</button>
         {FONT_STYLES.map(s => (
-          <button key={s} onClick={() => setStyle(s === style ? null : s)} className={`px-3 py-1 rounded-full text-xs font-medium transition-colors ${style === s ? 'bg-electric-ink text-white' : 'bg-gray-100 dark:bg-white/10 text-gray-700 dark:text-white/60 hover:bg-gray-200'}`}>{s}</button>
+          <button key={s} onClick={() => setStyle(s === style ? null : s)} className={`px-3 py-1 rounded-full text-xs font-medium transition-colors ${style === s ? 'bg-electric-ink text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`}>{s}</button>
         ))}
       </div>
       <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
@@ -1055,36 +1055,36 @@ function Section4Finitions({ config, setConfig }: { config: Config; setConfig: (
   return (
     <div className="space-y-8">
       <div>
-        <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-1">Finitions</h2>
-        <p className="text-sm text-gray-500 dark:text-white/65 mb-6">Les derniers ajustements qui font la différence.</p>
+        <h2 className="text-xl font-bold text-gray-900 mb-1">Finitions</h2>
+        <p className="text-sm text-gray-500 mb-6">Les derniers ajustements qui font la différence.</p>
       </div>
 
       <div>
-        <div className="font-semibold text-sm text-gray-800 dark:text-white/80 mb-3">Animations <span className="font-normal text-gray-500 dark:text-white/65">— {animLabels[config.anim]}</span></div>
+        <div className="font-semibold text-sm text-gray-800 mb-3">Animations <span className="font-normal text-gray-500">— {animLabels[config.anim]}</span></div>
         <input type="range" min={0} max={3} value={config.anim} onChange={e => set('anim', +e.target.value)} className="w-full accent-electric-ink" />
-        <div className="flex justify-between text-[10px] text-gray-500 dark:text-white/65 mt-1">
+        <div className="flex justify-between text-[10px] text-gray-500 mt-1">
           {animLabels.map(l => <span key={l}>{l}</span>)}
         </div>
       </div>
 
       <div>
-        <div className="font-semibold text-sm text-gray-800 dark:text-white/80 mb-3">Densité <span className="font-normal text-gray-500 dark:text-white/65">— {densityLabels[config.density]}</span></div>
+        <div className="font-semibold text-sm text-gray-800 mb-3">Densité <span className="font-normal text-gray-500">— {densityLabels[config.density]}</span></div>
         <div className="flex gap-2">
           {densityLabels.map((l, i) => (
             <button key={l} onClick={() => set('density', i)}
-              className={`flex-1 py-2 rounded-lg text-xs font-medium transition-colors ${config.density === i ? 'bg-electric-ink text-white' : 'bg-gray-100 dark:bg-white/10 text-gray-700 dark:text-white/60 hover:bg-gray-200'}`}>{l}</button>
+              className={`flex-1 py-2 rounded-lg text-xs font-medium transition-colors ${config.density === i ? 'bg-electric-ink text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`}>{l}</button>
           ))}
         </div>
       </div>
 
       <div>
-        <div className="font-semibold text-sm text-gray-800 dark:text-white/80 mb-3">Coins <span className="font-normal text-gray-500 dark:text-white/65">— {cornerLabels[config.corners]}</span></div>
+        <div className="font-semibold text-sm text-gray-800 mb-3">Coins <span className="font-normal text-gray-500">— {cornerLabels[config.corners]}</span></div>
         <div className="flex gap-3">
           {cornerLabels.map((l, i) => {
             const r = i === 0 ? '0px' : i === 1 ? '8px' : '20px'
             return (
               <button key={l} onClick={() => set('corners', i)}
-                className={`flex-1 py-3 text-xs font-medium border-2 transition-all ${config.corners === i ? 'border-electric-ink bg-blue-50 dark:bg-white/5' : 'border-gray-200 dark:border-white/10 hover:border-gray-300'}`}
+                className={`flex-1 py-3 text-xs font-medium border-2 transition-all ${config.corners === i ? 'border-electric-ink bg-blue-50' : 'border-gray-200 hover:border-gray-300'}`}
                 style={{ borderRadius: r }}>{l}</button>
             )
           })}
@@ -1092,62 +1092,62 @@ function Section4Finitions({ config, setConfig }: { config: Config; setConfig: (
       </div>
 
       <div>
-        <div className="font-semibold text-sm text-gray-800 dark:text-white/80 mb-3">Style de boutons</div>
+        <div className="font-semibold text-sm text-gray-800 mb-3">Style de boutons</div>
         <div className="flex gap-2">
           {buttonOpts.map(o => (
             <button key={o.id} onClick={() => set('buttonStyle', o.id)}
-              className={`flex-1 py-2 text-xs font-semibold transition-all border-2 ${config.buttonStyle === o.id ? 'border-electric-ink bg-blue-50 dark:bg-white/5 text-gray-900 dark:text-white' : 'border-gray-200 dark:border-white/10 text-gray-600 dark:text-white/65 hover:border-gray-300'}`}
+              className={`flex-1 py-2 text-xs font-semibold transition-all border-2 ${config.buttonStyle === o.id ? 'border-electric-ink bg-blue-50 text-gray-900' : 'border-gray-200 text-gray-600 hover:border-gray-300'}`}
               style={{ borderRadius: o.id === 'pilule' ? 999 : o.id === 'carre' ? 0 : 8 }}>{o.label}</button>
           ))}
         </div>
       </div>
 
       <div>
-        <div className="font-semibold text-sm text-gray-800 dark:text-white/80 mb-3">Style d'ombres</div>
+        <div className="font-semibold text-sm text-gray-800 mb-3">Style d'ombres</div>
         <div className="flex gap-2">
           {shadowOpts.map(o => (
             <button key={o.id} onClick={() => set('shadowStyle', o.id)}
-              className={`flex-1 py-2 rounded-lg text-xs font-medium transition-colors ${config.shadowStyle === o.id ? 'bg-electric-ink text-white' : 'bg-gray-100 dark:bg-white/10 text-gray-700 dark:text-white/60 hover:bg-gray-200'}`}>{o.label}</button>
+              className={`flex-1 py-2 rounded-lg text-xs font-medium transition-colors ${config.shadowStyle === o.id ? 'bg-electric-ink text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`}>{o.label}</button>
           ))}
         </div>
       </div>
 
       <div>
-        <div className="font-semibold text-sm text-gray-800 dark:text-white/80 mb-3">En-tête</div>
+        <div className="font-semibold text-sm text-gray-800 mb-3">En-tête</div>
         <div className="flex gap-2">
           {headerOpts.map(o => (
             <button key={o.id} onClick={() => set('headerStyle', o.id)}
-              className={`flex-1 py-2 rounded-lg text-xs font-medium transition-colors ${config.headerStyle === o.id ? 'bg-electric-ink text-white' : 'bg-gray-100 dark:bg-white/10 text-gray-700 dark:text-white/60 hover:bg-gray-200'}`}>{o.label}</button>
+              className={`flex-1 py-2 rounded-lg text-xs font-medium transition-colors ${config.headerStyle === o.id ? 'bg-electric-ink text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`}>{o.label}</button>
           ))}
         </div>
       </div>
 
       <div>
-        <div className="font-semibold text-sm text-gray-800 dark:text-white/80 mb-3">Imagerie</div>
+        <div className="font-semibold text-sm text-gray-800 mb-3">Imagerie</div>
         <div className="flex flex-wrap gap-2">
           {imageryOpts.map(o => (
             <button key={o} onClick={() => set('imagery', o)}
-              className={`px-3 py-1.5 rounded-full text-xs font-medium transition-colors ${config.imagery === o ? 'bg-electric-ink text-white' : 'bg-gray-100 dark:bg-white/10 text-gray-700 dark:text-white/60 hover:bg-gray-200'}`}>{o}</button>
+              className={`px-3 py-1.5 rounded-full text-xs font-medium transition-colors ${config.imagery === o ? 'bg-electric-ink text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`}>{o}</button>
           ))}
         </div>
       </div>
 
       <div>
-        <div className="font-semibold text-sm text-gray-800 dark:text-white/80 mb-3">Thème</div>
+        <div className="font-semibold text-sm text-gray-800 mb-3">Thème</div>
         <div className="flex gap-2">
           {themeOpts.map(o => (
             <button key={o} onClick={() => set('theme', o)}
-              className={`flex-1 py-2 rounded-lg text-xs font-medium transition-colors capitalize ${config.theme === o ? 'bg-electric-ink text-white' : 'bg-gray-100 dark:bg-white/10 text-gray-700 dark:text-white/60 hover:bg-gray-200'}`}>{o}</button>
+              className={`flex-1 py-2 rounded-lg text-xs font-medium transition-colors capitalize ${config.theme === o ? 'bg-electric-ink text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`}>{o}</button>
           ))}
         </div>
       </div>
 
       <div>
-        <div className="font-semibold text-sm text-gray-800 dark:text-white/80 mb-3">Ton & personnalité</div>
+        <div className="font-semibold text-sm text-gray-800 mb-3">Ton & personnalité</div>
         <div className="flex flex-wrap gap-2">
           {toneOpts.map(o => (
             <button key={o} onClick={() => set('tone', o)}
-              className={`px-3 py-1.5 rounded-full text-xs font-medium transition-colors ${config.tone === o ? 'bg-electric-ink text-white' : 'bg-gray-100 dark:bg-white/10 text-gray-700 dark:text-white/60 hover:bg-gray-200'}`}>{o}</button>
+              className={`px-3 py-1.5 rounded-full text-xs font-medium transition-colors ${config.tone === o ? 'bg-electric-ink text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`}>{o}</button>
           ))}
         </div>
       </div>
@@ -1382,8 +1382,8 @@ function SavedStyles({ config, setConfig }: { config: Config; setConfig: (c: Con
   }
 
   return (
-    <div className="bg-white dark:bg-gray-900/60 border border-gray-100 dark:border-white/10 rounded-2xl p-4">
-      <button type="button" onClick={() => setOpen(o => !o)} className="w-full flex items-center justify-between text-xs font-semibold text-gray-700 dark:text-white/70">
+    <div className="bg-white border border-gray-100 rounded-2xl p-4">
+      <button type="button" onClick={() => setOpen(o => !o)} className="w-full flex items-center justify-between text-xs font-semibold text-gray-700">
         <span className="flex items-center gap-1.5"><Save size={13} /> Mes styles enregistrés {styles.length > 0 && `(${styles.length})`}</span>
         <ChevronRight size={13} className={`transition-transform ${open ? 'rotate-90' : ''}`} />
       </button>
@@ -1391,19 +1391,19 @@ function SavedStyles({ config, setConfig }: { config: Config; setConfig: (c: Con
         <div className="mt-3 space-y-3">
           <div className="flex gap-2">
             <input value={name} onChange={e => setName(e.target.value)} placeholder="Nom du style"
-              className="flex-1 min-w-0 text-xs px-2.5 py-2 rounded-lg border border-gray-200 dark:border-white/10 bg-transparent text-gray-800 dark:text-white/80" />
+              className="flex-1 min-w-0 text-xs px-2.5 py-2 rounded-lg border border-gray-200 bg-transparent text-gray-800" />
             <button type="button" onClick={save} className="px-3 py-2 rounded-lg bg-electric-ink text-white text-xs font-semibold hover:bg-electric-ink/90 transition-colors">Enregistrer</button>
           </div>
           {styles.length === 0 ? (
-            <p className="text-[11px] text-gray-500 dark:text-white/65">Aucun style enregistré pour l'instant.</p>
+            <p className="text-[11px] text-gray-500">Aucun style enregistré pour l'instant.</p>
           ) : (
             <div className="space-y-1.5">
               {styles.slice().reverse().map(s => (
-                <div key={s.name} className="flex items-center justify-between gap-2 px-2.5 py-2 rounded-lg bg-gray-50 dark:bg-white/5">
-                  <button type="button" onClick={() => setConfig(s.config)} className="text-xs font-medium text-gray-700 dark:text-white/70 hover:text-electric dark:hover:text-electric text-left truncate flex-1">
+                <div key={s.name} className="flex items-center justify-between gap-2 px-2.5 py-2 rounded-lg bg-gray-50">
+                  <button type="button" onClick={() => setConfig(s.config)} className="text-xs font-medium text-gray-700 hover:text-electric text-left truncate flex-1">
                     {s.name}
                   </button>
-                  <button type="button" onClick={() => remove(s.name)} aria-label={`Supprimer ${s.name}`} className="text-gray-300 dark:text-white/65 hover:text-red-500 transition-colors shrink-0">
+                  <button type="button" onClick={() => remove(s.name)} aria-label={`Supprimer ${s.name}`} className="text-gray-300 hover:text-red-500 transition-colors shrink-0">
                     <Trash2 size={13} />
                   </button>
                 </div>
@@ -1428,14 +1428,14 @@ function Onboarding({ onDone }: { onDone: () => void }) {
   const [step, setStep] = useState(0)
   const last = step === ONBOARDING_STEPS.length - 1
   return (
-    <div className="mb-6 rounded-2xl border border-electric-ink/20 bg-blue-50/60 dark:bg-electric-ink/10 p-4 flex items-start gap-3">
+    <div className="mb-6 rounded-2xl border border-electric-ink/20 bg-blue-50/60 p-4 flex items-start gap-3">
       <div className="w-7 h-7 rounded-full bg-electric-ink text-white flex items-center justify-center text-xs font-bold shrink-0">{step + 1}</div>
       <div className="flex-1 min-w-0">
-        <div className="text-sm font-bold text-gray-900 dark:text-white">{ONBOARDING_STEPS[step].title}</div>
-        <p className="text-xs text-gray-600 dark:text-white/65 mt-0.5">{ONBOARDING_STEPS[step].text}</p>
+        <div className="text-sm font-bold text-gray-900">{ONBOARDING_STEPS[step].title}</div>
+        <p className="text-xs text-gray-600 mt-0.5">{ONBOARDING_STEPS[step].text}</p>
       </div>
       <div className="flex items-center gap-2 shrink-0">
-        <button type="button" onClick={onDone} className="text-xs text-gray-500 dark:text-white/65 hover:text-gray-600">Passer</button>
+        <button type="button" onClick={onDone} className="text-xs text-gray-500 hover:text-gray-600">Passer</button>
         <button type="button" onClick={() => last ? onDone() : setStep(s => s + 1)}
           className="px-3 py-1.5 rounded-lg bg-electric-ink text-white text-xs font-semibold hover:bg-electric-ink/90 transition-colors">
           {last ? 'Terminer' : 'Suivant'}
@@ -1579,7 +1579,7 @@ export default function StudioClient() {
     try { localStorage.setItem('studioOnboardingSeen', '1') } catch {}
   }, [])
 
-  if (!mounted) return <div className="h-96 animate-pulse bg-gray-100 dark:bg-gray-900/50 rounded-2xl m-8" />
+  if (!mounted) return <div className="h-96 animate-pulse bg-gray-100 rounded-2xl m-8" />
 
   const progress = ((section + 1) / SECTIONS.length) * 100
   const canUndo = historyRef.current.length > 0
@@ -1592,10 +1592,10 @@ export default function StudioClient() {
       {/* Presets + ambiances + historique */}
       <div className="mb-3 overflow-x-auto">
         <div className="flex gap-2 min-w-max pb-1">
-          <span className="text-xs text-gray-500 dark:text-white/65 self-center mr-1 shrink-0">Métier :</span>
+          <span className="text-xs text-gray-500 self-center mr-1 shrink-0">Métier :</span>
           {PRESETS.map(p => (
             <button key={p.id} type="button" onClick={() => applyPreset(p)}
-              className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white dark:bg-gray-900/60 border border-gray-200 dark:border-white/10 hover:border-electric-ink dark:hover:border-electric text-xs font-medium text-gray-700 dark:text-white/70 transition-colors whitespace-nowrap">
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white border border-gray-200 hover:border-electric-ink text-xs font-medium text-gray-700 transition-colors whitespace-nowrap">
               {p.label}
             </button>
           ))}
@@ -1603,10 +1603,10 @@ export default function StudioClient() {
       </div>
       <div className="mb-6 overflow-x-auto">
         <div className="flex gap-2 min-w-max pb-1 items-center">
-          <span className="text-xs text-gray-500 dark:text-white/65 self-center mr-1 shrink-0">Ambiance :</span>
+          <span className="text-xs text-gray-500 self-center mr-1 shrink-0">Ambiance :</span>
           {MOODS.map(m => (
             <button key={m.id} type="button" onClick={() => applyPreset(m)}
-              className="px-3 py-1.5 rounded-full bg-gray-100 dark:bg-white/5 border border-gray-200 dark:border-white/10 hover:border-electric-ink dark:hover:border-electric text-xs font-medium text-gray-700 dark:text-white/70 transition-colors whitespace-nowrap">
+              className="px-3 py-1.5 rounded-full bg-gray-100 border border-gray-200 hover:border-electric-ink text-xs font-medium text-gray-700 transition-colors whitespace-nowrap">
               {m.label}
             </button>
           ))}
@@ -1614,13 +1614,13 @@ export default function StudioClient() {
             className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-electric-ink text-white text-xs font-medium hover:bg-electric-ink/80 transition-colors whitespace-nowrap">
             <Shuffle size={12} /> Surprends-moi
           </button>
-          <div className="w-px h-5 bg-gray-200 dark:bg-white/10 mx-1 shrink-0" />
+          <div className="w-px h-5 bg-gray-200 mx-1 shrink-0" />
           <button type="button" onClick={undo} disabled={!canUndo} title="Annuler (Ctrl+Z)"
-            className="flex items-center gap-1 px-2.5 py-1.5 rounded-full text-xs font-medium text-gray-500 dark:text-white/65 hover:bg-gray-100 dark:hover:bg-white/10 disabled:opacity-30 disabled:hover:bg-transparent transition-colors whitespace-nowrap">
+            className="flex items-center gap-1 px-2.5 py-1.5 rounded-full text-xs font-medium text-gray-500 hover:bg-gray-100 disabled:opacity-30 disabled:hover:bg-transparent transition-colors whitespace-nowrap">
             <Undo2 size={12} /> Annuler
           </button>
           <button type="button" onClick={redo} disabled={!canRedo} title="Rétablir (Ctrl+Maj+Z)"
-            className="flex items-center gap-1 px-2.5 py-1.5 rounded-full text-xs font-medium text-gray-500 dark:text-white/65 hover:bg-gray-100 dark:hover:bg-white/10 disabled:opacity-30 disabled:hover:bg-transparent transition-colors whitespace-nowrap">
+            className="flex items-center gap-1 px-2.5 py-1.5 rounded-full text-xs font-medium text-gray-500 hover:bg-gray-100 disabled:opacity-30 disabled:hover:bg-transparent transition-colors whitespace-nowrap">
             <Redo2 size={12} /> Rétablir
           </button>
         </div>
@@ -1637,16 +1637,16 @@ export default function StudioClient() {
           {/* Progress + sommaire */}
           <div className="mb-6">
             <div className="flex items-center justify-between mb-2">
-              <span className="text-sm font-medium text-gray-700 dark:text-white/70">Étape {section + 1} / {SECTIONS.length}</span>
-              <span className="text-xs text-gray-500 dark:text-white/65">{Math.round(progress)}%</span>
+              <span className="text-sm font-medium text-gray-700">Étape {section + 1} / {SECTIONS.length}</span>
+              <span className="text-xs text-gray-500">{Math.round(progress)}%</span>
             </div>
-            <div className="h-1.5 bg-gray-100 dark:bg-white/10 rounded-full overflow-hidden mb-3">
+            <div className="h-1.5 bg-gray-100 rounded-full overflow-hidden mb-3">
               <div className="h-full bg-electric-ink rounded-full transition-all duration-300" style={{ width: `${progress}%` }} />
             </div>
             <div className="flex gap-1">
               {SECTIONS.map((s, i) => (
                 <button key={s.id} type="button" onClick={() => goToSection(i)}
-                  className={`flex-1 py-2 text-xs font-medium rounded-lg transition-colors ${i === section ? 'bg-electric-ink text-white' : i < section ? 'bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400' : 'bg-gray-100 dark:bg-white/10 text-gray-500 dark:text-white/65'}`}>
+                  className={`flex-1 py-2 text-xs font-medium rounded-lg transition-colors ${i === section ? 'bg-electric-ink text-white' : i < section ? 'bg-green-100 text-green-700' : 'bg-gray-100 text-gray-500'}`}>
                   {i < section ? '✓ ' : ''}{s.label}
                 </button>
               ))}
@@ -1665,7 +1665,7 @@ export default function StudioClient() {
           <div className="flex gap-3">
             {section > 0 && (
               <button type="button" onClick={() => goToSection(s => s - 1)}
-                className="px-5 py-2.5 rounded-xl border border-gray-200 dark:border-white/10 text-sm font-medium text-gray-700 dark:text-white/70 hover:bg-gray-50 dark:hover:bg-white/5 transition-colors">
+                className="px-5 py-2.5 rounded-xl border border-gray-200 text-sm font-medium text-gray-700 hover:bg-gray-50 transition-colors">
                 ← Précédent
               </button>
             )}
@@ -1676,7 +1676,7 @@ export default function StudioClient() {
               </button>
             ) : (
               <button type="button" onClick={() => goToSection(0)}
-                className="px-5 py-2.5 rounded-xl border border-gray-200 dark:border-white/10 text-sm font-medium text-gray-700 dark:text-white/70 hover:bg-gray-50 dark:hover:bg-white/5 transition-colors">
+                className="px-5 py-2.5 rounded-xl border border-gray-200 text-sm font-medium text-gray-700 hover:bg-gray-50 transition-colors">
                 Recommencer
               </button>
             )}
@@ -1687,14 +1687,14 @@ export default function StudioClient() {
         <div className="space-y-5 lg:sticky lg:top-24 self-start" id="studio-preview-panel">
           <div>
             <div className="flex items-center justify-between mb-2">
-              <div className="text-xs font-semibold text-gray-500 dark:text-white/65 uppercase tracking-wider">Aperçu en direct</div>
+              <div className="text-xs font-semibold text-gray-500 uppercase tracking-wider">Aperçu en direct</div>
               <button
                 type="button"
                 onClick={() => {
                   if (abMode) { setAbConfig(null); setAbMode(false) }
                   else { setAbConfig(randomConfig()); setAbMode(true) }
                 }}
-                className={`flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-xs font-medium transition-all border ${abMode ? 'bg-electric-ink text-white border-electric-ink' : 'border-gray-200 dark:border-white/10 text-gray-600 dark:text-white/65 hover:border-gray-300'}`}
+                className={`flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-xs font-medium transition-all border ${abMode ? 'bg-electric-ink text-white border-electric-ink' : 'border-gray-200 text-gray-600 hover:border-gray-300'}`}
               >
                 <Columns2 size={11} /> {abMode ? 'Quitter A/B' : 'Mode A/B'}
               </button>
@@ -1715,7 +1715,7 @@ export default function StudioClient() {
                 <X size={16} /> Fermer (Échap)
               </button>
             </div>
-            <div className="bg-white dark:bg-gray-900 rounded-2xl p-5">
+            <div className="bg-white rounded-2xl p-5">
               <LivePreview config={config} abConfig={abMode && abConfig ? abConfig : undefined} fullscreen onToggleFullscreen={() => setFullscreen(false)} templateId={templateId} setTemplateId={setTemplateId} />
             </div>
           </div>
@@ -1872,11 +1872,11 @@ function StyleMockup({ c }: { c: StyleCurrent }) {
 
 function StyleCurrentsGallery() {
   return (
-    <section className="border-t border-gray-100 dark:border-white/10 mt-6 pt-12 pb-4">
+    <section className="border-t border-gray-100 mt-6 pt-12 pb-4">
       <div className="mb-8">
         <div className="text-xs font-semibold text-electric uppercase tracking-widest mb-2">Inspiration</div>
-        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">Courants de style</h2>
-        <p className="text-gray-500 dark:text-white/65 text-sm max-w-2xl">
+        <h2 className="text-2xl font-bold text-gray-900 mb-2">Courants de style</h2>
+        <p className="text-gray-500 text-sm max-w-2xl">
           Six grandes directions esthétiques illustrées par des maquettes originales.
           Cliquez « Voir le site » pour vous inspirer.
         </p>
@@ -1885,14 +1885,14 @@ function StyleCurrentsGallery() {
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
         {STYLE_CURRENTS.map(c => (
           <article key={c.id}
-            className="group bg-white dark:bg-white/5 rounded-2xl overflow-hidden border border-gray-100 dark:border-white/10 hover:border-electric-ink/40 dark:hover:border-electric/30 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+            className="group bg-white rounded-2xl overflow-hidden border border-gray-100 hover:border-electric-ink/40 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
             <div className="relative overflow-hidden rounded-t-2xl">
               <StyleMockup c={c} />
               <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/10 pointer-events-none" />
             </div>
             <div className="p-4">
-              <h3 className="font-bold text-gray-900 dark:text-white text-sm mb-1.5">{c.name}</h3>
-              <p className="text-gray-500 dark:text-white/65 text-xs leading-relaxed mb-3">{c.desc}</p>
+              <h3 className="font-bold text-gray-900 text-sm mb-1.5">{c.name}</h3>
+              <p className="text-gray-500 text-xs leading-relaxed mb-3">{c.desc}</p>
               <div className="flex flex-wrap gap-2">
                 {c.refs.map(r => (
                   <a key={r.name} href={r.url} target="_blank" rel="noopener noreferrer"
@@ -1909,7 +1909,7 @@ function StyleCurrentsGallery() {
         ))}
       </div>
 
-      <p className="mt-8 text-center text-xs text-gray-500 dark:text-white/65 px-4">
+      <p className="mt-8 text-center text-xs text-gray-500 px-4">
         Sites cités à titre de référence et d&apos;inspiration — aucune affiliation ni partenariat avec ces marques.
         Les maquettes présentées ci-dessus sont des créations originales Stackup.
       </p>
