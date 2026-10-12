@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation'
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import MiniHero from '@/components/ui/MiniHero'
 import { Check, ArrowRight } from 'lucide-react'
 
 type ServiceData = {
@@ -362,33 +363,26 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
   }
 
   return (
-    <div className="min-h-screen bg-[#F8FAFC]">
+    <div className="min-h-screen bg-[#FFFDF9]">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       {faqSchema && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       {/* Hero */}
-      <section className="relative bg-gradient-to-b from-[#060D1A] to-[#0A0F1C] pt-32 pb-16 overflow-hidden">
-        <svg aria-hidden="true" className="gold-vein absolute bottom-0 left-0 w-full" style={{ height: '100px' }} viewBox="0 0 1440 100" preserveAspectRatio="none">
-          <path d="M0,100 C240,60 480,20 720,50 C960,80 1200,20 1440,40" strokeWidth="1.5" style={{ opacity: 0.22 }} />
-        </svg>
-        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6">
-          <nav className="flex items-center gap-1.5 text-white/65 text-xs mb-6" aria-label="Fil d'Ariane">
-            <Link href="/" className="hover:text-white transition-colors">Accueil</Link>
-            <span>›</span>
-            <Link href="/services" className="hover:text-white transition-colors">Services</Link>
-            <span>›</span>
-            <span className="text-white/60">{service.title}</span>
-          </nav>
-          <h1 className="font-display text-white mb-4">{service.title}</h1>
-          <p className="text-base sm:text-xl text-white/70">{service.subtitle}</p>
-          <div className="mt-6 flex flex-wrap gap-4 text-sm text-white/60">
-            <span>Délai : à partir de {service.duration}</span>
-            {service.price !== 'Sur devis' && <span>{service.price}</span>}
-            {service.priceNote && <span className="block text-sm text-white/60 mt-1">{service.priceNote}</span>}
-          </div>
-          <p className="mt-3 text-xs text-white/65 max-w-xl">Délais détaillés dans nos <a href="/cgv" className="underline hover:text-white/60 transition-colors">CGV</a>.</p>
+      <MiniHero
+        signature="trace"
+        breadcrumb={[{ name: 'Services', href: '/services' }, { name: service.title }]}
+        title={service.title}
+        subtitle={service.subtitle}
+      >
+        <div className="su-sig__meta">
+          <span>Délai : à partir de {service.duration}</span>
+          {service.price !== 'Sur devis' && <span>{service.price}</span>}
+          {service.priceNote && <span>{service.priceNote}</span>}
         </div>
-      </section>
+        <p className="mt-3 text-xs text-[#51657E] max-w-xl">
+          Délais détaillés dans nos <a href="/cgv" className="underline hover:text-navy transition-colors">CGV</a>.
+        </p>
+      </MiniHero>
 
       {/* SECTION 1 — Description (fond blanc) */}
       <div className="bg-white">

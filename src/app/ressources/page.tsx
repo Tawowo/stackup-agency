@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { FileText, Download, ArrowRight } from 'lucide-react'
 import { SITE } from '@/config/site'
-import Breadcrumb from '@/components/ui/Breadcrumb'
+import MiniHero from '@/components/ui/MiniHero'
 
 export const metadata: Metadata = {
   title: 'Ressources — Modèles et documents gratuits | Stackup Agency',
@@ -45,16 +45,13 @@ export default function RessourcesPage() {
     <div className="min-h-screen bg-[#FFFDF9]">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
-      <div className="bg-gradient-to-b from-[#060D1A] to-[#0A0F1C] pt-24 pb-16">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6">
-          <Breadcrumb items={[{ name: 'Ressources' }]} />
-          <p className="text-[13px] font-semibold text-gold uppercase tracking-[0.18em] mb-3">Gratuit</p>
-          <h1 className="text-3xl lg:text-5xl font-bold text-white mb-4">Ressources</h1>
-          <p className="text-white/70 text-lg max-w-2xl">
-            Des modèles et documents gratuits pour préparer votre projet et comprendre le cadre contractuel Stackup Agency, sans engagement.
-          </p>
-        </div>
-      </div>
+      <MiniHero
+        signature="colonne"
+        breadcrumb={[{ name: 'Ressources' }]}
+        marker="Gratuit"
+        title="Ressources"
+        subtitle="Des modèles et documents gratuits pour préparer votre projet et comprendre le cadre contractuel Stackup Agency, sans engagement."
+      />
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 py-16">
         <div className="grid sm:grid-cols-2 gap-5">

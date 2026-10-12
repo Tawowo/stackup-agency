@@ -573,7 +573,18 @@ function btnRadius(style: string, radius: number) {
 function MiniBtn({ children, config, pal, font, size = 9 }: { children: string; config: Config; pal: Palette5; font: FontDuo; size?: number }) {
   const r = btnRadius(config.buttonStyle, Math.min(config.corners === 0 ? 0 : config.corners === 1 ? 6 : 16, 16))
   const isContour = config.buttonStyle === 'contour'
-  const fg = isContour ? pal.acc : (relLuminance(pal.acc) > 0.55 ? '#111111' : '#ffffff')
+  /* Un SEUIL DE LUMINANCE n'est pas un contraste. `relLuminance > 0.55`
+     choisissait du blanc dès que l'accent descendait sous 0,55 — y compris
+     pour un bleu comme #4F9CF9 (luminance 0,34), où le blanc ne donne que
+     2,81:1. Relevé par axe-core sur cette page.
+
+     On compare donc les deux ratios réels, puis on passe le gagnant dans
+     `fixContrast`, qui existe déjà dans ce fichier et ajuste jusqu'à 4,5:1.
+     Un outil qui promet une « vérification de contraste AA » ne peut pas
+     montrer un aperçu qui ne la respecte pas. */
+  const surAccent =
+    contrastRatio('#111111', pal.acc) >= contrastRatio('#ffffff', pal.acc) ? '#111111' : '#ffffff'
+  const fg = isContour ? pal.acc : fixContrast(surAccent, pal.acc)
   return (
     <span style={{
       fontFamily: font.bodyStack, fontSize: size, fontWeight: 700, borderRadius: r,
@@ -585,7 +596,10 @@ function MiniBtn({ children, config, pal, font, size = 9 }: { children: string; 
 }
 
 function TemplateBody({ spec, pal, font, look, compact }: { spec: TemplateSpec; pal: Palette5; font: FontDuo; look: Look; compact: boolean }) {
-  const muted = pal.txt + '66'
+  /* `pal.txt + '66'`, c'est 40 % d'opacité : sur un fond clair la mention
+     tombait à 2,52:1 (relevé par axe-core sur « Sophie M. — avis Google »).
+     La teinte sourde se calcule donc, elle ne se devine pas. */
+  const muted = fixContrast(pal.txt, pal.bg)
   const cardBg = pal.sec + (compact ? '14' : '11')
   const cols = compact ? 2 : spec.kind === 'gallery' ? 3 : spec.kind === 'menu' ? 3 : spec.kind === 'product' ? 4 : spec.kind === 'grid-services' ? 2 : 3
 
@@ -656,7 +670,9 @@ function TemplateBody({ spec, pal, font, look, compact }: { spec: TemplateSpec; 
 
       {/* Footer */}
       <div style={{ background: pal.dom, padding: '7px 10px', display: 'flex', flexDirection: compact ? 'column' : 'row', gap: 3, justifyContent: 'space-between', alignItems: compact ? 'flex-start' : 'center' }}>
-        <span style={{ fontSize: 7, color: 'rgba(255,255,255,0.55)' }}>{spec.footerNote}</span>
+        {/* 0,55 d'opacité sur une couleur de marque quelconque ne garantit
+            rien : la mention passe par `fixContrast`, comme les boutons. */}
+        <span style={{ fontSize: 7, color: fixContrast('#ffffff', pal.dom) }}>{spec.footerNote}</span>
         <div style={{ display: 'flex', gap: 4 }}>
           {[pal.dom, pal.acc, pal.sec].map((c, i) => <div key={i} style={{ width: 9, height: 9, borderRadius: '50%', background: c, border: '1px solid rgba(255,255,255,0.25)' }} />)}
         </div>
@@ -691,13 +707,26 @@ function SiteHeader({ spec, pal, font, look, compact }: { spec: TemplateSpec; pa
 }
 
 function DesktopMockup({ spec, pal, font, look, tablet }: { spec: TemplateSpec; pal: Palette5; font: FontDuo; look: Look; tablet?: boolean }) {
+  /* L'APERÇU EST UNE IMAGE, PAS UNE INTERFACE.
+     `aria-hidden` sur tout le cadre : ce qu'il y a dedans est un site
+     HYPOTHÉTIQUE dessiné au sixième, avec de faux titres, de faux boutons et
+     une fausse barre d'adresse — du texte à 7,5 et 9,5 px, dans les couleurs
+     que le visiteur vient de choisir. Un lecteur d'écran ne peut rien faire
+     d'un aperçu visuel, et axe-core relevait ici des contrastes (2,81:1 et
+     2,84:1) qui ne décrivent pas l'interface de l'outil mais la maquette
+     qu'elle dessine. Rien ne se perd : tout ce que l'aperçu montre vient de
+     réglages qui ont, eux, leurs étiquettes. */
   return (
-    <div className="device-frame" style={{ maxWidth: tablet ? 340 : '100%', margin: tablet ? '0 auto' : undefined, fontFamily: font.bodyStack, borderRadius: 10, overflow: 'hidden', border: `1px solid ${pal.dom}22`, boxShadow: look.shadow }}>
-      {/* Browser chrome */}
+    <div
+      className="device-frame"
+      aria-hidden="true"
+      style={{ maxWidth: tablet ? 340 : '100%', margin: tablet ? '0 auto' : undefined, fontFamily: font.bodyStack, borderRadius: 10, overflow: 'hidden', border: `1px solid ${pal.dom}22`, boxShadow: look.shadow }}
+    >
+      {/* Faux navigateur : trois pastilles et une barre d'adresse. */}
       <div style={{ background: '#e8e8e8', padding: '5px 8px', display: 'flex', alignItems: 'center', gap: 4 }}>
         {['#ff5f57', '#febc2e', '#28c840'].map((c, i) => <div key={i} style={{ width: 7, height: 7, borderRadius: '50%', background: c }} />)}
         <div style={{ flex: 1, background: '#fff', borderRadius: 3, height: 13, margin: '0 8px', display: 'flex', alignItems: 'center', padding: '0 6px' }}>
-          <span style={{ fontSize: 7.5, color: '#999' }}>monsite.fr</span>
+          <span style={{ fontSize: 7.5, color: '#6b6b6b' }}>monsite.fr</span>
         </div>
       </div>
       <SiteHeader spec={spec} pal={pal} font={font} look={look} compact={!!tablet} />
@@ -707,8 +736,9 @@ function DesktopMockup({ spec, pal, font, look, tablet }: { spec: TemplateSpec; 
 }
 
 function MobileMockup({ spec, pal, font, look }: { spec: TemplateSpec; pal: Palette5; font: FontDuo; look: Look }) {
+  /* Même raison que le cadre de bureau : une maquette, pas une interface. */
   return (
-    <div className="device-frame" style={{ maxWidth: 160, margin: '0 auto', background: '#1a1a1a', borderRadius: 18, padding: '8px 5px', boxShadow: '0 8px 24px rgba(0,0,0,0.3)' }}>
+    <div className="device-frame" aria-hidden="true" style={{ maxWidth: 160, margin: '0 auto', background: '#1a1a1a', borderRadius: 18, padding: '8px 5px', boxShadow: '0 8px 24px rgba(0,0,0,0.3)' }}>
       <div style={{ width: 40, height: 6, background: '#333', borderRadius: 3, margin: '0 auto 6px' }} />
       <div style={{ borderRadius: 10, overflow: 'hidden', fontFamily: font.bodyStack }}>
         <SiteHeader spec={spec} pal={pal} font={font} look={look} compact />
@@ -734,7 +764,7 @@ function LivePreview({ config, abConfig, fullscreen, onToggleFullscreen, templat
   const fontB = abConfig ? (FONTS.find(f => f.id === abConfig.font) ?? FONTS[1]) : null
 
   const btnCls = (m: PreviewMode) =>
-    `flex items-center gap-1 px-2 py-1 rounded-lg text-xs font-medium transition-colors ${mode === m ? 'bg-electric-ink text-white' : 'text-gray-500 hover:bg-gray-100'}`
+    `flex items-center gap-1 px-2 py-1 rounded-lg text-xs font-medium transition-colors ${mode === m ? 'bg-electric-ink text-white' : 'text-gray-600 hover:bg-gray-100'}`
 
   return (
     <div>
@@ -768,7 +798,7 @@ function LivePreview({ config, abConfig, fullscreen, onToggleFullscreen, templat
         </div>
         {onToggleFullscreen && (
           <button onClick={onToggleFullscreen} title="Plein écran immersif (touche F)"
-            className="flex items-center gap-1 px-2 py-1 rounded-lg text-xs font-medium text-gray-500 hover:bg-gray-100 transition-colors">
+            className="flex items-center gap-1 px-2 py-1 rounded-lg text-xs font-medium text-gray-600 hover:bg-gray-100 transition-colors">
             {fullscreen ? <X size={13} /> : <Maximize2 size={13} />}
           </button>
         )}
@@ -780,7 +810,7 @@ function LivePreview({ config, abConfig, fullscreen, onToggleFullscreen, templat
       {mode === 'ab' && abConfig && palB && fontB && lookB && (
         <div className="grid grid-cols-2 gap-3">
           <div>
-            <div className="text-[10px] font-bold text-center mb-1 text-gray-500 uppercase tracking-widest">Version A</div>
+            <div className="text-[10px] font-bold text-center mb-1 text-gray-600 uppercase tracking-widest">Version A</div>
             <DesktopMockup spec={spec} pal={pal} font={font} look={look} tablet />
           </div>
           <div>
@@ -795,7 +825,7 @@ function LivePreview({ config, abConfig, fullscreen, onToggleFullscreen, templat
         {[pal.dom, pal.sec, pal.acc, pal.bg, pal.txt].map((c, i) => (
           <div key={i} title={c} className="studio-color-swatch" style={{ width: 16, height: 16, background: c, borderRadius: 4, border: `1px solid ${pal.dom}33`, flexShrink: 0 }} />
         ))}
-        <span className="text-[9px] text-gray-500 ml-1">{pal.name} · {font.title}</span>
+        <span className="text-[9px] text-gray-600 ml-1">{pal.name} · {font.title}</span>
       </div>
     </div>
   )
@@ -847,7 +877,7 @@ function FontCard({ font, selected, onSelect }: { font: FontDuo; selected: boole
       className={`text-left p-3 rounded-xl border-2 transition-all ${selected ? 'border-electric-ink bg-blue-50' : 'border-transparent bg-white hover:border-gray-200'}`}>
       <div style={{ fontFamily: font.titleStack, fontSize: 17, fontWeight: 700, lineHeight: 1.2, marginBottom: 2 }}>Titre exemple</div>
       <div style={{ fontFamily: font.bodyStack, fontSize: 11, lineHeight: 1.4, opacity: 0.65, marginBottom: 6 }}>Corps du texte en {font.body}</div>
-      <div className="text-[10px] text-gray-500">{font.name}</div>
+      <div className="text-[10px] text-gray-600">{font.name}</div>
     </button>
   )
 }
@@ -858,7 +888,7 @@ function Section1Arch({ config, setConfig }: { config: Config; setConfig: (c: Co
   return (
     <div>
       <h2 className="text-xl font-bold text-gray-900 mb-1">Architecture</h2>
-      <p className="text-sm text-gray-500 mb-6">Quelle est la structure principale de votre site ?</p>
+      <p className="text-sm text-gray-600 mb-6">Quelle est la structure principale de votre site ?</p>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
         {ARCHS.map(arch => {
           const pal = PALETTES.find(p => p.id === config.pal) ?? PALETTES[0]
@@ -870,7 +900,7 @@ function Section1Arch({ config, setConfig }: { config: Config; setConfig: (c: Co
                 <ArchWireframe archId={arch.id} pal={pal} />
               </div>
               <div className="font-semibold text-sm text-gray-900">{arch.label}</div>
-              <div className="text-xs text-gray-500 mt-0.5">{arch.ideal}</div>
+              <div className="text-xs text-gray-600 mt-0.5">{arch.ideal}</div>
               <div className="flex flex-wrap gap-1 mt-2">
                 {arch.tags.map(t => <span key={t} className="px-1.5 py-0.5 bg-gray-100 text-[9px] rounded-full text-gray-600">{t}</span>)}
               </div>
@@ -934,7 +964,7 @@ function Section2Pal({ config, setConfig }: { config: Config; setConfig: (c: Con
   return (
     <div>
       <h2 className="text-xl font-bold text-gray-900 mb-1">Palette de couleurs</h2>
-      <p className="text-sm text-gray-500 mb-4">50 palettes curées, 9 univers — ou composez la vôtre au pixel près.</p>
+      <p className="text-sm text-gray-600 mb-4">50 palettes curées, 9 univers — ou composez la vôtre au pixel près.</p>
 
       <div className="flex gap-2 mb-5">
         <button onClick={() => setCustomizing(false)}
@@ -952,7 +982,7 @@ function Section2Pal({ config, setConfig }: { config: Config; setConfig: (c: Con
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
             {ROLE_LABELS.map(r => (
               <div key={r.key} className="p-2.5 rounded-xl border border-gray-200 bg-white">
-                <div className="text-[10px] text-gray-500 mb-1.5">{r.label}</div>
+                <div className="text-[10px] text-gray-600 mb-1.5">{r.label}</div>
                 <div className="flex items-center gap-2">
                   <label className="relative w-7 h-7 rounded-lg overflow-hidden border border-gray-200 shrink-0 cursor-pointer" style={{ background: activePal[r.key] }}>
                     <input type="color" value={/^#[0-9a-fA-F]{6}$/.test(activePal[r.key]) ? activePal[r.key] : '#000000'}
@@ -1002,7 +1032,7 @@ function Section2Pal({ config, setConfig }: { config: Config; setConfig: (c: Con
                   </div>
                   <div className="px-2 py-1.5 bg-white text-left">
                     <div className="text-xs font-medium text-gray-900 truncate">{pal.name}</div>
-                    <div className="text-[10px] text-gray-500">{pal.fam}</div>
+                    <div className="text-[10px] text-gray-600">{pal.fam}</div>
                   </div>
                 </button>
               )
@@ -1023,7 +1053,7 @@ function Section3Font({ config, setConfig }: { config: Config; setConfig: (c: Co
   return (
     <div>
       <h2 className="text-xl font-bold text-gray-900 mb-1">Typographie</h2>
-      <p className="text-sm text-gray-500 mb-4">50 duos titre/corps. Les polices se chargent à la volée.</p>
+      <p className="text-sm text-gray-600 mb-4">50 duos titre/corps. Les polices se chargent à la volée.</p>
       <div className="flex flex-wrap gap-2 mb-5">
         <button onClick={() => setStyle(null)} className={`px-3 py-1 rounded-full text-xs font-medium transition-colors ${!style ? 'bg-electric-ink text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`}>Tous</button>
         {FONT_STYLES.map(s => (
@@ -1056,19 +1086,19 @@ function Section4Finitions({ config, setConfig }: { config: Config; setConfig: (
     <div className="space-y-8">
       <div>
         <h2 className="text-xl font-bold text-gray-900 mb-1">Finitions</h2>
-        <p className="text-sm text-gray-500 mb-6">Les derniers ajustements qui font la différence.</p>
+        <p className="text-sm text-gray-600 mb-6">Les derniers ajustements qui font la différence.</p>
       </div>
 
       <div>
-        <div className="font-semibold text-sm text-gray-800 mb-3">Animations <span className="font-normal text-gray-500">— {animLabels[config.anim]}</span></div>
+        <div className="font-semibold text-sm text-gray-800 mb-3">Animations <span className="font-normal text-gray-600">— {animLabels[config.anim]}</span></div>
         <input type="range" min={0} max={3} value={config.anim} onChange={e => set('anim', +e.target.value)} className="w-full accent-electric-ink" />
-        <div className="flex justify-between text-[10px] text-gray-500 mt-1">
+        <div className="flex justify-between text-[10px] text-gray-600 mt-1">
           {animLabels.map(l => <span key={l}>{l}</span>)}
         </div>
       </div>
 
       <div>
-        <div className="font-semibold text-sm text-gray-800 mb-3">Densité <span className="font-normal text-gray-500">— {densityLabels[config.density]}</span></div>
+        <div className="font-semibold text-sm text-gray-800 mb-3">Densité <span className="font-normal text-gray-600">— {densityLabels[config.density]}</span></div>
         <div className="flex gap-2">
           {densityLabels.map((l, i) => (
             <button key={l} onClick={() => set('density', i)}
@@ -1078,7 +1108,7 @@ function Section4Finitions({ config, setConfig }: { config: Config; setConfig: (
       </div>
 
       <div>
-        <div className="font-semibold text-sm text-gray-800 mb-3">Coins <span className="font-normal text-gray-500">— {cornerLabels[config.corners]}</span></div>
+        <div className="font-semibold text-sm text-gray-800 mb-3">Coins <span className="font-normal text-gray-600">— {cornerLabels[config.corners]}</span></div>
         <div className="flex gap-3">
           {cornerLabels.map((l, i) => {
             const r = i === 0 ? '0px' : i === 1 ? '8px' : '20px'
@@ -1252,7 +1282,7 @@ function ProfileCard({ config }: { config: Config }) {
     <div class="row"><span class="label">Animations</span><span class="value">${['Aucune','Subtile','Marquée','Spectaculaire'][config.anim]}</span></div>
     <h2 style="page-break-before: always; padding-top: 8px;">Composants dans le style</h2>
     <div style="display:flex; gap:12px; align-items:center; margin-bottom:16px; flex-wrap:wrap;">
-      <span style="display:inline-block; padding:10px 20px; font-weight:700; font-size:13px; border-radius:${btnRadius(config.buttonStyle, config.corners === 0 ? 0 : config.corners === 1 ? 8 : 16)}px; background:${config.buttonStyle === 'contour' ? '#fff' : pal.acc}; color:${config.buttonStyle === 'contour' ? pal.acc : (relLuminance(pal.acc) > 0.55 ? '#111' : '#fff')}; border:${config.buttonStyle === 'contour' ? `2px solid ${pal.acc}` : 'none'};">Bouton principal</span>
+      <span style="display:inline-block; padding:10px 20px; font-weight:700; font-size:13px; border-radius:${btnRadius(config.buttonStyle, config.corners === 0 ? 0 : config.corners === 1 ? 8 : 16)}px; background:${config.buttonStyle === 'contour' ? '#fff' : pal.acc}; color:${config.buttonStyle === 'contour' ? pal.acc : fixContrast(contrastRatio('#111111', pal.acc) >= contrastRatio('#ffffff', pal.acc) ? '#111111' : '#ffffff', pal.acc)}; border:${config.buttonStyle === 'contour' ? `2px solid ${pal.acc}` : 'none'};">Bouton principal</span>
       <span style="display:inline-block; padding:10px 20px; font-weight:700; font-size:13px; border-radius:${btnRadius(config.buttonStyle, config.corners === 0 ? 0 : config.corners === 1 ? 8 : 16)}px; background:transparent; color:${pal.dom}; border:1.5px solid ${pal.dom}55;">Bouton secondaire</span>
     </div>
     <div style="display:flex; gap:14px; margin-bottom:16px; flex-wrap:wrap;">
@@ -1267,7 +1297,7 @@ function ProfileCard({ config }: { config: Config }) {
     </div>
     <div style="max-width:320px;">
       <div style="font-size:11px; color:#666; margin-bottom:4px;">Champ de formulaire</div>
-      <div style="padding:10px 14px; border-radius:${config.corners === 0 ? 0 : config.corners === 1 ? 6 : 14}px; border:1.5px solid ${pal.dom}33; font-size:12px; color:#999;">Votre adresse email</div>
+      <div style="padding:10px 14px; border-radius:${config.corners === 0 ? 0 : config.corners === 1 ? 6 : 14}px; border:1.5px solid ${pal.dom}33; font-size:12px; color:#6b6b6b;">Votre adresse email</div>
     </div>
     <div class="footer">
       Transmettez ce guide à votre agence pour votre devis.<br>
@@ -1395,7 +1425,7 @@ function SavedStyles({ config, setConfig }: { config: Config; setConfig: (c: Con
             <button type="button" onClick={save} className="px-3 py-2 rounded-lg bg-electric-ink text-white text-xs font-semibold hover:bg-electric-ink/90 transition-colors">Enregistrer</button>
           </div>
           {styles.length === 0 ? (
-            <p className="text-[11px] text-gray-500">Aucun style enregistré pour l'instant.</p>
+            <p className="text-[11px] text-gray-600">Aucun style enregistré pour l'instant.</p>
           ) : (
             <div className="space-y-1.5">
               {styles.slice().reverse().map(s => (
@@ -1435,7 +1465,7 @@ function Onboarding({ onDone }: { onDone: () => void }) {
         <p className="text-xs text-gray-600 mt-0.5">{ONBOARDING_STEPS[step].text}</p>
       </div>
       <div className="flex items-center gap-2 shrink-0">
-        <button type="button" onClick={onDone} className="text-xs text-gray-500 hover:text-gray-600">Passer</button>
+        <button type="button" onClick={onDone} className="text-xs text-gray-600 hover:text-gray-700">Passer</button>
         <button type="button" onClick={() => last ? onDone() : setStep(s => s + 1)}
           className="px-3 py-1.5 rounded-lg bg-electric-ink text-white text-xs font-semibold hover:bg-electric-ink/90 transition-colors">
           {last ? 'Terminer' : 'Suivant'}
@@ -1592,7 +1622,7 @@ export default function StudioClient() {
       {/* Presets + ambiances + historique */}
       <div className="mb-3 overflow-x-auto">
         <div className="flex gap-2 min-w-max pb-1">
-          <span className="text-xs text-gray-500 self-center mr-1 shrink-0">Métier :</span>
+          <span className="text-xs text-gray-600 self-center mr-1 shrink-0">Métier :</span>
           {PRESETS.map(p => (
             <button key={p.id} type="button" onClick={() => applyPreset(p)}
               className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white border border-gray-200 hover:border-electric-ink text-xs font-medium text-gray-700 transition-colors whitespace-nowrap">
@@ -1603,7 +1633,7 @@ export default function StudioClient() {
       </div>
       <div className="mb-6 overflow-x-auto">
         <div className="flex gap-2 min-w-max pb-1 items-center">
-          <span className="text-xs text-gray-500 self-center mr-1 shrink-0">Ambiance :</span>
+          <span className="text-xs text-gray-600 self-center mr-1 shrink-0">Ambiance :</span>
           {MOODS.map(m => (
             <button key={m.id} type="button" onClick={() => applyPreset(m)}
               className="px-3 py-1.5 rounded-full bg-gray-100 border border-gray-200 hover:border-electric-ink text-xs font-medium text-gray-700 transition-colors whitespace-nowrap">
@@ -1616,11 +1646,11 @@ export default function StudioClient() {
           </button>
           <div className="w-px h-5 bg-gray-200 mx-1 shrink-0" />
           <button type="button" onClick={undo} disabled={!canUndo} title="Annuler (Ctrl+Z)"
-            className="flex items-center gap-1 px-2.5 py-1.5 rounded-full text-xs font-medium text-gray-500 hover:bg-gray-100 disabled:opacity-30 disabled:hover:bg-transparent transition-colors whitespace-nowrap">
+            className="flex items-center gap-1 px-2.5 py-1.5 rounded-full text-xs font-medium text-gray-600 hover:bg-gray-100 disabled:opacity-30 disabled:hover:bg-transparent transition-colors whitespace-nowrap">
             <Undo2 size={12} /> Annuler
           </button>
           <button type="button" onClick={redo} disabled={!canRedo} title="Rétablir (Ctrl+Maj+Z)"
-            className="flex items-center gap-1 px-2.5 py-1.5 rounded-full text-xs font-medium text-gray-500 hover:bg-gray-100 disabled:opacity-30 disabled:hover:bg-transparent transition-colors whitespace-nowrap">
+            className="flex items-center gap-1 px-2.5 py-1.5 rounded-full text-xs font-medium text-gray-600 hover:bg-gray-100 disabled:opacity-30 disabled:hover:bg-transparent transition-colors whitespace-nowrap">
             <Redo2 size={12} /> Rétablir
           </button>
         </div>
@@ -1638,7 +1668,7 @@ export default function StudioClient() {
           <div className="mb-6">
             <div className="flex items-center justify-between mb-2">
               <span className="text-sm font-medium text-gray-700">Étape {section + 1} / {SECTIONS.length}</span>
-              <span className="text-xs text-gray-500">{Math.round(progress)}%</span>
+              <span className="text-xs text-gray-600">{Math.round(progress)}%</span>
             </div>
             <div className="h-1.5 bg-gray-100 rounded-full overflow-hidden mb-3">
               <div className="h-full bg-electric-ink rounded-full transition-all duration-300" style={{ width: `${progress}%` }} />
@@ -1646,7 +1676,7 @@ export default function StudioClient() {
             <div className="flex gap-1">
               {SECTIONS.map((s, i) => (
                 <button key={s.id} type="button" onClick={() => goToSection(i)}
-                  className={`flex-1 py-2 text-xs font-medium rounded-lg transition-colors ${i === section ? 'bg-electric-ink text-white' : i < section ? 'bg-green-100 text-green-700' : 'bg-gray-100 text-gray-500'}`}>
+                  className={`flex-1 py-2 text-xs font-medium rounded-lg transition-colors ${i === section ? 'bg-electric-ink text-white' : i < section ? 'bg-green-100 text-green-700' : 'bg-gray-100 text-gray-600'}`}>
                   {i < section ? '✓ ' : ''}{s.label}
                 </button>
               ))}
@@ -1687,7 +1717,7 @@ export default function StudioClient() {
         <div className="space-y-5 lg:sticky lg:top-24 self-start" id="studio-preview-panel">
           <div>
             <div className="flex items-center justify-between mb-2">
-              <div className="text-xs font-semibold text-gray-500 uppercase tracking-wider">Aperçu en direct</div>
+              <div className="text-xs font-semibold text-gray-600 uppercase tracking-wider">Aperçu en direct</div>
               <button
                 type="button"
                 onClick={() => {
@@ -1876,7 +1906,7 @@ function StyleCurrentsGallery() {
       <div className="mb-8">
         <div className="text-xs font-semibold text-electric uppercase tracking-widest mb-2">Inspiration</div>
         <h2 className="text-2xl font-bold text-gray-900 mb-2">Courants de style</h2>
-        <p className="text-gray-500 text-sm max-w-2xl">
+        <p className="text-gray-600 text-sm max-w-2xl">
           Six grandes directions esthétiques illustrées par des maquettes originales.
           Cliquez « Voir le site » pour vous inspirer.
         </p>
@@ -1892,7 +1922,7 @@ function StyleCurrentsGallery() {
             </div>
             <div className="p-4">
               <h3 className="font-bold text-gray-900 text-sm mb-1.5">{c.name}</h3>
-              <p className="text-gray-500 text-xs leading-relaxed mb-3">{c.desc}</p>
+              <p className="text-gray-600 text-xs leading-relaxed mb-3">{c.desc}</p>
               <div className="flex flex-wrap gap-2">
                 {c.refs.map(r => (
                   <a key={r.name} href={r.url} target="_blank" rel="noopener noreferrer"
@@ -1909,7 +1939,7 @@ function StyleCurrentsGallery() {
         ))}
       </div>
 
-      <p className="mt-8 text-center text-xs text-gray-500 px-4">
+      <p className="mt-8 text-center text-xs text-gray-600 px-4">
         Sites cités à titre de référence et d&apos;inspiration — aucune affiliation ni partenariat avec ces marques.
         Les maquettes présentées ci-dessus sont des créations originales Stackup.
       </p>

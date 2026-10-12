@@ -15,10 +15,17 @@ interface BreadcrumbItem {
  *   echelle      un axe gradué qui se construit de gauche à droite
  *   chronologie  des crans qui se remplissent le long d'une ligne de temps
  *   signal       des ondes concentriques émises depuis un point
+ *   colonne      des lignes de texte qui se composent, de la gauche vers la droite
+ *   maillage     une couverture qui gagne du terrain, point par point
  *   sobre        aucun ornement — pour les pages où il n'aurait rien à dire
  *
  * Toutes sont décoratives : aucune ne porte d'information, toutes sont en
  * `aria-hidden`, et le titre reste peint sans elles.
+ *
+ * `colonne` et `maillage` ont été ajoutées pour remplacer la bande sombre
+ * que VINGT-QUATRE pages intérieures copiaient à l'identique — même dégradé,
+ * même `pt-24 pb-16`, même fil d'Ariane, même titre blanc. Les six pages
+ * commerciales avaient déjà leur signature ; les autres n'avaient rien.
  */
 export type Signature =
   | 'trace'
@@ -26,6 +33,8 @@ export type Signature =
   | 'echelle'
   | 'chronologie'
   | 'signal'
+  | 'colonne'
+  | 'maillage'
   | 'sobre'
 
 interface Props {
@@ -109,11 +118,74 @@ function Signal() {
   )
 }
 
+/**
+ * Des lignes de texte qui se composent — pour l'éditorial.
+ *
+ * Les longueurs ne sont pas aléatoires à chaque rendu : elles viennent d'une
+ * table fixe. Un `Math.random()` ici donnerait un balisage différent sur le
+ * serveur et dans le navigateur, donc une erreur d'hydratation.
+ */
+const LIGNES = [96, 72, 88, 54, 92, 66, 81, 44, 90, 70, 86, 58]
+
+function Colonne() {
+  return (
+    <div className="su-sig__colonne" aria-hidden="true">
+      {LIGNES.map((l, i) => (
+        <span
+          key={i}
+          style={{ '--l': `${l}%`, '--i': i, '--n': LIGNES.length } as React.CSSProperties}
+        />
+      ))}
+    </div>
+  )
+}
+
+/**
+ * Une couverture qui gagne du terrain — pour les pages de territoire.
+ *
+ * Le décalage de chaque point suit sa DISTANCE au foyer, pas son indice :
+ * l'allumage se propage en onde depuis un coin, au lieu de balayer la grille
+ * ligne par ligne. C'est ce qui le distingue de `echelle`, qui est un
+ * décalage linéaire.
+ */
+const MAILLE = { colonnes: 14, rangs: 7 }
+
+function Maillage() {
+  const points = []
+  for (let r = 0; r < MAILLE.rangs; r++) {
+    for (let c = 0; c < MAILLE.colonnes; c++) {
+      const d = Math.sqrt(c * c + r * r * 2.4)
+      points.push({ c, r, d })
+    }
+  }
+  const dMax = Math.max(...points.map((p) => p.d))
+  return (
+    <div className="su-sig__maillage" aria-hidden="true">
+      {points.map((p, i) => (
+        <span
+          key={i}
+          style={
+            {
+              '--c': p.c,
+              '--r': p.r,
+              '--cols': MAILLE.colonnes,
+              '--rangs': MAILLE.rangs,
+              '--d': (p.d / dMax).toFixed(3),
+            } as React.CSSProperties
+          }
+        />
+      ))}
+    </div>
+  )
+}
+
 const ORNEMENTS: Partial<Record<Signature, () => JSX.Element>> = {
   trace: Trace,
   echelle: Echelle,
   chronologie: Chronologie,
   signal: Signal,
+  colonne: Colonne,
+  maillage: Maillage,
 }
 
 /* ── L'en-tête ──────────────────────────────────────────────────────────── */
@@ -138,10 +210,15 @@ export default function MiniHero({
 
       <div className="su-sig__contenu">
         {breadcrumb && <Breadcrumb items={breadcrumb} />}
+        {/* Le repère passe sur `.su-surtitre`, la grammaire unique de la page
+            d'accueil. Il utilisait `.section-marker` : #2D7DD2 à 70 %
+            d'opacité, soit environ 2,6:1 sur l'ivoire — sous le seuil AA pour
+            du petit texte, et invisible à l'œil sur la capture qui me l'a fait
+            voir. `.su-surtitre` est en #B45309, mesuré à 4,94:1. */}
         {marker && (
-          <div className="section-marker mb-2 mt-1" aria-hidden="true">
+          <p className="su-surtitre mb-3 mt-1" aria-hidden="true">
             {marker}
-          </div>
+          </p>
         )}
 
         {/* Le titre est toujours peint. Les signatures n'agissent que sur sa

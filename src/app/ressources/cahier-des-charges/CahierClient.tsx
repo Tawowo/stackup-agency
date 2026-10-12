@@ -75,17 +75,17 @@ const BUDGETS = ['< 500€', '500 – 1 000€', '1 000 – 2 000€', '2 000 �
 function ProgressBar({ step, total }: { step: number; total: number }) {
   return (
     <div className="mb-12">
-      <div className="flex justify-between text-xs text-white/65 mb-3">
+      <div className="flex justify-between text-xs text-[#51657E] mb-3">
         <span>Étape {step}/{total}</span>
         <span>{Math.round((step / total) * 100)}% complété</span>
       </div>
-      <div className="h-1 bg-white/5 rounded-full overflow-hidden">
+      <div className="h-1 bg-navy/10 rounded-full overflow-hidden">
         <div className="h-full bg-gradient-to-r from-electric to-gold rounded-full transition-all duration-500 ease-out"
           style={{ width: `${(step / total) * 100}%` }} />
       </div>
       <div className="flex justify-between mt-3">
         {['Activité', 'Objectifs', 'Fonctionnalités', 'Charte', 'Budget'].map((s, i) => (
-          <div key={s} className={`text-xs transition-colors duration-200 ${i < step ? 'text-electric' : i === step - 1 ? 'text-white font-medium' : 'text-white/65'}`}>
+          <div key={s} className={`text-xs transition-colors duration-200 ${i < step ? 'text-electric' : i === step - 1 ? 'text-navy font-medium' : 'text-[#51657E]'}`}>
             {i < step - 1 ? '✓' : ''} <span className="hidden sm:inline">{s}</span>
           </div>
         ))}
@@ -100,8 +100,8 @@ function Chip({ label, selected, onToggle }: { label: string; selected: boolean;
     <button type="button" onClick={onToggle}
       className={`px-4 py-2 rounded-xl text-sm font-medium border transition-all duration-200 ${
         selected
-          ? 'bg-electric/20 border-electric text-white'
-          : 'bg-white/[0.03] border-white/10 text-white/65 hover:border-white/30 hover:text-white'
+          ? 'bg-electric/10 border-electric text-navy'
+          : 'bg-white border-navy/15 text-[#475569] hover:border-electric/50 hover:text-navy'
       }`}>
       {selected && <CheckCircle size={12} className="inline mr-1.5 text-electric" />}
       {label}
@@ -175,19 +175,19 @@ export default function CahierClient() {
           <div className="w-16 h-16 rounded-full bg-success/20 flex items-center justify-center mx-auto mb-4 success-icon-anim">
             <CheckCircle size={28} className="text-success" />
           </div>
-          <h2 className="text-2xl font-bold text-white mb-2">Cahier des charges complété !</h2>
-          <p className="text-white/65 text-sm">Exportez-le ou copiez-le pour l'envoyer avec votre demande de devis.</p>
+          <h2 className="text-2xl font-bold text-navy mb-2">Cahier des charges complété !</h2>
+          <p className="text-[#51657E] text-sm">Exportez-le ou copiez-le pour l'envoyer avec votre demande de devis.</p>
         </div>
 
-        <div className="rounded-2xl border border-white/10 bg-white/[0.02] p-6 mb-6">
-          <pre className="text-xs text-white/60 font-mono whitespace-pre-wrap leading-relaxed overflow-auto max-h-80">
+        <div className="rounded-2xl border border-navy/12 bg-white p-6 mb-6">
+          <pre className="text-xs text-[#475569] font-mono whitespace-pre-wrap leading-relaxed overflow-auto max-h-80">
             {generateText(data)}
           </pre>
         </div>
 
         <div className="flex flex-wrap gap-3 justify-center mb-8">
           <button onClick={copy}
-            className="flex items-center gap-2 px-6 py-3 bg-white/10 hover:bg-white/15 text-white rounded-xl text-sm font-medium transition-all">
+            className="flex items-center gap-2 px-6 py-3 bg-navy/8 hover:bg-navy/12 text-navy rounded-xl text-sm font-medium transition-all">
             {copied ? <Check size={15} className="text-success" /> : <Copy size={15} />}
             {copied ? 'Copié !' : 'Copier le texte'}
           </button>
@@ -198,7 +198,7 @@ export default function CahierClient() {
         </div>
 
         <div className="text-center">
-          <p className="text-white/65 text-sm mb-4">Prêt à démarrer votre projet ?</p>
+          <p className="text-[#51657E] text-sm mb-4">Prêt à démarrer votre projet ?</p>
           <Link href="/devis"
             className="inline-flex items-center gap-2 px-8 py-3 bg-gold hover:bg-gold/90 text-ink font-bold rounded-xl transition-all hover:-translate-y-0.5 text-sm">
             Demander un devis → <ChevronRight size={14} />
@@ -216,7 +216,7 @@ export default function CahierClient() {
         {/* ÉTAPE 1 — Activité */}
         {step === 1 && (
           <div className="space-y-6">
-            <h2 className="text-xl font-bold text-white">Votre activité</h2>
+            <h2 className="text-xl font-bold text-navy">Votre activité</h2>
             <div className="space-y-4">
               {[
                 { k: 'secteur', label: 'Secteur d\'activité', ph: 'Restauration, immobilier, santé, artisanat…' },
@@ -226,16 +226,17 @@ export default function CahierClient() {
               ].map(f => (
                 <div key={f.k} className="float-field relative">
                   <input
+                    id={`cdc-${f.k}`}
                     type="text"
                     placeholder=" "
                     value={data[f.k as keyof FormData] as string}
                     onChange={e => set(f.k as keyof FormData, e.target.value)}
-                    className="w-full px-4 pt-6 pb-3 rounded-xl border border-white/10 bg-white/[0.04] text-white placeholder:text-transparent focus:outline-none focus:border-electric/60 text-sm transition-colors"
+                    className="w-full px-4 pt-6 pb-3 rounded-xl border border-navy/15 bg-white text-navy placeholder:text-transparent focus:outline-none focus:border-electric text-sm transition-colors"
                   />
-                  <label className="absolute left-4 top-4 text-white/65 text-sm pointer-events-none transition-all duration-200">
+                  <label htmlFor={`cdc-${f.k}`} className="absolute left-4 top-4 text-[#51657E] text-sm pointer-events-none transition-all duration-200">
                     {f.label}
                   </label>
-                  <p className="text-xs text-white/65 mt-1 pl-1">{f.ph}</p>
+                  <p className="text-xs text-[#51657E] mt-1 pl-1">{f.ph}</p>
                 </div>
               ))}
             </div>
@@ -245,9 +246,9 @@ export default function CahierClient() {
         {/* ÉTAPE 2 — Objectifs */}
         {step === 2 && (
           <div className="space-y-6">
-            <h2 className="text-xl font-bold text-white">Objectifs du site</h2>
+            <h2 className="text-xl font-bold text-navy">Objectifs du site</h2>
             <div>
-              <p className="text-sm text-white/65 mb-3">Que doit accomplir votre site ? (plusieurs choix)</p>
+              <p className="text-sm text-[#51657E] mb-3">Que doit accomplir votre site ? (plusieurs choix)</p>
               <div className="flex flex-wrap gap-2">
                 {OBJECTIFS_LIST.map(o => (
                   <Chip key={o} label={o} selected={data.objectifs.includes(o)} onToggle={() => toggleArr('objectifs', o)} />
@@ -256,13 +257,14 @@ export default function CahierClient() {
             </div>
             <div className="float-field relative">
               <textarea
+                id="cdc-resultat-attendu"
                 placeholder=" "
                 rows={3}
                 value={data.resultatAttendu}
                 onChange={e => set('resultatAttendu', e.target.value)}
-                className="w-full px-4 pt-6 pb-3 rounded-xl border border-white/10 bg-white/[0.04] text-white placeholder:text-transparent focus:outline-none focus:border-electric/60 text-sm resize-none transition-colors"
+                className="w-full px-4 pt-6 pb-3 rounded-xl border border-navy/15 bg-white text-navy placeholder:text-transparent focus:outline-none focus:border-electric text-sm resize-none transition-colors"
               />
-              <label className="absolute left-4 top-4 text-white/65 text-sm pointer-events-none transition-all duration-200">
+              <label htmlFor="cdc-resultat-attendu" className="absolute left-4 top-4 text-[#51657E] text-sm pointer-events-none transition-all duration-200">
                 Résultat attendu dans 6 mois
               </label>
             </div>
@@ -272,9 +274,9 @@ export default function CahierClient() {
         {/* ÉTAPE 3 — Fonctionnalités */}
         {step === 3 && (
           <div className="space-y-6">
-            <h2 className="text-xl font-bold text-white">Fonctionnalités requises</h2>
+            <h2 className="text-xl font-bold text-navy">Fonctionnalités requises</h2>
             <div>
-              <p className="text-sm text-white/65 mb-3">Cochez ce dont vous avez besoin</p>
+              <p className="text-sm text-[#51657E] mb-3">Cochez ce dont vous avez besoin</p>
               <div className="flex flex-wrap gap-2">
                 {FONCT_LIST.map(f => (
                   <Chip key={f} label={f} selected={data.fonctionnalites.includes(f)} onToggle={() => toggleArr('fonctionnalites', f)} />
@@ -283,13 +285,14 @@ export default function CahierClient() {
             </div>
             <div className="float-field relative">
               <textarea
+                id="cdc-pages-speciales"
                 placeholder=" "
                 rows={3}
                 value={data.pagesSpeciales}
                 onChange={e => set('pagesSpeciales', e.target.value)}
-                className="w-full px-4 pt-6 pb-3 rounded-xl border border-white/10 bg-white/[0.04] text-white placeholder:text-transparent focus:outline-none focus:border-electric/60 text-sm resize-none transition-colors"
+                className="w-full px-4 pt-6 pb-3 rounded-xl border border-navy/15 bg-white text-navy placeholder:text-transparent focus:outline-none focus:border-electric text-sm resize-none transition-colors"
               />
-              <label className="absolute left-4 top-4 text-white/65 text-sm pointer-events-none transition-all duration-200">
+              <label htmlFor="cdc-pages-speciales" className="absolute left-4 top-4 text-[#51657E] text-sm pointer-events-none transition-all duration-200">
                 Pages ou sections spéciales à prévoir
               </label>
             </div>
@@ -299,7 +302,7 @@ export default function CahierClient() {
         {/* ÉTAPE 4 — Charte */}
         {step === 4 && (
           <div className="space-y-6">
-            <h2 className="text-xl font-bold text-white">Charte graphique</h2>
+            <h2 className="text-xl font-bold text-navy">Charte graphique</h2>
             <div className="space-y-4">
               {[
                 { k: 'logo', label: 'Logo existant ?', ph: 'Oui / Non / En cours' },
@@ -307,26 +310,26 @@ export default function CahierClient() {
                 { k: 'inspiration', label: 'Sites que vous aimez', ph: 'apple.com, airbnb.fr…' },
               ].map(f => (
                 <div key={f.k} className="float-field relative">
-                  <input type="text" placeholder=" "
+                  <input id={`cdc-${f.k}`} type="text" placeholder=" "
                     value={data[f.k as keyof FormData] as string}
                     onChange={e => set(f.k as keyof FormData, e.target.value)}
-                    className="w-full px-4 pt-6 pb-3 rounded-xl border border-white/10 bg-white/[0.04] text-white placeholder:text-transparent focus:outline-none focus:border-electric/60 text-sm transition-colors"
+                    className="w-full px-4 pt-6 pb-3 rounded-xl border border-navy/15 bg-white text-navy placeholder:text-transparent focus:outline-none focus:border-electric text-sm transition-colors"
                   />
-                  <label className="absolute left-4 top-4 text-white/65 text-sm pointer-events-none transition-all duration-200">{f.label}</label>
-                  <p className="text-xs text-white/65 mt-1 pl-1">{f.ph}</p>
+                  <label htmlFor={`cdc-${f.k}`} className="absolute left-4 top-4 text-[#51657E] text-sm pointer-events-none transition-all duration-200">{f.label}</label>
+                  <p className="text-xs text-[#51657E] mt-1 pl-1">{f.ph}</p>
                 </div>
               ))}
             </div>
             <div>
-              <p className="text-sm text-white/65 mb-3">Style visuel</p>
+              <p className="text-sm text-[#51657E] mb-3">Style visuel</p>
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
                 {STYLES.map(s => (
                   <button key={s.id} type="button"
                     onClick={() => set('style', s.id)}
                     className={`p-4 rounded-xl border text-left transition-all duration-200 ${
                       data.style === s.id
-                        ? 'border-electric bg-electric/10 text-white'
-                        : 'border-white/10 bg-white/[0.02] text-white/65 hover:border-white/25'
+                        ? 'border-electric bg-electric/10 text-navy'
+                        : 'border-navy/15 bg-white text-[#475569] hover:border-electric/50'
                     }`}>
                     <div className="text-xl mb-1">{s.emoji}</div>
                     <div className="text-xs font-medium">{s.label}</div>
@@ -340,57 +343,57 @@ export default function CahierClient() {
         {/* ÉTAPE 5 — Contenus & Budget */}
         {step === 5 && (
           <div className="space-y-6">
-            <h2 className="text-xl font-bold text-white">Contenus & Budget</h2>
+            <h2 className="text-xl font-bold text-navy">Contenus & Budget</h2>
             <div className="grid sm:grid-cols-2 gap-4">
               {[
                 { k: 'textesFournis', label: 'Textes fournis par vous', ph: 'Oui / Partiellement / Non' },
                 { k: 'photosFournies', label: 'Photos / visuels fournis', ph: 'Oui / Non / À créer' },
               ].map(f => (
                 <div key={f.k} className="float-field relative">
-                  <input type="text" placeholder=" "
+                  <input id={`cdc-${f.k}`} type="text" placeholder=" "
                     value={data[f.k as keyof FormData] as string}
                     onChange={e => set(f.k as keyof FormData, e.target.value)}
-                    className="w-full px-4 pt-6 pb-3 rounded-xl border border-white/10 bg-white/[0.04] text-white placeholder:text-transparent focus:outline-none focus:border-electric/60 text-sm transition-colors"
+                    className="w-full px-4 pt-6 pb-3 rounded-xl border border-navy/15 bg-white text-navy placeholder:text-transparent focus:outline-none focus:border-electric text-sm transition-colors"
                   />
-                  <label className="absolute left-4 top-4 text-white/65 text-sm pointer-events-none transition-all duration-200">{f.label}</label>
-                  <p className="text-xs text-white/65 mt-1 pl-1">{f.ph}</p>
+                  <label htmlFor={`cdc-${f.k}`} className="absolute left-4 top-4 text-[#51657E] text-sm pointer-events-none transition-all duration-200">{f.label}</label>
+                  <p className="text-xs text-[#51657E] mt-1 pl-1">{f.ph}</p>
                 </div>
               ))}
             </div>
             <div>
-              <p className="text-sm text-white/65 mb-3">Budget indicatif</p>
+              <p className="text-sm text-[#51657E] mb-3">Budget indicatif</p>
               <div className="flex flex-wrap gap-2">
                 {BUDGETS.map(b => (
                   <button key={b} type="button"
                     onClick={() => set('budget', b)}
                     className={`px-4 py-2 rounded-xl text-sm border transition-all ${
                       data.budget === b
-                        ? 'border-electric bg-electric/15 text-white font-medium'
-                        : 'border-white/10 text-white/65 hover:border-white/25'
+                        ? 'border-electric bg-electric/10 text-navy font-medium'
+                        : 'border-navy/15 text-[#475569] hover:border-electric/50'
                     }`}>{b}</button>
                 ))}
               </div>
             </div>
             <div className="float-field relative">
-              <input type="text" placeholder=" "
+              <input id="cdc-date-voulue" type="text" placeholder=" "
                 value={data.dateVoulue}
                 onChange={e => set('dateVoulue', e.target.value)}
-                className="w-full px-4 pt-6 pb-3 rounded-xl border border-white/10 bg-white/[0.04] text-white placeholder:text-transparent focus:outline-none focus:border-electric/60 text-sm transition-colors"
+                className="w-full px-4 pt-6 pb-3 rounded-xl border border-navy/15 bg-white text-navy placeholder:text-transparent focus:outline-none focus:border-electric text-sm transition-colors"
               />
-              <label className="absolute left-4 top-4 text-white/65 text-sm pointer-events-none transition-all duration-200">
+              <label htmlFor="cdc-date-voulue" className="absolute left-4 top-4 text-[#51657E] text-sm pointer-events-none transition-all duration-200">
                 Date souhaitée de mise en ligne
               </label>
-              <p className="text-xs text-white/65 mt-1 pl-1">Ex : Avant le 1er septembre, pas de contrainte…</p>
+              <p className="text-xs text-[#51657E] mt-1 pl-1">Ex : Avant le 1er septembre, pas de contrainte…</p>
             </div>
           </div>
         )}
       </div>
 
       {/* Navigation */}
-      <div className="flex justify-between mt-10 pt-6 border-t border-white/5">
+      <div className="flex justify-between mt-10 pt-6 border-t border-navy/10">
         {step > 1 ? (
           <button onClick={() => setStep(s => s - 1)}
-            className="flex items-center gap-2 px-5 py-2.5 rounded-xl border border-white/10 text-white/60 hover:text-white hover:border-white/25 text-sm transition-all">
+            className="flex items-center gap-2 px-5 py-2.5 rounded-xl border border-navy/20 text-[#475569] hover:text-navy hover:border-navy/40 text-sm transition-all">
             <ChevronLeft size={14} /> Précédent
           </button>
         ) : <div />}

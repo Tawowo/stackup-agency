@@ -31,19 +31,56 @@ const BASE = process.env.BASE ?? 'http://127.0.0.1:3100'
 const CHROME =
   process.env.CHROME_PATH ?? '/opt/pw-browsers/chromium-1194/chrome-linux/chrome'
 
+/**
+ * Les routes auditées.
+ *
+ * Elles étaient douze. C'était une couverture insuffisante, et je m'en suis
+ * aperçu en corrigeant un défaut de contraste sur `/zones-intervention` —
+ * une page que ce scan ne visitait pas. Un audit qui ne regarde que les
+ * pages déjà jugées bonnes ne trouve jamais rien.
+ *
+ * La liste couvre maintenant au moins un représentant de chaque GABARIT,
+ * puisque c'est le gabarit qui porte le défaut : une page générée par ville
+ * ou par métier en vaut quatre cents.
+ */
 const PAGES = (process.env.PAGES ?? [
   '/',
+  // Commerciales
   '/services',
   '/services/site-vitrine',
+  '/services/redaction-blog-seo',
+  '/tarifs',
+  '/tarifs/pro',
+  '/realisations',
+  '/a-propos',
+  '/contact',
+  '/parrainage',
+  // Conversion et outils
+  '/devis',
   '/laboratoire',
   '/configurateur',
-  '/tarifs',
-  '/realisations',
-  '/devis',
-  '/contact',
+  '/outils',
+  '/outils/audit-site',
+  '/outils/studio-de-style',
+  // Territoire — un gabarit, des centaines d'URL
+  '/zones-intervention',
+  '/agence-web',
+  '/agence-web/tours',
+  '/agence-web/departement/indre-et-loire',
+  // Métiers et solutions — mêmes gabarits démultipliés
+  '/creation-site-internet',
+  '/solutions',
+  // Éditorial
   '/blog',
-  '/a-propos',
-  '/parrainage',
+  '/blog/categorie/seo',
+  '/ressources',
+  '/ressources/documents',
+  '/ressources/cahier-des-charges',
+  // Utilitaires et mentions
+  '/faq',
+  '/plan-du-site',
+  '/mentions-legales',
+  '/cgv',
 ].join(',')).split(',')
 
 const dormir = (ms) => new Promise((r) => setTimeout(r, ms))

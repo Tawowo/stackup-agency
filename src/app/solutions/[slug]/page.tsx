@@ -5,7 +5,7 @@ import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { ChevronRight, CheckCircle, AlertCircle, Star } from 'lucide-react'
 import { SITE } from '@/config/site'
-import Breadcrumb from '@/components/ui/Breadcrumb'
+import MiniHero from '@/components/ui/MiniHero'
 
 export async function generateStaticParams() {
   return SOLUTIONS.map(s => ({ slug: s.slug }))
@@ -78,23 +78,21 @@ export default function SolutionPage({ params }: { params: { slug: string } }) {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
-      <div className="bg-gradient-to-b from-[#060D1A] to-[#0A0F1C] pt-24 pb-16">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6">
-          <Breadcrumb items={[{ name: 'Solutions', href: '/solutions' }, { name: s.nom }]} />
-          <h1 className="text-3xl lg:text-5xl font-bold text-white leading-tight mb-6">
-            {s.nom} sur mesure
-          </h1>
-          <p className="text-white/70 text-lg mb-8 max-w-2xl">{s.intro}</p>
-          <div className="flex flex-wrap gap-4">
-            <Link href="/contact" className="px-6 py-3 bg-gold hover:bg-gold/80 text-ink font-semibold rounded-xl transition-all hover:-translate-y-0.5">
-              Demander un devis →
-            </Link>
-            <Link href="/services/systeme-gestion" className="px-6 py-3 border border-white/20 text-white hover:bg-white/10 rounded-xl transition-all">
-              Voir l'offre Système de gestion
-            </Link>
-          </div>
+      <MiniHero
+        signature="trace"
+        breadcrumb={[{ name: 'Solutions', href: '/solutions' }, { name: s.nom }]}
+        title={`${s.nom} sur mesure`}
+        subtitle={s.intro}
+      >
+        <div className="su-sig__actions">
+          <Link href="/contact" className="px-6 py-3 bg-gold hover:bg-gold/80 text-ink font-semibold rounded-xl transition-all hover:-translate-y-0.5">
+            Demander un devis →
+          </Link>
+          <Link href="/services/systeme-gestion" className="px-6 py-3 border border-navy/25 text-navy hover:bg-navy/5 hover:border-navy/40 font-semibold rounded-xl transition-all">
+            Voir l&apos;offre Système de gestion
+          </Link>
         </div>
-      </div>
+      </MiniHero>
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 py-16 space-y-16">
 

@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import { SITE } from '@/config/site'
-import Breadcrumb from '@/components/ui/Breadcrumb'
+import MiniHero from '@/components/ui/MiniHero'
 import StudioClient from './StudioClient'
 import Link from 'next/link'
 
@@ -46,13 +46,12 @@ export default function StudioPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
-      <div className="bg-gradient-to-b from-[#060D1A] to-[#0A0F1C] pt-24 pb-10">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6">
-          <Breadcrumb items={[{ name: 'Outils', href: '/outils' }, { name: 'Studio de style' }]} />
-          <h1 className="text-3xl lg:text-4xl font-bold text-white mb-2">Studio de style</h1>
-          <p className="text-white/60">Le studio de style est un configurateur gratuit d'identité visuelle : 12 presets métier, 50 palettes curées (ou personnalisées au pixel près avec vérification de contraste AA), 50 typographies, aperçu ultra-réaliste sur 5 maquettes (artisan, e-commerce, restaurant, photographe, cabinet pro) — puis un devis pré-rempli avec votre direction artistique si vous souhaitez la faire construire. Sans inscription.</p>
-        </div>
-      </div>
+      <MiniHero
+        signature="trace"
+        breadcrumb={[{ name: 'Outils', href: '/outils' }, { name: 'Studio de style' }]}
+        title="Studio de style"
+        subtitle="Le studio de style est un configurateur gratuit d'identité visuelle : 12 presets métier, 50 palettes curées (ou personnalisées au pixel près avec vérification de contraste AA), 50 typographies, aperçu ultra-réaliste sur 5 maquettes (artisan, e-commerce, restaurant, photographe, cabinet pro) — puis un devis pré-rempli avec votre direction artistique si vous souhaitez la faire construire. Sans inscription."
+      />
 
       <StudioClient />
 

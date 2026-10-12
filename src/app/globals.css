@@ -1003,7 +1003,12 @@ a, button, [role="button"] { cursor: pointer; }
   top: 50%;
   transform: translateY(-50%);
   font-size: 0.875rem;
-  color: rgba(30,58,95,0.5);
+  /* 0,72 et non 0,5 : à 0,5 le navy donne #8F9DAF, soit 2,75:1 sur blanc —
+     sous le seuil AA, et ça concernait TOUTES les étiquettes flottantes des
+     formulaires du site ainsi que le sommaire des articles. À 0,72 le rendu
+     est #566B82, mesuré à 5,5:1. Trouvé en étendant le scan de contraste de
+     12 à 31 routes. */
+  color: rgba(30,58,95,0.72);
   pointer-events: none;
   transition: all 0.18s ease;
   white-space: nowrap;
@@ -1177,7 +1182,12 @@ a, button, [role="button"] { cursor: pointer; }
   display: block;
   padding: 0.35rem 0.75rem;
   border-left: 2px solid transparent;
-  color: rgba(30,58,95,0.5);
+  /* 0,72 et non 0,5 : à 0,5 le navy donne #8F9DAF, soit 2,75:1 sur blanc —
+     sous le seuil AA, et ça concernait TOUTES les étiquettes flottantes des
+     formulaires du site ainsi que le sommaire des articles. À 0,72 le rendu
+     est #566B82, mesuré à 5,5:1. Trouvé en étendant le scan de contraste de
+     12 à 31 routes. */
+  color: rgba(30,58,95,0.72);
   font-size: 0.8125rem;
   transition: color 0.2s ease, border-color 0.2s ease, padding-left 0.2s ease;
 }

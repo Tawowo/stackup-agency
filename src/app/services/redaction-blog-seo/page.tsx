@@ -4,7 +4,7 @@ import { useState } from 'react'
 import Link from 'next/link'
 import { CheckCircle, ChevronRight, FileText, TrendingUp, Clock, RefreshCw, CalculatorIcon } from 'lucide-react'
 import { SITE } from '@/config/site'
-import Breadcrumb from '@/components/ui/Breadcrumb'
+import MiniHero from '@/components/ui/MiniHero'
 
 // ── Schema.org (injected via dangerouslySetInnerHTML below) ──
 const serviceSchema = {
@@ -115,10 +115,14 @@ function Calculator() {
 
       <div className="space-y-6">
         <div>
-          <label className="block text-sm font-medium text-foreground mb-2">
+          {/* `htmlFor` manquait : axe-core signalait ce curseur comme un
+              champ sans étiquette. Un lecteur d'écran annonçait « curseur,
+              1 sur 10 » sans jamais dire de quoi. */}
+          <label htmlFor="rbs-articles" className="block text-sm font-medium text-foreground mb-2">
             Articles par mois : <span className="text-electric font-bold">{articles}</span>
           </label>
           <input
+            id="rbs-articles"
             type="range"
             min={1}
             max={10}
@@ -188,34 +192,27 @@ export default function RedactionBlogSEOPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
-      <div className="bg-gradient-to-b from-[#060D1A] to-[#0A0F1C] pt-24 pb-16">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6">
-          <Breadcrumb items={[{ name: 'Services', href: '/services' }, { name: 'Rédaction blog SEO' }]} />
-          <div className="inline-block px-3 py-1 bg-blue-500/20 text-electric text-xs font-medium rounded-full mb-4">
-            Contenu & Référencement
-          </div>
-          <h1 className="text-3xl lg:text-5xl font-bold text-white leading-tight mb-4">
-            Rédaction blog SEO
-          </h1>
-          <p className="text-white/80 text-lg mb-6 max-w-2xl leading-relaxed">
-            Des articles de blog optimisés pour Google, rédigés par des professionnels du web.
-            Gagnez en visibilité sans écrire une ligne — à partir de 25€ l'article.
-          </p>
-          <div className="flex flex-wrap gap-3 mb-8 text-sm text-white/60">
-            <span className="flex items-center gap-1.5"><CheckCircle size={14} className="text-success" /> Dès 25€ l'article</span>
-            <span className="flex items-center gap-1.5"><CheckCircle size={14} className="text-success" /> Livraison sous 5 jours ouvrés</span>
-            <span className="flex items-center gap-1.5"><CheckCircle size={14} className="text-success" /> Relecture humaine systématique</span>
-          </div>
-          <div className="flex flex-wrap gap-4">
-            <Link href="/contact?projet=redaction" className="px-6 py-3 bg-gold hover:bg-gold/80 text-ink font-semibold rounded-xl transition-all hover:-translate-y-0.5">
-              Démarrer mon blog →
-            </Link>
-            <Link href="#packs" className="px-6 py-3 border border-white/20 text-white hover:bg-white/10 rounded-xl transition-all">
-              Voir les packs
-            </Link>
-          </div>
+      <MiniHero
+        signature="trace"
+        breadcrumb={[{ name: 'Services', href: '/services' }, { name: 'Rédaction blog SEO' }]}
+        marker="Contenu &amp; référencement"
+        title="Rédaction blog SEO"
+        subtitle="Des articles de blog optimisés pour Google, rédigés par des professionnels du web. Gagnez en visibilité sans écrire une ligne — à partir de 25 € l'article."
+      >
+        <div className="su-sig__meta">
+          <span><CheckCircle size={14} className="text-success" /> Dès 25 € l&apos;article</span>
+          <span><CheckCircle size={14} className="text-success" /> Livraison sous 5 jours ouvrés</span>
+          <span><CheckCircle size={14} className="text-success" /> Relecture humaine systématique</span>
         </div>
-      </div>
+        <div className="su-sig__actions">
+          <Link href="/contact?projet=redaction" className="px-6 py-3 bg-gold hover:bg-gold/80 text-ink font-semibold rounded-xl transition-all hover:-translate-y-0.5">
+            Démarrer mon blog →
+          </Link>
+          <Link href="#packs" className="px-6 py-3 border border-navy/25 text-navy hover:bg-navy/5 hover:border-navy/40 font-semibold rounded-xl transition-all">
+            Voir les packs
+          </Link>
+        </div>
+      </MiniHero>
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 py-16 space-y-16">
 
@@ -278,7 +275,7 @@ export default function RedactionBlogSEOPage() {
             les informations, enrichir le champ sémantique et améliorer la structure pour regagner les
             premières pages de Google. C'est souvent plus rapide que de rédiger un article de zéro.
           </p>
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-amber-500/15 text-amber-700 rounded-xl text-sm font-semibold">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-amber-500/15 text-amber-800 rounded-xl text-sm font-semibold">
             <CheckCircle size={14} />
             2 optimisations content-refresh/mois incluses dans le Pack Autorité (159€/mois)
           </div>

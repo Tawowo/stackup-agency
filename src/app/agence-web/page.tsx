@@ -1,8 +1,9 @@
 /* eslint-disable react/no-unescaped-entities */
 import { VILLES } from '@/data/villes'
 import Link from 'next/link'
-import { MapPin, ChevronRight, Home } from 'lucide-react'
+import { MapPin, ChevronRight } from 'lucide-react'
 import { SITE } from '@/config/site'
+import MiniHero from '@/components/ui/MiniHero'
 
 export const metadata = {
   title: 'Agence web — Création site internet en France',
@@ -40,23 +41,17 @@ export default function AgenceWebPage() {
     <div className="min-h-screen bg-[#FFFDF9]">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} />
 
-      <div className="bg-gradient-to-b from-[#060D1A] to-[#0A0F1C] pt-24 pb-16">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6">
-          <nav className="flex items-center gap-1.5 text-white/65 text-xs mb-6" aria-label="Fil d'Ariane">
-            <Link href="/" className="hover:text-white transition-colors flex items-center gap-1"><Home size={11} /> Accueil</Link>
-            <ChevronRight size={11} />
-            <span className="text-white/60">Agence web</span>
-          </nav>
-          <h1 className="text-3xl lg:text-5xl font-bold text-white mb-6">
-            Agence web — création de sites internet
-          </h1>
-          <p className="text-white/70 text-lg max-w-2xl">
-            Stackup Agency crée des sites internet professionnels pour les TPE, artisans et commerces.
-            Basée à Tours, nous intervenons à distance dans toute la France.
-            À partir de {SITE.pricing.vitrine}€, livraison en 10 jours.
-          </p>
-        </div>
-      </div>
+      <MiniHero
+        signature="maillage"
+        breadcrumb={[{ name: 'Agence web' }]}
+        title="Agence web — création de sites internet"
+      >
+        <p className="su-sig__chapo">
+          Stackup Agency crée des sites internet professionnels pour les TPE, artisans et commerces.
+          Basée à Tours, nous intervenons à distance dans toute la France.
+          À partir de {SITE.pricing.vitrine} €, livraison en 10 jours.
+        </p>
+      </MiniHero>
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 py-16 space-y-12">
         {villesByRegion.map(({ region, villes }) => (

@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { Download, ExternalLink } from 'lucide-react'
 import { SITE } from '@/config/site'
-import Breadcrumb from '@/components/ui/Breadcrumb'
+import MiniHero from '@/components/ui/MiniHero'
 
 export const metadata: Metadata = {
   title: 'Documents officiels — Cadre contractuel',
@@ -121,18 +121,12 @@ const GROUPS = [
 export default function DocumentsPage() {
   return (
     <div className="min-h-screen bg-[#FFFDF9]">
-      <div className="bg-gradient-to-b from-[#060D1A] to-[#0A0F1C] pt-24 pb-16">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6">
-          <Breadcrumb items={[{ name: 'Ressources', href: '/ressources' }, { name: 'Documents officiels' }]} />
-          <h1 className="text-3xl lg:text-5xl font-bold text-white mb-6">
-            Documents officiels
-          </h1>
-          <p className="text-white/70 text-lg max-w-2xl">
-            Un cadre contractuel qui vous protège — chaque projet Stackup est encadré par un dispositif
-            contractuel complet. Vous avez égaré un document reçu par email ? Retrouvez-le ici.
-          </p>
-        </div>
-      </div>
+      <MiniHero
+        signature="colonne"
+        breadcrumb={[{ name: 'Ressources', href: '/ressources' }, { name: 'Documents officiels' }]}
+        title="Documents officiels"
+        subtitle="Un cadre contractuel qui vous protège — chaque projet Stackup est encadré par un dispositif contractuel complet. Vous avez égaré un document reçu par email ? Retrouvez-le ici."
+      />
 
       <div className="max-w-3xl mx-auto px-4 sm:px-6 py-16 space-y-14">
         {GROUPS.map(group => (

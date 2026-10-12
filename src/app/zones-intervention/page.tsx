@@ -4,7 +4,7 @@ import { VILLES } from '@/data/villes'
 import { SITE } from '@/config/site'
 import Link from 'next/link'
 import { MapPin, ArrowRight } from 'lucide-react'
-import Breadcrumb from '@/components/ui/Breadcrumb'
+import MiniHero from '@/components/ui/MiniHero'
 
 const TOTAL_COMMUNES = getCommunesGrandTotal()
 
@@ -51,19 +51,22 @@ export default function ZonesInterventionPage() {
     <div className="min-h-screen bg-[#FFFDF9]">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
-      {/* Hero */}
-      <div className="bg-gradient-to-b from-[#060D1A] to-[#0A0F1C] pt-24 pb-16">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6">
-          <Breadcrumb items={[{ name: 'Zones d’intervention' }]} />
-          <p className="text-[13px] font-semibold text-gold uppercase tracking-[0.18em] mb-3">Partout en France</p>
-          <h1 className="text-3xl lg:text-5xl font-bold text-white mb-4">Nos zones d’intervention</h1>
-          <p className="text-white/70 text-lg max-w-2xl">
-            Basée à Tours, Stackup Agency crée des sites internet pour les entreprises de <strong className="text-gold">plus de {Math.floor(TOTAL_COMMUNES / 100) * 100} communes</strong> :
-            tout le Centre-Val de Loire, les départements limitrophes et les grandes villes de France.
-            La création se fait à distance — visio, téléphone, partage d’écran — aux mêmes tarifs affichés partout.
-          </p>
-        </div>
-      </div>
+      {/* « maillage » : une couverture qui gagne du terrain, point par point.
+          Les points allumés ne représentent AUCUNE ville réelle — l'ornement
+          est en `aria-hidden` et ne prétend rien cartographier. */}
+      <MiniHero
+        signature="maillage"
+        breadcrumb={[{ name: 'Zones d’intervention' }]}
+        marker="Partout en France"
+        title="Nos zones d’intervention"
+      >
+        <p className="su-sig__chapo">
+          Basée à Tours, Stackup Agency crée des sites internet pour les entreprises de{' '}
+          <strong className="text-[#B45309]">plus de {Math.floor(TOTAL_COMMUNES / 100) * 100} communes</strong> :
+          tout le Centre-Val de Loire, les départements limitrophes et les grandes villes de France.
+          La création se fait à distance — visio, téléphone, partage d’écran — aux mêmes tarifs affichés partout.
+        </p>
+      </MiniHero>
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 py-16 space-y-14">
 

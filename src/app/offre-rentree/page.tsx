@@ -2,10 +2,10 @@
 import { isRentreeActive, getRemainingTime, RENTREE_DEADLINE } from '@/config/rentree'
 import { SITE } from '@/config/site'
 import { notFound } from 'next/navigation'
+import MiniHero from '@/components/ui/MiniHero'
 import Link from 'next/link'
 import { CheckCircle, ChevronRight } from 'lucide-react'
 import CountdownRentree from '@/components/rentree/CountdownRentree'
-import Breadcrumb from '@/components/ui/Breadcrumb'
 
 export const metadata = {
   title: { absolute: 'Offre rentrée — maquette de site offerte | Stackup Agency' },
@@ -95,21 +95,20 @@ export default function OffreRentreePage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
       {/* Hero */}
-      <div className="bg-gradient-to-b from-[#060D1A] to-[#0A0F1C] pt-24 pb-16">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6">
-          <Breadcrumb items={[{ name: 'Offre rentrée' }]} />
-          <div className="inline-flex items-center gap-2 px-3 py-1 bg-gold/20 text-gold rounded-full text-xs font-semibold mb-4 uppercase tracking-wider">
-            Offre de rentrée — jusqu'au 15 septembre 2026
-          </div>
-          <h1 className="text-3xl lg:text-5xl font-bold text-white leading-tight mb-4">
-            Votre maquette de site <span className="text-gold">offerte</span>
-          </h1>
-          <p className="text-white/70 text-lg mb-6 max-w-2xl">
-            Commandez votre site vitrine ({SITE.pricing.vitrine}€) ou multi-pages ({SITE.pricing.multipages}€) avant le 15 septembre et recevez votre maquette Figma (desktop + mobile) sans surcoût.
-          </p>
-          <div className="flex items-center gap-2 text-white/65 text-sm mb-8">
-            Offre expire dans&nbsp;<span className="text-gold"><CountdownRentree initialTime={initialTime} /></span>
-          </div>
+      <MiniHero
+        signature="signal"
+        breadcrumb={[{ name: 'Offre rentrée' }]}
+        marker="Offre de rentrée — jusqu’au 15 septembre 2026"
+        title="Votre maquette de site offerte"
+        subtitle={`Commandez votre site vitrine (${SITE.pricing.vitrine} €) ou multi-pages (${SITE.pricing.multipages} €) avant le 15 septembre et recevez votre maquette Figma (desktop + mobile) sans surcoût.`}
+      >
+        <div className="su-sig__meta">
+          <span>
+            Offre expire dans&nbsp;
+            <strong className="text-[#B45309]"><CountdownRentree initialTime={initialTime} /></strong>
+          </span>
+        </div>
+        <div className="su-sig__actions">
           <Link
             href="/devis?offre=rentree"
             className="inline-block px-8 py-4 bg-gold hover:bg-gold/90 text-ink font-bold rounded-xl text-lg transition-all hover:-translate-y-0.5 shadow-lg"
@@ -117,7 +116,7 @@ export default function OffreRentreePage() {
             Démarrer mon projet →
           </Link>
         </div>
-      </div>
+      </MiniHero>
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 py-16 space-y-16">
 

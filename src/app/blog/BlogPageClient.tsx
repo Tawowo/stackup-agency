@@ -2,6 +2,7 @@
 import Link from 'next/link'
 import { ArrowLeft } from 'lucide-react'
 import BlogClient from './BlogClient'
+import MiniHero from '@/components/ui/MiniHero'
 import { useLanguage } from '@/contexts/LanguageContext'
 import type { Post } from '@/lib/blog'
 
@@ -10,16 +11,14 @@ export default function BlogPageClient({ posts }: { posts: Post[] }) {
 
   if (lang === 'en') {
     return (
-      <div className="min-h-screen bg-[#F8FAFC]">
-        <div className="bg-gradient-to-b from-[#060D1A] to-[#0A0F1C] pt-24 pb-16">
-          <div className="max-w-5xl mx-auto px-4 sm:px-6">
-            <Link href="/" className="inline-flex items-center gap-2 text-white/65 hover:text-white text-sm mb-8 transition-colors">
+      <div className="min-h-screen bg-[#FFFDF9]">
+        <MiniHero signature="colonne" title="Blog" subtitle="Tips, insights and digital news.">
+          <p className="su-sig__actions">
+            <Link href="/" className="su-lien-trace inline-flex items-center gap-2">
               <ArrowLeft size={16} /> Back to site
             </Link>
-            <h1 className="text-4xl lg:text-6xl font-bold text-white mb-4">Blog</h1>
-            <p className="text-white/60 text-lg">Tips, insights and digital news.</p>
-          </div>
-        </div>
+          </p>
+        </MiniHero>
         <div className="max-w-3xl mx-auto px-4 sm:px-6 py-20 text-center">
           <h2 className="text-2xl font-bold text-gray-900 mb-4">
             Our blog is in French
@@ -39,17 +38,20 @@ export default function BlogPageClient({ posts }: { posts: Post[] }) {
   }
 
   return (
-    <div className="min-h-screen bg-[#F8FAFC]">
-      <div className="bg-gradient-to-b from-[#060D1A] to-[#0A0F1C] pt-24 pb-16">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6">
-          <Link href="/" className="inline-flex items-center gap-2 text-white/65 hover:text-white text-sm mb-8 transition-colors">
-            <ArrowLeft size={16} /> Retour au site
-          </Link>
-          <h1 className="text-4xl lg:text-6xl font-bold text-white mb-4">{t.blog.title}</h1>
-          <p className="text-white/60 text-lg">{t.blog.subtitle}</p>
-          <p className="text-gold/80 text-sm font-semibold mt-3">{posts.length} articles publiés — guides, prix et conseils concrets pour les TPE</p>
-        </div>
-      </div>
+    <div className="min-h-screen bg-[#FFFDF9]">
+      {/* « colonne » : des lignes qui se composent de la droite vers la
+          gauche. Ce qu'on vient chercher ici est du texte ; la signature le
+          dit sans l'illustrer. */}
+      <MiniHero
+        signature="colonne"
+        breadcrumb={[{ name: 'Blog' }]}
+        title={t.blog.title}
+        subtitle={t.blog.subtitle}
+      >
+        <p className="su-sig__meta">
+          <span>{posts.length} articles publiés — guides, prix et conseils concrets pour les TPE</span>
+        </p>
+      </MiniHero>
       <div className="max-w-5xl mx-auto px-4 sm:px-6 py-16">
         <BlogClient posts={posts} />
       </div>

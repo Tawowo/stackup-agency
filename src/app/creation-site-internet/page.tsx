@@ -1,8 +1,9 @@
 /* eslint-disable react/no-unescaped-entities */
 import { METIERS, CATEGORIES_METIERS } from '@/data/metiers'
 import Link from 'next/link'
-import { ChevronRight, Home } from 'lucide-react'
+import { ChevronRight } from 'lucide-react'
 import { SITE } from '@/config/site'
+import MiniHero from '@/components/ui/MiniHero'
 
 export const metadata = {
   title: 'Sites internet par métier — TPE, artisans',
@@ -35,22 +36,12 @@ export default function CreationSiteInternetPage() {
     <div className="min-h-screen bg-[#FFFDF9]">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} />
 
-      <div className="bg-gradient-to-b from-[#060D1A] to-[#0A0F1C] pt-24 pb-16">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6">
-          <nav className="flex items-center gap-1.5 text-white/65 text-xs mb-6" aria-label="Fil d'Ariane">
-            <Link href="/" className="hover:text-white transition-colors flex items-center gap-1"><Home size={11} /> Accueil</Link>
-            <ChevronRight size={11} />
-            <span className="text-white/60">Création site internet</span>
-          </nav>
-          <h1 className="text-3xl lg:text-5xl font-bold text-white mb-6">
-            Création de site internet par métier
-          </h1>
-          <p className="text-white/70 text-lg max-w-2xl">
-            Chaque métier a ses spécificités. Stackup Agency crée des sites adaptés à votre activité :
-            restaurant, artisan, professionnel de santé, commerce... À partir de {SITE.pricing.vitrine}€.
-          </p>
-        </div>
-      </div>
+      <MiniHero
+        signature="trace"
+        breadcrumb={[{ name: 'Création site internet' }]}
+        title="Création de site internet par métier"
+        subtitle={`Chaque métier a ses spécificités. Stackup Agency crée des sites adaptés à votre activité : restaurant, artisan, professionnel de santé, commerce… À partir de ${SITE.pricing.vitrine} €.`}
+      />
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 py-16 space-y-12">
         {categories.map(([cat, catLabel]) => {

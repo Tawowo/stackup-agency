@@ -2,8 +2,9 @@
 import { getAllPosts } from '@/lib/blog'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
-import { Clock, ArrowRight, Home, ChevronRight } from 'lucide-react'
+import { Clock, ArrowRight } from 'lucide-react'
 import { SITE } from '@/config/site'
+import MiniHero from '@/components/ui/MiniHero'
 
 const CATEGORIES: Record<string, { label: string; description: string; cats: string[] }> = {
   seo: {
@@ -75,22 +76,16 @@ export default function BlogCategoriePage({ params }: { params: { cat: string } 
     <div className="min-h-screen bg-[#FFFDF9]">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
-      <div className="bg-gradient-to-b from-[#060D1A] to-[#0A0F1C] pt-24 pb-16">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6">
-          <nav className="flex items-center gap-1.5 text-white/65 text-xs mb-6" aria-label="Fil d'Ariane">
-            <Link href="/" className="hover:text-white transition-colors flex items-center gap-1"><Home size={11} /> Accueil</Link>
-            <ChevronRight size={11} />
-            <Link href="/blog" className="hover:text-white transition-colors">Blog</Link>
-            <ChevronRight size={11} />
-            <span className="text-white/60">{catData.label}</span>
-          </nav>
-          <div className="inline-block px-3 py-1 bg-blue-500/20 text-electric text-xs font-medium rounded-full mb-4">
-            {posts.length} article{posts.length > 1 ? 's' : ''}
-          </div>
-          <h1 className="text-3xl lg:text-5xl font-bold text-white leading-tight mb-4">{catData.label}</h1>
-          <p className="text-white/70 text-lg max-w-2xl">{catData.description}</p>
-        </div>
-      </div>
+      <MiniHero
+        signature="colonne"
+        breadcrumb={[{ name: 'Blog', href: '/blog' }, { name: catData.label }]}
+        title={catData.label}
+        subtitle={catData.description}
+      >
+        <span className="su-sig__badge">
+          {posts.length} article{posts.length > 1 ? 's' : ''}
+        </span>
+      </MiniHero>
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 py-16">
         {posts.length === 0 ? (

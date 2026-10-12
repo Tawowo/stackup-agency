@@ -2,8 +2,9 @@
 import { VILLES, getVille } from '@/data/villes'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
-import { ChevronRight, Home, MapPin, CheckCircle, Building2, TrendingUp, ArrowRight } from 'lucide-react'
+import { ChevronRight, CheckCircle, Building2, TrendingUp, ArrowRight } from 'lucide-react'
 import { SITE } from '@/config/site'
+import MiniHero from '@/components/ui/MiniHero'
 
 export async function generateStaticParams() {
   return VILLES.map(v => ({ ville: v.slug }))
@@ -101,45 +102,27 @@ export default function AgenceWebVillePage({ params }: { params: { ville: string
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       {/* Hero */}
-      <div className="bg-gradient-to-b from-[#060D1A] to-[#0A0F1C] pt-24 pb-16">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6">
-          <nav className="flex items-center gap-1.5 text-white/65 text-xs mb-6" aria-label="Fil d'Ariane">
-            <Link href="/" className="hover:text-white transition-colors flex items-center gap-1"><Home size={11} /> Accueil</Link>
-            <ChevronRight size={11} />
-            <Link href="/agence-web" className="hover:text-white transition-colors">Agence web</Link>
-            <ChevronRight size={11} />
-            <span className="text-white/60">{v.ville}</span>
-          </nav>
-
-          <div className="flex items-center gap-2 mb-4">
-            <MapPin size={16} className="text-electric-clair" />
-            <span className="text-electric-clair text-sm font-medium">{v.departement} — {v.region}</span>
-          </div>
-
-          <h1 className="text-3xl lg:text-5xl font-bold text-white leading-tight mb-4">
-            Agence web {v.ville}
-          </h1>
-          <p className="text-white/70 text-lg mb-6 max-w-2xl">
-            Création de sites internet professionnels pour les entrepreneurs et commerces de {v.ville} et alentours.
-            Sites vitrine, e-commerce, applications métier — livrés en 10 à 21 jours, à partir de {SITE.pricing.vitrine}€.
-          </p>
-
-          <div className="flex flex-wrap gap-3 mb-8 text-sm text-white/60">
-            <span className="flex items-center gap-1.5"><CheckCircle size={14} className="text-success" /> À partir de {SITE.pricing.vitrine}€</span>
-            <span className="flex items-center gap-1.5"><CheckCircle size={14} className="text-success" /> Livraison en {SITE.delais.vitrine}</span>
-            <span className="flex items-center gap-1.5"><CheckCircle size={14} className="text-success" /> Devis gratuit sous 72h</span>
-          </div>
-
-          <div className="flex flex-wrap gap-4">
-            <Link href="/contact" className="px-6 py-3 bg-gold hover:bg-gold/80 text-ink font-semibold rounded-xl transition-all hover:-translate-y-0.5">
-              Devis gratuit sous 72h →
-            </Link>
-            <Link href="/services/site-vitrine" className="px-6 py-3 border border-white/20 text-white hover:bg-white/10 rounded-xl transition-all">
-              Voir nos offres
-            </Link>
-          </div>
+      <MiniHero
+        signature="maillage"
+        breadcrumb={[{ name: 'Agence web', href: '/agence-web' }, { name: v.ville }]}
+        marker={`${v.departement} — ${v.region}`}
+        title={`Agence web ${v.ville}`}
+        subtitle={`Création de sites internet professionnels pour les entrepreneurs et commerces de ${v.ville} et alentours. Sites vitrine, e-commerce, applications métier — livrés en 10 à 21 jours, à partir de ${SITE.pricing.vitrine} €.`}
+      >
+        <div className="su-sig__meta">
+          <span><CheckCircle size={14} className="text-success" /> À partir de {SITE.pricing.vitrine} €</span>
+          <span><CheckCircle size={14} className="text-success" /> Livraison en {SITE.delais.vitrine}</span>
+          <span><CheckCircle size={14} className="text-success" /> Devis gratuit sous 72 h</span>
         </div>
-      </div>
+        <div className="su-sig__actions">
+          <Link href="/contact" className="px-6 py-3 bg-gold hover:bg-gold/80 text-ink font-semibold rounded-xl transition-all hover:-translate-y-0.5">
+            Devis gratuit sous 72 h →
+          </Link>
+          <Link href="/services/site-vitrine" className="px-6 py-3 border border-navy/25 text-navy hover:bg-navy/5 hover:border-navy/40 font-semibold rounded-xl transition-all">
+            Voir nos offres
+          </Link>
+        </div>
+      </MiniHero>
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 py-16 space-y-16">
 

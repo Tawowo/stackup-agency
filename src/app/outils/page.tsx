@@ -1,6 +1,6 @@
 import { SITE } from '@/config/site'
 import Link from 'next/link'
-import Breadcrumb from '@/components/ui/Breadcrumb'
+import MiniHero from '@/components/ui/MiniHero'
 import { Search, Palette, FileText, BarChart3 } from 'lucide-react'
 import DecorProfondeur from '@/components/ui/DecorProfondeur'
 
@@ -70,15 +70,14 @@ export default function OutilsPage() {
       <DecorProfondeur variant="mixte" seed={3} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
-      <div className="bg-gradient-to-b from-[#060D1A] to-[#0A0F1C] pt-24 pb-16">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6">
-          <Breadcrumb items={[{ name: 'Outils' }]} />
-          <h1 className="text-3xl lg:text-5xl font-bold text-white mb-4">Outils gratuits</h1>
-          <p className="text-white/60 text-lg max-w-xl">
-            Testez, comparez, préparez votre projet. Tous nos outils sont gratuits et sans inscription.
-          </p>
-        </div>
-      </div>
+      {/* « trace » : un schéma qui se câble. Les outils sont des instruments —
+          la même signature que les pages de service, dont ils sont l'annexe. */}
+      <MiniHero
+        signature="trace"
+        breadcrumb={[{ name: 'Outils' }]}
+        title="Outils gratuits"
+        subtitle="Testez, comparez, préparez votre projet. Tous nos outils sont gratuits et sans inscription."
+      />
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 py-16">
         <div className="grid sm:grid-cols-2 gap-6 mb-16">

@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import Link from 'next/link'
 import { SITE } from '@/config/site'
-import Breadcrumb from '@/components/ui/Breadcrumb'
+import MiniHero from '@/components/ui/MiniHero'
 import FaqAccordion from '@/components/ui/FaqAccordion'
 
 export const metadata = {
@@ -86,17 +86,14 @@ export default function FAQPage() {
     <div className="min-h-screen bg-[#FFFDF9]">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
-      <div className="bg-gradient-to-b from-[#060D1A] to-[#0A0F1C] pt-24 pb-16">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6">
-          <Breadcrumb items={[{ name: 'FAQ' }]} />
-          <h1 className="text-3xl lg:text-5xl font-bold text-white mb-6">
-            Questions fréquentes
-          </h1>
-          <p className="text-white/70 text-lg max-w-2xl">
-            Tout ce que vous devez savoir avant de démarrer votre projet de site internet.
-          </p>
-        </div>
-      </div>
+      {/* « sobre » : une page de questions n'a pas besoin d'un ornement pour
+          dire ce qu'elle est, et l'œil doit aller droit aux réponses. */}
+      <MiniHero
+        signature="sobre"
+        breadcrumb={[{ name: 'FAQ' }]}
+        title="Questions fréquentes"
+        subtitle="Tout ce que vous devez savoir avant de démarrer votre projet de site internet."
+      />
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 py-16 space-y-12">
         {FAQ_ITEMS.map(cat => (

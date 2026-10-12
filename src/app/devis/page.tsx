@@ -1,6 +1,6 @@
 import { SITE } from '@/config/site'
 import DevisForm from '@/components/devis/DevisForm'
-import Breadcrumb from '@/components/ui/Breadcrumb'
+import MiniHero from '@/components/ui/MiniHero'
 import Link from 'next/link'
 
 export const metadata = {
@@ -29,13 +29,14 @@ export default function DevisPage() {
     <div className="min-h-screen bg-[#FFFDF9]">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
-      <div className="bg-gradient-to-b from-[#060D1A] to-[#0A0F1C] pt-24 pb-10">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6">
-          <Breadcrumb items={[{ name: 'Devis express' }]} />
-          <h1 className="text-3xl lg:text-4xl font-bold text-white mb-2">Devis express</h1>
-          <p className="text-white/60">5 étapes · moins de 5 minutes · réponse sous 72h</p>
-        </div>
-      </div>
+      {/* « signal » : des ondes émises depuis un point. Même famille que
+          contact et parrainage — une page d'où part un message. */}
+      <MiniHero
+        signature="signal"
+        breadcrumb={[{ name: 'Devis express' }]}
+        title="Devis express"
+        subtitle="5 étapes · moins de 5 minutes · réponse sous 72 h"
+      />
 
       <DevisForm />
 

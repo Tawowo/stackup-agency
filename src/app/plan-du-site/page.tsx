@@ -1,5 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import Link from 'next/link'
+import MiniHero from '@/components/ui/MiniHero'
 import { SITE } from '@/config/site'
 import { VILLES } from '@/data/villes'
 import { METIERS } from '@/data/metiers'
@@ -89,12 +90,13 @@ export default function PlanDuSitePage() {
 
   return (
     <div className="min-h-screen bg-[#FFFDF9]">
-      <div className="bg-gradient-to-b from-[#060D1A] to-[#0A0F1C] pt-24 pb-12">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6">
-          <h1 className="text-3xl lg:text-4xl font-bold text-white mb-4">Plan du site</h1>
-          <p className="text-white/60">Vue d'ensemble de toutes les pages de Stackup Agency.</p>
-        </div>
-      </div>
+      {/* « sobre » : un index n'a rien à mettre en scène. */}
+      <MiniHero
+        signature="sobre"
+        breadcrumb={[{ name: 'Plan du site' }]}
+        title="Plan du site"
+        subtitle="Vue d'ensemble de toutes les pages de Stackup Agency."
+      />
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 py-16 grid gap-12 sm:grid-cols-2 lg:grid-cols-3">
         <Section title="Pages principales" links={[

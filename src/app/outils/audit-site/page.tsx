@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import { SITE } from '@/config/site'
-import Breadcrumb from '@/components/ui/Breadcrumb'
+import MiniHero from '@/components/ui/MiniHero'
 import AuditClient from './AuditClient'
 import Link from 'next/link'
 
@@ -45,13 +45,12 @@ export default function AuditPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
-      <div className="bg-gradient-to-b from-[#060D1A] to-[#0A0F1C] pt-24 pb-10">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6">
-          <Breadcrumb items={[{ name: 'Outils', href: '/outils' }, { name: 'Audit de site' }]} />
-          <h1 className="text-3xl lg:text-4xl font-bold text-white mb-2">Audit de site gratuit</h1>
-          <p className="text-white/60">Cet outil gratuit analyse n'importe quel site en 10 à 20 secondes via Google PageSpeed Insights : score de performance mobile, accessibilité, SEO et Core Web Vitals, avec des explications en français simple et des conseils concrets. Sans inscription.</p>
-        </div>
-      </div>
+      <MiniHero
+        signature="trace"
+        breadcrumb={[{ name: 'Outils', href: '/outils' }, { name: 'Audit de site' }]}
+        title="Audit de site gratuit"
+        subtitle="Cet outil gratuit analyse n'importe quel site en 10 à 20 secondes via Google PageSpeed Insights : score de performance mobile, accessibilité, SEO et Core Web Vitals, avec des explications en français simple et des conseils concrets. Sans inscription."
+      />
 
       <AuditClient />
 

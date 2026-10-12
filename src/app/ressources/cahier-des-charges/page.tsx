@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import { SITE } from '@/config/site'
 import Link from 'next/link'
-import Breadcrumb from '@/components/ui/Breadcrumb'
+import MiniHero from '@/components/ui/MiniHero'
 import { CheckCircle, FileText } from 'lucide-react'
 import CahierClient from './CahierClient'
 
@@ -33,13 +33,12 @@ export default function CahierDesChargesPage() {
     <div className="min-h-screen bg-[#FFFDF9]">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
-      <div className="bg-gradient-to-b from-[#060D1A] to-[#0A0F1C] pt-24 pb-16">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6">
-          <Breadcrumb items={[{ name: 'Ressources', href: '/ressources/documents' }, { name: 'Cahier des charges' }]} />
-          <h1 className="text-3xl lg:text-4xl font-bold text-white mb-4">Cahier des charges site internet</h1>
-          <p className="text-white/60 text-lg">Un bon cahier des charges est la clé d'un projet livré dans les délais et dans le budget.</p>
-        </div>
-      </div>
+      <MiniHero
+        signature="colonne"
+        breadcrumb={[{ name: 'Ressources', href: '/ressources/documents' }, { name: 'Cahier des charges' }]}
+        title="Cahier des charges site internet"
+        subtitle="Un bon cahier des charges est la clé d'un projet livré dans les délais et dans le budget."
+      />
 
       {/* Interactive guided form */}
       <CahierClient />
@@ -77,7 +76,7 @@ export default function CahierDesChargesPage() {
         <div className="rounded-2xl border border-electric/20 bg-electric/5 p-5 flex items-center gap-4">
           <FileText size={20} className="text-electric flex-shrink-0" />
           <div className="flex-1 text-sm text-[#475569]">
-            Notre modèle de cahier des charges officiel est disponible parmi nos <Link href="/ressources/documents" className="text-electric hover:underline">documents à télécharger</Link>.
+            Notre modèle de cahier des charges officiel est disponible parmi nos <Link href="/ressources/documents" className="text-electric underline underline-offset-2 hover:no-underline">documents à télécharger</Link>.
           </div>
         </div>
 

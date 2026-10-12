@@ -5,7 +5,7 @@ import { SITE } from '@/config/site'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { ArrowRight, MapPin } from 'lucide-react'
-import Breadcrumb from '@/components/ui/Breadcrumb'
+import MiniHero from '@/components/ui/MiniHero'
 
 export function generateStaticParams() {
   return DEPARTEMENTS.map(d => ({ slug: d.slug }))
@@ -64,19 +64,17 @@ export default function DepartementPage({ params }: { params: { slug: string } }
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       {/* Hero */}
-      <div className="bg-gradient-to-b from-[#060D1A] to-[#0A0F1C] pt-24 pb-16">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6">
-          <Breadcrumb items={[{ name: 'Zones d’intervention', href: '/zones-intervention' }, { name: d.nom }]} />
-          <p className="text-[13px] font-semibold text-gold uppercase tracking-[0.18em] mb-3">{d.region} · {d.code}</p>
-          <h1 className="text-3xl lg:text-5xl font-bold text-white mb-4">
-            Agence web {d.nom}
-          </h1>
-          {/* Réponse directe (format IA) */}
-          <p className="text-white/70 text-lg max-w-2xl">
-            Stackup Agency crée des sites internet pour les entreprises {art.de}{d.nom} — site vitrine à partir de {SITE.pricing.vitrine} €, livré en 10 jours ouvrés, devis gratuit sous 72 h. Basée à Tours, l’agence travaille à distance ou en rendez-vous selon la proximité.
-          </p>
-        </div>
-      </div>
+      <MiniHero
+        signature="maillage"
+        breadcrumb={[{ name: 'Zones d’intervention', href: '/zones-intervention' }, { name: d.nom }]}
+        marker={`${d.region} · ${d.code}`}
+        title={`Agence web ${d.nom}`}
+      >
+        {/* Réponse directe (format IA) */}
+        <p className="su-sig__chapo">
+          Stackup Agency crée des sites internet pour les entreprises {art.de}{d.nom} — site vitrine à partir de {SITE.pricing.vitrine} €, livré en 10 jours ouvrés, devis gratuit sous 72 h. Basée à Tours, l’agence travaille à distance ou en rendez-vous selon la proximité.
+        </p>
+      </MiniHero>
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 py-16 space-y-16">
 

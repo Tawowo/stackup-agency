@@ -3021,6 +3021,34 @@ html.su-js:has([data-scene='ouverture']) {
   margin-top: 0.5rem;
 }
 
+/* LA COLONNE DE TEXTE S'ARRÊTE AVANT L'ORNEMENT.
+   Vu sur `/creation-site-internet/restaurant` : « Site internet pour
+   restaurant » courait jusque dans le schéma posé à droite. Rien ne
+   l'arrêtait — le titre n'avait aucune largeur maximale, alors que le chapô,
+   lui, en avait une. Les titres de ces pages sont générés (un par métier, un
+   par ville) : il y en aura toujours un plus long que prévu.
+
+   Le plafond ne s'applique QUE lorsqu'une signature occupe la droite. Sur
+   `sobre` et `masque`, le titre reprend toute la largeur. */
+@media (min-width: 901px) {
+  .su-sig[data-signature='trace'] .su-sig__titre,
+  .su-sig[data-signature='echelle'] .su-sig__titre,
+  .su-sig[data-signature='chronologie'] .su-sig__titre,
+  .su-sig[data-signature='signal'] .su-sig__titre,
+  .su-sig[data-signature='colonne'] .su-sig__titre,
+  .su-sig[data-signature='maillage'] .su-sig__titre {
+    max-width: min(56%, 34rem);
+  }
+  .su-sig[data-signature='trace'] .su-sig__chapo,
+  .su-sig[data-signature='echelle'] .su-sig__chapo,
+  .su-sig[data-signature='chronologie'] .su-sig__chapo,
+  .su-sig[data-signature='signal'] .su-sig__chapo,
+  .su-sig[data-signature='colonne'] .su-sig__chapo,
+  .su-sig[data-signature='maillage'] .su-sig__chapo {
+    max-width: min(56%, 34rem);
+  }
+}
+
 .su-sig__chapo {
   color: #475569;
   font-size: 1.125rem;
@@ -3998,4 +4026,209 @@ html.su-js:has([data-scene='ouverture']) {
   .su-verdict__mesure {
     padding-top: 1.25rem;
   }
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   §31 — DEUX SIGNATURES DE PLUS, POUR LES PAGES QUI N'EN AVAIENT AUCUNE
+   ═══════════════════════════════════════════════════════════════════════════
+
+   Vingt-quatre pages intérieures ouvraient sur la MÊME bande sombre :
+   `bg-gradient-to-b from-[#060D1A] to-[#0A0F1C] pt-24 pb-16`, fil d'Ariane,
+   titre blanc, chapô. Copiée vingt-quatre fois, sans un ornement, sans un
+   mécanisme, et terminée par une couture horizontale franche. Les six pages
+   commerciales avaient leur signature depuis la passe précédente ; tout le
+   reste du site n'avait rien.
+
+   Elles passent toutes sur `MiniHero`. L'encre est rendue à ce qui la mérite :
+   l'ouverture de l'accueil et la salle de projection. Un fond sombre qui
+   revient sur vingt-quatre pages n'est plus un parti pris, c'est un gabarit.
+
+   Deux mécanismes manquaient, parce qu'aucun des cinq existants ne disait ces
+   familles-là.
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* ── 6 · COLONNE — un texte qui se compose ──────────────────────────────────
+   Mécanisme : `scaleX` depuis la gauche, ligne après ligne. Ce n'est pas un
+   fondu : les lignes se POSENT, comme une colonne qu'on justifie. Pour le
+   blog et les ressources, où ce qu'on vient chercher est du texte. */
+
+.su-sig__colonne {
+  position: absolute;
+  top: 50%;
+  /* Première version en `right: -2rem` : la trame débordait du cadre et se
+     faisait trancher par l'`overflow: hidden` — vu sur capture. Un ornement
+     coupé net au bord passe pour un défaut de mise en page, pas pour un
+     parti pris. Il a maintenant sa gouttière. */
+  right: clamp(1.5rem, 4vw, 4rem);
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  width: clamp(200px, 26vw, 330px);
+  /* L'ornement ne doit jamais disputer la lecture du titre : il s'arrête bien
+     avant, et il est pâle. */
+  opacity: 0.5;
+}
+
+.su-sig__colonne > span {
+  display: block;
+  width: var(--l);
+  height: 5px;
+  border-radius: 3px;
+  background: #1e3a5f;
+  opacity: 0.26;
+  align-self: flex-end;
+}
+
+/* Un paragraphe se termine court : trois lignes sur douze sont ambrées et
+   plus fines, pour que la trame ne soit pas une simple rayure régulière. */
+.su-sig__colonne > span:nth-child(4n + 3) {
+  height: 3px;
+  background: #b45309;
+  opacity: 0.4;
+}
+
+.su-js .su-sig__colonne > span {
+  transform: scaleX(0);
+  transform-origin: right;
+  animation: su-sig-ligne 420ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation-delay: calc(300ms + var(--i) * 52ms);
+}
+
+@keyframes su-sig-ligne {
+  to {
+    transform: scaleX(1);
+  }
+}
+
+/* ── 7 · MAILLAGE — une couverture qui gagne du terrain ─────────────────────
+   Mécanisme : le retard de chaque point suit sa DISTANCE au foyer, pas son
+   indice. L'allumage se propage donc en onde depuis le coin bas-gauche, au
+   lieu de balayer la grille rang par rang — c'est ce qui le sépare d'un
+   simple décalage linéaire. Pour les pages de territoire. */
+
+.su-sig__maillage {
+  position: absolute;
+  top: 50%;
+  /* Première version calée à `right: 0` : la dernière colonne de points
+     touchait le bord du cadre et la trame passait pour un débordement. Elle
+     respire maintenant d'une gouttière entière. */
+  right: clamp(1.5rem, 4vw, 4rem);
+  transform: translateY(-50%);
+  display: grid;
+  grid-template-columns: repeat(var(--cols, 14), 1fr);
+  gap: clamp(10px, 1.2vw, 16px);
+  width: clamp(200px, 26vw, 330px);
+}
+
+.su-sig__maillage > span {
+  /* 5 px plutôt que 4 : à 4 px, la trame disparaissait presque entièrement à
+     l'œil — vu sur capture avant de corriger. */
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #1e3a5f;
+  /* Les points lointains restent plus pâles : la couverture s'épuise aux
+     marges, elle ne s'arrête pas net. */
+  opacity: calc(0.6 - var(--d) * 0.34);
+}
+
+/* L'accent ambré. Les villes où l'agence a déjà livré ne sont PAS indiquées
+   ici : ce serait une donnée, et je n'en ai pas. C'est un accent de
+   composition, rien d'autre.
+
+   `11n + 5` plutôt que `7n + 4` : avec 14 colonnes, un pas de 7 retombe sur
+   les deux MÊMES colonnes à chaque rang, et la trame se lisait comme deux
+   rayures verticales — vu sur capture. 11 et 14 étant premiers entre eux,
+   l'accent dérive en diagonale et ne se referme qu'au bout de la grille. */
+.su-sig__maillage > span:nth-child(11n + 5) {
+  width: 7px;
+  height: 7px;
+  background: #b45309;
+  opacity: calc(0.82 - var(--d) * 0.4);
+}
+
+.su-js .su-sig__maillage > span {
+  transform: scale(0);
+  animation: su-sig-maille 460ms cubic-bezier(0.34, 1.3, 0.5, 1) forwards;
+  animation-delay: calc(300ms + var(--d) * 620ms);
+}
+
+@keyframes su-sig-maille {
+  to {
+    transform: scale(1);
+  }
+}
+
+/* Sous 900 px, les deux ornements passeraient SOUS le titre, qui occupe alors
+   toute la largeur. On les retire : un ornement illisible n'est plus un
+   ornement, c'est du bruit. */
+@media (max-width: 900px) {
+  .su-sig__colonne,
+  .su-sig__maillage {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .su-js .su-sig__colonne > span,
+  .su-js .su-sig__maillage > span {
+    animation: none;
+    transform: none;
+  }
+}
+
+/* ── Ce que les en-têtes portaient en plus du titre ──────────────────────────
+   Plusieurs des vingt-quatre bandes ne contenaient pas qu'un titre : une
+   pastille de catégorie, une ligne de métadonnées, parfois deux boutons. Sur
+   l'encre, tout cela était écrit en `text-white/60` et `bg-blue-500/20`. Sur
+   l'ivoire, ces valeurs tombent sous 2:1. Voici leurs équivalents clairs,
+   contrastes vérifiés. */
+
+.su-sig__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45em;
+  padding: 0.32rem 0.75rem;
+  border-radius: 999px;
+  border: 1px solid rgb(var(--su-navy-rgb) / 0.16);
+  background: rgb(var(--su-navy-rgb) / 0.05);
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  /* #1E3A5F sur l'ivoire teinté à 5 % de navy → 9,4:1. */
+  color: var(--su-navy);
+  margin-bottom: 1rem;
+}
+
+.su-sig__badge--or {
+  border-color: rgb(var(--su-or-rgb) / 0.3);
+  background: rgb(var(--su-or-rgb) / 0.08);
+  color: var(--su-or-texte);
+}
+
+.su-sig__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 1.1rem;
+  margin-top: 1.2rem;
+  font-size: 0.875rem;
+  /* #51657E sur ivoire → 6,1:1. */
+  color: #51657e;
+}
+
+.su-sig__meta > * {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+}
+
+.su-sig__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  margin-top: 1.8rem;
 }
