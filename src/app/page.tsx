@@ -2,7 +2,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { CheckCircle } from 'lucide-react'
-import MarqueeSeparator from '@/components/home/MarqueeSeparator'
 import HomeFaq from '@/components/home/HomeFaq'
 import { SITE } from '@/config/site'
 import dynamic from 'next/dynamic'
@@ -10,10 +9,9 @@ import Ouverture from '@/components/home/Ouverture'
 
 // Sections sous la fold — code-splitting pour étaler l'hydratation (TBT)
 const Atelier = dynamic(() => import('@/components/home/Atelier'))
-const PreuvePar3 = dynamic(() => import('@/components/home/PreuvePar3'))
+const Verdict = dynamic(() => import('@/components/home/Verdict'))
 const Showroom = dynamic(() => import('@/components/home/Showroom'))
 const LaRoute = dynamic(() => import('@/components/home/LaRoute'))
-const StatPills = dynamic(() => import('@/components/home/StatPills'))
 const RaisonDetre = dynamic(() => import('@/components/home/RaisonDetre'))
 const PreuveLogicielle = dynamic(() => import('@/components/home/PreuveLogicielle'))
 const Seuil = dynamic(() => import('@/components/home/Seuil'))
@@ -63,6 +61,50 @@ const organizationSchema = {
   sameAs: [SITE.social.linkedin, SITE.social.instagram, SITE.social.facebook],
 }
 
+/**
+ * L'ORDRE DE LA PAGE.
+ *
+ * Il a été refait, pas réarrangé. L'ancien enchaînement posait quatre
+ * sections de « preuve » avant de montrer un seul vrai site livré, et
+ * répétait cinq fois les mêmes quatre chiffres.
+ *
+ * Le nouvel ordre suit les questions du lecteur, dans l'ordre où il se les
+ * pose : qu'est-ce que vous faites, montrez-moi, savez-vous faire plus qu'une
+ * jolie page, pourquoi vous plutôt qu'une autre, comment ça se passe, qui
+ * êtes-vous, et mes questions.
+ *
+ * Trois déplacements, chacun pour une raison :
+ *  - LES SERVICES remontent après l'anatomie. L'anatomie ouvre un site ; les
+ *    services disent lesquels on construit. C'est la suite logique, et c'est
+ *    la première chose qu'un visiteur cherche.
+ *  - LES RÉALISATIONS remontent de la 8e à la 5e place. Le travail réellement
+ *    livré est la preuve la plus forte de la page : il ne peut pas arriver
+ *    quatrième dans une file de démonstrations. Tout ce qui le précédait
+ *    argumentait à sa place.
+ *  - LE VERDICT (le prix) descend après les réalisations et le logiciel.
+ *    Annoncer « huit fois moins cher » avant d'avoir montré le travail, c'est
+ *    une affirmation ; après, c'est une conclusion.
+ *
+ * Trois suppressions, chacune parce qu'elle répétait :
+ *  - LE BANDEAU DÉFILANT : dix adjectifs qui glissaient, `aria-hidden`, sans
+ *    une information que la page ne porte pas ailleurs. Sa seule donnée
+ *    propre — la pile technique — est déplacée dans les légendes de
+ *    l'anatomie, où elle est lisible et rattachée à la couche concernée.
+ *  - LES PASTILLES DE CHIFFRES : cinq cartes identiques à la teinte près.
+ *    Leurs cinq chiffres sont tous redits ailleurs, et le « 80 % moins cher »
+ *    est même CALCULÉ par le comparateur à partir des tarifs réels, ce qui
+ *    vaut mieux qu'une valeur écrite à la main.
+ *  - « LA PREUVE PAR 3 » : deux de ses trois onglets doublaient le seuil,
+ *    l'anatomie et la méthode. Seul le comparateur survit, dans « Le verdict ».
+ *
+ * ANCRAGE DE LA TRAVERSÉE. Le moteur interpole entre les ancres
+ * `data-scene` dans l'ordre du document. La suite doit donc rester
+ * monotone — ouverture, seuil, preuve, noyau, flux, sortie — quel que soit
+ * le composant posé dedans. Et toute section de plein jour porte
+ * `data-nuit="0"` : sans cette ancre, l'ambiance interpole vers le seuil
+ * suivant EN TRAVERSANT le contenu, et le fond s'assombrit sous des textes
+ * dont les couleurs sont figées en mode jour (mesuré à 2,13:1 par axe-core).
+ */
 export default function Home() {
   return (
     <>
@@ -86,13 +128,6 @@ export default function Home() {
           intitule="Transition : d’une structure à une interface"
         />
 
-        {/* Ancré au plein jour : sans ancre propre, cette bande tombe dans
-            la plage d'interpolation du seuil et se retrouve peinte en gris
-            moyen, alors que ses couleurs sont figées en mode jour. */}
-        <div data-scene="preuve" data-nuit="0">
-          <MarqueeSeparator />
-        </div>
-
         {/* 03 — L'ANATOMIE : le seuil vient de promettre qu'une structure
             devient une interface. Cette section le démontre, en ouvrant un
             site en cinq couches. Mécanisme volontairement sans rapport avec
@@ -101,52 +136,49 @@ export default function Home() {
           <Anatomie />
         </div>
 
-        {/* 04 — L'Atelier, en plein jour */}
+        {/* 04 — LES SERVICES. L'anatomie vient d'ouvrir un site ; on dit
+            maintenant lesquels on construit. */}
         <div data-scene="preuve" data-nuit="0">
           <Atelier />
         </div>
 
-        {/* 04 — Pourquoi Stackup Agency */}
+        {/* 05 — LES RÉALISATIONS : îlot sombre autonome, indépendant de la
+            traversée globale. Une salle de projection à l'intérieur d'une
+            page claire. Remontée de la 8e place : c'est la preuve la plus
+            forte, elle passe devant les démonstrations. */}
         <div data-scene="preuve" data-nuit="0">
-          <PreuvePar3 />
+          <Showroom />
         </div>
 
-        {/* 05 — La preuve, dans la salle des machines */}
+        {/* 06 — LA SALLE DES MACHINES : l'escalade après le portfolio. Les
+            sites sont montrés ; voici ce qu'on fait au-delà. */}
         <div data-scene="noyau" data-nuit="0">
           <PreuveLogicielle />
         </div>
 
-        {/* 06 — Nos réalisations : îlot sombre autonome, indépendant de la
-            traversée globale. Une salle de projection à l'intérieur d'une
-            page claire. */}
-        <div data-scene="flux" data-nuit="0">
-          <Showroom />
+        {/* 07 — LE VERDICT : le prix, une fois le travail montré. */}
+        <div data-scene="noyau" data-nuit="0">
+          <Verdict />
         </div>
 
-        {/* 07 — La méthode */}
+        {/* 08 — LA MÉTHODE. Unique chronologie de la page, désormais : la
+            seconde, de J1 à J10, est supprimée avec « la preuve par 3 ». */}
         <div data-scene="flux" data-nuit="0">
           <LaRoute />
         </div>
 
-        {/* 08 — Notre raison d'être */}
+        {/* 09 — LA RAISON D'ÊTRE */}
         <div data-scene="flux" data-nuit="0">
           <RaisonDetre />
         </div>
 
-        {/* 09 — Chiffres clés et FAQ.
-            Ancrés explicitement au plein jour. Sans ancre, l'ambiance
-            interpolait depuis « flux » jusqu'au seuil de clôture EN LES
-            TRAVERSANT : le fond s'assombrissait sous des textes dont les
-            couleurs sont figées en mode jour. Mesuré par axe-core à 2,13:1
-            et 2,47:1. */}
+        {/* 10 — LES QUESTIONS */}
         <div data-scene="flux" data-nuit="0">
-          <StatPills />
-          <div className="section-divider" aria-hidden="true" />
           <HomeFaq />
           <div className="section-divider" aria-hidden="true" />
         </div>
 
-        {/* 10 — LE SEUIL DE CLÔTURE : la nuit revient.
+        {/* LE SEUIL DE CLÔTURE : la nuit revient.
             Il n'est pas décoratif : il fait tenir ensemble le fond clair de
             la FAQ et l'encre de l'appel final, qui se touchaient jusqu'ici
             par une couture franche. */}
@@ -157,7 +189,10 @@ export default function Home() {
           intitule="Transition : vers le premier contact"
         />
 
-        {/* 11 — CTA final */}
+        {/* 11 — LE PREMIER CONTACT.
+            La redite des quatre repères est ici assumée : à la clôture, un
+            rappel est un argument de conversion, pas une répétition. C'est
+            le seul endroit de la page où ils reviennent. */}
         <section className="py-28 bg-[#070B16] relative overflow-hidden">
           <div className="star-field" aria-hidden="true">
             {[
@@ -181,7 +216,7 @@ export default function Home() {
               style={{ background: 'radial-gradient(ellipse, rgba(45,125,210,0.15) 0%, rgba(245,158,11,0.05) 40%, transparent 70%)' }} />
           </div>
           <div className="relative max-w-3xl mx-auto px-4 sm:px-6 text-center">
-            <p className="text-[13px] font-semibold text-gold/70 uppercase tracking-[0.18em] mb-4">Démarrons</p>
+            <p className="su-surtitre su-surtitre--nuit mb-4">11 — Démarrons</p>
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               Votre site internet vous attend
             </h2>

@@ -3841,3 +3841,161 @@ html.su-js:has([data-scene='ouverture']) {
     filter: none;
   }
 }
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   §30 — LE VERDICT, et l'unification des surtitres
+   ═══════════════════════════════════════════════════════════════════════════
+
+   Deux choses ici.
+
+   1. `.su-surtitre--nuit`. La page portait DEUX traitements de surtitre : le
+      `.su-surtitre` en chasse fixe avec son filet d'amorce, et un empilement
+      Tailwind en ligne — même couleur, mais police proportionnelle et aucun
+      filet. Quatre sections utilisaient le second. C'est précisément
+      l'incohérence reprochée à la composition : deux grammaires pour un seul
+      rôle. Tout est passé sur `.su-surtitre`, et cette variante existe pour
+      les fonds d'encre, où le #B45309 du jour tombe à 2,1:1.
+
+   2. LE VERDICT. Le comparateur de prix était enfermé dans une carte blanche
+      arrondie, sous une barre d'onglets et un sous-titre répété : trois
+      niveaux d'habillage avant d'atteindre le seul élément qui compte, le
+      rapport en très grand. Ici, plus de carte — des filets. Le chiffre du
+      comparateur devient l'élément monumental de la section, ce qu'il était
+      déjà typographiquement sans jamais en avoir la place.
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* Pas de `:where()` : à spécificité égale, `stackup.css` étant importé AVANT
+   `@tailwind utilities`, c'est Tailwind qui gagnerait. */
+.su-surtitre.su-surtitre--nuit {
+  /* #FFC857 sur #070B16 → 11,9:1. Même or que la salle de projection, qui
+     est le seul autre fond sombre de la page. */
+  color: #ffc857;
+}
+
+/* ── La pile technique, dans les légendes de l'anatomie ─────────────────── */
+
+/* Ces mots existaient dans le bandeau défilant, `aria-hidden`, à 40 px/s.
+   Ils sont maintenant lisibles et rattachés à leur couche. */
+.su-ana__legende-outil {
+  display: block;
+  margin-top: 0.45rem;
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.06em;
+  /* #6B7E95 sur l'ivoire #FFFDF9 → 4,54:1. Au-dessus du seuil AA pour du
+     petit texte, et assez retiré pour rester une annotation. */
+  color: #6b7e95;
+}
+
+/* ── LE VERDICT ─────────────────────────────────────────────────────────── */
+
+.su-verdict {
+  position: relative;
+  /* Le filet du haut sépare déjà : inutile d'y ajouter une marge de section
+     pleine. Mesuré au navigateur, l'ancien `9vh` cumulé au bas de la salle
+     des machines donnait 235 px d'ivoire vide avant le surtitre. */
+  padding: clamp(3.5rem, 7vh, 5.5rem) 0 clamp(4.5rem, 9vh, 7rem);
+  /* Un filet, pas une carte : la section se délimite par la mesure, comme le
+     reste du plan. */
+  border-top: 1px solid rgb(var(--su-navy-rgb) / 0.12);
+}
+
+.su-verdict__corps {
+  width: min(100% - 2rem, 62rem);
+  margin-inline: auto;
+}
+
+.su-verdict__entete {
+  margin-bottom: clamp(2.5rem, 5vh, 3.5rem);
+}
+
+/* En deux colonnes dès qu'il y a la place. Première version : un en-tête
+   capé à 34rem dans un corps de 62rem — le titre se cassait en trois lignes
+   pendant que la moitié droite restait vide. Une page qui montre sa grille
+   ne peut pas laisser une demi-largeur sans emploi. */
+@media (min-width: 900px) {
+  .su-verdict__entete {
+    display: grid;
+    grid-template-columns: 1.15fr 1fr;
+    gap: 0 clamp(2.5rem, 5vw, 4.5rem);
+    align-items: start;
+  }
+  .su-verdict__entete .su-surtitre {
+    grid-column: 1 / -1;
+  }
+  .su-verdict__titre {
+    margin-top: 1.4rem;
+  }
+  .su-verdict__chapo {
+    /* Alignée sur la première ligne du titre, pas sur le haut de sa boîte :
+       le chapô et le titre partagent une ligne de base de départ. */
+    margin-top: 2rem;
+  }
+}
+
+.su-verdict__titre {
+  margin-top: 1.1rem;
+  font-family: var(--font-display), system-ui, sans-serif;
+  font-weight: 700;
+  /* Le titre a maintenant sa propre colonne : il peut monter d'un palier
+     sans casser en trois lignes. */
+  font-size: clamp(1.875rem, 4.4vw, 3.25rem);
+  line-height: 1.04;
+  letter-spacing: -0.03em;
+  color: var(--su-encre);
+  text-wrap: balance;
+}
+
+.su-verdict__accent {
+  color: var(--su-or-texte);
+}
+
+.su-verdict__chapo {
+  margin-top: 1.1rem;
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  max-width: 32rem;
+}
+
+/* Le cadre de mesure. Deux filets verticaux qui tiennent le graphique, et
+   son repère d'échelle en chasse fixe au-dessus. */
+.su-verdict__mesure {
+  position: relative;
+  padding: 2.25rem 0 0;
+  border-top: 1px solid rgb(var(--su-navy-rgb) / 0.16);
+}
+
+.su-verdict__repere {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translateY(-50%);
+  padding: 0 0.7rem;
+  background: var(--su-ivoire);
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 0.66rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  /* #51657E sur ivoire → 6,1:1. */
+  color: #51657e;
+  white-space: nowrap;
+}
+
+@media (max-width: 620px) {
+  /* Sous 620 px, « les deux barres · une seule échelle » dépasserait la
+     largeur du cadre. Le repère passe alors sous le filet, aligné à gauche
+     comme le reste de la colonne. */
+  .su-verdict__repere {
+    position: static;
+    display: block;
+    transform: none;
+    padding: 0 0 1rem;
+    background: none;
+    text-align: left;
+    white-space: normal;
+  }
+  .su-verdict__mesure {
+    padding-top: 1.25rem;
+  }
+}

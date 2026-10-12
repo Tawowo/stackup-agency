@@ -85,6 +85,58 @@ function Barre({
       >
         {etiquette}
       </em>
+
+      {/* ── Ces règles DOIVENT vivre ici ────────────────────────────────────
+          styled-jsx scope ses styles PAR COMPOSANT : il n'ajoute sa classe de
+          portée qu'aux éléments écrits dans le JSX du composant qui contient
+          le bloc `<style jsx>`. Les trois éléments ci-dessus sont rendus par
+          `Barre`, pas par `ComparateurPrix` — tant que leurs règles étaient
+          dans le bloc du parent, elles ne les atteignaient tout simplement
+          pas.
+
+          Conséquence observée au navigateur : `.cp-track` mesurait 25,6 px
+          au lieu de 40 et n'avait aucun fond, `.cp-bar` faisait 0 px de haut
+          sans dégradé, et `.cp-etiquette` restait en `position: static` et
+          en italique — le style par défaut de `<em>`. Autrement dit, les
+          deux barres du comparateur de prix N'ÉTAIENT PAS AFFICHÉES, et ce
+          sur le site en ligne.
+
+          C'est une régression que j'ai introduite moi-même en extrayant
+          `Barre` pour corriger l'étiquette « 10 jours ouvrés » rognée en
+          « s ouvrés » : j'avais vérifié le texte de l'étiquette, pas la
+          présence des barres. Les keyframes `cpShine` descendent avec les
+          règles, styled-jsx les scopant de la même façon. */}
+      <style jsx>{`
+        .cp-track { background: rgba(22,35,63,0.06); border-radius: 12px; height: 40px; position: relative; }
+        .cp-bar { height: 100%; border-radius: 12px; transition: width 1.1s cubic-bezier(.22,1,.36,1);
+          min-width: 0; position: relative; }
+        .cp-etiquette { font-style: normal; font-size: 12.5px; font-weight: 700; white-space: nowrap;
+          position: absolute; top: 50%; transform: translateY(-50%);
+          transition: left 1.1s cubic-bezier(.22,1,.36,1); }
+        /* Dedans : calée à droite de la barre. Dehors : juste après son bout. */
+        .cp-etiquette.dedans { left: auto; right: calc(100% - var(--w) + 12px); }
+        .cp-etiquette.dehors { left: calc(var(--w) + 12px); color: #334155; }
+        .cp-etiquette.dedans.grey { color: #1f2937; }
+        .cp-etiquette.dedans.gold { color: #3a2a05; }
+        .cp-bar.grey { background: linear-gradient(90deg, #cbd5e1, #94a3b8); color: #1f2937; overflow: hidden; }
+        .cp-bar.gold { background: linear-gradient(90deg, #fbbf24, #f59e0b); color: #3a2a05; box-shadow: 0 6px 16px rgba(245,158,11,0.35); overflow: hidden; }
+        .cp-bar.grey::after, .cp-bar.gold::after {
+          content: '';
+          position: absolute;
+          top: 0; left: -60%;
+          width: 45%; height: 100%;
+          background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.30) 50%, transparent 100%);
+          pointer-events: none;
+          animation: cpShine 1.4s cubic-bezier(0.22,1,0.36,1) 1.3s both;
+          border-radius: inherit;
+        }
+        @keyframes cpShine { 0%{left:-60%} 100%{left:130%} }
+        @media (prefers-reduced-motion: reduce) {
+          .cp-bar { transition: none; }
+          .cp-bar::after { animation: none; }
+          .cp-etiquette { transition: none; }
+        }
+      `}</style>
     </div>
   )
 }
@@ -155,34 +207,11 @@ export default function ComparateurPrix() {
         .cp-row-head { display: flex; justify-content: space-between; align-items: baseline; font-size: 14px; color: rgba(22,35,63,0.8); margin-bottom: 6px; }
         .cp-row-head strong { font-variant-numeric: tabular-nums; color: #16233f; }
         .cp-row-head strong.gold { color: #b45309; }
-        .cp-track { background: rgba(22,35,63,0.06); border-radius: 12px; height: 40px; position: relative; }
-        .cp-bar { height: 100%; border-radius: 12px; transition: width 1.1s cubic-bezier(.22,1,.36,1);
-          min-width: 0; position: relative; }
-        .cp-etiquette { font-style: normal; font-size: 12.5px; font-weight: 700; white-space: nowrap;
-          position: absolute; top: 50%; transform: translateY(-50%);
-          transition: left 1.1s cubic-bezier(.22,1,.36,1); }
-        /* Dedans : calée à droite de la barre. Dehors : juste après son bout. */
-        .cp-etiquette.dedans { left: auto; right: calc(100% - var(--w) + 12px); }
-        .cp-etiquette.dehors { left: calc(var(--w) + 12px); color: #334155; }
-        .cp-etiquette.dedans.grey { color: #1f2937; }
-        .cp-etiquette.dedans.gold { color: #3a2a05; }
-        .cp-bar.grey { background: linear-gradient(90deg, #cbd5e1, #94a3b8); color: #1f2937; overflow: hidden; }
-        .cp-bar.gold { background: linear-gradient(90deg, #fbbf24, #f59e0b); color: #3a2a05; box-shadow: 0 6px 16px rgba(245,158,11,0.35); overflow: hidden; }
-        .cp-bar.grey::after, .cp-bar.gold::after {
-          content: '';
-          position: absolute;
-          top: 0; left: -60%;
-          width: 45%; height: 100%;
-          background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.30) 50%, transparent 100%);
-          pointer-events: none;
-          animation: cpShine 1.4s cubic-bezier(0.22,1,0.36,1) 1.3s both;
-          border-radius: inherit;
-        }
-        @keyframes cpShine { 0%{left:-60%} 100%{left:130%} }
-        @media(prefers-reduced-motion:reduce){.cp-bar::after{animation:none}}
+        /* Les règles de la piste, de la barre et de l'étiquette sont
+           descendues dans « Barre », seul composant qui rend ces éléments :
+           styled-jsx ne scope qu'au composant où le bloc est écrit. */
         .cp-note { font-size: 13.5px; color: rgba(22,35,63,0.7); background: #fff7ea; border: 1px solid rgba(217,119,6,0.25); border-radius: 10px; padding: 10px 12px; }
         .cp-legende { font-size: 12px; color: rgba(22,35,63,0.78); }
-        @media (prefers-reduced-motion: reduce) { .cp-bar { transition: none; } }
       `}</style>
     </div>
   );

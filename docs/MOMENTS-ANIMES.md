@@ -17,14 +17,15 @@ Chaque ligne indique ce qui déclenche le moment et où le vérifier.
 | 2 | **Le mot porteur lettre par lettre** — « décoller » arrive lettre à lettre, chacune avec sa propre trajectoire, sa rotation et son flou | CSS, au parse | hero |
 | 3 | **Les trois niveaux du titre en cascade** — amorce, mot, chute, à 120 / 220 / 900 ms | CSS, au parse | hero |
 | 4 | **L'accroche mot à mot, par le flou** — chaque mot se dénoue d'un flou de 6 px | CSS, au parse | hero |
-| 5 | **La rampe de confiance** — les quatre cartes montent en décalé | CSS, au parse | hero |
+| 5 | **La ligne de données** — les quatre repères se posent en décalé sur la grille | CSS, au parse | ouverture |
+| 5 bis | **La grille de construction** — les douze colonnes se lèvent sous le contenu | CSS, au parse | ouverture |
+| 5 ter | **Les cotes qui se mesurent** — largeur et hauteur du cadre relevées au navigateur et réécrites à chaque redimensionnement, jamais des nombres décoratifs | `ResizeObserver` | ouverture |
 
 ## B — Animations spatiales
 *(profondeur, parallaxe, caméra)*
 
 | # | Moment | Déclencheur | Où |
 |---|--------|-------------|-----|
-| 6 | **Les plaques en parallaxe** — trois arêtes devant le texte, pilotées par le défilement ET par le pointeur, avec lissage | défilement + pointeur | hero |
 | 7 | **Le voyage de caméra** — position, cible et distance focale interpolées d'un état de scène à l'autre | défilement | toute la page |
 | 8 | **La rotation lente du nuage** — vitesse propre à chaque état | continu | toute la page |
 | 9 | **L'inclinaison au pointeur** — la scène entière s'incline légèrement vers le curseur | pointeur | toute la page |
@@ -55,8 +56,8 @@ Chaque ligne indique ce qui déclenche le moment et où le vérifier.
 | 22 | **Le retrait de l'en-tête** — le titre de section s'efface dès que la bande démarre | défilement | réalisations |
 | 23 | **Le filet de marge qui se trace** — hauteur écrite image par image, sans transition, pour suivre la main | défilement | méthode |
 | 24 | **Le balayage des étapes** — chaque étape se découvre de gauche à droite, à la règle (`clip-path`) | entrée dans le cadre | méthode |
-| 25 | **Le trait de progression du comparateur** — les barres s'étendent à l'entrée dans le cadre | entrée dans le cadre | preuve par 3 |
-| 26 | **Les compteurs** — les chiffres montent jusqu'à leur valeur | entrée dans le cadre | hero, chiffres clés |
+| 25 | **Le trait de progression du comparateur** — les barres s'étendent à l'entrée dans le cadre, l'étiquette de délai passe à l'extérieur quand la barre est trop courte | entrée dans le cadre | verdict |
+| 26 | **Le compteur du rapport** — « ×8,9 » monte jusqu'à sa valeur, recalculée à chaque type de projet | entrée dans le cadre, clic | verdict |
 
 ## E — Micro-interactions
 *(le détail qui se remarque sans se voir)*
@@ -97,12 +98,16 @@ Chaque ligne indique ce qui déclenche le moment et où le vérifier.
 
 ---
 
-**Total : 45 moments distincts.**
+**Total : 46 moments distincts.** Deux ont été retirés — les plaques en
+parallaxe et la rampe de quatre cartes du hero — et trois ajoutés avec
+l'ouverture. Le compte monte de 45 à 46, ce qui n'est pas le sujet : le sujet
+est qu'il n'y a plus deux mouvements qui ne disaient rien.
 
-Sur la seule page d'accueil : **26 moments**, portés par **cinq matières
-différentes** — des points en 3D (hero), des plans HTML en perspective
-(anatomie), des traits en Canvas 2D (réseau), des captures en pellicule
-(réalisations), des filets et des balayages (méthode).
+Sur la seule page d'accueil : **27 moments**, portés par **six matières
+différentes** — des points en 3D (ouverture), une grille mesurée au
+navigateur (ouverture), des plans HTML en perspective (anatomie), des traits
+en Canvas 2D (réseau), des captures en pellicule (réalisations), des filets
+et des balayages (méthode).
 
 Les six pages commerciales ont chacune une ouverture distincte, là où elles
 partageaient jusqu'ici le même fondu.
@@ -111,7 +116,7 @@ partageaient jusqu'ici le même fondu.
 
 | Condition | Ce qui reste |
 |-----------|--------------|
-| Sans JavaScript | Page entière en plein jour, 237 blocs de texte lisibles, aucun contenu masqué. Aucune animation, aucune scène. |
+| Sans JavaScript | Page entière en plein jour, 264 blocs de texte lisibles, aucun contenu masqué. Aucune animation, aucune scène. |
 | Mouvement réduit | Aucun canvas, aucune animation d'entrée, aucun balayage. La traversée d'ambiance subsiste : ce n'est pas du mouvement, c'est une couleur de fond. |
 | Sans WebGL | Aucun canvas. La traversée d'ambiance est pilotée en CSS par un observateur de défilement. |
 | Appareil lent | Le nombre de particules descend de 56 000 à 26 000 puis 9 000, mesuré sur la cadence réelle. Les textes ne dépendent d'aucun état JavaScript : ils sont peints par le compositeur. |
@@ -124,3 +129,9 @@ partageaient jusqu'ici le même fondu.
 | La trame de particules derrière les sections de jour | Le même nuage traînait derrière l'anatomie, le réseau, les réalisations et la méthode, et ramenait à une seule texture quatre sections conçues pour être radicalement différentes. La scène appartient désormais à la nuit. |
 | 840 ms de préchargeur | Un minuteur fixe sans rapport avec un chargement réel, qui cachait un hero déjà noir derrière un écran noir. Ramené de 1 400 ms à 560 ms. |
 | Le fondu-montée partagé des six en-têtes commerciaux | Remplacé par cinq mécanismes distincts. |
+| Les plaques en parallaxe du hero | Trois arêtes qui glissaient devant le texte. Elles ajoutaient du mouvement sans ajouter de sens, et brouillaient la lecture du titre. |
+| La rampe des quatre cartes de confiance | Quatre cartes flottantes sous le hero. Remplacées par une ligne de données alignée sur la grille, qui se lit d'un balayage au lieu de quatre. |
+| Le bandeau défilant d'adjectifs | Dix mots qui glissaient en boucle, `aria-hidden`, sans une information que la page ne porte pas ailleurs. Sa seule donnée propre — la pile technique — est descendue dans les légendes de l'anatomie, lisible et rattachée à sa couche. |
+| Les cinq pastilles de chiffres | Cinq cartes identiques à la teinte près. Leurs cinq chiffres sont tous redits ailleurs, et le « 80 % moins cher » est même CALCULÉ par le comparateur à partir des tarifs réels. |
+| L'onglet « Code → Site » | Un bloc de JSX qui fondait en page web : exactement la phrase du seuil, et exactement la démonstration de l'anatomie. Trois fois le même propos. |
+| L'onglet « 10 jours » | Une seconde chronologie J1→J10, en concurrence avec la méthode qui déroule le même processus avec le contenu réel des échanges. |

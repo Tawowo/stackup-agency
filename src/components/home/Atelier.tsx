@@ -385,7 +385,7 @@ export default function Atelier() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 relative">
         {/* Header */}
         <div className="mb-12 max-w-2xl">
-          <p className="text-[13px] font-semibold text-[#B45309] uppercase tracking-[0.18em] mb-3 reveal-item">Nos services</p>
+          <p className="su-surtitre mb-3 reveal-item">04 — Nos services</p>
           <h2 className="text-3xl lg:text-5xl font-bold text-navy mb-4 reveal-item" style={{ lineHeight: 1.15 }}>
             Nos services web
           </h2>

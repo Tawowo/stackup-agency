@@ -152,3 +152,48 @@ vit et se transforme.
 - **Le risque :** la froideur. Je le corrige par l'échelle — les titres
   doivent être monumentaux — et par l'ambre, qui reste la seule couleur
   chaude et donc le point de chaleur de toute la page.
+
+---
+
+## Ce que « le plan habité » devient une fois sorti du premier écran
+
+Une direction artistique qui ne vit que dans le hero n'est pas une direction
+artistique : c'est un habillage. Deuxième passe, sur le reste de la page.
+
+**Ce qui ne se propage PAS.** La grille de construction visible reste au seul
+premier écran. La répéter section après section aurait reproduit dans la
+composition le défaut même qu'on me reprochait dans le mouvement — « les
+animations se ressemblent trop ». La grille est le cartouche du plan, pas son
+papier peint.
+
+**Ce qui se propage.** Quatre principes, pas un motif :
+
+1. **Le numéro de section.** De `01 — Ouverture` à `11 — Démarrons`. La page
+   se lit comme un document, et on sait toujours où on en est.
+2. **Un seul surtitre.** La page en portait DEUX grammaires : `.su-surtitre`
+   en chasse fixe avec son filet d'amorce, et un empilement Tailwind en ligne,
+   même couleur mais police proportionnelle et sans filet. Quatre sections
+   utilisaient la seconde. C'était exactement l'incohérence reprochée.
+3. **Des filets plutôt que des cartes.** Le verdict se délimite par un trait,
+   pas par un rectangle arrondi avec une ombre.
+4. **L'annotation en chasse fixe porte une valeur réelle.** Les cotes du hero
+   sortent de `getBoundingClientRect`. La pile technique des légendes de
+   l'anatomie est vérifiable dans le dépôt. Aucun chiffre décoratif.
+
+### Deux soupçons visuels que la mesure n'a pas confirmés
+
+Les deux viennent d'une capture regardée, pas d'un outil. Les deux sont restés
+sans correction, parce que la mesure ne leur a pas donné raison.
+
+| Soupçon | Mesure | Décision |
+|---|---|---|
+| En 390 px, le voile de particules de jour « salit » le fond derrière le comparateur | Mesure différentielle (même cadre, canvas affiché puis masqué) : **1,65 niveau de luminance en moyenne sur 255**, contre 1,43 en 1440 px. L'hypothèse d'une densité plus forte sur écran étroit prévoyait un facteur 3,7 ; l'écart réel est de 16 %. | Aucune modification. |
+| Le nuage mord sur le titre du verdict | Au même endroit : **0,24 niveau en moyenne, 3 % des pixels touchés**. | Aucune modification. |
+
+L'outil qui a servi à trancher est `scripts/grain.mjs`. Sa première version
+était fausse — elle mesurait l'écart-type d'une bande fixe, et son résultat
+(un minimum de luminance à 21 sur un fond ivoire) trahissait du TEXTE dans la
+zone : elle mesurait la présence de lettres, pas le grain. Refaite avec un
+témoin : deux prises du même cadre, canvas affiché puis masqué, et la
+différence pixel à pixel. Le texte est identique dans les deux prises et
+s'annule.

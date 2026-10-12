@@ -54,7 +54,7 @@ export default function PreuveLogicielle() {
     <section ref={section} id="laboratoire" className="py-20 lg:py-28 su-ambiance ">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="max-w-2xl mb-10">
-          <p className="su-surtitre mb-5">La preuve</p>
+          <p className="su-surtitre mb-5">06 — La salle des machines</p>
           <h2 className="font-display font-bold text-[#0C1626] text-[clamp(1.75rem,4vw,2.75rem)] leading-[1.1] tracking-[-0.02em] mb-5">
             Nous ne faisons pas que des sites.<br />
             Voici un logiciel — manipulez-le.

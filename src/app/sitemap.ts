@@ -6,6 +6,7 @@ import { VILLES } from '@/data/villes'
 import { METIERS } from '@/data/metiers'
 import { SOLUTIONS } from '@/data/solutions'
 import { DEPARTEMENTS } from '@/data/departements'
+import { isRentreeActive } from '@/config/rentree'
 
 const base = 'https://stackup-agency.fr'
 
@@ -95,7 +96,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // Pages statiques principales
     { url: `${base}/blog`, lastModified: now, changeFrequency: 'weekly', priority: 0.8 },
     { url: `${base}/devis`, lastModified: now, changeFrequency: 'monthly', priority: 0.9 },
-    { url: `${base}/offre-rentree`, lastModified: now, changeFrequency: 'weekly', priority: 0.8 },
+    // L'offre de rentrée n'entre au plan du site QUE tant qu'elle est ouverte.
+    // `src/app/offre-rentree/page.tsx` appelle `notFound()` une fois la date
+    // passée : la référencer en permanence revenait à déclarer aux moteurs une
+    // URL qui répond 404 — constaté par `scripts/seo-lint.mjs`, seul échec de
+    // type « fetch » de l'audit.
+    ...(isRentreeActive()
+      ? [
+          {
+            url: `${base}/offre-rentree`,
+            lastModified: now,
+            changeFrequency: 'weekly' as const,
+            priority: 0.8,
+          },
+        ]
+      : []),
     // Démonstration logicielle et configurateur : deux pages à forte valeur
     // commerciale, priorité alignée sur celle des pages de service.
     { url: `${base}/laboratoire`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },

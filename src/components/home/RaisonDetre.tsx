@@ -66,14 +66,14 @@ export default function RaisonDetre() {
           <div className="order-1 lg:order-2">
             {/* Surtitre */}
             <p
-              className="text-[13px] font-semibold text-[#B45309] uppercase tracking-[0.18em] mb-5"
+              className="su-surtitre mb-5"
               style={{
                 opacity: visible ? 1 : 0,
                 transform: visible ? 'translateY(0)' : 'translateY(16px)',
                 transition: 'opacity 0.6s cubic-bezier(0.22,1,0.36,1), transform 0.6s cubic-bezier(0.22,1,0.36,1)',
               }}
             >
-              Notre raison d&apos;être
+              09 — Notre raison d&apos;être
             </p>
 
             {/* Titre avec trait dessiné sous "accessibles à tous" */}

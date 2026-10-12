@@ -34,6 +34,23 @@ interface Couche {
   cle: string
   titre: string
   role: string
+  /**
+   * Ce avec quoi la couche est faite.
+   *
+   * Cette ligne récupère l'information qui n'existait jusqu'ici que dans le
+   * bandeau défilant — « Next.js · TypeScript · Mobile-first · SEO natif »,
+   * qui était `aria-hidden`, passait à 40 px/s et n'était rattaché à rien.
+   * C'était le seul endroit de la page d'accueil où la pile technique était
+   * nommée. Supprimer le bandeau sans déplacer ces mots aurait fait perdre
+   * une information réelle ; les voici lisibles, et accrochés à la couche
+   * qu'ils concernent.
+   *
+   * Chaque mention est vérifiable dans le dépôt : `next` et `three` sont
+   * dans les dépendances, le projet est en TypeScript, `src/app/sitemap.ts`
+   * et `src/app/robots.ts` existent, et la page d'accueil émet deux blocs
+   * JSON-LD.
+   */
+  outil: string
   /** Ce que la couche montre, rendu à l'intérieur du plan. */
   rendu: 'structure' | 'interface' | 'interactions' | 'contenus' | 'referencement'
 }
@@ -43,30 +60,35 @@ const COUCHES: Couche[] = [
     cle: 'structure',
     titre: 'La structure',
     role: 'Le balisage sémantique. Ce que lisent Google et les lecteurs d’écran avant de voir quoi que ce soit.',
+    outil: 'HTML sémantique · Next.js App Router',
     rendu: 'structure',
   },
   {
     cle: 'interface',
     titre: 'L’interface',
     role: 'La typographie, les proportions, la couleur. Ce qui donne au site son visage.',
+    outil: 'Design sur mesure · mobile d’abord',
     rendu: 'interface',
   },
   {
     cle: 'interactions',
     titre: 'Les interactions',
     role: 'Survol, focus, états d’erreur, navigation au clavier. Ce qui répond quand on s’en sert.',
+    outil: 'TypeScript · parcours clavier complet',
     rendu: 'interactions',
   },
   {
     cle: 'contenus',
     titre: 'Les contenus',
     role: 'Vos textes, vos photos, vos offres. Le site n’est un outil que lorsqu’il les porte.',
+    outil: 'Contenus structurés · images optimisées',
     rendu: 'contenus',
   },
   {
     cle: 'referencement',
     titre: 'Le référencement',
     role: 'Métadonnées, données structurées, plan du site. Ce qui décide si on vous trouve.',
+    outil: 'JSON-LD · sitemap.xml · robots.txt',
     rendu: 'referencement',
   },
 ]
@@ -260,7 +282,7 @@ export default function Anatomie() {
     >
       <div className="su-ana__cadre">
         <header className="su-ana__entete">
-          <p className="su-surtitre">Ce qu’il y a dedans</p>
+          <p className="su-surtitre">03 — Ce qu’il y a dedans</p>
           <h2 id="su-ana-titre" className="su-ana__titre">
             Un site, c’est cinq couches.
             <br />
@@ -330,6 +352,7 @@ export default function Anatomie() {
                   <span className="su-ana__legende-texte">
                     <span className="su-ana__legende-titre">{c.titre}</span>
                     <span className="su-ana__legende-role su-doux">{c.role}</span>
+                    <span className="su-ana__legende-outil">{c.outil}</span>
                   </span>
                 </button>
               </li>

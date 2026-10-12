@@ -164,20 +164,6 @@ blockquote { font-weight: 600; font-style: italic; }
   transform: scaleX(1);
 }
 
-/* ─── Marquee (pure CSS transform, no JS velocity) ──────── */
-@keyframes marquee-scroll {
-  from { transform: translateX(0); }
-  to   { transform: translateX(-50%); }
-}
-.marquee-track {
-  display: flex;
-  width: max-content;
-  animation: marquee-scroll 24s linear infinite;
-}
-.marquee-track:hover {
-  animation-play-state: paused;
-}
-
 /* ─── Animated gradient CTA ──────────────────────────────── */
 @keyframes grad-shift {
   0%   { background-position: 0% 50%; }
@@ -258,7 +244,6 @@ blockquote { font-weight: 600; font-style: italic; }
 
 /* ─── Reduced motion ─────────────────────────────────────── */
 @media (prefers-reduced-motion: reduce) {
-  .marquee-track { animation: none; }
   .aurora-blob-1, .aurora-blob-2 { animation: none; }
   .reveal-item { opacity: 1; transform: none; transition: none; }
   .grain-overlay { display: none; }
@@ -855,15 +840,6 @@ a, button, [role="button"] { cursor: pointer; }
   animation: icon-pulse 0.5s cubic-bezier(0.16,1,0.3,1) both;
 }
 
-/* ─── Marquee keyword gradient ───────────────────────────── */
-.marquee-keyword {
-  background: linear-gradient(90deg, #2D7DD2, #F59E0B);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  font-weight: 700;
-}
-
 /* ─── Card border gradient (on hover) ───────────────────── */
 .card-border-gradient {
   position: relative;
@@ -922,7 +898,6 @@ a, button, [role="button"] { cursor: pointer; }
   .nav-slide { transition: background 0.3s ease; }
   .faq-body { transition: none; }
   .faq-chevron { transition: none; }
-  .marquee-track { animation: none; }
 }
 
 /* ═══════════════════════════════════════════════════════════
@@ -2387,14 +2362,6 @@ select:focus-visible {
   color: transparent;
 }
 
-/* ─── 13. MARQUEE DOUBLE SENS ───────────────────────────────── */
-@keyframes marquee-fwd  { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-@keyframes marquee-rev  { from { transform: translateX(-50%); } to { transform: translateX(0); } }
-.marquee-track { animation: marquee-fwd 24s linear infinite; }
-.marquee-track-rev { animation: marquee-rev 28s linear infinite; }
-.marquee-wrap:hover .marquee-track,
-.marquee-wrap:hover .marquee-track-rev { animation-play-state: paused; }
-
 /* ─── 14. BOUTON MAGNÉTIQUE CSS ─────────────────────────────── */
 .btn-magnetic {
   transition: transform 0.3s cubic-bezier(0.16,1,0.3,1), box-shadow 0.3s ease;
@@ -2518,7 +2485,6 @@ select:focus-visible {
   .card-3d-enter { animation: none; opacity: 1; transform: none; }
   .preloader-panel-top, .preloader-panel-bottom { animation: none; }
   .halo-breathe { animation: none; }
-  .marquee-track, .marquee-track-rev { animation: none; }
   .cta-glow { animation: none; }
   .volet-in, .volet-out { animation: none; clip-path: none; }
 }
