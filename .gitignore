@@ -49,3 +49,8 @@ docs/salle/
 docs/vue/
 docs/signatures/
 docs/logo/
+
+# archives de livraison
+# Un zip du dépôt construit DANS le dépôt : à ne jamais versionner, sinon
+# chaque livraison ajoute une copie compressée de tout le reste à l'historique.
+*.zip
