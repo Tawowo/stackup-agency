@@ -89,11 +89,9 @@ export default function Navbar() {
 
   const linkClass = 'text-navy hover:text-[#B45309]'
 
-  // Le libellé du logo est un <span> : il porte sa propre classe de couleur,
-  // qui l'emporte sur celle héritée du <a>. Il lui faut donc sa propre classe
-  // d'ambiance, sans quoi il reste navy sur l'encre — mesuré à 1,63:1.
+  // Le logo suit l'ambiance : navy de jour, clair sur l'encre. Une seule
+  // classe suffit depuis que le lettrage est un masque sur `currentColor`.
   const logoTextClass = isHome ? 'su-nav-libelle' : 'text-navy'
-  const logoSubClass  = isHome ? 'su-nav-doux' : 'text-[#475569]'
   // Le hamburger vit HORS du <nav> : il porte sa propre classe d'ambiance.
   const barColor      = isHome ? 'su-nav-barre' : 'bg-navy'
 
@@ -116,18 +114,11 @@ export default function Navbar() {
           <div className="flex items-center justify-between h-16 lg:h-20">
 
             {/* Logo */}
-            <Link href="/" className="flex items-center gap-2.5 shrink-0">
-              {/* Alternative vide : le nom de la marque est déjà écrit juste à
-                  côté. Le répéter ferait annoncer « Stackup Agency Stackup
-                  Agency » par un lecteur d'écran. */}
-              <LogoMarque taille={38} />
-              <div className="flex flex-col leading-tight">
-                <span className={`font-bold text-lg tracking-tight transition-colors ${logoTextClass}`}>Stackup</span>
-                <span className={`font-light text-[10px] tracking-[0.2em] uppercase transition-colors ${logoSubClass}`}>Agency</span>
-              </div>
-              {/* Complète le nom accessible sans masquer le texte visible :
-                  la commande vocale « Stackup Agency » trouve bien la cible. */}
-              <span className="sr-only">, retour à l’accueil</span>
+            {/* Le logo RÉEL : la marque vectorielle et le lettrage d'origine.
+                Le « Stackup / Agency » composé dans la fonte du site a été
+                retiré — ce n'était pas le logo, c'était une imitation. */}
+            <Link href="/" className={`shrink-0 ${logoTextClass}`} aria-label="Stackup Agency, retour à l’accueil">
+              <LogoMarque taille={34} />
             </Link>
 
             {/* Desktop nav */}

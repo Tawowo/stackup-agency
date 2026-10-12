@@ -8,7 +8,6 @@ import Footer from '@/components/layout/Footer'
 import CookieBanner from '@/components/ui/CookieBanner'
 import Palette from '@/components/ui/Palette'
 import RevealObserver from '@/components/ui/RevealObserver'
-import BrandPreloader from '@/components/ui/BrandPreloader'
 import PageProgressBar from '@/components/ui/PageProgressBar'
 import SectionProgressBar from '@/components/ui/SectionProgressBar'
 
@@ -233,7 +232,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               {isRentreeActive() && <MobileBannerSpacer />}
               <PageProgressBar />
               <SectionProgressBar />
-              <BrandPreloader />
               <RevealObserver />
               {/* Lien d'évitement : premier élément focalisable de la page,
                   il permet de sauter la navigation sans la parcourir au

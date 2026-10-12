@@ -67,12 +67,10 @@ export default function Footer() {
 
           {/* Col 1 — Marque */}
           <div className="lg:col-span-1">
-            <Link href="/" className="flex items-center gap-2 mb-4 group">
-              <LogoMarque taille={34} haut="#FFFFFF" bas="#FBBF24" />
-              <div className="flex flex-col leading-tight">
-                <span className="font-bold text-white text-base">Stackup</span>
-                <span className="font-light text-[9px] tracking-[0.2em] uppercase text-white/65">Agency</span>
-              </div>
+            {/* Sur l'encre du pied de page, la marque passe en monochrome
+                clair : son navy d'origine y serait illisible. */}
+            <Link href="/" className="inline-block mb-4 text-white" aria-label="Stackup Agency, retour à l’accueil">
+              <LogoMarque taille={32} teinte="clair" />
             </Link>
             <p className="text-white/65 text-sm mb-5 leading-relaxed">
               Agence web à Tours. Sites internet professionnels pour TPE et artisans, livrés en 10 jours.

@@ -3351,3 +3351,93 @@ html,
 body {
   overflow-x: clip;
 }
+
+/* ═════════════════════════════════════════════════════════════════════════
+   28. LE LOGO
+
+   Le lettrage est posé en MASQUE : l'image ne fournit que la forme des
+   lettres, la couleur vient de `currentColor`. C'est ce qui permet au même
+   asset de servir en navy sur l'ivoire et en blanc sur l'encre, sans deux
+   fichiers ni deux composants.
+
+   Rapport d'aspect verrouillé à 665/181, les dimensions du lettrage relevées
+   sur le fichier de marque : sans lui, le masque se déforme au premier
+   changement de hauteur.
+   ═════════════════════════════════════════════════════════════════════════ */
+
+.su-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.62em;
+  line-height: 1;
+}
+
+.su-logo__marque {
+  display: block;
+  flex-shrink: 0;
+}
+
+.su-logo__mot {
+  display: block;
+  flex-shrink: 0;
+  aspect-ratio: 665 / 181;
+  background-color: currentColor;
+  -webkit-mask-image: url('/marque/stackup-mot.png');
+  mask-image: url('/marque/stackup-mot.png');
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-position: left center;
+  mask-position: left center;
+}
+
+/* Repli pour les moteurs sans `mask-image` : plutôt qu'un bloc de couleur
+   pleine à la place du nom, on n'affiche rien et le nom reste porté par le
+   texte accessible, déjà présent. */
+@supports not ((-webkit-mask-image: url('#')) or (mask-image: url('#'))) {
+  .su-logo__mot {
+    display: none;
+  }
+}
+
+/* Les brins de la marque suivent la traversée.
+   Le navy d'origine (#0D2C4C) est à 1,15:1 sur l'encre #0A1220 : la moitié
+   du logo y disparaissait. Le brin bascule donc vers l'ivoire en même temps
+   que le texte, sur la même courbe. L'ambre, lui, tient des deux côtés et
+   reste la constante qui rend la marque reconnaissable. */
+:root {
+  --su-logo-brin: rgb(
+    calc(13 + (236 - 13) * var(--su-bascule))
+    calc(44 + (241 - 44) * var(--su-bascule))
+    calc(76 + (248 - 76) * var(--su-bascule))
+  );
+  --su-logo-ambre: rgb(
+    calc(246 + (251 - 246) * var(--su-bascule))
+    calc(145 + (191 - 145) * var(--su-bascule))
+    calc(6 + (36 - 6) * var(--su-bascule))
+  );
+}
+
+/* Le pied de page est toujours sur l'encre, quelle que soit l'ambiance. */
+footer .su-logo {
+  --su-logo-brin: #EDF2F8;
+  --su-logo-ambre: #FBBF24;
+}
+
+/* « AGENCY » est composé très fin et très espacé dans le logo d'origine : à
+   petite taille il se réduit à un gris. On ne touche pas aux lettres — on
+   donne au lettrage la taille qu'il lui faut pour rester lisible. */
+.su-logo__mot {
+  min-height: 1.35em;
+}
+
+/* Les brins du ruban se déplient à l'ouverture. */
+@keyframes su-marque-brin {
+  from { transform: scaleY(0.04) translateY(6px); opacity: 0; }
+  to   { transform: none; opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [style*='su-marque-brin'] { animation: none !important; }
+}
