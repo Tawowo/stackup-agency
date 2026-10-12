@@ -11,9 +11,11 @@
 | | Avant | Après |
 |---|---|---|
 | Performance accueil (mobile simulé) | **78** | **92** |
-| TBT accueil | **570 ms** | **150 ms** |
+| LCP accueil | 3,1 s | **2,9 s** |
+| TBT accueil | **570 ms** | **170 ms** |
 | CLS | 0 | **0** sur les 6 pages mesurées |
 | Accessibilité | non mesurée | **100 / 100** sur les 6 pages mesurées |
+| Éléments graphiques imperceptibles | non mesurés | **0** sur 19 pages, en 390 px et 1 440 px |
 | Bonnes pratiques | non mesurée | **100 / 100** |
 | SEO | non mesuré | **100 / 100** |
 | Violations de contraste | **44 sur la seule page d'accueil** | **0** sur 20 pages, en 390 px et en 1 440 px |
@@ -99,7 +101,43 @@ Deux corrections : bandeau rendu côté serveur avec masquage avant peinture pou
 
 `aria-hidden` masque aux lecteurs d'écran mais **ne retire pas les liens de l'ordre de tabulation**. `inert` fait les deux.
 
-### 3.6 Le repère `<main>` manquait à 29 gabarits
+### 3.6 Sans JavaScript, la section méthode était entièrement vide
+
+Les six étapes animaient leur entrée par `opacity: visible ? 1 : 0` piloté
+par un état React. Sans script, l'opacité n'est jamais levée. Même famille
+que le défaut `.check-item`.
+
+Réponse en deux temps : une primitive partagée (`src/lib/useRevelation.ts`)
+où le masquage vit en CSS sous `.su-js`, avec temporisation de secours ; et
+un filet `<noscript>` pour les composants non encore migrés. Ce filet a
+demandé deux essais — React échappe les guillemets en `&quot;` dans un
+`<style>`, où les entités ne sont pas décodées, ce qui rendait le sélecteur
+invalide ; puis sa portée, d'abord trop large, forçait visibles les menus
+déroulants de la navigation.
+
+### 3.7 Le titre de l'accueil se lisait « faitdécoller »
+
+Les deux lignes du H1 sont des blocs : visuellement elles se suivent, mais
+leurs textes se concatènent sans séparateur. Pour un lecteur d'écran comme
+pour l'indexation, le H1 disait « Le site web qui faitdécoller votre
+activité. »
+
+### 3.8 Le logo avait un fond blanc incrusté
+
+`logo-icon.png` déclarait un canal alpha, mais son pixel de coin valait
+RVBA (254, 254, 255, 255) — blanc opaque. Sur la barre de navigation
+ivoire, un carré blanc entourait la marque, sur chaque page. Remplacé par
+du SVG inline : 63 958 octets retirés du chemin critique, et la marque peut
+désormais prendre les couleurs de son contexte.
+
+### 3.9 La barre de navigation latérale était un artefact
+
+Conçue pour le thème sombre : points inactifs `bg-white/25`, rail
+`bg-white/10` — invisibles sur ivoire. Et quatre de ses cinq ancres
+n'existaient pas sur l'accueil. Elle n'affichait qu'un point orphelin au
+bord droit de l'écran.
+
+### 3.10 Le repère `<main>` manquait à 29 gabarits
 
 Ces 29 gabarits génèrent l'essentiel des pages du site. Corrigé une fois dans le layout, avec conversion des 13 `<main>` de page en `<div>` pour n'avoir jamais deux repères imbriqués.
 
@@ -124,7 +162,18 @@ J'ai essayé de deviner, par le voisinage d'une ligne de JSX, si elle s'affichai
 
 J'ai failli « corriger » un site qui n'avait rien. Le test porte désormais sur deux invariants déterministes.
 
-### 4.3 Une hypothèse de l'audit invalidée par les mesures
+### 4.3 Un padding en pourcentage, et une pastille de 711 px
+
+En corrigeant un élément décoratif, j'ai écrit `padding: "22%"`. Un padding
+en pourcentage se calcule sur la largeur du **bloc conteneur**, pas de
+l'élément : 22 % de 1 440 px, soit 317 px de marge interne de chaque côté.
+La pastille mesurait 711 px au lieu de 100 et chevauchait les cartes
+tarifaires.
+
+Repéré en mesurant sa boîte englobante après coup — pas en relisant le
+code, où l'erreur était invisible.
+
+### 4.4 Une hypothèse de l'audit invalidée par les mesures
 
 L'audit concluait que la feuille de style de 174 ko causait une tâche longue de 452 ms et en faisait le premier goulot de performance. Après travaux, **le CSS a grossi** (183 301 octets) et **la tâche longue a disparu**, le TBT passant de 570 à 150 ms.
 
