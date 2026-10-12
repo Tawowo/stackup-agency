@@ -185,6 +185,41 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               "try{if(localStorage.getItem('cookie-consent'))document.documentElement.classList.add('su-consenti')}catch(e){}",
           }}
         />
+        {/* Filet de sécurité sans JavaScript.
+            Plusieurs composants animent leur entrée par un style en ligne
+            `opacity: 0` levé par un état React. Sans script, ce style n'est
+            jamais levé et le contenu reste définitivement invisible —
+            mesuré : les six étapes de la section méthode, entièrement
+            masquées. Cette règle ne s'applique QUE si JavaScript est absent,
+            et n'a donc aucun effet sur le rendu normal. */}
+        {/* Filet de sécurité sans JavaScript.
+            Plusieurs composants animent leur entrée par une opacité nulle
+            levée par un état React. Sans script, elle n'est jamais levée et
+            le contenu reste définitivement invisible — mesuré : les six
+            étapes de la section méthode et le bloc « Notre raison d'être ».
+
+            `dangerouslySetInnerHTML` est nécessaire ici : le contenu d'un
+            <style> est du texte brut, et React y échappe les guillemets en
+            &quot;, ce qui rendait le sélecteur invalide. Les entités ne sont
+            pas décodées dans un <style>, donc la règle ne s'appliquait pas.
+
+            Portée volontairement étroite : uniquement les styles EN LIGNE,
+            uniquement dans <main>. Une version plus large forçait visibles
+            les menus déroulants de la navigation et les survols de cartes,
+            qui utilisent `opacity-0` pour un masquage parfaitement
+            légitime — vérifié par capture.
+
+            Cette règle n'existe que si JavaScript est absent : aucun effet
+            sur le rendu normal. */}
+        <noscript>
+          <style
+            dangerouslySetInnerHTML={{
+              __html:
+                "main [style*='opacity:0'],main [style*='opacity: 0']" +
+                "{opacity:1!important;transform:none!important}",
+            }}
+          />
+        </noscript>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaOrg) }}

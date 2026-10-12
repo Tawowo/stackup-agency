@@ -18,7 +18,10 @@ function PreviewVitrine() {
     return () => clearInterval(id)
   }, [])
   return (
-    <div className="p-4 space-y-3 font-sans">
+    // Illustration : un faux navigateur qui se construit. Son texte serait
+    // annoncé comme de vrais liens par un lecteur d'écran, et son état
+    // d'animation n'a aucune valeur informative.
+    <div className="p-4 space-y-3 font-sans" aria-hidden="true">
       {/* Header */}
       <div className={`transition-all duration-500 ${step >= 1 ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
         <div className="flex items-center justify-between h-8 bg-navy rounded px-3">

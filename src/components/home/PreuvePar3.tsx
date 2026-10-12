@@ -167,7 +167,7 @@ export default function PreuvePar3() {
   }
 
   return (
-    <section ref={ref} className="py-24 bg-white relative overflow-hidden">
+    <section ref={ref} id="pourquoi" className="py-24 bg-white relative overflow-hidden">
       <div className="pointer-events-none absolute top-0 right-0 w-[500px] h-96 rounded-full" aria-hidden="true"
         style={{ background: 'radial-gradient(ellipse at 80% 0%, rgba(45,125,210,0.07) 0%, transparent 70%)' }} />
 

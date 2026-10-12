@@ -50,7 +50,7 @@ export default function PreuveLogicielle() {
   }, [])
 
   return (
-    <section ref={section} className="py-20 lg:py-28 bg-[#FFFDF9]">
+    <section ref={section} id="laboratoire" className="py-20 lg:py-28 bg-[#FFFDF9]">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="max-w-2xl mb-10">
           <p className="su-surtitre mb-5">La preuve</p>

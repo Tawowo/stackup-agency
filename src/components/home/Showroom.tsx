@@ -154,7 +154,7 @@ export default function Showroom() {
   }
 
   return (
-    <section className="py-24 relative overflow-hidden transition-colors duration-700"
+    <section id="realisations" className="py-24 relative overflow-hidden transition-colors duration-700"
       style={{ background: `linear-gradient(180deg, #FFFDF9 0%, ${p.couleur}18 40%, #FFFDF9 100%)` }}>
       {/* Halo arrière-plan qui suit le projet actif */}
       <div className="pointer-events-none absolute inset-0 transition-all duration-700" aria-hidden="true"

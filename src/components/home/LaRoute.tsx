@@ -4,9 +4,11 @@
  * Timeline verticale 6 étapes · SVG trait qui se dessine au scrub
  * Trait 2px centré-gauche · numéros mono · icônes SVG trait
  */
-import { useRef, useState, useEffect } from 'react'
+import { useRef, useEffect } from 'react'
 import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
+import { SITE } from '@/config/site'
+import { useRevelation } from '@/lib/useRevelation'
 
 const STEPS = [
   {
@@ -59,8 +61,10 @@ function StepSVG({ num }: { num: string }) {
 export default function LaRoute() {
   const sectionRef = useRef<HTMLElement>(null)
   const pathRef = useRef<SVGPathElement>(null)
-  const [visible, setVisible] = useState<boolean[]>(STEPS.map(() => false))
-  const stepRefs = useRef<(HTMLDivElement | null)[]>([])
+  // Révélation déléguée à la primitive partagée : elle garantit que l'état
+  // masqué n'existe que si JavaScript peut le lever, et ajoute une
+  // temporisation de secours.
+  const revelation = useRevelation({ nombre: STEPS.length, marge: '0px 0px -15% 0px' })
 
   // SVG path scrub — direct manipulation, no CSS transition
   useEffect(() => {
@@ -93,26 +97,6 @@ export default function LaRoute() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  // Sticky step visibility — once true, stays true
-  useEffect(() => {
-    const obs = new IntersectionObserver((entries) => {
-      setVisible(prev => {
-        let changed = false
-        const next = [...prev]
-        entries.forEach(e => {
-          if (e.isIntersecting) {
-            const idx = Number((e.target as HTMLElement).dataset.stepIdx)
-            if (!isNaN(idx) && !next[idx]) { next[idx] = true; changed = true }
-          }
-        })
-        return changed ? next : prev
-      })
-    }, { rootMargin: '0px 0px -20% 0px', threshold: 0 })
-
-    stepRefs.current.forEach(el => { if (el) obs.observe(el) })
-    return () => obs.disconnect()
-  }, [])
-
   // Vertical SVG path height matches content ~ 6 steps × 110px
   const pathD = 'M 24 0 L 24 660'
 
@@ -134,7 +118,8 @@ export default function LaRoute() {
           </p>
         </div>
 
-        {/* Timeline */}
+        {/* Timeline + récapitulatif */}
+        <div className="lg:grid lg:grid-cols-[1fr_300px] lg:gap-12 lg:items-start">
         <div className="relative">
           {/* SVG vertical track */}
           <div className="absolute left-6 top-0 bottom-0 w-12 pointer-events-none hidden md:block" aria-hidden="true" style={{ height: '660px' }}>
@@ -157,19 +142,13 @@ export default function LaRoute() {
             {STEPS.map((step, i) => (
               <div
                 key={step.num}
-                ref={el => { stepRefs.current[i] = el }}
+                {...revelation.props(i)}
                 data-step-idx={i}
-                className="flex items-start gap-5 transition-all duration-700"
-                style={{
-                  opacity: visible[i] ? 1 : 0,
-                  transform: visible[i] ? 'translateY(0) scale(1)' : 'translateY(24px) scale(0.98)',
-                  transitionDelay: `${i * 70}ms`,
-                  transitionTimingFunction: 'cubic-bezier(0.22,1,0.36,1)',
-                }}
+                className={`flex items-start gap-5 ${revelation.props(i).className}`}
               >
                 {/* Step icon */}
                 <div className={`flex-shrink-0 w-11 h-11 rounded-xl flex items-center justify-center transition-colors duration-500 ${
-                  visible[i] ? 'bg-navy text-white' : 'bg-gray-100 text-[#64748B]'
+                  revelation.reveles[i] ? 'bg-navy text-white' : 'bg-gray-100 text-[#64748B]'
                 }`}>
                   <StepSVG num={step.num} />
                 </div>
@@ -185,6 +164,46 @@ export default function LaRoute() {
               </div>
             ))}
           </div>
+        </div>
+
+        {/* Récapitulatif collant — comble le vide de droite par du contenu
+            utile plutôt que par un ornement. Tout y est déduit du contenu
+            existant : aucune promesse nouvelle n'est introduite. */}
+        <aside className="hidden lg:block lg:sticky lg:top-28">
+          <div className="su-strate su-strate--levee su-strate--aretee p-6">
+            <p className="su-surtitre mb-5">De bout en bout</p>
+            <p className="font-display font-bold text-navy text-[2.4rem] leading-none mb-1">
+              {SITE.delais.vitrine.split(' ')[0]}
+              <span className="text-[0.46em] font-semibold text-[#475569] ml-2">
+                {SITE.delais.vitrine.split(' ').slice(1).join(' ')}
+              </span>
+            </p>
+            <p className="text-[13.5px] text-[#475569] leading-relaxed mb-6">
+              pour un site vitrine, de la démo à la mise en ligne.
+            </p>
+
+            <p className="text-[11px] font-bold text-[#B45309] uppercase tracking-[0.16em] mb-3 data-mono">
+              Ce que vous faites
+            </p>
+            <ul className="space-y-2.5 mb-6">
+              {[
+                'Regarder la démo et dire ce qui vous plaît',
+                'Fournir vos textes et vos photos',
+                'Valider le devis',
+              ].map((item) => (
+                <li key={item} className="flex items-start gap-2.5 text-[13.5px] text-[#475569] leading-snug">
+                  <span className="mt-[7px] w-1.5 h-1.5 rounded-full bg-[#B45309] flex-shrink-0" aria-hidden="true" />
+                  {item}
+                </li>
+              ))}
+            </ul>
+
+            <p className="text-[12.5px] text-[#64748B] leading-relaxed border-t border-navy/10 pt-4">
+              Le reste — conception, développement, mise en ligne, hébergement —
+              est de notre côté.
+            </p>
+          </div>
+        </aside>
         </div>
 
         {/* CTA */}

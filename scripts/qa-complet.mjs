@@ -372,6 +372,45 @@ async function main() {
     opaciteH1 === 'none' || opaciteH1 === 'matrix(1, 0, 0, 1, 0, 0)',
     `transform = ${opaciteH1}`,
   )
+  // Aucun contenu ne doit rester masqué faute de script. Plusieurs
+  // composants animent leur entrée par un style en ligne `opacity: 0` levé
+  // par un état React : sans JavaScript ce style n'est jamais levé.
+  const masquesSansJs = await sansJs.evaluate(() => {
+    const caches = []
+    document.querySelectorAll('main *').forEach((el) => {
+      // Un sous-arbre `aria-hidden` est une illustration, pas du contenu :
+      // qu'il soit masqué sans script n'a aucune conséquence.
+      if (el.closest('[aria-hidden="true"]')) return
+      const st = getComputedStyle(el)
+      if (+st.opacity > 0.01) return
+      if (st.display === 'none' || st.visibility === 'hidden') return
+      const r = el.getBoundingClientRect()
+      if (r.width < 40 || r.height < 12) return
+      if (!(el.textContent ?? '').trim()) return
+      caches.push(
+        `${el.tagName.toLowerCase()}.${(el.className ?? '').toString().slice(0, 40)} « ${(el.textContent ?? '').trim().slice(0, 40)} »`,
+      )
+    })
+    return caches.slice(0, 6)
+  })
+  verifier(
+    'aucun bloc de contenu invisible sans JavaScript',
+    masquesSansJs.length === 0,
+    masquesSansJs.join(' | '),
+  )
+
+  // Les lignes d'un titre masqué sont des blocs : leurs textes se
+  // concatènent sans séparateur si rien ne les sépare dans le DOM.
+  const titreSansJs = (await sansJs.locator('h1').textContent()) ?? ''
+  // Les deux lignes du titre sont des blocs : leurs textes se concatènent
+  // sans séparateur si rien ne les sépare dans le DOM. On vérifie donc que
+  // la jointure attendue existe bel et bien.
+  verifier(
+    'les lignes du titre sont séparées par une espace',
+    /fait\s+décoller/.test(titreSansJs.replace(/\s+/g, ' ')),
+    titreSansJs.trim(),
+  )
+
   await sansJs.screenshot({ path: `${SORTIE}/accueil-sans-javascript.png` })
   await ctxSansJs.close()
 

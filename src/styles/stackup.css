@@ -715,3 +715,41 @@ button:focus-visible,
 .su-consenti .su-bandeau-cookies {
   display: none;
 }
+
+/* ============================================================================
+   14. RÉVÉLATION AU DÉFILEMENT
+   Le masquage n'existe que sous `.su-js`. Sans JavaScript, le contenu est
+   simplement visible : c'est la règle structurelle du site, appliquée ici à
+   une classe entière de composants qui la violaient.
+   ========================================================================== */
+
+.su-revelable {
+  /* État de repos : visible. */
+}
+
+.su-js .su-revelable {
+  opacity: 0;
+  transform: translate3d(0, 22px, 0) scale(0.985);
+  transition: opacity var(--su-t-pose) var(--su-pose),
+              transform var(--su-t-pose) var(--su-pose);
+}
+
+.su-js .su-revelable.est-revele {
+  opacity: 1;
+  transform: translate3d(0, 0, 0) scale(1);
+}
+
+/* Décalage dans une suite, sans dépasser six paliers perceptibles. */
+.su-js .su-revelable[data-revele='1'] { transition-delay: 70ms; }
+.su-js .su-revelable[data-revele='2'] { transition-delay: 140ms; }
+.su-js .su-revelable[data-revele='3'] { transition-delay: 210ms; }
+.su-js .su-revelable[data-revele='4'] { transition-delay: 280ms; }
+.su-js .su-revelable[data-revele='5'] { transition-delay: 350ms; }
+
+@media (prefers-reduced-motion: reduce) {
+  .su-js .su-revelable {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}

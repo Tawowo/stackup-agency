@@ -48,6 +48,11 @@ export default function HeroSection() {
           <h1 className="font-display font-bold text-[#0C1626] mb-6 text-[clamp(2.3rem,6.2vw,4.1rem)] leading-[1.04] tracking-[-0.03em]">
             {TITRE.map((ligne, i) => (
               <span key={ligne} className="su-ligne-masque">
+                {/* Les lignes sont des blocs : visuellement elles se suivent,
+                    mais leurs textes se concatènent sans séparateur. Sans cet
+                    espace, le titre se lit « faitdécoller » — pour un lecteur
+                    d'écran comme pour l'indexation. */}
+                {i > 0 && <span className="sr-only"> </span>}
                 <span className="su-ligne-interne">
                   {i === 1 ? (
                     <>

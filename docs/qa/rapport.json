@@ -23,7 +23,9 @@
     "aucune scène WebGL en mouvement réduit",
     "le titre reste visible en mouvement réduit",
     "le titre est lisible sans JavaScript",
-    "le titre n’est pas masqué par la révélation sans JavaScript"
+    "le titre n’est pas masqué par la révélation sans JavaScript",
+    "aucun bloc de contenu invisible sans JavaScript",
+    "les lignes du titre sont séparées par une espace"
   ],
   "details": {
     "debordements": [],
