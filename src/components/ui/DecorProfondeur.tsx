@@ -64,15 +64,36 @@ export default function DecorProfondeur({ variant = "warm", seed = 0 }: { varian
         <circle cx="100" cy="100" r="72" fill="none" stroke="rgba(255,255,255,0.55)" strokeWidth="8"
           strokeDasharray="60 393" transform="rotate(-14 100 100)" />
       </svg>
-      {/* 5 — Pastille verre (profondeur premier plan) */}
+      {/* 5 — Pastille de strates (profondeur premier plan)
+          Version précédente : un carré de verre blanc translucide bordé de
+          blanc. Sur le fond ivoire du site, il lisait comme une carte vide —
+          une capture de /tarifs l'a montré sans ambiguïté. Le verre blanc a
+          besoin d'un fond chargé pour exister ; ici il n'en a pas.
+          Remplacé par une pile miniature, qui reprend le motif de la marque
+          et se lit donc comme un élément voulu. */}
       <div className="dp-float" style={{
         position: "absolute", [side]: high ? "10%" : "14%", top: high ? "58%" : "16%",
-        width: "clamp(64px, 7vw, 104px)", height: "clamp(64px, 7vw, 104px)", borderRadius: 28,
-        background: "linear-gradient(135deg, rgba(255,255,255,0.75), rgba(255,255,255,0.28))",
-        border: "1px solid rgba(255,255,255,0.9)",
-        boxShadow: "0 20px 40px rgba(15,23,42,0.12), 0 4px 10px rgba(15,23,42,0.06), inset 0 1px 0 rgba(255,255,255,0.9)",
-        backdropFilter: "blur(6px)", transform: "rotate(-8deg)",
-      }} />
+        width: "clamp(64px, 7vw, 104px)", height: "clamp(64px, 7vw, 104px)", borderRadius: 20,
+        background: "linear-gradient(135deg, rgba(255,255,255,0.96), rgba(255,253,249,0.9))",
+        border: "1px solid rgba(30,58,95,0.1)",
+        boxShadow: "0 18px 36px rgba(30,58,95,0.1), 0 3px 8px rgba(30,58,95,0.06)",
+        transform: "rotate(-8deg)",
+        // Marge interne en pixels, pas en pourcentage : un padding en % se
+        // calcule sur la LARGEUR DU BLOC CONTENEUR (ici 1440 px), pas sur
+        // l'élément. La pastille mesurait 711 px au lieu de 100.
+        display: "flex", flexDirection: "column", justifyContent: "center",
+        alignItems: "center", gap: 6, padding: 18, boxSizing: "border-box",
+      }}>
+        {[1, 0.78, 0.92].map((largeur, i) => (
+          <span key={i} style={{
+            width: `${largeur * 100}%`, height: 5, borderRadius: 2, flexShrink: 0,
+            background: i === 1
+              ? "linear-gradient(90deg, #F59E0B, #FBBF24)"
+              : "linear-gradient(90deg, #2a4d7a, #1E3A5F)",
+            opacity: i === 1 ? 0.9 : 0.72,
+          }} />
+        ))}
+      </div>
       {/* 6 — Nappe de points locale (jamais un quadrillage pleine page) */}
       <div style={{
         position: "absolute", [oppo]: "22%", top: high ? "auto" : "8%", bottom: high ? "10%" : "auto",

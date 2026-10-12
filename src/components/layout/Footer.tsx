@@ -1,6 +1,6 @@
 import Link from 'next/link'
-import Image from 'next/image'
 import { SITE } from '@/config/site'
+import LogoMarque from '@/components/ui/LogoMarque'
 
 function LinkedinIcon() {
   return (
@@ -68,7 +68,7 @@ export default function Footer() {
           {/* Col 1 — Marque */}
           <div className="lg:col-span-1">
             <Link href="/" className="flex items-center gap-2 mb-4 group">
-              <Image src="/logo-icon.png" alt="Stackup Agency" width={36} height={36} quality={100} className="object-contain brightness-0 invert group-hover:brightness-0 group-hover:invert transition-all" />
+              <LogoMarque taille={34} haut="#FFFFFF" bas="#FBBF24" />
               <div className="flex flex-col leading-tight">
                 <span className="font-bold text-white text-base">Stackup</span>
                 <span className="font-light text-[9px] tracking-[0.2em] uppercase text-white/65">Agency</span>

@@ -1,11 +1,11 @@
 'use client'
 import { useState, useEffect, useRef } from 'react'
-import Image from 'next/image'
 import Link from 'next/link'
 import { ChevronDown, DollarSign, Layers, PenSquare, User, HelpCircle, Gift, Mail } from 'lucide-react'
 import { usePathname } from 'next/navigation'
 import PaletteBouton from '@/components/ui/PaletteBouton'
 import { useBanniere } from '@/contexts/BanniereContext'
+import LogoMarque from '@/components/ui/LogoMarque'
 
 const SERVICES_LINKS = [
   { href: '/services/site-vitrine', label: 'Site vitrine' },
@@ -105,7 +105,7 @@ export default function Navbar() {
               {/* Alternative vide : le nom de la marque est déjà écrit juste à
                   côté. Le répéter ferait annoncer « Stackup Agency Stackup
                   Agency » par un lecteur d'écran. */}
-              <Image src="/logo-icon.png" alt="" width={40} height={40} quality={100} className="object-contain" priority />
+              <LogoMarque taille={38} />
               <div className="flex flex-col leading-tight">
                 <span className={`font-bold text-lg tracking-tight transition-colors ${logoTextClass}`}>Stackup</span>
                 <span className={`font-light text-[10px] tracking-[0.2em] uppercase transition-colors ${logoSubClass}`}>Agency</span>

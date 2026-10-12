@@ -1,26 +1,122 @@
 [
   {
-    "chemin": "/realisations",
+    "chemin": "/tarifs",
     "largeur": "mobile",
-    "fichier": "docs/captures/v6/realisations-mobile.png",
+    "fichier": "docs/captures/v6/tarifs-mobile.png",
     "erreurs": [],
     "debordement": false,
     "scrollWidth": 390,
     "innerWidth": 390,
     "canvas": 0,
-    "h1": "Nos réalisations",
-    "titre": "Réalisations — Sites de démonstration web | Stackup Agency"
+    "h1": "Tarifs clairs, sans surprise",
+    "titre": "Tarifs création site internet — À partir de 449€ | Stackup Agency"
   },
   {
-    "chemin": "/realisations",
+    "chemin": "/devis",
+    "largeur": "mobile",
+    "fichier": "docs/captures/v6/devis-mobile.png",
+    "erreurs": [],
+    "debordement": false,
+    "scrollWidth": 390,
+    "innerWidth": 390,
+    "canvas": 0,
+    "h1": "Devis express",
+    "titre": "Devis express — site internet en 5 min | Stackup Agency"
+  },
+  {
+    "chemin": "/contact",
+    "largeur": "mobile",
+    "fichier": "docs/captures/v6/contact-mobile.png",
+    "erreurs": [],
+    "debordement": false,
+    "scrollWidth": 390,
+    "innerWidth": 390,
+    "canvas": 0,
+    "h1": "Parlons de votre projet",
+    "titre": "Contact — Devis gratuit sous 72h | Stackup Agency"
+  },
+  {
+    "chemin": "/a-propos",
+    "largeur": "mobile",
+    "fichier": "docs/captures/v6/a-propos-mobile.png",
+    "erreurs": [],
+    "debordement": false,
+    "scrollWidth": 390,
+    "innerWidth": 390,
+    "canvas": 0,
+    "h1": "L'agence qui rend le digital accessible.",
+    "titre": "À propos — Notre agence web à Tours | Stackup Agency"
+  },
+  {
+    "chemin": "/blog",
+    "largeur": "mobile",
+    "fichier": "docs/captures/v6/blog-mobile.png",
+    "erreurs": [],
+    "debordement": false,
+    "scrollWidth": 390,
+    "innerWidth": 390,
+    "canvas": 0,
+    "h1": "Blog",
+    "titre": "Blog SEO & Création Web — Conseils Experts | Stackup Agency"
+  },
+  {
+    "chemin": "/tarifs",
     "largeur": "desktop",
-    "fichier": "docs/captures/v6/realisations-desktop.png",
+    "fichier": "docs/captures/v6/tarifs-desktop.png",
     "erreurs": [],
     "debordement": false,
     "scrollWidth": 1440,
     "innerWidth": 1440,
     "canvas": 0,
-    "h1": "Nos réalisations",
-    "titre": "Réalisations — Sites de démonstration web | Stackup Agency"
+    "h1": "Tarifs clairs, sans surprise",
+    "titre": "Tarifs création site internet — À partir de 449€ | Stackup Agency"
+  },
+  {
+    "chemin": "/devis",
+    "largeur": "desktop",
+    "fichier": "docs/captures/v6/devis-desktop.png",
+    "erreurs": [],
+    "debordement": false,
+    "scrollWidth": 1440,
+    "innerWidth": 1440,
+    "canvas": 0,
+    "h1": "Devis express",
+    "titre": "Devis express — site internet en 5 min | Stackup Agency"
+  },
+  {
+    "chemin": "/contact",
+    "largeur": "desktop",
+    "fichier": "docs/captures/v6/contact-desktop.png",
+    "erreurs": [],
+    "debordement": false,
+    "scrollWidth": 1440,
+    "innerWidth": 1440,
+    "canvas": 0,
+    "h1": "Parlons de votre projet",
+    "titre": "Contact — Devis gratuit sous 72h | Stackup Agency"
+  },
+  {
+    "chemin": "/a-propos",
+    "largeur": "desktop",
+    "fichier": "docs/captures/v6/a-propos-desktop.png",
+    "erreurs": [],
+    "debordement": false,
+    "scrollWidth": 1440,
+    "innerWidth": 1440,
+    "canvas": 0,
+    "h1": "L'agence qui rend le digital accessible.",
+    "titre": "À propos — Notre agence web à Tours | Stackup Agency"
+  },
+  {
+    "chemin": "/blog",
+    "largeur": "desktop",
+    "fichier": "docs/captures/v6/blog-desktop.png",
+    "erreurs": [],
+    "debordement": false,
+    "scrollWidth": 1440,
+    "innerWidth": 1440,
+    "canvas": 0,
+    "h1": "Blog",
+    "titre": "Blog SEO & Création Web — Conseils Experts | Stackup Agency"
   }
 ]
