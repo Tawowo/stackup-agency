@@ -37,7 +37,7 @@ export default function RealisationsPage() {
       <DecorProfondeur variant="cool" seed={2} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} />
 
-      <MiniHero
+      <MiniHero signature="masque"
         title="Nos réalisations"
         subtitle="Ces projets sont des sites de démonstration conçus pour illustrer nos capacités techniques. Ils ne représentent pas de clients réels, sauf mention explicite."
         breadcrumb={[{ name: 'Réalisations' }]}

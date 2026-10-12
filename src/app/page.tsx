@@ -17,6 +17,7 @@ const StatPills = dynamic(() => import('@/components/home/StatPills'))
 const RaisonDetre = dynamic(() => import('@/components/home/RaisonDetre'))
 const PreuveLogicielle = dynamic(() => import('@/components/home/PreuveLogicielle'))
 const Seuil = dynamic(() => import('@/components/home/Seuil'))
+const Anatomie = dynamic(() => import('@/components/home/Anatomie'))
 
 export const metadata: Metadata = {
   title: "Agence web Tours — Site internet en 10 jours",
@@ -90,7 +91,15 @@ export default function Home() {
           <MarqueeSeparator />
         </div>
 
-        {/* 03 — L'Atelier, en plein jour */}
+        {/* 03 — L'ANATOMIE : le seuil vient de promettre qu'une structure
+            devient une interface. Cette section le démontre, en ouvrant un
+            site en cinq couches. Mécanisme volontairement sans rapport avec
+            les particules : de vrais plans HTML en perspective. */}
+        <div data-scene="preuve" data-nuit="0">
+          <Anatomie />
+        </div>
+
+        {/* 04 — L'Atelier, en plein jour */}
         <div data-scene="preuve" data-nuit="0">
           <Atelier />
         </div>

@@ -41,6 +41,15 @@ const r = await page.evaluate(() => {
       const pb = p.getBoundingClientRect()
       if (pb.right > vue + 1 || pb.left < -1) continue
     }
+    // Un élément DÉCOUPÉ par un ancêtre ne fait pas déborder le document :
+    // la bande défilante et les halos de décor dépassent exprès de leur
+    // cadre, qui les coupe. Les signaler masquait les vrais coupables.
+    let coupe = false
+    for (let a = el.parentElement; a && a !== document.body; a = a.parentElement) {
+      const o = getComputedStyle(a)
+      if (o.overflowX !== 'visible') { coupe = true; break }
+    }
+    if (coupe) continue
     coupables.push({
       sel: `${el.tagName.toLowerCase()}.${String(el.className).slice(0, 48)}`,
       gauche: Math.round(b.left),

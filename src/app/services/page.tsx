@@ -108,7 +108,7 @@ export default function ServicesPage() {
     <div className="min-h-screen bg-[#FFFDF9]">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
 
-      <MiniHero
+      <MiniHero signature="trace"
         title="Nos services de création web"
         subtitle={`Sites internet professionnels à partir de ${SITE.pricing.vitrine}€. Livrés en 10 à 21 jours, hébergement inclus, SEO optimisé. Devis gratuit sous 72h.`}
         breadcrumb={[{ name: 'Services' }]}

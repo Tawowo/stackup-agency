@@ -274,15 +274,24 @@ export function creerPassage(conteneur: HTMLElement): ControlePassage | null {
   scene.add(nuage)
 
   // ── Couleurs par ambiance ────────────────────────────────────────────────
-  // De jour, la matière est à peine plus foncée que le papier et presque
-  // transparente : le nuage devient une trame, pas une tache. C'est le point
-  // qui manquait — des points opaques sur de l'ivoire lisent comme de la
-  // saleté, quelle que soit la forme qu'ils dessinent.
+  // DE JOUR, LA SCÈNE SE RETIRE PRESQUE ENTIÈREMENT.
+  //
+  // Elle a d'abord été réglée à 0,3 : une trame pâle derrière tout le
+  // contenu. Regardé section par section, c'était une erreur — le même
+  // nuage traînait derrière l'anatomie, le réseau, les réalisations et la
+  // méthode, et ramenait à une seule texture quatre sections conçues pour
+  // être radicalement différentes. Le fond commun annulait la diversité
+  // qu'on venait de construire.
+  //
+  // La scène appartient donc à la nuit : l'ouverture, les deux seuils, la
+  // clôture. De jour, chaque section porte son propre mécanisme, et il ne
+  // reste du nuage qu'un souffle — assez pour que les entrées et sorties de
+  // nuit ne soient pas des coupures, pas assez pour teinter quoi que ce soit.
   const JOUR = {
     matiere: new Color('#9fb4cd'),
     accent: new Color('#d9a441'),
     lumiere: new Color('#f3d6a0'),
-    opacite: 0.3,
+    opacite: 0.06,
   }
   // De nuit, elle émet : bleu froid lumineux ponctué d'or, en additif.
   const NUIT = {

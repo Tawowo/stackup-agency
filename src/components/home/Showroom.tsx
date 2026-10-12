@@ -276,6 +276,9 @@ export default function Showroom() {
               className="su-salle__vignette"
               style={{ '--i': i, '--accent': projet.accent } as React.CSSProperties}
               aria-current={i === courant ? 'true' : undefined}
+              /* Au-delà d'un écran de distance, rien n'est visible : on
+                 évite de peindre quatre vignettes hors cadre à chaque image. */
+              data-loin={defile && Math.abs(i - position) > 1.2 ? 'oui' : undefined}
             >
               <div className="su-salle__supports">
                 <Ecran projet={projet} actif={i === courant} />

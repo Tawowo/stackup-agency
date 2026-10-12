@@ -69,6 +69,23 @@ Chaque ligne indique ce qui déclenche le moment et où le vérifier.
 | 30 | **Le curseur de descente** — une pastille descend le long de son rail | continu | hero |
 | 31 | **Les jalons du rail** — le trait du projet actif s'épaissit et prend sa couleur | défilement | réalisations |
 
+## G — Mécanismes ajoutés par la passe « diversité radicale »
+*(des matières différentes, pas le même effet reteinté)*
+
+| # | Moment | Mécanisme | Où |
+|---|--------|-----------|-----|
+| 35 | **L'anatomie s'ouvre** — cinq plans HTML en perspective s'écartent au défilement puis se referment | 3D CSS sur de vrais éléments, `preserve-3d` | anatomie |
+| 36 | **L'isolement d'une couche** — survoler ou tabuler une légende éteint les quatre autres et révèle le plan choisi | opacité + saturation, piloté par la légende | anatomie |
+| 37 | **L'inclinaison de la pile** — la scène s'incline vers le pointeur, avec inertie | rotation lissée | anatomie |
+| 38 | **Le réseau circule** — des paquets parcourent les liaisons entre modules, avec une traînée | Canvas 2D, courbes de Bézier | réseau |
+| 39 | **Les nœuds se dérobent** — le pointeur repousse les modules, qui reviennent par ressort | physique simple, amortie | réseau |
+| 40 | **Le sous-graphe s'éclaire** — choisir un module allume ses liaisons et éteint le reste | parcours du graphe | réseau |
+| 41 | **Le schéma se câble** — blocs puis liaisons puis points se tracent dans l'ordre | `stroke-dashoffset` sur SVG | /services |
+| 42 | **Le titre découpé** — une trame diagonale défile DERRIÈRE les lettres | `background-clip: text` | /realisations |
+| 43 | **L'axe se gradue** — une règle se construit de gauche à droite, cran par cran | `scaleX` puis `scaleY` décalés | /tarifs |
+| 44 | **La chronologie se pose** — cinq crans apparaissent le long d'une ligne de temps | rebond séquencé | /a-propos |
+| 45 | **Le signal émet** — des ondes concentriques partent d'un point | cercles en boucle décalée | /contact, /parrainage |
+
 ## F — Moments spectaculaires
 *(ceux qu'on raconte après)*
 
@@ -80,7 +97,15 @@ Chaque ligne indique ce qui déclenche le moment et où le vérifier.
 
 ---
 
-**Total : 34 moments distincts**, répartis sur les six familles.
+**Total : 45 moments distincts.**
+
+Sur la seule page d'accueil : **26 moments**, portés par **cinq matières
+différentes** — des points en 3D (hero), des plans HTML en perspective
+(anatomie), des traits en Canvas 2D (réseau), des captures en pellicule
+(réalisations), des filets et des balayages (méthode).
+
+Les six pages commerciales ont chacune une ouverture distincte, là où elles
+partageaient jusqu'ici le même fondu.
 
 ## Ce qui se passe sans tout cela
 
@@ -90,3 +115,12 @@ Chaque ligne indique ce qui déclenche le moment et où le vérifier.
 | Mouvement réduit | Aucun canvas, aucune animation d'entrée, aucun balayage. La traversée d'ambiance subsiste : ce n'est pas du mouvement, c'est une couleur de fond. |
 | Sans WebGL | Aucun canvas. La traversée d'ambiance est pilotée en CSS par un observateur de défilement. |
 | Appareil lent | Le nombre de particules descend de 56 000 à 26 000 puis 9 000, mesuré sur la cadence réelle. Les textes ne dépendent d'aucun état JavaScript : ils sont peints par le compositeur. |
+| Écran étroit | La pellicule des réalisations redevient une pile verticale : détourner le défilement sur un téléphone est désagréable, et les captures ne se chargeaient pas derrière une translation. |
+
+## Ce qui a été retiré, et pourquoi
+
+| Retiré | Raison |
+|--------|--------|
+| La trame de particules derrière les sections de jour | Le même nuage traînait derrière l'anatomie, le réseau, les réalisations et la méthode, et ramenait à une seule texture quatre sections conçues pour être radicalement différentes. La scène appartient désormais à la nuit. |
+| 840 ms de préchargeur | Un minuteur fixe sans rapport avec un chargement réel, qui cachait un hero déjà noir derrière un écran noir. Ramené de 1 400 ms à 560 ms. |
+| Le fondu-montée partagé des six en-têtes commerciaux | Remplacé par cinq mécanismes distincts. |

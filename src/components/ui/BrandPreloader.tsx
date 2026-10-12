@@ -17,21 +17,28 @@ export default function BrandPreloader() {
 
     setVisible(true)
 
-    // Counter 0→100 over 800ms (eased)
+    // ── Un rideau, pas un écran de chargement ───────────────────────────
+    //
+    // Il durait 1,4 s sur un minuteur fixe, sans rapport avec le moindre
+    // chargement réel : du temps mort facturé au visiteur. Et depuis que
+    // l'accueil s'ouvre dans la nuit, il cachait un fond noir derrière un
+    // autre fond noir — il ne révélait plus rien.
+    //
+    // Il garde son rôle de couture entre l'arrivée et la scène, mais il le
+    // tient en 560 ms au lieu de 1400, et le compteur court sur 300 ms. Les
+    // panneaux s'écartent pendant que le hero joue déjà son ouverture.
     startRef.current = performance.now()
     const animCount = (now: number) => {
       const elapsed = now - startRef.current
-      const p = Math.min(elapsed / 800, 1)
+      const p = Math.min(elapsed / 300, 1)
       const eased = p < 0.5 ? 2 * p * p : 1 - Math.pow(-2 * p + 2, 2) / 2
       setCount(Math.round(eased * 100))
       if (p < 1) rafRef.current = requestAnimationFrame(animCount)
     }
     rafRef.current = requestAnimationFrame(animCount)
 
-    // Start lifting at 900ms
-    const t1 = setTimeout(() => setLifting(true), 900)
-    // Remove at 1400ms (after both panels clear)
-    const t2 = setTimeout(() => setVisible(false), 1400)
+    const t1 = setTimeout(() => setLifting(true), 320)
+    const t2 = setTimeout(() => setVisible(false), 560)
     return () => {
       clearTimeout(t1)
       clearTimeout(t2)

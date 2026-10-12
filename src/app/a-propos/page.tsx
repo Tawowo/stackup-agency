@@ -55,7 +55,7 @@ export default function AProposPage() {
       <DecorProfondeur variant="mixte" seed={0} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutPageSchema) }} />
 
-      <MiniHero
+      <MiniHero signature="chronologie"
         title="L'agence qui rend le digital accessible."
         subtitle="Stackup Agency est née d'un constat simple : les indépendants méritent le même niveau d'exigence digitale que les grandes entreprises — sans les tarifs des grandes agences."
         breadcrumb={[{ name: 'À propos' }]}

@@ -94,7 +94,7 @@ export default function ParrainagePage() {
       <DecorProfondeur variant="gold" seed={1} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
-      <MiniHero
+      <MiniHero signature="signal"
         breadcrumb={[{ name: 'Parrainage', href: '/parrainage' }]}
         title="Parrainez un professionnel, choisissez votre récompense"
         subtitle="À la signature de son projet : 1 mois d'abonnement Premium (89 €) offert OU −10 % sur votre propre prestation. Cumulable sur plusieurs filleuls."

@@ -13,6 +13,7 @@
  */
 
 import { useEffect, useRef, useState } from 'react'
+import Reseau from '@/components/home/Reseau'
 import Link from 'next/link'
 import dynamic from 'next/dynamic'
 import { ArrowRight } from 'lucide-react'
@@ -65,6 +66,10 @@ export default function PreuveLogicielle() {
             changement. Rien n’est simulé.
           </p>
         </div>
+
+        {/* Le réseau pose l'architecture ; l'outil ci-dessous la prouve en
+            fonctionnant réellement. L'un explique, l'autre démontre. */}
+        <Reseau />
 
         <div className="min-h-[640px]">{charger && <Laboratoire />}</div>
 

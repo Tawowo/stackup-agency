@@ -1,137 +1,146 @@
-balayage 0 → 16000 px, pas de 120
+balayage 0 → 20000 px, pas de 140
   y=    0 nuit=1.000 ·  27 textes · pire 8.44:1 (seuil 4.5)   « Obtenir mon devis gratuit »
-  y=  120 nuit=0.999 ·  28 textes · pire 8.44:1 (seuil 4.5)   « Obtenir mon devis gratuit »
-  y=  240 nuit=0.979 ·  16 textes · pire 8.44:1 (seuil 4.5)   « Obtenir mon devis gratuit »
-  y=  360 nuit=0.939 ·  16 textes · pire 8.44:1 (seuil 4.5)   « Obtenir mon devis gratuit »
-  y=  480 nuit=0.883 ·  15 textes · pire 8.44:1 (seuil 4.5)   « Obtenir mon devis gratuit »
-  y=  600 nuit=0.817 ·   7 textes · pire 8.44:1 (seuil 4.5)   « Obtenir mon devis gratuit »
-  y=  720 nuit=0.746 ·   5 textes · pire 10.22:1 (seuil 4.5)   « Descendre »
+  y=  140 nuit=0.997 ·  18 textes · pire 8.44:1 (seuil 4.5)   « Obtenir mon devis gratuit »
+  y=  280 nuit=0.968 ·  16 textes · pire 8.44:1 (seuil 4.5)   « Obtenir mon devis gratuit »
+  y=  420 nuit=0.913 ·  16 textes · pire 8.44:1 (seuil 4.5)   « Obtenir mon devis gratuit »
+  y=  560 nuit=0.840 ·   7 textes · pire 8.44:1 (seuil 4.5)   « Obtenir mon devis gratuit »
+  y=  700 nuit=0.759 ·   4 textes · pire 10.22:1 (seuil 4.5)   « Descendre »
   y=  840 nuit=0.676 ·   3 textes · pire 10.22:1 (seuil 4.5)   « Descendre »
-  y=  960 nuit=0.611 ·   3 textes · pire 11.23:1 (seuil 3)   « devient »
-  y= 1080 nuit=0.556 ·   3 textes · pire 11.23:1 (seuil 3)   « devient »
-  y= 1200 nuit=0.518 ·   0 textes · pire n/a:1 (seuil —)   
-  y= 1320 nuit=0.501 ·   0 textes · pire n/a:1 (seuil —)   
-  y= 1440 nuit=0.477 ·   0 textes · pire n/a:1 (seuil —)   
-  y= 1560 nuit=0.400 ·   3 textes · pire 4.94:1 (seuil 3)   « devient »
+  y=  980 nuit=0.601 ·   3 textes · pire 11.23:1 (seuil 3)   « devient »
+  y= 1120 nuit=0.541 ·   3 textes · pire 11.23:1 (seuil 3)   « devient »
+  y= 1260 nuit=0.506 ·   0 textes · pire n/a:1 (seuil —)   
+  y= 1400 nuit=0.491 ·   0 textes · pire n/a:1 (seuil —)   
+  y= 1540 nuit=0.416 ·   3 textes · pire 4.94:1 (seuil 3)   « devient »
   y= 1680 nuit=0.291 ·  71 textes · pire 4.68:1 (seuil 4.5)   « · »
-  y= 1800 nuit=0.174 ·  70 textes · pire 4.68:1 (seuil 4.5)   « · »
-  y= 1920 nuit=0.073 ·  71 textes · pire 4.68:1 (seuil 4.5)   « · »
-  y= 2040 nuit=0.010 ·  79 textes · pire 4.68:1 (seuil 4.5)   « · »
-  y= 2160 nuit=0.000 ·  85 textes · pire 4.68:1 (seuil 4.5)   « 1647 € »
-  y= 2280 nuit=0.000 ·  90 textes · pire 4.68:1 (seuil 4.5)   « 1447 € »
-  y= 2400 nuit=0.000 ·  97 textes · pire 4.55:1 (seuil 4.5)   « Délai : 10 jours ouvrés »
-  y= 2520 nuit=0.000 · 101 textes · pire 4.55:1 (seuil 4.5)   « Délai : 10 jours ouvrés »
-  y= 2640 nuit=0.000 ·  34 textes · pire 4.55:1 (seuil 4.5)   « Délai : 10 jours ouvrés »
-  y= 2760 nuit=0.000 ·  34 textes · pire 4.55:1 (seuil 4.5)   « Délai : 10 jours ouvrés »
-  y= 2880 nuit=0.000 ·  34 textes · pire 4.55:1 (seuil 4.5)   « Délai : 10 jours ouvrés »
-  y= 3000 nuit=0.000 ·  26 textes · pire 4.55:1 (seuil 4.5)   « Délai : 10 jours ouvrés »
-  y= 3120 nuit=0.000 ·  22 textes · pire 4.55:1 (seuil 4.5)   « Délai : 10 jours ouvrés »
-  y= 3240 nuit=0.000 ·  17 textes · pire 4.55:1 (seuil 4.5)   « Délai : 10 jours ouvrés »
-  y= 3360 nuit=0.000 ·  15 textes · pire 3.14:1 (seuil 3)   « × »
-  y= 3480 nuit=0.000 ·  12 textes · pire 3.14:1 (seuil 3)   « × »
-  y= 3600 nuit=0.000 ·  12 textes · pire 3.14:1 (seuil 3)   « × »
-  y= 3720 nuit=0.000 ·  12 textes · pire 3.14:1 (seuil 3)   « × »
-  y= 3840 nuit=0.000 ·   8 textes · pire 3.14:1 (seuil 3)   « × »
-  y= 3960 nuit=0.000 ·   9 textes · pire 3.14:1 (seuil 3)   « × »
-  y= 4080 nuit=0.000 ·  11 textes · pire 3.14:1 (seuil 3)   « × »
-  y= 4200 nuit=0.000 ·   9 textes · pire 4.68:1 (seuil 4.5)   « Trier par »
-  y= 4320 nuit=0.000 ·  17 textes · pire 4.68:1 (seuil 4.5)   « Statut »
-  y= 4440 nuit=0.000 ·  22 textes · pire 4.68:1 (seuil 4.5)   « Statut »
-  y= 4560 nuit=0.000 ·  28 textes · pire 4.68:1 (seuil 4.5)   « Statut »
-  y= 4680 nuit=0.000 ·  35 textes · pire 4.68:1 (seuil 4.5)   « Statut »
-  y= 4800 nuit=0.000 ·  41 textes · pire 4.68:1 (seuil 4.5)   « Statut »
-  y= 4920 nuit=0.000 ·  45 textes · pire 4.68:1 (seuil 4.5)   « Statut »
-  y= 5040 nuit=0.000 ·  51 textes · pire 4.68:1 (seuil 4.5)   « Statut »
-  y= 5160 nuit=0.000 ·  49 textes · pire 4.68:1 (seuil 4.5)   « 12 sur 12 interventions · dont 13 73 »
-  y= 5280 nuit=0.000 ·  47 textes · pire 4.68:1 (seuil 4.5)   « 12 sur 12 interventions · dont 13 73 »
-  y= 5400 nuit=0.000 ·  39 textes · pire 4.68:1 (seuil 4.5)   « 12 sur 12 interventions · dont 13 73 »
-  y= 5520 nuit=0.000 ·  32 textes · pire 4.68:1 (seuil 4.5)   « 12 sur 12 interventions · dont 13 73 »
-  y= 5640 nuit=0.000 ·  29 textes · pire 4.68:1 (seuil 4.5)   « 12 sur 12 interventions · dont 13 73 »
-  y= 5760 nuit=0.000 ·  22 textes · pire 4.68:1 (seuil 4.5)   « 12 sur 12 interventions · dont 13 73 »
-  y= 5880 nuit=0.000 ·  14 textes · pire 4.68:1 (seuil 4.5)   « 12 sur 12 interventions · dont 13 73 »
-  y= 6000 nuit=0.000 ·  13 textes · pire 4.68:1 (seuil 4.5)   « 12 sur 12 interventions · dont 13 73 »
-  y= 6120 nuit=0.000 ·  24 textes · pire 6.07:1 (seuil 4.5)   « /05 »
-  y= 6240 nuit=0.000 ·  48 textes · pire 6.07:1 (seuil 4.5)   « /05 »
-  y= 6360 nuit=0.000 ·  48 textes · pire 6.07:1 (seuil 4.5)   « /05 »
-  y= 6480 nuit=0.000 ·  48 textes · pire 6.07:1 (seuil 4.5)   « /05 »
-  y= 6600 nuit=0.000 ·  48 textes · pire 6.07:1 (seuil 4.5)   « /05 »
-  y= 6720 nuit=0.000 ·  48 textes · pire 6.07:1 (seuil 4.5)   « /05 »
-  y= 6840 nuit=0.000 ·  45 textes · pire 6.07:1 (seuil 4.5)   « /05 »
-  y= 6960 nuit=0.000 ·  45 textes · pire 6.07:1 (seuil 4.5)   « /05 »
-  y= 7080 nuit=0.000 ·  45 textes · pire 6.07:1 (seuil 4.5)   « /05 »
-  y= 7200 nuit=0.000 ·  45 textes · pire 6.07:1 (seuil 4.5)   « /05 »
-  y= 7320 nuit=0.000 ·  45 textes · pire 6.07:1 (seuil 4.5)   « /05 »
-  y= 7440 nuit=0.000 ·  45 textes · pire 6.07:1 (seuil 4.5)   « /05 »
-  y= 7560 nuit=0.000 ·  45 textes · pire 6.07:1 (seuil 4.5)   « /05 »
-  y= 7680 nuit=0.000 ·  45 textes · pire 6.07:1 (seuil 4.5)   « /05 »
-  y= 7800 nuit=0.000 ·  45 textes · pire 6.07:1 (seuil 4.5)   « /05 »
-  y= 7920 nuit=0.000 ·  45 textes · pire 6.07:1 (seuil 4.5)   « /05 »
-  y= 8040 nuit=0.000 ·  45 textes · pire 6.07:1 (seuil 4.5)   « /05 »
-  y= 8160 nuit=0.000 ·  45 textes · pire 6.07:1 (seuil 4.5)   « /05 »
-  y= 8280 nuit=0.000 ·  45 textes · pire 6.07:1 (seuil 4.5)   « /05 »
-  y= 8400 nuit=0.000 ·  45 textes · pire 6.07:1 (seuil 4.5)   « /05 »
-  y= 8520 nuit=0.000 ·  45 textes · pire 6.07:1 (seuil 4.5)   « /05 »
-  y= 8640 nuit=0.000 ·  45 textes · pire 6.07:1 (seuil 4.5)   « /05 »
-  y= 8760 nuit=0.000 ·  45 textes · pire 6.07:1 (seuil 4.5)   « /05 »
-  y= 8880 nuit=0.000 ·  45 textes · pire 6.07:1 (seuil 4.5)   « /05 »
-  y= 9000 nuit=0.000 ·  45 textes · pire 6.07:1 (seuil 4.5)   « /05 »
-  y= 9120 nuit=0.000 ·  45 textes · pire 6.07:1 (seuil 4.5)   « /05 »
+  y= 1820 nuit=0.156 ·  69 textes · pire 4.68:1 (seuil 4.5)   « · »
+  y= 1960 nuit=0.047 ·  70 textes · pire 4.68:1 (seuil 4.5)   « · »
+  y= 2100 nuit=0.000 ·  77 textes · pire 4.68:1 (seuil 4.5)   « · »
+  y= 2240 nuit=0.000 · 100 textes · pire 4.68:1 (seuil 4.5)   « 10 jours ouvrés »
+  y= 2380 nuit=0.000 · 107 textes · pire 4.51:1 (seuil 4.5)   « <section> »
+  y= 2520 nuit=0.000 · 114 textes · pire 4.51:1 (seuil 4.5)   « <footer> »
+  y= 2660 nuit=0.000 ·  48 textes · pire 4.51:1 (seuil 4.5)   « <footer> »
+  y= 2800 nuit=0.000 ·  48 textes · pire 4.51:1 (seuil 4.5)   « <footer> »
+  y= 2940 nuit=0.000 ·  43 textes · pire 4.51:1 (seuil 4.5)   « <footer> »
+  y= 3080 nuit=0.000 ·  42 textes · pire 4.51:1 (seuil 4.5)   « <footer> »
+  y= 3220 nuit=0.000 ·  39 textes · pire 4.51:1 (seuil 4.5)   « <footer> »
+  y= 3360 nuit=0.000 ·  26 textes · pire 4.68:1 (seuil 4.5)   « 1647 € »
+  y= 3500 nuit=0.000 ·  29 textes · pire 4.55:1 (seuil 4.5)   « Délai : 10 jours ouvrés »
+  y= 3640 nuit=0.000 ·  33 textes · pire 4.55:1 (seuil 4.5)   « Délai : 10 jours ouvrés »
+  y= 3780 nuit=0.000 ·  34 textes · pire 4.55:1 (seuil 4.5)   « Délai : 10 jours ouvrés »
+  y= 3920 nuit=0.000 ·  34 textes · pire 4.55:1 (seuil 4.5)   « Délai : 10 jours ouvrés »
+  y= 4060 nuit=0.000 ·  31 textes · pire 4.55:1 (seuil 4.5)   « Délai : 10 jours ouvrés »
+  y= 4200 nuit=0.000 ·  24 textes · pire 4.55:1 (seuil 4.5)   « Délai : 10 jours ouvrés »
+  y= 4340 nuit=0.000 ·  20 textes · pire 4.55:1 (seuil 4.5)   « Délai : 10 jours ouvrés »
+  y= 4480 nuit=0.000 ·  14 textes · pire 3.14:1 (seuil 3)   « × »
+  y= 4620 nuit=0.000 ·  12 textes · pire 3.14:1 (seuil 3)   « × »
+  y= 4760 nuit=0.000 ·  12 textes · pire 3.14:1 (seuil 3)   « × »
+  y= 4900 nuit=0.000 ·  12 textes · pire 3.14:1 (seuil 3)   « × »
+  y= 5040 nuit=0.000 ·   8 textes · pire 3.14:1 (seuil 3)   « × »
+  y= 5180 nuit=0.000 ·   9 textes · pire 3.14:1 (seuil 3)   « × »
+  y= 5320 nuit=0.000 ·  11 textes · pire 4.94:1 (seuil 4.5)   « La preuve »
+  y= 5460 nuit=0.000 ·  14 textes · pire 4.94:1 (seuil 4.5)   « La preuve »
+  y= 5600 nuit=0.000 ·  18 textes · pire 4.94:1 (seuil 4.5)   « La preuve »
+  y= 5740 nuit=0.000 ·  21 textes · pire 4.94:1 (seuil 4.5)   « La preuve »
+  y= 5880 nuit=0.000 ·  21 textes · pire 4.68:1 (seuil 4.5)   « Trier par »
+  y= 6020 nuit=0.000 ·  31 textes · pire 4.68:1 (seuil 4.5)   « Statut »
+  y= 6160 nuit=0.000 ·  35 textes · pire 4.68:1 (seuil 4.5)   « Statut »
+  y= 6300 nuit=0.000 ·  38 textes · pire 4.68:1 (seuil 4.5)   « Statut »
+  y= 6440 nuit=0.000 ·  41 textes · pire 4.68:1 (seuil 4.5)   « Statut »
+  y= 6580 nuit=0.000 ·  45 textes · pire 4.68:1 (seuil 4.5)   « Statut »
+  y= 6720 nuit=0.000 ·  51 textes · pire 4.68:1 (seuil 4.5)   « Statut »
+  y= 6860 nuit=0.000 ·  49 textes · pire 4.68:1 (seuil 4.5)   « 12 sur 12 interventions · dont 13 73 »
+  y= 7000 nuit=0.000 ·  43 textes · pire 4.68:1 (seuil 4.5)   « 12 sur 12 interventions · dont 13 73 »
+  y= 7140 nuit=0.000 ·  36 textes · pire 4.68:1 (seuil 4.5)   « 12 sur 12 interventions · dont 13 73 »
+  y= 7280 nuit=0.000 ·  29 textes · pire 4.68:1 (seuil 4.5)   « 12 sur 12 interventions · dont 13 73 »
+  y= 7420 nuit=0.000 ·  22 textes · pire 4.68:1 (seuil 4.5)   « 12 sur 12 interventions · dont 13 73 »
+  y= 7560 nuit=0.000 ·  14 textes · pire 4.68:1 (seuil 4.5)   « 12 sur 12 interventions · dont 13 73 »
+  y= 7700 nuit=0.000 ·  16 textes · pire 4.68:1 (seuil 4.5)   « 12 sur 12 interventions · dont 13 73 »
+  y= 7840 nuit=0.000 ·  43 textes · pire 6.07:1 (seuil 4.5)   « /05 »
+  y= 7980 nuit=0.000 ·  48 textes · pire 6.07:1 (seuil 4.5)   « /05 »
+  y= 8120 nuit=0.000 ·  48 textes · pire 6.07:1 (seuil 4.5)   « /05 »
+  y= 8260 nuit=0.000 ·  48 textes · pire 6.07:1 (seuil 4.5)   « /05 »
+  y= 8400 nuit=0.000 ·  48 textes · pire 6.07:1 (seuil 4.5)   « /05 »
+  y= 8540 nuit=0.000 ·  45 textes · pire 6.07:1 (seuil 4.5)   « /05 »
+  y= 8680 nuit=0.000 ·  45 textes · pire 6.07:1 (seuil 4.5)   « /05 »
+  y= 8820 nuit=0.000 ·  45 textes · pire 6.07:1 (seuil 4.5)   « /05 »
+  y= 8960 nuit=0.000 ·  45 textes · pire 6.07:1 (seuil 4.5)   « /05 »
+  y= 9100 nuit=0.000 ·  45 textes · pire 6.07:1 (seuil 4.5)   « /05 »
   y= 9240 nuit=0.000 ·  45 textes · pire 6.07:1 (seuil 4.5)   « /05 »
-  y= 9360 nuit=0.000 ·  45 textes · pire 6.07:1 (seuil 4.5)   « /05 »
-  y= 9480 nuit=0.000 ·  45 textes · pire 6.07:1 (seuil 4.5)   « /05 »
-  y= 9600 nuit=0.000 ·  45 textes · pire 6.07:1 (seuil 4.5)   « /05 »
-  y= 9720 nuit=0.000 ·  45 textes · pire 6.07:1 (seuil 4.5)   « /05 »
-  y= 9840 nuit=0.000 ·  45 textes · pire 6.07:1 (seuil 4.5)   « /05 »
-  y= 9960 nuit=0.000 ·  45 textes · pire 6.07:1 (seuil 4.5)   « /05 »
+  y= 9380 nuit=0.000 ·  45 textes · pire 6.07:1 (seuil 4.5)   « /05 »
+  y= 9520 nuit=0.000 ·  45 textes · pire 6.07:1 (seuil 4.5)   « /05 »
+  y= 9660 nuit=0.000 ·  45 textes · pire 6.07:1 (seuil 4.5)   « /05 »
+  y= 9800 nuit=0.000 ·  45 textes · pire 6.07:1 (seuil 4.5)   « /05 »
+  y= 9940 nuit=0.000 ·  45 textes · pire 6.07:1 (seuil 4.5)   « /05 »
   y=10080 nuit=0.000 ·  45 textes · pire 6.07:1 (seuil 4.5)   « /05 »
-  y=10200 nuit=0.000 ·  45 textes · pire 6.07:1 (seuil 4.5)   « /05 »
-  y=10320 nuit=0.000 ·  45 textes · pire 6.07:1 (seuil 4.5)   « /05 »
-  y=10440 nuit=0.000 ·  45 textes · pire 6.07:1 (seuil 4.5)   « /05 »
-  y=10560 nuit=0.000 ·  49 textes · pire 4.94:1 (seuil 4.5)   « Notre process »
-  y=10680 nuit=0.000 ·  50 textes · pire 4.94:1 (seuil 4.5)   « Notre process »
-  y=10800 nuit=0.000 ·  54 textes · pire 4.94:1 (seuil 4.5)   « Notre process »
-  y=10920 nuit=0.000 ·  57 textes · pire 4.94:1 (seuil 4.5)   « Notre process »
-  y=11040 nuit=0.000 ·  46 textes · pire 4.94:1 (seuil 4.5)   « Notre process »
-  y=11160 nuit=0.000 ·  21 textes · pire 4.94:1 (seuil 4.5)   « Notre process »
-  y=11280 nuit=0.000 ·  19 textes · pire 4.94:1 (seuil 4.5)   « Ce que vous faites, vous »
-  y=11400 nuit=0.000 ·  20 textes · pire 4.94:1 (seuil 4.5)   « Ce que vous faites, vous »
-  y=11520 nuit=0.000 ·  20 textes · pire 4.94:1 (seuil 4.5)   « Ce que vous faites, vous »
-  y=11640 nuit=0.000 ·  22 textes · pire 4.94:1 (seuil 4.5)   « Ce que vous faites, vous »
-  y=11760 nuit=0.000 ·  21 textes · pire 4.94:1 (seuil 4.5)   « Ce que vous faites, vous »
-  y=11880 nuit=0.000 ·  18 textes · pire 4.94:1 (seuil 4.5)   « Ce que vous faites, vous »
-  y=12000 nuit=0.000 ·  16 textes · pire 4.94:1 (seuil 4.5)   « Ce que vous faites, vous »
-  y=12120 nuit=0.000 ·  16 textes · pire 4.94:1 (seuil 3)   « 06 »
-  y=12240 nuit=0.000 ·  13 textes · pire 4.94:1 (seuil 3)   « 06 »
-  y=12360 nuit=0.000 ·  13 textes · pire 4.94:1 (seuil 4.5)   « Notre raison d'être »
-  y=12480 nuit=0.000 ·  10 textes · pire 4.94:1 (seuil 4.5)   « Notre raison d'être »
-  y=12600 nuit=0.000 ·   8 textes · pire 4.94:1 (seuil 4.5)   « Notre raison d'être »
-  y=12720 nuit=0.000 ·   6 textes · pire 4.94:1 (seuil 4.5)   « Notre raison d'être »
-  y=12840 nuit=0.000 ·   7 textes · pire 4.94:1 (seuil 4.5)   « Notre raison d'être »
-  y=12960 nuit=0.000 ·   5 textes · pire 4.94:1 (seuil 4.5)   « Notre raison d'être »
-  y=13080 nuit=0.000 ·   5 textes · pire 4.94:1 (seuil 4.5)   « Notre raison d'être »
-  y=13200 nuit=0.000 ·  10 textes · pire 4.94:1 (seuil 4.5)   « Notre raison d'être »
-  y=13320 nuit=0.000 ·   9 textes · pire 4.84:1 (seuil 3)   « j »
-  y=13440 nuit=0.000 ·  12 textes · pire 4.94:1 (seuil 4.5)   « FAQ »
-  y=13560 nuit=0.000 ·  17 textes · pire 4.94:1 (seuil 4.5)   « FAQ »
-  y=13680 nuit=0.000 ·  19 textes · pire 4.94:1 (seuil 4.5)   « FAQ »
-  y=13800 nuit=0.000 ·  17 textes · pire 4.94:1 (seuil 4.5)   « FAQ »
-  y=13920 nuit=0.036 ·  17 textes · pire 4.94:1 (seuil 4.5)   « FAQ »
-  y=14040 nuit=0.126 ·  12 textes · pire 4.94:1 (seuil 4.5)   « FAQ »
-  y=14160 nuit=0.253 ·  12 textes · pire 4.94:1 (seuil 4.5)   « FAQ »
-  y=14280 nuit=0.416 ·  12 textes · pire 5.02:1 (seuil 4.5)   « [ Q ] »
-  y=14400 nuit=0.581 ·  10 textes · pire 5.02:1 (seuil 4.5)   « [ Q ] »
-  y=14520 nuit=0.733 ·   5 textes · pire 6.88:1 (seuil 4.5)   « Toutes les questions »
-  y=14640 nuit=0.875 ·   3 textes · pire 11.23:1 (seuil 3)   « une chose »
-  y=14760 nuit=0.966 ·   3 textes · pire 11.23:1 (seuil 3)   « une chose »
-  y=14880 nuit=1.000 ·   3 textes · pire 11.23:1 (seuil 3)   « une chose »
-  y=15000 nuit=1.000 ·   3 textes · pire 11.23:1 (seuil 3)   « une chose »
-  y=15120 nuit=1.000 ·   3 textes · pire 11.23:1 (seuil 3)   « une chose »
-  y=15240 nuit=1.000 ·   2 textes · pire 11.23:1 (seuil 3)   « une chose »
-  y=15360 nuit=1.000 ·   4 textes · pire 9.15:1 (seuil 4.5)   « Démarrons »
-  y=15480 nuit=1.000 ·   5 textes · pire 6.81:1 (seuil 4.5)   « → »
-  y=15600 nuit=1.000 ·   5 textes · pire 6.81:1 (seuil 4.5)   « → »
-  y=15720 nuit=1.000 ·   5 textes · pire 6.81:1 (seuil 4.5)   « → »
-  y=15840 nuit=1.000 ·  20 textes · pire 6.81:1 (seuil 4.5)   « → »
-  y=15960 nuit=1.000 ·  52 textes · pire 6.81:1 (seuil 4.5)   « → »
+  y=10220 nuit=0.000 ·  45 textes · pire 6.07:1 (seuil 4.5)   « /05 »
+  y=10360 nuit=0.000 ·  45 textes · pire 6.07:1 (seuil 4.5)   « /05 »
+  y=10500 nuit=0.000 ·  45 textes · pire 6.07:1 (seuil 4.5)   « /05 »
+  y=10640 nuit=0.000 ·  45 textes · pire 6.07:1 (seuil 4.5)   « /05 »
+  y=10780 nuit=0.000 ·  45 textes · pire 6.07:1 (seuil 4.5)   « /05 »
+  y=10920 nuit=0.000 ·  45 textes · pire 6.07:1 (seuil 4.5)   « /05 »
+  y=11060 nuit=0.000 ·  45 textes · pire 6.07:1 (seuil 4.5)   « /05 »
+  y=11200 nuit=0.000 ·  45 textes · pire 6.07:1 (seuil 4.5)   « /05 »
+  y=11340 nuit=0.000 ·  45 textes · pire 6.07:1 (seuil 4.5)   « /05 »
+  y=11480 nuit=0.000 ·  45 textes · pire 6.07:1 (seuil 4.5)   « /05 »
+  y=11620 nuit=0.000 ·  45 textes · pire 6.07:1 (seuil 4.5)   « /05 »
+  y=11760 nuit=0.000 ·  45 textes · pire 6.07:1 (seuil 4.5)   « /05 »
+  y=11900 nuit=0.000 ·  45 textes · pire 6.07:1 (seuil 4.5)   « /05 »
+  y=12040 nuit=0.000 ·  45 textes · pire 6.07:1 (seuil 4.5)   « /05 »
+  y=12180 nuit=0.000 ·  48 textes · pire 4.94:1 (seuil 4.5)   « Notre process »
+  y=12320 nuit=0.000 ·  50 textes · pire 4.94:1 (seuil 4.5)   « Notre process »
+  y=12460 nuit=0.000 ·  54 textes · pire 4.94:1 (seuil 4.5)   « Notre process »
+  y=12600 nuit=0.000 ·  58 textes · pire 4.94:1 (seuil 4.5)   « Notre process »
+  y=12740 nuit=0.000 ·  42 textes · pire 4.94:1 (seuil 4.5)   « Notre process »
+  y=12880 nuit=0.000 ·  17 textes · pire 4.94:1 (seuil 4.5)   « Ce que vous faites, vous »
+  y=13020 nuit=0.000 ·  21 textes · pire 4.94:1 (seuil 4.5)   « Ce que vous faites, vous »
+  y=13160 nuit=0.000 ·  21 textes · pire 4.94:1 (seuil 4.5)   « Ce que vous faites, vous »
+  y=13300 nuit=0.000 ·  22 textes · pire 4.94:1 (seuil 4.5)   « Ce que vous faites, vous »
+  y=13440 nuit=0.000 ·  21 textes · pire 4.94:1 (seuil 4.5)   « Ce que vous faites, vous »
+  y=13580 nuit=0.000 ·  18 textes · pire 4.94:1 (seuil 4.5)   « Ce que vous faites, vous »
+  y=13720 nuit=0.000 ·  17 textes · pire 4.94:1 (seuil 4.5)   « Ce que vous faites, vous »
+  y=13860 nuit=0.000 ·  14 textes · pire 4.94:1 (seuil 3)   « 06 »
+  y=14000 nuit=0.000 ·  13 textes · pire 4.94:1 (seuil 4.5)   « Notre raison d'être »
+  y=14140 nuit=0.000 ·  10 textes · pire 4.94:1 (seuil 4.5)   « Notre raison d'être »
+  y=14280 nuit=0.000 ·   8 textes · pire 4.94:1 (seuil 4.5)   « Notre raison d'être »
+  y=14420 nuit=0.000 ·   6 textes · pire 4.94:1 (seuil 4.5)   « Notre raison d'être »
+  y=14560 nuit=0.000 ·   6 textes · pire 4.94:1 (seuil 4.5)   « Notre raison d'être »
+  y=14700 nuit=0.000 ·   5 textes · pire 4.94:1 (seuil 4.5)   « Notre raison d'être »
+  y=14840 nuit=0.000 ·  10 textes · pire 4.94:1 (seuil 4.5)   « Notre raison d'être »
+  y=14980 nuit=0.000 ·   9 textes · pire 4.84:1 (seuil 3)   « j »
+  y=15120 nuit=0.000 ·  12 textes · pire 4.94:1 (seuil 4.5)   « FAQ »
+  y=15260 nuit=0.000 ·  18 textes · pire 4.94:1 (seuil 4.5)   « FAQ »
+  y=15400 nuit=0.000 ·  18 textes · pire 4.94:1 (seuil 4.5)   « FAQ »
+  y=15540 nuit=0.018 ·  17 textes · pire 4.94:1 (seuil 4.5)   « FAQ »
+  y=15680 nuit=0.112 ·  17 textes · pire 4.94:1 (seuil 4.5)   « FAQ »
+  y=15820 nuit=0.262 ·  12 textes · pire 4.94:1 (seuil 4.5)   « FAQ »
+  y=15960 nuit=0.446 ·  11 textes · pire 5.02:1 (seuil 4.5)   « [ Q ] »
+  y=16100 nuit=0.639 ·   7 textes · pire 5.02:1 (seuil 4.5)   « [ Q ] »
+  y=16240 nuit=0.815 ·   3 textes · pire 11.23:1 (seuil 3)   « une chose »
+  y=16380 nuit=0.942 ·   3 textes · pire 11.23:1 (seuil 3)   « une chose »
+  y=16520 nuit=0.999 ·   3 textes · pire 11.23:1 (seuil 3)   « une chose »
+  y=16660 nuit=1.000 ·   3 textes · pire 11.23:1 (seuil 3)   « une chose »
+  y=16800 nuit=1.000 ·   3 textes · pire 11.23:1 (seuil 3)   « une chose »
+  y=16940 nuit=1.000 ·   3 textes · pire 9.15:1 (seuil 4.5)   « Démarrons »
+  y=17080 nuit=1.000 ·   4 textes · pire 9.15:1 (seuil 4.5)   « Démarrons »
+  y=17220 nuit=1.000 ·   5 textes · pire 6.81:1 (seuil 4.5)   « → »
+  y=17360 nuit=1.000 ·   5 textes · pire 6.81:1 (seuil 4.5)   « → »
+  y=17500 nuit=1.000 ·  20 textes · pire 6.81:1 (seuil 4.5)   « → »
+  y=17640 nuit=1.000 ·  52 textes · pire 6.81:1 (seuil 4.5)   « → »
+  y=17780 nuit=1.000 ·  78 textes · pire 6.81:1 (seuil 4.5)   « → »
+  y=17920 nuit=1.000 ·  80 textes · pire 6.81:1 (seuil 4.5)   « → »
+  y=18060 nuit=1.000 ·  81 textes · pire 6.81:1 (seuil 4.5)   « → »
+  y=18200 nuit=1.000 ·  81 textes · pire 6.81:1 (seuil 4.5)   « → »
+  y=18340 nuit=1.000 ·  81 textes · pire 6.81:1 (seuil 4.5)   « → »
+  y=18480 nuit=1.000 ·  81 textes · pire 6.81:1 (seuil 4.5)   « → »
+  y=18620 nuit=1.000 ·  81 textes · pire 6.81:1 (seuil 4.5)   « → »
+  y=18760 nuit=1.000 ·  81 textes · pire 6.81:1 (seuil 4.5)   « → »
+  y=18900 nuit=1.000 ·  81 textes · pire 6.81:1 (seuil 4.5)   « → »
+  y=19040 nuit=1.000 ·  81 textes · pire 6.81:1 (seuil 4.5)   « → »
+  y=19180 nuit=1.000 ·  81 textes · pire 6.81:1 (seuil 4.5)   « → »
+  y=19320 nuit=1.000 ·  81 textes · pire 6.81:1 (seuil 4.5)   « → »
+  y=19460 nuit=1.000 ·  81 textes · pire 6.81:1 (seuil 4.5)   « → »
+  y=19600 nuit=1.000 ·  81 textes · pire 6.81:1 (seuil 4.5)   « → »
+  y=19740 nuit=1.000 ·  81 textes · pire 6.81:1 (seuil 4.5)   « → »
+  y=19880 nuit=1.000 ·  81 textes · pire 6.81:1 (seuil 4.5)   « → »
 
-pire marge au seuil sur tout le balayage : 4.55:1 pour un seuil de 4.5:1
+pire marge au seuil sur tout le balayage : 4.51:1 pour un seuil de 4.5:1

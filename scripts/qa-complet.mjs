@@ -364,9 +364,20 @@ async function main() {
   const red = await ctxRed.newPage()
   await red.goto(`${BASE}/`, { waitUntil: 'networkidle' })
   await dormir(2500)
+  // Le contrôle comptait les <canvas>. Il est devenu faux depuis que le
+  // réseau de modules dessine un schéma en Canvas 2D : sous mouvement réduit
+  // il peint UNE image et s'arrête. Un dessin fixe n'est pas du mouvement —
+  // l'interdire reviendrait à supprimer un contenu au lieu d'une animation.
+  // Ce qui doit être absent, c'est la scène WebGL animée.
+  const scenesReduit = await red.evaluate(() => ({
+    passage: document.documentElement.dataset.passage ?? 'absent',
+    webgl: document.querySelectorAll('.su-passage canvas').length,
+    canvas2d: document.querySelectorAll('canvas').length,
+  }))
   verifier(
-    'aucune scène WebGL en mouvement réduit',
-    (await red.locator('canvas').count()) === 0,
+    'aucune scène WebGL animée en mouvement réduit',
+    scenesReduit.webgl === 0 && scenesReduit.passage !== 'actif',
+    `passage ${scenesReduit.passage}, ${scenesReduit.canvas2d} canvas statique(s)`,
   )
   const titreVisible = await red.locator('h1').isVisible()
   verifier('le titre reste visible en mouvement réduit', titreVisible)
