@@ -283,14 +283,38 @@ export default function Reseau() {
       }
     }
 
+    // ── Pas FIXE avec accumulateur ──────────────────────────────────────
+    //
+    // Les ressorts étaient intégrés à `dt` variable. Sur une image longue —
+    // un onglet qui revient au premier plan, un appareil qui rame — un pas
+    // trop grand fait diverger l'intégration et les nœuds partent à
+    // l'infini. Le défaut vient de la lecture de react-three-rapier, qui
+    // borne le delta puis le consomme par tranches constantes.
+    //
+    // 1/120 s : deux sous-pas par image à 60 Hz, assez fin pour que le
+    // ressort reste stable sans coûter de calcul visible sur huit nœuds.
+    const PAS = 1 / 120
+    let accumulateur = 0
     let image = 0
     let dernier = performance.now()
     function boucle(maintenant: number) {
       image = requestAnimationFrame(boucle)
-      const dt = Math.min((maintenant - dernier) / 1000, 0.05)
+      const brut = (maintenant - dernier) / 1000
       dernier = maintenant
-      if (!visible) return
-      peindre(dt)
+      if (!visible) {
+        // On ne laisse pas l'accumulateur gonfler hors écran : au retour,
+        // il rattraperait des centaines de pas d'un coup.
+        accumulateur = 0
+        return
+      }
+      accumulateur += Math.min(brut, 0.25)
+      let sous = 0
+      while (accumulateur >= PAS && sous < 12) {
+        peindre(PAS)
+        accumulateur -= PAS
+        sous++
+      }
+      if (sous === 0) peindre(0)
     }
 
     if (reduit) {

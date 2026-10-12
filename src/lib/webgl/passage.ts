@@ -60,8 +60,11 @@ export const ETATS: EtatScene[] = [
     // où c'est la lisibilité qui compte.
     cle: 'ouverture',
     forme: 1,
-    decalage: [4.15, -0.15, 0],
-    camera: [0, 0.35, 16.4],
+    // L'empilement se tient dans la colonne LIBRE de droite, au-dessus de la
+    // ligne de données. Avant : il chevauchait le mot porteur et se faisait
+    // couper par le filet du bas.
+    decalage: [5.6, 0.9, 0],
+    camera: [0, 0.35, 17.6],
     vise: [0, -0.3, 0],
     nuit: 1,
     turbulence: 0.1,

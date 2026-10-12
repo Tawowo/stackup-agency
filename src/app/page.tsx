@@ -6,7 +6,7 @@ import MarqueeSeparator from '@/components/home/MarqueeSeparator'
 import HomeFaq from '@/components/home/HomeFaq'
 import { SITE } from '@/config/site'
 import dynamic from 'next/dynamic'
-import HeroSection from '@/components/home/HeroSection'
+import Ouverture from '@/components/home/Ouverture'
 
 // Sections sous la fold — code-splitting pour étaler l'hydratation (TBT)
 const Atelier = dynamic(() => import('@/components/home/Atelier'))
@@ -70,8 +70,10 @@ export default function Home() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }} />
       <div className="page-transition">
 
-        {/* 01 — L'OUVERTURE, en pleine nuit */}
-        <HeroSection />
+        {/* 01 — L'OUVERTURE, en pleine nuit.
+            « Le plan habité » : une grille de construction visible, des
+            cotes aux valeurs réelles, et une seule chose à regarder. */}
+        <Ouverture />
 
         {/* 02 — LE SEUIL : on sort de la nuit.
             Le franchissement se joue ici, dans une section volontairement

@@ -3441,3 +3441,403 @@ footer .su-logo {
 @media (prefers-reduced-motion: reduce) {
   [style*='su-marque-brin'] { animation: none !important; }
 }
+
+/* ═════════════════════════════════════════════════════════════════════════
+   29. L'OUVERTURE — « le plan habité »
+
+   Deux reproches, deux réponses distinctes :
+
+   L'IMPOSANT vient de l'ÉCHELLE. Le mot porteur monte à 17 vw et déborde du
+   cadre. Il n'y a plus qu'une chose à regarder au premier écran.
+
+   Le PROFESSIONNEL vient de la MESURE. La grille de construction est
+   visible, et tout s'y aligne. Les cotes affichent les dimensions réelles
+   relevées dans le navigateur. Une grille affichée rend l'incohérence
+   impossible à cacher : elle force la rigueur au lieu de la promettre.
+   ═════════════════════════════════════════════════════════════════════════ */
+
+.su-plan {
+  position: relative;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  /* Gouttière constante : c'est elle qui définit la colonne de mesure. */
+  --gout: clamp(1.1rem, 4vw, 3.5rem);
+  --rang: clamp(3.6rem, 7vh, 5.4rem);
+}
+
+/* ── La grille ──────────────────────────────────────────────────────────── */
+
+.su-plan__grille {
+  position: absolute;
+  inset: var(--rang) var(--gout);
+  z-index: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  pointer-events: none;
+}
+
+@media (min-width: 900px) {
+  .su-plan__grille {
+    grid-template-columns: repeat(12, 1fr);
+  }
+}
+
+.su-plan__grille span {
+  border-left: 1px solid rgb(var(--su-trait, 160 185 220) / 0.1);
+}
+.su-plan__grille span:last-child {
+  border-right: 1px solid rgb(var(--su-trait, 160 185 220) / 0.1);
+}
+/* Au-delà de la quatrième colonne, rien à afficher sous 900 px. */
+@media (max-width: 899px) {
+  .su-plan__grille span:nth-child(n + 5) {
+    display: none;
+  }
+}
+
+html.su-js:has([data-scene='ouverture']) {
+  --su-trait: 160 185 220;
+}
+
+/* ── Les cotes ──────────────────────────────────────────────────────────── */
+
+.su-plan__cotes {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  font-family: var(--font-mono, ui-monospace), monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.1em;
+  color: var(--su-texte-doux);
+}
+
+.su-plan__cote {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.su-plan__cote i {
+  flex: 1;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.3;
+}
+.su-plan__cote b {
+  font-weight: 500;
+  opacity: 0.75;
+  white-space: nowrap;
+}
+
+/* La cote du haut passait SOUS la barre de navigation fixe, qui fait 64 à
+   80 px : elle était invisible. Elle descend sous le rang de garde. */
+.su-plan__cote--haut {
+  top: calc(var(--rang) + clamp(2.6rem, 5vh, 3.4rem));
+  left: var(--gout);
+  right: var(--gout);
+}
+
+.su-plan__cote--gauche {
+  /* Cote verticale.
+     Première version : `left: -gout; top: 50%` avec une rotation autour du
+     centre — l'étiquette se retrouvait AU MILIEU du cadre, par-dessus le
+     titre. Un élément large tourné autour de son centre balaie la moitié de
+     sa largeur. On l'ancre donc en haut à gauche et on tourne autour de
+     l'origine, ce qui le rabat proprement le long du bord. */
+  /* Rotation de -90° et ancrage en BAS à gauche : à +90° le texte se lisait
+     de haut en bas, donc « 900 » apparaissait « 006 ». */
+  left: 0;
+  bottom: var(--rang);
+  width: 56svh;
+  transform-origin: 0 100%;
+  transform: rotate(-90deg) translateY(calc(var(--gout) * 0.42));
+}
+
+@media (max-width: 899px) {
+  .su-plan__cote--gauche {
+    display: none;
+  }
+}
+
+/* ── Le contenu ─────────────────────────────────────────────────────────── */
+
+.su-plan__contenu {
+  position: relative;
+  z-index: 2;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: clamp(1.6rem, 4vh, 3rem);
+  padding: calc(var(--rang) + clamp(2.5rem, 6vh, 4rem)) var(--gout) var(--rang);
+}
+
+.su-plan__repere-haut {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--font-mono, ui-monospace), monospace;
+  font-size: 0.66rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--su-accent);
+}
+
+.su-plan__puce {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+  flex-shrink: 0;
+}
+
+.su-plan__coord {
+  margin-left: auto;
+  color: var(--su-texte-doux);
+  letter-spacing: 0.12em;
+  font-weight: 400;
+}
+@media (max-width: 719px) {
+  .su-plan__coord { display: none; }
+}
+
+/* ── Le titre ───────────────────────────────────────────────────────────── */
+
+.su-plan__bloc {
+  position: relative;
+  max-width: 68rem;
+}
+
+.su-plan__titre {
+  margin: 0;
+  font-family: var(--font-space), system-ui, sans-serif;
+  font-weight: 700;
+  line-height: 0.88;
+  letter-spacing: -0.045em;
+  color: var(--su-texte);
+}
+
+/* L'exemplaire lu par les technologies d'assistance. Motif repris de
+   `splitText` d'anime.js v4 : la phrase entière, visuellement masquée, et
+   tout le reste en `aria-hidden`. */
+.su-plan__titre-lu {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.su-plan__amorce,
+.su-plan__chute {
+  display: block;
+  font-size: clamp(1.5rem, 3.6vw, 3.1rem);
+  letter-spacing: -0.03em;
+}
+
+.su-plan__amorce {
+  color: var(--su-texte-doux);
+  font-weight: 500;
+}
+
+/* LE MOT. C'est lui qui porte l'échelle : jusqu'à 17 vw, et il déborde
+   volontairement de la colonne de texte. */
+.su-plan__mot {
+  display: block;
+  font-size: clamp(3.6rem, 17vw, 15rem);
+  line-height: 0.82;
+  letter-spacing: -0.06em;
+  margin: clamp(0.1rem, 0.6vw, 0.5rem) 0;
+  filter: drop-shadow(0 0 calc(46px * var(--su-nuit)) rgb(245 158 11 / calc(0.34 * var(--su-nuit))));
+}
+
+/* Le dégradé est porté par CHAQUE LETTRE, pas par le mot.
+   Première version : `background-clip: text` sur le mot, lettres en enfants.
+   Résultat mesuré au navigateur — le mot ne s'affichait pas du tout. Les
+   lettres sont des `inline-block`, elles génèrent leurs propres boîtes, et
+   le fond découpé du parent ne les atteint jamais. Un dégradé vertical
+   identique sur chaque lettre donne une lecture de métal, et n'a pas besoin
+   de continuité d'une lettre à l'autre. */
+.su-plan__lettre {
+  display: inline-block;
+  background-image: linear-gradient(
+    168deg,
+    #ffe3a8 0%,
+    #fbbf24 34%,
+    #f59e0b 62%,
+    #d97706 100%
+  );
+  background-size: 100% 260%;
+  background-position: 0 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.su-js .su-plan__lettre {
+  animation:
+    su-plan-lettre 980ms cubic-bezier(0.16, 1, 0.3, 1) both,
+    su-plan-balaye 7s linear calc(1.2s + var(--i) * 70ms) infinite;
+  animation-delay: calc(200ms + var(--i) * 54ms), calc(1.2s + var(--i) * 70ms);
+}
+
+@keyframes su-plan-lettre {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 0.42em, 0) scale(0.88);
+    filter: blur(10px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+    filter: blur(0);
+  }
+}
+
+/* Le balayage fait glisser le dégradé VERTICALEMENT dans chaque lettre.
+   Décalé d'une lettre à l'autre, l'onde traverse le mot. */
+@keyframes su-plan-balaye {
+  0%   { background-position: 0 100%; }
+  45%  { background-position: 0 0%; }
+  100% { background-position: 0 100%; }
+}
+
+@supports not ((-webkit-background-clip: text) or (background-clip: text)) {
+  .su-plan__mot {
+    background: none;
+    color: var(--su-accent);
+  }
+}
+
+.su-plan__accroche {
+  margin-top: clamp(1.1rem, 2.4vh, 1.8rem);
+  max-width: 34rem;
+  font-size: clamp(0.98rem, 1.25vw, 1.15rem);
+  line-height: 1.6;
+}
+
+.su-plan__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.9rem 1.5rem;
+  margin-top: clamp(1.3rem, 3vh, 2.1rem);
+}
+
+.su-plan__cote-titre {
+  display: none;
+  margin-top: 1rem;
+  font-family: var(--font-mono, ui-monospace), monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.1em;
+  color: var(--su-texte-doux);
+  opacity: 0.6;
+}
+@media (min-width: 1100px) {
+  .su-plan__cote-titre { display: block; }
+}
+
+/* ── La ligne de données ────────────────────────────────────────────────── */
+
+.su-plan__donnees {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(0.9rem, 2.4vw, 2.4rem);
+  margin: 0;
+  padding-top: clamp(1.1rem, 2.6vh, 1.8rem);
+  border-top: 1px solid var(--su-bordure);
+}
+
+@media (min-width: 760px) {
+  .su-plan__donnees {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+.su-plan__donnees dt {
+  font-family: var(--font-space), system-ui, sans-serif;
+  font-size: clamp(1.05rem, 1.9vw, 1.5rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--su-texte);
+  line-height: 1.1;
+}
+
+.su-plan__donnees dd {
+  margin: 0.2rem 0 0;
+  font-size: 0.8rem;
+  line-height: 1.4;
+}
+
+.su-js .su-plan__donnees > div {
+  animation: su-plan-donnee 760ms cubic-bezier(0.16, 0.84, 0.28, 1) both;
+  animation-delay: calc(1.25s + var(--i) * 90ms);
+}
+
+@keyframes su-plan-donnee {
+  from { opacity: 0; transform: translate3d(0, 14px, 0); }
+  to   { opacity: 1; transform: none; }
+}
+
+/* ── Le pied du cadre ───────────────────────────────────────────────────── */
+
+.su-plan__pied {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0 var(--gout) clamp(1rem, 2.4vh, 1.8rem);
+  font-family: var(--font-mono, ui-monospace), monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--su-texte-doux);
+}
+
+.su-plan__descendre {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.su-plan__descendre i {
+  display: block;
+  width: 1px;
+  height: 26px;
+  background: linear-gradient(to bottom, currentColor, transparent);
+}
+.su-js .su-plan__descendre i {
+  animation: su-plan-descendre 2.2s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+  transform-origin: top;
+}
+
+@keyframes su-plan-descendre {
+  0%   { transform: scaleY(0); opacity: 0; }
+  40%  { transform: scaleY(1); opacity: 1; }
+  100% { transform: scaleY(1) translateY(26px); opacity: 0; }
+}
+
+/* ── Mouvement réduit ───────────────────────────────────────────────────── */
+
+@media (prefers-reduced-motion: reduce) {
+  .su-js .su-plan__lettre,
+  .su-js .su-plan__donnees > div,
+  .su-js .su-plan__descendre i {
+    animation: none;
+    opacity: 1;
+    transform: none;
+    filter: none;
+  }
+  .su-plan__mot {
+    background: none;
+    color: var(--su-accent);
+    filter: none;
+  }
+}
