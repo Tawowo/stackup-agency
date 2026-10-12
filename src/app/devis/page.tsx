@@ -26,7 +26,7 @@ const breadcrumbSchema = {
 
 export default function DevisPage() {
   return (
-    <main className="min-h-screen bg-[#FFFDF9]">
+    <div className="min-h-screen bg-[#FFFDF9]">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
       <div className="bg-gradient-to-b from-[#060D1A] to-[#0A0F1C] pt-24 pb-10">
@@ -45,6 +45,6 @@ export default function DevisPage() {
         <Link href="/faq" className="text-electric hover:underline">Questions fréquentes →</Link>
         <Link href="/contact" className="text-electric hover:underline">Nous contacter →</Link>
       </div>
-    </main>
+    </div>
   )
 }

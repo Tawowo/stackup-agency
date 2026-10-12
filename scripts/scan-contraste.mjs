@@ -43,8 +43,13 @@ async function main() {
     executablePath: CHROME,
     args: ['--use-gl=swiftshader', '--enable-unsafe-swiftshader', '--disable-gpu-sandbox'],
   })
-  const ctx = await navigateur.newContext({ viewport: { width: 1440, height: 900 } })
+  const largeur = Number(process.env.LARGEUR ?? 1440)
+  const ctx = await navigateur.newContext({
+    viewport: { width: largeur, height: largeur < 700 ? 844 : 900 },
+    ...(largeur < 700 ? { isMobile: true, hasTouch: true, deviceScaleFactor: 2 } : {}),
+  })
   const page = await ctx.newPage()
+  console.log(`viewport : ${largeur}px`)
 
   const parClasse = new Map()
   let total = 0

@@ -362,7 +362,7 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
   }
 
   return (
-    <main className="min-h-screen bg-[#F8FAFC] dark:bg-[#0A0F1C]">
+    <div className="min-h-screen bg-[#F8FAFC] dark:bg-[#0A0F1C]">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       {faqSchema && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
@@ -497,6 +497,6 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
           </section>
         </div>
       </div>
-    </main>
+    </div>
   )
 }

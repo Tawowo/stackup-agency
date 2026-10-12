@@ -5,6 +5,7 @@ import { realisations } from '@/lib/realisations'
 import { SITE } from '@/config/site'
 import MiniHero from '@/components/ui/MiniHero'
 import DecorProfondeur from '@/components/ui/DecorProfondeur'
+import { assombrirJusquAu, composer, IVOIRE } from '@/lib/contraste'
 
 export const metadata = {
   title: 'Réalisations — Sites de démonstration web',
@@ -88,7 +89,7 @@ export default function RealisationsPage() {
                 <div className="flex flex-wrap gap-1.5 mt-3">
                   {r.tags.slice(0, 3).map(tag => (
                     <span key={tag} className="px-2 py-0.5 rounded-full text-xs border"
-                      style={{ background: `${r.couleur}12`, color: r.accent, borderColor: `${r.accent}30` }}>{tag}</span>
+                      style={{ background: `${r.couleur}12`, color: assombrirJusquAu(r.accent, composer(r.couleur, 0x12 / 255, IVOIRE)), borderColor: `${r.accent}30` }}>{tag}</span>
                   ))}
                 </div>
               </div>

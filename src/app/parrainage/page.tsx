@@ -90,7 +90,7 @@ export default function ParrainagePage() {
   }
 
   return (
-    <main className="min-h-screen bg-[#FFFDF9] relative overflow-hidden">
+    <div className="min-h-screen bg-[#FFFDF9] relative overflow-hidden">
       <DecorProfondeur variant="gold" seed={1} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
@@ -305,6 +305,6 @@ export default function ParrainagePage() {
         </section>
 
       </div>
-    </main>
+    </div>
   )
 }

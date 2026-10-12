@@ -111,7 +111,7 @@ export default function Lab() {
   }, [desassemblage])
 
   return (
-    <main className="min-h-screen bg-[#FFFDF9] p-6">
+    <div className="min-h-screen bg-[#FFFDF9] p-6">
       <h1 className="text-2xl font-bold text-[#1E3A5F] mb-1">Banc de mesure — LE MONOLITHE</h1>
       <p className="text-sm text-[#64748B] mb-6">
         Page technique interne, non indexée. Les relevés ci-dessous sont mesurés dans ce navigateur.
@@ -164,6 +164,6 @@ export default function Lab() {
           </label>
         </aside>
       </div>
-    </main>
+    </div>
   )
 }

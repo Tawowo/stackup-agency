@@ -46,11 +46,11 @@ const PROFILS: Record<Morphologie, Plaque[]> = {
   cycle:   [{ l: 0.86, dx: 0 }, { l: 0.74, dx: 0.05 }, { l: 0.86, dx: -0.03 }],
 }
 
-const L = 260
-const H = 150
+const L = 300
+const H = 176
 /** Profondeur de la face supérieure : donne l'inclinaison isométrique. */
-const PROF = 13
-const EPAISSEUR = 9
+const PROF = 17
+const EPAISSEUR = 11
 
 export default function StrateService({
   morphologie,
@@ -91,7 +91,7 @@ export default function StrateService({
   const n = plaques.length
   // La pile est centrée verticalement quel que soit le nombre de plaques :
   // sinon une morphologie à 6 couches déborde là où une à 2 flotte en haut.
-  const pas = Math.min(22, (H - PROF - EPAISSEUR - 24) / Math.max(n - 1, 1))
+  const pas = Math.min(25, (H - PROF - EPAISSEUR - 26) / Math.max(n - 1, 1))
   const hauteurTotale = pas * (n - 1)
   const baseY = (H + hauteurTotale) / 2 - 8
 
@@ -109,13 +109,26 @@ export default function StrateService({
           <stop offset="0%" stopColor="#2a4d7a" />
           <stop offset="100%" stopColor="#17304f" />
         </linearGradient>
+        <radialGradient id={`su-ombre-${morphologie}`}>
+          <stop offset="0%" stopColor="#1E3A5F" stopOpacity="0.22" />
+          <stop offset="100%" stopColor="#1E3A5F" stopOpacity="0" />
+        </radialGradient>
       </defs>
+
+      {/* Assise : sans ombre portée, la pile flotte au lieu d'être posée. */}
+      <ellipse
+        cx={L / 2}
+        cy={baseY + EPAISSEUR + 8}
+        rx={plaques[0].l * (L - 38) * 0.52}
+        ry="7"
+        fill={`url(#su-ombre-${morphologie})`}
+      />
 
       {/* Les plaques sont dessinées du bas vers le haut : l'ordre du document
           fait le recouvrement, sans avoir à gérer un z-index. */}
       {plaques.map((p, i) => {
-        const largeur = p.l * (L - 70)
-        const cx = L / 2 + p.dx * 58
+        const largeur = p.l * (L - 38)
+        const cx = L / 2 + p.dx * 66
         const y = baseY - i * pas
         const x = cx - largeur / 2
 
@@ -145,7 +158,7 @@ export default function StrateService({
               x2={x + largeur - PROF}
               y2={y - PROF}
               stroke="#F59E0B"
-              strokeWidth="1.4"
+              strokeWidth="2.2"
               className="su-strate-svg__arete"
             />
           </g>

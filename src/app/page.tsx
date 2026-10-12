@@ -68,7 +68,7 @@ export default function Home() {
       <ScrollBackground />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }} />
-      <main className="page-transition">
+      <div className="page-transition">
 
         {/* 01 — Hero */}
         <HeroSection />
@@ -163,7 +163,7 @@ export default function Home() {
           </div>
         </section>
 
-      </main>
+      </div>
     </>
   )
 }

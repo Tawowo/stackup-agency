@@ -35,9 +35,19 @@ export default function CountUp({ target, duration = 1200, suffix = '', prefix =
     return () => obs.disconnect()
   }, [target, duration])
 
+  // Les chiffres tabulaires donnent à chaque chiffre la même chasse, mais le
+  // NOMBRE de chiffres change pendant le décompte : 0 → 10 → 100. Chaque
+  // palier élargissait l'élément et décalait ce qui suit — origine du CLS de
+  // 0,001 relevé par Lighthouse. On réserve donc dès la première image la
+  // largeur du nombre final, exprimée en `ch` (une unité qui vaut exactement
+  // la chasse d'un chiffre quand la police est tabulaire).
+  const largeurFinale = `${String(target).length}ch`
+
   return (
-    <span ref={spanRef} className={className}>
-      {prefix}{value}{suffix}
+    <span ref={spanRef} className={className} style={{ fontVariantNumeric: 'tabular-nums' }}>
+      {prefix}
+      <span style={{ display: 'inline-block', minWidth: largeurFinale }}>{value}</span>
+      {suffix}
     </span>
   )
 }

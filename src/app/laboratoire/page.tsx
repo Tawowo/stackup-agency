@@ -49,7 +49,7 @@ const PREUVES = [
 
 export default function PageLaboratoire() {
   return (
-    <main className="page-transition bg-[#FFFDF9]">
+    <div className="page-transition bg-[#FFFDF9]">
       <section className="max-w-6xl mx-auto px-4 sm:px-6 pt-32 pb-12">
         <p className="su-surtitre mb-6">Le laboratoire</p>
         <h1 className="font-display font-bold text-[#0C1626] text-[clamp(2.1rem,5.2vw,3.4rem)] leading-[1.08] tracking-[-0.02em] max-w-3xl mb-6">
@@ -110,6 +110,6 @@ export default function PageLaboratoire() {
           </p>
         </div>
       </section>
-    </main>
+    </div>
   )
 }

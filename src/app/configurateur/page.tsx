@@ -19,7 +19,7 @@ export const metadata: Metadata = {
 
 export default function PageConfigurateur() {
   return (
-    <main className="page-transition bg-[#FFFDF9]">
+    <div className="page-transition bg-[#FFFDF9]">
       <section className="max-w-4xl mx-auto px-4 sm:px-6 pt-32 pb-10">
         <p className="su-surtitre mb-6">Configurateur</p>
         <h1 className="font-display font-bold text-[#0C1626] text-[clamp(2.1rem,5.2vw,3.4rem)] leading-[1.08] tracking-[-0.02em] mb-6">
@@ -33,13 +33,16 @@ export default function PageConfigurateur() {
         </p>
       </section>
 
-      <section className="max-w-4xl mx-auto px-4 sm:px-6 pb-24">
+      <section className="max-w-4xl mx-auto px-4 sm:px-6 pb-24" aria-labelledby="titre-configurateur">
+        <h2 id="titre-configurateur" className="sr-only">
+          Configurateur de projet en quatre étapes
+        </h2>
         <Configurateur />
         <p className="text-[13px] text-[#64748B] mt-5 text-center">
           Aucune inscription, aucune donnée transmise tant que vous n’envoyez pas
           le formulaire de devis.
         </p>
       </section>
-    </main>
+    </div>
   )
 }

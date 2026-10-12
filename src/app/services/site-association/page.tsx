@@ -50,7 +50,7 @@ const faq = [
 
 export default function SiteAssociationPage() {
   return (
-    <main className="min-h-screen bg-[#F8FAFC] dark:bg-[#0A0F1C]">
+    <div className="min-h-screen bg-[#F8FAFC] dark:bg-[#0A0F1C]">
       {/* Hero */}
       <section className="bg-gradient-to-b from-[#1E3A5F] to-[#0F172A] py-24 pt-32">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
@@ -160,6 +160,6 @@ export default function SiteAssociationPage() {
           </Link>
         </section>
       </div>
-    </main>
+    </div>
   )
 }

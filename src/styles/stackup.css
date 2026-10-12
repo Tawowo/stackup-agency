@@ -417,30 +417,22 @@ button:focus-visible,
   pointer-events: none;
 }
 
-/* Zone de la scène : dimensions réservées en pourcentage du hero, donc
-   aucune réservation d'espace supplémentaire et CLS inchangé. */
+/* Zone de la scène.
+   Sur mobile : bloc dans le flux, hauteur fixée en ligne (300 px), à pleine
+   intensité. Sur grand écran : calée à droite derrière le contenu.
+   Dans les deux cas la hauteur est connue avant le rendu, donc CLS inchangé. */
 .su-hero__scene {
-  position: absolute;
   z-index: 0;
-  inset: 0 0 0 auto;
-  width: 58%;
   pointer-events: none;
 }
 
-@media (max-width: 1023px) {
+@media (min-width: 1024px) {
   .su-hero__scene {
-    inset: auto 0 0 0;
-    width: 100%;
-    height: 38%;
-    /* Une capture à 390 px a montré le monolithe passant derrière le second
-       appel à l'action et la mention tarifaire. Il est donc repoussé vers le
-       bas, atténué, et fondu longuement : il reste perceptible comme
-       profondeur sans jamais concurrencer un texte. */
-    opacity: 0.6;
-    mask-image: linear-gradient(180deg, transparent, #000 38%);
+    position: absolute;
+    inset: 0 0 0 auto;
+    width: 58%;
   }
 }
-
 
 /* ============================================================================
    10. LA PALETTE — navigation clavier
@@ -669,4 +661,37 @@ button:focus-visible,
   .su-vu .su-strate-svg__cycle { animation: none; }
   .su-strate-svg__arete,
   .su-vu .su-strate-svg__arete { opacity: 0.85; animation: none; }
+}
+
+/* ============================================================================
+   12. LIEN D'ÉVITEMENT
+   Masqué tant qu'il n'a pas le focus, pleinement visible dès qu'il l'obtient.
+   `clip` plutôt que `display:none` : un élément retiré du rendu n'est pas
+   focalisable, donc le lien ne servirait à rien.
+   ========================================================================== */
+
+.su-evitement {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -140%);
+  z-index: 300;
+  padding: 0.85rem 1.5rem;
+  border-radius: 0 0 var(--su-rayon-s) var(--su-rayon-s);
+  background: var(--su-encre);
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: transform var(--su-t-geste) var(--su-pose);
+}
+
+.su-evitement:focus-visible {
+  transform: translate(-50%, 0);
+  outline: 2px solid var(--su-or);
+  outline-offset: -4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .su-evitement { transition: none; }
 }

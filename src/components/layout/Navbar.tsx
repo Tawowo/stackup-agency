@@ -101,12 +101,18 @@ export default function Navbar() {
           <div className="flex items-center justify-between h-16 lg:h-20">
 
             {/* Logo */}
-            <Link href="/" className="flex items-center gap-2.5 shrink-0" aria-label="Stackup Agency — Accueil">
-              <Image src="/logo-icon.png" alt="Stackup Agency" width={40} height={40} quality={100} className="object-contain" priority />
+            <Link href="/" className="flex items-center gap-2.5 shrink-0">
+              {/* Alternative vide : le nom de la marque est déjà écrit juste à
+                  côté. Le répéter ferait annoncer « Stackup Agency Stackup
+                  Agency » par un lecteur d'écran. */}
+              <Image src="/logo-icon.png" alt="" width={40} height={40} quality={100} className="object-contain" priority />
               <div className="flex flex-col leading-tight">
                 <span className={`font-bold text-lg tracking-tight transition-colors ${logoTextClass}`}>Stackup</span>
                 <span className={`font-light text-[10px] tracking-[0.2em] uppercase transition-colors ${logoSubClass}`}>Agency</span>
               </div>
+              {/* Complète le nom accessible sans masquer le texte visible :
+                  la commande vocale « Stackup Agency » trouve bien la cible. */}
+              <span className="sr-only">, retour à l’accueil</span>
             </Link>
 
             {/* Desktop nav */}
@@ -196,7 +202,14 @@ export default function Navbar() {
       </button>
 
       {/* Mobile menu — fond blanc V4 */}
-      <div className={`mobile-menu-overlay lg:hidden ${open ? 'menu-open' : ''}`} aria-hidden={!open}>
+      <div
+        className={`mobile-menu-overlay lg:hidden ${open ? 'menu-open' : ''}`}
+        aria-hidden={!open}
+        // `inert` retire le sous-arbre de l'ordre de tabulation en plus de le
+        // masquer : sans lui, un utilisateur au clavier tabule dans un menu
+        // fermé et invisible, relevé par Lighthouse (aria-hidden-focus).
+        {...(!open ? { inert: '' as unknown as boolean } : {})}
+      >
         <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/30 to-transparent" aria-hidden="true" />
         <div className="pointer-events-none absolute bottom-0 right-0 w-72 h-72 rounded-full"
           style={{ background: 'radial-gradient(ellipse, rgba(245,158,11,0.06) 0%, transparent 70%)' }} aria-hidden="true" />

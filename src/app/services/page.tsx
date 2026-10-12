@@ -131,7 +131,7 @@ export default function ServicesPage() {
                 <div className="text-xs text-foreground/70 dark:text-white/65 mt-0.5">Livraison : {s.delai}</div>
               </div>
             </div>
-            <div className="grid lg:grid-cols-[1fr_250px] gap-6 lg:gap-9 items-start mb-6">
+            <div className="grid lg:grid-cols-[1fr_290px] gap-6 lg:gap-10 items-start mb-6">
               <div>
                 <p className="text-foreground/80 mb-5">{s.desc}</p>
                 <div className="grid sm:grid-cols-2 gap-2">

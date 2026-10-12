@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 
 export default function MentionsLegales() {
   return (
-    <main className="min-h-screen bg-[#F8FAFC] dark:bg-[#0A0F1C] py-24 pt-32">
+    <div className="min-h-screen bg-[#F8FAFC] dark:bg-[#0A0F1C] py-24 pt-32">
       <div className="max-w-3xl mx-auto px-4 sm:px-6">
         <Link href="/" className="inline-flex items-center gap-2 text-electric hover:underline text-sm mb-8">
           <ArrowLeft size={16} /> Retour à l&apos;accueil
@@ -116,6 +116,6 @@ export default function MentionsLegales() {
           <Link href="/contact" className="text-electric hover:underline">Nous contacter →</Link>
         </div>
       </div>
-    </main>
+    </div>
   )
 }

@@ -51,11 +51,7 @@ export default function HeroSection() {
 
   return (
     <section className="su-hero min-h-[100svh] flex items-center">
-      <div className="su-hero__scene">
-        <Monolithe />
-      </div>
-
-      <div className="relative z-[3] w-full max-w-6xl mx-auto px-4 sm:px-6 pt-32 pb-20 lg:py-32">
+      <div className="relative z-[3] w-full max-w-6xl mx-auto px-4 sm:px-6 pt-32 pb-16 lg:py-32">
         <div className={`max-w-xl ${revele ? 'su-revele' : ''}`}>
           <p className="su-surtitre mb-7">Agence web — Tours</p>
 
@@ -96,6 +92,16 @@ export default function HeroSection() {
           <p className="text-[13px] text-[#64748B]">
             À partir de {SITE.pricing.vitrine} € · Devis gratuit sous 72 h
           </p>
+        </div>
+
+        {/* LE MONOLITHE.
+            Sur grand écran il occupe la moitié droite, derrière le contenu.
+            Sur mobile il prend sa propre bande dans le flux, à pleine
+            intensité : une capture à 390 px a montré qu'en fond atténué il
+            ressemblait à une bavure grise plutôt qu'à un objet voulu.
+            La hauteur est fixe dans les deux cas, donc rien ne se décale. */}
+        <div className="su-hero__scene relative h-[300px] -mx-4 sm:-mx-6 mt-10 lg:mt-0 lg:mx-0 lg:h-auto">
+          <Monolithe />
         </div>
 
         <div className="su-groupe grid grid-cols-2 lg:grid-cols-4 gap-3 mt-14 lg:mt-20 max-w-3xl">

@@ -88,3 +88,29 @@ export function assombrirJusquAu(
 
 /** Le fond clair de référence du site. */
 export const IVOIRE = '#FFFDF9'
+
+/**
+ * Compose une couleur semi-transparente sur un fond opaque.
+ *
+ * Nécessaire pour calculer juste : une étiquette posée sur `${couleur}12`
+ * n'est pas sur de l'ivoire pur mais sur un ivoire légèrement teinté. Viser
+ * le seuil contre l'ivoire laissait passer des textes à 3,96:1 — assez pour
+ * échouer, assez peu pour ne se voir qu'en viewport mobile.
+ */
+export function composer(couleur: string, alpha: number, fond: string): string {
+  const lire = (h: string) => {
+    const p = h.replace('#', '')
+    const b = p.length === 3 ? p.split('').map((c) => c + c).join('') : p
+    const n = parseInt(b, 16)
+    return [(n >> 16) & 255, (n >> 8) & 255, n & 255]
+  }
+  const [r1, v1, b1] = lire(couleur)
+  const [r2, v2, b2] = lire(fond)
+  const m = (a: number, b: number) => Math.round(a * alpha + b * (1 - alpha))
+  return (
+    '#' +
+    [m(r1, r2), m(v1, v2), m(b1, b2)]
+      .map((c) => c.toString(16).padStart(2, '0'))
+      .join('')
+  )
+}

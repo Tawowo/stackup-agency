@@ -66,7 +66,7 @@ function CardItem({ card, index, isVisible }: { card: Card; index: number; isVis
 
       <div className="flex items-start justify-between mb-3">
         <h3 className={`text-lg font-bold ${card.highlight ? 'text-white' : 'text-navy'}`}>{card.titre}</h3>
-        <span className={`text-2xl font-bold ml-3 tabular-nums data-mono ${card.highlight ? 'text-[#B45309]' : 'text-electric'}`}>
+        <span className={`text-2xl font-bold ml-3 tabular-nums data-mono ${card.highlight ? 'text-[#FBBF24]' : 'text-electric'}`}>
           <span className="price-reveal is-visible">
             <span className="price-reveal-inner">{price}&thinsp;€</span>
           </span>

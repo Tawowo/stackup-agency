@@ -195,8 +195,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <SectionProgressBar />
               <BrandPreloader />
               <RevealObserver />
+              {/* Lien d'évitement : premier élément focalisable de la page,
+                  il permet de sauter la navigation sans la parcourir au
+                  clavier à chaque changement de page. */}
+              <a href="#contenu" className="su-evitement">Aller au contenu</a>
               <Navbar />
-              {children}
+              {/* Repère principal unique pour toutes les pages. Il était
+                  absent de 29 gabarits, qui génèrent l'essentiel des 438
+                  pages du site (règle WCAG landmark-one-main). */}
+              <main id="contenu">{children}</main>
               <Footer />
               <CookieBanner />
               <Palette />
