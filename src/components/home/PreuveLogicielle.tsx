@@ -13,6 +13,7 @@
  */
 
 import { useEffect, useRef, useState } from 'react'
+import Reseau from '@/components/home/Reseau'
 import Link from 'next/link'
 import dynamic from 'next/dynamic'
 import { ArrowRight } from 'lucide-react'
@@ -50,7 +51,7 @@ export default function PreuveLogicielle() {
   }, [])
 
   return (
-    <section ref={section} id="laboratoire" className="py-20 lg:py-28 bg-[#FFFDF9]">
+    <section ref={section} id="laboratoire" className="py-20 lg:py-28 su-ambiance ">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="max-w-2xl mb-10">
           <p className="su-surtitre mb-5">La preuve</p>
@@ -65,6 +66,10 @@ export default function PreuveLogicielle() {
             changement. Rien n’est simulé.
           </p>
         </div>
+
+        {/* Le réseau pose l'architecture ; l'outil ci-dessous la prouve en
+            fonctionnant réellement. L'un explique, l'autre démontre. */}
+        <Reseau />
 
         <div className="min-h-[640px]">{charger && <Laboratoire />}</div>
 

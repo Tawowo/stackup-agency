@@ -38,7 +38,7 @@ export default function TarifsPage() {
       <DecorProfondeur variant="warm" seed={1} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
-      <MiniHero
+      <MiniHero signature="echelle"
         title="Tarifs clairs, sans surprise"
         subtitle={`Site vitrine à partir de ${SITE.pricing.vitrine}€, tout inclus : design, développement, SEO, hébergement 12 mois et SSL. Devis gratuit sous 72h.`}
         breadcrumb={[{ name: 'Tarifs' }]}

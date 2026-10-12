@@ -37,3 +37,14 @@ next-env.d.ts
 public/images/*-placeholder.png
 tests/e2e/screenshots/
 logs/
+
+# Captures de travail produites par les scripts d'observation.
+# Elles se régénèrent en une commande et pèsent des dizaines de mégaoctets :
+# seule la sélection de `docs/preuves/` est versionnée.
+docs/ouverture/
+docs/page/
+docs/passage/
+docs/replis/
+docs/salle/
+docs/vue/
+docs/signatures/

@@ -1,35 +1,40 @@
 'use client'
 
 /**
- * HERO — LE MONOLITHE.
+ * HERO — L'OUVERTURE DU PASSAGE.
  *
- * Remplace l'éditeur de code animé. L'audit a relevé que cet effet, très
- * répandu, ne démontrait aucune capacité réelle : du faux code qui se tape
- * dans une fausse fenêtre. La scène 3D, elle, est exécutée par le navigateur
- * du visiteur — c'est la démonstration qui remplace la promesse.
+ * Ce n'est plus « un titre à côté d'un objet 3D ». La composition est
+ * construite sur trois plans de profondeur traversés par le regard :
  *
- * Conséquence de performance recherchée : plus aucune image dans le hero.
- * Le LCP n'est plus un fichier de 100 ko à télécharger mais le titre lui-même,
- * déjà présent dans le HTML servi.
+ *   plan −1  le nuage de particules (canvas fixe, derrière tout)
+ *   plan  0  des plaques en parallaxe lente, derrière le texte
+ *   plan  1  la typographie
+ *   plan  2  des plaques en parallaxe rapide, DEVANT le texte
  *
- * Tout le contenu commercial et référençable de l'ancien hero est conservé à
- * l'identique : titre, accroche, deux appels à l'action, mention tarifaire,
- * barre de confiance.
+ * Le titre lui-même est sculpté : trois niveaux typographiques très
+ * différents plutôt qu'un bloc homogène, et le mot porteur arrive lettre par
+ * lettre. Le contenu référençable est strictement identique à l'ancien hero.
  */
 
+import { useEffect, useRef } from 'react'
 import Link from 'next/link'
 import dynamic from 'next/dynamic'
 import { ArrowRight } from 'lucide-react'
 import { SITE } from '@/config/site'
 import CountUp from '@/components/ui/CountUp'
+import BoutonMagnetique from '@/components/ui/BoutonMagnetique'
 
-// `ssr: false` : la scène n'a aucun rendu serveur utile, et ce découpage
-// garantit que `three` reste hors du bundle de la page.
-const Monolithe = dynamic(() => import('@/components/webgl/Monolithe'), {
-  ssr: false,
-})
+const Passage = dynamic(() => import('@/components/webgl/Passage'), { ssr: false })
 
-const TITRE = ['Le site web qui fait', 'décoller votre activité.']
+const MOT = 'décoller'
+const TITRE_COMPLET = 'Le site web qui fait décoller votre activité.'
+
+/** Plaques de parallaxe. Déterministes : deux chargements donnent la même image. */
+const PLAQUES_AVANT = [
+  { x: -4, y: 30, l: 210, h: 15, r: -14, p: 0.55, o: 0.95 },
+  { x: 86, y: 76, l: 260, h: 18, r: -16, p: 0.74, o: 0.9 },
+  { x: 30, y: 94, l: 150, h: 13, r: -11, p: 0.44, o: 0.85 },
+]
 
 const CONFIANCE = [
   { valeur: 10, suffixe: ' j', libelle: "de l'idée à la mise en ligne", accent: true },
@@ -38,86 +43,186 @@ const CONFIANCE = [
   { texte: 'Code livré', libelle: 'vous êtes propriétaire', accent: false },
 ] as const
 
-export default function HeroSection() {
-  return (
-    <section className="su-hero min-h-[100svh] flex items-center">
-      <div className="relative z-[3] w-full max-w-6xl mx-auto px-4 sm:px-6 pt-32 pb-16 lg:py-32">
-        <div className="max-w-xl">
-          <p className="su-surtitre mb-7">Agence web — Tours</p>
+function Plaques({
+  liste,
+  classe,
+}: {
+  liste: typeof PLAQUES_AVANT
+  classe: string
+}) {
+  const hote = useRef<HTMLDivElement>(null)
 
-          <h1 className="font-display font-bold text-[#0C1626] mb-6 text-[clamp(2.3rem,6.2vw,4.1rem)] leading-[1.04] tracking-[-0.03em]">
-            {TITRE.map((ligne, i) => (
-              <span key={ligne} className="su-ligne-masque">
-                {/* Les lignes sont des blocs : visuellement elles se suivent,
-                    mais leurs textes se concatènent sans séparateur. Sans cet
-                    espace, le titre se lit « faitdécoller » — pour un lecteur
-                    d'écran comme pour l'indexation. */}
-                {i > 0 && <span className="sr-only"> </span>}
-                <span className="su-ligne-interne">
-                  {i === 1 ? (
-                    <>
-                      <span className="text-[#B45309]">décoller</span> votre activité.
-                    </>
-                  ) : (
-                    ligne
-                  )}
-                </span>
+  useEffect(() => {
+    const el = hote.current
+    if (!el) return
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
+
+    let image = 0
+    let attente = false
+    const souris = { x: 0, y: 0 }
+    const lisse = { x: 0, y: 0 }
+
+    const peindre = () => {
+      lisse.x += (souris.x - lisse.x) * 0.07
+      lisse.y += (souris.y - lisse.y) * 0.07
+      const y = window.scrollY
+      el.style.setProperty('--su-par-y', String(y))
+      el.style.setProperty('--su-par-mx', lisse.x.toFixed(3))
+      el.style.setProperty('--su-par-my', lisse.y.toFixed(3))
+      image = 0
+    }
+
+    const planifier = () => {
+      if (attente) return
+      attente = true
+      requestAnimationFrame(() => {
+        attente = false
+        peindre()
+      })
+    }
+
+    const surSouris = (e: PointerEvent) => {
+      if (e.pointerType === 'touch') return
+      souris.x = (e.clientX / window.innerWidth) * 2 - 1
+      souris.y = (e.clientY / window.innerHeight) * 2 - 1
+      planifier()
+    }
+
+    // Boucle continue tant que le lissage n'a pas convergé.
+    const boucle = () => {
+      peindre()
+      image = requestAnimationFrame(boucle)
+    }
+    image = requestAnimationFrame(boucle)
+
+    window.addEventListener('pointermove', surSouris, { passive: true })
+    window.addEventListener('scroll', planifier, { passive: true })
+    return () => {
+      cancelAnimationFrame(image)
+      window.removeEventListener('pointermove', surSouris)
+      window.removeEventListener('scroll', planifier)
+    }
+  }, [])
+
+  return (
+    <div ref={hote} className={`su-plaques ${classe}`} aria-hidden="true">
+      {liste.map((p, i) => (
+        <span
+          key={i}
+          className="su-plaque"
+          style={
+            {
+              '--x': `${p.x}%`,
+              '--y': `${p.y}%`,
+              '--l': `${p.l}px`,
+              '--h': `${p.h}px`,
+              '--r': `${p.r}deg`,
+              '--p': p.p,
+              '--o': p.o,
+              '--i': i,
+            } as React.CSSProperties
+          }
+        />
+      ))}
+    </div>
+  )
+}
+
+export default function HeroSection() {
+  // Aucune bascule d'état ici, volontairement.
+  //
+  // L'ouverture était auparavant déclenchée par un `useState` posé après le
+  // montage. Mesuré au navigateur : quand le fil principal sature, ce rendu
+  // n'arrive pas, et l'intégralité du hero reste invisible. Les révélations
+  // sont désormais purement CSS, sous `.su-js` : elles partent au parse et
+  // se jouent sur le compositeur, hors de portée d'un JavaScript en retard.
+  return (
+    <section
+      data-scene="ouverture"
+      data-nuit="1"
+      className="su-hero-passage su-ambiance"
+    >
+      <Passage />
+
+      <div className="su-scene-devant w-full max-w-6xl mx-auto px-4 sm:px-6 pt-28 pb-16 lg:pt-32 lg:pb-24">
+        <p className="su-surtitre su-ouverture su-ouverture--1 mb-6 lg:mb-8">
+          Agence web — Tours
+        </p>
+
+        {/* Le libellé accessible porte la phrase entière : les lettres
+            séparées ne sont lues ni épelées. */}
+        <h1 className="su-titre-sculpte" aria-label={TITRE_COMPLET}>
+          <span className="su-titre__amorce su-ouverture su-ouverture--2">
+            Le site web qui fait
+          </span>
+
+          <span className="sr-only"> </span>
+          <span className="su-titre__mot">
+            {MOT.split('').map((lettre, i) => (
+              <span
+                key={i}
+                className="su-lettre"
+                style={{ '--i': i, '--n': MOT.length } as React.CSSProperties}
+              >
+                {lettre}
               </span>
             ))}
-          </h1>
+          </span>
 
-          <p className="text-[#475569] text-lg leading-relaxed mb-9 max-w-lg">
-            Sites vitrines, e-commerce et applications sur mesure — conçus,
-            développés et mis en ligne en {SITE.delais.vitrine}.
-          </p>
+          <span className="sr-only"> </span>
+          <span className="su-titre__chute su-ouverture su-ouverture--3">
+            votre activité.
+          </span>
+        </h1>
 
-          <div className="flex flex-wrap gap-3.5 mb-5">
-            <Link href="/contact" className="su-action">
-              Obtenir mon devis gratuit
-              <ArrowRight size={17} aria-hidden="true" />
-            </Link>
-            <Link href="/services" className="su-action su-action--fantome">
-              Découvrir nos services
-            </Link>
-          </div>
+        <p className="su-doux su-accroche su-ouverture su-ouverture--4">
+          <span>Sites vitrines,</span> <span>e-commerce</span> <span>et applications</span>{' '}
+          <span>sur mesure</span> <span>— conçus,</span> <span>développés</span>{' '}
+          <span>et mis en ligne</span> <span>en {SITE.delais.vitrine}.</span>
+        </p>
 
-          <p className="text-[13px] text-[#64748B]">
-            À partir de {SITE.pricing.vitrine} € · Devis gratuit sous 72 h
-          </p>
+        <div className="flex flex-wrap items-center gap-3.5 mb-5 su-ouverture su-ouverture--5">
+          <BoutonMagnetique href="/contact" className="su-action su-action--eclat">
+            Obtenir mon devis gratuit
+            <ArrowRight size={17} aria-hidden="true" />
+          </BoutonMagnetique>
+          <Link href="/services" className="su-lien-trace">
+            Découvrir nos services
+          </Link>
         </div>
 
-        {/* LE MONOLITHE.
-            Sur grand écran il occupe la moitié droite, derrière le contenu.
-            Sur mobile il prend sa propre bande dans le flux, à pleine
-            intensité : une capture à 390 px a montré qu'en fond atténué il
-            ressemblait à une bavure grise plutôt qu'à un objet voulu.
-            La hauteur est fixe dans les deux cas, donc rien ne se décale. */}
-        <div className="su-hero__scene relative h-[300px] -mx-4 sm:-mx-6 mt-10 lg:absolute lg:inset-y-0 lg:right-0 lg:left-auto lg:w-[58%] lg:h-auto lg:m-0">
-          <Monolithe />
-        </div>
+        <p className="text-[13px] su-doux su-ouverture su-ouverture--6">
+          À partir de {SITE.pricing.vitrine} € · Devis gratuit sous 72 h
+        </p>
 
-        <div className="su-groupe grid grid-cols-2 lg:grid-cols-4 gap-3 mt-14 lg:mt-20 max-w-3xl">
-          {CONFIANCE.map((item) => (
+        <div className="su-confiance su-ouverture su-ouverture--7">
+          {CONFIANCE.map((item, i) => (
             <div
               key={item.libelle}
-              className="su-strate su-strate--aretee px-4 py-3.5 su-pose-active"
+              className="su-carte-ambiance su-confiance__item"
+              style={{ '--i': i } as React.CSSProperties}
             >
-              <div
-                className={`text-[1.55rem] font-display font-bold leading-none mb-1.5 ${
-                  item.accent ? 'text-[#B45309]' : 'text-[#1E3A5F]'
-                }`}
-              >
+              <div className={`su-confiance__valeur ${item.accent ? 'su-accent' : ''}`}>
                 {'valeur' in item ? (
-                  <CountUp target={item.valeur} suffix={item.suffixe} duration={1200} />
+                  <CountUp target={item.valeur} suffix={item.suffixe} duration={1400} />
                 ) : (
                   item.texte
                 )}
               </div>
-              <div className="text-[12.5px] text-[#64748B] leading-snug">{item.libelle}</div>
+              <div className="su-confiance__libelle su-doux">{item.libelle}</div>
             </div>
           ))}
         </div>
+
+        <div className="su-defiler su-ouverture su-ouverture--8" aria-hidden="true">
+          <span className="su-defiler__mot">Descendre</span>
+          <span className="su-defiler__rail">
+            <span className="su-defiler__curseur" />
+          </span>
+        </div>
       </div>
+
+      <Plaques liste={PLAQUES_AVANT} classe="su-plaques--avant" />
     </section>
   )
 }

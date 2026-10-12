@@ -20,10 +20,10 @@
     "la recherche renvoie des résultats",
     "Entrée navigue vers la page choisie",
     "Échap referme la palette",
-    "aucune scène WebGL en mouvement réduit",
+    "aucune scène WebGL animée en mouvement réduit",
     "le titre reste visible en mouvement réduit",
     "le titre est lisible sans JavaScript",
-    "le titre n’est pas masqué par la révélation sans JavaScript",
+    "le titre est entièrement peint sans JavaScript",
     "aucun bloc de contenu invisible sans JavaScript",
     "les lignes du titre sont séparées par une espace"
   ],

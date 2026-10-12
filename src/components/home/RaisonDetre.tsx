@@ -29,7 +29,7 @@ export default function RaisonDetre() {
   }, [])
 
   return (
-    <section ref={sectionRef} id="raison-detre" className="py-24 bg-white relative overflow-hidden">
+    <section ref={sectionRef} id="raison-detre" className="py-24 su-ambiance relative overflow-hidden">
       {/* Halo doux */}
       <div className="pointer-events-none absolute top-0 right-0 w-[500px] h-[400px]" aria-hidden="true"
         style={{ background: 'radial-gradient(ellipse at 80% 0%, rgba(245,158,11,0.06) 0%, transparent 70%)' }} />

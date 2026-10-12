@@ -1,227 +1,354 @@
 'use client'
+
 /**
- * LE SHOWROOM V4.2 — Vraies démos Stackup, desktop + téléphone simultanés
- * Fond qui change par projet — captures réelles via Image Next.js
+ * LA SALLE DE PROJECTION.
+ *
+ * Les réalisations ne sont plus une rangée d'onglets au-dessus d'une capture.
+ * La section devient un îlot d'encre dans une page claire — une salle — et les
+ * projets y défilent comme une pellicule : on avance verticalement, la bande
+ * se déplace horizontalement.
+ *
+ * Trois partis pris :
+ *
+ *  1. L'ÎLOT EST AUTONOME. Son encre ne vient pas de `--su-nuit` : elle lui
+ *     appartient. La traversée de la page reste au plein jour autour, ce qui
+ *     fait de cette section une rupture franche plutôt qu'une étape de plus.
+ *
+ *  2. LE DÉFILEMENT EST LA SEULE SOURCE DE VÉRITÉ. Pas d'état « projet
+ *     actif » dupliqué entre React et le défilement : la position de la page
+ *     détermine tout. Les pastilles de navigation ne changent pas un état,
+ *     elles déplacent la page — donc clavier, souris et défilement parlent la
+ *     même langue et ne peuvent pas se contredire.
+ *
+ *  3. LA SALLE S'ÉCLAIRE À LA COULEUR DU PROJET. Un halo prend l'accent du
+ *     projet au centre de l'écran. C'est ce qui fait qu'on change de monde en
+ *     avançant, au lieu de changer d'image.
+ *
+ * Repli : sans JavaScript, et sous mouvement réduit, la bande redevient une
+ * pile verticale, complète et lisible. Rien n'est conditionné à l'animation.
+ *
+ * Les projets, les URL et les captures sont ceux qui existent réellement.
  */
-import { useState } from 'react'
+
+import { useCallback, useEffect, useRef, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { ExternalLink } from 'lucide-react'
 import { texteLisibleSur } from '@/lib/contraste'
 
-interface Project {
+interface Projet {
   nom: string
   type: string
   slug: string
   image: string
-  couleur: string
   accent: string
   url: string
   tags: string[]
+  /** Ce que la démo met en œuvre — déduit du projet, rien d'inventé. */
+  note: string
 }
 
-const PROJECTS: Project[] = [
+const PROJETS: Projet[] = [
   {
     nom: 'Cadence Studio',
     type: 'Vitrine + livraison client — Vidéaste',
     slug: 'demo-videaste',
     image: '/images/realisations/demo-videaste.webp',
-    couleur: '#0C1017',
     accent: '#E8B84B',
     url: 'https://demo-videaste-vitrine.vercel.app',
     tags: ['Vidéaste', 'Livraison', 'Timeline'],
+    note: 'Espace de livraison client et lecture des rushes dans le navigateur.',
   },
   {
     nom: 'Château des Lumières',
     type: 'Site vitrine — Hôtel boutique',
     slug: 'chateau-lumieres',
     image: '/images/realisations/chateau-lumieres.webp',
-    couleur: '#213547',
     accent: '#5F8D6A',
     url: 'https://stackup-demos-e85v.vercel.app',
     tags: ['Hôtel', 'Réservation', 'Animations'],
+    note: 'Parcours de réservation et mise en scène animée des chambres.',
   },
   {
     nom: 'Maison Élise',
     type: 'E-commerce — Mode',
     slug: 'maison-elise',
     image: '/images/realisations/maison-elise.webp',
-    couleur: '#2E2B28',
     accent: '#D46A92',
     url: 'https://stackup-demos-tq9a.vercel.app',
     tags: ['Boutique', 'Panier', 'Mode'],
+    note: 'Catalogue, fiches produit et panier complets.',
   },
   {
     nom: 'Au Pain Doré',
     type: 'Site vitrine — Boulangerie',
     slug: 'au-pain-dore',
     image: '/images/realisations/au-pain-dore.webp',
-    couleur: '#5A3E2B',
     accent: '#D89C4A',
     url: 'https://stackup-demos-u2go.vercel.app',
     tags: ['Artisan', 'Vitrine', 'Local'],
+    note: 'Vitrine d’artisan : horaires, gamme et accès, sans superflu.',
   },
   {
-    nom: "L'Olivier — Dashboard",
+    nom: 'L’Olivier — Dashboard',
     type: 'Système de gestion',
     slug: 'lolivier-dashboard',
     image: '/images/realisations/lolivier-dashboard.webp',
-    couleur: '#101828',
     accent: '#29C36A',
     url: 'https://stackup-demos-jxtr.vercel.app',
     tags: ['Dashboard', 'CRM', 'Restaurant'],
+    note: 'Interface de gestion : réservations, salle et suivi du service.',
   },
 ]
 
-function DesktopFrame({ project, transitioning }: { project: Project; transitioning: boolean }) {
+/** Le cadre navigateur, posé autour de la capture réelle. */
+function Ecran({ projet, actif }: { projet: Projet; actif: boolean }) {
   return (
-    <div className="flex-1 min-w-0">
-      {/* Cadre navigateur */}
-      <div className={`rounded-2xl overflow-hidden border border-gray-200 shadow-[0_24px_60px_rgba(0,0,0,0.15)] transition-all duration-300 ${transitioning ? 'opacity-0 scale-[0.99]' : 'opacity-100 scale-100'}`}>
-        {/* Chrome nav */}
-        <div className="bg-gray-100 px-3 py-2.5 flex items-center gap-2 border-b border-gray-200">
-          <div className="flex gap-1.5">
-            <div className="w-2.5 h-2.5 rounded-full bg-red-400" />
-            <div className="w-2.5 h-2.5 rounded-full bg-yellow-400" />
-            <div className="w-2.5 h-2.5 rounded-full bg-green-400" />
-          </div>
-          <div className="flex-1 bg-white rounded-md px-2.5 py-1 text-[10px] text-gray-500 font-mono flex items-center gap-1.5 border border-gray-200">
-            <div className="w-2 h-2 rounded-full flex-shrink-0" style={{ background: project.accent }} />
-            {project.url.replace('https://', '')}
-          </div>
-          <ExternalLink size={11} className="text-gray-500" />
-        </div>
-        {/* Screenshot desktop */}
-        <div className="relative bg-gray-900 overflow-hidden" style={{ aspectRatio: '1200/558' }}>
-          <Image
-            src={project.image}
-            alt={`Capture ${project.nom}`}
-            fill
-            quality={90}
-            className="object-cover object-top transition-opacity duration-300"
-            sizes="(max-width: 768px) 100vw, 900px"
+    <div className="su-salle__ecran">
+      <div className="su-salle__chrome">
+        <span className="su-salle__pastilles" aria-hidden="true">
+          <i />
+          <i />
+          <i />
+        </span>
+        <span className="su-salle__url">
+          <span
+            className="su-salle__point"
+            style={{ background: projet.accent }}
+            aria-hidden="true"
           />
-          {/* Overlay léger pour profondeur */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
-        </div>
+          {projet.url.replace('https://', '')}
+        </span>
+        <ExternalLink size={12} aria-hidden="true" />
       </div>
-      {/* Support moniteur */}
-      <div className="h-3 bg-gray-200 rounded-b-xl mx-6" />
-      <div className="h-1.5 bg-gray-300 rounded-full mx-12" />
+      <div className="su-salle__vue">
+        <Image
+          src={projet.image}
+          alt={`Capture du site ${projet.nom}`}
+          fill
+          quality={88}
+          className="object-cover object-top"
+          sizes="(max-width: 900px) 92vw, 920px"
+          /* Seule la première capture est prioritaire : les autres n'ont
+             aucune raison de disputer la bande passante au contenu visible. */
+          priority={actif && projet.slug === PROJETS[0].slug}
+        />
+      </div>
     </div>
   )
 }
 
-function PhoneFrame({ project, transitioning }: { project: Project; transitioning: boolean }) {
+/** Le même site vu sur un téléphone — la preuve que le responsive est fait. */
+function Telephone({ projet }: { projet: Projet }) {
   return (
-    <div className={`flex-shrink-0 pb-3 transition-all duration-300 ${transitioning ? 'opacity-0 scale-[0.97]' : 'opacity-100 scale-100'}`}
-      style={{ transitionDelay: transitioning ? '0ms' : '60ms' }}>
-      <div className="rounded-[28px] overflow-hidden border-[3px] border-gray-700 shadow-[0_20px_60px_rgba(0,0,0,0.25)] bg-gray-900 relative" style={{ width: 130, aspectRatio: '9/19.5' }}>
-        {/* Notch */}
-        <div className="absolute top-2 left-1/2 -translate-x-1/2 w-14 h-3.5 rounded-full bg-gray-900 z-10" />
-        {/* Screenshot dans le téléphone */}
-        <div className="w-full h-full relative overflow-hidden">
-          <Image
-            src={project.image}
-            alt={`Mobile ${project.nom}`}
-            fill
-            quality={90}
-            className="object-cover object-top"
-            sizes="640px"
-          />
-        </div>
-        {/* Bottom bar */}
-        <div className="absolute bottom-0 inset-x-0 h-5 bg-gray-900 flex items-center justify-center">
-          <div className="w-12 h-1 bg-gray-600 rounded-full" />
-        </div>
-      </div>
+    <div className="su-salle__tel" aria-hidden="true">
+      <span className="su-salle__encoche" />
+      <Image
+        src={projet.image}
+        alt=""
+        fill
+        quality={70}
+        className="object-cover object-top"
+        sizes="200px"
+      />
+      <span className="su-salle__barre" />
     </div>
   )
 }
 
 export default function Showroom() {
-  const [active, setActive] = useState(0)
-  const [transitioning, setTransitioning] = useState(false)
-  const p = PROJECTS[active]
+  const section = useRef<HTMLElement>(null)
+  const scene = useRef<HTMLDivElement>(null)
+  const [defile, setDefile] = useState(false)
+  const [courant, setCourant] = useState(0)
+  const [avancement, setAvancement] = useState(0)
+  const [position, setPosition] = useState(0)
 
-  function handleSelect(i: number) {
-    if (i === active) return
-    setTransitioning(true)
-    setTimeout(() => {
-      setActive(i)
-      setTransitioning(false)
-    }, 250)
-  }
+  /** Position de défilement qui met le projet `i` au centre de l'écran. */
+  const positionDe = useCallback((i: number) => {
+    const el = section.current
+    if (!el) return 0
+    const haut = el.offsetTop
+    const course = el.offsetHeight - window.innerHeight
+    return haut + (course * i) / Math.max(PROJETS.length - 1, 1)
+  }, [])
+
+  useEffect(() => {
+    const el = section.current
+    if (!el) return
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
+
+    // Pas de bande horizontale sous 900 px.
+    //
+    // Deux raisons, l'une mesurée, l'autre d'usage. Mesurée : les vignettes
+    // mises en bande sont déplacées par `transform`, et le chargement
+    // paresseux des images se fonde sur la position de MISE EN PAGE — sur
+    // mobile, les captures des projets 2 à 5 ne se chargeaient jamais et on
+    // ne voyait que des cadres vides. D'usage : détourner le défilement
+    // vertical sur un téléphone est désagréable. La pile verticale, qui est
+    // déjà l'état de repli, est ici le meilleur état.
+    if (!window.matchMedia('(min-width: 900px)').matches) return
+
+    // La bande ne se met en place qu'ici : si ce code ne tourne pas, le CSS
+    // laisse la pile verticale en place et la section reste complète.
+    setDefile(true)
+
+    let attente = false
+    const maj = () => {
+      attente = false
+      const haut = el.offsetTop
+      const course = Math.max(el.offsetHeight - window.innerHeight, 1)
+      const p = Math.min(Math.max((window.scrollY - haut) / course, 0), 1)
+      setAvancement(p)
+
+      // La bande MARQUE un arrêt sur chaque projet.
+      //
+      // Une translation continue paraissait juste sur le papier et était
+      // fausse à l'écran : la fiche est à droite de son écran, donc à
+      // mi-course on lisait la fiche d'un projet à côté de la capture du
+      // suivant. Chaque projet tient maintenant 55 % de son segment immobile,
+      // puis glisse vers le suivant sur les 45 % restants. On lit toujours un
+      // projet, jamais deux moitiés.
+      const segment = p * (PROJETS.length - 1)
+      const base = Math.min(Math.floor(segment), PROJETS.length - 2)
+      const f = Math.min(Math.max(segment - base, 0), 1)
+      const t = f < 0.55 ? 0 : (f - 0.55) / 0.45
+      const doux = t * t * (3 - 2 * t)
+      const pos = base + doux
+      setPosition(pos)
+      setCourant(Math.round(pos))
+    }
+    const surDefilement = () => {
+      if (attente) return
+      attente = true
+      requestAnimationFrame(maj)
+    }
+
+    window.addEventListener('scroll', surDefilement, { passive: true })
+    window.addEventListener('resize', surDefilement)
+    maj()
+    return () => {
+      window.removeEventListener('scroll', surDefilement)
+      window.removeEventListener('resize', surDefilement)
+    }
+  }, [])
+
+  const p = PROJETS[courant]
 
   return (
-    <section id="realisations" className="py-24 relative overflow-hidden transition-colors duration-700"
-      style={{ background: `linear-gradient(180deg, #FFFDF9 0%, ${p.couleur}18 40%, #FFFDF9 100%)` }}>
-      {/* Halo arrière-plan qui suit le projet actif */}
-      <div className="pointer-events-none absolute inset-0 transition-all duration-700" aria-hidden="true"
-        style={{ background: `radial-gradient(ellipse at 50% 40%, ${p.accent}35 0%, transparent 60%)` }} />
+    <section
+      ref={section}
+      id="realisations"
+      className="su-salle"
+      data-defile={defile ? 'oui' : undefined}
+      style={
+        {
+          '--n': PROJETS.length,
+          '--p': avancement.toFixed(4),
+          '--pos': position.toFixed(4),
+          '--accent': p.accent,
+        } as React.CSSProperties
+      }
+      aria-label="Nos réalisations"
+    >
+      {/* La lumière de la salle prend la couleur du projet au centre. */}
+      <div className="su-salle__lumiere" aria-hidden="true" />
 
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 relative">
-        <p className="text-[13px] font-semibold text-[#B45309] uppercase tracking-[0.18em] mb-3 reveal-item">Nos réalisations</p>
-        <h2 className="text-3xl lg:text-5xl font-bold text-navy mb-4 reveal-item" style={{ lineHeight: 1.15 }}>
-          Nos vraies réalisations
-        </h2>
-        <p className="text-[#475569] max-w-xl mb-10 reveal-item" style={{ animationDelay: '80ms' }}>
-          Sites de démonstration complets — consultables en ligne. Ce que vous voyez est exactement ce que nous livrons.
-        </p>
+      <div ref={scene} className="su-salle__scene">
+        <header className="su-salle__entete">
+          <p className="su-salle__surtitre">Nos réalisations</p>
+          <h2 className="su-salle__titre">
+            Cinq sites complets,
+            <br />
+            <span className="su-salle__titre-accent">consultables en ligne.</span>
+          </h2>
+          <p className="su-salle__intro">
+            Ce ne sont pas des aperçus. Chaque adresse ouvre un site de
+            démonstration entier — c&rsquo;est exactement ce que nous livrons.
+          </p>
+        </header>
 
-        {/* Sélecteur projets */}
-        <div className="flex flex-wrap gap-2.5 mb-10">
-          {PROJECTS.map((proj, i) => (
-            <button key={proj.slug} onClick={() => handleSelect(i)}
-              className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-sm font-semibold transition-all duration-200 border ${
-                i === active
-                  ? 'border-transparent shadow-md shadow-black/15'
-                  : 'bg-white text-[#475569] border-gray-200 hover:border-gray-300 hover:text-navy hover:-translate-y-0.5'
-              }`}
-              style={i === active ? { background: proj.accent, color: texteLisibleSur(proj.accent) } : {}}
+        {/* La pellicule. En pile verticale tant que `data-defile` est absent. */}
+        <div className="su-salle__bande">
+          {PROJETS.map((projet, i) => (
+            <article
+              key={projet.slug}
+              className="su-salle__vignette"
+              style={{ '--i': i, '--accent': projet.accent } as React.CSSProperties}
+              aria-current={i === courant ? 'true' : undefined}
+              /* Au-delà d'un écran de distance, rien n'est visible : on
+                 évite de peindre quatre vignettes hors cadre à chaque image. */
+              data-loin={defile && Math.abs(i - position) > 1.2 ? 'oui' : undefined}
             >
-              <div
-                className="w-2 h-2 rounded-full flex-shrink-0"
-                style={{ background: i === active ? 'currentColor' : proj.accent, opacity: i === active ? 0.7 : 1 }}
-              />
-              <span className="hidden sm:inline">{proj.nom}</span>
-              <span className="sm:hidden text-xs">{proj.type.split('—')[0].trim()}</span>
-            </button>
+              <div className="su-salle__supports">
+                <Ecran projet={projet} actif={i === courant} />
+                <Telephone projet={projet} />
+              </div>
+
+              <div className="su-salle__fiche">
+                <div className="su-salle__identite">
+                  <p className="su-salle__rang" aria-hidden="true">
+                    {String(i + 1).padStart(2, '0')}
+                    <span>/{String(PROJETS.length).padStart(2, '0')}</span>
+                  </p>
+                  <h3 className="su-salle__nom">{projet.nom}</h3>
+                  <p className="su-salle__type">{projet.type}</p>
+                  <p className="su-salle__note">{projet.note}</p>
+                  <ul className="su-salle__tags">
+                    {projet.tags.map((t) => (
+                      <li key={t}>{t}</li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="su-salle__actions">
+                  <a
+                    href={projet.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="su-salle__visiter"
+                    style={{
+                      background: projet.accent,
+                      color: texteLisibleSur(projet.accent),
+                    }}
+                  >
+                    <ExternalLink size={15} aria-hidden="true" />
+                    Visiter la démo
+                    <span className="sr-only"> {projet.nom} (nouvel onglet)</span>
+                  </a>
+                  <Link href={`/realisations/${projet.slug}`} className="su-salle__fiche-lien">
+                    Fiche projet
+                  </Link>
+                </div>
+              </div>
+            </article>
           ))}
         </div>
 
-        {/* Écrans dual */}
-        <div className="flex items-end gap-6 lg:gap-8">
-          <DesktopFrame project={p} transitioning={transitioning} />
-          <PhoneFrame project={p} transitioning={transitioning} />
-        </div>
-
-        {/* Info projet */}
-        <div className="mt-8 flex items-start justify-between flex-wrap gap-4">
-          <div>
-            <h3 className="font-bold text-navy text-lg mb-0.5">{p.nom}</h3>
-            <p className="text-[#64748B] text-sm mb-2">{p.type}</p>
-            <div className="flex flex-wrap gap-1.5">
-              {p.tags.map(t => (
-                <span key={t} className="text-[11px] px-2.5 py-1 rounded-full font-medium border"
-                  style={{ borderColor: p.accent + '40', color: p.accent, background: p.accent + '10' }}>
-                  {t}
-                </span>
-              ))}
-            </div>
-          </div>
-          <div className="flex gap-3">
-            <a href={p.url} target="_blank" rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-sm font-semibold px-5 py-2.5 rounded-xl transition-all hover:-translate-y-0.5 shadow-md"
-              style={{ background: p.accent, color: texteLisibleSur(p.accent) }}>
-              <ExternalLink size={14} /> Visiter la démo complète →
-            </a>
-            <Link href={`/realisations/${p.slug}`}
-              className="inline-flex items-center gap-2 text-sm font-semibold px-5 py-2.5 rounded-xl border border-gray-200 text-navy hover:border-navy/30 hover:bg-gray-50 transition-all hover:-translate-y-0.5">
-              Fiche projet
-            </Link>
-          </div>
-        </div>
+        {/* Le rail : repère de position ET navigation. Il ne pilote pas un
+            état séparé — il déplace la page, donc tout reste cohérent. */}
+        <nav className="su-salle__rail" aria-label="Choisir une réalisation">
+          {PROJETS.map((projet, i) => (
+            <button
+              key={projet.slug}
+              type="button"
+              className="su-salle__jalon"
+              aria-current={i === courant ? 'true' : undefined}
+              style={{ '--accent': projet.accent } as React.CSSProperties}
+              onClick={() =>
+                window.scrollTo({
+                  top: positionDe(i),
+                  behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches
+                    ? 'instant'
+                    : 'smooth',
+                })
+              }
+            >
+              <span className="su-salle__jalon-trait" aria-hidden="true" />
+              <span className="su-salle__jalon-nom">{projet.nom}</span>
+            </button>
+          ))}
+        </nav>
       </div>
     </section>
   )

@@ -77,16 +77,31 @@ export default function Navbar() {
   // L'opacité doit appartenir à l'échelle Tailwind (…, 90, 95, 100) : un
   // `bg-[#FFFDF9]/90` ne génère aucune règle, et la barre se retrouve alors
   // sans fond du tout — c'est exactement ce qui s'était produit ici.
-  const navBg = scrolled || !isHome
-    ? 'bg-[#FFFDF9]/95 backdrop-blur-md shadow-sm border-b border-[#1E3A5F]/10'
-    : 'bg-[#FFFDF9]/95 backdrop-blur-md'
+  // Sur l'accueil la barre suit la traversée jour ↔ nuit. Elle ne le fait pas
+  // en JavaScript : `.su-nav-ambiance` rebranche fond, libellés et bordure sur
+  // les mêmes variables que le reste de la page, si bien qu'elle bascule au
+  // même instant que le corps — aucune désynchronisation possible.
+  const navBg = isHome
+    ? 'su-nav-ambiance backdrop-blur-md'
+    : scrolled
+      ? 'bg-[#FFFDF9]/95 backdrop-blur-md shadow-sm border-b border-[#1E3A5F]/10'
+      : 'bg-[#FFFDF9]/95 backdrop-blur-md'
 
   const linkClass = 'text-navy hover:text-[#B45309]'
 
-  const logoTextClass = 'text-navy'
-  const logoSubClass  = 'text-[#475569]'
-  const barColor      = 'bg-navy'
+  // Le libellé du logo est un <span> : il porte sa propre classe de couleur,
+  // qui l'emporte sur celle héritée du <a>. Il lui faut donc sa propre classe
+  // d'ambiance, sans quoi il reste navy sur l'encre — mesuré à 1,63:1.
+  const logoTextClass = isHome ? 'su-nav-libelle' : 'text-navy'
+  const logoSubClass  = isHome ? 'su-nav-doux' : 'text-[#475569]'
+  // Le hamburger vit HORS du <nav> : il porte sa propre classe d'ambiance.
+  const barColor      = isHome ? 'su-nav-barre' : 'bg-navy'
 
+  // Un panneau fermé est à `opacity: 0` mais reste dans le document : sans
+  // `inert`, on tabule dedans à l'aveugle, et axe-core y mesure un contraste
+  // contre le fond de la page — six violations qui masquaient les vraies.
+  // `inert` règle les deux d'un coup, et pour la bonne raison : le panneau
+  // fermé n'est pas une partie perceptible de la page.
   const dropdownCls = (isOpen: boolean) =>
     `absolute top-full left-1/2 -translate-x-1/2 mt-2 rounded-2xl bg-white shadow-lift border border-gray-100 py-2 transition-all duration-200 dropdown-stagger ${isOpen ? 'opacity-100 pointer-events-auto translate-y-0 open' : 'opacity-0 pointer-events-none -translate-y-2'}`
 
@@ -129,7 +144,12 @@ export default function Navbar() {
                   Services
                   <ChevronDown size={13} className={`transition-transform ${servicesOpen ? 'rotate-180' : ''}`} />
                 </button>
-                <div className={`${dropdownCls(servicesOpen)} w-52`} role="menu">
+                <div
+                  className={`${dropdownCls(servicesOpen)} w-52`}
+                  role="menu"
+                  aria-hidden={!servicesOpen}
+                  {...(!servicesOpen ? { inert: '' as unknown as boolean } : {})}
+                >
                   {SERVICES_LINKS.map(l => (
                     <Link key={l.href} href={l.href} role="menuitem" onClick={() => setServicesOpen(false)}
                       className="dropdown-item flex items-center gap-2 px-4 py-2.5 text-sm text-gray-700 hover:bg-amber-50 hover:text-navy transition-colors rounded-lg mx-1">
@@ -160,7 +180,12 @@ export default function Navbar() {
                   Outils
                   <ChevronDown size={13} className={`transition-transform ${outilsOpen ? 'rotate-180' : ''}`} />
                 </button>
-                <div className={`${dropdownCls(outilsOpen)} w-56`} role="menu">
+                <div
+                  className={`${dropdownCls(outilsOpen)} w-56`}
+                  role="menu"
+                  aria-hidden={!outilsOpen}
+                  {...(!outilsOpen ? { inert: '' as unknown as boolean } : {})}
+                >
                   {OUTILS_LINKS.map(l => (
                     <Link key={l.href} href={l.href} role="menuitem" onClick={() => setOutilsOpen(false)}
                       className="dropdown-item flex items-center gap-2 px-4 py-2.5 text-sm text-gray-700 hover:bg-amber-50 hover:text-navy transition-colors rounded-lg mx-1">
@@ -182,7 +207,7 @@ export default function Navbar() {
             {/* Desktop CTA */}
             <div className="hidden lg:flex items-center gap-3 shrink-0">
               <PaletteBouton />
-              <Link href="/devis" className="px-4 py-2.5 bg-gold hover:bg-gold/80 text-ink text-sm font-semibold rounded-xl shadow-lg shadow-amber-500/30 transition-all hover:-translate-y-0.5 whitespace-nowrap">
+              <Link href="/devis" className="su-nav-action px-4 py-2.5 bg-gold hover:bg-gold/80 text-ink text-sm font-semibold rounded-xl shadow-lg shadow-amber-500/30 transition-all hover:-translate-y-0.5 whitespace-nowrap">
                 Devis gratuit →
               </Link>
             </div>
@@ -195,7 +220,9 @@ export default function Navbar() {
 
       {/* Hamburger */}
       <button onClick={() => setOpen(!open)} type="button" aria-label={open ? 'Fermer le menu' : 'Ouvrir le menu'} aria-expanded={open}
-        className="fixed top-3 right-4 z-[100] lg:hidden w-11 h-11 flex flex-col justify-center items-center gap-[5px]">
+        className={`fixed top-3 right-4 z-[100] lg:hidden w-11 h-11 flex flex-col justify-center items-center gap-[5px] ${
+          isHome ? 'su-nav-plaque' : ''
+        }`}>
         <span className={`block w-6 h-0.5 transition-all duration-300 ${barColor} ${open ? 'rotate-45 translate-y-[7px]' : ''}`} />
         <span className={`block w-6 h-0.5 transition-all duration-300 ${barColor} ${open ? 'opacity-0' : ''}`} />
         <span className={`block w-6 h-0.5 transition-all duration-300 ${barColor} ${open ? '-rotate-45 -translate-y-[7px]' : ''}`} />
@@ -276,7 +303,7 @@ export default function Navbar() {
 
           <div className="mt-auto pt-8">
             <Link href="/devis" onClick={() => setOpen(false)}
-              className="mobile-menu-cta flex items-center justify-center py-4 bg-gradient-to-r from-gold to-amber-400 text-ink text-base font-bold rounded-2xl min-h-[56px] shadow-lg shadow-gold/20 hover:opacity-90 transition-opacity">
+              className="su-nav-action mobile-menu-cta flex items-center justify-center py-4 bg-gradient-to-r from-gold to-amber-400 text-ink text-base font-bold rounded-2xl min-h-[56px] shadow-lg shadow-gold/20 hover:opacity-90 transition-opacity">
               Devis gratuit →
             </Link>
             <p className="text-center text-[#64748B] text-xs mt-4">Réponse sous 72h · Sans engagement</p>

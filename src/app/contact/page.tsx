@@ -52,7 +52,7 @@ export default function ContactPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(contactPageSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
-      <MiniHero
+      <MiniHero signature="signal"
         title="Parlons de votre projet"
         subtitle="Décrivez votre projet et nous vous répondons sous 72h avec un devis personnalisé. Premier rendez-vous sans engagement."
         breadcrumb={[{ name: 'Contact' }]}

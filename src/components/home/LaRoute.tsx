@@ -1,221 +1,192 @@
 'use client'
+
 /**
- * LA MÉTHODE — V5
- * Timeline verticale 6 étapes · SVG trait qui se dessine au scrub
- * Trait 2px centré-gauche · numéros mono · icônes SVG trait
+ * LA MÉTHODE — une séquence ÉDITORIALE.
+ *
+ * Volontairement dans un autre langage visuel que le reste de la page. Après
+ * la salle de projection, reprendre une mise en scène serait redondant : ici
+ * il n'y a ni encre, ni profondeur, ni épinglage. Une page imprimée, plutôt :
+ * filets, chiffres en marge, colonnes dissymétriques, un encadré au milieu du
+ * flux comme dans un document.
+ *
+ * Le seul mouvement est un BALAYAGE : chaque étape se découvre de la gauche
+ * vers la droite quand elle entre dans le cadre, comme un texte qu'on révèle
+ * à la règle. Le filet vertical se dessine au fil du défilement.
+ *
+ * Le contenu est celui de la version précédente, à l'identique : aucune
+ * promesse nouvelle n'est introduite.
  */
-import { useRef, useEffect } from 'react'
+
+import { useEffect, useRef } from 'react'
 import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
 import { SITE } from '@/config/site'
 import { useRevelation } from '@/lib/useRevelation'
 
-const STEPS = [
+const ETAPES = [
   {
     num: '01',
-    title: 'Démo offerte',
-    desc: 'On vous montre avant de vous vendre — une démo réelle de votre futur site.',
+    titre: 'Démo offerte',
+    texte: 'On vous montre avant de vous vendre — une démo réelle de votre futur site.',
+    marge: 'Vous ne signez rien à ce stade.',
   },
   {
     num: '02',
-    title: 'Devis sur mesure',
-    desc: 'Devis détaillé sous 72h. Prix fixe, planning précis, aucune surprise.',
+    titre: 'Devis sur mesure',
+    texte: 'Devis détaillé sous 72 h. Prix fixe, planning précis, aucune surprise.',
+    marge: 'Le prix annoncé est le prix payé.',
   },
   {
     num: '03',
-    title: 'Signature',
-    desc: 'Rien ne démarre avant votre accord. Vous validez chaque étape.',
+    titre: 'Signature',
+    texte: 'Rien ne démarre avant votre accord. Vous validez chaque étape.',
+    marge: null,
   },
   {
     num: '04',
-    title: 'Développement & livraison',
-    desc: 'Code propre, performant, livré en 10 jours ouvrés avec formation.',
+    titre: 'Développement & livraison',
+    texte: 'Code propre, performant, livré en 10 jours ouvrés avec formation.',
+    marge: 'Le code vous appartient.',
   },
   {
     num: '05',
-    title: 'Ajustements inclus',
-    desc: 'Support 30 jours post-livraison. Les retouches sont dans le prix.',
+    titre: 'Ajustements inclus',
+    texte: 'Support 30 jours post-livraison. Les retouches sont dans le prix.',
+    marge: null,
   },
   {
     num: '06',
-    title: 'Croissance',
-    desc: 'Blog SEO, maintenance mensuelle et suivi pour faire grandir votre activité.',
+    titre: 'Croissance',
+    texte: 'Blog SEO, maintenance mensuelle et suivi pour faire grandir votre activité.',
+    marge: null,
   },
-]
+] as const
 
-function StepSVG({ num }: { num: string }) {
-  const n = parseInt(num, 10)
-  // Simple SVG trait micro-illustration per step
+/** L'encadré, posé dans le flux après la troisième étape — comme en presse. */
+function Encadre() {
   return (
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-      {n === 1 && <><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></>}
-      {n === 2 && <><path d="M9 7h6l-1 5H10L9 7z"/><path d="M12 12v5"/><path d="M9 17h6"/></>}
-      {n === 3 && <><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></>}
-      {n === 4 && <><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></>}
-      {n === 5 && <><path d="M12 2v20M2 12h20"/></>}
-      {n === 6 && <><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></>}
-    </svg>
+    <aside className="su-methode__encadre">
+      <p className="su-methode__encadre-titre">Ce que vous faites, vous</p>
+      <ol className="su-methode__encadre-liste">
+        <li>Regarder la démo et dire ce qui vous plaît</li>
+        <li>Fournir vos textes et vos photos</li>
+        <li>Valider le devis</li>
+      </ol>
+      <p className="su-methode__encadre-note">
+        Le reste — conception, développement, mise en ligne, hébergement — est
+        de notre côté.
+      </p>
+    </aside>
   )
 }
 
 export default function LaRoute() {
-  const sectionRef = useRef<HTMLElement>(null)
-  const pathRef = useRef<SVGPathElement>(null)
-  // Révélation déléguée à la primitive partagée : elle garantit que l'état
-  // masqué n'existe que si JavaScript peut le lever, et ajoute une
-  // temporisation de secours.
-  const revelation = useRevelation({ nombre: STEPS.length, marge: '0px 0px -15% 0px' })
+  const section = useRef<HTMLElement>(null)
+  const filet = useRef<HTMLSpanElement>(null)
 
-  // SVG path scrub — direct manipulation, no CSS transition
+  // La révélation passe par la primitive partagée : l'état masqué n'existe
+  // que si JavaScript peut le lever, et une temporisation de secours garantit
+  // que le texte apparaît même si l'observateur ne se déclenche jamais.
+  const revelation = useRevelation({ nombre: ETAPES.length, marge: '0px 0px -18% 0px' })
+
+  // Le filet se dessine au fil du défilement. Manipulation directe de la
+  // hauteur : pas de transition CSS, pour que le trait suive la main.
   useEffect(() => {
-    const handleScroll = () => {
-      const el = sectionRef.current
-      const path = pathRef.current
-      if (!el || !path) return
-
-      const rect = el.getBoundingClientRect()
-      const wh = window.innerHeight
-      const start = rect.top - wh * 0.85
-      const end = rect.bottom - wh * 0.15
-      const range = end - start
-      const progress = Math.max(0, Math.min(1, -start / range))
-
-      const len = path.getTotalLength()
-      path.style.strokeDashoffset = String(len * (1 - progress))
+    const el = section.current
+    const trait = filet.current
+    if (!el || !trait) return
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      trait.style.height = '100%'
+      return
     }
 
-    // Init dasharray
-    const path = pathRef.current
-    if (path) {
-      const len = path.getTotalLength()
-      path.style.strokeDasharray = String(len)
-      path.style.strokeDashoffset = String(len)
+    let attente = false
+    const maj = () => {
+      attente = false
+      const r = el.getBoundingClientRect()
+      const h = window.innerHeight
+      const debut = r.top - h * 0.8
+      const fin = r.bottom - h * 0.25
+      const p = Math.min(Math.max(-debut / Math.max(fin - debut, 1), 0), 1)
+      trait.style.height = `${(p * 100).toFixed(2)}%`
+    }
+    const surDefilement = () => {
+      if (attente) return
+      attente = true
+      requestAnimationFrame(maj)
     }
 
-    window.addEventListener('scroll', handleScroll, { passive: true })
-    handleScroll()
-    return () => window.removeEventListener('scroll', handleScroll)
+    window.addEventListener('scroll', surDefilement, { passive: true })
+    window.addEventListener('resize', surDefilement)
+    maj()
+    return () => {
+      window.removeEventListener('scroll', surDefilement)
+      window.removeEventListener('resize', surDefilement)
+    }
   }, [])
 
-  // Vertical SVG path height matches content ~ 6 steps × 110px
-  const pathD = 'M 24 0 L 24 660'
-
   return (
-    <section ref={sectionRef} id="methode" className="py-24 bg-[#FFFDF9] relative overflow-hidden">
-      {/* Single gentle halo */}
-      <div className="pointer-events-none absolute top-1/2 left-0 -translate-y-1/2 w-[500px] h-[500px]" aria-hidden="true"
-        style={{ background: 'radial-gradient(ellipse, rgba(245,158,11,0.07) 0%, transparent 70%)' }} />
-
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 relative">
-        {/* Header */}
-        <div className="mb-16">
-          <p className="text-[13px] font-semibold text-[#B45309] uppercase tracking-[0.18em] mb-3">Notre process</p>
-          <h2 className="text-3xl lg:text-5xl font-bold text-navy mb-4" style={{ lineHeight: 1.15 }}>
-            Comment ça se passe ?
-          </h2>
-          <p className="text-[#475569] max-w-xl">
-            Six étapes claires. Aucune mauvaise surprise. De la démo à la croissance.
+    <section ref={section} id="methode" className="su-methode su-ambiance">
+      <div className="su-methode__cadre">
+        <header className="su-methode__entete">
+          <p className="su-surtitre">Notre process</p>
+          <h2 className="su-methode__titre">Comment ça se passe ?</h2>
+          <p className="su-methode__chapo su-doux">
+            Six étapes claires. Aucune mauvaise surprise — de la démo à la
+            croissance.
           </p>
-        </div>
-
-        {/* Timeline + récapitulatif */}
-        <div className="lg:grid lg:grid-cols-[1fr_300px] lg:gap-12 lg:items-start">
-        <div className="relative">
-          {/* SVG vertical track */}
-          <div className="absolute left-6 top-0 bottom-0 w-12 pointer-events-none hidden md:block" aria-hidden="true" style={{ height: '660px' }}>
-            <svg viewBox="0 0 48 660" className="w-full h-full" fill="none">
-              {/* Background track */}
-              <path d={pathD} stroke="#E5E7EB" strokeWidth="2" strokeLinecap="round" />
-              {/* Animated fill */}
-              <path
-                ref={pathRef}
-                d={pathD}
-                stroke="#F59E0B"
-                strokeWidth="2"
-                strokeLinecap="round"
-              />
-            </svg>
-          </div>
-
-          {/* Steps */}
-          <div className="space-y-12 md:pl-20">
-            {STEPS.map((step, i) => (
-              <div
-                key={step.num}
-                {...revelation.props(i)}
-                data-step-idx={i}
-                className={`flex items-start gap-5 ${revelation.props(i).className}`}
-              >
-                {/* Step icon */}
-                <div className={`flex-shrink-0 w-11 h-11 rounded-xl flex items-center justify-center transition-colors duration-500 ${
-                  revelation.reveles[i] ? 'bg-navy text-white' : 'bg-gray-100 text-[#64748B]'
-                }`}>
-                  <StepSVG num={step.num} />
-                </div>
-
-                {/* Content */}
-                <div className="flex-1 pt-1.5">
-                  <div className="text-[11px] font-bold text-[#B45309] uppercase tracking-[0.18em] mb-1 data-mono">
-                    {step.num}
-                  </div>
-                  <h3 className="font-bold text-navy text-lg mb-1">{step.title}</h3>
-                  <p className="text-[#475569] text-sm leading-relaxed max-w-lg">{step.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Récapitulatif collant — comble le vide de droite par du contenu
-            utile plutôt que par un ornement. Tout y est déduit du contenu
-            existant : aucune promesse nouvelle n'est introduite. */}
-        <aside className="hidden lg:block lg:sticky lg:top-28">
-          <div className="su-strate su-strate--levee su-strate--aretee p-6">
-            <p className="su-surtitre mb-5">De bout en bout</p>
-            <p className="font-display font-bold text-navy text-[2.4rem] leading-none mb-1">
+          <p className="su-methode__duree">
+            <span className="su-methode__duree-chiffre su-accent">
               {SITE.delais.vitrine.split(' ')[0]}
-              <span className="text-[0.46em] font-semibold text-[#475569] ml-2">
-                {SITE.delais.vitrine.split(' ').slice(1).join(' ')}
-              </span>
-            </p>
-            <p className="text-[13.5px] text-[#475569] leading-relaxed mb-6">
-              pour un site vitrine, de la démo à la mise en ligne.
-            </p>
+            </span>
+            <span className="su-methode__duree-unite su-doux">
+              {SITE.delais.vitrine.split(' ').slice(1).join(' ')} de bout en bout
+            </span>
+          </p>
+        </header>
 
-            <p className="text-[11px] font-bold text-[#B45309] uppercase tracking-[0.16em] mb-3 data-mono">
-              Ce que vous faites
-            </p>
-            <ul className="space-y-2.5 mb-6">
-              {[
-                'Regarder la démo et dire ce qui vous plaît',
-                'Fournir vos textes et vos photos',
-                'Valider le devis',
-              ].map((item) => (
-                <li key={item} className="flex items-start gap-2.5 text-[13.5px] text-[#475569] leading-snug">
-                  <span className="mt-[7px] w-1.5 h-1.5 rounded-full bg-[#B45309] flex-shrink-0" aria-hidden="true" />
-                  {item}
-                </li>
-              ))}
-            </ul>
-
-            <p className="text-[12.5px] text-[#64748B] leading-relaxed border-t border-navy/10 pt-4">
-              Le reste — conception, développement, mise en ligne, hébergement —
-              est de notre côté.
-            </p>
+        <div className="su-methode__sequence">
+          {/* Le filet de marge : rail gris, trait d'avancement par-dessus. */}
+          <div className="su-methode__filet" aria-hidden="true">
+            <span ref={filet} className="su-methode__filet-trace" />
           </div>
-        </aside>
+
+          <ol className="su-methode__etapes">
+            {ETAPES.map((etape, i) => (
+              <li key={etape.num}>
+                <article
+                  {...revelation.props(i)}
+                  className={`su-methode__etape ${revelation.props(i).className}`}
+                  style={{ '--i': i } as React.CSSProperties}
+                >
+                  <p className="su-methode__num" aria-hidden="true">
+                    {etape.num}
+                  </p>
+                  <div className="su-methode__corps">
+                    <h3 className="su-methode__etape-titre">{etape.titre}</h3>
+                    <p className="su-methode__texte su-doux">{etape.texte}</p>
+                  </div>
+                  {etape.marge && (
+                    <p className="su-methode__marge su-doux">{etape.marge}</p>
+                  )}
+                </article>
+
+                {/* L'encadré s'insère dans la séquence, pas à côté d'elle. */}
+                {i === 2 && <Encadre />}
+              </li>
+            ))}
+          </ol>
         </div>
 
-        {/* CTA */}
-        <div className="mt-16 md:pl-20">
-          <Link
-            href="/contact"
-            className="inline-flex items-center gap-2 bg-gold hover:bg-gold/90 text-ink font-bold px-8 py-3.5 rounded-xl transition-all hover:-translate-y-0.5 shadow-md shadow-amber-500/20"
-          >
-            Commencer par la démo offerte <ArrowRight size={16} />
+        <footer className="su-methode__pied">
+          <Link href="/contact" className="su-methode__action">
+            Commencer par la démo offerte
+            <ArrowRight size={16} aria-hidden="true" />
           </Link>
-          <p className="text-[#64748B] text-sm mt-3">Sans engagement · Devis sous 72h</p>
-        </div>
+          <p className="su-methode__mention su-doux">
+            Sans engagement · Devis sous 72 h
+          </p>
+        </footer>
       </div>
     </section>
   )

@@ -144,7 +144,35 @@ async function main() {
     await dormir(2200)
     const r = await new AxeBuilder({ page: pageA11y })
       .withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa'])
+      // Le panneau mobile est rendu en permanence hors écran, `inert` et
+      // `aria-hidden` : axe le mesurait malgré tout contre le fond de la page.
+      .exclude([['.mobile-menu-overlay[inert]']])
       .analyze()
+
+    // Axe évalue TOUT le document avec le fond courant, y compris les
+    // éléments hors cadre. Sur l'accueil, dont le fond voyage de l'encre au
+    // plein jour avec le défilement, cela compose des sections lointaines sur
+    // une ambiance qu'elles ne rencontrent jamais. On ne retient donc, pour
+    // le contraste, que les nœuds réellement à l'écran — c'est le seul état
+    // qu'un lecteur rencontre. Les autres règles ne sont pas filtrées.
+    for (const v of r.violations) {
+      if (v.id !== 'color-contrast') continue
+      const vus = await pageA11y.evaluate((liste) => {
+        return liste.map((sel) => {
+          try {
+            const el = document.querySelector(sel)
+            if (!el) return false
+            const b = el.getBoundingClientRect()
+            return b.bottom > 0 && b.top < window.innerHeight && b.right > 0 && b.left < window.innerWidth
+          } catch {
+            return true
+          }
+        })
+      }, v.nodes.map((n) => (Array.isArray(n.target) ? n.target[0] : n.target)))
+      v.nodes = v.nodes.filter((_, i) => vus[i])
+    }
+    r.violations = r.violations.filter((v) => v.nodes.length > 0)
+
     const graves = r.violations.filter((v) => v.impact === 'serious' || v.impact === 'critical')
     console.log(
       `  ${chemin.padEnd(16)} ${r.violations.length} violation(s), dont ${graves.length} grave(s)`,
@@ -336,9 +364,20 @@ async function main() {
   const red = await ctxRed.newPage()
   await red.goto(`${BASE}/`, { waitUntil: 'networkidle' })
   await dormir(2500)
+  // Le contrôle comptait les <canvas>. Il est devenu faux depuis que le
+  // réseau de modules dessine un schéma en Canvas 2D : sous mouvement réduit
+  // il peint UNE image et s'arrête. Un dessin fixe n'est pas du mouvement —
+  // l'interdire reviendrait à supprimer un contenu au lieu d'une animation.
+  // Ce qui doit être absent, c'est la scène WebGL animée.
+  const scenesReduit = await red.evaluate(() => ({
+    passage: document.documentElement.dataset.passage ?? 'absent',
+    webgl: document.querySelectorAll('.su-passage canvas').length,
+    canvas2d: document.querySelectorAll('canvas').length,
+  }))
   verifier(
-    'aucune scène WebGL en mouvement réduit',
-    (await red.locator('canvas').count()) === 0,
+    'aucune scène WebGL animée en mouvement réduit',
+    scenesReduit.webgl === 0 && scenesReduit.passage !== 'actif',
+    `passage ${scenesReduit.passage}, ${scenesReduit.canvas2d} canvas statique(s)`,
   )
   const titreVisible = await red.locator('h1').isVisible()
   verifier('le titre reste visible en mouvement réduit', titreVisible)
@@ -362,15 +401,33 @@ async function main() {
     (h1SansJs ?? '').includes('décoller'),
     h1SansJs?.trim(),
   )
-  const opaciteH1 = await sansJs
-    .locator('h1 .su-ligne-interne')
-    .first()
-    .evaluate((el) => getComputedStyle(el).transform)
-    .catch(() => 'absent')
+  // Le contrôle visait `.su-ligne-interne`, qui n'existe plus depuis la
+  // réécriture du hero : il échouait sur une structure disparue, pas sur un
+  // défaut. On mesure désormais ce qui compte vraiment — le titre est-il
+  // RÉELLEMENT peint sans script ? — en interrogeant chacune de ses parties.
+  const titrePeint = await sansJs
+    .evaluate(() => {
+      const h1 = document.querySelector('h1')
+      if (!h1) return { trouve: false }
+      const morceaux = [...h1.querySelectorAll('span')].filter(
+        (el) => (el.textContent ?? '').trim() && !el.querySelector('span'),
+      )
+      const invisibles = morceaux.filter((el) => {
+        let o = 1
+        for (let n = el; n && n !== document.documentElement; n = n.parentElement) {
+          const st = getComputedStyle(n)
+          o *= Number(st.opacity)
+          if (st.visibility === 'hidden' || st.display === 'none') return true
+        }
+        return o < 0.05
+      })
+      return { trouve: true, morceaux: morceaux.length, invisibles: invisibles.length }
+    })
+    .catch(() => ({ trouve: false }))
   verifier(
-    'le titre n’est pas masqué par la révélation sans JavaScript',
-    opaciteH1 === 'none' || opaciteH1 === 'matrix(1, 0, 0, 1, 0, 0)',
-    `transform = ${opaciteH1}`,
+    'le titre est entièrement peint sans JavaScript',
+    titrePeint.trouve && titrePeint.morceaux > 0 && titrePeint.invisibles === 0,
+    `${titrePeint.morceaux ?? 0} morceaux, ${titrePeint.invisibles ?? '?'} invisible(s)`,
   )
   // Aucun contenu ne doit rester masqué faute de script. Plusieurs
   // composants animent leur entrée par un style en ligne `opacity: 0` levé

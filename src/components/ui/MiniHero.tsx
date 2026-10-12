@@ -5,39 +5,159 @@ interface BreadcrumbItem {
   href?: string
 }
 
+/**
+ * Les signatures d'ouverture.
+ *
+ * Chacune est un MÉCANISME différent, pas une variante de couleur :
+ *
+ *   trace        un schéma qui se dessine, trait par trait (SVG, stroke-dashoffset)
+ *   masque       le titre découpé dans une trame en mouvement (background-clip)
+ *   echelle      un axe gradué qui se construit de gauche à droite
+ *   chronologie  des crans qui se remplissent le long d'une ligne de temps
+ *   signal       des ondes concentriques émises depuis un point
+ *   sobre        aucun ornement — pour les pages où il n'aurait rien à dire
+ *
+ * Toutes sont décoratives : aucune ne porte d'information, toutes sont en
+ * `aria-hidden`, et le titre reste peint sans elles.
+ */
+export type Signature =
+  | 'trace'
+  | 'masque'
+  | 'echelle'
+  | 'chronologie'
+  | 'signal'
+  | 'sobre'
+
 interface Props {
   title: string
   subtitle?: string
   breadcrumb?: BreadcrumbItem[]
   children?: React.ReactNode
-  marker?: string  // e.g. "[ 01 / SERVICES ]"
+  marker?: string
+  /** Mécanique d'ouverture. Par défaut : `sobre`. */
+  signature?: Signature
 }
 
-/**
- * V4 — MiniHero clair lumineux.
- * Fond ivoire chaud, halo or subtil, texte navy.
- * Utilisé sur 100+ pages intérieures.
- */
-export default function MiniHero({ title, subtitle, breadcrumb, children, marker }: Props) {
+/* ── Les ornements ──────────────────────────────────────────────────────── */
+
+/** Un schéma de site qui se câble : blocs reliés par des traits qui se tracent. */
+function Trace() {
   return (
-    <div className="relative bg-[#FFFDF9] pt-24 pb-14 overflow-hidden">
-      {/* Halo or doux en haut à droite */}
-      <div className="pointer-events-none absolute top-0 right-0 w-[500px] h-64 rounded-full" aria-hidden="true"
-        style={{ background: 'radial-gradient(ellipse at 80% 0%, rgba(245,158,11,0.08) 0%, transparent 70%)' }} />
-      {/* Halo bleu doux à gauche */}
-      <div className="pointer-events-none absolute bottom-0 left-0 w-72 h-48 rounded-full" aria-hidden="true"
-        style={{ background: 'radial-gradient(ellipse, rgba(45,125,210,0.05) 0%, transparent 70%)' }} />
+    <svg className="su-sig__trace" viewBox="0 0 420 190" fill="none" aria-hidden="true">
+      <g className="su-sig__trace-blocs">
+        <rect x="12" y="20" width="96" height="26" rx="4" />
+        <rect x="12" y="68" width="96" height="58" rx="4" />
+        <rect x="156" y="36" width="108" height="42" rx="4" />
+        <rect x="156" y="104" width="108" height="42" rx="4" />
+        <rect x="312" y="62" width="92" height="62" rx="4" />
+      </g>
+      <g className="su-sig__trace-liens">
+        <path d="M108 33 H132 V57 H156" />
+        <path d="M108 97 H132 V125 H156" />
+        <path d="M264 57 H288 V93 H312" />
+        <path d="M264 125 H288 V93" />
+      </g>
+      <g className="su-sig__trace-points">
+        <circle cx="132" cy="33" r="3" />
+        <circle cx="132" cy="125" r="3" />
+        <circle cx="288" cy="93" r="3.5" />
+      </g>
+    </svg>
+  )
+}
 
-      {/* Bordure basse subtile */}
-      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/20 to-transparent" aria-hidden="true" />
+/** Un axe gradué qui se construit : l'échelle des offres. */
+function Echelle() {
+  return (
+    <div className="su-sig__echelle" aria-hidden="true">
+      <span className="su-sig__echelle-axe" />
+      {Array.from({ length: 24 }, (_, i) => (
+        <span
+          key={i}
+          className="su-sig__echelle-cran"
+          style={{ '--i': i, '--n': 24 } as React.CSSProperties}
+        />
+      ))}
+    </div>
+  )
+}
 
-      <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6">
+/** Une ligne de temps dont les crans se remplissent. */
+function Chronologie() {
+  return (
+    <div className="su-sig__chrono" aria-hidden="true">
+      <span className="su-sig__chrono-ligne" />
+      {Array.from({ length: 5 }, (_, i) => (
+        <span
+          key={i}
+          className="su-sig__chrono-cran"
+          style={{ '--i': i } as React.CSSProperties}
+        />
+      ))}
+    </div>
+  )
+}
+
+/** Des ondes concentriques, émises depuis un point. */
+function Signal() {
+  return (
+    <div className="su-sig__signal" aria-hidden="true">
+      {Array.from({ length: 4 }, (_, i) => (
+        <span key={i} style={{ '--i': i } as React.CSSProperties} />
+      ))}
+    </div>
+  )
+}
+
+const ORNEMENTS: Partial<Record<Signature, () => JSX.Element>> = {
+  trace: Trace,
+  echelle: Echelle,
+  chronologie: Chronologie,
+  signal: Signal,
+}
+
+/* ── L'en-tête ──────────────────────────────────────────────────────────── */
+
+export default function MiniHero({
+  title,
+  subtitle,
+  breadcrumb,
+  children,
+  marker,
+  signature = 'sobre',
+}: Props) {
+  const Ornement = ORNEMENTS[signature]
+
+  return (
+    <div className="su-sig" data-signature={signature}>
+      {Ornement && (
+        <div className="su-sig__ornement" aria-hidden="true">
+          <Ornement />
+        </div>
+      )}
+
+      <div className="su-sig__contenu">
         {breadcrumb && <Breadcrumb items={breadcrumb} />}
-        {marker && <div className="section-marker mb-2 mt-1" aria-hidden="true">{marker}</div>}
-        <h1 className="reveal-item font-display text-navy mt-2">{title}</h1>
-        {subtitle && (
-          <p className="reveal-item text-[#475569] text-lg max-w-2xl mt-3" style={{ animationDelay: '80ms' }}>{subtitle}</p>
+        {marker && (
+          <div className="section-marker mb-2 mt-1" aria-hidden="true">
+            {marker}
+          </div>
         )}
+
+        {/* Le titre est toujours peint. Les signatures n'agissent que sur sa
+            mise en scène, jamais sur sa présence : sans script, sans
+            animation et sous mouvement réduit, il est là, en entier. */}
+        <h1 className="su-sig__titre font-display">
+          {signature === 'masque' ? (
+            <span className="su-sig__titre-masque" data-texte={title}>
+              {title}
+            </span>
+          ) : (
+            title
+          )}
+        </h1>
+
+        {subtitle && <p className="su-sig__chapo">{subtitle}</p>}
         {children}
       </div>
     </div>
