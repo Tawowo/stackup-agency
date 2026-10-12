@@ -1,169 +1,131 @@
 'use client'
 
 /**
- * Banc de mesure du MONOLITHE — Phase 4.
+ * LE BANC DE LA BANDE.
  *
- * Cette page n'est pas une vitrine : elle existe pour produire des chiffres.
- * Elle affiche en direct le palier de qualité choisi par le moniteur, le temps
- * de trame moyen mesuré, et expose ces valeurs sur `window.__SU_LAB` pour
- * qu'un script Playwright les relève sans dépendre d'une lecture d'écran.
+ * Cette page n'est pas une vitrine et ne sera jamais livrée au visiteur :
+ * elle existe pour produire des CHIFFRES et des captures comparables. Le
+ * dossier (17.6 §4) interdit de fabriquer des prototypes isolés sans les
+ * intégrer — ce banc n'est pas un prototype, c'est l'instrument qui permet
+ * de prouver que l'intégration est correcte.
  *
- * Accessible via /lab — en `noindex`, hors sitemap.
+ * Elle sert à deux vérifications que rien d'autre ne peut faire :
+ *
+ *  1. LA SUPERPOSITION. À progression 0, ce que la scène affiche doit être
+ *     exactement la silhouette du logo. Le banc fige la progression à une
+ *     valeur donnée dans l'URL (`?p=0`) et cadre la bande seule sur un fond
+ *     uni, pour que `scripts/superposition.mjs` puisse comparer pixel à
+ *     pixel avec `public/Logo_Stackup-Agency.png`.
+ *
+ *  2. LA CADENCE. Le temps de trame moyen et le palier courant sont exposés
+ *     sur `window.__SU_LAB`, pour qu'un script les relève sans avoir à lire
+ *     une image.
+ *
+ * `noindex`, hors sitemap.
  */
 
 import { useEffect, useRef, useState } from 'react'
-import type { ControleMonolithe } from '@/lib/webgl/monolithe'
-import type { Palier } from '@/lib/webgl/quality'
-
-interface Releve {
-  palier: string
-  tempsTrame: number
-  fps: number
-  webgl: boolean
-  mouvementReduit: boolean
-  instances: number
-  ecoule: number
-}
-
-declare global {
-  interface Window {
-    __SU_LAB?: Releve
-  }
-}
+import { useBande } from '@/store/bande'
 
 export default function Lab() {
-  const hote = useRef<HTMLDivElement>(null)
-  const controle = useRef<ControleMonolithe | null>(null)
-  const [releve, setReleve] = useState<Releve | null>(null)
-  const [desassemblage, setDesassemblage] = useState(0)
-  const [diagnostic, setDiagnostic] = useState<string>('initialisation…')
+  const [releve, setReleve] = useState({ tempsTrame: 0, fps: 0, trames: 0 })
+  const setProgression = useBande((s) => s.setProgression)
+  const setEtat = useBande((s) => s.setEtat)
+  const setMouvement = useBande((s) => s.setMouvement)
+  const prete = useBande((s) => s.prete)
+  const repli = useBande((s) => s.repli)
+  const image = useRef(0)
 
+  // La progression vient de l'URL : le script de capture la fixe, la page
+  // n'anime rien. Une valeur figée est la seule façon de comparer deux
+  // captures prises à des moments différents.
   useEffect(() => {
-    const element = hote.current
-    if (!element) return
-    let annule = false
-    let intervalle: ReturnType<typeof setInterval> | undefined
-    const depart = performance.now()
+    const params = new URLSearchParams(window.location.search)
+    const p = Number(params.get('p') ?? '0')
+    const fige = params.get('fige') === '1'
+    // `nu=1` retire tout le chrome du site (navigation, pied de page,
+    // bandeau cookies). Sans ça, la capture de superposition inclut le logo
+    // de la barre et le bandeau sombre du bas : leur encre entre dans la
+    // boîte englobante et la mesure compare n'importe quoi. C'est l'erreur
+    // qu'a donnée la première exécution — 83 % d'écart, dont l'essentiel
+    // venait du chrome.
+    if (params.get('nu') === '1') document.documentElement.dataset.bancNu = 'oui'
+    setEtat('logo')
+    setProgression(Number.isFinite(p) ? Math.max(0, Math.min(1, p)) : 0)
+    // `fige=1` coupe tout mouvement : indispensable pour que la
+    // superposition ne tombe pas sur une image d'inclinaison au pointeur.
+    if (fige) setMouvement('aucun')
+  }, [setProgression, setEtat, setMouvement])
 
-    async function demarrer() {
-      const [{ creerMonolithe }, { webglDisponible, mouvementReduit, reglagesPour }] =
-        await Promise.all([
-          import('@/lib/webgl/monolithe'),
-          import('@/lib/webgl/quality'),
-        ])
-
-      const webgl = webglDisponible()
-      const reduit = mouvementReduit()
-
-      if (!webgl) {
-        setDiagnostic('WebGL indisponible — le repli CSS serait affiché en production.')
-        return
-      }
-      if (reduit) {
-        setDiagnostic('prefers-reduced-motion actif — la scène est volontairement désactivée.')
-        return
-      }
-
-      const instance = creerMonolithe(element!)
-      if (!instance) {
-        setDiagnostic('Création du contexte WebGL refusée par le navigateur.')
-        return
-      }
-      if (annule) {
-        instance.detruire()
-        return
-      }
-
-      controle.current = instance
-      setDiagnostic('scène active')
-
-      intervalle = setInterval(() => {
-        const dpr = window.devicePixelRatio || 1
-        const r = reglagesPour(instance.palier() as Palier, dpr)
-        const t = instance.tempsTrame()
-        const valeurs: Releve = {
-          palier: instance.palier(),
-          tempsTrame: Math.round(t * 100) / 100,
-          fps: Math.round(1000 / t),
-          webgl,
-          mouvementReduit: reduit,
-          instances: r.instances,
-          ecoule: Math.round(performance.now() - depart),
+  // Mesure de cadence sur une fenêtre glissante de 120 trames.
+  useEffect(() => {
+    let dernier = performance.now()
+    const fenetre: number[] = []
+    let total = 0
+    const boucle = () => {
+      image.current = requestAnimationFrame(boucle)
+      const maintenant = performance.now()
+      const dt = maintenant - dernier
+      dernier = maintenant
+      total++
+      fenetre.push(dt)
+      if (fenetre.length > 120) fenetre.shift()
+      if (total % 20 === 0) {
+        const moyenne = fenetre.reduce((a, v) => a + v, 0) / fenetre.length
+        const r = {
+          tempsTrame: Math.round(moyenne * 100) / 100,
+          fps: Math.round(1000 / moyenne),
+          trames: total,
         }
-        window.__SU_LAB = valeurs
-        setReleve(valeurs)
-      }, 500)
+        setReleve(r)
+        ;(window as unknown as { __SU_LAB?: unknown }).__SU_LAB = {
+          ...r,
+          prete: useBande.getState().prete,
+          repli: useBande.getState().repli,
+          progression: useBande.getState().progression,
+        }
+      }
     }
-
-    demarrer()
-
-    return () => {
-      annule = true
-      if (intervalle) clearInterval(intervalle)
-      controle.current?.detruire()
-      controle.current = null
-      delete window.__SU_LAB
-    }
+    image.current = requestAnimationFrame(boucle)
+    return () => cancelAnimationFrame(image.current)
   }, [])
 
-  useEffect(() => {
-    controle.current?.setDesassemblage(desassemblage)
-  }, [desassemblage])
-
   return (
-    <div className="min-h-screen bg-[#FFFDF9] p-6">
-      <h1 className="text-2xl font-bold text-[#1E3A5F] mb-1">Banc de mesure — LE MONOLITHE</h1>
-      <p className="text-sm text-[#64748B] mb-6">
-        Page technique interne, non indexée. Les relevés ci-dessous sont mesurés dans ce navigateur.
-      </p>
-
-      <div className="grid lg:grid-cols-[1fr_320px] gap-6">
-        <div
-          className="relative rounded-xl overflow-hidden border border-[#1E3A5F]/10"
-          style={{ height: 'min(70vh, 620px)', background: '#FFFDF9' }}
-        >
-          <div ref={hote} className="su-scene" />
-        </div>
-
-        <aside className="su-strate su-strate--levee p-5 text-sm self-start">
-          <p className="su-surtitre mb-4">Relevés</p>
-          <p className="mb-4 text-[#64748B]" data-diagnostic>{diagnostic}</p>
-
-          {releve ? (
-            <dl className="space-y-2 font-mono text-[13px]">
-              {([
-                ['palier', releve.palier],
-                ['instances', String(releve.instances)],
-                ['temps de trame', `${releve.tempsTrame.toFixed(2)} ms`],
-                ['cadence', `${releve.fps} fps`],
-                ['écoulé', `${(releve.ecoule / 1000).toFixed(1)} s`],
-              ] as const).map(([cle, valeur]) => (
-                <div key={cle} className="flex justify-between gap-4 border-b border-[#1E3A5F]/10 pb-1.5">
-                  <dt className="text-[#64748B]">{cle}</dt>
-                  <dd className="font-semibold text-[#1E3A5F]">{valeur}</dd>
-                </div>
-              ))}
-            </dl>
-          ) : (
-            <p className="text-[#64748B]">aucun relevé</p>
-          )}
-
-          <label className="block mt-6">
-            <span className="text-[#1E3A5F] font-semibold">
-              Désassemblage : {desassemblage.toFixed(2)}
-            </span>
-            <input
-              type="range"
-              min={0}
-              max={1}
-              step={0.01}
-              value={desassemblage}
-              onChange={(e) => setDesassemblage(Number(e.target.value))}
-              className="w-full mt-2 accent-[#F59E0B]"
-            />
-          </label>
-        </aside>
+    <main
+      style={{
+        minHeight: '100vh',
+        // Fond uni et neutre : la superposition compare des silhouettes, pas
+        // des arrière-plans. L'ivoire du site conviendrait moins bien — son
+        // grain très clair brouille le seuillage.
+        background: '#FFFFFF',
+        display: 'grid',
+        placeItems: 'center',
+        position: 'relative',
+      }}
+    >
+      <div
+        data-banc="releve"
+        style={{
+          position: 'fixed',
+          top: 8,
+          left: 8,
+          zIndex: 10,
+          fontFamily: 'ui-monospace, monospace',
+          fontSize: 11,
+          color: '#334155',
+          background: 'rgba(255,255,255,.9)',
+          padding: '6px 9px',
+          borderRadius: 4,
+          border: '1px solid #e2e8f0',
+          lineHeight: 1.6,
+        }}
+      >
+        banc de la bande
+        <br />
+        {releve.fps} fps · {releve.tempsTrame} ms · {releve.trames} trames
+        <br />
+        scène {prete ? 'prête' : 'en attente'} · {repli ? 'REPLI SVG' : 'webgl'}
       </div>
-    </div>
+    </main>
   )
 }

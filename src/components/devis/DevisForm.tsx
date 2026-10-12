@@ -36,7 +36,9 @@ const INITIAL: FormState = {
 
 // ─── Config ───────────────────────────────────────────────────────────────────
 
-type LucideIcon = React.ElementType
+/* `React.ElementType` ne décrit aucune prop : sous les types de React 19,
+   lui passer `size` échoue. Le type dit ce que ces icônes reçoivent. */
+type LucideIcon = React.ComponentType<{ size?: number; className?: string; strokeWidth?: number }>
 
 type ProjetDef = {
   id: string

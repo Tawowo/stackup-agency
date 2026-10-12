@@ -1,0 +1,20 @@
+{
+ "largeur": 390,
+ "seuil": 2,
+ "N": 420,
+ "aireReference": 96370,
+ "aireReferenceErodee": 93908,
+ "differentsErodes": 1859,
+ "pourcentageErode": 1.98,
+ "differents": 1928,
+ "enTrop": 712,
+ "manquants": 1216,
+ "pourcentage": 2,
+ "surContour": 1474,
+ "horsContour": 454,
+ "pourcentageHorsContour": 0.47,
+ "bandeContour": 3,
+ "proportionsRef": 0.64,
+ "proportionsRendu": 0.6413,
+ "ecartProportions": 0.0020312499999999498
+}

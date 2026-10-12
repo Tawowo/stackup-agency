@@ -4232,3 +4232,25 @@ html.su-js:has([data-scene='ouverture']) {
   gap: 0.9rem;
   margin-top: 1.8rem;
 }
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   LE BANC NU — `/lab?nu=1`
+   Retire tout le chrome du site pour que la mesure de superposition ne
+   compare que la bande et le logo. Une mesure qui inclut la barre de
+   navigation mesure la barre de navigation.
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* On masque TOUT sauf le canvas.
+   Première version : une liste de sélecteurs (header, footer, bandeau
+   cookies…). Elle laissait passer le bouton du menu mobile, dont l'encre
+   entrait dans la boîte englobante et portait l'écart mesuré à 84 % en
+   390 px. Une liste de ce qu'il faut cacher est toujours incomplète ; une
+   liste de ce qu'il faut garder ne l'est pas. */
+html[data-banc-nu='oui'] body > *:not(.su-scene) {
+  display: none !important;
+}
+
+html[data-banc-nu='oui'],
+html[data-banc-nu='oui'] body {
+  background: #ffffff !important;
+}

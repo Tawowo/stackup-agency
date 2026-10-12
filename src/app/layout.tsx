@@ -12,6 +12,7 @@ import PageProgressBar from '@/components/ui/PageProgressBar'
 import SectionProgressBar from '@/components/ui/SectionProgressBar'
 
 import { SITE } from '@/config/site'
+import SceneMontee from '@/webgl/SceneMontee'
 import { BanniereProvider } from '@/contexts/BanniereContext'
 
 const inter = Inter({
@@ -240,6 +241,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 portait DEUX dates contradictoires et survivait à son
                 expiration dans cinq composants. */}
             <BanniereProvider initialActive={SITE.offreEnCours.active}>
+              {/* LA SCÈNE PERSISTANTE.
+                  Montée ici, dans le layout racine, elle n'est jamais
+                  démontée : la navigation entre pages ne recrée donc ni le
+                  contexte WebGL, ni les géométries, ni les matériaux, et la
+                  bande traverse les pages au lieu de réapparaître à chaque
+                  fois. Elle se place elle-même dans un portail vers le body
+                  et ne capte aucun événement. */}
+              <SceneMontee />
               <PageProgressBar />
               <SectionProgressBar />
               <RevealObserver />

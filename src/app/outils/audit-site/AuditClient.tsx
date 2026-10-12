@@ -35,7 +35,14 @@ function useCountUp(target: number, active: boolean, delay = 0, duration = 1200)
 
 // ─── Large Score Gauge ─────────────────────────────────────────────────────────
 function ScoreGauge({ label, score, icon: Icon, delay = 0, active }: {
-  label: string; score: number; icon: React.ElementType; delay?: number; active: boolean
+  label: string
+  score: number
+  /* `React.ElementType` ne décrit aucune prop : sous les types de React 19,
+     lui passer `size` et `className` échoue. Le type dit donc ce que le
+     composant reçoit réellement. */
+  icon: React.ComponentType<{ size?: number; className?: string }>
+  delay?: number
+  active: boolean
 }) {
   const displayed = useCountUp(score, active, delay)
   const pct = displayed / 100

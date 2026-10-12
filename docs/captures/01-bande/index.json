@@ -1,0 +1,20 @@
+[
+ {
+  "fichier": "docs/captures/01-bande/bande-p0-1440-y0.png",
+  "route": "/lab?p=0&fige=1",
+  "largeur": 1440,
+  "y": 0,
+  "hauteur": 1522,
+  "grille": false,
+  "reduit": false
+ },
+ {
+  "fichier": "docs/captures/01-bande/bande-p0-390-y0.png",
+  "route": "/lab?p=0&fige=1&nu=1",
+  "largeur": 390,
+  "y": 0,
+  "hauteur": 844,
+  "grille": false,
+  "reduit": false
+ }
+]

@@ -53,3 +53,54 @@ plus la chasse fixe technique.
 **Vérifié.** Build vert, lint propre, QA 25/25, captures « avant »
 (`docs/captures/00-avant/`) et « socle » (`00-socle/`) prises et regardées en
 1440 et 390.
+
+## Phase 1 — Scène et bande ◐ (socle fait, hero en cours)
+
+**L'objet.** Le ruban du logo, extrudé depuis les deux tracés de
+`LogoMarque.tsx` — le décalque relevé sur le PNG d'origine, pas un redessin.
+Aucun biseau (il élargirait la silhouette et ferait échouer la
+superposition). L'épaisseur passe par `scale.z` : la géométrie est
+construite une fois, et à épaisseur nulle il ne reste que la face avant,
+donc exactement la silhouette plate.
+
+**La bascule de projection.** La matrice de projection est la moyenne
+pondérée de l'orthographique et de la perspective. Deux autres pistes ont
+été écartées pour des raisons précises : une perspective à petit angle n'est
+PAS une orthographie (il y reste une fuite, la silhouette ne se superpose
+jamais, et la distance tend vers l'infini) ; deux caméras échangées à
+mi-parcours font un saut visible, que le dossier interdit explicitement.
+
+**LA SUPERPOSITION — la règle bloquante 4.2 §6.**
+
+| | 1440 px | 390 px |
+|---|---|---|
+| écart brut | **1,89 %** | **2,00 %** |
+| dont forme fausse (hors contour) | 0,38 % | 0,47 % |
+| écart de proportions | 0,31 % | — |
+
+Seuil du dossier : 2 %. Tenu aux deux largeurs.
+
+Le chemin pour y arriver dit quelque chose. Premier essai : **83 %**. Trois
+fautes, toutes dans la MESURE, aucune dans l'objet :
+
+1. Le dossier (4.1) annonce `logo_Stackup-Agency_seul.png` comme « détouré,
+   RGBA ». Vérifié au navigateur : il a un canal alpha, mais **zéro pixel
+   transparent** — 81,8 % de blanc opaque. Il n'est pas détouré. Binariser
+   par l'alpha allumait l'image entière.
+2. La capture incluait la barre de navigation et le bandeau cookies : leur
+   encre entrait dans la boîte englobante. Première correction par liste de
+   sélecteurs à masquer — elle laissait passer le bouton du menu mobile,
+   d'où 84 % en 390 px. Une liste de ce qu'il faut cacher est toujours
+   incomplète ; une liste de ce qu'il faut garder ne l'est pas.
+3. Le seuil de binarisation était à 232, ce qui inclut le halo
+   d'anticrénelage. Le bon seuil se DÉRIVE : luminance du navy 39,7, de
+   l'ambre 156,4, du papier 255 ; demi-couverture à 147 et 206 ; moyenne
+   **176**. Sous 157, l'ambre plein est exclu et l'écart explose à 76 % —
+   ce qui confirme l'arithmétique.
+
+**Cadence** (SwiftShader, rendu logiciel sans GPU — proxy, pas un vrai
+appareil) : 31 fps en 1440, 60 fps en 390.
+
+**Pas encore fait en phase 1** : le hero RÉVÉLATION lui-même (la bande n'est
+visible que sur le banc `/lab`), le repli SVG, l'ombre portée réelle, le
+drag.
