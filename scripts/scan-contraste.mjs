@@ -13,6 +13,18 @@
  */
 import { chromium } from 'playwright'
 import AxeBuilder from '@axe-core/playwright'
+
+/**
+ * Sous-arbres qu'axe ne doit pas mesurer.
+ *
+ * Le panneau de navigation mobile est rendu en permanence, hors écran, avec
+ * `inert` et `aria-hidden` : personne ne peut le voir ni l'atteindre. Axe le
+ * mesurait quand même contre le fond de la page et remontait six violations
+ * fantômes — qui masquaient les vraies dans la liste. On l'exclut parce qu'il
+ * est réellement inerte, pas pour faire taire l'outil : son contraste est
+ * vérifié quand il est ouvert, sur son propre fond opaque.
+ */
+const EXCLUS = [['.mobile-menu-overlay[inert]']]
 import { writeFileSync, mkdirSync } from 'node:fs'
 
 const BASE = process.env.BASE ?? 'http://127.0.0.1:3100'
@@ -57,9 +69,79 @@ async function main() {
   for (const chemin of PAGES) {
     await page.goto(`${BASE}${chemin}`, { waitUntil: 'networkidle', timeout: 60000 })
     await dormir(2300)
-    const r = await new AxeBuilder({ page })
-      .withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa'])
-      .analyze()
+
+    // ── Plusieurs passes, à des positions de défilement différentes ──────
+    //
+    // L'accueil change de couleurs AVEC le défilement : le fond voyage de
+    // l'encre au plein jour et revient. Analyser toute la page depuis le
+    // haut mesurait donc des sections lointaines sous l'ambiance du hero —
+    // un fond nocturne sous des blocs que le lecteur ne voit qu'en plein
+    // jour. Cinq violations remontaient ainsi d'un état que personne ne
+    // rencontre, et elles noyaient les vraies.
+    //
+    // On repasse donc à plusieurs hauteurs, chacune laissée se stabiliser,
+    // et on fusionne. Un défaut réel apparaît dans la passe où la section
+    // concernée est à l'écran ; un artefact disparaît.
+    const hauteur = await page.evaluate(() => document.body.scrollHeight)
+    const vue = await page.evaluate(() => window.innerHeight)
+    const passes = Math.max(1, Math.min(8, Math.ceil((hauteur - vue) / vue / 1.6)))
+
+    const violations = new Map()
+    for (let i = 0; i < passes; i++) {
+      const y = Math.round(((hauteur - vue) * i) / Math.max(passes - 1, 1))
+      await page.evaluate((v) => window.scrollTo({ top: v, behavior: 'instant' }), y)
+      await dormir(passes > 1 ? 900 : 0)
+      const partiel = await new AxeBuilder({ page })
+        .withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa'])
+        .exclude(EXCLUS)
+        .analyze()
+      // Axe évalue TOUS les nœuds du document, y compris ceux qui sont hors
+      // du cadre — en les composant sur le fond courant. Sur une page dont
+      // le fond voyage avec le défilement, cela fabrique des violations
+      // imaginaires : l'Atelier mesuré sur l'encre du hero, alors qu'on ne
+      // le lit qu'en plein jour. On ne retient donc que les nœuds
+      // réellement à l'écran pendant CETTE passe.
+      for (const v of partiel.violations) {
+        if (v.id === 'color-contrast') {
+          const cibles = v.nodes.map((n) => (Array.isArray(n.target) ? n.target[0] : n.target))
+          const vus = await page.evaluate((liste) => {
+            return liste.map((sel) => {
+              try {
+                const el = document.querySelector(sel)
+                if (!el) return false
+                const r = el.getBoundingClientRect()
+                return (
+                  r.bottom > 0 &&
+                  r.top < window.innerHeight &&
+                  r.right > 0 &&
+                  r.left < window.innerWidth &&
+                  r.width > 1 &&
+                  r.height > 1
+                )
+              } catch {
+                // Sélecteur illisible : on garde le nœud. Dans le doute, on
+                // signale — jamais l'inverse.
+                return true
+              }
+            })
+          }, cibles)
+          v.nodes = v.nodes.filter((_, i) => vus[i])
+          if (v.nodes.length === 0) continue
+        }
+        const existante = violations.get(v.id)
+        if (!existante) {
+          violations.set(v.id, { ...v, nodes: [...v.nodes] })
+          continue
+        }
+        // Dédoublonnage par cible : le même nœud vu dans deux passes ne
+        // compte qu'une fois.
+        const connues = new Set(existante.nodes.map((n) => String(n.target)))
+        for (const n of v.nodes) {
+          if (!connues.has(String(n.target))) existante.nodes.push(n)
+        }
+      }
+    }
+    const r = { violations: [...violations.values()] }
 
     const contraste = r.violations.filter((v) => v.id === 'color-contrast')
     const autres = r.violations.filter((v) => v.id !== 'color-contrast')
@@ -78,8 +160,10 @@ async function main() {
           .split(/\s+/)
           .filter((c) => /^(group-hover:|hover:)?text-/.test(c))
           .join(' ') || classes.slice(0, 50)
+        const cible = Array.isArray(n.target) ? n.target.join(' ') : String(n.target ?? '')
         const entree = parClasse.get(cles) ?? {
           nombre: 0,
+          cibles: [],
           ratio: m?.[1],
           fg: m?.[2],
           bg: m?.[3],
@@ -90,6 +174,7 @@ async function main() {
         }
         entree.nombre++
         entree.pages.add(chemin)
+        if (entree.cibles.length < 4 && cible) entree.cibles.push(cible)
         parClasse.set(cles, entree)
       }
     }

@@ -376,7 +376,7 @@ export default function Atelier() {
   const Preview = meta.Component
 
   return (
-    <section id="services" className="py-24 bg-[#FFFDF9] relative overflow-hidden">
+    <section id="services" className="py-24 su-ambiance relative overflow-hidden">
       {/* Halos */}
       <div className="pointer-events-none absolute top-0 right-0 w-[500px] h-[400px]" aria-hidden="true"
         style={{ background: 'radial-gradient(ellipse, rgba(245,158,11,0.07) 0%, transparent 70%)' }} />
@@ -460,7 +460,7 @@ export default function Atelier() {
                   <div className="w-3 h-3 rounded-full bg-green-400" />
                 </div>
                 <div className="browser-url-light mx-2 flex items-center gap-1">
-                  <span className="text-green-600 text-[10px]">🔒</span>
+                  <span className="text-[#15803D] text-[10px]" aria-hidden="true">🔒</span>
                   <span className="text-xs text-[#64748B] font-mono truncate">stackup-demo.fr / {svc.id}</span>
                 </div>
                 <ExternalLink size={11} className="text-[#64748B]" />
@@ -481,7 +481,7 @@ export default function Atelier() {
                   </span>
                   <span className="flex items-center gap-1">
                     <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
-                    <span className="text-[8px] text-green-600 font-bold">LIVE</span>
+                    <span className="text-[8px] text-[#14532D] font-bold">LIVE</span>
                   </span>
                 </div>
 

@@ -84,8 +84,16 @@ const SONDE = (seuil) => {
   document.querySelectorAll('svg').forEach((svg) => {
     const r = svg.getBoundingClientRect()
     if (r.width < 6 || r.height < 6) return
+    // Hors du cadre : sur une page dont le fond voyage avec le défilement,
+    // mesurer une icône qu'on ne voit pas revient à la composer sur une
+    // ambiance qu'elle ne rencontrera jamais. On ne juge que ce qui est vu.
+    if (r.bottom < 0 || r.top > window.innerHeight || r.right < 0 || r.left > window.innerWidth) return
     const st = getComputedStyle(svg)
     if (st.visibility === 'hidden' || st.display === 'none' || +st.opacity === 0) return
+    // Une icône purement décorative n'a pas à porter de contraste : le
+    // critère 1.4.11 vise les graphiques PORTEURS d'information. Celles-ci
+    // sont retirées de l'arbre d'accessibilité et doublées par du texte.
+    if (svg.getAttribute('aria-hidden') === 'true' && svg.closest('a, button')?.textContent?.trim()) return
     // Les icônes Lucide peignent avec `stroke: currentColor`.
     const couleur = lire(st.color)
     if (!couleur || couleur[3] === 0) return
@@ -126,7 +134,26 @@ async function main() {
   for (const chemin of PAGES) {
     await page.goto(`${BASE}${chemin}`, { waitUntil: 'networkidle', timeout: 60000 })
     await dormir(1800)
-    const r = await page.evaluate(SONDE, SEUIL)
+
+    // Plusieurs passes, puisqu'on ne juge plus que ce qui est à l'écran :
+    // sans cela, on ne verrait que le haut de page.
+    const hauteur = await page.evaluate(() => document.body.scrollHeight)
+    const vue = await page.evaluate(() => window.innerHeight)
+    const passes = Math.max(1, Math.min(10, Math.ceil((hauteur - vue) / vue)))
+    const r = []
+    const dejaVu = new Set()
+    for (let i = 0; i < passes; i++) {
+      const y = Math.round(((hauteur - vue) * i) / Math.max(passes - 1, 1))
+      await page.evaluate((v) => window.scrollTo({ top: v, behavior: 'instant' }), y)
+      await dormir(passes > 1 ? 800 : 0)
+      for (const x of await page.evaluate(SONDE, SEUIL)) {
+        const cle = `${x.classe}|${x.couleur}|${x.parent}`
+        if (dejaVu.has(cle)) continue
+        dejaVu.add(cle)
+        r.push(x)
+      }
+    }
+
     for (const x of r) {
       total++
       const cle = `${x.classe} | ${x.couleur}`

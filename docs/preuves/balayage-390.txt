@@ -1,0 +1,137 @@
+balayage 0 → 20000 px, pas de 150
+  y=    0 nuit=1.000 ·  20 textes · pire 8.44:1 (seuil 4.5)   « Obtenir mon devis gratuit »
+  y=  150 nuit=0.988 ·  17 textes · pire 8.44:1 (seuil 4.5)   « Obtenir mon devis gratuit »
+  y=  300 nuit=0.936 ·  15 textes · pire 8.44:1 (seuil 4.5)   « Obtenir mon devis gratuit »
+  y=  450 nuit=0.856 ·   6 textes · pire 10.22:1 (seuil 4.5)   « Descendre »
+  y=  600 nuit=0.760 ·   6 textes · pire 10.22:1 (seuil 4.5)   « Descendre »
+  y=  750 nuit=0.664 ·   4 textes · pire 10.22:1 (seuil 4.5)   « Descendre »
+  y=  900 nuit=0.579 ·   3 textes · pire 11.23:1 (seuil 3)   « devient »
+  y= 1050 nuit=0.520 ·   0 textes · pire n/a:1 (seuil —)   
+  y= 1200 nuit=0.500 ·   0 textes · pire n/a:1 (seuil —)   
+  y= 1350 nuit=0.433 ·  74 textes · pire 4.68:1 (seuil 4.5)   « · »
+  y= 1500 nuit=0.296 ·  71 textes · pire 4.68:1 (seuil 4.5)   « · »
+  y= 1650 nuit=0.143 ·  70 textes · pire 4.68:1 (seuil 4.5)   « · »
+  y= 1800 nuit=0.028 ·  72 textes · pire 4.68:1 (seuil 4.5)   « · »
+  y= 1950 nuit=0.000 ·  72 textes · pire 4.68:1 (seuil 4.5)   « · »
+  y= 2100 nuit=0.000 ·  72 textes · pire 4.68:1 (seuil 4.5)   « · »
+  y= 2250 nuit=0.000 ·  72 textes · pire 4.68:1 (seuil 4.5)   « · »
+  y= 2400 nuit=0.000 ·   4 textes · pire 4.76:1 (seuil 4.5)   « site-vitrine »
+  y= 2550 nuit=0.000 ·   5 textes · pire 4.76:1 (seuil 4.5)   « site-vitrine »
+  y= 2700 nuit=0.000 ·   1 textes · pire 6.88:1 (seuil 4.5)   « Voir tous nos services »
+  y= 2850 nuit=0.000 ·   1 textes · pire 6.88:1 (seuil 4.5)   « Voir tous nos services »
+  y= 3000 nuit=0.000 ·   7 textes · pire 4.94:1 (seuil 4.5)   « La preuve par 3 »
+  y= 3150 nuit=0.000 ·  10 textes · pire 3.14:1 (seuil 3)   « × »
+  y= 3300 nuit=0.000 ·   7 textes · pire 4.94:1 (seuil 4.5)   « La preuve par 3 »
+  y= 3450 nuit=0.000 ·   8 textes · pire 3.14:1 (seuil 3)   « × »
+  y= 3600 nuit=0.000 ·  11 textes · pire 3.14:1 (seuil 3)   « × »
+  y= 3750 nuit=0.000 ·  14 textes · pire 3.14:1 (seuil 3)   « × »
+  y= 3900 nuit=0.000 ·   9 textes · pire 3.14:1 (seuil 3)   « × »
+  y= 4050 nuit=0.000 ·   7 textes · pire 3.14:1 (seuil 3)   « × »
+  y= 4200 nuit=0.000 ·   9 textes · pire 3.14:1 (seuil 3)   « × »
+  y= 4350 nuit=0.000 ·  10 textes · pire 4.94:1 (seuil 4.5)   « La preuve »
+  y= 4500 nuit=0.000 ·   7 textes · pire 4.94:1 (seuil 4.5)   « La preuve »
+  y= 4650 nuit=0.000 ·   5 textes · pire 4.94:1 (seuil 4.5)   « La preuve »
+  y= 4800 nuit=0.000 ·  12 textes · pire 4.68:1 (seuil 4.5)   « Statut »
+  y= 4950 nuit=0.000 ·  26 textes · pire 4.68:1 (seuil 4.5)   « Statut »
+  y= 5100 nuit=0.000 ·  19 textes · pire 4.68:1 (seuil 4.5)   « Statut »
+  y= 5250 nuit=0.000 ·  23 textes · pire 4.68:1 (seuil 4.5)   « Statut »
+  y= 5400 nuit=0.000 ·  26 textes · pire 4.68:1 (seuil 4.5)   « Statut »
+  y= 5550 nuit=0.000 ·  42 textes · pire 4.68:1 (seuil 4.5)   « Statut »
+  y= 5700 nuit=0.000 ·  43 textes · pire 4.76:1 (seuil 4.5)   « INT-0135 · Vouvray · 29/09/2026 »
+  y= 5850 nuit=0.000 ·  31 textes · pire 4.76:1 (seuil 4.5)   « INT-0131 · Montlouis-sur-Loire · 04/ »
+  y= 6000 nuit=0.000 ·  29 textes · pire 4.76:1 (seuil 4.5)   « INT-0134 · Saint-Pierre-des-Corps ·  »
+  y= 6150 nuit=0.000 ·  34 textes · pire 4.68:1 (seuil 4.5)   « 12 sur 12 interventions · dont 13 73 »
+  y= 6300 nuit=0.000 ·  31 textes · pire 4.68:1 (seuil 4.5)   « 12 sur 12 interventions · dont 13 73 »
+  y= 6450 nuit=0.000 ·  26 textes · pire 4.68:1 (seuil 4.5)   « 12 sur 12 interventions · dont 13 73 »
+  y= 6600 nuit=0.000 ·  20 textes · pire 4.68:1 (seuil 4.5)   « 12 sur 12 interventions · dont 13 73 »
+  y= 6750 nuit=0.000 ·  19 textes · pire 4.68:1 (seuil 4.5)   « 12 sur 12 interventions · dont 13 73 »
+  y= 6900 nuit=0.000 ·  18 textes · pire 4.68:1 (seuil 4.5)   « 12 sur 12 interventions · dont 13 73 »
+  y= 7050 nuit=0.000 ·  10 textes · pire 4.68:1 (seuil 4.5)   « 12 sur 12 interventions · dont 13 73 »
+  y= 7200 nuit=0.000 ·   7 textes · pire 6.07:1 (seuil 4.5)   « /05 »
+  y= 7350 nuit=0.000 ·  13 textes · pire 6.07:1 (seuil 4.5)   « /05 »
+  y= 7500 nuit=0.000 ·  19 textes · pire 6.07:1 (seuil 4.5)   « /05 »
+  y= 7650 nuit=0.000 ·  10 textes · pire 6.07:1 (seuil 4.5)   « /05 »
+  y= 7800 nuit=0.000 ·  12 textes · pire 6.07:1 (seuil 4.5)   « /05 »
+  y= 7950 nuit=0.000 ·  16 textes · pire 6.07:1 (seuil 4.5)   « /05 »
+  y= 8100 nuit=0.000 ·  21 textes · pire 6.07:1 (seuil 4.5)   « /05 »
+  y= 8250 nuit=0.000 ·  11 textes · pire 6.07:1 (seuil 4.5)   « /05 »
+  y= 8400 nuit=0.000 ·  16 textes · pire 6.07:1 (seuil 4.5)   « /05 »
+  y= 8550 nuit=0.000 ·  15 textes · pire 6.07:1 (seuil 4.5)   « /05 »
+  y= 8700 nuit=0.000 ·  20 textes · pire 6.07:1 (seuil 4.5)   « /05 »
+  y= 8850 nuit=0.000 ·  12 textes · pire 6.07:1 (seuil 4.5)   « /05 »
+  y= 9000 nuit=0.000 ·  16 textes · pire 6.07:1 (seuil 4.5)   « /05 »
+  y= 9150 nuit=0.000 ·  14 textes · pire 6.07:1 (seuil 4.5)   « /05 »
+  y= 9300 nuit=0.000 ·  21 textes · pire 6.07:1 (seuil 4.5)   « /05 »
+  y= 9450 nuit=0.000 ·  16 textes · pire 6.07:1 (seuil 4.5)   « /05 »
+  y= 9600 nuit=0.000 ·  19 textes · pire 6.07:1 (seuil 4.5)   « /05 »
+  y= 9750 nuit=0.000 ·  14 textes · pire 6.07:1 (seuil 4.5)   « /05 »
+  y= 9900 nuit=0.000 ·  22 textes · pire 4.94:1 (seuil 4.5)   « Notre process »
+  y=10050 nuit=0.000 ·  18 textes · pire 4.94:1 (seuil 4.5)   « Notre process »
+  y=10200 nuit=0.000 ·  19 textes · pire 4.94:1 (seuil 4.5)   « Notre process »
+  y=10350 nuit=0.000 ·  17 textes · pire 4.94:1 (seuil 4.5)   « Notre process »
+  y=10500 nuit=0.000 ·  21 textes · pire 4.94:1 (seuil 4.5)   « Ce que vous faites, vous »
+  y=10650 nuit=0.000 ·  25 textes · pire 4.94:1 (seuil 4.5)   « Ce que vous faites, vous »
+  y=10800 nuit=0.000 ·  18 textes · pire 4.94:1 (seuil 4.5)   « Ce que vous faites, vous »
+  y=10950 nuit=0.000 ·  21 textes · pire 4.94:1 (seuil 4.5)   « Ce que vous faites, vous »
+  y=11100 nuit=0.000 ·  23 textes · pire 4.94:1 (seuil 4.5)   « Ce que vous faites, vous »
+  y=11250 nuit=0.000 ·  16 textes · pire 4.94:1 (seuil 4.5)   « Ce que vous faites, vous »
+  y=11400 nuit=0.000 ·  15 textes · pire 4.94:1 (seuil 4.5)   « Ce que vous faites, vous »
+  y=11550 nuit=0.000 ·  15 textes · pire 4.94:1 (seuil 3)   « 06 »
+  y=11700 nuit=0.000 ·  15 textes · pire 4.94:1 (seuil 4.5)   « Notre raison d'être »
+  y=11850 nuit=0.000 ·  11 textes · pire 4.94:1 (seuil 4.5)   « Notre raison d'être »
+  y=12000 nuit=0.000 ·   9 textes · pire 4.94:1 (seuil 4.5)   « Notre raison d'être »
+  y=12150 nuit=0.000 ·   7 textes · pire 4.94:1 (seuil 4.5)   « Notre raison d'être »
+  y=12300 nuit=0.000 ·   7 textes · pire 4.94:1 (seuil 4.5)   « Notre raison d'être »
+  y=12450 nuit=0.000 ·   5 textes · pire 4.94:1 (seuil 4.5)   « Notre raison d'être »
+  y=12600 nuit=0.000 ·   4 textes · pire 11.32:1 (seuil 4.5)   « Notre histoire »
+  y=12750 nuit=0.000 ·   4 textes · pire 11.32:1 (seuil 4.5)   « Notre histoire »
+  y=12900 nuit=0.000 ·   7 textes · pire 4.84:1 (seuil 3)   « j »
+  y=13050 nuit=0.000 ·   2 textes · pire 11.32:1 (seuil 4.5)   « Notre histoire »
+  y=13200 nuit=0.000 ·   2 textes · pire 4.84:1 (seuil 3)   « j »
+  y=13350 nuit=0.000 ·   5 textes · pire 4.84:1 (seuil 3)   « j »
+  y=13500 nuit=0.000 ·  12 textes · pire 4.94:1 (seuil 4.5)   « FAQ »
+  y=13650 nuit=0.000 ·   7 textes · pire 4.94:1 (seuil 4.5)   « FAQ »
+  y=13800 nuit=0.000 ·  11 textes · pire 4.94:1 (seuil 4.5)   « FAQ »
+  y=13950 nuit=0.040 ·  15 textes · pire 4.94:1 (seuil 4.5)   « FAQ »
+  y=14100 nuit=0.148 ·  15 textes · pire 4.94:1 (seuil 4.5)   « FAQ »
+  y=14250 nuit=0.303 ·  14 textes · pire 4.94:1 (seuil 4.5)   « FAQ »
+  y=14400 nuit=0.483 ·  12 textes · pire 4.94:1 (seuil 4.5)   « FAQ »
+  y=14550 nuit=0.665 ·  10 textes · pire 5.02:1 (seuil 4.5)   « [ Q ] »
+  y=14700 nuit=0.825 ·   9 textes · pire 5.02:1 (seuil 4.5)   « [ Q ] »
+  y=14850 nuit=0.943 ·   3 textes · pire 11.23:1 (seuil 3)   « une chose »
+  y=15000 nuit=0.998 ·   3 textes · pire 11.23:1 (seuil 3)   « une chose »
+  y=15150 nuit=1.000 ·   3 textes · pire 11.23:1 (seuil 3)   « une chose »
+  y=15300 nuit=1.000 ·   5 textes · pire 9.15:1 (seuil 4.5)   « Démarrons »
+  y=15450 nuit=1.000 ·   8 textes · pire 6.81:1 (seuil 4.5)   « → »
+  y=15600 nuit=1.000 ·   2 textes · pire 9.15:1 (seuil 4.5)   « Démarrons »
+  y=15750 nuit=1.000 ·   3 textes · pire 9.15:1 (seuil 4.5)   « Démarrons »
+  y=15900 nuit=1.000 ·   5 textes · pire 6.81:1 (seuil 4.5)   « → »
+  y=16050 nuit=1.000 ·  11 textes · pire 6.81:1 (seuil 4.5)   « → »
+  y=16200 nuit=1.000 ·   5 textes · pire 6.81:1 (seuil 4.5)   « → »
+  y=16350 nuit=1.000 ·   8 textes · pire 6.81:1 (seuil 4.5)   « → »
+  y=16500 nuit=1.000 ·  23 textes · pire 6.81:1 (seuil 4.5)   « → »
+  y=16650 nuit=1.000 ·  37 textes · pire 19.44:1 (seuil 4.5)   « Agence web par ville »
+  y=16800 nuit=1.000 ·  23 textes · pire 19.44:1 (seuil 4.5)   « Toutes les solutions »
+  y=16950 nuit=1.000 ·  31 textes · pire 19.44:1 (seuil 4.5)   « Par métier »
+  y=17100 nuit=1.000 ·  50 textes · pire 19.44:1 (seuil 4.5)   « Agence web Nantes »
+  y=17250 nuit=1.000 ·  66 textes · pire 8.80:1 (seuil 4.5)   « Toutes nos zones d\u2019intervention »
+  y=17400 nuit=1.000 ·  44 textes · pire 8.80:1 (seuil 4.5)   « Toutes nos zones d\u2019intervention »
+  y=17550 nuit=1.000 ·  45 textes · pire 8.80:1 (seuil 4.5)   « Toutes nos zones d\u2019intervention »
+  y=17700 nuit=1.000 ·  52 textes · pire 8.80:1 (seuil 4.5)   « Toutes nos zones d\u2019intervention »
+  y=17850 nuit=1.000 ·  61 textes · pire 8.80:1 (seuil 4.5)   « Toutes nos zones d\u2019intervention »
+  y=18000 nuit=1.000 ·  45 textes · pire 8.80:1 (seuil 4.5)   « Toutes nos zones d\u2019intervention »
+  y=18150 nuit=1.000 ·  39 textes · pire 8.80:1 (seuil 4.5)   « Toutes nos zones d\u2019intervention »
+  y=18300 nuit=1.000 ·  48 textes · pire 8.80:1 (seuil 4.5)   « Toutes nos zones d\u2019intervention »
+  y=18450 nuit=1.000 ·  61 textes · pire 8.80:1 (seuil 4.5)   « Toutes nos zones d\u2019intervention »
+  y=18600 nuit=1.000 ·  45 textes · pire 8.80:1 (seuil 4.5)   « Toutes nos zones d\u2019intervention »
+  y=18750 nuit=1.000 ·  39 textes · pire 8.80:1 (seuil 4.5)   « Toutes nos zones d\u2019intervention »
+  y=18900 nuit=1.000 ·  46 textes · pire 8.80:1 (seuil 4.5)   « Toutes nos zones d\u2019intervention »
+  y=19050 nuit=1.000 ·  60 textes · pire 8.80:1 (seuil 4.5)   « Toutes nos zones d\u2019intervention »
+  y=19200 nuit=1.000 ·  45 textes · pire 8.80:1 (seuil 4.5)   « Toutes nos zones d\u2019intervention »
+  y=19350 nuit=1.000 ·  39 textes · pire 8.80:1 (seuil 4.5)   « Toutes nos zones d\u2019intervention »
+  y=19500 nuit=1.000 ·  46 textes · pire 8.80:1 (seuil 4.5)   « Toutes nos zones d\u2019intervention »
+  y=19650 nuit=1.000 ·  60 textes · pire 8.80:1 (seuil 4.5)   « Toutes nos zones d\u2019intervention »
+  y=19800 nuit=1.000 ·  45 textes · pire 8.80:1 (seuil 4.5)   « Toutes nos zones d\u2019intervention »
+  y=19950 nuit=1.000 ·  39 textes · pire 8.80:1 (seuil 4.5)   « Toutes nos zones d\u2019intervention »
+
+pire marge au seuil sur tout le balayage : 3.14:1 pour un seuil de 3:1

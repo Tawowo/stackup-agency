@@ -25,11 +25,11 @@ export default function PaletteBouton({ className = '' }: { className?: string }
       onClick={() => window.dispatchEvent(new CustomEvent('su:palette'))}
       aria-label="Rechercher dans le site"
       aria-keyshortcuts="Control+K Meta+K"
-      className={`group inline-flex items-center gap-2 h-9 pl-3 pr-2 rounded-lg border border-navy/15 bg-white/60 text-[#475569] hover:text-navy hover:border-gold/50 transition-colors ${className}`}
+      className={`su-nav-recherche group inline-flex items-center gap-2 h-9 pl-3 pr-2 rounded-lg border border-navy/15 bg-white/60 text-[#475569] hover:text-navy hover:border-gold/50 transition-colors ${className}`}
     >
       <Search size={15} aria-hidden="true" />
-      <span className="text-[13px] hidden xl:inline">Rechercher</span>
-      <kbd className="hidden xl:inline font-mono text-[10.5px] px-1.5 py-0.5 rounded border border-navy/10 bg-navy/[0.04] text-[#475569]">
+      <span className="su-nav-doux text-[13px] hidden xl:inline">Rechercher</span>
+      <kbd className="su-nav-doux hidden xl:inline font-mono text-[10.5px] px-1.5 py-0.5 rounded border border-navy/10 bg-navy/[0.04] text-[#475569]">
         {mac ? '⌘K' : 'Ctrl K'}
       </kbd>
     </button>

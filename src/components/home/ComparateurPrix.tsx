@@ -56,6 +56,39 @@ function CountX({ value, run }: { value: number; run: boolean }) {
   return <>{v.toFixed(1).replace(".", ",")}</>;
 }
 
+/**
+ * Une barre et son étiquette de délai.
+ *
+ * L'étiquette passe À L'EXTÉRIEUR de la barre quand celle-ci est trop courte
+ * pour la contenir. Sans cela, « 10 jours ouvrés » était rogné en « s ouvrés »
+ * sur la barre Stackup, large de 7 % seulement — et c'est justement la barre
+ * dont le délai compte le plus.
+ */
+function Barre({
+  teinte,
+  largeur,
+  etiquette,
+}: {
+  teinte: 'grey' | 'gold'
+  largeur: number
+  etiquette: string
+}) {
+  // 34 % : en dessous, une étiquette de ~100 px ne tient pas dans la barre
+  // aux largeurs de colonne usuelles.
+  const dehors = largeur < 34
+  return (
+    <div className="cp-track">
+      <div className={`cp-bar ${teinte}`} style={{ width: `${largeur}%` }} />
+      <em
+        className={`cp-etiquette ${dehors ? 'dehors' : 'dedans'} ${teinte}`}
+        style={{ ['--w' as string]: `${largeur}%` }}
+      >
+        {etiquette}
+      </em>
+    </div>
+  )
+}
+
 export default function ComparateurPrix() {
   const [active, setActive] = useState<Offre>(OFFRES[0]);
   const { ref, inView } = useInViewOnce<HTMLDivElement>();
@@ -90,11 +123,11 @@ export default function ComparateurPrix() {
       <div className="cp-rows">
         <div className="cp-row">
           <div className="cp-row-head"><span>Agence classique</span><strong>{fmt(active.agenceMin)} – {fmt(active.agenceMax)}</strong></div>
-          <div className="cp-track"><div className="cp-bar grey" style={{ width: inView ? `${barAgence}%` : "0%" }}><em>{active.agenceDelai}</em></div></div>
+          <Barre teinte="grey" largeur={inView ? barAgence : 0} etiquette={active.agenceDelai} />
         </div>
         <div className="cp-row">
           <div className="cp-row-head"><span>Stackup Agency</span><strong className="gold">{active.stackupNote ? `${active.stackupNote} ` : ""}{fmt(active.stackup)}</strong></div>
-          <div className="cp-track"><div className="cp-bar gold" style={{ width: inView ? `${barStackup}%` : "0%" }}><em>{active.delai}</em></div></div>
+          <Barre teinte="gold" largeur={inView ? barStackup : 0} etiquette={active.delai} />
         </div>
       </div>
 
@@ -122,10 +155,17 @@ export default function ComparateurPrix() {
         .cp-row-head { display: flex; justify-content: space-between; align-items: baseline; font-size: 14px; color: rgba(22,35,63,0.8); margin-bottom: 6px; }
         .cp-row-head strong { font-variant-numeric: tabular-nums; color: #16233f; }
         .cp-row-head strong.gold { color: #b45309; }
-        .cp-track { background: rgba(22,35,63,0.06); border-radius: 12px; overflow: hidden; height: 40px; }
-        .cp-bar { height: 100%; display: flex; align-items: center; justify-content: flex-end; padding: 0 12px;
-          border-radius: 12px; transition: width 1.1s cubic-bezier(.22,1,.36,1); min-width: 0; position: relative; }
-        .cp-bar em { font-style: normal; font-size: 12.5px; font-weight: 700; white-space: nowrap; }
+        .cp-track { background: rgba(22,35,63,0.06); border-radius: 12px; height: 40px; position: relative; }
+        .cp-bar { height: 100%; border-radius: 12px; transition: width 1.1s cubic-bezier(.22,1,.36,1);
+          min-width: 0; position: relative; }
+        .cp-etiquette { font-style: normal; font-size: 12.5px; font-weight: 700; white-space: nowrap;
+          position: absolute; top: 50%; transform: translateY(-50%);
+          transition: left 1.1s cubic-bezier(.22,1,.36,1); }
+        /* Dedans : calée à droite de la barre. Dehors : juste après son bout. */
+        .cp-etiquette.dedans { left: auto; right: calc(100% - var(--w) + 12px); }
+        .cp-etiquette.dehors { left: calc(var(--w) + 12px); color: #334155; }
+        .cp-etiquette.dedans.grey { color: #1f2937; }
+        .cp-etiquette.dedans.gold { color: #3a2a05; }
         .cp-bar.grey { background: linear-gradient(90deg, #cbd5e1, #94a3b8); color: #1f2937; overflow: hidden; }
         .cp-bar.gold { background: linear-gradient(90deg, #fbbf24, #f59e0b); color: #3a2a05; box-shadow: 0 6px 16px rgba(245,158,11,0.35); overflow: hidden; }
         .cp-bar.grey::after, .cp-bar.gold::after {

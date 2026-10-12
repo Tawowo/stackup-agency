@@ -7,7 +7,6 @@ import HomeFaq from '@/components/home/HomeFaq'
 import { SITE } from '@/config/site'
 import dynamic from 'next/dynamic'
 import HeroSection from '@/components/home/HeroSection'
-import ScrollBackground from '@/components/home/ScrollBackground'
 
 // Sections sous la fold — code-splitting pour étaler l'hydratation (TBT)
 const Atelier = dynamic(() => import('@/components/home/Atelier'))
@@ -17,6 +16,7 @@ const LaRoute = dynamic(() => import('@/components/home/LaRoute'))
 const StatPills = dynamic(() => import('@/components/home/StatPills'))
 const RaisonDetre = dynamic(() => import('@/components/home/RaisonDetre'))
 const PreuveLogicielle = dynamic(() => import('@/components/home/PreuveLogicielle'))
+const Seuil = dynamic(() => import('@/components/home/Seuil'))
 
 export const metadata: Metadata = {
   title: "Agence web Tours — Site internet en 10 jours",
@@ -65,49 +65,88 @@ const organizationSchema = {
 export default function Home() {
   return (
     <>
-      <ScrollBackground />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }} />
       <div className="page-transition">
 
-        {/* 01 — Hero */}
+        {/* 01 — L'OUVERTURE, en pleine nuit */}
         <HeroSection />
-        {/* La couture sombre→clair n'a plus d'objet : le hero est désormais
-            sur fond ivoire, comme la section qui le suit. */}
-        <MarqueeSeparator />
-        <div className="section-divider" aria-hidden="true" />
 
-        {/* 02 — L'Atelier — Nos services web */}
-        <Atelier />
-        <div className="section-divider" aria-hidden="true" />
+        {/* 02 — LE SEUIL : on sort de la nuit.
+            Le franchissement se joue ici, dans une section volontairement
+            sans corps de texte : le fond et le texte ne se croisent donc sur
+            aucun contenu, et le contraste ne s'effondre jamais. */}
+        <Seuil
+          scene="seuil"
+          nuit={0.5}
+          mots={['Une structure', 'devient', 'une interface.']}
+          intitule="Transition : d’une structure à une interface"
+        />
 
-        {/* 03 — Pourquoi Stackup Agency */}
-        <PreuvePar3 />
-        <div className="section-divider" aria-hidden="true" />
+        {/* Ancré au plein jour : sans ancre propre, cette bande tombe dans
+            la plage d'interpolation du seuil et se retrouve peinte en gris
+            moyen, alors que ses couleurs sont figées en mode jour. */}
+        <div data-scene="preuve" data-nuit="0">
+          <MarqueeSeparator />
+        </div>
 
-        {/* 03bis — La preuve : un logiciel réellement manipulable */}
-        <PreuveLogicielle />
-        <div className="section-divider" aria-hidden="true" />
+        {/* 03 — L'Atelier, en plein jour */}
+        <div data-scene="preuve" data-nuit="0">
+          <Atelier />
+        </div>
 
-        {/* 04 — Notre raison d'être */}
-        <RaisonDetre />
-        <div className="section-divider" aria-hidden="true" />
+        {/* 04 — Pourquoi Stackup Agency */}
+        <div data-scene="preuve" data-nuit="0">
+          <PreuvePar3 />
+        </div>
 
-        {/* 05 — Comment ça se passe — La Méthode */}
-        <LaRoute />
+        {/* 05 — La preuve, dans la salle des machines */}
+        <div data-scene="noyau" data-nuit="0">
+          <PreuveLogicielle />
+        </div>
 
-        {/* 06 — Nos réalisations — Showroom */}
-        <Showroom />
+        {/* 06 — Nos réalisations : îlot sombre autonome, indépendant de la
+            traversée globale. Une salle de projection à l'intérieur d'une
+            page claire. */}
+        <div data-scene="flux" data-nuit="0">
+          <Showroom />
+        </div>
 
-        {/* 07 — Chiffres clés */}
-        <StatPills />
-        <div className="section-divider" aria-hidden="true" />
+        {/* 07 — La méthode */}
+        <div data-scene="flux" data-nuit="0">
+          <LaRoute />
+        </div>
 
-        {/* 08 — FAQ */}
-        <HomeFaq />
-        <div className="section-divider" aria-hidden="true" />
+        {/* 08 — Notre raison d'être */}
+        <div data-scene="flux" data-nuit="0">
+          <RaisonDetre />
+        </div>
 
-        {/* 09 — CTA final */}
+        {/* 09 — Chiffres clés et FAQ.
+            Ancrés explicitement au plein jour. Sans ancre, l'ambiance
+            interpolait depuis « flux » jusqu'au seuil de clôture EN LES
+            TRAVERSANT : le fond s'assombrissait sous des textes dont les
+            couleurs sont figées en mode jour. Mesuré par axe-core à 2,13:1
+            et 2,47:1. */}
+        <div data-scene="flux" data-nuit="0">
+          <StatPills />
+          <div className="section-divider" aria-hidden="true" />
+          <HomeFaq />
+          <div className="section-divider" aria-hidden="true" />
+        </div>
+
+        {/* 10 — LE SEUIL DE CLÔTURE : la nuit revient.
+            Il n'est pas décoratif : il fait tenir ensemble le fond clair de
+            la FAQ et l'encre de l'appel final, qui se touchaient jusqu'ici
+            par une couture franche. */}
+        <Seuil
+          scene="sortie"
+          nuit={1}
+          mots={['Il reste', 'une chose', 'à faire.']}
+          intitule="Transition : vers le premier contact"
+        />
+
+        {/* 11 — CTA final */}
         <section className="py-28 bg-[#070B16] relative overflow-hidden">
           <div className="star-field" aria-hidden="true">
             {[
