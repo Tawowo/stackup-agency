@@ -98,6 +98,10 @@ export default function Navbar() {
   // Un panneau fermé est à `opacity: 0` mais reste dans le document : sans
   // `inert`, on tabule dedans à l'aveugle, et axe-core y mesure un contraste
   // contre le fond de la page — six violations qui masquaient les vraies.
+  // Sous React 18 il fallait écrire `inert: ''` : React ne connaissait pas
+  // l'attribut et seule la chaîne vide le faisait sortir. React 19 le prend
+  // en booléen natif, et la chaîne vide y est FAUSSE — l'attribut
+  // disparaissait. C'est ce qu'axe-core a vu juste après la migration.
   // `inert` règle les deux d'un coup, et pour la bonne raison : le panneau
   // fermé n'est pas une partie perceptible de la page.
   const dropdownCls = (isOpen: boolean) =>
@@ -139,7 +143,7 @@ export default function Navbar() {
                   className={`${dropdownCls(servicesOpen)} w-52`}
                   role="menu"
                   aria-hidden={!servicesOpen}
-                  {...(!servicesOpen ? { inert: '' as unknown as boolean } : {})}
+                  inert={!servicesOpen}
                 >
                   {SERVICES_LINKS.map(l => (
                     <Link key={l.href} href={l.href} role="menuitem" onClick={() => setServicesOpen(false)}
@@ -175,7 +179,7 @@ export default function Navbar() {
                   className={`${dropdownCls(outilsOpen)} w-56`}
                   role="menu"
                   aria-hidden={!outilsOpen}
-                  {...(!outilsOpen ? { inert: '' as unknown as boolean } : {})}
+                  inert={!outilsOpen}
                 >
                   {OUTILS_LINKS.map(l => (
                     <Link key={l.href} href={l.href} role="menuitem" onClick={() => setOutilsOpen(false)}
@@ -226,7 +230,7 @@ export default function Navbar() {
         // `inert` retire le sous-arbre de l'ordre de tabulation en plus de le
         // masquer : sans lui, un utilisateur au clavier tabule dans un menu
         // fermé et invisible, relevé par Lighthouse (aria-hidden-focus).
-        {...(!open ? { inert: '' as unknown as boolean } : {})}
+        inert={!open}
       >
         <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/30 to-transparent" aria-hidden="true" />
         <div className="pointer-events-none absolute bottom-0 right-0 w-72 h-72 rounded-full"

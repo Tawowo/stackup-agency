@@ -5,7 +5,6 @@ import { SITE } from '@/config/site'
 import MiniHero from '@/components/ui/MiniHero'
 import PricingCards from '@/components/tarifs/PricingCards'
 import TarifsShelf from '@/components/tarifs/TarifsShelf'
-import EncartRentree from '@/components/rentree/EncartRentree'
 import DecorProfondeur from '@/components/ui/DecorProfondeur'
 
 export const metadata = {
@@ -92,7 +91,6 @@ export default function TarifsPage() {
           ]} />
         </section>
 
-        <EncartRentree />
 
         {/* Système de gestion */}
         <section className="rounded-2xl border border-electric/30 bg-blue-500/5 p-6 lg:p-8">

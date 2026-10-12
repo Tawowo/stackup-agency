@@ -33,9 +33,9 @@ html {
   html, body { overflow-x: hidden; }
 }
 
-/* ─── Typography Premium (Space Grotesk + Inter) ─────────── */
+/* ─── Typographie : Poppins (display) + Inter (texte) ────── */
 h1, h2, .font-display {
-  font-family: var(--font-space, 'Space Grotesk', system-ui, sans-serif);
+  font-family: var(--font-space, Poppins, system-ui, sans-serif);
 }
 h1 {
   font-size: clamp(2.6rem, 6vw, 4.6rem);
@@ -2461,7 +2461,7 @@ select:focus-visible {
   margin: 0.05em 0.1em 0 0;
   font-weight: 700;
   color: #2D7DD2;
-  font-family: var(--font-space, 'Space Grotesk', sans-serif);
+  font-family: var(--font-space, Poppins, sans-serif);
 }
 
 /* ─── 21. FORME DE FOND PARTICULES (CTA final) ───────────────── */

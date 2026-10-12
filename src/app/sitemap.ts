@@ -6,7 +6,7 @@ import { VILLES } from '@/data/villes'
 import { METIERS } from '@/data/metiers'
 import { SOLUTIONS } from '@/data/solutions'
 import { DEPARTEMENTS } from '@/data/departements'
-import { isRentreeActive } from '@/config/rentree'
+import { realisations } from '@/lib/realisations'
 
 const base = 'https://stackup-agency.fr'
 
@@ -23,14 +23,11 @@ const tarifPlans = ['starter', 'pro', 'premium']
 
 const blogCategories = ['seo', 'creation-sites', 'applications-metier', 'strategie', 'restaurants', 'artisans']
 
-const realisationSlugs = [
-  'chateau-lumieres',
-  'maison-elise',
-  'au-pain-dore',
-  'prestige-immo',
-  'lolivier-dashboard',
-  'chateau-fleury',
-]
+/* Les slugs viennent de la SOURCE, plus d'une liste recopiée à la main.
+   La liste codée en dur avait dérivé : il y manquait `demo-videaste`, qui est
+   le projet mis en avant de la page réalisations et la seule étude de cas du
+   site. Il n'était donc déclaré à aucun moteur. */
+const realisationSlugs = realisations.map((r) => r.slug)
 
 const servicesLocauxSlugs = [
   'creation-site-restaurant',
@@ -96,21 +93,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // Pages statiques principales
     { url: `${base}/blog`, lastModified: now, changeFrequency: 'weekly', priority: 0.8 },
     { url: `${base}/devis`, lastModified: now, changeFrequency: 'monthly', priority: 0.9 },
-    // L'offre de rentrée n'entre au plan du site QUE tant qu'elle est ouverte.
-    // `src/app/offre-rentree/page.tsx` appelle `notFound()` une fois la date
-    // passée : la référencer en permanence revenait à déclarer aux moteurs une
-    // URL qui répond 404 — constaté par `scripts/seo-lint.mjs`, seul échec de
-    // type « fetch » de l'audit.
-    ...(isRentreeActive()
-      ? [
-          {
-            url: `${base}/offre-rentree`,
-            lastModified: now,
-            changeFrequency: 'weekly' as const,
-            priority: 0.8,
-          },
-        ]
-      : []),
     // Démonstration logicielle et configurateur : deux pages à forte valeur
     // commerciale, priorité alignée sur celle des pages de service.
     { url: `${base}/laboratoire`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
@@ -186,6 +168,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // Cocons sémantiques — hubs
     { url: `${base}/agence-web`, lastModified: now, changeFrequency: 'weekly', priority: 0.9 },
     { url: `${base}/zones-intervention`, lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
+    /* Trois pages existaient sans être déclarées : le hub des ressources, le
+       plan du site, et le hub des départements. Relevé par l'audit. */
+    { url: `${base}/ressources`, lastModified: now, changeFrequency: 'monthly', priority: 0.6 },
+    { url: `${base}/plan-du-site`, lastModified: now, changeFrequency: 'monthly', priority: 0.4 },
 
     // Hubs départementaux
     ...DEPARTEMENTS.map(d => ({

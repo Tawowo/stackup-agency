@@ -1,0 +1,38 @@
+[
+ {
+  "fichier": "docs/captures/00-socle/accueil-1440-y0.png",
+  "route": "/",
+  "largeur": 1440,
+  "y": 0,
+  "hauteur": 18463,
+  "grille": false,
+  "reduit": false
+ },
+ {
+  "fichier": "docs/captures/00-socle/accueil-1440-y1400.png",
+  "route": "/",
+  "largeur": 1440,
+  "y": 1400,
+  "hauteur": 18463,
+  "grille": false,
+  "reduit": false
+ },
+ {
+  "fichier": "docs/captures/00-socle/accueil-390-y0.png",
+  "route": "/",
+  "largeur": 390,
+  "y": 0,
+  "hauteur": 20302,
+  "grille": false,
+  "reduit": false
+ },
+ {
+  "fichier": "docs/captures/00-socle/accueil-390-y1400.png",
+  "route": "/",
+  "largeur": 390,
+  "y": 1400,
+  "hauteur": 20302,
+  "grille": false,
+  "reduit": false
+ }
+]

@@ -20,7 +20,6 @@ interface FormState {
   options: string[]
   fonctionnalites: string[]
   maintenance: string
-  offreRentree: boolean
   nom: string
   email: string
   telephone: string
@@ -31,7 +30,7 @@ interface FormState {
 
 const INITIAL: FormState = {
   projet: '', metier: '', options: [], fonctionnalites: [],
-  maintenance: '', offreRentree: false,
+  maintenance: '',
   nom: '', email: '', telephone: '', message: '', rgpd: false, src: '',
 }
 
@@ -394,11 +393,10 @@ function Etape3({ state, set }: { state: FormState; set: (k: keyof FormState, v:
 // ─── Étape 4 ─────────────────────────────────────────────────────────────────
 
 function Etape4({
-  state, set, rentreeActive,
+  state, set,
 }: {
   state: FormState
   set: (k: keyof FormState, v: unknown) => void
-  rentreeActive: boolean
 }) {
   return (
     <div>
@@ -442,23 +440,6 @@ function Etape4({
         })}
       </div>
 
-      {rentreeActive && (
-        <label className={[
-          'flex items-center gap-4 p-5 rounded-2xl border-2 cursor-pointer transition-all duration-200',
-          state.offreRentree ? 'border-gold bg-gold/[0.07]' : 'border-gold/30 hover:border-gold/55',
-        ].join(' ')}>
-          <div className={[
-            'w-5 h-5 rounded-md border-2 flex items-center justify-center flex-shrink-0 transition-colors',
-            state.offreRentree ? 'bg-gold border-gold' : 'border-gold/40',
-          ].join(' ')}>
-            {state.offreRentree && <Check size={11} strokeWidth={3} className="text-white" />}
-          </div>
-          <input type="checkbox" checked={state.offreRentree} onChange={e => set('offreRentree', e.target.checked)} className="sr-only" />
-          <span className="text-sm text-foreground">
-            🎒 <strong>Offre rentrée</strong> — maquette offerte (valable jusqu'au 13 sept. 2026)
-          </span>
-        </label>
-      )}
     </div>
   )
 }
@@ -602,12 +583,6 @@ function RecapView({
             </div>
           )}
 
-          {state.offreRentree && (
-            <div className="px-6 py-4 check-item flex items-center gap-2">
-              <span>🎒</span>
-              <span className="text-sm font-medium text-[#B45309]">Offre rentrée — maquette offerte</span>
-            </div>
-          )}
 
           <div className="px-6 py-4 check-item">
             <div className="text-[10px] font-bold uppercase tracking-wider text-[#64748B] mb-1.5">Contact</div>
@@ -709,7 +684,6 @@ function DevisFormInner() {
   const [view,      setView]      = useState<View>('form')
   const [sending,   setSending]   = useState(false)
   const [error,     setError]     = useState('')
-  const [rentreeActive, setRentreeActive] = useState(false)
 
   const wrapperRef = useRef<HTMLDivElement>(null)
 
@@ -729,14 +703,12 @@ function DevisFormInner() {
     const projet      = searchParams.get('projet') as Projet
     const metier      = searchParams.get('metier') || ''
     const src         = searchParams.get('src') || ''
-    const offreRentree = searchParams.get('offre') === 'rentree'
-    if (projet || metier || src || offreRentree) {
+    if (projet || metier || src) {
       setState(s => ({
         ...s,
         ...(projet       ? { projet }           : {}),
         ...(metier       ? { metier }            : {}),
         ...(src          ? { src }               : {}),
-        ...(offreRentree ? { offreRentree: true } : {}),
       }))
     }
   }, [searchParams])
@@ -757,7 +729,6 @@ function DevisFormInner() {
   }, [])
 
   useEffect(() => {
-    setRentreeActive(Date.now() < new Date('2026-09-15T21:59:59Z').getTime())
   }, [])
 
   // Persist state in sessionStorage
@@ -776,39 +747,30 @@ function DevisFormInner() {
     return true
   }
 
-  const buildEmailHtml = () => {
+  /* Le récapitulatif part en DONNÉES, plus en HTML.
+     L'API composait l'e-mail à partir du balisage envoyé par le navigateur :
+     n'importe qui pouvait donc faire partir un courriel au contenu de son
+     choix depuis l'adresse de l'agence. Les gabarits vivent désormais dans
+     `src/app/api/contact/route.ts`, côté serveur. */
+  const buildRecapitulatif = () => {
     const projet = PROJETS.find(p => p.id === state.projet)
     const { base, surDevis, mensuel } = calcPrix(state)
     const maintenance = MAINTENANCES.find(m => m.id === state.maintenance)
-    return `
-      <h2>Nouveau devis express — stackup-agency.fr</h2>
-      <p><strong>Nom :</strong> ${state.nom}</p>
-      <p><strong>Email :</strong> ${state.email}</p>
-      <p><strong>Téléphone :</strong> ${state.telephone || 'Non renseigné'}</p>
-      <hr />
-      <p><strong>Type de site :</strong> ${projet?.label || state.projet}</p>
-      ${state.metier ? `<p><strong>Secteur / métier :</strong> ${state.metier}</p>` : ''}
-      <p><strong>Contenus :</strong> ${state.options.length ? state.options.join(', ') : 'Aucun'}</p>
-      <p><strong>Fonctionnalités :</strong> ${state.fonctionnalites.length ? state.fonctionnalites.join(', ') + ' (sur devis)' : 'Aucune'}</p>
-      <p><strong>Maintenance :</strong> ${maintenance?.label || 'Aucune'}</p>
-      <p><strong>Offre rentrée :</strong> ${state.offreRentree ? 'Oui' : 'Non'}</p>
-      <p><strong>Estimation :</strong> ${surDevis ? 'Sur devis' : `${base?.toLocaleString('fr-FR')} €`}${mensuel ? ` + ${mensuel} €/mois` : ''}</p>
-      ${state.message ? `<p><strong>Message :</strong><br>${state.message}</p>` : ''}
-      ${state.src ? `<p><strong>Source :</strong> ${state.src}</p>` : ''}
-    `
-  }
-
-  const buildConfirmHtml = () => {
-    const projet = PROJETS.find(p => p.id === state.projet)
-    return `
-      <h2>Votre demande de devis a bien été reçue</h2>
-      <p>Bonjour ${state.nom},</p>
-      <p>Nous avons bien reçu votre demande de devis pour un <strong>${projet?.label || state.projet}</strong>${state.metier ? ` (${state.metier})` : ''}.</p>
-      <p>Nous vous répondrons sous <strong>72h</strong> avec un devis personnalisé.</p>
-      ${state.offreRentree ? '<p>🎒 <strong>Offre rentrée notée</strong> : votre maquette sera offerte avec votre projet.</p>' : ''}
-      <p>En attendant, n'hésitez pas à consulter notre <a href="https://stackup-agency.fr/faq">FAQ</a> ou nos <a href="https://stackup-agency.fr/realisations">réalisations</a>.</p>
-      <p>Cordialement,<br>${SITE.signature}</p>
-    `
+    const lignes: { label: string; valeur: string }[] = [
+      { label: 'Type de site', valeur: projet?.label || state.projet },
+    ]
+    if (state.metier) lignes.push({ label: 'Secteur / métier', valeur: state.metier })
+    lignes.push({ label: 'Contenus', valeur: state.options.length ? state.options.join(', ') : 'Aucun' })
+    lignes.push({
+      label: 'Fonctionnalités',
+      valeur: state.fonctionnalites.length ? state.fonctionnalites.join(', ') + ' (sur devis)' : 'Aucune',
+    })
+    lignes.push({ label: 'Maintenance', valeur: maintenance?.label || 'Aucune' })
+    lignes.push({
+      label: 'Estimation',
+      valeur: (surDevis ? 'Sur devis' : `${base?.toLocaleString('fr-FR')} €`) + (mensuel ? ` + ${mensuel} €/mois` : ''),
+    })
+    return lignes
   }
 
   const submit = async () => {
@@ -829,9 +791,9 @@ function DevisFormInner() {
           phone: state.telephone,
           project: projet?.label || state.projet,
           message: state.message,
-          subject: `Devis express — ${projet?.label || state.projet} — ${state.nom}`,
-          html: buildEmailHtml(),
-          confirmHtml: buildConfirmHtml(),
+          type: 'devis',
+          recapitulatif: buildRecapitulatif(),
+          rgpd: state.rgpd,
           src: state.src,
         }),
       })
@@ -890,7 +852,7 @@ function DevisFormInner() {
           )}
           {step === 2 && <Etape2 state={state} set={set} />}
           {step === 3 && <Etape3 state={state} set={set} />}
-          {step === 4 && <Etape4 state={state} set={set} rentreeActive={rentreeActive} />}
+          {step === 4 && <Etape4 state={state} set={set} />}
           {step === 5 && <Etape5 state={state} set={set} />}
         </div>
       </div>

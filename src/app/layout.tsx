@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Inter, Space_Grotesk, JetBrains_Mono } from 'next/font/google'
+import { Inter, Poppins, JetBrains_Mono } from 'next/font/google'
 import './globals.css'
 import { LanguageProvider } from '@/contexts/LanguageContext'
 import { ThemeProvider } from '@/contexts/ThemeContext'
@@ -13,9 +13,6 @@ import SectionProgressBar from '@/components/ui/SectionProgressBar'
 
 import { SITE } from '@/config/site'
 import { BanniereProvider } from '@/contexts/BanniereContext'
-import BanniereRentree from '@/components/rentree/BanniereRentree'
-import MobileBannerSpacer from '@/components/rentree/MobileBannerSpacer'
-import { isRentreeActive } from '@/config/rentree'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -23,9 +20,19 @@ const inter = Inter({
   display: 'swap',
 })
 
-const spaceGrotesk = Space_Grotesk({
+/* LA VOIX DISPLAY : POPPINS, LA FAMILLE DU LETTRAGE DU LOGO.
+   Space Grotesk a été retirée : c'est la display des gabarits SaaS de
+   2021-2023, elle ne ressemble pas au lettrage « Stackup » (un géométrique à
+   `a` d'un seul étage, de la famille de Poppins), et à 17 vw elle devient
+   lourde. Le site passe donc de trois voix sans rôle distinct à deux voix
+   fortes : Poppins pour les titres, Inter pour le texte, JetBrains Mono pour
+   les cotes et les fiches techniques.
+
+   La variable garde son nom `--font-space` : la renommer obligerait à
+   toucher une trentaine de déclarations CSS sans rien changer au rendu. */
+const poppins = Poppins({
   subsets: ['latin'],
-  weight: ['500', '700'],
+  weight: ['500', '600', '700'],
   variable: '--font-space',
   display: 'swap',
 })
@@ -224,12 +231,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaOrg) }}
         />
       </head>
-      <body className={`${inter.variable} ${spaceGrotesk.variable} ${jetbrainsMono.variable} antialiased`}>
+      <body className={`${inter.variable} ${poppins.variable} ${jetbrainsMono.variable} antialiased`}>
         <ThemeProvider>
           <LanguageProvider>
-            <BanniereProvider initialActive={isRentreeActive()}>
-              {isRentreeActive() && <BanniereRentree />}
-              {isRentreeActive() && <MobileBannerSpacer />}
+            {/* L'offre en cours est pilotée par `SITE.offreEnCours.active`
+                (une seule date de fin, un seul interrupteur). Le code
+                spécifique à l'« offre de rentrée » a été supprimé : il
+                portait DEUX dates contradictoires et survivait à son
+                expiration dans cinq composants. */}
+            <BanniereProvider initialActive={SITE.offreEnCours.active}>
               <PageProgressBar />
               <SectionProgressBar />
               <RevealObserver />

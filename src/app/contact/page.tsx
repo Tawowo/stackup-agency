@@ -2,7 +2,6 @@ import { SITE } from '@/config/site'
 import Link from 'next/link'
 import MiniHero from '@/components/ui/MiniHero'
 import ContactFormV4 from '@/components/contact/ContactFormV4'
-import EncartRentree from '@/components/rentree/EncartRentree'
 import DecorProfondeur from '@/components/ui/DecorProfondeur'
 
 export const metadata = {
@@ -59,7 +58,6 @@ export default function ContactPage() {
       />
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6">
-        <EncartRentree />
       </div>
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 py-12">

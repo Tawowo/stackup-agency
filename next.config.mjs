@@ -7,6 +7,13 @@ const nextConfig = {
   poweredByHeader: false,
   redirects: async () => [
     {
+      // L'offre de rentrée est expirée et sa page supprimée. Une 301 plutôt
+      // qu'un 404 : la page était au plan du site et a pu être indexée.
+      source: '/offre-rentree',
+      destination: '/tarifs',
+      permanent: true,
+    },
+    {
       source: '/:path*',
       has: [{ type: 'host', value: 'www.stackup-agency.fr' }],
       destination: 'https://stackup-agency.fr/:path*',

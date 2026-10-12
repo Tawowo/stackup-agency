@@ -953,7 +953,7 @@ body:has(.su-passage) {
 .su-titre-sculpte {
   display: block;
   margin: 0 0 clamp(1.5rem, 3vw, 2.4rem);
-  font-family: var(--font-space), 'Space Grotesk', system-ui, sans-serif;
+  font-family: var(--font-space), Poppins, system-ui, sans-serif;
   line-height: 0.92;
 }
 

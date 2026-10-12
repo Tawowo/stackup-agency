@@ -3,7 +3,6 @@ import Link from 'next/link'
 import { CheckCircle, ChevronRight } from 'lucide-react'
 import { SITE } from '@/config/site'
 import MiniHero from '@/components/ui/MiniHero'
-import EncartRentree from '@/components/rentree/EncartRentree'
 import StrateService, { type Morphologie } from '@/components/services/StrateService'
 
 export const metadata = {
@@ -115,7 +114,6 @@ export default function ServicesPage() {
       />
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 py-16 space-y-8">
-        <EncartRentree />
         {SERVICES.map((s, idx) => (
           <div key={s.slug} className="reveal-item group rounded-2xl border border-navy/20 p-6 lg:p-8 hover:border-electric/30 hover:shadow-lg hover:shadow-electric/5 transition-all duration-300 relative overflow-hidden"
             style={{ animationDelay: `${idx * 60}ms` }}>
