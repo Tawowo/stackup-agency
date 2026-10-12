@@ -39,12 +39,7 @@ import { useEffect, useMemo, useRef } from 'react'
 import { useFrame, useThree } from '@react-three/fiber'
 import { PerspectiveCamera, OrthographicCamera, Matrix4 } from 'three'
 import { useBande } from '@/store/bande'
-import { HAUTEUR_MONDE } from './bande/geometrie'
-
-/** Champ de vision de la projection perspective, en degrés (fiche 11.1). */
-const FOV = 38
-/** Hauteur visible, en unités monde. La bande occupe ~62 % de la hauteur. */
-const HAUTEUR_VUE = HAUTEUR_MONDE / 0.62
+import { FOV, hauteurVisible, distanceCamera } from './cadrage'
 
 export default function CameraRig({ cadrageMobile = false }: { cadrageMobile?: boolean }) {
   const { camera, size } = useThree()
@@ -53,15 +48,8 @@ export default function CameraRig({ cadrageMobile = false }: { cadrageMobile?: b
   const melange = useRef(new Matrix4())
   const progressionLissee = useRef(0)
 
-  // La hauteur visible est plus grande en portrait : la bande y occupe une
-  // zone dédiée du tiers supérieur (14.3), pas tout l'écran.
-  const hauteurVue = cadrageMobile ? HAUTEUR_VUE * 1.25 : HAUTEUR_VUE
-
-  /** Distance qui donne cette hauteur visible au plan de la bande. */
-  const distance = useMemo(
-    () => hauteurVue / 2 / Math.tan((FOV * Math.PI) / 360),
-    [hauteurVue],
-  )
+  const hauteurVue = hauteurVisible(cadrageMobile)
+  const distance = useMemo(() => distanceCamera(cadrageMobile), [cadrageMobile])
 
   useEffect(() => {
     const aspect = size.width / Math.max(1, size.height)

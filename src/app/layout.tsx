@@ -13,6 +13,7 @@ import SectionProgressBar from '@/components/ui/SectionProgressBar'
 
 import { SITE } from '@/config/site'
 import SceneMontee from '@/webgl/SceneMontee'
+import CalqueConstruction from '@/components/ui/CalqueConstruction'
 import { BanniereProvider } from '@/contexts/BanniereContext'
 
 const inter = Inter({
@@ -249,6 +250,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   fois. Elle se place elle-même dans un portail vers le body
                   et ne capte aucun événement. */}
               <SceneMontee />
+              <CalqueConstruction />
               <PageProgressBar />
               <SectionProgressBar />
               <RevealObserver />

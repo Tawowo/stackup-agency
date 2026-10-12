@@ -1,0 +1,20 @@
+[
+ {
+  "fichier": "docs/captures/01-hero/accueil-1440-y0.png",
+  "route": "/",
+  "largeur": 1440,
+  "y": 0,
+  "hauteur": 18507,
+  "grille": false,
+  "reduit": false
+ },
+ {
+  "fichier": "docs/captures/01-hero/accueil-390-y0.png",
+  "route": "/",
+  "largeur": 390,
+  "y": 0,
+  "hauteur": 20419,
+  "grille": false,
+  "reduit": false
+ }
+]

@@ -4254,3 +4254,359 @@ html[data-banc-nu='oui'],
 html[data-banc-nu='oui'] body {
   background: #ffffff !important;
 }
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   L'OUVERTURE — moment 00
+   Spécification : dossier §10.1. Composition §9.3, vocabulaire §9.4.
+   ═══════════════════════════════════════════════════════════════════════════
+
+   Grille de douze colonnes, visible uniquement sous la touche G. La marque
+   occupe les colonnes 1 à 8, le texte d'appui les colonnes 9 à 12, les
+   quatre cotes tiennent le bas. Masse à gauche, air à droite : asymétrique
+   par intention, jamais centré.
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+.su-ouv {
+  position: relative;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(5.5rem, 11vh, 8rem) 0 clamp(2rem, 4vh, 3rem);
+  /* AUCUN FOND ICI — et c'est structurel, pas un oubli.
+     La scène est un calque fixe en `z-index: 0`. Une section qui se peint un
+     fond opaque passe devant et masque la bande : c'est exactement ce qui
+     s'est produit au premier rendu du hero, où le ruban était correctement
+     placé et correctement dimensionné, mais recouvert par l'ivoire de cette
+     règle. L'ivoire est porté par le `body` ; les sections qui veulent
+     laisser voir la scène ne peignent rien, celles qui veulent la masquer
+     posent leur fond explicitement. */
+  background: transparent;
+  overflow: hidden;
+}
+
+/* La grille de construction. Elle n'est PAS visible en permanence : le
+   dossier la met derrière la touche G (§10.11). Un site qui montre sa grille
+   en continu la transforme en décor ; derrière une touche, elle reste une
+   preuve de maîtrise pour qui la cherche. */
+.su-ouv__grille {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 0;
+  width: min(100% - 3rem, 86rem);
+  margin-inline: auto;
+  opacity: 0;
+  transition: opacity 320ms var(--su-pose, cubic-bezier(0.16, 0.84, 0.28, 1));
+  pointer-events: none;
+  z-index: 3;
+}
+
+html[data-grille='oui'] .su-ouv__grille {
+  opacity: 1;
+}
+
+.su-ouv__grille > span {
+  border-left: 1px solid rgb(var(--su-navy-rgb) / 0.09);
+}
+.su-ouv__grille > span:last-child {
+  border-right: 1px solid rgb(var(--su-navy-rgb) / 0.09);
+}
+
+.su-ouv__corps {
+  position: relative;
+  z-index: 2;
+  width: min(100% - 3rem, 86rem);
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: clamp(1.5rem, 3vw, 2.5rem) clamp(1rem, 2vw, 2rem);
+  align-items: start;
+}
+
+/* ── La marque ─────────────────────────────────────────────────────────── */
+
+.su-ouv__marque {
+  grid-column: 1 / span 8;
+  display: flex;
+  align-items: center;
+  gap: clamp(1rem, 2.4vw, 2.4rem);
+  color: var(--su-navy);
+}
+
+/* La boîte d'ancrage : exactement les proportions de l'étendue des tracés
+   (145 × 227), pas celles du viewBox nominal (146 × 229). La scène 3D vient
+   occuper cette boîte ; le SVG qu'elle contient est le secours. */
+.su-ouv__ancre {
+  position: relative;
+  height: clamp(9rem, 26vh, 17rem);
+  aspect-ratio: 145 / 227;
+  flex-shrink: 0;
+}
+
+.su-ouv__ruban,
+.su-ouv__ruban .su-logo__marque {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* L'effacement du SVG quand la scène prend le relais.
+   140 ms, et rien ne bouge : le volume est déjà exactement au même endroit,
+   à la même taille, dans la même projection. C'est tout l'intérêt de la
+   bascule de matrice — l'échange est invisible. */
+.su-scene-prete .su-ouv__ancre .su-logo__marque {
+  opacity: 0;
+  transition: opacity 140ms linear;
+}
+.su-ouv__marque[data-repli='oui'] .su-logo__marque {
+  opacity: 1 !important;
+}
+
+.su-ouv__lettrage {
+  height: clamp(2.6rem, 7.4vh, 4.9rem);
+  color: var(--su-navy);
+}
+
+/* ── Le titre ──────────────────────────────────────────────────────────── */
+
+.su-ouv__titre {
+  grid-column: 1 / span 9;
+  margin: clamp(1.2rem, 3vh, 2.4rem) 0 0;
+  font-family: var(--font-space), Poppins, system-ui, sans-serif;
+  font-weight: 700;
+  font-size: clamp(2.4rem, 6.2vw, 5rem);
+  line-height: 0.98;
+  letter-spacing: -0.035em;
+  color: var(--su-encre);
+  text-wrap: balance;
+}
+
+.su-ouv__amorce,
+.su-ouv__chute {
+  display: inline;
+}
+
+/* LE MOT PORTEUR.
+   16 vw : il déborde de la colonne de texte, et il n'y a plus qu'une chose
+   à regarder. C'est un vrai bouton — le dossier interdit qu'une interaction
+   essentielle dépende du survol (§17.6 §16), et changer la nature du projet
+   en est une. */
+.su-ouv__mot {
+  display: inline-block;
+  padding: 0;
+  border: 0;
+  background: none;
+  font: inherit;
+  font-size: clamp(3.4rem, 13vw, 11rem);
+  line-height: 0.82;
+  letter-spacing: -0.05em;
+  color: var(--su-ambre-texte, #b45309);
+  cursor: pointer;
+  vertical-align: baseline;
+  transition: color 320ms var(--su-pose, cubic-bezier(0.16, 0.84, 0.28, 1));
+}
+
+.su-ouv__mot:hover,
+.su-ouv__mot:focus-visible {
+  color: #92400e;
+}
+
+.su-ouv__mot::after {
+  /* Un trait sous le mot : il dit que c'est actionnable sans ajouter
+     d'icône. Il se trace depuis la gauche au survol et au focus. */
+  content: '';
+  display: block;
+  height: 3px;
+  background: currentColor;
+  opacity: 0.35;
+  transform: scaleX(0.18);
+  transform-origin: left;
+  transition: transform 320ms var(--su-pose, cubic-bezier(0.16, 0.84, 0.28, 1));
+}
+.su-ouv__mot:hover::after,
+.su-ouv__mot:focus-visible::after {
+  transform: scaleX(1);
+}
+
+/* ── La colonne d'appui ────────────────────────────────────────────────── */
+
+.su-ouv__colonne {
+  grid-column: 9 / span 4;
+  grid-row: 1 / span 2;
+  align-self: start;
+  padding-top: clamp(0.5rem, 2vh, 2rem);
+}
+
+.su-ouv__accroche {
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  color: #475569;
+  margin: 0 0 1.6rem;
+  max-width: 26rem;
+}
+
+.su-ouv__actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.su-action--contour {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1.4rem;
+  border: 1px solid rgb(var(--su-navy-rgb) / 0.3);
+  border-radius: 4px;
+  font-weight: 600;
+  color: var(--su-navy);
+  background: transparent;
+  transition:
+    border-color 320ms var(--su-pose, cubic-bezier(0.16, 0.84, 0.28, 1)),
+    background 320ms var(--su-pose, cubic-bezier(0.16, 0.84, 0.28, 1));
+}
+.su-action--contour:hover,
+.su-action--contour:focus-visible {
+  border-color: rgb(var(--su-navy-rgb) / 0.55);
+  background: rgb(var(--su-navy-rgb) / 0.04);
+}
+
+/* ── Les quatre cotes ──────────────────────────────────────────────────── */
+
+.su-ouv__cotes {
+  grid-column: 1 / span 12;
+  margin: clamp(2rem, 5vh, 3.5rem) 0 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  border-top: 1px solid rgb(var(--su-navy-rgb) / 0.14);
+  padding-top: 1.1rem;
+}
+
+.su-ouv__cotes dt {
+  font-family: var(--font-space), Poppins, system-ui, sans-serif;
+  font-weight: 700;
+  font-size: clamp(1.1rem, 1.8vw, 1.5rem);
+  color: var(--su-encre);
+  font-variant-numeric: tabular-nums;
+}
+
+.su-ouv__cotes dd {
+  margin: 0.2rem 0 0;
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  color: #51657e;
+}
+
+/* ── Le pied ───────────────────────────────────────────────────────────── */
+
+.su-ouv__pied {
+  position: relative;
+  z-index: 2;
+  width: min(100% - 3rem, 86rem);
+  margin: clamp(1.5rem, 3vh, 2.5rem) auto 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #51657e;
+}
+
+.su-ouv__descendre {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+.su-ouv__descendre i {
+  display: block;
+  width: 1px;
+  height: 26px;
+  background: linear-gradient(to bottom, currentColor, transparent);
+}
+
+/* ── Composition en portrait ───────────────────────────────────────────── */
+
+@media (max-width: 899px) {
+  /* Le dossier (§14.2) impose : la bande dans une zone dédiée du haut,
+     AUCUNE superposition texte/objet, titre sur trois lignes, une seule
+     action pleine largeur, quatre cotes en deux lignes de deux. */
+  .su-ouv__corps {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .su-ouv__marque,
+  .su-ouv__titre,
+  .su-ouv__colonne,
+  .su-ouv__cotes {
+    grid-column: 1 / -1;
+  }
+  .su-ouv__colonne {
+    grid-row: auto;
+    padding-top: 1.2rem;
+  }
+  .su-ouv__ancre {
+    height: clamp(7.5rem, 22vh, 12rem);
+  }
+  .su-ouv__lettrage {
+    height: clamp(1.9rem, 5.4vh, 2.8rem);
+  }
+  .su-ouv__titre {
+    font-size: clamp(2rem, 9.5vw, 3rem);
+    margin-top: 1.4rem;
+  }
+  .su-ouv__mot {
+    font-size: clamp(3.2rem, 22vw, 6rem);
+  }
+  .su-ouv__actions {
+    align-self: stretch;
+  }
+  .su-ouv__actions > :first-child {
+    width: 100%;
+    justify-content: center;
+    min-height: 52px;
+  }
+  .su-ouv__cotes {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.9rem 1rem;
+  }
+  .su-ouv__pied {
+    font-size: 0.62rem;
+  }
+}
+
+/* ── Mouvement réduit ──────────────────────────────────────────────────── */
+
+@media (prefers-reduced-motion: reduce) {
+  .su-ouv__mot,
+  .su-ouv__mot::after,
+  .su-ouv__grille,
+  .su-ouv__ancre .su-logo__marque {
+    transition: none;
+  }
+  .su-ouv__descendre i {
+    animation: none;
+  }
+}
+
+/* Les deux lignes du titre d'ouverture. Elles sont déclarées, pas subies :
+   le mot porteur termine la première, le délai occupe la seconde. */
+/* `display: block`, pas `flex`.
+   Un conteneur flex transforme les espaces du texte en gouttières : le rendu
+   est le même, mais le titre se copie d'un bloc, « Votresiteen 10 jours
+   ouvrés ». Les deux lignes restent décidées (chaque `span` est un bloc),
+   et les espaces redeviennent des caractères. L'alignement sur la ligne de
+   base du mot porteur vient alors du flux en ligne, ce qui est précisément
+   ce que demande le dossier : « le logo et le mot porteur se partagent la
+   même ligne de base ». */
+.su-ouv__ligne {
+  display: block;
+  white-space: nowrap;
+}

@@ -24,7 +24,8 @@ import { useMemo, useRef } from 'react'
 import { useFrame } from '@react-three/fiber'
 import { Group, Color, MathUtils } from 'three'
 import { useBande } from '@/store/bande'
-import { creerGeometriesBande } from './geometrie'
+import { creerGeometriesBande, HAUTEUR_MONDE } from './geometrie'
+import { hauteurVisible } from '../cadrage'
 
 /** Couleurs du logo, identiques à `LogoMarque.tsx`. */
 const NAVY = '#0D2C4C'
@@ -35,8 +36,14 @@ const EPAISSEUR_MAX = 0.12
 /** Une épaisseur nulle rendrait les normales indéfinies : on garde un epsilon. */
 const EPAISSEUR_MIN = 0.0008
 
-export default function Bande({ mobile = false }: { mobile?: boolean }) {
+export default function Bande() {
   const groupe = useRef<Group>(null)
+  /* Deux groupes imbriqués, et pas un seul : le PORTEUR applique la
+     position et l'échelle dictées par la boîte d'ancrage HTML, le groupe
+     intérieur garde la rotation et l'épaisseur. Tout mettre sur un seul
+     groupe ferait que chaque relecture de l'ancrage écraserait la rotation
+     en cours. */
+  const porteur = useRef<Group>(null)
   const { navy, ambre } = useMemo(() => creerGeometriesBande(), [])
 
   // La pellicule teinte le brin navy par l'accent du projet courant. Une
@@ -49,7 +56,8 @@ export default function Bande({ mobile = false }: { mobile?: boolean }) {
 
   useFrame((etatTrois, delta) => {
     const g = groupe.current
-    if (!g) return
+    const pr = porteur.current
+    if (!g || !pr) return
     const { progression, etat, mouvement, accent } = useBande.getState()
 
     const fige = mouvement === 'aucun'
@@ -97,6 +105,32 @@ export default function Bande({ mobile = false }: { mobile?: boolean }) {
       g.scale.y = 1
     }
 
+    /* ── Ancrage sur la mise en page ───────────────────────────────────────
+       La page déclare une boîte ; la bande s'y place. La conversion est
+       directe parce que la caméra regarde l'origine et que la hauteur
+       visible au plan z = 0 est connue : une fraction d'écran devient une
+       fraction de cette hauteur. Sans ancrage (pages sans hero), la bande
+       reste centrée. */
+    const anc = useBande.getState().ancrage
+    if (anc) {
+      /* La hauteur visible vient du cadrage partagé, PAS de
+         `state.viewport` : la projection de cette scène est une matrice
+         mélangée ortho/perspective, et `viewport` la calcule comme si
+         c'était une perspective ordinaire. Il renvoyait donc une valeur
+         fausse, et la bande se plaçait hors du cadre — le premier rendu du
+         hero montrait un trou à la place du ruban. */
+      const portrait = etatTrois.size.width < 900
+      const hauteurVue = hauteurVisible(portrait)
+      const largeurVue = hauteurVue * (etatTrois.size.width / Math.max(1, etatTrois.size.height))
+      pr.position.x = (anc.cx - 0.5) * largeurVue
+      pr.position.y = (0.5 - anc.cy) * hauteurVue
+      const e = (anc.hauteur * hauteurVue) / HAUTEUR_MONDE
+      pr.scale.setScalar(e)
+    } else {
+      pr.position.set(0, 0, 0)
+      pr.scale.setScalar(1)
+    }
+
     /* ── Teinte d'accent ──────────────────────────────────────────────────
        Seul le brin navy prend l'accent du projet : l'ambre du logo ne change
        jamais de teinte au-delà de ses deux valeurs (règle 4.2 §2). */
@@ -108,18 +142,16 @@ export default function Bande({ mobile = false }: { mobile?: boolean }) {
     }
   })
 
-  // Sur mobile la bande vit dans une zone dédiée du tiers supérieur : elle
-  // est remontée et légèrement réduite plutôt que centrée sur tout l'écran.
-  const position: [number, number, number] = mobile ? [0, 0.35, 0] : [0, 0, 0]
-
   return (
-    <group ref={groupe} position={position}>
-      <mesh geometry={navy} castShadow receiveShadow>
-        <meshStandardMaterial color={NAVY} roughness={0.92} metalness={0} />
-      </mesh>
-      <mesh geometry={ambre} castShadow receiveShadow>
-        <meshStandardMaterial color={AMBRE} roughness={0.86} metalness={0} />
-      </mesh>
+    <group ref={porteur}>
+      <group ref={groupe}>
+        <mesh geometry={navy} castShadow receiveShadow>
+          <meshStandardMaterial color={NAVY} roughness={0.92} metalness={0} />
+        </mesh>
+        <mesh geometry={ambre} castShadow receiveShadow>
+          <meshStandardMaterial color={AMBRE} roughness={0.86} metalness={0} />
+        </mesh>
+      </group>
     </group>
   )
 }

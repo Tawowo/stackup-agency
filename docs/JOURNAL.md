@@ -101,6 +101,36 @@ fautes, toutes dans la MESURE, aucune dans l'objet :
 **Cadence** (SwiftShader, rendu logiciel sans GPU — proxy, pas un vrai
 appareil) : 31 fps en 1440, 60 fps en 390.
 
-**Pas encore fait en phase 1** : le hero RÉVÉLATION lui-même (la bande n'est
-visible que sur le banc `/lab`), le repli SVG, l'ombre portée réelle, le
-drag.
+**LE HERO.** Le ruban 3D s'aligne au pixel sur une boîte vide déclarée par
+le HTML, à côté du lettrage, qui reste du HTML (sélectionnable, indexable,
+lisible par un lecteur d'écran, présent sans WebGL). Titre « Votre [site] en
+10 jours ouvrés. », mot porteur cliquable, deux actions, quatre cotes tirées
+de `site.ts`, pied « 00 — Ouverture ».
+
+**Quatre défauts trouvés en regardant les captures, et un par la QA :**
+
+1. Le ruban n'apparaissait pas. La bande se plaçait hors cadre parce qu'elle
+   lisait `state.viewport` de R3F, qui calcule la hauteur visible à partir du
+   `fov` — or la projection de cette scène est une matrice MÉLANGÉE
+   ortho/perspective. La hauteur visible est passée dans un module partagé.
+2. Le ruban était correctement placé mais invisible : le hero se peignait un
+   fond ivoire opaque qui passait devant le calque fixe. L'ivoire est
+   désormais porté par le `body` ; une section qui veut laisser voir la scène
+   ne peint rien.
+3. La page devenait sombre une fois ce fond retiré : le hero portait encore
+   `data-scene="ouverture"`, qui met la traversée nuit/jour à 1. La direction
+   retenue est ivoire dominant ; le hero ne participe plus à ce système.
+4. Au défilement, la bande restait collée à l'écran et chevauchait le titre :
+   l'ancrage n'était relevé qu'au redimensionnement. Il suit maintenant le
+   défilement, une fois par image au plus.
+5. La QA a relevé que le titre se copiait « Votresiteen 10 jours ouvrés » :
+   première version en `display: flex` avec `gap`. Le rendu était identique,
+   mais une gouttière n'est pas un caractère.
+
+**Deux contrôles de la QA étaient périmés** : ils cherchaient « décoller »,
+le mot porteur de l'ancien hero. Réécrits sur ce qui doit rester vrai quelle
+que soit la formulation.
+
+**Pas fait en phase 1** : le repli SVG animé, l'ombre portée réelle sur
+l'ivoire, le drag à ± 20°, le cycle du mot porteur relié à la configuration
+de la bande (il change le texte et le store, pas encore la forme).

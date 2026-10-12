@@ -51,6 +51,17 @@ interface EtatGlobal {
   repli: boolean
   /** La scène est-elle prête à être affichée (évite un clignotement) ? */
   prete: boolean
+  /**
+   * Où la bande doit se placer à l'écran, en fraction de la fenêtre.
+   *
+   * C'est une page HTML qui décide, pas la scène : le hero contient une
+   * boîte vide qui tient la place du ruban, à côté du lettrage. La scène lit
+   * sa position et s'y cale. C'est la seule façon d'avoir un objet 3D qui
+   * s'aligne au pixel sur une mise en page fluide — et la raison pour
+   * laquelle le lettrage peut rester du HTML, donc sélectionnable, traduisible
+   * et lisible par un lecteur d'écran.
+   */
+  ancrage: { cx: number; cy: number; hauteur: number } | null
 
   setEtat: (e: EtatBande) => void
   setProgression: (p: number) => void
@@ -60,6 +71,7 @@ interface EtatGlobal {
   setMouvement: (m: Mouvement) => void
   setRepli: (r: boolean) => void
   setPrete: (p: boolean) => void
+  setAncrage: (a: { cx: number; cy: number; hauteur: number } | null) => void
 }
 
 export const useBande = create<EtatGlobal>()(
@@ -72,6 +84,7 @@ export const useBande = create<EtatGlobal>()(
     mouvement: 'plein',
     repli: false,
     prete: false,
+    ancrage: null,
 
     setEtat: (etat) => set({ etat }),
     // Pas de `set` si la valeur n'a pas bougé : la progression est écrite à
@@ -84,6 +97,7 @@ export const useBande = create<EtatGlobal>()(
     setMouvement: (mouvement) => set({ mouvement }),
     setRepli: (repli) => set({ repli }),
     setPrete: (prete) => set({ prete }),
+    setAncrage: (ancrage) => set({ ancrage }),
   })),
 )
 

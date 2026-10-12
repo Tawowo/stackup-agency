@@ -52,7 +52,7 @@ function contenuScene(mobile: boolean) {
           l'ombre ne soient pas des aplats noirs : le papier a toujours un
           peu de lumière rebondie. */}
       <directionalLight position={[4, -3, -5]} intensity={0.4} />
-      <Bande mobile={mobile} />
+      <Bande />
     </>
   )
 }
@@ -110,10 +110,16 @@ export default function Scene() {
             'webglcontextlost',
             (e) => {
               e.preventDefault()
+              document.documentElement.classList.remove('su-scene-prete')
               setRepli(true)
             },
             { passive: false },
           )
+          /* La classe sur <html> permet au CSS de savoir que le relais est
+             pris, et donc d'effacer le SVG de secours. Elle ne peut pas être
+             une variable React : le SVG est rendu par une autre page du
+             document, hors de cet arbre. */
+          document.documentElement.classList.add('su-scene-prete')
           setPrete(true)
         }}
       >

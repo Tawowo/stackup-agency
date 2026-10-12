@@ -56,6 +56,11 @@ export default function LogoMarque({
   teinte = 'auto',
   className = '',
 }: Props) {
+  /* `taille = 0` : le dimensionnement vient du CSS, pas de la prop. C'est
+     ce qu'il faut dans le hero, où la marque doit remplir une boîte fluide
+     dont la hauteur est en `vh`. On retire alors width/height du SVG et on
+     laisse le viewBox et le CSS s'en charger. */
+  const auto = taille === 0
   const largeurMarque = Math.round((taille * 146) / 229)
   // Les brins passent par des variables CSS : le navy d'origine (#0D2C4C)
   // disparaît sur l'encre de l'accueil nocturne — mesuré, la marque y était
@@ -68,8 +73,7 @@ export default function LogoMarque({
     <span className={`su-logo ${className}`} data-teinte={teinte}>
       <svg
         className="su-logo__marque"
-        width={largeurMarque}
-        height={taille}
+        {...(auto ? {} : { width: largeurMarque, height: taille })}
         viewBox="0 0 146 229"
         fill="none"
         aria-hidden="true"
@@ -82,7 +86,7 @@ export default function LogoMarque({
       {avecTexte && (
         <span
           className="su-logo__mot"
-          style={{ height: taille * 0.74 }}
+          {...(auto ? {} : { style: { height: taille * 0.74 } })}
           aria-hidden="true"
         />
       )}

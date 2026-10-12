@@ -396,9 +396,14 @@ async function main() {
   await sansJs.goto(`${BASE}/`, { waitUntil: 'domcontentloaded' })
   await dormir(900)
   const h1SansJs = await sansJs.locator('h1').textContent()
+  /* Le contrôle cherchait « décoller », le mot porteur de l'ANCIEN hero.
+     Celui-ci a été remplacé (§10.1 du dossier) par « Votre [site] en
+     10 jours ouvrés. », dont le mot porteur change à la demande. On vérifie
+     donc ce qui doit rester vrai quelle que soit la formulation : le titre
+     contient la promesse de délai, et il est entier sans JavaScript. */
   verifier(
     'le titre est lisible sans JavaScript',
-    (h1SansJs ?? '').includes('décoller'),
+    /Votre\s+\S+\s+en\s+\d+\s+jours ouvrés/.test((h1SansJs ?? '').replace(/\s+/g, ' ')),
     h1SansJs?.trim(),
   )
   // Le contrôle visait `.su-ligne-interne`, qui n'existe plus depuis la
@@ -462,9 +467,15 @@ async function main() {
   // Les deux lignes du titre sont des blocs : leurs textes se concatènent
   // sans séparateur si rien ne les sépare dans le DOM. On vérifie donc que
   // la jointure attendue existe bel et bien.
+  /* Même raison : la jointure à vérifier n'est plus « fait décoller » mais
+     celle des deux lignes du nouveau titre. Le défaut que ce contrôle
+     existe pour attraper est toujours le même, et il a resservi : une
+     première version de ce hero utilisait `display: flex` avec `gap`, ce qui
+     donne le bon rendu mais copie « Votresiteen 10 jours ouvrés » — une
+     gouttière n'est pas un caractère. */
   verifier(
     'les lignes du titre sont séparées par une espace',
-    /fait\s+décoller/.test(titreSansJs.replace(/\s+/g, ' ')),
+    /\S\s+en\s+\d+\s+jours ouvrés/.test(titreSansJs.replace(/\s+/g, ' ')),
     titreSansJs.trim(),
   )
 
