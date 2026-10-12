@@ -4,15 +4,17 @@ import { getAllPosts } from '@/lib/blog'
 export const size = { width: 1200, height: 630 }
 export const contentType = 'image/png'
 
-export function generateImageMetadata({ params }: { params: { slug: string } }) {
+export async function generateImageMetadata({ params }: { params: Promise<{ slug: string }> }) {
+  const parametres = await params
   const posts = getAllPosts()
-  const post = posts.find(p => p.slug === params.slug)
-  return [{ id: params.slug, alt: post?.title ?? 'Article Stackup Agency' }]
+  const post = posts.find(p => p.slug === parametres.slug)
+  return [{ id: parametres.slug, alt: post?.title ?? 'Article Stackup Agency' }]
 }
 
-export default function Image({ params }: { params: { slug: string } }) {
+export default async function Image({ params }: { params: Promise<{ slug: string }> }) {
+  const parametres = await params
   const posts = getAllPosts()
-  const post = posts.find(p => p.slug === params.slug)
+  const post = posts.find(p => p.slug === parametres.slug)
   const title = post?.title ?? 'Blog Stackup Agency'
   const tag = post?.tag ?? 'Blog'
 

@@ -65,7 +65,7 @@ const REPERES = [
  * constaté en lisant `updateScrollPosition` de curtains.js, qui accumule les
  * deltas précisément pour l'éviter.
  */
-function useCotes(cadre: React.RefObject<HTMLElement>, bloc: React.RefObject<HTMLElement>) {
+function useCotes(cadre: React.RefObject<HTMLElement | null>, bloc: React.RefObject<HTMLElement | null>) {
   const [cotes, setCotes] = useState<{ largeur: number; hauteur: number; titre: number } | null>(
     null,
   )

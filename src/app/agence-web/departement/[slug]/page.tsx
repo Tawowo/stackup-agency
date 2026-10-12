@@ -11,8 +11,9 @@ export function generateStaticParams() {
   return DEPARTEMENTS.map(d => ({ slug: d.slug }))
 }
 
-export function generateMetadata({ params }: { params: { slug: string } }) {
-  const d = getDepartement(params.slug)
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+  const parametres = await params
+  const d = getDepartement(parametres.slug)
   if (!d) return {}
   const art = getArticles(d.slug)
   return {
@@ -28,8 +29,9 @@ export function generateMetadata({ params }: { params: { slug: string } }) {
   }
 }
 
-export default function DepartementPage({ params }: { params: { slug: string } }) {
-  const d = getDepartement(params.slug)
+export default async function DepartementPage({ params }: { params: Promise<{ slug: string }> }) {
+  const parametres = await params
+  const d = getDepartement(parametres.slug)
   if (!d) notFound()
   const art = getArticles(d.slug)
 

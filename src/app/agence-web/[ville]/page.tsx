@@ -10,8 +10,9 @@ export async function generateStaticParams() {
   return VILLES.map(v => ({ ville: v.slug }))
 }
 
-export async function generateMetadata({ params }: { params: { ville: string } }) {
-  const v = getVille(params.ville)
+export async function generateMetadata({ params }: { params: Promise<{ ville: string }> }) {
+  const parametres = await params
+  const v = getVille(parametres.ville)
   if (!v) return {}
   const url = `${SITE.url}/agence-web/${v.slug}`
   const rawTitle = `Agence web ${v.ville} — Site internet dès ${SITE.pricing.vitrine}€`
@@ -29,8 +30,9 @@ export async function generateMetadata({ params }: { params: { ville: string } }
 }
 
 
-export default function AgenceWebVillePage({ params }: { params: { ville: string } }) {
-  const v = getVille(params.ville)
+export default async function AgenceWebVillePage({ params }: { params: Promise<{ ville: string }> }) {
+  const parametres = await params
+  const v = getVille(parametres.ville)
   if (!v) notFound()
 
   const url = `${SITE.url}/agence-web/${v.slug}`

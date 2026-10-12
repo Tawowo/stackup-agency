@@ -1,5 +1,6 @@
 /* eslint-disable react/no-unescaped-entities, @typescript-eslint/no-unsafe-function-type */
 'use client'
+import type React from 'react'
 import { useState, useEffect, useRef, useCallback } from 'react'
 import Link from 'next/link'
 import { SITE } from '@/config/site'
@@ -346,7 +347,7 @@ function ArchWireframe({ archId, pal }: { archId: string; pal: Palette5 }) {
   const s = { bg: pal.bg, dom: pal.dom, sec: pal.sec, txt: pal.txt, acc: pal.acc }
   const base = { background: s.bg, borderRadius: 8, overflow: 'hidden', border: `1px solid ${s.dom}22`, width: '100%', aspectRatio: '4/3' }
 
-  const wireframes: Record<string, JSX.Element> = {
+  const wireframes: Record<string, React.JSX.Element> = {
     A01: (
       <div style={base} className="flex flex-col">
         <div style={{ background: s.dom, height: 20, display: 'flex', alignItems: 'center', padding: '0 8px', gap: 4 }}>

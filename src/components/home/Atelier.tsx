@@ -4,6 +4,7 @@
  * Split sticky : gauche = liste des 7 services / droite = navigateur vivant
  * qui MONTRE le service actif en train de se construire.
  */
+import type React from 'react'
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { ArrowRight, ExternalLink, Monitor, LayoutGrid, ShoppingCart, Settings, Users, PenLine, BarChart2 } from 'lucide-react'
@@ -336,7 +337,7 @@ function PreviewMultiPages() {
 }
 
 // ─── Map service ID → preview component & colors ────────────────────────
-const PREVIEW_MAP: Record<string, { Component: () => JSX.Element; accent: string; bgFrom: string; bgTo: string }> = {
+const PREVIEW_MAP: Record<string, { Component: () => React.JSX.Element; accent: string; bgFrom: string; bgTo: string }> = {
   'site-vitrine':       { Component: PreviewVitrine,     accent: '#2D7DD2', bgFrom: '#EFF6FF', bgTo: '#DBEAFE' },
   'site-multi-pages':   { Component: PreviewMultiPages,  accent: '#2D7DD2', bgFrom: '#EFF6FF', bgTo: '#BFDBFE' },
   'site-ecommerce':     { Component: PreviewEcommerce,   accent: '#1E3A5F', bgFrom: '#EEF2FF', bgTo: '#C7D2FE' },

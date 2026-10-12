@@ -1,3 +1,4 @@
+import type React from 'react'
 import Breadcrumb from '@/components/ui/Breadcrumb'
 
 interface BreadcrumbItem {
@@ -179,7 +180,7 @@ function Maillage() {
   )
 }
 
-const ORNEMENTS: Partial<Record<Signature, () => JSX.Element>> = {
+const ORNEMENTS: Partial<Record<Signature, () => React.JSX.Element>> = {
   trace: Trace,
   echelle: Echelle,
   chronologie: Chronologie,

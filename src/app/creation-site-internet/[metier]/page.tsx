@@ -10,8 +10,9 @@ export async function generateStaticParams() {
   return METIERS.map(m => ({ metier: m.slug }))
 }
 
-export async function generateMetadata({ params }: { params: { metier: string } }) {
-  const m = getMetier(params.metier)
+export async function generateMetadata({ params }: { params: Promise<{ metier: string }> }) {
+  const parametres = await params
+  const m = getMetier(parametres.metier)
   if (!m) return {}
   const url = `${SITE.url}/creation-site-internet/${m.slug}`
   const prix = m.serviceLie === 'site-ecommerce' ? SITE.pricing.ecommerce : m.serviceLie === 'site-multi-pages' ? SITE.pricing.multipages : SITE.pricing.vitrine
@@ -50,8 +51,9 @@ const AVANTAGES_STACKUP = [
   { icon: CheckCircle, titre: 'SEO local intégré', desc: 'Chaque site est optimisé pour votre ville et votre métier dès la mise en ligne.' },
 ]
 
-export default function MetierPage({ params }: { params: { metier: string } }) {
-  const m = getMetier(params.metier)
+export default async function MetierPage({ params }: { params: Promise<{ metier: string }> }) {
+  const parametres = await params
+  const m = getMetier(parametres.metier)
   if (!m) notFound()
 
   const url = `${SITE.url}/creation-site-internet/${m.slug}`

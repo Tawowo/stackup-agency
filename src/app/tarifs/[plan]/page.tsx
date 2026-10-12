@@ -174,10 +174,11 @@ export async function generateStaticParams() {
   return Object.keys(plans).map(plan => ({ plan }))
 }
 
-export async function generateMetadata({ params }: { params: { plan: string } }): Promise<Metadata> {
-  const plan = plans[params.plan]
+export async function generateMetadata({ params }: { params: Promise<{ plan: string }> }): Promise<Metadata> {
+  const parametres = await params
+  const plan = plans[parametres.plan]
   if (!plan) return {}
-  const url = `https://stackup-agency.fr/tarifs/${params.plan}`
+  const url = `https://stackup-agency.fr/tarifs/${parametres.plan}`
   return {
     title: `Plan ${plan.name} ${plan.price} — Maintenance Web`,
     description: plan.metaDesc,
@@ -191,12 +192,13 @@ export async function generateMetadata({ params }: { params: { plan: string } })
   }
 }
 
-export default function TarifPage({ params }: { params: { plan: string } }) {
-  const plan = plans[params.plan]
+export default async function TarifPage({ params }: { params: Promise<{ plan: string }> }) {
+  const parametres = await params
+  const plan = plans[parametres.plan]
   if (!plan) notFound()
 
   const planKeys = ['starter', 'pro', 'premium'] as const
-  const url = `https://stackup-agency.fr/tarifs/${params.plan}`
+  const url = `https://stackup-agency.fr/tarifs/${parametres.plan}`
 
   const offerSchema = {
     '@context': 'https://schema.org',
@@ -246,7 +248,7 @@ export default function TarifPage({ params }: { params: { plan: string } }) {
             <span>›</span>
             <span className="text-white/60">Plan {plan.name}</span>
           </nav>
-          {params.plan === 'pro' && (
+          {parametres.plan === 'pro' && (
             <div className="inline-flex items-center gap-1.5 px-4 py-1.5 bg-gold rounded-full text-ink text-xs font-bold mb-4">
               <Zap size={12} fill="white" />
               Recommandé
@@ -310,9 +312,9 @@ export default function TarifPage({ params }: { params: { plan: string } }) {
                 <tr className="border-b border-gray-100">
                   <th className="text-left p-4 text-gray-500 text-sm font-medium">Fonctionnalité</th>
                   {planKeys.map(key => (
-                    <th key={key} className={`p-4 text-sm font-bold ${key === params.plan ? 'text-electric' : 'text-gray-500'}`}>
+                    <th key={key} className={`p-4 text-sm font-bold ${key === parametres.plan ? 'text-electric' : 'text-gray-500'}`}>
                       {key.charAt(0).toUpperCase() + key.slice(1)}
-                      {key === params.plan && <div className="text-xs font-normal text-electric">Votre plan</div>}
+                      {key === parametres.plan && <div className="text-xs font-normal text-electric">Votre plan</div>}
                     </th>
                   ))}
                 </tr>
@@ -324,7 +326,7 @@ export default function TarifPage({ params }: { params: { plan: string } }) {
                     {planKeys.map(key => (
                       <td key={key} className="p-4 text-center">
                         {row[key] ? (
-                          <Check size={16} className={key === params.plan ? 'text-electric mx-auto' : 'text-[#15803D] mx-auto'} />
+                          <Check size={16} className={key === parametres.plan ? 'text-electric mx-auto' : 'text-[#15803D] mx-auto'} />
                         ) : (
                           <X size={16} className="text-gray-300 mx-auto" />
                         )}

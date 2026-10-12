@@ -306,10 +306,11 @@ export async function generateStaticParams() {
   return Object.keys(services).map((slug) => ({ slug }))
 }
 
-export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
-  const service = services[params.slug]
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const parametres = await params
+  const service = services[parametres.slug]
   if (!service) return {}
-  const url = `https://stackup-agency.fr/services/${params.slug}`
+  const url = `https://stackup-agency.fr/services/${parametres.slug}`
   return {
     title: `${service.title} — ${service.price}`,
     description: service.metaDesc,
@@ -323,11 +324,12 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   }
 }
 
-export default function ServicePage({ params }: { params: { slug: string } }) {
-  const service = services[params.slug]
+export default async function ServicePage({ params }: { params: Promise<{ slug: string }> }) {
+  const parametres = await params
+  const service = services[parametres.slug]
   if (!service) notFound()
 
-  const url = `https://stackup-agency.fr/services/${params.slug}`
+  const url = `https://stackup-agency.fr/services/${parametres.slug}`
 
   const serviceSchema = {
     '@context': 'https://schema.org',

@@ -43,10 +43,11 @@ export function generateStaticParams() {
   return Object.keys(CATEGORIES).map(cat => ({ cat }))
 }
 
-export async function generateMetadata({ params }: { params: { cat: string } }) {
-  const catData = CATEGORIES[params.cat]
+export async function generateMetadata({ params }: { params: Promise<{ cat: string }> }) {
+  const parametres = await params
+  const catData = CATEGORIES[parametres.cat]
   if (!catData) return {}
-  const url = `${SITE.url}/blog/categorie/${params.cat}`
+  const url = `${SITE.url}/blog/categorie/${parametres.cat}`
   return {
     title: `${catData.label} — Articles et conseils`,
     description: catData.description,
@@ -55,8 +56,9 @@ export async function generateMetadata({ params }: { params: { cat: string } }) 
   }
 }
 
-export default function BlogCategoriePage({ params }: { params: { cat: string } }) {
-  const catData = CATEGORIES[params.cat]
+export default async function BlogCategoriePage({ params }: { params: Promise<{ cat: string }> }) {
+  const parametres = await params
+  const catData = CATEGORIES[parametres.cat]
   if (!catData) notFound()
 
   const allPosts = getAllPosts()
@@ -68,7 +70,7 @@ export default function BlogCategoriePage({ params }: { params: { cat: string } 
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Accueil', item: SITE.url },
       { '@type': 'ListItem', position: 2, name: 'Blog', item: `${SITE.url}/blog` },
-      { '@type': 'ListItem', position: 3, name: catData.label, item: `${SITE.url}/blog/categorie/${params.cat}` },
+      { '@type': 'ListItem', position: 3, name: catData.label, item: `${SITE.url}/blog/categorie/${parametres.cat}` },
     ],
   }
 
@@ -118,7 +120,7 @@ export default function BlogCategoriePage({ params }: { params: { cat: string } 
         )}
 
         <div className="mt-12 flex flex-wrap gap-3">
-          {Object.entries(CATEGORIES).filter(([k]) => k !== params.cat).map(([slug, data]) => (
+          {Object.entries(CATEGORIES).filter(([k]) => k !== parametres.cat).map(([slug, data]) => (
             <Link
               key={slug}
               href={`/blog/categorie/${slug}`}

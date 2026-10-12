@@ -12,8 +12,9 @@ export async function generateStaticParams() {
   return posts.map(p => ({ slug: p.slug }))
 }
 
-export async function generateMetadata({ params }: { params: { slug: string } }) {
-  const post = await getPost(params.slug)
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+  const parametres = await params
+  const post = await getPost(parametres.slug)
   if (!post) return {}
   const url = `https://stackup-agency.fr/blog/${post.slug}`
   const rawTitle = post.seoTitle || post.title
@@ -43,8 +44,9 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   }
 }
 
-export default async function BlogPostPage({ params }: { params: { slug: string } }) {
-  const post = await getPost(params.slug)
+export default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {
+  const parametres = await params
+  const post = await getPost(parametres.slug)
   if (!post) notFound()
   const allPosts = getAllPosts()
 

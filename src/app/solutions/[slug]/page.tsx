@@ -11,8 +11,9 @@ export async function generateStaticParams() {
   return SOLUTIONS.map(s => ({ slug: s.slug }))
 }
 
-export async function generateMetadata({ params }: { params: { slug: string } }) {
-  const s = getSolution(params.slug)
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+  const parametres = await params
+  const s = getSolution(parametres.slug)
   if (!s) return {}
   const url = `${SITE.url}/solutions/${s.slug}`
   const suffix = ' | Stackup Agency'
@@ -30,8 +31,9 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   }
 }
 
-export default function SolutionPage({ params }: { params: { slug: string } }) {
-  const s = getSolution(params.slug)
+export default async function SolutionPage({ params }: { params: Promise<{ slug: string }> }) {
+  const parametres = await params
+  const s = getSolution(parametres.slug)
   if (!s) notFound()
 
   const url = `${SITE.url}/solutions/${s.slug}`

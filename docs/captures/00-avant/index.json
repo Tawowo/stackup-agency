@@ -1,0 +1,92 @@
+[
+ {
+  "fichier": "docs/captures/00-avant/accueil-1440-y0.png",
+  "route": "/",
+  "largeur": 1440,
+  "y": 0,
+  "hauteur": 18415,
+  "grille": false,
+  "reduit": false
+ },
+ {
+  "fichier": "docs/captures/00-avant/accueil-1440-y1400.png",
+  "route": "/",
+  "largeur": 1440,
+  "y": 1400,
+  "hauteur": 18415,
+  "grille": false,
+  "reduit": false
+ },
+ {
+  "fichier": "docs/captures/00-avant/accueil-1440-y3200.png",
+  "route": "/",
+  "largeur": 1440,
+  "y": 3200,
+  "hauteur": 18415,
+  "grille": false,
+  "reduit": false
+ },
+ {
+  "fichier": "docs/captures/00-avant/accueil-1440-y6500.png",
+  "route": "/",
+  "largeur": 1440,
+  "y": 6500,
+  "hauteur": 18415,
+  "grille": false,
+  "reduit": false
+ },
+ {
+  "fichier": "docs/captures/00-avant/accueil-1440-y11000.png",
+  "route": "/",
+  "largeur": 1440,
+  "y": 11000,
+  "hauteur": 18415,
+  "grille": false,
+  "reduit": false
+ },
+ {
+  "fichier": "docs/captures/00-avant/accueil-390-y0.png",
+  "route": "/",
+  "largeur": 390,
+  "y": 0,
+  "hauteur": 20268,
+  "grille": false,
+  "reduit": false
+ },
+ {
+  "fichier": "docs/captures/00-avant/accueil-390-y1400.png",
+  "route": "/",
+  "largeur": 390,
+  "y": 1400,
+  "hauteur": 20268,
+  "grille": false,
+  "reduit": false
+ },
+ {
+  "fichier": "docs/captures/00-avant/accueil-390-y3200.png",
+  "route": "/",
+  "largeur": 390,
+  "y": 3200,
+  "hauteur": 20268,
+  "grille": false,
+  "reduit": false
+ },
+ {
+  "fichier": "docs/captures/00-avant/accueil-390-y6500.png",
+  "route": "/",
+  "largeur": 390,
+  "y": 6500,
+  "hauteur": 20268,
+  "grille": false,
+  "reduit": false
+ },
+ {
+  "fichier": "docs/captures/00-avant/accueil-390-y11000.png",
+  "route": "/",
+  "largeur": 390,
+  "y": 11000,
+  "hauteur": 20268,
+  "grille": false,
+  "reduit": false
+ }
+]
