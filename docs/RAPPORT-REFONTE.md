@@ -1,280 +1,206 @@
-# Refonte Stackup Agency — rapport
+# Rapport de refonte — Stackup Agency
 
-Trois commits sur `main` : `cdcfdfb`, `56e0ba7`, `e83a0ca`.
-86 fichiers, +2 657 / −1 249 lignes.
+Rapport demandé par la section 17.7 du dossier. Il est écrit pour être
+utilisable, donc il nomme d'abord ce qui n'est pas fait.
 
-Ce document dit ce qui a été fait, ce qui a été mesuré, et ce qui ne l'a pas
-été. Les points marqués **non traité** le sont vraiment.
-
----
-
-## Mission 1 — La recherche
-
-**24 dépôts dont j'ai lu du code**, le fichier précisé pour chacun dans
-`docs/recherche/NOTES-BRUTES.md`.
-
-**6 dépôts nommés comme NON lus** plutôt que résumés depuis leur README :
-Theatre.js, three-stdlib et maath (404 sur tous les chemins essayés), Rive,
-les WebGPU samples, Tweakpane. L'objectif annoncé était trente ; il en manque
-six, et ils sont nommés.
-
-**Bilan des dépendances : aucune ajoutée.** Six techniques reprises, treize
-bibliothèques écartées avec un motif chiffré — par exemple `EffectComposer`,
-qui alloue deux cibles half-float plein écran, soit ≈ 63 Mo de VRAM en
-1440×900 à dpr 1,75 avant le moindre effet. Le détail est dans
-`docs/recherche/DECISIONS.md`.
-
-**Deux défauts de mon propre code trouvés par la lecture :**
-- le réseau de modules intégrait ses ressorts à `dt` variable — corrigé par un
-  accumulateur à pas fixe (1/120 s), méthode lue dans react-three-rapier ;
-- le titre découpé reposait sur `aria-label` plus des espaces `sr-only`, et le
-  copier-coller donnait « faitdécollervotre » — remplacé par le motif de
-  `splitText` d'anime.js v4.
-
-**Une affirmation fausse corrigée dans mon propre document :** j'y avais écrit
-que mon rotationnel ne normalisait pas. La lecture de mon code montre
-l'inverse. La vraie différence avec lygia est ailleurs, et reste notée comme
-dette, pas comme correction.
+Branche : `claude/brave-maxwell-i7g77j` · Date : 13 octobre 2026
 
 ---
 
-## Mission 2 — Le logo
+## 1. Ce qui n'est pas fait
 
-Restauré avant cette session (`422d5b6`), par décalque et non à main levée :
-chaque arête de `public/Logo_Stackup-Agency.png` scannée ligne par ligne puis
-ajustée par régression, erreur inférieure au pixel sur une largeur de 145. Le
-lettrage « Stackup AGENCY » est extrait en masque alpha, donc ce sont les
-lettres du fichier d'origine.
+Le dossier découpe le chantier en huit phases (§17.3). **Les phases 0, 1 et 2
+sont terminées. La phase 3 est entamée. Les phases 4 à 7 ne sont pas
+commencées.** Le détail :
 
-Le préchargeur a été supprimé : un minuteur fixe de 840 ms sans rapport avec
-un chargement réel, qui cachait un hero déjà noir derrière un écran noir.
+| Phase | État | Ce qui manque |
+| --- | --- | --- |
+| 0. Socle | **Terminée** | — |
+| 1. Scène et bande | **Terminée** | — |
+| 2. Accueil, première moitié | **Terminée** | — |
+| 3. Accueil, seconde moitié | **Partielle** | PELLICULE au sens plein (feuilletage des captures au drag, rail de jalons cliquable, transition par élément partagé) ; Salle des machines remise en scène ; Juste Prix ; DIX JOURS ; Atelier ; Départ ; footer |
+| 4. Pages commerciales | **Non commencée** | Les six gabarits de service, le gabarit projet, le curseur des tarifs, la fusion configurateur + devis, le contact, la TRAVERSÉE (View Transitions) |
+| 5. Pages programmatiques | **Non commencée** | Toute la matrice 13.11 : villes, départements, métiers, services locaux, solutions, hubs, à propos, FAQ, blog, outils, comparatif, légales, 404 |
+| 6. Finition et mesure | **Non commencée** | Grain et post-traitement, calque `G`, raccourcis, curseur, haptique, gyroscope, Lighthouse CI, vidéos |
+| 7. Options | **Non commencée** | Rapier, portails drei, PDF de devis, export du cahier des charges, visualisations d'articles |
 
----
+Ce qui a été fait en phase 3 est le **tampon « Démonstration »** sur les sept
+fiches de la salle de projection, parce que c'est une règle bloquante (§15.3)
+et non une amélioration : laisser un visiteur cliquer sur « Visiter la démo »
+en croyant voir un client réel est le problème que la règle vise. Le reste de
+la phase 3 attend.
 
-## Mission 3 — La page d'accueil
+**Deux dettes antérieures restent ouvertes**, signalées et non traitées :
 
-### Le premier écran : « le plan habité »
-
-Trois directions ont été conçues et comparées dans `DECISIONS.md`. Deux
-écartées, avec motif :
-
-- **La chambre noire** — spectaculaire, mais un site commercial entièrement
-  sombre handicape la lecture des offres et des prix, qui sont l'argument de
-  vente.
-- **La matière** — la typographie extrudée est un poncif, et l'empilement de
-  plaques est déjà la mécanique de l'anatomie : une redite interne.
-
-**Retenue : le plan habité.** Les deux reproches appelaient deux réponses
-différentes. L'IMPOSANT vient de l'échelle : le mot porteur monte à 17 vw et
-déborde de la colonne de texte. Le PROFESSIONNEL vient de la mesure : une
-grille de construction de 12 colonnes est visible, et toute la composition s'y
-aligne. Les cotes affichent les dimensions réelles relevées dans le navigateur
-et remises à jour par `ResizeObserver` — jamais des nombres décoratifs.
-
-Supprimés parce qu'ils ajoutaient du mouvement sans ajouter de sens : les
-trois plaques de parallaxe et les quatre cartes de confiance flottantes.
-
-### L'ordre de la page, refait
-
-L'ancien enchaînement posait **quatre sections de « preuve » avant de montrer
-un seul site livré**, et répétait **cinq fois les mêmes quatre chiffres**.
-
-| | Avant | Après |
-|---|---|---|
-| 01 | Hero | **L'ouverture** — le plan habité |
-| 02 | Seuil | Seuil |
-| — | Bandeau défilant | *supprimé* |
-| 03 | Anatomie | Anatomie |
-| 04 | Atelier | **Les services** (remonté) |
-| 05 | Preuve par 3 | **Les réalisations** (remontées de la 8ᵉ place) |
-| 06 | Preuve logicielle | La salle des machines |
-| 07 | Réalisations | **Le verdict** — le prix, après le travail |
-| 08 | La méthode | La méthode |
-| 09 | Raison d'être | Raison d'être |
-| 10 | Chiffres + FAQ | **FAQ seule** |
-| 11 | Seuil + CTA | Seuil + CTA |
-
-Trois déplacements, chacun pour une raison : les services suivent l'anatomie
-(elle ouvre un site, ils disent lesquels on construit) ; les réalisations
-remontent parce que le travail livré est la preuve la plus forte et ne peut
-pas arriver quatrième dans une file de démonstrations ; le prix descend parce
-qu'annoncer « huit fois moins cher » avant d'avoir montré le travail est une
-affirmation, alors qu'après c'est une conclusion.
-
-Trois suppressions, chacune pour cause de redite. Avant de supprimer les cinq
-pastilles de chiffres, j'ai vérifié les cinq valeurs une par une : toutes sont
-redites ailleurs, et le « 80 % moins cher » est même **calculé** par le
-comparateur à partir des tarifs réels.
-
-La seule information qui n'existait nulle part ailleurs — la pile technique du
-bandeau défilant — a été **déplacée**, pas perdue : elle est descendue dans
-les légendes de l'anatomie, lisible et rattachée à sa couche.
+- `public/` contient 1,6 Mo de doublons à double extension
+  (`hero-accueil.mp4.mp4`, `portrait-fondateur.webp.png`,
+  `hero-monument-s.webp.png`). Supprimables, mais c'est une décision qui vous
+  revient : je ne sais pas lequel des deux fichiers fait foi.
+- `seo-lint` signale deux pages à liens internes insuffisants
+  (`/laboratoire`, 2 liens ; `/configurateur`, 0). Non corrigé **exprès** :
+  la phase 4 refond ce tunnel, et ajouter des liens maintenant serait du
+  remplissage à défaire.
 
 ---
 
-## Mission 4 — Les expériences
+## 2. Les huit critères d'acceptation (§17.7)
 
-`docs/MOMENTS-ANIMES.md` est à jour : **46 moments**, dont **27 sur la page
-d'accueil**, portés par six matières différentes — points en 3D, grille mesurée
-au navigateur, plans HTML en perspective, Canvas 2D, pellicule de captures,
-filets et balayages.
+Le dossier dit : « Si l'un de ces huit points manque, le travail n'est pas
+terminé. » Il manque. Voici où en est chacun.
 
-Le compte passe de 45 à 46, ce qui n'est pas le sujet : le sujet est que deux
-mouvements qui ne disaient rien ont disparu.
-
----
-
-## Mission 5 — Les technologies
-
-Aucune bibliothèque installée. `three` reste en imports sélectifs, sans
-dépendance transitive. Le tableau des treize écartées et de leur motif est
-dans `DECISIONS.md`.
+| # | Critère | État |
+| --- | --- | --- |
+| 1 | Composition remarquable même sans animation | **Tenu** sur les moments livrés. Les apparitions sont des découpes, et sous `prefers-reduced-motion` elles sont retirées, pas remplacées : le contenu est entier. |
+| 2 | Logo exact, et c'est lui qui devient l'objet 3D | **Tenu.** Superposition mesurée à 1,89 % (1440) et 2,00 % (390), sous le seuil de 2 % de la règle 4.2. |
+| 3 | Neuf moments, neuf mécanismes distincts | **Non tenu** — quatre moments livrés sur neuf. Les quatre ont bien des mécanismes différents (bascule de projection, coupe en lamelles, morph de 120 plaques, traversée d'accent). |
+| 4 | Toutes les pages de la matrice transformées | **Non tenu.** C'est la phase 5. |
+| 5 | Mobile avec ses propres compositions | **Tenu sur les moments livrés** : hero en portrait, strates en onglets balayables, offres en balayage. Chaque moment a sa capture 390. |
+| 6 | Parcours configurateur → devis → e-mail sans ressaisie | **Non vérifié.** C'est la phase 4. Le parcours existant fonctionne, il n'a pas été refondu. |
+| 7 | Budgets tenus, axe et contraste sur 31 routes | **Tenu pour l'accessibilité** : axe 0 violation, contraste 0 nœud en échec, défilement horizontal 0 px à 390 et 1440. **Non vérifié pour les budgets de performance** : pas de Lighthouse CI (phase 6). |
+| 8 | Le rapport nomme ce qui n'a pas été fait | Ce document. |
 
 ---
 
-## Mission 6 — Le professionnalisme
+## 3. Les règles bloquantes
 
-- **Un seul surtitre.** La page en portait deux grammaires : `.su-surtitre` en
-  chasse fixe avec son filet, et un empilement Tailwind en ligne, même couleur
-  mais police proportionnelle et sans filet. Quatre sections utilisaient la
-  seconde.
-- **Des numéros de section**, de `01 — Ouverture` à `11 — Démarrons`.
-- **Des filets plutôt que des cartes** pour le verdict.
-- **Un seul blanc.** Huit pages utilisaient `#F8FAFC` là où trente utilisaient
-  l'ivoire `#FFFDF9` de la marque.
+Vous aviez désigné trois sections comme bloquantes. Leur état, mesuré :
 
----
+### §4.2 — Le logo
 
-## Mission 7 — Les pages intérieures
+`LogoMarque` et le PNG d'origine sont la seule source ; `logo.svg` et
+`logo-white.svg` sont supprimés. Le ruban 3D est tracé depuis le logo et, au
+repos, se superpose au PNG à **1,89 %** (1440) et **2,00 %** (390) d'écart.
 
-**Vingt-quatre pages ouvraient sur la même bande sombre**, copiée à
-l'identique. Comme plusieurs de ces fichiers sont des gabarits — une page par
-ville, une par métier, une par solution — elle se répétait en réalité sur
-plusieurs centaines d'URL.
+Trois choses rendent ce chiffre défendable, et elles ont toutes commencé par
+une mesure fausse :
 
-Vingt passent sur `MiniHero`, avec une signature par famille :
+1. Le dossier (§4.1) décrit `logo_Stackup-Agency_seul.png` comme « détouré,
+   RGBA ». Vérifié dans le navigateur : il n'a **aucun** pixel transparent et
+   81,8 % de blanc opaque. Binariser sur l'alpha allumait donc toute l'image.
+2. La capture incluait la barre de navigation et le bandeau cookies. Masquer
+   une *liste* de sélecteurs a raté le bouton hamburger mobile (84 % à
+   390 px) ; la version retenue masque tout sauf le canvas.
+3. Le seuil de binarisation à 232 incluait le halo d'anticrénelage. Il est
+   maintenant **dérivé** des luminances réelles (navy 39,7 · ambre 156,4 ·
+   papier 255 → 176), pas choisi.
 
-| Famille | Signature | Mécanisme |
-|---|---|---|
-| services, solutions, métiers, outils | `trace` | un schéma qui se câble |
-| territoire | `maillage` **(nouveau)** | une couverture qui gagne du terrain |
-| éditorial | `colonne` **(nouveau)** | des lignes de texte qui se composent |
-| devis, offre | `signal` | des ondes concentriques |
-| faq, plan du site | `sobre` | rien |
+L'écart se décompose en 0,38 % / 0,47 % d'erreur de forme ; le reste est du
+bord.
 
-`/comparatif/wix-wordpress-sur-mesure` reste à l'écart : c'est une page
-entièrement sombre, pas une page claire avec une bande rapportée.
+### §15.3 — Honnêteté
 
-### Ce que l'élargissement de l'audit a révélé
+- **Conditions commerciales : une seule version.** Les pages affichaient
+  30/70 quand les CGV disent 40/60 ; 2 ou 3 révisions ; 30, 60 ou 90 jours de
+  support. Tout vient de `site.ts`, qui recopie les CGV.
+- **Parrainage.** Trois versions sur la seule page qui en parle, dont
+  « gagnez 200 € pour chaque client » dans l'image Open Graph — celle qui
+  part dans les messageries. L'article 13 des CGV fait foi, et il décrit un
+  *choix* ; ma première correction l'avait aplati en une branche, recréant la
+  divergence qu'elle devait supprimer.
+- **Six témoignages inventés supprimés** de `services-locaux` : « 30 % de
+  réservations en plus », « 40 % de mes nouveaux clients », « 2 h par jour
+  gagnées », attribués à des « Chef propriétaire » et « Dirigeant PME » sans
+  nom. Remplacés par les quatre engagements des CGV, qui sont opposables.
+- **Hébergement décrit tel qu'il est.** « Hébergement en France » devient
+  « en Europe » partout : les mentions légales nomment Vercel Inc., société
+  américaine, avec des régions européennes. L'hébergement français reste
+  possible sur demande, et c'est écrit ainsi.
+- **Démonstrations annoncées** sur chaque fiche de l'accueil.
 
-Le scan de contraste visitait **douze routes sur quarante-deux**, toutes déjà
-jugées bonnes. Porté à **trente et une**, choisies pour couvrir au moins un
-représentant de chaque gabarit, il est immédiatement passé de 0 à **13 nœuds
-en échec**. Tous corrigés :
+### §17.6 — Les dix-huit erreurs
 
-- `.float-field label` en `rgba(30,58,95,0.5)` → **2,75:1**. Ça concernait
-  toutes les étiquettes flottantes des formulaires du site, et `.toc-link`
-  avait la même valeur pour le sommaire des articles. Porté à 5,5:1.
-- Le repère de `MiniHero` en `.section-marker` → **≈ 2,6:1**. Passé sur
-  `.su-surtitre`, 4,94:1.
-- Le studio de style choisissait la couleur du texte de ses maquettes par un
-  **seuil de luminance**. Un seuil n'est pas un contraste : sur un bleu comme
-  #4F9CF9 il donnait du blanc à **2,81:1**. Le fichier contenait déjà
-  `fixContrast()`, qui ajuste jusqu'à 4,5:1, et ne s'en servait pas ici.
-- 22 × `text-gray-500` sur gris clair (4,39:1).
-- **Deux formulaires sans étiquettes**, signalés « critical » : les six champs
-  du cahier des charges et le curseur « articles par mois ».
+Les deux qui étaient encore violées sont corrigées :
 
-### Le défaut le plus sérieux
-
-`CahierClient` — le formulaire guidé de cahier des charges — était écrit pour
-un fond sombre. Sa page est en ivoire. **Le texte tapé par le visiteur
-s'affichait en blanc sur ivoire : invisible.** Vérifié à la capture avant de
-corriger, puis entièrement reteint.
-
-Ce n'est pas une régression de ce lot : la racine de cette page était déjà
-ivoire avant que j'y touche. La bande sombre en haut faisait illusion.
+- **Règle 2** (pas de fondu + translation par défaut) : le `grep` exigé par
+  le dossier revient maintenant vide hors blog et FAQ. Une trentaine
+  d'occurrences remplacées par la découpe.
+- **Règle 17** (pas d'état masqué par défaut) : ces mêmes blocs partaient
+  invisibles et n'apparaissaient que par JavaScript. `--su-pose` vaut
+  désormais 1 par défaut.
 
 ---
 
-## Mission 8 — Ce qui a été observé, et ce que la mesure a démenti
+## 4. Ce que les captures ont trouvé et que la relecture n'aurait pas trouvé
 
-### Un défaut grave trouvé à l'écran
+C'est la partie la plus utile du rapport, parce qu'elle dit ce que vaut la
+boucle que vous avez imposée (implémenter → capturer → lire → corriger).
+**Aucun de ces défauts n'aurait été vu autrement, et tous passaient le
+build.**
 
-**Les deux barres du comparateur de prix n'étaient pas affichées**, sur le
-site en ligne. Pas « mal cadrées » : absentes. `.cp-track` mesurait 25,6 px au
-lieu de 40 sans aucun fond, `.cp-bar` faisait 0 px de haut sans dégradé, et
-l'étiquette restait en `position: static` et en italique — le style par défaut
-de `<em>`.
-
-La cause : **styled-jsx scope ses styles par composant**. Les trois éléments
-sont rendus par `Barre` ; leurs règles vivaient dans le bloc de
-`ComparateurPrix`. C'est une régression que j'ai introduite moi-même en
-extrayant `Barre` pour corriger une étiquette rognée — j'avais vérifié le
-texte de l'étiquette, pas la présence des barres.
-
-### Deux soupçons que la mesure n'a pas confirmés
-
-Les deux viennent d'une capture regardée. Les deux sont restés **sans
-correction**, parce que la mesure ne leur a pas donné raison.
-
-| Soupçon | Mesure | Décision |
-|---|---|---|
-| En 390 px le voile de particules « salit » le fond | Mesure différentielle (même cadre, canvas affiché puis masqué) : **1,65 niveau de luminance sur 255**, contre 1,43 en 1440 px. L'hypothèse d'une densité plus forte prévoyait un facteur 3,7 ; l'écart réel est de 16 %. | Rien changé |
-| Le nuage mord sur le titre du verdict | **0,24 niveau en moyenne, 3 % des pixels touchés** | Rien changé |
-
-### Trois outils de mesure, dont deux étaient faux
-
-- `scripts/grain.mjs` — première version : écart-type d'une bande fixe. Son
-  résultat (un minimum de luminance à 21 sur un fond ivoire) trahissait du
-  **texte** dans la zone : elle mesurait la présence de lettres, pas le grain.
-  Refaite avec un témoin.
-- `scripts/cadrer.mjs` — en 390 px, la démonstration logicielle passe de 4 à
-  12 lignes selon l'avancement ; les captures tombaient 2 000 px au-dessus de
-  la cible et montraient la section **précédente**.
-- `scripts/scan-contraste.mjs` — couvrait douze routes sur quarante-deux.
+1. **La scène débordait sur presque tout le site.** L'état initial du store
+   était `'logo'` : toute page qui ne déclare rien héritait du ruban centré à
+   l'échelle 1. Sur `/services-locaux/…`, il barrait le texte d'une section
+   entière. Un état `'absent'` est devenu le défaut.
+2. **Les cinq lamelles dessinaient chacune le ruban entier**, superposées.
+   `gl.localClippingEnabled` était activé après la compilation des programmes
+   GLSL, que three.js ne recompile pas sur ce drapeau.
+3. **Le bouton de la maquette sortait sans son fond ambré** : le CSS inventait
+   `--su-ambre`, `--su-papier` et `--su-ambre-encre`, qui n'existent pas. Les
+   variables CSS échouent en silence.
+4. **En 390 px, le titre des strates sortait de l'écran** avant que la
+   maquette n'y entre : le bloc collant dépassait 100 vh.
+5. **La pile se lisait comme trois bandes, pas cinq.**
+6. **Le titre se copiait « Votresiteen 10 jours ouvrés »** : `display: flex` +
+   `gap` n'est pas un caractère.
+7. **Les plaques ambrées formaient deux rayures verticales** : une sur six
+   dans une grille de douze colonnes. Sept est premier avec 12, 10, 8 et 3.
 
 ---
 
-## Mission 9 — Performance, accessibilité, fiabilité
+## 5. Trois instruments de mesure ont menti avant d'être corrigés
 
-| Contrôle | Résultat |
-|---|---|
-| `npm run build` | ✓ compilé, 0 erreur |
-| `npx next lint` | ✓ 0 avertissement |
-| `scripts/qa-complet.mjs` | 25 / 25 |
-| `scripts/scan-contraste.mjs` (axe-core) | **0 nœud en échec sur 31 routes** |
-| `scripts/detecter-invisibles.mjs` | 0 élément graphique sous 3:1, sur 19 pages |
-| `scripts/defilement-horizontal.mjs` | **0 px** en 360, 390, 430, 768, 1024, 1440 |
-| `scripts/replis.mjs` | les 4 voies tiennent — sans script, 264 blocs de texte lisibles en plein jour |
-| Poids de l'accueil | **24,7 ko · 130 ko** de JS au premier chargement, contre 27,8 · 133 avant |
+Noté parce que c'est la leçon la plus transférable du chantier : **un outil
+de mesure se valide avant de lui faire confiance.**
 
-Un défaut de référencement corrigé au passage : `/offre-rentree` appelle
-`notFound()` depuis que l'offre est close, mais le plan du site la déclarait
-toujours — une URL annoncée aux moteurs qui répond 404. L'audit passe de 8 à
-7 échecs et la catégorie « fetch » disparaît.
+- **Comparer deux captures, avec et sans le canvas.** Verdicts
+  contradictoires entre 1440 et 390 pour la même route. Ce n'était pas la
+  scène qui changeait entre les deux prises, mais la page — images différées,
+  révélations au défilement.
+- **Masquer tout sauf le canvas.** Image vide même sur l'accueil, où le ruban
+  est pourtant là : la scène se place d'après une boîte d'ancrage HTML, et
+  masquer cette boîte la réduit à zéro. **La mesure détruisait son objet.**
+- **La mesure de superposition du logo**, trois fois fausse (voir §3).
+
+Ce qui les remplace : `Temoin`, qui lit le compteur de triangles du renderer,
+et `scripts/scene-portee.mjs`, qui balaie les routes. Le compteur ne ment pas
+— il dit ce qui a été soumis au GPU. Résultat : 20 routes × 2 largeurs,
+0 fuite ; l'accueil dessine (96 triangles à 1440, 48 à 390, la différence
+étant la passe d'ombres absente en mobile).
 
 ---
 
-## Ce qui n'a PAS été fait
+## 6. État des vérifications
 
-- **Six dépôts de la mission 1 ne sont pas lus** : Theatre.js, three-stdlib,
-  maath, Rive, WebGPU samples, Tweakpane.
-- **7 échecs `seo-lint`** subsistent sur 100 pages : titres et descriptions
-  trop longs sur `/laboratoire`, `/parrainage` et `/outils/studio-de-style`,
-  trop peu de liens internes dans le corps de `/laboratoire` et
-  `/configurateur`. Aucun ne concerne l'accueil ni les en-têtes. **Aucun n'a
-  été corrigé.**
-- **`/comparatif/wix-wordpress-sur-mesure` n'a pas été retravaillée.**
-- **Le rotationnel du shader** n'est pas un rotationnel exact : il combine les
-  différences d'un bruit scalaire au lieu de dériver un bruit vectoriel. Noté
-  comme dette.
-- **1,6 Mo de doublons à double extension** restent dans `public/` —
-  `hero-accueil.mp4.mp4`, `portrait-fondateur.webp.png`,
-  `hero-monument-s.webp.png`. J'attends votre décision avant de supprimer des
-  fichiers.
-- **Les captures ont été prises en 1440 et 390** (et 1280 pour les en-têtes
-  intérieurs). Les largeurs intermédiaires sont couvertes par le contrôle de
-  débordement, pas par une capture regardée.
-- **Aucun test sur un appareil réel.** Tout est mesuré sous Chromium avec
-  SwiftShader : un rendu logiciel, sans GPU.
+Toutes relancées au dernier commit :
+
+```
+build          vert
+lint           0 avertissement
+QA complet     25/25
+axe-core       0 violation (dont 0 grave)
+contraste      0 nœud en échec sur 31 routes
+défilement h.  0 px à 1440 et 390
+portée scène   0 fuite sur 20 routes × 2 largeurs
+seo-lint       3 échecs sur 100 pages (2 assumés, voir §1)
+superposition  1,89 % / 2,00 % (seuil 2 %)
+```
+
+Captures lues, et non seulement prises :
+`docs/captures/p2-honnetete/`, `p2c-strates/`, `p2d-offre/`, `p2e-decoupe/`,
+`p3-salle/`.
+
+---
+
+## 7. Ce que je recommande pour la suite
+
+Dans cet ordre, et pour une raison à chaque fois :
+
+1. **Phase 4 avant le reste de la phase 3.** Les pages commerciales portent
+   le chiffre d'affaires ; les moments 05 à 09 de l'accueil portent le style.
+   Le dossier met les deux en « indispensable », mais si une seule doit
+   partir d'abord, c'est le tunnel de conversion.
+2. **Trancher sur les doublons de `public/`** (§1) — une minute de votre
+   part, 1,6 Mo de moins à servir.
+3. **Lighthouse CI dès maintenant**, sans attendre la phase 6 : les budgets
+   16.3 se tiennent plus facilement en continu qu'en rattrapage, et les
+   moments livrés sont le bon moment pour poser la ligne de base.
