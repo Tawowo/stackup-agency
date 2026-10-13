@@ -3,6 +3,11 @@ export const SITE = {
   legalName: 'Stackup Agency',
   url: 'https://stackup-agency.fr',
   email: 'contact@stackup-agency.fr',
+  /* Aucun numéro n'existait dans le dépôt au moment d'écrire la page de
+     maintenance, et je n'en invente pas. Renseignez-le ici au format
+     international (« +33 6 12 34 56 78 ») et il s'affichera ; laissé vide,
+     la page n'affiche que l'adresse e-mail. */
+  telephone: '',
   signature: "L'équipe Stackup Agency",
   address: {
     locality: 'Tours',
@@ -212,3 +217,20 @@ export function APartirDe(montant: number, suffixe = '€'): string {
   const t = aPartirDe(montant, suffixe)
   return t.charAt(0).toUpperCase() + t.slice(1)
 }
+
+/**
+ * LA FIN ANNONCÉE DE LA MAINTENANCE.
+ *
+ * Une date FIXE, écrite en clair, et non un calcul du type « maintenant
+ * + 48 h » : ce dernier repousserait l'échéance à chaque chargement et le
+ * compte à rebours n'arriverait jamais à zéro. Le visiteur qui revient une
+ * heure plus tard doit voir une heure de moins.
+ *
+ * Format ISO 8601 avec le fuseau explicite (`Z` = UTC) : sans lui, un
+ * navigateur interprète la chaîne dans SON fuseau, et deux visiteurs de
+ * continents différents voient deux comptes à rebours différents.
+ *
+ * Posée à 48 h de sa rédaction, le 13 octobre 2026 à 15 h 15 UTC.
+ * Pour la changer : remplacez simplement la chaîne ci-dessous.
+ */
+export const MAINTENANCE_FIN = '2026-10-15T15:15:21Z'
