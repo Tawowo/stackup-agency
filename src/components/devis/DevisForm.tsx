@@ -1,6 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 'use client'
 import { useState, useEffect, useRef, useCallback, Suspense } from 'react'
+import { normaliserOffre, VERS_DEVIS } from '@/lib/offres'
 
 import { useSearchParams } from 'next/navigation'
 import Link from 'next/link'
@@ -241,6 +242,15 @@ function Etape1({
             <button
               key={p.id}
               type="button"
+              /* L'ÉTAT DE SÉLECTION DOIT ÊTRE PROGRAMMATIQUE.
+
+                 Il n'était porté que par la couleur de bordure et une
+                 pastille cochée : un lecteur d'écran ne pouvait pas dire
+                 quel projet était choisi, et un visiteur qui distingue mal
+                 le bleu non plus. `aria-pressed` le dit à tout le monde —
+                 et donne au passage un point d'appui fiable pour vérifier
+                 la reprise depuis le configurateur. */
+              aria-pressed={selected}
               onClick={() => handlePick(p.id)}
               className={[
                 'relative text-left p-5 rounded-2xl border-2 transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-electric',
@@ -713,6 +723,39 @@ function DevisFormInner() {
         ...(src          ? { src }               : {}),
       }))
     }
+  }, [searchParams])
+
+  /* REPRISE DU TYPE DE PROJET — pour ne pas reposer la question.
+   *
+   * Le configurateur demande le type de projet à sa première étape ; ce
+   * formulaire le redemandait à la sienne. Un visiteur qui enchaînait les
+   * deux répondait deux fois à la même question, et le critère §17.7 n° 6
+   * exige un parcours « sans ressaisie ». Mesuré en jouant le parcours de
+   * bout en bout, pas déduit du code.
+   *
+   * Deux sources, dans cet ordre : le paramètre d'URL (qui survit au
+   * copier-coller et au nouvel onglet) puis le stockage de session. Les
+   * identifiants diffèrent d'un module à l'autre, d'où la table de
+   * correspondance de `lib/offres.ts`.
+   *
+   * On ne saute PAS l'étape pour autant : le choix est présélectionné et
+   * reste visible, donc modifiable. Sauter une étape déjà remplie donne
+   * l'impression d'avoir perdu le contrôle du formulaire. */
+  useEffect(() => {
+    let brut: string | null = searchParams?.get('base') ?? null
+    if (!brut) {
+      try {
+        brut = sessionStorage.getItem('su:configurateur:base')
+        if (brut) sessionStorage.removeItem('su:configurateur:base')
+      } catch {
+        brut = null
+      }
+    }
+    const id = normaliserOffre(brut)
+    if (!id) return
+    const projetDevis = VERS_DEVIS[id]
+    // Jamais par-dessus un choix déjà fait par le visiteur.
+    setState(s => (s.projet ? s : { ...s, projet: projetDevis, src: s.src || 'configurateur' }))
   }, [searchParams])
 
   // Reprise de la synthèse du configurateur.

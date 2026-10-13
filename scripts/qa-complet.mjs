@@ -300,7 +300,11 @@ async function main() {
   await conf.screenshot({ path: `${SORTIE}/configurateur-synthese.png` })
 
   await conf.getByRole('link', { name: /Transmettre et demander/ }).click()
-  await conf.waitForURL('**/devis', { timeout: 15000 })
+  // Le motif accepte un paramètre : le lien porte désormais le type de
+  // projet — /devis?base=ecommerce — pour que le formulaire n'ait pas à
+  // reposer la question. Le motif strict ne correspondait plus, et le
+  // contrôle échouait sur une amélioration.
+  await conf.waitForURL('**/devis*', { timeout: 15000 })
   await dormir(1600)
   // Le champ « message » appartient à une étape ultérieure du formulaire :
   // on interroge l'état persisté, qui est ce que le formulaire lira.

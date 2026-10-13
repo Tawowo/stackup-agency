@@ -13,7 +13,8 @@
  * comme restant à chiffrer.
  */
 
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
+import { normaliserOffre } from '@/lib/offres'
 import Link from 'next/link'
 import { ArrowLeft, ArrowRight, Check, Info } from 'lucide-react'
 import {
@@ -30,12 +31,32 @@ import {
 
 /** Clé de transmission vers le formulaire de devis. Lue puis effacée. */
 export const CLE_TRANSMISSION = 'su:configurateur'
+/** Le type de projet choisi, transmis à part pour être PRÉSÉLECTIONNÉ. */
+export const CLE_BASE = 'su:configurateur:base'
 
 const ETAPES = ['Votre projet', 'Vos besoins', 'Votre échéance', 'Synthèse'] as const
 
 export default function Configurateur() {
   const [etape, setEtape] = useState(0)
   const [config, setConfig] = useState<Configuration>(CONFIGURATION_VIDE)
+
+  /* L'OFFRE CHOISIE AILLEURS ARRIVE ICI.
+   *
+   * La section « l'offre » de l'accueil et « le juste prix » pointent vers
+   * `/configurateur?base=…` depuis qu'elles existent. Le paramètre n'était
+   * lu nulle part : le visiteur qui cliquait « Configurer mon projet » après
+   * avoir choisi « Boutique en ligne » retombait sur une première étape
+   * vierge et devait rechoisir. Les identifiants diffèrent d'un module à
+   * l'autre, d'où la table de `lib/offres.ts`.
+   *
+   * On présélectionne sans avancer : la première étape reste affichée, le
+   * choix est visible et modifiable. */
+  useEffect(() => {
+    const brut = new URLSearchParams(window.location.search).get('base')
+    const id = normaliserOffre(brut)
+    if (!id) return
+    setConfig((c) => (c.base ? c : { ...c, base: id }))
+  }, [])
 
   const options = useMemo(() => optionsPour(config.base), [config.base])
   const estimation = useMemo(() => estimer(config), [config])
@@ -70,6 +91,14 @@ export default function Configurateur() {
   function transmettre() {
     try {
       sessionStorage.setItem(CLE_TRANSMISSION, synthese)
+      /* Le type de projet part À PART de la synthèse.
+
+         La synthèse est un texte : elle atterrit dans le champ « message »
+         et le visiteur devait malgré tout re-choisir son type de projet à la
+         première étape du devis — la question à laquelle il venait de
+         répondre. Mesuré en jouant le parcours : c'est exactement la
+         ressaisie que le critère §17.7 n° 6 interdit. */
+      if (config.base) sessionStorage.setItem(CLE_BASE, config.base)
     } catch {
       // Navigation privée ou stockage refusé : le lien fonctionne quand même,
       // le visiteur aura simplement à décrire son besoin lui-même.
@@ -281,7 +310,15 @@ export default function Configurateur() {
             </div>
 
             <div className="flex flex-wrap gap-3">
-              <Link href="/devis" onClick={transmettre} className="su-action">
+              {/* La base passe AUSSI par l'URL : le stockage de session ne
+                  survit ni à un lien copié-collé, ni à un nouvel onglet, ni
+                  à une navigation privée stricte. Deux chemins pour la même
+                  information, le plus robuste des deux gagne. */}
+              <Link
+                href={config.base ? `/devis?base=${config.base}` : '/devis'}
+                onClick={transmettre}
+                className="su-action"
+              >
                 Transmettre et demander mon devis
                 <ArrowRight size={17} aria-hidden="true" />
               </Link>
