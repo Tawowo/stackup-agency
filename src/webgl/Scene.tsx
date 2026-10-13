@@ -27,7 +27,7 @@
  */
 import { useEffect, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
-import { Canvas } from '@react-three/fiber'
+import { Canvas, useFrame, useThree } from '@react-three/fiber'
 import { useBande } from '@/store/bande'
 import CameraRig from './CameraRig'
 import Bande from './bande/Bande'
@@ -35,6 +35,40 @@ import BandeInstanciee from './bande/BandeInstanciee'
 
 /** Angle de la lumière, partagé avec le CSS (`--su-angle-lumiere`). */
 const ANGLE_LUMIERE = -18
+
+/**
+ * LE TÉMOIN — combien de triangles la scène a-t-elle dessinés ?
+ *
+ * POURQUOI IL EXISTE. Il fallait vérifier, route par route, que la bande ne
+ * s'affiche QUE là où une page la demande. Deux mesures par capture d'écran
+ * ont échoué avant lui, et c'est instructif :
+ *
+ *  — comparer deux captures, avec et sans le canvas, rendait des verdicts
+ *    contradictoires entre 1440 et 390 : ce n'était pas la scène qui
+ *    changeait entre les deux prises, mais la page (images différées,
+ *    révélations au défilement) ;
+ *  — masquer tout sauf le canvas donnait une image vide MÊME sur l'accueil,
+ *    où le ruban est pourtant bien là. Normal : la scène se place d'après la
+ *    boîte d'ancrage HTML, et masquer cette boîte la réduit à zéro. La
+ *    mesure détruisait son objet.
+ *
+ * Le compteur du renderer, lui, ne ment pas : il dit ce qui a été soumis au
+ * GPU à l'image précédente. Zéro triangle = rien n'est dessiné.
+ *
+ * Il n'expose aucune donnée : deux entiers et une chaîne d'état.
+ */
+function Temoin() {
+  const gl = useThree((s) => s.gl)
+  useFrame(() => {
+    const w = window as unknown as { __SU_SCENE?: Record<string, unknown> }
+    w.__SU_SCENE = {
+      triangles: gl.info.render.triangles,
+      appels: gl.info.render.calls,
+      etat: useBande.getState().etat,
+    }
+  })
+  return null
+}
 
 function contenuScene(mobile: boolean) {
   const a = (ANGLE_LUMIERE * Math.PI) / 180
@@ -55,6 +89,7 @@ function contenuScene(mobile: boolean) {
       <directionalLight position={[4, -3, -5]} intensity={0.4} />
       <Bande />
       <BandeInstanciee />
+      <Temoin />
     </>
   )
 }

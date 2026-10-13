@@ -3,6 +3,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import MiniHero from '@/components/ui/MiniHero'
 import { Check, ArrowRight } from 'lucide-react'
+import { SITE } from '@/config/site'
 
 type ServiceData = {
   title: string
@@ -47,10 +48,10 @@ Nous intégrons également les éléments essentiels à toute présence en ligne
     ],
     included: [
       'Jusqu\'à 5 pages',
-      '2 révisions incluses',
+      `${SITE.conditions.revisionsIncluses} révisions incluses`,
       'Livraison des fichiers sources',
       'Formation à l\'administration',
-      'Support technique 30 jours post-livraison',
+      `Support technique ${SITE.conditions.supportJours} jours après mise en ligne`,
     ],
     process: [
       { step: 'Découverte', desc: 'Échange initial pour comprendre votre activité, vos cibles et vos objectifs.' },
@@ -93,10 +94,10 @@ Le rendu final est un site professionnel, rapide, sécurisé et optimisé pour l
     ],
     included: [
       'Jusqu\'à 10 pages',
-      '3 révisions incluses',
+      `${SITE.conditions.revisionsIncluses} révisions incluses`,
       'Module blog',
       'Formation à l\'administration',
-      'Support technique 60 jours post-livraison',
+      `Support technique ${SITE.conditions.supportJours} jours après mise en ligne`,
     ],
     process: [
       { step: 'Audit & Stratégie', desc: 'Analyse de votre marché, définition de l\'architecture des pages et de la stratégie SEO.' },
@@ -108,7 +109,7 @@ Le rendu final est un site professionnel, rapide, sécurisé et optimisé pour l
     faq: [
       { q: 'Puis-je ajouter des pages par la suite ?', a: 'Absolument. L\'architecture est conçue pour évoluer. Des pages supplémentaires peuvent être ajoutées à tout moment.' },
       { q: 'Intégrez-vous un blog ?', a: 'Oui, le blog est inclus et vous pouvez publier des articles en toute autonomie.' },
-      { q: 'Combien de temps après la livraison puis-je vous contacter ?', a: 'Vous bénéficiez de 60 jours de support post-livraison inclus. Au-delà, un plan de maintenance peut prendre le relais.' },
+      { q: 'Combien de temps après la livraison puis-je vous contacter ?', a: `Vous bénéficiez de ${SITE.conditions.supportJours} jours de support après la mise en ligne. Au-delà, un plan de maintenance peut prendre le relais.` },
     ],
     cta: 'Créer mon site multi-pages',
   },
@@ -140,9 +141,9 @@ Que vous vendiez 10 ou 10 000 produits, nous adaptons la solution à votre catal
     included: [
       'Jusqu\'à 50 produits intégrés',
       'Configuration paiement & livraison',
-      '3 révisions design',
+      `${SITE.conditions.revisionsIncluses} révisions design`,
       'Formation complète',
-      'Support technique 90 jours post-livraison',
+      `Support technique ${SITE.conditions.supportJours} jours après mise en ligne`,
     ],
     process: [
       { step: 'Audit & Cahier des charges', desc: 'Analyse de votre catalogue, de vos modes de livraison et de vos besoins spécifiques.' },
@@ -189,7 +190,7 @@ Nous analysons vos flux de travail, nous concevons l'architecture, nous dévelop
       'Architecture & conception',
       'Formation des équipes',
       'Documentation technique',
-      'Support technique 90 jours post-livraison',
+      `Support technique ${SITE.conditions.supportJours} jours après mise en ligne`,
     ],
     process: [
       { step: 'Analyse des besoins', desc: 'Audit complet de vos processus, identification des points de friction et des gains possibles.' },

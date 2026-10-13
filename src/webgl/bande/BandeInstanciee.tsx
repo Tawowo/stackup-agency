@@ -93,7 +93,7 @@ export default function BandeInstanciee() {
     if (!m) return
     const { mouvement, ancrage, etat } = useBande.getState()
 
-    // La section n'est pas à l'écran : rien à calculer.
+    // La section n'est pas à l'écran (y compris 'absent') : rien à calculer.
     if (etat !== 'offre') {
       m.visible = false
       return

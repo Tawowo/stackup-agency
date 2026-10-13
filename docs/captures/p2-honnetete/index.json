@@ -1,0 +1,98 @@
+[
+ {
+  "fichier": "docs/captures/p2-honnetete/accueil-1440-plein.png",
+  "route": "/",
+  "largeur": 1440,
+  "hauteur": 18271,
+  "plein": true,
+  "reduit": false
+ },
+ {
+  "fichier": "docs/captures/p2-honnetete/accueil-390-plein.png",
+  "route": "/",
+  "largeur": 390,
+  "hauteur": 20334,
+  "plein": true,
+  "reduit": false
+ },
+ {
+  "fichier": "docs/captures/p2-honnetete/faq-1440-plein.png",
+  "route": "/faq",
+  "largeur": 1440,
+  "hauteur": 3214,
+  "plein": true,
+  "reduit": false
+ },
+ {
+  "fichier": "docs/captures/p2-honnetete/faq-390-plein.png",
+  "route": "/faq",
+  "largeur": 390,
+  "hauteur": 4626,
+  "plein": true,
+  "reduit": false
+ },
+ {
+  "fichier": "docs/captures/p2-honnetete/tarifs-1440-plein.png",
+  "route": "/tarifs",
+  "largeur": 1440,
+  "hauteur": 5193,
+  "plein": true,
+  "reduit": false
+ },
+ {
+  "fichier": "docs/captures/p2-honnetete/tarifs-390-plein.png",
+  "route": "/tarifs",
+  "largeur": 390,
+  "hauteur": 8885,
+  "plein": true,
+  "reduit": false
+ },
+ {
+  "fichier": "docs/captures/p2-honnetete/svc-vitrine-1440-plein.png",
+  "route": "/services/site-vitrine",
+  "largeur": 1440,
+  "hauteur": 3888,
+  "plein": true,
+  "reduit": false
+ },
+ {
+  "fichier": "docs/captures/p2-honnetete/svc-vitrine-390-plein.png",
+  "route": "/services/site-vitrine",
+  "largeur": 390,
+  "hauteur": 6324,
+  "plein": true,
+  "reduit": false
+ },
+ {
+  "fichier": "docs/captures/p2-honnetete/svc-multi-1440-plein.png",
+  "route": "/services/site-multi-pages",
+  "largeur": 1440,
+  "hauteur": 3907,
+  "plein": true,
+  "reduit": false
+ },
+ {
+  "fichier": "docs/captures/p2-honnetete/svc-multi-390-plein.png",
+  "route": "/services/site-multi-pages",
+  "largeur": 390,
+  "hauteur": 6236,
+  "plein": true,
+  "reduit": false
+ },
+ {
+  "fichier": "docs/captures/p2-honnetete/loc-resto-1440-plein.png",
+  "route": "/services-locaux/creation-site-restaurant",
+  "largeur": 1440,
+  "hauteur": 5504,
+  "plein": true,
+  "reduit": false
+ },
+ {
+  "fichier": "docs/captures/p2-honnetete/loc-resto-390-plein.png",
+  "route": "/services-locaux/creation-site-restaurant",
+  "largeur": 390,
+  "hauteur": 8880,
+  "plein": true,
+  "reduit": false
+ }
+]

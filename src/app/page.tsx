@@ -237,7 +237,7 @@ export default function Home() {
                 `${SITE.pricing.vitrine} € tout inclus`,
                 `Livraison en ${SITE.delais.vitrine}`,
                 'Code 100 % propriétaire',
-                'Hébergement France',
+                SITE.hebergement.court,
               ].map(item => (
                 <div key={item} className="flex items-center gap-1.5 text-white/60 text-sm">
                   <CheckCircle size={14} className="text-success" />

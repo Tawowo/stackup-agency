@@ -105,7 +105,7 @@ export async function POST(req: Request) {
         ? `<h3>Message</h3><p>${echapper(d.message).split(/\n+/).filter(Boolean).join('<br />')}</p>`
         : '',
       '<hr />',
-      `<p><em>Rappel : le filleul bénéficie de −${SITE.parrainage.filleulRemise} % sur son projet ; le parrain reçoit ${echapper(SITE.parrainage.parrainRecompense)} à la signature.</em></p>`,
+      `<p><em>Rappel : le filleul bénéficie de −${SITE.parrainage.filleulRemise} % sur son projet ; à la signature, le parrain choisit entre ${echapper(SITE.parrainage.parrainRecompenseA)} et ${echapper(SITE.parrainage.parrainRecompenseB)}.</em></p>`,
     ]
       .filter(Boolean)
       .join('\n'),

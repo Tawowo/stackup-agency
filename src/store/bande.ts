@@ -18,6 +18,7 @@ import { subscribeWithSelector } from 'zustand/middleware'
 
 /** Les états que la bande peut prendre. Une page = un état. */
 export type EtatBande =
+  | 'absent' // la page ne demande rien : la scène ne montre RIEN
   | 'logo' // à plat, silhouette exacte, projection orthographique
   | 'volume' // extrudée, pivotée, ombrée
   | 'strates' // découpée en cinq lamelles
@@ -76,7 +77,19 @@ interface EtatGlobal {
 
 export const useBande = create<EtatGlobal>()(
   subscribeWithSelector((set) => ({
-    etat: 'logo',
+    /* ABSENT PAR DÉFAUT, et c'est une correction.
+
+       L'état initial était 'logo'. Conséquence vue en capture sur
+       /services-locaux/creation-site-restaurant : la bande, que personne
+       n'avait demandée, se plaçait au centre de la fenêtre à l'échelle 1 et
+       barrait le texte de la section. Le canvas est en `position: fixed`
+       au-dessus du fond de page, donc le défaut se propageait à toutes les
+       routes qui ne déclarent rien — c'est-à-dire presque toutes.
+
+       Le principe du canvas persistant est que les pages DÉCLARENT et que la
+       scène obéit. Une page qui ne déclare rien doit donc obtenir le vide,
+       pas le dernier état en date. */
+    etat: 'absent',
     progression: 0,
     offre: 'vitrine',
     accent: null,

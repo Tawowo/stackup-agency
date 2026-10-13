@@ -62,8 +62,12 @@ export default function Bande() {
 
     /* Une seule forme à la fois. Quand la section de l'offre prend la main,
        c'est la version en cent vingt plaques qui s'affiche : les deux se
-       superposeraient sinon, et on verrait deux rubans. */
-    const cache = etat === 'offre'
+       superposeraient sinon, et on verrait deux rubans.
+
+       Et rien du tout quand la page ne demande rien ('absent') : sans cette
+       ligne, la bande s'affichait par-dessus le contenu des pages qui ne
+       déclarent aucune scène. */
+    const cache = etat === 'offre' || etat === 'absent'
     pr.visible = !cache
     if (cache) return
 

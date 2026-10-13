@@ -7,9 +7,9 @@ import { SITE } from '@/config/site'
 const Laboratoire = dynamic(() => import('@/components/laboratoire/Laboratoire'))
 
 export const metadata: Metadata = {
-  title: 'Le laboratoire — une démonstration de logiciel métier',
+  title: 'Laboratoire — démonstration de logiciel métier',
   description:
-    'Une interface de gestion réellement fonctionnelle, manipulable dans votre navigateur : filtres, tris et calculs réels. La démonstration que Stackup Agency développe des logiciels, pas seulement des sites.',
+    'Démonstration : une interface de gestion manipulable dans votre navigateur — filtres, tris et calculs réels. Données fictives.',
   alternates: { canonical: `${SITE.url}/laboratoire` },
   openGraph: {
     url: `${SITE.url}/laboratoire`,
