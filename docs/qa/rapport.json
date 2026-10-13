@@ -1,6 +1,6 @@
 {
   "genere": "2026-10-13",
-  "phase": 2,
+  "phase": 3,
   "captures": [
     {
       "fichier": "docs/qa/shots/lab/logo-1440.png",
@@ -1119,6 +1119,338 @@
       "largeur": 390,
       "rm": false,
       "visible": "Mobile : projet 3 par balayage simulé, cadre posé.",
+      "defauts": [],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/accueil/05-repos-1440.png",
+      "route": "/",
+      "etat": "05-repos",
+      "largeur": 1440,
+      "rm": false,
+      "visible": "Salle des machines au repos : titre « Des outils qui vous appartiennent. » et ligne à gauche, action ambre ; au centre le réseau de 12 modules (blocs de plaques reliés par des chapelets, hub ambre) avec un bouton mono par nœud calé sous sa plaque ; Devis & factures allumé (rotation 6 s), les autres assombris sans s'écarter ; à droite la Plaque encre avec la maquette animée (statut « Accepté », cadran 3, trois lignes, puce active, quatre fonctions).",
+      "defauts": [
+        "Première passe : l'isolation des strates (écart 0,35) dispersait le réseau et le bouton Caisse chevauchait la maquette — isolation paramétrée par moment (écart 0 ici), rayons du réseau resserrés, titre recalé sur deux lignes"
+      ],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/accueil/05-repos-1440-rm.png",
+      "route": "/",
+      "etat": "05-repos",
+      "largeur": 1440,
+      "rm": true,
+      "visible": "Mouvement réduit : logo figé derrière les boutons du réseau, maquette posée sans animation, statut fixe.",
+      "defauts": [
+        "Le logo figé passe derrière les étiquettes des nœuds : lisible mais chargé ; à arbitrer en phase 7 (niveau « léger »)"
+      ],
+      "corrige": false
+    },
+    {
+      "fichier": "docs/qa/shots/accueil/05-repos-390.png",
+      "route": "/",
+      "etat": "05-repos",
+      "largeur": 390,
+      "rm": false,
+      "visible": "Mobile : titre, ligne, action pleine largeur, réseau en portrait (deux anneaux étroits), la maquette dessous.",
+      "defauts": [],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/accueil/05-repos-390-rm.png",
+      "route": "/",
+      "etat": "05-repos",
+      "largeur": 390,
+      "rm": true,
+      "visible": "Idem, logo figé.",
+      "defauts": [],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/accueil/05-module-2-1440.png",
+      "route": "/",
+      "etat": "05-module-2",
+      "largeur": 1440,
+      "rm": false,
+      "visible": "Clic sur Planning : le nœud s'allume (ambre), les autres s'assombrissent, la maquette Planning se découpe (statut « À compléter », 38 h, trois jours, fonctions) ; le curseur en anneau « Allumer » sur le bouton.",
+      "defauts": [],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/accueil/05-module-2-390.png",
+      "route": "/",
+      "etat": "05-module-2",
+      "largeur": 390,
+      "rm": false,
+      "visible": "Mobile : tap sur Planning, nœud allumé, maquette dessous (hors capture).",
+      "defauts": [],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/accueil/05-module-7-1440.png",
+      "route": "/",
+      "etat": "05-module-7",
+      "largeur": 1440,
+      "rm": false,
+      "visible": "Caisse allumée : maquette Caisse (statut « Ouvert », 68 tickets, trois tickets).",
+      "defauts": [
+        "Première passe : bouton Caisse sous la Plaque, clic impossible (timeout) — rayons corrigés"
+      ],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/accueil/05-module-7-390.png",
+      "route": "/",
+      "etat": "05-module-7",
+      "largeur": 390,
+      "rm": false,
+      "visible": "Mobile : Caisse allumée.",
+      "defauts": [],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/accueil/06-repos-1440.png",
+      "route": "/",
+      "etat": "06-repos",
+      "largeur": 1440,
+      "rm": false,
+      "visible": "Ivoire. Titre « Un prix juste, écrit noir sur blanc. », à droite la jauge en arc de plaques navy avec ses graduations et l'aiguille (chapelet + pointe ambre) au repos ; quatre Plaques ivoire-creuse avec numéro, nom, Cadran « à partir de 449 / 749 / 1 647 / 1 447 € » et trois inclusions ; trois engagements tracés en SVG ; action « Voir tous les tarifs ».",
+      "defauts": [
+        "Première passe : jauge minuscule et titre descendu au milieu (align-items center) — jauge agrandie (arc 48 plaques, échelle 1,15, 40 svh), titre calé en haut"
+      ],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/accueil/06-repos-1440-rm.png",
+      "route": "/",
+      "etat": "06-repos",
+      "largeur": 1440,
+      "rm": true,
+      "visible": "Mouvement réduit : ivoire posé, le logo figé à la place de la jauge, Plaques et Cadrans posés.",
+      "defauts": [],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/accueil/06-repos-390.png",
+      "route": "/",
+      "etat": "06-repos",
+      "largeur": 390,
+      "rm": false,
+      "visible": "Mobile : titre, jauge réduite, Plaques empilées, cadran plein écran.",
+      "defauts": [],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/accueil/06-repos-390-rm.png",
+      "route": "/",
+      "etat": "06-repos",
+      "largeur": 390,
+      "rm": true,
+      "visible": "Idem, logo figé.",
+      "defauts": [],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/accueil/06-focal-1440.png",
+      "route": "/",
+      "etat": "06-focal",
+      "largeur": 1440,
+      "rm": false,
+      "visible": "Offre 2 focalisée (clavier) : liseré ambre et relief sur la Plaque, l'aiguille de la jauge a tourné d'un tiers (pointe ambre déplacée).",
+      "defauts": [],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/accueil/06-focal-390.png",
+      "route": "/",
+      "etat": "06-focal",
+      "largeur": 390,
+      "rm": false,
+      "visible": "Mobile : Plaque 2 focalisée, aiguille déplacée.",
+      "defauts": [],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/accueil/07-etape-1-1440.png",
+      "route": "/",
+      "etat": "07-etape-1",
+      "largeur": 1440,
+      "rm": false,
+      "visible": "Méthode, entrée : titre, 01 déplié en display XL ambre avec « On se parle » découpé ; 02 en plaque ambre pleine déjà visible (entrée du viewport) ; à droite, la page en construction : cadre (en-tête, pied, côtés) et la plaque ambre de la démo (étape 2).",
+      "defauts": [],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/accueil/07-etape-1-1440-rm.png",
+      "route": "/",
+      "etat": "07-etape-1",
+      "largeur": 1440,
+      "rm": true,
+      "visible": "Mouvement réduit : numéros et textes posés, logo figé.",
+      "defauts": [],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/accueil/07-etape-1-390.png",
+      "route": "/",
+      "etat": "07-etape-1",
+      "largeur": 390,
+      "rm": false,
+      "visible": "Mobile : scène en bandeau épinglé en haut, étapes en pile dessous.",
+      "defauts": [],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/accueil/07-etape-1-390-rm.png",
+      "route": "/",
+      "etat": "07-etape-1",
+      "largeur": 390,
+      "rm": true,
+      "visible": "Idem, logo figé.",
+      "defauts": [],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/accueil/07-etape-2-1440.png",
+      "route": "/",
+      "etat": "07-etape-2",
+      "largeur": 1440,
+      "rm": false,
+      "visible": "Étape 2 (0,35) : la plaque ambre « On vous montre avant de vous vendre » au premier plan, la scène a la structure et la démo ambre.",
+      "defauts": [],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/accueil/07-etape-2-390.png",
+      "route": "/",
+      "etat": "07-etape-2",
+      "largeur": 390,
+      "rm": false,
+      "visible": "Mobile : 01 et la plaque ambre 02, scène en bandeau derrière.",
+      "defauts": [
+        "Le bandeau épinglé passe derrière le texte de 01 — lisible, à ajuster (z-index / opacité) en phase 7"
+      ],
+      "corrige": false
+    },
+    {
+      "fichier": "docs/qa/shots/accueil/07-etape-5-1440.png",
+      "route": "/",
+      "etat": "07-etape-5",
+      "largeur": 1440,
+      "rm": false,
+      "visible": "Fin (p = 1) : 03, 04, 05 dépliés ; la page complète : structure, démo ambre, titre et colonnes, barre d'adresse et bouton, plaques de réglage autour.",
+      "defauts": [
+        "Première passe : 05 pas franchi (déclencheur à 60 % trop bas pour la dernière étape) — seuil à 78 %, espace bas réduit"
+      ],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/accueil/07-etape-5-390.png",
+      "route": "/",
+      "etat": "07-etape-5",
+      "largeur": 390,
+      "rm": false,
+      "visible": "Mobile : 03-05, page complète en bandeau.",
+      "defauts": [],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/accueil/08-atelier-1440.png",
+      "route": "/",
+      "etat": "08-atelier",
+      "largeur": 1440,
+      "rm": false,
+      "visible": "Atelier : placeholder « Portrait à venir » (plaque ivoire-creuse 3:4), le logo à l'arrêt en dessous avec son ombre longue (calme : ni respiration ni dérive) ; nom, « Fondateur, développeur », trois paragraphes, accordéon de trois questions (la première ouverte).",
+      "defauts": [],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/accueil/08-atelier-1440-rm.png",
+      "route": "/",
+      "etat": "08-atelier",
+      "largeur": 1440,
+      "rm": true,
+      "visible": "Idem, logo figé.",
+      "defauts": [],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/accueil/08-atelier-390.png",
+      "route": "/",
+      "etat": "08-atelier",
+      "largeur": 390,
+      "rm": false,
+      "visible": "Mobile : portrait et logo côte à côte, texte dessous.",
+      "defauts": [],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/accueil/08-atelier-390-rm.png",
+      "route": "/",
+      "etat": "08-atelier",
+      "largeur": 390,
+      "rm": true,
+      "visible": "Idem.",
+      "defauts": [],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/accueil/09-depart-1440.png",
+      "route": "/",
+      "etat": "09-depart",
+      "largeur": 1440,
+      "rm": false,
+      "visible": "Départ : la pile repliée en logo (ortho, de face) à gauche, « Il reste une chose à faire. » déplié, un champ et « Recevoir une démo » ; le footer commence dessous.",
+      "defauts": [],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/accueil/09-depart-1440-rm.png",
+      "route": "/",
+      "etat": "09-depart",
+      "largeur": 1440,
+      "rm": true,
+      "visible": "Idem, logo figé, titre posé.",
+      "defauts": [],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/accueil/09-depart-390.png",
+      "route": "/",
+      "etat": "09-depart",
+      "largeur": 390,
+      "rm": false,
+      "visible": "Mobile : logo au-dessus, titre, champ et action empilés.",
+      "defauts": [],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/accueil/09-depart-390-rm.png",
+      "route": "/",
+      "etat": "09-depart",
+      "largeur": 390,
+      "rm": true,
+      "visible": "Idem.",
+      "defauts": [],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/accueil/footer-1440.png",
+      "route": "/",
+      "etat": "footer",
+      "largeur": 1440,
+      "rm": false,
+      "visible": "Footer : logo exact avec lettrage, ligne, e-mail ambre souligné ; navigation (six liens) ; mentions mono (légales, confidentialité, CGV, TVA). Pas de filigrane, pas d'étoiles.",
+      "defauts": [],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/accueil/footer-390.png",
+      "route": "/",
+      "etat": "footer",
+      "largeur": 390,
+      "rm": false,
+      "visible": "Mobile : trois colonnes empilées.",
       "defauts": [],
       "corrige": true
     }

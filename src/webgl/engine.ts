@@ -30,6 +30,9 @@ export function createStackUniforms() {
     uNuit: { value: 1 },
     uAccent: { value: new Color('#F69106') },
     uIsolate: { value: -1 },
+    /** Isolation : écart latéral des autres (unités locales) et assombrissement (0-1). */
+    uIsoPush: { value: 0.35 },
+    uIsoDim: { value: 0.65 },
     /** 1 = orthographique : les plaques du logo ne respirent qu'en profondeur. */
     uOrtho: { value: 1 },
     uArc: { value: 0.6 },

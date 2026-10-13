@@ -4,9 +4,12 @@ import { strates } from './strates.ts'
 import { boutique, logiciel, multi, pageLayout } from './offres.ts'
 import { pellicule } from './pellicule.ts'
 import { noyau } from './noyau.ts'
+import { machines } from './machines.ts'
+import { cadran } from './cadran.ts'
+import { methode } from './methode.ts'
 import type { LayoutData } from './types.ts'
 
-export type LayoutName = 'logo' | 'pile' | 'strates' | 'page' | 'multi' | 'boutique' | 'logiciel' | 'pellicule' | 'noyau'
+export type LayoutName = 'logo' | 'pile' | 'strates' | 'page' | 'multi' | 'boutique' | 'logiciel' | 'pellicule' | 'noyau' | 'machines' | 'cadran' | 'methode'
 
 /** Paramètres que les layouts lisent dans le store (`params`). */
 export interface LayoutParams {
@@ -20,6 +23,9 @@ export interface LayoutParams {
   ouverture: number
   glisse: number
   portrait: number
+  aiguille: number
+  etape: number
+  modules: number
 }
 
 export const LAYOUTS: Record<LayoutName, (n: number, p: LayoutParams) => LayoutData> = {
@@ -32,11 +38,14 @@ export const LAYOUTS: Record<LayoutName, (n: number, p: LayoutParams) => LayoutD
   logiciel: (n) => logiciel(n),
   pellicule: (n, p) => pellicule(n, { glisse: p.glisse }),
   noyau: (n) => noyau(n),
+  machines: (n, p) => machines(n, p.modules, p.portrait > 0.5),
+  cadran: (n, p) => cadran(n, p.aiguille),
+  methode: (n, p) => methode(n, p.etape),
 }
 
 /** Clés de `params` dont le changement recalcule le layout courant. */
-export const CLES_LAYOUT: (keyof LayoutParams)[] = ['parNiveau', 'ecart', 'torsion', 'rayon', 'chantier', 'echelle', 'hauteur', 'ouverture', 'glisse', 'portrait']
+export const CLES_LAYOUT: (keyof LayoutParams)[] = ['parNiveau', 'ecart', 'torsion', 'rayon', 'chantier', 'echelle', 'hauteur', 'ouverture', 'glisse', 'portrait', 'aiguille', 'etape', 'modules']
 
 export const NOMS_LAYOUTS = Object.keys(LAYOUTS) as LayoutName[]
 export type { LayoutData } from './types.ts'
-export { logo, pile, strates, pageLayout, multi, boutique, logiciel, pellicule, noyau }
+export { logo, pile, strates, pageLayout, multi, boutique, logiciel, pellicule, noyau, machines, cadran, methode }

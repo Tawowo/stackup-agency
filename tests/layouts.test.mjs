@@ -85,3 +85,37 @@ test('pellicule : le glissement décale tout le cadre', () => {
   const b = pellicule(450, { glisse: 2.8 })
   for (let i = 3; i < 60; i++) if (a.scale[i] > 0) assert.ok(Math.abs(b.pos[i * 3] - a.pos[i * 3] - 2.8) < 1e-5)
 })
+
+import { machines, aretes } from '../src/webgl/layouts/machines.ts'
+import { cadran } from '../src/webgl/layouts/cadran.ts'
+import { methode } from '../src/webgl/layouts/methode.ts'
+
+test('machines : un groupe par module, des arêtes, le hub ambre', () => {
+  const d = machines(800, 12)
+  const groupes = new Set()
+  for (let i = 3; i < 800; i++) if (d.scale[i] > 0) groupes.add(d.group[i])
+  assert.equal(groupes.size, 13, '12 modules + le groupe des arêtes')
+  assert.ok(d.scale[2] > 0)
+  assert.ok(aretes(12).length >= 12)
+  const p = machines(800, 12, true)
+  for (let i = 3; i < 800; i++) if (p.scale[i] > 0) assert.ok(Math.abs(p.pos[i * 3]) < 0.73, 'portrait : tout tient en largeur')
+})
+
+test('cadran : l aiguille suit le paramètre', () => {
+  const a = cadran(450, 0)
+  const b = cadran(450, 1)
+  assert.ok(a.pos[2 * 3] < 0 && b.pos[2 * 3] > 0, 'la pointe ambre passe de gauche à droite')
+  assert.ok(a.scale[2] > 0)
+})
+
+test('methode : chaque étape ajoute des plaques, l ambre arrive à l étape 2', () => {
+  const visibles = (d) => { let v = 0; for (let i = 0; i < 450; i++) if (d.scale[i] > 0) v++; return v }
+  let prev = 0
+  for (let k = 0; k <= 5; k++) {
+    const v = visibles(methode(450, k))
+    assert.ok(v >= prev, `étape ${k}`)
+    prev = v
+  }
+  assert.equal(methode(450, 1).scale[2], 0)
+  assert.ok(methode(450, 2).scale[2] > 0)
+})

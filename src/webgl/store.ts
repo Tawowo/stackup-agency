@@ -30,6 +30,9 @@ export interface PileParams {
   glisse: number
   /** 1 = largeur < 768 px : variantes compactes des layouts. */
   portrait: number
+  aiguille: number
+  etape: number
+  modules: number
 }
 
 export interface SceneParams extends PileParams {
@@ -45,6 +48,8 @@ export interface SceneParams extends PileParams {
   mur: number
   grain: number
   plaques: number
+  isoPush: number
+  isoDim: number
 }
 
 export const PARAMS_DEFAUT: SceneParams = {
@@ -61,6 +66,9 @@ export const PARAMS_DEFAUT: SceneParams = {
   ouverture: 1,
   glisse: 0,
   portrait: 0,
+  aiguille: 0,
+  etape: 5,
+  modules: 12,
   ambiant: 0.32,
   cle: 0.95,
   fresnel: 0.3,
@@ -70,6 +78,8 @@ export const PARAMS_DEFAUT: SceneParams = {
   mur: 1,
   grain: 1,
   plaques: 1,
+  isoPush: 0.35,
+  isoDim: 0.65,
 }
 
 export interface Pose {
@@ -103,6 +113,8 @@ interface SceneState {
   mode: '3d' | '2d'
   active: boolean
   still: boolean
+  /** Pile à l'arrêt : ni respiration ni dérive, l'ombre longue seule. */
+  calme: boolean
   reduced: boolean
   isolate: number
   spin: number
@@ -128,6 +140,7 @@ interface SceneState {
   setMode: (m: '3d' | '2d') => void
   setActive: (a: boolean) => void
   setStill: (s: boolean) => void
+  setCalme: (c: boolean) => void
   setReduced: (r: boolean) => void
   setIsolate: (i: number) => void
   setSpin: (spin: number, tilt: number, dragging: boolean) => void
@@ -154,6 +167,7 @@ export const useScene = create<SceneState>((set) => ({
   mode: '3d',
   active: true,
   still: false,
+  calme: false,
   reduced: false,
   isolate: -1,
   spin: 0,
@@ -179,6 +193,7 @@ export const useScene = create<SceneState>((set) => ({
   setMode: (mode) => set({ mode }),
   setActive: (active) => set({ active }),
   setStill: (still) => set({ still }),
+  setCalme: (calme) => set({ calme }),
   setReduced: (reduced) => set({ reduced }),
   setIsolate: (isolate) => set({ isolate }),
   setSpin: (spin, tilt, dragging) => set({ spin, tilt, dragging }),

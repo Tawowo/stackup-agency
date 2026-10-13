@@ -89,3 +89,39 @@ chemin : `half` est réservé en GLSL, le shader ne compilait plus (canvas noir 
 **Prochaine étape — phase 3** : moments 05 (Salle des machines, modules + maquettes animées, `DemoSlot`
 vide), 06 (Juste prix, layout `cadran`), 07 (Méthode, layout `methode`), 08 (Atelier), 09 (Départ, retour
 au logo), footer ; vidéo d'un scroll entier (desktop, mobile, rm).
+
+## 2026-10-13 — Phase 3 : accueil, seconde moitié (moments 05-09) ✅
+
+**Fait.** Layouts purs + tests : `machines` (12 nœuds en deux anneaux, chapelets d'arêtes, hub ambre,
+variante portrait), `cadran` (arc de 48 plaques, graduations, aiguille pilotée par `params.aiguille`),
+`methode` (cinq groupes qui s'assemblent, `params.etape`). Isolation paramétrée par moment (`isoPush`,
+`isoDim`) ; `calme` (pile à l'arrêt). Moment 05 MODULES : douze solutions réelles de `src/data/solutions.ts`,
+un bouton HTML par nœud calé sur sa plaque, clic / tap / flèches allument un nœud (isolation), maquette
+animée par découpe dans une Plaque (liste, Cadran, statut en boucle de 2,4 s, puce qui tourne), rotation
+6 s jusqu'à interaction, `DemoSlot.tsx` vide non rendu ; aucun ancien Laboratoire. 06 CADRAN : ivoire,
+quatre Plaques + Cadran + trois inclusions, trois engagements tracés en SVG, l'aiguille suit l'offre
+survolée / focalisée. 07 ASSEMBLAGE SÉQUENTIEL : cinq étapes, numéro déplié, texte découpé, plaque ambre
+pour l'étape 02, scène collante à droite qui s'assemble par étape. 08 ATELIER : placeholder de portrait,
+Mathéo Reboul, trois paragraphes, accordéon natif (`components/editorial`, fondu toléré), pile à l'arrêt.
+09 DÉPART : champ unique → `/contact?projet=…`, retour au layout `logo`. Footer (logo, nav, mentions).
+Pages de chantier pour mentions légales, confidentialité, CGV. `devIndicators` coupés (le pavé Next
+entrait dans les captures).
+
+**Captures lues** : 32 états des moments 05-09 + footer (138 entrées). Défauts vus et corrigés : trois
+états vides (`half` réservé en GLSL ; `ENTREES` importé d'un composant client ; `COURT` utilisé avant
+sa déclaration) ; isolation des strates qui dispersait le réseau ; bouton Caisse sous la maquette ;
+jauge minuscule et titre 06 descendu ; étape 05 jamais franchie (seuil de déclenchement). Notés, non
+corrigés : en mouvement réduit le logo figé passe derrière les nœuds (05) ; sur mobile le bandeau
+épinglé de 07 passe derrière le texte de l'étape 01.
+
+**Vidéos.** L'enregistreur de Playwright ne produit aucune trame sous SwiftShader (chemin annoncé,
+fichier jamais écrit) et son ffmpeg n'a ni image2 ni VP9 : `scripts/videos.mjs` capture une trame JPEG
+par pas de scroll et les envoie en flux (image2pipe) à ce ffmpeg en VP8. Trois vidéos dans
+`docs/qa/videos/` (1440, 390, 1440 mouvement réduit), ignorées par git (`*.webm`), à regénérer avec
+`npm run videos`.
+
+**Pas fait** : gyroscope, raccourcis clavier globaux, réglage du mouvement (phase 7) ; cadence sur vrai GPU.
+
+**Prochaine étape — phase 4** : `/tarifs` (configurateur de pile en trois temps, Cadran, offres, maintenance,
+« Recevoir un devis » → `/contact` avec configuration sérialisée) et `/contact` (trois plaques, zod, Resend,
+limitation de débit, pile qui se construit par champ rempli, confirmation).

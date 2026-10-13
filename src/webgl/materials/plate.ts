@@ -50,6 +50,7 @@ uniform float uPlaqueH;
 uniform float uPente;
 uniform float uBreath;
 uniform float uGrain;
+uniform float uIsoDim;
 
 varying vec3 vNormal;
 varying vec3 vWorld;
@@ -121,7 +122,7 @@ void main() {
   col = mix(col, base * (0.95 + 0.25 * diff), (1.0 - uNuit) * (ambre ? 0.85 : 0.5));
 
   // Isolation : les autres s'assombrissent.
-  col *= 1.0 - vDim * 0.65;
+  col *= 1.0 - vDim * uIsoDim;
 
   // Grain fin (bruit bleu approché), 2-3 %.
   if (uGrain > 0.5) {

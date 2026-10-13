@@ -8,7 +8,7 @@ export interface Etat {
   /** Paramètres d'URL ajoutés à la route. */
   query?: string
   /** Geste à exécuter avant la capture. */
-  action?: 'drag' | 'menu' | 'touche3' | 'onglet2' | 'onglet3' | 'onglet4'
+  action?: 'drag' | 'menu' | 'touche3' | 'onglet2' | 'onglet3' | 'onglet4' | 'noeud2' | 'noeud7' | 'focus-offre2'
   /** Limiter à certaines largeurs (par défaut : 1440 et 390). */
   largeurs?: number[]
   /** Position de scroll, en fraction de la distance épinglée du moment visé (par défaut 00). */
@@ -81,6 +81,17 @@ export const ROUTES: Route[] = [
       { nom: 'pellicule-glissement', query: QUALITE, moment: '03', depuis: 0.25, scroll: 0.5, piste: 2, attente: 700, sansRm: true },
       { nom: '03-projet-5', query: QUALITE, moment: '03', scroll: 1, piste: 4, attente: 2400, sansRm: true },
       { nom: '04-seuil', query: QUALITE, moment: '04', scroll: 0, attente: 2400 },
+      { nom: '05-repos', query: QUALITE, moment: '05', scroll: 0, attente: 2600 },
+      { nom: '05-module-2', query: QUALITE, moment: '05', scroll: 0, action: 'noeud2', attente: 1800, sansRm: true },
+      { nom: '05-module-7', query: QUALITE, moment: '05', scroll: 0, action: 'noeud7', attente: 1800, sansRm: true },
+      { nom: '06-repos', query: QUALITE, moment: '06', scroll: 0, attente: 2600 },
+      { nom: '06-focal', query: QUALITE, moment: '06', scroll: 0, action: 'focus-offre2', attente: 1800, sansRm: true },
+      { nom: '07-etape-1', query: QUALITE, moment: '07', scroll: 0, attente: 2200 },
+      { nom: '07-etape-2', query: QUALITE, moment: '07', scroll: 0.35, attente: 2200, sansRm: true },
+      { nom: '07-etape-5', query: QUALITE, moment: '07', scroll: 1, attente: 2200, sansRm: true },
+      { nom: '08-atelier', query: QUALITE, moment: '08', scroll: 0, attente: 2200 },
+      { nom: '09-depart', query: QUALITE, moment: '09', scroll: 0, attente: 2400 },
+      { nom: 'footer', query: QUALITE, moment: '09', scroll: 2, attente: 1800, sansRm: true },
     ],
   },
 ]

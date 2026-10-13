@@ -1,0 +1,202 @@
+.su-mac {
+  position: relative;
+  min-height: 100svh;
+}
+.su-mac__grille {
+  max-width: var(--su-conteneur-scene);
+  margin: 0 auto;
+  padding: 96px var(--su-gouttiere) 64px;
+  min-height: 100svh;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: auto 1fr;
+  column-gap: var(--su-gouttiere);
+  row-gap: 24px;
+}
+.su-mac__tete {
+  grid-column: 1 / span 4;
+  grid-row: 1 / span 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 18px;
+}
+.su-mac__etiquette {
+  color: var(--su-texte-doux);
+  margin: 0;
+}
+.su-mac__titre {
+  margin: 0;
+  font-size: clamp(2.2rem, 3.6vw, 3.6rem);
+  color: var(--su-ivoire);
+}
+.su-mac__ligne {
+  margin: 0;
+  max-width: 36ch;
+  color: var(--su-texte-doux);
+  font-size: 1.0625rem;
+}
+.su-mac__reseau {
+  grid-column: 5 / span 5;
+  grid-row: 1 / span 2;
+  display: flex;
+  align-items: center;
+}
+.su-mac__cadre {
+  width: 100%;
+  height: min(80svh, 100%);
+}
+.su-mac__noeuds {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+}
+.su-mac__noeuds:focus-visible {
+  outline: 2px solid var(--su-ambre-clair);
+  outline-offset: 6px;
+}
+/* La boîte 146 × 229 ajustée dans le cadre. */
+.su-mac__noeuds::before {
+  content: '';
+  grid-area: 1 / 1;
+  aspect-ratio: 146 / 229;
+  height: 100%;
+  max-width: 100%;
+}
+.su-mac__noeud {
+  position: absolute;
+  transform: translate(-50%, 44px);
+  min-height: 32px;
+  padding: 6px 10px;
+  border: 1px solid color-mix(in srgb, var(--su-graphite) 45%, transparent);
+  border-radius: 4px;
+  background: var(--su-encre-2);
+  color: var(--su-ivoire);
+  font-size: 0.6875rem;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: border-color var(--su-reflexe), color var(--su-reflexe), box-shadow var(--su-reflexe);
+}
+.su-mac__noeud[data-actif='1'] {
+  border-color: var(--su-ambre);
+  color: var(--su-ambre-clair);
+  box-shadow: var(--su-ombre);
+}
+.su-mac__plaque {
+  grid-column: 10 / span 3;
+  grid-row: 1 / span 2;
+  align-self: center;
+  padding: 20px;
+  min-height: 360px;
+}
+/* ───── Maquette animée ───── */
+.su-mac__ecran > * {
+  clip-path: inset(0 100% 0 0);
+  animation: su-decoupe 620ms var(--su-pose) forwards;
+  animation-delay: calc(var(--k, 0) * 70ms + 150ms);
+}
+.su-mac__barre {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid color-mix(in srgb, var(--su-graphite) 35%, transparent);
+  color: var(--su-ambre-clair);
+}
+.su-mac__statut {
+  color: var(--su-ivoire);
+  padding: 2px 8px;
+  border-radius: 3px;
+  background: color-mix(in srgb, var(--su-ambre) 22%, transparent);
+  transition: background var(--su-geste);
+}
+.su-mac__chiffre {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin: 18px 0 14px;
+}
+.su-mac__cadran {
+  font-size: 2.6rem;
+  color: var(--su-ivoire);
+}
+.su-mac__unite {
+  color: var(--su-texte-doux);
+  font-size: 0.875rem;
+}
+.su-mac__liste {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 0.875rem;
+}
+.su-mac__liste li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 10px;
+  border-radius: 3px;
+  background: color-mix(in srgb, var(--su-ivoire) 5%, transparent);
+}
+.su-mac__puce {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--su-graphite);
+  transition: background var(--su-geste), box-shadow var(--su-geste);
+}
+.su-mac__puce[data-on='1'] {
+  background: var(--su-ambre);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--su-ambre) 30%, transparent);
+}
+.su-mac__fonctions {
+  list-style: none;
+  margin: 18px 0 0;
+  padding: 14px 0 0;
+  border-top: 1px solid color-mix(in srgb, var(--su-graphite) 35%, transparent);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  color: var(--su-texte-doux);
+  font-size: 0.6875rem;
+  text-transform: none;
+  letter-spacing: 0.02em;
+}
+@media (max-width: 767px) {
+  .su-mac__grille {
+    padding-top: 84px;
+    grid-template-rows: auto auto auto;
+    row-gap: 16px;
+  }
+  .su-mac__tete {
+    grid-column: 1 / -1;
+    grid-row: 1;
+  }
+  .su-mac__titre {
+    font-size: clamp(2rem, 9vw, 3rem);
+  }
+  .su-mac__reseau {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+  .su-mac__cadre {
+    height: 52svh;
+  }
+  .su-mac__noeud {
+    transform: translate(-50%, 30px);
+    font-size: 0.625rem;
+    padding: 5px 8px;
+  }
+  .su-mac__plaque {
+    grid-column: 1 / -1;
+    grid-row: 3;
+    min-height: 0;
+  }
+  .su-mac__tete .su-action {
+    align-self: stretch;
+  }
+}

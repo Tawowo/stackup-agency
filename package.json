@@ -16,7 +16,8 @@
     "lab": "node scripts/lab.mjs",
     "logo:trace": "node scripts/logo-trace.mjs",
     "logo:check": "node scripts/logo-check.mjs",
-    "cadence": "node scripts/cadence.mjs"
+    "cadence": "node scripts/cadence.mjs",
+    "videos": "node scripts/videos.mjs"
   },
   "dependencies": {
     "@gsap/react": "^2.1.2",

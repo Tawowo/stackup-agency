@@ -44,6 +44,7 @@ uniform float uEpaisseur;
 uniform float uBreath;
 uniform float uOrtho;
 uniform float uIsolate;
+uniform float uIsoPush;
 uniform float uPointerActive;
 uniform vec3 uPointer;
 uniform vec4 uExclu;
@@ -81,8 +82,8 @@ Inst instance(vec3 position) {
   // Isolation d'une strate : les autres s'écartent et s'assombrissent.
   float iso = step(0.0, uIsolate);
   float other = iso * (1.0 - step(abs(aGroup - uIsolate), 0.5));
-  pos.x += other * sign(pos.x + 0.001) * 0.35;
-  pos.z -= other * 0.4;
+  pos.x += other * sign(pos.x + 0.001) * uIsoPush;
+  pos.z -= other * uIsoPush * 1.15;
 
   // Contournement de la zone du titre : en vol, une plaque qui entre dans le
   // rectangle d'exclusion est repoussée hors de lui, par le côté le plus

@@ -393,3 +393,71 @@
 .su-seuil-noyau .su-seuil {
   padding-top: 18svh;
 }
+
+/* ───────── Footer ───────── */
+.su-footer {
+  position: relative;
+  border-top: 1px solid color-mix(in srgb, var(--su-graphite) 30%, transparent);
+  color: var(--su-texte);
+}
+.su-footer__grille {
+  max-width: var(--su-conteneur-scene);
+  margin: 0 auto;
+  padding: 48px var(--su-gouttiere) 40px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: var(--su-gouttiere);
+  row-gap: 32px;
+}
+.su-footer__marque {
+  grid-column: 1 / span 5;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  align-items: flex-start;
+}
+.su-footer__marque .su-logo {
+  height: 40px;
+}
+.su-footer__ligne {
+  margin: 0;
+  color: var(--su-texte-doux);
+}
+.su-footer__mail {
+  color: var(--su-accent-texte);
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+}
+.su-footer__nav {
+  grid-column: 7 / span 3;
+}
+.su-footer__nav ul,
+.su-footer__legal {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.su-footer__nav a,
+.su-footer__legal a {
+  color: inherit;
+  text-decoration: none;
+}
+.su-footer__nav a:hover,
+.su-footer__legal a:hover {
+  color: var(--su-accent-texte);
+}
+.su-footer__legal {
+  grid-column: 10 / span 3;
+  color: var(--su-texte-doux);
+  font-size: 0.6875rem;
+}
+@media (max-width: 767px) {
+  .su-footer__marque,
+  .su-footer__nav,
+  .su-footer__legal {
+    grid-column: 1 / -1;
+  }
+}

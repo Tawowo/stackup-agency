@@ -5,6 +5,7 @@ const config: NextConfig = {
   poweredByHeader: false,
   typescript: { ignoreBuildErrors: false },
   agentRules: false,
+  devIndicators: false,
 }
 
 export default config

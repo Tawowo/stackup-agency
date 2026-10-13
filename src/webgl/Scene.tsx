@@ -118,6 +118,8 @@ function Rig() {
       u.uScan.value = (t / 9) % 1
       u.uNuit.value = s.nuit
       u.uIsolate.value = s.isolate
+      u.uIsoPush.value = s.params.isoPush
+      u.uIsoDim.value = s.params.isoDim
       u.uArc.value = s.params.arc
       u.uDelay.value = s.params.retard
       u.uEpaisseur.value = s.params.epaisseur
@@ -129,7 +131,7 @@ function Rig() {
       u.uShadow.value = s.params.ombre
       u.uWall.value = s.params.mur
       u.uGrain.value = s.params.grain
-      u.uBreath.value = s.still ? 0 : 1
+      u.uBreath.value = s.still || s.calme ? 0 : 1
       accent.set(s.accent)
       u.uAccent.value.copy(accent)
 
@@ -179,8 +181,9 @@ function Rig() {
         // Dérive (orbite ±2° sur 12 s) et parallaxe du pointeur (±3°) :
         // appliquées au groupe, autour de son propre centre, pour que la pile
         // reste calée au pixel sur sa boîte HTML. La caméra ne bouge jamais.
-        const dx = s.still ? 0 : (Math.sin((t * 2 * Math.PI) / 12) * 2 * Math.PI) / 180
-        const dy = s.still ? 0 : (Math.sin((t * 2 * Math.PI) / 17) * 1.2 * Math.PI) / 180
+        const fige = s.still || s.calme
+        const dx = fige ? 0 : (Math.sin((t * 2 * Math.PI) / 12) * 2 * Math.PI) / 180
+        const dy = fige ? 0 : (Math.sin((t * 2 * Math.PI) / 17) * 1.2 * Math.PI) / 180
         g.rotation.set(spin.x + dy + orbit.y + lisse.px, spin.y + dx + orbit.x + lisse.py, 0)
         // Zone d'exclusion (titre) → repère local du groupe.
         const ex = s.exclusion

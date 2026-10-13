@@ -69,7 +69,7 @@ export async function capturer({ route, dossier, etats }, browser, filtreEtat) {
               const r = el ? el.getBoundingClientRect() : { top: 0, height: window.innerHeight }
               const top = r.top + window.scrollY
               const dist = Math.max(0, r.height - window.innerHeight)
-              const y = Math.round(top + dist * frac)
+              const y = frac > 1 ? document.documentElement.scrollHeight : Math.round(top + dist * frac)
               const lenis = window.__suLenis
               if (lenis) lenis.scrollTo(y, { immediate: true })
               window.scrollTo(0, y)
@@ -95,6 +95,8 @@ export async function capturer({ route, dossier, etats }, browser, filtreEtat) {
           if (etat.depuis === undefined) await page.waitForTimeout(600)
         }
         if (etat.action === 'touche3') await page.keyboard.press('3')
+        if (etat.action?.startsWith('noeud')) await page.locator('.su-mac__noeud').nth(Number(etat.action.slice(5)) - 1).click()
+        if (etat.action === 'focus-offre2') await page.locator('.su-prix__offre').nth(1).focus()
         if (etat.action?.startsWith('onglet')) {
           const k = Number(etat.action.slice(6))
           await page.locator('.su-off__onglet').nth(k - 1).click()

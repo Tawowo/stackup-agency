@@ -9,14 +9,8 @@ import { usePathname } from 'next/navigation'
 import { useEffect, useRef, useState } from 'react'
 import LogoMarque from '@/components/ui/LogoMarque'
 import Action from '@/components/ui/Action'
+import { ENTREES } from './entrees'
 
-export const ENTREES = [
-  { href: '/realisations', nom: 'Réalisations' },
-  { href: '/services', nom: 'Services' },
-  { href: '/solutions', nom: 'Outils de gestion' },
-  { href: '/tarifs', nom: 'Tarifs' },
-  { href: '/a-propos', nom: 'À propos' },
-]
 
 export default function Nav() {
   const panneau = useRef<HTMLDivElement>(null)

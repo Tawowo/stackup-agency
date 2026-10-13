@@ -61,6 +61,7 @@ export default function Strates() {
         if (phase === ph && s.moment === '01') return
         phase = ph
         s.setMoment('01')
+        s.setParams({ isoPush: 0.35, isoDim: 0.65 })
         if (reduit) return
         s.setPose({ x: 0.5, y: -0.22 })
         s.setProjection(0.5)
