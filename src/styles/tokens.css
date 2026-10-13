@@ -1,0 +1,44 @@
+/* TOKENS — la seule source des couleurs, durées et courbes (PROMPT-REFONTE § 3). */
+:root {
+  --su-encre: #060B14;
+  --su-encre-2: #0A1220;
+  --su-navy: #0D2C4C;
+  --su-navy-clair: #1C4A78;
+  --su-ambre: #F69106;
+  --su-ambre-clair: #FFB84D;
+  --su-ambre-texte: #B45309;
+  --su-ivoire: #FFFDF9;
+  --su-ivoire-creuse: #F3EFE6;
+  --su-graphite: #8A97A8;
+  --su-graphite-ivoire: #64748B;
+  --su-lumiere-angle: -18deg;
+
+  /* Pilotée par le scroll : 1 = encre (nuit), 0 = ivoire (la lumière s'allume). */
+  --su-nuit: 1;
+
+  /* Dérivés : fond et textes suivent --su-nuit sans JS supplémentaire. */
+  --su-fond: color-mix(in srgb, var(--su-encre) calc(var(--su-nuit) * 100%), var(--su-ivoire));
+  --su-texte: color-mix(in srgb, var(--su-ivoire) calc(var(--su-nuit) * 100%), var(--su-navy));
+  --su-texte-doux: color-mix(in srgb, var(--su-graphite) calc(var(--su-nuit) * 100%), var(--su-graphite-ivoire));
+  --su-accent-texte: color-mix(in srgb, var(--su-ambre-clair) calc(var(--su-nuit) * 100%), var(--su-ambre-texte));
+
+  /* Mouvement : quatre durées, trois courbes. */
+  --su-reflexe: 140ms;
+  --su-geste: 320ms;
+  --su-pose-duree: 620ms;
+  --su-scene: 1100ms;
+  --su-pose: cubic-bezier(0.16, 0.84, 0.28, 1);
+  --su-glisse: cubic-bezier(0.33, 0, 0.1, 1);
+  --su-sortie: cubic-bezier(0.5, 0, 0.75, 0);
+  --su-cascade: 70ms;
+
+  /* Ombre posée à −18° (partagée avec la 3D). */
+  --su-ombre-x: calc(cos(var(--su-lumiere-angle)) * 14px);
+  --su-ombre-y: calc(sin(var(--su-lumiere-angle)) * -14px);
+  --su-ombre: var(--su-ombre-x) var(--su-ombre-y) 0 rgba(6, 11, 20, 0.45);
+
+  /* Grille. */
+  --su-gouttiere: 24px;
+  --su-conteneur-texte: 1200px;
+  --su-conteneur-scene: 1440px;
+}

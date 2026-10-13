@@ -1,171 +1,67 @@
-# Journal du chantier
+# Journal du chantier — Stackup Agency V5
 
-Court par obligation : le dossier interdit (17.6 §8) de produire de la
-documentation à la place du travail. Une ligne par phase, ce qui est fait,
-ce qui ne l'est pas.
+Court par obligation (≤ 150 lignes). Le propriétaire lit ce fichier pour savoir où on en est.
 
-## Phase 0 — Socle ✅
+## 2026-10-13 — Phase 0 : scaffold + Stack Engine
 
-**Migration Next 15 + React 19.** Quatre ruptures traitées : `params`
-asynchrone (11 routes), namespace `JSX` supprimé, `useRef<T>(null)` qui rend
-`RefObject<T | null>`, types React 19. Build vert, 232 articles générés sur
-300 (68 à publication future), 73 redirections intactes.
+**Situation de départ.** Le dépôt n'était pas vide : il contenait l'ancien site et une refonte
+antérieure (Next 15, « bande » 3D). Tout a été déplacé dans `ancien/` (git mv, rien n'est perdu,
+une copie est aussi dans `../stackup-agency-20261012/`). `ancien/` sert uniquement de carrière :
+logo, images, PDF, données, 300 articles, logique du configurateur, `LogoMarque.tsx`. Il sera
+supprimé du dépôt quand les reprises de la phase 6 (JSON-LD, redirections) seront faites.
 
-**Une régression trouvée par axe-core juste après la migration.** React 18
-exigeait d'écrire `inert: ''` — la chaîne vide était la seule façon de poser
-l'attribut. React 19 le prend en booléen natif, et la chaîne vide y est
-FAUSSE : les trois panneaux de navigation fermés redevenaient tabulables, sur
-cinq pages. Corrigé en `inert={!ouvert}`.
+**Plan de la phase 0 (10 lignes).**
+1. Projet neuf : Next 16 (App Router, Turbopack), React 19, TS strict, Tailwind 4, ESLint 9.
+2. Tokens `src/styles/tokens.css`, polices locales (Poppins 600/700, Inter variable, JetBrains Mono).
+3. `scripts/logo-trace.mjs` : à partir des deux tracés SVG de `LogoMarque`, dériver la plaque
+   canonique (parallélogramme, pente du pli) et les trois poses exactes du logo → `src/webgl/logo-geometry.ts`.
+4. Stack Engine : uniforms partagés (`engine.ts`), `plates.tsx` (InstancedMesh, morph A→B dans le
+   vertex shader, arc, retard par instance), matériau navy/ambre avec lumière à −18°, grain, lentille.
+5. Layouts purs `logo` et `pile` (+ tests node:test), store zustand `scene`.
+6. Canvas persistant `Scene.tsx` (frameloop never, avancé par `gsap.ticker`), caméra ortho↔perspective
+   par mélange de matrices, ombre projetée sur un mur à −18°, respiration / balayage / dérive.
+7. Paliers `quality.ts` (detect-gpu + capacités, `?quality=`), moniteur fps dans le ticker.
+8. `/lab` : Tweakpane (épaisseur, écartement, torsion, arc, retard, morph, projection), drag.
+9. Playwright : `scripts/shots.config.ts`, `shots.mjs`, projets 1440 / 390, SwiftShader ; `logo-check.mjs`.
+10. Captures lues : lab logo, pile, drag, morph 0,5 ; superposition ≤ 2 % ; `docs/qa/rapport.json`.
 
-**Nettoyage.** Supprimés : `Monolithe.tsx`, `ScrollBackground.tsx`,
-`CountUp.tsx`, `useReveal.ts`, `/api/testimonials`, les six composants
-`rentree/`, `config/rentree.ts`, la page `/offre-rentree` (301 vers
-`/tarifs`), `public/logo.svg` et `public/logo-white.svg` (redessins
-approximatifs à deux polygones — exactement le « pictogramme inventé » que la
-règle 4.2 proscrit), la dépendance `twilio` (jamais utilisée).
+**Ce qui est visible à la fin de la phase 0** (`npm run lab`, puis `/lab`) : le logo exact en trois
+plaques, immense, qui respire en profondeur, balayé par une bande ambre, dérivant de ±2°, avec une
+ombre longue à −18° sur un mur faiblement éclairé par la lampe ambre ; au drag il tourne (inertie,
+retour lent) ; le bouton « pile » fait arriver une tour torsadée depuis l'arrière-plan (arc, retard
+par instance) ; le curseur ortho ↔ perspective bascule sans saut ; « nuit / jour » allume l'ivoire.
+`/` montre le logo calé sur les colonnes 1-6 et le mot porteur en Poppins — un stub, pas le hero.
 
-**`site.ts` devient la source unique.** Ajout des conditions commerciales en
-UNE seule version (celle des CGV PDF du 28 juillet 2026, par arbitrage
-18.6) : acompte 40/60, 3 révisions, 30 jours de support, suppléments ;
-l'hébergement dit tel qu'il est (« en Europe ou en France selon l'offre »,
-le site affirmait « France » alors que les mentions légales nomment Vercel,
-société américaine) ; le parrainage en une version au lieu de quatre ; un
-mécanisme générique `offreEnCours` à la place du code spécifique à l'offre de
-rentrée, qui portait deux dates de fin contradictoires ; `prochainCreneau`
-vide, à saisir à la main — jamais calculé, ce serait une urgence fabriquée.
+**Captures lues** : 24 fichiers commentés dans `docs/qa/rapport.json` (lab × 7 états, accueil, logo-check).
+Défauts trouvés en regardant, et corrigés : Tweakpane en double ; caméra qui recentrait la pile à
+l'écran (le logo ignorait sa boîte HTML) ; tour chaotique (plaques trop grandes, trop nombreuses) ;
+plaques de profil roses (classification des faces par la normale monde) ; lentille et Fresnel
+beaucoup trop forts (taches beiges) ; ambre jaunie sur ivoire ; `--su-nuit` CSS qui ne suivait pas.
 
-**API.** `/api/contact` acceptait `html`, `confirmHtml` et `subject` du
-client et les relayait à Resend : n'importe qui pouvait faire partir un
-e-mail au contenu de son choix DEPUIS l'adresse de l'agence, vers une adresse
-de son choix. Réécrite : zod, gabarits serveur, échappement, limitation de
-débit. `/api/parrainage` idem. Le formulaire de devis envoie désormais un
-récapitulatif en DONNÉES.
+**Superposition du logo (règle 9)** : 1,05 % en 1440, 1,08 % en 390 (seuil 2 %), ratio à 0,45 % près.
+Méthode : encre = luminance < 176, boîtes englobantes alignées, référence `logo_Stackup-Agency_seul.png`.
+Chaque bande du logo a sa propre pente (0,418 / 0,392 / 0,391) : une plaque canonique à 21,83° plus une
+rotation résiduelle par instance (≤ 0,9°) reproduit la silhouette.
 
-**Sitemap.** Les slugs de réalisations venaient d'une liste recopiée à la
-main qui avait dérivé : `demo-videaste`, le projet mis en avant et seule
-étude de cas du site, n'était déclaré à aucun moteur. Ils viennent maintenant
-de `lib/realisations.ts`. Ajout de `/ressources` et `/plan-du-site`.
+**Cadence (SwiftShader, proxy)** — mesurée sur le temps réel, pas sur le delta borné :
+logo 8-9 fps en 1440, 15 en 390 ; pile 4 en 1440, 9 en 390. Un canvas VIDE (un quad plat, sans
+plaques) plafonne déjà à 16 fps en 1440 dans ce conteneur : le seuil « ≥ 30 » n'y est pas atteignable,
+quel que soit le shader. Le moniteur de qualité (baisse du DPR puis du palier, puis repli 2D) est
+désactivé quand `?quality=` force un palier, sinon il bascule les captures longues en 2D. À mesurer sur
+un vrai GPU à la prochaine session ; en attendant, les captures restent la preuve.
 
-**Typographie.** Space Grotesk retirée, Poppins installée — la famille du
-lettrage du logo. Trois voix sans rôle distinct deviennent deux voix fortes
-plus la chasse fixe technique.
+**Décisions / dépendances.** Hors liste § 5, avec motif : `@tweakpane/core` (types de Tweakpane 4,
+dev) ; `sharp` (recadrage/redimensionnement de `logo-check`, puis AVIF des démos en phase 3, dev).
+Pas de Lenis, zod, Resend, tunnel-rat, drei-only encore : ajoutés quand une phase les emploie.
+L'ombre est projetée par le moteur lui-même (second passage du même InstancedBufferGeometry, projeté
+le long de la lumière sur un mur), pas par `ContactShadows` : un matériau de profondeur ne connaît pas
+le morph dans le vertex shader. Le mur peint le fond (encre ↔ ivoire), le halo, la vignette et le grain.
+Les layouts sont des fonctions pures (`node --test`, 3 tests).
 
-**Vérifié.** Build vert, lint propre, QA 25/25, captures « avant »
-(`docs/captures/00-avant/`) et « socle » (`00-socle/`) prises et regardées en
-1440 et 390.
+**Pas fait en phase 0.** Repli 2D animé (SVG statique seulement) ; composition mobile de la pile ;
+le retour après drag trop rapide pour être capturé ; AGENTS.md généré par Next désactivé.
 
-## Phase 1 — Scène et bande ◐ (socle fait, hero en cours)
-
-**L'objet.** Le ruban du logo, extrudé depuis les deux tracés de
-`LogoMarque.tsx` — le décalque relevé sur le PNG d'origine, pas un redessin.
-Aucun biseau (il élargirait la silhouette et ferait échouer la
-superposition). L'épaisseur passe par `scale.z` : la géométrie est
-construite une fois, et à épaisseur nulle il ne reste que la face avant,
-donc exactement la silhouette plate.
-
-**La bascule de projection.** La matrice de projection est la moyenne
-pondérée de l'orthographique et de la perspective. Deux autres pistes ont
-été écartées pour des raisons précises : une perspective à petit angle n'est
-PAS une orthographie (il y reste une fuite, la silhouette ne se superpose
-jamais, et la distance tend vers l'infini) ; deux caméras échangées à
-mi-parcours font un saut visible, que le dossier interdit explicitement.
-
-**LA SUPERPOSITION — la règle bloquante 4.2 §6.**
-
-| | 1440 px | 390 px |
-|---|---|---|
-| écart brut | **1,89 %** | **2,00 %** |
-| dont forme fausse (hors contour) | 0,38 % | 0,47 % |
-| écart de proportions | 0,31 % | — |
-
-Seuil du dossier : 2 %. Tenu aux deux largeurs.
-
-Le chemin pour y arriver dit quelque chose. Premier essai : **83 %**. Trois
-fautes, toutes dans la MESURE, aucune dans l'objet :
-
-1. Le dossier (4.1) annonce `logo_Stackup-Agency_seul.png` comme « détouré,
-   RGBA ». Vérifié au navigateur : il a un canal alpha, mais **zéro pixel
-   transparent** — 81,8 % de blanc opaque. Il n'est pas détouré. Binariser
-   par l'alpha allumait l'image entière.
-2. La capture incluait la barre de navigation et le bandeau cookies : leur
-   encre entrait dans la boîte englobante. Première correction par liste de
-   sélecteurs à masquer — elle laissait passer le bouton du menu mobile,
-   d'où 84 % en 390 px. Une liste de ce qu'il faut cacher est toujours
-   incomplète ; une liste de ce qu'il faut garder ne l'est pas.
-3. Le seuil de binarisation était à 232, ce qui inclut le halo
-   d'anticrénelage. Le bon seuil se DÉRIVE : luminance du navy 39,7, de
-   l'ambre 156,4, du papier 255 ; demi-couverture à 147 et 206 ; moyenne
-   **176**. Sous 157, l'ambre plein est exclu et l'écart explose à 76 % —
-   ce qui confirme l'arithmétique.
-
-**Cadence** (SwiftShader, rendu logiciel sans GPU — proxy, pas un vrai
-appareil) : 31 fps en 1440, 60 fps en 390.
-
-**LE HERO.** Le ruban 3D s'aligne au pixel sur une boîte vide déclarée par
-le HTML, à côté du lettrage, qui reste du HTML (sélectionnable, indexable,
-lisible par un lecteur d'écran, présent sans WebGL). Titre « Votre [site] en
-10 jours ouvrés. », mot porteur cliquable, deux actions, quatre cotes tirées
-de `site.ts`, pied « 00 — Ouverture ».
-
-**Quatre défauts trouvés en regardant les captures, et un par la QA :**
-
-1. Le ruban n'apparaissait pas. La bande se plaçait hors cadre parce qu'elle
-   lisait `state.viewport` de R3F, qui calcule la hauteur visible à partir du
-   `fov` — or la projection de cette scène est une matrice MÉLANGÉE
-   ortho/perspective. La hauteur visible est passée dans un module partagé.
-2. Le ruban était correctement placé mais invisible : le hero se peignait un
-   fond ivoire opaque qui passait devant le calque fixe. L'ivoire est
-   désormais porté par le `body` ; une section qui veut laisser voir la scène
-   ne peint rien.
-3. La page devenait sombre une fois ce fond retiré : le hero portait encore
-   `data-scene="ouverture"`, qui met la traversée nuit/jour à 1. La direction
-   retenue est ivoire dominant ; le hero ne participe plus à ce système.
-4. Au défilement, la bande restait collée à l'écran et chevauchait le titre :
-   l'ancrage n'était relevé qu'au redimensionnement. Il suit maintenant le
-   défilement, une fois par image au plus.
-5. La QA a relevé que le titre se copiait « Votresiteen 10 jours ouvrés » :
-   première version en `display: flex` avec `gap`. Le rendu était identique,
-   mais une gouttière n'est pas un caractère.
-
-**Deux contrôles de la QA étaient périmés** : ils cherchaient « décoller »,
-le mot porteur de l'ancien hero. Réécrits sur ce qui doit rester vrai quelle
-que soit la formulation.
-
-**Pas fait en phase 1** : le repli SVG animé, l'ombre portée réelle sur
-l'ivoire, le drag à ± 20°, le cycle du mot porteur relié à la configuration
-de la bande (il change le texte et le store, pas encore la forme).
-
-## Phase 2 — L'offre ◐ (CONFIGURATION faite, STRATES non faite)
-
-**CONFIGURATION (fiche 11.3).** Cent vingt plaques instanciées, cinq
-configurations calculées par du code : une strate pour la vitrine, cinq pour
-le multi-pages, une grille de produits pour la boutique, huit modules en
-couronne pour le système de gestion, une page et un formulaire pour
-l'association. Rien n'est modelé — une forme modelée serait un fichier de
-plus à charger, versionner et re-modeler au premier changement d'offre.
-
-Le morph se fait plaque par plaque avec un retard tiré du rang (fenêtre de
-65 %) et un léger arc en Z. Sans le retard, les 120 plaques partent et
-arrivent ensemble et le mouvement se lit comme un bloc qui glisse ; sans
-l'arc, elles se traversent par le plus court chemin, ce qui se voit.
-
-Les deux pseudo-aléas (relief de la boutique, retard du morph) sont des
-hachages du rang, pas `Math.random()` : une forme qui change à chaque rendu
-rendrait toute comparaison de captures impossible.
-
-**La section L'OFFRE** remplace « l'Atelier » : une grille de sept vignettes
-et vingt-cinq fondus-translations, qui annonçait « survolez chaque service »
-alors qu'elle ne réagissait qu'au clic, et dont l'aperçu collait au-dessus de
-la liste sur mobile. Cinq onglets en `role="tablist"`, flèches et touches
-1–5, prix et délais lus dans `site.ts`, révisions et support lus dans les
-conditions uniques.
-
-**Un défaut vu sur capture :** les plaques ambrées retombaient toutes sur
-deux colonnes et dessinaient des rayures verticales — une plaque sur six
-dans une grille de douze. Passé à une sur sept, premier avec 12, 10, 8 et 3,
-les quatre largeurs de grille utilisées.
-
-**Pas fait en phase 2** : STRATES (la bande qui se découpe en cinq lamelles
-et envoie ses composants dans une maquette), les lignes entre modules de la
-configuration « gestion », la nav en strates, le menu mobile refait, le
-défilement automatique des offres, le verrou de 8 s.
+**Prochaine étape — phase 1, le hero (moment 00)** : nav + LogoMarque, Lenis sur le ticker, section
+épinglée 150 vh, ortho → perspective pilotée par le scroll, `logo` → `pile`, titre déplié par mots,
+quatre cotes mesurées, curseur, repli 2D animé, mouvement réduit, mobile 390 ; captures p = 0 / 0,25 /
+0,5 / 1 × 2 largeurs × (normal, rm) + sans WebGL ; logo-check sur `/`.

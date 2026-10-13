@@ -1,0 +1,275 @@
+import type { Metadata } from 'next'
+import { Inter, Poppins, JetBrains_Mono } from 'next/font/google'
+import './globals.css'
+import { LanguageProvider } from '@/contexts/LanguageContext'
+import { ThemeProvider } from '@/contexts/ThemeContext'
+import Navbar from '@/components/layout/Navbar'
+import Footer from '@/components/layout/Footer'
+import CookieBanner from '@/components/ui/CookieBanner'
+import Palette from '@/components/ui/Palette'
+import RevealObserver from '@/components/ui/RevealObserver'
+import PageProgressBar from '@/components/ui/PageProgressBar'
+import SectionProgressBar from '@/components/ui/SectionProgressBar'
+
+import { SITE } from '@/config/site'
+import SceneMontee from '@/webgl/SceneMontee'
+import CalqueConstruction from '@/components/ui/CalqueConstruction'
+import { BanniereProvider } from '@/contexts/BanniereContext'
+
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-inter',
+  display: 'swap',
+})
+
+/* LA VOIX DISPLAY : POPPINS, LA FAMILLE DU LETTRAGE DU LOGO.
+   Space Grotesk a été retirée : c'est la display des gabarits SaaS de
+   2021-2023, elle ne ressemble pas au lettrage « Stackup » (un géométrique à
+   `a` d'un seul étage, de la famille de Poppins), et à 17 vw elle devient
+   lourde. Le site passe donc de trois voix sans rôle distinct à deux voix
+   fortes : Poppins pour les titres, Inter pour le texte, JetBrains Mono pour
+   les cotes et les fiches techniques.
+
+   La variable garde son nom `--font-space` : la renommer obligerait à
+   toucher une trentaine de déclarations CSS sans rien changer au rendu. */
+const poppins = Poppins({
+  subsets: ['latin'],
+  weight: ['500', '600', '700'],
+  variable: '--font-space',
+  display: 'swap',
+})
+
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ['latin'],
+  weight: ['400', '600', '700'],
+  variable: '--font-mono',
+  display: 'swap',
+})
+
+export const metadata: Metadata = {
+  metadataBase: new URL(SITE.url),
+  title: {
+    default: 'Stackup Agency — Agence Web & Digital | Création Site Internet',
+    template: '%s | Stackup Agency',
+  },
+  description:
+    'Stackup Agency : agence digitale spécialisée en création de sites web, applications et systèmes de gestion sur mesure. Devis gratuit sous 72h. Prix accessibles, qualité premium.',
+  keywords: [
+    'agence web',
+    'création site internet',
+    'développement web',
+    'agence digitale Tours',
+    'site vitrine',
+    'site e-commerce',
+    'application web sur mesure',
+  ],
+  authors: [{ name: SITE.name, url: SITE.url }],
+  creator: SITE.name,
+  publisher: SITE.name,
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'fr_FR',
+    url: SITE.url,
+    siteName: SITE.name,
+    title: 'Stackup Agency — Agence Web & Digital | Création Site Internet',
+    description:
+      'Agence digitale spécialisée en création de sites web, applications et systèmes de gestion sur mesure. Devis gratuit sous 72h.',
+    images: [
+      {
+        url: `${SITE.url}/og-image.png`,
+        width: 1200,
+        height: 630,
+        alt: 'Stackup Agency',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Stackup Agency — Agence Web & Digital',
+    description: 'Création de sites web, applications et systèmes de gestion sur mesure.',
+    images: [`${SITE.url}/og-image.png`],
+  },
+  alternates: {
+    canonical: SITE.url,
+    types: {
+      'application/rss+xml': `${SITE.url}/feed.xml`,
+    },
+  },
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: '48x48' },
+      { url: '/icons/icon-48.png', sizes: '48x48', type: 'image/png' },
+      { url: '/icons/icon-96.png', sizes: '96x96', type: 'image/png' },
+      { url: '/icons/icon-192.png', sizes: '192x192', type: 'image/png' },
+      { url: '/icons/icon-512.png', sizes: '512x512', type: 'image/png' },
+    ],
+    apple: [{ url: '/apple-icon.png', sizes: '180x180', type: 'image/png' }],
+    shortcut: ['/favicon.ico'],
+  },
+  manifest: '/manifest.json',
+  verification: {
+    google: 'xiP5qgErkvFWvBzdgLl2rUGwMVWq0jLJTk0OwUnGrX4',
+  },
+}
+
+const schemaOrg = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    '@id': `${SITE.url}/#website`,
+    name: SITE.name,
+    url: SITE.url,
+    publisher: { '@id': `${SITE.url}/#organization` },
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': ['Organization', 'LocalBusiness'],
+    '@id': `${SITE.url}/#organization`,
+    name: SITE.name,
+    legalName: SITE.legalName,
+    description: 'Agence digitale spécialisée en création de sites web, applications et systèmes de gestion sur mesure — basée à Tours, intervenant sur toute la France.',
+    url: SITE.url,
+    email: SITE.email,
+    foundingDate: SITE.founded,
+    logo: {
+      '@type': 'ImageObject',
+      url: `${SITE.url}/icons/icon-512.png`,
+      width: 512,
+      height: 512,
+    },
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: SITE.address.locality,
+      addressRegion: SITE.address.department,
+      addressCountry: SITE.address.country,
+    },
+    areaServed: {
+      '@type': 'Country',
+      name: 'France',
+    },
+    contactPoint: {
+      '@type': 'ContactPoint',
+      email: SITE.email,
+      contactType: 'customer service',
+      availableLanguage: ['fr'],
+    },
+    priceRange: '€€',
+    knowsAbout: ['Création de site web', 'Développement web', 'SEO', 'Marketing digital', 'Applications web sur mesure'],
+    sameAs: [
+      SITE.social.linkedin,
+      SITE.social.instagram,
+      SITE.social.facebook,
+    ],
+  },
+]
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+  return (
+    <html lang="fr" suppressHydrationWarning>
+      <head>
+        {/* Marque la disponibilité de JavaScript AVANT le premier rendu.
+            Les primitives de révélation (.su-ligne-interne) ne masquent leur
+            contenu que sous `.su-js` : sans JavaScript le texte reste
+            simplement visible, et comme la classe est posée de façon
+            synchrone dans <head>, il n'y a aucun scintillement. */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html:
+              "document.documentElement.classList.add('su-js');" +
+              // Masque le bandeau cookies avant la première peinture pour qui
+              // a déjà répondu : sans cela, le bandeau rendu côté serveur
+              // clignoterait à chaque page.
+              "try{if(localStorage.getItem('cookie-consent'))document.documentElement.classList.add('su-consenti')}catch(e){}",
+          }}
+        />
+        {/* Filet de sécurité sans JavaScript.
+            Plusieurs composants animent leur entrée par un style en ligne
+            `opacity: 0` levé par un état React. Sans script, ce style n'est
+            jamais levé et le contenu reste définitivement invisible —
+            mesuré : les six étapes de la section méthode, entièrement
+            masquées. Cette règle ne s'applique QUE si JavaScript est absent,
+            et n'a donc aucun effet sur le rendu normal. */}
+        {/* Filet de sécurité sans JavaScript.
+            Plusieurs composants animent leur entrée par une opacité nulle
+            levée par un état React. Sans script, elle n'est jamais levée et
+            le contenu reste définitivement invisible — mesuré : les six
+            étapes de la section méthode et le bloc « Notre raison d'être ».
+
+            `dangerouslySetInnerHTML` est nécessaire ici : le contenu d'un
+            <style> est du texte brut, et React y échappe les guillemets en
+            &quot;, ce qui rendait le sélecteur invalide. Les entités ne sont
+            pas décodées dans un <style>, donc la règle ne s'appliquait pas.
+
+            Portée volontairement étroite : uniquement les styles EN LIGNE,
+            uniquement dans <main>. Une version plus large forçait visibles
+            les menus déroulants de la navigation et les survols de cartes,
+            qui utilisent `opacity-0` pour un masquage parfaitement
+            légitime — vérifié par capture.
+
+            Cette règle n'existe que si JavaScript est absent : aucun effet
+            sur le rendu normal. */}
+        <noscript>
+          <style
+            dangerouslySetInnerHTML={{
+              __html:
+                "main [style*='opacity:0'],main [style*='opacity: 0']" +
+                "{opacity:1!important;transform:none!important}",
+            }}
+          />
+        </noscript>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaOrg) }}
+        />
+      </head>
+      <body className={`${inter.variable} ${poppins.variable} ${jetbrainsMono.variable} antialiased`}>
+        <ThemeProvider>
+          <LanguageProvider>
+            {/* L'offre en cours est pilotée par `SITE.offreEnCours.active`
+                (une seule date de fin, un seul interrupteur). Le code
+                spécifique à l'« offre de rentrée » a été supprimé : il
+                portait DEUX dates contradictoires et survivait à son
+                expiration dans cinq composants. */}
+            <BanniereProvider initialActive={SITE.offreEnCours.active}>
+              {/* LA SCÈNE PERSISTANTE.
+                  Montée ici, dans le layout racine, elle n'est jamais
+                  démontée : la navigation entre pages ne recrée donc ni le
+                  contexte WebGL, ni les géométries, ni les matériaux, et la
+                  bande traverse les pages au lieu de réapparaître à chaque
+                  fois. Elle se place elle-même dans un portail vers le body
+                  et ne capte aucun événement. */}
+              <SceneMontee />
+              <CalqueConstruction />
+              <PageProgressBar />
+              <SectionProgressBar />
+              <RevealObserver />
+              {/* Lien d'évitement : premier élément focalisable de la page,
+                  il permet de sauter la navigation sans la parcourir au
+                  clavier à chaque changement de page. */}
+              <a href="#contenu" className="su-evitement">Aller au contenu</a>
+              <Navbar />
+              {/* Repère principal unique pour toutes les pages. Il était
+                  absent de 29 gabarits, qui génèrent l'essentiel des 438
+                  pages du site (règle WCAG landmark-one-main). */}
+              <main id="contenu">{children}</main>
+              <Footer />
+              <CookieBanner />
+              <Palette />
+            </BanniereProvider>
+          </LanguageProvider>
+        </ThemeProvider>
+      </body>
+    </html>
+  )
+}

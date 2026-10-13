@@ -1,0 +1,35 @@
+{
+  "echecs": [],
+  "reussites": [
+    "aucun débordement horizontal",
+    "aucune erreur console",
+    "aucune violation grave ou critique",
+    "le laboratoire affiche des interventions",
+    "un filtre de statut réduit réellement la liste",
+    "la synthèse se recalcule sur l’ensemble filtré",
+    "la recherche filtre réellement",
+    "le tri réordonne réellement",
+    "faire avancer une intervention modifie son état",
+    "un montant apparaît après le choix du projet",
+    "une option sans tarif public est signalée « à chiffrer »",
+    "la synthèse mentionne « à partir de »",
+    "la synthèse mentionne « sur devis »",
+    "la synthèse arrive réellement dans le formulaire de devis",
+    "la clé de transmission est consommée après lecture",
+    "Ctrl+K ouvre la palette",
+    "la recherche renvoie des résultats",
+    "Entrée navigue vers la page choisie",
+    "Échap referme la palette",
+    "aucune scène WebGL animée en mouvement réduit",
+    "le titre reste visible en mouvement réduit",
+    "le titre est lisible sans JavaScript",
+    "le titre est entièrement peint sans JavaScript",
+    "aucun bloc de contenu invisible sans JavaScript",
+    "les lignes du titre sont séparées par une espace"
+  ],
+  "details": {
+    "debordements": [],
+    "erreursConsole": [],
+    "a11y": []
+  }
+}

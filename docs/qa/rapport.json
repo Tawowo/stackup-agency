@@ -1,35 +1,270 @@
 {
-  "echecs": [],
-  "reussites": [
-    "aucun débordement horizontal",
-    "aucune erreur console",
-    "aucune violation grave ou critique",
-    "le laboratoire affiche des interventions",
-    "un filtre de statut réduit réellement la liste",
-    "la synthèse se recalcule sur l’ensemble filtré",
-    "la recherche filtre réellement",
-    "le tri réordonne réellement",
-    "faire avancer une intervention modifie son état",
-    "un montant apparaît après le choix du projet",
-    "une option sans tarif public est signalée « à chiffrer »",
-    "la synthèse mentionne « à partir de »",
-    "la synthèse mentionne « sur devis »",
-    "la synthèse arrive réellement dans le formulaire de devis",
-    "la clé de transmission est consommée après lecture",
-    "Ctrl+K ouvre la palette",
-    "la recherche renvoie des résultats",
-    "Entrée navigue vers la page choisie",
-    "Échap referme la palette",
-    "aucune scène WebGL animée en mouvement réduit",
-    "le titre reste visible en mouvement réduit",
-    "le titre est lisible sans JavaScript",
-    "le titre est entièrement peint sans JavaScript",
-    "aucun bloc de contenu invisible sans JavaScript",
-    "les lignes du titre sont séparées par une espace"
-  ],
-  "details": {
-    "debordements": [],
-    "erreursConsole": [],
-    "a11y": []
-  }
+  "genere": "2026-10-13",
+  "phase": 0,
+  "captures": [
+    {
+      "fichier": "docs/qa/shots/lab/logo-1440.png",
+      "route": "/lab",
+      "etat": "logo",
+      "largeur": 1440,
+      "rm": false,
+      "visible": "Les trois plaques du logo, immenses, centrées dans la boîte (cols 4-9), navy éclairées par l'ambre, liseré clair sur les arêtes côté lumière, ombre longue à −18° sur le mur, halo ambré faible, grain, vignette. HUD mono en haut à gauche, Tweakpane à droite.",
+      "defauts": [
+        "Tweakpane rendu deux fois (double effet StrictMode) — corrigé par un drapeau d'annulation",
+        "Plaque du milieu paraissant plus sombre — mesuré au pixel : identique (15,42,64), c'était la bande de balayage"
+      ],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/lab/logo-1440-rm.png",
+      "route": "/lab",
+      "etat": "logo",
+      "largeur": 1440,
+      "rm": true,
+      "visible": "Même composition, figée : pas de dérive, pas de respiration ; la bande de balayage est éteinte (uBreath = 0).",
+      "defauts": [],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/lab/logo-390.png",
+      "route": "/lab",
+      "etat": "logo",
+      "largeur": 390,
+      "rm": false,
+      "visible": "Logo pleine largeur (cols 1-12), boutons du HUD sur deux lignes, pas de Tweakpane (masqué < md).",
+      "defauts": [],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/lab/logo-390-rm.png",
+      "route": "/lab",
+      "etat": "logo",
+      "largeur": 390,
+      "rm": true,
+      "visible": "Identique, figé.",
+      "defauts": [],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/lab/pile-1440.png",
+      "route": "/lab",
+      "etat": "pile",
+      "largeur": 1440,
+      "rm": false,
+      "visible": "Les trois plaques du logo restent devant ; derrière, une tour torsadée de plaques à l'échelle 0,5, tangentes au colimaçon, monte du bas du logo et déborde par le haut ; quelques plaques « en vol » au sommet ; le mur et les ombres reculent.",
+      "defauts": [
+        "Première version : plaques à l'échelle du logo, 800 en colimaçon de rayon 0,32 → masse chaotique illisible — corrigé (échelle 0,5, hauteur bornée 3,4, reste dissous)",
+        "Plaques de profil teintées rose : `side` lisait la normale monde — corrigé par un varying vFace"
+      ],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/lab/pile-1440-rm.png",
+      "route": "/lab",
+      "etat": "pile",
+      "largeur": 1440,
+      "rm": true,
+      "visible": "La tour posée d'un coup, sans morph (mouvement réduit). Sur le site, le mouvement réduit gardera le layout logo (phase 1).",
+      "defauts": [],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/lab/pile-390.png",
+      "route": "/lab",
+      "etat": "pile",
+      "largeur": 390,
+      "rm": false,
+      "visible": "Tour derrière le logo pleine largeur ; lisible mais la tour dépasse à gauche du cadre sur mobile.",
+      "defauts": [
+        "Composition mobile de la pile à dessiner pour le hero (phase 1)"
+      ],
+      "corrige": false
+    },
+    {
+      "fichier": "docs/qa/shots/lab/pile-390-rm.png",
+      "route": "/lab",
+      "etat": "pile",
+      "largeur": 390,
+      "rm": true,
+      "visible": "Idem, figé.",
+      "defauts": [],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/lab/morph-05-1440.png",
+      "route": "/lab",
+      "etat": "morph-05",
+      "largeur": 1440,
+      "rm": false,
+      "visible": "uMorph = 0,5 figé : les plaques en vol entre l'arrière-plan et la tour, trajectoires en arc, rotation en vol ; le logo immobile.",
+      "defauts": [],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/lab/morph-05-390.png",
+      "route": "/lab",
+      "etat": "morph-05",
+      "largeur": 390,
+      "rm": false,
+      "visible": "Idem en portrait.",
+      "defauts": [],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/lab/drag-1440.png",
+      "route": "/lab",
+      "etat": "drag",
+      "largeur": 1440,
+      "rm": false,
+      "visible": "Après un drag de 240 px : spin 1,22 rad, la pile tourne autour de son axe vertical, l'épaisseur des plaques apparaît, la tour révèle son hélice, arête ambre du logo éclairée.",
+      "defauts": [
+        "Lentille du pointeur : +50 % d'ambre sur un rayon de 0,9 → taches beiges — corrigé (0,15, rayon 0,7)",
+        "Fresnel trop large (pow 3, 0,45) → plaques saumon en incidence rasante — corrigé (pow 4, 0,3)"
+      ],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/lab/drag-390.png",
+      "route": "/lab",
+      "etat": "drag",
+      "largeur": 390,
+      "rm": false,
+      "visible": "Drag tactile simulé : la pile a tourné puis le retour lent a commencé (spin 0 au moment de la capture).",
+      "defauts": [
+        "Le retour à l'orientation d'origine est trop rapide pour être capturé à 1,6 s — à régler avec le hero"
+      ],
+      "corrige": false
+    },
+    {
+      "fichier": "docs/qa/shots/lab/perspective-1440.png",
+      "route": "/lab",
+      "etat": "perspective",
+      "largeur": 1440,
+      "rm": false,
+      "visible": "proj = 0 : perspective (distance 6,5), la tour fuit vers le haut, les plaques du logo prennent de la profondeur, les ombres s'allongent.",
+      "defauts": [
+        "Première distance (9) donnait une perspective imperceptible — passée à 6,5"
+      ],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/lab/perspective-390.png",
+      "route": "/lab",
+      "etat": "perspective",
+      "largeur": 390,
+      "rm": false,
+      "visible": "Idem en portrait.",
+      "defauts": [],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/lab/jour-1440.png",
+      "route": "/lab",
+      "etat": "jour",
+      "largeur": 1440,
+      "rm": false,
+      "visible": "Fond ivoire (nuit = 0) : navy franc, ambre du logo, ombres gris pâle à −18°, grain fin ; le HUD passe en navy.",
+      "defauts": [
+        "L'ambre virait au jaune sur ivoire — corrigé (mélange vers la couleur de base)",
+        "Le HUD restait ivoire sur ivoire : --su-nuit CSS ne suivait pas le store — corrigé (SceneMount)"
+      ],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/lab/jour-390.png",
+      "route": "/lab",
+      "etat": "jour",
+      "largeur": 390,
+      "rm": false,
+      "visible": "Idem en portrait.",
+      "defauts": [],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/lab/repli-1440.png",
+      "route": "/lab",
+      "etat": "repli",
+      "largeur": 1440,
+      "rm": false,
+      "visible": "webgl = 0 : mode 2d, le logo SVG (LogoMarque) remplit exactement la boîte, sur l'encre. Pas de canvas.",
+      "defauts": [
+        "Repli 2D statique : l'animation par clip-path arrive en phase 1"
+      ],
+      "corrige": false
+    },
+    {
+      "fichier": "docs/qa/shots/lab/repli-390.png",
+      "route": "/lab",
+      "etat": "repli",
+      "largeur": 390,
+      "rm": false,
+      "visible": "Idem en portrait.",
+      "defauts": [],
+      "corrige": false
+    },
+    {
+      "fichier": "docs/qa/shots/accueil/haut-1440.png",
+      "route": "/",
+      "etat": "haut",
+      "largeur": 1440,
+      "rm": false,
+      "visible": "Stub de phase 0 : le logo au repos calé sur les colonnes 1-6, le titre display (Poppins 700) en bas à droite, étiquette mono au-dessus. Aucun contenu migré.",
+      "defauts": [
+        "Première capture : le logo ignorait sa boîte et se centrait à l'écran (la caméra orbitait autour de la pile) — corrigé : caméra fixe, dérive et parallaxe appliquées au groupe"
+      ],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/accueil/haut-1440-rm.png",
+      "route": "/",
+      "etat": "haut",
+      "largeur": 1440,
+      "rm": true,
+      "visible": "Idem, figé.",
+      "defauts": [],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/accueil/haut-390.png",
+      "route": "/",
+      "etat": "haut",
+      "largeur": 390,
+      "rm": false,
+      "visible": "Logo pleine largeur dans le tiers supérieur, titre dessous sur deux lignes.",
+      "defauts": [],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/accueil/haut-390-rm.png",
+      "route": "/",
+      "etat": "haut",
+      "largeur": 390,
+      "rm": true,
+      "visible": "Idem, figé.",
+      "defauts": [],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/logo-check/capture-1440.png",
+      "route": "/lab",
+      "etat": "logo-check",
+      "largeur": 1440,
+      "rm": true,
+      "visible": "Capture du contrôle de superposition (ivoire, sans mur ni ombre, figé). Écart 1,05 % de la boîte (seuil 2 %), ratio 0,6371 vs 0,64 (0,45 %). Le diff ne montre que des liserés d'un pixel sur les arêtes longues.",
+      "defauts": [
+        "Première passe à 25 % : le HUD du lab entrait dans le recadrage — corrigé (?hud=0)"
+      ],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/logo-check/capture-390.png",
+      "route": "/lab",
+      "etat": "logo-check",
+      "largeur": 390,
+      "rm": true,
+      "visible": "Écart 1,08 %, ratio 0,6371. Tenu.",
+      "defauts": [],
+      "corrige": true
+    }
+  ]
 }
