@@ -24,7 +24,7 @@ keywords: ["galerie client photographe", "galerie photo privée", "livraison pho
 | Boutique de tirages automatisée (labo partenaire) | ✅ **Point fort** | ⚠️ Semi-automatisé, via vos labos |
 | Vente sans commission | ❌ (10-15 % hors formules hautes) | ✅ 0 % |
 | Votre marque et votre domaine partout | ⚠️ Formules chères uniquement | ✅ Natif |
-| Vos données en France (RGPD) | ⚠️ Variable | ✅ |
+| Vos données dans l'UE (RGPD) | ⚠️ Variable | ✅ |
 | Fonctionne si vous arrêtez de payer | ❌ | ✅ |
 | Évolutions à la demande (contrats, acomptes, planning) | ❌ | ✅ |
 
@@ -50,7 +50,7 @@ Un système de galeries développé pour vous par Stackup Agency comprend :
 - l'interface client — votre marque, vos couleurs — où vos clients consultent, marquent leurs favoris et téléchargent selon vos règles ;
 - le filigrane automatique sur les aperçus, le HD réservé aux ayants droit ;
 - les statistiques par galerie (vues, téléchargements) ;
-- l'hébergement en France, RGPD natif.
+- l'hébergement dans l'Union européenne, RGPD natif.
 
 Prix : **à partir de 1 447 €** — le prix s'affine selon le périmètre (± 500 € autour de ce tarif dans la majorité des projets). Délai : sur mesure, chiffré au devis. Et avant tout engagement, une démonstration vous est présentée — nous montrons avant de vendre.
 

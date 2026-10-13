@@ -8,7 +8,7 @@ export const realisations = [
     url: 'https://demo-videaste-vitrine.vercel.app',
     couleur: '#0C1017',
     accent: '#E8B84B',
-    description: "La vitrine complète de notre offre vidéaste : site portfolio cinématographique + espace de livraison client avec commentaires horodatés sur la timeline vidéo, versions de montage V1/V2/V3, liens privés par destinataire et espace de gestion. Entièrement visitable, accès admin inclus.",
+    description: "Démonstration de notre offre vidéaste : portfolio cinématographique et espace de livraison client (commentaires horodatés, liens privés). Accès admin inclus.",
     tags: ['Vidéaste', 'Livraison client', 'Timeline', 'Espace admin'],
     services: ['Développement web', 'Système de livraison vidéo', 'Design cinématographique'],
     fonctionnalites: [

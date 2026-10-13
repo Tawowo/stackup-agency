@@ -43,7 +43,7 @@ Pour des secteurs particulièrement sensibles (santé, juridique, données finan
 
 Trois éléments permettent de clarifier la situation d'un SaaS déjà en place : la nationalité de la société éditrice (visible dans les mentions légales ou les conditions générales d'utilisation), la localisation effective des serveurs (souvent précisée dans la politique de confidentialité), et l'existence de clauses contractuelles types ou d'un mécanisme de transfert encadré pour les données européennes. L'absence de réponse claire à ces trois questions est en elle-même une information utile sur le niveau de transparence du prestataire.
 
-## L'alternative : un système sur mesure hébergé en France
+## L'alternative : un système sur mesure hébergé en Europe
 
 Un système de gestion sur mesure, développé pour une entreprise française et hébergé chez un prestataire français, élimine structurellement la question du Cloud Act : ni l'éditeur du logiciel ni l'hébergeur ne sont soumis au droit américain. Cette approche a un coût de développement initial, mais offre une réponse définitive à la question de la souveraineté des données, sans dépendre de l'évolution future de la politique d'un éditeur SaaS étranger.
 
@@ -52,7 +52,7 @@ Un système de gestion sur mesure, développé pour une entreprise française et
 - La majorité des SaaS métier utilisés par les TPE françaises sont édités par des entreprises soumises au Cloud Act américain, indépendamment de la localisation physique des serveurs.
 - Le RGPD encadre les transferts de données mais ne neutralise pas juridiquement l'exposition au Cloud Act d'une entreprise américaine.
 - Le risque concret reste statistiquement faible au quotidien pour la plupart des TPE, mais devient un critère commercial réel pour certains clients sensibles à la souveraineté numérique.
-- Un système sur mesure hébergé en France élimine structurellement cette exposition, sans dépendre d'un éditeur étranger.
+- Un système sur mesure hébergé dans l'Union européenne élimine structurellement cette exposition, sans dépendre d'un éditeur étranger.
 
 ## Questions fréquentes
 

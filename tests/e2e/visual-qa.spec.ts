@@ -14,7 +14,7 @@ const PAGES = [
 
 for (const page of PAGES) {
   test.describe(`${page.name}`, () => {
-    test(`screenshot light @${test.info ? '' : ''}`, async ({ page: p, browserName }, testInfo) => {
+    test('screenshot light', async ({ page: p, browserName }, testInfo) => {
       await p.goto(page.path, { waitUntil: 'domcontentloaded' })
       await p.waitForTimeout(1000)
       const project = testInfo.project.name
@@ -24,7 +24,7 @@ for (const page of PAGES) {
       })
     })
 
-    test(`screenshot dark @${test.info ? '' : ''}`, async ({ page: p }, testInfo) => {
+    test('screenshot dark', async ({ page: p }, testInfo) => {
       await p.emulateMedia({ colorScheme: 'dark' })
       await p.goto(page.path, { waitUntil: 'domcontentloaded' })
       await p.waitForTimeout(1000)

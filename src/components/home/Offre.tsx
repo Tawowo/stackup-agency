@@ -32,6 +32,7 @@ import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
 import { SITE } from '@/config/site'
 import { useBande, type Offre as NomOffre } from '@/store/bande'
+import Cadran from './Cadran'
 
 interface Fiche {
   id: NomOffre
@@ -97,6 +98,42 @@ export default function Offre() {
 
   const active = OFFRES.find((o) => o.id === offre) ?? OFFRES[1]
 
+  /* AVANCE AUTOMATIQUE, ET SON VERROU DE HUIT SECONDES.
+
+     La fiche 11.3 demande que la section fasse défiler les offres d'elle-même
+     — sans quoi un visiteur qui ne clique pas ne voit qu'une des cinq formes
+     et le propos de la section lui échappe — mais qu'elle se taise dès qu'il
+     prend la main, pendant huit secondes.
+
+     Sans ce verrou, le comportement est hostile : on clique « Boutique », on
+     commence à lire, et la section passe à « Système de gestion » sous les
+     yeux. Le verrou se réarme à chaque interaction. */
+  const derniereInteraction = useRef(0)
+
+  const choisir = useCallback(
+    (id: NomOffre) => {
+      derniereInteraction.current = Date.now()
+      setOffre(id)
+    },
+    [setOffre],
+  )
+
+  useEffect(() => {
+    /* Le mouvement réduit coupe l'avance : une section qui change seule est
+       exactement ce que ce réglage demande d'éviter. */
+    if (typeof window === 'undefined') return
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
+
+    const horloge = window.setInterval(() => {
+      if (useBande.getState().etat !== 'offre') return
+      if (Date.now() - derniereInteraction.current < 8000) return
+      if (document.hidden) return
+      const i = OFFRES.findIndex((o) => o.id === useBande.getState().offre)
+      useBande.getState().setOffre(OFFRES[(i + 1) % OFFRES.length].id)
+    }, 4200)
+    return () => window.clearInterval(horloge)
+  }, [])
+
   /* La section prend la main sur l'état de la bande quand elle entre à
      l'écran, et la rend quand elle sort. C'est le principe du canvas
      persistant : les pages et les sections DÉCLARENT ce qu'elles veulent,
@@ -153,16 +190,16 @@ export default function Offre() {
       const i = OFFRES.findIndex((o) => o.id === offre)
       if (e.key === 'ArrowDown' || e.key === 'ArrowRight') {
         e.preventDefault()
-        setOffre(OFFRES[(i + 1) % OFFRES.length].id)
+        choisir(OFFRES[(i + 1) % OFFRES.length].id)
       } else if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') {
         e.preventDefault()
-        setOffre(OFFRES[(i - 1 + OFFRES.length) % OFFRES.length].id)
+        choisir(OFFRES[(i - 1 + OFFRES.length) % OFFRES.length].id)
       } else if (/^[1-5]$/.test(e.key)) {
         e.preventDefault()
-        setOffre(OFFRES[Number(e.key) - 1].id)
+        choisir(OFFRES[Number(e.key) - 1].id)
       }
     },
-    [offre, setOffre],
+    [offre, choisir],
   )
 
   return (
@@ -189,7 +226,7 @@ export default function Offre() {
               aria-selected={o.id === offre}
               tabIndex={o.id === offre ? 0 : -1}
               className="su-offre__onglet"
-              onClick={() => setOffre(o.id)}
+              onClick={() => choisir(o.id)}
             >
               <span className="su-offre__onglet-nom">{o.nom}</span>
               <span className="su-offre__onglet-prix">
@@ -216,7 +253,7 @@ export default function Offre() {
               <dt>Prix</dt>
               <dd>
                 {active.prefixe ? `${active.prefixe} ` : ''}
-                {active.prix.toLocaleString('fr-FR')} €
+                <Cadran valeur={active.prix} suffixe="€" />
               </dd>
             </div>
             <div>

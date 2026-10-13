@@ -57,10 +57,11 @@ function ShelfRow({ shelf, isVisible, shelfIndex }: { shelf: Shelf; isVisible: b
     return () => clearTimeout(t)
   }, [isVisible, shelf.items.length, shelfIndex])
 
+  /* Apparition par découpe, jamais par fondu + translation (§17.6 règle 2).
+     Le bloc ne bouge pas : c'est la lame qui passe. */
   return (
-    <div className={`rounded-2xl border-2 p-5 transition-all duration-500 ${shelf.border} ${
-      isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
-    }`}
+    <div className={`su-decoupe rounded-2xl border-2 p-5 ${shelf.border}`}
+      data-posee={isVisible}
       style={{ transitionDelay: `${shelfIndex * 120}ms` }}
     >
       {/* Shelf label */}

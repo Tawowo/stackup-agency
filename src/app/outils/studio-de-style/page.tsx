@@ -6,7 +6,7 @@ import Link from 'next/link'
 
 export const metadata = {
   title: { absolute: 'Studio de style — Identité visuelle de votre site | Stackup' },
-  description: 'Configurateur gratuit de style pour votre site internet : 12 presets métier, 50 palettes (ou personnalisées au pixel près), 50 typographies, aperçu ultra-réaliste sur 5 maquettes. Devis pré-rempli avec votre direction artistique.',
+  description: 'Configurateur gratuit : 12 presets métier, 50 palettes, 50 typographies et un aperçu sur 5 maquettes. Devis pré-rempli avec votre direction artistique.',
   alternates: { canonical: `${SITE.url}/outils/studio-de-style` },
   openGraph: {
     url: `${SITE.url}/outils/studio-de-style`,

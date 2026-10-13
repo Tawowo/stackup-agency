@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { ArrowLeft, CheckCircle, ArrowRight, Mail } from 'lucide-react'
+import { SITE } from '@/config/site'
 
 type PageData = {
   title: string
@@ -13,7 +14,6 @@ type PageData = {
   steps: { num: string; title: string; desc: string }[]
   price: { from: string; details: string }
   faq: { q: string; a: string }[]
-  testimonial: { quote: string; author: string; company: string }
 }
 
 const pages: Record<string, PageData> = {
@@ -61,11 +61,6 @@ const pages: Record<string, PageData> = {
       { q: 'Y a-t-il des frais de commission sur les réservations ?', a: 'Aucune commission. Votre système de réservation vous appartient entièrement.' },
       { q: 'Mon site sera-t-il visible sur Google ?', a: 'Oui, nous optimisons votre référencement local et configurons votre fiche Google Business.' },
     ],
-    testimonial: {
-      quote: 'Depuis notre nouveau site, nous recevons 30% de réservations en plus par mois. La mise en place a été rapide et l\'équipe Stackup a tout géré.',
-      author: 'Chef propriétaire',
-      company: 'Restaurant, Centre-Val de Loire',
-    },
   },
 
   'creation-site-artisan': {
@@ -112,11 +107,6 @@ const pages: Record<string, PageData> = {
       { q: 'Combien de temps pour avoir des résultats SEO ?', a: 'Les premiers résultats apparaissent entre 2 et 4 mois. En attendant, votre site donne déjà une image professionnelle.' },
       { q: 'Est-ce que je peux ajouter des réalisations moi-même ?', a: 'Oui, nous vous formons. Ajouter un nouveau chantier prend moins de 10 minutes.' },
     ],
-    testimonial: {
-      quote: 'J\'ai reçu ma première demande de devis en ligne 3 jours après la mise en ligne. En 6 mois, 40% de mes nouveaux clients viennent de mon site.',
-      author: 'Artisan plombier-chauffagiste',
-      company: 'Eure-et-Loir',
-    },
   },
 
   'creation-site-commerce': {
@@ -163,11 +153,6 @@ const pages: Record<string, PageData> = {
       { q: 'Le click & collect prend-il une commission ?', a: 'Aucune commission. Vous encaissez 100% du montant des commandes.' },
       { q: 'Puis-je vendre en ligne et en boutique en même temps ?', a: 'Oui, c\'est précisément l\'objectif. Le stock est géré en temps réel pour éviter les ruptures.' },
     ],
-    testimonial: {
-      quote: 'Notre boutique fait maintenant 25% de son chiffre d\'affaires grâce au click & collect mis en place par Stackup. La livraison locale suit.',
-      author: 'Responsable boutique',
-      company: 'Commerce de centre-ville',
-    },
   },
 
   'creation-boutique-en-ligne': {
@@ -214,11 +199,6 @@ const pages: Record<string, PageData> = {
       { q: 'Puis-je gérer les promotions et codes promo ?', a: 'Oui, depuis votre espace d\'administration vous créez des promotions, codes de réduction et ventes flash.' },
       { q: 'Et si je veux vendre en France et en Europe ?', a: 'Votre boutique peut être multilingue et gérer plusieurs devises. TVA par pays incluse.' },
     ],
-    testimonial: {
-      quote: 'En 3 mois, notre boutique en ligne a généré autant de CA que notre point de vente physique. Et sans payer de commission à personne.',
-      author: 'Créatrice de cosmétiques naturels',
-      company: 'Boutique en ligne, France',
-    },
   },
 
   'developpement-application-metier': {
@@ -261,15 +241,10 @@ const pages: Record<string, PageData> = {
     price: { from: 'À partir de 1 447€', details: 'Application sur mesure, hébergement sécurisé, formation équipe, support 3 mois. Le prix s\'affine selon le périmètre (± 500 € autour de ce tarif dans la majorité des projets).' },
     faq: [
       { q: 'Combien de temps pour développer mon application ?', a: 'Entre 4 et 12 semaines selon la complexité. Nous définissons ensemble le planning lors du cadrage.' },
-      { q: 'Est-ce que mes données sont sécurisées ?', a: 'Oui. Hébergement en France, chiffrement des données, sauvegardes quotidiennes, conformité RGPD.' },
+      { q: 'Est-ce que mes données sont sécurisées ?', a: 'Oui. Hébergement en Europe, chiffrement des données, sauvegardes quotidiennes, conformité RGPD.' },
       { q: 'Puis-je faire évoluer l\'application plus tard ?', a: 'Absolument. On développe en pensant à l\'évolutivité. Ajouter une fonctionnalité est simple et bien documenté.' },
       { q: 'Est-ce que l\'application fonctionne sur mobile ?', a: 'Oui, toutes nos applications sont responsives et accessibles depuis smartphone et tablette.' },
     ],
-    testimonial: {
-      quote: 'On a remplacé 4 logiciels différents par une seule application Stackup. L\'équipe gagne 2h par jour et les erreurs de saisie ont disparu.',
-      author: 'Dirigeant PME',
-      company: '25 employés, secteur services',
-    },
   },
 
   'referencement-local-seo': {
@@ -316,11 +291,6 @@ const pages: Record<string, PageData> = {
       { q: 'Quelle est la différence entre SEO local et Google Ads ?', a: 'Le SEO local génère du trafic organique (gratuit sur le long terme). Google Ads génère du trafic payant immédiat. Les deux sont complémentaires.' },
       { q: 'Que se passe-t-il si j\'arrête le service ?', a: 'Votre positionnement reste acquis sur le court terme. On vous donne tous les accès et la documentation. Rien n\'est propriétaire.' },
     ],
-    testimonial: {
-      quote: 'En 4 mois, on est passés de la 2ème page à la 3ème position sur "plombier Dreux". On reçoit maintenant 8 à 10 demandes par semaine via Google.',
-      author: 'Artisan plombier',
-      company: 'Eure-et-Loir',
-    },
   },
 }
 
@@ -447,14 +417,40 @@ export default async function ServicesLocauxPage({ params }: { params: Promise<{
         </div>
       </section>
 
-      {/* Testimonial */}
-      <section className="py-20 px-4">
-        <div className="max-w-2xl mx-auto text-center">
-          <blockquote className="text-xl text-ink/70 italic leading-relaxed mb-6">
-            &ldquo;{page.testimonial.quote}&rdquo;
-          </blockquote>
-          <div className="font-semibold text-gray-900">{page.testimonial.author}</div>
-          <div className="text-sm text-muted">{page.testimonial.company}</div>
+      {/* CE QUI EST ÉCRIT AU CONTRAT.
+
+          Cette section portait six témoignages — « 30 % de réservations en
+          plus », « 40 % de mes nouveaux clients », « 2 h par jour gagnées » —
+          attribués à des « Chef propriétaire » et « Dirigeant PME » sans nom.
+          Aucun n'était vérifiable, et le dossier de refonte en fait une règle
+          bloquante (§15.3) : pas de témoignage, pas de statistique sans
+          source. Ils sont supprimés, pas réécrits.
+
+          À la place, les seuls engagements qui se vérifient : ceux des
+          conditions générales de vente, lues depuis la source unique. */}
+      <section className="py-20 px-4" aria-labelledby="su-engagements">
+        <div className="max-w-3xl mx-auto">
+          <h2 id="su-engagements" className="text-3xl font-bold text-gray-900 mb-4 text-center">
+            Ce qui est écrit au contrat
+          </h2>
+          <p className="text-center text-muted mb-10">
+            Pas de témoignage, pas de chiffre de performance : ces quatre points sont dans les{' '}
+            <Link href="/cgv" className="underline">conditions générales de vente</Link> et vous
+            sont opposables.
+          </p>
+          <dl className="grid gap-4 sm:grid-cols-2">
+            {[
+              { t: 'Paiement', d: `${SITE.conditions.acomptePourcent} % à la commande, ${SITE.conditions.soldePourcent} % à la livraison. En trois fois au-delà de ${SITE.conditions.paiementTroisFoisDes} €.` },
+              { t: 'Révisions', d: `${SITE.conditions.revisionsIncluses} séries de retours comprises dans le prix, sans supplément.` },
+              { t: 'Support', d: `${SITE.conditions.supportJours} jours après la mise en ligne. Les correctifs d'anomalie sont gratuits.` },
+              { t: 'Propriété', d: SITE.conditions.propriete },
+            ].map((e) => (
+              <div key={e.t} className="bg-white rounded-2xl p-6 border border-gray-100">
+                <dt className="font-bold text-gray-900 mb-2">{e.t}</dt>
+                <dd className="text-gray-500 text-sm leading-relaxed">{e.d}</dd>
+              </div>
+            ))}
+          </dl>
         </div>
       </section>
 

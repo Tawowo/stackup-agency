@@ -18,6 +18,7 @@ import { subscribeWithSelector } from 'zustand/middleware'
 
 /** Les états que la bande peut prendre. Une page = un état. */
 export type EtatBande =
+  | 'absent' // la page ne demande rien : la scène ne montre RIEN
   | 'logo' // à plat, silhouette exacte, projection orthographique
   | 'volume' // extrudée, pivotée, ombrée
   | 'strates' // découpée en cinq lamelles
@@ -62,6 +63,13 @@ interface EtatGlobal {
    * et lisible par un lecteur d'écran.
    */
   ancrage: { cx: number; cy: number; hauteur: number } | null
+  /**
+   * La couche isolée dans les STRATES, ou `null` si la pile est entière.
+   *
+   * L'isolement est une interaction au CLIC, jamais au survol : le dossier
+   * l'interdit (§17.6 règle 16) et le tactile n'a pas de survol du tout.
+   */
+  isolee: number | null
 
   setEtat: (e: EtatBande) => void
   setProgression: (p: number) => void
@@ -72,11 +80,24 @@ interface EtatGlobal {
   setRepli: (r: boolean) => void
   setPrete: (p: boolean) => void
   setAncrage: (a: { cx: number; cy: number; hauteur: number } | null) => void
+  setIsolee: (i: number | null) => void
 }
 
 export const useBande = create<EtatGlobal>()(
   subscribeWithSelector((set) => ({
-    etat: 'logo',
+    /* ABSENT PAR DÉFAUT, et c'est une correction.
+
+       L'état initial était 'logo'. Conséquence vue en capture sur
+       /services-locaux/creation-site-restaurant : la bande, que personne
+       n'avait demandée, se plaçait au centre de la fenêtre à l'échelle 1 et
+       barrait le texte de la section. Le canvas est en `position: fixed`
+       au-dessus du fond de page, donc le défaut se propageait à toutes les
+       routes qui ne déclarent rien — c'est-à-dire presque toutes.
+
+       Le principe du canvas persistant est que les pages DÉCLARENT et que la
+       scène obéit. Une page qui ne déclare rien doit donc obtenir le vide,
+       pas le dernier état en date. */
+    etat: 'absent',
     progression: 0,
     offre: 'vitrine',
     accent: null,
@@ -85,6 +106,7 @@ export const useBande = create<EtatGlobal>()(
     repli: false,
     prete: false,
     ancrage: null,
+    isolee: null,
 
     setEtat: (etat) => set({ etat }),
     // Pas de `set` si la valeur n'a pas bougé : la progression est écrite à
@@ -98,6 +120,7 @@ export const useBande = create<EtatGlobal>()(
     setRepli: (repli) => set({ repli }),
     setPrete: (prete) => set({ prete }),
     setAncrage: (ancrage) => set({ ancrage }),
+    setIsolee: (isolee) => set({ isolee }),
   })),
 )
 

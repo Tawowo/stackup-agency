@@ -80,7 +80,7 @@ Délai : sur mesure selon le périmètre, fixé au devis.
 - Prix d'entrée du sur-mesure TPE : **1 447 €**, ± 500 € selon le périmètre dans la majorité des projets.
 - Les 4 curseurs du devis : briques fonctionnelles, rôles, intégrations, reprise de données.
 - Croisement financier avec le SaaS vers la 3e année — et l'adéquation métier fait le reste.
-- L'outil vous appartient : données en France, code remis, aucune dépendance.
+- L'outil vous appartient : données dans l'Union européenne, code remis, aucune dépendance.
 
 ## Questions fréquentes
 

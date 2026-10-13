@@ -27,7 +27,7 @@ import { useEffect, useMemo, useRef } from 'react'
 import { useFrame } from '@react-three/fiber'
 import { InstancedMesh, Object3D, Color, MathUtils, Euler, Vector3 } from 'three'
 import { useBande, type Offre } from '@/store/bande'
-import { LAYOUTS, NB_PLAQUES, retardPlaque, type NomLayout } from './layouts'
+import { LAYOUTS, NB_PLAQUES, retardPlaque, segmentsGestion, type NomLayout } from './layouts'
 import { hauteurVisible } from '../cadrage'
 
 const NAVY = '#0D2C4C'
@@ -46,6 +46,8 @@ const VERS_LAYOUT: Record<Offre, NomLayout> = {
 
 export default function BandeInstanciee() {
   const maille = useRef<InstancedMesh>(null)
+  const liaisons = useRef<import('three').LineSegments>(null)
+  const positionsLiaisons = useMemo(() => segmentsGestion(), [])
   const jeton = useMemo(() => new Object3D(), [])
   const depart = useRef<NomLayout>('vitrine')
   const arrivee = useRef<NomLayout>('vitrine')
@@ -93,7 +95,7 @@ export default function BandeInstanciee() {
     if (!m) return
     const { mouvement, ancrage, etat } = useBande.getState()
 
-    // La section n'est pas à l'écran : rien à calculer.
+    // La section n'est pas à l'écran (y compris 'absent') : rien à calculer.
     if (etat !== 'offre') {
       m.visible = false
       return
@@ -141,6 +143,24 @@ export default function BandeInstanciee() {
     }
     m.instanceMatrix.needsUpdate = true
 
+    /* Les liaisons n'existent que pour « système de gestion », et elles
+       apparaissent avec lui : visibles à proportion de la part de la forme
+       d'arrivée (ou de départ) qui est « gestion ». Sans cette pondération,
+       elles surgiraient d'un coup au milieu du morph. */
+    const l = liaisons.current
+    if (l) {
+      const versGestion = arrivee.current === 'gestion' ? t.current : 0
+      const depuisGestion = depart.current === 'gestion' ? 1 - t.current : 0
+      const force = Math.max(versGestion, depuisGestion)
+      l.visible = force > 0.02
+      const mat = l.material as { opacity: number; transparent: boolean }
+      mat.transparent = true
+      mat.opacity = force * 0.45
+      l.position.copy(m.position)
+      l.scale.copy(m.scale)
+      l.rotation.copy(m.rotation)
+    }
+
     /* L'ancrage, comme pour la bande continue : la page déclare une boîte,
        l'objet s'y place. */
     if (ancrage) {
@@ -161,6 +181,7 @@ export default function BandeInstanciee() {
   })
 
   return (
+    <>
     <instancedMesh
       ref={maille}
       args={[undefined, undefined, NB_PLAQUES]}
@@ -173,5 +194,16 @@ export default function BandeInstanciee() {
       </boxGeometry>
       <meshStandardMaterial vertexColors roughness={0.9} metalness={0} />
     </instancedMesh>
+    {/* Les liaisons entre modules — voir `segmentsGestion`. */}
+    <lineSegments ref={liaisons} visible={false}>
+      <bufferGeometry>
+        <bufferAttribute
+          attach="attributes-position"
+          args={[positionsLiaisons, 3]}
+        />
+      </bufferGeometry>
+      <lineBasicMaterial color={NAVY} transparent opacity={0} />
+    </lineSegments>
+    </>
   )
 }

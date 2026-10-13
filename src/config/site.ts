@@ -85,10 +85,22 @@ export const SITE = {
 
   /* ─── PARRAINAGE — UNE SEULE VERSION ─────────────────────────────────────
      Quatre versions coexistaient (1 mois Premium, −10 %, « 1 mois de
-     maintenance », « 200 € » dans l'image Open Graph). Celle-ci fait foi. */
+     maintenance », « 200 € » dans l'image Open Graph).
+
+     C'est l'article 13 des CGV qui fait foi, et il décrit un CHOIX, pas une
+     récompense unique : « au choix, 1 mois d'abonnement Premium (89 €)
+     offert OU −10 % sur sa propre prestation non encore signée ». La
+     première rédaction de ce bloc avait aplati ce choix en une seule
+     branche, ce qui recréait la divergence qu'il devait supprimer — la page
+     de parrainage, elle, offrait bien les deux. */
   parrainage: {
+    /** Remise accordée au filleul sur son premier projet, en pourcent. */
     filleulRemise: 10,
-    parrainRecompense: '1 mois de maintenance Premium offert',
+    /** Les deux branches au choix du parrain, par filleul signé. */
+    parrainRecompenseA: "1 mois d'abonnement Premium (89 €) offert",
+    parrainRecompenseB: '−10 % sur sa propre prestation non encore signée',
+    /** Formulation courte, pour un titre ou une carte. */
+    parrainCourt: '1 mois Premium offert ou −10 %',
   },
 
   /* ─── OFFRE EN COURS — MÉCANISME GÉNÉRIQUE ───────────────────────────────
