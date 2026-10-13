@@ -91,7 +91,7 @@ function Field({ id, label, value, onChange, type = 'text', required, as = 'inpu
       {/* Encouragement bubble */}
       <div
         className={`flex items-center gap-1.5 mt-1.5 transition-all duration-300 ${
-          showEncouragement ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-1 pointer-events-none'
+          showEncouragement ? 'opacity-100' : 'opacity-0 pointer-events-none'
         }`}
       >
         <Smile size={12} className="text-[#B45309] flex-shrink-0" />

@@ -5261,3 +5261,39 @@ html[data-grille='oui'] .su-ouv__grille {
     transition: none;
   }
 }
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   §33. LA DÉCOUPE — l'apparition par défaut du site
+
+   Le dossier n'interdit qu'une seule apparition, et c'est la plus répandue :
+   le fondu accompagné d'une translation verticale (§17.6 règle 2). La raison
+   est que tous les sites la font, donc elle ne dit rien ; et qu'elle fait
+   bouger le texte sous l'œil qui essaie de le lire.
+
+   Ce qui la remplace ici est le geste du site lui-même : une lame passe et
+   découvre le bloc, qui ne bouge pas d'un pixel. C'est le même mécanisme que
+   la maquette des STRATES, et c'est voulu — une seule apparition pour tout
+   le site, nommée, au lieu d'un fondu générique.
+
+   `--su-pose` vaut 1 par défaut : sans JavaScript, le contenu est là. C'est
+   la règle 17, et elle compte plus que l'effet.
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+.su-decoupe {
+  --su-pose: 1;
+  clip-path: inset(0 0 calc((1 - var(--su-pose)) * 100%) 0);
+  transition: clip-path 620ms cubic-bezier(0.2, 0.7, 0.3, 1);
+}
+
+.su-decoupe[data-posee='false'] {
+  --su-pose: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .su-decoupe,
+  .su-decoupe[data-posee='false'] {
+    --su-pose: 1;
+    clip-path: none;
+    transition: none;
+  }
+}

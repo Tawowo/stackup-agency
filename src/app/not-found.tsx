@@ -15,9 +15,10 @@ const TERMINAL_LINES = [
 function TerminalLine({ text, error, visible }: { text: string; error?: boolean; visible: boolean }) {
   return (
     <div
-      className={`transition-all duration-300 data-mono text-xs sm:text-sm ${
-        visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-1'
-      } ${error ? 'text-red-300' : 'text-electric-clair'}`}
+      className={`su-decoupe data-mono text-xs sm:text-sm ${
+        error ? 'text-red-300' : 'text-electric-clair'
+      }`}
+      data-posee={visible}
     >
       {text}
       {visible && text === TERMINAL_LINES[TERMINAL_LINES.length - 1].text && (

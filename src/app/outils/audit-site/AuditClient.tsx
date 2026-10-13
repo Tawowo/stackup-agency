@@ -217,7 +217,7 @@ function Results({ result }: { result: AuditResult }) {
       </div>
 
       {/* Score Gauges — BIG */}
-      <div className={`transition-all duration-700 ${phase >= 2 ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
+      <div className={`su-decoupe`} data-posee={phase >= 2}
         style={{ transitionDelay: '0ms' }}>
         <div className="rounded-2xl border border-white/10 bg-gradient-to-br from-white/[0.03] to-white/[0.01] p-8">
           <div className="flex items-center gap-2 mb-8">
@@ -239,7 +239,7 @@ function Results({ result }: { result: AuditResult }) {
 
       {/* Core Web Vitals */}
       {(result.metrics.lcp || result.metrics.cls || result.metrics.tbt) && (
-        <div className={`transition-all duration-700 ${phase >= 3 ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
+        <div className={`su-decoupe`} data-posee={phase >= 3}>
           <div className="rounded-2xl border border-white/10 p-6">
             <div className="flex items-center gap-2 mb-6">
               <div className="w-1 h-5 bg-gold rounded-full" />
@@ -265,7 +265,7 @@ function Results({ result }: { result: AuditResult }) {
 
       {/* Opportunities */}
       {result.opportunities.length > 0 && (
-        <div className={`transition-all duration-700 ${phase >= 4 ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
+        <div className={`su-decoupe`} data-posee={phase >= 4}>
           <div className="flex items-center gap-2 mb-4">
             <div className="w-1 h-5 bg-gold/60 rounded-full" />
             <h2 className="text-xs font-semibold text-white/65 uppercase tracking-widest">
@@ -281,7 +281,7 @@ function Results({ result }: { result: AuditResult }) {
       )}
 
       {/* Verdict */}
-      <div className={`transition-all duration-700 ${phase >= 5 ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
+      <div className={`su-decoupe`} data-posee={phase >= 5}>
         <div className={`rounded-2xl p-6 border ${
           avg >= 85 ? 'border-success/30 bg-success/5' :
           avg >= 60 ? 'border-gold/30 bg-gold/5' :
@@ -304,7 +304,7 @@ function Results({ result }: { result: AuditResult }) {
       </div>
 
       {/* CTA */}
-      <div className={`transition-all duration-700 ${phase >= 6 ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
+      <div className={`su-decoupe`} data-posee={phase >= 6}>
         <div className="rounded-2xl p-8 bg-gradient-to-br from-navy via-navy to-electric/80 relative overflow-hidden">
           <div className="absolute top-0 right-0 w-64 h-64 rounded-full opacity-10"
             style={{ background: 'radial-gradient(circle, #F59E0B, transparent)', transform: 'translate(30%, -30%)' }} />
