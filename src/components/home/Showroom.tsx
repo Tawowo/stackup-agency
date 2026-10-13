@@ -226,7 +226,7 @@ export default function Showroom() {
 
       <div ref={scene} className="su-salle__scene">
         <header className="su-salle__entete">
-          <p className="su-salle__surtitre">05 — Nos réalisations</p>
+          <p className="su-salle__surtitre">03 — Nos réalisations</p>
           <h2 className="su-salle__titre">
             Cinq sites complets,
             <br />

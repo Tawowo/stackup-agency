@@ -165,7 +165,7 @@ export default function LaRoute() {
     <section ref={section} id="methode" className="su-methode su-ambiance">
       <div className="su-methode__cadre">
         <header className="su-methode__entete">
-          <p className="su-surtitre">08 — Notre méthode</p>
+          <p className="su-surtitre">07 — Notre méthode</p>
           <h2 className="su-methode__titre">Comment ça se passe ?</h2>
           <p className="su-methode__chapo su-doux">
             Six étapes claires. Aucune mauvaise surprise — de la démo à la

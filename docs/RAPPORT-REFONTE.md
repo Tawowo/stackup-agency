@@ -4,31 +4,42 @@ Rapport demandé par la section 17.7 du dossier. Il est écrit pour être
 utilisable, donc il nomme d'abord ce qui n'est pas fait.
 
 Branche : `claude/brave-maxwell-i7g77j` · Date : 13 octobre 2026
+Dernière mise à jour après la phase 3.
 
 ---
 
 ## 1. Ce qui n'est pas fait
 
-Le dossier découpe le chantier en huit phases (§17.3). **Les phases 0, 1 et 2
-sont terminées. La phase 3 est entamée. Les phases 4 à 7 ne sont pas
-commencées.** Le détail :
+Le dossier découpe le chantier en huit phases (§17.3). **Les phases 0 à 3
+sont faites, la phase 3 à l'exception de deux points. Les phases 4 à 7 ne
+sont pas commencées.** Le détail :
 
 | Phase | État | Ce qui manque |
 | --- | --- | --- |
 | 0. Socle | **Terminée** | — |
 | 1. Scène et bande | **Terminée** | — |
 | 2. Accueil, première moitié | **Terminée** | — |
-| 3. Accueil, seconde moitié | **Partielle** | PELLICULE au sens plein (feuilletage des captures au drag, rail de jalons cliquable, transition par élément partagé) ; Salle des machines remise en scène ; Juste Prix ; DIX JOURS ; Atelier ; Départ ; footer |
+| 3. Accueil, seconde moitié | **Quasi terminée** | Le feuilletage des captures au drag dans la PELLICULE, et la Salle des machines remise en scène en application complète (barre latérale, tableau de bord, modules branchables). Juste Prix, DIX JOURS, Atelier et Départ sont faits. |
 | 4. Pages commerciales | **Non commencée** | Les six gabarits de service, le gabarit projet, le curseur des tarifs, la fusion configurateur + devis, le contact, la TRAVERSÉE (View Transitions) |
 | 5. Pages programmatiques | **Non commencée** | Toute la matrice 13.11 : villes, départements, métiers, services locaux, solutions, hubs, à propos, FAQ, blog, outils, comparatif, légales, 404 |
 | 6. Finition et mesure | **Non commencée** | Grain et post-traitement, calque `G`, raccourcis, curseur, haptique, gyroscope, Lighthouse CI, vidéos |
 | 7. Options | **Non commencée** | Rapier, portails drei, PDF de devis, export du cahier des charges, visualisations d'articles |
 
-Ce qui a été fait en phase 3 est le **tampon « Démonstration »** sur les sept
-fiches de la salle de projection, parce que c'est une règle bloquante (§15.3)
-et non une amélioration : laisser un visiteur cliquer sur « Visiter la démo »
-en croyant voir un client réel est le problème que la règle vise. Le reste de
-la phase 3 attend.
+Ce qui a été fait en phase 3 :
+
+- **Le tampon « Démonstration »** sur les sept fiches de la salle de
+  projection (règle bloquante §15.3), et la liste des projets lue depuis
+  `lib/realisations.ts` au lieu d'une copie à cinq entrées qui avait déjà
+  divergé.
+- **DIX JOURS sur un calendrier réel** : dates en jours ouvrés depuis
+  aujourd'hui, fériés français calculés et non listés, onze cas de test.
+- **LE JUSTE PRIX** : le « ×8,9 moins cher qu'une agence classique » et ses
+  fourchettes inventées sont supprimés ; la comparaison restante est sourcée
+  par des articles publiés, et elle est moins flatteuse (voir §4).
+- **LE DÉPART** : la bande revient et se replie en logo exact ; les trente
+  étoiles clignotantes disparaissent.
+- **Les trois engagements vérifiables**, chacun avec le lien qui permet de
+  le contrôler.
 
 **Deux dettes antérieures restent ouvertes**, signalées et non traitées :
 
@@ -52,11 +63,11 @@ terminé. » Il manque. Voici où en est chacun.
 | --- | --- | --- |
 | 1 | Composition remarquable même sans animation | **Tenu** sur les moments livrés. Les apparitions sont des découpes, et sous `prefers-reduced-motion` elles sont retirées, pas remplacées : le contenu est entier. |
 | 2 | Logo exact, et c'est lui qui devient l'objet 3D | **Tenu.** Superposition mesurée à 1,89 % (1440) et 2,00 % (390), sous le seuil de 2 % de la règle 4.2. |
-| 3 | Neuf moments, neuf mécanismes distincts | **Non tenu** — quatre moments livrés sur neuf. Les quatre ont bien des mécanismes différents (bascule de projection, coupe en lamelles, morph de 120 plaques, traversée d'accent). |
+| 3 | Neuf moments, neuf mécanismes distincts | **Tenu en partie** — huit moments sur neuf sont en place et aucun ne partage le geste d'un autre : bascule de projection, coupe en lamelles par plans de coupe, morph de 120 plaques, traversée d'accent, calendrier réel daté, repliement sur le logo. Quatre d'entre eux ne se trouvent dans aucun gabarit courant, ce que le critère demande. Manque la Salle des machines remise en scène. |
 | 4 | Toutes les pages de la matrice transformées | **Non tenu.** C'est la phase 5. |
 | 5 | Mobile avec ses propres compositions | **Tenu sur les moments livrés** : hero en portrait, strates en onglets balayables, offres en balayage. Chaque moment a sa capture 390. |
 | 6 | Parcours configurateur → devis → e-mail sans ressaisie | **Non vérifié.** C'est la phase 4. Le parcours existant fonctionne, il n'a pas été refondu. |
-| 7 | Budgets tenus, axe et contraste sur 31 routes | **Tenu pour l'accessibilité** : axe 0 violation, contraste 0 nœud en échec, défilement horizontal 0 px à 390 et 1440. **Non vérifié pour les budgets de performance** : pas de Lighthouse CI (phase 6). |
+| 7 | Budgets tenus, axe et contraste sur 31 routes | **Tenu pour l'accessibilité** : axe 0 violation, contraste 0 nœud en échec, défilement horizontal 0 px à 390 et 1440, et les neuf sources citées répondent toutes. **Non vérifié pour les budgets de performance** : pas de Lighthouse CI (phase 6). |
 | 8 | Le rapport nomme ce qui n'a pas été fait | Ce document. |
 
 ---
@@ -144,6 +155,15 @@ build.**
    `gap` n'est pas un caractère.
 7. **Les plaques ambrées formaient deux rayures verticales** : une sur six
    dans une grille de douze colonnes. Sept est premier avec 12, 10, 8 et 3.
+8. **La bande du Départ était dessinée et invisible** — le compteur du
+   renderer annonçait ses 96 triangles. Deux causes empilées : son brin navy
+   #0D2C4C posé sur un fond encre #070B16, puis le fond opaque de la section
+   qui passe par-dessus le canvas. La seconde, j'avais déjà écrit sa
+   correction pour le hero et je l'ai refaite quand même.
+9. **La source citée par Le Juste Prix rendait 404** : l'article a une date
+   de publication au 19 novembre. Build vert, lint vert, page parfaite.
+10. **La numérotation des moments comportait deux « 06 », deux « 09 » et un
+    « 10 » placé avant un « 09 »** après les réordonnancements.
 
 ---
 
@@ -160,9 +180,21 @@ de mesure se valide avant de lui faire confiance.**
   est pourtant là : la scène se place d'après une boîte d'ancrage HTML, et
   masquer cette boîte la réduit à zéro. **La mesure détruisait son objet.**
 - **La mesure de superposition du logo**, trois fois fausse (voir §3).
+- **Mon audit de la règle 2.** J'ai annoncé à la phase 2e que le `grep`
+  exigé par le dossier revenait vide. Il revenait vide parce qu'il ne
+  cherchait que les CLASSES Tailwind `opacity-0 translate-y` : huit
+  fondus-translations supplémentaires vivaient en style inline, dont quatre
+  dans la seule section « raison d'être ». Un outil qui rend le résultat
+  attendu n'est pas pour autant un outil qui mesure la bonne chose.
 
-Ce qui les remplace : `Temoin`, qui lit le compteur de triangles du renderer,
-et `scripts/scene-portee.mjs`, qui balaie les routes. Le compteur ne ment pas
+Deux instruments ont été ajoutés à la suite de ces erreurs :
+`scripts/verifier-sources.mjs`, qui vérifie que chaque source citée en dur
+répond 200, et `scripts/test-jours-ouvres.mjs`, onze cas sur le calcul des
+dates. Un calcul de dates qu'on n'éprouve pas est un calcul faux qu'on n'a
+pas encore vu.
+
+Ce qui remplace les trois mesures fausses : `Temoin`, qui lit le compteur de
+triangles du renderer, et `scripts/scene-portee.mjs`, qui balaie les routes. Le compteur ne ment pas
 — il dit ce qui a été soumis au GPU. Résultat : 20 routes × 2 largeurs,
 0 fuite ; l'accueil dessine (96 triangles à 1440, 48 à 390, la différence
 étant la passe d'ombres absente en mobile).
@@ -174,20 +206,23 @@ et `scripts/scene-portee.mjs`, qui balaie les routes. Le compteur ne ment pas
 Toutes relancées au dernier commit :
 
 ```
-build          vert
-lint           0 avertissement
-QA complet     25/25
-axe-core       0 violation (dont 0 grave)
-contraste      0 nœud en échec sur 31 routes
-défilement h.  0 px à 1440 et 390
-portée scène   0 fuite sur 20 routes × 2 largeurs
-seo-lint       3 échecs sur 100 pages (2 assumés, voir §1)
-superposition  1,89 % / 2,00 % (seuil 2 %)
+build           vert
+lint            0 avertissement
+QA complet      25/25
+axe-core        0 violation (dont 0 grave)
+contraste       0 nœud en échec sur 31 routes
+défilement h.   0 px à 1440 et 390
+portée scène    0 fuite sur 20 routes × 2 largeurs
+sources citées  9, toutes en réponse 200
+jours ouvrés    11 cas de test, tous passants
+seo-lint        3 échecs sur 100 pages (2 assumés, voir §1)
+superposition   1,89 % / 2,00 % (seuil 2 %)
+numérotation    croissante et sans doublon
 ```
 
 Captures lues, et non seulement prises :
 `docs/captures/p2-honnetete/`, `p2c-strates/`, `p2d-offre/`, `p2e-decoupe/`,
-`p3-salle/`.
+`p3-salle/`, `p3-methode/`, `p3-depart/`, `p3-prix/`, `p3-engagements/`.
 
 ---
 
@@ -195,12 +230,17 @@ Captures lues, et non seulement prises :
 
 Dans cet ordre, et pour une raison à chaque fois :
 
-1. **Phase 4 avant le reste de la phase 3.** Les pages commerciales portent
-   le chiffre d'affaires ; les moments 05 à 09 de l'accueil portent le style.
-   Le dossier met les deux en « indispensable », mais si une seule doit
-   partir d'abord, c'est le tunnel de conversion.
-2. **Trancher sur les doublons de `public/`** (§1) — une minute de votre
+1. **Phase 4.** C'est maintenant la bonne suite : les moments de l'accueil
+   sont en place, et les pages commerciales portent le chiffre d'affaires.
+2. **Lire ce que dit désormais Le Juste Prix.** La comparaison sourcée est
+   nettement moins flatteuse que le « ×8,9 » qu'elle remplace : avec le plan
+   Starter, une vitrine sur cinq ans se situe entre 841 € de plus et 559 € de
+   moins qu'un constructeur par abonnement. C'est la seule phrase que les
+   sources autorisent. Si vous disposez de relevés de prix d'agences —
+   devis reçus, grilles publiées — la comparaison « agence classique » peut
+   revenir, sourcée cette fois.
+3. **Trancher sur les doublons de `public/`** (§1) — une minute de votre
    part, 1,6 Mo de moins à servir.
-3. **Lighthouse CI dès maintenant**, sans attendre la phase 6 : les budgets
+4. **Lighthouse CI dès maintenant**, sans attendre la phase 6 : les budgets
    16.3 se tiennent plus facilement en continu qu'en rattrapage, et les
    moments livrés sont le bon moment pour poser la ligne de base.

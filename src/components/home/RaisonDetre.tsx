@@ -70,7 +70,7 @@ export default function RaisonDetre() {
               className="su-surtitre mb-5 su-decoupe"
               data-posee={visible}
             >
-              09 — Notre raison d&apos;être
+              08 — Notre raison d&apos;être
             </p>
 
             {/* Titre avec trait dessiné sous "accessibles à tous" */}
