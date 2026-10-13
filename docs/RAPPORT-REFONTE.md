@@ -4,25 +4,25 @@ Rapport demandé par la section 17.7 du dossier. Il est écrit pour être
 utilisable, donc il nomme d'abord ce qui n'est pas fait.
 
 Branche : `claude/brave-maxwell-i7g77j` · Date : 13 octobre 2026
-Dernière mise à jour après la phase 3.
+Dernière mise à jour après les phases 3, 4a-4b et 6a.
 
 ---
 
 ## 1. Ce qui n'est pas fait
 
 Le dossier découpe le chantier en huit phases (§17.3). **Les phases 0 à 3
-sont faites, la phase 3 à l'exception de deux points. Les phases 4 à 7 ne
-sont pas commencées.** Le détail :
+sont faites. Les phases 4 et 6 sont entamées. Les phases 5 et 7 ne sont pas
+commencées.** Le détail :
 
 | Phase | État | Ce qui manque |
 | --- | --- | --- |
 | 0. Socle | **Terminée** | — |
 | 1. Scène et bande | **Terminée** | — |
 | 2. Accueil, première moitié | **Terminée** | — |
-| 3. Accueil, seconde moitié | **Quasi terminée** | Le feuilletage des captures au drag dans la PELLICULE, et la Salle des machines remise en scène en application complète (barre latérale, tableau de bord, modules branchables). Juste Prix, DIX JOURS, Atelier et Départ sont faits. |
-| 4. Pages commerciales | **Non commencée** | Les six gabarits de service, le gabarit projet, le curseur des tarifs, la fusion configurateur + devis, le contact, la TRAVERSÉE (View Transitions) |
+| 3. Accueil, seconde moitié | **Terminée** sauf un point | Le feuilletage des captures au drag dans la PELLICULE. Juste Prix, DIX JOURS, Atelier, Départ, Salle des machines : faits. |
+| 4. Pages commerciales | **Entamée** | Les six gabarits de service, le gabarit projet, le curseur des tarifs, la fusion complète configurateur + devis, le contact, et les View Transitions à proprement parler. Faits : la moitié architecturale de la TRAVERSÉE (chaque page déclare l'état de la bande) et le parcours de conversion sans ressaisie. |
 | 5. Pages programmatiques | **Non commencée** | Toute la matrice 13.11 : villes, départements, métiers, services locaux, solutions, hubs, à propos, FAQ, blog, outils, comparatif, légales, 404 |
-| 6. Finition et mesure | **Non commencée** | Grain et post-traitement, calque `G`, raccourcis, curseur, haptique, gyroscope, Lighthouse CI, vidéos |
+| 6. Finition et mesure | **Entamée** | Grain et post-traitement, calque `G`, raccourcis, curseur, haptique, gyroscope, vidéos. Fait : la mesure des budgets 16.3 (`scripts/budgets.mjs`). |
 | 7. Options | **Non commencée** | Rapier, portails drei, PDF de devis, export du cahier des charges, visualisations d'articles |
 
 Ce qui a été fait en phase 3 :
@@ -66,8 +66,8 @@ terminé. » Il manque. Voici où en est chacun.
 | 3 | Neuf moments, neuf mécanismes distincts | **Tenu en partie** — huit moments sur neuf sont en place et aucun ne partage le geste d'un autre : bascule de projection, coupe en lamelles par plans de coupe, morph de 120 plaques, traversée d'accent, calendrier réel daté, repliement sur le logo. Quatre d'entre eux ne se trouvent dans aucun gabarit courant, ce que le critère demande. Manque la Salle des machines remise en scène. |
 | 4 | Toutes les pages de la matrice transformées | **Non tenu.** C'est la phase 5. |
 | 5 | Mobile avec ses propres compositions | **Tenu sur les moments livrés** : hero en portrait, strates en onglets balayables, offres en balayage. Chaque moment a sa capture 390. |
-| 6 | Parcours configurateur → devis → e-mail sans ressaisie | **Non vérifié.** C'est la phase 4. Le parcours existant fonctionne, il n'a pas été refondu. |
-| 7 | Budgets tenus, axe et contraste sur 31 routes | **Tenu pour l'accessibilité** : axe 0 violation, contraste 0 nœud en échec, défilement horizontal 0 px à 390 et 1440, et les neuf sources citées répondent toutes. **Non vérifié pour les budgets de performance** : pas de Lighthouse CI (phase 6). |
+| 6 | Parcours configurateur → devis → e-mail sans ressaisie | **Tenu**, sauf la dernière étape. Le parcours est joué de bout en bout par `scripts/parcours-conversion.mjs` aux deux largeurs : le type de projet arrive présélectionné et la synthèse est reprise. L'e-mail réellement reçu reste à vérifier à la main, une fois : un script de vérification n'a pas à écrire à qui que ce soit. |
+| 7 | Budgets tenus, axe et contraste sur 31 routes | **Tenu pour l'accessibilité** : axe 0 violation, contraste 0 nœud en échec, défilement horizontal 0 px à 390 et 1440, neuf sources citées qui répondent toutes. **Mesuré et NON TENU pour la performance** : le LCP sort à 2,87–3,4 s contre 2,5 s de plafond. Voir §6 pour ce que cette mesure vaut et ce qu'elle ne vaut pas. |
 | 8 | Le rapport nomme ce qui n'a pas été fait | Ce document. |
 
 ---
@@ -164,6 +164,18 @@ build.**
    de publication au 19 novembre. Build vert, lint vert, page parfaite.
 10. **La numérotation des moments comportait deux « 06 », deux « 09 » et un
     « 10 » placé avant un « 09 »** après les réordonnancements.
+11. **`plan` et `ombre` sans place déclarée se plaçaient au centre à
+    l'échelle 1** : le ruban couvrait le titre et les tarifs sur /tarifs, le
+    titre et le texte sur une fiche projet.
+12. **`repos` portait un facteur 4 de trop** : un ruban à 36 % de l'écran et
+    rogné, là où le dossier demande une signature discrète.
+13. **En portrait, la signature se posait sur le mot « sans »** du titre
+    « Tarifs clairs, sans surprise ».
+14. **L'aperçu des modules affichait une requête de référencement** —
+    « création site e-commerce click and collect » — au lieu d'une phrase.
+15. **Le moteur 3D était téléchargé sur les pages sans scène** : 238 ko pour
+    un canvas qui ne dessine rien. Trouvé par la mesure des budgets, pas à
+    l'œil.
 
 ---
 
@@ -180,6 +192,14 @@ de mesure se valide avant de lui faire confiance.**
   est pourtant là : la scène se place d'après une boîte d'ancrage HTML, et
   masquer cette boîte la réduit à zéro. **La mesure détruisait son objet.**
 - **La mesure de superposition du logo**, trois fois fausse (voir §3).
+- **`scene-portee.mjs` testait une route qui n'existe pas**
+  (`/realisations/portfolio-photographe`) : il criait à la fuite sur une page
+  404. Il contrôle désormais le code HTTP — une route morte doit se dire
+  comme telle, pas se déguiser en anomalie de rendu.
+- **Mon test du parcours de conversion s'est trompé deux fois avant le
+  site** : il cliquait « Continuer » sans répondre à l'étape qui attendait
+  une réponse, puis il cherchait un champ « message » qui n'apparaît qu'à une
+  étape ultérieure. Deux accusations infondées.
 - **Mon audit de la règle 2.** J'ai annoncé à la phase 2e que le `grep`
   exigé par le dossier revenait vide. Il revenait vide parce qu'il ne
   cherchait que les CLASSES Tailwind `opacity-0 translate-y` : huit
@@ -204,6 +224,28 @@ triangles du renderer, et `scripts/scene-portee.mjs`, qui balaie les routes. Le 
 ## 6. État des vérifications
 
 Toutes relancées au dernier commit :
+
+### Performance — mesurée, et ce qu'elle vaut
+
+```
+TTFB            5 à 6 ms
+CLS             0 (plafond 0,05)
+LCP             2 874 à 3 444 ms (plafond 2 500) — NON TENU
+JS transféré    253 ko sans scène · 498-511 ko avec
+```
+
+Le poids transféré a été divisé par deux sur les pages qui ne demandent pas
+la scène (502 → 253 ko), et leur TBT avec (216 → 45 ms).
+
+**Le LCP d'ici ne permet pas de juger ce que verra un visiteur.** Lighthouse
+applique son bridage simulé — processeur divisé par quatre, 4G lente —
+par-dessus un conteneur déjà partagé, et deux passages du même build donnent
+des TBT allant du simple au triple. Le serveur répond en 5 ms et le CLS est à
+zéro : le retard ne vient ni du serveur ni d'un décalage de mise en page. La
+mesure est à refaire sur le déploiement réel, comme le dossier l'avait prévu
+(§17.5).
+
+### Le reste
 
 ```
 build           vert
@@ -241,6 +283,9 @@ Dans cet ordre, et pour une raison à chaque fois :
    revenir, sourcée cette fois.
 3. **Trancher sur les doublons de `public/`** (§1) — une minute de votre
    part, 1,6 Mo de moins à servir.
-4. **Lighthouse CI dès maintenant**, sans attendre la phase 6 : les budgets
-   16.3 se tiennent plus facilement en continu qu'en rattrapage, et les
-   moments livrés sont le bon moment pour poser la ligne de base.
+4. **Relancer `scripts/budgets.mjs` sur stackup-agency.fr** une fois
+   déployé. C'est la seule mesure de LCP qui vaudra quelque chose, et elle
+   tranchera si le budget est réellement dépassé ou si le conteneur mentait.
+5. **Vérifier une fois à la main qu'un devis arrive bien par e-mail.**
+   C'est la seule étape du parcours de conversion que je n'ai pas jouée :
+   poster le formulaire aurait envoyé un vrai message.
