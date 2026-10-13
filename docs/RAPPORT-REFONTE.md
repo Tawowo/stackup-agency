@@ -21,7 +21,7 @@ commencées.** Le détail :
 | 2. Accueil, première moitié | **Terminée** | — |
 | 3. Accueil, seconde moitié | **Terminée** sauf un point | Le feuilletage des captures au drag dans la PELLICULE. Juste Prix, DIX JOURS, Atelier, Départ, Salle des machines : faits. |
 | 4. Pages commerciales | **Entamée** | Les six gabarits de service, le gabarit projet, le curseur des tarifs, la fusion complète configurateur + devis, le contact, et les View Transitions à proprement parler. Faits : la moitié architecturale de la TRAVERSÉE (chaque page déclare l'état de la bande) et le parcours de conversion sans ressaisie. |
-| 5. Pages programmatiques | **Non commencée** | Toute la matrice 13.11 : villes, départements, métiers, services locaux, solutions, hubs, à propos, FAQ, blog, outils, comparatif, légales, 404 |
+| 5. Pages programmatiques | **En partie faite, avant ce chantier** | Le travail fin par gabarit décrit dans la matrice 13.11. Mais les pages NE SONT PAS restées au gabarit uniforme : signatures distinctes, fonds ivoire, contenu local réel. Mesuré en capture, voir §2 critère 4. |
 | 6. Finition et mesure | **Entamée** | Grain et post-traitement, calque `G`, raccourcis, curseur, haptique, gyroscope, vidéos. Fait : la mesure des budgets 16.3 (`scripts/budgets.mjs`). |
 | 7. Options | **Non commencée** | Rapier, portails drei, PDF de devis, export du cahier des charges, visualisations d'articles |
 
@@ -64,7 +64,7 @@ terminé. » Il manque. Voici où en est chacun.
 | 1 | Composition remarquable même sans animation | **Tenu** sur les moments livrés. Les apparitions sont des découpes, et sous `prefers-reduced-motion` elles sont retirées, pas remplacées : le contenu est entier. |
 | 2 | Logo exact, et c'est lui qui devient l'objet 3D | **Tenu.** Superposition mesurée à 1,89 % (1440) et 2,00 % (390), sous le seuil de 2 % de la règle 4.2. |
 | 3 | Neuf moments, neuf mécanismes distincts | **Tenu en partie** — huit moments sur neuf sont en place et aucun ne partage le geste d'un autre : bascule de projection, coupe en lamelles par plans de coupe, morph de 120 plaques, traversée d'accent, calendrier réel daté, repliement sur le logo. Quatre d'entre eux ne se trouvent dans aucun gabarit courant, ce que le critère demande. Manque la Salle des machines remise en scène. |
-| 4 | Toutes les pages de la matrice transformées | **Non tenu.** C'est la phase 5. |
+| 4 | Toutes les pages de la matrice transformées | **Tenu sur le point que le critère nomme**, et j'avais écrit l'inverse. Le gabarit condamné — bande sombre uniforme + colonne + cartes + CTA dégradé — n'existe plus : les en-têtes portent huit signatures distinctes réparties sur les familles, les fonds sont ivoire, et le dernier CTA à dégradé vient d'être remplacé par un aplat. Vérifié en capture sur six familles (hub, module, ville, métier, ressources, à propos), pas au `grep`. Ce qui reste de la phase 5 est le travail fin par gabarit décrit dans la matrice 13.11, que je n'ai pas repris ligne à ligne. |
 | 5 | Mobile avec ses propres compositions | **Tenu sur les moments livrés** : hero en portrait, strates en onglets balayables, offres en balayage. Chaque moment a sa capture 390. |
 | 6 | Parcours configurateur → devis → e-mail sans ressaisie | **Tenu**, sauf la dernière étape. Le parcours est joué de bout en bout par `scripts/parcours-conversion.mjs` aux deux largeurs : le type de projet arrive présélectionné et la synthèse est reprise. L'e-mail réellement reçu reste à vérifier à la main, une fois : un script de vérification n'a pas à écrire à qui que ce soit. |
 | 7 | Budgets tenus, axe et contraste sur 31 routes | **Tenu pour l'accessibilité** : axe 0 violation, contraste 0 nœud en échec, défilement horizontal 0 px à 390 et 1440, neuf sources citées qui répondent toutes. **Mesuré et NON TENU pour la performance** : le LCP sort à 2,87–3,4 s contre 2,5 s de plafond. Voir §6 pour ce que cette mesure vaut et ce qu'elle ne vaut pas. |
@@ -200,6 +200,12 @@ de mesure se valide avant de lui faire confiance.**
   site** : il cliquait « Continuer » sans répondre à l'étape qui attendait
   une réponse, puis il cherchait un champ « message » qui n'apparaît qu'à une
   étape ultérieure. Deux accusations infondées.
+- **Et moi-même, dans la première version de ce rapport.** J'y ai écrit que
+  le critère 4 n'était « pas tenu » et que la phase 5 n'était « pas
+  commencée », en lisant le plan de phases plutôt que les pages. Capture
+  faite sur six familles : le gabarit condamné n'existait déjà plus. Un
+  rapport qui sous-estime trompe autant qu'un rapport qui enjolive — il fait
+  refaire ce qui est fait, et détourne l'attention de ce qui ne l'est pas.
 - **Mon audit de la règle 2.** J'ai annoncé à la phase 2e que le `grep`
   exigé par le dossier revenait vide. Il revenait vide parce qu'il ne
   cherchait que les CLASSES Tailwind `opacity-0 translate-y` : huit

@@ -332,7 +332,7 @@ export default async function ServicesLocauxPage({ params }: { params: Promise<{
           </p>
           <Link
             href="#contact"
-            className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-[#1E3A5F] to-[#2D7DD2] text-white font-semibold rounded-lg hover:opacity-90 transition-all hover:scale-105 shadow-lg shadow-electric/25"
+            className="inline-flex items-center gap-2 px-8 py-4 bg-[#1E3A5F] text-white font-semibold rounded-lg hover:bg-[#2D7DD2] transition-colors shadow-lg shadow-electric/25"
           >
             {page.hero.cta}
             <ArrowRight size={16} />
