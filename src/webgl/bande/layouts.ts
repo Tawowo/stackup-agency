@@ -188,6 +188,38 @@ export const LAYOUTS: Record<NomLayout, Transformation[]> = {
 }
 
 /**
+ * LES LIAISONS ENTRE MODULES, pour la configuration « système de gestion ».
+ *
+ * Fiche 11.3 : les huit modules sont « reliés par des lignes ». Sans elles,
+ * on voit huit grappes posées en couronne — ce qui raconte « huit choses
+ * séparées », l'exact contraire du propos. Un logiciel de gestion vaut par
+ * ce qui circule entre ses modules.
+ *
+ * Les segments sont calculés une fois, dans le même repère que les plaques,
+ * et consommés par un `LineSegments` : chaque module au noyau, plus la
+ * couronne de proche en proche.
+ */
+export function segmentsGestion(): Float32Array {
+  const modules = 8
+  const parModule = NB_PLAQUES / modules
+  const rayon = 1.25
+  const centres: [number, number, number][] = []
+  for (let m = 0; m < modules; m++) {
+    const angle = (m / modules) * Math.PI * 2
+    centres.push([Math.cos(angle) * rayon, Math.sin(angle) * rayon * 1.12, Math.sin(angle) * 0.18])
+  }
+  const pts: number[] = []
+  for (let m = 0; m < modules; m++) {
+    // Rayon : du noyau vers le module.
+    pts.push(0, 0, 0, ...centres[m])
+    // Couronne : du module au suivant.
+    pts.push(...centres[m], ...centres[(m + 1) % modules])
+  }
+  void parModule
+  return new Float32Array(pts)
+}
+
+/**
  * Le retard de chaque plaque dans le morph, entre 0 et 0,35.
  *
  * Tiré d'un hachage du rang : stable d'un rendu à l'autre, donc comparable
