@@ -4,9 +4,8 @@ Court par obligation (≤ 150 lignes).
 
 ## 2026-10-13 — Phase 0 : scaffold + Stack Engine ✅
 
-**Départ.** Le dépôt contenait l'ancien site et une refonte antérieure : tout est dans `ancien/`
-(git mv, rien de perdu ; copie dans `../stackup-agency-20261012/`). `ancien/` est une carrière
-(logo, images, PDF, données, 300 articles, configurateur, LogoMarque) à supprimer après la phase 6.
+**Départ.** L'ancien site et une refonte antérieure sont dans `ancien/` (git mv ; carrière de logo, images,
+données, articles, configurateur, LogoMarque) à supprimer après la phase 6.
 
 **Fait.** Next 16 / React 19 / TS strict / Tailwind 4 / three + R3F 9. Tokens, polices locales
 (Poppins 600/700, Inter variable, JetBrains Mono). `scripts/logo-trace.mjs` dérive UNE plaque canonique
@@ -27,14 +26,11 @@ chaotique ; plaques de profil roses ; lentille et Fresnel trop forts ; ambre jau
 
 ## 2026-10-13 — Phase 1 : le hero (moment 00) ✅
 
-**Fait.** Store : `projection`, `pose`, `scrub`, `target` (paire A/B explicite — la bascule « p > 0 »
-courait contre le montage différé de la scène). Lenis sur `gsap.ticker` + ScrollTrigger, barre de
-progression. Nav (LogoMarque, cinq entrées, action, menu mobile en lamelles `inert` + focus piégé).
-Action, Cote (mesure réelle), Curseur (point + anneau amorti, pointeur fin). OUVERTURE : section
-épinglée 150 vh (120 mobile), titre déplié par mots avec arête ambre, deux actions, quatre cotes (deux
-mobile) ; le scroll écrit uMorph (logo → pile), ortho → perspective, épaisseur ×2,5, pose de la tour.
-Repli 2D 100 % CSS : trois plaques SVG exactes + sept fantômes pilotés par `--su-p`. Mouvement
-réduit : logo figé, texte posé, pas d'épinglage. Six pages de chantier pour les routes de la nav.
+**Fait.** Store : `projection`, `pose`, `scrub`, `target` (paire A/B explicite). Lenis sur `gsap.ticker` +
+ScrollTrigger, barre de progression. Nav (LogoMarque, menu mobile en lamelles `inert`, focus piégé). Action,
+Cote. OUVERTURE : épinglée 150 vh (120 mobile), titre déplié par mots, actions, cotes ; le scroll écrit uMorph
+(logo → pile), ortho → perspective, épaisseur × 2,5. Repli 2D 100 % CSS (`--su-p`). Mouvement réduit : logo
+figé, pas d'épinglage. Six pages de chantier.
 
 **Captures lues** : 23 états du hero + 2 logo-check (1,17 % / 1,43 %). Défauts corrigés : tour déjà
 construite à p = 0 ; repli 2D en ivoire ; menu par-dessus la barre ; `?fond=ivoire` écrasé par le hero.
@@ -54,12 +50,11 @@ Moment 01 DÉCOUPE (épinglé 250 vh, lamelles une à une, 1-5 / clic isole, ref
 04 SEUIL « Pas que des sites. » avec la pile en noyau. Mouvement réduit : moteur figé sur le logo,
 aucun épinglage, couleurs posées sans tween. `ScrollRefresh` recalcule les triggers une fois tout monté.
 
-**Captures lues** : 15 layouts sur `/lab`, 59 états de l'accueil (100 entrées). Défauts corrigés : strates
+**Captures lues** : 15 layouts sur `/lab`, 59 états de l'accueil (100 entrées ; démos injoignables d'ici,
+AVIF repris de l'ancien site). Défauts corrigés : strates
 vues de face ; scène vide au moment 01 → registre des boîtes ; pile du hero écrasant la paire → propriétaire
 `moment` ; maquette décalée → blocs communs ; lamelles non refermées → phase dérivée de la progression ;
 snap inertiel de la pellicule ; triggers faussés en mouvement réduit → plus d'épinglage.
-
-**Démos.** URL de démo injoignables depuis ce conteneur : AVIF issus des captures de l'ancien site.
 
 **Corrections avant la phase 3** (captures avant dans `docs/qa/shots/avant/`) : zone d'exclusion du titre
 (`useExclusion`, ResizeObserver) passée au vertex shader, les plaques en vol la contournent ; variante
@@ -81,9 +76,8 @@ qui dispersait le réseau ; bouton Caisse sous la maquette ; jauge minuscule ; �
 Notés : en mouvement réduit le logo figé passe derrière les nœuds (05) ; mobile : bandeau de 07 derrière 01.
 
 **Vidéos.** L'enregistreur Playwright ne produit aucune trame sous SwiftShader et son ffmpeg n'a ni image2
-ni VP9 : `scripts/videos.mjs` capture une trame JPEG par pas et les envoie en flux (image2pipe) en VP8.
-`docs/qa/videos/*.webm` (1440, 390, rm), hors git, `npm run videos`.
-
+ni VP9 : `scripts/videos.mjs` capture une trame JPEG par pas (simulation avancée par `__suSettle`), les envoie
+en flux (image2pipe) en VP8 et garde une planche-contact (`planche-*`). Hors git, `npm run videos`.
 
 **Vercel.** Preview en 404 : `vercel.json` (`"framework": "nextjs"`) était parti dans `ancien/`. Restauré,
 plus `engines.node = 22.x`. vercel.app injoignable d'ici : état lu par l'API GitHub (`deployments`).
@@ -144,8 +138,9 @@ nav (× 0,85), logo figé géant en mouvement réduit (× 0,6), flux gris sur iv
 8°) : 1,39 % (seuil 2 %). Seconde passe : approche des strates en rampe de scroll (la tour se replie en pile de
 lamelles, états `01-arrivee-*`), hero qui reprend sa paire au retour, sol et poussière effacés sous une petite
 forme ou quand le sol monte au-dessus du centre, cadre mobile de la pellicule centré sur la capture (× 0,6).
-Ouverts : plaques en vol qui frôlent la nav (00 p = 0,8), bandeau de 07 derrière les étapes sur mobile, logo de
-l'atelier coupé à l'entrée, fronts de dissolution vifs et torche discrète (à juger en mouvement sur GPU).
+Vidéos regénérées et lues (planches-contact) : traversée continue, aucune coupure ; mi-rampe de lumière grise
+→ pointe ambrée ; arc réduit pendant l'approche. Ouverts : plaques en vol qui frôlent la nav (00 p = 0,8),
+bandeau de 07 derrière les étapes sur mobile, logo de l'atelier coupé à l'entrée, torche discrète (GPU).
 
 **Pas fait / à vérifier sur un vrai GPU** : cadence réelle avec sol + flux + code + poussière (palier
 `medium` : 600 flux, 220 poussières) ; le rendu des points (`gl_PointSize`) sur Safari ; l'inclinaison

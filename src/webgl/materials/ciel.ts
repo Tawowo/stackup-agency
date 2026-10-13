@@ -37,6 +37,8 @@ void main() {
   nuit = mix(nuit, NAVY_HAUT, smoothstep(0.75, 1.0, h) * 0.45);
   vec3 jour = mix(IVOIRE, IVOIRE_CREUSE, smoothstep(0.2, 1.0, h) * 0.4);
   vec3 col = mix(jour, nuit, uNuit);
+  // Allumage : à mi-chemin, la lumière est chaude (ambre), pas grise.
+  col += uAccent * sin(3.14159265 * clamp(uNuit, 0.0, 1.0)) * 0.10;
   if (uWall > 0.5) {
     float sc = max(uStackEcran.z, 40.0);
     // Halo de la lampe : au-dessus et à gauche de la pile, large, ambré.

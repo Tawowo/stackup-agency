@@ -6,7 +6,7 @@
  * Sortie : docs/qa/videos/<nom>.webm.
  */
 import { chromium } from '@playwright/test'
-import { mkdirSync, readdirSync, readFileSync, rmSync, statSync } from 'node:fs'
+import { copyFileSync, mkdirSync, readdirSync, readFileSync, rmSync, statSync } from 'node:fs'
 import { execFileSync } from 'node:child_process'
 const CHROMIUM = '/opt/pw-browsers/chromium-1194/chrome-linux/chrome'
 const FFMPEG = '/opt/pw-browsers/ffmpeg-1011/ffmpeg-linux'
@@ -61,6 +61,14 @@ for (const c of CAS) {
     ['-y', '-loglevel', 'error', '-f', 'image2pipe', '-c:v', 'mjpeg', '-framerate', '24', '-i', 'pipe:0', '-c:v', 'vp8', '-qmin', '0', '-qmax', '50', '-crf', '10', '-deadline', 'realtime', '-speed', '8', '-b:v', '1500k', '-pix_fmt', 'yuv420p', sortie],
     { input: flux, maxBuffer: 1 << 30 },
   )
+  // Une planche-contact (une trame sur 30) reste à côté de la vidéo, pour la lire sans la jouer.
+  const planche = `docs/qa/videos/planche-${c.nom}`
+  rmSync(planche, { recursive: true, force: true })
+  mkdirSync(planche, { recursive: true })
+  readdirSync(dir)
+    .sort()
+    .filter((_, i) => i % 30 === 0)
+    .forEach((f) => copyFileSync(`${dir}/${f}`, `${planche}/${f}`))
   rmSync(dir, { recursive: true, force: true })
   console.log('✓', sortie, `${n} trames, ${Math.round(statSync(sortie).size / 1024)} ko`)
 }

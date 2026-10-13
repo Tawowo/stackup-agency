@@ -1263,6 +1263,38 @@
    "defauts": [
     "Fronts de dissolution vifs sur une image fixe — à juger en mouvement sur GPU"
    ]
+  },
+  {
+   "fichier": "docs/qa/videos/accueil-1440.webm",
+   "route": "/",
+   "etat": "accueil-1440",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Scroll complet desktop (481 trames, planche-contact de 17 vues lue) : hero → tour, approche des strates (la tour s'envole puis se replie en pile de lamelles, le sol se dissout et se reforme), lamelles ouvertes puis refermées, lumière allumée sur l'offre (ivoire), pellicule continue (les cadres suivent les captures), seuil, machines, prix sur ivoire, méthode assemblée étape par étape, atelier, départ, footer. Aucune animation interrompue, aucune coupure de caméra.",
+   "defauts": [
+    "Mi-chemin d'une frontière de lumière (ex. strates → offre), l'image est grise et plate le temps de la rampe (40 vh) — atténué : pointe ambrée à mi-rampe dans le ciel",
+    "À mi-approche des strates, les plaques en vol montent haut (arc) et sortent du cadre un instant — atténué : arc 0,25 pendant l'approche"
+   ]
+  },
+  {
+   "fichier": "docs/qa/videos/accueil-390.webm",
+   "route": "/",
+   "etat": "accueil-390",
+   "largeur": 390,
+   "rm": false,
+   "visible": "Scroll complet mobile (520 trames) : logo plein cadre, tour courte (1,6) sous le titre, lamelles, offre en ivoire avec onglets horizontaux, pellicule par balayage (cadre centré sur la capture), seuil, réseau portrait, prix, méthode (bandeau collant), atelier, départ.",
+   "defauts": [
+    "Bandeau épinglé de la méthode derrière les étapes (déjà noté) — ouvert"
+   ]
+  },
+  {
+   "fichier": "docs/qa/videos/accueil-1440-rm.webm",
+   "route": "/",
+   "etat": "accueil-1440-rm",
+   "largeur": 1440,
+   "rm": true,
+   "visible": "Scroll complet en mouvement réduit (189 trames) : logo figé (× 0,6 hors du hero) qui glisse de boîte en boîte sans morph, lumière par frontières posée sans tween, titres posés, aucun épinglage.",
+   "defauts": []
   }
  ]
 }

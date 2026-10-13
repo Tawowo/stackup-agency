@@ -69,6 +69,7 @@ void main() {
   float th = uDissolve * 1.15;
   float cut = smoothstep(th - 0.06, th, n);
   float front = (1.0 - smoothstep(0.0, fwidth(n) * 2.0 + 0.004, abs(n - th))) * step(0.001, uDissolve) * step(uDissolve, 0.98);
+  front *= 0.3 + 0.7 * uNuit;
   col += uAccent * front * 0.8;
   float base = mix(0.55, 0.92, uNuit);
   // Une forme petite et haute (le noyau du seuil, le logo en coin) n'a pas de sol :

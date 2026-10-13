@@ -2,7 +2,7 @@
 /**
  * LA LUMIÈRE — nuit (1) ou ivoire (0), pilotée UNIQUEMENT par la position de
  * scroll. Chaque moment déclare `data-nuit` ; à chaque frontière entre deux
- * moments, la lumière change sur une rampe de 50 vh centrée sur la frontière,
+ * moments, la lumière change sur une rampe de 40 vh centrée sur la frontière,
  * mesurée au centre du viewport. Remonter donne exactement l'inverse. Les
  * positions sont relevées après chaque refresh de ScrollTrigger (épinglages).
  */
@@ -29,7 +29,7 @@ export default function Lumiere() {
       const y = window.scrollY + H * 0.5
       let n = premiere
       for (const b of bornes) {
-        let t = (y - (b.y - 0.25 * H)) / (0.5 * H)
+        let t = (y - (b.y - 0.2 * H)) / (0.4 * H)
         t = t < 0 ? 0 : t > 1 ? 1 : t
         t = t * t * (3 - 2 * t)
         n = n + (b.apres - n) * t
