@@ -1,11 +1,15 @@
 /**
  * LE MODE MAINTENANCE.
  *
- * Quand `MAINTENANCE=1`, toute requête reçoit la page de maintenance avec un
- * statut 503. Sans la variable, ce fichier ne fait rien et le site répond
- * normalement — c'est ce qui permet de rallumer le site depuis le tableau de
- * bord Vercel SANS redéployer : on retire la variable, on relance l'instance,
- * et c'est fini.
+ * Toute requête reçoit la page de maintenance avec un statut 503 tant que
+ * `MAINTENANCE_ACTIVE` vaut `true` dans `config/site.ts`. C'est l'unique
+ * interrupteur à connaître : il est dans le dépôt, à côté de la date du
+ * compte à rebours, et il ne demande aucune manipulation chez l'hébergeur.
+ *
+ * La variable d'environnement `MAINTENANCE` reste lue, et PASSE DEVANT la
+ * constante quand elle est posée : `1` force l'allumage, `0` force
+ * l'extinction. Elle sert de sortie de secours — couper la maintenance sans
+ * toucher au code — mais elle n'est nécessaire à rien au quotidien.
  *
  * POURQUOI 503 ET NON 200 OU 302.
  *
@@ -34,12 +38,20 @@
 
 import { NextResponse } from 'next/server'
 import { pageMaintenance } from '@/lib/maintenance'
+import { MAINTENANCE_ACTIVE } from '@/config/site'
 
 /** Durée annoncée au robot, en secondes. 48 h, comme le compte à rebours. */
 const RETRY_APRES = 172800
 
 export function middleware() {
-  if (process.env.MAINTENANCE !== '1') return NextResponse.next()
+  /* L'ordre compte : la variable d'environnement tranche quand elle existe,
+     la constante du dépôt décide sinon. Une valeur autre que '0' ou '1' est
+     ignorée plutôt qu'interprétée — un `MAINTENANCE=true` mal saisi ne doit
+     ni allumer ni éteindre le site par accident. */
+  const forcee = process.env.MAINTENANCE
+  const actif = forcee === '1' ? true : forcee === '0' ? false : MAINTENANCE_ACTIVE
+
+  if (!actif) return NextResponse.next()
 
   return new NextResponse(pageMaintenance(), {
     status: 503,

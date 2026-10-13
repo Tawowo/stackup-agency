@@ -234,3 +234,22 @@ export function APartirDe(montant: number, suffixe = '€'): string {
  * Pour la changer : remplacez simplement la chaîne ci-dessous.
  */
 export const MAINTENANCE_FIN = '2026-10-15T15:15:21Z'
+
+/**
+ * LE MODE MAINTENANCE EST-IL ACTIF ?
+ *
+ * C'EST CETTE LIGNE QUI DÉCIDE, et rien d'autre. Mettre `false` rallume le
+ * site ; mettre `true` le remet en construction. Un commit, un déploiement,
+ * c'est tout.
+ *
+ * POURQUOI ICI PLUTÔT QUE DANS UNE VARIABLE D'ENVIRONNEMENT. La variable
+ * existe toujours (voir `middleware.ts`) et reste prioritaire, mais elle
+ * oblige à passer par le tableau de bord de l'hébergeur, à ne pas se tromper
+ * d'environnement, et à redéployer quand même. Une constante dans le dépôt
+ * se lit, se relit et se change au même endroit que le reste du site —
+ * personne n'a à deviner où est l'interrupteur.
+ *
+ * La date de fin du compte à rebours est juste au-dessus : les deux vont
+ * ensemble, et c'est voulu.
+ */
+export const MAINTENANCE_ACTIVE = true
