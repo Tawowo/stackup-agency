@@ -6,10 +6,10 @@ import dynamic from 'next/dynamic'
 import Ouverture from '@/components/home/Ouverture'
 import Strates from '@/components/home/Strates'
 import Depart from '@/components/home/Depart'
+const JustePrix = dynamic(() => import('@/components/home/JustePrix'))
 
 // Sections sous la fold — code-splitting pour étaler l'hydratation (TBT)
 const Offre = dynamic(() => import('@/components/home/Offre'))
-const Verdict = dynamic(() => import('@/components/home/Verdict'))
 const Showroom = dynamic(() => import('@/components/home/Showroom'))
 const LaRoute = dynamic(() => import('@/components/home/LaRoute'))
 const RaisonDetre = dynamic(() => import('@/components/home/RaisonDetre'))
@@ -159,10 +159,16 @@ export default function Home() {
           <PreuveLogicielle />
         </div>
 
-        {/* 07 — LE VERDICT : le prix, une fois le travail montré. */}
-        <div data-scene="noyau" data-nuit="0">
-          <Verdict />
-        </div>
+        {/* 06 — LE JUSTE PRIX : le prix, une fois le travail montré.
+
+            CE QUE ÇA REMPLACE : « le verdict », dont le comparateur affichait
+            « ×8,9 moins cher qu'une agence classique » à partir de
+            fourchettes codées en dur (2 000 à 6 000 € pour une vitrine…) qui
+            ne venaient de nulle part. Le dossier l'interdit deux fois (§15.3
+            et §10.7) et le commanditaire a tranché : le comparateur part, le
+            coût sur cinq ans reste — celui-là est sourcé par notre propre
+            article, qui détaille quatre abonnements poste par poste. */}
+        <JustePrix />
 
         {/* 08 — LA MÉTHODE. Unique chronologie de la page, désormais : la
             seconde, de J1 à J10, est supprimée avec « la preuve par 3 ». */}

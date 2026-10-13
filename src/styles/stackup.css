@@ -5494,3 +5494,234 @@ html[data-fin='oui'] body {
     gap: 1rem 0.75rem;
   }
 }
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   §35. LE JUSTE PRIX — moment 06
+   Spécification : dossier §10.7. « Éditoriale : deux colonnes de filets, pas
+   de cartes. » Les cartes arrondies à ombre portée ajoutent trois niveaux de
+   chrome avant d'arriver au chiffre, qui est la seule chose qui compte ici.
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+.su-prix {
+  position: relative;
+  padding: clamp(4rem, 10vh, 7rem) 0;
+  background: transparent;
+}
+
+.su-prix__corps {
+  position: relative;
+  z-index: 2;
+  width: min(100% - 3rem, 86rem);
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: clamp(1.5rem, 3vw, 2.5rem);
+  align-items: start;
+}
+
+.su-prix__entete { grid-column: 1 / -1; }
+
+.su-prix__titre {
+  margin: 1rem 0 clamp(1.5rem, 4vh, 2.5rem);
+  font-family: var(--font-space), Poppins, system-ui, sans-serif;
+  font-weight: 700;
+  font-size: clamp(1.9rem, 4.4vw, 3.2rem);
+  line-height: 1.04;
+  letter-spacing: -0.03em;
+  color: var(--su-encre);
+}
+
+.su-prix__accent { color: var(--su-or-texte); }
+
+.su-prix__colonne { grid-column: span 4; }
+.su-prix__cinq    { grid-column: span 4; }
+
+.su-prix__sous {
+  margin: 0 0 0.75rem;
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgb(var(--su-navy-rgb) / 0.75);
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgb(var(--su-navy-rgb) / 0.16);
+}
+
+.su-prix__sous--contre { margin-top: 1.75rem; }
+
+.su-prix__lignes { margin: 0; }
+
+.su-prix__lignes > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid rgb(var(--su-navy-rgb) / 0.1);
+}
+
+.su-prix__lignes dt {
+  font-size: 0.9rem;
+  color: rgb(var(--su-navy-rgb) / 0.75);
+}
+
+.su-prix__lignes dd {
+  margin: 0;
+  font-family: var(--font-space), Poppins, system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--su-encre);
+  text-align: right;
+}
+
+.su-prix__total { font-size: 1.5rem; }
+
+.su-prix__detail {
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 0.66rem;
+  font-weight: 400;
+  color: rgb(var(--su-navy-rgb) / 0.75);
+}
+
+.su-prix__mention,
+.su-prix__nuance {
+  margin: 0.9rem 0 0;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: rgb(var(--su-navy-rgb) / 0.75);
+}
+
+.su-prix__liste {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.su-prix__liste li {
+  padding: 0.45rem 0 0.45rem 1.1rem;
+  position: relative;
+  font-size: 0.92rem;
+  line-height: 1.45;
+  border-bottom: 1px solid rgb(var(--su-navy-rgb) / 0.08);
+  color: var(--su-encre);
+}
+
+.su-prix__liste li::before {
+  content: '+';
+  position: absolute;
+  left: 0;
+  font-family: var(--font-mono), ui-monospace, monospace;
+  color: var(--su-or-texte);
+}
+
+.su-prix__liste--contre li { color: rgb(var(--su-navy-rgb) / 0.75); }
+.su-prix__liste--contre li::before {
+  content: '−';
+  color: rgb(var(--su-navy-rgb) / 0.75);
+}
+
+/* ── Le choix de maintenance ───────────────────────────────────────────── */
+
+.su-prix__plans {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 1.25rem;
+}
+
+.su-prix__plan {
+  padding: 0.4rem 0.7rem;
+  border: 1px solid rgb(var(--su-navy-rgb) / 0.2);
+  border-radius: 0.4rem;
+  background: none;
+  font-size: 0.8rem;
+  color: var(--su-encre);
+  cursor: pointer;
+  transition: border-color 160ms ease, background-color 160ms ease;
+}
+
+.su-prix__plan span {
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 0.68rem;
+  color: rgb(var(--su-navy-rgb) / 0.75);
+}
+
+.su-prix__plan[aria-checked='true'] {
+  border-color: var(--su-or);
+  background: rgb(var(--su-or-rgb) / 0.12);
+}
+
+.su-prix__plan:focus-visible {
+  outline: 2px solid var(--su-or);
+  outline-offset: 2px;
+}
+
+/* ── La balance ────────────────────────────────────────────────────────── */
+
+.su-prix__balance {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.su-prix__face {
+  padding-top: 0.75rem;
+  border-top: 2px solid var(--su-encre);
+}
+
+.su-prix__face--contre { border-top-color: rgb(var(--su-navy-rgb) / 0.25); }
+
+.su-prix__face-nom {
+  margin: 0;
+  font-size: 0.82rem;
+  color: rgb(var(--su-navy-rgb) / 0.75);
+}
+
+.su-prix__face-chiffre {
+  margin: 0.2rem 0 0.4rem;
+  font-family: var(--font-space), Poppins, system-ui, sans-serif;
+  font-weight: 700;
+  font-size: clamp(1.8rem, 3.6vw, 2.6rem);
+  letter-spacing: -0.02em;
+  color: var(--su-encre);
+}
+
+.su-prix__face--contre .su-prix__face-chiffre {
+  color: rgb(var(--su-navy-rgb) / 0.75);
+}
+
+.su-prix__face-note {
+  margin: 0;
+  font-size: 0.78rem;
+  line-height: 1.5;
+  color: rgb(var(--su-navy-rgb) / 0.75);
+}
+
+.su-prix__source {
+  color: var(--su-or-texte);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.su-prix__ecart {
+  margin: 1.25rem 0 0;
+  padding-left: 0.75rem;
+  border-left: 2px solid var(--su-or);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--su-encre);
+}
+
+.su-prix__actions {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+}
+
+@media (max-width: 1099px) {
+  .su-prix__colonne,
+  .su-prix__cinq { grid-column: 1 / -1; }
+  .su-prix__cinq { margin-top: 1.5rem; }
+}
