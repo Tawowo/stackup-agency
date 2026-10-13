@@ -15,21 +15,36 @@
   grid-column: 1 / span 4;
   grid-row: 1;
 }
-.su-ate__placeholder {
-  aspect-ratio: 3 / 4;
-  display: grid;
-  place-items: end start;
-  padding: 18px;
-  color: var(--su-graphite-ivoire);
+.su-ate__portrait {
+  margin: 0;
+  position: relative;
 }
+.su-ate__cadre-photo {
+  overflow: hidden;
+  aspect-ratio: 4 / 5;
+  padding: 0;
+}
+.su-portrait {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.su-ate__legende {
+  margin-top: 10px;
+  color: var(--su-texte-doux);
+}
+/* Le logo au repos se pose comme un tampon, sous la photo, à droite de la légende. */
 .su-ate__scene {
-  grid-column: 1 / span 4;
+  grid-column: 3 / span 3;
   grid-row: 2;
+  align-self: start;
+  margin-top: -8svh;
   pointer-events: none;
 }
 .su-ate__cadre {
-  width: 70%;
-  height: 26svh;
+  width: 100%;
+  height: 22svh;
 }
 .su-ate__texte {
   grid-column: 6 / span 6;
@@ -60,59 +75,6 @@
 }
 .su-ate__faq {
   margin-top: 40px;
-}
-/* ───── Accordéon (editorial) ───── */
-.su-acc {
-  display: flex;
-  flex-direction: column;
-  border-top: 1px solid color-mix(in srgb, var(--su-graphite) 35%, transparent);
-}
-.su-acc__item {
-  border-bottom: 1px solid color-mix(in srgb, var(--su-graphite) 35%, transparent);
-}
-.su-acc__q {
-  display: flex;
-  gap: 16px;
-  align-items: baseline;
-  padding: 16px 0;
-  min-height: 44px;
-  cursor: pointer;
-  font-family: var(--su-font-display), sans-serif;
-  font-weight: 600;
-  font-size: 1.125rem;
-  list-style: none;
-}
-.su-acc__q::-webkit-details-marker {
-  display: none;
-}
-.su-acc__q::after {
-  content: '+';
-  margin-left: auto;
-  color: var(--su-accent-texte);
-  font-weight: 400;
-}
-.su-acc__item[open] .su-acc__q::after {
-  content: '−';
-}
-.su-acc__num {
-  color: var(--su-accent-texte);
-}
-.su-acc__r {
-  margin: 0;
-  padding: 0 0 18px calc(3ch + 16px);
-  max-width: 52ch;
-  color: var(--su-texte-doux);
-  animation: su-fondu 320ms var(--su-pose);
-}
-@keyframes su-fondu {
-  from {
-    opacity: 0;
-    transform: translateY(8px);
-  }
-}
-.su-acc__q:focus-visible {
-  outline: 2px solid var(--su-ambre-clair);
-  outline-offset: 3px;
 }
 @media (max-width: 767px) {
   .su-ate__grille {

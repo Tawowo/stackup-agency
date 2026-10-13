@@ -94,7 +94,7 @@ Inst instance(vec3 position) {
   vec3 e = mix(aRotA, aRotB, t);
   // En vol, la plaque tourne un peu sur elle-même.
   // (sauf pendant l'impression : la couche descend à plat, déjà alignée)
-  e.y += sin(3.14159265 * t) * (aSeed - 0.5) * 1.2 * (1.0 - uFlash);
+  e.y += sin(3.14159265 * t) * (aSeed - 0.5) * 1.2 * (1.0 - uFlash) * min(uArc / 0.6, 1.0);
   float sc = mix(aScaleA, aScaleB, t);
 
   // Respiration : ±1,5 % d'échelle (période 6 s, déphasée), et un va-et-vient

@@ -131,8 +131,16 @@
     grid-column: 1 / -1;
     gap: 12vh;
   }
+  /* Mobile : chaque étape est une plaque opaque qui glisse PAR-DESSUS la page en
+     construction (le bandeau 3D reste derrière, jamais mêlé au texte). */
   .su-met__etape {
     gap: 14px;
+    position: relative;
+    z-index: 2;
+    padding: 18px 16px 20px;
+    border-radius: 4px;
+    background: color-mix(in srgb, var(--su-encre-2) 94%, transparent);
+    box-shadow: var(--su-ombre);
   }
   .su-met__num {
     font-size: 2.8rem;

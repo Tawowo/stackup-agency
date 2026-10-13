@@ -6,9 +6,11 @@
  * chargées, car les hauteurs de titres changent).
  */
 import { useEffect } from 'react'
+import { usePathname } from 'next/navigation'
 import { ScrollTrigger, initGsap } from '@/lib/gsap'
 
 export default function ScrollRefresh() {
+  const chemin = usePathname()
   useEffect(() => {
     initGsap()
     ScrollTrigger.refresh()
@@ -19,6 +21,6 @@ export default function ScrollRefresh() {
     return () => {
       vivant = false
     }
-  }, [])
+  }, [chemin])
   return null
 }

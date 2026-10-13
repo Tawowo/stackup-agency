@@ -80,6 +80,15 @@ export function createStackUniforms() {
     uClair: { value: 0 },
     /** Liseré ivoire des arêtes sur fond sombre (0 → 1). */
     uRim: { value: 1 },
+    /** Mot écrit par les flux : index (ligne de la texture) et intensité. */
+    uMot: { value: 0 },
+    uForme: { value: 0 },
+    /** Où et à quelle taille le mot s'écrit (monde) : x, y, z, demi-largeur. */
+    uMotCadre: { value: new Vector4(2, 0, 0.8, 2) },
+    /** Mise au point : 0 = sur la pile (code flou), 1 = sur le fond (code net, pendant les traversées). */
+    uFocus: { value: 0 },
+    /** Onde au clic sur le sol : x, z (monde), instant du clic, intensité. */
+    uOnde: { value: new Vector4(0, 0, -100, 0) },
     /** Allumage des couches qui se posent (hero « impression ») : 0 hors du hero. */
     uFlash: { value: 0 },
     /** Centre de la pile à l'écran : x, y (px, origine en bas à gauche), échelle (px par unité locale). */

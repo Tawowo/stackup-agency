@@ -20,6 +20,13 @@ export const SITE = {
   departement: 'Indre-et-Loire',
   email: 'contact@stackup-agency.fr',
   telephone: '',
+  /** Conditions de fabrication (reprises de l'ancien site). */
+  conditions: {
+    acomptePourcent: 40,
+    soldePourcent: 60,
+    revisionsIncluses: 3,
+    supportJours: 30,
+  },
   social: {
     linkedin: 'https://www.linkedin.com/in/stackup-agency-5756943aa/',
     instagram: 'https://www.instagram.com/stackup.agency/',

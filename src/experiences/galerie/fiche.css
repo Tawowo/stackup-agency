@@ -1,0 +1,182 @@
+.su-fic {
+  max-width: var(--su-conteneur-scene);
+  margin: 0 auto;
+  padding: 104px var(--su-gouttiere) 10svh;
+}
+.su-fic__ariane {
+  display: flex;
+  gap: 8px;
+  color: var(--su-texte-doux);
+  margin-bottom: 18px;
+}
+.su-fic__ariane a {
+  color: inherit;
+}
+.su-fic__demo {
+  margin: 0;
+  color: var(--accent);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+}
+.su-fic__titre {
+  margin: 4px 0 0;
+  font-size: clamp(2.4rem, 5vw, 4.6rem);
+}
+.su-fic__type {
+  margin: 6px 0 0;
+  color: var(--su-texte-doux);
+}
+.su-fic__tete {
+  /* Le titre tient au-dessus de la capture : elle commence à 190 px (élément partagé). */
+  min-height: 86px;
+}
+.su-fic__visuel {
+  position: relative;
+  margin: 0 auto;
+  width: min(1200px, calc(100vw - 48px));
+  position: absolute;
+  left: 50%;
+  top: 190px;
+  transform: translateX(-50%);
+}
+.su-fic__capture {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  box-shadow: 0 30px 80px rgba(6, 14, 28, 0.55);
+}
+/* Cadre de plaques : la boîte d'ancrage est dimensionnée pour que le cadre `pellicule`
+   (2,5 × 1,4 unités) entoure la capture. */
+.su-fic__cadre-zone {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  pointer-events: none;
+}
+.su-fic__cadre {
+  width: 58.4%;
+  height: 0;
+  padding-bottom: 92%;
+  margin-top: -46%;
+  margin-bottom: -46%;
+}
+.su-fic__actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: calc(min(1200px, 100vw - 48px) * 0.465 + 120px);
+}
+.su-fic__corps {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: var(--su-gouttiere);
+  row-gap: 56px;
+  margin-top: 64px;
+}
+.su-fic__bloc {
+  grid-column: 1 / span 7;
+}
+.su-fic__bloc--large {
+  grid-column: 1 / -1;
+}
+.su-fic__aside {
+  grid-column: 9 / span 4;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.su-fic__h2 {
+  margin: 0 0 16px;
+  font-family: var(--su-font-display), sans-serif;
+  font-size: clamp(1.6rem, 2.6vw, 2.2rem);
+}
+.su-fic__h3 {
+  margin: 28px 0 12px;
+  font-family: var(--su-font-display), sans-serif;
+  font-size: 1.25rem;
+}
+.su-fic__texte {
+  margin: 0;
+  font-size: 1.0625rem;
+  max-width: 62ch;
+}
+.su-fic__etapes {
+  margin: 0;
+  padding-left: 1.4em;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 68ch;
+}
+.su-fic__etapes li::marker {
+  color: var(--accent);
+  font-family: var(--su-font-mono), monospace;
+}
+.su-fic__fonctions {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 12px;
+}
+.su-fic__fonctions li {
+  display: flex;
+  gap: 12px;
+  align-items: baseline;
+  padding: 14px 16px;
+}
+.su-fic__fonctions .su-mono {
+  color: var(--accent);
+}
+.su-fic__acces {
+  padding: 18px;
+}
+.su-fic__acces p {
+  margin: 0 0 8px;
+}
+.su-fic__note {
+  color: var(--su-texte-doux);
+  font-size: 0.875rem;
+}
+.su-fic__suite {
+  margin-top: 12svh;
+  border-top: 1px solid color-mix(in srgb, var(--su-graphite) 30%, transparent);
+  padding-top: 28px;
+}
+.su-fic__suivant {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  color: inherit;
+  text-decoration: none;
+}
+.su-fic__suivant .su-display {
+  font-size: clamp(1.8rem, 3.6vw, 3rem);
+}
+.su-fic__suivant:hover .su-display {
+  color: var(--su-accent-texte);
+}
+@media (max-width: 767px) {
+  .su-fic__visuel {
+    top: 150px;
+  }
+  .su-fic__tete {
+    min-height: 60px;
+  }
+  .su-fic__titre {
+    font-size: 2rem;
+  }
+  .su-fic__actions {
+    margin-top: calc((100vw - 48px) * 0.465 + 80px);
+  }
+  .su-fic__bloc,
+  .su-fic__aside {
+    grid-column: 1 / -1;
+  }
+}

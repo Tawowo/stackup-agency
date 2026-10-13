@@ -33,6 +33,7 @@ uniform vec3 uAccent;
 uniform vec4 uStack;
 uniform float uDissolve;
 uniform float uWall;
+uniform vec4 uOnde;
 uniform vec3 uBase;
 uniform vec3 uLigne;
 varying vec3 vWorld;
@@ -64,6 +65,11 @@ void main() {
   float lens = uProbeActive * (1.0 - smoothstep(uProbeRadius * 0.6, uProbeRadius, dl));
   float rim = uProbeActive * exp(-pow((dl - uProbeRadius) * 7.0, 2.0));
   col += ligne * lens * (g1 * 0.35 + g5 * 0.25) + uAccent * (rim * 0.12 + lens * 0.06);
+  // Onde au clic : un anneau ambre qui s'élargit sur le sol depuis le point touché.
+  float age = uTime - uOnde.z;
+  float rayonOnde = age * 3.2;
+  float anneau = exp(-pow((distance(p, uOnde.xy) - rayonOnde) * 5.0, 2.0)) * exp(-age * 1.6) * uOnde.w * step(0.0, age);
+  col += uAccent * anneau * 0.9;
   // Dissolution par bruit fractal (0 = plein, 1 = retiré), avec un front fin lumineux.
   float n = fbm(gp * 0.6 + 3.1);
   float th = uDissolve * 1.15;

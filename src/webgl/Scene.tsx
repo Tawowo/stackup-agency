@@ -24,6 +24,9 @@ import Sol from './monde/Sol'
 import Flux from './monde/Flux'
 import CodeVivant from './monde/CodeVivant'
 import Lampe from './monde/Lampe'
+import Galerie from './monde/Galerie'
+import Tapis from './monde/Tapis'
+import { PROJETS } from '@/experiences/galerie/projets'
 import { CIBLE_FPS, lireForcage, palierInferieur } from './quality'
 import { useScene } from './store'
 
@@ -43,6 +46,7 @@ function Rig() {
   const tier = useScene((s) => s.tier)
   const count = PLAQUES_PAR_PALIER[tier]
   const p = useScene((s) => s.params)
+  const monde = useScene((s) => s.monde)
   const plaques = p.plaques > 0
 
   useEffect(() => {
@@ -92,13 +96,21 @@ function Rig() {
   useEffect(() => {
     const px = { x: 0, y: 0, active: false, clic: null as { x: number; y: number } | null }
     let down: { x: number; y: number; t: number; cible: boolean } | null = null
+    const racine = document.documentElement
     const move = (e: PointerEvent) => {
       if (e.pointerType !== 'mouse') return
       px.x = e.clientX
       px.y = e.clientY
       px.active = true
+      // La lumière suit le pointeur sur toute la page (calque CSS .su-lueur).
+      racine.style.setProperty('--su-mx', `${e.clientX}px`)
+      racine.style.setProperty('--su-my', `${e.clientY}px`)
+      racine.dataset.suLueur = '1'
     }
-    const leave = () => (px.active = false)
+    const leave = () => {
+      px.active = false
+      delete racine.dataset.suLueur
+    }
     const interactif = (t: EventTarget | null) => t instanceof Element && !!t.closest('a,button,input,select,textarea,label,summary,[data-su-pane]')
     const pdown = (e: PointerEvent) => {
       down = { x: e.clientX, y: e.clientY, t: performance.now(), cible: interactif(e.target) }
@@ -179,6 +191,15 @@ function Rig() {
       u.uCode.value = prm.codeOpacite * prm.code
       u.uLampeForce.value = prm.lampe
       u.uRim.value = prm.rim
+      u.uMot.value = s.mot
+      u.uForme.value = s.forme
+      {
+        // Le mot s'écrit dans la zone libre : moitié droite sur grand écran, haut de l'écran sur mobile.
+        const Wu = size.width / PX_PAR_UNITE
+        const Hu = size.height / PX_PAR_UNITE
+        if (size.width >= 768) u.uMotCadre.value.set(Wu * 0.22, Hu * 0.12, 0.8, Math.min(Wu * 0.22, 3.4))
+        else u.uMotCadre.value.set(0, Hu * 0.22, 0.8, Wu * 0.42)
+      }
       u.uFlash.value = prm.flash
       u.uBreath.value = s.still || s.calme ? 0 : 1
       accent.set(s.accent)
@@ -210,7 +231,12 @@ function Rig() {
       u.uOrtho.value = lisse.proj
       camera.updateProjectionMatrix()
       const el = lisse.el
-      camera.position.set(0, DISTANCE * Math.sin(el), DISTANCE * Math.cos(el))
+      // LA PLONGÉE : pendant une traversée (sol dissous), la caméra avance dans la scène
+      // et la mise au point passe de la pile au fond (le code devient net), puis revient.
+      const plonge = s.reduced ? 0 : lisse.dissolve
+      const dist = DISTANCE * (1 - 0.32 * plonge) * (1 - 0.38 * prm.approche)
+      camera.position.set(0, dist * Math.sin(el + 0.06 * plonge), dist * Math.cos(el + 0.06 * plonge))
+      u.uFocus.value = plonge
       camera.lookAt(0, 0, 0)
       camera.updateMatrixWorld()
 
@@ -352,13 +378,15 @@ function Rig() {
           orbit.x *= 1 - Math.min(1, dt * 2)
           orbit.y *= 1 - Math.min(1, dt * 2)
         }
-        // Clic : la plaque sous le pointeur bascule et montre sa face produit.
+        // Clic : la plaque sous le pointeur bascule et montre sa face produit ;
+        // ailleurs, une onde part du point touché sur le sol et souffle les flux.
         if (ptr && ptr.clic && pl) {
           frapper(ptr.clic.x, ptr.clic.y)
           ptr.clic = null
           local.copy(probeDeep)
           g.worldToLocal(local)
-          pl.basculer(local.x, local.y)
+          const touche = pl.basculer(local.x, local.y)
+          if (!touche && !s.reduced) u.uOnde.value.set(probe.x, probe.z, u.uTime.value, 1)
         }
       }
 
@@ -412,6 +440,8 @@ function Rig() {
       {p.sol > 0 && <Sol />}
       {p.lampe > 0 && <Lampe poussiere={POUSSIERE_PAR_PALIER[tier]} />}
       <group ref={mondeRef}>{p.code > 0 && <CodeVivant />}</group>
+      {monde === 'galerie' && <Galerie projets={PROJETS} />}
+      {monde === 'tapis' && <Tapis />}
       <group ref={groupRef}>
         {plaques && <Plates count={count} handleRef={platesRef} />}
         {p.flux > 0 && <Flux count={FLUX_PAR_PALIER[tier]} />}

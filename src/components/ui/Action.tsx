@@ -11,7 +11,7 @@ export default function Action({
   href,
   variante = 'plein',
   children,
-  mot = 'Voir',
+  mot,
   className = '',
   type,
   onClick,
@@ -19,16 +19,25 @@ export default function Action({
   href?: string
   variante?: Variante
   children: ReactNode
-  /** Mot affiché par le curseur au survol. */
+  /** Conservé pour compatibilité (l'ancien curseur l'affichait) ; sans effet. */
   mot?: string
   className?: string
   type?: 'submit' | 'button'
-  onClick?: () => void
+  onClick?: (e: React.MouseEvent<HTMLAnchorElement & HTMLButtonElement>) => void
 }) {
+  void mot
   const cls = `su-action su-action--${variante} ${className}`
+  if (href && /^https?:\/\//.test(href)) {
+    return (
+      <a href={href} className={cls} target="_blank" rel="noopener noreferrer" onClick={onClick}>
+        <span className="su-action__texte">{children}</span>
+        <span className="sr-only"> (nouvel onglet)</span>
+      </a>
+    )
+  }
   if (href) {
     return (
-      <Link href={href} className={cls}>
+      <Link href={href} className={cls} onClick={onClick}>
         <span className="su-action__texte">{children}</span>
       </Link>
     )

@@ -45,7 +45,7 @@ void main() {
     vec2 c = uStackEcran.xy + vec2(-1.4, 1.9) * sc;
     float d = distance(gl_FragCoord.xy, c) / (sc * 2.6);
     float halo = exp(-d * d) * uHalo * uLampeForce;
-    col += uAccent * halo * mix(0.3, 1.1, uNuit);
+    col += uAccent * halo * mix(0.2, 0.5, uNuit);
     // Halo ambre localisé derrière la pile : il détache le navy du logo du fond navy.
     float d2 = distance(gl_FragCoord.xy, uStackEcran.xy) / (sc * 1.15);
     col += uAccent * exp(-d2 * d2) * uHalo * 1.1 * uNuit;

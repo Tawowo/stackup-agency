@@ -4,11 +4,12 @@
  * le configurateur. Puis les quatre offres détaillées, la maintenance, et
  * l'action finale vers /contact.
  */
-import { useEffect, useRef } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
+import { useDragPile } from '@/webgl/useDragPile'
+import PlanTechnique from './PlanTechnique'
 import StackFrame from '@/webgl/StackFrame'
 import { useScene } from '@/webgl/store'
 import { gsap, SplitText, initGsap } from '@/lib/gsap'
-import Lumiere from '@/experiences/lumiere'
 import { SITE } from '@/config/site'
 import { OFFRES_SCENE } from '@/experiences/offre/offres'
 import type { Configuration } from '@/lib/configuration'
@@ -30,6 +31,9 @@ const MAINTENANCE_LIGNES = [
 export default function Tarifs({ initiale }: { initiale: Configuration }) {
   const page = useRef<HTMLElement>(null)
   const titre = useRef<HTMLHeadingElement>(null)
+  const [conf, setConf] = useState<Configuration>(initiale)
+  const surConfig = useCallback((c: Configuration) => setConf(c), [])
+  const bind = useDragPile()
   useEffect(() => {
     initGsap()
     const el = page.current
@@ -37,11 +41,14 @@ export default function Tarifs({ initiale }: { initiale: Configuration }) {
     if (!el || !h1) return
     const s = useScene.getState()
     s.setMoment('tarifs')
+    s.setMonde('tapis')
     s.setNuit(1)
     s.setScrub(false)
     s.setTarget(null)
-    s.setPose({ x: 0, y: 0 })
-    s.setProjection(1)
+    // La chaîne d'assemblage : vue de trois quarts pour voir le tapis arriver.
+    s.setParams({ entree: 1, arc: 0, retard: 0.35, flash: 0 })
+    s.setPose({ x: 0.16, y: -0.3 })
+    s.setProjection(0.35)
     s.setCalme(false)
     if (!s.reduced) s.setLayout('cadran')
     const split = new SplitText(h1, { type: 'words', wordsClass: 'su-tar__mot' })
@@ -55,16 +62,19 @@ export default function Tarifs({ initiale }: { initiale: Configuration }) {
     return () => {
       ctx.revert()
       split.revert()
-      useScene.getState().setNuit(1)
+      const sc = useScene.getState()
+      sc.setNuit(1)
+      sc.setMonde('fabrique')
+      sc.setParams({ entree: 0, arc: 0.6, retard: 0.25 })
     }
   }, [])
 
   return (
     <main ref={page} className="su-tar" data-moment="tarifs">
-      <Lumiere />
       <section className="su-tar__hero" data-moment="tarifs-hero" data-nuit="1" aria-labelledby="su-tar-titre">
+        <PlanTechnique c={conf} />
         <div className="su-tar__grille">
-          <div className="su-tar__scene">
+          <div className="su-tar__scene" {...bind()} role="img" aria-label="Le produit en construction sur la chaîne ; faites-le tourner">
             <StackFrame className="su-tar__cadre" />
           </div>
           <header className="su-tar__tete">
@@ -75,7 +85,7 @@ export default function Tarifs({ initiale }: { initiale: Configuration }) {
             <p className="su-tar__ligne">Un type, des fonctions, des options : le plancher se recalcule à chaque choix, et part avec vous vers le devis.</p>
           </header>
           <div className="su-tar__conf">
-            <Configurateur initiale={initiale} />
+            <Configurateur initiale={initiale} onConfig={surConfig} />
           </div>
         </div>
       </section>

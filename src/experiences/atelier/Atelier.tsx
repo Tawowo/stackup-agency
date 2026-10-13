@@ -11,6 +11,7 @@ import { initGsap } from '@/lib/gsap'
 import { arriverParScroll } from '../arrivee'
 import { SITE } from '@/config/site'
 import Accordeon from '@/components/editorial/Accordeon'
+import Portrait from '@/components/ui/Portrait'
 import './atelier.css'
 
 const QUESTIONS = [
@@ -30,11 +31,12 @@ export default function Atelier() {
   return (
     <section ref={section} className="su-ate" data-moment="08" data-nuit="0" data-titre="L’atelier" id="atelier" aria-labelledby="su-ate-titre">
       <div className="su-ate__grille">
-        <div className="su-ate__portrait" role="img" aria-label="Portrait de Mathéo Reboul, à venir">
-          <div className="su-plaque su-plaque--ivoire su-ate__placeholder">
-            <span className="su-mono">Portrait à venir</span>
+        <figure className="su-ate__portrait">
+          <div className="su-plaque su-ate__cadre-photo">
+            <Portrait fond="ivoire" />
           </div>
-        </div>
+          <figcaption className="su-mono su-ate__legende">Tours, l’atelier</figcaption>
+        </figure>
         <div className="su-ate__scene" aria-hidden="true">
           <StackFrame className="su-ate__cadre" />
         </div>

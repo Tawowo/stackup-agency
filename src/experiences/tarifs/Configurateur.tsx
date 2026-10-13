@@ -14,11 +14,25 @@ import Action from '@/components/ui/Action'
 import Cadran from '@/components/ui/Cadran'
 import Plaque from '@/components/ui/Plaque'
 
-export default function Configurateur({ initiale }: { initiale: Configuration }) {
+export default function Configurateur({ initiale, onConfig }: { initiale: Configuration; onConfig?: (c: Configuration) => void }) {
   const [c, setC] = useState<Configuration>(initiale)
   const router = useRouter()
   const e = useMemo(() => estimer(c), [c])
   const fonctions = fonctionsPour(c.type)
+  // Le prix affiché attend que le module ajouté passe sous le portique de mesure
+  // (≈ 0,6 s de la course sur le tapis) ; un retrait se compte tout de suite.
+  const [affiche, setAffiche] = useState(e.ponctuel)
+  useEffect(() => {
+    onConfig?.(c)
+  }, [c, onConfig])
+  useEffect(() => {
+    if (e.ponctuel <= affiche || useScene.getState().reduced) {
+      const t0 = setTimeout(() => setAffiche(e.ponctuel), 0)
+      return () => clearTimeout(t0)
+    }
+    const t = setTimeout(() => setAffiche(e.ponctuel), 620)
+    return () => clearTimeout(t)
+  }, [e.ponctuel, affiche])
 
   // La scène suit la configuration : cadran tant qu'aucun type, puis la forme.
   useEffect(() => {
@@ -150,7 +164,7 @@ export default function Configurateur({ initiale }: { initiale: Configuration })
 
       <div className="su-conf__total" aria-live="polite">
         <p className="su-conf__cadran">
-          {c.type ? <Cadran valeur={e.ponctuel} prefixe="à partir de" suffixe="€" /> : <span className="su-conf__vide">Choisissez un type pour voir le plancher.</span>}
+          {c.type ? <Cadran valeur={affiche} prefixe="à partir de" suffixe="€" /> : <span className="su-conf__vide">Choisissez un type pour voir le plancher.</span>}
         </p>
         {e.mensuel > 0 && (
           <p className="su-mono su-conf__mensuel">

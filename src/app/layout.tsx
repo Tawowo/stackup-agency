@@ -4,6 +4,8 @@ import { inter, jetbrains, poppins } from './fonts'
 import SceneMount from '@/webgl/SceneMount'
 import Nav from '@/components/layout/Nav'
 import Defilement from '@/components/layout/Defilement'
+import Lumiere from '@/experiences/lumiere'
+import ScrollRefresh from '@/components/layout/ScrollRefresh'
 import '@/styles/chrome.css'
 
 export const metadata: Metadata = {
@@ -24,9 +26,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="fr" className={`${poppins.variable} ${inter.variable} ${jetbrains.variable}`}>
       <body>
         <SceneMount />
+        <div className="su-lueur" aria-hidden="true" />
         <Defilement />
         <Nav />
         <div className="su-page">{children}</div>
+        <Lumiere />
+        <ScrollRefresh />
       </body>
     </html>
   )

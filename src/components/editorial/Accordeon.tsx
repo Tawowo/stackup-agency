@@ -4,6 +4,8 @@
  * toléré : le texte courant apparaît en fondu + 8 px. Tout le contenu est dans
  * le DOM, ouvert sans JS (details/summary natif).
  */
+import './editorial.css'
+
 export interface Question {
   q: string
   r: string

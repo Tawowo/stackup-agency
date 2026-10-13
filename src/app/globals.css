@@ -176,3 +176,24 @@ body {
   box-shadow: 0 0 0 1px color-mix(in srgb, var(--su-ivoire) calc(var(--su-nuit) * 40%), transparent),
     calc(var(--su-nuit) * 6px) calc(var(--su-nuit) * 4px) 0 rgba(6, 14, 28, calc(var(--su-nuit) * 0.35));
 }
+
+/* La lumière qui suit le pointeur sur toute la page : une lueur ambre très
+   douce en mode écran sur la nuit, presque rien sur l'ivoire. Décorative. */
+.su-lueur {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity var(--su-geste);
+  background: radial-gradient(420px circle at var(--su-mx, 50%) var(--su-my, 50%), color-mix(in srgb, var(--su-ambre) calc(6% + var(--su-nuit) * 10%), transparent), transparent 70%);
+  mix-blend-mode: screen;
+}
+:root[data-su-lueur='1'] .su-lueur {
+  opacity: 1;
+}
+@media (prefers-reduced-motion: reduce) {
+  .su-lueur {
+    display: none;
+  }
+}

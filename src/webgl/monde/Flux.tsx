@@ -12,6 +12,7 @@ import { BufferAttribute, BufferGeometry, CatmullRomCurve3, DataTexture, FloatTy
 import { stackUniforms } from '../engine'
 import { seed } from '../layouts/types'
 import { HASH, TORCHE } from '../materials/glsl'
+import { MOTS, pointsDuMot } from './mots'
 
 const PAS = 128
 
@@ -83,7 +84,17 @@ uniform vec3 uPointer;
 uniform float uPointerActive;
 uniform float uOrtho;
 uniform float uDpr;
+uniform sampler2D uMots;
+uniform float uNbMots;
+uniform float uNbPoints;
+uniform float uMot;
+uniform float uForme;
+uniform vec4 uStack;
+uniform vec4 uMotCadre;
+uniform vec4 uOnde;
+uniform float uTime;
 attribute float aPath;
+attribute float aIndex;
 attribute float aOffset;
 attribute float aSpeed;
 attribute vec3 aJitter;
@@ -91,6 +102,7 @@ attribute float aSeed;
 varying float vA;
 varying float vSeed;
 varying float vLens;
+varying float vForme;
 void main() {
   float t = fract(aOffset + uFlowTime * aSpeed * 0.06);
   vec3 p = texture2D(uChemins, vec2(t, (aPath + 0.5) / uNbChemins)).xyz;
@@ -103,6 +115,23 @@ void main() {
   float pousse = uPointerActive * smoothstep(1.0, 0.0, dl) * 0.7;
   p.xy += (dl > 1e-3 ? d / dl : vec2(0.0, 1.0)) * pousse;
   vec4 wp = modelMatrix * vec4(p, 1.0);
+  // Onde au clic : les particules sont soufflées par l'anneau qui passe.
+  float ageO = uTime - uOnde.z;
+  vec2 dO = wp.xz - uOnde.xy;
+  float lO = length(dO);
+  float souffle = exp(-pow((lO - ageO * 3.2) * 2.0, 2.0)) * exp(-ageO * 1.6) * uOnde.w * step(0.0, ageO);
+  wp.xz += (lO > 1e-3 ? dO / lO : vec2(1.0, 0.0)) * souffle * 0.6;
+  wp.y += souffle * 0.4;
+  // LE MOT : la particule quitte son chemin pour une position du mot, devant la pile,
+  // face à la caméra ; chacune avec un léger retard (le mot se forme, puis se défait).
+  float retard = aSeed * 0.35;
+  float f = clamp((uForme - retard) / (1.0 - retard + 1e-3), 0.0, 1.0);
+  f = f * f * (3.0 - 2.0 * f);
+  if (f > 0.001) {
+    vec2 m = texture2D(uMots, vec2((aIndex + 0.5) / uNbPoints, (uMot + 0.5) / uNbMots)).xy;
+    vec3 cible = vec3(uMotCadre.x + m.x * uMotCadre.w, uMotCadre.y + m.y * uMotCadre.w * 1.1, uMotCadre.z);
+    wp.xyz = mix(wp.xyz, cible, f);
+  }
   vec4 mv = viewMatrix * wp;
   gl_Position = projectionMatrix * mv;
   // Comètes : une tête vive, une traîne douce, cohérentes le long du chemin
@@ -112,7 +141,9 @@ void main() {
   vLens = probeLens(wp.xyz);
   vSeed = aSeed;
   float persp = mix(6.5 / max(-mv.z, 0.5), 1.0, uOrtho);
-  gl_PointSize = (1.8 + aSeed * 1.8 + vLens * 2.0 + (1.0 - tete) * 1.2) * persp * uDpr;
+  vA = mix(vA, 0.95, f);
+  vForme = f;
+  gl_PointSize = (1.8 + aSeed * 1.8 + vLens * 2.0 + (1.0 - tete) * 1.2 + f * 0.8) * persp * uDpr;
 }
 `
 const fragment = /* glsl */ `
@@ -125,6 +156,7 @@ uniform float uDissolve;
 varying float vA;
 varying float vSeed;
 varying float vLens;
+varying float vForme;
 const vec3 CLAIR = vec3(0.86, 0.91, 0.98);
 const vec3 NAVY = vec3(0.051, 0.173, 0.298);
 void main() {
@@ -135,6 +167,9 @@ void main() {
   vec3 col = mix(uAccent, nuit, uNuit);
   float a = disc * vA * uFlux * (1.0 + vLens * 1.6) * (1.0 - uDissolve * 0.5);
   a *= mix(0.3, 1.0, uNuit);
+  // Le mot se lit, sur navy comme sur ivoire : ambre franc.
+  col = mix(col, uAccent, vForme * (1.0 - uNuit) );
+  a = max(a, disc * vForme * 0.9);
   gl_FragColor = vec4(col, a);
 }
 `
@@ -150,7 +185,20 @@ export default function Flux({ count = 900 }: { count?: number }) {
     const spd = new Float32Array(count)
     const jit = new Float32Array(count * 3)
     const sd = new Float32Array(count)
+    const idx = new Float32Array(count)
+    // Texture des mots : une ligne par mot, `count` points (x, y) par ligne.
+    const motsData = new Float32Array(count * MOTS.length * 4)
+    MOTS.forEach((m, r) => {
+      const pts = pointsDuMot(m, count)
+      for (let i = 0; i < count; i++) {
+        motsData[(r * count + i) * 4] = pts[i * 2]!
+        motsData[(r * count + i) * 4 + 1] = pts[i * 2 + 1]!
+      }
+    })
+    const motsTex = new DataTexture(motsData, count, MOTS.length, RGBAFormat, FloatType)
+    motsTex.needsUpdate = true
     for (let i = 0; i < count; i++) {
+      idx[i] = i
       path[i] = i % P
       off[i] = seed(i, 21)
       spd[i] = 0.7 + seed(i, 22) * 0.8
@@ -166,11 +214,12 @@ export default function Flux({ count = 900 }: { count?: number }) {
     g.setAttribute('aSpeed', new BufferAttribute(spd, 1))
     g.setAttribute('aJitter', new BufferAttribute(jit, 3))
     g.setAttribute('aSeed', new BufferAttribute(sd, 1))
+    g.setAttribute('aIndex', new BufferAttribute(idx, 1))
     g.boundingSphere = null
     const m = new ShaderMaterial({
       vertexShader: vertex,
       fragmentShader: fragment,
-      uniforms: { ...u, uChemins: { value: tex }, uNbChemins: { value: P }, uDpr: { value: typeof window === 'undefined' ? 1 : Math.min(window.devicePixelRatio, 1.5) } },
+      uniforms: { ...u, uChemins: { value: tex }, uNbChemins: { value: P }, uMots: { value: motsTex }, uNbMots: { value: MOTS.length }, uNbPoints: { value: count }, uDpr: { value: typeof window === 'undefined' ? 1 : Math.min(window.devicePixelRatio, 1.5) } },
       transparent: true,
       depthWrite: false,
     })

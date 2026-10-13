@@ -75,6 +75,7 @@ uniform float uDissolve;
 uniform float uDecalage;
 uniform float uRatio;
 uniform float uProfondeur;
+uniform float uFocus;
 uniform vec3 uAccent;
 varying vec2 vUv;
 varying vec3 vWorld;
@@ -83,7 +84,12 @@ void main() {
   // Le texte garde ses proportions ; il défile avec l'étage et, lentement, avec le temps.
   vec2 st = vec2(vUv.x, vUv.y * uRatio * 0.5);
   st.y += uEtage * 0.11 + uTime * 0.004 + uDecalage;
-  vec4 tex = texture2D(uTexte, st);
+  // Mise au point : au repos, l'œil est sur la pile et le code est flou ;
+  // pendant une traversée, la mise au point glisse vers le fond et le code devient net.
+  float flou = (1.0 - uFocus) * (0.0025 + 0.004 * (1.0 - uProfondeur));
+  vec4 tex = texture2D(uTexte, st) * 0.4
+    + texture2D(uTexte, st + vec2(flou, 0.0)) * 0.15 + texture2D(uTexte, st - vec2(flou, 0.0)) * 0.15
+    + texture2D(uTexte, st + vec2(0.0, flou)) * 0.15 + texture2D(uTexte, st - vec2(0.0, flou)) * 0.15;
   // Tête d'écriture : les lignes au-dessus de la tête sont écrites, la ligne
   // courante s'écrit caractère par caractère, le reste attend.
   float tete = fract(uTime * 0.018 + uDecalage * 3.7 + 0.55);
@@ -102,7 +108,7 @@ void main() {
   float bord = smoothstep(0.0, 0.08, vUv.x) * smoothstep(1.0, 0.92, vUv.x) * smoothstep(0.0, 0.1, vUv.y) * smoothstep(1.0, 0.9, vUv.y);
   float lens = probeLens(vWorld);
   float a = tex.a * ecrit * garde * bord * uProfondeur;
-  a *= uCode * (1.0 + lens * 1.8) * (1.0 - uDissolve * 0.6);
+  a *= uCode * (1.0 + lens * 1.8) * (1.0 + uFocus * 1.4);
   vec3 nuit = tex.rgb;
   vec3 col = mix(NAVY, nuit, uNuit);
   col += uAccent * front * 0.9;

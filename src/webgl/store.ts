@@ -74,6 +74,10 @@ export interface SceneParams extends PileParams {
   flash: number
   /** Hero « impression » : nombre de couches empilées derrière le logo. */
   couches: number
+  /** La caméra s'approche de la scène (0 → 1), pilotée par le scroll (/a-propos). */
+  approche: number
+  /** Arrivée des nouvelles plaques : 0 = depuis la profondeur, 1 = sur le tapis (depuis la gauche). */
+  entree: number
 }
 
 export const PARAMS_DEFAUT: SceneParams = {
@@ -119,6 +123,8 @@ export const PARAMS_DEFAUT: SceneParams = {
   rim: 1,
   flash: 0,
   couches: 20,
+  approche: 0,
+  entree: 0,
 }
 
 export interface Pose {
@@ -170,6 +176,14 @@ interface SceneState {
   dissolve: number
   /** Inclinaison du téléphone (−1 → 1) : déplace la lampe. */
   inclinaison: { x: number; y: number }
+  /** Les flux écrivent un mot à l'entrée d'un moment : index du mot et intensité (0 → 1, scroll seul). */
+  mot: number
+  forme: number
+  /** Le monde propre de la page (en plus de la Fabrique) et sa progression de travelling (0 → 1). */
+  monde: 'fabrique' | 'galerie' | 'tapis' | 'compil' | 'tableau' | 'atelier'
+  travel: number
+  /** Galerie : index de l'écran survolé (−1 : aucun). */
+  survol: number
   setLayout: (l: LayoutName) => void
   setMorph: (m: number) => void
   setProjection: (p: number) => void
@@ -198,6 +212,10 @@ interface SceneState {
   setEtage: (e: number) => void
   setDissolve: (d: number) => void
   setInclinaison: (x: number, y: number) => void
+  setMot: (mot: number, forme: number) => void
+  setMonde: (m: SceneState['monde']) => void
+  setTravel: (t: number) => void
+  setSurvol: (i: number) => void
 }
 
 export const useScene = create<SceneState>((set) => ({
@@ -231,6 +249,11 @@ export const useScene = create<SceneState>((set) => ({
   etage: 0,
   dissolve: 0,
   inclinaison: { x: 0, y: 0 },
+  mot: 0,
+  forme: 0,
+  monde: 'fabrique',
+  travel: 0,
+  survol: -1,
   setLayout: (layout) => set({ layout }),
   setMorph: (morph) => set({ morph }),
   setProjection: (projection) => set({ projection }),
@@ -259,4 +282,8 @@ export const useScene = create<SceneState>((set) => ({
   setEtage: (etage) => set({ etage }),
   setDissolve: (dissolve) => set({ dissolve }),
   setInclinaison: (x, y) => set({ inclinaison: { x, y } }),
+  setMot: (mot, forme) => set({ mot, forme }),
+  setMonde: (monde) => set({ monde }),
+  setTravel: (travel) => set({ travel }),
+  setSurvol: (survol) => set({ survol }),
 }))

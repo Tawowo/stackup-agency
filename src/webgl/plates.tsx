@@ -91,6 +91,35 @@ function write(g: InstancedBufferGeometry, k: 'A' | 'B', d: LayoutData) {
   }
 }
 
+/**
+ * APPARIEMENT — une plaque absente d'un côté (échelle 0) ne traverse plus la
+ * scène depuis un point d'attente lointain : elle naît ou s'efface sur place,
+ * en profondeur, juste derrière la position qu'elle occupe de l'autre côté.
+ * Les transitions restent des formes lisibles, jamais un amas qui se croise.
+ */
+function apparier(a: LayoutData, b: LayoutData) {
+  const n = a.scale.length
+  for (let i = 0; i < n; i++) {
+    const sa = a.scale[i]!
+    const sb = b.scale[i]!
+    if (sa <= 0 && sb > 0) {
+      a.pos[i * 3] = b.pos[i * 3]!
+      a.pos[i * 3 + 1] = b.pos[i * 3 + 1]!
+      a.pos[i * 3 + 2] = b.pos[i * 3 + 2]! - 0.9
+      a.rot[i * 3] = b.rot[i * 3]!
+      a.rot[i * 3 + 1] = b.rot[i * 3 + 1]!
+      a.rot[i * 3 + 2] = b.rot[i * 3 + 2]!
+    } else if (sb <= 0 && sa > 0) {
+      b.pos[i * 3] = a.pos[i * 3]!
+      b.pos[i * 3 + 1] = a.pos[i * 3 + 1]!
+      b.pos[i * 3 + 2] = a.pos[i * 3 + 2]! - 0.9
+      b.rot[i * 3] = a.rot[i * 3]!
+      b.rot[i * 3 + 1] = a.rot[i * 3 + 1]!
+      b.rot[i * 3 + 2] = a.rot[i * 3 + 2]!
+    }
+  }
+}
+
 /** Figer l'état interpolé courant dans A (pour repartir d'un morph interrompu). */
 function snapshot(g: InstancedBufferGeometry, morph: number, delay: number) {
   const n = g.instanceCount
@@ -141,6 +170,8 @@ export function Plates({ count, handleRef }: { count: number; handleRef: React.R
       setPair: (a, b, pp = {}) => {
         const da = compute(a, pp.a)
         const db = b ? compute(b, pp.b) : da
+        // L'impression du hero garde sa tête d'impression (descente), le reste s'apparie.
+        if (b && a !== 'empileDepart') apparier(da, db)
         write(geometry, 'A', da)
         write(geometry, 'B', db)
         h.murA = da.mur
@@ -155,6 +186,51 @@ export function Plates({ count, handleRef }: { count: number; handleRef: React.R
         h.murA = h.murA + (h.murB - h.murA) * u.uMorph.value
         h.solA = h.solA + (h.solB - h.solA) * u.uMorph.value
         const d = compute(name)
+        // Chaîne d'assemblage : une plaque qui apparaît arrive sur le tapis, depuis la gauche,
+        // à la hauteur du sol, déjà à sa taille et à plat.
+        if (st.params.entree > 0.5) {
+          const A = geometry.getAttribute('aPosA') as InstancedBufferAttribute
+          const R = geometry.getAttribute('aRotA') as InstancedBufferAttribute
+          const SA = geometry.getAttribute('aScaleA') as InstancedBufferAttribute
+          const pa = A.array as Float32Array
+          const ra = R.array as Float32Array
+          const sa = SA.array as Float32Array
+          for (let i = 0; i < geometry.instanceCount; i++) {
+            if (sa[i]! > 0.01 || d.scale[i]! <= 0) continue
+            pa[i * 3] = d.pos[i * 3]! - 3.2
+            pa[i * 3 + 1] = (h.solB ?? -1) + 0.06
+            pa[i * 3 + 2] = 0.2
+            ra[i * 3] = 0
+            ra[i * 3 + 1] = 0
+            ra[i * 3 + 2] = 0
+            sa[i] = d.scale[i]!
+          }
+          A.needsUpdate = R.needsUpdate = SA.needsUpdate = true
+        } else {
+          // Sinon, appariement en profondeur (comme setPair) : rien ne traverse la scène.
+          const A = geometry.getAttribute('aPosA') as InstancedBufferAttribute
+          const R = geometry.getAttribute('aRotA') as InstancedBufferAttribute
+          const SA = geometry.getAttribute('aScaleA') as InstancedBufferAttribute
+          const pa = A.array as Float32Array
+          const ra = R.array as Float32Array
+          const sa = SA.array as Float32Array
+          for (let i = 0; i < geometry.instanceCount; i++) {
+            const vaA = sa[i]! > 0.01
+            const vaB = d.scale[i]! > 0
+            if (!vaA && vaB) {
+              for (let c = 0; c < 3; c++) {
+                pa[i * 3 + c] = d.pos[i * 3 + c]! - (c === 2 ? 0.9 : 0)
+                ra[i * 3 + c] = d.rot[i * 3 + c]!
+              }
+            } else if (vaA && !vaB) {
+              for (let c = 0; c < 3; c++) {
+                d.pos[i * 3 + c] = pa[i * 3 + c]! - (c === 2 ? 0.9 : 0)
+                d.rot[i * 3 + c] = ra[i * 3 + c]!
+              }
+            }
+          }
+          A.needsUpdate = R.needsUpdate = true
+        }
         write(geometry, 'B', d)
         h.murB = d.mur
         h.solB = basDe(d)

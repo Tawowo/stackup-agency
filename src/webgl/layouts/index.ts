@@ -10,9 +10,10 @@ import { methode } from './methode.ts'
 import { configurateur } from './configurateur.ts'
 import { formulaire } from './formulaire.ts'
 import { empile, empileDepart } from './empile.ts'
+import { cadre } from './cadre.ts'
 import type { LayoutData } from './types.ts'
 
-export type LayoutName = 'logo' | 'empile' | 'empileDepart' | 'pile' | 'strates' | 'page' | 'multi' | 'boutique' | 'logiciel' | 'pellicule' | 'noyau' | 'machines' | 'cadran' | 'methode' | 'configurateur' | 'formulaire'
+export type LayoutName = 'logo' | 'empile' | 'empileDepart' | 'cadre' | 'pile' | 'strates' | 'page' | 'multi' | 'boutique' | 'logiciel' | 'pellicule' | 'noyau' | 'machines' | 'cadran' | 'methode' | 'configurateur' | 'formulaire'
 
 /** Paramètres que les layouts lisent dans le store (`params`). */
 export interface LayoutParams {
@@ -40,6 +41,7 @@ export const LAYOUTS: Record<LayoutName, (n: number, p: LayoutParams) => LayoutD
   logo: (n) => logo(n),
   empile: (n, p) => empile(n, p.couches),
   empileDepart: (n, p) => empileDepart(n, p.couches),
+  cadre: (n) => cadre(n),
   // Portrait : une tour plus courte, qui ne monte pas jusque sous la nav.
   pile: (n, p) => pile(n, p.portrait > 0.5 ? { ...p, hauteur: Math.min(p.hauteur, 1.6) } : p),
   strates: (n, p) => strates(n, { ouverture: p.ouverture }),
@@ -61,4 +63,4 @@ export const CLES_LAYOUT: (keyof LayoutParams)[] = ['parNiveau', 'ecart', 'torsi
 
 export const NOMS_LAYOUTS = Object.keys(LAYOUTS) as LayoutName[]
 export type { LayoutData } from './types.ts'
-export { logo, empile, empileDepart, pile, strates, pageLayout, multi, boutique, logiciel, pellicule, noyau, machines, cadran, methode, configurateur, formulaire }
+export { logo, empile, empileDepart, cadre, pile, strates, pageLayout, multi, boutique, logiciel, pellicule, noyau, machines, cadran, methode, configurateur, formulaire }

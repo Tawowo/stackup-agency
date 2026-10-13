@@ -389,3 +389,82 @@
     padding: 64px 0;
   }
 }
+
+/* LA CHAÎNE D'ASSEMBLAGE — le plan technique derrière le configurateur. */
+.su-tar__hero {
+  position: relative;
+}
+.su-plan {
+  position: absolute;
+  right: max(var(--su-gouttiere), calc((100vw - var(--su-conteneur-scene)) / 2));
+  top: 120px;
+  width: min(56vw, 760px);
+  height: auto;
+  z-index: 0;
+  pointer-events: none;
+  opacity: calc(0.22 + var(--su-nuit) * 0.2);
+}
+.su-tar__grille {
+  position: relative;
+  z-index: 1;
+}
+.su-plan__grille line {
+  stroke: color-mix(in srgb, var(--su-graphite) 30%, transparent);
+  stroke-width: 0.5;
+}
+.su-plan__cote,
+.su-plan text {
+  font-family: var(--su-font-mono), monospace;
+  font-size: 11px;
+  fill: var(--su-ambre-clair);
+}
+.su-plan__trait rect,
+.su-plan__trait path,
+.su-plan__trait line {
+  fill: none;
+  stroke: var(--su-ambre-clair);
+  stroke-width: 1.2;
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  animation: su-plan-trace 900ms var(--su-pose) forwards;
+  animation-delay: calc(var(--i, 0) * 110ms);
+  filter: drop-shadow(0 0 3px color-mix(in srgb, var(--su-ambre) 60%, transparent));
+}
+.su-plan__trait text {
+  opacity: 0;
+  animation: su-plan-texte 300ms linear forwards;
+  animation-delay: calc(var(--i, 0) * 110ms + 600ms);
+}
+.su-plan__trait--module rect {
+  stroke: var(--su-ivoire);
+}
+@keyframes su-plan-trace {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes su-plan-texte {
+  to {
+    opacity: 1;
+  }
+}
+.su-tar__scene {
+  touch-action: pan-y;
+  cursor: grab;
+}
+@media (max-width: 767px) {
+  .su-plan {
+    top: 80px;
+    width: 92vw;
+    opacity: 0.16;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .su-plan__trait rect,
+  .su-plan__trait path,
+  .su-plan__trait line,
+  .su-plan__trait text {
+    animation-duration: 1ms;
+    animation-delay: 0ms;
+  }
+}

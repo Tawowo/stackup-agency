@@ -69,7 +69,9 @@ export default function Strates() {
         s.setPose({ x: 0.5, y: -0.22 })
         s.setProjection(0.5)
         s.setScrub(true)
-        s.setParams({ arc: ph === 'arrive' ? 0.25 : 0.6, retard: 0.25, flash: 0 })
+        // L'approche : le S massif se recompose en pile de lamelles sans se disperser
+        // (pas d'arc, presque pas de retard : une seule forme qui se transforme).
+        s.setParams({ arc: ph === 'arrive' ? 0 : 0.6, retard: ph === 'arrive' ? 0.12 : 0.25, flash: 0 })
         if (ph === 'arrive') s.setPair('empile', 'strates', { b: { ouverture: 0 } })
         else if (ph === 'ouvre') s.setPair('strates', 'strates', { a: { ouverture: 0 }, b: { ouverture: 1 } })
         else s.setPair('strates', 'strates', { a: { ouverture: 1 }, b: { ouverture: 0 } })

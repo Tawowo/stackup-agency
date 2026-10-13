@@ -6,7 +6,7 @@
 import sharp from 'sharp'
 import { mkdirSync, statSync } from 'node:fs'
 
-const PROJETS = ['demo-videaste', 'chateau-lumieres', 'maison-elise', 'au-pain-dore', 'prestige-immo']
+const PROJETS = ['demo-videaste', 'chateau-lumieres', 'maison-elise', 'au-pain-dore', 'prestige-immo', 'lolivier-dashboard', 'chateau-fleury']
 for (const slug of PROJETS) {
   const src = `public/images/realisations/${slug}.webp`
   const dir = `public/realisations/${slug}`
