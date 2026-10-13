@@ -79,9 +79,11 @@ export default function CameraRig({ cadrageMobile = false }: { cadrageMobile?: b
   useFrame((_, delta) => {
     const { progression, etat, mouvement } = useBande.getState()
 
-    // Les états qui ne sont pas une révélation restent en volume : seule
-    // l'ouverture traverse la bascule.
-    const cible = etat === 'logo' ? Math.min(1, progression / 0.25) : 1
+    /* Les états qui ne sont pas une révélation restent en volume. Deux la
+       traversent : l'ouverture (du plat au volume) et le départ (du volume
+       au plat), aux deux bouts de la page. */
+    const cible =
+      etat === 'logo' ? Math.min(1, progression / 0.25) : etat === 'depart' ? progression : 1
 
     // Un amortissement indépendant de la cadence : sans lui, la bascule est
     // saccadée quand le défilement arrive par à-coups. Sous « mouvement

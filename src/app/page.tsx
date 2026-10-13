@@ -1,12 +1,11 @@
 /* eslint-disable react/no-unescaped-entities */
 import type { Metadata } from 'next'
-import Link from 'next/link'
-import { CheckCircle } from 'lucide-react'
 import HomeFaq from '@/components/home/HomeFaq'
 import { SITE } from '@/config/site'
 import dynamic from 'next/dynamic'
 import Ouverture from '@/components/home/Ouverture'
 import Strates from '@/components/home/Strates'
+import Depart from '@/components/home/Depart'
 
 // Sections sous la fold — code-splitting pour étaler l'hydratation (TBT)
 const Offre = dynamic(() => import('@/components/home/Offre'))
@@ -193,64 +192,16 @@ export default function Home() {
           intitule="Transition : vers le premier contact"
         />
 
-        {/* 11 — LE PREMIER CONTACT.
-            La redite des quatre repères est ici assumée : à la clôture, un
-            rappel est un argument de conversion, pas une répétition. C'est
-            le seul endroit de la page où ils reviennent. */}
-        <section className="py-28 bg-[#070B16] relative overflow-hidden">
-          <div className="star-field" aria-hidden="true">
-            {[
-              [8,12,3.1,0.5],[17,67,2.8,1.2],[23,34,4.2,0.0],[31,89,3.7,2.1],[42,21,2.5,1.8],
-              [51,55,3.9,0.3],[63,78,2.2,2.5],[72,43,4.8,0.8],[81,11,3.3,1.5],[91,66,2.7,0.1],
-              [6,82,4.1,2.8],[15,47,3.5,0.6],[26,93,2.9,1.9],[35,28,4.5,0.9],[47,71,3.2,2.3],
-              [56,16,2.6,1.1],[68,60,4.0,0.4],[76,85,3.8,2.0],[86,37,2.4,1.6],[95,52,4.6,0.7],
-              [4,29,3.0,2.9],[19,74,2.3,0.2],[29,48,4.3,1.4],[39,91,3.6,2.6],[49,13,2.8,0.0],
-              [59,57,4.7,1.7],[69,32,3.1,2.4],[79,77,2.5,0.5],[88,22,4.4,1.3],[97,68,3.9,2.2],
-            ].map(([left, top, dur, delay], i) => (
-              <div key={i} className="star" style={{
-                left: `${left}%`,
-                top: `${top}%`,
-                '--dur': `${dur}s`,
-                '--delay': `${delay}s`,
-              } as React.CSSProperties} />
-            ))}
-          </div>
-          <div className="pointer-events-none absolute inset-0 flex items-center justify-center" aria-hidden="true">
-            <div className="halo-breathe w-[600px] h-[600px] rounded-full"
-              style={{ background: 'radial-gradient(ellipse, rgba(45,125,210,0.15) 0%, rgba(245,158,11,0.05) 40%, transparent 70%)' }} />
-          </div>
-          <div className="relative max-w-3xl mx-auto px-4 sm:px-6 text-center">
-            <p className="su-surtitre su-surtitre--nuit mb-4">11 — Démarrons</p>
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-              Votre site internet vous attend
-            </h2>
-            <p className="text-white/70 text-lg mb-10">
-              Devis gratuit sous 72 h. Premier rendez-vous sans engagement.
-              Livraison garantie en {SITE.delais.vitrine}.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Link href="/contact" className="btn-magnetic cta-glow relative overflow-hidden px-8 py-4 bg-gold hover:bg-gold/90 text-ink font-bold rounded-xl shadow-lg shadow-amber-500/30 transition-all hover:-translate-y-0.5">
-                Démarrer mon projet <span className="arrow-slide ml-1">→</span>
-              </Link>
-              <Link href="/tarifs" className="px-8 py-4 border border-white/25 text-white hover:bg-white/10 hover:border-white/40 font-semibold rounded-xl transition-all">
-                Voir les tarifs
-              </Link>
-            </div>
-            <div className="mt-10 flex flex-wrap justify-center gap-6">
-              {[
-                `${SITE.pricing.vitrine} € tout inclus`,
-                `Livraison en ${SITE.delais.vitrine}`,
-                'Code 100 % propriétaire',
-                SITE.hebergement.court,
-              ].map(item => (
-                <div key={item} className="flex items-center gap-1.5 text-white/60 text-sm">
-                  <CheckCircle size={14} className="text-success" />
-                  {item}
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
+        {/* 09 — LE DÉPART. La bande revient au centre et se replie en
+            logo exact : le site s'ouvre sur le logo qui devient un objet et
+            se ferme sur l'objet qui redevient le logo.
+
+            CE QUE ÇA REMPLACE : trente étoiles clignotantes positionnées une
+            par une, un halo qui respire et un bouton à lueur. Le dossier les
+            écarte nommément (§10.10 : « sans étoiles ni confettis ») — c'est
+            de la décoration empruntée à un autre métier, qui tourne en
+            continu sans qu'on puisse l'arrêter et ne dit rien du travail. */}
+        <Depart />
 
       </div>
     </>

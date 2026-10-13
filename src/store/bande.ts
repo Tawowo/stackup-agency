@@ -27,6 +27,7 @@ export type EtatBande =
   | 'reseau' // modules reliés (salle des machines, solutions)
   | 'plan' // à plat vue de dessus, cotée (tarifs)
   | 'repos' // repliée en logo, petite, immobile (pages éditoriales)
+  | 'depart' // revient au centre et se replie en logo exact : la boucle se ferme
 
 export type Offre = 'association' | 'vitrine' | 'multipages' | 'boutique' | 'gestion'
 

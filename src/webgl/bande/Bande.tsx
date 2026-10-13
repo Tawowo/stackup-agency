@@ -31,6 +31,21 @@ import { hauteurVisible } from '../cadrage'
 const NAVY = '#0D2C4C'
 const AMBRE = '#F69106'
 
+/* LA VARIANTE CLAIRE, pour les fonds sombres.
+ *
+ * Ce ne sont pas des couleurs inventées : ce sont exactement celles que
+ * `LogoMarque` applique déjà quand on lui demande sa teinte « clair ».
+ * Le dossier impose des variantes claire et sombre définies (§4.2), et en
+ * avoir deux jeux qui divergent serait la même faute que deux versions d'une
+ * condition commerciale.
+ *
+ * Le besoin s'est vu en capture sur LE DÉPART : le ruban y était bien
+ * dessiné — le compteur du renderer annonçait ses 96 triangles — mais
+ * invisible, parce que son brin #0D2C4C se pose sur un fond #070B16. Un
+ * objet correctement rendu et illisible reste un objet absent. */
+const NAVY_CLAIR = '#F5F3EE'
+const AMBRE_CLAIR = '#FBBF24'
+
 /** Épaisseur maximale, en fraction de la largeur de la bande (fiche 11.1). */
 const EPAISSEUR_MAX = 0.12
 /** Une épaisseur nulle rendrait les normales indéfinies : on garde un epsilon. */
@@ -72,7 +87,13 @@ export default function Bande() {
     if (cache) return
 
     const fige = mouvement === 'aucun'
-    const p = etat === 'logo' ? Math.min(1, progression / 0.25) : 1
+    /* Au DÉPART, la progression descend de 1 à 0 : la bande part du volume
+       et se replie jusqu'à la silhouette exacte du logo. C'est la même
+       mécanique que la RÉVÉLATION du hero, jouée à l'envers — et c'est
+       voulu : le site s'ouvre sur le logo qui devient un objet et se ferme
+       sur l'objet qui redevient le logo. */
+    const p =
+      etat === 'logo' ? Math.min(1, progression / 0.25) : etat === 'depart' ? progression : 1
 
     /* ── Épaisseur ────────────────────────────────────────────────────────
        Elle monte entre p = 0,1 et p = 0,5 (fiche 11.1). Avant 0,1 la bande
@@ -146,10 +167,16 @@ export default function Bande() {
        Seul le brin navy prend l'accent du projet : l'ambre du logo ne change
        jamais de teinte au-delà de ses deux valeurs (règle 4.2 §2). */
     const mailles = g.children as { material?: { color?: Color } }[]
+    const surFonce = etat === 'depart'
     const matNavy = mailles[0]?.material
     if (matNavy?.color) {
-      cible.set(accent ?? NAVY)
+      cible.set(accent ?? (surFonce ? NAVY_CLAIR : NAVY))
       matNavy.color.lerp(cible, 1 - Math.exp(-delta * 3))
+    }
+    const matAmbre = mailles[1]?.material
+    if (matAmbre?.color) {
+      cible.set(surFonce ? AMBRE_CLAIR : AMBRE)
+      matAmbre.color.lerp(cible, 1 - Math.exp(-delta * 3))
     }
   })
 

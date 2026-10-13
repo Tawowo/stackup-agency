@@ -5352,3 +5352,145 @@ html[data-grille='oui'] .su-ouv__grille {
   padding-left: 0.75rem;
   border-left: 2px solid rgb(var(--su-or-rgb) / 0.5);
 }
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   §34. LE DÉPART — moment 09
+   Spécification : dossier §10.10. Fond encre, la bande au centre qui se
+   replie en logo. Pas d'étoiles, pas de halo qui respire, pas de lueur sur
+   le bouton : le dossier les écarte nommément, et trente éléments animés en
+   permanence au bas d'une page sont du travail fait pour rien.
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* LA SECTION NE PEINT RIEN, C'EST LE BODY QUI PORTE L'ENCRE.
+
+   Elle portait d'abord `background: #070b16`. En capture, le ruban était
+   bien dessiné — le compteur du renderer annonçait ses 96 triangles — mais
+   introuvable à l'écran. Un fond de section opaque passe PAR-DESSUS le
+   canvas, qui est en `position: fixed` au-dessous du contenu de page. C'est
+   exactement ce qui était arrivé au hero, et la correction est la même, déjà
+   écrite pour `.su-ouv` : le body porte la couleur, les sections qui veulent
+   voir la scène ne peignent pas.
+
+   La classe est posée sur <html> par la section elle-même quand elle entre à
+   l'écran. Les sections qui la précèdent peignent leur propre ivoire, donc
+   l'encre du body n'est visible que là où on la veut. */
+.su-depart {
+  position: relative;
+  background: transparent;
+  padding: clamp(4rem, 10vh, 7rem) 0 clamp(5rem, 12vh, 8rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(1.5rem, 4vh, 3rem);
+  text-align: center;
+  overflow: hidden;
+}
+
+/* La place que la bande vient occuper. Grande : c'est la dernière image. */
+.su-depart__scene {
+  width: min(100% - 3rem, 34rem);
+  height: clamp(13rem, 30vh, 20rem);
+}
+
+.su-depart__corps {
+  position: relative;
+  z-index: 2;
+  width: min(100% - 3rem, 52rem);
+}
+
+.su-depart__titre {
+  margin: 0.9rem 0 0;
+  font-family: var(--font-space), Poppins, system-ui, sans-serif;
+  font-weight: 700;
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  line-height: 1.04;
+  letter-spacing: -0.03em;
+  color: #fff;
+}
+
+.su-depart__voies {
+  margin-top: clamp(1.75rem, 4vh, 2.75rem);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.su-depart__voie {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1.4rem;
+  border: 1px solid rgb(255 255 255 / 0.25);
+  border-radius: 0.65rem;
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: background-color 180ms ease, border-color 180ms ease;
+}
+
+.su-depart__voie:hover {
+  background: rgb(255 255 255 / 0.08);
+  border-color: rgb(255 255 255 / 0.4);
+}
+
+.su-depart__voie:focus-visible {
+  outline: 2px solid var(--su-or);
+  outline-offset: 3px;
+}
+
+/* Une seule couleur d'action, donc un seul bouton la porte. */
+.su-depart__voie--eclat {
+  background: var(--su-or);
+  border-color: var(--su-or);
+  color: var(--su-encre);
+}
+
+.su-depart__voie--eclat:hover {
+  background: var(--su-or-clair);
+  border-color: var(--su-or-clair);
+}
+
+.su-depart__cotes {
+  margin: clamp(2rem, 5vh, 3rem) 0 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+  border-top: 1px solid rgb(255 255 255 / 0.14);
+  padding-top: 1.5rem;
+}
+
+.su-depart__cotes dt {
+  font-family: var(--font-space), Poppins, system-ui, sans-serif;
+  font-weight: 700;
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
+  color: #fff;
+}
+
+.su-depart__cotes dd {
+  margin: 0.25rem 0 0;
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.04em;
+  color: rgb(255 255 255 / 0.72);
+}
+
+.su-depart__creneau {
+  margin: 1.5rem 0 0;
+  font-size: 0.9rem;
+  color: rgb(255 255 255 / 0.78);
+}
+
+html[data-fin='oui'] body {
+  background-color: #070b16;
+}
+
+@media (max-width: 899px) {
+  .su-depart__scene {
+    height: 30vh;
+  }
+  .su-depart__cotes {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem 0.75rem;
+  }
+}
