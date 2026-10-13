@@ -67,7 +67,7 @@ export default function Bande() {
        Et rien du tout quand la page ne demande rien ('absent') : sans cette
        ligne, la bande s'affichait par-dessus le contenu des pages qui ne
        déclarent aucune scène. */
-    const cache = etat === 'offre' || etat === 'absent'
+    const cache = etat === 'offre' || etat === 'absent' || etat === 'strates'
     pr.visible = !cache
     if (cache) return
 

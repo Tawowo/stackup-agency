@@ -32,6 +32,7 @@ import { useBande } from '@/store/bande'
 import CameraRig from './CameraRig'
 import Bande from './bande/Bande'
 import BandeInstanciee from './bande/BandeInstanciee'
+import Strates from './bande/Strates'
 
 /** Angle de la lumière, partagé avec le CSS (`--su-angle-lumiere`). */
 const ANGLE_LUMIERE = -18
@@ -89,6 +90,7 @@ function contenuScene(mobile: boolean) {
       <directionalLight position={[4, -3, -5]} intensity={0.4} />
       <Bande />
       <BandeInstanciee />
+      <Strates />
       <Temoin />
     </>
   )
@@ -143,6 +145,17 @@ export default function Scene() {
         eventSource={typeof document !== 'undefined' ? document.body : undefined}
         eventPrefix="client"
         onCreated={({ gl }) => {
+          /* LE DÉCOUPAGE LOCAL S'ACTIVE ICI, ET NULLE PART AILLEURS.
+
+             Il l'était d'abord dans un `useEffect` de `Strates`. Résultat vu
+             en capture : les cinq lamelles dessinaient chacune le ruban
+             ENTIER, superposées — une seule forme au lieu d'une pile. Le
+             motif est connu de three.js : le programme GLSL est compilé sans
+             le support du découpage, et basculer le drapeau ensuite ne le
+             recompile pas. Il doit donc être vrai avant que le premier
+             matériau ne compile, c'est-à-dire ici. */
+          gl.localClippingEnabled = true
+
           gl.domElement.addEventListener(
             'webglcontextlost',
             (e) => {

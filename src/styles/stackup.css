@@ -4402,7 +4402,7 @@ html[data-grille='oui'] .su-ouv__grille {
   font-size: clamp(3.4rem, 13vw, 11rem);
   line-height: 0.82;
   letter-spacing: -0.05em;
-  color: var(--su-ambre-texte, #b45309);
+  color: var(--su-or-texte);
   cursor: pointer;
   vertical-align: baseline;
   transition: color 320ms var(--su-pose, cubic-bezier(0.16, 0.84, 0.28, 1));
@@ -4685,7 +4685,7 @@ html[data-grille='oui'] .su-ouv__grille {
   bottom: -1px;
   height: 2px;
   width: 100%;
-  background: var(--su-ambre-texte, #b45309);
+  background: var(--su-or-texte);
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 320ms var(--su-pose, cubic-bezier(0.16, 0.84, 0.28, 1));
@@ -4848,6 +4848,416 @@ html[data-grille='oui'] .su-ouv__grille {
 @media (prefers-reduced-motion: reduce) {
   .su-offre__onglet,
   .su-offre__onglet::before {
+    transition: none;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   §32. LES STRATES — moment 01
+   Spécification : dossier §10.2, fiche d'animation 11.2.
+
+   ÉPINGLAGE. 250 vh de section, contenu `sticky`. Pas de ScrollTrigger :
+   son pin fige et compense en JavaScript, ce qui ajoute un second ticker à
+   côté de celui de R3F (interdit, §17.6 règle 18). `sticky` fait le même
+   travail dans le compositeur et survit à l'absence de JavaScript.
+
+   APPARITION PAR DÉCOUPE, PAS PAR FONDU. Le fondu + translation verticale
+   est la seule apparition explicitement interdite par le dossier (règle 2).
+   Ici chaque bloc de la maquette est RÉVÉLÉ par un `clip-path` qui remonte :
+   le bloc est à sa place dès le départ, c'est la lame qui passe. C'est le
+   geste du site — on découpe des couches — et non un effet d'arrivée.
+
+   `--su-pose` VAUT 1 PAR DÉFAUT. Sans JavaScript, la maquette est entière.
+   C'est le composant qui la replie au montage. Règle 17 : jamais d'état
+   masqué par défaut.
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+.su-strates {
+  position: relative;
+  /* 250 vh : la hauteur de course de l'épinglage. */
+  height: 250vh;
+  /* Pas de fond : le calque de la scène doit rester visible. */
+  background: transparent;
+}
+
+.su-strates__collant {
+  position: sticky;
+  top: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: clamp(1.5rem, 4vh, 3rem);
+  padding: clamp(3rem, 8vh, 6rem) 0;
+}
+
+.su-strates__entete,
+.su-strates__corps {
+  position: relative;
+  z-index: 2;
+  width: min(100% - 3rem, 86rem);
+  margin-inline: auto;
+}
+
+.su-strates__titre {
+  margin: 1rem 0 0;
+  font-family: var(--font-space), Poppins, system-ui, sans-serif;
+  font-weight: 700;
+  font-size: clamp(1.9rem, 4.4vw, 3.2rem);
+  line-height: 1.04;
+  letter-spacing: -0.03em;
+  color: var(--su-encre);
+}
+
+.su-strates__chapo {
+  margin: 0.9rem 0 0;
+  max-width: 44ch;
+  font-size: clamp(1rem, 1.1vw, 1.12rem);
+  line-height: 1.55;
+  color: rgb(var(--su-navy-rgb) / 0.72);
+}
+
+.su-strates__corps {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: clamp(1.5rem, 3vw, 2.5rem);
+  align-items: center;
+}
+
+/* La place de la pile en volume : une boîte vide que la scène vient
+   occuper. Elle ne porte aucun contenu — tout est dans les légendes. */
+.su-strates__scene {
+  grid-column: 1 / span 4;
+  height: clamp(16rem, 42vh, 26rem);
+}
+
+/* ── Les légendes ──────────────────────────────────────────────────────── */
+
+.su-strates__legendes {
+  grid-column: 5 / span 4;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid rgb(var(--su-navy-rgb) / 0.14);
+}
+
+.su-strates__legende {
+  border-bottom: 1px solid rgb(var(--su-navy-rgb) / 0.14);
+  transition: opacity 320ms var(--su-pose-courbe, cubic-bezier(0.2, 0.7, 0.3, 1));
+}
+
+.su-strates__legende[data-eteinte='true'] {
+  opacity: 0.3;
+}
+
+.su-strates__bouton {
+  --su-pose: 1;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.2rem 0.75rem;
+  width: 100%;
+  padding: 0.85rem 0.25rem;
+  background: none;
+  border: 0;
+  text-align: left;
+  cursor: pointer;
+  color: inherit;
+  /* La découpe : le bloc se dévoile par le bas, comme une lame qui passe. */
+  clip-path: inset(0 0 calc((1 - var(--su-pose)) * 100%) 0);
+}
+
+.su-strates__bouton:focus-visible {
+  outline: 2px solid var(--su-or);
+  outline-offset: 2px;
+}
+
+.su-strates__rang {
+  grid-row: 1 / span 2;
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  /* 0,75 et non 0,4 : à 0,4 le rang tombait à 2,19:1 sur l'ivoire, soit
+     moins de la moitié du minimum. Mesuré, pas estimé — 0,70 est le premier
+     palier qui passe (4,68:1), 0,75 laisse une marge. */
+  color: rgb(var(--su-navy-rgb) / 0.75);
+  padding-top: 0.25rem;
+}
+
+.su-strates__nom {
+  font-family: var(--font-space), Poppins, system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 1.02rem;
+  color: var(--su-encre);
+}
+
+.su-strates__bouton[aria-pressed='true'] .su-strates__nom {
+  color: var(--su-or-texte);
+}
+
+.su-strates__texte {
+  grid-column: 2;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: rgb(var(--su-navy-rgb) / 0.72);
+}
+
+.su-strates__technique {
+  grid-column: 2;
+  margin-top: 0.3rem;
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.04em;
+  /* Même raison que le rang : 0,45 donnait 2,45:1. */
+  color: rgb(var(--su-navy-rgb) / 0.75);
+}
+
+/* ── La maquette ───────────────────────────────────────────────────────── */
+
+.su-strates__maquette {
+  grid-column: 9 / span 4;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0.75rem;
+  background: var(--su-ivoire);
+  border: 1px solid rgb(var(--su-navy-rgb) / 0.12);
+  border-radius: 0.6rem;
+  box-shadow: 0 18px 40px -28px rgb(var(--su-navy-rgb) / 0.5);
+  /* Hauteur dictée par le contenu : l'ancien `aspect-ratio` réservait un
+     tiers de vide sous le formulaire, vu en capture. */
+  min-height: 22rem;
+}
+
+.su-strates__maquette > * {
+  --su-pose: 1;
+  clip-path: inset(0 0 calc((1 - var(--su-pose)) * 100%) 0);
+  transition: opacity 320ms cubic-bezier(0.2, 0.7, 0.3, 1);
+}
+
+.su-strates__maquette > [data-eteinte='true'] {
+  opacity: 0.25;
+}
+
+.su-maq__barre {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.5rem;
+  background: rgb(var(--su-navy-rgb) / 0.06);
+  border-radius: 0.3rem;
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 0.6rem;
+  color: rgb(var(--su-navy-rgb) / 0.6);
+}
+
+.su-maq__pastille {
+  width: 0.4rem;
+  height: 0.4rem;
+  border-radius: 50%;
+  background: var(--su-or);
+  flex: none;
+}
+
+.su-maq__url { flex: 1; }
+
+.su-maq__ssl {
+  font-size: 0.52rem;
+  letter-spacing: 0.08em;
+  padding: 0.1rem 0.3rem;
+  border: 1px solid rgb(var(--su-navy-rgb) / 0.22);
+  border-radius: 0.2rem;
+}
+
+.su-maq__entete {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.4rem 0.2rem;
+  border-bottom: 1px solid rgb(var(--su-navy-rgb) / 0.1);
+}
+
+.su-maq__logo {
+  width: 1.6rem;
+  height: 0.5rem;
+  background: var(--su-encre);
+  border-radius: 0.1rem;
+}
+
+.su-maq__nav { display: flex; gap: 0.3rem; }
+
+.su-maq__nav i {
+  display: block;
+  width: 0.9rem;
+  height: 0.26rem;
+  background: rgb(var(--su-navy-rgb) / 0.25);
+  border-radius: 0.1rem;
+}
+
+.su-maq__hero {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding: 0.7rem 0.2rem;
+}
+
+.su-maq__titre {
+  height: 0.7rem;
+  width: 85%;
+  background: var(--su-encre);
+  border-radius: 0.12rem;
+}
+
+.su-maq__ligne {
+  height: 0.3rem;
+  width: 100%;
+  background: rgb(var(--su-navy-rgb) / 0.18);
+  border-radius: 0.1rem;
+}
+
+.su-maq__ligne--courte { width: 62%; }
+
+.su-maq__actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding: 0.2rem;
+}
+
+.su-maq__bouton {
+  display: inline-block;
+  padding: 0.3rem 0.5rem;
+  background: var(--su-or);
+  color: var(--su-encre);
+  border-radius: 0.25rem;
+  font-size: 0.6rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.su-maq__champ {
+  height: 1.1rem;
+  background: rgb(var(--su-navy-rgb) / 0.05);
+  border: 1px solid rgb(var(--su-navy-rgb) / 0.16);
+  border-radius: 0.25rem;
+}
+
+.su-maq__fiche {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  padding: 0.45rem 0.5rem;
+  background: rgb(var(--su-navy-rgb) / 0.04);
+  border-left: 2px solid var(--su-or);
+  border-radius: 0.2rem;
+}
+
+.su-maq__fiche-titre {
+  font-size: 0.62rem;
+  font-weight: 600;
+  color: var(--su-encre);
+}
+
+.su-maq__fiche-meta {
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 0.52rem;
+  color: rgb(var(--su-navy-rgb) / 0.55);
+}
+
+/* ── Portrait ──────────────────────────────────────────────────────────────
+   Pas de longue course épinglée sur téléphone : 160 vh au lieu de 250. La
+   pile passe en haut, la maquette dessous, les légendes entre les deux. Le
+   dossier le demande explicitement (§10.2 « Mobile »), et c'est aussi la
+   seule mise en page tenable : trois colonnes dans 390 px ne se lisent pas.
+   ──────────────────────────────────────────────────────────────────────── */
+
+@media (max-width: 899px) {
+  .su-strates {
+    height: 160vh;
+  }
+
+  /* PAS D'ÉPINGLAGE EN PORTRAIT, et ce n'est pas un choix de confort.
+
+     Avec `sticky`, le contenu empilé — titre, chapô, pile, cinq légendes,
+     maquette — dépasse largement 100 vh dans 390 px. Le bloc collant ne
+     peut alors rien retenir : il défile comme un bloc ordinaire et le titre
+     sort de l'écran avant que la maquette n'y entre. Vu en capture. Le
+     dossier demandait déjà « pas de pin long » (§10.2) ; la mesure dit
+     pourquoi. */
+  .su-strates__collant {
+    position: static;
+    min-height: 0;
+    justify-content: flex-start;
+    gap: 1.25rem;
+    padding: clamp(2.5rem, 7vh, 4rem) 0;
+  }
+
+  .su-strates__corps {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .su-strates__scene {
+    grid-column: 1 / -1;
+    height: 30vh;
+  }
+
+  /* LES LÉGENDES DEVIENNENT DES ONGLETS BALAYABLES (§10.2 « Mobile »).
+     Cinq blocs de texte empilés font défiler la maquette hors de portée ;
+     une rangée qui se balaye les ramène dans un seul écran. Le défilement
+     tactile suffit : aucune flèche à viser, et rien ne dépend du survol. */
+  .su-strates__legendes {
+    grid-column: 1 / -1;
+    flex-direction: row;
+    border-top: 0;
+    gap: 0.75rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    /* Les onglets débordent volontairement de la gouttière pour que le
+       suivant s'annonce au bord de l'écran — sans jamais créer de
+       défilement horizontal de PAGE : le conteneur seul défile. */
+    padding-bottom: 0.5rem;
+    scrollbar-width: none;
+  }
+  .su-strates__legendes::-webkit-scrollbar {
+    display: none;
+  }
+
+  .su-strates__legende {
+    flex: 0 0 78%;
+    scroll-snap-align: center;
+    border-bottom: 0;
+    border: 1px solid rgb(var(--su-navy-rgb) / 0.14);
+    border-radius: 0.5rem;
+  }
+
+  .su-strates__bouton {
+    height: 100%;
+    padding: 0.85rem;
+  }
+
+  .su-strates__maquette {
+    grid-column: 1 / -1;
+    aspect-ratio: auto;
+  }
+
+  .su-strates__chapo {
+    font-size: 0.95rem;
+  }
+}
+
+/* ── Mouvement réduit ──────────────────────────────────────────────────────
+   La découpe devient une coupe nette : la maquette est entière, point. On
+   ne remplace pas une animation par une autre, on la retire.
+   ──────────────────────────────────────────────────────────────────────── */
+
+@media (prefers-reduced-motion: reduce) {
+  .su-strates__bouton,
+  .su-strates__maquette > * {
+    clip-path: none;
     transition: none;
   }
 }

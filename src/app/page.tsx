@@ -6,6 +6,7 @@ import HomeFaq from '@/components/home/HomeFaq'
 import { SITE } from '@/config/site'
 import dynamic from 'next/dynamic'
 import Ouverture from '@/components/home/Ouverture'
+import Strates from '@/components/home/Strates'
 
 // Sections sous la fold — code-splitting pour étaler l'hydratation (TBT)
 const Offre = dynamic(() => import('@/components/home/Offre'))
@@ -15,7 +16,6 @@ const LaRoute = dynamic(() => import('@/components/home/LaRoute'))
 const RaisonDetre = dynamic(() => import('@/components/home/RaisonDetre'))
 const PreuveLogicielle = dynamic(() => import('@/components/home/PreuveLogicielle'))
 const Seuil = dynamic(() => import('@/components/home/Seuil'))
-const Anatomie = dynamic(() => import('@/components/home/Anatomie'))
 
 export const metadata: Metadata = {
   title: "Agence web Tours — Site internet en 10 jours",
@@ -117,30 +117,34 @@ export default function Home() {
             cotes aux valeurs réelles, et une seule chose à regarder. */}
         <Ouverture />
 
-        {/* 02 — LE SEUIL : on sort de la nuit.
-            Le franchissement se joue ici, dans une section volontairement
-            sans corps de texte : le fond et le texte ne se croisent donc sur
-            aucun contenu, et le contraste ne s'effondre jamais. */}
-        <Seuil
-          scene="seuil"
-          nuit={0.5}
-          mots={['Une structure', 'devient', 'une interface.']}
-          intitule="Transition : d’une structure à une interface"
-        />
+        {/* 01 — LES STRATES. La bande se coupe en cinq lamelles et la
+            maquette se construit, une couche à la fois.
 
-        {/* 03 — L'ANATOMIE : le seuil vient de promettre qu'une structure
-            devient une interface. Cette section le démontre, en ouvrant un
-            site en cinq couches. Mécanisme volontairement sans rapport avec
-            les particules : de vrais plans HTML en perspective. */}
-        <div data-scene="preuve" data-nuit="0">
-          <Anatomie />
-        </div>
+            CE QUE ÇA REMPLACE : « l'Anatomie », qui racontait déjà « un site
+            a cinq couches » avec des plans HTML en perspective. Garder les
+            deux aurait donné deux versions du même geste, ce que le dossier
+            interdit (§17.6 règle 3 : une expérience = un mécanisme nommé).
+            Le propos est conservé ; c'est la bande — l'objet du site — qui
+            le porte désormais, au lieu d'un décor sans rapport avec elle. */}
+        <Strates />
 
         {/* 02 — L'OFFRE. Cinq onglets, et la bande prend la configuration
             de l'offre choisie. Remplace « l'Atelier » : une grille de sept
             vignettes et vingt-cinq fondus-translations, qui annonçait
             « survolez » alors qu'elle ne réagissait qu'au clic. */}
         <Offre />
+
+        {/* 04 — LE SEUIL. Il était en deuxième position, quand l'ouverture
+            se jouait en pleine nuit et qu'il fallait en sortir. L'ouverture
+            est claire depuis la refonte du hero : le seuil n'a plus de nuit
+            à quitter et reprend sa place de l'ordre prévu (§10.5), entre
+            l'offre et les preuves. */}
+        <Seuil
+          scene="seuil"
+          nuit={0.5}
+          mots={['Une structure', 'devient', 'une interface.']}
+          intitule="Transition : d’une structure à une interface"
+        />
 
         {/* 05 — LES RÉALISATIONS : îlot sombre autonome, indépendant de la
             traversée globale. Une salle de projection à l'intérieur d'une

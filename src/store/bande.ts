@@ -63,6 +63,13 @@ interface EtatGlobal {
    * et lisible par un lecteur d'écran.
    */
   ancrage: { cx: number; cy: number; hauteur: number } | null
+  /**
+   * La couche isolée dans les STRATES, ou `null` si la pile est entière.
+   *
+   * L'isolement est une interaction au CLIC, jamais au survol : le dossier
+   * l'interdit (§17.6 règle 16) et le tactile n'a pas de survol du tout.
+   */
+  isolee: number | null
 
   setEtat: (e: EtatBande) => void
   setProgression: (p: number) => void
@@ -73,6 +80,7 @@ interface EtatGlobal {
   setRepli: (r: boolean) => void
   setPrete: (p: boolean) => void
   setAncrage: (a: { cx: number; cy: number; hauteur: number } | null) => void
+  setIsolee: (i: number | null) => void
 }
 
 export const useBande = create<EtatGlobal>()(
@@ -98,6 +106,7 @@ export const useBande = create<EtatGlobal>()(
     repli: false,
     prete: false,
     ancrage: null,
+    isolee: null,
 
     setEtat: (etat) => set({ etat }),
     // Pas de `set` si la valeur n'a pas bougé : la progression est écrite à
@@ -111,6 +120,7 @@ export const useBande = create<EtatGlobal>()(
     setRepli: (repli) => set({ repli }),
     setPrete: (prete) => set({ prete }),
     setAncrage: (ancrage) => set({ ancrage }),
+    setIsolee: (isolee) => set({ isolee }),
   })),
 )
 
