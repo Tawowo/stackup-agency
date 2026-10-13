@@ -8,11 +8,14 @@ export interface Etat {
   /** Paramètres d'URL ajoutés à la route. */
   query?: string
   /** Geste à exécuter avant la capture. */
-  action?: 'drag' | 'menu'
+  action?: 'drag' | 'menu' | 'touche3' | 'onglet2' | 'onglet3' | 'onglet4'
   /** Limiter à certaines largeurs (par défaut : 1440 et 390). */
   largeurs?: number[]
-  /** Position de scroll, en fraction de la distance épinglée du moment 00. */
+  /** Position de scroll, en fraction de la distance épinglée du moment visé (par défaut 00). */
   scroll?: number
+  moment?: string
+  /** Mobile : index du projet à afficher par balayage de la pellicule. */
+  piste?: number
   /** Attente supplémentaire après le chargement, en ms (animations de scène). */
   attente?: number
   /** Ne pas prendre la variante mouvement réduit. */
@@ -38,6 +41,14 @@ export const ROUTES: Route[] = [
       { nom: 'perspective', query: `${QUALITE}&layout=pile&proj=0`, attente: 1600, sansRm: true },
       { nom: 'jour', query: `${QUALITE}&layout=logo&fond=ivoire`, attente: 1200, sansRm: true },
       { nom: 'repli', query: `webgl=0&pane=0`, attente: 300, sansRm: true },
+      { nom: 'strates-ouvert', query: `${QUALITE}&layout=strates&ouverture=1&rx=0.55&ry=-0.35&proj=0.3`, attente: 1600, sansRm: true },
+      { nom: 'strates-ferme', query: `${QUALITE}&layout=strates&ouverture=0&rx=0.55&ry=-0.35&proj=0.3`, attente: 1600, sansRm: true },
+      { nom: 'page', query: `${QUALITE}&layout=page&ry=-0.3&proj=0.2`, attente: 1600, sansRm: true },
+      { nom: 'multi', query: `${QUALITE}&layout=multi&rx=0.08&ry=-0.2&proj=0`, attente: 1600, sansRm: true },
+      { nom: 'boutique', query: `${QUALITE}&layout=boutique`, attente: 1600, sansRm: true },
+      { nom: 'logiciel', query: `${QUALITE}&layout=logiciel`, attente: 1600, sansRm: true },
+      { nom: 'pellicule', query: `${QUALITE}&layout=pellicule`, attente: 1600, sansRm: true },
+      { nom: 'noyau', query: `${QUALITE}&layout=noyau&proj=0.3`, attente: 1600, sansRm: true, largeurs: [1440] },
     ],
   },
   {
@@ -52,6 +63,21 @@ export const ROUTES: Route[] = [
       { nom: '00-menu', query: QUALITE, action: 'menu', attente: 1000, sansRm: true, largeurs: [390] },
       { nom: '00-sans-webgl', query: 'webgl=0', attente: 1500, sansRm: true },
       { nom: '00-sans-webgl-p1', query: 'webgl=0', scroll: 1, attente: 1500, sansRm: true },
+      { nom: '01-ferme', query: QUALITE, moment: '01', scroll: 0.02, attente: 1800 },
+      { nom: '01-2-ouvertes', query: QUALITE, moment: '01', scroll: 0.25, attente: 1600, sansRm: true },
+      { nom: '01-5-ouvertes', query: QUALITE, moment: '01', scroll: 0.7, attente: 1800 },
+      { nom: '01-isole-3', query: QUALITE, moment: '01', scroll: 0.7, action: 'touche3', attente: 1400, sansRm: true },
+      { nom: '01-referme', query: QUALITE, moment: '01', scroll: 1, attente: 1800, sansRm: true },
+      { nom: '02-une-page', query: QUALITE, moment: '02', scroll: 0, attente: 2600 },
+      { nom: '02-multi', query: QUALITE, moment: '02', scroll: 0, action: 'onglet2', attente: 2200, sansRm: true },
+      { nom: '02-boutique', query: QUALITE, moment: '02', scroll: 0, action: 'onglet3', attente: 2200, sansRm: true },
+      { nom: '02-outil', query: QUALITE, moment: '02', scroll: 0, action: 'onglet4', attente: 2200, sansRm: true },
+      { nom: '02-transition', query: QUALITE, moment: '02', scroll: 0, action: 'onglet2', attente: 450, sansRm: true },
+      { nom: '03-projet-1', query: QUALITE, moment: '03', scroll: 0, attente: 2400 },
+      { nom: '03-projet-3', query: QUALITE, moment: '03', scroll: 0.5, piste: 2, attente: 2400, sansRm: true },
+      { nom: '03-glissement', query: QUALITE, moment: '03', scroll: 0.37, piste: 1, attente: 500, sansRm: true },
+      { nom: '03-projet-5', query: QUALITE, moment: '03', scroll: 1, piste: 4, attente: 2400, sansRm: true },
+      { nom: '04-seuil', query: QUALITE, moment: '04', scroll: 0, attente: 2400 },
     ],
   },
 ]

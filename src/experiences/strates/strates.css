@@ -1,0 +1,191 @@
+.su-str {
+  --su-p: 0;
+  position: relative;
+}
+.su-str__scene {
+  min-height: 100svh;
+}
+.su-str__grille {
+  position: relative;
+  max-width: var(--su-conteneur-scene);
+  margin: 0 auto;
+  padding: 96px var(--su-gouttiere) 32px;
+  min-height: 100svh;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: auto 1fr auto;
+  column-gap: var(--su-gouttiere);
+}
+.su-str__tete {
+  grid-column: 1 / span 7;
+  grid-row: 1;
+  perspective: 900px;
+}
+.su-str__etiquette {
+  color: var(--su-texte-doux);
+  margin: 0 0 12px;
+}
+.su-str__titre {
+  margin: 0;
+  font-size: clamp(2.4rem, 5.2vw, 5rem);
+  color: var(--su-ivoire);
+}
+.su-str__mot {
+  display: inline-block;
+  will-change: transform;
+}
+.su-str__cadre-zone {
+  grid-column: 5 / span 7;
+  grid-row: 1 / span 3;
+  display: flex;
+  align-items: center;
+  pointer-events: none;
+}
+.su-str__cadre {
+  width: 100%;
+  height: min(82svh, 100%);
+}
+.su-str__liste {
+  grid-column: 1 / span 4;
+  grid-row: 2;
+  align-self: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.su-str__couche {
+  border-top: 1px solid color-mix(in srgb, var(--su-graphite) 30%, transparent);
+  transition: opacity var(--su-geste) var(--su-glisse);
+}
+.su-str__couche[data-isole='0'] {
+  opacity: 0.35;
+}
+.su-str__bouton {
+  display: grid;
+  grid-template-columns: 3ch 1fr;
+  grid-template-rows: auto auto;
+  column-gap: 14px;
+  width: 100%;
+  min-height: 44px;
+  padding: 12px 0;
+  background: none;
+  border: 0;
+  color: var(--su-ivoire);
+  text-align: left;
+  cursor: pointer;
+}
+.su-str__num {
+  grid-row: 1 / span 2;
+  color: var(--su-ambre-clair);
+  padding-top: 4px;
+}
+.su-str__nom {
+  font-family: var(--su-font-display), sans-serif;
+  font-weight: 600;
+  font-size: 1.35rem;
+  line-height: 1.1;
+  /* Dépliage depuis la ligne de base quand la lamelle s'ouvre. */
+  display: inline-block;
+  transform-origin: 50% 100%;
+  transform: rotateX(-90deg);
+  transition: transform var(--su-pose-duree) var(--su-pose);
+}
+.su-str__couche[data-ouverte='1'] .su-str__nom {
+  transform: rotateX(0);
+}
+.su-str__ligne {
+  color: var(--su-texte-doux);
+  font-size: 0.9375rem;
+  clip-path: inset(0 100% 0 0);
+  transition: clip-path var(--su-pose-duree) var(--su-pose);
+  transition-delay: 120ms;
+}
+.su-str__couche[data-ouverte='1'] .su-str__ligne {
+  clip-path: inset(0);
+}
+.su-str__texte {
+  margin: 0 0 12px 0;
+  padding-left: calc(3ch + 14px);
+  max-width: 38ch;
+  color: var(--su-texte-doux);
+  font-size: 0.9375rem;
+  clip-path: inset(0 100% 0 0);
+  max-height: 0;
+  overflow: hidden;
+  transition: clip-path var(--su-pose-duree) var(--su-pose), max-height var(--su-pose-duree) var(--su-pose);
+}
+.su-str__couche[data-isole='1'] .su-str__texte {
+  clip-path: inset(0);
+  max-height: 6em;
+}
+.su-str__bouton:focus-visible {
+  outline: 2px solid var(--su-ambre-clair);
+  outline-offset: 2px;
+}
+.su-str__fin {
+  grid-column: 1 / span 6;
+  grid-row: 3;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  clip-path: inset(0 100% 0 0);
+  transition: clip-path var(--su-scene) var(--su-pose);
+}
+.su-str__fin[data-visible='1'] {
+  clip-path: inset(0);
+}
+.su-str__fin .su-display {
+  font-size: clamp(1.6rem, 2.8vw, 2.5rem);
+  color: var(--su-ivoire);
+}
+.su-str__fin-ligne {
+  color: var(--su-ambre-clair);
+  font-size: 1.125rem;
+}
+
+@media (max-width: 767px) {
+  .su-str__grille {
+    padding-top: 84px;
+    grid-template-rows: auto auto auto auto;
+  }
+  .su-str__tete {
+    grid-column: 1 / -1;
+  }
+  .su-str__titre {
+    font-size: clamp(2rem, 9.5vw, 3rem);
+  }
+  .su-str__cadre-zone {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+  .su-str__cadre {
+    height: 36svh;
+    margin: 8px 0;
+  }
+  .su-str__liste {
+    grid-column: 1 / -1;
+    grid-row: 3;
+    flex-direction: row;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 12px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .su-str__couche {
+    flex: 0 0 78%;
+    scroll-snap-align: start;
+    border-top: 0;
+    border-left: 1px solid color-mix(in srgb, var(--su-graphite) 30%, transparent);
+    padding-left: 12px;
+  }
+  .su-str__fin {
+    grid-column: 1 / -1;
+    grid-row: 4;
+    padding-top: 12px;
+  }
+}

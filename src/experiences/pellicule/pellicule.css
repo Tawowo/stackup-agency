@@ -1,0 +1,115 @@
+.su-pel {
+  position: relative;
+}
+.su-pel__scene {
+  position: relative;
+  min-height: 100svh;
+  overflow: hidden;
+}
+.su-pel__cadre-zone {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  pointer-events: none;
+}
+.su-pel__cadre {
+  width: min(60vw, 900px);
+  height: min(60vw, 900px);
+}
+.su-pel__tete {
+  position: absolute;
+  top: 84px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  max-width: var(--su-conteneur-scene);
+  margin: 0 auto;
+  padding: 0 var(--su-gouttiere);
+  z-index: 2;
+}
+.su-pel__etiquette,
+.su-pel__compteur {
+  color: var(--su-texte-doux);
+  margin: 0;
+}
+.su-pel__piste {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100svh;
+  z-index: 1;
+}
+.su-pel__projet {
+  flex: 0 0 100vw;
+  width: 100vw;
+  height: 100svh;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: var(--su-gouttiere);
+  align-items: center;
+  padding: 120px var(--su-gouttiere) 48px;
+  box-sizing: border-box;
+}
+.su-pel__capture {
+  grid-column: 1 / span 8;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: var(--su-ombre);
+  background: var(--su-encre-2);
+}
+.su-pel__capture img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.su-pel__texte {
+  grid-column: 9 / span 4;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: flex-start;
+}
+.su-pel__demo {
+  margin: 0;
+  color: var(--accent, var(--su-ambre-clair));
+}
+.su-pel__nom {
+  margin: 0;
+  font-size: clamp(2.2rem, 4.5vw, 4.5rem);
+  color: var(--su-ivoire);
+}
+.su-pel__type {
+  margin: 0 0 8px;
+  color: var(--su-texte-doux);
+}
+
+@media (max-width: 767px) {
+  .su-pel__piste {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+  .su-pel__projet {
+    scroll-snap-align: start;
+    grid-template-rows: auto auto;
+    align-content: center;
+    padding: 110px var(--su-gouttiere) 32px;
+    row-gap: 18px;
+  }
+  .su-pel__capture {
+    grid-column: 1 / -1;
+  }
+  .su-pel__texte {
+    grid-column: 1 / -1;
+  }
+  .su-pel__nom {
+    font-size: clamp(1.9rem, 8vw, 2.6rem);
+  }
+  .su-pel__cadre {
+    width: 92vw;
+    height: 60svh;
+  }
+}

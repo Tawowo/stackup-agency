@@ -44,7 +44,7 @@ async function main() {
   await page.goto(`${BASE}${url}`, { waitUntil: 'networkidle' })
   await page.waitForSelector('html[data-su-ready="1"]', { timeout: 20000 })
   await page.waitForTimeout(600)
-  const box = await page.locator('[data-su-frame]').boundingBox()
+  const box = await page.locator('[data-su-frame]').first().boundingBox()
   const marge = 12
   const clip = { x: Math.max(0, box.x - marge), y: Math.max(0, box.y - marge), width: box.width + 2 * marge, height: box.height + 2 * marge }
   mkdirSync('docs/qa/shots/logo-check', { recursive: true })

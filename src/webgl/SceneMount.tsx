@@ -7,6 +7,7 @@ import dynamic from 'next/dynamic'
 import { useEffect, useState } from 'react'
 import { detecterPalier } from './quality'
 import { useScene, type SceneParams } from './store'
+import { stackUniforms } from './engine'
 
 const Scene = dynamic(() => import('./Scene'), { ssr: false })
 
@@ -29,6 +30,9 @@ export default function SceneMount() {
     const st = useScene.getState()
     const proj = q.get('proj')
     if (proj !== null) st.setProjection(Number(proj))
+    const rx = q.get('rx')
+    const ry = q.get('ry')
+    if (rx !== null || ry !== null) st.setPose({ x: Number(rx ?? 0), y: Number(ry ?? 0) })
     const p: Partial<SceneParams> = {}
     if (q.get('mur') === '0') p.mur = 0
     if (q.get('ombre') === '0') p.ombre = 0
@@ -36,6 +40,9 @@ export default function SceneMount() {
     if (q.get('plaques') === '0') p.plaques = 0
     if (Object.keys(p).length) st.setParams(p)
     if (q.get('fond') === 'ivoire') st.forcerNuit(0)
+    if (process.env.NODE_ENV !== 'production') {
+      ;(window as unknown as { __su?: unknown }).__su = { scene: useScene, u: stackUniforms() }
+    }
     detecterPalier().then((tier) => {
       if (!vivant) return
       setTier(tier)

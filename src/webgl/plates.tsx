@@ -13,7 +13,7 @@ import { PLAQUE } from './logo-geometry'
 import { stackUniforms } from './engine'
 import { plateMaterial } from './materials/plate'
 import { shadowMaterial } from './materials/shadow'
-import { LAYOUTS, type LayoutData, type LayoutName } from './layouts'
+import { CLES_LAYOUT, LAYOUTS, type LayoutData, type LayoutName, type LayoutParams } from './layouts'
 import { seed } from './layouts/types'
 import { useScene } from './store'
 
@@ -21,7 +21,7 @@ export interface PlatesHandle {
   /** Écrit le layout cible dans B (A reçoit l'état courant) et remet uMorph à 0. */
   setTarget: (name: LayoutName) => void
   /** Pose A et B explicitement (morph piloté par une expérience). */
-  setPair: (a: LayoutName, b: LayoutName | null) => void
+  setPair: (a: LayoutName, b: LayoutName | null, pp?: { a?: Partial<LayoutParams>; b?: Partial<LayoutParams> }) => void
   murA: number
   murB: number
 }
@@ -43,6 +43,7 @@ export function buildInstanced(n: number) {
   g.setAttribute('aIndex', new InstancedBufferAttribute(idx, 1))
   g.setAttribute('aSeed', new InstancedBufferAttribute(sd, 1))
   g.setAttribute('aGroup', new InstancedBufferAttribute(new Float32Array(n), 1))
+  g.setAttribute('aDelay', new InstancedBufferAttribute(new Float32Array(n), 1))
   for (const k of ['A', 'B']) {
     g.setAttribute(`aPos${k}`, new InstancedBufferAttribute(new Float32Array(n * 3), 3))
     g.setAttribute(`aRot${k}`, new InstancedBufferAttribute(new Float32Array(n * 3), 3))
@@ -64,13 +65,16 @@ function write(g: InstancedBufferGeometry, k: 'A' | 'B', d: LayoutData) {
     const gr = g.getAttribute('aGroup') as InstancedBufferAttribute
     ;(gr.array as Float32Array).set(d.group)
     gr.needsUpdate = true
+    const dl = g.getAttribute('aDelay') as InstancedBufferAttribute
+    ;(dl.array as Float32Array).set(d.delay)
+    dl.needsUpdate = true
   }
 }
 
 /** Figer l'état interpolé courant dans A (pour repartir d'un morph interrompu). */
 function snapshot(g: InstancedBufferGeometry, morph: number, delay: number) {
   const n = g.instanceCount
-  const seedA = g.getAttribute('aSeed').array as Float32Array
+  const seedA = g.getAttribute('aDelay').array as Float32Array
   for (const [name, size] of [
     ['Pos', 3],
     ['Rot', 3],
@@ -102,7 +106,8 @@ export function Plates({ count, handleRef }: { count: number; handleRef: React.R
 
   useEffect(() => {
     const s = useScene.getState()
-    const compute = (name: LayoutName) => LAYOUTS[name](count, useScene.getState().params)
+    const compute = (name: LayoutName, override?: Partial<LayoutParams>) =>
+      LAYOUTS[name](count, { ...useScene.getState().params, ...(override ?? {}) })
     const first = compute(s.layout)
     write(geometry, 'A', first)
     write(geometry, 'B', first)
@@ -110,9 +115,9 @@ export function Plates({ count, handleRef }: { count: number; handleRef: React.R
     const h: PlatesHandle = {
       murA: first.mur,
       murB: first.mur,
-      setPair: (a, b) => {
-        const da = compute(a)
-        const db = b ? compute(b) : da
+      setPair: (a, b, pp = {}) => {
+        const da = compute(a, pp.a)
+        const db = b ? compute(b, pp.b) : da
         write(geometry, 'A', da)
         write(geometry, 'B', db)
         h.murA = da.mur
@@ -131,18 +136,16 @@ export function Plates({ count, handleRef }: { count: number; handleRef: React.R
         st.setMorph(0)
       },
     }
-    if (s.target) h.setPair(s.layout, s.target)
+    if (s.target) h.setPair(s.layout, s.target, s.pairParams)
     handleRef.current = h
     // Un changement de paramètres de pile recalcule la cible en place.
-    const CLES = ['parNiveau', 'ecart', 'torsion', 'rayon', 'chantier', 'echelle', 'hauteur'] as const
+    // Un changement de paramètre de layout recalcule la cible en place.
     const unsub = useScene.subscribe((st, prev) => {
-      if (st.params === prev.params || currentRef.current !== 'pile') return
-      if (CLES.every((k) => st.params[k] === prev.params[k])) return
-      {
-        const d = compute('pile')
-        write(geometry, 'B', d)
-        h.murB = d.mur
-      }
+      if (st.params === prev.params || currentRef.current === 'logo') return
+      if (CLES_LAYOUT.every((k) => st.params[k] === prev.params[k])) return
+      const d = compute(currentRef.current, st.pairParams.b)
+      write(geometry, 'B', d)
+      h.murB = d.mur
     })
     return () => {
       unsub()

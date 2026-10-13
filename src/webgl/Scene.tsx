@@ -47,22 +47,24 @@ function Rig() {
   useEffect(() => {
     let prev = useScene.getState().layout
     let prevTarget = useScene.getState().target
+    let prevPP = useScene.getState().pairParams
     return useScene.subscribe((s) => {
       const p = platesRef.current
       if (!p) return
-      if (s.target !== prevTarget) {
+      if (s.target !== prevTarget || s.pairParams !== prevPP) {
         // Une expérience pose la paire A → B et écrit uMorph elle-même.
         prevTarget = s.target
+        prevPP = s.pairParams
         prev = s.layout
         gsap.killTweensOf(u.uMorph)
-        p.setPair(s.layout, s.target)
+        p.setPair(s.layout, s.target, s.pairParams)
         if (!s.target) u.uMorph.value = 0
         return
       }
       if (s.layout !== prev) {
         prev = s.layout
         if (s.target) {
-          p.setPair(s.layout, s.target)
+          p.setPair(s.layout, s.target, s.pairParams)
           return
         }
         p.setTarget(s.layout)
@@ -104,6 +106,7 @@ function Rig() {
     const stackPos = { x: 0, y: 0, s: 1 }
     const orbit = { x: 0, y: 0 }
     const spin = { y: 0, x: 0 }
+    const lisse = { px: 0, py: 0, proj: 1 }
     const accent = new Color()
     const tick = (_time: number, deltaMs: number) => {
       const s = useScene.getState()
@@ -130,9 +133,18 @@ function Rig() {
       accent.set(s.accent)
       u.uAccent.value.copy(accent)
 
-      // Projection : ortho ↔ perspective.
-      camera.blend = s.projection
-      u.uOrtho.value = s.projection
+      // Projection et pose : amorties (un changement de section ne saute pas).
+      if (s.still) {
+        lisse.proj = s.projection
+        lisse.px = s.pose.x
+        lisse.py = s.pose.y
+      } else {
+        damp(lisse, 'proj', s.projection, 0.18, dt)
+        damp(lisse, 'px', s.pose.x, 0.25, dt)
+        damp(lisse, 'py', s.pose.y, 0.25, dt)
+      }
+      camera.blend = lisse.proj
+      u.uOrtho.value = lisse.proj
       camera.updateProjectionMatrix()
 
       // Cadrage : la boîte HTML → position et échelle du groupe.
@@ -169,13 +181,13 @@ function Rig() {
         // reste calée au pixel sur sa boîte HTML. La caméra ne bouge jamais.
         const dx = s.still ? 0 : (Math.sin((t * 2 * Math.PI) / 12) * 2 * Math.PI) / 180
         const dy = s.still ? 0 : (Math.sin((t * 2 * Math.PI) / 17) * 1.2 * Math.PI) / 180
-        g.rotation.set(spin.x + dy + orbit.y + s.pose.x, spin.y + dx + orbit.x + s.pose.y, 0)
+        g.rotation.set(spin.x + dy + orbit.y + lisse.px, spin.y + dx + orbit.x + lisse.py, 0)
         // Mur et halo.
         const p = platesRef.current
         const murLocal = p ? p.murA + (p.murB - p.murA) * u.uMorph.value : -0.3
         u.uWallZ.value = murLocal * stackPos.s
         u.uStack.value.set(stackPos.x, stackPos.y, stackPos.s, 1)
-        u.uBox.value.set(-1.2, s.layout === 'pile' ? 6 : 1.2)
+        u.uBox.value.set(-1.2, s.layout === 'pile' || s.target === 'pile' ? 6 : 1.2)
         if (wallRef.current) wallRef.current.position.set(0, 0, u.uWallZ.value - 0.02)
         // Pointeur → repère local.
         const ptr = (window as unknown as { __suPointer?: { px: { x: number; y: number; active: boolean } } }).__suPointer?.px

@@ -10,6 +10,9 @@ export function initGsap() {
   fait = true
   gsap.registerPlugin(ScrollTrigger, SplitText)
   gsap.ticker.lagSmoothing(0)
+  if (process.env.NODE_ENV !== 'production') {
+    ;(window as unknown as { __suST?: unknown }).__suST = ScrollTrigger
+  }
 }
 
 export { gsap, ScrollTrigger, SplitText }

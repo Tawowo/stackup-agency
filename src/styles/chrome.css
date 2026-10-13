@@ -272,3 +272,124 @@
   margin: -32px 0 0 -32px;
   background: var(--su-ambre);
 }
+
+/* ───────── Plaque ───────── */
+.su-plaque {
+  border-radius: 4px;
+  box-shadow: var(--su-ombre);
+}
+.su-plaque--ivoire {
+  background: var(--su-ivoire-creuse);
+  color: var(--su-navy);
+}
+.su-plaque--encre {
+  background: var(--su-encre-2);
+  color: var(--su-ivoire);
+}
+
+/* ───────── Seuil ───────── */
+.su-seuil {
+  display: grid;
+  place-items: center;
+  min-height: 70svh;
+  padding: 0 var(--su-gouttiere);
+  perspective: 900px;
+}
+.su-seuil__texte {
+  margin: 0;
+  text-align: center;
+  font-size: clamp(2.75rem, 7vw, 6rem);
+  color: var(--su-texte);
+}
+.su-seuil__mot {
+  display: inline-block;
+  will-change: transform;
+}
+
+/* ───────── Fiche de fabrication ───────── */
+.su-fiche {
+  margin: 0;
+  padding: 18px 20px;
+  border: 1px solid color-mix(in srgb, currentColor 22%, transparent);
+  border-radius: 4px;
+  font-family: var(--su-font-mono), ui-monospace, monospace;
+  font-size: 0.8125rem;
+  letter-spacing: 0.04em;
+}
+.su-fiche__titre {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.6875rem;
+  color: var(--su-accent-texte);
+  margin-bottom: 10px;
+}
+.su-fiche__ligne {
+  display: grid;
+  grid-template-columns: 11ch 1fr;
+  gap: 12px;
+  padding: 7px 0;
+  border-top: 1px solid color-mix(in srgb, currentColor 14%, transparent);
+}
+.su-fiche__ligne dt {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--su-texte-doux);
+  font-size: 0.6875rem;
+  padding-top: 2px;
+}
+.su-fiche__ligne dd {
+  margin: 0;
+}
+
+/* ───────── Cadran ───────── */
+.su-cadran {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.25em;
+  font-family: var(--su-font-display), var(--su-font-sans), sans-serif;
+  font-weight: 700;
+  line-height: 1;
+}
+.su-cadran__pref,
+.su-cadran__suf {
+  font-family: var(--su-font-sans), sans-serif;
+  font-weight: 500;
+  font-size: 0.4em;
+  color: var(--su-texte-doux);
+}
+.su-cadran__roues {
+  display: inline-flex;
+}
+.su-cadran__roue {
+  display: inline-block;
+  height: 1em;
+  overflow: hidden;
+}
+.su-cadran__col {
+  display: flex;
+  flex-direction: column;
+  transform: translateY(calc(var(--n, 0) * -1em));
+  transition: transform 900ms var(--su-pose);
+  transition-delay: calc(var(--i, 0) * 40ms);
+}
+.su-cadran__col > span {
+  display: block;
+  height: 1em;
+  /* Poppins n'a pas de chiffres tabulaires : chaque roue prend la largeur du
+     chiffre le plus large, on centre pour que le « 7 » ne laisse pas de trou. */
+  text-align: center;
+}
+.su-cadran__roue {
+  letter-spacing: -0.02em;
+}
+.su-cadran__sep {
+  display: inline-block;
+}
+
+.su-seuil-noyau__cadre {
+  width: min(34vw, 360px);
+  height: min(36svh, 300px);
+}
+.su-seuil-noyau .su-seuil {
+  padding-top: 18svh;
+}

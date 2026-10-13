@@ -28,6 +28,7 @@ export const INSTANCE = /* glsl */ `
 attribute float aIndex;
 attribute float aSeed;
 attribute float aGroup;
+attribute float aDelay;
 attribute vec3 aPosA;
 attribute vec3 aRotA;
 attribute float aScaleA;
@@ -49,7 +50,7 @@ uniform vec3 uPointer;
 struct Inst { vec3 world; mat3 R; float lens; float dim; float scale; };
 
 Inst instance(vec3 position) {
-  float d = aSeed * uDelay;
+  float d = aDelay * uDelay;
   float t = clamp((uMorph - d) / max(1.0 - uDelay, 1e-3), 0.0, 1.0);
   t = t * t * (3.0 - 2.0 * t);
   vec3 pos = mix(aPosA, aPosB, t);

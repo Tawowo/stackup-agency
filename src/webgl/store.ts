@@ -6,7 +6,7 @@
  * veulent (layout cible, nuit, accent, boîte d'ancrage) ; le moteur fait.
  */
 import { create } from 'zustand'
-import type { LayoutName } from './layouts'
+import type { LayoutName, LayoutParams } from './layouts'
 
 export type Tier = 'ultra' | 'high' | 'medium' | 'low'
 
@@ -26,6 +26,8 @@ export interface PileParams {
   chantier: number
   echelle: number
   hauteur: number
+  ouverture: number
+  glisse: number
 }
 
 export interface SceneParams extends PileParams {
@@ -54,6 +56,8 @@ export const PARAMS_DEFAUT: SceneParams = {
   chantier: 0.12,
   echelle: 0.5,
   hauteur: 3.4,
+  ouverture: 1,
+  glisse: 0,
   ambiant: 0.32,
   cle: 0.95,
   fresnel: 0.3,
@@ -81,6 +85,10 @@ interface SceneState {
   scrub: boolean
   /** Cible de morph pilotée par l'expérience : A = layout, B = target, uMorph écrit par le scroll. */
   target: LayoutName | null
+  /** Surcharges de paramètres par côté de la paire (ex. strates ouvertes → fermées). */
+  pairParams: { a?: Partial<LayoutParams>; b?: Partial<LayoutParams> }
+  /** Le moment (expérience) qui possède la scène : les autres n'écrivent pas. */
+  moment: string
   nuit: number
   /** Diagnostic (`?fond=ivoire`) : la nuit forcée l'emporte sur les expériences. */
   nuitForcee: number | null
@@ -104,6 +112,8 @@ interface SceneState {
   setPose: (p: Pose) => void
   setScrub: (s: boolean) => void
   setTarget: (t: LayoutName | null) => void
+  setPair: (a: LayoutName, b: LayoutName | null, pairParams?: { a?: Partial<LayoutParams>; b?: Partial<LayoutParams> }) => void
+  setMoment: (m: string) => void
   setNuit: (n: number) => void
   forcerNuit: (n: number | null) => void
   setAccent: (a: string) => void
@@ -127,6 +137,8 @@ export const useScene = create<SceneState>((set) => ({
   pose: { x: 0, y: 0 },
   scrub: false,
   target: null,
+  pairParams: {},
+  moment: '00',
   nuit: 1,
   nuitForcee: null,
   accent: '#F69106',
@@ -148,7 +160,9 @@ export const useScene = create<SceneState>((set) => ({
   setProjection: (projection) => set({ projection }),
   setPose: (pose) => set({ pose }),
   setScrub: (scrub) => set({ scrub }),
-  setTarget: (target) => set({ target }),
+  setTarget: (target) => set({ target, pairParams: {} }),
+  setPair: (layout, target, pairParams = {}) => set({ layout, target, pairParams }),
+  setMoment: (moment) => set({ moment }),
   setNuit: (nuit) => set((st) => ({ nuit: st.nuitForcee ?? nuit })),
   forcerNuit: (nuitForcee) => set((st) => ({ nuitForcee, nuit: nuitForcee ?? st.nuit })),
   setAccent: (accent) => set({ accent }),

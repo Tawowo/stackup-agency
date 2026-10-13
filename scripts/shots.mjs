@@ -62,21 +62,44 @@ export async function capturer({ route, dossier, etats }, browser, filtreEtat) {
         await page.goto(url, { waitUntil: 'networkidle' })
         await page.waitForSelector('html[data-su-ready="1"]', { timeout: 20000 }).catch(() => {})
         if (etat.scroll !== undefined) {
-          await page.evaluate((frac) => {
-            const el = document.querySelector('[data-moment="00"]')
-            const dist = el ? el.getBoundingClientRect().height - window.innerHeight : window.innerHeight
-            const y = Math.round(dist * frac)
-            const lenis = window.__suLenis
-            if (lenis) lenis.scrollTo(y, { immediate: true })
-            window.scrollTo(0, y)
-          }, etat.scroll)
+          // Deux temps : on s'approche (les ScrollTriggers se déclenchent dans l'ordre), puis on se cale.
+          const aller = async (frac, moment) => {
+            await page.evaluate(([frac, moment]) => {
+              const el = document.querySelector(`[data-moment="${moment}"]`)
+              const r = el ? el.getBoundingClientRect() : { top: 0, height: window.innerHeight }
+              const top = r.top + window.scrollY
+              const dist = Math.max(0, r.height - window.innerHeight)
+              const y = Math.round(top + dist * frac)
+              const lenis = window.__suLenis
+              if (lenis) lenis.scrollTo(y, { immediate: true })
+              window.scrollTo(0, y)
+            }, [frac, moment])
+          }
+          const moment = etat.moment ?? '00'
+          if (moment !== '00') {
+            await aller(0, moment)
+            await page.waitForTimeout(400)
+          }
+          await aller(etat.scroll, moment)
           await page.waitForTimeout(900)
+        }
+        if (etat.piste !== undefined && taille.mobile) {
+          await page.evaluate((k) => {
+            const piste = document.querySelector('.su-pel__piste')
+            if (piste) piste.scrollLeft = k * piste.clientWidth
+          }, etat.piste)
+          await page.waitForTimeout(600)
+        }
+        if (etat.action === 'touche3') await page.keyboard.press('3')
+        if (etat.action?.startsWith('onglet')) {
+          const k = Number(etat.action.slice(6))
+          await page.locator('.su-off__onglet').nth(k - 1).click()
         }
         if (etat.action === 'menu') {
           await page.locator('.su-nav__menu').click()
         }
         if (etat.action === 'drag') {
-          const box = await page.locator('[data-su-frame]').boundingBox()
+          const box = await page.locator('[data-su-frame]').first().boundingBox()
           const cx = box.x + box.width / 2
           const cy = box.y + box.height / 2
           await page.mouse.move(cx - 120, cy)

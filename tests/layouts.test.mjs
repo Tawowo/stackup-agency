@@ -44,3 +44,44 @@ test('pile : parNiveau = 1 donne une colonne sur l axe', () => {
   const posees = Math.min(37, Math.floor(o.hauteur / o.ecart))
   for (let i = 3; i < 3 + posees; i++) proche(d.pos[i * 3], 0)
 })
+
+import { strates, STRATES } from '../src/webgl/layouts/strates.ts'
+import { pageLayout, multi, boutique, logiciel } from '../src/webgl/layouts/offres.ts'
+import { pellicule } from '../src/webgl/layouts/pellicule.ts'
+
+test('strates : cinq groupes, retard par lamelle, écartement piloté', () => {
+  const ouvert = strates(450, { ouverture: 1 })
+  const ferme = strates(450, { ouverture: 0 })
+  const groupes = new Set()
+  for (let i = 2; i < 3 + 5 * 54; i++) {
+    if (i === 2 || ouvert.scale[i] > 0) groupes.add(ouvert.group[i])
+  }
+  assert.equal(groupes.size, STRATES.length)
+  // La lamelle 0 part avant la lamelle 4.
+  assert.ok(ouvert.delay[3] < ouvert.delay[3 + 4 * 54])
+  // Fermé : hauteur totale < 0,4 ; ouvert : > 1,5.
+  const hauteur = (d) => d.pos[3 * 3 + 1] - d.pos[(3 + 4 * 54) * 3 + 1]
+  assert.ok(hauteur(ferme) < 0.4, `fermé ${hauteur(ferme)}`)
+  assert.ok(hauteur(ouvert) > 1.5, `ouvert ${hauteur(ouvert)}`)
+  // La plaque ambre (2) est dans Design (groupe 0), visible.
+  assert.equal(ouvert.group[2], 0)
+  assert.ok(ouvert.scale[2] > 0)
+})
+
+test('offres : chaque layout emploie la plaque ambre et dissout le reste', () => {
+  for (const f of [pageLayout, multi, boutique, logiciel]) {
+    const d = f(450)
+    assert.ok(d.scale[2] > 0, `${f.name} : plaque ambre visible`)
+    assert.equal(d.scale[0], 0)
+    let visibles = 0
+    for (let i = 0; i < 450; i++) if (d.scale[i] > 0) visibles++
+    assert.ok(visibles > 40 && visibles < 300, `${f.name} : ${visibles} plaques`)
+    assert.equal(d.scale[449], 0, 'le reste est dissous')
+  }
+})
+
+test('pellicule : le glissement décale tout le cadre', () => {
+  const a = pellicule(450, { glisse: 0 })
+  const b = pellicule(450, { glisse: 2.8 })
+  for (let i = 3; i < 60; i++) if (a.scale[i] > 0) assert.ok(Math.abs(b.pos[i * 3] - a.pos[i * 3] - 2.8) < 1e-5)
+})

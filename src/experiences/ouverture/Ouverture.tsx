@@ -34,10 +34,10 @@ export default function Ouverture() {
     const mobile = window.innerWidth < 768
 
     // La scène : logo au départ, pile à l'arrivée, le scroll écrit uMorph.
+    s.setMoment('00')
     s.setNuit(1)
     s.setScrub(true)
-    s.setLayout('logo')
-    s.setTarget(reduit ? null : 'pile')
+    s.setPair('logo', reduit ? null : 'pile')
     u.uMorph.value = 0
     s.setProjection(1)
     s.setPose({ x: 0, y: 0 })
@@ -79,8 +79,11 @@ export default function Ouverture() {
         pin: st,
         pinSpacing: true,
         scrub: 0.6,
+        onEnter: () => useScene.getState().setMoment('00'),
+        onEnterBack: () => useScene.getState().setMoment('00'),
         onUpdate: (self) => {
           const p = self.progress
+          if (useScene.getState().moment !== '00') return
           u.uMorph.value = p
           el.style.setProperty('--su-p', p.toFixed(4))
           const sc = useScene.getState()

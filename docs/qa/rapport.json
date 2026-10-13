@@ -1,6 +1,6 @@
 {
   "genere": "2026-10-13",
-  "phase": 1,
+  "phase": 2,
   "captures": [
     {
       "fichier": "docs/qa/shots/lab/logo-1440.png",
@@ -482,6 +482,582 @@
       "defauts": [
         "Première capture : le panneau recouvrait la barre (logo et bouton Fermer cachés) — corrigé par un z-index sur la barre"
       ],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/lab/strates-ouvert-1440.png",
+      "route": "/lab",
+      "etat": "strates-ouvert",
+      "largeur": 1440,
+      "rm": false,
+      "visible": "Cinq lamelles de 54 plaques à plat (9 × 6), écartées, vues de trois quarts (pose rx 0,55 / ry −0,35, projection 0,3), la plaque ambre en tête de « Design », ombres sur le mur.",
+      "defauts": [
+        "Première version vue de face : des traits invisibles — pose de trois quarts ajoutée ; plaques trop petites et trop espacées — resserrées (échelle 0,12, écart max 0,38)"
+      ],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/lab/strates-ouvert-390.png",
+      "route": "/lab",
+      "etat": "strates-ouvert",
+      "largeur": 390,
+      "rm": false,
+      "visible": "Idem en portrait, lamelles pleine largeur.",
+      "defauts": [],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/lab/strates-ferme-1440.png",
+      "route": "/lab",
+      "etat": "strates-ferme",
+      "largeur": 1440,
+      "rm": false,
+      "visible": "Ouverture 0 : les cinq lamelles refermées en un bloc épais, l'ambre sur l'arête.",
+      "defauts": [],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/lab/strates-ferme-390.png",
+      "route": "/lab",
+      "etat": "strates-ferme",
+      "largeur": 390,
+      "rm": false,
+      "visible": "Idem en portrait.",
+      "defauts": [],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/lab/page-1440.png",
+      "route": "/lab",
+      "etat": "page",
+      "largeur": 1440,
+      "rm": false,
+      "visible": "Une page web en plaques : en-tête (rangée en chevrons), titre sur deux lignes, image à droite, deux colonnes de texte, bouton ambre ; perspective légère.",
+      "defauts": [
+        "Chevrons (miroir une plaque sur deux) sur les lignes de texte : illisible — gardés sur l'en-tête seulement"
+      ],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/lab/page-390.png",
+      "route": "/lab",
+      "etat": "page",
+      "largeur": 390,
+      "rm": false,
+      "visible": "Idem en portrait.",
+      "defauts": [],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/lab/multi-1440.png",
+      "route": "/lab",
+      "etat": "multi",
+      "largeur": 1440,
+      "rm": false,
+      "visible": "Trois pages en éventail : la centrale de face avec le bouton ambre, deux latérales plus petites et tournées ; perspective.",
+      "defauts": [
+        "Pages latérales trop proches et trop grandes — écartées (±0,86) et réduites (0,54)"
+      ],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/lab/multi-390.png",
+      "route": "/lab",
+      "etat": "multi",
+      "largeur": 390,
+      "rm": false,
+      "visible": "Idem en portrait, l'éventail déborde du cadre à gauche et à droite.",
+      "defauts": [
+        "Composition mobile de l'éventail à resserrer (phase 2 suite)"
+      ],
+      "corrige": false
+    },
+    {
+      "fichier": "docs/qa/shots/lab/boutique-1440.png",
+      "route": "/lab",
+      "etat": "boutique",
+      "largeur": 1440,
+      "rm": false,
+      "visible": "Grille 4 × 3 de produits (vignette 2 × 2 + ligne de prix), en-tête, et le panier ambre en haut à droite.",
+      "defauts": [],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/lab/boutique-390.png",
+      "route": "/lab",
+      "etat": "boutique",
+      "largeur": 390,
+      "rm": false,
+      "visible": "Idem en portrait.",
+      "defauts": [],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/lab/logiciel-1440.png",
+      "route": "/lab",
+      "etat": "logiciel",
+      "largeur": 1440,
+      "rm": false,
+      "visible": "Réseau de huit modules (blocs 3 × 3) en anneau, reliés par des chapelets de petites plaques entre eux et vers le hub ambre central.",
+      "defauts": [],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/lab/logiciel-390.png",
+      "route": "/lab",
+      "etat": "logiciel",
+      "largeur": 390,
+      "rm": false,
+      "visible": "Idem en portrait, le réseau remplit la largeur.",
+      "defauts": [],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/lab/pellicule-1440.png",
+      "route": "/lab",
+      "etat": "pellicule",
+      "largeur": 1440,
+      "rm": false,
+      "visible": "Cadre 16:9 de plaques (haut/bas en chevrons, côtés tournés de 90°), perforations plus petites au-dessus et au-dessous, repère ambre en bas à droite.",
+      "defauts": [],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/lab/pellicule-390.png",
+      "route": "/lab",
+      "etat": "pellicule",
+      "largeur": 390,
+      "rm": false,
+      "visible": "Idem en portrait (le cadre dépasse la largeur, voulu).",
+      "defauts": [],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/lab/noyau-1440.png",
+      "route": "/lab",
+      "etat": "noyau",
+      "largeur": 1440,
+      "rm": false,
+      "visible": "Noyau compact de ~160 plaques en sphère aplatie, orientations variées, la plaque ambre au cœur.",
+      "defauts": [],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/accueil/01-ferme-1440.png",
+      "route": "/",
+      "etat": "01-ferme",
+      "largeur": 1440,
+      "rm": false,
+      "visible": "Entrée du moment 01 (p = 0,02) : titre « Un site, c'est cinq couches. » déplié, les cinq numéros mono à gauche sans leurs noms (ils se déplient à l'ouverture de chaque lamelle), la tour du hero encore en place à droite, en vol vers les strates.",
+      "defauts": [],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/accueil/01-ferme-1440-rm.png",
+      "route": "/",
+      "etat": "01-ferme",
+      "largeur": 1440,
+      "rm": true,
+      "visible": "Mouvement réduit : logo figé dans le cadre, titre posé, liste complète.",
+      "defauts": [],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/accueil/01-ferme-390.png",
+      "route": "/",
+      "etat": "01-ferme",
+      "largeur": 390,
+      "rm": false,
+      "visible": "Mobile : titre, cadre en portrait, liste en balayage horizontal (une carte par couche).",
+      "defauts": [],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/accueil/01-ferme-390-rm.png",
+      "route": "/",
+      "etat": "01-ferme",
+      "largeur": 390,
+      "rm": true,
+      "visible": "Idem, logo figé.",
+      "defauts": [],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/accueil/01-2-ouvertes-1440.png",
+      "route": "/",
+      "etat": "01-2-ouvertes",
+      "largeur": 1440,
+      "rm": false,
+      "visible": "p = 0,25 : Design et Contenu ont leur nom déplié et leur ligne découpée ; à droite les plaques arrivent en arc depuis la tour.",
+      "defauts": [],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/accueil/01-2-ouvertes-390.png",
+      "route": "/",
+      "etat": "01-2-ouvertes",
+      "largeur": 390,
+      "rm": false,
+      "visible": "Idem mobile.",
+      "defauts": [],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/accueil/01-5-ouvertes-1440.png",
+      "route": "/",
+      "etat": "01-5-ouvertes",
+      "largeur": 1440,
+      "rm": false,
+      "visible": "p = 0,7 : les cinq lamelles ouvertes de trois quarts à droite, la plaque ambre en tête de Design, les cinq couches nommées à gauche.",
+      "defauts": [
+        "Première capture : scène vide (la boîte du hero, hors écran, gardait la main) — corrigé par un registre des boîtes qui élit la plus visible ; puis la pile du hero restait affichée (la bascule du hero écrasait la paire) — corrigé par un propriétaire de scène (`moment`) dans le store"
+      ],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/accueil/01-5-ouvertes-1440-rm.png",
+      "route": "/",
+      "etat": "01-5-ouvertes",
+      "largeur": 1440,
+      "rm": true,
+      "visible": "Mouvement réduit : le logo figé à la place des strates (règle 6 : moteur figé au repos).",
+      "defauts": [],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/accueil/01-5-ouvertes-390.png",
+      "route": "/",
+      "etat": "01-5-ouvertes",
+      "largeur": 390,
+      "rm": false,
+      "visible": "Mobile : lamelles en portrait sous le titre, liste en balayage.",
+      "defauts": [],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/accueil/01-5-ouvertes-390-rm.png",
+      "route": "/",
+      "etat": "01-5-ouvertes",
+      "largeur": 390,
+      "rm": true,
+      "visible": "Idem, logo figé.",
+      "defauts": [],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/accueil/01-isole-3-1440.png",
+      "route": "/",
+      "etat": "01-isole-3",
+      "largeur": 1440,
+      "rm": false,
+      "visible": "Touche 3 : « Code » isolé, les quatre autres couches à 35 % et leurs lamelles écartées et assombries ; le paragraphe de deux lignes se découpe sous Code.",
+      "defauts": [],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/accueil/01-isole-3-390.png",
+      "route": "/",
+      "etat": "01-isole-3",
+      "largeur": 390,
+      "rm": false,
+      "visible": "Mobile : la lamelle Code reste éclairée, les autres s'écartent ; la carte Design s'assombrit.",
+      "defauts": [],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/accueil/01-referme-1440.png",
+      "route": "/",
+      "etat": "01-referme",
+      "largeur": 1440,
+      "rm": false,
+      "visible": "p = 1 : les lamelles refermées en un bloc épais ; « Nous fabriquons les cinq. / Vous êtes propriétaire des cinq. » découpé en bas à gauche.",
+      "defauts": [
+        "Première capture : lamelles encore ouvertes — onEnter et onUpdate se disputaient la phase sur un saut ; la phase est maintenant dérivée de la progression seule"
+      ],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/accueil/01-referme-390.png",
+      "route": "/",
+      "etat": "01-referme",
+      "largeur": 390,
+      "rm": false,
+      "visible": "Mobile : bloc refermé, phrase finale sous la liste.",
+      "defauts": [],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/accueil/02-une-page-1440.png",
+      "route": "/",
+      "etat": "02-une-page",
+      "largeur": 1440,
+      "rm": false,
+      "visible": "Ivoire. « Ce qu'on fabrique. » en navy, sélecteur vertical (Site une page actif en navy), à droite la page en plaques avec, par-dessus, les cadres de la maquette HTML calés sur les mêmes blocs (en-tête, titre, image, colonnes, bouton ambre) ; Cadran « à partir de 449 € », Fiche de fabrication.",
+      "defauts": [
+        "Maquette décalée des plaques (deux systèmes de coordonnées) — refonte : les layouts d'offre sont des BLOCS déclaratifs et la maquette est dérivée des mêmes blocs, en ortho ; chiffres du Cadran mal espacés (Poppins non tabulaire) — roues centrées"
+      ],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/accueil/02-une-page-1440-rm.png",
+      "route": "/",
+      "etat": "02-une-page",
+      "largeur": 1440,
+      "rm": true,
+      "visible": "Mouvement réduit : ivoire allumé sans tween, logo figé dans le cadre avec les cadres de la maquette autour, sélecteur, Cadran, Fiche.",
+      "defauts": [
+        "Première capture restée sur l'encre : en mouvement réduit, le seul épinglage (01) faussait la mesure des triggers suivants — plus d'épinglage en mouvement réduit, et un refresh final des ScrollTriggers"
+      ],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/accueil/02-une-page-390.png",
+      "route": "/",
+      "etat": "02-une-page",
+      "largeur": 390,
+      "rm": false,
+      "visible": "Mobile : onglets horizontaux balayables, scène en portrait avec la maquette, cadran pleine largeur, fiche.",
+      "defauts": [],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/accueil/02-une-page-390-rm.png",
+      "route": "/",
+      "etat": "02-une-page",
+      "largeur": 390,
+      "rm": true,
+      "visible": "Mouvement réduit : ivoire allumé sans tween, logo figé dans le cadre avec les cadres de la maquette autour, sélecteur, Cadran, Fiche.",
+      "defauts": [
+        "Première capture restée sur l'encre : en mouvement réduit, le seul épinglage (01) faussait la mesure des triggers suivants — plus d'épinglage en mouvement réduit, et un refresh final des ScrollTriggers"
+      ],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/accueil/02-multi-1440.png",
+      "route": "/",
+      "etat": "02-multi",
+      "largeur": 1440,
+      "rm": false,
+      "visible": "Onglet 2 : trois pages en éventail, maquette calée (trois jeux de cadres), Cadran 749, fiche multi-pages ; le curseur s'ouvre en anneau ambre « Choisir » sur l'onglet.",
+      "defauts": [],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/accueil/02-multi-390.png",
+      "route": "/",
+      "etat": "02-multi",
+      "largeur": 390,
+      "rm": false,
+      "visible": "Mobile : l'éventail déborde un peu du cadre.",
+      "defauts": [],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/accueil/02-boutique-1440.png",
+      "route": "/",
+      "etat": "02-boutique",
+      "largeur": 1440,
+      "rm": false,
+      "visible": "Onglet 3 : grille 4 × 3 de produits avec vignettes et prix, panier ambre, Cadran 1 647.",
+      "defauts": [],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/accueil/02-boutique-390.png",
+      "route": "/",
+      "etat": "02-boutique",
+      "largeur": 390,
+      "rm": false,
+      "visible": "Idem mobile.",
+      "defauts": [],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/accueil/02-outil-1440.png",
+      "route": "/",
+      "etat": "02-outil",
+      "largeur": 1440,
+      "rm": false,
+      "visible": "Onglet 4 : réseau de huit modules et hub ambre, cadres de la maquette sur chaque module, Cadran 1 447.",
+      "defauts": [],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/accueil/02-outil-390.png",
+      "route": "/",
+      "etat": "02-outil",
+      "largeur": 390,
+      "rm": false,
+      "visible": "Idem mobile, onglet 4 défilé en tête.",
+      "defauts": [],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/accueil/02-transition-1440.png",
+      "route": "/",
+      "etat": "02-transition",
+      "largeur": 1440,
+      "rm": false,
+      "visible": "450 ms après le clic sur l'onglet 2 : les plaques en vol entre la page et l'éventail, la maquette pas encore découpée, le Cadran en train de rouler (le 7 à mi-course).",
+      "defauts": [],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/accueil/02-transition-390.png",
+      "route": "/",
+      "etat": "02-transition",
+      "largeur": 390,
+      "rm": false,
+      "visible": "Idem mobile.",
+      "defauts": [],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/accueil/03-projet-1-1440.png",
+      "route": "/",
+      "etat": "03-projet-1",
+      "largeur": 1440,
+      "rm": false,
+      "visible": "La lumière s'est éteinte. Projet 1/5 Cadence Studio : capture desktop AVIF à gauche (8 colonnes), étiquette « Démo », nom en display, type, « Ouvrir la démo » ; derrière, le cadre de plaques teinté de l'accent du projet ; compteur 01 / 05.",
+      "defauts": [
+        "Les URL des démos sont injoignables depuis le conteneur : les AVIF sont produits à partir des captures existantes de l'ancien site (4 à 41 ko), à refaire depuis les vraies démos"
+      ],
+      "corrige": false
+    },
+    {
+      "fichier": "docs/qa/shots/accueil/03-projet-1-1440-rm.png",
+      "route": "/",
+      "etat": "03-projet-1",
+      "largeur": 1440,
+      "rm": true,
+      "visible": "Mouvement réduit : logo figé derrière la capture.",
+      "defauts": [],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/accueil/03-projet-1-390.png",
+      "route": "/",
+      "etat": "03-projet-1",
+      "largeur": 390,
+      "rm": false,
+      "visible": "Mobile : capture en grand, texte dessous, cadre de plaques derrière ; balayage natif entre projets.",
+      "defauts": [],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/accueil/03-projet-1-390-rm.png",
+      "route": "/",
+      "etat": "03-projet-1",
+      "largeur": 390,
+      "rm": true,
+      "visible": "Idem, logo figé.",
+      "defauts": [],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/accueil/03-projet-3-1440.png",
+      "route": "/",
+      "etat": "03-projet-3",
+      "largeur": 1440,
+      "rm": false,
+      "visible": "Projet 3/5 Maison Élise : le cadre a glissé et s'est teinté rose, compteur 03 / 05.",
+      "defauts": [
+        "Première capture : piste décalée et contenu coupé (snap avec inertie après un saut) — inertie coupée"
+      ],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/accueil/03-projet-3-390.png",
+      "route": "/",
+      "etat": "03-projet-3",
+      "largeur": 390,
+      "rm": false,
+      "visible": "Mobile : le balayage natif n'a pas été simulé, projet 1 affiché.",
+      "defauts": [
+        "Capture mobile du projet 3 à produire par un balayage"
+      ],
+      "corrige": false
+    },
+    {
+      "fichier": "docs/qa/shots/accueil/03-glissement-1440.png",
+      "route": "/",
+      "etat": "03-glissement",
+      "largeur": 1440,
+      "rm": false,
+      "visible": "Entre 2 et 3 (0,37) : projet 2 Château des Lumières affiché, cadre bleu-vert ; le glissement lui-même est trop bref pour être saisi à 500 ms.",
+      "defauts": [],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/accueil/03-glissement-390.png",
+      "route": "/",
+      "etat": "03-glissement",
+      "largeur": 390,
+      "rm": false,
+      "visible": "Mobile, projet 1.",
+      "defauts": [],
+      "corrige": false
+    },
+    {
+      "fichier": "docs/qa/shots/accueil/03-projet-5-1440.png",
+      "route": "/",
+      "etat": "03-projet-5",
+      "largeur": 1440,
+      "rm": false,
+      "visible": "Projet 5/5 Prestige Immo : cadre teinté turquoise, compteur 05 / 05.",
+      "defauts": [],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/accueil/03-projet-5-390.png",
+      "route": "/",
+      "etat": "03-projet-5",
+      "largeur": 390,
+      "rm": false,
+      "visible": "Mobile, projet 1.",
+      "defauts": [],
+      "corrige": false
+    },
+    {
+      "fichier": "docs/qa/shots/accueil/04-seuil-1440.png",
+      "route": "/",
+      "etat": "04-seuil",
+      "largeur": 1440,
+      "rm": false,
+      "visible": "Seuil « Pas que des sites. » déplié, centré ; au-dessus, la pile repliée en noyau compact avec la plaque ambre au cœur, ombre longue.",
+      "defauts": [
+        "Noyau derrière le texte — déplacé au-dessus"
+      ],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/accueil/04-seuil-1440-rm.png",
+      "route": "/",
+      "etat": "04-seuil",
+      "largeur": 1440,
+      "rm": true,
+      "visible": "Mouvement réduit : logo figé au-dessus du Seuil.",
+      "defauts": [],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/accueil/04-seuil-390.png",
+      "route": "/",
+      "etat": "04-seuil",
+      "largeur": 390,
+      "rm": false,
+      "visible": "Mobile : noyau au-dessus, Seuil sur deux lignes.",
+      "defauts": [],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/accueil/04-seuil-390-rm.png",
+      "route": "/",
+      "etat": "04-seuil",
+      "largeur": 390,
+      "rm": true,
+      "visible": "Idem, logo figé.",
+      "defauts": [],
       "corrige": true
     }
   ]

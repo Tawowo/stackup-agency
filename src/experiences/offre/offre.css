@@ -1,0 +1,186 @@
+.su-off {
+  position: relative;
+  min-height: 100svh;
+  color: var(--su-texte);
+}
+.su-off__grille {
+  max-width: var(--su-conteneur-scene);
+  margin: 0 auto;
+  padding: 96px var(--su-gouttiere) 64px;
+  min-height: 100svh;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: auto auto 1fr;
+  column-gap: var(--su-gouttiere);
+  row-gap: 24px;
+}
+.su-off__tete {
+  grid-column: 1 / span 4;
+  grid-row: 1;
+}
+.su-off__etiquette {
+  color: var(--su-texte-doux);
+  margin: 0 0 12px;
+}
+.su-off__titre {
+  margin: 0;
+  font-size: clamp(2.4rem, 5.2vw, 5rem);
+  color: var(--su-navy);
+}
+.su-off__selecteur {
+  grid-column: 1 / span 4;
+  grid-row: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.su-off__onglet {
+  display: grid;
+  grid-template-columns: 3ch 1fr;
+  align-items: center;
+  gap: 14px;
+  min-height: 56px;
+  padding: 12px 16px;
+  border: 1px solid transparent;
+  background: var(--su-ivoire-creuse);
+  color: var(--su-navy);
+  text-align: left;
+  font-family: var(--su-font-display), sans-serif;
+  font-weight: 600;
+  font-size: 1.125rem;
+  cursor: pointer;
+  transition: transform var(--su-reflexe) var(--su-glisse), background var(--su-geste);
+}
+.su-off__onglet[data-actif='1'] {
+  background: var(--su-navy);
+  color: var(--su-ivoire);
+  transform: translate(-2px, -2px);
+}
+.su-off__onglet:focus-visible {
+  outline: 2px solid var(--su-ambre);
+  outline-offset: 3px;
+}
+.su-off__num {
+  color: var(--su-ambre-texte);
+}
+.su-off__onglet[data-actif='1'] .su-off__num {
+  color: var(--su-ambre-clair);
+}
+.su-off__scene {
+  grid-column: 5 / span 8;
+  grid-row: 1 / span 3;
+  display: flex;
+  align-items: center;
+}
+.su-off__cadre {
+  width: 100%;
+  height: min(78svh, 100%);
+}
+.su-off__panneau {
+  grid-column: 1 / span 4;
+  grid-row: 3;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  align-items: flex-start;
+}
+.su-off__prix {
+  margin: 0;
+  color: var(--su-navy);
+}
+.su-off__cadran {
+  font-size: clamp(2.5rem, 4.5vw, 4rem);
+}
+.su-off__fiche {
+  width: 100%;
+  color: var(--su-navy);
+}
+
+/* ───────── Maquette HTML (découpe, cascade) ───────── */
+.su-maq {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  pointer-events: none;
+}
+/* La boîte 146 × 229 ajustée dans le cadre, comme la scène. */
+.su-maq__boite {
+  position: relative;
+  aspect-ratio: 146 / 229;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+}
+@supports not (aspect-ratio: 1) {
+  .su-maq__boite {
+    width: 100%;
+  }
+}
+.su-maq__bloc {
+  position: absolute;
+  border: 1px solid color-mix(in srgb, var(--su-navy) 40%, transparent);
+  background: color-mix(in srgb, var(--su-navy) 5%, transparent);
+  border-radius: 2px;
+  clip-path: inset(0 100% 0 0);
+  animation: su-decoupe 620ms var(--su-pose) forwards;
+  animation-delay: calc(var(--k, 0) * 70ms + 350ms);
+}
+@keyframes su-decoupe {
+  to {
+    clip-path: inset(0);
+  }
+}
+.su-maq__bloc--bouton,
+.su-maq__bloc--panier,
+.su-maq__bloc--hub {
+  border-color: var(--su-ambre);
+  background: color-mix(in srgb, var(--su-ambre) 12%, transparent);
+}
+.su-maq__bloc--texte,
+.su-maq__bloc--prix {
+  border-style: dashed;
+}
+
+@media (max-width: 767px) {
+  .su-off__grille {
+    padding-top: 84px;
+    grid-template-rows: auto auto auto auto;
+    row-gap: 16px;
+  }
+  .su-off__tete {
+    grid-column: 1 / -1;
+  }
+  .su-off__titre {
+    font-size: clamp(2rem, 9.5vw, 3rem);
+  }
+  .su-off__selecteur {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    flex-direction: row;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    gap: 8px;
+  }
+  .su-off__onglet {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    min-height: 48px;
+    font-size: 1rem;
+  }
+  .su-off__scene {
+    grid-column: 1 / -1;
+    grid-row: 3;
+  }
+  .su-off__cadre {
+    height: 40svh;
+  }
+  .su-off__panneau {
+    grid-column: 1 / -1;
+    grid-row: 4;
+  }
+  .su-off__panneau .su-action {
+    width: 100%;
+  }
+}

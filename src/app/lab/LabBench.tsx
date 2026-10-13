@@ -10,9 +10,9 @@ import StackFrame from '@/webgl/StackFrame'
 import { stackUniforms } from '@/webgl/engine'
 import { useDragPile } from '@/webgl/useDragPile'
 import { PARAMS_DEFAUT, useScene, type SceneParams } from '@/webgl/store'
-import type { LayoutName } from '@/webgl/layouts'
+import { NOMS_LAYOUTS, type LayoutName } from '@/webgl/layouts'
 
-const LAYOUTS: LayoutName[] = ['logo', 'pile']
+const LAYOUTS: LayoutName[] = NOMS_LAYOUTS
 
 export default function LabBench({ hud = true }: { hud?: boolean }) {
   const bind = useDragPile()
@@ -85,6 +85,9 @@ export default function LabBench({ hud = true }: { hud?: boolean }) {
       f2.addBinding(params, 'chantier', { min: 0, max: 0.4, step: 0.01 }).on('change', push)
       f2.addBinding(params, 'echelle', { min: 0.1, max: 1, step: 0.01 }).on('change', push)
       f2.addBinding(params, 'hauteur', { min: 0.5, max: 12, step: 0.1 }).on('change', push)
+      const f2b = p.addFolder({ title: 'Strates & pellicule' })
+      f2b.addBinding(params, 'ouverture', { min: 0, max: 1, step: 0.01 }).on('change', push)
+      f2b.addBinding(params, 'glisse', { min: -3, max: 3, step: 0.05 }).on('change', push)
       const f3 = p.addFolder({ title: 'Lumière' })
       f3.addBinding(params, 'ambiant', { min: 0, max: 1, step: 0.01 }).on('change', push)
       f3.addBinding(params, 'cle', { min: 0, max: 2, step: 0.01 }).on('change', push)
@@ -118,8 +121,8 @@ export default function LabBench({ hud = true }: { hud?: boolean }) {
   const aller = (l: LayoutName) => {
     useScene.getState().setTarget(null)
     if (l === layout) {
-      // Rejouer le morph depuis l'autre forme.
-      const autre = LAYOUTS.find((x) => x !== l)!
+      // Rejouer le morph depuis le logo.
+      const autre: LayoutName = l === 'logo' ? 'pile' : 'logo'
       useScene.getState().setLayout(autre)
       setTimeout(() => useScene.getState().setLayout(l), 1150)
       return

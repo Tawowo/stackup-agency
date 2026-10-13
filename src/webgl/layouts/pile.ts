@@ -1,5 +1,5 @@
 import { LOGO_POSES } from '../logo-geometry.ts'
-import { allocate, seed, setInstance, type LayoutData } from './types.ts'
+import { allocate, horsChamp, seed, setInstance, type LayoutData } from './types.ts'
 
 export interface PileOptions {
   /** Plaques par niveau (1 = colonne simple, 3-4 = colimaçon). */
@@ -72,9 +72,7 @@ export function pile(n: number, o: PileOptions = PILE_DEFAUT): LayoutData {
       const sy = yTop + seed(i, 5) * 1.4 + j * 0.01
       setInstance(d, i, sx, sy, sz, (seed(i, 6) - 0.5) * 0.8, seed(i, 7) * Math.PI * 2, (seed(i, 8) - 0.5) * 0.5, o.echelle, 1)
     } else {
-      const a = seed(i) * Math.PI * 2
-      const rr = 1.5 + seed(i, 1) * 3
-      setInstance(d, i, Math.cos(a) * rr, Math.sin(a) * rr * 0.6 + 1.5, -4 - seed(i, 2) * 4, 0, a, 0, 0, 1)
+      horsChamp(d, i)
     }
   }
   return d
