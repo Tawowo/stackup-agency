@@ -17,9 +17,13 @@ varying float vFace;
 varying float vDos;
 varying float vFlip;
 varying vec2 vUv;
+varying float vFlash;
+varying float vAmbreCopie;
 
 void main() {
   Inst I = instance(position);
+  vFlash = I.flash;
+  vAmbreCopie = step(98.5, aGroup) * step(aGroup, 99.5);
   vFace = abs(normal.z);
   vDos = step(normal.z, -0.5);
   vFlip = I.flip;
@@ -58,6 +62,7 @@ uniform float uBreath;
 uniform float uGrain;
 uniform float uIsoDim;
 uniform float uClair;
+uniform float uRim;
 
 varying vec3 vNormal;
 varying vec3 vWorld;
@@ -71,6 +76,8 @@ varying float vFace;
 varying float vDos;
 varying float vFlip;
 varying vec2 vUv;
+varying float vFlash;
+varying float vAmbreCopie;
 
 const vec3 NAVY = vec3(0.051, 0.173, 0.298);
 const vec3 NAVY_CLAIR = vec3(0.110, 0.290, 0.471);
@@ -78,6 +85,7 @@ const vec3 CLAIR = vec3(0.90, 0.925, 0.96);
 const vec3 CLAIR_OMBRE = vec3(0.66, 0.72, 0.80);
 const vec3 AMBRE = vec3(0.965, 0.569, 0.024);
 const vec3 AMBRE_CLAIR = vec3(1.0, 0.722, 0.302);
+const vec3 IVOIRE = vec3(1.0, 0.992, 0.976);
 
 /* La face « produit » : au dos d'une plaque basculée, un écran — barre de
    titre navy, lignes de texte, un bouton ambre, une ligne de balayage. */
@@ -110,9 +118,9 @@ vec3 produit(vec2 uv, float t) {
 }
 
 void main() {
-  bool ambre = vIndex > 1.5 && vIndex < 2.5;
-  // Sur fond sombre : plaques claires + ambre (la version blanche du logo) ;
-  // sur ivoire : navy + ambre (la version d'origine).
+  bool ambre = (vIndex > 1.5 && vIndex < 2.5) || vAmbreCopie > 0.5;
+  // Le logo officiel : navy + ambre partout. (uClair = 1 rendrait les plaques
+  // claires sur fond sombre ; il reste à 0, conservé pour le banc d'essai.)
   float clair = uNuit * uClair;
   vec3 navy = mix(NAVY, CLAIR, clair);
   vec3 navyClair = mix(NAVY_CLAIR, CLAIR_OMBRE, clair);
@@ -165,12 +173,27 @@ void main() {
   // Lentille du pointeur.
   col += uAccent * vLens * 0.15;
 
-  // Sur ivoire, les plaques gardent leur couleur franche (navy, ambre du logo) ;
-  // sur fond sombre, les plaques claires gardent leur blanc (pas de surexposition).
-  col = mix(col, base * (0.95 + 0.25 * diff), (1.0 - uNuit) * (ambre ? 0.85 : 0.5));
+  // Les plaques gardent leur couleur franche (navy, ambre du logo), sur ivoire comme sur navy.
+  col = mix(col, base * (0.95 + 0.25 * diff), (1.0 - uNuit) * (ambre ? 0.85 : 0.5) + uNuit * (ambre ? 0.3 : 0.45));
   // Plaques claires : exposition contenue, ombres fraîches (bleutées), jamais de blanc brûlé.
   vec3 clairOmbre = mix(vec3(0.62, 0.68, 0.78), base, 0.35);
   col = mix(col, mix(clairOmbre, base, 0.45 + 0.55 * diff), clair * (ambre ? 0.0 : 0.8));
+
+  // LISERÉ DE LUMIÈRE (rim light) : sur navy, le navy du logo se perdrait dans le
+  // fond ; un liseré ivoire fin court sur les quatre arêtes de chaque face, plus
+  // vif du côté de la lampe, et l'épaisseur s'éclaire d'ivoire. Les couleurs de
+  // la plaque ne changent pas. Nul sur ivoire (uNuit = 0).
+  float dArete = min(min(dTop, dBot), min(dL, dR));
+  float largeurRim = 0.006 * uPlaqueW + fwidth(dArete) * 1.2;
+  float rimMasque = (1.0 - smoothstep(0.0, largeurRim, dArete)) * vFace;
+  float cote = 0.55 + 0.45 * min(lit * 3.0, 1.0);
+  float rimForce = uRim * uNuit * (ambre ? 0.35 : 1.0);
+  col = mix(col, IVOIRE * cote, rimMasque * rimForce * 0.85);
+  col = mix(col, mix(navyClair, IVOIRE, 0.55), side * rimForce * (ambre ? 0.0 : 0.45));
+
+  // Couche qui se pose (hero « impression ») : la face s'allume d'ambre, l'arête d'ivoire.
+  col += mix(AMBRE_CLAIR, IVOIRE, 0.2) * vFlash * (0.6 * vFace + 0.9 * side);
+  col = mix(col, IVOIRE, rimMasque * min(vFlash, 1.0) * 0.8);
 
   // Face produit : au dos d'une plaque basculée.
   float dos = vDos * vFace * smoothstep(0.5, 0.6, vFlip);

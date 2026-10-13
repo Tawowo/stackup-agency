@@ -37,10 +37,14 @@ export default function Ouverture() {
     const reduit = s.reduced
     const mobile = window.innerWidth < 768
 
-    // La scène : logo au départ, pile à l'arrivée, le scroll écrit uMorph.
+    // La scène : l'IMPRESSION. Le logo est là ; au scroll, des couches de trois
+    // plaques viennent se poser exactement derrière lui, une à une (tête
+    // d'impression au-dessus → place), chacune s'allume en se posant ; le S
+    // devient massif, puis la caméra tourne pour montrer la profondeur.
     s.setMoment('00')
     s.setScrub(true)
-    s.setPair('logo', reduit ? null : 'pile')
+    s.setParams({ retard: 0.9, flash: 1, epaisseur: 1, arc: 0 })
+    s.setPair(reduit ? 'logo' : 'empileDepart', reduit ? null : 'empile')
     u.uMorph.value = 0
     s.setProjection(1)
     s.setPose({ x: 0, y: 0 })
@@ -88,17 +92,24 @@ export default function Ouverture() {
           const sc = useScene.getState()
           sc.setMoment('00')
           sc.setScrub(true)
-          sc.setPair('logo', reduit ? null : 'pile')
+          sc.setParams({ retard: 0.9, flash: 1, epaisseur: 1, arc: 0 })
+          sc.setPair(reduit ? 'logo' : 'empileDepart', reduit ? null : 'empile')
         },
         onUpdate: (self) => {
           const p = self.progress
           if (useScene.getState().moment !== '00') return
-          u.uMorph.value = p
+          // 0 → 0,78 : les couches se posent ; 0,72 → 1 : la caméra tourne autour du S massif.
+          const lisse = (a: number, b: number) => {
+            const t = Math.min(1, Math.max(0, (p - a) / (b - a)))
+            return t * t * (3 - 2 * t)
+          }
+          u.uMorph.value = Math.min(1, p / 0.78)
           el.style.setProperty('--su-p', p.toFixed(4))
           const sc = useScene.getState()
-          sc.setProjection(1 - gsap.parseEase('power2.inOut')(p))
-          sc.setParams({ epaisseur: 1 + 1.5 * Math.min(1, p * 2) })
-          sc.setPose({ x: -0.12 * p, y: 0.22 * p })
+          sc.setProjection(1 - lisse(0, 0.3))
+          // Trois quarts léger pendant l'impression (on voit les couches arriver), puis le tour
+          // de caméra : la profondeur part vers le haut et la droite sans atteindre le titre.
+          sc.setPose({ x: 0.06 * lisse(0, 0.3) + 0.04 * lisse(0.72, 1), y: -0.24 * lisse(0, 0.3) - 0.15 * lisse(0.72, 1) })
         },
       })
     }, el)
@@ -111,7 +122,7 @@ export default function Ouverture() {
       sc.setScrub(false)
       sc.setProjection(1)
       sc.setPose({ x: 0, y: 0 })
-      sc.setParams({ epaisseur: 1 })
+      sc.setParams({ epaisseur: 1, retard: 0.25, flash: 0, arc: 0.6 })
       u.uMorph.value = 0
     }
   }, [])

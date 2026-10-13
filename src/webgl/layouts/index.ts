@@ -9,9 +9,10 @@ import { cadran } from './cadran.ts'
 import { methode } from './methode.ts'
 import { configurateur } from './configurateur.ts'
 import { formulaire } from './formulaire.ts'
+import { empile, empileDepart } from './empile.ts'
 import type { LayoutData } from './types.ts'
 
-export type LayoutName = 'logo' | 'pile' | 'strates' | 'page' | 'multi' | 'boutique' | 'logiciel' | 'pellicule' | 'noyau' | 'machines' | 'cadran' | 'methode' | 'configurateur' | 'formulaire'
+export type LayoutName = 'logo' | 'empile' | 'empileDepart' | 'pile' | 'strates' | 'page' | 'multi' | 'boutique' | 'logiciel' | 'pellicule' | 'noyau' | 'machines' | 'cadran' | 'methode' | 'configurateur' | 'formulaire'
 
 /** Paramètres que les layouts lisent dans le store (`params`). */
 export interface LayoutParams {
@@ -32,10 +33,13 @@ export interface LayoutParams {
   type: number
   fonctions: number
   champs: number
+  couches: number
 }
 
 export const LAYOUTS: Record<LayoutName, (n: number, p: LayoutParams) => LayoutData> = {
   logo: (n) => logo(n),
+  empile: (n, p) => empile(n, p.couches),
+  empileDepart: (n, p) => empileDepart(n, p.couches),
   // Portrait : une tour plus courte, qui ne monte pas jusque sous la nav.
   pile: (n, p) => pile(n, p.portrait > 0.5 ? { ...p, hauteur: Math.min(p.hauteur, 1.6) } : p),
   strates: (n, p) => strates(n, { ouverture: p.ouverture }),
@@ -53,8 +57,8 @@ export const LAYOUTS: Record<LayoutName, (n: number, p: LayoutParams) => LayoutD
 }
 
 /** Clés de `params` dont le changement recalcule le layout courant. */
-export const CLES_LAYOUT: (keyof LayoutParams)[] = ['parNiveau', 'ecart', 'torsion', 'rayon', 'chantier', 'echelle', 'hauteur', 'ouverture', 'glisse', 'largeur', 'portrait', 'aiguille', 'etape', 'modules', 'type', 'fonctions', 'champs']
+export const CLES_LAYOUT: (keyof LayoutParams)[] = ['parNiveau', 'ecart', 'torsion', 'rayon', 'chantier', 'echelle', 'hauteur', 'ouverture', 'glisse', 'largeur', 'portrait', 'aiguille', 'etape', 'modules', 'type', 'fonctions', 'champs', 'couches']
 
 export const NOMS_LAYOUTS = Object.keys(LAYOUTS) as LayoutName[]
 export type { LayoutData } from './types.ts'
-export { logo, pile, strates, pageLayout, multi, boutique, logiciel, pellicule, noyau, machines, cadran, methode, configurateur, formulaire }
+export { logo, empile, empileDepart, pile, strates, pageLayout, multi, boutique, logiciel, pellicule, noyau, machines, cadran, methode, configurateur, formulaire }

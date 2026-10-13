@@ -78,8 +78,9 @@ uniform float uPointerActive;
 uniform vec3 uPointer;
 uniform vec4 uExclu;
 uniform float uExcluActive;
+uniform float uFlash;
 
-struct Inst { vec3 world; mat3 R; float lens; float dim; float scale; float flip; };
+struct Inst { vec3 world; mat3 R; float lens; float dim; float scale; float flip; float flash; };
 
 Inst instance(vec3 position) {
   float d = aDelay * uDelay;
@@ -92,7 +93,8 @@ Inst instance(vec3 position) {
   pos.z += arc * 0.35;
   vec3 e = mix(aRotA, aRotB, t);
   // En vol, la plaque tourne un peu sur elle-même.
-  e.y += sin(3.14159265 * t) * (aSeed - 0.5) * 1.2;
+  // (sauf pendant l'impression : la couche descend à plat, déjà alignée)
+  e.y += sin(3.14159265 * t) * (aSeed - 0.5) * 1.2 * (1.0 - uFlash);
   float sc = mix(aScaleA, aScaleB, t);
 
   // Respiration : ±1,5 % d'échelle (période 6 s, déphasée), et un va-et-vient
@@ -117,7 +119,7 @@ Inst instance(vec3 position) {
   // Contournement de la zone du titre : en vol, une plaque qui entre dans le
   // rectangle d'exclusion est repoussée hors de lui, par le côté le plus
   // proche, avec un poids lisse (pas de saut au bord).
-  if (uExcluActive > 0.5) {
+  if (uExcluActive > 0.5 && uFlash < 0.5) {
     float fly = sin(3.14159265 * t) * step(0.001, dist);
     vec2 c = 0.5 * (uExclu.xy + uExclu.zw);
     vec2 hd = 0.5 * (uExclu.zw - uExclu.xy);
@@ -143,6 +145,11 @@ Inst instance(vec3 position) {
   r.dim = other;
   r.scale = sc;
   r.flip = aFlip;
+  // Pose d'une couche (hero « impression ») : la plaque s'allume à l'instant où elle se pose,
+  // puis s'éteint en quelques couches. Fonction du morph seul : piloté par le scroll.
+  float pose = uMorph - (d + 1.0 - uDelay);
+  float approche = clamp(1.0 - abs(pose) / 0.03, 0.0, 1.0);
+  r.flash = uFlash * step(0.001, distance(aPosA, aPosB)) * (step(0.0, pose) * exp(-pose * 22.0) + approche * 0.4);
   return r;
 }
 `

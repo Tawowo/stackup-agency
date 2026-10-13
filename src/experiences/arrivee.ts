@@ -45,7 +45,7 @@ export function arriverParScroll(el: HTMLElement, o: Arrivee): () => void {
     s.setMoment(o.moment)
     s.setPose(o.pose)
     s.setProjection(o.projection)
-    if (o.params) s.setParams(o.params)
+    s.setParams({ retard: 0.25, flash: 0, arc: 0.6, ...(o.params ?? {}) })
     if (o.calme !== undefined) s.setCalme(o.calme)
   }
   const commettre = () => {

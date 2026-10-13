@@ -11,6 +11,7 @@
  */
 import { useEffect, useRef, type ReactNode } from 'react'
 import Fallback2D from './Fallback2D'
+import gsap from 'gsap'
 import { useScene } from './store'
 
 const registre = new Set<HTMLElement>()
@@ -33,6 +34,8 @@ function elire() {
       meilleur = r
     }
   }
+  const f = useScene.getState().frame
+  if (meilleur && f && Math.abs(f.x - meilleur.left) < 0.25 && Math.abs(f.y - meilleur.top) < 0.25 && Math.abs(f.w - meilleur.width) < 0.25 && Math.abs(f.h - meilleur.height) < 0.25) return
   useScene.getState().setFrame(meilleur ? { x: meilleur.left, y: meilleur.top, w: meilleur.width, h: meilleur.height } : null)
 }
 
@@ -43,6 +46,9 @@ function armer() {
   ro.observe(document.documentElement)
   window.addEventListener('scroll', elire, { passive: true })
   window.addEventListener('resize', elire)
+  // Une boîte peut se déplacer sans changer de taille (polices, grille, épinglage) :
+  // le ticker unique relit les boîtes à chaque trame (lectures seules, pas d'écriture DOM).
+  gsap.ticker.add(elire)
 }
 
 export default function StackFrame({ className = '', children }: { className?: string; children?: ReactNode }) {

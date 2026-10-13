@@ -55,7 +55,7 @@ export default function Nav() {
   return (
     <header className="su-nav" data-ouvert={ouvert ? '1' : '0'}>
       <div className="su-nav__barre">
-        <Link href="/" className="su-nav__logo" aria-label="Stackup Agency, accueil">
+        <Link href="/" className="su-nav__logo su-logo-plaque" aria-label="Stackup Agency, accueil">
           <LogoMarque taille={34} />
         </Link>
         <nav className="su-nav__entrees" aria-label="Navigation principale">

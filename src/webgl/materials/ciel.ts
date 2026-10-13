@@ -46,9 +46,9 @@ void main() {
     float d = distance(gl_FragCoord.xy, c) / (sc * 2.6);
     float halo = exp(-d * d) * uHalo * uLampeForce;
     col += uAccent * halo * mix(0.3, 1.1, uNuit);
-    // Lueur plus serrée derrière la pile elle-même.
-    float d2 = distance(gl_FragCoord.xy, uStackEcran.xy) / (sc * 1.4);
-    col += uAccent * exp(-d2 * d2) * uHalo * 0.5 * uNuit;
+    // Halo ambre localisé derrière la pile : il détache le navy du logo du fond navy.
+    float d2 = distance(gl_FragCoord.xy, uStackEcran.xy) / (sc * 1.15);
+    col += uAccent * exp(-d2 * d2) * uHalo * 1.1 * uNuit;
     // Vignette douce (jamais noire).
     vec2 v = q - 0.5;
     float vig = smoothstep(0.4, 1.0, length(v) * 1.3);

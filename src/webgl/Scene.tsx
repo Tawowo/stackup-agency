@@ -178,6 +178,8 @@ function Rig() {
       u.uFlux.value = prm.fluxIntensite * prm.flux
       u.uCode.value = prm.codeOpacite * prm.code
       u.uLampeForce.value = prm.lampe
+      u.uRim.value = prm.rim
+      u.uFlash.value = prm.flash
       u.uBreath.value = s.still || s.calme ? 0 : 1
       accent.set(s.accent)
       u.uAccent.value.copy(accent)

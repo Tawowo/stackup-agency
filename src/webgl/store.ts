@@ -69,6 +69,11 @@ export interface SceneParams extends PileParams {
   fluxIntensite: number
   /** Opacité du code vivant (0 → 0.4). */
   codeOpacite: number
+  /** Liseré ivoire des arêtes (0 → 1) et allumage des couches posées (0 / 1). */
+  rim: number
+  flash: number
+  /** Hero « impression » : nombre de couches empilées derrière le logo. */
+  couches: number
 }
 
 export const PARAMS_DEFAUT: SceneParams = {
@@ -96,7 +101,7 @@ export const PARAMS_DEFAUT: SceneParams = {
   cle: 0.95,
   fresnel: 0.3,
   arete: 0.9,
-  halo: 0.16,
+  halo: 0.24,
   ombre: 0.6,
   mur: 1,
   grain: 1,
@@ -111,6 +116,9 @@ export const PARAMS_DEFAUT: SceneParams = {
   solMarge: 0.22,
   fluxIntensite: 0.8,
   codeOpacite: 0.16,
+  rim: 1,
+  flash: 0,
+  couches: 20,
 }
 
 export interface Pose {

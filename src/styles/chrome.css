@@ -30,7 +30,9 @@
 }
 .su-nav__logo {
   display: inline-flex;
-  color: var(--su-texte);
+  height: 48px;
+}
+.su-nav__logo .su-logo {
   height: 34px;
 }
 .su-nav__entrees {
@@ -371,6 +373,9 @@
 }
 .su-footer__marque .su-logo {
   height: 40px;
+}
+.su-footer__marque .su-logo-plaque {
+  padding: 9px 14px 9px 12px;
 }
 .su-footer__ligne {
   margin: 0;

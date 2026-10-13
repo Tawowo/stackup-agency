@@ -47,7 +47,7 @@ export function createStackUniforms() {
     uKey: { value: 0.95 },
     uFresnel: { value: 0.45 },
     uEdge: { value: 0.9 },
-    uHalo: { value: 0.16 },
+    uHalo: { value: 0.24 },
     uShadow: { value: 0.6 },
     uWall: { value: 1 },
     uGrain: { value: 1 },
@@ -77,7 +77,11 @@ export function createStackUniforms() {
     uFlux: { value: 0.8 },
     uCode: { value: 0.16 },
     /** Palette des plaques sur fond sombre : 1 = plaques claires (logo blanc + ambre). */
-    uClair: { value: 1 },
+    uClair: { value: 0 },
+    /** Liseré ivoire des arêtes sur fond sombre (0 → 1). */
+    uRim: { value: 1 },
+    /** Allumage des couches qui se posent (hero « impression ») : 0 hors du hero. */
+    uFlash: { value: 0 },
     /** Centre de la pile à l'écran : x, y (px, origine en bas à gauche), échelle (px par unité locale). */
     uStackEcran: { value: new Vector3(720, 450, 100) },
   }

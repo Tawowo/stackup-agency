@@ -9,7 +9,9 @@ export default function Footer() {
     <footer className="su-footer">
       <div className="su-footer__grille">
         <div className="su-footer__marque">
-          <LogoMarque taille={40} />
+          <span className="su-logo-plaque">
+            <LogoMarque taille={40} />
+          </span>
           <p className="su-footer__ligne">
             Sites et outils sur mesure. {SITE.ville}, {SITE.departement}.
           </p>

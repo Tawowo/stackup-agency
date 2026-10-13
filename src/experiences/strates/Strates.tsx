@@ -69,8 +69,8 @@ export default function Strates() {
         s.setPose({ x: 0.5, y: -0.22 })
         s.setProjection(0.5)
         s.setScrub(true)
-        s.setParams({ arc: ph === 'arrive' ? 0.25 : 0.6 })
-        if (ph === 'arrive') s.setPair('pile', 'strates', { b: { ouverture: 0 } })
+        s.setParams({ arc: ph === 'arrive' ? 0.25 : 0.6, retard: 0.25, flash: 0 })
+        if (ph === 'arrive') s.setPair('empile', 'strates', { b: { ouverture: 0 } })
         else if (ph === 'ouvre') s.setPair('strates', 'strates', { a: { ouverture: 0 }, b: { ouverture: 1 } })
         else s.setPair('strates', 'strates', { a: { ouverture: 1 }, b: { ouverture: 0 } })
       }

@@ -43,6 +43,8 @@ async function main() {
   const page = await browser.newPage({ viewport: { width: largeur, height: largeur < 600 ? 844 : 900 } })
   await page.goto(`${BASE}${url}`, { waitUntil: 'networkidle' })
   await page.waitForSelector('html[data-su-ready="1"]', { timeout: 20000 })
+  // Le rail de profondeur et la nav vivent dans les marges : hors mesure.
+  await page.addStyleTag({ content: '.su-rail, .su-nav { display: none !important; }' })
   await page.waitForTimeout(600)
   const box = await page.locator('[data-su-frame]').first().boundingBox()
   const marge = 12
