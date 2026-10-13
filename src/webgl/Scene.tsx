@@ -66,6 +66,7 @@ function Temoin() {
       triangles: gl.info.render.triangles,
       appels: gl.info.render.calls,
       etat: useBande.getState().etat,
+      mouvement: useBande.getState().mouvement,
     }
   })
   return null

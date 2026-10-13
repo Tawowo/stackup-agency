@@ -5974,3 +5974,56 @@ html[data-fin='oui'] body {
     display: none;
   }
 }
+
+/* ── Le réglage des animations, au pied de page (§14.10) ───────────────────
+   Sur fond encre. Les quatre niveaux sont de vrais boutons radio : l'état
+   est porté par `aria-checked`, et la couleur ne fait que le redire.
+   ──────────────────────────────────────────────────────────────────────── */
+
+.su-reglage-mvt {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.6rem;
+}
+
+.su-reglage-mvt__titre {
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 0.66rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgb(255 255 255 / 0.7);
+}
+
+.su-reglage-mvt__choix {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+}
+
+.su-reglage-mvt__bouton {
+  padding: 0.3rem 0.65rem;
+  border: 1px solid rgb(255 255 255 / 0.22);
+  border-radius: 0.35rem;
+  background: none;
+  font-size: 0.74rem;
+  color: rgb(255 255 255 / 0.85);
+  cursor: pointer;
+  transition: border-color 160ms ease, background-color 160ms ease;
+}
+
+.su-reglage-mvt__bouton:hover {
+  border-color: rgb(255 255 255 / 0.45);
+}
+
+.su-reglage-mvt__bouton[aria-checked='true'] {
+  border-color: var(--su-or);
+  background: rgb(var(--su-or-rgb) / 0.18);
+  color: #fff;
+}
+
+.su-reglage-mvt__bouton:focus-visible {
+  outline: 2px solid var(--su-or);
+  outline-offset: 2px;
+}

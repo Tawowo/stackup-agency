@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { SITE } from '@/config/site'
 import LogoMarque from '@/components/ui/LogoMarque'
+import ReglageMouvement from '@/components/ui/ReglageMouvement'
 
 function LinkedinIcon() {
   return (
@@ -174,6 +175,13 @@ export default function Footer() {
               </li>
             </ul>
           </div>
+        </div>
+
+        {/* Le réglage des animations (dossier §14.10). Au pied de page :
+            c'est un confort, pas une étape du parcours — mais il doit être
+            trouvable, donc pas caché derrière un menu. */}
+        <div className="border-t border-white/10 pt-6 pb-6 flex justify-center">
+          <ReglageMouvement />
         </div>
 
         <div className="border-t border-white/10 pt-8 flex flex-col sm:flex-row items-center justify-between gap-3">

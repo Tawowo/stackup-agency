@@ -50,6 +50,57 @@ export default function SceneMontee() {
    * connaît pas cette fonction ; un onglet qui n'a jamais de temps mort
    * obtient donc la scène quand même, un peu plus tard.
    */
+  /* LES TROIS NIVEAUX DE MOUVEMENT (dossier §14.10), BRANCHÉS.
+   *
+   * Le store portait `mouvement` depuis le début et les composants 3D le
+   * lisaient consciencieusement — mais RIEN ne l'écrivait, sauf la page de
+   * banc. Il valait donc « plein » pour tout le monde, en permanence.
+   *
+   * Conséquence mesurée : avec `prefers-reduced-motion: reduce` actif, la
+   * bande continuait de respirer, de suivre le pointeur et de basculer. Un
+   * réglage que le système d'exploitation transmet et que le site ignore est
+   * pire qu'un réglage absent : le visiteur a demandé, et on lui a répondu
+   * non sans le dire.
+   *
+   * Les sections HTML, elles, interrogeaient la media query directement et
+   * faisaient ce qu'il fallait. Seule la scène 3D était sourde — ce qui est
+   * l'endroit où le mouvement est le plus fort.
+   *
+   * Le niveau « léger » est réservé aux machines modestes : il coupe les
+   * boucles continues (la respiration, la rotation lente) sans supprimer les
+   * transitions que déclenche une action. C'est un compromis de performance,
+   * pas une préférence exprimée — d'où un critère technique et non une
+   * media query.
+   */
+  useEffect(() => {
+    const mq = window.matchMedia('(prefers-reduced-motion: reduce)')
+    const nav = navigator as Navigator & { deviceMemory?: number }
+    const modeste = (nav.deviceMemory ?? 8) <= 4 || (navigator.hardwareConcurrency ?? 8) <= 4
+
+    const appliquer = () => {
+      /* Le choix explicite du visiteur passe avant tout : il a cliqué sur
+         ce site, en connaissance de cause. La préférence système reste le
+         défaut quand il n'a rien choisi. */
+      let enregistre: string | null = null
+      try {
+        enregistre = localStorage.getItem('su:mouvement')
+      } catch {
+        enregistre = null
+      }
+      if (enregistre === 'plein' || enregistre === 'leger' || enregistre === 'aucun') {
+        useBande.getState().setMouvement(enregistre)
+        return
+      }
+      useBande.getState().setMouvement(
+        mq.matches ? 'aucun' : modeste ? 'leger' : 'plein',
+      )
+    }
+    appliquer()
+    // La préférence peut changer pendant la visite : on suit.
+    mq.addEventListener('change', appliquer)
+    return () => mq.removeEventListener('change', appliquer)
+  }, [])
+
   const [pretPourScene, setPretPourScene] = useState(false)
 
   /* ET SURTOUT : AUCUNE PAGE NE PAIE POUR UNE SCÈNE QU'ELLE NE DEMANDE PAS.
