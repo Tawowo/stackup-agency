@@ -4,7 +4,7 @@ Rapport demandé par la section 17.7 du dossier. Il est écrit pour être
 utilisable, donc il nomme d'abord ce qui n'est pas fait.
 
 Branche : `claude/brave-maxwell-i7g77j` · Date : 13 octobre 2026
-Dernière mise à jour après les phases 3, 4a-4b et 6a.
+Dernière mise à jour après les phases 3, 4a-4b, 5a et 6a-6b.
 
 ---
 
@@ -22,7 +22,7 @@ commencées.** Le détail :
 | 3. Accueil, seconde moitié | **Terminée** sauf un point | Le feuilletage des captures au drag dans la PELLICULE. Juste Prix, DIX JOURS, Atelier, Départ, Salle des machines : faits. |
 | 4. Pages commerciales | **Entamée** | Les six gabarits de service, le gabarit projet, le curseur des tarifs, la fusion complète configurateur + devis, le contact, et les View Transitions à proprement parler. Faits : la moitié architecturale de la TRAVERSÉE (chaque page déclare l'état de la bande) et le parcours de conversion sans ressaisie. |
 | 5. Pages programmatiques | **En partie faite, avant ce chantier** | Le travail fin par gabarit décrit dans la matrice 13.11. Mais les pages NE SONT PAS restées au gabarit uniforme : signatures distinctes, fonds ivoire, contenu local réel. Mesuré en capture, voir §2 critère 4. |
-| 6. Finition et mesure | **Entamée** | Grain et post-traitement, calque `G`, raccourcis, curseur, haptique, gyroscope, vidéos. Fait : la mesure des budgets 16.3 (`scripts/budgets.mjs`). |
+| 6. Finition et mesure | **Entamée** | Grain et post-traitement, calque `G`, raccourcis, curseur, haptique, gyroscope, vidéos. Faits : la mesure des budgets 16.3 (`scripts/budgets.mjs`) et les trois niveaux de mouvement, avec leur réglage au pied de page. |
 | 7. Options | **Non commencée** | Rapier, portails drei, PDF de devis, export du cahier des charges, visualisations d'articles |
 
 Ce qui a été fait en phase 3 :
@@ -176,6 +176,14 @@ build.**
 15. **Le moteur 3D était téléchargé sur les pages sans scène** : 238 ko pour
     un canvas qui ne dessine rien. Trouvé par la mesure des budgets, pas à
     l'œil.
+16. **La scène 3D ignorait `prefers-reduced-motion`.** Le store portait le
+    niveau de mouvement, les composants le lisaient — et rien ne l'écrivait.
+    Les sections HTML faisaient ce qu'il fallait ; seule la scène était
+    sourde, c'est-à-dire l'endroit où le mouvement est le plus fort. Un
+    réglage que le système transmet et que le site ignore est pire qu'un
+    réglage absent.
+17. **Un CTA à dégradé survivait** dans les pages de services locaux —
+    littéralement le motif que le dossier condamne.
 
 ---
 
@@ -200,6 +208,11 @@ de mesure se valide avant de lui faire confiance.**
   site** : il cliquait « Continuer » sans répondre à l'étape qui attendait
   une réponse, puis il cherchait un champ « message » qui n'apparaît qu'à une
   étape ultérieure. Deux accusations infondées.
+- **Mon test des niveaux de mouvement**, qui envoyait un événement
+  personnalisé que rien n'écoute — un mécanisme que j'avais inventé. Il
+  rapportait le même niveau partout, et j'aurais pu en conclure que la
+  correction ne marchait pas. C'est en cherchant comment forcer le niveau que
+  la vraie lacune est apparue : il n'y avait aucun moyen, pour personne.
 - **Et moi-même, dans la première version de ce rapport.** J'y ai écrit que
   le critère 4 n'était « pas tenu » et que la phase 5 n'était « pas
   commencée », en lisant le plan de phases plutôt que les pages. Capture
@@ -295,3 +308,6 @@ Dans cet ordre, et pour une raison à chaque fois :
 5. **Vérifier une fois à la main qu'un devis arrive bien par e-mail.**
    C'est la seule étape du parcours de conversion que je n'ai pas jouée :
    poster le formulaire aurait envoyé un vrai message.
+6. **Regarder le réglage des animations au pied de page** et dire s'il vous
+   convient là. C'est un ajout de ma part : le dossier demande les trois
+   niveaux, il ne dit pas où les proposer.
