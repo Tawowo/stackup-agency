@@ -248,8 +248,10 @@ export default function BlogClient({ posts }: { posts: Post[] }) {
 
       <style jsx>{`
         @keyframes fadeInUp {
-          from { opacity: 0; transform: translateY(16px); }
-          to { opacity: 1; transform: translateY(0); }
+          /* Découpe, pas fondu + translation (§17.6 règle 2) : le bloc
+             ne bouge pas, c'est la lame qui passe. */
+          from { clip-path: inset(0 0 100% 0); }
+          to { clip-path: inset(0 0 0 0); }
         }
         @media (prefers-reduced-motion: reduce) {
           article { animation: none !important; }

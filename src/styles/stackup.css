@@ -5725,3 +5725,54 @@ html[data-fin='oui'] body {
   .su-prix__cinq { grid-column: 1 / -1; }
   .su-prix__cinq { margin-top: 1.5rem; }
 }
+
+/* ── Les trois engagements vérifiables (§10.9) ─────────────────────────────
+   Pas de cartes : trois colonnes de filets, comme le reste des sections
+   éditoriales. Chacune se termine par le lien qui permet de vérifier —
+   c'est ce qui les distingue d'arguments.
+   ──────────────────────────────────────────────────────────────────────── */
+
+.su-engagements {
+  margin: clamp(2.5rem, 6vh, 4rem) 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(1.25rem, 3vw, 2.5rem);
+}
+
+.su-engagements li {
+  padding-top: 0.85rem;
+  border-top: 2px solid var(--su-encre);
+}
+
+.su-engagements h3 {
+  margin: 0 0 0.5rem;
+  font-family: var(--font-space), Poppins, system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 1.02rem;
+  color: var(--su-encre);
+}
+
+.su-engagements p {
+  margin: 0 0 0.7rem;
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: rgb(var(--su-navy-rgb) / 0.78);
+}
+
+.su-engagements a {
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--su-or-texte);
+  border-bottom: 1px solid rgb(var(--su-or-rgb) / 0.45);
+  padding-bottom: 1px;
+}
+
+.su-engagements a:hover { border-bottom-color: var(--su-or-texte); }
+
+@media (max-width: 899px) {
+  .su-engagements { grid-template-columns: 1fr; gap: 1.5rem; }
+}

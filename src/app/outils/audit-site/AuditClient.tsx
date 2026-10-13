@@ -162,8 +162,9 @@ function Opportunity({ opp, index, visible }: {
   const [open, setOpen] = useState(index === 0)
   return (
     <div
-      className="rounded-xl border border-white/10 overflow-hidden transition-all duration-500"
-      style={{ opacity: visible ? 1 : 0, transform: visible ? 'translateY(0)' : 'translateY(12px)', transitionDelay: `${index * 80}ms` }}
+      className="su-decoupe rounded-xl border border-white/10 overflow-hidden"
+      data-posee={visible}
+      style={{ transitionDelay: `${index * 80}ms` }}
     >
       <button
         className="w-full flex items-center justify-between gap-3 p-4 text-left hover:bg-white/5 transition-colors"

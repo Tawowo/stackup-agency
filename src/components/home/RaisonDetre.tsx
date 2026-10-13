@@ -7,6 +7,7 @@ import { useRef, useState, useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
+import { SITE } from '@/config/site'
 
 const PARAGRAPHS = [
   `Stackup Agency est née d'un constat simple : les indépendants et les petites entreprises méritent le même niveau de site web que les grands groupes — mais les tarifs des agences classiques les en excluent presque toujours.`,
@@ -66,24 +67,16 @@ export default function RaisonDetre() {
           <div className="order-1 lg:order-2">
             {/* Surtitre */}
             <p
-              className="su-surtitre mb-5"
-              style={{
-                opacity: visible ? 1 : 0,
-                transform: visible ? 'translateY(0)' : 'translateY(16px)',
-                transition: 'opacity 0.6s cubic-bezier(0.22,1,0.36,1), transform 0.6s cubic-bezier(0.22,1,0.36,1)',
-              }}
+              className="su-surtitre mb-5 su-decoupe"
+              data-posee={visible}
             >
               09 — Notre raison d&apos;être
             </p>
 
             {/* Titre avec trait dessiné sous "accessibles à tous" */}
             <div
-              className="mb-8"
-              style={{
-                opacity: visible ? 1 : 0,
-                transform: visible ? 'translateY(0)' : 'translateY(20px)',
-                transition: 'opacity 0.7s cubic-bezier(0.22,1,0.36,1) 0.1s, transform 0.7s cubic-bezier(0.22,1,0.36,1) 0.1s',
-              }}
+              className="mb-8 su-decoupe"
+              data-posee={visible}
             >
               <h2 className="text-3xl lg:text-4xl font-bold text-navy" style={{ lineHeight: 1.2 }}>
                 Des sites d&apos;exception,{' '}
@@ -108,12 +101,9 @@ export default function RaisonDetre() {
               {PARAGRAPHS.map((p, i) => (
                 <p
                   key={i}
-                  className="text-navy/75 leading-relaxed text-[15px]"
-                  style={{
-                    opacity: visible ? 1 : 0,
-                    transform: visible ? 'translateY(0)' : 'translateY(16px)',
-                    transition: `opacity 0.7s cubic-bezier(0.22,1,0.36,1) ${0.2 + i * 0.12}s, transform 0.7s cubic-bezier(0.22,1,0.36,1) ${0.2 + i * 0.12}s`,
-                  }}
+                  className="text-navy/75 leading-relaxed text-[15px] su-decoupe"
+                  data-posee={visible}
+                  style={{ transitionDelay: `${0.2 + i * 0.12}s` }}
                 >
                   {p}
                 </p>
@@ -121,13 +111,7 @@ export default function RaisonDetre() {
             </div>
 
             {/* CTA */}
-            <div
-              style={{
-                opacity: visible ? 1 : 0,
-                transform: visible ? 'translateY(0)' : 'translateY(12px)',
-                transition: 'opacity 0.6s cubic-bezier(0.22,1,0.36,1) 0.6s, transform 0.6s cubic-bezier(0.22,1,0.36,1) 0.6s',
-              }}
-            >
+            <div className="su-decoupe" data-posee={visible}>
               <Link
                 href="/a-propos"
                 className="inline-flex items-center gap-2 text-navy font-semibold text-sm border-b border-navy/25 hover:border-gold hover:text-[#B45309] transition-all duration-200 pb-0.5"
@@ -138,6 +122,47 @@ export default function RaisonDetre() {
           </div>
 
         </div>
+
+        {/* LES TROIS ENGAGEMENTS VÉRIFIABLES (dossier §10.9).
+
+            « Vérifiable » est le mot qui compte : chacun des trois peut être
+            contrôlé par le lecteur sans nous croire sur parole. Le premier
+            est dans les CGV, le deuxième se constate en parcourant le site,
+            le troisième mène aux douze documents contractuels, en ligne et
+            téléchargeables. Un engagement qu'on ne peut pas vérifier est un
+            argument, pas un engagement.
+
+            Le deuxième n'est devenu vrai qu'en supprimant six témoignages
+            inventés qui figuraient encore sur les pages de services locaux.
+            Il n'aurait pas pu être écrit avant. */}
+        <ul className="su-engagements">
+          <li>
+            <h3>Le code vous appartient</h3>
+            <p>
+              {SITE.conditions.propriete} C’est à l’article des conditions
+              générales, pas une promesse orale.
+            </p>
+            <Link href="/cgv">Lire les CGV</Link>
+          </li>
+          <li>
+            <h3>Aucun témoignage inventé</h3>
+            <p>
+              Pas de citation attribuée à un client anonyme, pas de
+              pourcentage de performance sans source. Les démonstrations sont
+              annoncées comme telles sur chaque fiche.
+            </p>
+            <Link href="/realisations">Voir les démonstrations</Link>
+          </li>
+          <li>
+            <h3>Les documents sont publics</h3>
+            <p>
+              Contrat de prestation, bon de commande, procès-verbal de
+              livraison, cession de droits : les douze documents sont en ligne
+              avant que vous ne signiez quoi que ce soit.
+            </p>
+            <Link href="/ressources/documents">Les douze documents</Link>
+          </li>
+        </ul>
       </div>
     </section>
   )
