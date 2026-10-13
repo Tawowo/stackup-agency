@@ -1,0 +1,391 @@
+.su-tar {
+  color: var(--su-texte);
+}
+.su-tar__grille {
+  max-width: var(--su-conteneur-scene);
+  margin: 0 auto;
+  padding: 0 var(--su-gouttiere);
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: var(--su-gouttiere);
+  row-gap: 32px;
+}
+/* ───── Hero + configurateur ───── */
+.su-tar__hero {
+  padding: 110px 0 72px;
+  min-height: 100svh;
+}
+.su-tar__scene {
+  grid-column: 1 / span 5;
+  grid-row: 1 / span 2;
+  position: sticky;
+  top: 90px;
+  height: calc(100svh - 110px);
+  display: flex;
+  align-items: flex-start;
+  padding-top: 4svh;
+  pointer-events: none;
+}
+.su-tar__cadre {
+  width: 100%;
+  height: 62svh;
+}
+.su-tar__tete {
+  grid-column: 6 / span 7;
+  perspective: 900px;
+}
+.su-tar__etiquette {
+  margin: 0 0 12px;
+  color: var(--su-texte-doux);
+}
+.su-tar__titre {
+  margin: 0;
+  font-size: clamp(2.6rem, 5.6vw, 5.4rem);
+  color: var(--su-ivoire);
+}
+.su-tar__mot {
+  display: inline-block;
+}
+.su-tar__ligne {
+  margin: 20px 0 0;
+  max-width: 44ch;
+  color: var(--su-texte-doux);
+  font-size: 1.0625rem;
+}
+.su-tar__conf {
+  grid-column: 6 / span 7;
+}
+.su-conf {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.su-conf__temps {
+  margin: 0;
+  padding: 18px 20px 22px;
+  border: 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  background: var(--su-encre-2);
+  color: var(--su-ivoire);
+  transition: opacity var(--su-geste);
+}
+.su-conf__temps:disabled {
+  opacity: 0.55;
+}
+.su-conf__legende {
+  /* Enfant flex : la légende se dessine dans la plaque, pas sur son bord. */
+  float: left;
+  width: 100%;
+  color: var(--su-ambre-clair);
+  padding: 0;
+  margin-bottom: 12px;
+}
+.su-conf__types {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+.su-conf__type {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-height: 60px;
+  padding: 12px 14px;
+  border: 1px solid color-mix(in srgb, var(--su-graphite) 40%, transparent);
+  border-radius: 4px;
+  background: transparent;
+  color: var(--su-ivoire);
+  text-align: left;
+  cursor: pointer;
+  font: inherit;
+  transition: background var(--su-geste), transform var(--su-reflexe) var(--su-glisse);
+}
+.su-conf__type[data-actif='1'] {
+  background: var(--su-ambre);
+  color: var(--su-encre);
+  border-color: var(--su-ambre);
+  box-shadow: var(--su-ombre);
+  transform: translate(-2px, -2px);
+}
+.su-conf__type:focus-visible,
+.su-conf__case:focus-within {
+  outline: 2px solid var(--su-ambre-clair);
+  outline-offset: 2px;
+}
+.su-conf__type-nom {
+  font-family: var(--su-font-display), sans-serif;
+  font-weight: 600;
+  font-size: 1.0625rem;
+}
+.su-conf__type-prix {
+  font-size: 0.6875rem;
+  text-transform: none;
+  letter-spacing: 0.04em;
+  opacity: 0.85;
+}
+.su-conf__cases,
+.su-conf__maint {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+}
+.su-conf__case {
+  position: relative;
+  display: grid;
+  grid-template-columns: 18px 1fr;
+  grid-template-rows: auto auto;
+  column-gap: 10px;
+  align-items: start;
+  padding: 10px 12px;
+  min-height: 44px;
+  border: 1px solid color-mix(in srgb, var(--su-graphite) 35%, transparent);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: border-color var(--su-reflexe), background var(--su-reflexe);
+}
+.su-conf__case[data-actif='1'] {
+  border-color: var(--su-ambre);
+  background: color-mix(in srgb, var(--su-ambre) 12%, transparent);
+}
+.su-conf__case input {
+  grid-row: 1 / span 2;
+  margin: 3px 0 0;
+  accent-color: var(--su-ambre);
+}
+.su-conf__case-nom {
+  font-weight: 600;
+  font-size: 0.9375rem;
+}
+.su-conf__case-detail {
+  color: var(--su-texte-doux);
+  font-size: 0.8125rem;
+}
+.su-conf__attente,
+.su-conf__option-note {
+  margin: 0;
+  color: var(--su-texte-doux);
+  font-size: 0.9375rem;
+}
+.su-conf__options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.su-conf__option-titre {
+  margin: 6px 0 0;
+  font-weight: 600;
+}
+.su-conf__total {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 6px;
+}
+.su-conf__cadran {
+  margin: 0;
+  font-size: clamp(2.2rem, 4vw, 3.4rem);
+  color: var(--su-ivoire);
+}
+.su-conf__vide {
+  font-family: var(--su-font-sans), sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--su-texte-doux);
+}
+.su-conf__mensuel {
+  margin: 0;
+  color: var(--su-ambre-clair);
+}
+.su-conf__surdevis {
+  margin: 0;
+  color: var(--su-texte-doux);
+  font-size: 0.9375rem;
+}
+.su-conf__actions {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  margin-top: 8px;
+}
+.su-conf__actions .su-action--lien {
+  background: none;
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.9375rem;
+}
+/* ───── Offres (ivoire) ───── */
+.su-tar__offres,
+.su-tar__maint {
+  padding: 96px 0;
+}
+.su-tar__h2 {
+  grid-column: 1 / span 8;
+  margin: 0;
+  font-size: clamp(2.2rem, 4.6vw, 4.4rem);
+}
+.su-tar__liste,
+.su-tar__plans {
+  grid-column: 1 / -1;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--su-gouttiere);
+}
+.su-tar__plans {
+  grid-template-columns: repeat(3, 1fr);
+}
+.su-tar__offre,
+.su-tar__plan {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 22px 22px 26px;
+  height: 100%;
+}
+.su-tar__num {
+  margin: 0;
+  color: var(--su-ambre-texte);
+}
+.su-tar__nom {
+  margin: 0;
+  font-family: var(--su-font-display), sans-serif;
+  font-weight: 600;
+  font-size: 1.3rem;
+  line-height: 1.15;
+}
+.su-tar__prix {
+  margin: 4px 0;
+  font-size: 2rem;
+}
+.su-tar__inclus {
+  list-style: none;
+  margin: 0;
+  padding: 10px 0 0;
+  border-top: 1px solid color-mix(in srgb, var(--su-navy) 15%, transparent);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 0.9375rem;
+  color: var(--su-graphite-ivoire);
+}
+.su-tar__fiche {
+  margin-top: auto;
+}
+.su-tar__supplements {
+  grid-column: 1 / span 7;
+}
+.su-tar__supplements h3 {
+  margin: 0 0 12px;
+  color: var(--su-accent-texte);
+}
+.su-tar__sup-liste {
+  margin: 0;
+  border-top: 1px solid color-mix(in srgb, currentColor 18%, transparent);
+}
+.su-tar__sup-liste > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 10px 0;
+  border-bottom: 1px solid color-mix(in srgb, currentColor 18%, transparent);
+}
+.su-tar__sup-liste dt {
+  color: var(--su-texte-doux);
+}
+.su-tar__sup-liste dd {
+  margin: 0;
+  font-weight: 600;
+}
+.su-tar__mention {
+  margin: 14px 0 0;
+  color: var(--su-texte-doux);
+  font-size: 0.6875rem;
+}
+.su-tar__table {
+  grid-column: 1 / -1;
+  border-collapse: collapse;
+  font-size: 0.75rem;
+  text-transform: none;
+  letter-spacing: 0.03em;
+}
+.su-tar__table th,
+.su-tar__table td {
+  padding: 10px 12px;
+  border-bottom: 1px solid color-mix(in srgb, currentColor 18%, transparent);
+  text-align: left;
+}
+.su-tar__table thead th {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--su-accent-texte);
+}
+.su-tar__table td {
+  color: var(--su-ambre-texte);
+  text-align: center;
+}
+.su-tar__final {
+  grid-column: 1 / span 8;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: flex-start;
+  margin: 24px 0 0;
+}
+.su-tar__final-titre {
+  font-size: clamp(1.6rem, 2.8vw, 2.5rem);
+}
+@media (max-width: 1023px) {
+  .su-tar__liste {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 767px) {
+  .su-tar__hero {
+    padding-top: 84px;
+  }
+  .su-tar__scene {
+    grid-column: 1 / -1;
+    grid-row: 1;
+    position: static;
+    height: auto;
+  }
+  .su-tar__cadre {
+    height: 32svh;
+    width: 70%;
+    margin: 0 auto;
+  }
+  .su-tar__tete,
+  .su-tar__conf,
+  .su-tar__h2,
+  .su-tar__supplements,
+  .su-tar__final {
+    grid-column: 1 / -1;
+  }
+  .su-tar__titre {
+    font-size: clamp(2.2rem, 10vw, 3.2rem);
+  }
+  .su-conf__types,
+  .su-conf__cases,
+  .su-conf__maint {
+    grid-template-columns: 1fr;
+  }
+  .su-tar__liste,
+  .su-tar__plans {
+    grid-template-columns: 1fr;
+  }
+  .su-tar__table {
+    font-size: 0.6875rem;
+  }
+  .su-tar__table th,
+  .su-tar__table td {
+    padding: 8px 6px;
+  }
+  .su-tar__offres,
+  .su-tar__maint {
+    padding: 64px 0;
+  }
+}

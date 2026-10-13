@@ -33,6 +33,9 @@ export interface PileParams {
   aiguille: number
   etape: number
   modules: number
+  type: number
+  fonctions: number
+  champs: number
 }
 
 export interface SceneParams extends PileParams {
@@ -69,6 +72,9 @@ export const PARAMS_DEFAUT: SceneParams = {
   aiguille: 0,
   etape: 5,
   modules: 12,
+  type: 0,
+  fonctions: 0,
+  champs: 0,
   ambiant: 0.32,
   cle: 0.95,
   fresnel: 0.3,

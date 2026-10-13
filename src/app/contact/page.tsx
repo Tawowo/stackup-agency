@@ -1,8 +1,13 @@
 import type { Metadata } from 'next'
-import Chantier from '@/gabarits/Chantier'
+import Formulaire from '@/experiences/contact/Formulaire'
 
-export const metadata: Metadata = { title: 'Contact — Stackup Agency', robots: { index: false } }
+export const metadata: Metadata = {
+  title: 'Contact — Stackup Agency',
+  description: 'Parlez-nous de votre projet : site ou outil sur mesure. Réponse personnelle, démo avant signature.',
+}
 
-export default function Page() {
-  return <Chantier titre="Contact" phase={4} />
+export default async function Page({ searchParams }: { searchParams: Promise<Record<string, string | string[] | undefined>> }) {
+  const q = await searchParams
+  const s = (k: string) => (typeof q[k] === 'string' ? (q[k] as string) : '')
+  return <Formulaire c={s('c') || null} projet={s('projet').slice(0, 3000)} objet={s('objet')} />
 }

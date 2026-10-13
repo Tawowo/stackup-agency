@@ -119,3 +119,26 @@ test('methode : chaque étape ajoute des plaques, l ambre arrive à l étape 2',
   assert.equal(methode(450, 1).scale[2], 0)
   assert.ok(methode(450, 2).scale[2] > 0)
 })
+
+import { configurateur } from '../src/webgl/layouts/configurateur.ts'
+import { formulaire } from '../src/webgl/layouts/formulaire.ts'
+
+test('configurateur : chaque fonction cochée ajoute un module', () => {
+  const vis = (d) => { let v = 0; for (let i = 0; i < 450; i++) if (d.scale[i] > 0) v++; return v }
+  const a = configurateur(450, 0, 0)
+  const b = configurateur(450, 0, 0b101)
+  assert.ok(vis(b) > vis(a) + 8)
+  assert.ok(b.scale[2] > 0)
+})
+
+test('formulaire : une rangée par champ rempli, l ambre à la fin', () => {
+  const vis = (d) => { let v = 0; for (let i = 3; i < 450; i++) if (d.scale[i] > 0) v++; return v }
+  let prev = vis(formulaire(450, 0))
+  for (let k = 1; k <= 9; k++) {
+    const v = vis(formulaire(450, k))
+    assert.ok(v > prev, `champ ${k}`)
+    prev = v
+  }
+  assert.equal(formulaire(450, 8).scale[2], 0)
+  assert.ok(formulaire(450, 9).scale[2] > 0)
+})

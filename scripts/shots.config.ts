@@ -8,7 +8,7 @@ export interface Etat {
   /** Paramètres d'URL ajoutés à la route. */
   query?: string
   /** Geste à exécuter avant la capture. */
-  action?: 'drag' | 'menu' | 'touche3' | 'onglet2' | 'onglet3' | 'onglet4' | 'noeud2' | 'noeud7' | 'focus-offre2'
+  action?: 'drag' | 'menu' | 'touche3' | 'onglet2' | 'onglet3' | 'onglet4' | 'noeud2' | 'noeud7' | 'focus-offre2' | 'conf-type' | 'conf-fonctions' | 'conf-options' | 'ctc-vide' | 'ctc-remplir'
   /** Limiter à certaines largeurs (par défaut : 1440 et 390). */
   largeurs?: number[]
   /** Position de scroll, en fraction de la distance épinglée du moment visé (par défaut 00). */
@@ -92,6 +92,40 @@ export const ROUTES: Route[] = [
       { nom: '08-atelier', query: QUALITE, moment: '08', scroll: 0, attente: 2200 },
       { nom: '09-depart', query: QUALITE, moment: '09', scroll: 0, attente: 2400 },
       { nom: 'footer', query: QUALITE, moment: '09', scroll: 2, attente: 1800, sansRm: true },
+    ],
+  },
+  {
+    route: '/tarifs',
+    dossier: 'tarifs',
+    etats: [
+      { nom: 'vide', query: QUALITE, attente: 2200 },
+      { nom: 'type', query: QUALITE, action: 'conf-type', attente: 2000, sansRm: true },
+      { nom: 'fonctions', query: QUALITE, action: 'conf-fonctions', attente: 2000, sansRm: true },
+      { nom: 'options', query: QUALITE, action: 'conf-options', attente: 2000, sansRm: true },
+      { nom: 'offres', query: QUALITE, moment: 'tarifs', scroll: 0.42, attente: 2000, sansRm: true },
+      { nom: 'maintenance', query: QUALITE, moment: 'tarifs', scroll: 1, attente: 2000, sansRm: true },
+    ],
+  },
+  {
+    route: '/contact',
+    dossier: 'contact',
+    etats: [
+      { nom: 'vide', query: QUALITE, attente: 2000 },
+      { nom: 'erreurs', query: QUALITE, action: 'ctc-vide', attente: 1200, sansRm: true },
+      { nom: 'prerempli', query: `${QUALITE}&c=${encodeURIComponent('t=multi-pages;f=formulaire,galerie,rdv;m=pro;r=4')}&projet=${encodeURIComponent('Un site pour mon atelier de menuiserie à Tours, avec galerie et prise de rendez-vous.')}`, action: 'ctc-remplir', attente: 2200, sansRm: true },
+    ],
+  },
+  {
+    route: '/contact/merci',
+    dossier: 'contact',
+    etats: [{ nom: 'merci', query: `${QUALITE}&envoye=0`, attente: 2000, sansRm: true }],
+  },
+  {
+    route: '/api/contact/apercu',
+    dossier: 'contact',
+    etats: [
+      { nom: 'email-demande', query: '', attente: 300, sansRm: true, largeurs: [1440] },
+      { nom: 'email-accuse', query: 'quel=accuse', attente: 300, sansRm: true, largeurs: [1440] },
     ],
   },
 ]

@@ -1,6 +1,6 @@
 {
   "genere": "2026-10-13",
-  "phase": 3,
+  "phase": 4,
   "captures": [
     {
       "fichier": "docs/qa/shots/lab/logo-1440.png",
@@ -1451,6 +1451,276 @@
       "largeur": 390,
       "rm": false,
       "visible": "Mobile : trois colonnes empilées.",
+      "defauts": [],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/contact/vide-1440.png",
+      "route": "/contact",
+      "etat": "vide",
+      "largeur": 1440,
+      "rm": false,
+      "visible": "Contact vide : titre « Parlons de votre projet. » et ligne à gauche (colonne collante), le socle de la pile (une rangée) dans le cadre ; à droite trois plaques ivoire-creuse « 01 · Vous », « 02 · Votre projet », « 03 · Comment vous joindre » avec leurs champs, légendes mono ambre dans la plaque.",
+      "defauts": [
+        "Première passe : légendes des fieldsets dessinées sur le bord des plaques (barrées) — légendes flottées en enfant flex"
+      ],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/contact/vide-1440-rm.png",
+      "route": "/contact",
+      "etat": "vide",
+      "largeur": 1440,
+      "rm": true,
+      "visible": "Mouvement réduit : logo figé dans le cadre, formulaire identique.",
+      "defauts": [],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/contact/vide-390.png",
+      "route": "/contact",
+      "etat": "vide",
+      "largeur": 390,
+      "rm": false,
+      "visible": "Mobile : titre, ligne, pile au-dessus, plaques pleine largeur avec un champ par ligne.",
+      "defauts": [],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/contact/vide-390-rm.png",
+      "route": "/contact",
+      "etat": "vide",
+      "largeur": 390,
+      "rm": true,
+      "visible": "Idem, logo figé.",
+      "defauts": [],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/contact/erreurs-1440.png",
+      "route": "/contact",
+      "etat": "erreurs",
+      "largeur": 1440,
+      "rm": false,
+      "visible": "Envoi à vide : annonce en tête « 6 champs à corriger : prénom, nom, objet, projet, e-mail, consentement. » (aria-live), champs fautifs en bordure rouge épaisse avec message sous chacun, focus posé sur le prénom.",
+      "defauts": [],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/contact/erreurs-390.png",
+      "route": "/contact",
+      "etat": "erreurs",
+      "largeur": 390,
+      "rm": false,
+      "visible": "Idem mobile.",
+      "defauts": [],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/contact/prerempli-1440.png",
+      "route": "/contact",
+      "etat": "prerempli",
+      "largeur": 1440,
+      "rm": false,
+      "visible": "Arrivée depuis /tarifs (?c=…&projet=…) : la Fiche « Votre configuration » (type, fonctions, maintenance, rédaction, plancher à partir de 838 €) sous la pile, l'objet « Site » et le projet pré-remplis ; quatre champs saisis par le script, la pile a posé une rangée par champ valide.",
+      "defauts": [],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/contact/prerempli-390.png",
+      "route": "/contact",
+      "etat": "prerempli",
+      "largeur": 390,
+      "rm": false,
+      "visible": "Mobile : Fiche en haut, champs remplis.",
+      "defauts": [],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/contact/merci-1440.png",
+      "route": "/contact/merci",
+      "etat": "merci",
+      "largeur": 1440,
+      "rm": false,
+      "visible": "Confirmation : la pile refermée en logo à gauche, « C'est parti. », le texte honnête quand Resend n'est pas configuré (message consigné, écrire aussi à contact@), retour à l'accueil.",
+      "defauts": [],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/contact/merci-390.png",
+      "route": "/contact/merci",
+      "etat": "merci",
+      "largeur": 390,
+      "rm": false,
+      "visible": "Idem mobile, logo au-dessus.",
+      "defauts": [],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/contact/email-demande-1440.png",
+      "route": "/api/contact/apercu",
+      "etat": "email-demande",
+      "largeur": 1440,
+      "rm": false,
+      "visible": "Gabarit de l'e-mail reçu par l'agence (rendu HTML serveur, échappé) : bandeau mono « Nouvelle demande · date », titre objet + nom, tableau clé/valeur (entreprise, métier, projet, configuration multi-lignes, e-mail, téléphone, préférence), pied avec l'origine. Plaque ivoire sur ivoire-creuse, filet ambre, ombre à −18°.",
+      "defauts": [
+        "Pas de clé Resend dans ce conteneur : l'envoi réel reste à vérifier par le propriétaire avec RESEND_API_KEY ; le gabarit est la preuve disponible"
+      ],
+      "corrige": false
+    },
+    {
+      "fichier": "docs/qa/shots/contact/email-accuse-1440.png",
+      "route": "/api/contact/apercu",
+      "etat": "email-accuse",
+      "largeur": 1440,
+      "rm": false,
+      "visible": "Accusé envoyé au visiteur : « Bonjour Camille, », réponse personnelle annoncée selon la préférence, citation du projet, signature.",
+      "defauts": [],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/tarifs/vide-1440.png",
+      "route": "/tarifs",
+      "etat": "vide",
+      "largeur": 1440,
+      "rm": false,
+      "visible": "Hero : la jauge en arc de plaques (aiguille ambre à 0) dans la colonne gauche collante, « Choisissez ce qu'on empile. » déplié, la ligne, puis le configurateur : plaque 01 · Type (quatre radios avec « à partir de »), 02 · Fonctions (attente d'un type), 03 · Options.",
+      "defauts": [
+        "Première passe : jauge coupée en bas (cadre centré trop haut) — cadre 62 svh aligné en haut ; légendes sur le bord des plaques — flottées, plaques en flex"
+      ],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/tarifs/vide-1440-rm.png",
+      "route": "/tarifs",
+      "etat": "vide",
+      "largeur": 1440,
+      "rm": true,
+      "visible": "Mouvement réduit : logo figé à la place de la jauge, titre posé, configurateur identique.",
+      "defauts": [],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/tarifs/vide-390.png",
+      "route": "/tarifs",
+      "etat": "vide",
+      "largeur": 390,
+      "rm": false,
+      "visible": "Mobile : jauge au-dessus, titre, puis les plaques du configurateur pleine largeur, un bouton par ligne.",
+      "defauts": [],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/tarifs/vide-390-rm.png",
+      "route": "/tarifs",
+      "etat": "vide",
+      "largeur": 390,
+      "rm": true,
+      "visible": "Idem, logo figé.",
+      "defauts": [],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/tarifs/type-1440.png",
+      "route": "/tarifs",
+      "etat": "type",
+      "largeur": 1440,
+      "rm": false,
+      "visible": "Type « Site multi-pages » choisi (radio ambre, curseur « Choisir ») : la pile se réassemble en la variante compacte de l'éventail (trois pages empilées, bouton ambre), 02 · Fonctions se remplit des six fonctions compatibles.",
+      "defauts": [
+        "Première passe : la forme débordait du cadre et les modules sortaient à droite — variante compacte, échelle 0,74, colonne des modules à 0,52"
+      ],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/tarifs/type-390.png",
+      "route": "/tarifs",
+      "etat": "type",
+      "largeur": 390,
+      "rm": false,
+      "visible": "Mobile : pile compacte au-dessus, type choisi en ambre.",
+      "defauts": [],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/tarifs/fonctions-1440.png",
+      "route": "/tarifs",
+      "etat": "fonctions",
+      "largeur": 1440,
+      "rm": false,
+      "visible": "Formulaire, Galerie, Blog cochés (cases ambre) : trois modules 2 × 2 s'allument dans la colonne droite de la pile, reliés par de petites plaques.",
+      "defauts": [],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/tarifs/fonctions-390.png",
+      "route": "/tarifs",
+      "etat": "fonctions",
+      "largeur": 390,
+      "rm": false,
+      "visible": "Mobile : trois cases cochées, focus visible sur Blog.",
+      "defauts": [],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/tarifs/options-1440.png",
+      "route": "/tarifs",
+      "etat": "options",
+      "largeur": 1440,
+      "rm": false,
+      "visible": "Maintenance Pro et Pack 4 articles : le Cadran affiche « à partir de 838 € » (749 + 89), « + 44 €/mois de maintenance », « Précisé au devis : Formulaire, Galerie, Blog. » ; aucune durée nulle part.",
+      "defauts": [],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/tarifs/options-390.png",
+      "route": "/tarifs",
+      "etat": "options",
+      "largeur": 390,
+      "rm": false,
+      "visible": "Mobile : options en colonne, Pro et Pack 4 sélectionnés.",
+      "defauts": [],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/tarifs/offres-1440.png",
+      "route": "/tarifs",
+      "etat": "offres",
+      "largeur": 1440,
+      "rm": false,
+      "visible": "Ivoire : « Les quatre offres, en entier. », quatre Plaques avec Cadran, toutes les inclusions, Fiche de fabrication, « Demander un devis » ; la jauge du hero finit sa course collante en haut.",
+      "defauts": [
+        "La jauge du hero reste visible en haut de la section ivoire au point de bascule — à arbitrer en phase 7"
+      ],
+      "corrige": false
+    },
+    {
+      "fichier": "docs/qa/shots/tarifs/offres-390.png",
+      "route": "/tarifs",
+      "etat": "offres",
+      "largeur": 390,
+      "rm": false,
+      "visible": "Mobile : Plaques empilées.",
+      "defauts": [],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/tarifs/maintenance-1440.png",
+      "route": "/tarifs",
+      "etat": "maintenance",
+      "largeur": 1440,
+      "rm": false,
+      "visible": "Trois plans (Starter 29, Pro 44, Premium 89 €/mois) en Plaques avec leurs inclusions, tableau mono de comparaison (● / —), « Un devis, pas une estimation. » et l'action finale.",
+      "defauts": [],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/tarifs/maintenance-390.png",
+      "route": "/tarifs",
+      "etat": "maintenance",
+      "largeur": 390,
+      "rm": false,
+      "visible": "Mobile : plans empilés, tableau resserré.",
       "defauts": [],
       "corrige": true
     }

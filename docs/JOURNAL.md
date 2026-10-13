@@ -19,9 +19,8 @@ un seul ticker gsap, drag avec inertie, paliers detect-gpu + moniteur (désactiv
 `/lab` : Tweakpane, états par URL. Scripts : shots (1440/390, ± mouvement réduit, SwiftShader),
 logo-check, cadence, compresser-png. Layouts purs testés (`node --test`).
 
-**Captures lues** : 24 (rapport.json). Défauts vus et corrigés : Tweakpane en double ; caméra qui
-recentrait la pile (le logo ignorait sa boîte) ; tour chaotique ; plaques de profil roses ; lentille
-et Fresnel trop forts ; ambre jaunie sur ivoire ; `--su-nuit` CSS non synchronisée.
+**Captures lues** : 24. Défauts corrigés : Tweakpane en double ; caméra qui recentrait la pile ; tour
+chaotique ; plaques de profil roses ; lentille et Fresnel trop forts ; ambre jaunie ; `--su-nuit` CSS.
 
 **Superposition** : 1,05 % (1440) / 1,08 % (390), seuil 2 %. **Cadence SwiftShader** (temps réel) :
 logo 8-9 fps en 1440, 15 en 390 ; pile 4 / 9 ; un canvas VIDE plafonne à 16 fps ici → le proxy « ≥ 30 »
@@ -40,12 +39,8 @@ mobile) ; le scroll écrit uMorph (logo → pile), ortho → perspective, épais
 Repli 2D 100 % CSS : trois plaques SVG exactes + sept fantômes pilotés par `--su-p`. Mouvement
 réduit : logo figé, texte posé, pas d'épinglage. Six pages de chantier pour les routes de la nav.
 
-**Captures lues** : 23 états du hero + 2 logo-check (1,17 % / 1,43 %). Défauts vus et corrigés : tour
-déjà construite à p = 0 ; repli 2D en ivoire ; panneau du menu par-dessus la barre ; `?fond=ivoire`
-écrasé par le hero. Noté, non corrigé : à p = 0,5 des plaques en vol traversent la zone du titre.
-
-**Pas fait** : gyroscope, vidéo du scroll, cadence sur vrai GPU, raccourcis clavier, retour après drag
-trop rapide.
+**Captures lues** : 23 états du hero + 2 logo-check (1,17 % / 1,43 %). Défauts corrigés : tour déjà
+construite à p = 0 ; repli 2D en ivoire ; menu par-dessus la barre ; `?fond=ivoire` écrasé par le hero.
 
 ## 2026-10-13 — Phase 2 : accueil, première moitié ✅ (moments 01-04)
 
@@ -122,6 +117,34 @@ par pas de scroll et les envoie en flux (image2pipe) à ce ffmpeg en VP8. Trois 
 
 **Pas fait** : gyroscope, raccourcis clavier globaux, réglage du mouvement (phase 7) ; cadence sur vrai GPU.
 
-**Prochaine étape — phase 4** : `/tarifs` (configurateur de pile en trois temps, Cadran, offres, maintenance,
-« Recevoir un devis » → `/contact` avec configuration sérialisée) et `/contact` (trois plaques, zod, Resend,
-limitation de débit, pile qui se construit par champ rempli, confirmation).
+**Vercel.** La preview de la branche renvoyait 404 NOT_FOUND partout (même `/favicon.ico`) avec un build
+« completed » : `vercel.json` (`"framework": "nextjs"`) était parti dans `ancien/` avec l'ancien site, et
+le projet retombait sur son preset enregistré (servi comme dossier statique). Restauré à la racine, plus
+`engines.node = 22.x`. Le conteneur ne peut pas joindre vercel.app (politique d'egress) : l'état des
+déploiements se lit par l'API GitHub (`deployments` + `statuses.environment_url`).
+
+## 2026-10-13 — Phase 4 : tarifs + contact ✅
+
+**Fait.** `src/lib/configuration.ts` : schéma zod, `serialiser` / `deserialiser` (`?c=t=outil;f=rdv;m=pro;r=4`),
+`normaliser` (fonctions incompatibles retirées), `estimer` (plancher + mensuel + fonctions « sur devis »,
+jauge), `lignesFiche`, `resumer` ; tests. Layouts `configurateur` (forme du type en variante compacte + un
+module 2 × 2 relié par fonction cochée) et `formulaire` (une rangée par champ valide, l'ambre au neuvième).
+`/tarifs` : hero en `cadran` (aiguille = plancher / max), titre déplié, configurateur en trois plaques
+(radios au clavier, cases, maintenance, rédaction), Cadran recalculé, « Recevoir un devis » → `/contact?c=…` ;
+quatre offres en entier (Cadran, inclusions, Fiche), suppléments, trois plans de maintenance + tableau mono,
+ancres `#une-page` etc. ; la lecture passe sur ivoire. `/contact` : trois plaques, zod client + serveur,
+erreurs annoncées (`role="status"`, `aria-invalid`, focus sur le premier champ fautif), RGPD explicite,
+pot de miel, `projet` / `objet` / `c` pré-remplis, Fiche de la configuration, pile construite champ par
+champ. `/api/contact` : zod, limitation 5 / 10 min par IP (mémoire d'instance), gabarits HTML + texte
+échappés, Resend (demande + accusé) ; sans `RESEND_API_KEY` → 202 `envoye: false`, consigné serveur, et la
+page `/contact/merci` le dit. `/api/contact/apercu` (hors production) rend les deux gabarits.
+
+**Captures lues** : tarifs 6 états, contact 3, merci, 2 gabarits (150 entrées). Défauts vus et corrigés :
+légendes des fieldsets dessinées sur le bord des plaques (flottées, plaques en flex) ; forme du
+configurateur trop large pour son cadre et modules hors champ (variante compacte, colonne à 0,52) ; jauge du
+hero coupée en bas. Non vérifié : l'envoi réel Resend (pas de clé ici) — le propriétaire ajoute
+`RESEND_API_KEY`, `CONTACT_TO`, `CONTACT_FROM` (domaine vérifié chez Resend) sur Vercel.
+
+**Prochaine étape — phase 5** : `/realisations` (+ fiche, transition par élément partagé), `/services`
+(+ fiche), `/solutions` (+ fiche, Salle des machines en grand), `/a-propos`, TRAVERSÉE (le canvas ne se
+démonte jamais entre les pages : morph vers le layout de la page cible).

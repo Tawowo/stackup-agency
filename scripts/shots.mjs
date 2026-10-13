@@ -60,7 +60,7 @@ export async function capturer({ route, dossier, etats }, browser, filtreEtat) {
         const page = await ctx.newPage()
         const url = `${BASE}${route}${etat.query ? `?${etat.query}` : ''}`
         await page.goto(url, { waitUntil: 'networkidle' })
-        await page.waitForSelector('html[data-su-ready="1"]', { timeout: 20000 }).catch(() => {})
+        if (!route.startsWith('/api/')) await page.waitForSelector('html[data-su-ready="1"]', { timeout: 20000 }).catch(() => {})
         if (etat.scroll !== undefined) {
           // Deux temps : on s'approche (les ScrollTriggers se déclenchent dans l'ordre), puis on se cale.
           const aller = async (frac, moment) => {
@@ -97,6 +97,26 @@ export async function capturer({ route, dossier, etats }, browser, filtreEtat) {
         if (etat.action === 'touche3') await page.keyboard.press('3')
         if (etat.action?.startsWith('noeud')) await page.locator('.su-mac__noeud').nth(Number(etat.action.slice(5)) - 1).click()
         if (etat.action === 'focus-offre2') await page.locator('.su-prix__offre').nth(1).focus()
+        if (etat.action?.startsWith('conf-')) {
+          await page.locator('.su-conf__type').nth(1).click()
+          if (etat.action !== 'conf-type') {
+            const cases = page.locator('[data-temps="2"] .su-conf__case input')
+            for (let k = 0; k < 3; k++) await cases.nth(k).check()
+          }
+          if (etat.action === 'conf-options') {
+            await page.locator('input[name="maintenance"]').nth(2).check()
+            await page.locator('input[name="redaction"]').nth(1).check()
+          }
+        }
+        if (etat.action === 'ctc-vide') await page.locator('.su-ctc__form button[type="submit"]').click()
+        if (etat.action === 'ctc-remplir') {
+          await page.fill('#su-ctc-prenom', 'Camille')
+          await page.fill('#su-ctc-nom', 'Durand')
+          await page.fill('#su-ctc-entreprise', 'Menuiserie Durand')
+          await page.fill('#su-ctc-email', 'camille@exemple.fr')
+          await page.locator('input[name="rgpd"]').check()
+          await page.locator('#su-ctc-prenom').focus()
+        }
         if (etat.action?.startsWith('onglet')) {
           const k = Number(etat.action.slice(6))
           await page.locator('.su-off__onglet').nth(k - 1).click()
