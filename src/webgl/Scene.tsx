@@ -182,6 +182,14 @@ function Rig() {
         const dx = s.still ? 0 : (Math.sin((t * 2 * Math.PI) / 12) * 2 * Math.PI) / 180
         const dy = s.still ? 0 : (Math.sin((t * 2 * Math.PI) / 17) * 1.2 * Math.PI) / 180
         g.rotation.set(spin.x + dy + orbit.y + lisse.px, spin.y + dx + orbit.x + lisse.py, 0)
+        // Zone d'exclusion (titre) → repère local du groupe.
+        const ex = s.exclusion
+        if (ex && ex.w > 0) {
+          const lx = (px: number) => ((px - W / 2) / PX_PAR_UNITE - stackPos.x) / stackPos.s
+          const ly = (py: number) => ((H / 2 - py) / PX_PAR_UNITE - stackPos.y) / stackPos.s
+          u.uExclu.value.set(lx(ex.x), ly(ex.y + ex.h), lx(ex.x + ex.w), ly(ex.y))
+          u.uExcluActive.value = 1
+        } else u.uExcluActive.value = 0
         // Mur et halo.
         const p = platesRef.current
         const murLocal = p ? p.murA + (p.murB - p.murA) * u.uMorph.value : -0.3

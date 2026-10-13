@@ -58,6 +58,15 @@ export default function SceneMount() {
     document.documentElement.dataset.suMode = mode
   }, [mode])
 
+  // Portrait (< 768 px) : variantes compactes des layouts.
+  useEffect(() => {
+    const mq = window.matchMedia('(max-width: 767px)')
+    const appliquer = () => useScene.getState().setParams({ portrait: mq.matches ? 1 : 0 })
+    appliquer()
+    mq.addEventListener('change', appliquer)
+    return () => mq.removeEventListener('change', appliquer)
+  }, [])
+
   // `--su-nuit` (CSS) suit la nuit de la scène : fond, textes et canvas ensemble.
   useEffect(() => {
     const appliquer = (n: number) => document.documentElement.style.setProperty('--su-nuit', n.toFixed(3))

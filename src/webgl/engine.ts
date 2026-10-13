@@ -51,6 +51,9 @@ export function createStackUniforms() {
     uShadow: { value: 0.6 },
     uWall: { value: 1 },
     uGrain: { value: 1 },
+    /** Rectangle d'exclusion (repère local) : minX, minY, maxX, maxY. */
+    uExclu: { value: new Vector4(0, 0, 0, 0) },
+    uExcluActive: { value: 0 },
   }
 }
 

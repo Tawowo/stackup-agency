@@ -4,7 +4,9 @@
  * orthographique). La boîte de la maquette reproduit la boîte du logo
  * (146 × 229) que la scène ajuste dans le cadre ; les positions sont en %.
  */
-import { BLOCS, boiteBloc } from '@/webgl/layouts/offres'
+'use client'
+import { blocsDe, boiteBloc } from '@/webgl/layouts/offres'
+import { useScene } from '@/webgl/store'
 import { LOGO_VIEW, SVG_PAR_UNITE } from '@/webgl/logo-geometry'
 import type { OffreScene } from './offres'
 
@@ -12,7 +14,8 @@ const W = LOGO_VIEW.w / SVG_PAR_UNITE // 1.46
 const H = LOGO_VIEW.h / SVG_PAR_UNITE // 2.29
 
 export default function Maquette({ offre }: { offre: OffreScene }) {
-  const blocs = BLOCS[offre.maquette]
+  const portrait = useScene((s) => s.params.portrait) > 0.5
+  const blocs = blocsDe(offre.maquette, portrait)
   return (
     <div className="su-maq" data-maquette={offre.maquette} aria-hidden="true">
       <div className="su-maq__boite">

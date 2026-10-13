@@ -46,6 +46,8 @@ uniform float uOrtho;
 uniform float uIsolate;
 uniform float uPointerActive;
 uniform vec3 uPointer;
+uniform vec4 uExclu;
+uniform float uExcluActive;
 
 struct Inst { vec3 world; mat3 R; float lens; float dim; float scale; };
 
@@ -81,6 +83,22 @@ Inst instance(vec3 position) {
   float other = iso * (1.0 - step(abs(aGroup - uIsolate), 0.5));
   pos.x += other * sign(pos.x + 0.001) * 0.35;
   pos.z -= other * 0.4;
+
+  // Contournement de la zone du titre : en vol, une plaque qui entre dans le
+  // rectangle d'exclusion est repoussée hors de lui, par le côté le plus
+  // proche, avec un poids lisse (pas de saut au bord).
+  if (uExcluActive > 0.5) {
+    float fly = sin(3.14159265 * t) * step(0.001, dist);
+    vec2 c = 0.5 * (uExclu.xy + uExclu.zw);
+    vec2 hd = 0.5 * (uExclu.zw - uExclu.xy);
+    vec2 dd = abs(pos.xy - c) - hd;
+    float m = max(dd.x, dd.y);
+    float w = fly * (1.0 - smoothstep(-0.05, 0.45, m));
+    float dx = pos.x - c.x;
+    float cibleX = hd.x + 0.3;
+    pos.x += sign(dx + 1e-4) * max(0.0, cibleX - abs(dx)) * w;
+    pos.z -= 0.6 * w;
+  }
 
   mat3 R = rotXYZ(e);
   vec3 local = position * vec3(1.0, 1.0, uEpaisseur) * sc * breath;

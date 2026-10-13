@@ -9,6 +9,8 @@ export interface Bloc {
   /** Centre, unités monde. */
   x: number
   y: number
+  /** Profondeur (0 = plan de la maquette). */
+  z?: number
   /** Rangées de plaques : largeur de chaque rangée (nombre de plaques). */
   rangees: number[]
   /** Échelle des plaques. */
@@ -34,20 +36,29 @@ export function boiteBloc(b: Bloc): { x: number; y: number; w: number; h: number
   return { x: b.x - w / 2, y: b.y + h / 2, w, h }
 }
 
-function page(cx: number, cy: number, echelle: number, delay: number, ambre: boolean): Bloc[] {
+function page(cx: number, cy: number, echelle: number, delay: number, ambre: boolean, z = 0): Bloc[] {
   const s = S * echelle
   const g = (dx: number) => cx + dx * echelle
   const h = (dy: number) => cy + dy * echelle
-  const col = (x: number, d: number): Bloc => ({ x: g(x), y: h(0.08), rangees: [4, 4, 4, 3], s, g: 2, delay: delay + d, role: 'texte' })
+  const col = (x: number, d: number): Bloc => ({ x: g(x), y: h(0.08), z, rangees: [4, 4, 4, 3], s, g: 2, delay: delay + d, role: 'texte' })
   return [
-    { x: cx, y: h(0.95), rangees: [9], s, g: 0, delay, role: 'entete' },
-    { x: g(-0.3), y: h(0.56), rangees: [5, 4], s: s * 1.25, g: 1, delay: delay + 0.08, role: 'titre' },
-    { x: g(0.38), y: h(0.56), rangees: [3, 3], s, g: 1, delay: delay + 0.12, role: 'image' },
+    { x: cx, y: h(0.95), z, rangees: [9], s, g: 0, delay, role: 'entete' },
+    { x: g(-0.3), y: h(0.56), z, rangees: [5, 4], s: s * 1.25, g: 1, delay: delay + 0.08, role: 'titre' },
+    { x: g(0.38), y: h(0.56), z, rangees: [3, 3], s, g: 1, delay: delay + 0.12, role: 'image' },
     col(-0.38, 0.16),
     col(0.3, 0.2),
-    { x: g(-0.42), y: h(-0.62), rangees: [1], s: s * 1.6, g: 3, delay: delay + 0.3, role: 'bouton', ambre },
+    { x: g(-0.42), y: h(-0.62), z, rangees: [1], s: s * 1.6, g: 3, delay: delay + 0.3, role: 'bouton', ambre },
   ]
 }
+
+/** MULTI en portrait : trois pages empilées verticalement (la principale au
+ *  milieu, deux plus petites en retrait au-dessus et au-dessous), rien ne
+ *  dépasse la boîte 1,46 × 2,29. */
+const MULTI_PORTRAIT: Bloc[] = [
+  ...page(-0.12, 0.72, 0.4, 0.2, false, -0.3),
+  ...page(0, 0, 0.62, 0, true),
+  ...page(0.12, -0.74, 0.4, 0.4, false, -0.3),
+]
 
 export const BLOCS: Record<'page' | 'multi' | 'boutique' | 'logiciel', Bloc[]> = {
   page: page(0, 0, 1, 0, true),
@@ -77,10 +88,16 @@ export const BLOCS: Record<'page' | 'multi' | 'boutique' | 'logiciel', Bloc[]> =
   })(),
 }
 
+/** Blocs d'une maquette, selon l'orientation. */
+export function blocsDe(nom: keyof typeof BLOCS, portrait: boolean): Bloc[] {
+  return nom === 'multi' && portrait ? MULTI_PORTRAIT : BLOCS[nom]
+}
+
 function poserBloc(d: LayoutData, i: number, b: Bloc): number {
   const pas = PX * (b.s / S)
+  const z = b.z ?? 0
   if (b.ambre) {
-    setInstance(d, 2, b.x, b.y, 0.03, 0, 0, 0, b.s, b.g, b.delay)
+    setInstance(d, 2, b.x, b.y, z + 0.03, 0, 0, 0, b.s, b.g, b.delay)
     return i
   }
   const boite = boiteBloc(b)
@@ -88,7 +105,7 @@ function poserBloc(d: LayoutData, i: number, b: Bloc): number {
   b.rangees.forEach((n, r) => {
     const y = boite.y - b.s * 0.25 - r * (b.s * LIGNE) - b.s * 0.25
     const cx = boite.x + (n * pas) / 2
-    k = rangee(d, k, n, cx, y, 0, pas, b.s, { g: b.g, delay: b.delay + r * 0.02, miroir: b.role === 'entete' })
+    k = rangee(d, k, n, cx, y, z, pas, b.s, { g: b.g, delay: b.delay + r * 0.02, miroir: b.role === 'entete' })
   })
   return k
 }
@@ -110,8 +127,8 @@ function finir(d: LayoutData, i: number, n: number): LayoutData {
 export function pageLayout(n: number): LayoutData {
   return depuisBlocs(n, BLOCS.page, -0.7)
 }
-export function multi(n: number): LayoutData {
-  return depuisBlocs(n, BLOCS.multi, -0.9)
+export function multi(n: number, portrait = false): LayoutData {
+  return depuisBlocs(n, blocsDe('multi', portrait), -0.9)
 }
 export function boutique(n: number): LayoutData {
   return depuisBlocs(n, BLOCS.boutique, -0.7)

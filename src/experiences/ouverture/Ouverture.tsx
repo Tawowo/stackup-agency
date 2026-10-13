@@ -11,16 +11,20 @@ import StackFrame from '@/webgl/StackFrame'
 import { stackUniforms } from '@/webgl/engine'
 import { useScene } from '@/webgl/store'
 import { useDragPile } from '@/webgl/useDragPile'
+import { useExclusion } from '@/webgl/useExclusion'
 import { gsap, ScrollTrigger, SplitText, initGsap } from '@/lib/gsap'
 import Action from '@/components/ui/Action'
 import Cote from '@/components/ui/Cote'
 import './ouverture.css'
+
+const EXCLUSION_00 = ['.su-ouv__texte', '.su-nav__barre']
 
 export default function Ouverture() {
   const section = useRef<HTMLElement>(null)
   const scene = useRef<HTMLDivElement>(null)
   const titre = useRef<HTMLHeadingElement>(null)
   const bind = useDragPile()
+  useExclusion(EXCLUSION_00)
 
   useEffect(() => {
     initGsap()

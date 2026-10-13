@@ -19,6 +19,7 @@ export interface LayoutParams {
   hauteur: number
   ouverture: number
   glisse: number
+  portrait: number
 }
 
 export const LAYOUTS: Record<LayoutName, (n: number, p: LayoutParams) => LayoutData> = {
@@ -26,7 +27,7 @@ export const LAYOUTS: Record<LayoutName, (n: number, p: LayoutParams) => LayoutD
   pile: (n, p) => pile(n, p),
   strates: (n, p) => strates(n, { ouverture: p.ouverture }),
   page: (n) => pageLayout(n),
-  multi: (n) => multi(n),
+  multi: (n, p) => multi(n, p.portrait > 0.5),
   boutique: (n) => boutique(n),
   logiciel: (n) => logiciel(n),
   pellicule: (n, p) => pellicule(n, { glisse: p.glisse }),
@@ -34,7 +35,7 @@ export const LAYOUTS: Record<LayoutName, (n: number, p: LayoutParams) => LayoutD
 }
 
 /** Clés de `params` dont le changement recalcule le layout courant. */
-export const CLES_LAYOUT: (keyof LayoutParams)[] = ['parNiveau', 'ecart', 'torsion', 'rayon', 'chantier', 'echelle', 'hauteur', 'ouverture', 'glisse']
+export const CLES_LAYOUT: (keyof LayoutParams)[] = ['parNiveau', 'ecart', 'torsion', 'rayon', 'chantier', 'echelle', 'hauteur', 'ouverture', 'glisse', 'portrait']
 
 export const NOMS_LAYOUTS = Object.keys(LAYOUTS) as LayoutName[]
 export type { LayoutData } from './types.ts'

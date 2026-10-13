@@ -267,32 +267,12 @@
       "corrige": true
     },
     {
-      "fichier": "docs/qa/shots/accueil/00-p025-1440.png",
-      "route": "/",
-      "etat": "00-p025",
-      "largeur": 1440,
-      "rm": false,
-      "visible": "p = 0,25 : les plaques du logo ont pris de l'épaisseur (×1,75), l'ombre s'allonge, les premières plaques arrivent de l'arrière-plan en petits éclats ; les cotes s'effacent (opacité 1 − 1,6 p) ; barre de progression ambre en haut.",
-      "defauts": [],
-      "corrige": true
-    },
-    {
       "fichier": "docs/qa/shots/accueil/00-p025-1440-rm.png",
       "route": "/",
       "etat": "00-p025",
       "largeur": 1440,
       "rm": true,
       "visible": "Mouvement réduit : pas d'épinglage, la page n'a pas de distance à défiler, identique à p = 0.",
-      "defauts": [],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/accueil/00-p025-390.png",
-      "route": "/",
-      "etat": "00-p025",
-      "largeur": 390,
-      "rm": false,
-      "visible": "Mobile p = 0,25 : épaisseur, éclats en vol autour du logo, la nav reste lisible.",
       "defauts": [],
       "corrige": true
     },
@@ -307,34 +287,12 @@
       "corrige": true
     },
     {
-      "fichier": "docs/qa/shots/accueil/00-p05-1440.png",
-      "route": "/",
-      "etat": "00-p05",
-      "largeur": 1440,
-      "rm": false,
-      "visible": "p = 0,5 : la perspective est engagée (les plaques du logo fuient), des dizaines de plaques en vol en arc vers la tour, le titre reste net.",
-      "defauts": [
-        "Les plaques en vol traversent la zone du titre (positions hors champ réparties sur ±4,5 unités) — à resserrer côté gauche si cela gêne la lecture ; non bloquant"
-      ],
-      "corrige": false
-    },
-    {
       "fichier": "docs/qa/shots/accueil/00-p05-1440-rm.png",
       "route": "/",
       "etat": "00-p05",
       "largeur": 1440,
       "rm": true,
       "visible": "Idem p = 0 figé.",
-      "defauts": [],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/accueil/00-p05-390.png",
-      "route": "/",
-      "etat": "00-p05",
-      "largeur": 390,
-      "rm": false,
-      "visible": "Mobile p = 0,5 : plaques en vol, perspective, titre dessous intact.",
       "defauts": [],
       "corrige": true
     },
@@ -559,18 +517,6 @@
         "Pages latérales trop proches et trop grandes — écartées (±0,86) et réduites (0,54)"
       ],
       "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/lab/multi-390.png",
-      "route": "/lab",
-      "etat": "multi",
-      "largeur": 390,
-      "rm": false,
-      "visible": "Idem en portrait, l'éventail déborde du cadre à gauche et à droite.",
-      "defauts": [
-        "Composition mobile de l'éventail à resserrer (phase 2 suite)"
-      ],
-      "corrige": false
     },
     {
       "fichier": "docs/qa/shots/lab/boutique-1440.png",
@@ -833,26 +779,6 @@
       "corrige": true
     },
     {
-      "fichier": "docs/qa/shots/accueil/02-multi-1440.png",
-      "route": "/",
-      "etat": "02-multi",
-      "largeur": 1440,
-      "rm": false,
-      "visible": "Onglet 2 : trois pages en éventail, maquette calée (trois jeux de cadres), Cadran 749, fiche multi-pages ; le curseur s'ouvre en anneau ambre « Choisir » sur l'onglet.",
-      "defauts": [],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/accueil/02-multi-390.png",
-      "route": "/",
-      "etat": "02-multi",
-      "largeur": 390,
-      "rm": false,
-      "visible": "Mobile : l'éventail déborde un peu du cadre.",
-      "defauts": [],
-      "corrige": true
-    },
-    {
       "fichier": "docs/qa/shots/accueil/02-boutique-1440.png",
       "route": "/",
       "etat": "02-boutique",
@@ -955,50 +881,6 @@
       "corrige": true
     },
     {
-      "fichier": "docs/qa/shots/accueil/03-projet-3-1440.png",
-      "route": "/",
-      "etat": "03-projet-3",
-      "largeur": 1440,
-      "rm": false,
-      "visible": "Projet 3/5 Maison Élise : le cadre a glissé et s'est teinté rose, compteur 03 / 05.",
-      "defauts": [
-        "Première capture : piste décalée et contenu coupé (snap avec inertie après un saut) — inertie coupée"
-      ],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/accueil/03-projet-3-390.png",
-      "route": "/",
-      "etat": "03-projet-3",
-      "largeur": 390,
-      "rm": false,
-      "visible": "Mobile : le balayage natif n'a pas été simulé, projet 1 affiché.",
-      "defauts": [
-        "Capture mobile du projet 3 à produire par un balayage"
-      ],
-      "corrige": false
-    },
-    {
-      "fichier": "docs/qa/shots/accueil/03-glissement-1440.png",
-      "route": "/",
-      "etat": "03-glissement",
-      "largeur": 1440,
-      "rm": false,
-      "visible": "Entre 2 et 3 (0,37) : projet 2 Château des Lumières affiché, cadre bleu-vert ; le glissement lui-même est trop bref pour être saisi à 500 ms.",
-      "defauts": [],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/accueil/03-glissement-390.png",
-      "route": "/",
-      "etat": "03-glissement",
-      "largeur": 390,
-      "rm": false,
-      "visible": "Mobile, projet 1.",
-      "defauts": [],
-      "corrige": false
-    },
-    {
       "fichier": "docs/qa/shots/accueil/03-projet-5-1440.png",
       "route": "/",
       "etat": "03-projet-5",
@@ -1057,6 +939,186 @@
       "largeur": 390,
       "rm": true,
       "visible": "Idem, logo figé.",
+      "defauts": [],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/avant/00-p05-1440.png",
+      "route": "/",
+      "etat": "avant-00-p05",
+      "largeur": 1440,
+      "rm": false,
+      "visible": "AVANT : à p = 0,5 des dizaines de plaques en vol traversent la zone du titre « Sites et outils sur mesure. » et la ligne.",
+      "defauts": [
+        "Trajectoires non contraintes"
+      ],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/avant/00-p05-390.png",
+      "route": "/",
+      "etat": "avant-00-p05",
+      "largeur": 390,
+      "rm": false,
+      "visible": "AVANT : plaques en vol au-dessus du logo et derrière la nav ; le titre, plus bas, est épargné par hasard.",
+      "defauts": [],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/avant/02-multi-390.png",
+      "route": "/",
+      "etat": "avant-02-multi",
+      "largeur": 390,
+      "rm": false,
+      "visible": "AVANT : l'éventail de trois pages déborde du cadre à gauche et à droite (pages latérales coupées).",
+      "defauts": [
+        "Pas de variante portrait"
+      ],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/avant/03-glissement-1440.png",
+      "route": "/",
+      "etat": "avant-03-glissement",
+      "largeur": 1440,
+      "rm": false,
+      "visible": "AVANT : capture « entre 2 et 3 » : le projet 2 est déjà posé, le glissement (1,1 s, scrub 0,6) est passé avant la capture.",
+      "defauts": [
+        "Glissement trop bref"
+      ],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/accueil/00-p025-1440.png",
+      "route": "/",
+      "etat": "00-p025",
+      "largeur": 1440,
+      "rm": false,
+      "visible": "APRÈS : p = 0,25, zone d'exclusion = titre + ligne + actions (ResizeObserver) ; les premières plaques arrivent par la gauche et le haut, aucune sur le texte.",
+      "defauts": [
+        "Première passe : canvas noir partout — `half` est un mot réservé GLSL, le shader ne compilait plus ; renommé"
+      ],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/accueil/00-p05-1440.png",
+      "route": "/",
+      "etat": "00-p05",
+      "largeur": 1440,
+      "rm": false,
+      "visible": "APRÈS : p = 0,5, nuage de plaques en vol à gauche et au-dessus du logo, repoussées hors du rectangle du titre (contournement par le côté le plus proche, pondéré par sin(πt)) ; le titre et la ligne sont intacts.",
+      "defauts": [
+        "Une plaque frôle la nav à droite (hors zone du titre) — toléré"
+      ],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/accueil/00-p075-1440.png",
+      "route": "/",
+      "etat": "00-p075",
+      "largeur": 1440,
+      "rm": false,
+      "visible": "APRÈS : p = 0,75, la tour se construit derrière le logo, les dernières plaques en vol restent à gauche ; texte intact.",
+      "defauts": [],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/accueil/00-p025-390.png",
+      "route": "/",
+      "etat": "00-p025",
+      "largeur": 390,
+      "rm": false,
+      "visible": "APRÈS mobile : p = 0,25, éclats en vol autour du logo seulement, titre et actions intacts.",
+      "defauts": [],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/accueil/00-p05-390.png",
+      "route": "/",
+      "etat": "00-p05",
+      "largeur": 390,
+      "rm": false,
+      "visible": "APRÈS mobile : p = 0,5, les plaques en vol restent dans le tiers supérieur, derrière la nav et autour du logo ; rien sur le titre.",
+      "defauts": [],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/accueil/00-p075-390.png",
+      "route": "/",
+      "etat": "00-p075",
+      "largeur": 390,
+      "rm": false,
+      "visible": "APRÈS mobile : p = 0,75, tour derrière le logo, texte intact.",
+      "defauts": [],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/accueil/02-multi-390.png",
+      "route": "/",
+      "etat": "02-multi",
+      "largeur": 390,
+      "rm": false,
+      "visible": "APRÈS : variante portrait de `multi` — trois pages empilées verticalement (principale au centre, deux plus petites en retrait au-dessus et au-dessous), maquette calée dessus ; tout tient dans le cadre 390.",
+      "defauts": [],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/lab/multi-390.png",
+      "route": "/lab",
+      "etat": "multi",
+      "largeur": 390,
+      "rm": false,
+      "visible": "APRÈS : même variante portrait sur le lab, vue de trois quarts (pose d'URL), rien ne sort de la boîte.",
+      "defauts": [],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/accueil/02-multi-1440.png",
+      "route": "/",
+      "etat": "02-multi",
+      "largeur": 1440,
+      "rm": false,
+      "visible": "Inchangé en 1440 : éventail horizontal, maquette calée.",
+      "defauts": [],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/accueil/pellicule-glissement-1440.png",
+      "route": "/",
+      "etat": "pellicule-glissement",
+      "largeur": 1440,
+      "rm": false,
+      "visible": "APRÈS : scrub 1,4 et morph 1,6 s ; 700 ms après le passage du projet 2 au 3, le cadre de plaques est en vol (plaques dispersées en arc, teinte rose en cours), le projet 3 déjà affiché : le glissement se lit.",
+      "defauts": [],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/accueil/pellicule-glissement-390.png",
+      "route": "/",
+      "etat": "pellicule-glissement",
+      "largeur": 390,
+      "rm": false,
+      "visible": "APRÈS mobile : balayage simulé vers le projet 3, cadre de plaques en vol au-dessus de la capture.",
+      "defauts": [],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/accueil/03-projet-3-1440.png",
+      "route": "/",
+      "etat": "03-projet-3",
+      "largeur": 1440,
+      "rm": false,
+      "visible": "Projet 3/5 Maison Élise, cadre posé et teinté rose après le glissement allongé.",
+      "defauts": [],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/accueil/03-projet-3-390.png",
+      "route": "/",
+      "etat": "03-projet-3",
+      "largeur": 390,
+      "rm": false,
+      "visible": "Mobile : projet 3 par balayage simulé, cadre posé.",
       "defauts": [],
       "corrige": true
     }

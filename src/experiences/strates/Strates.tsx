@@ -10,6 +10,7 @@ import { useEffect, useRef, useState } from 'react'
 import StackFrame from '@/webgl/StackFrame'
 import { stackUniforms } from '@/webgl/engine'
 import { useScene } from '@/webgl/store'
+import { useExclusion } from '@/webgl/useExclusion'
 import { gsap, ScrollTrigger, SplitText, initGsap } from '@/lib/gsap'
 import './strates.css'
 
@@ -21,12 +22,15 @@ export const COUCHES = [
   { num: '05', nom: 'Hébergement et nom de domaine', ligne: 'Ce qui le rend accessible.', texte: 'Mise en ligne, nom de domaine, certificat, sauvegardes : douze mois inclus, puis vous décidez.' },
 ]
 
+const EXCLUSION_01 = ['.su-str__tete', '.su-str__liste']
+
 export default function Strates() {
   const section = useRef<HTMLElement>(null)
   const scene = useRef<HTMLDivElement>(null)
   const titre = useRef<HTMLHeadingElement>(null)
   const [isole, setIsole] = useState(-1)
   const [p, setP] = useState(0)
+  useExclusion(EXCLUSION_01, p > 0 && p < 1)
 
   useEffect(() => {
     initGsap()

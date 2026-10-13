@@ -28,6 +28,8 @@ export interface PileParams {
   hauteur: number
   ouverture: number
   glisse: number
+  /** 1 = largeur < 768 px : variantes compactes des layouts. */
+  portrait: number
 }
 
 export interface SceneParams extends PileParams {
@@ -58,6 +60,7 @@ export const PARAMS_DEFAUT: SceneParams = {
   hauteur: 3.4,
   ouverture: 1,
   glisse: 0,
+  portrait: 0,
   ambiant: 0.32,
   cle: 0.95,
   fresnel: 0.3,
@@ -94,6 +97,8 @@ interface SceneState {
   nuitForcee: number | null
   accent: string
   frame: Frame | null
+  /** Zone HTML (titre) que les plaques en vol contournent, en pixels CSS. */
+  exclusion: Frame | null
   tier: Tier
   mode: '3d' | '2d'
   active: boolean
@@ -118,6 +123,7 @@ interface SceneState {
   forcerNuit: (n: number | null) => void
   setAccent: (a: string) => void
   setFrame: (f: Frame | null) => void
+  setExclusion: (f: Frame | null) => void
   setTier: (t: Tier) => void
   setMode: (m: '3d' | '2d') => void
   setActive: (a: boolean) => void
@@ -143,6 +149,7 @@ export const useScene = create<SceneState>((set) => ({
   nuitForcee: null,
   accent: '#F69106',
   frame: null,
+  exclusion: null,
   tier: 'high',
   mode: '3d',
   active: true,
@@ -167,6 +174,7 @@ export const useScene = create<SceneState>((set) => ({
   forcerNuit: (nuitForcee) => set((st) => ({ nuitForcee, nuit: nuitForcee ?? st.nuit })),
   setAccent: (accent) => set({ accent }),
   setFrame: (frame) => set({ frame }),
+  setExclusion: (exclusion) => set({ exclusion }),
   setTier: (tier) => set({ tier }),
   setMode: (mode) => set({ mode }),
   setActive: (active) => set({ active }),

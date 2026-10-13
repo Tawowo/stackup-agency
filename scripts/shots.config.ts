@@ -14,6 +14,8 @@ export interface Etat {
   /** Position de scroll, en fraction de la distance épinglée du moment visé (par défaut 00). */
   scroll?: number
   moment?: string
+  /** Position de départ (même moment) avant d'aller à `scroll` : capture un état intermédiaire. */
+  depuis?: number
   /** Mobile : index du projet à afficher par balayage de la pellicule. */
   piste?: number
   /** Attente supplémentaire après le chargement, en ms (animations de scène). */
@@ -58,6 +60,7 @@ export const ROUTES: Route[] = [
       { nom: '00-p0', query: QUALITE, attente: 1800 },
       { nom: '00-p025', query: QUALITE, scroll: 0.25, attente: 1600 },
       { nom: '00-p05', query: QUALITE, scroll: 0.5, attente: 1600 },
+      { nom: '00-p075', query: QUALITE, scroll: 0.75, attente: 1600, sansRm: true },
       { nom: '00-p1', query: QUALITE, scroll: 1, attente: 1800 },
       { nom: '00-drag', query: QUALITE, action: 'drag', attente: 1200, sansRm: true },
       { nom: '00-menu', query: QUALITE, action: 'menu', attente: 1000, sansRm: true, largeurs: [390] },
@@ -75,7 +78,7 @@ export const ROUTES: Route[] = [
       { nom: '02-transition', query: QUALITE, moment: '02', scroll: 0, action: 'onglet2', attente: 450, sansRm: true },
       { nom: '03-projet-1', query: QUALITE, moment: '03', scroll: 0, attente: 2400 },
       { nom: '03-projet-3', query: QUALITE, moment: '03', scroll: 0.5, piste: 2, attente: 2400, sansRm: true },
-      { nom: '03-glissement', query: QUALITE, moment: '03', scroll: 0.37, piste: 1, attente: 500, sansRm: true },
+      { nom: 'pellicule-glissement', query: QUALITE, moment: '03', depuis: 0.25, scroll: 0.5, piste: 2, attente: 700, sansRm: true },
       { nom: '03-projet-5', query: QUALITE, moment: '03', scroll: 1, piste: 4, attente: 2400, sansRm: true },
       { nom: '04-seuil', query: QUALITE, moment: '04', scroll: 0, attente: 2400 },
     ],

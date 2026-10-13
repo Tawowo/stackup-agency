@@ -80,15 +80,19 @@ export async function capturer({ route, dossier, etats }, browser, filtreEtat) {
             await aller(0, moment)
             await page.waitForTimeout(400)
           }
+          if (etat.depuis !== undefined) {
+            await aller(etat.depuis, moment)
+            await page.waitForTimeout(2200)
+          }
           await aller(etat.scroll, moment)
-          await page.waitForTimeout(900)
+          if (etat.depuis === undefined) await page.waitForTimeout(900)
         }
         if (etat.piste !== undefined && taille.mobile) {
           await page.evaluate((k) => {
             const piste = document.querySelector('.su-pel__piste')
             if (piste) piste.scrollLeft = k * piste.clientWidth
           }, etat.piste)
-          await page.waitForTimeout(600)
+          if (etat.depuis === undefined) await page.waitForTimeout(600)
         }
         if (etat.action === 'touche3') await page.keyboard.press('3')
         if (etat.action?.startsWith('onglet')) {

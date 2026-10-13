@@ -78,6 +78,14 @@ de `public/realisations/` viennent des captures de l'ancien site (4 à 41 ko) ; 
 **Pas fait** : vidéo Playwright du scroll ; moments 05-09 ; `ContactShadows`/`AdaptiveDpr` de drei non
 employés (ombre et DPR gérés par le moteur).
 
+**Corrections avant la phase 3 (captures avant dans `docs/qa/shots/avant/`).** Zone d'exclusion du
+titre (`useExclusion`, ResizeObserver, union titre + nav) passée au vertex shader : les plaques en vol la
+contournent par le côté le plus proche, pondéré par sin(πt) ; p = 0,25 / 0,5 / 0,75 capturés aux deux
+largeurs, texte intact. Variante `portrait` de `multi` (trois pages empilées, `params.portrait` suit la
+media query) : rien ne sort du cadre à 390. Pellicule : scrub 1,4, snap 0,6-1,2 s, morph du cadre 1,6 s ;
+état `pellicule-glissement` (depuis 0,25 → 0,5, 700 ms) qui montre le cadre en vol. Défaut trouvé en
+chemin : `half` est réservé en GLSL, le shader ne compilait plus (canvas noir sur toutes les captures).
+
 **Prochaine étape — phase 3** : moments 05 (Salle des machines, modules + maquettes animées, `DemoSlot`
 vide), 06 (Juste prix, layout `cadran`), 07 (Méthode, layout `methode`), 08 (Atelier), 09 (Départ, retour
 au logo), footer ; vidéo d'un scroll entier (desktop, mobile, rm).

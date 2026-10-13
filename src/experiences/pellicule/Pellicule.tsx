@@ -77,8 +77,8 @@ export default function Pellicule() {
           start: 'top top',
           end: () => `+=${Math.round(window.innerHeight * (n - 1) * 0.9)}`,
           pin: st,
-          scrub: 0.6,
-          snap: { snapTo: 1 / (n - 1), duration: { min: 0.2, max: 0.6 }, ease: 'power2.inOut', inertia: false, directional: false },
+          scrub: 1.4,
+          snap: { snapTo: 1 / (n - 1), duration: { min: 0.6, max: 1.2 }, ease: 'power2.inOut', inertia: false, directional: false },
           onUpdate: (self) => setCourant(Math.round(self.progress * (n - 1))),
         },
       })
@@ -103,7 +103,7 @@ export default function Pellicule() {
     s.setPair('pellicule', 'pellicule', { a: { glisse: 2.9 * sens }, b: { glisse: 0 } })
     u.uMorph.value = 0
     gsap.killTweensOf(u.uMorph)
-    gsap.to(u.uMorph, { value: 1, duration: 1.1, ease: 'power3.out' })
+    gsap.to(u.uMorph, { value: 1, duration: 1.6, ease: 'power2.inOut' })
     return () => {
       s.setAccent('#F69106')
     }
