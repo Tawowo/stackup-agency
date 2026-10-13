@@ -1,0 +1,116 @@
+{
+  "date": "2026-10-13T10:11:36.591Z",
+  "base": "http://localhost:3100",
+  "resultats": [
+    {
+      "route": "/",
+      "perf": 85,
+      "mesures": {
+        "largest-contentful-paint": {
+          "valeur": 3319.773,
+          "plafond": 2500,
+          "ok": false
+        },
+        "cumulative-layout-shift": {
+          "valeur": 0,
+          "plafond": 0.05,
+          "ok": true
+        },
+        "total-blocking-time": {
+          "valeur": 301,
+          "plafond": 200,
+          "ok": false
+        }
+      },
+      "jsKo": 511
+    },
+    {
+      "route": "/tarifs",
+      "perf": 93,
+      "mesures": {
+        "largest-contentful-paint": {
+          "valeur": 2876.607,
+          "plafond": 2500,
+          "ok": false
+        },
+        "cumulative-layout-shift": {
+          "valeur": 0,
+          "plafond": 0.05,
+          "ok": true
+        },
+        "total-blocking-time": {
+          "valeur": 164,
+          "plafond": 200,
+          "ok": true
+        }
+      },
+      "jsKo": 498
+    },
+    {
+      "route": "/realisations",
+      "perf": 92,
+      "mesures": {
+        "largest-contentful-paint": {
+          "valeur": 3388.605,
+          "plafond": 2500,
+          "ok": false
+        },
+        "cumulative-layout-shift": {
+          "valeur": 0,
+          "plafond": 0.05,
+          "ok": true
+        },
+        "total-blocking-time": {
+          "valeur": 45.5,
+          "plafond": 200,
+          "ok": true
+        }
+      },
+      "jsKo": 253
+    },
+    {
+      "route": "/blog",
+      "perf": 94,
+      "mesures": {
+        "largest-contentful-paint": {
+          "valeur": 2874.356,
+          "plafond": 2500,
+          "ok": false
+        },
+        "cumulative-layout-shift": {
+          "valeur": 0,
+          "plafond": 0.05,
+          "ok": true
+        },
+        "total-blocking-time": {
+          "valeur": 79,
+          "plafond": 200,
+          "ok": true
+        }
+      },
+      "jsKo": 258
+    },
+    {
+      "route": "/contact",
+      "perf": 92,
+      "mesures": {
+        "largest-contentful-paint": {
+          "valeur": 3308.276,
+          "plafond": 2500,
+          "ok": false
+        },
+        "cumulative-layout-shift": {
+          "valeur": 0,
+          "plafond": 0.05,
+          "ok": true
+        },
+        "total-blocking-time": {
+          "valeur": 45.5,
+          "plafond": 200,
+          "ok": true
+        }
+      },
+      "jsKo": 253
+    }
+  ]
+}
