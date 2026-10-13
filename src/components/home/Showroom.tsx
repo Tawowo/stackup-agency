@@ -35,6 +35,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { ExternalLink } from 'lucide-react'
 import { texteLisibleSur } from '@/lib/contraste'
+import { realisations } from '@/lib/realisations'
 
 interface Projet {
   nom: string
@@ -48,58 +49,27 @@ interface Projet {
   note: string
 }
 
-const PROJETS: Projet[] = [
-  {
-    nom: 'Cadence Studio',
-    type: 'Vitrine + livraison client — Vidéaste',
-    slug: 'demo-videaste',
-    image: '/images/realisations/demo-videaste.webp',
-    accent: '#E8B84B',
-    url: 'https://demo-videaste-vitrine.vercel.app',
-    tags: ['Vidéaste', 'Livraison', 'Timeline'],
-    note: 'Espace de livraison client et lecture des rushes dans le navigateur.',
-  },
-  {
-    nom: 'Château des Lumières',
-    type: 'Site vitrine — Hôtel boutique',
-    slug: 'chateau-lumieres',
-    image: '/images/realisations/chateau-lumieres.webp',
-    accent: '#5F8D6A',
-    url: 'https://stackup-demos-e85v.vercel.app',
-    tags: ['Hôtel', 'Réservation', 'Animations'],
-    note: 'Parcours de réservation et mise en scène animée des chambres.',
-  },
-  {
-    nom: 'Maison Élise',
-    type: 'E-commerce — Mode',
-    slug: 'maison-elise',
-    image: '/images/realisations/maison-elise.webp',
-    accent: '#D46A92',
-    url: 'https://stackup-demos-tq9a.vercel.app',
-    tags: ['Boutique', 'Panier', 'Mode'],
-    note: 'Catalogue, fiches produit et panier complets.',
-  },
-  {
-    nom: 'Au Pain Doré',
-    type: 'Site vitrine — Boulangerie',
-    slug: 'au-pain-dore',
-    image: '/images/realisations/au-pain-dore.webp',
-    accent: '#D89C4A',
-    url: 'https://stackup-demos-u2go.vercel.app',
-    tags: ['Artisan', 'Vitrine', 'Local'],
-    note: 'Vitrine d’artisan : horaires, gamme et accès, sans superflu.',
-  },
-  {
-    nom: 'L’Olivier — Dashboard',
-    type: 'Système de gestion',
-    slug: 'lolivier-dashboard',
-    image: '/images/realisations/lolivier-dashboard.webp',
-    accent: '#29C36A',
-    url: 'https://stackup-demos-jxtr.vercel.app',
-    tags: ['Dashboard', 'CRM', 'Restaurant'],
-    note: 'Interface de gestion : réservations, salle et suivi du service.',
-  },
-]
+/* LES PROJETS VIENNENT DE `lib/realisations.ts`, ET DE NULLE PART AILLEURS.
+
+   Cette liste était recopiée ici, à cinq entrées, quand la source en compte
+   sept : deux projets réels n'apparaissaient donc pas sur l'accueil, et les
+   intitulés avaient déjà divergé (« Vitrine + livraison client — Vidéaste »
+   ici contre « Site vitrine + espace de livraison — Vidéaste » là-bas). Le
+   dossier demande les sept projets de `lib/realisations.ts` (§10.4), et la
+   règle de source unique vaut pour les réalisations comme pour les prix. */
+const PROJETS: Projet[] = realisations.map((r) => ({
+  nom: r.nom,
+  type: r.type,
+  slug: r.slug,
+  image: r.image,
+  accent: r.accent,
+  url: r.url,
+  tags: r.tags.slice(0, 3),
+  /* La phrase d'accroche est la première du descriptif de la source,
+     tronquée à la ponctuation : rien n'est réécrit ici, donc rien ne peut
+     diverger. */
+  note: r.description.split(/(?<=\.)\s/)[0],
+}))
 
 /** Le cadre navigateur, posé autour de la capture réelle. */
 function Ecran({ projet, actif }: { projet: Projet; actif: boolean }) {
@@ -291,6 +261,14 @@ export default function Showroom() {
                     {String(i + 1).padStart(2, '0')}
                     <span>/{String(PROJETS.length).padStart(2, '0')}</span>
                   </p>
+                  {/* LE TAMPON. Le dossier en fait une règle bloquante
+                      (§15.3, §10.4) : chaque démonstration est annoncée
+                      comme telle, sur la fiche elle-même et pas seulement
+                      dans une phrase d'introduction que personne ne lit.
+                      Ces sites sont de vrais sites, mais les entreprises
+                      sont fictives, et un visiteur doit le savoir avant de
+                      cliquer, pas après. */}
+                  <p className="su-salle__tampon">Démonstration</p>
                   <h3 className="su-salle__nom">{projet.nom}</h3>
                   <p className="su-salle__type">{projet.type}</p>
                   <p className="su-salle__note">{projet.note}</p>

@@ -5297,3 +5297,20 @@ html[data-grille='oui'] .su-ouv__grille {
     transition: none;
   }
 }
+
+/* Le tampon « Démonstration » des fiches de la salle de projection.
+   Capitales espacées, filet au-dessus et au-dessous : il doit se lire comme
+   une mention portée sur un document, pas comme une étiquette décorative. */
+.su-salle__tampon {
+  display: inline-block;
+  margin: 0 0 0.75rem;
+  padding: 0.28rem 0.6rem;
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgb(255 255 255 / 0.82);
+  border-top: 1px solid rgb(255 255 255 / 0.3);
+  border-bottom: 1px solid rgb(255 255 255 / 0.3);
+}
