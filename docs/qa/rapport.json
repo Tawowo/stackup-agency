@@ -403,10 +403,8 @@
    "etat": "perspective",
    "largeur": 390,
    "rm": false,
-   "visible": "Pile énorme, coupée, plaque ambre en haut à gauche : la rangée de boutons du lab débordait (1 506 px) et l'émulation mobile dézoomait la page (innerWidth 1 506), d'où une caméra calibrée sur un faux viewport.",
-   "defauts": [
-    "Débordement du HUD de /lab sur mobile — corrigé (boutons en flex-wrap), captures 390 du lab reprises"
-   ]
+   "visible": "Pile en perspective plein cadre, caméra calibrée sur le vrai viewport (HUD en flex-wrap), sol en bande, code derrière, poussière.",
+   "defauts": []
   },
   {
    "fichier": "docs/qa/shots/lab/jour-1440.png",
@@ -425,10 +423,8 @@
    "etat": "jour",
    "largeur": 390,
    "rm": false,
-   "visible": "Idem mobile (viewport faussé par le HUD, repris).",
-   "defauts": [
-    "HUD mobile débordant — corrigé"
-   ]
+   "visible": "Ivoire mobile : logo navy + ambre, grille en filigrane, étincelles ambre.",
+   "defauts": []
   },
   {
    "fichier": "docs/qa/shots/lab/repli-1440.png",
@@ -436,10 +432,8 @@
    "etat": "repli",
    "largeur": 1440,
    "rm": false,
-   "visible": "Repli 2D : les trois polygones du logo rendus en NOIR sur navy, sans ambre.",
-   "defauts": [
-    "Le CSS du repli vivait dans ouverture.css (chargé seulement par l'accueil) : sur /lab les polygones prenaient le noir par défaut — corrigé : CSS global, plaques claires + ambre sur l'encre, navy sur ivoire"
-   ]
+   "visible": "Repli 2D sur /lab : plaques claires + ambre avec liseré, sur navy — CSS global.",
+   "defauts": []
   },
   {
    "fichier": "docs/qa/shots/lab/strates-ouvert-1440.png",
@@ -447,10 +441,8 @@
    "etat": "strates-ouvert",
    "largeur": 1440,
    "rm": false,
-   "visible": "Cinq lamelles claires écartées, vues en plongée au-dessus du sol quadrillé, ombres portées sous chaque lamelle, poussière et flux autour, code derrière.",
-   "defauts": [
-    "Halo de la lampe posé au centre-bas quelle que soit la forme (la plaque ambre est en haut à gauche des strates) — corrigé : la lampe suit la plaque ambre réelle (instance 2) dans chaque forme"
-   ]
+   "visible": "Cinq lamelles claires écartées en plongée, lampe calée sur la plaque ambre (lueur en haut à gauche), ombres sur le sol.",
+   "defauts": []
   },
   {
    "fichier": "docs/qa/shots/lab/strates-ferme-1440.png",
@@ -642,10 +634,8 @@
    "etat": "00-p0",
    "largeur": 390,
    "rm": false,
-   "visible": "Logo plein cadre en haut, sol en bande sous la plaque ambre, code vivant, poussière ; titre, texte, deux actions pleine largeur, deux cotes.",
-   "defauts": [
-    "Le bord lointain du sol forme une bande sombre horizontale derrière le logo (fondu trop court à cette échelle) — adouci : fondu lointain allongé"
-   ]
+   "visible": "Logo plein cadre en haut, sol fondu très loin (plus de bande sombre), code vivant et poussière ; titre, texte, actions, cotes.",
+   "defauts": []
   },
   {
    "fichier": "docs/qa/shots/accueil/00-p0-390-rm.png",
@@ -736,7 +726,7 @@
    "etat": "00-p1",
    "largeur": 1440,
    "rm": false,
-   "visible": "p = 1 : tour claire torsadée complète derrière le logo, qui dépasse le cadre vers le haut, sol en perspective, ombres, code derrière.",
+   "visible": "p = 1 : tour claire torsadée complète derrière le logo, sol en perspective, ombres, code derrière.",
    "defauts": []
   },
   {
@@ -783,10 +773,8 @@
    "etat": "01-p0",
    "largeur": 1440,
    "rm": false,
-   "visible": "Entrée des strates : la tour du hero, immense, posée sur le sol quadrillé ; titre déplié à gauche, liste 01-05 en attente.",
-   "defauts": [
-    "Le « q » de « cinq » frôle la tour (cadre cols 5-11) — inchangé depuis la phase 2, mineur"
-   ]
+   "visible": "Entrée des strates (p = 0,01) : pile de lamelles fermée en plongée sur le sol quadrillé, ombre dessous, liste 01-05 en attente.",
+   "defauts": []
   },
   {
    "fichier": "docs/qa/shots/accueil/01-p0-1440-rm.png",
@@ -803,10 +791,8 @@
    "etat": "01-p02",
    "largeur": 1440,
    "rm": false,
-   "visible": "p = 0,2 : les plaques de la tour s'envolent vers le haut à droite (en route vers les lamelles et hors champ), le sol reste, deux couches listées.",
-   "defauts": [
-    "En vol, les plaques traversent la barre de nav et le bouton « Parler de votre projet » en haut à droite (l'exclusion ne couvre que le titre et la liste) — noté, transition brève"
-   ]
+   "visible": "p = 0,2 : la première lamelle (Design) se soulève, deux couches listées ; plus de plaques en vol dans la nav.",
+   "defauts": []
   },
   {
    "fichier": "docs/qa/shots/accueil/01-p04-1440.png",
@@ -814,7 +800,7 @@
    "etat": "01-p04",
    "largeur": 1440,
    "rm": false,
-   "visible": "p = 0,4 : la première lamelle (Design) se détache, plaque ambre à sa pointe, les autres encore groupées ; flaque de lumière au sol, trois couches listées.",
+   "visible": "p = 0,4 : trois lamelles ouvertes, trois couches listées.",
    "defauts": []
   },
   {
@@ -850,10 +836,8 @@
    "etat": "01-p0",
    "largeur": 390,
    "rm": false,
-   "visible": "Mobile, entrée des strates : la tour du hero monte jusque sous la nav et passe derrière le titre.",
-   "defauts": [
-    "Tour trop haute en portrait (3,4 unités) : elle couvre le titre et touche la nav — corrigé : hauteur bornée à 2,1 en portrait (layout pile)"
-   ]
+   "visible": "Mobile : pile de lamelles fermée sous le titre, sol en bande, liste horizontale.",
+   "defauts": []
   },
   {
    "fichier": "docs/qa/shots/accueil/01-p04-390.png",
@@ -890,10 +874,8 @@
    "etat": "02-une-page",
    "largeur": 1440,
    "rm": false,
-   "visible": "Ivoire (lumière allumée par la frontière 01→02) : sélecteur, forme « site une page » en plaques navy calées sur la maquette HTML, plaque ambre, code vivant en navy pâle derrière, étincelles ambre, grille du sol en filigrane ; Cadran 449, fiche.",
-   "defauts": [
-    "Roues du Cadran arrêtées entre deux chiffres (scrub à 85 %) — corrigé : fin de rampe à 80 % du viewport et roue quantifiée (round) chiffre par chiffre"
-   ]
+   "visible": "Ivoire : forme « une page » calée sur la maquette, Cadran 449 sur ses chiffres, fiche, code vivant pâle.",
+   "defauts": []
   },
   {
    "fichier": "docs/qa/shots/accueil/02-une-page-1440-rm.png",
@@ -957,10 +939,8 @@
    "etat": "02-multi",
    "largeur": 390,
    "rm": false,
-   "visible": "Mobile, onglet 02 capturé à mi-morph (SwiftShader : 1,1 s de tween = 11 trames à 3 i/s) : pages et maquettes en cours d'assemblage.",
-   "defauts": [
-    "État intermédiaire capturé au lieu de l'état final — corrigé dans shots.mjs (__suSettle après chaque action), à recapturer"
-   ]
+   "visible": "Mobile, onglet 02 : éventail et maquettes à l'état final (settle après geste), Cadran 749 posé.",
+   "defauts": []
   },
   {
    "fichier": "docs/qa/shots/accueil/03-p0-1440.png",
@@ -1033,10 +1013,8 @@
    "etat": "03-p0",
    "largeur": 390,
    "rm": false,
-   "visible": "Mobile : capture en haut, titre et action dessous ; la rangée basse du cadre de plaques traverse le sous-titre et le bouton.",
-   "defauts": [
-    "Cadre de plaques trop grand en portrait, il passe sur le texte — corrigé : variante portrait du layout pellicule (× 0,7)"
-   ]
+   "visible": "Mobile : cadre de plaques (× 0,6) centré sur la capture, texte dessous dégagé.",
+   "defauts": []
   },
   {
    "fichier": "docs/qa/shots/accueil/03-p06-390.png",
@@ -1044,10 +1022,8 @@
    "etat": "03-p06",
    "largeur": 390,
    "rm": false,
-   "visible": "Mobile, projet 3 par balayage : accent rose sur l'étiquette, même cadre trop grand.",
-   "defauts": [
-    "Même défaut — corrigé"
-   ]
+   "visible": "Mobile, projet 3 : cadre centré sur la capture, accent rose.",
+   "defauts": []
   },
   {
    "fichier": "docs/qa/shots/accueil/04-seuil-1440.png",
@@ -1055,10 +1031,8 @@
    "etat": "04-seuil",
    "largeur": 1440,
    "rm": false,
-   "visible": "Seuil : le noyau (plaques claires en réseau serré autour de l'ambre) petit en haut, « Pas que des sites. » déplié au centre ; le sol, à cette petite échelle, n'est qu'une bande sombre horizontale derrière le texte.",
-   "defauts": [
-    "Bande sombre du sol derrière le seuil (forme petite et haute) — corrigé : sol et ombre s'effacent sous une échelle de 0,95"
-   ]
+   "visible": "Seuil : noyau clair en haut, phrase centrée, plus de bande sombre (sol et ombre effacés sous une petite forme).",
+   "defauts": []
   },
   {
    "fichier": "docs/qa/shots/accueil/04-seuil-390.png",
@@ -1113,10 +1087,8 @@
    "etat": "06-repos",
    "largeur": 1440,
    "rm": false,
-   "visible": "Ivoire : jauge en arc de plaques navy, aiguille au repos (ambre à gauche), quatre Plaques d'offres avec Cadran, engagements tracés (scrub), code vivant navy pâle ; flux en points gris-beige autour de la jauge.",
-   "defauts": [
-    "Flux sur ivoire lus comme de la poussière grise — corrigé : ambre franc, alpha 0,3"
-   ]
+   "visible": "Ivoire : jauge, offres, engagements tracés par le scroll ; étincelles ambre discrètes.",
+   "defauts": []
   },
   {
    "fichier": "docs/qa/shots/accueil/06-focal-1440.png",
@@ -1144,10 +1116,8 @@
    "etat": "07-p0",
    "largeur": 1440,
    "rm": false,
-   "visible": "Méthode, entrée : structure de page en plaques claires (étape 1) posée sur le sol, titre, étape 01 ; la carte ambre de l'étape 02 est à l'écran mais vide (texte non révélé).",
-   "defauts": [
-    "Texte de l'étape 02 non révélé alors que sa carte est visible (révélation indexée sur une rampe globale) — corrigé : étape dérivée de la position de chaque carte (80 % du viewport), scène et texte sur la même règle"
-   ]
+   "visible": "Méthode, entrée : structure (× 0,85) sur le sol, étape 01 et carte 02 (ambre) révélée.",
+   "defauts": []
   },
   {
    "fichier": "docs/qa/shots/accueil/07-p05-1440.png",
@@ -1164,10 +1134,8 @@
    "etat": "07-p1",
    "largeur": 1440,
    "rm": false,
-   "visible": "Fin : page complète (structure, démo, contenu, mise en ligne, réglages autour), étapes 03-04 en vue.",
-   "defauts": [
-    "La rangée haute (barre d'adresse) passe sous la nav et le bouton « Parler de votre projet » — corrigé : layout methode réduit à 0,85"
-   ]
+   "visible": "Fin : page complète sous la nav, sans la toucher ; étapes 03-05.",
+   "defauts": []
   },
   {
    "fichier": "docs/qa/shots/accueil/07-p05-390.png",
@@ -1266,6 +1234,35 @@
    "rm": false,
    "visible": "Mobile : nœud Planning allumé dans le réseau portrait.",
    "defauts": []
+  },
+  {
+   "fichier": "docs/qa/shots/accueil/01-arrivee-03-1440.png",
+   "route": "/",
+   "etat": "01-arrivee-03",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Approche des strates (30 %) : la tour quitte le hero par le haut à gauche, le titre des strates monte par le bas, le sol se dissout.",
+   "defauts": []
+  },
+  {
+   "fichier": "docs/qa/shots/accueil/01-arrivee-06-1440.png",
+   "route": "/",
+   "etat": "01-arrivee-06",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Approche (60 %) : les plaques en vol se rassemblent vers la position des strates, titre des strates à mi-écran, flaque de lumière au sol.",
+   "defauts": []
+  },
+  {
+   "fichier": "docs/qa/shots/accueil/01-arrivee-09-1440.png",
+   "route": "/",
+   "etat": "01-arrivee-09",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Approche (90 %) : pile de lamelles fermée posée sur le sol, le sol se reforme avec ses fronts ambre, titre en place.",
+   "defauts": [
+    "Fronts de dissolution vifs sur une image fixe — à juger en mouvement sur GPU"
+   ]
   }
  ]
 }

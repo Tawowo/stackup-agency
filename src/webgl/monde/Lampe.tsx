@@ -93,7 +93,8 @@ void main() {
   p.y += sin(uTime * 0.09 + aSeed * 9.1) * 0.2 + fract(uTime * 0.012 * (0.5 + aSeed)) * 0.6 - 0.3;
   p.z += cos(uTime * 0.11 + aSeed * 4.7) * 0.2;
   vec3 wp = vec3(uStack.x, uStack.y, 0.0) + p * uStack.z;
-  wp.y = max(wp.y, uSolY + 0.05);
+  // Sous le sol, la poussière s'éteint (jamais de rangée écrasée sur une ligne).
+  float sousSol = smoothstep(uSolY - 0.3, uSolY + 0.15, wp.y);
   // Visible surtout dans le faisceau : distance à l'axe lampe → pied de pile.
   vec3 cible = vec3(uStack.x + 0.3 * uStack.z, uSolY, 2.4 * uStack.z);
   vec3 axe = normalize(cible - uLampe);
@@ -101,7 +102,7 @@ void main() {
   float along = clamp(dot(rel, axe), 0.0, 20.0);
   float ecart = length(rel - axe * along) / max(uStack.z, 0.3);
   float dansFaisceau = 1.0 - smoothstep(0.3 + along * 0.45 / max(uStack.z, 0.3), 1.0 + along * 0.6 / max(uStack.z, 0.3), ecart);
-  vA = 0.05 + 0.7 * dansFaisceau;
+  vA = (0.05 + 0.7 * dansFaisceau) * sousSol;
   vA *= 0.6 + 0.4 * sin(uTime * (0.6 + aSeed) + aSeed * 20.0);
   vec4 mv = viewMatrix * vec4(wp, 1.0);
   gl_Position = projectionMatrix * mv;

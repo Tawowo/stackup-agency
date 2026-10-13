@@ -58,7 +58,7 @@ void main() {
   col += mix(uAccent, vec3(1.0), 0.5) * exp(-d0 * d0) * 0.26 * mix(0.3, 1.0, uNuit);
   // Bords fondus : le sol se perd dans le ciel vers le fond, et sur les côtés.
   vec2 gp = (p - vec2(uStack.x, 0.0)) / max(uStack.z, 0.5);
-  float edge = (1.0 - smoothstep(1.2, 9.0, -gp.y)) * (1.0 - smoothstep(5.0, 10.0, abs(gp.x))) * smoothstep(5.5, 3.0, gp.y);
+  float edge = (1.0 - smoothstep(0.4, 13.0, -gp.y)) * (1.0 - smoothstep(5.0, 10.0, abs(gp.x))) * smoothstep(5.5, 3.0, gp.y);
   // Torche : liseré et révélation.
   float dl = distance(p, uProbe.xz);
   float lens = uProbeActive * (1.0 - smoothstep(uProbeRadius * 0.6, uProbeRadius, dl));
@@ -73,7 +73,7 @@ void main() {
   float base = mix(0.55, 0.92, uNuit);
   // Une forme petite et haute (le noyau du seuil, le logo en coin) n'a pas de sol :
   // à cette échelle il ne ferait qu'une bande sombre au milieu de l'écran.
-  float presence = smoothstep(0.5, 0.95, uStack.z);
+  float presence = smoothstep(0.5, 0.95, uStack.z) * (1.0 - smoothstep(-0.6, 0.4, uSolY));
   float alpha = (edge * cut * base + front * edge) * presence;
   gl_FragColor = vec4(col, alpha);
 }

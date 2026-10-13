@@ -1,42 +1,36 @@
-/** SONDE — lit la position et la progression d'un moment après un saut de scroll (diagnostic). */
+/** SONDE — position de scroll, triggers et morph à un moment donné (mobile ou desktop). */
 import { chromium } from '@playwright/test'
 const CHROMIUM = '/opt/pw-browsers/chromium-1194/chrome-linux/chrome'
 const ARGS = ['--use-gl=angle', '--use-angle=swiftshader', '--enable-unsafe-swiftshader', '--ignore-gpu-blocklist']
-const moment = process.argv[2] ?? '03'
-const frac = Number(process.argv[3] ?? '0.5')
+const [moment = '01', frac = '0', w = '390'] = process.argv.slice(2)
+const mobile = Number(w) < 600
 const browser = await chromium.launch({ executablePath: CHROMIUM, args: ARGS })
-const page = await browser.newPage({ viewport: { width: 1440, height: 900 } })
-await page.goto(`http://localhost:3000/?quality=high`, { waitUntil: 'networkidle' })
-await page.waitForSelector('html[data-su-ready="1"]')
-const lire = async (etape) => {
-  const r = await page.evaluate((m) => {
-    const el = document.querySelector(`[data-moment="${m}"]`)
-    const rect = el.getBoundingClientRect()
-    const piste = document.querySelector('.su-pel__piste')
-    return { scrollY: window.scrollY, top: rect.top + window.scrollY, height: rect.height, doc: document.documentElement.scrollHeight, pisteX: piste ? getComputedStyle(piste).transform : null, compteur: document.querySelector('.su-pel__compteur')?.textContent }
-  }, moment)
-  console.log(etape, JSON.stringify(r))
-}
-await lire('chargé')
-const aller = async (f) => {
-  await page.evaluate(([f, m]) => {
-    const el = document.querySelector(`[data-moment="${m}"]`)
-    const r = el.getBoundingClientRect()
-    const top = r.top + window.scrollY
-    const dist = Math.max(0, r.height - window.innerHeight)
-    const y = Math.round(top + dist * f)
-    window.__suLenis?.scrollTo(y, { immediate: true })
-    window.scrollTo(0, y)
-  }, [f, moment])
-}
-await aller(0)
-await page.waitForTimeout(400)
-await lire('après aller(0)')
-await aller(frac)
-await page.waitForTimeout(300)
-await lire('après aller(frac) +300ms')
+const ctx = await browser.newContext({ viewport: { width: Number(w), height: mobile ? 844 : 900 }, isMobile: mobile, hasTouch: mobile, deviceScaleFactor: mobile ? 2 : 1 })
+const page = await ctx.newPage()
+await page.goto('http://localhost:3000/?quality=high', { waitUntil: 'networkidle' })
+await page.waitForSelector('html[data-su-ready="1"]', { timeout: 30000 }).catch(() => {})
+await page.waitForTimeout(800)
+const lire = () => page.evaluate(([moment, frac]) => {
+  const el = document.querySelector(`[data-moment="${moment}"]`)
+  const r = el.getBoundingClientRect()
+  const top = r.top + window.scrollY
+  const dist = Math.max(0, r.height - window.innerHeight)
+  const y = Math.round(top + dist * frac)
+  const sts = window.__suST.getAll().filter((t) => t.pin).map((t) => ({ pin: t.pin.className.slice(0, 14), start: Math.round(t.start), end: Math.round(t.end), p: +t.progress.toFixed(3) }))
+  const s = window.__su.scene.getState()
+  return { top: Math.round(top), h: Math.round(r.height), y, scrollY: window.scrollY, inner: [innerWidth, innerHeight], moment: s.moment, layout: s.layout, target: s.target, morph: +window.__su.u.uMorph.value.toFixed(3), pins: sts }
+}, [moment, Number(frac)])
+console.log('avant', JSON.stringify(await lire()))
+await page.evaluate(([moment, frac]) => {
+  const el = document.querySelector(`[data-moment="${moment}"]`)
+  const r = el.getBoundingClientRect()
+  const top = r.top + window.scrollY
+  const dist = Math.max(0, r.height - window.innerHeight)
+  const y = Math.round(top + dist * frac)
+  window.__suLenis?.scrollTo(y, { immediate: true })
+  window.scrollTo(0, y)
+}, [moment, Number(frac)])
 await page.waitForTimeout(900)
-await lire('+900ms')
-await page.waitForTimeout(2400)
-await lire('+2400ms')
+await page.evaluate(() => window.__suSettle?.(150))
+console.log('après', JSON.stringify(await lire()))
 await browser.close()

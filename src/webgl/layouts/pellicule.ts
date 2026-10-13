@@ -45,7 +45,7 @@ export function pellicule(n: number, o: PelliculeOptions = { glisse: 0, largeur:
   d.mur = -0.8
   horsChamp(d, 0)
   horsChamp(d, 1)
-  const e = o.portrait ? 0.7 : 1
+  const e = o.portrait ? 0.6 : 1
   const f = o.glisse
   const k0 = Math.floor(f)
   const cadres = [k0, k0 + 1]

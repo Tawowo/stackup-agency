@@ -16,6 +16,8 @@ export interface Etat {
   moment?: string
   /** Position de départ (même moment) avant d'aller à `scroll` : capture un état intermédiaire. */
   depuis?: number
+  /** Approche : fraction de la hauteur du viewport AVANT le haut du moment (0,3 = il reste 70 % à monter). */
+  avant?: number
   /** Mobile : index du projet à afficher par balayage de la pellicule. */
   piste?: number
   /** Attente supplémentaire après le chargement, en ms (animations de scène). */
@@ -81,7 +83,12 @@ export const ROUTES: Route[] = [
       { nom: '00-menu', query: QUALITE, action: 'menu', attente: 1000, sansRm: true, largeurs: [390] },
       { nom: '00-sans-webgl', query: 'webgl=0', attente: 1500, sansRm: true },
       { nom: '00-sans-webgl-p1', query: 'webgl=0', scroll: 1, attente: 1500, sansRm: true },
-      { nom: '01-p0', query: QUALITE, moment: '01', scroll: 0, attente: 1800 },
+      /* p = 0 : juste après la frontière (0,01), là où la section prend la main. */
+      /* L'approche des strates : la tour du hero se replie en pile de lamelles, pilotée par le scroll. */
+      { nom: '01-arrivee-03', query: QUALITE, moment: '01', avant: 0.3, attente: 1400, sansRm: true, largeurs: [1440] },
+      { nom: '01-arrivee-06', query: QUALITE, moment: '01', avant: 0.6, attente: 1400, sansRm: true, largeurs: [1440] },
+      { nom: '01-arrivee-09', query: QUALITE, moment: '01', avant: 0.9, attente: 1400, sansRm: true, largeurs: [1440] },
+      { nom: '01-p0', query: QUALITE, moment: '01', scroll: 0.01, attente: 1800 },
       { nom: '01-p02', query: QUALITE, moment: '01', scroll: 0.2, attente: 1400, sansRm: true },
       { nom: '01-p04', query: QUALITE, moment: '01', scroll: 0.4, attente: 1400, sansRm: true },
       { nom: '01-p06', query: QUALITE, moment: '01', scroll: 0.6, attente: 1400, sansRm: true },
@@ -93,7 +100,7 @@ export const ROUTES: Route[] = [
       { nom: '02-boutique', query: QUALITE, moment: '02', scroll: 0, action: 'onglet3', attente: 2200, sansRm: true },
       { nom: '02-outil', query: QUALITE, moment: '02', scroll: 0, action: 'onglet4', attente: 2200, sansRm: true },
       { nom: '02-transition', query: QUALITE, moment: '02', scroll: 0, action: 'onglet2', attente: 450, sansRm: true },
-      { nom: '03-p0', query: QUALITE, moment: '03', scroll: 0, attente: 2400 },
+      { nom: '03-p0', query: QUALITE, moment: '03', scroll: 0.01, attente: 2400 },
       { nom: '03-p02', query: QUALITE, moment: '03', scroll: 0.2, piste: 1, attente: 1600, sansRm: true },
       { nom: '03-p04', query: QUALITE, moment: '03', scroll: 0.4, piste: 2, attente: 1600, sansRm: true },
       { nom: '03-p06', query: QUALITE, moment: '03', scroll: 0.6, piste: 2, attente: 1600, sansRm: true },

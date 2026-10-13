@@ -61,6 +61,18 @@ export async function capturer({ route, dossier, etats }, browser, filtreEtat) {
         const url = `${BASE}${route}${etat.query ? `?${etat.query}` : ''}`
         await page.goto(url, { waitUntil: 'networkidle' })
         if (!route.startsWith('/api/')) await page.waitForSelector('html[data-su-ready="1"]', { timeout: 20000 }).catch(() => {})
+        if (etat.avant !== undefined) {
+          // Approche : le haut du moment est encore à (1 − avant) × viewport sous le bord supérieur.
+          await page.evaluate(([moment, avant]) => {
+            const el = document.querySelector(`[data-moment="${moment}"]`)
+            const top = el.getBoundingClientRect().top + window.scrollY
+            const y = Math.round(top - window.innerHeight * (1 - avant))
+            window.__suLenis?.scrollTo(y, { immediate: true })
+            window.scrollTo(0, y)
+          }, [etat.moment ?? '01', etat.avant])
+          await page.waitForTimeout(600)
+          await page.evaluate(() => window.__suSettle?.(150))
+        }
         if (etat.scroll !== undefined) {
           // Deux temps : on s'approche (les ScrollTriggers se déclenchent dans l'ordre), puis on se cale.
           const aller = async (frac, moment) => {

@@ -54,9 +54,12 @@ export default function Strates() {
           scrollTrigger: { trigger: el, start: 'top 90%', end: 'top 30%', scrub: true },
         })
       }
-      // La scène : pile → strates ouvertes (une à une), puis ouvertes → refermées.
-      let phase: 'ouvre' | 'ferme' | null = null
-      const poser = (ph: 'ouvre' | 'ferme') => {
+      // La scène, en trois rampes toutes pilotées par le scroll : à l'approche
+      // (le haut de la section monte du bas du viewport jusqu'en haut), la tour
+      // du hero se replie en pile de lamelles fermée ; épinglée, les lamelles
+      // s'ouvrent une à une ; à la fin elles se referment en une plaque épaisse.
+      let phase: 'arrive' | 'ouvre' | 'ferme' | null = null
+      const poser = (ph: 'arrive' | 'ouvre' | 'ferme') => {
         const s = useScene.getState()
         if (phase === ph && s.moment === '01') return
         phase = ph
@@ -66,7 +69,8 @@ export default function Strates() {
         s.setPose({ x: 0.5, y: -0.22 })
         s.setProjection(0.5)
         s.setScrub(true)
-        if (ph === 'ouvre') s.setPair('pile', 'strates', { b: { ouverture: 1 } })
+        if (ph === 'arrive') s.setPair('pile', 'strates', { b: { ouverture: 0 } })
+        else if (ph === 'ouvre') s.setPair('strates', 'strates', { a: { ouverture: 0 }, b: { ouverture: 1 } })
         else s.setPair('strates', 'strates', { a: { ouverture: 1 }, b: { ouverture: 0 } })
       }
       // La phase ne dépend que de la progression : l'ordre des rappels
@@ -93,6 +97,23 @@ export default function Strates() {
         ScrollTrigger.create({ trigger: el, start: 'top 60%', end: 'bottom 40%', onEnter: () => poser('ouvre'), onEnterBack: () => poser('ouvre') })
         return
       }
+      // L'approche : rampe « haut de section au bas du viewport → en haut ».
+      ScrollTrigger.create({
+        trigger: el,
+        start: 'top bottom',
+        end: 'top top',
+        scrub: true,
+        onUpdate: (self) => {
+          const p = self.progress
+          if (p <= 0 || p >= 1) return
+          poser('arrive')
+          u.uMorph.value = p * p * (3 - 2 * p)
+        },
+        onLeaveBack: () => {
+          // Rendue au hero : il reprend la main par son propre épinglage.
+          phase = null
+        },
+      })
       ScrollTrigger.create({
         trigger: el,
         start: 'top top',

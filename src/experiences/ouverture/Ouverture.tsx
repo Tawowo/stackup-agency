@@ -83,7 +83,13 @@ export default function Ouverture() {
         pinSpacing: true,
         scrub: true,
         onEnter: () => useScene.getState().setMoment('00'),
-        onEnterBack: () => useScene.getState().setMoment('00'),
+        onEnterBack: () => {
+          // Retour d'en bas : le hero reprend la main sur sa paire logo → pile.
+          const sc = useScene.getState()
+          sc.setMoment('00')
+          sc.setScrub(true)
+          sc.setPair('logo', reduit ? null : 'pile')
+        },
         onUpdate: (self) => {
           const p = self.progress
           if (useScene.getState().moment !== '00') return

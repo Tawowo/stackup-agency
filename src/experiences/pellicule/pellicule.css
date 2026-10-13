@@ -92,12 +92,17 @@
     scrollbar-width: none;
     -webkit-overflow-scrolling: touch;
   }
+  /* Mobile : la capture en haut (hauteur fixe), le cadre de plaques calé dessus,
+     le texte dessous, hors du cadre. */
   .su-pel__projet {
     scroll-snap-align: start;
     grid-template-rows: auto auto;
-    align-content: center;
+    align-content: start;
     padding: 110px var(--su-gouttiere) 32px;
     row-gap: 18px;
+  }
+  .su-pel__cadre-zone {
+    align-items: start;
   }
   .su-pel__capture {
     grid-column: 1 / -1;
@@ -108,8 +113,11 @@
   .su-pel__nom {
     font-size: clamp(1.9rem, 8vw, 2.6rem);
   }
+  /* Le cadre de plaques (1,75 × 0,98 unité en portrait) entoure la capture
+     16:9 de 92 vw : échelle tirée par la hauteur (500 px), centrée sur elle. */
   .su-pel__cadre {
     width: 92vw;
-    height: 60svh;
+    height: 500px;
+    margin-top: -60px;
   }
 }

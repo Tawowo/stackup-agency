@@ -1,6 +1,6 @@
 # Journal du chantier — Stackup Agency V5
 
-Court par obligation (≤ 150 lignes). Le propriétaire lit ce fichier pour savoir où on en est.
+Court par obligation (≤ 150 lignes).
 
 ## 2026-10-13 — Phase 0 : scaffold + Stack Engine ✅
 
@@ -21,11 +21,9 @@ logo-check, cadence, compresser-png. Layouts purs testés (`node --test`).
 
 **Captures lues** : 24. Défauts corrigés : Tweakpane en double ; caméra qui recentrait la pile ; tour
 chaotique ; plaques de profil roses ; lentille et Fresnel trop forts ; ambre jaunie ; `--su-nuit` CSS.
+**Superposition** : 1,05 % / 1,08 % (seuil 2 %). **Cadence SwiftShader** : 16 fps max ici, à mesurer sur GPU.
 
-**Superposition** : 1,05 % / 1,08 % (seuil 2 %). **Cadence SwiftShader** : un canvas vide plafonne à 16 fps
-dans ce conteneur → le proxy « ≥ 30 » n'y est pas atteignable, à mesurer sur un vrai GPU.
-
-**Dépendances hors liste** : `@tweakpane/core` (types, dev), `sharp` (logo-check, AVIF phase 3, dev).
+**Dépendances hors liste** : `@tweakpane/core` (types, dev), `sharp` (logo-check, AVIF, dev).
 
 ## 2026-10-13 — Phase 1 : le hero (moment 00) ✅
 
@@ -136,8 +134,18 @@ Rail de profondeur (`Rail.tsx`, IntersectionObserver −45 % / −50 %, Lenis au
 ≥ 1360 px). Ivoire sur 02, 06, 08. `__suSettle(n)` : la simulation avance sans rendre, pour des captures
 déterministes sous SwiftShader (1-3 i/s) ; utilisé par shots, shot-accueil et videos.
 
-**Superposition** (tangage 8°, ortho) : 1,39 % (seuil 2 %). Dissolution inversée trouvée par la sonde
-(`scripts/sonde-monde.mjs`), corrigée ; premier cadrage sans glissement ; lampe recentrée sur le logo.
+**Captures lues** : 46 états du lab, 83 de l'accueil (129 entrées, rapport réécrit). Défauts vus et corrigés :
+dissolution inversée (sonde `sonde-monde.mjs`), lampe calée sur la plaque ambre réelle de chaque forme, code
+vivant à taille de lecture, HUD du lab qui faussait le viewport mobile, repli 2D noir hors de l'accueil (CSS
+global, plaques claires), sol en bande sombre derrière le seuil (effacé sous une petite forme), tour trop
+haute en portrait, cadre de la pellicule sur le texte mobile (× 0,7), Cadran arrêté entre deux chiffres
+(quantifié), étape 02 de la méthode non révélée (étape par position de carte), page de la méthode sous la
+nav (× 0,85), logo figé géant en mouvement réduit (× 0,6), flux gris sur ivoire. **Superposition** (tangage
+8°) : 1,39 % (seuil 2 %). Seconde passe : approche des strates en rampe de scroll (la tour se replie en pile de
+lamelles, états `01-arrivee-*`), hero qui reprend sa paire au retour, sol et poussière effacés sous une petite
+forme ou quand le sol monte au-dessus du centre, cadre mobile de la pellicule centré sur la capture (× 0,6).
+Ouverts : plaques en vol qui frôlent la nav (00 p = 0,8), bandeau de 07 derrière les étapes sur mobile, logo de
+l'atelier coupé à l'entrée, fronts de dissolution vifs et torche discrète (à juger en mouvement sur GPU).
 
 **Pas fait / à vérifier sur un vrai GPU** : cadence réelle avec sol + flux + code + poussière (palier
 `medium` : 600 flux, 220 poussières) ; le rendu des points (`gl_PointSize`) sur Safari ; l'inclinaison
