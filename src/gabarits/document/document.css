@@ -1,0 +1,131 @@
+/* LE GABARIT DOCUMENT */
+.su-doc__tete-grille {
+  max-width: var(--su-conteneur-scene);
+  margin: 0 auto;
+  min-height: 62svh;
+  padding: 120px var(--su-gouttiere) 48px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: var(--su-gouttiere);
+  align-items: end;
+}
+.su-doc__texte {
+  grid-column: 1 / span 8;
+}
+.su-doc__ariane {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  color: var(--su-texte-doux);
+  font-size: 0.75rem;
+  margin-bottom: 16px;
+}
+.su-doc__ariane a {
+  color: inherit;
+}
+.su-doc__etiquette {
+  margin: 0 0 10px;
+  color: var(--su-ambre-clair);
+}
+.su-doc__titre {
+  margin: 0;
+  font-size: clamp(2.2rem, 5vw, 4.4rem);
+  max-width: 20ch;
+}
+.su-doc__chapo {
+  margin: 18px 0 0;
+  max-width: 60ch;
+  font-size: 1.125rem;
+  color: var(--su-texte-doux);
+}
+.su-doc__scene {
+  grid-column: 10 / span 3;
+  position: relative;
+  pointer-events: none;
+}
+.su-doc__cadre {
+  width: 100%;
+  height: 30svh;
+}
+.su-doc__maj {
+  display: block;
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid color-mix(in srgb, var(--su-ambre) 60%, transparent);
+  color: var(--su-texte-doux);
+  font-size: 0.6875rem;
+  text-align: center;
+}
+.su-doc__corps {
+  padding: 9svh var(--su-gouttiere) 14svh;
+}
+.su-doc__grille {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.su-doc__grille--marge {
+  display: grid;
+  grid-template-columns: 240px minmax(0, 1fr);
+  column-gap: 56px;
+}
+.su-doc__sommaire {
+  position: sticky;
+  top: 110px;
+  align-self: start;
+  font-size: 0.875rem;
+}
+.su-doc__sommaire .su-mono {
+  margin: 0 0 10px;
+  color: var(--su-texte-doux);
+  font-size: 0.75rem;
+}
+.su-doc__sommaire ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.su-doc__sommaire a {
+  color: var(--su-texte-doux);
+  text-decoration: none;
+  border-left: 2px solid transparent;
+  padding-left: 10px;
+  display: block;
+}
+.su-doc__sommaire a:hover,
+.su-doc__sommaire a:focus-visible {
+  color: var(--su-texte);
+  border-left-color: var(--su-ambre);
+}
+.su-doc__large {
+  max-width: var(--su-conteneur-scene);
+  margin: 0 auto;
+}
+@media (max-width: 900px) {
+  .su-doc__grille--marge {
+    grid-template-columns: 1fr;
+  }
+  .su-doc__sommaire {
+    position: static;
+    margin-bottom: 32px;
+  }
+}
+@media (max-width: 767px) {
+  .su-doc__tete-grille {
+    padding-top: 96px;
+    min-height: 0;
+  }
+  .su-doc__texte,
+  .su-doc__scene {
+    grid-column: 1 / -1;
+  }
+  .su-doc__scene {
+    grid-row: 1;
+    margin-bottom: 16px;
+  }
+  .su-doc__cadre {
+    height: 18svh;
+  }
+}

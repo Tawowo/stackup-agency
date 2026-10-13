@@ -8,7 +8,7 @@ export interface Etat {
   /** Paramètres d'URL ajoutés à la route. */
   query?: string
   /** Geste à exécuter avant la capture. */
-  action?: 'drag' | 'menu' | 'touche3' | 'onglet2' | 'onglet3' | 'onglet4' | 'noeud2' | 'noeud7' | 'focus-offre2' | 'conf-type' | 'conf-fonctions' | 'conf-options' | 'ctc-vide' | 'ctc-remplir' | 'torche' | 'clic-plaque' | 'tab-poser' | 'regle' | 'lampe'
+  action?: 'drag' | 'menu' | 'touche3' | 'onglet2' | 'onglet3' | 'onglet4' | 'noeud2' | 'noeud7' | 'focus-offre2' | 'conf-type' | 'conf-fonctions' | 'conf-options' | 'ctc-vide' | 'ctc-remplir' | 'torche' | 'clic-plaque' | 'tab-poser' | 'regle' | 'lampe' | 'ctc-envoyer' | 'ctc-depart'
   /** Limiter à certaines largeurs (par défaut : 1440 et 390). */
   largeurs?: number[]
   /** Position de scroll, en fraction de la distance épinglée du moment visé (par défaut 00). */
@@ -203,6 +203,8 @@ export const ROUTES: Route[] = [
     etats: [
       { nom: 'vide', query: QUALITE, attente: 2000 },
       { nom: 'erreurs', query: QUALITE, action: 'ctc-vide', attente: 1200, sansRm: true },
+      { nom: 'enveloppe', query: QUALITE, action: 'ctc-envoyer', attente: 0, sansRm: true },
+      { nom: 'depart', query: QUALITE, action: 'ctc-depart', attente: 0, sansRm: true },
       { nom: 'prerempli', query: `${QUALITE}&c=${encodeURIComponent('t=multi-pages;f=formulaire,galerie,rdv;m=pro;r=4')}&projet=${encodeURIComponent('Un site pour mon atelier de menuiserie à Tours, avec galerie et prise de rendez-vous.')}`, action: 'ctc-remplir', attente: 2200, sansRm: true },
     ],
   },

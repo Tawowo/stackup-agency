@@ -1,0 +1,283 @@
+/* L'AUDIT — /outils/audit-site */
+.su-aud {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+.su-aud__form {
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.su-aud__label {
+  color: var(--su-ambre-clair);
+}
+.su-aud__ligne {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.su-aud__champ {
+  flex: 1 1 260px;
+  min-height: 48px;
+  padding: 0 16px;
+  border: 1px solid color-mix(in srgb, var(--su-ivoire) 30%, transparent);
+  border-radius: 4px;
+  background: color-mix(in srgb, var(--su-encre) 70%, transparent);
+  color: var(--su-ivoire);
+  font: inherit;
+  font-size: 1.0625rem;
+}
+.su-aud__champ::placeholder {
+  color: var(--su-graphite);
+}
+.su-aud__champ:focus-visible {
+  outline: 2px solid var(--su-ambre-clair);
+  outline-offset: 2px;
+}
+.su-aud__note {
+  margin: 0;
+  font-size: 0.875rem;
+  color: var(--su-graphite);
+}
+
+/* Attente : un tracé qui boucle (vocabulaire : tracé SVG). */
+.su-aud__attente {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: var(--su-texte-doux);
+}
+.su-aud__attente svg {
+  width: 40px;
+  height: 40px;
+  flex: none;
+}
+.su-aud__boucle {
+  fill: none;
+  stroke: var(--su-ambre);
+  stroke-width: 3;
+  stroke-dasharray: 30 70;
+  animation: su-aud-boucle 1.2s linear infinite;
+}
+@keyframes su-aud-boucle {
+  to {
+    stroke-dashoffset: -100;
+  }
+}
+.su-aud__erreur {
+  margin: 0;
+  padding: 14px 18px;
+  border-left: 3px solid var(--su-ambre);
+  background: color-mix(in srgb, var(--su-ambre) 12%, transparent);
+  color: var(--su-texte);
+}
+
+/* Résultats : la section se découpe, l'anneau se trace, les chiffres tournent. */
+.su-aud__resultats {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  animation: su-aud-decoupe var(--su-scene) var(--su-pose) both;
+}
+@keyframes su-aud-decoupe {
+  from {
+    clip-path: inset(0 -40px 100% -40px);
+  }
+  to {
+    clip-path: inset(-40px);
+  }
+}
+.su-aud__h2 {
+  margin: 12px 0 0;
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  line-height: 1.05;
+  color: var(--su-texte);
+}
+.su-aud__url {
+  color: var(--su-accent-texte);
+  overflow-wrap: anywhere;
+}
+.su-aud__quand {
+  margin: -12px 0 0;
+  color: var(--su-texte-doux);
+  font-size: 0.75rem;
+}
+.su-aud__jauges {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--su-gouttiere);
+}
+.su-aud__jauge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 6px;
+}
+.su-aud__anneau {
+  position: relative;
+  width: min(100%, 200px);
+  aspect-ratio: 1;
+}
+.su-aud__anneau svg {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+.su-aud__piste,
+.su-aud__arc {
+  fill: none;
+  stroke-width: 8;
+}
+.su-aud__piste {
+  stroke: color-mix(in srgb, var(--su-texte) 12%, transparent);
+}
+.su-aud__arc {
+  stroke: var(--su-ambre);
+  stroke-dasharray: 100;
+  stroke-dashoffset: calc(100 - var(--score));
+  animation: su-aud-trace var(--su-scene) var(--su-pose) 200ms both;
+}
+@keyframes su-aud-trace {
+  from {
+    stroke-dashoffset: 100;
+  }
+}
+.su-aud__cran {
+  stroke: var(--su-texte-doux);
+  stroke-width: 1.5;
+}
+.su-aud__score {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  display: grid;
+  place-items: center;
+  font-size: clamp(2.4rem, 5vw, 3.4rem);
+  color: var(--su-texte);
+}
+.su-aud__volet {
+  margin: 8px 0 0;
+  font-size: 1.375rem;
+  color: var(--su-texte);
+}
+.su-aud__niveau {
+  margin: 0;
+  color: var(--su-accent-texte);
+  font-size: 0.75rem;
+}
+.su-aud__sens {
+  margin: 4px 0 0;
+  max-width: 34ch;
+  font-size: 0.9375rem;
+  color: var(--su-texte-doux);
+}
+.su-aud__fiche {
+  color: var(--su-texte);
+  max-width: 640px;
+}
+.su-aud__fiche .su-fiche__ligne {
+  grid-template-columns: 5ch 1fr;
+}
+.su-aud__recos {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+.su-aud__reco {
+  padding: 18px 20px;
+  border-top: 2px solid var(--su-ambre);
+  background: color-mix(in srgb, var(--su-texte) 5%, transparent);
+  animation: su-aud-depli var(--su-pose-duree) var(--su-pose) both;
+  animation-delay: calc(600ms + var(--su-cascade) * var(--i, 0));
+}
+@keyframes su-aud-depli {
+  from {
+    clip-path: inset(0 100% 0 0);
+  }
+  to {
+    clip-path: inset(0);
+  }
+}
+.su-aud__reco-cat {
+  margin: 0 0 6px;
+  font-size: 0.6875rem;
+  color: var(--su-accent-texte);
+}
+.su-aud__reco-titre {
+  margin: 0;
+  font-size: 1.0625rem;
+  font-weight: 600;
+  color: var(--su-texte);
+}
+.su-aud__reco-detail {
+  margin: 8px 0 0;
+  font-size: 0.9375rem;
+  color: var(--su-texte-doux);
+}
+.su-aud__reco-pied {
+  margin: 10px 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  font-size: 0.6875rem;
+  color: var(--su-texte-doux);
+}
+.su-aud__reco-pied a {
+  color: var(--su-accent-texte);
+}
+.su-aud__rien {
+  margin: 0;
+  color: var(--su-texte-doux);
+}
+.su-aud__suite {
+  padding: 28px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.su-aud__honnete {
+  margin: 0;
+  max-width: 62ch;
+  color: color-mix(in srgb, var(--su-ivoire) 82%, transparent);
+}
+.su-aud-faq {
+  margin-top: 9svh;
+}
+.su-aud-faq h2 {
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  margin: 0 0 20px;
+}
+@media (prefers-reduced-motion: reduce) {
+  .su-aud__resultats,
+  .su-aud__arc,
+  .su-aud__reco {
+    animation: none;
+  }
+}
+@media (max-width: 767px) {
+  .su-aud__form,
+  .su-aud__suite {
+    padding: 20px;
+  }
+  .su-aud__jauges {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+  .su-aud__anneau {
+    width: 180px;
+  }
+  .su-aud__recos {
+    grid-template-columns: 1fr;
+  }
+}

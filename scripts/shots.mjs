@@ -159,6 +159,19 @@ export async function capturer({ route, dossier, etats }, browser, filtreEtat) {
           await page.locator('input[name="rgpd"]').check()
           await page.locator('#su-ctc-prenom').focus()
         }
+        if (etat.action === 'ctc-envoyer' || etat.action === 'ctc-depart') {
+          // L'API est simulée (aucun e-mail réel) : on capture le pliage puis le départ.
+          await page.route('**/api/contact', (r) => r.fulfill({ status: 200, contentType: 'application/json', body: JSON.stringify({ ok: true, envoye: false }) }))
+          await page.fill('#su-ctc-prenom', 'Camille')
+          await page.fill('#su-ctc-nom', 'Durand')
+          await page.fill('#su-ctc-entreprise', 'Menuiserie Durand')
+          await page.fill('#su-ctc-email', 'camille@exemple.fr')
+          await page.locator('#su-ctc-objet').selectOption({ index: 1 })
+          await page.fill('#su-ctc-projet', 'Un site pour mon atelier de menuiserie à Tours, avec une galerie de chantiers.')
+          await page.locator('input[name="rgpd"]').check()
+          await page.locator('.su-ctc__form button[type="submit"]').click()
+          await page.waitForTimeout(etat.action === 'ctc-envoyer' ? 1000 : 1750)
+        }
         if (etat.action?.startsWith('onglet')) {
           const k = Number(etat.action.slice(6))
           await page.locator('.su-off__onglet').nth(k - 1).click()

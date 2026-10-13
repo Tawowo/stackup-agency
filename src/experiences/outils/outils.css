@@ -1,0 +1,68 @@
+/* LES OUTILS — index /outils : quatre plaques qui se déplient en cascade. */
+.su-out {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--su-gouttiere);
+}
+.su-out > li {
+  animation: su-out-depli var(--su-pose-duree) var(--su-pose) both;
+  animation-delay: calc(var(--su-cascade) * var(--i, 0));
+}
+@keyframes su-out-depli {
+  from {
+    clip-path: inset(0 0 100% 0);
+  }
+  to {
+    clip-path: inset(0 -40px -40px 0);
+  }
+}
+.su-out__plaque {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 28px;
+  text-decoration: none;
+  transition: transform var(--su-reflexe) var(--su-glisse);
+}
+.su-out__plaque:hover,
+.su-out__plaque:focus-visible {
+  transform: translate(-2px, -2px);
+}
+.su-out__plaque:focus-visible {
+  outline: 2px solid var(--su-ambre);
+  outline-offset: 3px;
+}
+.su-out__num {
+  font-size: 0.6875rem;
+  color: var(--su-ambre-texte);
+}
+.su-out__nom {
+  font-size: clamp(1.6rem, 2.6vw, 2.2rem);
+}
+.su-out__texte {
+  color: var(--su-graphite-ivoire);
+  max-width: 48ch;
+}
+.su-out__ouvrir {
+  margin-top: auto;
+  padding-top: 8px;
+  font-size: 0.75rem;
+  color: var(--su-ambre-texte);
+}
+@media (prefers-reduced-motion: reduce) {
+  .su-out > li {
+    animation: none;
+  }
+}
+@media (max-width: 767px) {
+  .su-out {
+    grid-template-columns: 1fr;
+  }
+  .su-out__plaque {
+    padding: 22px;
+  }
+}

@@ -4,7 +4,12 @@ export const CIBLE_FPS: Record<Tier, number> = { ultra: 55, high: 50, medium: 40
 
 export function lireForcage(): Tier | null {
   if (typeof window === 'undefined') return null
-  const q = new URLSearchParams(window.location.search).get('quality')
+  // Le forçage (?quality=) tient pour toute la session d'onglet : il survit aux traversées.
+  let q = new URLSearchParams(window.location.search).get('quality')
+  try {
+    if (q) sessionStorage.setItem('su-quality', q)
+    else q = sessionStorage.getItem('su-quality')
+  } catch {}
   return q === 'ultra' || q === 'high' || q === 'medium' || q === 'low' ? q : null
 }
 

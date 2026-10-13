@@ -116,7 +116,7 @@ export default function AtelierNuit() {
             <ol className="su-atn__engagements" aria-label="Trois engagements">
               {ENGAGEMENTS.map((e, k) => (
                 <li key={e} style={{ '--e': ecrit(k).toFixed(3) } as React.CSSProperties}>
-                  <svg viewBox="0 0 900 80" className="su-atn__trace" aria-hidden="true">
+                  <svg viewBox="0 0 1000 80" className="su-atn__trace" aria-hidden="true">
                     <text x="0" y="58" pathLength={1}>
                       {e}
                     </text>

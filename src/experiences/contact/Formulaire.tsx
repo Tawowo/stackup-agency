@@ -10,6 +10,7 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { CHAMPS_ORDRE, ContactSchema, OBJETS, type ContactEntree } from '@/lib/contact'
 import { deserialiser, lignesFiche, resumer, type Configuration } from '@/lib/configuration'
+import { gsap } from '@/lib/gsap'
 import { useScene } from '@/webgl/store'
 import StackFrame from '@/webgl/StackFrame'
 import Action from '@/components/ui/Action'
@@ -96,7 +97,23 @@ export default function Formulaire({ c, projet, objet }: { c: string | null; pro
       const res = await fetch('/api/contact', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify(r.data) })
       const j = (await res.json()) as { ok: boolean; envoye?: boolean; erreur?: string; champs?: Champs }
       if (res.ok && j.ok) {
-        router.push(`/contact/merci?envoye=${j.envoye ? '1' : '0'}`)
+        // Le départ : la pile se plie en enveloppe, le logo la scelle, puis elle
+        // file au fond de la scène ; la page de confirmation prend le relais.
+        const sc = useScene.getState()
+        const suite = () => router.push(`/contact/merci?envoye=${j.envoye ? '1' : '0'}`)
+        setMessage('Demande envoyée. Elle part.')
+        if (sc.reduced) return suite()
+        sc.setParams({ retard: 0.5, arc: 0.4 })
+        sc.setLayout('enveloppe')
+        const f = { v: 0 }
+        gsap.to(f, {
+          v: 1,
+          delay: 1.1,
+          duration: 1.1,
+          ease: 'power2.in',
+          onUpdate: () => useScene.getState().setParams({ fuite: f.v }),
+          onComplete: suite,
+        })
         return
       }
       if (j.champs) setErreurs(j.champs)

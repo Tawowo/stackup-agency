@@ -57,3 +57,33 @@ masque la nav et le rail (ils entraient dans la boîte). `StackFrame` relit les 
 Décision : la photo envoyée dans le message n'arrive pas comme fichier ; `scripts/portrait.mjs` la traitera dès
 qu'elle sera posée en `public/images/source/matheo-reboul.jpg` ; en attendant, la photo de l'atelier
 (`portrait-fondateur.webp`, déjà dans le dépôt) sert de portrait.
+
+## 2026-10-13 (nuit) — Mission en autonomie : état précis pour reprendre avec « Continue »
+
+**Fait.** Accueil audité (captures relues : hero, strates, offre, seuil, machines, prix, méthode, atelier,
+départ ; mots formés par les flux, onde au clic, plongée de caméra entre sections, lueur au pointeur).
+Pages-mondes : `/realisations` (Galerie, `src/webgl/monde/Galerie.tsx`, `src/experiences/galerie/`),
+`/services` (Compilation, `src/experiences/compil/`), `/solutions` (Tableau, `src/experiences/tableau/`),
+`/a-propos` (Atelier de nuit, `src/experiences/atelier-nuit/`), `/tarifs` (Tapis + plan technique), fiches
+services (4), solutions (15), réalisations (7). Blog : 300 articles (`src/lib/blog.ts`, `src/experiences/journal/`),
+catégories, RSS. Pages locales : gabarit signé `src/gabarits/locale/` (villes 30, départements 18 avec
+communes filtrables, métiers 79, services locaux 6, zones). Traversée : `src/experiences/traversee/Traversee.tsx`
+(repli de la page par découpe + dissolution du sol, dépliage à l'arrivée). Contact : layout `enveloppe` +
+paramètre `fuite` (l'enveloppe file au fond), la page merci la fait revenir. SEO : `src/config/routes.ts`
+(source unique), `sitemap.ts`, `robots.ts`, `src/config/redirections.ts` (80 × 301, générées par
+`scripts/redirections.mjs`) — **à brancher dans `next.config.ts`** (redémarre le serveur : le faire hors captures).
+
+**Décisions (une ligne chacune).**
+- Les 67 articles à `publishAt` futur restent programmés (stratégie de l'ancien site) ; ISR 12 h les publie à date.
+- Cadran : rotation d'une traite à l'entrée (900 ms) — un prix ne reste jamais figé sur une valeur intermédiaire.
+- À propos : pas de travelling caméra (le cadre 3D quittait la photo) ; la figure entière grandit d'un bloc.
+- Galerie : le hall attend au fond à droite pendant l'intro (travel −1 → 0) ; mobile : recul de 6 unités.
+- Nav : voile du fond courant dès 40 px de scroll (le texte ne passe plus sous le logo).
+- PageSpeed Insights (gratuit, sans IA) reste la source de l'audit de site ; clé `PAGESPEED_API_KEY` facultative.
+
+**En cours.** Pages documents (gabarit `src/gabarits/document/`) : légales + plan du site + 404 animée
+(`eboulis`), outils (audit, studio de style), ressources (cahier des charges, documents), FAQ, comparatif,
+parrainage. Captures à relire : contact (enveloppe/départ), traversée, galerie mobile.
+
+**Reste à faire.** Brancher redirections ; vidéos par page ; QA (axe, contraste, sans JS, perf, toutes les
+routes du sitemap capturées au moins une fois, `npm run verify`) ; rapport final en tête de ce journal.

@@ -174,15 +174,16 @@ export default function Galerie({ projets }: { projets: ProjetGalerie[] }) {
     const s = useScene.getState()
     const r = racine.current
     if (!r) return
+    if (process.env.NODE_ENV !== 'production') (window as unknown as { __suGalerie?: Group }).__suGalerie = r
     // travel < 0 : l'introduction — le hall attend au fond et à droite, hors du titre,
     // et s'avance à mesure que l'intro défile (−1 → 0).
     const intro = Math.min(1, Math.max(0, -s.travel))
     const avance = Math.max(0, s.travel) * (n - 1) * ESPACEMENT
     const ii = intro * intro * (3 - 2 * intro)
-    // Mobile : le hall à l'échelle 0,56 (l'écran tient dans la largeur) ; z local inchangé.
-    const ech = mobile ? 0.56 : 1
-    r.scale.setScalar(ech)
-    r.position.set(ii * (mobile ? 9 : 8), mobile ? 0.5 : 0, avance * ech - ii * 5)
+    // Mobile : tout le hall recule de 6 unités (l'écran tient dans la largeur) ;
+    // l'allumage reste calculé sur la position locale.
+    const recul = mobile ? 6 : 0
+    r.position.set(ii * (mobile ? 9 : 10), 0, avance - recul - ii * 5)
     const ptr = (window as unknown as { __suPointer?: { px: { x: number; y: number; active: boolean } } }).__suPointer?.px
     const nx = ptr?.active ? (ptr.x / size.width) * 2 - 1 : 0
     const ny = ptr?.active ? (ptr.y / size.height) * 2 - 1 : 0

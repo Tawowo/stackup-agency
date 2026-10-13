@@ -2,6 +2,7 @@
 /** Confirmation : la pile refermée en logo, la page se termine comme elle a commencé. */
 import { useEffect } from 'react'
 import StackFrame from '@/webgl/StackFrame'
+import { gsap } from '@/lib/gsap'
 import { useScene } from '@/webgl/store'
 import Action from '@/components/ui/Action'
 import { SITE } from '@/config/site'
@@ -18,6 +19,13 @@ export default function Merci({ envoye }: { envoye: boolean }) {
     s.setProjection(1)
     s.setCalme(false)
     if (!s.reduced) s.setLayout('logo')
+    // L'enveloppe est partie au fond : le logo en revient, reformé.
+    const f = { v: s.params.fuite }
+    const t = gsap.to(f, { v: 0, duration: s.reduced ? 0 : 1.2, ease: 'power3.out', onUpdate: () => useScene.getState().setParams({ fuite: f.v }) })
+    return () => {
+      t.kill()
+      useScene.getState().setParams({ fuite: 0 })
+    }
   }, [])
   return (
     <main className="su-merci" data-moment="merci">

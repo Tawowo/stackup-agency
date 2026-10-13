@@ -285,8 +285,11 @@ function Rig() {
         if (s.still || premier || naissance) lisse.dissolve = dissolveCible
         else damp(lisse, 'dissolve', dissolveCible, dissolveCible > lisse.dissolve ? 0.08 : 0.22, dt)
         u.uDissolve.value = lisse.dissolve
-        g.position.set(stackPos.x, stackPos.y, 0)
-        g.scale.setScalar(stackPos.s)
+        // Départ : l'enveloppe monte, rapetisse et file au fond de la scène.
+        const fu = prm.fuite
+        const fuE = fu * fu
+        g.position.set(stackPos.x + fu * 0.6, stackPos.y + fu * 1.4, -fuE * 9)
+        g.scale.setScalar(stackPos.s * (1 - 0.55 * fu))
         // Drag : rotation avec inertie, retour lent.
         if (!s.dragging) {
           damp(spin, 'y', 0, 1.2, dt)
@@ -421,6 +424,8 @@ function Rig() {
     // Captures (SwiftShader, 1-3 i/s) : avance la simulation sans rendre, pour
     // obtenir l'état qu'un visiteur à 60 i/s verrait après `n` trames.
     if (process.env.NODE_ENV !== 'production') (window as unknown as { __suCam?: BlendCamera }).__suCam = camera
+    // QA : lecture de l'état de la scène depuis les sondes Playwright (dev seulement).
+    if (process.env.NODE_ENV !== 'production') (window as unknown as { __suEtat?: () => unknown }).__suEtat = () => useScene.getState()
     const w = window as unknown as { __suSettle?: (n?: number) => void }
     w.__suSettle = (n = 120) => {
       // Les écouteurs de scroll (boîtes, ScrollTrigger, lumière) d'abord, de façon synchrone.

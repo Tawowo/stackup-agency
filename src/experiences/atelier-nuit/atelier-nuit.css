@@ -121,7 +121,7 @@
 }
 /* Écrit en lumière : le contour se trace (scroll), puis le plein s'allume. */
 .su-atn__trace {
-  width: min(100%, 720px);
+  width: min(100%, 800px);
   height: auto;
   overflow: visible;
 }

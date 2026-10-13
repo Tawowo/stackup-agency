@@ -78,6 +78,8 @@ export interface SceneParams extends PileParams {
   approche: number
   /** Arrivée des nouvelles plaques : 0 = depuis la profondeur, 1 = sur le tapis (depuis la gauche). */
   entree: number
+  /** Départ (/contact, après l'envoi) : l'enveloppe file dans la profondeur (0 → 1). */
+  fuite: number
 }
 
 export const PARAMS_DEFAUT: SceneParams = {
@@ -125,6 +127,7 @@ export const PARAMS_DEFAUT: SceneParams = {
   couches: 20,
   approche: 0,
   entree: 0,
+  fuite: 0,
 }
 
 export interface Pose {

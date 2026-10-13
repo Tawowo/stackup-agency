@@ -7,6 +7,7 @@ import { article, articlesLies, rayonDe, tousLesArticles } from '@/lib/blog'
 import { meta, filAriane, faqPage, JsonLd, ORIGINE } from '@/lib/seo'
 import { SITE } from '@/config/site'
 import '@/experiences/journal/journal.css'
+import '@/components/editorial/editorial.css'
 import '@/experiences/journal/lecture.css'
 
 // Les articles programmés (publishAt) paraissent à leur date sans redéploiement.

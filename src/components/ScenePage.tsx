@@ -16,7 +16,7 @@ export default function ScenePage({ moment, forme = 'logo', projection = 0.4, po
     s.setMonde('fabrique')
     s.setScrub(false)
     s.setTarget(null)
-    s.setParams({ retard: 0.25, flash: 0, arc: 0.6, entree: 0, approche: 0, ...(params ?? {}) })
+    s.setParams({ retard: 0.25, flash: 0, arc: 0.6, entree: 0, approche: 0, fuite: 0, ...(params ?? {}) })
     s.setProjection(projection)
     s.setPose(pose)
     if (!s.reduced) s.setLayout(forme)
