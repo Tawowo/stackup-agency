@@ -5776,3 +5776,147 @@ html[data-fin='oui'] body {
 @media (max-width: 899px) {
   .su-engagements { grid-template-columns: 1fr; gap: 1.5rem; }
 }
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   §36. LES MODULES BRANCHABLES — moment 05
+   Spécification : dossier §10.6. L'encart « ce que c'est / ce que ce n'est
+   pas » et la liste des modules, côte à côte sous la démonstration.
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+.su-modules {
+  margin-top: clamp(2rem, 5vh, 3.5rem);
+  display: grid;
+  grid-template-columns: 5fr 7fr;
+  gap: clamp(1.5rem, 3vw, 3rem);
+  align-items: start;
+}
+
+.su-modules__titre {
+  margin: 0 0 0.75rem;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  font-family: var(--font-space), Poppins, system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--su-encre);
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--su-encre);
+}
+
+.su-modules__compte {
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 0.68rem;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  color: rgb(var(--su-navy-rgb) / 0.75);
+}
+
+/* ── L'encart net ──────────────────────────────────────────────────────── */
+
+.su-modules__net { margin: 0; }
+
+.su-modules__net > div { padding: 0.75rem 0; }
+
+.su-modules__net > div + div {
+  border-top: 1px solid rgb(var(--su-navy-rgb) / 0.12);
+}
+
+.su-modules__net dt {
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--su-or-texte);
+  margin-bottom: 0.3rem;
+}
+
+/* La seconde colonne est la plus importante des deux, et elle ne doit pas
+   être traitée comme une réserve en petits caractères : même taille, même
+   couleur de texte. */
+.su-modules__net dd {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: rgb(var(--su-navy-rgb) / 0.78);
+}
+
+.su-modules__net > div + div dt { color: rgb(var(--su-navy-rgb) / 0.78); }
+
+/* ── La liste des modules ──────────────────────────────────────────────── */
+
+.su-modules__chapo {
+  margin: 0 0 1rem;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: rgb(var(--su-navy-rgb) / 0.78);
+}
+
+.su-modules__liste {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.su-modules__liste li { max-width: 100%; }
+
+.su-modules__module {
+  padding: 0.4rem 0.75rem;
+  border: 1px solid rgb(var(--su-navy-rgb) / 0.2);
+  border-radius: 0.4rem;
+  background: none;
+  font-size: 0.84rem;
+  color: var(--su-encre);
+  cursor: pointer;
+  text-align: left;
+  transition: border-color 160ms ease, background-color 160ms ease;
+}
+
+.su-modules__module:hover { border-color: rgb(var(--su-navy-rgb) / 0.45); }
+
+.su-modules__module[aria-expanded='true'] {
+  border-color: var(--su-or);
+  background: rgb(var(--su-or-rgb) / 0.12);
+}
+
+.su-modules__module:focus-visible {
+  outline: 2px solid var(--su-or);
+  outline-offset: 2px;
+}
+
+.su-modules__apercu {
+  margin-top: 0.5rem;
+  padding: 0.65rem 0.75rem;
+  border-left: 2px solid var(--su-or);
+  background: rgb(var(--su-navy-rgb) / 0.04);
+  border-radius: 0 0.3rem 0.3rem 0;
+}
+
+.su-modules__apercu p {
+  margin: 0 0 0.4rem;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: rgb(var(--su-navy-rgb) / 0.78);
+}
+
+.su-modules__apercu a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--su-or-texte);
+}
+
+.su-modules__tous { margin-top: 1rem; display: inline-block; }
+
+@media (max-width: 1099px) {
+  .su-modules { grid-template-columns: 1fr; }
+}

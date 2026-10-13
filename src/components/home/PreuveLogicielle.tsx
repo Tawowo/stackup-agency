@@ -14,6 +14,7 @@
 
 import { useEffect, useRef, useState } from 'react'
 import Reseau from '@/components/home/Reseau'
+import Modules from '@/components/home/Modules'
 import Link from 'next/link'
 import dynamic from 'next/dynamic'
 import { ArrowRight } from 'lucide-react'
@@ -72,6 +73,13 @@ export default function PreuveLogicielle() {
         <Reseau />
 
         <div className="min-h-[640px]">{charger && <Laboratoire />}</div>
+
+        {/* L'encart « ce que c'est / ce que ce n'est pas » et les modules
+            branchables (dossier §10.6). Ils arrivent APRÈS la démonstration
+            et non avant : c'est une fois qu'on a manipulé l'outil qu'on peut
+            se tromper sur ce qu'il est, et qu'on se demande ce que ça
+            donnerait pour son propre métier. */}
+        <Modules />
 
         <div className="flex flex-wrap items-center gap-3 mt-8">
           <Link href="/laboratoire" className="su-action su-action--fantome">
