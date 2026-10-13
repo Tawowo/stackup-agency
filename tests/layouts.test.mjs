@@ -80,10 +80,19 @@ test('offres : chaque layout emploie la plaque ambre et dissout le reste', () =>
   }
 })
 
-test('pellicule : le glissement décale tout le cadre', () => {
-  const a = pellicule(450, { glisse: 0 })
-  const b = pellicule(450, { glisse: 2.8 })
-  for (let i = 3; i < 60; i++) if (a.scale[i] > 0) assert.ok(Math.abs(b.pos[i * 3] - a.pos[i * 3] - 2.8) < 1e-5)
+test('pellicule : bande continue, un cadre par projet espacé d’un écran', () => {
+  const a = pellicule(450, { glisse: 0, largeur: 6 })
+  const b = pellicule(450, { glisse: 0.4, largeur: 6 })
+  // Le cadre du projet 0 (parité 0) glisse de −0,4 écran ; celui du projet 1 (parité 1) est à +0,6 écran.
+  const moitie = Math.floor((450 - 3) / 2)
+  for (let i = 3; i < 3 + 30; i++) if (a.scale[i] > 0) assert.ok(Math.abs(b.pos[i * 3] - a.pos[i * 3] + 0.4 * 6) < 1e-5)
+  let droite = 0
+  for (let i = 3 + moitie; i < 3 + moitie + 30; i++) if (b.scale[i] > 0) droite = Math.max(droite, b.pos[i * 3])
+  assert.ok(droite > 0.6 * 6 - 1.5 && droite < 0.6 * 6 + 1.5, `cadre suivant à ${droite}`)
+  // La plaque ambre suit le projet le plus proche.
+  assert.ok(Math.abs(a.pos[6] - (1.25 + 0.12)) < 1e-5)
+  const c = pellicule(450, { glisse: 0, largeur: 6, portrait: true })
+  assert.ok(c.scale[3] < a.scale[3], 'cadre plus petit en portrait')
 })
 
 import { machines, aretes } from '../src/webgl/layouts/machines.ts'

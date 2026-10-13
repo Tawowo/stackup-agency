@@ -63,34 +63,19 @@ snap inertiel de la pellicule ; triggers faussés en mouvement réduit → plus 
 
 **Démos.** URL de démo injoignables depuis ce conteneur : AVIF issus des captures de l'ancien site.
 
-**Corrections avant la phase 3 (captures avant dans `docs/qa/shots/avant/`).** Zone d'exclusion du
-titre (`useExclusion`, ResizeObserver, union titre + nav) passée au vertex shader : les plaques en vol la
-contournent par le côté le plus proche, pondéré par sin(πt) ; p = 0,25 / 0,5 / 0,75 capturés aux deux
-largeurs, texte intact. Variante `portrait` de `multi` (trois pages empilées, `params.portrait` suit la
-media query) : rien ne sort du cadre à 390. Pellicule : scrub 1,4, snap 0,6-1,2 s, morph du cadre 1,6 s ;
-état `pellicule-glissement` (depuis 0,25 → 0,5, 700 ms) qui montre le cadre en vol. Défaut trouvé en
-chemin : `half` est réservé en GLSL, le shader ne compilait plus (canvas noir sur toutes les captures).
-
-**Prochaine étape — phase 3** : moments 05 (Salle des machines, modules + maquettes animées, `DemoSlot`
-vide), 06 (Juste prix, layout `cadran`), 07 (Méthode, layout `methode`), 08 (Atelier), 09 (Départ, retour
-au logo), footer ; vidéo d'un scroll entier (desktop, mobile, rm).
+**Corrections avant la phase 3** (captures avant dans `docs/qa/shots/avant/`) : zone d'exclusion du titre
+(`useExclusion`, ResizeObserver) passée au vertex shader, les plaques en vol la contournent ; variante
+`portrait` de `multi` (rien ne sort du cadre à 390) ; pellicule allongée. `half` réservé en GLSL corrigé.
 
 ## 2026-10-13 — Phase 3 : accueil, seconde moitié (moments 05-09) ✅
 
-**Fait.** Layouts purs + tests : `machines` (12 nœuds en deux anneaux, chapelets d'arêtes, hub ambre,
-variante portrait), `cadran` (arc de 48 plaques, graduations, aiguille pilotée par `params.aiguille`),
-`methode` (cinq groupes qui s'assemblent, `params.etape`). Isolation paramétrée par moment (`isoPush`,
-`isoDim`) ; `calme` (pile à l'arrêt). Moment 05 MODULES : douze solutions réelles de `src/data/solutions.ts`,
-un bouton HTML par nœud calé sur sa plaque, clic / tap / flèches allument un nœud (isolation), maquette
-animée par découpe dans une Plaque (liste, Cadran, statut en boucle de 2,4 s, puce qui tourne), rotation
-6 s jusqu'à interaction, `DemoSlot.tsx` vide non rendu ; aucun ancien Laboratoire. 06 CADRAN : ivoire,
-quatre Plaques + Cadran + trois inclusions, trois engagements tracés en SVG, l'aiguille suit l'offre
-survolée / focalisée. 07 ASSEMBLAGE SÉQUENTIEL : cinq étapes, numéro déplié, texte découpé, plaque ambre
-pour l'étape 02, scène collante à droite qui s'assemble par étape. 08 ATELIER : placeholder de portrait,
-Mathéo Reboul, trois paragraphes, accordéon natif (`components/editorial`, fondu toléré), pile à l'arrêt.
-09 DÉPART : champ unique → `/contact?projet=…`, retour au layout `logo`. Footer (logo, nav, mentions).
-Pages de chantier pour mentions légales, confidentialité, CGV. `devIndicators` coupés (le pavé Next
-entrait dans les captures).
+**Fait.** Layouts purs + tests : `machines` (12 nœuds, arêtes, hub ambre, portrait), `cadran` (arc de 48
+plaques, aiguille `params.aiguille`), `methode` (cinq groupes, `params.etape`). Isolation par moment, `calme`.
+05 MODULES : douze solutions réelles, un bouton par nœud calé sur sa plaque, maquette animée par découpe,
+`DemoSlot` vide non rendu, aucun ancien Laboratoire. 06 CADRAN : ivoire, quatre Plaques + Cadran, trois
+engagements tracés en SVG, aiguille sur l'offre focalisée. 07 ASSEMBLAGE SÉQUENTIEL : cinq étapes, plaque
+ambre pour la démo. 08 ATELIER : portrait à venir, accordéon natif, pile à l'arrêt. 09 DÉPART : champ
+unique → `/contact?projet=…`. Footer, pages de chantier légales, `devIndicators` coupés.
 
 **Captures lues** : 32 états (138 entrées). Défauts corrigés : trois états vides (`half` réservé en GLSL,
 `ENTREES` importé d'un composant client, `COURT` utilisé avant sa déclaration) ; isolation des strates
@@ -102,27 +87,17 @@ ni VP9 : `scripts/videos.mjs` capture une trame JPEG par pas et les envoie en fl
 `docs/qa/videos/*.webm` (1440, 390, rm), hors git, `npm run videos`.
 
 
-**Vercel.** La preview de la branche renvoyait 404 NOT_FOUND partout (même `/favicon.ico`) avec un build
-« completed » : `vercel.json` (`"framework": "nextjs"`) était parti dans `ancien/` avec l'ancien site, et
-le projet retombait sur son preset enregistré (servi comme dossier statique). Restauré à la racine, plus
-`engines.node = 22.x`. Le conteneur ne peut pas joindre vercel.app (politique d'egress) : l'état des
-déploiements se lit par l'API GitHub (`deployments` + `statuses.environment_url`).
+**Vercel.** Preview en 404 : `vercel.json` (`"framework": "nextjs"`) était parti dans `ancien/`. Restauré,
+plus `engines.node = 22.x`. vercel.app injoignable d'ici : état lu par l'API GitHub (`deployments`).
 
 ## 2026-10-13 — Phase 4 : tarifs + contact ✅
 
-**Fait.** `src/lib/configuration.ts` : schéma zod, `serialiser` / `deserialiser` (`?c=t=outil;f=rdv;m=pro;r=4`),
-`normaliser` (fonctions incompatibles retirées), `estimer` (plancher + mensuel + fonctions « sur devis »,
-jauge), `lignesFiche`, `resumer` ; tests. Layouts `configurateur` (forme du type en variante compacte + un
-module 2 × 2 relié par fonction cochée) et `formulaire` (une rangée par champ valide, l'ambre au neuvième).
-`/tarifs` : hero en `cadran` (aiguille = plancher / max), titre déplié, configurateur en trois plaques
-(radios au clavier, cases, maintenance, rédaction), Cadran recalculé, « Recevoir un devis » → `/contact?c=…` ;
-quatre offres en entier (Cadran, inclusions, Fiche), suppléments, trois plans de maintenance + tableau mono,
-ancres `#une-page` etc. ; la lecture passe sur ivoire. `/contact` : trois plaques, zod client + serveur,
-erreurs annoncées (`role="status"`, `aria-invalid`, focus sur le premier champ fautif), RGPD explicite,
-pot de miel, `projet` / `objet` / `c` pré-remplis, Fiche de la configuration, pile construite champ par
-champ. `/api/contact` : zod, limitation 5 / 10 min par IP (mémoire d'instance), gabarits HTML + texte
-échappés, Resend (demande + accusé) ; sans `RESEND_API_KEY` → 202 `envoye: false`, consigné serveur, et la
-page `/contact/merci` le dit. `/api/contact/apercu` (hors production) rend les deux gabarits.
+**Fait.** `src/lib/configuration.ts` (zod, `serialiser` / `deserialiser` `?c=t=outil;f=rdv;m=pro;r=4`,
+`normaliser`, `estimer`, `lignesFiche`, `resumer` ; tests). Layouts `configurateur` et `formulaire`.
+`/tarifs` : hero en `cadran`, configurateur en trois plaques (clavier), Cadran recalculé, « Recevoir un
+devis » → `/contact?c=…`, quatre offres, suppléments, maintenance, lecture sur ivoire. `/contact` : zod
+client + serveur, erreurs annoncées, RGPD, pot de miel, pré-remplissage, pile construite champ par champ.
+`/api/contact` : limitation 5 / 10 min par IP, gabarits échappés, Resend ; sans clé → 202 `envoye: false`.
 
 **Captures lues** : tarifs 6 états, contact 3, merci, 2 gabarits (150 entrées). Défauts vus et corrigés :
 légendes des fieldsets dessinées sur le bord des plaques (flottées, plaques en flex) ; forme du
@@ -130,29 +105,42 @@ configurateur trop large pour son cadre et modules hors champ (variante compacte
 hero coupée en bas. Non vérifié : l'envoi réel Resend (pas de clé ici) — le propriétaire ajoute
 `RESEND_API_KEY`, `CONTACT_TO`, `CONTACT_FROM` (domaine vérifié chez Resend) sur Vercel.
 
-## 2026-10-13 — Refonte de l'univers : « La Fabrique » (avant la phase 5)
+## 2026-10-13 — Refonte de l'univers : « La Fabrique » (avant la phase 5) ✅ (à relire sur GPU)
 
-Référence lue : `reference/hydreaux-scan/` (hors git), livré par la même agence. Repris : uniforms partagés,
-lentille `probeLens` interpolée sol / profondeur, sol en bruit fractal avec front `fwidth`, flux GPU en
-`DataTexture` lus dans le vertex shader, chronologie pure pilotée par le scroll, caméra par trajectoire, jauge
-`DepthRail`. Le moteur, la structure et les neuf moments restent ; c'est le monde autour qui change.
+Référence lue : `reference/hydreaux-scan/` (hors git, exclu de tsc/eslint), livré par la même agence. Repris :
+`probeLens` interpolée sol / profondeur, sol en bruit fractal avec front `fwidth`, flux GPU en `DataTexture`,
+chronologie pure pilotée par le scroll, `DepthRail`. Le moteur et les neuf moments restent ; le monde change.
 
-**Plan (10 lignes).**
-1. Tokens : encre `#0B1E36` → `#102A4A` (jamais de noir), halo ambre plus généreux ; curseur supprimé ;
-   plaques claires + ambre sur fond sombre (navy sur ivoire seulement), comme `LogoMarque`.
-2. Ciel : le mur devient un dégradé navy profond → navy, halo ambre volumétrique, grain. Caméra avec
-   élévation (le sol se voit), toujours ortho ↔ perspective sans saut.
-3. Sol : plan d'atelier en perspective (grille, cotes), reçoit l'ombre projetée de la pile, se révèle sous
-   la torche du pointeur (`probeLens`), se dissout par bruit fractal pendant chaque traversée.
-4. Flux : particules GPU (`DataTexture` de trajectoires : hélice, montées, arcs) le long de la pile,
-   accélérées par la vitesse de scroll, détournées autour du pointeur, allumées par la torche.
-5. Code vivant : nos propres sources (`scripts/code-vivant.mjs` → texture canvas) écrites, défilantes et
-   dissoutes en profondeur derrière la pile, à faible contraste.
-6. Lumière : faisceau ambre depuis la plaque ambre (billboard qui pivote avec la caméra), poussière lumineuse.
-7. Traversée : la pile glisse d'un étage à l'autre (position amortie, jamais de saut), le sol se dissout et
-   se reforme ; `DepthRail` vertical cliquable (10 étages) ; inclinaison du téléphone → lumière.
-8. Clic sur une plaque : elle se retourne et montre une face produit (écran procédural dans le shader).
-9. Calibrage : tout le scroll en `scrub: true`, timelines complètes, états de début et de fin atteints ;
-   captures p = 0 / 0,2 / 0,4 / 0,6 / 0,8 / 1 des sections épinglées, aux deux largeurs.
-10. Ordre : `/lab` d'abord (sol, flux, code, lumière, descente, captures lues), puis intégration aux neuf
-    moments, vidéos par trames d'un scroll complet.
+**Plan (10 lignes).** 1 tokens navy `#0B1E36 → #102A4A`, plaques claires + ambre sur fond sombre, curseur
+supprimé · 2 ciel plein écran (dégradé, halo, vignette) et caméra inclinée (tangage 8°) · 3 sol d'atelier
+(grille, ombre projetée, torche, dissolution fractale) · 4 flux GPU le long de la pile · 5 code vivant
+(nos sources) derrière · 6 lumière ambre depuis la plaque ambre + poussière · 7 traversée (glissement
+amorti, sol dissous puis reformé, rail cliquable, inclinaison du téléphone) · 8 bascule d'une plaque au clic
+(face produit) · 9 calibrage scrub pur, captures p = 0…1 · 10 `/lab` d'abord, puis les neuf moments, vidéos.
+
+**Fait.** `src/webgl/monde/` : `Ciel` (quad en clip space, halo calé sur `uStackEcran`), `Sol` (plan posé par
+le vertex shader à `uSolY` = bas de la forme − marge, maille bornée 40-130 px, flaque de lumière, liseré de
+torche, dissolution `uDissolve` avec front ambre), `Flux` (10 chemins × 128 pas en DataTexture, comètes
+cohérentes par chemin, `uFlowTime` accéléré par la vitesse de scroll, déviation autour du pointeur, allumage
+par la torche, hauteur calée sur `uBox`), `CodeVivant` (160 lignes de `plates.tsx`, `plate.ts`… peintes
+en CanvasTexture, trois plans, tête d'écriture, défilement avec l'étage, dissolution fractale), `Lampe`
+(halo billboard, faisceau vers le sol, poussière dans le faisceau). Ombre désormais projetée sur le sol.
+`Scene` : tangage amorti, caméra orbitale, glissement amorti de la pile vers sa boîte (le trajet dissout le
+sol), rayon du pointeur → `uProbe` (sol) / `uProbeDeep` (plan de la pile), clic → `basculer()` (attribut
+`aFlip`, face produit procédurale au dos), `uLight` déplacé par `deviceorientation` (permission iOS au premier
+toucher). Plaques : `mix(NAVY, CLAIR, uNuit)`, exposition contenue. Calibrage : `arriverParScroll`
+(rampe « haut à 100 % → 55 % », forme commise à la fin, retour identique), `Lumiere` (nuit par frontières
+`data-nuit`, rampe de 50 vh, scroll seul), étapes de la méthode en paire par tranche, pellicule continue
+(bande de cadres par parité, accent interpolé, `largeur` mesurée), cadran, seuil, titres et tracés en scrub.
+Rail de profondeur (`Rail.tsx`, IntersectionObserver −45 % / −50 %, Lenis au clic, gouttière gauche
+≥ 1360 px). Ivoire sur 02, 06, 08. `__suSettle(n)` : la simulation avance sans rendre, pour des captures
+déterministes sous SwiftShader (1-3 i/s) ; utilisé par shots, shot-accueil et videos.
+
+**Superposition** (tangage 8°, ortho) : 1,39 % (seuil 2 %). Dissolution inversée trouvée par la sonde
+(`scripts/sonde-monde.mjs`), corrigée ; premier cadrage sans glissement ; lampe recentrée sur le logo.
+
+**Pas fait / à vérifier sur un vrai GPU** : cadence réelle avec sol + flux + code + poussière (palier
+`medium` : 600 flux, 220 poussières) ; le rendu des points (`gl_PointSize`) sur Safari ; l'inclinaison
+du téléphone (non testable ici). Le rail n'a pas d'étiquettes permanentes sous 1680 px (gouttière de 24 px).
+
+**Prochaine étape** : phase 5 (réalisations, services, solutions, à-propos, TRAVERSÉE), puis 6-7.

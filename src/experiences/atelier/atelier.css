@@ -28,8 +28,8 @@
   pointer-events: none;
 }
 .su-ate__cadre {
-  width: 60%;
-  height: 30svh;
+  width: 70%;
+  height: 26svh;
 }
 .su-ate__texte {
   grid-column: 6 / span 6;

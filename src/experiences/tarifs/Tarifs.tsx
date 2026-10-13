@@ -7,7 +7,8 @@
 import { useEffect, useRef } from 'react'
 import StackFrame from '@/webgl/StackFrame'
 import { useScene } from '@/webgl/store'
-import { gsap, ScrollTrigger, SplitText, initGsap } from '@/lib/gsap'
+import { gsap, SplitText, initGsap } from '@/lib/gsap'
+import Lumiere from '@/experiences/lumiere'
 import { SITE } from '@/config/site'
 import { OFFRES_SCENE } from '@/experiences/offre/offres'
 import type { Configuration } from '@/lib/configuration'
@@ -44,35 +45,24 @@ export default function Tarifs({ initiale }: { initiale: Configuration }) {
     s.setCalme(false)
     if (!s.reduced) s.setLayout('cadran')
     const split = new SplitText(h1, { type: 'words', wordsClass: 'su-tar__mot' })
-    const nuit = { v: 1 }
-    const vers = (v: number) => {
-      gsap.killTweensOf(nuit)
-      if (useScene.getState().reduced) {
-        nuit.v = v
-        useScene.getState().setNuit(v)
-        return
-      }
-      gsap.to(nuit, { v, duration: 1.1, ease: 'power2.inOut', onUpdate: () => useScene.getState().setNuit(nuit.v) })
-    }
     const ctx = gsap.context(() => {
       if (!s.reduced) {
         gsap.set(split.words, { rotateX: -90, transformOrigin: '50% 100%' })
         gsap.to(split.words, { rotateX: 0, duration: 0.62, ease: 'power3.out', stagger: 0.07, delay: 0.15 })
       }
-      // La lecture (offres, maintenance) se fait sur ivoire.
-      ScrollTrigger.create({ trigger: '.su-tar__offres', start: 'top 60%', onEnter: () => vers(0), onLeaveBack: () => vers(1) })
     }, el)
+    // La lecture (offres, maintenance) se fait sur ivoire : voir `data-nuit` et <Lumiere />.
     return () => {
       ctx.revert()
       split.revert()
-      gsap.killTweensOf(nuit)
       useScene.getState().setNuit(1)
     }
   }, [])
 
   return (
     <main ref={page} className="su-tar" data-moment="tarifs">
-      <section className="su-tar__hero" aria-labelledby="su-tar-titre">
+      <Lumiere />
+      <section className="su-tar__hero" data-moment="tarifs-hero" data-nuit="1" aria-labelledby="su-tar-titre">
         <div className="su-tar__grille">
           <div className="su-tar__scene">
             <StackFrame className="su-tar__cadre" />
@@ -90,7 +80,7 @@ export default function Tarifs({ initiale }: { initiale: Configuration }) {
         </div>
       </section>
 
-      <section className="su-tar__offres" aria-labelledby="su-tar-offres">
+      <section className="su-tar__offres" data-moment="tarifs-offres" data-nuit="0" aria-labelledby="su-tar-offres">
         <div className="su-tar__grille">
           <h2 id="su-tar-offres" className="su-display su-tar__h2">
             Les quatre offres,

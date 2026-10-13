@@ -6,7 +6,7 @@
  * par trame.
  */
 import { useEffect, useMemo, useRef } from 'react'
-import { InstancedBufferAttribute, InstancedBufferGeometry, type Mesh } from 'three'
+import { InstancedBufferAttribute, InstancedBufferGeometry, Vector3, type Mesh } from 'three'
 import gsap from 'gsap'
 import { plaqueGeometry } from './geometry'
 import { PLAQUE } from './logo-geometry'
@@ -29,6 +29,8 @@ export interface PlatesHandle {
   solB: number
   /** Bascule la plaque la plus proche du point (repère local) : montre sa face « produit ». */
   basculer: (x: number, y: number) => boolean
+  /** Position courante de la plaque ambre (instance 2), repère local, sans l'arc. */
+  ambre: (out: Vector3) => Vector3
 }
 
 /** Bas d'une forme : la plus basse des plaques posées (échelle > 0), moins une demi-hauteur. */
@@ -159,6 +161,15 @@ export function Plates({ count, handleRef }: { count: number; handleRef: React.R
         u.uMorph.value = 0
         currentRef.current = name
         st.setMorph(0)
+      },
+      ambre: (out) => {
+        const A = geometry.getAttribute('aPosA').array as Float32Array
+        const B = geometry.getAttribute('aPosB').array as Float32Array
+        const D = geometry.getAttribute('aDelay').array as Float32Array
+        const dl = u.uDelay.value
+        let t = Math.min(Math.max((u.uMorph.value - D[2]! * dl) / Math.max(1 - dl, 1e-3), 0), 1)
+        t = t * t * (3 - 2 * t)
+        return out.set(A[6]! + (B[6]! - A[6]!) * t, A[7]! + (B[7]! - A[7]!) * t, A[8]! + (B[8]! - A[8]!) * t)
       },
       basculer: (x, y) => {
         // Position courante de chaque instance (sans l'arc) : la plus proche dans un rayon d'une demi-plaque.

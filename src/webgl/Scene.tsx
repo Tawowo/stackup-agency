@@ -149,6 +149,7 @@ function Rig() {
     const probe = new Vector3()
     const probeDeep = new Vector3()
     const local = new Vector3()
+    const lampe = new Vector3()
     const ecran = new Vector3()
     const pas = (deltaMs: number, rendre: boolean) => {
       const s = useScene.getState()
@@ -228,6 +229,9 @@ function Rig() {
           // Avec le tangage, le plan z = 0 est vu en légère plongée : on compense la hauteur.
           cible.y = (H / 2 - (f.y + f.h / 2)) / PX_PAR_UNITE / Math.cos(el)
           cible.s = Math.min(f.w / LOGO_VIEW.w, f.h / LOGO_VIEW.h) * (SVG_PAR_UNITE / PX_PAR_UNITE)
+          // Mouvement réduit : le logo figé remplit les boîtes des autres moments (souvent larges) ;
+          // on le garde plus petit pour qu'il ne passe pas derrière leur texte.
+          if (s.reduced && s.moment !== '00') cible.s *= 0.6
         } else {
           // Sans boîte déclarée : logo en coin, petit, qui respire.
           cible.s = 0.4
@@ -278,7 +282,8 @@ function Rig() {
         const m = mondeRef.current
         if (m) {
           m.position.set(stackPos.x, stackPos.y, 0)
-          m.scale.setScalar(stackPos.s)
+          // Le code vivant garde une taille de lecture : il ne grandit pas avec un logo géant.
+          m.scale.setScalar(gsap.utils.clamp(0.8, 1.7, stackPos.s))
         }
         // Zone d'exclusion (titre) → repère local du groupe.
         const ex = s.exclusion
@@ -296,8 +301,16 @@ function Rig() {
         u.uWallZ.value = murLocal * stackPos.s
         u.uSolY.value = stackPos.y + (solLocal - prm.solMarge) * stackPos.s
         u.uStack.value.set(stackPos.x, stackPos.y, stackPos.s, 1)
-        // La lumière part du logo : la plaque ambre est la source (l'inclinaison du téléphone la décale).
-        u.uLampe.value.set(stackPos.x + (-0.05 + s.inclinaison.x * 0.5) * stackPos.s, stackPos.y + (-0.58 + s.inclinaison.y * 0.3) * stackPos.s, 0.45 * stackPos.s)
+        // La lumière part du logo : la plaque ambre, où qu'elle soit dans la forme courante,
+        // est la source (l'inclinaison du téléphone la décale).
+        if (pl) {
+          pl.ambre(lampe)
+          lampe.x += s.inclinaison.x * 0.5
+          lampe.y += s.inclinaison.y * 0.3
+          lampe.z += 0.45
+          g.localToWorld(lampe)
+          u.uLampe.value.lerp(lampe, premier ? 1 : Math.min(1, dt * 8))
+        } else u.uLampe.value.set(stackPos.x, stackPos.y - 0.58 * stackPos.s, 0.45 * stackPos.s)
         u.uBox.value.set(-1.2, s.layout === 'pile' || s.target === 'pile' ? 6 : 1.2)
         // Centre de la pile à l'écran (pour le halo du ciel).
         ecran.set(stackPos.x, stackPos.y, 0).project(camera)
@@ -377,6 +390,7 @@ function Rig() {
     gsap.ticker.add(tick)
     // Captures (SwiftShader, 1-3 i/s) : avance la simulation sans rendre, pour
     // obtenir l'état qu'un visiteur à 60 i/s verrait après `n` trames.
+    if (process.env.NODE_ENV !== 'production') (window as unknown as { __suCam?: BlendCamera }).__suCam = camera
     const w = window as unknown as { __suSettle?: (n?: number) => void }
     w.__suSettle = (n = 120) => {
       // Les écouteurs de scroll (boîtes, ScrollTrigger, lumière) d'abord, de façon synchrone.

@@ -42,6 +42,9 @@ for (const c of CAS) {
       window.scrollTo(0, yy)
     }, y)
     await page.waitForTimeout(40)
+    // Sous SwiftShader (1-3 i/s), la simulation (glissement, dissolution) avance
+    // sans rendre de trois trames à 60 i/s par pas : l'allure d'un vrai scroll.
+    await page.evaluate(() => window.__suSettle?.(3))
     await trame()
   }
   for (let k = 0; k < 24; k++) {

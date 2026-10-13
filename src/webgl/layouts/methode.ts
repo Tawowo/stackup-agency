@@ -12,6 +12,17 @@ const PX = 0.158
 export function methode(n: number, etape = 5): LayoutData {
   const d = allocate(n)
   d.mur = -0.7
+  const res = construire(n, etape, d)
+  // La page tient dans le cadre (la barre d'adresse ne monte plus sous la nav) : × 0,85.
+  for (let i = 0; i < n; i++) {
+    res.pos[i * 3] = res.pos[i * 3]! * 0.85
+    res.pos[i * 3 + 1] = res.pos[i * 3 + 1]! * 0.85
+    res.scale[i] = res.scale[i]! * 0.85
+  }
+  return res
+}
+
+function construire(n: number, etape: number, d: LayoutData): LayoutData {
   horsChamp(d, 0)
   horsChamp(d, 1)
   horsChamp(d, 2)

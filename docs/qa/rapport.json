@@ -1,1728 +1,1271 @@
 {
-  "genere": "2026-10-13",
-  "phase": 4,
-  "captures": [
-    {
-      "fichier": "docs/qa/shots/lab/logo-1440.png",
-      "route": "/lab",
-      "etat": "logo",
-      "largeur": 1440,
-      "rm": false,
-      "visible": "Les trois plaques du logo, immenses, centrées dans la boîte (cols 4-9), navy éclairées par l'ambre, liseré clair sur les arêtes côté lumière, ombre longue à −18° sur le mur, halo ambré faible, grain, vignette. HUD mono en haut à gauche, Tweakpane à droite.",
-      "defauts": [
-        "Tweakpane rendu deux fois (double effet StrictMode) — corrigé par un drapeau d'annulation",
-        "Plaque du milieu paraissant plus sombre — mesuré au pixel : identique (15,42,64), c'était la bande de balayage"
-      ],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/lab/logo-1440-rm.png",
-      "route": "/lab",
-      "etat": "logo",
-      "largeur": 1440,
-      "rm": true,
-      "visible": "Même composition, figée : pas de dérive, pas de respiration ; la bande de balayage est éteinte (uBreath = 0).",
-      "defauts": [],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/lab/logo-390.png",
-      "route": "/lab",
-      "etat": "logo",
-      "largeur": 390,
-      "rm": false,
-      "visible": "Logo pleine largeur (cols 1-12), boutons du HUD sur deux lignes, pas de Tweakpane (masqué < md).",
-      "defauts": [],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/lab/logo-390-rm.png",
-      "route": "/lab",
-      "etat": "logo",
-      "largeur": 390,
-      "rm": true,
-      "visible": "Identique, figé.",
-      "defauts": [],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/lab/pile-1440.png",
-      "route": "/lab",
-      "etat": "pile",
-      "largeur": 1440,
-      "rm": false,
-      "visible": "Les trois plaques du logo restent devant ; derrière, une tour torsadée de plaques à l'échelle 0,5, tangentes au colimaçon, monte du bas du logo et déborde par le haut ; quelques plaques « en vol » au sommet ; le mur et les ombres reculent.",
-      "defauts": [
-        "Première version : plaques à l'échelle du logo, 800 en colimaçon de rayon 0,32 → masse chaotique illisible — corrigé (échelle 0,5, hauteur bornée 3,4, reste dissous)",
-        "Plaques de profil teintées rose : `side` lisait la normale monde — corrigé par un varying vFace"
-      ],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/lab/pile-1440-rm.png",
-      "route": "/lab",
-      "etat": "pile",
-      "largeur": 1440,
-      "rm": true,
-      "visible": "La tour posée d'un coup, sans morph (mouvement réduit). Sur le site, le mouvement réduit gardera le layout logo (phase 1).",
-      "defauts": [],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/lab/pile-390.png",
-      "route": "/lab",
-      "etat": "pile",
-      "largeur": 390,
-      "rm": false,
-      "visible": "Tour derrière le logo pleine largeur ; lisible mais la tour dépasse à gauche du cadre sur mobile.",
-      "defauts": [
-        "Composition mobile de la pile à dessiner pour le hero (phase 1)"
-      ],
-      "corrige": false
-    },
-    {
-      "fichier": "docs/qa/shots/lab/pile-390-rm.png",
-      "route": "/lab",
-      "etat": "pile",
-      "largeur": 390,
-      "rm": true,
-      "visible": "Idem, figé.",
-      "defauts": [],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/lab/morph-05-1440.png",
-      "route": "/lab",
-      "etat": "morph-05",
-      "largeur": 1440,
-      "rm": false,
-      "visible": "uMorph = 0,5 figé : les plaques en vol entre l'arrière-plan et la tour, trajectoires en arc, rotation en vol ; le logo immobile.",
-      "defauts": [],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/lab/morph-05-390.png",
-      "route": "/lab",
-      "etat": "morph-05",
-      "largeur": 390,
-      "rm": false,
-      "visible": "Idem en portrait.",
-      "defauts": [],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/lab/drag-1440.png",
-      "route": "/lab",
-      "etat": "drag",
-      "largeur": 1440,
-      "rm": false,
-      "visible": "Après un drag de 240 px : spin 1,22 rad, la pile tourne autour de son axe vertical, l'épaisseur des plaques apparaît, la tour révèle son hélice, arête ambre du logo éclairée.",
-      "defauts": [
-        "Lentille du pointeur : +50 % d'ambre sur un rayon de 0,9 → taches beiges — corrigé (0,15, rayon 0,7)",
-        "Fresnel trop large (pow 3, 0,45) → plaques saumon en incidence rasante — corrigé (pow 4, 0,3)"
-      ],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/lab/drag-390.png",
-      "route": "/lab",
-      "etat": "drag",
-      "largeur": 390,
-      "rm": false,
-      "visible": "Drag tactile simulé : la pile a tourné puis le retour lent a commencé (spin 0 au moment de la capture).",
-      "defauts": [
-        "Le retour à l'orientation d'origine est trop rapide pour être capturé à 1,6 s — à régler avec le hero"
-      ],
-      "corrige": false
-    },
-    {
-      "fichier": "docs/qa/shots/lab/perspective-1440.png",
-      "route": "/lab",
-      "etat": "perspective",
-      "largeur": 1440,
-      "rm": false,
-      "visible": "proj = 0 : perspective (distance 6,5), la tour fuit vers le haut, les plaques du logo prennent de la profondeur, les ombres s'allongent.",
-      "defauts": [
-        "Première distance (9) donnait une perspective imperceptible — passée à 6,5"
-      ],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/lab/perspective-390.png",
-      "route": "/lab",
-      "etat": "perspective",
-      "largeur": 390,
-      "rm": false,
-      "visible": "Idem en portrait.",
-      "defauts": [],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/lab/jour-1440.png",
-      "route": "/lab",
-      "etat": "jour",
-      "largeur": 1440,
-      "rm": false,
-      "visible": "Fond ivoire (nuit = 0) : navy franc, ambre du logo, ombres gris pâle à −18°, grain fin ; le HUD passe en navy.",
-      "defauts": [
-        "L'ambre virait au jaune sur ivoire — corrigé (mélange vers la couleur de base)",
-        "Le HUD restait ivoire sur ivoire : --su-nuit CSS ne suivait pas le store — corrigé (SceneMount)"
-      ],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/lab/jour-390.png",
-      "route": "/lab",
-      "etat": "jour",
-      "largeur": 390,
-      "rm": false,
-      "visible": "Idem en portrait.",
-      "defauts": [],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/lab/repli-1440.png",
-      "route": "/lab",
-      "etat": "repli",
-      "largeur": 1440,
-      "rm": false,
-      "visible": "webgl = 0 : mode 2d, le logo SVG (LogoMarque) remplit exactement la boîte, sur l'encre. Pas de canvas.",
-      "defauts": [
-        "Repli 2D statique : l'animation par clip-path arrive en phase 1"
-      ],
-      "corrige": false
-    },
-    {
-      "fichier": "docs/qa/shots/lab/repli-390.png",
-      "route": "/lab",
-      "etat": "repli",
-      "largeur": 390,
-      "rm": false,
-      "visible": "Idem en portrait.",
-      "defauts": [],
-      "corrige": false
-    },
-    {
-      "fichier": "docs/qa/shots/logo-check/capture-1440.png",
-      "route": "/lab",
-      "etat": "logo-check-lab",
-      "largeur": 1440,
-      "rm": true,
-      "visible": "Capture du contrôle de superposition (ivoire, sans mur ni ombre, figé). Écart 1,05 % de la boîte (seuil 2 %), ratio 0,6371 vs 0,64 (0,45 %). Le diff ne montre que des liserés d'un pixel sur les arêtes longues.",
-      "defauts": [
-        "Première passe à 25 % : le HUD du lab entrait dans le recadrage — corrigé (?hud=0)"
-      ],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/logo-check/capture-390.png",
-      "route": "/lab",
-      "etat": "logo-check-lab",
-      "largeur": 390,
-      "rm": true,
-      "visible": "Écart 1,08 %, ratio 0,6371. Tenu.",
-      "defauts": [],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/accueil/00-p0-1440.png",
-      "route": "/",
-      "etat": "00-p0",
-      "largeur": 1440,
-      "rm": false,
-      "visible": "Hero au repos : nav (logo + lettrage, cinq entrées, action contour), le logo exact immense sur les colonnes 1-5, ombre longue, halo ; à droite en bas, « Sites et outils / sur mesure. » en Poppins 700 ~120 px qui touche le bord, la ligne, deux actions (ambre à reflet, contour), quatre cotes réelles en bas (logo 566, titre 228, conteneur 1440, ligne de base 583).",
-      "defauts": [
-        "Première capture : la tour déjà construite à p = 0 — la bascule de layout sur p > 0 courait contre le montage différé de la scène ; corrigé : la paire A = logo / B = pile est posée explicitement (store `target`) et uMorph seul bouge"
-      ],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/accueil/00-p0-1440-rm.png",
-      "route": "/",
-      "etat": "00-p0",
-      "largeur": 1440,
-      "rm": true,
-      "visible": "Mouvement réduit : même composition, logo figé (pas de dérive, pas de balayage), texte posé sans animation, pas d'épinglage.",
-      "defauts": [],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/accueil/00-p0-390.png",
-      "route": "/",
-      "etat": "00-p0",
-      "largeur": 390,
-      "rm": false,
-      "visible": "Mobile : nav réduite (logo, bouton Menu 44 px), logo dans le tiers supérieur à 78 % de largeur, étiquette, titre sur deux lignes, ligne, deux actions empilées pleine largeur, deux cotes (logo 267, titre 97).",
-      "defauts": [],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/accueil/00-p0-390-rm.png",
-      "route": "/",
-      "etat": "00-p0",
-      "largeur": 390,
-      "rm": true,
-      "visible": "Idem, figé.",
-      "defauts": [],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/accueil/00-p025-1440-rm.png",
-      "route": "/",
-      "etat": "00-p025",
-      "largeur": 1440,
-      "rm": true,
-      "visible": "Mouvement réduit : pas d'épinglage, la page n'a pas de distance à défiler, identique à p = 0.",
-      "defauts": [],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/accueil/00-p025-390-rm.png",
-      "route": "/",
-      "etat": "00-p025",
-      "largeur": 390,
-      "rm": true,
-      "visible": "Idem p = 0 figé.",
-      "defauts": [],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/accueil/00-p05-1440-rm.png",
-      "route": "/",
-      "etat": "00-p05",
-      "largeur": 1440,
-      "rm": true,
-      "visible": "Idem p = 0 figé.",
-      "defauts": [],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/accueil/00-p05-390-rm.png",
-      "route": "/",
-      "etat": "00-p05",
-      "largeur": 390,
-      "rm": true,
-      "visible": "Idem p = 0 figé.",
-      "defauts": [],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/accueil/00-p1-1440.png",
-      "route": "/",
-      "etat": "00-p1",
-      "largeur": 1440,
-      "rm": false,
-      "visible": "p = 1 : perspective pleine, la tour torsadée construite derrière le logo incliné (pose x −0,12, y +0,22), épaisseur ×2,5, mur reculé ; le titre et les actions à droite n'ont pas bougé ; cotes effacées.",
-      "defauts": [],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/accueil/00-p1-1440-rm.png",
-      "route": "/",
-      "etat": "00-p1",
-      "largeur": 1440,
-      "rm": true,
-      "visible": "Idem p = 0 figé.",
-      "defauts": [],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/accueil/00-p1-390.png",
-      "route": "/",
-      "etat": "00-p1",
-      "largeur": 390,
-      "rm": false,
-      "visible": "Mobile p = 1 : la tour derrière le logo, le titre dessous. La tour est coupée par le haut de l'écran (débordement voulu).",
-      "defauts": [],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/accueil/00-p1-390-rm.png",
-      "route": "/",
-      "etat": "00-p1",
-      "largeur": 390,
-      "rm": true,
-      "visible": "Idem p = 0 figé.",
-      "defauts": [],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/accueil/00-drag-1440.png",
-      "route": "/",
-      "etat": "00-drag",
-      "largeur": 1440,
-      "rm": false,
-      "visible": "Drag de 240 px à p = 0 : le logo seul tourne (~65°), épaisseur et arête ambre visibles ; le curseur (point + anneau ambre) est capturé au point de relâchement.",
-      "defauts": [],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/accueil/00-drag-390.png",
-      "route": "/",
-      "etat": "00-drag",
-      "largeur": 390,
-      "rm": false,
-      "visible": "Drag tactile simulé à p = 0 : le logo a tourné puis amorce son retour.",
-      "defauts": [],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/accueil/00-sans-webgl-1440.png",
-      "route": "/",
-      "etat": "00-sans-webgl",
-      "largeur": 1440,
-      "rm": false,
-      "visible": "webgl = 0 : repli 2D, les trois plaques SVG exactes dans la boîte, en navy-clair avec un liseré ambre (le navy pur disparaît sur l'encre), le reste de la page identique.",
-      "defauts": [
-        "Première version : plaques ivoire (la variable du brin de la nav) — corrigé avec une teinte propre au repli"
-      ],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/accueil/00-sans-webgl-390.png",
-      "route": "/",
-      "etat": "00-sans-webgl",
-      "largeur": 390,
-      "rm": false,
-      "visible": "Idem en portrait.",
-      "defauts": [],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/accueil/00-sans-webgl-p1-1440.png",
-      "route": "/",
-      "etat": "00-sans-webgl-p1",
-      "largeur": 1440,
-      "rm": false,
-      "visible": "Repli 2D à p = 1 : sept plaques fantômes se sont déployées vers le haut derrière le logo (translation et échelle pilotées par --su-p), le logo s'est légèrement rétracté.",
-      "defauts": [],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/accueil/00-sans-webgl-p1-390.png",
-      "route": "/",
-      "etat": "00-sans-webgl-p1",
-      "largeur": 390,
-      "rm": false,
-      "visible": "Idem en portrait.",
-      "defauts": [],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/logo-check/capture-1440.png",
-      "route": "/",
-      "etat": "logo-check-hero",
-      "largeur": 1440,
-      "rm": true,
-      "visible": "Superposition sur le hero (ivoire forcé, figé, sans mur ni ombre) : écart 1,17 % de la boîte, ratio 0,6364 vs 0,64 (0,57 %). Tenu.",
-      "defauts": [
-        "Première passe : le hero forçait nuit = 1 par-dessus `?fond=ivoire` — corrigé par une nuit forcée prioritaire dans le store"
-      ],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/logo-check/capture-390.png",
-      "route": "/",
-      "etat": "logo-check-hero",
-      "largeur": 390,
-      "rm": true,
-      "visible": "Écart 1,43 %, ratio 0,6367. Tenu.",
-      "defauts": [],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/accueil/00-menu-390.png",
-      "route": "/",
-      "etat": "00-menu",
-      "largeur": 390,
-      "rm": false,
-      "visible": "Menu mobile ouvert : panneau encre plein écran, six lamelles (numéro mono ambre + entrée en Poppins display) séparées par des filets, la barre (logo, bouton « Fermer ») reste visible au-dessus. Le panneau est `inert` fermé, le focus est piégé ouvert.",
-      "defauts": [
-        "Première capture : le panneau recouvrait la barre (logo et bouton Fermer cachés) — corrigé par un z-index sur la barre"
-      ],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/lab/strates-ouvert-1440.png",
-      "route": "/lab",
-      "etat": "strates-ouvert",
-      "largeur": 1440,
-      "rm": false,
-      "visible": "Cinq lamelles de 54 plaques à plat (9 × 6), écartées, vues de trois quarts (pose rx 0,55 / ry −0,35, projection 0,3), la plaque ambre en tête de « Design », ombres sur le mur.",
-      "defauts": [
-        "Première version vue de face : des traits invisibles — pose de trois quarts ajoutée ; plaques trop petites et trop espacées — resserrées (échelle 0,12, écart max 0,38)"
-      ],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/lab/strates-ouvert-390.png",
-      "route": "/lab",
-      "etat": "strates-ouvert",
-      "largeur": 390,
-      "rm": false,
-      "visible": "Idem en portrait, lamelles pleine largeur.",
-      "defauts": [],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/lab/strates-ferme-1440.png",
-      "route": "/lab",
-      "etat": "strates-ferme",
-      "largeur": 1440,
-      "rm": false,
-      "visible": "Ouverture 0 : les cinq lamelles refermées en un bloc épais, l'ambre sur l'arête.",
-      "defauts": [],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/lab/strates-ferme-390.png",
-      "route": "/lab",
-      "etat": "strates-ferme",
-      "largeur": 390,
-      "rm": false,
-      "visible": "Idem en portrait.",
-      "defauts": [],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/lab/page-1440.png",
-      "route": "/lab",
-      "etat": "page",
-      "largeur": 1440,
-      "rm": false,
-      "visible": "Une page web en plaques : en-tête (rangée en chevrons), titre sur deux lignes, image à droite, deux colonnes de texte, bouton ambre ; perspective légère.",
-      "defauts": [
-        "Chevrons (miroir une plaque sur deux) sur les lignes de texte : illisible — gardés sur l'en-tête seulement"
-      ],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/lab/page-390.png",
-      "route": "/lab",
-      "etat": "page",
-      "largeur": 390,
-      "rm": false,
-      "visible": "Idem en portrait.",
-      "defauts": [],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/lab/multi-1440.png",
-      "route": "/lab",
-      "etat": "multi",
-      "largeur": 1440,
-      "rm": false,
-      "visible": "Trois pages en éventail : la centrale de face avec le bouton ambre, deux latérales plus petites et tournées ; perspective.",
-      "defauts": [
-        "Pages latérales trop proches et trop grandes — écartées (±0,86) et réduites (0,54)"
-      ],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/lab/boutique-1440.png",
-      "route": "/lab",
-      "etat": "boutique",
-      "largeur": 1440,
-      "rm": false,
-      "visible": "Grille 4 × 3 de produits (vignette 2 × 2 + ligne de prix), en-tête, et le panier ambre en haut à droite.",
-      "defauts": [],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/lab/boutique-390.png",
-      "route": "/lab",
-      "etat": "boutique",
-      "largeur": 390,
-      "rm": false,
-      "visible": "Idem en portrait.",
-      "defauts": [],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/lab/logiciel-1440.png",
-      "route": "/lab",
-      "etat": "logiciel",
-      "largeur": 1440,
-      "rm": false,
-      "visible": "Réseau de huit modules (blocs 3 × 3) en anneau, reliés par des chapelets de petites plaques entre eux et vers le hub ambre central.",
-      "defauts": [],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/lab/logiciel-390.png",
-      "route": "/lab",
-      "etat": "logiciel",
-      "largeur": 390,
-      "rm": false,
-      "visible": "Idem en portrait, le réseau remplit la largeur.",
-      "defauts": [],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/lab/pellicule-1440.png",
-      "route": "/lab",
-      "etat": "pellicule",
-      "largeur": 1440,
-      "rm": false,
-      "visible": "Cadre 16:9 de plaques (haut/bas en chevrons, côtés tournés de 90°), perforations plus petites au-dessus et au-dessous, repère ambre en bas à droite.",
-      "defauts": [],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/lab/pellicule-390.png",
-      "route": "/lab",
-      "etat": "pellicule",
-      "largeur": 390,
-      "rm": false,
-      "visible": "Idem en portrait (le cadre dépasse la largeur, voulu).",
-      "defauts": [],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/lab/noyau-1440.png",
-      "route": "/lab",
-      "etat": "noyau",
-      "largeur": 1440,
-      "rm": false,
-      "visible": "Noyau compact de ~160 plaques en sphère aplatie, orientations variées, la plaque ambre au cœur.",
-      "defauts": [],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/accueil/01-ferme-1440.png",
-      "route": "/",
-      "etat": "01-ferme",
-      "largeur": 1440,
-      "rm": false,
-      "visible": "Entrée du moment 01 (p = 0,02) : titre « Un site, c'est cinq couches. » déplié, les cinq numéros mono à gauche sans leurs noms (ils se déplient à l'ouverture de chaque lamelle), la tour du hero encore en place à droite, en vol vers les strates.",
-      "defauts": [],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/accueil/01-ferme-1440-rm.png",
-      "route": "/",
-      "etat": "01-ferme",
-      "largeur": 1440,
-      "rm": true,
-      "visible": "Mouvement réduit : logo figé dans le cadre, titre posé, liste complète.",
-      "defauts": [],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/accueil/01-ferme-390.png",
-      "route": "/",
-      "etat": "01-ferme",
-      "largeur": 390,
-      "rm": false,
-      "visible": "Mobile : titre, cadre en portrait, liste en balayage horizontal (une carte par couche).",
-      "defauts": [],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/accueil/01-ferme-390-rm.png",
-      "route": "/",
-      "etat": "01-ferme",
-      "largeur": 390,
-      "rm": true,
-      "visible": "Idem, logo figé.",
-      "defauts": [],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/accueil/01-2-ouvertes-1440.png",
-      "route": "/",
-      "etat": "01-2-ouvertes",
-      "largeur": 1440,
-      "rm": false,
-      "visible": "p = 0,25 : Design et Contenu ont leur nom déplié et leur ligne découpée ; à droite les plaques arrivent en arc depuis la tour.",
-      "defauts": [],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/accueil/01-2-ouvertes-390.png",
-      "route": "/",
-      "etat": "01-2-ouvertes",
-      "largeur": 390,
-      "rm": false,
-      "visible": "Idem mobile.",
-      "defauts": [],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/accueil/01-5-ouvertes-1440.png",
-      "route": "/",
-      "etat": "01-5-ouvertes",
-      "largeur": 1440,
-      "rm": false,
-      "visible": "p = 0,7 : les cinq lamelles ouvertes de trois quarts à droite, la plaque ambre en tête de Design, les cinq couches nommées à gauche.",
-      "defauts": [
-        "Première capture : scène vide (la boîte du hero, hors écran, gardait la main) — corrigé par un registre des boîtes qui élit la plus visible ; puis la pile du hero restait affichée (la bascule du hero écrasait la paire) — corrigé par un propriétaire de scène (`moment`) dans le store"
-      ],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/accueil/01-5-ouvertes-1440-rm.png",
-      "route": "/",
-      "etat": "01-5-ouvertes",
-      "largeur": 1440,
-      "rm": true,
-      "visible": "Mouvement réduit : le logo figé à la place des strates (règle 6 : moteur figé au repos).",
-      "defauts": [],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/accueil/01-5-ouvertes-390.png",
-      "route": "/",
-      "etat": "01-5-ouvertes",
-      "largeur": 390,
-      "rm": false,
-      "visible": "Mobile : lamelles en portrait sous le titre, liste en balayage.",
-      "defauts": [],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/accueil/01-5-ouvertes-390-rm.png",
-      "route": "/",
-      "etat": "01-5-ouvertes",
-      "largeur": 390,
-      "rm": true,
-      "visible": "Idem, logo figé.",
-      "defauts": [],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/accueil/01-isole-3-1440.png",
-      "route": "/",
-      "etat": "01-isole-3",
-      "largeur": 1440,
-      "rm": false,
-      "visible": "Touche 3 : « Code » isolé, les quatre autres couches à 35 % et leurs lamelles écartées et assombries ; le paragraphe de deux lignes se découpe sous Code.",
-      "defauts": [],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/accueil/01-isole-3-390.png",
-      "route": "/",
-      "etat": "01-isole-3",
-      "largeur": 390,
-      "rm": false,
-      "visible": "Mobile : la lamelle Code reste éclairée, les autres s'écartent ; la carte Design s'assombrit.",
-      "defauts": [],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/accueil/01-referme-1440.png",
-      "route": "/",
-      "etat": "01-referme",
-      "largeur": 1440,
-      "rm": false,
-      "visible": "p = 1 : les lamelles refermées en un bloc épais ; « Nous fabriquons les cinq. / Vous êtes propriétaire des cinq. » découpé en bas à gauche.",
-      "defauts": [
-        "Première capture : lamelles encore ouvertes — onEnter et onUpdate se disputaient la phase sur un saut ; la phase est maintenant dérivée de la progression seule"
-      ],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/accueil/01-referme-390.png",
-      "route": "/",
-      "etat": "01-referme",
-      "largeur": 390,
-      "rm": false,
-      "visible": "Mobile : bloc refermé, phrase finale sous la liste.",
-      "defauts": [],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/accueil/02-une-page-1440.png",
-      "route": "/",
-      "etat": "02-une-page",
-      "largeur": 1440,
-      "rm": false,
-      "visible": "Ivoire. « Ce qu'on fabrique. » en navy, sélecteur vertical (Site une page actif en navy), à droite la page en plaques avec, par-dessus, les cadres de la maquette HTML calés sur les mêmes blocs (en-tête, titre, image, colonnes, bouton ambre) ; Cadran « à partir de 449 € », Fiche de fabrication.",
-      "defauts": [
-        "Maquette décalée des plaques (deux systèmes de coordonnées) — refonte : les layouts d'offre sont des BLOCS déclaratifs et la maquette est dérivée des mêmes blocs, en ortho ; chiffres du Cadran mal espacés (Poppins non tabulaire) — roues centrées"
-      ],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/accueil/02-une-page-1440-rm.png",
-      "route": "/",
-      "etat": "02-une-page",
-      "largeur": 1440,
-      "rm": true,
-      "visible": "Mouvement réduit : ivoire allumé sans tween, logo figé dans le cadre avec les cadres de la maquette autour, sélecteur, Cadran, Fiche.",
-      "defauts": [
-        "Première capture restée sur l'encre : en mouvement réduit, le seul épinglage (01) faussait la mesure des triggers suivants — plus d'épinglage en mouvement réduit, et un refresh final des ScrollTriggers"
-      ],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/accueil/02-une-page-390.png",
-      "route": "/",
-      "etat": "02-une-page",
-      "largeur": 390,
-      "rm": false,
-      "visible": "Mobile : onglets horizontaux balayables, scène en portrait avec la maquette, cadran pleine largeur, fiche.",
-      "defauts": [],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/accueil/02-une-page-390-rm.png",
-      "route": "/",
-      "etat": "02-une-page",
-      "largeur": 390,
-      "rm": true,
-      "visible": "Mouvement réduit : ivoire allumé sans tween, logo figé dans le cadre avec les cadres de la maquette autour, sélecteur, Cadran, Fiche.",
-      "defauts": [
-        "Première capture restée sur l'encre : en mouvement réduit, le seul épinglage (01) faussait la mesure des triggers suivants — plus d'épinglage en mouvement réduit, et un refresh final des ScrollTriggers"
-      ],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/accueil/02-boutique-1440.png",
-      "route": "/",
-      "etat": "02-boutique",
-      "largeur": 1440,
-      "rm": false,
-      "visible": "Onglet 3 : grille 4 × 3 de produits avec vignettes et prix, panier ambre, Cadran 1 647.",
-      "defauts": [],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/accueil/02-boutique-390.png",
-      "route": "/",
-      "etat": "02-boutique",
-      "largeur": 390,
-      "rm": false,
-      "visible": "Idem mobile.",
-      "defauts": [],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/accueil/02-outil-1440.png",
-      "route": "/",
-      "etat": "02-outil",
-      "largeur": 1440,
-      "rm": false,
-      "visible": "Onglet 4 : réseau de huit modules et hub ambre, cadres de la maquette sur chaque module, Cadran 1 447.",
-      "defauts": [],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/accueil/02-outil-390.png",
-      "route": "/",
-      "etat": "02-outil",
-      "largeur": 390,
-      "rm": false,
-      "visible": "Idem mobile, onglet 4 défilé en tête.",
-      "defauts": [],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/accueil/02-transition-1440.png",
-      "route": "/",
-      "etat": "02-transition",
-      "largeur": 1440,
-      "rm": false,
-      "visible": "450 ms après le clic sur l'onglet 2 : les plaques en vol entre la page et l'éventail, la maquette pas encore découpée, le Cadran en train de rouler (le 7 à mi-course).",
-      "defauts": [],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/accueil/02-transition-390.png",
-      "route": "/",
-      "etat": "02-transition",
-      "largeur": 390,
-      "rm": false,
-      "visible": "Idem mobile.",
-      "defauts": [],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/accueil/03-projet-1-1440.png",
-      "route": "/",
-      "etat": "03-projet-1",
-      "largeur": 1440,
-      "rm": false,
-      "visible": "La lumière s'est éteinte. Projet 1/5 Cadence Studio : capture desktop AVIF à gauche (8 colonnes), étiquette « Démo », nom en display, type, « Ouvrir la démo » ; derrière, le cadre de plaques teinté de l'accent du projet ; compteur 01 / 05.",
-      "defauts": [
-        "Les URL des démos sont injoignables depuis le conteneur : les AVIF sont produits à partir des captures existantes de l'ancien site (4 à 41 ko), à refaire depuis les vraies démos"
-      ],
-      "corrige": false
-    },
-    {
-      "fichier": "docs/qa/shots/accueil/03-projet-1-1440-rm.png",
-      "route": "/",
-      "etat": "03-projet-1",
-      "largeur": 1440,
-      "rm": true,
-      "visible": "Mouvement réduit : logo figé derrière la capture.",
-      "defauts": [],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/accueil/03-projet-1-390.png",
-      "route": "/",
-      "etat": "03-projet-1",
-      "largeur": 390,
-      "rm": false,
-      "visible": "Mobile : capture en grand, texte dessous, cadre de plaques derrière ; balayage natif entre projets.",
-      "defauts": [],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/accueil/03-projet-1-390-rm.png",
-      "route": "/",
-      "etat": "03-projet-1",
-      "largeur": 390,
-      "rm": true,
-      "visible": "Idem, logo figé.",
-      "defauts": [],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/accueil/03-projet-5-1440.png",
-      "route": "/",
-      "etat": "03-projet-5",
-      "largeur": 1440,
-      "rm": false,
-      "visible": "Projet 5/5 Prestige Immo : cadre teinté turquoise, compteur 05 / 05.",
-      "defauts": [],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/accueil/03-projet-5-390.png",
-      "route": "/",
-      "etat": "03-projet-5",
-      "largeur": 390,
-      "rm": false,
-      "visible": "Mobile, projet 1.",
-      "defauts": [],
-      "corrige": false
-    },
-    {
-      "fichier": "docs/qa/shots/accueil/04-seuil-1440.png",
-      "route": "/",
-      "etat": "04-seuil",
-      "largeur": 1440,
-      "rm": false,
-      "visible": "Seuil « Pas que des sites. » déplié, centré ; au-dessus, la pile repliée en noyau compact avec la plaque ambre au cœur, ombre longue.",
-      "defauts": [
-        "Noyau derrière le texte — déplacé au-dessus"
-      ],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/accueil/04-seuil-1440-rm.png",
-      "route": "/",
-      "etat": "04-seuil",
-      "largeur": 1440,
-      "rm": true,
-      "visible": "Mouvement réduit : logo figé au-dessus du Seuil.",
-      "defauts": [],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/accueil/04-seuil-390.png",
-      "route": "/",
-      "etat": "04-seuil",
-      "largeur": 390,
-      "rm": false,
-      "visible": "Mobile : noyau au-dessus, Seuil sur deux lignes.",
-      "defauts": [],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/accueil/04-seuil-390-rm.png",
-      "route": "/",
-      "etat": "04-seuil",
-      "largeur": 390,
-      "rm": true,
-      "visible": "Idem, logo figé.",
-      "defauts": [],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/avant/00-p05-1440.png",
-      "route": "/",
-      "etat": "avant-00-p05",
-      "largeur": 1440,
-      "rm": false,
-      "visible": "AVANT : à p = 0,5 des dizaines de plaques en vol traversent la zone du titre « Sites et outils sur mesure. » et la ligne.",
-      "defauts": [
-        "Trajectoires non contraintes"
-      ],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/avant/00-p05-390.png",
-      "route": "/",
-      "etat": "avant-00-p05",
-      "largeur": 390,
-      "rm": false,
-      "visible": "AVANT : plaques en vol au-dessus du logo et derrière la nav ; le titre, plus bas, est épargné par hasard.",
-      "defauts": [],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/avant/02-multi-390.png",
-      "route": "/",
-      "etat": "avant-02-multi",
-      "largeur": 390,
-      "rm": false,
-      "visible": "AVANT : l'éventail de trois pages déborde du cadre à gauche et à droite (pages latérales coupées).",
-      "defauts": [
-        "Pas de variante portrait"
-      ],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/avant/03-glissement-1440.png",
-      "route": "/",
-      "etat": "avant-03-glissement",
-      "largeur": 1440,
-      "rm": false,
-      "visible": "AVANT : capture « entre 2 et 3 » : le projet 2 est déjà posé, le glissement (1,1 s, scrub 0,6) est passé avant la capture.",
-      "defauts": [
-        "Glissement trop bref"
-      ],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/accueil/00-p025-1440.png",
-      "route": "/",
-      "etat": "00-p025",
-      "largeur": 1440,
-      "rm": false,
-      "visible": "APRÈS : p = 0,25, zone d'exclusion = titre + ligne + actions (ResizeObserver) ; les premières plaques arrivent par la gauche et le haut, aucune sur le texte.",
-      "defauts": [
-        "Première passe : canvas noir partout — `half` est un mot réservé GLSL, le shader ne compilait plus ; renommé"
-      ],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/accueil/00-p05-1440.png",
-      "route": "/",
-      "etat": "00-p05",
-      "largeur": 1440,
-      "rm": false,
-      "visible": "APRÈS : p = 0,5, nuage de plaques en vol à gauche et au-dessus du logo, repoussées hors du rectangle du titre (contournement par le côté le plus proche, pondéré par sin(πt)) ; le titre et la ligne sont intacts.",
-      "defauts": [
-        "Une plaque frôle la nav à droite (hors zone du titre) — toléré"
-      ],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/accueil/00-p075-1440.png",
-      "route": "/",
-      "etat": "00-p075",
-      "largeur": 1440,
-      "rm": false,
-      "visible": "APRÈS : p = 0,75, la tour se construit derrière le logo, les dernières plaques en vol restent à gauche ; texte intact.",
-      "defauts": [],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/accueil/00-p025-390.png",
-      "route": "/",
-      "etat": "00-p025",
-      "largeur": 390,
-      "rm": false,
-      "visible": "APRÈS mobile : p = 0,25, éclats en vol autour du logo seulement, titre et actions intacts.",
-      "defauts": [],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/accueil/00-p05-390.png",
-      "route": "/",
-      "etat": "00-p05",
-      "largeur": 390,
-      "rm": false,
-      "visible": "APRÈS mobile : p = 0,5, les plaques en vol restent dans le tiers supérieur, derrière la nav et autour du logo ; rien sur le titre.",
-      "defauts": [],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/accueil/00-p075-390.png",
-      "route": "/",
-      "etat": "00-p075",
-      "largeur": 390,
-      "rm": false,
-      "visible": "APRÈS mobile : p = 0,75, tour derrière le logo, texte intact.",
-      "defauts": [],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/accueil/02-multi-390.png",
-      "route": "/",
-      "etat": "02-multi",
-      "largeur": 390,
-      "rm": false,
-      "visible": "APRÈS : variante portrait de `multi` — trois pages empilées verticalement (principale au centre, deux plus petites en retrait au-dessus et au-dessous), maquette calée dessus ; tout tient dans le cadre 390.",
-      "defauts": [],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/lab/multi-390.png",
-      "route": "/lab",
-      "etat": "multi",
-      "largeur": 390,
-      "rm": false,
-      "visible": "APRÈS : même variante portrait sur le lab, vue de trois quarts (pose d'URL), rien ne sort de la boîte.",
-      "defauts": [],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/accueil/02-multi-1440.png",
-      "route": "/",
-      "etat": "02-multi",
-      "largeur": 1440,
-      "rm": false,
-      "visible": "Inchangé en 1440 : éventail horizontal, maquette calée.",
-      "defauts": [],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/accueil/pellicule-glissement-1440.png",
-      "route": "/",
-      "etat": "pellicule-glissement",
-      "largeur": 1440,
-      "rm": false,
-      "visible": "APRÈS : scrub 1,4 et morph 1,6 s ; 700 ms après le passage du projet 2 au 3, le cadre de plaques est en vol (plaques dispersées en arc, teinte rose en cours), le projet 3 déjà affiché : le glissement se lit.",
-      "defauts": [],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/accueil/pellicule-glissement-390.png",
-      "route": "/",
-      "etat": "pellicule-glissement",
-      "largeur": 390,
-      "rm": false,
-      "visible": "APRÈS mobile : balayage simulé vers le projet 3, cadre de plaques en vol au-dessus de la capture.",
-      "defauts": [],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/accueil/03-projet-3-1440.png",
-      "route": "/",
-      "etat": "03-projet-3",
-      "largeur": 1440,
-      "rm": false,
-      "visible": "Projet 3/5 Maison Élise, cadre posé et teinté rose après le glissement allongé.",
-      "defauts": [],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/accueil/03-projet-3-390.png",
-      "route": "/",
-      "etat": "03-projet-3",
-      "largeur": 390,
-      "rm": false,
-      "visible": "Mobile : projet 3 par balayage simulé, cadre posé.",
-      "defauts": [],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/accueil/05-repos-1440.png",
-      "route": "/",
-      "etat": "05-repos",
-      "largeur": 1440,
-      "rm": false,
-      "visible": "Salle des machines au repos : titre « Des outils qui vous appartiennent. » et ligne à gauche, action ambre ; au centre le réseau de 12 modules (blocs de plaques reliés par des chapelets, hub ambre) avec un bouton mono par nœud calé sous sa plaque ; Devis & factures allumé (rotation 6 s), les autres assombris sans s'écarter ; à droite la Plaque encre avec la maquette animée (statut « Accepté », cadran 3, trois lignes, puce active, quatre fonctions).",
-      "defauts": [
-        "Première passe : l'isolation des strates (écart 0,35) dispersait le réseau et le bouton Caisse chevauchait la maquette — isolation paramétrée par moment (écart 0 ici), rayons du réseau resserrés, titre recalé sur deux lignes"
-      ],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/accueil/05-repos-1440-rm.png",
-      "route": "/",
-      "etat": "05-repos",
-      "largeur": 1440,
-      "rm": true,
-      "visible": "Mouvement réduit : logo figé derrière les boutons du réseau, maquette posée sans animation, statut fixe.",
-      "defauts": [
-        "Le logo figé passe derrière les étiquettes des nœuds : lisible mais chargé ; à arbitrer en phase 7 (niveau « léger »)"
-      ],
-      "corrige": false
-    },
-    {
-      "fichier": "docs/qa/shots/accueil/05-repos-390.png",
-      "route": "/",
-      "etat": "05-repos",
-      "largeur": 390,
-      "rm": false,
-      "visible": "Mobile : titre, ligne, action pleine largeur, réseau en portrait (deux anneaux étroits), la maquette dessous.",
-      "defauts": [],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/accueil/05-repos-390-rm.png",
-      "route": "/",
-      "etat": "05-repos",
-      "largeur": 390,
-      "rm": true,
-      "visible": "Idem, logo figé.",
-      "defauts": [],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/accueil/05-module-2-1440.png",
-      "route": "/",
-      "etat": "05-module-2",
-      "largeur": 1440,
-      "rm": false,
-      "visible": "Clic sur Planning : le nœud s'allume (ambre), les autres s'assombrissent, la maquette Planning se découpe (statut « À compléter », 38 h, trois jours, fonctions) ; le curseur en anneau « Allumer » sur le bouton.",
-      "defauts": [],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/accueil/05-module-2-390.png",
-      "route": "/",
-      "etat": "05-module-2",
-      "largeur": 390,
-      "rm": false,
-      "visible": "Mobile : tap sur Planning, nœud allumé, maquette dessous (hors capture).",
-      "defauts": [],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/accueil/05-module-7-1440.png",
-      "route": "/",
-      "etat": "05-module-7",
-      "largeur": 1440,
-      "rm": false,
-      "visible": "Caisse allumée : maquette Caisse (statut « Ouvert », 68 tickets, trois tickets).",
-      "defauts": [
-        "Première passe : bouton Caisse sous la Plaque, clic impossible (timeout) — rayons corrigés"
-      ],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/accueil/05-module-7-390.png",
-      "route": "/",
-      "etat": "05-module-7",
-      "largeur": 390,
-      "rm": false,
-      "visible": "Mobile : Caisse allumée.",
-      "defauts": [],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/accueil/06-repos-1440.png",
-      "route": "/",
-      "etat": "06-repos",
-      "largeur": 1440,
-      "rm": false,
-      "visible": "Ivoire. Titre « Un prix juste, écrit noir sur blanc. », à droite la jauge en arc de plaques navy avec ses graduations et l'aiguille (chapelet + pointe ambre) au repos ; quatre Plaques ivoire-creuse avec numéro, nom, Cadran « à partir de 449 / 749 / 1 647 / 1 447 € » et trois inclusions ; trois engagements tracés en SVG ; action « Voir tous les tarifs ».",
-      "defauts": [
-        "Première passe : jauge minuscule et titre descendu au milieu (align-items center) — jauge agrandie (arc 48 plaques, échelle 1,15, 40 svh), titre calé en haut"
-      ],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/accueil/06-repos-1440-rm.png",
-      "route": "/",
-      "etat": "06-repos",
-      "largeur": 1440,
-      "rm": true,
-      "visible": "Mouvement réduit : ivoire posé, le logo figé à la place de la jauge, Plaques et Cadrans posés.",
-      "defauts": [],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/accueil/06-repos-390.png",
-      "route": "/",
-      "etat": "06-repos",
-      "largeur": 390,
-      "rm": false,
-      "visible": "Mobile : titre, jauge réduite, Plaques empilées, cadran plein écran.",
-      "defauts": [],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/accueil/06-repos-390-rm.png",
-      "route": "/",
-      "etat": "06-repos",
-      "largeur": 390,
-      "rm": true,
-      "visible": "Idem, logo figé.",
-      "defauts": [],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/accueil/06-focal-1440.png",
-      "route": "/",
-      "etat": "06-focal",
-      "largeur": 1440,
-      "rm": false,
-      "visible": "Offre 2 focalisée (clavier) : liseré ambre et relief sur la Plaque, l'aiguille de la jauge a tourné d'un tiers (pointe ambre déplacée).",
-      "defauts": [],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/accueil/06-focal-390.png",
-      "route": "/",
-      "etat": "06-focal",
-      "largeur": 390,
-      "rm": false,
-      "visible": "Mobile : Plaque 2 focalisée, aiguille déplacée.",
-      "defauts": [],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/accueil/07-etape-1-1440.png",
-      "route": "/",
-      "etat": "07-etape-1",
-      "largeur": 1440,
-      "rm": false,
-      "visible": "Méthode, entrée : titre, 01 déplié en display XL ambre avec « On se parle » découpé ; 02 en plaque ambre pleine déjà visible (entrée du viewport) ; à droite, la page en construction : cadre (en-tête, pied, côtés) et la plaque ambre de la démo (étape 2).",
-      "defauts": [],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/accueil/07-etape-1-1440-rm.png",
-      "route": "/",
-      "etat": "07-etape-1",
-      "largeur": 1440,
-      "rm": true,
-      "visible": "Mouvement réduit : numéros et textes posés, logo figé.",
-      "defauts": [],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/accueil/07-etape-1-390.png",
-      "route": "/",
-      "etat": "07-etape-1",
-      "largeur": 390,
-      "rm": false,
-      "visible": "Mobile : scène en bandeau épinglé en haut, étapes en pile dessous.",
-      "defauts": [],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/accueil/07-etape-1-390-rm.png",
-      "route": "/",
-      "etat": "07-etape-1",
-      "largeur": 390,
-      "rm": true,
-      "visible": "Idem, logo figé.",
-      "defauts": [],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/accueil/07-etape-2-1440.png",
-      "route": "/",
-      "etat": "07-etape-2",
-      "largeur": 1440,
-      "rm": false,
-      "visible": "Étape 2 (0,35) : la plaque ambre « On vous montre avant de vous vendre » au premier plan, la scène a la structure et la démo ambre.",
-      "defauts": [],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/accueil/07-etape-2-390.png",
-      "route": "/",
-      "etat": "07-etape-2",
-      "largeur": 390,
-      "rm": false,
-      "visible": "Mobile : 01 et la plaque ambre 02, scène en bandeau derrière.",
-      "defauts": [
-        "Le bandeau épinglé passe derrière le texte de 01 — lisible, à ajuster (z-index / opacité) en phase 7"
-      ],
-      "corrige": false
-    },
-    {
-      "fichier": "docs/qa/shots/accueil/07-etape-5-1440.png",
-      "route": "/",
-      "etat": "07-etape-5",
-      "largeur": 1440,
-      "rm": false,
-      "visible": "Fin (p = 1) : 03, 04, 05 dépliés ; la page complète : structure, démo ambre, titre et colonnes, barre d'adresse et bouton, plaques de réglage autour.",
-      "defauts": [
-        "Première passe : 05 pas franchi (déclencheur à 60 % trop bas pour la dernière étape) — seuil à 78 %, espace bas réduit"
-      ],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/accueil/07-etape-5-390.png",
-      "route": "/",
-      "etat": "07-etape-5",
-      "largeur": 390,
-      "rm": false,
-      "visible": "Mobile : 03-05, page complète en bandeau.",
-      "defauts": [],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/accueil/08-atelier-1440.png",
-      "route": "/",
-      "etat": "08-atelier",
-      "largeur": 1440,
-      "rm": false,
-      "visible": "Atelier : placeholder « Portrait à venir » (plaque ivoire-creuse 3:4), le logo à l'arrêt en dessous avec son ombre longue (calme : ni respiration ni dérive) ; nom, « Fondateur, développeur », trois paragraphes, accordéon de trois questions (la première ouverte).",
-      "defauts": [],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/accueil/08-atelier-1440-rm.png",
-      "route": "/",
-      "etat": "08-atelier",
-      "largeur": 1440,
-      "rm": true,
-      "visible": "Idem, logo figé.",
-      "defauts": [],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/accueil/08-atelier-390.png",
-      "route": "/",
-      "etat": "08-atelier",
-      "largeur": 390,
-      "rm": false,
-      "visible": "Mobile : portrait et logo côte à côte, texte dessous.",
-      "defauts": [],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/accueil/08-atelier-390-rm.png",
-      "route": "/",
-      "etat": "08-atelier",
-      "largeur": 390,
-      "rm": true,
-      "visible": "Idem.",
-      "defauts": [],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/accueil/09-depart-1440.png",
-      "route": "/",
-      "etat": "09-depart",
-      "largeur": 1440,
-      "rm": false,
-      "visible": "Départ : la pile repliée en logo (ortho, de face) à gauche, « Il reste une chose à faire. » déplié, un champ et « Recevoir une démo » ; le footer commence dessous.",
-      "defauts": [],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/accueil/09-depart-1440-rm.png",
-      "route": "/",
-      "etat": "09-depart",
-      "largeur": 1440,
-      "rm": true,
-      "visible": "Idem, logo figé, titre posé.",
-      "defauts": [],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/accueil/09-depart-390.png",
-      "route": "/",
-      "etat": "09-depart",
-      "largeur": 390,
-      "rm": false,
-      "visible": "Mobile : logo au-dessus, titre, champ et action empilés.",
-      "defauts": [],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/accueil/09-depart-390-rm.png",
-      "route": "/",
-      "etat": "09-depart",
-      "largeur": 390,
-      "rm": true,
-      "visible": "Idem.",
-      "defauts": [],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/accueil/footer-1440.png",
-      "route": "/",
-      "etat": "footer",
-      "largeur": 1440,
-      "rm": false,
-      "visible": "Footer : logo exact avec lettrage, ligne, e-mail ambre souligné ; navigation (six liens) ; mentions mono (légales, confidentialité, CGV, TVA). Pas de filigrane, pas d'étoiles.",
-      "defauts": [],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/accueil/footer-390.png",
-      "route": "/",
-      "etat": "footer",
-      "largeur": 390,
-      "rm": false,
-      "visible": "Mobile : trois colonnes empilées.",
-      "defauts": [],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/contact/vide-1440.png",
-      "route": "/contact",
-      "etat": "vide",
-      "largeur": 1440,
-      "rm": false,
-      "visible": "Contact vide : titre « Parlons de votre projet. » et ligne à gauche (colonne collante), le socle de la pile (une rangée) dans le cadre ; à droite trois plaques ivoire-creuse « 01 · Vous », « 02 · Votre projet », « 03 · Comment vous joindre » avec leurs champs, légendes mono ambre dans la plaque.",
-      "defauts": [
-        "Première passe : légendes des fieldsets dessinées sur le bord des plaques (barrées) — légendes flottées en enfant flex"
-      ],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/contact/vide-1440-rm.png",
-      "route": "/contact",
-      "etat": "vide",
-      "largeur": 1440,
-      "rm": true,
-      "visible": "Mouvement réduit : logo figé dans le cadre, formulaire identique.",
-      "defauts": [],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/contact/vide-390.png",
-      "route": "/contact",
-      "etat": "vide",
-      "largeur": 390,
-      "rm": false,
-      "visible": "Mobile : titre, ligne, pile au-dessus, plaques pleine largeur avec un champ par ligne.",
-      "defauts": [],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/contact/vide-390-rm.png",
-      "route": "/contact",
-      "etat": "vide",
-      "largeur": 390,
-      "rm": true,
-      "visible": "Idem, logo figé.",
-      "defauts": [],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/contact/erreurs-1440.png",
-      "route": "/contact",
-      "etat": "erreurs",
-      "largeur": 1440,
-      "rm": false,
-      "visible": "Envoi à vide : annonce en tête « 6 champs à corriger : prénom, nom, objet, projet, e-mail, consentement. » (aria-live), champs fautifs en bordure rouge épaisse avec message sous chacun, focus posé sur le prénom.",
-      "defauts": [],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/contact/erreurs-390.png",
-      "route": "/contact",
-      "etat": "erreurs",
-      "largeur": 390,
-      "rm": false,
-      "visible": "Idem mobile.",
-      "defauts": [],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/contact/prerempli-1440.png",
-      "route": "/contact",
-      "etat": "prerempli",
-      "largeur": 1440,
-      "rm": false,
-      "visible": "Arrivée depuis /tarifs (?c=…&projet=…) : la Fiche « Votre configuration » (type, fonctions, maintenance, rédaction, plancher à partir de 838 €) sous la pile, l'objet « Site » et le projet pré-remplis ; quatre champs saisis par le script, la pile a posé une rangée par champ valide.",
-      "defauts": [],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/contact/prerempli-390.png",
-      "route": "/contact",
-      "etat": "prerempli",
-      "largeur": 390,
-      "rm": false,
-      "visible": "Mobile : Fiche en haut, champs remplis.",
-      "defauts": [],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/contact/merci-1440.png",
-      "route": "/contact/merci",
-      "etat": "merci",
-      "largeur": 1440,
-      "rm": false,
-      "visible": "Confirmation : la pile refermée en logo à gauche, « C'est parti. », le texte honnête quand Resend n'est pas configuré (message consigné, écrire aussi à contact@), retour à l'accueil.",
-      "defauts": [],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/contact/merci-390.png",
-      "route": "/contact/merci",
-      "etat": "merci",
-      "largeur": 390,
-      "rm": false,
-      "visible": "Idem mobile, logo au-dessus.",
-      "defauts": [],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/contact/email-demande-1440.png",
-      "route": "/api/contact/apercu",
-      "etat": "email-demande",
-      "largeur": 1440,
-      "rm": false,
-      "visible": "Gabarit de l'e-mail reçu par l'agence (rendu HTML serveur, échappé) : bandeau mono « Nouvelle demande · date », titre objet + nom, tableau clé/valeur (entreprise, métier, projet, configuration multi-lignes, e-mail, téléphone, préférence), pied avec l'origine. Plaque ivoire sur ivoire-creuse, filet ambre, ombre à −18°.",
-      "defauts": [
-        "Pas de clé Resend dans ce conteneur : l'envoi réel reste à vérifier par le propriétaire avec RESEND_API_KEY ; le gabarit est la preuve disponible"
-      ],
-      "corrige": false
-    },
-    {
-      "fichier": "docs/qa/shots/contact/email-accuse-1440.png",
-      "route": "/api/contact/apercu",
-      "etat": "email-accuse",
-      "largeur": 1440,
-      "rm": false,
-      "visible": "Accusé envoyé au visiteur : « Bonjour Camille, », réponse personnelle annoncée selon la préférence, citation du projet, signature.",
-      "defauts": [],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/tarifs/vide-1440.png",
-      "route": "/tarifs",
-      "etat": "vide",
-      "largeur": 1440,
-      "rm": false,
-      "visible": "Hero : la jauge en arc de plaques (aiguille ambre à 0) dans la colonne gauche collante, « Choisissez ce qu'on empile. » déplié, la ligne, puis le configurateur : plaque 01 · Type (quatre radios avec « à partir de »), 02 · Fonctions (attente d'un type), 03 · Options.",
-      "defauts": [
-        "Première passe : jauge coupée en bas (cadre centré trop haut) — cadre 62 svh aligné en haut ; légendes sur le bord des plaques — flottées, plaques en flex"
-      ],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/tarifs/vide-1440-rm.png",
-      "route": "/tarifs",
-      "etat": "vide",
-      "largeur": 1440,
-      "rm": true,
-      "visible": "Mouvement réduit : logo figé à la place de la jauge, titre posé, configurateur identique.",
-      "defauts": [],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/tarifs/vide-390.png",
-      "route": "/tarifs",
-      "etat": "vide",
-      "largeur": 390,
-      "rm": false,
-      "visible": "Mobile : jauge au-dessus, titre, puis les plaques du configurateur pleine largeur, un bouton par ligne.",
-      "defauts": [],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/tarifs/vide-390-rm.png",
-      "route": "/tarifs",
-      "etat": "vide",
-      "largeur": 390,
-      "rm": true,
-      "visible": "Idem, logo figé.",
-      "defauts": [],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/tarifs/type-1440.png",
-      "route": "/tarifs",
-      "etat": "type",
-      "largeur": 1440,
-      "rm": false,
-      "visible": "Type « Site multi-pages » choisi (radio ambre, curseur « Choisir ») : la pile se réassemble en la variante compacte de l'éventail (trois pages empilées, bouton ambre), 02 · Fonctions se remplit des six fonctions compatibles.",
-      "defauts": [
-        "Première passe : la forme débordait du cadre et les modules sortaient à droite — variante compacte, échelle 0,74, colonne des modules à 0,52"
-      ],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/tarifs/type-390.png",
-      "route": "/tarifs",
-      "etat": "type",
-      "largeur": 390,
-      "rm": false,
-      "visible": "Mobile : pile compacte au-dessus, type choisi en ambre.",
-      "defauts": [],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/tarifs/fonctions-1440.png",
-      "route": "/tarifs",
-      "etat": "fonctions",
-      "largeur": 1440,
-      "rm": false,
-      "visible": "Formulaire, Galerie, Blog cochés (cases ambre) : trois modules 2 × 2 s'allument dans la colonne droite de la pile, reliés par de petites plaques.",
-      "defauts": [],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/tarifs/fonctions-390.png",
-      "route": "/tarifs",
-      "etat": "fonctions",
-      "largeur": 390,
-      "rm": false,
-      "visible": "Mobile : trois cases cochées, focus visible sur Blog.",
-      "defauts": [],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/tarifs/options-1440.png",
-      "route": "/tarifs",
-      "etat": "options",
-      "largeur": 1440,
-      "rm": false,
-      "visible": "Maintenance Pro et Pack 4 articles : le Cadran affiche « à partir de 838 € » (749 + 89), « + 44 €/mois de maintenance », « Précisé au devis : Formulaire, Galerie, Blog. » ; aucune durée nulle part.",
-      "defauts": [],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/tarifs/options-390.png",
-      "route": "/tarifs",
-      "etat": "options",
-      "largeur": 390,
-      "rm": false,
-      "visible": "Mobile : options en colonne, Pro et Pack 4 sélectionnés.",
-      "defauts": [],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/tarifs/offres-1440.png",
-      "route": "/tarifs",
-      "etat": "offres",
-      "largeur": 1440,
-      "rm": false,
-      "visible": "Ivoire : « Les quatre offres, en entier. », quatre Plaques avec Cadran, toutes les inclusions, Fiche de fabrication, « Demander un devis » ; la jauge du hero finit sa course collante en haut.",
-      "defauts": [
-        "La jauge du hero reste visible en haut de la section ivoire au point de bascule — à arbitrer en phase 7"
-      ],
-      "corrige": false
-    },
-    {
-      "fichier": "docs/qa/shots/tarifs/offres-390.png",
-      "route": "/tarifs",
-      "etat": "offres",
-      "largeur": 390,
-      "rm": false,
-      "visible": "Mobile : Plaques empilées.",
-      "defauts": [],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/tarifs/maintenance-1440.png",
-      "route": "/tarifs",
-      "etat": "maintenance",
-      "largeur": 1440,
-      "rm": false,
-      "visible": "Trois plans (Starter 29, Pro 44, Premium 89 €/mois) en Plaques avec leurs inclusions, tableau mono de comparaison (● / —), « Un devis, pas une estimation. » et l'action finale.",
-      "defauts": [],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/tarifs/maintenance-390.png",
-      "route": "/tarifs",
-      "etat": "maintenance",
-      "largeur": 390,
-      "rm": false,
-      "visible": "Mobile : plans empilés, tableau resserré.",
-      "defauts": [],
-      "corrige": true
-    }
-  ]
+ "genere": "2026-10-13",
+ "phase": "fabrique",
+ "captures": [
+  {
+   "fichier": "docs/qa/shots/contact/vide-1440.png",
+   "route": "/contact",
+   "etat": "vide",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Contact vide : titre « Parlons de votre projet. » et ligne à gauche (colonne collante), le socle de la pile (une rangée) dans le cadre ; à droite trois plaques ivoire-creuse « 01 · Vous », « 02 · Votre projet », « 03 · Comment vous joindre » avec leurs champs, légendes mono ambre dans la plaque.",
+   "defauts": [
+    "Première passe : légendes des fieldsets dessinées sur le bord des plaques (barrées) — légendes flottées en enfant flex"
+   ],
+   "corrige": true
+  },
+  {
+   "fichier": "docs/qa/shots/contact/vide-1440-rm.png",
+   "route": "/contact",
+   "etat": "vide",
+   "largeur": 1440,
+   "rm": true,
+   "visible": "Mouvement réduit : logo figé dans le cadre, formulaire identique.",
+   "defauts": [],
+   "corrige": true
+  },
+  {
+   "fichier": "docs/qa/shots/contact/vide-390.png",
+   "route": "/contact",
+   "etat": "vide",
+   "largeur": 390,
+   "rm": false,
+   "visible": "Mobile : titre, ligne, pile au-dessus, plaques pleine largeur avec un champ par ligne.",
+   "defauts": [],
+   "corrige": true
+  },
+  {
+   "fichier": "docs/qa/shots/contact/vide-390-rm.png",
+   "route": "/contact",
+   "etat": "vide",
+   "largeur": 390,
+   "rm": true,
+   "visible": "Idem, logo figé.",
+   "defauts": [],
+   "corrige": true
+  },
+  {
+   "fichier": "docs/qa/shots/contact/erreurs-1440.png",
+   "route": "/contact",
+   "etat": "erreurs",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Envoi à vide : annonce en tête « 6 champs à corriger : prénom, nom, objet, projet, e-mail, consentement. » (aria-live), champs fautifs en bordure rouge épaisse avec message sous chacun, focus posé sur le prénom.",
+   "defauts": [],
+   "corrige": true
+  },
+  {
+   "fichier": "docs/qa/shots/contact/erreurs-390.png",
+   "route": "/contact",
+   "etat": "erreurs",
+   "largeur": 390,
+   "rm": false,
+   "visible": "Idem mobile.",
+   "defauts": [],
+   "corrige": true
+  },
+  {
+   "fichier": "docs/qa/shots/contact/prerempli-1440.png",
+   "route": "/contact",
+   "etat": "prerempli",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Arrivée depuis /tarifs (?c=…&projet=…) : la Fiche « Votre configuration » (type, fonctions, maintenance, rédaction, plancher à partir de 838 €) sous la pile, l'objet « Site » et le projet pré-remplis ; quatre champs saisis par le script, la pile a posé une rangée par champ valide.",
+   "defauts": [],
+   "corrige": true
+  },
+  {
+   "fichier": "docs/qa/shots/contact/prerempli-390.png",
+   "route": "/contact",
+   "etat": "prerempli",
+   "largeur": 390,
+   "rm": false,
+   "visible": "Mobile : Fiche en haut, champs remplis.",
+   "defauts": [],
+   "corrige": true
+  },
+  {
+   "fichier": "docs/qa/shots/contact/merci-1440.png",
+   "route": "/contact/merci",
+   "etat": "merci",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Confirmation : la pile refermée en logo à gauche, « C'est parti. », le texte honnête quand Resend n'est pas configuré (message consigné, écrire aussi à contact@), retour à l'accueil.",
+   "defauts": [],
+   "corrige": true
+  },
+  {
+   "fichier": "docs/qa/shots/contact/merci-390.png",
+   "route": "/contact/merci",
+   "etat": "merci",
+   "largeur": 390,
+   "rm": false,
+   "visible": "Idem mobile, logo au-dessus.",
+   "defauts": [],
+   "corrige": true
+  },
+  {
+   "fichier": "docs/qa/shots/contact/email-demande-1440.png",
+   "route": "/api/contact/apercu",
+   "etat": "email-demande",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Gabarit de l'e-mail reçu par l'agence (rendu HTML serveur, échappé) : bandeau mono « Nouvelle demande · date », titre objet + nom, tableau clé/valeur (entreprise, métier, projet, configuration multi-lignes, e-mail, téléphone, préférence), pied avec l'origine. Plaque ivoire sur ivoire-creuse, filet ambre, ombre à −18°.",
+   "defauts": [
+    "Pas de clé Resend dans ce conteneur : l'envoi réel reste à vérifier par le propriétaire avec RESEND_API_KEY ; le gabarit est la preuve disponible"
+   ],
+   "corrige": false
+  },
+  {
+   "fichier": "docs/qa/shots/contact/email-accuse-1440.png",
+   "route": "/api/contact/apercu",
+   "etat": "email-accuse",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Accusé envoyé au visiteur : « Bonjour Camille, », réponse personnelle annoncée selon la préférence, citation du projet, signature.",
+   "defauts": [],
+   "corrige": true
+  },
+  {
+   "fichier": "docs/qa/shots/tarifs/vide-1440.png",
+   "route": "/tarifs",
+   "etat": "vide",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Hero : la jauge en arc de plaques (aiguille ambre à 0) dans la colonne gauche collante, « Choisissez ce qu'on empile. » déplié, la ligne, puis le configurateur : plaque 01 · Type (quatre radios avec « à partir de »), 02 · Fonctions (attente d'un type), 03 · Options.",
+   "defauts": [
+    "Première passe : jauge coupée en bas (cadre centré trop haut) — cadre 62 svh aligné en haut ; légendes sur le bord des plaques — flottées, plaques en flex"
+   ],
+   "corrige": true
+  },
+  {
+   "fichier": "docs/qa/shots/tarifs/vide-1440-rm.png",
+   "route": "/tarifs",
+   "etat": "vide",
+   "largeur": 1440,
+   "rm": true,
+   "visible": "Mouvement réduit : logo figé à la place de la jauge, titre posé, configurateur identique.",
+   "defauts": [],
+   "corrige": true
+  },
+  {
+   "fichier": "docs/qa/shots/tarifs/vide-390.png",
+   "route": "/tarifs",
+   "etat": "vide",
+   "largeur": 390,
+   "rm": false,
+   "visible": "Mobile : jauge au-dessus, titre, puis les plaques du configurateur pleine largeur, un bouton par ligne.",
+   "defauts": [],
+   "corrige": true
+  },
+  {
+   "fichier": "docs/qa/shots/tarifs/vide-390-rm.png",
+   "route": "/tarifs",
+   "etat": "vide",
+   "largeur": 390,
+   "rm": true,
+   "visible": "Idem, logo figé.",
+   "defauts": [],
+   "corrige": true
+  },
+  {
+   "fichier": "docs/qa/shots/tarifs/type-1440.png",
+   "route": "/tarifs",
+   "etat": "type",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Type « Site multi-pages » choisi (radio ambre, curseur « Choisir ») : la pile se réassemble en la variante compacte de l'éventail (trois pages empilées, bouton ambre), 02 · Fonctions se remplit des six fonctions compatibles.",
+   "defauts": [
+    "Première passe : la forme débordait du cadre et les modules sortaient à droite — variante compacte, échelle 0,74, colonne des modules à 0,52"
+   ],
+   "corrige": true
+  },
+  {
+   "fichier": "docs/qa/shots/tarifs/type-390.png",
+   "route": "/tarifs",
+   "etat": "type",
+   "largeur": 390,
+   "rm": false,
+   "visible": "Mobile : pile compacte au-dessus, type choisi en ambre.",
+   "defauts": [],
+   "corrige": true
+  },
+  {
+   "fichier": "docs/qa/shots/tarifs/fonctions-1440.png",
+   "route": "/tarifs",
+   "etat": "fonctions",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Formulaire, Galerie, Blog cochés (cases ambre) : trois modules 2 × 2 s'allument dans la colonne droite de la pile, reliés par de petites plaques.",
+   "defauts": [],
+   "corrige": true
+  },
+  {
+   "fichier": "docs/qa/shots/tarifs/fonctions-390.png",
+   "route": "/tarifs",
+   "etat": "fonctions",
+   "largeur": 390,
+   "rm": false,
+   "visible": "Mobile : trois cases cochées, focus visible sur Blog.",
+   "defauts": [],
+   "corrige": true
+  },
+  {
+   "fichier": "docs/qa/shots/tarifs/options-1440.png",
+   "route": "/tarifs",
+   "etat": "options",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Maintenance Pro et Pack 4 articles : le Cadran affiche « à partir de 838 € » (749 + 89), « + 44 €/mois de maintenance », « Précisé au devis : Formulaire, Galerie, Blog. » ; aucune durée nulle part.",
+   "defauts": [],
+   "corrige": true
+  },
+  {
+   "fichier": "docs/qa/shots/tarifs/options-390.png",
+   "route": "/tarifs",
+   "etat": "options",
+   "largeur": 390,
+   "rm": false,
+   "visible": "Mobile : options en colonne, Pro et Pack 4 sélectionnés.",
+   "defauts": [],
+   "corrige": true
+  },
+  {
+   "fichier": "docs/qa/shots/tarifs/offres-1440.png",
+   "route": "/tarifs",
+   "etat": "offres",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Ivoire : « Les quatre offres, en entier. », quatre Plaques avec Cadran, toutes les inclusions, Fiche de fabrication, « Demander un devis » ; la jauge du hero finit sa course collante en haut.",
+   "defauts": [
+    "La jauge du hero reste visible en haut de la section ivoire au point de bascule — à arbitrer en phase 7"
+   ],
+   "corrige": false
+  },
+  {
+   "fichier": "docs/qa/shots/tarifs/offres-390.png",
+   "route": "/tarifs",
+   "etat": "offres",
+   "largeur": 390,
+   "rm": false,
+   "visible": "Mobile : Plaques empilées.",
+   "defauts": [],
+   "corrige": true
+  },
+  {
+   "fichier": "docs/qa/shots/tarifs/maintenance-1440.png",
+   "route": "/tarifs",
+   "etat": "maintenance",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Trois plans (Starter 29, Pro 44, Premium 89 €/mois) en Plaques avec leurs inclusions, tableau mono de comparaison (● / —), « Un devis, pas une estimation. » et l'action finale.",
+   "defauts": [],
+   "corrige": true
+  },
+  {
+   "fichier": "docs/qa/shots/tarifs/maintenance-390.png",
+   "route": "/tarifs",
+   "etat": "maintenance",
+   "largeur": 390,
+   "rm": false,
+   "visible": "Mobile : plans empilés, tableau resserré.",
+   "defauts": [],
+   "corrige": true
+  },
+  {
+   "fichier": "docs/qa/shots/lab/logo-1440.png",
+   "route": "/lab",
+   "etat": "logo",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Logo en plaques claires + ambre sur le ciel navy (dégradé, jamais noir), caméra inclinée de 8° : le sol d'atelier apparaît en bande sous la plaque ambre (grille fine, flaque de lumière chaude, ombre écrasée), code vivant à gauche et à droite, poussière, flux en comètes ambre autour du S.",
+   "defauts": [
+    "Code vivant trop grand derrière un logo géant (les plans suivaient l'échelle de la pile) — corrigé : échelle du monde bornée 0,8-1,7"
+   ]
+  },
+  {
+   "fichier": "docs/qa/shots/lab/logo-1440-rm.png",
+   "route": "/lab",
+   "etat": "logo",
+   "largeur": 1440,
+   "rm": true,
+   "visible": "Même scène figée (pas de respiration, flux arrêtés), identique au cadrage près.",
+   "defauts": []
+  },
+  {
+   "fichier": "docs/qa/shots/lab/logo-390.png",
+   "route": "/lab",
+   "etat": "logo",
+   "largeur": 390,
+   "rm": false,
+   "visible": "Logo plein cadre, sol en bande en bas (grille, lumière), code vivant derrière, poussière ; HUD du lab par-dessus (normal sur /lab).",
+   "defauts": [
+    "Code vivant trop grand (même cause) — corrigé"
+   ]
+  },
+  {
+   "fichier": "docs/qa/shots/lab/logo-390-rm.png",
+   "route": "/lab",
+   "etat": "logo",
+   "largeur": 390,
+   "rm": true,
+   "visible": "Idem figé.",
+   "defauts": []
+  },
+  {
+   "fichier": "docs/qa/shots/lab/pile-1440.png",
+   "route": "/lab",
+   "etat": "pile",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Tour claire torsadée derrière le logo, plaques claires aux arêtes bleutées, sol avec ombres longues des plaques hautes vers la droite, flux le long de la tour, code derrière.",
+   "defauts": []
+  },
+  {
+   "fichier": "docs/qa/shots/lab/pile-1440-rm.png",
+   "route": "/lab",
+   "etat": "pile",
+   "largeur": 1440,
+   "rm": true,
+   "visible": "Tour figée, mêmes éléments.",
+   "defauts": []
+  },
+  {
+   "fichier": "docs/qa/shots/lab/pile-390.png",
+   "route": "/lab",
+   "etat": "pile",
+   "largeur": 390,
+   "rm": false,
+   "visible": "Tour plein cadre, sol et ombre en bas, code derrière.",
+   "defauts": []
+  },
+  {
+   "fichier": "docs/qa/shots/lab/pile-390-rm.png",
+   "route": "/lab",
+   "etat": "pile",
+   "largeur": 390,
+   "rm": true,
+   "visible": "Idem figé.",
+   "defauts": []
+  },
+  {
+   "fichier": "docs/qa/shots/lab/morph-05-1440.png",
+   "route": "/lab",
+   "etat": "morph-05",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Morph logo → pile à mi-course : plaques en vol au-dessus, tour à demi construite, ombres au sol.",
+   "defauts": []
+  },
+  {
+   "fichier": "docs/qa/shots/lab/drag-1440.png",
+   "route": "/lab",
+   "etat": "drag",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Pile tournée de 1,1 rad par le drag : les plaques claires vues de biais, la plaque ambre de chant, ombres au sol qui suivent, flux qui tournent avec la pile.",
+   "defauts": []
+  },
+  {
+   "fichier": "docs/qa/shots/lab/morph-05-390.png",
+   "route": "/lab",
+   "etat": "morph-05",
+   "largeur": 390,
+   "rm": false,
+   "visible": "Morph à mi-course plein cadre, halo chaud à la plaque ambre, sol et ombre en bas.",
+   "defauts": [
+    "Bande navy unie sous le canvas en bas (72 px CSS) sur /lab mobile émulé — à vérifier sur les captures de l'accueil (canvas fixe inset 0)"
+   ]
+  },
+  {
+   "fichier": "docs/qa/shots/lab/drag-390.png",
+   "route": "/lab",
+   "etat": "drag",
+   "largeur": 390,
+   "rm": false,
+   "visible": "Pile vue de face : le geste de drag émulé (tactile) n'a pas tourné la pile.",
+   "defauts": [
+    "Drag tactile sans effet dans l'émulation Playwright (déjà le cas en phase 0, geste synthétique) — à vérifier sur un vrai téléphone"
+   ]
+  },
+  {
+   "fichier": "docs/qa/shots/lab/perspective-1440.png",
+   "route": "/lab",
+   "etat": "perspective",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Pile en perspective sur le sol d'atelier : grille fuyante, flaque de lumière ambre au pied, ombres longues projetées vers la droite et le fond, code vivant derrière, poussière dans le faisceau, ciel navy profond → navy.",
+   "defauts": []
+  },
+  {
+   "fichier": "docs/qa/shots/lab/perspective-390.png",
+   "route": "/lab",
+   "etat": "perspective",
+   "largeur": 390,
+   "rm": false,
+   "visible": "Pile énorme, coupée, plaque ambre en haut à gauche : la rangée de boutons du lab débordait (1 506 px) et l'émulation mobile dézoomait la page (innerWidth 1 506), d'où une caméra calibrée sur un faux viewport.",
+   "defauts": [
+    "Débordement du HUD de /lab sur mobile — corrigé (boutons en flex-wrap), captures 390 du lab reprises"
+   ]
+  },
+  {
+   "fichier": "docs/qa/shots/lab/jour-1440.png",
+   "route": "/lab",
+   "etat": "jour",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Ivoire : logo navy + ambre exact, ombre douce navy au sol, grille du sol en filigrane, code vivant en navy très pâle, flux en points.",
+   "defauts": [
+    "Flux en grains navy sur le papier (effet poussière sale) — corrigé : étincelles ambre, alpha 0,42"
+   ]
+  },
+  {
+   "fichier": "docs/qa/shots/lab/jour-390.png",
+   "route": "/lab",
+   "etat": "jour",
+   "largeur": 390,
+   "rm": false,
+   "visible": "Idem mobile (viewport faussé par le HUD, repris).",
+   "defauts": [
+    "HUD mobile débordant — corrigé"
+   ]
+  },
+  {
+   "fichier": "docs/qa/shots/lab/repli-1440.png",
+   "route": "/lab",
+   "etat": "repli",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Repli 2D : les trois polygones du logo rendus en NOIR sur navy, sans ambre.",
+   "defauts": [
+    "Le CSS du repli vivait dans ouverture.css (chargé seulement par l'accueil) : sur /lab les polygones prenaient le noir par défaut — corrigé : CSS global, plaques claires + ambre sur l'encre, navy sur ivoire"
+   ]
+  },
+  {
+   "fichier": "docs/qa/shots/lab/strates-ouvert-1440.png",
+   "route": "/lab",
+   "etat": "strates-ouvert",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Cinq lamelles claires écartées, vues en plongée au-dessus du sol quadrillé, ombres portées sous chaque lamelle, poussière et flux autour, code derrière.",
+   "defauts": [
+    "Halo de la lampe posé au centre-bas quelle que soit la forme (la plaque ambre est en haut à gauche des strates) — corrigé : la lampe suit la plaque ambre réelle (instance 2) dans chaque forme"
+   ]
+  },
+  {
+   "fichier": "docs/qa/shots/lab/strates-ferme-1440.png",
+   "route": "/lab",
+   "etat": "strates-ferme",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Lamelles refermées en une plaque épaisse posée sur le sol, ombre longue vers la droite, flaque de lumière devant.",
+   "defauts": []
+  },
+  {
+   "fichier": "docs/qa/shots/lab/page-1440.png",
+   "route": "/lab",
+   "etat": "page",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Forme « site une page » en plaques claires (chevrons, paragraphes, colonnes) au-dessus du sol en perspective, plaque ambre au sol, ombres des rangées.",
+   "defauts": []
+  },
+  {
+   "fichier": "docs/qa/shots/lab/multi-1440.png",
+   "route": "/lab",
+   "etat": "multi",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Éventail de trois pages claires, sol fuyant, ombres, flaque de lumière.",
+   "defauts": []
+  },
+  {
+   "fichier": "docs/qa/shots/lab/boutique-1440.png",
+   "route": "/lab",
+   "etat": "boutique",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Grille de produits (3 × 4 plaques + étiquettes) en orthographique, sol en bande en bas, code vivant visible des deux côtés.",
+   "defauts": []
+  },
+  {
+   "fichier": "docs/qa/shots/lab/logiciel-1440.png",
+   "route": "/lab",
+   "etat": "logiciel",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Huit modules autour d'un hub ambre reliés par des chapelets, sol en bande, code derrière.",
+   "defauts": []
+  },
+  {
+   "fichier": "docs/qa/shots/lab/pellicule-1440.png",
+   "route": "/lab",
+   "etat": "pellicule",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Cadre 16:9 de plaques claires (deux cadres par parité, le second hors champ à un écran), perforations, plaque ambre au coin bas-droit, sol en bande, code derrière.",
+   "defauts": []
+  },
+  {
+   "fichier": "docs/qa/shots/lab/noyau-1440.png",
+   "route": "/lab",
+   "etat": "noyau",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Noyau compact de plaques claires autour de la plaque ambre, posé sur le sol quadrillé en perspective, ombre groupée à droite, flaque de lumière, poussière.",
+   "defauts": []
+  },
+  {
+   "fichier": "docs/qa/shots/lab/monde-logo-1440.png",
+   "route": "/lab",
+   "etat": "monde-logo",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Le monde complet, sans HUD : logo clair + ambre en perspective sur le sol d'atelier (grille, flaque chaude, ombre longue), ciel navy profond → navy, code vivant derrière à droite, poussière, flux. Lampe calée sur la plaque ambre.",
+   "defauts": []
+  },
+  {
+   "fichier": "docs/qa/shots/lab/monde-sans-1440.png",
+   "route": "/lab",
+   "etat": "monde-sans",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Témoin : même scène sans sol, flux, code ni lampe — logo clair sur dégradé navy, ombre flottante. Montre ce que le monde ajoute.",
+   "defauts": []
+  },
+  {
+   "fichier": "docs/qa/shots/lab/monde-sol-1440.png",
+   "route": "/lab",
+   "etat": "monde-sol",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Le sol seul : plan quadrillé en perspective (maille fine et forte), bords fondus vers le fond, ombre longue du logo projetée dessus, cote pointillée sur l'axe, légère chaleur au pied.",
+   "defauts": []
+  },
+  {
+   "fichier": "docs/qa/shots/lab/monde-flux-1440.png",
+   "route": "/lab",
+   "etat": "monde-flux",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Les flux seuls autour de la pile : comètes ambre et claires en hélice et en arcs, denses près de la tour, traînes cohérentes.",
+   "defauts": [
+    "Flux clairsemés à 900 points sur une tour de 6 unités (lisibles mais discrets) — réglable par fluxIntensite ; laissé tel quel pour rester sous le seuil de « nuage décoratif »"
+   ]
+  },
+  {
+   "fichier": "docs/qa/shots/lab/monde-code-1440.png",
+   "route": "/lab",
+   "etat": "monde-code",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Le code vivant seul (opacité 0,4 pour la lecture) : trois plans inclinés en profondeur derrière la pile, lignes réelles de plates.tsx / plate.ts, mots-clés ambrés, tête d'écriture, pas de plaques.",
+   "defauts": []
+  },
+  {
+   "fichier": "docs/qa/shots/lab/monde-lampe-1440.png",
+   "route": "/lab",
+   "etat": "monde-lampe",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "La lampe seule : halo ambre à la plaque ambre, faisceau chaud qui tombe devant la pile, poussière lumineuse concentrée dans le faisceau, ombre longue.",
+   "defauts": []
+  },
+  {
+   "fichier": "docs/qa/shots/lab/monde-torche-1440.png",
+   "route": "/lab",
+   "etat": "monde-torche",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Réseau de modules en plongée ; la torche du pointeur (en bas à droite) dessine un liseré ambre sur le sol et révèle la grille dedans, les flux proches s'allument.",
+   "defauts": []
+  },
+  {
+   "fichier": "docs/qa/shots/lab/monde-bascule-1440.png",
+   "route": "/lab",
+   "etat": "monde-bascule",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Clic sur la plaque ambre : elle a pivoté sur son axe et montre sa face produit — barre de titre navy avec trois pastilles, lignes de texte, bouton ambre, liseré ambre de l'épaisseur. Les deux autres plaques intactes.",
+   "defauts": []
+  },
+  {
+   "fichier": "docs/qa/shots/lab/monde-descente-1440.png",
+   "route": "/lab",
+   "etat": "monde-descente",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Traversée à mi-course (dissolve 0,55) : le sol se retire par îlots de bruit fractal, chaque bord souligné d'un front ambre fin ; la pile reste, le ciel apparaît sous le sol.",
+   "defauts": [
+    "Fronts ambre assez vifs (effet « lave ») sur une capture fixe ; en mouvement la dissolution dure ~0,4 s — à juger sur GPU, intensité 0,8 réglable dans sol.ts"
+   ]
+  },
+  {
+   "fichier": "docs/qa/shots/lab/monde-jour-1440.png",
+   "route": "/lab",
+   "etat": "monde-jour",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Le monde sur ivoire : logo navy + ambre, sol quadrillé en filigrane sur le papier, ombre navy translucide, code en navy pâle, étincelles ambre (flux). Ni halo ni faisceau (uNuit = 0).",
+   "defauts": []
+  },
+  {
+   "fichier": "docs/qa/shots/lab/monde-plat-1440.png",
+   "route": "/lab",
+   "etat": "monde-plat",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Tangage 0, orthographique : le logo exact (celui du logo-check), le sol réduit à une ligne invisible, code vivant et poussière derrière.",
+   "defauts": []
+  },
+  {
+   "fichier": "docs/qa/shots/accueil/00-p0-1440.png",
+   "route": "/",
+   "etat": "00-p0",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Hero : logo clair + ambre immense à gauche sur le ciel navy, sol d'atelier en bande sous la plaque ambre (grille, flaque chaude, ombre), code vivant derrière, poussière ; titre déplié à droite, actions, quatre cotes. Rail de profondeur dans la gouttière gauche (cran ambre « 00 »).",
+   "defauts": []
+  },
+  {
+   "fichier": "docs/qa/shots/accueil/00-p0-1440-rm.png",
+   "route": "/",
+   "etat": "00-p0",
+   "largeur": 1440,
+   "rm": true,
+   "visible": "Identique, figé (pas de respiration ni de flux).",
+   "defauts": []
+  },
+  {
+   "fichier": "docs/qa/shots/accueil/00-p0-390.png",
+   "route": "/",
+   "etat": "00-p0",
+   "largeur": 390,
+   "rm": false,
+   "visible": "Logo plein cadre en haut, sol en bande sous la plaque ambre, code vivant, poussière ; titre, texte, deux actions pleine largeur, deux cotes.",
+   "defauts": [
+    "Le bord lointain du sol forme une bande sombre horizontale derrière le logo (fondu trop court à cette échelle) — adouci : fondu lointain allongé"
+   ]
+  },
+  {
+   "fichier": "docs/qa/shots/accueil/00-p0-390-rm.png",
+   "route": "/",
+   "etat": "00-p0",
+   "largeur": 390,
+   "rm": true,
+   "visible": "Identique, figé.",
+   "defauts": []
+  },
+  {
+   "fichier": "docs/qa/shots/accueil/00-p02-1440.png",
+   "route": "/",
+   "etat": "00-p02",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "p = 0,2 : la projection bascule, les premières plaques arrivent de l'arrière-plan (en vol au-dessus, à droite du logo), le sol reste, titre intact.",
+   "defauts": []
+  },
+  {
+   "fichier": "docs/qa/shots/accueil/00-p02-390.png",
+   "route": "/",
+   "etat": "00-p02",
+   "largeur": 390,
+   "rm": false,
+   "visible": "p = 0,2 mobile : plaques en vol au-dessus du logo, texte intact.",
+   "defauts": []
+  },
+  {
+   "fichier": "docs/qa/shots/accueil/00-p04-1440.png",
+   "route": "/",
+   "etat": "00-p04",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "p = 0,4 : perspective presque acquise, logo épaissi, plaques en vol en haut (hors du titre), sol quadrillé en perspective sous la pile, ombre longue.",
+   "defauts": []
+  },
+  {
+   "fichier": "docs/qa/shots/accueil/00-p04-390.png",
+   "route": "/",
+   "etat": "00-p04",
+   "largeur": 390,
+   "rm": false,
+   "visible": "p = 0,4 mobile : plaques en vol autour du logo, titre et actions intacts.",
+   "defauts": []
+  },
+  {
+   "fichier": "docs/qa/shots/accueil/00-p06-1440.png",
+   "route": "/",
+   "etat": "00-p06",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "p = 0,6 : la tour se construit derrière le logo, encore des plaques en vol au-dessus ; cotes du bas estompées (pilotées par --su-p).",
+   "defauts": []
+  },
+  {
+   "fichier": "docs/qa/shots/accueil/00-p06-390.png",
+   "route": "/",
+   "etat": "00-p06",
+   "largeur": 390,
+   "rm": false,
+   "visible": "p = 0,6 mobile : tour à demi construite, plaques en vol.",
+   "defauts": []
+  },
+  {
+   "fichier": "docs/qa/shots/accueil/00-p08-1440.png",
+   "route": "/",
+   "etat": "00-p08",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "p = 0,8 : tour presque entière, dernières plaques arrivant par le haut.",
+   "defauts": [
+    "Deux plaques en vol frôlent la barre de nav (sur « Réalisations ») — la zone d'exclusion ne pèse qu'en x ; mineur, noté"
+   ]
+  },
+  {
+   "fichier": "docs/qa/shots/accueil/00-p08-390.png",
+   "route": "/",
+   "etat": "00-p08",
+   "largeur": 390,
+   "rm": false,
+   "visible": "p = 0,8 mobile : tour haute derrière le logo, flux, poussière.",
+   "defauts": []
+  },
+  {
+   "fichier": "docs/qa/shots/accueil/00-p1-1440.png",
+   "route": "/",
+   "etat": "00-p1",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "p = 1 : tour claire torsadée complète derrière le logo, qui dépasse le cadre vers le haut, sol en perspective, ombres, code derrière.",
+   "defauts": []
+  },
+  {
+   "fichier": "docs/qa/shots/accueil/00-p1-1440-rm.png",
+   "route": "/",
+   "etat": "00-p1",
+   "largeur": 1440,
+   "rm": true,
+   "visible": "Mouvement réduit, p = 1 : logo figé, aucune tour (le moteur reste au repos), sol et code présents.",
+   "defauts": []
+  },
+  {
+   "fichier": "docs/qa/shots/accueil/00-p1-390.png",
+   "route": "/",
+   "etat": "00-p1",
+   "largeur": 390,
+   "rm": false,
+   "visible": "p = 1 mobile : tour claire complète derrière le logo, sol en bande, code et poussière.",
+   "defauts": []
+  },
+  {
+   "fichier": "docs/qa/shots/accueil/00-torche-1440.png",
+   "route": "/",
+   "etat": "00-torche",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Pointeur en bas à droite : liseré ambre de la torche sur le sol sous les actions, grille révélée dedans, parallaxe de la pile (±3°) vers le pointeur.",
+   "defauts": [
+    "Torche discrète sur une capture fixe (liseré 0,12) : lisible mais pas spectaculaire — à juger en mouvement sur GPU"
+   ]
+  },
+  {
+   "fichier": "docs/qa/shots/accueil/00-sans-webgl-1440.png",
+   "route": "/",
+   "etat": "00-sans-webgl",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Repli 2D : logo SVG en plaques claires + ambre (liseré ambre fin), sur le fond navy CSS, titre et actions ; pas de monde (CSS seul).",
+   "defauts": []
+  },
+  {
+   "fichier": "docs/qa/shots/accueil/01-p0-1440.png",
+   "route": "/",
+   "etat": "01-p0",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Entrée des strates : la tour du hero, immense, posée sur le sol quadrillé ; titre déplié à gauche, liste 01-05 en attente.",
+   "defauts": [
+    "Le « q » de « cinq » frôle la tour (cadre cols 5-11) — inchangé depuis la phase 2, mineur"
+   ]
+  },
+  {
+   "fichier": "docs/qa/shots/accueil/01-p0-1440-rm.png",
+   "route": "/",
+   "etat": "01-p0",
+   "largeur": 1440,
+   "rm": true,
+   "visible": "Mouvement réduit : logo figé à droite, code vivant derrière, liste posée, phrase de fin visible.",
+   "defauts": []
+  },
+  {
+   "fichier": "docs/qa/shots/accueil/01-p02-1440.png",
+   "route": "/",
+   "etat": "01-p02",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "p = 0,2 : les plaques de la tour s'envolent vers le haut à droite (en route vers les lamelles et hors champ), le sol reste, deux couches listées.",
+   "defauts": [
+    "En vol, les plaques traversent la barre de nav et le bouton « Parler de votre projet » en haut à droite (l'exclusion ne couvre que le titre et la liste) — noté, transition brève"
+   ]
+  },
+  {
+   "fichier": "docs/qa/shots/accueil/01-p04-1440.png",
+   "route": "/",
+   "etat": "01-p04",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "p = 0,4 : la première lamelle (Design) se détache, plaque ambre à sa pointe, les autres encore groupées ; flaque de lumière au sol, trois couches listées.",
+   "defauts": []
+  },
+  {
+   "fichier": "docs/qa/shots/accueil/01-p06-1440.png",
+   "route": "/",
+   "etat": "01-p06",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "p = 0,6 : quatre lamelles écartées en plongée, cinq couches listées, lampe calée sur la plaque ambre (lueur à gauche de la lamelle du haut).",
+   "defauts": []
+  },
+  {
+   "fichier": "docs/qa/shots/accueil/01-p08-1440.png",
+   "route": "/",
+   "etat": "01-p08",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "p = 0,8 : cinq lamelles ouvertes, ombres sur le sol, code derrière.",
+   "defauts": []
+  },
+  {
+   "fichier": "docs/qa/shots/accueil/01-p1-1440.png",
+   "route": "/",
+   "etat": "01-p1",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "p = 1 : lamelles refermées en une plaque épaisse posée sur le sol, ombre longue ; « Nous fabriquons les cinq. »",
+   "defauts": []
+  },
+  {
+   "fichier": "docs/qa/shots/accueil/01-p0-390.png",
+   "route": "/",
+   "etat": "01-p0",
+   "largeur": 390,
+   "rm": false,
+   "visible": "Mobile, entrée des strates : la tour du hero monte jusque sous la nav et passe derrière le titre.",
+   "defauts": [
+    "Tour trop haute en portrait (3,4 unités) : elle couvre le titre et touche la nav — corrigé : hauteur bornée à 2,1 en portrait (layout pile)"
+   ]
+  },
+  {
+   "fichier": "docs/qa/shots/accueil/01-p04-390.png",
+   "route": "/",
+   "etat": "01-p04",
+   "largeur": 390,
+   "rm": false,
+   "visible": "p = 0,4 mobile : lamelles en formation de part et d'autre, quelques plaques en vol sur le titre ; liste horizontale (01 Design, 02…), sol en bande.",
+   "defauts": [
+    "Quelques plaques en vol traversent le titre sur mobile (zone d'exclusion étroite à cette échelle) — mineur, noté"
+   ]
+  },
+  {
+   "fichier": "docs/qa/shots/accueil/01-p08-390.png",
+   "route": "/",
+   "etat": "01-p08",
+   "largeur": 390,
+   "rm": false,
+   "visible": "p = 0,8 mobile : cinq lamelles claires ouvertes sous le titre, lueur ambre à la plaque ambre, sol en bande.",
+   "defauts": []
+  },
+  {
+   "fichier": "docs/qa/shots/accueil/01-p1-390.png",
+   "route": "/",
+   "etat": "01-p1",
+   "largeur": 390,
+   "rm": false,
+   "visible": "p = 1 mobile : plaque épaisse refermée sur le sol, phrase de fin en bas.",
+   "defauts": []
+  },
+  {
+   "fichier": "docs/qa/shots/accueil/02-une-page-1440.png",
+   "route": "/",
+   "etat": "02-une-page",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Ivoire (lumière allumée par la frontière 01→02) : sélecteur, forme « site une page » en plaques navy calées sur la maquette HTML, plaque ambre, code vivant en navy pâle derrière, étincelles ambre, grille du sol en filigrane ; Cadran 449, fiche.",
+   "defauts": [
+    "Roues du Cadran arrêtées entre deux chiffres (scrub à 85 %) — corrigé : fin de rampe à 80 % du viewport et roue quantifiée (round) chiffre par chiffre"
+   ]
+  },
+  {
+   "fichier": "docs/qa/shots/accueil/02-une-page-1440-rm.png",
+   "route": "/",
+   "etat": "02-une-page",
+   "largeur": 1440,
+   "rm": true,
+   "visible": "Mouvement réduit : logo navy figé derrière la maquette (le moteur reste au repos), ivoire, fiche, Cadran posé.",
+   "defauts": []
+  },
+  {
+   "fichier": "docs/qa/shots/accueil/02-multi-1440.png",
+   "route": "/",
+   "etat": "02-multi",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Onglet 02 : éventail de trois pages, maquettes HTML calées, Cadran 749.",
+   "defauts": []
+  },
+  {
+   "fichier": "docs/qa/shots/accueil/02-boutique-1440.png",
+   "route": "/",
+   "etat": "02-boutique",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Onglet 03 : grille 3 × 4 de produits, étiquettes, plaque ambre « caisse » en haut à droite, Cadran 1 647.",
+   "defauts": []
+  },
+  {
+   "fichier": "docs/qa/shots/accueil/02-outil-1440.png",
+   "route": "/",
+   "etat": "02-outil",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Onglet 04 : huit modules reliés au hub ambre par des chapelets, Cadran 1 447.",
+   "defauts": []
+  },
+  {
+   "fichier": "docs/qa/shots/accueil/02-transition-1440.png",
+   "route": "/",
+   "etat": "02-transition",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "450 ms après le clic sur 02 : plaques en vol entre la page et l'éventail, maquettes en découpe, onglet 02 en train de s'allumer.",
+   "defauts": []
+  },
+  {
+   "fichier": "docs/qa/shots/accueil/02-une-page-390.png",
+   "route": "/",
+   "etat": "02-une-page",
+   "largeur": 390,
+   "rm": false,
+   "visible": "Mobile ivoire : onglets en rangée horizontale, forme « une page » en plaques navy + maquette, Cadran, fiche.",
+   "defauts": [
+    "Cadran entre deux chiffres (même cause) — corrigé"
+   ]
+  },
+  {
+   "fichier": "docs/qa/shots/accueil/02-multi-390.png",
+   "route": "/",
+   "etat": "02-multi",
+   "largeur": 390,
+   "rm": false,
+   "visible": "Mobile, onglet 02 capturé à mi-morph (SwiftShader : 1,1 s de tween = 11 trames à 3 i/s) : pages et maquettes en cours d'assemblage.",
+   "defauts": [
+    "État intermédiaire capturé au lieu de l'état final — corrigé dans shots.mjs (__suSettle après chaque action), à recapturer"
+   ]
+  },
+  {
+   "fichier": "docs/qa/shots/accueil/03-p0-1440.png",
+   "route": "/",
+   "etat": "03-p0",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Pellicule, projet 1/5 : cadre de plaques claires continu derrière la capture, plaque ambre teintée de l'accent du projet, sol en perspective avec ombre des rangées, poussière. Lumière revenue à la nuit par la frontière 02→03.",
+   "defauts": []
+  },
+  {
+   "fichier": "docs/qa/shots/accueil/03-p0-1440-rm.png",
+   "route": "/",
+   "etat": "03-p0",
+   "largeur": 1440,
+   "rm": true,
+   "visible": "Mouvement réduit : le logo figé, dimensionné sur la boîte large de la pellicule, passe en géant derrière la capture et le texte.",
+   "defauts": [
+    "Logo figé trop grand hors du hero en mouvement réduit — corrigé : échelle × 0,6 hors du moment 00 (et plus derrière les nœuds de 05)"
+   ]
+  },
+  {
+   "fichier": "docs/qa/shots/accueil/03-p02-1440.png",
+   "route": "/",
+   "etat": "03-p02",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "p = 0,2 → projet 2 (snap) : cadre recentré après le glissement, plaque ambre devenue dorée (accent interpolé), capture du château.",
+   "defauts": []
+  },
+  {
+   "fichier": "docs/qa/shots/accueil/03-p04-1440.png",
+   "route": "/",
+   "etat": "03-p04",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "p = 0,4 → projet 3, accent rose, cadre stable.",
+   "defauts": []
+  },
+  {
+   "fichier": "docs/qa/shots/accueil/03-p06-1440.png",
+   "route": "/",
+   "etat": "03-p06",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "p = 0,6 → projet 3 encore (snap au plus proche), identique à p = 0,4 : la position repose, aucun état intermédiaire figé.",
+   "defauts": []
+  },
+  {
+   "fichier": "docs/qa/shots/accueil/03-p08-1440.png",
+   "route": "/",
+   "etat": "03-p08",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "p = 0,8 → projet 4 (boulangerie), accent ambre.",
+   "defauts": []
+  },
+  {
+   "fichier": "docs/qa/shots/accueil/03-p1-1440.png",
+   "route": "/",
+   "etat": "03-p1",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "p = 1 → projet 5 (agence immobilière), accent teal sur la plaque et l'étiquette.",
+   "defauts": []
+  },
+  {
+   "fichier": "docs/qa/shots/accueil/03-p0-390.png",
+   "route": "/",
+   "etat": "03-p0",
+   "largeur": 390,
+   "rm": false,
+   "visible": "Mobile : capture en haut, titre et action dessous ; la rangée basse du cadre de plaques traverse le sous-titre et le bouton.",
+   "defauts": [
+    "Cadre de plaques trop grand en portrait, il passe sur le texte — corrigé : variante portrait du layout pellicule (× 0,7)"
+   ]
+  },
+  {
+   "fichier": "docs/qa/shots/accueil/03-p06-390.png",
+   "route": "/",
+   "etat": "03-p06",
+   "largeur": 390,
+   "rm": false,
+   "visible": "Mobile, projet 3 par balayage : accent rose sur l'étiquette, même cadre trop grand.",
+   "defauts": [
+    "Même défaut — corrigé"
+   ]
+  },
+  {
+   "fichier": "docs/qa/shots/accueil/04-seuil-1440.png",
+   "route": "/",
+   "etat": "04-seuil",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Seuil : le noyau (plaques claires en réseau serré autour de l'ambre) petit en haut, « Pas que des sites. » déplié au centre ; le sol, à cette petite échelle, n'est qu'une bande sombre horizontale derrière le texte.",
+   "defauts": [
+    "Bande sombre du sol derrière le seuil (forme petite et haute) — corrigé : sol et ombre s'effacent sous une échelle de 0,95"
+   ]
+  },
+  {
+   "fichier": "docs/qa/shots/accueil/04-seuil-390.png",
+   "route": "/",
+   "etat": "04-seuil",
+   "largeur": 390,
+   "rm": false,
+   "visible": "Mobile : noyau en haut entouré de flux et de poussière, phrase au centre, pas de sol visible.",
+   "defauts": []
+  },
+  {
+   "fichier": "docs/qa/shots/accueil/05-repos-1440.png",
+   "route": "/",
+   "etat": "05-repos",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Salle des machines : réseau de douze modules en plaques claires reliés au hub ambre, en plongée sur le sol quadrillé, étiquettes HTML calées, maquette Devis & factures à droite, code vivant derrière.",
+   "defauts": []
+  },
+  {
+   "fichier": "docs/qa/shots/accueil/05-repos-1440-rm.png",
+   "route": "/",
+   "etat": "05-repos",
+   "largeur": 1440,
+   "rm": true,
+   "visible": "Mouvement réduit : logo figé géant derrière les étiquettes.",
+   "defauts": [
+    "Logo figé derrière les nœuds (déjà noté en phase 3) — atténué : × 0,6 hors du hero"
+   ]
+  },
+  {
+   "fichier": "docs/qa/shots/accueil/05-module-7-1440.png",
+   "route": "/",
+   "etat": "05-module-7",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Nœud Caisse allumé (isolation : les autres s'assombrissent), maquette Caisse (68 tickets, statut Ouvert).",
+   "defauts": []
+  },
+  {
+   "fichier": "docs/qa/shots/accueil/05-repos-390.png",
+   "route": "/",
+   "etat": "05-repos",
+   "largeur": 390,
+   "rm": false,
+   "visible": "Mobile : titre, texte, action, puis le réseau portrait avec ses étiquettes, flaque de lumière au pied.",
+   "defauts": []
+  },
+  {
+   "fichier": "docs/qa/shots/accueil/06-repos-1440.png",
+   "route": "/",
+   "etat": "06-repos",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Ivoire : jauge en arc de plaques navy, aiguille au repos (ambre à gauche), quatre Plaques d'offres avec Cadran, engagements tracés (scrub), code vivant navy pâle ; flux en points gris-beige autour de la jauge.",
+   "defauts": [
+    "Flux sur ivoire lus comme de la poussière grise — corrigé : ambre franc, alpha 0,3"
+   ]
+  },
+  {
+   "fichier": "docs/qa/shots/accueil/06-focal-1440.png",
+   "route": "/",
+   "etat": "06-focal",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Offre 02 focalisée : plaque cerclée d'ambre, aiguille déplacée au tiers de l'arc.",
+   "defauts": []
+  },
+  {
+   "fichier": "docs/qa/shots/accueil/06-repos-390.png",
+   "route": "/",
+   "etat": "06-repos",
+   "largeur": 390,
+   "rm": false,
+   "visible": "Mobile ivoire : titre, jauge, plaques d'offres empilées.",
+   "defauts": [
+    "Mêmes points gris autour de la jauge — corrigé"
+   ]
+  },
+  {
+   "fichier": "docs/qa/shots/accueil/07-p0-1440.png",
+   "route": "/",
+   "etat": "07-p0",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Méthode, entrée : structure de page en plaques claires (étape 1) posée sur le sol, titre, étape 01 ; la carte ambre de l'étape 02 est à l'écran mais vide (texte non révélé).",
+   "defauts": [
+    "Texte de l'étape 02 non révélé alors que sa carte est visible (révélation indexée sur une rampe globale) — corrigé : étape dérivée de la position de chaque carte (80 % du viewport), scène et texte sur la même règle"
+   ]
+  },
+  {
+   "fichier": "docs/qa/shots/accueil/07-p05-1440.png",
+   "route": "/",
+   "etat": "07-p05",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Mi-parcours : plaque ambre (démo) et contenu assemblés dans la structure, étape 02 révélée en ambre, 03 en cours.",
+   "defauts": []
+  },
+  {
+   "fichier": "docs/qa/shots/accueil/07-p1-1440.png",
+   "route": "/",
+   "etat": "07-p1",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Fin : page complète (structure, démo, contenu, mise en ligne, réglages autour), étapes 03-04 en vue.",
+   "defauts": [
+    "La rangée haute (barre d'adresse) passe sous la nav et le bouton « Parler de votre projet » — corrigé : layout methode réduit à 0,85"
+   ]
+  },
+  {
+   "fichier": "docs/qa/shots/accueil/07-p05-390.png",
+   "route": "/",
+   "etat": "07-p05",
+   "largeur": 390,
+   "rm": false,
+   "visible": "Mobile : le bandeau collant de la pile en haut, cartes 02 (ambre) et 03 qui défilent par-dessus ; le texte de 01 passe sous la nav.",
+   "defauts": [
+    "Bandeau épinglé derrière le texte des étapes sur mobile (déjà noté en phase 3) — ouvert"
+   ]
+  },
+  {
+   "fichier": "docs/qa/shots/accueil/08-atelier-1440.png",
+   "route": "/",
+   "etat": "08-atelier",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Ivoire : portrait à venir, nom, trois paragraphes, accordéon ; le logo navy + ambre au repos, posé en perspective sur le sol quadrillé en filigrane, ombre longue — coupé par le bas du viewport à cette position.",
+   "defauts": [
+    "Logo au repos à moitié hors du viewport à l'entrée (cadre sous le portrait) — mineur, visible en scrollant"
+   ]
+  },
+  {
+   "fichier": "docs/qa/shots/accueil/08-atelier-390.png",
+   "route": "/",
+   "etat": "08-atelier",
+   "largeur": 390,
+   "rm": false,
+   "visible": "Mobile ivoire : portrait et logo côte à côte, texte dessous, étincelles ambre discrètes.",
+   "defauts": []
+  },
+  {
+   "fichier": "docs/qa/shots/accueil/09-depart-1440.png",
+   "route": "/",
+   "etat": "09-depart",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Départ : le logo clair + ambre revenu au repos à gauche, lampe sur sa plaque ambre, code vivant lisible derrière, grille du sol ; titre déplié, champ et action.",
+   "defauts": []
+  },
+  {
+   "fichier": "docs/qa/shots/accueil/09-depart-390.png",
+   "route": "/",
+   "etat": "09-depart",
+   "largeur": 390,
+   "rm": false,
+   "visible": "Mobile : logo en haut sous une pluie de poussière et de flux, titre, champ, action pleine largeur, footer.",
+   "defauts": []
+  },
+  {
+   "fichier": "docs/qa/shots/accueil/footer-1440.png",
+   "route": "/",
+   "etat": "footer",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Bas de page : logo clair (nav et footer), colonnes, mentions mono ; la pile reste au-dessus, calée sur le départ.",
+   "defauts": []
+  },
+  {
+   "fichier": "docs/qa/shots/accueil/07-p0-1440-rm.png",
+   "route": "/",
+   "etat": "07-p0",
+   "largeur": 1440,
+   "rm": true,
+   "visible": "Mouvement réduit : logo figé à droite (× 0,6), carte ambre vide (même défaut de révélation).",
+   "defauts": [
+    "Carte 02 vide — corrigé (étape par position)"
+   ]
+  },
+  {
+   "fichier": "docs/qa/shots/accueil/09-depart-1440-rm.png",
+   "route": "/",
+   "etat": "09-depart",
+   "largeur": 1440,
+   "rm": true,
+   "visible": "Mouvement réduit : logo clair figé à gauche, code vivant, titre posé.",
+   "defauts": []
+  },
+  {
+   "fichier": "docs/qa/shots/accueil/02-boutique-390.png",
+   "route": "/",
+   "etat": "02-boutique",
+   "largeur": 390,
+   "rm": false,
+   "visible": "Mobile, onglet 03 : grille boutique calée sur la maquette, Cadran en cours de rotation.",
+   "defauts": [
+    "Cadran entre deux chiffres (capture avant la fin du tween de 900 ms) — corrigé par le settle après geste"
+   ]
+  },
+  {
+   "fichier": "docs/qa/shots/accueil/05-module-2-390.png",
+   "route": "/",
+   "etat": "05-module-2",
+   "largeur": 390,
+   "rm": false,
+   "visible": "Mobile : nœud Planning allumé dans le réseau portrait.",
+   "defauts": []
+  }
+ ]
 }

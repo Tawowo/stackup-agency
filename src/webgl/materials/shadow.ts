@@ -45,6 +45,7 @@ void main() {
   vec2 g = (vSol.xz - vec2(uStack.x, 0.0)) / max(uStack.z, 0.2);
   float n = fbm(g * 0.6 + 3.1);
   a *= smoothstep(uDissolve * 1.15 - 0.06, uDissolve * 1.15, n);
+  a *= smoothstep(0.5, 0.95, uStack.z);
   gl_FragColor = vec4(mix(jour, nuit, uNuit), a);
 }
 `

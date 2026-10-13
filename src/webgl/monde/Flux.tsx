@@ -131,9 +131,10 @@ void main() {
   float d = length(gl_PointCoord - 0.5);
   float disc = smoothstep(0.5, 0.15, d);
   vec3 nuit = mix(uAccent, CLAIR, step(0.72, vSeed) * 0.8);
-  vec3 col = mix(NAVY, nuit, uNuit);
+  // Sur ivoire : des étincelles ambre (pas des grains navy qui salissent le papier).
+  vec3 col = mix(uAccent, nuit, uNuit);
   float a = disc * vA * uFlux * (1.0 + vLens * 1.6) * (1.0 - uDissolve * 0.5);
-  a *= mix(0.5, 1.0, uNuit);
+  a *= mix(0.3, 1.0, uNuit);
   gl_FragColor = vec4(col, a);
 }
 `

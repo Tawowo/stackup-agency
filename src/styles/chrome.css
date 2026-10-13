@@ -317,7 +317,8 @@
   display: flex;
   flex-direction: column;
   /* --p : progression de scroll (0 → 1) de la première rotation ; --n : le chiffre. */
-  transform: translateY(calc(var(--n, 0) * var(--p, 0) * -1em));
+  /* La roue avance chiffre par chiffre (round) : à l'arrêt, jamais entre deux glyphes. */
+  transform: translateY(calc(round(nearest, var(--n, 0) * var(--p, 0), 1) * -1em));
   transition: transform 900ms var(--su-pose);
   transition-delay: calc(var(--i, 0) * 40ms);
 }

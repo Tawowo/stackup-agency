@@ -109,6 +109,7 @@ export async function capturer({ route, dossier, etats }, browser, filtreEtat) {
           await page.waitForTimeout(300)
           await page.evaluate(() => window.__suSettle?.(90))
         }
+        const settleApres = !!etat.action && etat.action !== 'torche' && etat.action !== 'clic-plaque' && etat.nom !== '02-transition'
         if (etat.action === 'touche3') await page.keyboard.press('3')
         if (etat.action?.startsWith('noeud')) await page.locator('.su-mac__noeud').nth(Number(etat.action.slice(5)) - 1).click()
         if (etat.action === 'focus-offre2') await page.locator('.su-prix__offre').nth(1).focus()
@@ -150,6 +151,8 @@ export async function capturer({ route, dossier, etats }, browser, filtreEtat) {
           await page.waitForTimeout(150)
         }
         if (etat.attente) await page.waitForTimeout(etat.attente)
+        // Après un geste : l'état final qu'un visiteur à 60 i/s verrait (tweens de scène avancés sans rendre).
+        if (settleApres) await page.evaluate(() => window.__suSettle?.(150))
         const dir = `docs/qa/shots/${dossier}`
         mkdirSync(dir, { recursive: true })
         const fichier = `${dir}/${etat.nom}-${taille.nom}${rm ? '-rm' : ''}.png`

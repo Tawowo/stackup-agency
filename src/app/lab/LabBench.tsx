@@ -162,7 +162,7 @@ export default function LabBench({ hud = true }: { hud?: boolean }) {
         <p className="su-mono" style={{ color: 'var(--su-texte-doux)' }}>
           LAB · Stack Engine · {tier} · {mode} · {fps} fps · morph {morph.toFixed(2)} · spin {spin.toFixed(2)}
         </p>
-        <div className="flex gap-2">
+        <div className="flex flex-wrap gap-2" style={{ maxWidth: "calc(100vw - 48px)" }}>
           {LAYOUTS.map((l) => (
             <button
               key={l}

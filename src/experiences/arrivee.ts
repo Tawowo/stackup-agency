@@ -66,9 +66,12 @@ export function arriverParScroll(el: HTMLElement, o: Arrivee): () => void {
       const s = useScene.getState()
       const p = self.progress
       if (s.reduced) {
+        // Mouvement réduit : le moteur reste figé sur le logo ; la section ne
+        // prend que la main (moment, pose, calme), jamais la forme.
         if (p > 0.5 && phase !== 'commis') {
           poser()
-          commettre()
+          phase = 'commis'
+          o.onPrise?.()
         }
         return
       }
@@ -100,24 +103,18 @@ export function arriverParScroll(el: HTMLElement, o: Arrivee): () => void {
     },
   })
   // La section reprend la main quand on y revient (d'en bas) : forme commise, pose, calme.
+  const reprendre = () => {
+    if (phase !== 'commis' || mienne()) return
+    poser()
+    if (!useScene.getState().reduced) useScene.getState().setPair(o.layout, null, o.paramsB ? { a: o.paramsB } : {})
+    o.onPrise?.()
+  }
   const garde = ScrollTrigger.create({
     trigger: el,
     start: o.fin ?? 'top 55%',
     end: 'bottom 45%',
-    onEnterBack: () => {
-      if (phase === 'commis' && !mienne()) {
-        poser()
-        useScene.getState().setPair(o.layout, null, o.paramsB ? { a: o.paramsB } : {})
-        o.onPrise?.()
-      }
-    },
-    onEnter: () => {
-      if (phase === 'commis' && !mienne()) {
-        poser()
-        useScene.getState().setPair(o.layout, null, o.paramsB ? { a: o.paramsB } : {})
-        o.onPrise?.()
-      }
-    },
+    onEnterBack: () => reprendre(),
+    onEnter: () => reprendre(),
     onLeave: () => {
       if (o.calme) useScene.getState().setCalme(false)
       o.onSortie?.()

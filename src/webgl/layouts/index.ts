@@ -36,13 +36,14 @@ export interface LayoutParams {
 
 export const LAYOUTS: Record<LayoutName, (n: number, p: LayoutParams) => LayoutData> = {
   logo: (n) => logo(n),
-  pile: (n, p) => pile(n, p),
+  // Portrait : une tour plus courte, qui ne monte pas jusque sous la nav.
+  pile: (n, p) => pile(n, p.portrait > 0.5 ? { ...p, hauteur: Math.min(p.hauteur, 2.1) } : p),
   strates: (n, p) => strates(n, { ouverture: p.ouverture }),
   page: (n) => pageLayout(n),
   multi: (n, p) => multi(n, p.portrait > 0.5),
   boutique: (n) => boutique(n),
   logiciel: (n) => logiciel(n),
-  pellicule: (n, p) => pellicule(n, { glisse: p.glisse, largeur: p.largeur }),
+  pellicule: (n, p) => pellicule(n, { glisse: p.glisse, largeur: p.largeur, portrait: p.portrait > 0.5 }),
   noyau: (n) => noyau(n),
   machines: (n, p) => machines(n, p.modules, p.portrait > 0.5),
   cadran: (n, p) => cadran(n, p.aiguille),

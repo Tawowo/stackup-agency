@@ -25,8 +25,8 @@ export default function Cadran({ valeur, prefixe = '', suffixe = '', className =
     }
     const st = ScrollTrigger.create({
       trigger: el,
-      start: 'top 96%',
-      end: 'top 62%',
+      start: 'top 100%',
+      end: 'top 80%',
       scrub: true,
       onUpdate: (self) => {
         el.style.setProperty('--p', self.progress.toFixed(4))
