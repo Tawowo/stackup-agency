@@ -24,6 +24,7 @@ export interface LayoutParams {
   hauteur: number
   ouverture: number
   glisse: number
+  largeur: number
   portrait: number
   aiguille: number
   etape: number
@@ -41,7 +42,7 @@ export const LAYOUTS: Record<LayoutName, (n: number, p: LayoutParams) => LayoutD
   multi: (n, p) => multi(n, p.portrait > 0.5),
   boutique: (n) => boutique(n),
   logiciel: (n) => logiciel(n),
-  pellicule: (n, p) => pellicule(n, { glisse: p.glisse }),
+  pellicule: (n, p) => pellicule(n, { glisse: p.glisse, largeur: p.largeur }),
   noyau: (n) => noyau(n),
   machines: (n, p) => machines(n, p.modules, p.portrait > 0.5),
   cadran: (n, p) => cadran(n, p.aiguille),
@@ -51,7 +52,7 @@ export const LAYOUTS: Record<LayoutName, (n: number, p: LayoutParams) => LayoutD
 }
 
 /** Clés de `params` dont le changement recalcule le layout courant. */
-export const CLES_LAYOUT: (keyof LayoutParams)[] = ['parNiveau', 'ecart', 'torsion', 'rayon', 'chantier', 'echelle', 'hauteur', 'ouverture', 'glisse', 'portrait', 'aiguille', 'etape', 'modules', 'type', 'fonctions', 'champs']
+export const CLES_LAYOUT: (keyof LayoutParams)[] = ['parNiveau', 'ecart', 'torsion', 'rayon', 'chantier', 'echelle', 'hauteur', 'ouverture', 'glisse', 'largeur', 'portrait', 'aiguille', 'etape', 'modules', 'type', 'fonctions', 'champs']
 
 export const NOMS_LAYOUTS = Object.keys(LAYOUTS) as LayoutName[]
 export type { LayoutData } from './types.ts'

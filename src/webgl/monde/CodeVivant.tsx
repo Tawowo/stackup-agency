@@ -106,7 +106,7 @@ void main() {
   vec3 nuit = tex.rgb;
   vec3 col = mix(NAVY, nuit, uNuit);
   col += uAccent * front * 0.9;
-  a = mix(a * 0.55, a, uNuit) + front * bord * 0.25 * uCode * 4.0;
+  a = mix(a * 0.4, a, uNuit) + front * bord * 0.25 * uCode * 4.0;
   gl_FragColor = vec4(col, a);
 }
 `

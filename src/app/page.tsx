@@ -10,6 +10,8 @@ import Atelier from '@/experiences/atelier/Atelier'
 import Depart from '@/experiences/depart/Depart'
 import Footer from '@/components/layout/Footer'
 import ScrollRefresh from '@/components/layout/ScrollRefresh'
+import Rail from '@/components/layout/Rail'
+import Lumiere from '@/experiences/lumiere'
 
 export default function Accueil() {
   return (
@@ -27,6 +29,8 @@ export default function Accueil() {
         <Depart />
       </main>
       <Footer />
+      <Rail />
+      <Lumiere />
       <ScrollRefresh />
     </>
   )

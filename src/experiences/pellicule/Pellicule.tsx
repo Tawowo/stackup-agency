@@ -9,10 +9,12 @@
 import { useEffect, useRef, useState } from 'react'
 import Image from 'next/image'
 import StackFrame from '@/webgl/StackFrame'
-import { stackUniforms } from '@/webgl/engine'
 import { useScene } from '@/webgl/store'
-import { gsap, ScrollTrigger, initGsap } from '@/lib/gsap'
+import { gsap, initGsap } from '@/lib/gsap'
+import { LOGO_VIEW } from '@/webgl/logo-geometry'
+import { PX_PAR_UNITE } from '@/webgl/camera'
 import { realisations } from '@/data/realisations'
+import { arriverParScroll } from '../arrivee'
 import Action from '@/components/ui/Action'
 import './pellicule.css'
 
@@ -23,7 +25,6 @@ export default function Pellicule() {
   const scene = useRef<HTMLDivElement>(null)
   const piste = useRef<HTMLDivElement>(null)
   const [courant, setCourant] = useState(0)
-  const [visible, setVisible] = useState(false)
 
   useEffect(() => {
     initGsap()
@@ -34,38 +35,38 @@ export default function Pellicule() {
     const reduit = useScene.getState().reduced
     const mobile = window.innerWidth < 768
     const n = PROJETS.length
-    const nuit = { v: useScene.getState().nuit }
-    const eteindre = (v: number) => {
-      gsap.killTweensOf(nuit)
-      if (reduit) {
-        nuit.v = v
-        useScene.getState().setNuit(v)
-        return
-      }
-      gsap.to(nuit, { v, duration: 1.1, ease: 'power2.inOut', onUpdate: () => useScene.getState().setNuit(nuit.v) })
+    // La largeur d'un écran en unités locales de la pile (un projet par écran).
+    const largeur = () => {
+      const cadre = el.querySelector<HTMLElement>('.su-pel__cadre')
+      const r = cadre?.getBoundingClientRect()
+      const s = r && r.width > 0 ? Math.min(r.width / LOGO_VIEW.w, r.height / LOGO_VIEW.h) : 1
+      return window.innerWidth / PX_PAR_UNITE / s + 0.6
     }
+    // La bande de cadres suit la piste : index continu, accent interpolé.
+    const suivre = (f: number) => {
+      const s = useScene.getState()
+      if (s.moment !== '03') return
+      const k = Math.min(n - 2, Math.max(0, Math.floor(f)))
+      const t = Math.min(1, Math.max(0, f - k))
+      const a = PROJETS[k]!.accent
+      const b = PROJETS[k + 1]!.accent
+      s.setAccent(gsap.utils.interpolate(a, b, t))
+      s.setParams({ glisse: f, largeur: largeur() })
+      setCourant(Math.round(f))
+    }
+    const arret = arriverParScroll(el, {
+      moment: '03',
+      layout: 'pellicule',
+      pose: { x: 0.05, y: -0.08 },
+      projection: 0.3,
+      paramsB: { glisse: 0 },
+      onPrise: () => useScene.getState().setParams({ glisse: mobile ? tr.scrollLeft / Math.max(1, tr.clientWidth) : 0, largeur: largeur() }),
+      onSortie: () => useScene.getState().setAccent('#F69106'),
+    })
     const ctx = gsap.context(() => {
-      ScrollTrigger.create({
-        trigger: el,
-        start: 'top 60%',
-        onEnter: () => {
-          useScene.getState().setMoment('03')
-          eteindre(1)
-          setVisible(true)
-        },
-        onEnterBack: () => {
-          useScene.getState().setMoment('03')
-          eteindre(1)
-          setVisible(true)
-        },
-        onLeaveBack: () => {
-          eteindre(0)
-          setVisible(false)
-        },
-      })
       if (mobile || reduit) {
-        // Mobile : balayage natif ; on lit l'index au scroll de la piste.
-        const lire = () => setCourant(Math.round(tr.scrollLeft / tr.clientWidth))
+        // Mobile : balayage natif ; la bande suit le scroll de la piste, en continu.
+        const lire = () => suivre(tr.scrollLeft / Math.max(1, tr.clientWidth))
         tr.addEventListener('scroll', lire, { passive: true })
         return
       }
@@ -77,40 +78,20 @@ export default function Pellicule() {
           start: 'top top',
           end: () => `+=${Math.round(window.innerHeight * (n - 1) * 0.9)}`,
           pin: st,
-          scrub: 1.4,
+          scrub: true,
           snap: { snapTo: 1 / (n - 1), duration: { min: 0.6, max: 1.2 }, ease: 'power2.inOut', inertia: false, directional: false },
-          onUpdate: (self) => setCourant(Math.round(self.progress * (n - 1))),
+          onUpdate: (self) => suivre(self.progress * (n - 1)),
         },
       })
     }, el)
-    return () => ctx.revert()
+    return () => {
+      ctx.revert()
+      arret()
+    }
   }, [])
 
-  // Le cadre de plaques suit le projet : glissement + accent.
-  const precedent = useRef(0)
-  useEffect(() => {
-    if (!visible) return
-    const s = useScene.getState()
-    if (s.moment !== '03' || s.reduced) return
-    const u = stackUniforms()
-    const p = PROJETS[courant]!
-    s.setAccent(p.accent)
-    s.setPose({ x: 0.05, y: -0.08 })
-    s.setProjection(0.3)
-    s.setScrub(true)
-    const sens = courant >= precedent.current ? 1 : -1
-    precedent.current = courant
-    s.setPair('pellicule', 'pellicule', { a: { glisse: 2.9 * sens }, b: { glisse: 0 } })
-    u.uMorph.value = 0
-    gsap.killTweensOf(u.uMorph)
-    gsap.to(u.uMorph, { value: 1, duration: 1.6, ease: 'power2.inOut' })
-    return () => {
-      s.setAccent('#F69106')
-    }
-  }, [courant, visible])
-
   return (
-    <section ref={section} className="su-pel" data-moment="03" id="realisations-pellicule" aria-labelledby="su-pel-titre">
+    <section ref={section} className="su-pel" data-moment="03" data-nuit="1" data-titre="Réalisations" id="realisations-pellicule" aria-labelledby="su-pel-titre">
       <div ref={scene} className="su-pel__scene">
         <div className="su-pel__cadre-zone" aria-hidden="true">
           <StackFrame className="su-pel__cadre" />

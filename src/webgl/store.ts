@@ -28,6 +28,8 @@ export interface PileParams {
   hauteur: number
   ouverture: number
   glisse: number
+  /** Pellicule : largeur d'un écran en unités locales (un projet par écran). */
+  largeur: number
   /** 1 = largeur < 768 px : variantes compactes des layouts. */
   portrait: number
   aiguille: number
@@ -82,6 +84,7 @@ export const PARAMS_DEFAUT: SceneParams = {
   hauteur: 3.4,
   ouverture: 1,
   glisse: 0,
+  largeur: 6,
   portrait: 0,
   aiguille: 0,
   etape: 5,

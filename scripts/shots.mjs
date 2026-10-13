@@ -86,6 +86,8 @@ export async function capturer({ route, dossier, etats }, browser, filtreEtat) {
           }
           await aller(etat.scroll, moment)
           if (etat.depuis === undefined) await page.waitForTimeout(900)
+          // L'état qu'un visiteur à 60 i/s verrait : la simulation avance sans rendre.
+          if (etat.depuis === undefined) await page.evaluate(() => window.__suSettle?.(150))
         }
         if (etat.piste !== undefined && taille.mobile) {
           await page.evaluate((k) => {
@@ -93,6 +95,19 @@ export async function capturer({ route, dossier, etats }, browser, filtreEtat) {
             if (piste) piste.scrollLeft = k * piste.clientWidth
           }, etat.piste)
           if (etat.depuis === undefined) await page.waitForTimeout(600)
+        }
+        if (etat.action === 'torche' || etat.action === 'clic-plaque') {
+          // La torche : le pointeur se pose en bas à droite de la scène (sur le sol) ; ou clique une plaque.
+          const { width, height } = taille.viewport
+          const cible = etat.action === 'torche' ? [width * 0.6, height * 0.8] : [width * 0.5, height * 0.62]
+          await page.mouse.move(cible[0] - 60, cible[1] - 60)
+          await page.mouse.move(cible[0], cible[1], { steps: 8 })
+          if (etat.action === 'clic-plaque') {
+            await page.mouse.down()
+            await page.mouse.up()
+          }
+          await page.waitForTimeout(300)
+          await page.evaluate(() => window.__suSettle?.(90))
         }
         if (etat.action === 'touche3') await page.keyboard.press('3')
         if (etat.action?.startsWith('noeud')) await page.locator('.su-mac__noeud').nth(Number(etat.action.slice(5)) - 1).click()

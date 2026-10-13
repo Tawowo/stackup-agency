@@ -7,8 +7,8 @@
  */
 import { useEffect, useRef } from 'react'
 import StackFrame from '@/webgl/StackFrame'
-import { useScene } from '@/webgl/store'
-import { ScrollTrigger, initGsap } from '@/lib/gsap'
+import { initGsap } from '@/lib/gsap'
+import { arriverParScroll } from '../arrivee'
 import { SITE } from '@/config/site'
 import Accordeon from '@/components/editorial/Accordeon'
 import './atelier.css'
@@ -25,27 +25,10 @@ export default function Atelier() {
     initGsap()
     const el = section.current
     if (!el) return
-    const entrer = () => {
-      const s = useScene.getState()
-      s.setMoment('08')
-      s.setNuit(1)
-      s.setCalme(true)
-      if (s.reduced) return
-      s.setScrub(false)
-      s.setTarget(null)
-      s.setPose({ x: 0, y: 0.35 })
-      s.setProjection(0.5)
-      s.setLayout('logo')
-    }
-    const sortir = () => useScene.getState().setCalme(false)
-    const st = ScrollTrigger.create({ trigger: el, start: 'top 55%', end: 'bottom 45%', onEnter: entrer, onEnterBack: entrer, onLeave: sortir, onLeaveBack: sortir })
-    return () => {
-      st.kill()
-      sortir()
-    }
+    return arriverParScroll(el, { moment: '08', layout: 'logo', pose: { x: 0, y: 0.35 }, projection: 0.5, calme: true })
   }, [])
   return (
-    <section ref={section} className="su-ate" data-moment="08" id="atelier" aria-labelledby="su-ate-titre">
+    <section ref={section} className="su-ate" data-moment="08" data-nuit="0" data-titre="L’atelier" id="atelier" aria-labelledby="su-ate-titre">
       <div className="su-ate__grille">
         <div className="su-ate__portrait" role="img" aria-label="Portrait de Mathéo Reboul, à venir">
           <div className="su-plaque su-plaque--ivoire su-ate__placeholder">

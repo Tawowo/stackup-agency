@@ -12,7 +12,8 @@ import StackFrame from '@/webgl/StackFrame'
 import { useScene } from '@/webgl/store'
 import { noeud } from '@/webgl/layouts/machines'
 import { LOGO_VIEW, SVG_PAR_UNITE } from '@/webgl/logo-geometry'
-import { gsap, ScrollTrigger, initGsap } from '@/lib/gsap'
+import { gsap, initGsap } from '@/lib/gsap'
+import { arriverParScroll } from '../arrivee'
 import Action from '@/components/ui/Action'
 import Plaque from '@/components/ui/Plaque'
 import { MODULES } from './modules'
@@ -34,22 +35,17 @@ export default function Machines() {
     initGsap()
     const el = section.current
     if (!el) return
-    const entrer = () => {
-      const s = useScene.getState()
-      s.setMoment('05')
-      s.setNuit(1)
-      setVisible(true)
-      if (s.reduced) return
-      s.setScrub(false)
-      s.setTarget(null)
-      s.setPose({ x: 0.12, y: -0.1 })
-      s.setProjection(0.6)
-      s.setParams({ modules: MODULES.length, isoPush: 0, isoDim: 0.42 })
-      s.setLayout('machines')
-    }
-    const st = ScrollTrigger.create({ trigger: el, start: 'top 55%', end: 'bottom 45%', onEnter: entrer, onEnterBack: entrer, onLeave: () => setVisible(false), onLeaveBack: () => setVisible(false) })
+    const arret = arriverParScroll(el, {
+      moment: '05',
+      layout: 'machines',
+      pose: { x: 0.12, y: -0.1 },
+      projection: 0.6,
+      params: { modules: MODULES.length, isoPush: 0, isoDim: 0.42 },
+      onPrise: () => setVisible(true),
+      onSortie: () => setVisible(false),
+    })
     return () => {
-      st.kill()
+      arret()
       useScene.getState().setIsolate(-1)
     }
   }, [])
@@ -85,7 +81,7 @@ export default function Machines() {
 
   const mod = MODULES[actif]!
   return (
-    <section ref={section} className="su-mac" data-moment="05" id="machines" aria-labelledby="su-mac-titre">
+    <section ref={section} className="su-mac" data-moment="05" data-nuit="1" data-titre="Salle des machines" id="machines" aria-labelledby="su-mac-titre">
       <div className="su-mac__grille">
         <header className="su-mac__tete">
           <p className="su-mono su-mac__etiquette">05 — La salle des machines</p>
@@ -122,7 +118,6 @@ export default function Machines() {
                     data-actif={k === actif ? '1' : '0'}
                     style={{ left: `${((p.x + W / 2) / W) * 100}%`, top: `${((H / 2 - p.y) / H) * 100}%` }}
                     onClick={() => choisir(k)}
-                    data-curseur="Allumer"
                   >
                     {m.court}
                   </button>

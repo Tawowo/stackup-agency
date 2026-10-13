@@ -150,7 +150,7 @@ function Rig() {
     const probeDeep = new Vector3()
     const local = new Vector3()
     const ecran = new Vector3()
-    const tick = (_time: number, deltaMs: number) => {
+    const pas = (deltaMs: number, rendre: boolean) => {
       const s = useScene.getState()
       if (document.hidden || !s.active) return
       const dtReel = deltaMs / 1000
@@ -347,8 +347,9 @@ function Rig() {
         }
       }
 
-      advance(_time)
+      if (rendre) advance(performance.now())
       premier = false
+      if (!rendre) return
 
       // Moniteur : moyenne glissante sur le temps RÉEL, baisse du DPR puis du palier.
       acc += dtReel
@@ -372,8 +373,21 @@ function Rig() {
       }
       if (!s.ready) s.setReady(true)
     }
+    const tick = (_time: number, deltaMs: number) => pas(deltaMs, true)
     gsap.ticker.add(tick)
-    return () => gsap.ticker.remove(tick)
+    // Captures (SwiftShader, 1-3 i/s) : avance la simulation sans rendre, pour
+    // obtenir l'état qu'un visiteur à 60 i/s verrait après `n` trames.
+    const w = window as unknown as { __suSettle?: (n?: number) => void }
+    w.__suSettle = (n = 120) => {
+      // Les écouteurs de scroll (boîtes, ScrollTrigger, lumière) d'abord, de façon synchrone.
+      window.dispatchEvent(new Event('scroll'))
+      ;(window as unknown as { __suST?: { update: () => void } }).__suST?.update()
+      for (let i = 0; i < n; i++) pas(1000 / 60, false)
+    }
+    return () => {
+      gsap.ticker.remove(tick)
+      delete w.__suSettle
+    }
   }, [u, camera, advance, size, gl])
 
   return (

@@ -39,7 +39,6 @@ export default function Ouverture() {
 
     // La scène : logo au départ, pile à l'arrivée, le scroll écrit uMorph.
     s.setMoment('00')
-    s.setNuit(1)
     s.setScrub(true)
     s.setPair('logo', reduit ? null : 'pile')
     u.uMorph.value = 0
@@ -82,7 +81,7 @@ export default function Ouverture() {
         end: () => `+=${Math.round(window.innerHeight * (mobile ? 1.2 : 1.5))}`,
         pin: st,
         pinSpacing: true,
-        scrub: 0.6,
+        scrub: true,
         onEnter: () => useScene.getState().setMoment('00'),
         onEnterBack: () => useScene.getState().setMoment('00'),
         onUpdate: (self) => {
@@ -112,7 +111,7 @@ export default function Ouverture() {
   }, [])
 
   return (
-    <section ref={section} className="su-ouv" data-moment="00" aria-labelledby="su-ouv-titre">
+    <section ref={section} className="su-ouv" data-moment="00" data-nuit="1" data-titre="Ouverture" aria-labelledby="su-ouv-titre">
       <div ref={scene} className="su-ouv__scene">
         <div className="su-ouv__grille">
           <div className="su-ouv__logo" {...bind()} role="img" aria-label="Logo Stackup Agency, trois plaques empilées">

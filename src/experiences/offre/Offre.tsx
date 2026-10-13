@@ -9,7 +9,8 @@
 import { useEffect, useRef, useState } from 'react'
 import StackFrame from '@/webgl/StackFrame'
 import { useScene } from '@/webgl/store'
-import { gsap, ScrollTrigger, initGsap } from '@/lib/gsap'
+import { gsap, initGsap } from '@/lib/gsap'
+import { arriverParScroll } from '../arrivee'
 import Action from '@/components/ui/Action'
 import Cadran from '@/components/ui/Cadran'
 import Fiche from '@/components/ui/Fiche'
@@ -24,45 +25,20 @@ export default function Offre() {
   const [visible, setVisible] = useState(false)
   const tabs = useRef<(HTMLButtonElement | null)[]>([])
 
-  // Entrée dans la section : la lumière s'allume, la pile prend la forme de l'offre.
+  // Entrée dans la section : la pile morphe vers la première offre, pilotée par le scroll.
   useEffect(() => {
     initGsap()
     const el = section.current
     if (!el) return
-    const nuit = { v: useScene.getState().nuit }
-    const allumer = (v: number) => {
-      gsap.killTweensOf(nuit)
-      if (useScene.getState().reduced) {
-        nuit.v = v
-        useScene.getState().setNuit(v)
-        return
-      }
-      gsap.to(nuit, { v, duration: 1.1, ease: 'power2.inOut', onUpdate: () => useScene.getState().setNuit(nuit.v) })
-    }
-    const st = ScrollTrigger.create({
-      trigger: el,
-      start: 'top 55%',
-      end: 'bottom 45%',
-      onEnter: () => {
-        useScene.getState().setMoment('02')
-        allumer(0)
-        setVisible(true)
-      },
-      onEnterBack: () => {
-        useScene.getState().setMoment('02')
-        allumer(0)
-        setVisible(true)
-      },
-      onLeaveBack: () => {
-        allumer(1)
-        setVisible(false)
-      },
-      onLeave: () => setVisible(false),
+    const o = OFFRES_SCENE[0]!
+    return arriverParScroll(el, {
+      moment: '02',
+      layout: o.layout,
+      pose: o.pose,
+      projection: o.projection,
+      onPrise: () => setVisible(true),
+      onSortie: () => setVisible(false),
     })
-    return () => {
-      st.kill()
-      gsap.killTweensOf(nuit)
-    }
   }, [])
 
   // La scène suit l'offre active (tween de layout, pas de scrub).
@@ -111,7 +87,7 @@ export default function Offre() {
   const offre = offreDe(o.id)
 
   return (
-    <section ref={section} className="su-off" data-moment="02" id="offre" aria-labelledby="su-off-titre">
+    <section ref={section} className="su-off" data-moment="02" data-nuit="0" data-titre="L’offre" id="offre" aria-labelledby="su-off-titre">
       <div className="su-off__grille">
         <header className="su-off__tete">
           <p className="su-mono su-off__etiquette">02 — L’offre</p>
@@ -139,7 +115,6 @@ export default function Offre() {
                 className="su-plaque su-off__onglet"
                 data-actif={k === actif ? '1' : '0'}
                 onClick={() => choisir(k)}
-                data-curseur="Choisir"
               >
                 <span className="su-mono su-off__num">0{k + 1}</span>
                 <span className="su-off__nom">{of.nom}</span>

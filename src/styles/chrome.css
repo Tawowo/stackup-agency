@@ -316,9 +316,13 @@
 .su-cadran__col {
   display: flex;
   flex-direction: column;
-  transform: translateY(calc(var(--n, 0) * -1em));
+  /* --p : progression de scroll (0 → 1) de la première rotation ; --n : le chiffre. */
+  transform: translateY(calc(var(--n, 0) * var(--p, 0) * -1em));
   transition: transform 900ms var(--su-pose);
   transition-delay: calc(var(--i, 0) * 40ms);
+}
+.su-cadran[data-scrub='1'] .su-cadran__col {
+  transition: none;
 }
 .su-cadran__col > span {
   display: block;
@@ -408,4 +412,111 @@
   .su-footer__legal {
     grid-column: 1 / -1;
   }
+}
+
+/* ───────── Rail de profondeur (accueil, ≥ 1360 px) ─────────
+   Une colonne fine dans la gouttière gauche : une ligne, un cran par moment,
+   le cran actif en ambre avec son numéro au-dessus. Les titres n'apparaissent
+   qu'au survol ou au clavier (en pastille), et en permanence à partir de
+   1680 px, quand la marge hors conteneur les accueille. */
+.su-rail {
+  position: fixed;
+  left: 0;
+  top: 50%;
+  z-index: 40;
+  transform: translateY(-50%);
+  display: none;
+  color: var(--su-texte-doux);
+}
+@media (min-width: 1360px) {
+  .su-rail {
+    display: block;
+  }
+}
+.su-rail__liste {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.su-rail__liste::before {
+  content: '';
+  position: absolute;
+  left: 4px;
+  top: 8px;
+  bottom: 8px;
+  width: 1px;
+  background: color-mix(in srgb, var(--su-graphite) 40%, transparent);
+}
+.su-rail__bouton {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 26px;
+  padding: 0 6px 0 4px;
+  background: none;
+  border: 0;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+  text-align: left;
+}
+.su-rail__cran {
+  width: 9px;
+  height: 2px;
+  flex: none;
+  background: color-mix(in srgb, var(--su-graphite) 60%, transparent);
+  transition: width var(--su-geste) var(--su-pose), background var(--su-geste);
+}
+.su-rail__num {
+  position: absolute;
+  left: 2px;
+  top: -2px;
+  font-size: 0.5625rem;
+  letter-spacing: 0.04em;
+  line-height: 1;
+  color: var(--su-accent-texte);
+  opacity: 0;
+  transition: opacity var(--su-geste);
+}
+.su-rail__titre {
+  position: absolute;
+  left: 26px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: inline-flex;
+  align-items: center;
+  height: 20px;
+  padding: 0 8px;
+  border-radius: 3px;
+  background: color-mix(in srgb, var(--su-fond) 86%, transparent);
+  color: var(--su-texte);
+  font-family: var(--su-font-mono), ui-monospace, monospace;
+  font-size: 0.6875rem;
+  letter-spacing: 0.06em;
+  white-space: nowrap;
+  clip-path: inset(0 100% 0 0);
+  transition: clip-path var(--su-geste) var(--su-pose);
+}
+.su-rail__etage[data-actif='1'] .su-rail__cran {
+  width: 18px;
+  background: var(--su-ambre);
+}
+.su-rail__etage[data-actif='1'] .su-rail__num {
+  opacity: 1;
+}
+.su-rail__bouton:hover .su-rail__titre,
+.su-rail__bouton:focus-visible .su-rail__titre {
+  clip-path: inset(0 0 0 0);
+}
+@media (min-width: 1680px) {
+  .su-rail__etage[data-actif='1'] .su-rail__titre {
+    clip-path: inset(0 0 0 0);
+  }
+}
+.su-rail__bouton:focus-visible {
+  outline: 2px solid var(--su-ambre);
+  outline-offset: -2px;
 }

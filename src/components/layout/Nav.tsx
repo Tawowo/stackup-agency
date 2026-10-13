@@ -55,12 +55,12 @@ export default function Nav() {
   return (
     <header className="su-nav" data-ouvert={ouvert ? '1' : '0'}>
       <div className="su-nav__barre">
-        <Link href="/" className="su-nav__logo" aria-label="Stackup Agency, accueil" data-curseur="Accueil">
+        <Link href="/" className="su-nav__logo" aria-label="Stackup Agency, accueil">
           <LogoMarque taille={34} />
         </Link>
         <nav className="su-nav__entrees" aria-label="Navigation principale">
           {ENTREES.map((e) => (
-            <Link key={e.href} href={e.href} className="su-nav__lien" aria-current={chemin === e.href ? 'page' : undefined} data-curseur="Voir">
+            <Link key={e.href} href={e.href} className="su-nav__lien" aria-current={chemin === e.href ? 'page' : undefined}>
               {e.nom}
             </Link>
           ))}

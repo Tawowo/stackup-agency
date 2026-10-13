@@ -78,7 +78,6 @@ export default function Configurateur({ initiale }: { initiale: Configuration })
                 data-actif={actif ? '1' : '0'}
                 onClick={() => maj({ type: t as IdOffre })}
                 onKeyDown={(ev) => flechesType(ev, k)}
-                data-curseur="Choisir"
               >
                 <span className="su-conf__type-nom">{o.nom}</span>
                 <span className="su-mono su-conf__type-prix">{formatAPartirDe(o)}</span>

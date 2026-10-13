@@ -8,7 +8,8 @@
 import { useEffect, useRef, useState } from 'react'
 import StackFrame from '@/webgl/StackFrame'
 import { useScene } from '@/webgl/store'
-import { gsap, ScrollTrigger, initGsap } from '@/lib/gsap'
+import { ScrollTrigger, initGsap } from '@/lib/gsap'
+import { arriverParScroll } from '../arrivee'
 import { SITE } from '@/config/site'
 import Action from '@/components/ui/Action'
 import Cadran from '@/components/ui/Cadran'
@@ -30,34 +31,19 @@ export default function Prix() {
     initGsap()
     const el = section.current
     if (!el) return
-    const nuit = { v: useScene.getState().nuit }
-    const allumer = (v: number) => {
-      gsap.killTweensOf(nuit)
-      if (useScene.getState().reduced) {
-        nuit.v = v
-        useScene.getState().setNuit(v)
-        return
-      }
-      gsap.to(nuit, { v, duration: 1.1, ease: 'power2.inOut', onUpdate: () => useScene.getState().setNuit(nuit.v) })
-    }
-    const entrer = () => {
-      const s = useScene.getState()
-      s.setMoment('06')
-      allumer(0)
-      if (s.reduced) return
-      s.setScrub(false)
-      s.setTarget(null)
-      s.setPose({ x: 0, y: 0 })
-      s.setProjection(1)
-      s.setLayout('cadran')
-    }
-    const st = ScrollTrigger.create({ trigger: el, start: 'top 55%', end: 'bottom 45%', onEnter: entrer, onEnterBack: entrer, onLeaveBack: () => allumer(1), onLeave: () => allumer(1) })
-    // Les engagements se tracent à l'entrée.
+    const arret = arriverParScroll(el, { moment: '06', layout: 'cadran', pose: { x: 0, y: 0 }, projection: 1, params: { aiguille: 0 } })
+    // Les engagements se tracent avec le scroll (SVG, --su-trace de 0 à 1).
     const traces = el.querySelectorAll<SVGPathElement>('.su-prix__trace')
-    const st2 = ScrollTrigger.create({ trigger: '.su-prix__engagements', start: 'top 85%', onEnter: () => el.dataset.traces = '1' })
     traces.forEach((p) => p.style.setProperty('--len', String(p.getTotalLength())))
+    const st2 = ScrollTrigger.create({
+      trigger: '.su-prix__engagements',
+      start: 'top 90%',
+      end: 'top 55%',
+      scrub: true,
+      onUpdate: (self) => el.style.setProperty('--su-trace', self.progress.toFixed(4)),
+    })
     return () => {
-      st.kill()
+      arret()
       st2.kill()
     }
   }, [])
@@ -70,7 +56,7 @@ export default function Prix() {
   }, [focal, n])
 
   return (
-    <section ref={section} className="su-prix" data-moment="06" id="prix" aria-labelledby="su-prix-titre">
+    <section ref={section} className="su-prix" data-moment="06" data-nuit="0" data-titre="Le juste prix" id="prix" aria-labelledby="su-prix-titre">
       <div className="su-prix__grille">
         <header className="su-prix__tete">
           <p className="su-mono su-prix__etiquette">06 — Le juste prix</p>

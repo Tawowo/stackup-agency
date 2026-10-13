@@ -28,13 +28,13 @@ export default function Action({
   const cls = `su-action su-action--${variante} ${className}`
   if (href) {
     return (
-      <Link href={href} className={cls} data-curseur={mot}>
+      <Link href={href} className={cls}>
         <span className="su-action__texte">{children}</span>
       </Link>
     )
   }
   return (
-    <button type={type ?? 'button'} className={cls} data-curseur={mot} onClick={onClick}>
+    <button type={type ?? 'button'} className={cls} onClick={onClick}>
       <span className="su-action__texte">{children}</span>
     </button>
   )

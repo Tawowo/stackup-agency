@@ -45,13 +45,13 @@ export default function Strates() {
     const split = new SplitText(h2, { type: 'words', wordsClass: 'su-str__mot' })
     const ctx = gsap.context(() => {
       if (!reduit) {
+        // Le titre se déplie mot par mot, piloté par le scroll (réversible).
         gsap.set(split.words, { rotateX: -90, transformOrigin: '50% 100%' })
         gsap.to(split.words, {
           rotateX: 0,
-          duration: 0.62,
           ease: 'power3.out',
-          stagger: 0.07,
-          scrollTrigger: { trigger: h2, start: 'top 85%' },
+          stagger: 0.12,
+          scrollTrigger: { trigger: el, start: 'top 90%', end: 'top 30%', scrub: true },
         })
       }
       // La scène : pile → strates ouvertes (une à une), puis ouvertes → refermées.
@@ -65,7 +65,6 @@ export default function Strates() {
         if (reduit) return
         s.setPose({ x: 0.5, y: -0.22 })
         s.setProjection(0.5)
-        s.setNuit(1)
         s.setScrub(true)
         if (ph === 'ouvre') s.setPair('pile', 'strates', { b: { ouverture: 1 } })
         else s.setPair('strates', 'strates', { a: { ouverture: 1 }, b: { ouverture: 0 } })
@@ -99,7 +98,7 @@ export default function Strates() {
         start: 'top top',
         end: () => `+=${Math.round(window.innerHeight * (mobile ? 1.5 : 2.5))}`,
         pin: st,
-        scrub: 0.6,
+        scrub: true,
         onEnter: (self) => appliquer(self.progress),
         onEnterBack: (self) => appliquer(self.progress),
         onUpdate: (self) => appliquer(self.progress),
@@ -131,7 +130,7 @@ export default function Strates() {
   const choisir = (k: number) => setIsole((cur) => (cur === k ? -1 : k))
 
   return (
-    <section ref={section} className="su-str" data-moment="01" id="strates" aria-labelledby="su-str-titre">
+    <section ref={section} className="su-str" data-moment="01" data-nuit="1" data-titre="Les strates" id="strates" aria-labelledby="su-str-titre">
       <div ref={scene} className="su-str__scene">
         <div className="su-str__grille">
           <header className="su-str__tete">
@@ -146,7 +145,7 @@ export default function Strates() {
           <ol className="su-str__liste" aria-label="Les cinq couches">
             {COUCHES.map((c, k) => (
               <li key={c.num} className="su-str__couche" data-isole={isole === k ? '1' : isole === -1 ? '' : '0'} data-ouverte={p > 0.08 + k * 0.11 ? '1' : '0'}>
-                <button type="button" className="su-str__bouton" aria-pressed={isole === k} onClick={() => choisir(k)} data-curseur="Isoler">
+                <button type="button" className="su-str__bouton" aria-pressed={isole === k} onClick={() => choisir(k)}>
                   <span className="su-mono su-str__num">{c.num}</span>
                   <span className="su-str__nom">{c.nom}</span>
                   <span className="su-str__ligne">{c.ligne}</span>

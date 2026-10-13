@@ -111,16 +111,8 @@
   stroke-linecap: round;
   stroke-linejoin: round;
   stroke-dasharray: var(--len, 100);
-  stroke-dashoffset: var(--len, 100);
-}
-.su-prix[data-traces='1'] .su-prix__trace {
-  animation: su-trace 900ms var(--su-pose) forwards;
-  animation-delay: calc(var(--k, 0) * 150ms);
-}
-@keyframes su-trace {
-  to {
-    stroke-dashoffset: 0;
-  }
+  /* Tracé piloté par le scroll (--su-trace : 0 → 1), le k-ième engagement un peu après le précédent. */
+  stroke-dashoffset: calc(var(--len, 100) * (1 - clamp(0, (var(--su-trace, 0) - var(--k, 0) * 0.18) / 0.6, 1)));
 }
 .su-prix__action {
   grid-column: 9 / span 4;

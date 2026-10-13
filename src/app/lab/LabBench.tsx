@@ -36,6 +36,8 @@ export default function LabBench({ hud = true }: { hud?: boolean }) {
       if (v !== null) p[k] = Number(v)
     }
     if (Object.keys(p).length) s.setParams(p)
+    const dis = q.get('dissolve')
+    if (dis !== null) s.setDissolve(Number(dis))
     const l = q.get('layout') as LayoutName | null
     const m = q.get('morph')
     if (l && LAYOUTS.includes(l) && l !== s.layout) {

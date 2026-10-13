@@ -215,6 +215,13 @@ export function Plates({ count, handleRef }: { count: number; handleRef: React.R
       const d = compute(currentRef.current, st.pairParams.b)
       write(geometry, 'B', d)
       h.murB = d.mur
+      h.solB = basDe(d)
+      if (!st.target) {
+        // Sans cible, la forme visible est A (morph 0) : on l'écrit aussi.
+        write(geometry, 'A', d)
+        h.murA = d.mur
+        h.solA = h.solB
+      }
     })
     return () => {
       unsub()

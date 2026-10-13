@@ -42,11 +42,11 @@
 .su-ate__titre {
   margin: 0;
   font-size: clamp(2.4rem, 5vw, 4.8rem);
-  color: var(--su-ivoire);
+  color: var(--su-texte);
 }
 .su-ate__role {
   margin: 10px 0 28px;
-  color: var(--su-ambre-clair);
+  color: var(--su-accent-texte);
 }
 .su-ate__paragraphes {
   display: flex;
@@ -88,14 +88,14 @@
 .su-acc__q::after {
   content: '+';
   margin-left: auto;
-  color: var(--su-ambre-clair);
+  color: var(--su-accent-texte);
   font-weight: 400;
 }
 .su-acc__item[open] .su-acc__q::after {
   content: '−';
 }
 .su-acc__num {
-  color: var(--su-ambre-clair);
+  color: var(--su-accent-texte);
 }
 .su-acc__r {
   margin: 0;

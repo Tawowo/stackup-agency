@@ -10,7 +10,8 @@ import { useEffect, useRef, useState } from 'react'
 import StackFrame from '@/webgl/StackFrame'
 import { stackUniforms } from '@/webgl/engine'
 import { useScene } from '@/webgl/store'
-import { gsap, ScrollTrigger, initGsap } from '@/lib/gsap'
+import { ScrollTrigger, initGsap } from '@/lib/gsap'
+import { arriverParScroll } from '../arrivee'
 import './methode.css'
 
 export const ETAPES = [
@@ -29,47 +30,42 @@ export default function Methode() {
     initGsap()
     const el = section.current
     if (!el) return
-    const nuit = { v: useScene.getState().nuit }
-    const eteindre = (v: number) => {
-      gsap.killTweensOf(nuit)
-      if (useScene.getState().reduced) {
-        nuit.v = v
-        useScene.getState().setNuit(v)
-        return
-      }
-      gsap.to(nuit, { v, duration: 1.1, ease: 'power2.inOut', onUpdate: () => useScene.getState().setNuit(nuit.v) })
-    }
-    let courante = 0
-    const aller = (k: number) => {
-      const s = useScene.getState()
-      s.setMoment('07')
-      eteindre(1)
-      if (courante === k && s.layout === 'methode') return
-      const de = courante
-      courante = k
-      setEtape(k)
-      if (s.reduced) return
-      s.setScrub(true)
-      s.setPose({ x: 0.08, y: -0.25 })
-      s.setProjection(0.4)
-      const u = stackUniforms()
-      s.setPair('methode', 'methode', { a: { etape: de }, b: { etape: k } })
-      u.uMorph.value = 0
-      gsap.killTweensOf(u.uMorph)
-      gsap.to(u.uMorph, { value: 1, duration: 1.1, ease: 'power2.inOut' })
-    }
-    const triggers = Array.from(el.querySelectorAll<HTMLElement>('.su-met__etape')).map((e, k) =>
-      ScrollTrigger.create({ trigger: e, start: 'top 78%', onEnter: () => aller(k + 1), onEnterBack: () => aller(k + 1) }),
-    )
-    const st = ScrollTrigger.create({ trigger: el, start: 'top 55%', onEnter: () => aller(Math.max(courante, 1)), onEnterBack: () => aller(5) })
+    const u = stackUniforms()
+    // Arrivée : la jauge devient la structure de la page (étape 1), pilotée par le scroll.
+    const arret = arriverParScroll(el, { moment: '07', layout: 'methode', pose: { x: 0.08, y: -0.25 }, projection: 0.4, params: { etape: 1 } })
+    // Puis les étapes 2 à 5 s'assemblent, une par tranche de scroll, à l'identique à la remontée.
+    let paire = -1
+    const etapes = el.querySelectorAll<HTMLElement>('.su-met__etape')
+    const st = ScrollTrigger.create({
+      trigger: etapes[1] ?? el,
+      start: 'top 80%',
+      endTrigger: etapes[etapes.length - 1] ?? el,
+      end: 'top 45%',
+      scrub: true,
+      onUpdate: (self) => {
+        const s = useScene.getState()
+        if (s.moment !== '07') return
+        const e = 1 + self.progress * 4
+        const k = Math.min(4, Math.floor(e))
+        const t = e - k
+        setEtape(Math.round(e))
+        if (s.reduced) return
+        if (k !== paire) {
+          paire = k
+          s.setScrub(true)
+          s.setPair('methode', 'methode', { a: { etape: k }, b: { etape: k + 1 } })
+        }
+        u.uMorph.value = t * t * (3 - 2 * t)
+      },
+    })
     return () => {
-      triggers.forEach((t) => t.kill())
+      arret()
       st.kill()
     }
   }, [])
 
   return (
-    <section ref={section} className="su-met" data-moment="07" id="methode" aria-labelledby="su-met-titre">
+    <section ref={section} className="su-met" data-moment="07" data-nuit="1" data-titre="La méthode" id="methode" aria-labelledby="su-met-titre">
       <div className="su-met__grille">
         <header className="su-met__tete">
           <p className="su-mono su-met__etiquette">07 — La méthode</p>
