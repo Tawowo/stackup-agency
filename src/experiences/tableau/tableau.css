@@ -54,6 +54,7 @@
   font-weight: 600;
   font-size: 1.0625rem;
   color: var(--su-navy);
+  background: var(--su-ivoire-creuse);
   cursor: grab;
   touch-action: none;
   user-select: none;
@@ -272,8 +273,11 @@
 @media (max-width: 1023px) {
   .su-tab__palette {
     grid-column: 1 / -1;
-    flex-direction: row;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .su-tab__bloc {
+    width: 100%;
   }
   .su-tab__plan,
   .su-tab__bilan {

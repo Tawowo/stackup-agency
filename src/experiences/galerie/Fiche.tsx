@@ -10,7 +10,7 @@ import { useEffect, useRef } from 'react'
 import Link from 'next/link'
 import StackFrame from '@/webgl/StackFrame'
 import { useScene } from '@/webgl/store'
-import { initGsap } from '@/lib/gsap'
+import { gsap, initGsap } from '@/lib/gsap'
 import Action from '@/components/ui/Action'
 import Fiche2 from '@/components/ui/Fiche'
 import type { Projet } from './projets'
@@ -30,11 +30,19 @@ export default function Fiche({ projet: p, suivant }: { projet: Projet; suivant:
     s.setProjection(0.15)
     s.setPose({ x: 0.04, y: -0.06 })
     if (!s.reduced) s.setLayout('pellicule')
-    // L'élément partagé de la galerie s'efface quand la capture est là.
+    // L'élément partagé de la galerie finit sa course sur la capture réelle
+    // (recalage FLIP), puis s'efface : la capture prend le relais sans saut.
     const img = capture.current
-    const retirer = () => document.querySelectorAll('.su-gal__partage').forEach((e) => e.remove())
-    if (img?.complete) retirer()
-    else img?.addEventListener('load', retirer, { once: true })
+    const partage = document.querySelector<HTMLElement>('.su-gal__partage')
+    const retirer = () => {
+      document.querySelectorAll('.su-gal__partage').forEach((e) => e.remove())
+      if (img) img.style.visibility = ''
+    }
+    if (partage && img) {
+      img.style.visibility = 'hidden'
+      const r = img.getBoundingClientRect()
+      gsap.to(partage, { left: r.left, top: r.top, width: r.width, height: r.height, duration: s.reduced ? 0 : 0.45, ease: 'power3.inOut', onComplete: () => (img.complete ? retirer() : img.addEventListener('load', retirer, { once: true })) })
+    }
     const filet = setTimeout(retirer, 1500)
     return () => {
       clearTimeout(filet)

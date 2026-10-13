@@ -101,6 +101,14 @@ export async function capturer({ route, dossier, etats }, browser, filtreEtat) {
           // L'état qu'un visiteur à 60 i/s verrait : la simulation avance sans rendre.
           if (etat.depuis === undefined) await page.evaluate(() => window.__suSettle?.(150))
         }
+        if (etat.scrollY !== undefined) {
+          await page.evaluate((y) => {
+            window.__suLenis?.scrollTo(y, { immediate: true })
+            window.scrollTo(0, y)
+          }, etat.scrollY)
+          await page.waitForTimeout(900)
+          await page.evaluate(() => window.__suSettle?.(150))
+        }
         if (etat.piste !== undefined && taille.mobile) {
           await page.evaluate((k) => {
             const piste = document.querySelector('.su-pel__piste')
@@ -122,6 +130,12 @@ export async function capturer({ route, dossier, etats }, browser, filtreEtat) {
           await page.evaluate(() => window.__suSettle?.(90))
         }
         const settleApres = !!etat.action && etat.action !== 'torche' && etat.action !== 'clic-plaque' && etat.nom !== '02-transition'
+        if (etat.action === 'tab-poser') {
+          // Pose deux modules au tap (planning, rendez-vous) : connexions et graphiques.
+          for (const nom of ['Rendez-vous', 'Planning', 'Stocks']) await page.locator('.su-tab__bloc', { hasText: nom }).first().click()
+        }
+        if (etat.action === 'regle') await page.locator('.su-fso__curseur input').fill('3')
+        if (etat.action === 'lampe') await page.locator('.su-atn__interrupteur').click()
         if (etat.action === 'touche3') await page.keyboard.press('3')
         if (etat.action?.startsWith('noeud')) await page.locator('.su-mac__noeud').nth(Number(etat.action.slice(5)) - 1).click()
         if (etat.action === 'focus-offre2') await page.locator('.su-prix__offre').nth(1).focus()

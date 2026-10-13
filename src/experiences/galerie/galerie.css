@@ -107,6 +107,18 @@
   max-width: var(--su-conteneur-scene);
   margin: 0 auto;
   padding: 14svh var(--su-gouttiere) 12svh;
+  position: relative;
+  z-index: 1;
+  isolation: isolate;
+}
+/* Le hall reste derrière : la liste se pose sur un sol d'encre qui monte en dégradé
+   (les écrans ne traversent jamais les vignettes). */
+.su-gal__liste::before {
+  content: '';
+  position: absolute;
+  inset: 0 -100vw;
+  z-index: -1;
+  background: linear-gradient(to bottom, transparent, var(--su-encre) 12svh);
 }
 .su-gal__liste-titre {
   margin: 0 0 32px;

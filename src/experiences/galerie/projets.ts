@@ -24,7 +24,11 @@ type Brut = (typeof realisations)[number] & {
   demoAccess?: { password?: string; note?: string }
 }
 
-export const PROJETS: Projet[] = (realisations as Brut[]).map((r) => ({
+// Le hall s'ouvre sur la démo la plus lumineuse (la boulangerie) ; l'ordre des autres est conservé.
+const OUVERTURE = 'au-pain-dore'
+const ordonnees = [...(realisations as Brut[])].sort((a, b) => Number(b.slug === OUVERTURE) - Number(a.slug === OUVERTURE))
+
+export const PROJETS: Projet[] = ordonnees.map((r) => ({
   slug: r.slug,
   nom: r.nom,
   type: r.type,

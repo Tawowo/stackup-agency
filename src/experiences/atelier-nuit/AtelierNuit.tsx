@@ -60,10 +60,13 @@ export default function AtelierNuit() {
           const q = reduit ? 1 : self.progress
           setP(q)
           if (useScene.getState().moment !== 'atelier-nuit') return
-          // 0 → 0,45 : le cadre se construit ; 0 → 1 : la caméra s'approche.
-          u.uMorph.value = Math.min(1, q / 0.45)
-          useScene.getState().setParams({ approche: reduit ? 0 : q })
-          useScene.getState().setPose({ x: 0.1 - 0.06 * q, y: -0.18 + 0.14 * q })
+          // 0 → 0,45 : le cadre se construit en se tournant face à vous ; ensuite on
+          // s'approche : la figure entière (cadre 3D + photo) grandit d'un bloc, le
+          // cadre ne quitte jamais la photo (pas de travelling caméra ici).
+          const m = Math.min(1, q / 0.45)
+          u.uMorph.value = m
+          const f = 1 - m * m * (3 - 2 * m)
+          useScene.getState().setPose({ x: 0.1 * f, y: -0.18 * f })
         },
       })
     }, el)
@@ -102,7 +105,7 @@ export default function AtelierNuit() {
                 {lampe ? 'Éteindre la pièce, garder la lampe' : 'Rallumer la pièce'}
               </button>
             </header>
-            <figure className="su-atn__portrait" style={{ '--revele': revele.toFixed(3) } as React.CSSProperties}>
+            <figure className="su-atn__portrait" style={{ '--revele': revele.toFixed(3), '--approche': Math.max(0, (p - 0.45) / 0.55).toFixed(3) } as React.CSSProperties}>
               <div className="su-atn__cadre-zone" aria-hidden="true">
                 <StackFrame className="su-atn__cadre" />
               </div>

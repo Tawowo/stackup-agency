@@ -1,13 +1,15 @@
 'use client'
 /**
  * CADRAN — un chiffre à roues : chaque chiffre est une colonne 0-9 qui tourne
- * jusqu'à la bonne valeur. La première rotation est PILOTÉE PAR LE SCROLL
- * (`--p` de 0 à 1 quand le cadran entre dans le viewport, réversible) ; un
- * changement de valeur ensuite (configurateur) tourne en 900 ms. Le texte
- * réel est présent pour les lecteurs d'écran et sans JS.
+ * jusqu'à la bonne valeur. La rotation part quand le cadran entre dans le
+ * viewport et tourne d'une traite (900 ms) : un prix n'est JAMAIS figé sur une
+ * valeur intermédiaire quand le scroll s'arrête. Revenir au-dessus le remet à
+ * zéro (il retournera à la prochaine entrée). Un changement de valeur ensuite
+ * (configurateur) tourne en 900 ms. Le texte réel est présent pour les
+ * lecteurs d'écran et sans JS.
  */
 import { useEffect, useRef } from 'react'
-import { ScrollTrigger, initGsap } from '@/lib/gsap'
+import { gsap, ScrollTrigger, initGsap } from '@/lib/gsap'
 
 const COLONNE = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
 
@@ -23,17 +25,28 @@ export default function Cadran({ valeur, prefixe = '', suffixe = '', className =
       el.dataset.scrub = '0'
       return
     }
+    const etat = { p: 0 }
+    const poser = () => {
+      el.style.setProperty('--p', etat.p.toFixed(4))
+      el.dataset.scrub = etat.p >= 1 ? '0' : '1'
+    }
+    poser()
+    const tourner = () => gsap.to(etat, { p: 1, duration: 0.9, ease: 'power3.out', overwrite: true, onUpdate: poser })
     const st = ScrollTrigger.create({
       trigger: el,
-      start: 'top 100%',
-      end: 'top 80%',
-      scrub: true,
-      onUpdate: (self) => {
-        el.style.setProperty('--p', self.progress.toFixed(4))
-        el.dataset.scrub = self.progress >= 1 ? '0' : '1'
+      start: 'top 96%',
+      onEnter: () => tourner(),
+      onEnterBack: () => tourner(),
+      onLeaveBack: () => {
+        gsap.killTweensOf(etat)
+        etat.p = 0
+        poser()
       },
     })
-    return () => st.kill()
+    return () => {
+      st.kill()
+      gsap.killTweensOf(etat)
+    }
   }, [])
   return (
     <span ref={ref} className={`su-cadran su-tabular ${className}`} data-scrub="1" aria-label={`${prefixe}${texte}${suffixe}`.trim()}>

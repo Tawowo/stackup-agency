@@ -1,0 +1,223 @@
+/* LECTURE — /blog/[slug]. Colonne de 68 caractères, sur ivoire. */
+.su-lec__tete-grille {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 132px var(--su-gouttiere) 56px;
+}
+.su-lec__ariane {
+  display: flex;
+  gap: 8px;
+  color: var(--su-texte-doux);
+  margin-bottom: 20px;
+}
+.su-lec__ariane a {
+  color: inherit;
+}
+.su-lec__titre {
+  margin: 0;
+  font-size: clamp(2.2rem, 4.8vw, 4.2rem);
+  line-height: 1.02;
+  max-width: 24ch;
+}
+.su-lec__chapo {
+  margin: 22px 0 0;
+  max-width: 62ch;
+  font-size: 1.25rem;
+  color: var(--su-texte-doux);
+}
+.su-lec__meta {
+  margin: 22px 0 0;
+  color: var(--su-ambre-clair);
+  font-size: 0.75rem;
+}
+.su-lec__grille {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 56px var(--su-gouttiere) 0;
+  display: grid;
+  grid-template-columns: 260px minmax(0, 1fr);
+  column-gap: 56px;
+}
+.su-lec__marge {
+  position: relative;
+}
+.su-lec__pile {
+  position: sticky;
+  top: 96px;
+  height: 200px;
+  pointer-events: none;
+}
+.su-lec__cadre {
+  width: 70%;
+  height: 100%;
+}
+.su-lec__sommaire {
+  position: sticky;
+  top: 316px;
+  font-size: 0.875rem;
+}
+.su-lec__sommaire .su-mono {
+  color: var(--su-texte-doux);
+  font-size: 0.75rem;
+  margin: 0 0 10px;
+}
+.su-lec__sommaire ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-height: calc(100svh - 360px);
+  overflow: auto;
+}
+.su-lec__sommaire a {
+  color: var(--su-texte-doux);
+  text-decoration: none;
+  display: block;
+  padding-left: 10px;
+  border-left: 2px solid transparent;
+  line-height: 1.35;
+}
+.su-lec__sommaire a[aria-current='true'] {
+  color: var(--su-texte);
+  border-left-color: var(--su-ambre);
+}
+.su-prose {
+  max-width: 68ch;
+  font-size: 1.125rem;
+  line-height: 1.7;
+}
+.su-prose > * + * {
+  margin-top: 1.1em;
+}
+.su-prose h2 {
+  margin-top: 2.2em;
+  font-family: var(--su-font-display), sans-serif;
+  font-size: clamp(1.6rem, 2.4vw, 2rem);
+  line-height: 1.15;
+  scroll-margin-top: 100px;
+}
+.su-prose h3 {
+  margin-top: 1.8em;
+  font-family: var(--su-font-display), sans-serif;
+  font-size: 1.3rem;
+}
+.su-prose a {
+  color: var(--su-ambre-texte);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+.su-prose strong {
+  color: var(--su-texte);
+}
+.su-prose ul,
+.su-prose ol {
+  padding-left: 1.3em;
+}
+.su-prose li + li {
+  margin-top: 0.4em;
+}
+.su-prose li::marker {
+  color: var(--su-ambre-texte);
+}
+.su-prose blockquote {
+  margin-left: 0;
+  padding: 4px 0 4px 20px;
+  border-left: 3px solid var(--su-ambre);
+  font-style: italic;
+}
+.su-prose table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9375rem;
+}
+.su-prose th,
+.su-prose td {
+  padding: 8px 10px;
+  border-bottom: 1px solid color-mix(in srgb, var(--su-graphite) 30%, transparent);
+  text-align: left;
+}
+.su-prose code {
+  font-family: var(--su-font-mono), monospace;
+  font-size: 0.9em;
+  background: var(--su-ivoire-creuse);
+  padding: 1px 5px;
+  border-radius: 3px;
+}
+.su-prose hr {
+  border: 0;
+  border-top: 1px solid color-mix(in srgb, var(--su-graphite) 30%, transparent);
+}
+.su-lec__cta {
+  margin: 56px 0 0;
+  max-width: 68ch;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+}
+.su-lec__cta .su-display {
+  margin: 0;
+  font-size: 1.6rem;
+  line-height: 1.1;
+}
+.su-lec__cta p {
+  margin: 0;
+}
+.su-lec__lies {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 72px var(--su-gouttiere) 14svh;
+}
+.su-lec__lies .su-mono {
+  color: var(--su-texte-doux);
+}
+.su-lec__lies ul {
+  list-style: none;
+  margin: 12px 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--su-gouttiere);
+}
+.su-lec__lies a {
+  display: block;
+  padding-top: 14px;
+  border-top: 2px solid var(--su-navy);
+  color: inherit;
+  text-decoration: none;
+  font-family: var(--su-font-display), sans-serif;
+  font-weight: 600;
+  font-size: 1.15rem;
+  line-height: 1.25;
+}
+.su-lec__lies a:hover {
+  color: var(--su-ambre-texte);
+}
+@media (max-width: 900px) {
+  .su-lec__grille {
+    grid-template-columns: 1fr;
+  }
+  /* Mobile : la pile s'imprime en tête d'article (pas de marge collante qui
+     passerait sur le texte) ; le sommaire reste dans le flux de l'article. */
+  .su-lec__pile {
+    position: relative;
+    top: 0;
+    height: 120px;
+    margin-bottom: 8px;
+  }
+  .su-lec__cadre {
+    width: 40%;
+  }
+  .su-lec__sommaire {
+    display: none;
+  }
+  .su-lec__lies ul {
+    grid-template-columns: 1fr;
+  }
+  .su-lec__tete-grille {
+    padding-top: 100px;
+  }
+}

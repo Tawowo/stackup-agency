@@ -208,6 +208,14 @@
   }
   .su-cmp__code pre {
     font-size: 0.66rem;
+    overflow-x: hidden;
+  }
+  /* Mobile : la ligne trop longue se replie (retrait suspendu), rien ne sort du cadre. */
+  .su-cmp__l {
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    padding-left: 2ch;
+    text-indent: -2ch;
   }
   .su-cmp__offre {
     grid-row: 4;

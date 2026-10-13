@@ -27,7 +27,11 @@ export default function Lumiere() {
       }))
       actif = items.length > 0
       premiere = items[0]?.nuit ?? 1
-      bornes = items.slice(1).map((it) => ({ y: it.top, apres: it.nuit }))
+      // Une frontière trop proche du bas de page (dernière section courte) est avancée :
+      // la bascule doit être complète au scroll maximal, jamais figée à mi-chemin.
+      const H = window.innerHeight
+      const max = document.documentElement.scrollHeight - H
+      bornes = items.slice(1).map((it) => ({ y: Math.min(it.top, max + 0.28 * H), apres: it.nuit }))
       entrees = Array.from(document.querySelectorAll<HTMLElement>('[data-moment]'))
         .map((el) => ({ y: el.getBoundingClientRect().top + window.scrollY, mot: MOT_DU_MOMENT[el.dataset.moment ?? ''] ?? 0 }))
         .filter((e) => e.mot > 0)

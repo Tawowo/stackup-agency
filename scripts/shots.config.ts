@@ -8,12 +8,14 @@ export interface Etat {
   /** Paramètres d'URL ajoutés à la route. */
   query?: string
   /** Geste à exécuter avant la capture. */
-  action?: 'drag' | 'menu' | 'touche3' | 'onglet2' | 'onglet3' | 'onglet4' | 'noeud2' | 'noeud7' | 'focus-offre2' | 'conf-type' | 'conf-fonctions' | 'conf-options' | 'ctc-vide' | 'ctc-remplir' | 'torche' | 'clic-plaque'
+  action?: 'drag' | 'menu' | 'touche3' | 'onglet2' | 'onglet3' | 'onglet4' | 'noeud2' | 'noeud7' | 'focus-offre2' | 'conf-type' | 'conf-fonctions' | 'conf-options' | 'ctc-vide' | 'ctc-remplir' | 'torche' | 'clic-plaque' | 'tab-poser' | 'regle' | 'lampe'
   /** Limiter à certaines largeurs (par défaut : 1440 et 390). */
   largeurs?: number[]
   /** Position de scroll, en fraction de la distance épinglée du moment visé (par défaut 00). */
   scroll?: number
   moment?: string
+  /** Défilement absolu en pixels (pages sans moment épinglé). */
+  scrollY?: number
   /** Position de départ (même moment) avant d'aller à `scroll` : capture un état intermédiaire. */
   depuis?: number
   /** Approche : fraction de la hauteur du viewport AVANT le haut du moment (0,3 = il reste 70 % à monter). */
@@ -121,6 +123,69 @@ export const ROUTES: Route[] = [
     ],
   },
   {
+    route: '/realisations',
+    dossier: 'realisations',
+    etats: [
+      { nom: 'intro', query: QUALITE, attente: 1800 },
+      { nom: 'hall-p0', query: QUALITE, moment: 'galerie', scroll: 0.01, attente: 2000 },
+      { nom: 'hall-p05', query: QUALITE, moment: 'galerie', scroll: 0.5, attente: 2000, sansRm: true },
+      { nom: 'hall-p1', query: QUALITE, moment: 'galerie', scroll: 1, attente: 2000, sansRm: true },
+      { nom: 'liste', query: QUALITE, moment: 'galerie-liste', scroll: 0, attente: 1400, sansRm: true },
+    ],
+  },
+  {
+    route: '/realisations/au-pain-dore',
+    dossier: 'realisations',
+    etats: [{ nom: 'fiche', query: QUALITE, attente: 2200 }],
+  },
+  {
+    route: '/services',
+    dossier: 'services',
+    etats: [
+      { nom: 'intro', query: QUALITE, attente: 1800 },
+      { nom: 'vitrine-p02', query: QUALITE, moment: 'compil-0', scroll: 0.2, attente: 1600, sansRm: true },
+      { nom: 'vitrine-p06', query: QUALITE, moment: 'compil-0', scroll: 0.6, attente: 1600, sansRm: true },
+      { nom: 'vitrine-p1', query: QUALITE, moment: 'compil-0', scroll: 1, attente: 1600 },
+      { nom: 'boutique-p05', query: QUALITE, moment: 'compil-2', scroll: 0.5, attente: 1600, sansRm: true },
+      { nom: 'outil-p1', query: QUALITE, moment: 'compil-3', scroll: 1, attente: 1600, sansRm: true },
+      { nom: 'fin', query: QUALITE, moment: 'services-fin', scroll: 0, attente: 1400, sansRm: true },
+    ],
+  },
+  {
+    route: '/services/site-ecommerce',
+    dossier: 'services',
+    etats: [{ nom: 'fiche-ecommerce', query: QUALITE, attente: 2600 }],
+  },
+  {
+    route: '/solutions',
+    dossier: 'solutions',
+    etats: [
+      { nom: 'tableau', query: QUALITE, attente: 2200 },
+      { nom: 'tableau-pose', query: QUALITE, action: 'tab-poser', attente: 1800, sansRm: true },
+      { nom: 'catalogue', query: QUALITE, moment: 'solutions-catalogue', scroll: 0, attente: 1400, sansRm: true },
+    ],
+  },
+  {
+    route: '/solutions/prise-rendez-vous-en-ligne',
+    dossier: 'solutions',
+    etats: [
+      { nom: 'fiche', query: QUALITE, attente: 2200 },
+      { nom: 'fiche-regle', query: QUALITE, action: 'regle', attente: 1400, sansRm: true },
+    ],
+  },
+  {
+    route: '/a-propos',
+    dossier: 'a-propos',
+    etats: [
+      { nom: 'p0', query: QUALITE, moment: 'atelier-nuit', scroll: 0, attente: 2000 },
+      { nom: 'p04', query: QUALITE, moment: 'atelier-nuit', scroll: 0.4, attente: 1600, sansRm: true },
+      { nom: 'p07', query: QUALITE, moment: 'atelier-nuit', scroll: 0.7, attente: 1600, sansRm: true },
+      { nom: 'p1', query: QUALITE, moment: 'atelier-nuit', scroll: 1, attente: 1600 },
+      { nom: 'lampe', query: QUALITE, moment: 'atelier-nuit', scroll: 1, action: 'lampe', attente: 1600, sansRm: true },
+      { nom: 'recit', query: QUALITE, moment: 'atelier-recit', scroll: 0, attente: 1400, sansRm: true },
+    ],
+  },
+  {
     route: '/tarifs',
     dossier: 'tarifs',
     etats: [
@@ -152,6 +217,36 @@ export const ROUTES: Route[] = [
     etats: [
       { nom: 'email-demande', query: '', attente: 300, sansRm: true, largeurs: [1440] },
       { nom: 'email-accuse', query: 'quel=accuse', attente: 300, sansRm: true, largeurs: [1440] },
+    ],
+  },
+  ...([
+    ['/agence-web/tours', 'loc-ville'],
+    ['/agence-web/departement/indre-et-loire', 'loc-dep'],
+    ['/creation-site-internet/plombier', 'loc-metier'],
+    ['/services-locaux/creation-site-restaurant', 'loc-service'],
+    ['/zones-intervention', 'loc-zones'],
+  ] as [string, string][]).map(([route, m]): Route => ({
+    route,
+    dossier: 'locales',
+    etats: [
+      { nom: route.split('/').filter(Boolean).join('_') + '-hero', query: QUALITE, attente: 2000 },
+      { nom: route.split('/').filter(Boolean).join('_') + '-corps', query: QUALITE, moment: `${m}-corps`, scroll: 0, attente: 1400, sansRm: true },
+    ],
+  })),
+  {
+    route: '/blog',
+    dossier: 'blog',
+    etats: [
+      { nom: 'kiosque', query: QUALITE, attente: 2000 },
+      { nom: 'liste', query: QUALITE, scrollY: 1400, attente: 1200, sansRm: true },
+    ],
+  },
+  {
+    route: '/blog/10-erreurs-seo-site-web',
+    dossier: 'blog',
+    etats: [
+      { nom: 'article', query: QUALITE, attente: 2000 },
+      { nom: 'article-milieu', query: QUALITE, scrollY: 2600, attente: 1400, sansRm: true },
     ],
   },
 ]

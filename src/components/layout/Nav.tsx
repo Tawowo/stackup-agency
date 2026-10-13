@@ -52,8 +52,20 @@ export default function Nav() {
     return () => document.removeEventListener('keydown', key)
   }, [ouvert])
 
+  // Dès qu'on a quitté le haut de page, la barre pose un voile du fond courant
+  // derrière elle : le texte qui défile ne passe jamais sous le logo ni le menu.
+  const nav = useRef<HTMLElement>(null)
+  useEffect(() => {
+    const el = nav.current
+    if (!el) return
+    const lire = () => (el.dataset.defile = window.scrollY > 40 ? '1' : '0')
+    lire()
+    window.addEventListener('scroll', lire, { passive: true })
+    return () => window.removeEventListener('scroll', lire)
+  }, [chemin])
+
   return (
-    <header className="su-nav" data-ouvert={ouvert ? '1' : '0'}>
+    <header ref={nav} className="su-nav" data-ouvert={ouvert ? '1' : '0'}>
       <div className="su-nav__barre">
         <Link href="/" className="su-nav__logo su-logo-plaque" aria-label="Stackup Agency, accueil">
           <LogoMarque taille={34} />

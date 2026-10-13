@@ -20,7 +20,8 @@ import './galerie.css'
 export function rectFiche() {
   const W = window.innerWidth
   const l = Math.min(1200, W - 48)
-  return { x: (W - l) / 2, y: W < 768 ? 150 : 190, w: l, h: l * (558 / 1200) }
+  // Place approximative : la fiche recale l'image sur sa capture réelle à l'arrivée.
+  return { x: (W - l) / 2, y: W < 768 ? 300 : 380, w: l, h: l * (558 / 1200) }
 }
 
 export default function Hall() {
@@ -39,7 +40,7 @@ export default function Hall() {
     const s = useScene.getState()
     s.setMoment('galerie')
     s.setMonde('galerie')
-    s.setTravel(0)
+    s.setTravel(-1)
     s.setNuit(1)
     s.setScrub(false)
     s.setPair('logo', null)
@@ -47,6 +48,14 @@ export default function Hall() {
     s.setPose({ x: 0, y: 0 })
     const reduit = s.reduced
     const ctx = gsap.context(() => {
+      // L'intro défile : le hall s'avance depuis le fond (travel −1 → 0).
+      ScrollTrigger.create({
+        trigger: el,
+        start: 'top bottom',
+        end: 'top top',
+        scrub: true,
+        onUpdate: (self) => useScene.getState().setTravel(self.progress - 1),
+      })
       ScrollTrigger.create({
         trigger: el,
         start: 'top top',

@@ -174,8 +174,15 @@ export default function Galerie({ projets }: { projets: ProjetGalerie[] }) {
     const s = useScene.getState()
     const r = racine.current
     if (!r) return
-    const avance = s.travel * (n - 1) * ESPACEMENT
-    r.position.set(0, 0, avance)
+    // travel < 0 : l'introduction — le hall attend au fond et à droite, hors du titre,
+    // et s'avance à mesure que l'intro défile (−1 → 0).
+    const intro = Math.min(1, Math.max(0, -s.travel))
+    const avance = Math.max(0, s.travel) * (n - 1) * ESPACEMENT
+    const ii = intro * intro * (3 - 2 * intro)
+    // Mobile : le hall à l'échelle 0,56 (l'écran tient dans la largeur) ; z local inchangé.
+    const ech = mobile ? 0.56 : 1
+    r.scale.setScalar(ech)
+    r.position.set(ii * (mobile ? 9 : 8), mobile ? 0.5 : 0, avance * ech - ii * 5)
     const ptr = (window as unknown as { __suPointer?: { px: { x: number; y: number; active: boolean } } }).__suPointer?.px
     const nx = ptr?.active ? (ptr.x / size.width) * 2 - 1 : 0
     const ny = ptr?.active ? (ptr.y / size.height) * 2 - 1 : 0
@@ -197,7 +204,7 @@ export default function Galerie({ projets }: { projets: ProjetGalerie[] }) {
       g.rotation.set(-ny * 0.12 * face, (k % 2 === 0 ? -0.32 : 0.32) * (1 - face) + nx * 0.22 * face, 0)
       g.visible = z < 7
     })
-    vivants.current.sol.uniforms.uTravel!.value = s.travel
+    vivants.current.sol.uniforms.uTravel!.value = Math.max(0, s.travel)
   })
 
   const clic = (k: number) => (e: ThreeEvent<MouseEvent>) => {

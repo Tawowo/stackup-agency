@@ -81,6 +81,8 @@
   max-height: 76svh;
   justify-self: center;
   width: 100%;
+  transform: scale(calc(1 + 0.16 * var(--approche, 0)));
+  transform-origin: 50% 45%;
 }
 .su-atn__cadre-zone {
   position: absolute;

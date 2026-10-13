@@ -17,6 +17,18 @@
   z-index: 50;
   color: var(--su-texte);
 }
+.su-nav::before {
+  content: '';
+  position: absolute;
+  inset: 0 0 -28px 0;
+  pointer-events: none;
+  background: linear-gradient(to bottom, var(--su-fond) 0%, color-mix(in srgb, var(--su-fond) 88%, transparent) 62%, transparent 100%);
+  opacity: 0;
+  transition: opacity var(--su-geste);
+}
+.su-nav[data-defile='1']::before {
+  opacity: 1;
+}
 .su-nav__barre {
   position: relative;
   z-index: 1;

@@ -1,0 +1,277 @@
+/* LE GABARIT SIGNÉ — pages locales */
+.su-loc__hero-grille {
+  max-width: var(--su-conteneur-scene);
+  margin: 0 auto;
+  min-height: 86svh;
+  padding: 120px var(--su-gouttiere) 56px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: var(--su-gouttiere);
+  align-items: end;
+}
+.su-loc__texte {
+  grid-column: 1 / span 7;
+}
+.su-loc__ariane {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  color: var(--su-texte-doux);
+  margin-bottom: 16px;
+  font-size: 0.75rem;
+}
+.su-loc__ariane a {
+  color: inherit;
+}
+.su-loc__etiquette {
+  margin: 0 0 10px;
+  color: var(--su-ambre-clair);
+}
+.su-loc__titre {
+  margin: 0;
+  font-size: clamp(2.4rem, 5.4vw, 5rem);
+  max-width: 18ch;
+}
+.su-loc__intro {
+  margin: 20px 0 0;
+  max-width: 60ch;
+  font-size: 1.125rem;
+  color: var(--su-texte-doux);
+}
+.su-loc__actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 26px;
+}
+.su-loc__scene {
+  grid-column: 8 / span 5;
+  align-self: end;
+  position: relative;
+  pointer-events: none;
+  padding-bottom: 30px;
+}
+.su-loc__cadre {
+  width: 100%;
+  height: 58svh;
+}
+/* Le repère : une cote d'atelier sous la pile, signature du gabarit. */
+.su-loc__repere {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding-top: 8px;
+  border-top: 1px solid color-mix(in srgb, var(--su-ambre) 60%, transparent);
+  color: var(--su-texte-doux);
+  font-size: 0.6875rem;
+  text-align: center;
+}
+.su-loc__corps {
+  max-width: var(--su-conteneur-scene);
+  margin: 0 auto;
+  padding: 10svh var(--su-gouttiere) 14svh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 72px var(--su-gouttiere);
+}
+.su-loc__bloc--large {
+  grid-column: 1 / -1;
+}
+.su-loc__h2 {
+  margin: 0 0 20px;
+  font-family: var(--su-font-display), sans-serif;
+  font-size: clamp(1.6rem, 2.6vw, 2.2rem);
+  line-height: 1.12;
+}
+.su-loc__long {
+  margin: 0;
+  max-width: 66ch;
+  font-size: 1.0625rem;
+}
+.su-loc__puces,
+.su-loc__liens {
+  list-style: none;
+  margin: 18px 0 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.su-loc__puces li {
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: var(--su-ivoire-creuse);
+  font-size: 0.875rem;
+}
+.su-loc__liens a {
+  display: inline-block;
+  padding: 8px 12px;
+  border-radius: 4px;
+  border: 1px solid color-mix(in srgb, var(--su-graphite) 40%, transparent);
+  color: inherit;
+  text-decoration: none;
+}
+.su-loc__liens a:hover,
+.su-loc__liens a:focus-visible {
+  border-color: var(--su-ambre);
+}
+.su-loc__liens .su-mono {
+  color: var(--su-texte-doux);
+  font-size: 0.75rem;
+}
+.su-loc__barres {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.su-loc__barres li {
+  padding-left: 20px;
+  position: relative;
+}
+.su-loc__barres li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.6em;
+  width: 12px;
+  height: 4px;
+  background: var(--su-ambre);
+  transform: skewY(-18deg);
+}
+.su-loc__grille {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 14px;
+}
+.su-loc__grille li {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 18px;
+}
+.su-loc__grille .su-mono {
+  color: var(--su-ambre-texte);
+  font-size: 0.75rem;
+}
+.su-loc__offres {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--su-gouttiere);
+}
+.su-loc__offres li {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+}
+.su-loc__offre-nom {
+  font-family: var(--su-font-display), sans-serif;
+  font-weight: 600;
+  font-size: 1.15rem;
+}
+.su-loc__cadran {
+  font-size: 2rem;
+}
+.su-loc__offres a {
+  color: var(--su-ambre-texte);
+  font-size: 0.875rem;
+}
+.su-loc__filtre {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+.su-loc__filtre input {
+  min-height: 44px;
+  min-width: 260px;
+  padding: 0 14px;
+  border-radius: 4px;
+  border: 1px solid color-mix(in srgb, var(--su-graphite) 50%, transparent);
+  background: var(--su-ivoire);
+  color: var(--su-navy);
+  font: inherit;
+}
+.su-loc__compte {
+  color: var(--su-texte-doux);
+  font-size: 0.75rem;
+}
+.su-loc__epcis {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px var(--su-gouttiere);
+  margin-top: 16px;
+}
+.su-loc__epcis h3 {
+  margin: 0 0 4px;
+  font-size: 0.75rem;
+  color: var(--su-ambre-texte);
+}
+.su-loc__epcis p {
+  margin: 0;
+  font-size: 0.875rem;
+  color: var(--su-texte-doux);
+  line-height: 1.6;
+}
+.su-loc__faq {
+  max-width: 860px;
+}
+.su-loc__fin {
+  grid-column: 1 / -1;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+.su-loc__fin .su-display {
+  margin: 0;
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+}
+.su-loc__fin p {
+  margin: 0;
+  max-width: 60ch;
+}
+@media (max-width: 1023px) {
+  .su-loc__offres {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 767px) {
+  .su-loc__hero-grille {
+    padding-top: 90px;
+  }
+  .su-loc__texte,
+  .su-loc__scene {
+    grid-column: 1 / -1;
+  }
+  .su-loc__scene {
+    grid-row: 1;
+  }
+  .su-loc__cadre {
+    height: 30svh;
+  }
+  .su-loc__scene {
+    padding-bottom: 0;
+    margin-bottom: 20px;
+  }
+  .su-loc__repere {
+    position: static;
+    display: block;
+  }
+  .su-loc__corps,
+  .su-loc__epcis,
+  .su-loc__offres {
+    grid-template-columns: 1fr;
+  }
+}

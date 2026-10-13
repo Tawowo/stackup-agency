@@ -27,18 +27,11 @@
   margin: 6px 0 0;
   color: var(--su-texte-doux);
 }
-.su-fic__tete {
-  /* Le titre tient au-dessus de la capture : elle commence à 190 px (élément partagé). */
-  min-height: 86px;
-}
 .su-fic__visuel {
   position: relative;
-  margin: 0 auto;
-  width: min(1200px, calc(100vw - 48px));
-  position: absolute;
-  left: 50%;
-  top: 190px;
-  transform: translateX(-50%);
+  margin: 36px auto 0;
+  width: 100%;
+  max-width: 1200px;
 }
 .su-fic__capture {
   position: relative;
@@ -69,7 +62,7 @@
   display: flex;
   gap: 12px;
   flex-wrap: wrap;
-  margin-top: calc(min(1200px, 100vw - 48px) * 0.465 + 120px);
+  margin-top: 40px;
 }
 .su-fic__corps {
   display: grid;
@@ -164,16 +157,10 @@
 }
 @media (max-width: 767px) {
   .su-fic__visuel {
-    top: 150px;
-  }
-  .su-fic__tete {
-    min-height: 60px;
+    margin-top: 24px;
   }
   .su-fic__titre {
     font-size: 2rem;
-  }
-  .su-fic__actions {
-    margin-top: calc((100vw - 48px) * 0.465 + 80px);
   }
   .su-fic__bloc,
   .su-fic__aside {
