@@ -14,7 +14,10 @@ html {
 
 body {
   margin: 0;
+  /* Jamais de noir pur : navy profond en bas, navy en haut, le halo ambre vient de la scène. */
   background: var(--su-fond);
+  background-image: linear-gradient(180deg, color-mix(in srgb, var(--su-encre-2) calc(var(--su-nuit) * 100%), var(--su-ivoire)) 0%, var(--su-fond) 100%);
+  background-attachment: fixed;
   color: var(--su-texte);
   font-family: var(--su-font-sans), system-ui, sans-serif;
   font-size: 1rem;

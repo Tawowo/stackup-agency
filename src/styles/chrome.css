@@ -221,58 +221,6 @@
   color: var(--su-texte);
 }
 
-/* ───────── Curseur ───────── */
-.su-curseur__point,
-.su-curseur__anneau {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-  z-index: 70;
-  opacity: 0;
-  will-change: transform;
-}
-:root[data-su-curseur='1'] .su-curseur__point,
-:root[data-su-curseur='1'] .su-curseur__anneau {
-  display: block;
-}
-:root[data-su-curseur='1'] body {
-  cursor: none;
-}
-:root[data-su-curseur='1'] a,
-:root[data-su-curseur='1'] button {
-  cursor: none;
-}
-.su-curseur__point {
-  width: 8px;
-  height: 8px;
-  margin: -4px 0 0 -4px;
-  border-radius: 50%;
-  background: var(--su-ambre);
-}
-.su-curseur__anneau {
-  width: 32px;
-  height: 32px;
-  margin: -16px 0 0 -16px;
-  border-radius: 50%;
-  border: 1px solid var(--su-ambre);
-  display: grid;
-  place-items: center;
-  font-family: var(--su-font-mono), monospace;
-  font-size: 0.625rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--su-encre);
-  transition: width var(--su-geste) var(--su-pose), height var(--su-geste) var(--su-pose), margin var(--su-geste) var(--su-pose), background var(--su-geste);
-}
-.su-curseur__anneau[data-ouvert='1'] {
-  width: 64px;
-  height: 64px;
-  margin: -32px 0 0 -32px;
-  background: var(--su-ambre);
-}
-
 /* ───────── Plaque ───────── */
 .su-plaque {
   border-radius: 4px;

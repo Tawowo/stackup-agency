@@ -4,7 +4,6 @@ import { inter, jetbrains, poppins } from './fonts'
 import SceneMount from '@/webgl/SceneMount'
 import Nav from '@/components/layout/Nav'
 import Defilement from '@/components/layout/Defilement'
-import Curseur from '@/components/ui/Curseur'
 import '@/styles/chrome.css'
 
 export const metadata: Metadata = {
@@ -28,7 +27,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Defilement />
         <Nav />
         <div className="su-page">{children}</div>
-        <Curseur />
       </body>
     </html>
   )

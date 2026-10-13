@@ -1,7 +1,8 @@
 /* TOKENS — la seule source des couleurs, durées et courbes (PROMPT-REFONTE § 3). */
 :root {
-  --su-encre: #060B14;
-  --su-encre-2: #0A1220;
+  --su-encre: #0B1E36;
+  --su-encre-2: #102A4A;
+  --su-encre-3: #163A62;
   --su-navy: #0D2C4C;
   --su-navy-clair: #1C4A78;
   --su-ambre: #F69106;
@@ -35,7 +36,7 @@
   /* Ombre posée à −18° (partagée avec la 3D). */
   --su-ombre-x: calc(cos(var(--su-lumiere-angle)) * 14px);
   --su-ombre-y: calc(sin(var(--su-lumiere-angle)) * -14px);
-  --su-ombre: var(--su-ombre-x) var(--su-ombre-y) 0 rgba(6, 11, 20, 0.45);
+  --su-ombre: var(--su-ombre-x) var(--su-ombre-y) 0 rgba(6, 14, 28, 0.45);
 
   /* Grille. */
   --su-gouttiere: 24px;

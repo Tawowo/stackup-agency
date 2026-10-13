@@ -38,6 +38,11 @@ export default function SceneMount() {
     if (q.get('ombre') === '0') p.ombre = 0
     if (q.get('grain') === '0') p.grain = 0
     if (q.get('plaques') === '0') p.plaques = 0
+    // Le monde, pièce par pièce (sol, flux, code, lampe) et l'inclinaison de la caméra.
+    for (const k of ['sol', 'flux', 'code', 'lampe', 'tangage'] as const) {
+      const v = q.get(k)
+      if (v !== null) p[k] = Number(v)
+    }
     if (Object.keys(p).length) st.setParams(p)
     if (q.get('fond') === 'ivoire') st.forcerNuit(0)
     if (process.env.NODE_ENV !== 'production') {
@@ -65,6 +70,32 @@ export default function SceneMount() {
     appliquer()
     mq.addEventListener('change', appliquer)
     return () => mq.removeEventListener('change', appliquer)
+  }, [])
+
+  // Mobile : l'inclinaison du téléphone déplace la lampe (permission iOS demandée au premier toucher).
+  useEffect(() => {
+    if (!('DeviceOrientationEvent' in window) || !window.matchMedia('(pointer: coarse)').matches) return
+    let base: { beta: number; gamma: number } | null = null
+    const lire = (e: DeviceOrientationEvent) => {
+      if (e.beta === null || e.gamma === null) return
+      base ??= { beta: e.beta, gamma: e.gamma }
+      const x = Math.max(-1, Math.min(1, (e.gamma - base.gamma) / 25))
+      const y = Math.max(-1, Math.min(1, (e.beta - base.beta) / 25))
+      useScene.getState().setInclinaison(x, y)
+    }
+    const brancher = () => window.addEventListener('deviceorientation', lire)
+    const demander = () => {
+      type Perm = { requestPermission?: () => Promise<'granted' | 'denied'> }
+      const P = DeviceOrientationEvent as unknown as Perm
+      if (typeof P.requestPermission === 'function') P.requestPermission().then((r) => r === 'granted' && brancher()).catch(() => {})
+      else brancher()
+      window.removeEventListener('touchend', demander)
+    }
+    window.addEventListener('touchend', demander, { passive: true })
+    return () => {
+      window.removeEventListener('touchend', demander)
+      window.removeEventListener('deviceorientation', lire)
+    }
   }, [])
 
   // `--su-nuit` (CSS) suit la nuit de la scène : fond, textes et canvas ensemble.

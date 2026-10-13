@@ -11,12 +11,9 @@ export const LUMIERE_ANGLE = (-18 * Math.PI) / 180
 /** Longueur des ombres : décalage par unité de profondeur. */
 export const LUMIERE_RASANT = 0.55
 
+/** La lampe : en haut à gauche, devant ; l'ombre part vers la droite et le bas, sur le sol. */
 export function directionLumiere(): Vector3 {
-  return new Vector3(
-    Math.cos(LUMIERE_ANGLE) * LUMIERE_RASANT,
-    Math.sin(LUMIERE_ANGLE) * LUMIERE_RASANT,
-    -1,
-  ).normalize()
+  return new Vector3(0.42, -0.75, -0.6).normalize()
 }
 
 export function createStackUniforms() {
@@ -57,6 +54,32 @@ export function createStackUniforms() {
     /** Rectangle d'exclusion (repère local) : minX, minY, maxX, maxY. */
     uExclu: { value: new Vector4(0, 0, 0, 0) },
     uExcluActive: { value: 0 },
+    /* ── La Fabrique ── */
+    /** Torche : impact du pointeur sur le sol (monde) et à la profondeur de la pile. */
+    uProbe: { value: new Vector3() },
+    uProbeDeep: { value: new Vector3() },
+    uProbeRadius: { value: 1.6 },
+    uProbeActive: { value: 0 },
+    /** Dissolution du sol pendant une traversée (0 = plein, 1 = retiré). */
+    uDissolve: { value: 0 },
+    /** Hauteur du sol (monde) et centre de la pile (monde x, y, échelle). */
+    uSolY: { value: -2 },
+    /** Temps cumulé des flux (vitesse pilotée par le scroll). */
+    uFlowTime: { value: 0 },
+    /** Vitesse de scroll normalisée (0 → 1), pour les flux. */
+    uVitesse: { value: 0 },
+    /** Étage courant (continu) : pour le défilement du code vivant. */
+    uEtage: { value: 0 },
+    /** Position de la lampe (monde) et sa couleur-intensité. */
+    uLampe: { value: new Vector3(-2, 3, 2) },
+    uLampeForce: { value: 1 },
+    /** Intensité des flux et opacité du code. */
+    uFlux: { value: 0.8 },
+    uCode: { value: 0.16 },
+    /** Palette des plaques sur fond sombre : 1 = plaques claires (logo blanc + ambre). */
+    uClair: { value: 1 },
+    /** Centre de la pile à l'écran : x, y (px, origine en bas à gauche), échelle (px par unité locale). */
+    uStackEcran: { value: new Vector3(720, 450, 100) },
   }
 }
 

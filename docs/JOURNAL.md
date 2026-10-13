@@ -22,9 +22,8 @@ logo-check, cadence, compresser-png. Layouts purs testés (`node --test`).
 **Captures lues** : 24. Défauts corrigés : Tweakpane en double ; caméra qui recentrait la pile ; tour
 chaotique ; plaques de profil roses ; lentille et Fresnel trop forts ; ambre jaunie ; `--su-nuit` CSS.
 
-**Superposition** : 1,05 % (1440) / 1,08 % (390), seuil 2 %. **Cadence SwiftShader** (temps réel) :
-logo 8-9 fps en 1440, 15 en 390 ; pile 4 / 9 ; un canvas VIDE plafonne à 16 fps ici → le proxy « ≥ 30 »
-n'est pas atteignable dans ce conteneur, à mesurer sur un vrai GPU.
+**Superposition** : 1,05 % / 1,08 % (seuil 2 %). **Cadence SwiftShader** : un canvas vide plafonne à 16 fps
+dans ce conteneur → le proxy « ≥ 30 » n'y est pas atteignable, à mesurer sur un vrai GPU.
 
 **Dépendances hors liste** : `@tweakpane/core` (types, dev), `sharp` (logo-check, AVIF phase 3, dev).
 
@@ -57,21 +56,12 @@ Moment 01 DÉCOUPE (épinglé 250 vh, lamelles une à une, 1-5 / clic isole, ref
 04 SEUIL « Pas que des sites. » avec la pile en noyau. Mouvement réduit : moteur figé sur le logo,
 aucun épinglage, couleurs posées sans tween. `ScrollRefresh` recalcule les triggers une fois tout monté.
 
-**Captures lues** : 15 layouts sur `/lab`, 59 états de l'accueil (100 entrées dans `rapport.json`).
-Défauts vus et corrigés : lab strates vus de face (traits), chevrons sur le texte, éventail trop serré ;
-scène vide au moment 01 (la boîte du hero gardait la main) → registre ; pile du hero affichée sur 01-03
-(la bascule du hero écrasait la paire) → propriétaire `moment` ; maquette décalée des plaques → blocs
-communs ; lamelles pas refermées à p = 1 (onEnter/onUpdate en course) → phase dérivée de la progression ;
-piste de la pellicule décalée après un saut (snap inertiel) ; noyau derrière le texte du Seuil ; en
-mouvement réduit, les triggers sous le seul épinglage restant étaient mesurés faux → plus d'épinglage.
-Noté, non corrigé : éventail `multi` qui déborde sur mobile ; le glissement de la pellicule est trop bref
-pour une capture fixe (une vidéo le montrera en phase 3).
+**Captures lues** : 15 layouts sur `/lab`, 59 états de l'accueil (100 entrées). Défauts corrigés : strates
+vues de face ; scène vide au moment 01 → registre des boîtes ; pile du hero écrasant la paire → propriétaire
+`moment` ; maquette décalée → blocs communs ; lamelles non refermées → phase dérivée de la progression ;
+snap inertiel de la pellicule ; triggers faussés en mouvement réduit → plus d'épinglage.
 
-**Démos.** Les cinq URL de démo sont injoignables depuis ce conteneur (réseau sortant filtré) : les AVIF
-de `public/realisations/` viennent des captures de l'ancien site (4 à 41 ko) ; à refaire depuis les démos.
-
-**Pas fait** : vidéo Playwright du scroll ; moments 05-09 ; `ContactShadows`/`AdaptiveDpr` de drei non
-employés (ombre et DPR gérés par le moteur).
+**Démos.** URL de démo injoignables depuis ce conteneur : AVIF issus des captures de l'ancien site.
 
 **Corrections avant la phase 3 (captures avant dans `docs/qa/shots/avant/`).** Zone d'exclusion du
 titre (`useExclusion`, ResizeObserver, union titre + nav) passée au vertex shader : les plaques en vol la
@@ -102,20 +92,15 @@ Mathéo Reboul, trois paragraphes, accordéon natif (`components/editorial`, fon
 Pages de chantier pour mentions légales, confidentialité, CGV. `devIndicators` coupés (le pavé Next
 entrait dans les captures).
 
-**Captures lues** : 32 états des moments 05-09 + footer (138 entrées). Défauts vus et corrigés : trois
-états vides (`half` réservé en GLSL ; `ENTREES` importé d'un composant client ; `COURT` utilisé avant
-sa déclaration) ; isolation des strates qui dispersait le réseau ; bouton Caisse sous la maquette ;
-jauge minuscule et titre 06 descendu ; étape 05 jamais franchie (seuil de déclenchement). Notés, non
-corrigés : en mouvement réduit le logo figé passe derrière les nœuds (05) ; sur mobile le bandeau
-épinglé de 07 passe derrière le texte de l'étape 01.
+**Captures lues** : 32 états (138 entrées). Défauts corrigés : trois états vides (`half` réservé en GLSL,
+`ENTREES` importé d'un composant client, `COURT` utilisé avant sa déclaration) ; isolation des strates
+qui dispersait le réseau ; bouton Caisse sous la maquette ; jauge minuscule ; étape 05 jamais franchie.
+Notés : en mouvement réduit le logo figé passe derrière les nœuds (05) ; mobile : bandeau de 07 derrière 01.
 
-**Vidéos.** L'enregistreur de Playwright ne produit aucune trame sous SwiftShader (chemin annoncé,
-fichier jamais écrit) et son ffmpeg n'a ni image2 ni VP9 : `scripts/videos.mjs` capture une trame JPEG
-par pas de scroll et les envoie en flux (image2pipe) à ce ffmpeg en VP8. Trois vidéos dans
-`docs/qa/videos/` (1440, 390, 1440 mouvement réduit), ignorées par git (`*.webm`), à regénérer avec
-`npm run videos`.
+**Vidéos.** L'enregistreur Playwright ne produit aucune trame sous SwiftShader et son ffmpeg n'a ni image2
+ni VP9 : `scripts/videos.mjs` capture une trame JPEG par pas et les envoie en flux (image2pipe) en VP8.
+`docs/qa/videos/*.webm` (1440, 390, rm), hors git, `npm run videos`.
 
-**Pas fait** : gyroscope, raccourcis clavier globaux, réglage du mouvement (phase 7) ; cadence sur vrai GPU.
 
 **Vercel.** La preview de la branche renvoyait 404 NOT_FOUND partout (même `/favicon.ico`) avec un build
 « completed » : `vercel.json` (`"framework": "nextjs"`) était parti dans `ancien/` avec l'ancien site, et
@@ -145,6 +130,29 @@ configurateur trop large pour son cadre et modules hors champ (variante compacte
 hero coupée en bas. Non vérifié : l'envoi réel Resend (pas de clé ici) — le propriétaire ajoute
 `RESEND_API_KEY`, `CONTACT_TO`, `CONTACT_FROM` (domaine vérifié chez Resend) sur Vercel.
 
-**Prochaine étape — phase 5** : `/realisations` (+ fiche, transition par élément partagé), `/services`
-(+ fiche), `/solutions` (+ fiche, Salle des machines en grand), `/a-propos`, TRAVERSÉE (le canvas ne se
-démonte jamais entre les pages : morph vers le layout de la page cible).
+## 2026-10-13 — Refonte de l'univers : « La Fabrique » (avant la phase 5)
+
+Référence lue : `reference/hydreaux-scan/` (hors git), livré par la même agence. Repris : uniforms partagés,
+lentille `probeLens` interpolée sol / profondeur, sol en bruit fractal avec front `fwidth`, flux GPU en
+`DataTexture` lus dans le vertex shader, chronologie pure pilotée par le scroll, caméra par trajectoire, jauge
+`DepthRail`. Le moteur, la structure et les neuf moments restent ; c'est le monde autour qui change.
+
+**Plan (10 lignes).**
+1. Tokens : encre `#0B1E36` → `#102A4A` (jamais de noir), halo ambre plus généreux ; curseur supprimé ;
+   plaques claires + ambre sur fond sombre (navy sur ivoire seulement), comme `LogoMarque`.
+2. Ciel : le mur devient un dégradé navy profond → navy, halo ambre volumétrique, grain. Caméra avec
+   élévation (le sol se voit), toujours ortho ↔ perspective sans saut.
+3. Sol : plan d'atelier en perspective (grille, cotes), reçoit l'ombre projetée de la pile, se révèle sous
+   la torche du pointeur (`probeLens`), se dissout par bruit fractal pendant chaque traversée.
+4. Flux : particules GPU (`DataTexture` de trajectoires : hélice, montées, arcs) le long de la pile,
+   accélérées par la vitesse de scroll, détournées autour du pointeur, allumées par la torche.
+5. Code vivant : nos propres sources (`scripts/code-vivant.mjs` → texture canvas) écrites, défilantes et
+   dissoutes en profondeur derrière la pile, à faible contraste.
+6. Lumière : faisceau ambre depuis la plaque ambre (billboard qui pivote avec la caméra), poussière lumineuse.
+7. Traversée : la pile glisse d'un étage à l'autre (position amortie, jamais de saut), le sol se dissout et
+   se reforme ; `DepthRail` vertical cliquable (10 étages) ; inclinaison du téléphone → lumière.
+8. Clic sur une plaque : elle se retourne et montre une face produit (écran procédural dans le shader).
+9. Calibrage : tout le scroll en `scrub: true`, timelines complètes, états de début et de fin atteints ;
+   captures p = 0 / 0,2 / 0,4 / 0,6 / 0,8 / 1 des sections épinglées, aux deux largeurs.
+10. Ordre : `/lab` d'abord (sol, flux, code, lumière, descente, captures lues), puis intégration aux neuf
+    moments, vidéos par trames d'un scroll complet.

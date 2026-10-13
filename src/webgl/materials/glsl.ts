@@ -11,6 +11,34 @@ mat3 rotXYZ(vec3 e) {
 }
 `
 
+export const NOISE = /* glsl */ `
+float hash21(vec2 p) { return fract(sin(dot(p, vec2(127.1, 311.7))) * 43758.5453); }
+float vnoise(vec2 p) {
+  vec2 i = floor(p); vec2 f = fract(p);
+  vec2 u = f * f * (3.0 - 2.0 * f);
+  return mix(mix(hash21(i), hash21(i + vec2(1, 0)), u.x), mix(hash21(i + vec2(0, 1)), hash21(i + vec2(1, 1)), u.x), u.y);
+}
+float fbm(vec2 p) { float v = 0.0; float a = 0.5; for (int i = 0; i < 4; i++) { v += a * vnoise(p); p *= 2.03; a *= 0.5; } return v; }
+float gridLine(float c, float w) {
+  float d = abs(fract(c - 0.5) - 0.5) / max(fwidth(c), 1e-4);
+  return 1.0 - min(d / w, 1.0);
+}
+`
+
+/** La torche : lentille interpolée entre l'impact au sol et l'impact à la profondeur de la pile. */
+export const TORCHE = /* glsl */ `
+uniform vec3 uProbe;
+uniform vec3 uProbeDeep;
+uniform float uProbeRadius;
+uniform float uProbeActive;
+uniform float uSolY;
+float probeLens(vec3 wp) {
+  float k = clamp((wp.y - uSolY) / 2.4, 0.0, 1.5);
+  vec3 c = mix(uProbe, uProbeDeep, k);
+  return uProbeActive * (1.0 - smoothstep(uProbeRadius * 0.55, uProbeRadius * 0.95, distance(wp.xz, c.xz)));
+}
+`
+
 export const HASH = /* glsl */ `
 float hash12(vec2 p) {
   vec3 p3 = fract(vec3(p.xyx) * 0.1031);
@@ -35,6 +63,7 @@ attribute float aScaleA;
 attribute vec3 aPosB;
 attribute vec3 aRotB;
 attribute float aScaleB;
+attribute float aFlip;
 
 uniform float uTime;
 uniform float uMorph;
@@ -50,7 +79,7 @@ uniform vec3 uPointer;
 uniform vec4 uExclu;
 uniform float uExcluActive;
 
-struct Inst { vec3 world; mat3 R; float lens; float dim; float scale; };
+struct Inst { vec3 world; mat3 R; float lens; float dim; float scale; float flip; };
 
 Inst instance(vec3 position) {
   float d = aDelay * uDelay;
@@ -101,10 +130,11 @@ Inst instance(vec3 position) {
     pos.z -= 0.6 * w;
   }
 
-  mat3 R = rotXYZ(e);
+  // Bascule (clic) : la plaque pivote sur son axe long et avance vers le spectateur.
+  mat3 R = rotXYZ(e) * rotXYZ(vec3(0.0, 3.14159265 * aFlip, 0.0));
   vec3 local = position * vec3(1.0, 1.0, uEpaisseur) * sc * breath;
   vec3 world = R * local + pos;
-  world.z += zb + lens * 0.09;
+  world.z += zb + lens * 0.09 + sin(3.14159265 * aFlip) * 0.45 * sc;
 
   Inst r;
   r.world = world;
@@ -112,6 +142,7 @@ Inst instance(vec3 position) {
   r.lens = lens;
   r.dim = other;
   r.scale = sc;
+  r.flip = aFlip;
   return r;
 }
 `

@@ -1,45 +1,56 @@
 import { LessDepth, ShaderMaterial } from 'three'
 import type { StackUniforms } from '../engine'
-import { INSTANCE, ROT } from './glsl'
+import { INSTANCE, NOISE, ROT } from './glsl'
 
 /**
- * OMBRE PORTÉE — la même plaque, projetée le long de la lumière (−18°) sur le
- * mur z = uWallZ. Une ombre planaire nette, longue, qui se raccourcit quand la
- * plaque respire vers le mur : c'est la vie de la scène au repos.
+ * OMBRE PORTÉE — la même plaque, projetée le long de la lumière de la lampe
+ * sur le sol de l'atelier (plan y = uSolY). Une ombre planaire, longue vers
+ * la droite et le fond, qui se dissout avec le sol pendant une traversée.
  */
 const vertex = /* glsl */ `
 ${ROT}
 ${INSTANCE}
 uniform vec3 uLight;
-uniform float uWallZ;
-varying float vDepth;
+uniform float uSolY;
+varying float vHauteur;
+varying vec3 vSol;
 void main() {
   Inst I = instance(position);
   vec4 wp = modelMatrix * vec4(I.world, 1.0);
-  float t = (uWallZ - wp.z) / uLight.z;
-  vec3 sp = wp.xyz + uLight * t;
-  sp.z = uWallZ + 0.002;
-  vDepth = wp.z - uWallZ;
+  float t = (uSolY - wp.y) / min(uLight.y, -0.05);
+  vec3 sp = wp.xyz + uLight * max(t, 0.0);
+  sp.y = uSolY + 0.004;
+  vHauteur = wp.y - uSolY;
+  vSol = sp;
   gl_Position = projectionMatrix * viewMatrix * vec4(sp, 1.0);
 }
 `
 const fragment = /* glsl */ `
 precision highp float;
+${NOISE}
 uniform float uNuit;
 uniform float uShadow;
-varying float vDepth;
+uniform float uDissolve;
+uniform vec4 uStack;
+varying float vHauteur;
+varying vec3 vSol;
 void main() {
-  // Sur l'encre : plus sombre que l'encre. Sur l'ivoire : navy translucide.
-  vec3 nuit = vec3(0.012, 0.024, 0.047);
+  // Sur navy : plus sombre que le sol. Sur ivoire : navy translucide.
+  vec3 nuit = vec3(0.016, 0.047, 0.094);
   vec3 jour = vec3(0.051, 0.173, 0.298);
-  float a = mix(0.22, 0.85, uNuit) * uShadow;
-  a *= 1.0 - smoothstep(1.5, 6.0, vDepth) * 0.5;
+  float a = mix(0.18, 0.62, uNuit) * uShadow;
+  // Plus la plaque est haute, plus l'ombre est douce et pâle.
+  a *= 1.0 - smoothstep(0.5, 5.0, vHauteur) * 0.65;
+  // L'ombre suit la dissolution du sol.
+  vec2 g = (vSol.xz - vec2(uStack.x, 0.0)) / max(uStack.z, 0.2);
+  float n = fbm(g * 0.6 + 3.1);
+  a *= smoothstep(uDissolve * 1.15 - 0.06, uDissolve * 1.15, n);
   gl_FragColor = vec4(mix(jour, nuit, uNuit), a);
 }
 `
 
 export function shadowMaterial(u: StackUniforms) {
-  const m = new ShaderMaterial({
+  return new ShaderMaterial({
     vertexShader: vertex,
     fragmentShader: fragment,
     uniforms: u,
@@ -47,5 +58,4 @@ export function shadowMaterial(u: StackUniforms) {
     depthWrite: true,
     depthFunc: LessDepth,
   })
-  return m
 }

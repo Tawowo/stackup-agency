@@ -18,6 +18,7 @@
     "shots:home": "node --experimental-strip-types --no-warnings scripts/shots.mjs --route=/",
     "lab": "node scripts/lab.mjs",
     "logo:trace": "node scripts/logo-trace.mjs",
+    "code:vivant": "node scripts/code-vivant.mjs",
     "logo:check": "node scripts/logo-check.mjs",
     "cadence": "node scripts/cadence.mjs",
     "videos": "node scripts/videos.mjs"

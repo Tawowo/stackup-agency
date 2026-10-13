@@ -98,7 +98,16 @@ export default function LabBench({ hud = true }: { hud?: boolean }) {
       f3.addBinding(params, 'arete', { min: 0, max: 1.5, step: 0.01 }).on('change', push)
       f3.addBinding(params, 'halo', { min: 0, max: 0.6, step: 0.01 }).on('change', push)
       f3.addBinding(params, 'ombre', { min: 0, max: 1, step: 0.01 }).on('change', push)
-      const etat = { nuit: s.nuit, morph: 0, isolate: -1 }
+      const f5 = p.addFolder({ title: 'La Fabrique' })
+      f5.addBinding(params, 'tangage', { min: 0, max: 18, step: 0.5, label: 'tangage °' }).on('change', push)
+      f5.addBinding(params, 'sol', { min: 0, max: 1, step: 1 }).on('change', push)
+      f5.addBinding(params, 'solMarge', { min: 0, max: 1, step: 0.01 }).on('change', push)
+      f5.addBinding(params, 'flux', { min: 0, max: 1, step: 1 }).on('change', push)
+      f5.addBinding(params, 'fluxIntensite', { min: 0, max: 1.5, step: 0.01 }).on('change', push)
+      f5.addBinding(params, 'code', { min: 0, max: 1, step: 1 }).on('change', push)
+      f5.addBinding(params, 'codeOpacite', { min: 0, max: 0.5, step: 0.01 }).on('change', push)
+      f5.addBinding(params, 'lampe', { min: 0, max: 1, step: 1 }).on('change', push)
+      const etat = { nuit: s.nuit, morph: 0, isolate: -1, dissolve: 0 }
       const f4 = p.addFolder({ title: 'Scène' })
       f4.addBinding(etat, 'nuit', { min: 0, max: 1, step: 0.01 }).on('change', (e) => useScene.getState().setNuit(e.value))
       f4.addBinding(etat, 'morph', { min: 0, max: 1, step: 0.01 }).on('change', (e) => {
@@ -108,6 +117,7 @@ export default function LabBench({ hud = true }: { hud?: boolean }) {
         useScene.getState().setMorph(e.value)
       })
       f4.addBinding(etat, 'isolate', { min: -1, max: 5, step: 1 }).on('change', (e) => useScene.getState().setIsolate(e.value))
+      f4.addBinding(etat, 'dissolve', { min: 0, max: 1, step: 0.01 }).on('change', (e) => useScene.getState().setDissolve(e.value))
       p.addButton({ title: 'Réinitialiser' }).on('click', () => {
         Object.assign(params, PARAMS_DEFAUT, { projection: 1 })
         push()
@@ -191,7 +201,7 @@ export default function LabBench({ hud = true }: { hud?: boolean }) {
           </button>
         </div>
       </header>
-      <div ref={paneRef} className="pointer-events-auto absolute right-6 top-6 w-[300px] max-md:hidden" />
+      <div ref={paneRef} data-su-pane="" className="pointer-events-auto absolute right-6 top-6 w-[300px] max-md:hidden" />
     </main>
   )
 }

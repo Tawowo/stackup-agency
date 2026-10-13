@@ -24,6 +24,23 @@ export interface PlatesHandle {
   setPair: (a: LayoutName, b: LayoutName | null, pp?: { a?: Partial<LayoutParams>; b?: Partial<LayoutParams> }) => void
   murA: number
   murB: number
+  /** Bas de la forme (y local), côté A et B : le sol se pose dessous. */
+  solA: number
+  solB: number
+  /** Bascule la plaque la plus proche du point (repère local) : montre sa face « produit ». */
+  basculer: (x: number, y: number) => boolean
+}
+
+/** Bas d'une forme : la plus basse des plaques posées (échelle > 0), moins une demi-hauteur. */
+function basDe(d: LayoutData): number {
+  let min = Infinity
+  for (let i = 0; i < d.scale.length; i++) {
+    const sc = d.scale[i]!
+    if (sc <= 0) continue
+    const y = d.pos[i * 3 + 1]! - 0.36 * sc
+    if (y < min) min = y
+  }
+  return Number.isFinite(min) ? min : -1.2
 }
 
 export function buildInstanced(n: number) {
@@ -44,6 +61,7 @@ export function buildInstanced(n: number) {
   g.setAttribute('aSeed', new InstancedBufferAttribute(sd, 1))
   g.setAttribute('aGroup', new InstancedBufferAttribute(new Float32Array(n), 1))
   g.setAttribute('aDelay', new InstancedBufferAttribute(new Float32Array(n), 1))
+  g.setAttribute('aFlip', new InstancedBufferAttribute(new Float32Array(n), 1))
   for (const k of ['A', 'B']) {
     g.setAttribute(`aPos${k}`, new InstancedBufferAttribute(new Float32Array(n * 3), 3))
     g.setAttribute(`aRot${k}`, new InstancedBufferAttribute(new Float32Array(n * 3), 3))
@@ -112,9 +130,12 @@ export function Plates({ count, handleRef }: { count: number; handleRef: React.R
     write(geometry, 'A', first)
     write(geometry, 'B', first)
     currentRef.current = s.layout
+    const flips = new Map<number, { v: number }>()
     const h: PlatesHandle = {
       murA: first.mur,
       murB: first.mur,
+      solA: basDe(first),
+      solB: basDe(first),
       setPair: (a, b, pp = {}) => {
         const da = compute(a, pp.a)
         const db = b ? compute(b, pp.b) : da
@@ -122,18 +143,66 @@ export function Plates({ count, handleRef }: { count: number; handleRef: React.R
         write(geometry, 'B', db)
         h.murA = da.mur
         h.murB = db.mur
+        h.solA = basDe(da)
+        h.solB = basDe(db)
         currentRef.current = b ?? a
       },
       setTarget: (name) => {
         const st = useScene.getState()
         snapshot(geometry, u.uMorph.value, u.uDelay.value)
         h.murA = h.murA + (h.murB - h.murA) * u.uMorph.value
+        h.solA = h.solA + (h.solB - h.solA) * u.uMorph.value
         const d = compute(name)
         write(geometry, 'B', d)
         h.murB = d.mur
+        h.solB = basDe(d)
         u.uMorph.value = 0
         currentRef.current = name
         st.setMorph(0)
+      },
+      basculer: (x, y) => {
+        // Position courante de chaque instance (sans l'arc) : la plus proche dans un rayon d'une demi-plaque.
+        const A = geometry.getAttribute('aPosA').array as Float32Array
+        const B = geometry.getAttribute('aPosB').array as Float32Array
+        const SA = geometry.getAttribute('aScaleA').array as Float32Array
+        const SB = geometry.getAttribute('aScaleB').array as Float32Array
+        const D = geometry.getAttribute('aDelay').array as Float32Array
+        const m = u.uMorph.value
+        const dl = u.uDelay.value
+        let best = -1
+        let bestD = Infinity
+        for (let i = 0; i < geometry.instanceCount; i++) {
+          let t = Math.min(Math.max((m - D[i]! * dl) / Math.max(1 - dl, 1e-3), 0), 1)
+          t = t * t * (3 - 2 * t)
+          const sc = SA[i]! + (SB[i]! - SA[i]!) * t
+          if (sc <= 0.05) continue
+          const px = A[i * 3]! + (B[i * 3]! - A[i * 3]!) * t
+          const py = A[i * 3 + 1]! + (B[i * 3 + 1]! - A[i * 3 + 1]!) * t
+          const dx = (x - px) / (0.75 * sc)
+          const dy = (y - py) / (0.3 * sc)
+          const dd = dx * dx + dy * dy
+          if (dd < 1 && dd < bestD) {
+            bestD = dd
+            best = i
+          }
+        }
+        if (best < 0) return false
+        const attr = geometry.getAttribute('aFlip') as InstancedBufferAttribute
+        const arr = attr.array as Float32Array
+        const etat = flips.get(best) ?? { v: 0 }
+        flips.set(best, etat)
+        gsap.killTweensOf(etat)
+        const cible = etat.v > 0.5 ? 0 : 1
+        gsap.to(etat, {
+          v: cible,
+          duration: 0.9,
+          ease: 'power3.inOut',
+          onUpdate: () => {
+            arr[best] = etat.v
+            attr.needsUpdate = true
+          },
+        })
+        return true
       },
     }
     if (s.target) h.setPair(s.layout, s.target, s.pairParams)

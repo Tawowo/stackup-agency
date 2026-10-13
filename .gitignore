@@ -9,3 +9,4 @@ playwright-report
 .DS_Store
 docs/qa/shots/**/*.webm
 docs/qa/videos/*.webm
+reference/
