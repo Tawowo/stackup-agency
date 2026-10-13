@@ -86,14 +86,27 @@ export default function Bande() {
     pr.visible = !cache
     if (cache) return
 
-    const fige = mouvement === 'aucun'
+    /* REPOS et PLAN sont immobiles par nature, pas seulement sous mouvement
+       réduit : une bande qui respire en haut d'un article de blog ferait
+       concurrence au texte, qui est la seule chose à lire sur ces pages. */
+    const fige = mouvement === 'aucun' || etat === 'repos' || etat === 'plan'
     /* Au DÉPART, la progression descend de 1 à 0 : la bande part du volume
        et se replie jusqu'à la silhouette exacte du logo. C'est la même
        mécanique que la RÉVÉLATION du hero, jouée à l'envers — et c'est
        voulu : le site s'ouvre sur le logo qui devient un objet et se ferme
        sur l'objet qui redevient le logo. */
     const p =
-      etat === 'logo' ? Math.min(1, progression / 0.25) : etat === 'depart' ? progression : 1
+      etat === 'logo'
+        ? Math.min(1, progression / 0.25)
+        : etat === 'depart'
+          ? progression
+          : /* REPOS : la silhouette exacte du logo, à plat — c'est la même
+               contrainte qu'au repos du hero, appliquée aux pages
+               éditoriales. PLAN : à plat aussi, mais vue de dessus et cotée
+               par la page (dossier §11.6). */
+            etat === 'repos' || etat === 'plan'
+            ? 0
+            : 1
 
     /* ── Épaisseur ────────────────────────────────────────────────────────
        Elle monte entre p = 0,1 et p = 0,5 (fiche 11.1). Avant 0,1 la bande
@@ -144,6 +157,48 @@ export default function Bande() {
        fraction de cette hauteur. Sans ancrage (pages sans hero), la bande
        reste centrée. */
     const anc = useBande.getState().ancrage
+    /* SANS BOÎTE D'ANCRAGE, le repos se place lui-même.
+
+       Les pages éditoriales n'ont pas de place réservée pour la bande : le
+       dossier la veut « petite, en haut à droite, immobile » (§11.6). C'est
+       le seul état qui se positionne sans que la page le lui demande, parce
+       que c'est le seul qui ne fait pas partie de la mise en page — il
+       signe, il ne compose pas. */
+    if (!anc && etat === 'repos') {
+      const portrait = etatTrois.size.width < 900
+      const hv = hauteurVisible(portrait)
+      const lv = hv * (etatTrois.size.width / Math.max(1, etatTrois.size.height))
+      /* La fraction de hauteur d'écran que doit occuper la signature. La
+         conversion est la même que pour une boîte d'ancrage : fraction
+         d'écran × hauteur visible ÷ hauteur de l'objet. La première version
+         portait un facteur 4 de trop et rendait un ruban à 36 % de l'écran,
+         rogné par le bord droit — vu en capture. */
+      const part = portrait ? 0.07 : 0.085
+      pr.scale.setScalar((part * hv) / HAUTEUR_MONDE)
+      /* Placée d'après sa taille réelle, pour qu'elle ne touche jamais le
+         bord : demi-largeur de l'objet plus une gouttière. */
+      const demiLargeur = (part * hv) / 2
+      pr.position.x = lv / 2 - demiLargeur - lv * 0.045
+      pr.position.y = hv / 2 - (part * hv) / 2 - hv * 0.08
+      return
+    }
+    /* UN ÉTAT QUI COMPOSE N'EXISTE PAS SANS PLACE.
+
+       Les états `plan` et `ombre` font partie d'une mise en page : la page
+       doit leur réserver une boîte. Sans elle, ils retombaient sur le cas
+       par défaut — centre de l'écran, échelle 1 — et le ruban couvrait le
+       titre et les tarifs sur /tarifs, le titre et le texte sur une fiche
+       projet. Vu en capture aux deux endroits.
+
+       C'est la même leçon que l'état « absent » : le silence d'une page vaut
+       « je ne demande rien », jamais « place-toi où tu veux ». Un état qui a
+       besoin d'une place et n'en a pas ne peint pas. */
+    if (!anc && (etat === 'plan' || etat === 'ombre')) {
+      pr.visible = false
+      return
+    }
+    pr.visible = true
+
     if (anc) {
       /* La hauteur visible vient du cadrage partagé, PAS de
          `state.viewport` : la projection de cette scène est une matrice

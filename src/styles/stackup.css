@@ -5920,3 +5920,57 @@ html[data-fin='oui'] body {
 @media (max-width: 1099px) {
   .su-modules { grid-template-columns: 1fr; }
 }
+
+/* ── Les places réservées à la bande sur les pages intérieures ─────────────
+   Des boîtes vides, positionnées par la grille de la page. Elles ne peignent
+   rien : elles disent seulement « l'objet va là ». `pointer-events: none`
+   parce qu'une boîte invisible qui intercepte les clics est un bug qu'on met
+   une heure à trouver.
+   ──────────────────────────────────────────────────────────────────────── */
+
+.su-place-tarifs,
+.su-place-projet {
+  position: absolute;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Tarifs : à droite du titre, dans la respiration de l'en-tête. */
+.su-place-tarifs {
+  top: 7rem;
+  right: 4vw;
+  width: clamp(9rem, 17vw, 15rem);
+  height: clamp(9rem, 17vw, 15rem);
+}
+
+/* Fiche projet : dans la bande sombre du hero, derrière le texte. */
+.su-place-projet {
+  top: 9rem;
+  right: 5vw;
+  width: clamp(8rem, 15vw, 13rem);
+  height: clamp(8rem, 15vw, 13rem);
+}
+
+@media (max-width: 899px) {
+  /* EN PORTRAIT, PAS DE SIGNATURE SUR CES PAGES, ET C'EST UN CHOIX.
+
+     Première version : une petite boîte en haut à droite. En capture à
+     390 px, le ruban se posait sur le mot « sans » du titre « Tarifs clairs,
+     sans surprise ». Dans 390 px, un titre de deux lignes occupe toute la
+     largeur : il n'y a pas de coin libre, et il n'y en aura pas davantage
+     avec un titre de projet plus long.
+
+     Les emplacements calculés sur la longueur du titre sont fragiles — ils
+     retombent en panne au premier texte un peu différent. Supprimer la boîte
+     suffit : la règle posée dans `Bande.tsx` fait qu'un état qui n'a pas de
+     place ne peint pas, donc rien d'autre n'est à faire.
+
+     Ce n'est pas sacrifier le mobile : les neuf moments de l'accueil ont
+     chacun leur composition en portrait. Ce qui disparaît ici est une
+     signature sur une page intérieure, et une signature qui couvre le titre
+     vaut moins que pas de signature. */
+  .su-place-tarifs,
+  .su-place-projet {
+    display: none;
+  }
+}

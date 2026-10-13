@@ -6,6 +6,8 @@ import MiniHero from '@/components/ui/MiniHero'
 import PricingCards from '@/components/tarifs/PricingCards'
 import TarifsShelf from '@/components/tarifs/TarifsShelf'
 import DecorProfondeur from '@/components/ui/DecorProfondeur'
+import DeclareScene from '@/webgl/DeclareScene'
+import AncrageScene from '@/webgl/AncrageScene'
 
 export const metadata = {
   title: `Tarifs création site internet — À partir de ${SITE.pricing.vitrine}€`,
@@ -34,6 +36,12 @@ const faqSchema = {
 export default function TarifsPage() {
   return (
     <div className="min-h-screen bg-[#FFFDF9] relative overflow-hidden">
+      {/* La page déclare ce qu'elle veut de la scène : la bande à plat, vue
+          de dessus, comme un plan coté (dossier §11.6) — et la place où la
+          poser. Sans cette place, l'état `plan` ne peint pas : voir la règle
+          dans `Bande.tsx`. */}
+      <DeclareScene etat="plan" />
+      <AncrageScene className="su-place-tarifs" />
       <DecorProfondeur variant="warm" seed={1} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 

@@ -6,6 +6,7 @@ import { Clock, Tag } from 'lucide-react'
 import RelatedPosts from '@/components/blog/RelatedPosts'
 import AuthorByline from '@/components/blog/AuthorByline'
 import ReadingProgress from '@/components/blog/ReadingProgress'
+import DeclareScene from '@/webgl/DeclareScene'
 
 export async function generateStaticParams() {
   const posts = getAllPosts()
@@ -98,6 +99,10 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
   return (
     <div className="min-h-screen bg-[#FFFDF9]">
+      {/* Page éditoriale : la bande se replie en logo, petite et immobile.
+          Elle signe, elle ne compose pas — le texte est la seule chose à
+          lire ici (dossier §11.6). */}
+      <DeclareScene etat="repos" />
       <ReadingProgress />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(blogPostingSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />

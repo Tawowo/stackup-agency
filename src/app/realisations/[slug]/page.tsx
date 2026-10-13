@@ -4,6 +4,8 @@ import Image from 'next/image'
 import { ArrowLeft, ExternalLink, Check, ArrowRight, Mail } from 'lucide-react'
 import { realisations } from '@/lib/realisations'
 import { assombrirJusquAu, texteLisibleSur, IVOIRE } from '@/lib/contraste'
+import DeclareScene from '@/webgl/DeclareScene'
+import AncrageScene from '@/webgl/AncrageScene'
 
 type CaseStudy = { contexte: string; construit: string[]; tester: string[] }
 
@@ -52,6 +54,11 @@ export default async function RealisationPage({ params }: { params: Promise<{ sl
 
   return (
     <div className="min-h-screen bg-white">
+      {/* La bande passe en ombre, teintée par l'accent du projet : c'est
+          l'éclairage de la pellicule, repris ici pour que la fiche prolonge
+          la salle de projection au lieu de rompre avec elle (§11.6). */}
+      <DeclareScene etat="ombre" accent={r.accent} />
+      <AncrageScene className="su-place-projet" />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       {/* Hero */}
       <div className="relative pt-24 pb-20 px-4 overflow-hidden" style={{ background: r.couleur }}>
