@@ -17,48 +17,67 @@
  * promesse nouvelle n'est introduite.
  */
 
-import { useEffect, useRef } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
 import { SITE } from '@/config/site'
 import { useRevelation } from '@/lib/useRevelation'
+import { ajouterJoursOuvres, formaterJour } from '@/lib/joursOuvres'
 
+/* LE CALENDRIER RÉEL (dossier §10.8).
+ *
+ * Chaque étape porte son décalage en JOURS OUVRÉS depuis le premier contact.
+ * `null` signifie délibérément « pas de date » : les étapes qui dépendent de
+ * vous ne peuvent pas être datées par nous, et leur en coller une serait une
+ * pression inventée. Le dossier interdit exactement ça (§15.3 : aucune
+ * disponibilité calculée pour fabriquer de l'urgence).
+ *
+ * Les décalages ne sont pas choisis : ils découlent des engagements déjà
+ * écrits ailleurs sur le site — devis sous 72 h, livraison en 10 jours
+ * ouvrés, support de 30 jours — et le libellé dit « au plus tard ». */
 const ETAPES = [
   {
     num: '01',
     titre: 'Démo offerte',
     texte: 'On vous montre avant de vous vendre — une démo réelle de votre futur site.',
     marge: 'Vous ne signez rien à ce stade.',
+    ouvres: 0,
   },
   {
     num: '02',
     titre: 'Devis sur mesure',
     texte: 'Devis détaillé sous 72 h. Prix fixe, planning précis, aucune surprise.',
     marge: 'Le prix annoncé est le prix payé.',
+    ouvres: 3,
   },
   {
     num: '03',
     titre: 'Signature',
     texte: 'Rien ne démarre avant votre accord. Vous validez chaque étape.',
     marge: null,
+    // Pas de date : c'est vous qui la fixez.
+    ouvres: null,
   },
   {
     num: '04',
     titre: 'Développement & livraison',
     texte: 'Code propre, performant, livré en 10 jours ouvrés avec formation.',
     marge: 'Le code vous appartient.',
+    ouvres: 13,
   },
   {
     num: '05',
     titre: 'Ajustements inclus',
     texte: 'Support 30 jours post-livraison. Les retouches sont dans le prix.',
     marge: null,
+    ouvres: 14,
   },
   {
     num: '06',
     titre: 'Croissance',
     texte: 'Blog SEO, maintenance mensuelle et suivi pour faire grandir votre activité.',
     marge: null,
+    ouvres: null,
   },
 ] as const
 
@@ -83,6 +102,23 @@ function Encadre() {
 export default function LaRoute() {
   const section = useRef<HTMLElement>(null)
   const filet = useRef<HTMLSpanElement>(null)
+
+  /* LES DATES SE CALCULENT DANS LE NAVIGATEUR, PAS À LA CONSTRUCTION.
+
+     Cette page est générée statiquement : une date calculée au build serait
+     celle du jour du déploiement et vieillirait en silence. Un visiteur de
+     décembre lirait les dates d'octobre, ce qui est pire que pas de date du
+     tout. D'où le calcul au montage, et `null` tant qu'il n'a pas eu lieu —
+     sans JavaScript, la frise s'affiche sans dates, ce qui reste juste. */
+  const [aujourdhui, setAujourdhui] = useState<Date | null>(null)
+  useEffect(() => setAujourdhui(new Date()), [])
+
+  const dates = useMemo(() => {
+    if (!aujourdhui) return null
+    return ETAPES.map((e) =>
+      e.ouvres === null ? null : ajouterJoursOuvres(aujourdhui, e.ouvres),
+    )
+  }, [aujourdhui])
 
   // La révélation passe par la primitive partagée : l'état masqué n'existe
   // que si JavaScript peut le lever, et une temporisation de secours garantit
@@ -135,6 +171,16 @@ export default function LaRoute() {
             Six étapes claires. Aucune mauvaise surprise — de la démo à la
             croissance.
           </p>
+          {/* Ce que ces dates sont, et ce qu'elles ne sont pas. Sans cette
+              ligne, une frise datée se lit comme un engagement contractuel
+              alors que c'est une projection à partir d'aujourd'hui. */}
+          {aujourdhui && (
+            <p className="su-methode__projection">
+              Dates calculées en jours ouvrés depuis aujourd’hui, jours fériés
+              français déduits. Projection, pas engagement : le départ réel est
+              fixé à la signature.
+            </p>
+          )}
           <p className="su-methode__duree">
             <span className="su-methode__duree-chiffre su-accent">
               {SITE.delais.vitrine.split(' ')[0]}
@@ -164,6 +210,20 @@ export default function LaRoute() {
                   </p>
                   <div className="su-methode__corps">
                     <h3 className="su-methode__etape-titre">{etape.titre}</h3>
+                    {/* La date réelle, quand elle existe. Les étapes qui
+                        dépendent du client n'en ont pas, et c'est écrit. */}
+                    {dates?.[i] ? (
+                      <p className="su-methode__date">
+                        <time dateTime={dates[i]!.toISOString().slice(0, 10)}>
+                          {formaterJour(dates[i]!)}
+                        </time>
+                        <span className="su-methode__date-mention"> au plus tard</span>
+                      </p>
+                    ) : etape.ouvres === null ? (
+                      <p className="su-methode__date su-methode__date--libre">
+                        Quand vous le décidez
+                      </p>
+                    ) : null}
                     <p className="su-methode__texte su-doux">{etape.texte}</p>
                   </div>
                   {etape.marge && (

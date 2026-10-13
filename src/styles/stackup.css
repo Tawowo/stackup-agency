@@ -5314,3 +5314,41 @@ html[data-grille='oui'] .su-ouv__grille {
   border-top: 1px solid rgb(255 255 255 / 0.3);
   border-bottom: 1px solid rgb(255 255 255 / 0.3);
 }
+
+/* ── Les dates réelles de la méthode (§10.8) ───────────────────────────────
+   Chasse fixe : une date est une donnée, pas une phrase. Elle se lit en
+   diagonale, comme une colonne de registre.
+   ──────────────────────────────────────────────────────────────────────── */
+
+.su-methode__date {
+  margin: 0 0 0.3rem;
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 0.78rem;
+  letter-spacing: 0.02em;
+  color: var(--su-or-texte);
+}
+
+.su-methode__date time {
+  font-weight: 600;
+}
+
+.su-methode__date-mention {
+  color: rgb(var(--su-navy-rgb) / 0.75);
+  font-weight: 400;
+}
+
+/* Les étapes que le client décide n'ont pas de date, et le disent sans
+   prendre la couleur d'action : ce n'est pas une échéance. */
+.su-methode__date--libre {
+  color: rgb(var(--su-navy-rgb) / 0.75);
+}
+
+.su-methode__projection {
+  margin: 0.9rem 0 0;
+  max-width: 52ch;
+  font-size: 0.82rem;
+  line-height: 1.5;
+  color: rgb(var(--su-navy-rgb) / 0.75);
+  padding-left: 0.75rem;
+  border-left: 2px solid rgb(var(--su-or-rgb) / 0.5);
+}
