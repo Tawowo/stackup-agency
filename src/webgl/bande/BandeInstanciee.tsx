@@ -37,7 +37,6 @@ const DUREE = 1.1
 
 /** L'offre du store correspond un pour un à une configuration. */
 const VERS_LAYOUT: Record<Offre, NomLayout> = {
-  association: 'association',
   vitrine: 'vitrine',
   multipages: 'multipages',
   boutique: 'boutique',

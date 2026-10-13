@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import Link from 'next/link'
-import { SITE } from '@/config/site'
+import { SITE, aPartirDe } from '@/config/site'
 import MiniHero from '@/components/ui/MiniHero'
 import FaqAccordion from '@/components/ui/FaqAccordion'
 
@@ -20,7 +20,7 @@ const FAQ_ITEMS = [
   {
     cat: 'Délais et processus',
     faqs: [
-      { q: 'Quels sont les délais de livraison ?', a: `Site vitrine : ${SITE.delais.vitrine}. Site multi-pages : ${SITE.delais.multipages}. Boutique en ligne : ${SITE.delais.ecommerce}. Site association : ${SITE.delais.association}. Système de gestion : ${SITE.delais.gestion}. Les délais sont garantis contractuellement à partir de la validation du brief et du paiement de l'acompte.` },
+      { q: 'Quels sont les délais de livraison ?', a: `Site vitrine : ${SITE.delais.vitrine}. Site multi-pages : ${SITE.delais.multipages}. Boutique en ligne : ${SITE.delais.ecommerce}. Système de gestion : ${SITE.delais.gestion}. Les délais sont garantis contractuellement à partir de la validation du brief et du paiement de l'acompte.` },
       { q: 'Comment se déroule le processus de création ?', a: `1. Prise de contact et brief. 2. Devis et bon de commande. 3. Acompte de ${SITE.conditions.acomptePourcent} %. 4. Maquette. 5. Développement. 6. Retours et ajustements (${SITE.conditions.revisionsIncluses} révisions comprises). 7. Livraison et mise en ligne. 8. Formation à la prise en main.` },
       { q: 'Combien de modifications peut-on demander ?', a: "Deux rounds de retours sont inclus dans chaque projet. Des modifications supplémentaires sont facturées au taux horaire." },
       { q: 'Travaillez-vous à distance ou en présentiel ?', a: "Nous travaillons principalement à distance par visioconférence et email. Cela nous permet d'être réactifs pour tous nos clients en France, pas seulement en Touraine." },
@@ -29,13 +29,13 @@ const FAQ_ITEMS = [
   {
     cat: 'Pourquoi Stackup Agency ?',
     faqs: [
-      { q: 'Pourquoi vous plutôt qu\'une agence classique ?', a: 'Des tarifs 3 à 5 fois inférieurs à périmètre égal, car pas de bureaux à amortir ni de couches commerciales. Du code sur mesure en Next.js et TypeScript, pas de template. Un délai de 10 jours ouvrés contractuel pour un site vitrine. Et toutes nos démonstrations sont en ligne — pas de portfolio fantôme.' },
+      { q: 'Pourquoi vous plutôt qu\'une agence classique ?', a: 'Pas de bureaux à amortir ni de couches commerciales : la structure est légère, et cela se voit sur le devis. Du code sur mesure en Next.js et TypeScript, pas de template. Un délai de 10 jours ouvrés contractuel pour un site vitrine. Et toutes nos démonstrations sont en ligne — pas de portfolio fantôme.' },
     ],
   },
   {
     cat: 'Tarifs et paiement',
     faqs: [
-      { q: 'Quels sont les tarifs ?', a: `Site vitrine : ${SITE.pricing.vitrine}€. Site multi-pages : ${SITE.pricing.multipages}€. Boutique en ligne : ${SITE.pricing.ecommerce}€. Système de gestion : à partir de ${SITE.pricing.gestion}€. Site association : ${SITE.pricing.association}€. Ces prix sont tout inclus (design, développement, SEO, hébergement 12 mois, SSL).` },
+      { q: 'Quels sont les tarifs ?', a: `Site vitrine : ${aPartirDe(SITE.pricing.vitrine)}. Site multi-pages : ${aPartirDe(SITE.pricing.multipages)}. Boutique en ligne : ${aPartirDe(SITE.pricing.ecommerce)}. Système de gestion : ${aPartirDe(SITE.pricing.gestion)}. Ces prix sont tout inclus (design, développement, SEO, hébergement 12 mois, SSL).` },
       { q: 'Y a-t-il des frais cachés ?', a: "Non. Le prix affiché est le prix final. Hébergement, SSL et formation de base sont inclus la première année." },
       { q: 'Comment se déroule le paiement ?', a: `${SITE.conditions.acomptePourcent} % d'acompte au démarrage, ${SITE.conditions.soldePourcent} % à la livraison. Paiement en trois fois possible au-delà de ${SITE.conditions.paiementTroisFoisDes} €. Virement bancaire ou carte bancaire (paiement en ligne sécurisé).` },
       { q: 'Proposez-vous des facilités de paiement ?', a: "Pour les projets supérieurs à 500€, un échelonnement sur 3 mensualités sans frais est possible. Mentionnez-le lors de votre demande." },
@@ -47,7 +47,7 @@ const FAQ_ITEMS = [
     faqs: [
       { q: 'Est-ce que je suis propriétaire du code ?', a: "Oui, à 100%. Une fois le projet livré et payé, le code vous appartient entièrement. Vous êtes libre de le modifier, de le transférer ou de changer d'hébergeur." },
       { q: 'Où est hébergé mon site ?', a: SITE.hebergement.long },
-      { q: 'Que se passe-t-il après les 12 mois d\'hébergement inclus ?', a: `Vous pouvez opter pour l'une de nos offres de maintenance (à partir de ${SITE.pricing.maintenanceStarter}€/mois) ou récupérer votre code et gérer l'hébergement vous-même. Le nom de domaine, offert la première année, reste ensuite à votre charge sauf abonnement de maintenance actif (il y est inclus).` },
+      { q: 'Que se passe-t-il après les 12 mois d\'hébergement inclus ?', a: `Vous pouvez opter pour l'une de nos offres de maintenance (${aPartirDe(SITE.pricing.maintenanceStarter)}/mois) ou récupérer votre code et gérer l'hébergement vous-même. Le nom de domaine, offert la première année, reste ensuite à votre charge sauf abonnement de maintenance actif (il y est inclus).` },
       { q: 'Mon site sera-t-il sécurisé ?', a: "Oui. Chaque site est livré avec un certificat SSL (HTTPS), des mises à jour de sécurité régulières et des sauvegardes automatiques." },
       { q: 'Mon site sera-t-il visible sur mobile ?', a: "Oui. Tous nos sites sont 100% responsive, optimisés pour mobile, tablette et desktop. Les performances mobiles sont testées avant livraison." },
     ],

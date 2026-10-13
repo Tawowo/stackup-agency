@@ -45,7 +45,7 @@ Les tarifs web ne varient pas selon la ville mais selon le prestataire choisi. V
 - E-commerce avancé : 2 500€ à 6 000€+
 
 ### Site association
-- Prestataire spécialisé : 149€ à 600€
+- Prestataire spécialisé : quelques centaines d'euros
 
 ---
 

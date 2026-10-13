@@ -2,17 +2,17 @@
 import { METIERS, CATEGORIES_METIERS } from '@/data/metiers'
 import Link from 'next/link'
 import { ChevronRight } from 'lucide-react'
-import { SITE } from '@/config/site'
+import { SITE, aPartirDe } from '@/config/site'
 import MiniHero from '@/components/ui/MiniHero'
 
 export const metadata = {
   title: 'Sites internet par métier — TPE, artisans',
-  description: `Site internet sur mesure selon votre métier : restaurant, artisan, médecin, commerçant. À partir de ${SITE.pricing.vitrine}€, livré en 10 jours. Devis gratuit sous 72h.`,
+  description: `Site internet sur mesure selon votre métier : restaurant, artisan, médecin, commerçant. ${aPartirDe(SITE.pricing.vitrine)}, livré en 10 jours. Devis gratuit sous 72h.`,
   alternates: { canonical: `${SITE.url}/creation-site-internet` },
   openGraph: {
     url: `${SITE.url}/creation-site-internet`,
     title: 'Création site internet par métier',
-    description: `Sites internet professionnels par métier. À partir de ${SITE.pricing.vitrine}€.`,
+    description: `Sites internet professionnels par métier. ${aPartirDe(SITE.pricing.vitrine)}.`,
     type: 'website',
   },
 }
@@ -40,7 +40,7 @@ export default function CreationSiteInternetPage() {
         signature="trace"
         breadcrumb={[{ name: 'Création site internet' }]}
         title="Création de site internet par métier"
-        subtitle={`Chaque métier a ses spécificités. Stackup Agency crée des sites adaptés à votre activité : restaurant, artisan, professionnel de santé, commerce… À partir de ${SITE.pricing.vitrine} €.`}
+        subtitle={`Chaque métier a ses spécificités. Stackup Agency crée des sites adaptés à votre activité : restaurant, artisan, professionnel de santé, commerce… ${aPartirDe(SITE.pricing.vitrine)}.`}
       />
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 py-16 space-y-12">

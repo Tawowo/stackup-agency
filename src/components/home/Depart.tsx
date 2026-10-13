@@ -33,7 +33,7 @@
 import { useEffect, useRef } from 'react'
 import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
-import { SITE } from '@/config/site'
+import { SITE, aPartirDe } from '@/config/site'
 import { useBande } from '@/store/bande'
 
 /** Durée du repliement, celle de la fiche 11.1 relue à l'envers. */
@@ -122,7 +122,7 @@ export default function Depart() {
   }, [])
 
   const cotes = [
-    { valeur: `${SITE.pricing.vitrine} €`, note: 'tout inclus' },
+    { valeur: aPartirDe(SITE.pricing.vitrine), note: 'tout inclus' },
     { valeur: SITE.delais.vitrine, note: 'de l’idée à la mise en ligne' },
     { valeur: '72 h', note: 'délai de réponse' },
     { valeur: '100 %', note: 'le code est à vous' },

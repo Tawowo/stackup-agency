@@ -52,7 +52,6 @@ const SERVICES: EntreePalette[] = [
   { titre: 'Refonte de site', href: '/services/refonte-site', categorie: 'Service', motsCles: 'moderniser relooker' },
   { titre: 'Maintenance', href: '/services/maintenance', categorie: 'Service', motsCles: 'suivi mises à jour' },
   { titre: 'Rédaction blog SEO', href: '/services/redaction-blog-seo', categorie: 'Service', motsCles: 'contenu articles référencement' },
-  { titre: 'Site d’association', href: '/services/site-association', categorie: 'Service' },
 ]
 
 let cache: EntreePalette[] | null = null

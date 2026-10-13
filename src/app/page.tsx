@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import type { Metadata } from 'next'
 import HomeFaq from '@/components/home/HomeFaq'
-import { SITE } from '@/config/site'
+import { SITE, aPartirDe } from '@/config/site'
 import dynamic from 'next/dynamic'
 import Ouverture from '@/components/home/Ouverture'
 import Strates from '@/components/home/Strates'
@@ -18,12 +18,12 @@ const Seuil = dynamic(() => import('@/components/home/Seuil'))
 
 export const metadata: Metadata = {
   title: "Agence web Tours — Site internet en 10 jours",
-  description: `Stackup Agency crée votre site internet en ${SITE.delais.vitrine} à partir de ${SITE.pricing.vitrine}€. Site vitrine, e-commerce, système de gestion sur mesure. Devis gratuit sous 72h.`,
+  description: `Stackup Agency crée votre site internet en ${SITE.delais.vitrine} ${aPartirDe(SITE.pricing.vitrine)}. Site vitrine, e-commerce, système de gestion sur mesure. Devis gratuit sous 72h.`,
   alternates: { canonical: SITE.url },
   openGraph: {
     url: SITE.url,
-    title: "Agence web Tours — Site internet livré en 10 jours dès 449€",
-    description: `Stackup Agency crée votre site internet en ${SITE.delais.vitrine} à partir de ${SITE.pricing.vitrine}€.`,
+    title: "Agence web Tours — Site internet livré en 10 jours à partir de 449€",
+    description: `Stackup Agency crée votre site internet en ${SITE.delais.vitrine} ${aPartirDe(SITE.pricing.vitrine)}.`,
     type: 'website',
   },
 }
@@ -47,7 +47,7 @@ const organizationSchema = {
   name: SITE.name,
   url: SITE.url,
   email: SITE.email,
-  description: `Agence web basée à Tours. Création de sites internet professionnels pour TPE et artisans, livrés en ${SITE.delais.vitrine} à partir de ${SITE.pricing.vitrine}€.`,
+  description: `Agence web basée à Tours. Création de sites internet professionnels pour TPE et artisans, livrés en ${SITE.delais.vitrine} ${aPartirDe(SITE.pricing.vitrine)}.`,
   address: {
     '@type': 'PostalAddress',
     addressLocality: SITE.address.locality,
@@ -55,7 +55,7 @@ const organizationSchema = {
     postalCode: SITE.address.departmentCode,
     addressCountry: SITE.address.country,
   },
-  priceRange: `À partir de ${SITE.pricing.vitrine}€`,
+  priceRange: `${aPartirDe(SITE.pricing.vitrine)}`,
   areaServed: { '@type': 'Country', name: 'France' },
   sameAs: [SITE.social.linkedin, SITE.social.instagram, SITE.social.facebook],
 }
@@ -81,7 +81,7 @@ const organizationSchema = {
  *    quatrième dans une file de démonstrations. Tout ce qui le précédait
  *    argumentait à sa place.
  *  - LE VERDICT (le prix) descend après les réalisations et le logiciel.
- *    Annoncer « huit fois moins cher » avant d'avoir montré le travail, c'est
+ *    Annoncer un écart de prix avant d'avoir montré le travail, c'est
  *    une affirmation ; après, c'est une conclusion.
  *
  * Trois suppressions, chacune parce qu'elle répétait :
@@ -161,13 +161,11 @@ export default function Home() {
 
         {/* 06 — LE JUSTE PRIX : le prix, une fois le travail montré.
 
-            CE QUE ÇA REMPLACE : « le verdict », dont le comparateur affichait
-            « ×8,9 moins cher qu'une agence classique » à partir de
-            fourchettes codées en dur (2 000 à 6 000 € pour une vitrine…) qui
-            ne venaient de nulle part. Le dossier l'interdit deux fois (§15.3
-            et §10.7) et le commanditaire a tranché : le comparateur part, le
-            coût sur cinq ans reste — celui-là est sourcé par notre propre
-            article, qui détaille quatre abonnements poste par poste. */}
+            CE QUE ÇA REMPLACE : « le verdict », dont le comparateur mettait
+            en avant un rapport entre nos prix et ceux d'une agence, calculé
+            sur des fourchettes codées en dur qui ne venaient de nulle part.
+            Supprimé sur décision du commanditaire. Ne subsiste que le coût
+            sur cinq ans, sourcé par nos propres articles publiés. */}
         <JustePrix />
 
         {/* 08 — LA MÉTHODE. Unique chronologie de la page, désormais : la

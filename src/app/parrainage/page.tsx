@@ -13,7 +13,7 @@ const faqSchema = {
     {
       '@type': 'Question',
       name: 'Quelle est la récompense du parrain ?',
-      acceptedAnswer: { '@type': 'Answer', text: 'À la signature du projet de votre filleul, vous choisissez votre récompense : 1 mois d\'abonnement Premium (89 €) offert OU −10 % sur votre propre prestation non encore signée. Une récompense par filleul signé, cumulable sur plusieurs filleuls.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'À la signature du projet de votre filleul, vous choisissez votre récompense : 1 mois d\'abonnement Premium offert (valeur à partir de 89 €) OU −10 % sur votre propre prestation non encore signée. Une récompense par filleul signé, cumulable sur plusieurs filleuls.' },
     },
     {
       '@type': 'Question',
@@ -55,7 +55,7 @@ const STEPS = [
     Icon: Gift,
     num: '03',
     titre: 'Vous choisissez votre récompense',
-    desc: '1 mois d\'abonnement Premium (89 €) offert OU −10 % sur votre propre prestation non encore signée. Une récompense par filleul, cumulable sur plusieurs filleuls.',
+    desc: '1 mois d\'abonnement Premium offert (valeur à partir de 89 €) OU −10 % sur votre propre prestation non encore signée. Une récompense par filleul, cumulable sur plusieurs filleuls.',
   },
 ]
 
@@ -97,7 +97,7 @@ export default function ParrainagePage() {
       <MiniHero signature="signal"
         breadcrumb={[{ name: 'Parrainage', href: '/parrainage' }]}
         title="Parrainez un professionnel, choisissez votre récompense"
-        subtitle="À la signature de son projet : 1 mois d'abonnement Premium (89 €) offert OU −10 % sur votre propre prestation. Cumulable sur plusieurs filleuls."
+        subtitle="À la signature de son projet : 1 mois d'abonnement Premium offert (valeur à partir de 89 €) OU −10 % sur votre propre prestation. Cumulable sur plusieurs filleuls."
       />
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 py-16 space-y-16">
@@ -130,7 +130,7 @@ export default function ParrainagePage() {
             <div className="rounded-2xl border border-gold/30 bg-gradient-to-br from-navy to-[#0F172A] p-8 text-white">
               <div className="text-xs font-semibold text-[#B45309]/70 uppercase tracking-widest mb-4">Pour vous — le parrain, au choix</div>
               <div className="flex items-baseline gap-2 mb-1">
-                <span className="font-display font-bold text-3xl text-[#B45309]">1 mois Premium (89 €)</span>
+                <span className="font-display font-bold text-3xl text-[#B45309]">1 mois Premium offert</span>
               </div>
               <div className="text-white/60 text-base mb-1">offert sur votre abonnement</div>
               <div className="text-white/65 text-sm mb-4">

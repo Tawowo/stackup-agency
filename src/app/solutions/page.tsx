@@ -1,17 +1,17 @@
 import { SOLUTIONS } from '@/data/solutions'
 import Link from 'next/link'
 import { ChevronRight } from 'lucide-react'
-import { SITE } from '@/config/site'
+import { SITE, aPartirDe } from '@/config/site'
 import MiniHero from '@/components/ui/MiniHero'
 
 export const metadata = {
   title: 'Solutions digitales sur mesure — RDV, gestion',
-  description: `Solutions digitales pour TPE et artisans : prise de RDV, click & collect, commande en ligne, CRM, gestion des stocks. Développement sur mesure à partir de ${SITE.pricing.gestion}€.`,
+  description: `Solutions digitales pour TPE et artisans : prise de RDV, click & collect, commande en ligne, CRM, gestion des stocks. Développement sur mesure ${aPartirDe(SITE.pricing.gestion)}.`,
   alternates: { canonical: `${SITE.url}/solutions` },
   openGraph: {
     url: `${SITE.url}/solutions`,
     title: 'Solutions digitales sur mesure — RDV, commandes, gestion',
-    description: `Solutions digitales sur mesure pour TPE et artisans. À partir de ${SITE.pricing.gestion}€.`,
+    description: `Solutions digitales sur mesure pour TPE et artisans. ${aPartirDe(SITE.pricing.gestion)}.`,
     type: 'website',
   },
 }

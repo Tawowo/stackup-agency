@@ -3,7 +3,7 @@ import { VILLES, getVille } from '@/data/villes'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { ChevronRight, CheckCircle, Building2, TrendingUp, ArrowRight } from 'lucide-react'
-import { SITE } from '@/config/site'
+import { SITE, aPartirDe } from '@/config/site'
 import MiniHero from '@/components/ui/MiniHero'
 
 export async function generateStaticParams() {
@@ -15,12 +15,12 @@ export async function generateMetadata({ params }: { params: Promise<{ ville: st
   const v = getVille(parametres.ville)
   if (!v) return {}
   const url = `${SITE.url}/agence-web/${v.slug}`
-  const rawTitle = `Agence web ${v.ville} — Site internet dès ${SITE.pricing.vitrine}€`
+  const rawTitle = `Agence web ${v.ville} — Site internet ${aPartirDe(SITE.pricing.vitrine)}`
   const suffix = ' | Stackup Agency'
   const seoTitle = rawTitle.length <= 65 - suffix.length
     ? rawTitle + suffix
-    : `Agence web ${v.ville} — dès ${SITE.pricing.vitrine}€` + suffix
-  const description = `Création de site internet à ${v.ville} à partir de ${SITE.pricing.vitrine}€, livré en 10 jours ouvrés. Design personnalisé, SEO intégré. Devis gratuit sous 72h.`
+    : `Agence web ${v.ville} — ${aPartirDe(SITE.pricing.vitrine)}` + suffix
+  const description = `Création de site internet à ${v.ville} ${aPartirDe(SITE.pricing.vitrine)}, livré en 10 jours ouvrés. Design personnalisé, SEO intégré. Devis gratuit sous 72h.`
   return {
     title: { absolute: seoTitle },
     description,
@@ -71,7 +71,7 @@ export default async function AgenceWebVillePage({ params }: { params: Promise<{
   const faqItems = [
     {
       q: `Quel est le prix d'un site internet à ${v.ville} ?`,
-      a: `Stackup Agency propose des sites vitrine à partir de ${SITE.pricing.vitrine}€ et des sites e-commerce à partir de ${SITE.pricing.ecommerce}€. Le devis est gratuit et rendu sous 72h, sans engagement.`,
+      a: `Stackup Agency propose des sites vitrine ${aPartirDe(SITE.pricing.vitrine)} et des sites e-commerce ${aPartirDe(SITE.pricing.ecommerce)}. Le devis est gratuit et rendu sous 72h, sans engagement.`,
     },
     {
       q: `Combien de temps pour créer un site web à ${v.ville} ?`,
@@ -109,7 +109,7 @@ export default async function AgenceWebVillePage({ params }: { params: Promise<{
         breadcrumb={[{ name: 'Agence web', href: '/agence-web' }, { name: v.ville }]}
         marker={`${v.departement} — ${v.region}`}
         title={`Agence web ${v.ville}`}
-        subtitle={`Création de sites internet professionnels pour les entrepreneurs et commerces de ${v.ville} et alentours. Sites vitrine, e-commerce, applications métier — livrés en 10 à 21 jours, à partir de ${SITE.pricing.vitrine} €.`}
+        subtitle={`Création de sites internet professionnels pour les entrepreneurs et commerces de ${v.ville} et alentours. Sites vitrine, e-commerce, applications métier — livrés en 10 à 21 jours, ${aPartirDe(SITE.pricing.vitrine)}.`}
       >
         <div className="su-sig__meta">
           <span><CheckCircle size={14} className="text-success" /> À partir de {SITE.pricing.vitrine} €</span>
@@ -158,10 +158,10 @@ export default async function AgenceWebVillePage({ params }: { params: Promise<{
           </h2>
           <div className="grid sm:grid-cols-2 gap-4">
             {[
-              { titre: 'Site vitrine', prix: `${SITE.pricing.vitrine}€`, delai: SITE.delais.vitrine, desc: 'Présence en ligne professionnelle, SEO local optimisé', href: '/services/site-vitrine' },
-              { titre: 'Site multi-pages', prix: `${SITE.pricing.multipages}€`, delai: SITE.delais.multipages, desc: 'Site complet avec plusieurs sections et pages de service', href: '/services/site-multi-pages' },
-              { titre: 'Boutique en ligne', prix: `${SITE.pricing.ecommerce}€`, delai: SITE.delais.ecommerce, desc: 'E-commerce complet, paiement sécurisé, gestion des stocks', href: '/services/site-ecommerce' },
-              { titre: 'Application métier', prix: `${SITE.pricing.gestion}€`, delai: SITE.delais.gestion, desc: 'Logiciel sur mesure : caisse, RDV, commandes, CRM', href: '/services/systeme-gestion' },
+              { titre: 'Site vitrine', prix: `${aPartirDe(SITE.pricing.vitrine)}`, delai: SITE.delais.vitrine, desc: 'Présence en ligne professionnelle, SEO local optimisé', href: '/services/site-vitrine' },
+              { titre: 'Site multi-pages', prix: `${aPartirDe(SITE.pricing.multipages)}`, delai: SITE.delais.multipages, desc: 'Site complet avec plusieurs sections et pages de service', href: '/services/site-multi-pages' },
+              { titre: 'Boutique en ligne', prix: `${aPartirDe(SITE.pricing.ecommerce)}`, delai: SITE.delais.ecommerce, desc: 'E-commerce complet, paiement sécurisé, gestion des stocks', href: '/services/site-ecommerce' },
+              { titre: 'Application métier', prix: `${aPartirDe(SITE.pricing.gestion)}`, delai: SITE.delais.gestion, desc: 'Logiciel sur mesure : caisse, RDV, commandes, CRM', href: '/services/systeme-gestion' },
             ].map(s => (
               <Link key={s.titre} href={s.href} className="reveal-item p-5 rounded-2xl border border-navy/20 hover:border-electric/40 hover:-translate-y-0.5 transition-all duration-200 group">
                 <div className="flex items-start justify-between mb-2">

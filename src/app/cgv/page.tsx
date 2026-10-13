@@ -41,20 +41,19 @@ const sections = [
           <thead>
             <tr className="border-b border-gray-200">
               <th className="text-left py-2 font-semibold">Service</th>
-              <th className="text-left py-2 font-semibold">Tarif</th>
+              <th className="text-left py-2 font-semibold">Tarif de départ</th>
               <th className="text-left py-2 font-semibold">Délai</th>
             </tr>
           </thead>
           <tbody className="divide-y divide-gray-100">
             {[
-              ['Site Association', '149 €', '7 jours ouvrés'],
-              ['Site Vitrine', '449 €', '10 jours ouvrés'],
-              ['Site Multi-pages', '749 €', '17 jours ouvrés'],
-              ['Site E-commerce', '1 647 €', '21 jours ouvrés'],
-              ['Système de Gestion', '1 447 €', '21 jours ouvrés'],
-              ['Maintenance Starter', '29 €/mois', 'Engagement mensuel'],
-              ['Maintenance Pro', '44 €/mois', 'Engagement mensuel'],
-              ['Maintenance Premium', '89 €/mois', 'Engagement mensuel'],
+              ['Site Vitrine', 'à partir de 449 €', '10 jours ouvrés'],
+              ['Site Multi-pages', 'à partir de 749 €', '17 jours ouvrés'],
+              ['Site E-commerce', 'à partir de 1 647 €', '21 jours ouvrés'],
+              ['Système de Gestion', 'à partir de 1 447 €', '21 jours ouvrés'],
+              ['Maintenance Starter', 'à partir de 29 €/mois', 'Engagement mensuel'],
+              ['Maintenance Pro', 'à partir de 44 €/mois', 'Engagement mensuel'],
+              ['Maintenance Premium', 'à partir de 89 €/mois', 'Engagement mensuel'],
             ].map(([service, tarif, delai]) => (
               <tr key={service}>
                 <td className="py-2">{service}</td>
@@ -99,7 +98,6 @@ const sections = [
       <div className="space-y-2">
         <p>Après livraison, un support technique est inclus :</p>
         <ul className="list-disc pl-5 space-y-1">
-          <li><strong>Site Association :</strong> 15 jours ouvrés après livraison</li>
           <li><strong>Site Vitrine :</strong> 15 jours ouvrés après livraison</li>
           <li><strong>Site Multi-pages :</strong> 30 jours ouvrés après livraison</li>
           <li><strong>Site E-commerce :</strong> 30 jours ouvrés après livraison</li>
@@ -131,7 +129,7 @@ const sections = [
       <div className="space-y-2">
         <p>Le programme de parrainage de Stackup Agency fonctionne comme suit :</p>
         <ul className="list-disc pl-5 space-y-1">
-          <li><strong>Pour le parrain :</strong> au choix, 1 mois d&apos;abonnement Premium (89 €) offert OU −10 % sur sa propre prestation non encore signée, pour chaque nouveau client signé grâce à sa recommandation (mise en relation signalée avant la signature du devis du filleul ; une récompense par filleul, cumulable)</li>
+          <li><strong>Pour le parrain :</strong> au choix, 1 mois d&apos;abonnement Premium offert (valeur à partir de 89 €) offert OU −10 % sur sa propre prestation non encore signée, pour chaque nouveau client signé grâce à sa recommandation (mise en relation signalée avant la signature du devis du filleul ; une récompense par filleul, cumulable)</li>
           <li><strong>Pour le filleul :</strong> 10 % de réduction sur son premier projet</li>
         </ul>
         <p>Cette offre est cumulable et activée sur mention du nom du parrain lors de la prise de contact.</p>

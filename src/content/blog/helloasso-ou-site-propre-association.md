@@ -22,7 +22,7 @@ En revanche, HelloAsso n'est pas conçu pour être le site vitrine d'une associa
 | Critère | HelloAsso | Site internet propre |
 |---|---|---|
 | Rôle principal | Collecte de paiements (dons, adhésions, billetterie) | Vitrine, présentation, référencement, communication |
-| Coût | Gratuit, financé par pourboires volontaires du payeur | À partir de 149 €, achat unique |
+| Coût | Gratuit, financé par pourboires volontaires du payeur | Sur devis, achat unique |
 | Identité visuelle | Charte imposée par la plateforme | Personnalisée à l'image de l'association |
 | Nom de domaine | Sous-domaine helloasso.com | Nom de domaine propre, offert la 1ʳᵉ année |
 | Référencement Google | Très limité, page noyée parmi des milliers d'autres | Optimisable pour apparaître sur les recherches locales |
@@ -70,7 +70,7 @@ Rarement pour des recherches précises liées à l'association, car la page est 
 Non, une interface d'administration simple permet de mettre à jour les événements et actualités sans connaissance technique, avec une formation incluse à la livraison.
 
 **Quel est le budget minimum pour un site propre d'association ?**
-À partir de 149 €, livré en 7 jours ouvrés, un montant pensé pour rester compatible avec les budgets associatifs les plus serrés.
+Un site d'association se chiffre comme les autres projets, selon son périmètre : [nos offres et leurs tarifs de départ](/services) sont publics.
 
 ---
 

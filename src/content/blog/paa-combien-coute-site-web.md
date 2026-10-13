@@ -9,7 +9,7 @@ category: "creation"
 keywords: ["combien coûte un site web", "prix site internet professionnel", "tarif site web 2026", "coût création site"]
 ---
 
-**Le prix d'un site web professionnel en France varie de 149€ à plusieurs dizaines de milliers d'euros.** Cette fourchette est inutile sans contexte. Voici les tarifs réels selon le type de site dont vous avez besoin.
+**Le prix d'un site web professionnel en France varie de quelques centaines d'euros à plusieurs dizaines de milliers d'euros.** Cette fourchette est inutile sans contexte. Voici les tarifs réels selon le type de site dont vous avez besoin.
 
 ---
 
@@ -30,7 +30,7 @@ Inclut : design personnalisé, 5 pages (accueil, services, à propos, réalisati
 
 ### Site association
 
-**Prix chez Stackup Agency : 149€**
+**Prix chez Stackup Agency : sur devis**
 
 Pour les associations, MJC, clubs sportifs et structures à but non lucratif. Design adapté, fonctionnalités associatives (agenda, adhésion, contact), livré en 7 jours ouvrés.
 

@@ -12,7 +12,6 @@ const SERVICES_LINKS = [
   { href: '/services/site-multi-pages', label: 'Site multi-pages' },
   { href: '/services/site-ecommerce', label: 'Boutique en ligne' },
   { href: '/services/systeme-gestion', label: 'Système de gestion' },
-  { href: '/services/site-association', label: 'Site association' },
 ]
 
 const OUTILS_LINKS = [

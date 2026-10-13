@@ -102,9 +102,9 @@ Pour la plupart des recycleries, la galerie sans achat en ligne est le bon compr
 
 ## Budget et délais pour un site de recyclerie
 
-### Formule site association (149€ — notre tarif spécifique)
+### Site d'association
 
-Notre [formule site association à 149€](/tarifs) couvre les besoins essentiels :
+Notre [nos offres](/services) couvre les besoins essentiels :
 - 5 pages fonctionnelles (accueil, donner, acheter, bénévolat, contact)
 - Design sobre et accessible
 - SEO de base
@@ -137,7 +137,7 @@ Une fiche bien complète avec vos horaires, vos catégories (magasin d'occasion,
 ## FAQ
 
 **Une recyclerie a-t-elle droit à un site web gratuit avec certains dispositifs ?**
-Il existe des dispositifs d'accompagnement numérique pour les associations (exemple : associations territoriales, dispositifs régionaux). Ces accompagnements offrent parfois des modules de création de site, mais avec des résultats souvent médiocres. Un site sur mesure à 149€ est souvent plus efficace qu'un site "gratuit" de mauvaise qualité.
+Il existe des dispositifs d'accompagnement numérique pour les associations (exemple : associations territoriales, dispositifs régionaux). Ces accompagnements offrent parfois des modules de création de site, mais avec des résultats souvent médiocres. Un site sur mesure à sur devis est souvent plus efficace qu'un site "gratuit" de mauvaise qualité.
 
 **Comment mesurer l'impact du site sur nos dons et bénévoles ?**
 Installez Google Analytics 4 (gratuit) et configurez des objectifs : soumission du formulaire de contact, clics sur l'email ou le téléphone. Notez également l'augmentation des demandes de don et de bénévolat dans les semaines suivant la mise en ligne.

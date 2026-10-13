@@ -4,10 +4,10 @@
  * Le même objet commercial portait TROIS identifiants différents selon
  * l'endroit du code :
  *
- *   store de la scène   vitrine · multipages · boutique  · gestion · association
- *   configurateur       vitrine · multipages · ecommerce · gestion · association
+ *   store de la scène   vitrine · multipages · boutique  · gestion
+ *   configurateur       vitrine · multipages · ecommerce · gestion
  *   formulaire de devis site-vitrine · site-multi-pages · site-ecommerce ·
- *                       systeme-gestion · site-association
+ *                       systeme-gestion
  *
  * Conséquence mesurée : le configurateur ne pouvait pas transmettre le type
  * de projet au devis, qui le redemandait à sa première étape. Un visiteur
@@ -23,7 +23,7 @@
  */
 
 /** L'identifiant de référence : celui du configurateur. */
-export type IdOffre = 'vitrine' | 'multipages' | 'ecommerce' | 'gestion' | 'association'
+export type IdOffre = 'vitrine' | 'multipages' | 'ecommerce' | 'gestion'
 
 /**
  * Ce que le formulaire de devis attend.
@@ -38,7 +38,6 @@ export const VERS_DEVIS = {
   multipages: 'site-multi-pages',
   ecommerce: 'site-ecommerce',
   gestion: 'systeme-gestion',
-  association: 'site-association',
 } as const satisfies Record<IdOffre, string>
 
 /** Ce que le store de la scène emploie. */
@@ -47,7 +46,6 @@ export const VERS_SCENE = {
   multipages: 'multipages',
   ecommerce: 'boutique',
   gestion: 'gestion',
-  association: 'association',
 } as const satisfies Record<IdOffre, string>
 
 /**
@@ -68,15 +66,13 @@ export function normaliserOffre(valeur: string | null | undefined): IdOffre | nu
     multipages: 'multipages',
     ecommerce: 'ecommerce',
     gestion: 'gestion',
-    association: 'association',
-    // Vocabulaire du store de la scène.
+      // Vocabulaire du store de la scène.
     boutique: 'ecommerce',
     // Vocabulaire du formulaire de devis.
     'site-vitrine': 'vitrine',
     'site-multi-pages': 'multipages',
     'site-ecommerce': 'ecommerce',
     'systeme-gestion': 'gestion',
-    'site-association': 'association',
   }
   return direct[v] ?? null
 }

@@ -20,7 +20,7 @@ const pages: Record<string, PageData> = {
   'creation-site-restaurant': {
     title: 'Création de site web pour restaurant',
     metaTitle: 'Site web restaurant — Réservation en ligne',
-    metaDesc: 'Créez un site web professionnel pour votre restaurant : réservation en ligne, menu digital, SEO local, click & collect. Livré en 10 jours dès 449€.',
+    metaDesc: 'Créez un site web professionnel pour votre restaurant : réservation en ligne, menu digital, SEO local, click & collect. Livré en 10 jours à partir de 449€.',
     hero: {
       headline: 'Le site web qui remplit votre restaurant',
       subheadline: 'Réservation en ligne, menu digital, SEO local et click & collect — tout ce dont votre établissement a besoin pour attirer plus de clients.',
@@ -66,7 +66,7 @@ const pages: Record<string, PageData> = {
   'creation-site-artisan': {
     title: 'Création de site web pour artisan',
     metaTitle: 'Site web artisan — Devis en ligne et SEO local',
-    metaDesc: 'Site web professionnel pour artisans : portfolio chantiers, devis en ligne, prise de RDV, SEO local. Générez des leads qualifiés. Livré en 10 jours dès 449€.',
+    metaDesc: 'Site web professionnel pour artisans : portfolio chantiers, devis en ligne, prise de RDV, SEO local. Générez des leads qualifiés. Livré en 10 jours à partir de 449€.',
     hero: {
       headline: 'Le site qui remplit votre carnet de commandes',
       subheadline: 'Portfolio de réalisations, formulaire de devis, prise de RDV en ligne et SEO local — attirez des clients qualifiés dans votre secteur.',
@@ -112,7 +112,7 @@ const pages: Record<string, PageData> = {
   'creation-site-commerce': {
     title: 'Création de site web pour commerce',
     metaTitle: 'Site web commerce — Click & collect, SEO local',
-    metaDesc: 'Site web professionnel pour votre commerce : catalogue en ligne, click & collect, horaires, SEO local. Attirez des clients et vendez en ligne. Dès 449€.',
+    metaDesc: 'Site web professionnel pour votre commerce : catalogue en ligne, click & collect, horaires, SEO local. Attirez des clients et vendez en ligne. À partir de 449€.',
     hero: {
       headline: 'Votre commerce mérite d\'être visible en ligne',
       subheadline: 'Catalogue produits, horaires, click & collect et SEO local — combattez les pure players avec un site web qui convertit les visiteurs en clients.',
@@ -157,8 +157,8 @@ const pages: Record<string, PageData> = {
 
   'creation-boutique-en-ligne': {
     title: 'Création de boutique en ligne',
-    metaTitle: 'Boutique en ligne sur mesure — dès 1 647 €',
-    metaDesc: 'Lancez votre boutique en ligne sur mesure : paiement sécurisé, gestion des stocks, livraison, SEO e-commerce. Développement professionnel dès 1 647 €.',
+    metaTitle: 'Boutique en ligne sur mesure — à partir de 1 647 €',
+    metaDesc: 'Lancez votre boutique en ligne sur mesure : paiement sécurisé, gestion des stocks, livraison, SEO e-commerce. Développement professionnel à partir de 1 647 €.',
     hero: {
       headline: 'Votre boutique en ligne livrée en 10 jours',
       subheadline: 'Paiement sécurisé, gestion des stocks, livraison automatisée, SEO e-commerce — tout pour vendre en ligne sans dépendre d\'Amazon ou d\'Etsy.',
@@ -204,7 +204,7 @@ const pages: Record<string, PageData> = {
   'developpement-application-metier': {
     title: 'Développement d\'application métier sur mesure',
     metaTitle: 'Application métier sur mesure — CRM et ERP',
-    metaDesc: 'Développement d\'application métier sur mesure : CRM, ERP, gestion planning, facturation automatique. Remplacez Excel et les logiciels génériques. Dès 1 447€.',
+    metaDesc: 'Développement d\'application métier sur mesure : CRM, ERP, gestion planning, facturation automatique. Remplacez Excel et les logiciels génériques. À partir de 1 447€.',
     hero: {
       headline: 'Remplacez vos outils obsolètes par une application sur mesure',
       subheadline: 'CRM, gestion planning, facturation automatique, tableau de bord temps réel — une seule application qui fait tout ce que vous avez besoin.',
@@ -250,7 +250,7 @@ const pages: Record<string, PageData> = {
   'referencement-local-seo': {
     title: 'Référencement local SEO',
     metaTitle: 'Référencement local — Apparaître sur Google Maps',
-    metaDesc: 'Référencement local SEO : Google Business Profile, mots-clés locaux, backlinks, avis clients. Apparaissez en premier sur Google dans votre ville. Dès 189€/mois.',
+    metaDesc: 'Référencement local SEO : Google Business Profile, mots-clés locaux, backlinks, avis clients. Apparaissez en premier sur Google dans votre ville. À partir de 189€/mois.',
     hero: {
       headline: 'Apparaître en premier sur Google dans votre ville',
       subheadline: 'Google Business Profile optimisé, mots-clés locaux, stratégie d\'avis et backlinks — tout pour dominer les résultats de recherche locaux.',

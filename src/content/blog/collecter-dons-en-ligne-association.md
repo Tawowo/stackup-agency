@@ -65,7 +65,7 @@ Oui, la collecte reste possible, mais sans avantage fiscal pour le donateur — 
 Oui, à condition d'utiliser un prestataire de paiement en ligne sécurisé et conforme aux standards du secteur, comme pour toute transaction en ligne.
 
 **Combien coûte la mise en place d'un système de don en ligne sur le site de l'association ?**
-L'offre Site Association démarre à 149 €, livrée en 7 jours ouvrés, et peut intégrer le module de collecte de dons dès la mise en ligne.
+Un site d'association se chiffre comme les autres projets, selon son périmètre : [nos offres et leurs tarifs de départ](/services) sont publics.
 
 ---
 

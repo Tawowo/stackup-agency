@@ -58,14 +58,6 @@ export const BASES: Base[] = [
     delai: SITE.delais.gestion,
     href: '/services/application-sur-mesure',
   },
-  {
-    id: 'association',
-    titre: 'Site d’association',
-    description: 'Tarif réduit pour les structures à but non lucratif.',
-    prix: SITE.pricing.association,
-    delai: SITE.delais.association,
-    href: '/services/site-association',
-  },
 ]
 
 export interface Option {

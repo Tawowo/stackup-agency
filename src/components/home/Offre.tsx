@@ -38,21 +38,12 @@ interface Fiche {
   id: NomOffre
   nom: string
   prix: number
-  prefixe?: string
   delai: string
   perimetre: string
   lien: string
 }
 
 const OFFRES: Fiche[] = [
-  {
-    id: 'association',
-    nom: 'Site association',
-    prix: SITE.pricing.association,
-    delai: SITE.delais.association,
-    perimetre: 'Design associatif, adhésion en ligne, calendrier, hébergement 12 mois, SSL, formation.',
-    lien: '/services/site-association',
-  },
   {
     id: 'vitrine',
     nom: 'Site vitrine',
@@ -81,7 +72,6 @@ const OFFRES: Fiche[] = [
     id: 'gestion',
     nom: 'Système de gestion',
     prix: SITE.pricing.gestion,
-    prefixe: 'à partir de',
     delai: SITE.delais.gestion,
     perimetre: 'Développement sur mesure, administration, formation, données en Europe, sans abonnement.',
     lien: '/services/systeme-gestion',
@@ -229,8 +219,11 @@ export default function Offre() {
               onClick={() => choisir(o.id)}
             >
               <span className="su-offre__onglet-nom">{o.nom}</span>
+              {/* « À partir de » sur TOUTES les offres, et non sur la seule
+                  « gestion » comme auparavant : aucun de ces montants n'est
+                  un prix ferme, le périmètre les fait tous varier. */}
               <span className="su-offre__onglet-prix">
-                {o.prefixe ? <i>{o.prefixe} </i> : null}
+                <i>à partir de </i>
                 {o.prix.toLocaleString('fr-FR')} €
               </span>
               <span className="su-offre__onglet-rang" aria-hidden="true">
@@ -252,7 +245,7 @@ export default function Offre() {
             <div>
               <dt>Prix</dt>
               <dd>
-                {active.prefixe ? `${active.prefixe} ` : ''}
+                {'à partir de '}
                 <Cadran valeur={active.prix} suffixe="€" />
               </dd>
             </div>
@@ -283,7 +276,7 @@ export default function Offre() {
       </div>
 
       <p className="sr-only" aria-live="polite">
-        Offre sélectionnée : {active.nom}, {active.prix} euros, livré en {active.delai}.
+        Offre sélectionnée : {active.nom}, à partir de {active.prix} euros, livré en {active.delai}.
       </p>
     </section>
   )

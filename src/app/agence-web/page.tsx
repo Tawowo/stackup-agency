@@ -2,17 +2,17 @@
 import { VILLES } from '@/data/villes'
 import Link from 'next/link'
 import { MapPin, ChevronRight } from 'lucide-react'
-import { SITE } from '@/config/site'
+import { SITE, aPartirDe } from '@/config/site'
 import MiniHero from '@/components/ui/MiniHero'
 
 export const metadata = {
   title: 'Agence web — Création site internet en France',
-  description: `Agence web basée à Tours, création de sites internet pour TPE et artisans partout en France. Site vitrine à partir de ${SITE.pricing.vitrine}€, livré en 10 jours. Devis gratuit.`,
+  description: `Agence web basée à Tours, création de sites internet pour TPE et artisans partout en France. Site vitrine ${aPartirDe(SITE.pricing.vitrine)}, livré en 10 jours. Devis gratuit.`,
   alternates: { canonical: `${SITE.url}/agence-web` },
   openGraph: {
     url: `${SITE.url}/agence-web`,
     title: 'Agence web — Création site internet en France',
-    description: `Stackup Agency crée des sites internet professionnels pour les entrepreneurs et TPE. À partir de ${SITE.pricing.vitrine}€.`,
+    description: `Stackup Agency crée des sites internet professionnels pour les entrepreneurs et TPE. ${aPartirDe(SITE.pricing.vitrine)}.`,
     type: 'website',
   },
 }

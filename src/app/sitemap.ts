@@ -107,7 +107,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/ressources/documents`, lastModified: now, changeFrequency: 'monthly', priority: 0.5 },
 
     // Services
-    { url: `${base}/services/site-association`, lastModified: now, changeFrequency: 'weekly', priority: 0.9 },
     { url: `${base}/services/redaction-blog-seo`, lastModified: now, changeFrequency: 'weekly', priority: 0.9 },
     ...serviceSlugs.map(slug => ({
       url: `${base}/services/${slug}`,

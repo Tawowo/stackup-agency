@@ -1,11 +1,11 @@
-import { SITE } from '@/config/site'
+import { SITE, aPartirDe } from '@/config/site'
 import DevisForm from '@/components/devis/DevisForm'
 import MiniHero from '@/components/ui/MiniHero'
 import Link from 'next/link'
 
 export const metadata = {
   title: { absolute: 'Devis express — site internet en 5 min | Stackup Agency' },
-  description: `Obtenez un devis personnalisé pour votre site internet en 5 minutes. Site vitrine dès ${SITE.pricing.vitrine}€, multi-pages dès ${SITE.pricing.multipages}€. Réponse sous 72h.`,
+  description: `Obtenez un devis personnalisé pour votre site internet en 5 minutes. Site vitrine ${aPartirDe(SITE.pricing.vitrine)}, multi-pages ${aPartirDe(SITE.pricing.multipages)}. Réponse sous 72h.`,
   alternates: { canonical: `${SITE.url}/devis` },
   openGraph: {
     url: `${SITE.url}/devis`,

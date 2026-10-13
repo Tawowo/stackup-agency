@@ -1,7 +1,7 @@
 import { DEPARTEMENTS, getDepartement, getArticles } from '@/data/departements'
 import { COMMUNES_PAR_DEPARTEMENT, getCommunesTotal } from '@/data/communes-groupes'
 import { VILLES } from '@/data/villes'
-import { SITE } from '@/config/site'
+import { SITE, aPartirDe } from '@/config/site'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { ArrowRight, MapPin } from 'lucide-react'
@@ -18,7 +18,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const art = getArticles(d.slug)
   return {
     title: { absolute: `Agence web ${d.nom} (${d.code}) — Création de site internet | Stackup` },
-    description: `Création de sites internet dans ${art.dans}${d.nom} : ${d.communesPrincipales.slice(0, 4).join(', ')}… Site vitrine dès ${SITE.pricing.vitrine} €, livré en 10 jours ouvrés. Devis gratuit sous 72 h.`,
+    description: `Création de sites internet dans ${art.dans}${d.nom} : ${d.communesPrincipales.slice(0, 4).join(', ')}… Site vitrine ${aPartirDe(SITE.pricing.vitrine)}, livré en 10 jours ouvrés. Devis gratuit sous 72 h.`,
     alternates: { canonical: `${SITE.url}/agence-web/departement/${d.slug}` },
     openGraph: {
       url: `${SITE.url}/agence-web/departement/${d.slug}`,

@@ -7,17 +7,16 @@
  *
  * CE QUE ÇA REMPLACE, ET POURQUOI C'ÉTAIT À REMPLACER.
  *
- * Le comparateur précédent affichait un chiffre monumental — « ×8,9 moins
- * cher qu'une agence classique » — calculé à partir de fourchettes codées en
- * dur : 2 000 à 6 000 € pour une vitrine, 10 000 à 40 000 € pour un système
- * de gestion. Ces nombres ne venaient de nulle part. Aucune étude, aucun
- * relevé, aucune note de bas de page. Le composant qui l'affichait était même
- * commenté « avec sa fourchette de marché déclarée en légende » — une légende
- * qui n'existait pas.
+ * Le comparateur précédent mettait en avant un rapport entre nos prix et
+ * ceux d'une agence, calculé sur des fourchettes codées en dur. Ces nombres
+ * ne venaient de nulle part : aucune étude, aucun relevé, aucune note de bas
+ * de page. Le composant qui l'affichait était même commenté « avec sa
+ * fourchette de marché déclarée en légende » — une légende qui n'existait
+ * pas.
  *
  * Le dossier l'interdit deux fois : §15.3 (« comparaisons de prix uniquement
- * avec sources, sinon retirées ») et §10.7 (« sans ×8,9 non sourcé »). Le
- * commanditaire a tranché : le comparateur part, le coût sur cinq ans reste.
+ * avec sources, sinon retirées ») et §10.7. Le commanditaire a tranché : le
+ * comparateur part, le coût sur cinq ans reste.
  *
  * CE QUI LE REMPLACE EST SOURCÉ.
  *
@@ -101,12 +100,11 @@ const PLANS = [
   { cle: 'premium', nom: 'Premium', mensuel: SITE.pricing.maintenancePremium },
 ] as const
 
-const PRIX: Record<string, { nom: string; prix: number; prefixe?: string }> = {
-  association: { nom: 'Site association', prix: SITE.pricing.association },
+const PRIX: Record<string, { nom: string; prix: number }> = {
   vitrine: { nom: 'Site vitrine', prix: SITE.pricing.vitrine },
   multipages: { nom: 'Site multi-pages', prix: SITE.pricing.multipages },
   boutique: { nom: 'Boutique en ligne', prix: SITE.pricing.ecommerce },
-  gestion: { nom: 'Système de gestion', prix: SITE.pricing.gestion, prefixe: 'à partir de' },
+  gestion: { nom: 'Système de gestion', prix: SITE.pricing.gestion },
 }
 
 export default function JustePrix() {
@@ -155,6 +153,7 @@ export default function JustePrix() {
             <div>
               <dt>À la commande</dt>
               <dd>
+                <i>à partir de </i>
                 <Cadran
                   valeur={Math.round((base.prix * SITE.conditions.acomptePourcent) / 100)}
                   suffixe="€"
@@ -168,6 +167,7 @@ export default function JustePrix() {
             <div>
               <dt>À la livraison</dt>
               <dd>
+                <i>à partir de </i>
                 <Cadran
                   valeur={Math.round((base.prix * SITE.conditions.soldePourcent) / 100)}
                   suffixe="€"
@@ -180,8 +180,10 @@ export default function JustePrix() {
             </div>
             <div>
               <dt>Total</dt>
+              {/* « À partir de » sur toutes les offres : aucun de ces
+                  montants n'est un prix ferme. */}
               <dd className="su-prix__total">
-                {base.prefixe ? <i>{base.prefixe} </i> : null}
+                <i>à partir de </i>
                 <Cadran valeur={base.prix} suffixe="€" />
               </dd>
             </div>
@@ -265,7 +267,7 @@ export default function JustePrix() {
           </div>
 
           {/* L'écart est affiché comme une soustraction, pas comme un
-              multiplicateur : « ×8,9 » impressionne et ne se vérifie pas,
+              multiplicateur : un rapport impressionne et ne se vérifie pas,
               une différence en euros se recalcule de tête. */}
           <p className="su-prix__ecart">
             {ecartBas > 0 ? (

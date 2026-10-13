@@ -29,7 +29,7 @@ export type EtatBande =
   | 'repos' // repliée en logo, petite, immobile (pages éditoriales)
   | 'depart' // revient au centre et se replie en logo exact : la boucle se ferme
 
-export type Offre = 'association' | 'vitrine' | 'multipages' | 'boutique' | 'gestion'
+export type Offre = 'vitrine' | 'multipages' | 'boutique' | 'gestion'
 
 export type Palier = 'bas' | 'moyen' | 'haut'
 

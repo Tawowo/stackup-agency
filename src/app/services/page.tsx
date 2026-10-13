@@ -1,18 +1,18 @@
 /* eslint-disable react/no-unescaped-entities */
 import Link from 'next/link'
 import { CheckCircle, ChevronRight } from 'lucide-react'
-import { SITE } from '@/config/site'
+import { SITE, aPartirDe } from '@/config/site'
 import MiniHero from '@/components/ui/MiniHero'
 import StrateService, { type Morphologie } from '@/components/services/StrateService'
 
 export const metadata = {
   title: 'Nos services — Vitrine, e-commerce, gestion web',
-  description: `Création de sites internet professionnels à partir de ${SITE.pricing.vitrine}€. Site vitrine, multi-pages, boutique en ligne, application métier. Devis gratuit sous 72h.`,
+  description: `Création de sites internet professionnels ${aPartirDe(SITE.pricing.vitrine)}. Site vitrine, multi-pages, boutique en ligne, application métier. Devis gratuit sous 72h.`,
   alternates: { canonical: `${SITE.url}/services` },
   openGraph: {
     url: `${SITE.url}/services`,
     title: 'Nos services web — Stackup Agency',
-    description: `Sites internet livrés en 10 à 21 jours. À partir de ${SITE.pricing.vitrine}€.`,
+    description: `Sites internet livrés en 10 à 21 jours. ${aPartirDe(SITE.pricing.vitrine)}.`,
     type: 'website',
   },
 }
@@ -63,17 +63,6 @@ const SERVICES = [
     ideal: 'Restaurants, hôtels, artisans, professions de santé',
   },
   {
-    slug: 'site-association',
-    morphologie: 'compact' as Morphologie,
-    structure: '2 couches · périmètre resserré',
-    titre: 'Site association',
-    prix: SITE.pricing.association,
-    delai: SITE.delais.association,
-    desc: 'Site professionnel pour associations loi 1901. Adhésion, actualités, événements.',
-    inclus: ['Design adapté association', 'Formulaire d\'adhésion', 'Calendrier événements', 'Espace membres', 'Hébergement 12 mois', 'SSL inclus'],
-    ideal: 'Associations loi 1901, clubs sportifs, culturels',
-  },
-  {
     slug: 'redaction-blog-seo',
     morphologie: 'cycle' as Morphologie,
     structure: 'cycle · publication récurrente',
@@ -109,7 +98,7 @@ export default function ServicesPage() {
 
       <MiniHero signature="trace"
         title="Nos services de création web"
-        subtitle={`Sites internet professionnels à partir de ${SITE.pricing.vitrine}€. Livrés en 10 à 21 jours, hébergement inclus, SEO optimisé. Devis gratuit sous 72h.`}
+        subtitle={`Sites internet professionnels ${aPartirDe(SITE.pricing.vitrine)}. Livrés en 10 à 21 jours, hébergement inclus, SEO optimisé. Devis gratuit sous 72h.`}
         breadcrumb={[{ name: 'Services' }]}
       />
 
@@ -217,7 +206,7 @@ export default function ServicesPage() {
               { q: 'Quels sont les délais de livraison ?', a: `Site vitrine : ${SITE.delais.vitrine}. Site multi-pages : ${SITE.delais.multipages}. Boutique en ligne : ${SITE.delais.ecommerce}. Système de gestion : ${SITE.delais.gestion}. Délais garantis contractuellement.` },
               { q: 'Le prix est-il tout inclus ?', a: 'Oui. Le prix affiché inclut le design, le développement, le SEO de base, l\'hébergement 12 mois, le certificat SSL et la formation à la prise en main. Pas de surprise.' },
               { q: 'Est-ce que je suis propriétaire du code ?', a: 'Oui, à 100%. Une fois le projet livré et payé, le code vous appartient entièrement. Vous êtes libre de le modifier ou de changer d\'hébergeur.' },
-              { q: 'Que se passe-t-il après les 12 mois d\'hébergement inclus ?', a: `Après la première année, vous pouvez opter pour l'une de nos offres de maintenance (à partir de ${SITE.pricing.maintenanceStarter}€/mois) ou récupérer votre code et gérer l'hébergement vous-même. Le nom de domaine, offert la première année, reste ensuite à votre charge sauf abonnement de maintenance actif (il y est inclus).` },
+              { q: 'Que se passe-t-il après les 12 mois d\'hébergement inclus ?', a: `Après la première année, vous pouvez opter pour l'une de nos offres de maintenance (${aPartirDe(SITE.pricing.maintenanceStarter)}/mois) ou récupérer votre code et gérer l'hébergement vous-même. Le nom de domaine, offert la première année, reste ensuite à votre charge sauf abonnement de maintenance actif (il y est inclus).` },
             ].map(faq => (
               <details key={faq.q} className="group rounded-xl border border-navy/20 overflow-hidden">
                 <summary className="flex items-center justify-between p-4 cursor-pointer font-medium text-foreground list-none">

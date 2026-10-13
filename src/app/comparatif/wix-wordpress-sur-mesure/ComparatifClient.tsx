@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
 import { CheckCircle, XCircle, Minus, ChevronRight } from 'lucide-react'
-import { SITE } from '@/config/site'
+import { SITE, aPartirDe } from '@/config/site'
 
 type Val = 'oui' | 'non' | 'partiel'
 
@@ -192,7 +192,7 @@ export default function ComparatifClient() {
           {[
             { title: 'Wix', icon: '🟡', when: 'Site personnel, hobby, test rapide. Budget zéro et pas besoin de performances poussées.', col: 'border-white/10' },
             { title: 'WordPress', icon: '🔵', when: 'Blog avec beaucoup de contenu, site géré par une équipe non-technique avec accès CMS simple.', col: 'border-white/10' },
-            { title: 'Sur-mesure', icon: '⚡', when: `Activité professionnelle, commerce, restaurant, artisan. Dès ${SITE.pricing.vitrine}€ chez Stackup Agency.`, col: 'border-electric/40' },
+            { title: 'Sur-mesure', icon: '⚡', when: `Activité professionnelle, commerce, restaurant, artisan. ${aPartirDe(SITE.pricing.vitrine)} chez Stackup Agency.`, col: 'border-electric/40' },
           ].map((c, i) => (
             <div key={c.title} className={`rounded-2xl border ${c.col} p-5 bg-white/[0.02] transition-all duration-300 hover:-translate-y-1 hover:border-white/20`}
               style={{ animationDelay: `${i * 100}ms` }}>

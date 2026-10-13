@@ -1,12 +1,12 @@
 import type { Metadata } from 'next'
 import dynamic from 'next/dynamic'
-import { SITE } from '@/config/site'
+import { SITE, aPartirDe } from '@/config/site'
 
 const Configurateur = dynamic(() => import('@/components/configurateur/Configurateur'))
 
 export const metadata: Metadata = {
   title: 'Configurer mon projet — estimation en 4 étapes',
-  description: `Construisez votre projet en quatre questions et obtenez un point de départ chiffré à partir de nos tarifs publics (dès ${SITE.pricing.vitrine} €). Sans inscription, sans engagement.`,
+  description: `Construisez votre projet en quatre questions et obtenez un point de départ chiffré à partir de nos tarifs publics (${aPartirDe(SITE.pricing.vitrine)}). Sans inscription, sans engagement.`,
   alternates: { canonical: `${SITE.url}/configurateur` },
   openGraph: {
     url: `${SITE.url}/configurateur`,

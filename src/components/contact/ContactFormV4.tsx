@@ -178,7 +178,6 @@ export default function ContactFormV4() {
               { value: 'Site multi-pages', label: 'Site multi-pages' },
               { value: 'E-commerce', label: 'Boutique en ligne' },
               { value: 'Système de gestion', label: 'Système de gestion' },
-              { value: 'Site association', label: 'Site association' },
               { value: 'Blog SEO', label: 'Blog & référencement' },
               { value: 'Marketing digital', label: 'Marketing digital' },
               { value: 'Autre', label: 'Autre / Je ne sais pas encore' },

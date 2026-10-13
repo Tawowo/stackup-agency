@@ -53,7 +53,7 @@ Pour une association qui gère aussi l'inscription à des activités spécifique
 
 ## Ce que cela coûte de mettre ce système en place
 
-L'offre Site Association de Stackup Agency est **à partir de 149 €, livrée en 7 jours ouvrés**, et inclut le formulaire de contact et d'adhésion en ligne dès le départ — le nom de domaine est offert la première année. L'association reste propriétaire de son site et forme ses bénévoles à l'administration du contenu, pour gérer les événements et actualités en autonomie sans dépendre d'un prestataire à chaque mise à jour. Ce tarif est pensé pour rester compatible avec les budgets serrés d'une structure associative, avec les justificatifs nécessaires pour une éventuelle demande de subvention numérique.
+Un site d'association se chiffre comme les autres projets, selon son périmètre : [nos offres et leurs tarifs de départ](/services) sont publics. L'association reste propriétaire de son site et forme ses bénévoles à l'administration du contenu, pour gérer les événements et actualités en autonomie sans dépendre d'un prestataire à chaque mise à jour. Ce tarif est pensé pour rester compatible avec les budgets serrés d'une structure associative, avec les justificatifs nécessaires pour une éventuelle demande de subvention numérique.
 
 ## En résumé
 

@@ -67,7 +67,7 @@ Non, il vaut mieux laisser la personne choisir une mission ponctuelle si elle h�
 Oui, avec un champ dédié à l'autorisation parentale pour les missions ouvertes aux mineurs, en cohérence avec les obligations de protection des données des mineurs.
 
 **Combien coûte la mise en place de ce type de formulaire sur le site de l'association ?**
-Il est inclus dans l'offre Site Association, à partir de 149 €, livrée en 7 jours ouvrés.
+Il est inclus dans l'offre Site Association, à partir de sur devis, livrée en 7 jours ouvrés.
 
 ---
 

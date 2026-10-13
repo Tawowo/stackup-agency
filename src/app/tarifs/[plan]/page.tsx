@@ -20,9 +20,9 @@ type PlanData = {
 const plans: Record<string, PlanData> = {
   starter: {
     name: 'Starter',
-    price: '29€/mois',
+    price: 'à partir de 29 €/mois',
     tagline: 'L\'essentiel pour démarrer sereinement.',
-    metaDesc: 'Plan Maintenance Starter à 29€/mois : hébergement, SSL, mises à jour sécurité, 1 modification/mois, support 7 jours. Idéal pour indépendants et artisans.',
+    metaDesc: 'Plan Maintenance Starter à partir de 29 €/mois : hébergement, SSL, mises à jour sécurité, 1 modification/mois, support 7 jours. Idéal pour indépendants et artisans.',
     description: `Le plan Starter est conçu pour les indépendants et les petites entreprises qui ont besoin d'une maintenance de base fiable. Il garantit que votre site reste en ligne, sécurisé et fonctionnel.
 
 Ce plan convient parfaitement si vous venez de lancer votre site et que vous souhaitez une solution d'hébergement et de maintenance sans surprise. Vous bénéficiez d'un hébergement haute disponibilité inclus, des mises à jour de sécurité régulières et d'un support par email avec réponse garantie sous 7 jours ouvrés.
@@ -70,9 +70,9 @@ C'est le point d'entrée idéal pour professionnaliser votre présence en ligne.
   },
   pro: {
     name: 'Pro',
-    price: '44€/mois',
+    price: 'à partir de 44 €/mois',
     tagline: 'Le plan recommandé pour les entreprises actives.',
-    metaDesc: 'Plan Maintenance Pro à 44€/mois : hébergement, SSL, sauvegardes quotidiennes, 3 modifications/mois, support prioritaire 5 jours. Le plus populaire.',
+    metaDesc: 'Plan Maintenance Pro à partir de 44 €/mois : hébergement, SSL, sauvegardes quotidiennes, 3 modifications/mois, support prioritaire 5 jours. Le plus populaire.',
     description: `Le plan Pro est notre offre la plus populaire. Il combine l'essentiel de la maintenance avec un niveau de support et de service qui permet à votre site de rester performant et à jour en permanence.
 
 Avec le support prioritaire sous 5 jours ouvrés, vos demandes sont traitées en priorité. Que vous ayez un bug à corriger, une question technique ou une mise à jour à effectuer, nous intervenons rapidement. Les 3 modifications mensuelles incluses couvrent la grande majorité des besoins courants.
@@ -119,9 +119,9 @@ Les sauvegardes automatiques hebdomadaires vous offrent une tranquillité d'espr
   },
   premium: {
     name: 'Premium',
-    price: '89€/mois',
+    price: 'à partir de 89 €/mois',
     tagline: 'Le service complet pour les exigeants.',
-    metaDesc: 'Plan Maintenance Premium à 89€/mois : 5 modifications/mois, support urgent 48h, sauvegardes quotidiennes, rapport SEO mensuel. Service complet pour les pros.',
+    metaDesc: 'Plan Maintenance Premium à partir de 89 €/mois : 5 modifications/mois, support urgent 48h, sauvegardes quotidiennes, rapport SEO mensuel. Service complet pour les pros.',
     description: `Le plan Premium est notre offre la plus complète. Il est conçu pour les entreprises qui considèrent leur site web comme un actif stratégique et qui souhaitent bénéficier du meilleur niveau de service.
 
 Le support urgent sous 48h est notre engagement le plus fort. Si votre site rencontre un problème critique, nous intervenons dans les plus brefs délais, y compris le week-end pour les incidents graves.

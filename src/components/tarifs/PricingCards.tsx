@@ -66,9 +66,18 @@ function CardItem({ card, index, isVisible }: { card: Card; index: number; isVis
 
       <div className="flex items-start justify-between mb-3">
         <h3 className={`text-lg font-bold ${card.highlight ? 'text-white' : 'text-navy'}`}>{card.titre}</h3>
-        <span className={`text-2xl font-bold ml-3 tabular-nums data-mono ${card.highlight ? 'text-[#FBBF24]' : 'text-electric'}`}>
-          <span className="price-reveal is-visible">
-            <span className="price-reveal-inner">{price}&thinsp;€</span>
+        {/* « À partir de » au-dessus du montant, et non à côté : la mention
+            doit se lire avant le chiffre, sinon elle est perçue comme une
+            réserve ajoutée après coup. Aucun de ces montants n'est un prix
+            ferme — le périmètre les fait tous varier. */}
+        <span className={`ml-3 text-right leading-tight ${card.highlight ? 'text-[#FBBF24]' : 'text-electric'}`}>
+          <span className={`block text-[0.62rem] font-normal uppercase tracking-[0.12em] ${card.highlight ? 'text-white/70' : 'text-navy/70'}`}>
+            à partir de
+          </span>
+          <span className="text-2xl font-bold tabular-nums data-mono">
+            <span className="price-reveal is-visible">
+              <span className="price-reveal-inner">{price}&thinsp;€</span>
+            </span>
           </span>
         </span>
       </div>

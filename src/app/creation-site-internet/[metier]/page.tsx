@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: { params: Promise<{ metier: s
   const url = `${SITE.url}/creation-site-internet/${m.slug}`
   const prix = m.serviceLie === 'site-ecommerce' ? SITE.pricing.ecommerce : m.serviceLie === 'site-multi-pages' ? SITE.pricing.multipages : SITE.pricing.vitrine
   const delai = m.serviceLie === 'site-ecommerce' ? SITE.delais.ecommerce : m.serviceLie === 'site-multi-pages' ? SITE.delais.multipages : SITE.delais.vitrine
-  const rawTitre = `Site web ${m.metier} — dès ${prix}€`
+  const rawTitre = `Site web ${m.metier} — à partir de ${prix}€`
   const suffix = ' | Stackup Agency'
   const seoTitre = rawTitre.length <= 65 - suffix.length ? rawTitre + suffix : rawTitre.slice(0, rawTitre.lastIndexOf(' ', 64 - suffix.length) || 64 - suffix.length) + '…' + suffix
   const description = `Site internet pour ${m.metier} à partir de ${prix}€, livré en ${delai}. Design sur mesure, SEO local, devis gratuit sous 72h.`
@@ -262,7 +262,7 @@ export default async function MetierPage({ params }: { params: Promise<{ metier:
               <h3 className="font-bold text-white">Rendez votre site encore plus visible avec un blog SEO</h3>
               <p className="text-electric text-xs font-medium mt-0.5">À partir de 25€ l'article</p>
             </div>
-            <span className="text-[#B45309] font-bold text-xl flex-shrink-0">25€</span>
+            <span className="text-[#B45309] font-bold text-xl flex-shrink-0">à partir de 25&nbsp;€</span>
           </div>
           <p className="text-white/70 text-sm mb-4">
             Un site web seul ne suffit pas toujours à dominer Google. Des articles de blog optimisés SEO

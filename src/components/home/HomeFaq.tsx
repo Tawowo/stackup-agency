@@ -2,11 +2,11 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import { ChevronDown, ArrowRight } from 'lucide-react'
-import { SITE } from '@/config/site'
+import { SITE, aPartirDe } from '@/config/site'
 import DecorProfondeur from '@/components/ui/DecorProfondeur'
 
 const FAQ_ITEMS = [
-  { q: 'Combien coûte un site internet professionnel ?', a: `Un site vitrine complet démarre à ${SITE.pricing.vitrine} €, livraison et hébergement 12 mois inclus. Pas de frais cachés.` },
+  { q: 'Combien coûte un site internet professionnel ?', a: `Un site vitrine complet est proposé ${aPartirDe(SITE.pricing.vitrine)}, livraison et hébergement 12 mois inclus. Le prix définitif dépend du périmètre et se fixe au devis.` },
   { q: 'Combien de temps dure la réalisation ?', a: `Un site vitrine est livré en ${SITE.delais.vitrine} à compter de la validation du design. Les délais sont contractuels.` },
   { q: 'Suis-je propriétaire de mon site ?', a: 'Oui, à 100 %. Vous recevez tous les accès (hébergement, nom de domaine, code source) à la livraison.' },
 ]

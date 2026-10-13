@@ -29,10 +29,10 @@ const faqSchema = {
     { '@type': 'Question', name: 'Puis-je valider l\'article avant publication ?', acceptedAnswer: { '@type': 'Answer', text: 'Oui. Chaque article vous est soumis en version finale avant publication. Vous disposez d\'un aller-retour de corrections inclus dans chaque prestation.' } },
     { '@type': 'Question', name: 'Rédigez-vous des articles pour des sites tiers (sites clients, guest posting) ?', acceptedAnswer: { '@type': 'Answer', text: 'Oui. La prestation s\'applique à tout site : votre propre blog, un site partenaire pour du netlinking, ou un site de client si vous êtes une agence. Le tarif est identique.' } },
     { '@type': 'Question', name: 'Les images sont-elles fournies avec l\'article ?', acceptedAnswer: { '@type': 'Answer', text: 'Non. Nous livrons le texte structuré (H1/H2/H3, méta-titre, meta description, alt d\'images suggérés). La sélection et l\'insertion des images restent à votre charge, ou peuvent faire l\'objet d\'une prestation complémentaire.' } },
-    { '@type': 'Question', name: 'Combien coûte un article de blog SEO ?', acceptedAnswer: { '@type': 'Answer', text: 'Un article de blog SEO coûte 25€ à l\'unité chez Stackup Agency. Les packs mensuels offrent un meilleur rapport : Pack Visibilité à 89€/mois (4 articles) et Pack Autorité à 159€/mois (8 articles + 2 content-refresh).' } },
-    { '@type': 'Question', name: 'Mon site n\'a pas de blog. Est-ce un problème ?', acceptedAnswer: { '@type': 'Answer', text: 'Non. Si votre site n\'a pas encore de section blog, nous proposons une prestation d\'accès technique à 49€ pour l\'installer et le configurer. Cette prestation est réalisée une seule fois.' } },
+    { '@type': 'Question', name: 'Combien coûte un article de blog SEO ?', acceptedAnswer: { '@type': 'Answer', text: 'Un article de blog SEO coûte à partir de 25 € à l\'unité chez Stackup Agency. Les packs mensuels offrent un meilleur rapport : Pack Visibilité à à partir de 89 €/mois (4 articles) et Pack Autorité à à partir de 159 €/mois (8 articles + 2 content-refresh).' } },
+    { '@type': 'Question', name: 'Mon site n\'a pas de blog. Est-ce un problème ?', acceptedAnswer: { '@type': 'Answer', text: 'Non. Si votre site n\'a pas encore de section blog, nous proposons une prestation d\'accès technique à à partir de 49 € pour l\'installer et le configurer. Cette prestation est réalisée une seule fois.' } },
     { '@type': 'Question', name: 'En combien de temps verrai-je des résultats ?', acceptedAnswer: { '@type': 'Answer', text: 'Les premiers effets SEO sont visibles entre 3 et 6 mois selon votre secteur et la concurrence. La publication régulière d\'articles de qualité est la clé : chaque mois, votre autorité se renforce et vos positions s\'améliorent progressivement.' } },
-    { '@type': 'Question', name: 'Qu\'est-ce que le content refresh ?', acceptedAnswer: { '@type': 'Answer', text: 'Le content refresh consiste à mettre à jour et optimiser vos anciens articles pour regagner des positions perdues. C\'est inclus à raison de 2 optimisations par mois dans le Pack Autorité (159€/mois).' } },
+    { '@type': 'Question', name: 'Qu\'est-ce que le content refresh ?', acceptedAnswer: { '@type': 'Answer', text: 'Le content refresh consiste à mettre à jour et optimiser vos anciens articles pour regagner des positions perdues. C\'est inclus à raison de 2 optimisations par mois dans le Pack Autorité (à partir de 159 €/mois).' } },
   ],
 }
 
@@ -171,7 +171,7 @@ function Calculator() {
                 Estimation
               </div>
               <div className="text-3xl font-bold text-navy">{unitaire}€</div>
-              <div className="text-sm text-[#475569] mt-1">{articles} article{articles > 1 ? 's' : ''} × 25€</div>
+              <div className="text-sm text-[#475569] mt-1">{articles} article{articles > 1 ? 's' : ''} × à partir de 25 €</div>
             </>
           )}
           <Link
@@ -200,7 +200,7 @@ export default function RedactionBlogSEOPage() {
         subtitle="Des articles de blog optimisés pour Google, rédigés par des professionnels du web. Gagnez en visibilité sans écrire une ligne — à partir de 25 € l'article."
       >
         <div className="su-sig__meta">
-          <span><CheckCircle size={14} className="text-success" /> Dès 25 € l&apos;article</span>
+          <span><CheckCircle size={14} className="text-success" /> À partir de 25 € l&apos;article</span>
           <span><CheckCircle size={14} className="text-success" /> Livraison sous 5 jours ouvrés</span>
           <span><CheckCircle size={14} className="text-success" /> Relecture humaine systématique</span>
         </div>
@@ -277,7 +277,7 @@ export default function RedactionBlogSEOPage() {
           </p>
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-amber-500/15 text-amber-800 rounded-xl text-sm font-semibold">
             <CheckCircle size={14} />
-            2 optimisations content-refresh/mois incluses dans le Pack Autorité (159€/mois)
+            2 optimisations content-refresh/mois incluses dans le Pack Autorité (à partir de 159 €/mois)
           </div>
         </section>
 
@@ -304,9 +304,9 @@ export default function RedactionBlogSEOPage() {
               </thead>
               <tbody className="divide-y divide-navy/5">
                 {[
-                  ['Prix', '25€', '89€/mois', '159€/mois'],
+                  ['Prix', 'à partir de 25 €', 'à partir de 89 €/mois', 'à partir de 159 €/mois'],
                   ['Articles/mois', '1 à la fois', '4', '8'],
-                  ['Coût par article', '25€', '22,25€', '19,88€'],
+                  ['Coût par article', 'à partir de 25 €', 'à partir de 22,25 €', 'à partir de 19,88 €'],
                   ['Calendrier éditorial', '✗', '✓', '✓'],
                   ['Rapport de positions', '✗', '✓', '✓'],
                   ['Content refresh inclus', '✗', '✗', '2/mois'],
@@ -369,7 +369,7 @@ export default function RedactionBlogSEOPage() {
               <p className="text-electric text-sm mt-0.5">Pour les sites existants sans blog</p>
             </div>
             <div className="text-right flex-shrink-0">
-              <span className="text-2xl font-bold text-navy">49€</span>
+              <span className="text-2xl font-bold text-navy">à partir de 49 €</span>
               <div className="text-xs text-[#475569]">une fois</div>
             </div>
           </div>

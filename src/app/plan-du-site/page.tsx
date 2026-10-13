@@ -21,7 +21,6 @@ const SERVICES = [
   { href: '/services/systeme-gestion', label: 'Système de gestion' },
   { href: '/services/marketing-digital', label: 'Marketing digital' },
   { href: '/services/maintenance-support', label: 'Maintenance & support' },
-  { href: '/services/site-association', label: 'Site association' },
 ]
 
 const SERVICES_LOCAUX = [

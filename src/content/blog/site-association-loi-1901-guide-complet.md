@@ -1,6 +1,6 @@
 ---
 title: "Site d'association loi 1901 : le guide complet"
-excerpt: "Adhésions, dons, bénévoles, calendrier, subventions, RGPD : tout ce qu'un site d'association loi 1901 doit couvrir, avec les bonnes pratiques et les coûts réels, à partir de 149 €."
+excerpt: "Adhésions, dons, bénévoles, calendrier, subventions, RGPD : tout ce qu'un site d'association loi 1901 doit couvrir, avec les bonnes pratiques et les coûts réels, à partir de sur devis."
 date: "2026-08-17"
 publishAt: "2027-01-12"
 readTime: 18
@@ -9,7 +9,7 @@ category: "associations"
 keywords: ["site association loi 1901", "site internet association", "creer site web association", "site association guide complet"]
 ---
 
-**Un site d'association loi 1901 utile combine cinq fonctions : une présentation claire de la mission, un formulaire d'adhésion et de don en ligne, un calendrier des événements, un espace de recrutement des bénévoles, et une conformité RGPD sur les données collectées — l'ensemble tient dans une offre à partir de 149 €, livrée en 7 jours ouvrés.** Ce guide couvre chacune de ces briques, dans l'ordre où une association gagne à les mettre en place.
+**Un site d'association loi 1901 utile combine cinq fonctions : une présentation claire de la mission, un formulaire d'adhésion et de don en ligne, un calendrier des événements, un espace de recrutement des bénévoles, et une conformité RGPD sur les données collectées — l'ensemble tient dans une offre à partir de sur devis, livrée en 7 jours ouvrés.** Ce guide couvre chacune de ces briques, dans l'ordre où une association gagne à les mettre en place.
 
 ## Pourquoi une association a besoin d'un site, même petite
 
@@ -59,7 +59,7 @@ Une association qui collecte des adhésions, des dons ou des candidatures de bé
 
 ## Combien coûte un site d'association, et pour quel délai
 
-L'offre Site Association de Stackup Agency est **à partir de 149 €, livrée en 7 jours ouvrés**, un tarif pensé pour rester compatible avec les budgets serrés des structures associatives. Elle inclut le formulaire de contact et d'adhésion en ligne, le nom de domaine offert la première année, et une formation à l'administration du contenu pour que les bénévoles puissent gérer eux-mêmes les événements et actualités, sans dépendre d'un prestataire à chaque mise à jour. Toutes les pièces justificatives nécessaires (devis, facture, description des prestations) peuvent être fournies pour une éventuelle demande de subvention numérique.
+Un site d'association se chiffre comme les autres projets, selon son périmètre : [nos offres et leurs tarifs de départ](/services) sont publics. Elle inclut le formulaire de contact et d'adhésion en ligne, le nom de domaine offert la première année, et une formation à l'administration du contenu pour que les bénévoles puissent gérer eux-mêmes les événements et actualités, sans dépendre d'un prestataire à chaque mise à jour. Toutes les pièces justificatives nécessaires (devis, facture, description des prestations) peuvent être fournies pour une éventuelle demande de subvention numérique.
 
 ## Qui gère le site une fois livré, quand les bénévoles changent chaque année
 
@@ -76,14 +76,14 @@ Une préoccupation fréquente des associations, particulièrement celles dont le
 ## En résumé
 
 - Un site d'association utile combine présentation de la mission, adhésions en ligne, dons, calendrier et recrutement de bénévoles.
-- L'offre Site Association démarre à 149 €, livrée en 7 jours ouvrés, avec formation incluse pour une gestion autonome par les bénévoles.
+- Un site d'association se chiffre comme les autres projets, selon son périmètre : [nos offres et leurs tarifs de départ](/services) sont publics.
 - Le site sert aussi de support direct pour les dossiers de subvention, grâce à une page d'historique des actions tenue à jour.
 - La conformité RGPD sur les données des adhérents, donateurs et bénévoles reste obligatoire, avec une vigilance renforcée pour les mineurs.
 
 ## Questions fréquentes
 
 **Quel budget prévoir pour un site d'association complet ?**
-À partir de 149 € pour une livraison en 7 jours ouvrés, incluant le formulaire d'adhésion et le nom de domaine offert la première année.
+Un site d'association se chiffre comme les autres projets, selon son périmètre : [nos offres et leurs tarifs de départ](/services) sont publics.
 
 **Un site est-il vraiment utile pour une toute petite association locale ?**
 Oui, dès qu'elle organise des événements ou recherche des membres au-delà de son cercle immédiat — le site touche un public que le bouche-à-oreille n'atteint pas.

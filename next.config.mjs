@@ -7,6 +7,18 @@ const nextConfig = {
   poweredByHeader: false,
   redirects: async () => [
     {
+      // L'offre « site association » est retirée du catalogue et sa page
+      // supprimée. Une 301 plutôt qu'un 404 : la page était au plan du site,
+      // indexée, et plusieurs articles du blog pointent encore vers elle.
+      source: '/services/site-association',
+      destination: '/services',
+      // 301 explicite, et non `permanent: true` : ce dernier produit un 308
+      // chez Next. Les deux sont permanents et transmettent le référencement,
+      // mais c'est un 301 qui a été demandé, et certains outils d'audit plus
+      // anciens ne reconnaissent que celui-là.
+      statusCode: 301,
+    },
+    {
       // L'offre de rentrée est expirée et sa page supprimée. Une 301 plutôt
       // qu'un 404 : la page était au plan du site et a pu être indexée.
       source: '/offre-rentree',

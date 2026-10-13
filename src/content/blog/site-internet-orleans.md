@@ -38,7 +38,7 @@ Le paysage des prestataires web est fragmenté : quelques agences établies, des
 | Site vitrine 5 pages | 449€ | 1 800€ | Code sur mesure vs template, SEO inclus ou non |
 | Site multi-pages 10-15 pages | 749€ | 3 500€ | Complexité du design, nombre de fonctionnalités |
 | Boutique en ligne | 1 647€ | 5 000€+ | Nombre de produits, paiement, logistique |
-| Site association | 149€ | 800€ | Fonctionnalités spécifiques (adhésion, agenda) |
+| Site association | sur devis | 800€ | Fonctionnalités spécifiques (adhésion, agenda) |
 
 Ces fourchettes reflètent le marché français, pas uniquement orléanais — les tarifs web ne varient pas significativement d'une ville à l'autre.
 

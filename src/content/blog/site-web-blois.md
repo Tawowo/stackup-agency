@@ -38,7 +38,7 @@ Les tarifs pratiqués dans le Loir-et-Cher sont alignés sur le marché national
 | Site vitrine 5 pages | 449€ | Design, SEO de base, hébergement 12 mois |
 | Site multi-pages | 749€ | Jusqu'à 15 pages, blog, SEO |
 | Boutique en ligne | 1 647€ | Paiement sécurisé, gestion stocks |
-| Site association | 149€ | Fonctionnalités associatives de base |
+| Site association | sur devis | Fonctionnalités associatives de base |
 
 **Attention aux offres très bas prix** : un site à 200€ est généralement un template générique, sans optimisation SEO réelle et sans code propriétaire. À ce prix, vous n'êtes souvent pas propriétaire du code.
 

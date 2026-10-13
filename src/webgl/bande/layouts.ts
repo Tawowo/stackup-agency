@@ -18,7 +18,7 @@
  * ressemble à un simple fondu de deux formes.
  */
 
-export type NomLayout = 'vitrine' | 'multipages' | 'boutique' | 'gestion' | 'association'
+export type NomLayout = 'vitrine' | 'multipages' | 'boutique' | 'gestion'
 
 /** Nombre de plaques. 120 : trivial pour le GPU, assez pour toutes les formes. */
 export const NB_PLAQUES = 120
@@ -138,44 +138,11 @@ function gestion(): Transformation[] {
   })
 }
 
-/* ── Association : une strate et un formulaire ─────────────────────────────
-   Une page, plus un bloc de champs : l'offre associative, c'est un site
-   simple avec une adhésion en ligne. */
-function association(): Transformation[] {
-  const champs = 20
-  const corps = NB_PLAQUES - champs
-  const cols = 10
-  const rangs = corps / cols
-  const pl = L / cols
-  const ph = (H * 0.62) / rangs
-  return Array.from({ length: NB_PLAQUES }, (_, i) => {
-    if (i < corps) {
-      const c = i % cols
-      const r = Math.floor(i / cols)
-      return {
-        p: [(c - (cols - 1) / 2) * pl, H * 0.2 + ((rangs - 1) / 2 - r) * ph, 0],
-        r: [0, 0, 0],
-        e: [pl, ph, 0.05],
-      } as Transformation
-    }
-    // Les vingt dernières forment quatre champs empilés.
-    const k = i - corps
-    const ligne = Math.floor(k / 5)
-    const col = k % 5
-    return {
-      p: [(col - 2) * (L / 5), -H * 0.22 - ligne * 0.3, 0.1],
-      r: [0, 0, 0],
-      e: [(L / 5) * 0.9, 0.17, 0.07],
-    } as Transformation
-  })
-}
-
 const FABRIQUES: Record<NomLayout, () => Transformation[]> = {
   vitrine,
   multipages,
   boutique,
   gestion,
-  association,
 }
 
 /** Les cinq configurations, calculées une fois. */
@@ -184,7 +151,6 @@ export const LAYOUTS: Record<NomLayout, Transformation[]> = {
   multipages: FABRIQUES.multipages(),
   boutique: FABRIQUES.boutique(),
   gestion: FABRIQUES.gestion(),
-  association: FABRIQUES.association(),
 }
 
 /**

@@ -35,7 +35,7 @@ Une commission d'attribution de subvention (mairie, département, région, féd�
 
 ## Le cas spécifique des subventions numériques
 
-Certaines collectivités et certains fonds proposent des subventions spécifiquement destinées à la transformation numérique des associations — équipement, formation, création de site internet. Pour ce type de dossier, une facture détaillant les prestations (site internet, hébergement, formation à l'administration) est directement exigée. L'offre Site Association de Stackup Agency, **à partir de 149 € pour une livraison en 7 jours ouvrés**, peut fournir toutes les pièces justificatives nécessaires — devis, facture, description des prestations — pour ce type de demande de subvention numérique.
+Certaines collectivités et certains fonds proposent des subventions spécifiquement destinées à la transformation numérique des associations — équipement, formation, création de site internet. Pour ce type de dossier, une facture détaillant les prestations (site internet, hébergement, formation à l'administration) est directement exigée. L'offre Site Association de Stackup Agency, **à partir de sur devis pour une livraison en 7 jours ouvrés**, peut fournir toutes les pièces justificatives nécessaires — devis, facture, description des prestations — pour ce type de demande de subvention numérique.
 
 ## Un site vaut-il mieux qu'un dossier bien rempli sans site ?
 
@@ -67,7 +67,7 @@ La régularité des actualités et événements publiés, qui témoigne d'une ac
 Le dossier reste à refaire, mais la constitution est plus rapide car l'essentiel des preuves d'activité (événements, bilans, chiffres) est déjà présent et daté sur le site.
 
 **Combien coûte un site suffisant pour ce type de dossier ?**
-L'offre Site Association démarre à 149 €, livrée en 7 jours ouvrés, avec toutes les pièces justificatives nécessaires fournies pour la demande de subvention.
+Un site d'association se chiffre comme les autres projets, selon son périmètre : [nos offres et leurs tarifs de départ](/services) sont publics.
 
 ---
 

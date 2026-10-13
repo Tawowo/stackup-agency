@@ -18,10 +18,14 @@ export const SITE = {
     instagram: 'https://www.instagram.com/stackup.agency/',
     facebook: 'https://www.facebook.com/profile.php?id=61588724591496',
   },
+  /* PRIX PLANCHERS, JAMAIS DES PRIX FERMES.
+     Chaque montant ci-dessous est un point de DÉPART : le prix définitif
+     dépend du périmètre et se fixe au devis. Tout affichage passe donc par
+     `aPartirDe()` ci-dessous, pour qu'aucun écran ne puisse présenter l'un
+     de ces nombres comme un tarif arrêté. */
   pricing: {
     vitrine: 449,
     multipages: 749,
-    association: 149,
     gestion: 1447,
     ecommerce: 1647,
     marketingMensuel: 0, // sur devis — ne pas afficher
@@ -35,7 +39,6 @@ export const SITE = {
     multipages: '17 jours ouvrés',
     ecommerce: '21 jours ouvrés',
     gestion: '21 jours ouvrés',
-    association: '7 jours ouvrés',
   },
   indexNowKey: 'a3f7c2e1d9b4e8f0a1c5d7e9f2b3a4c6',
 
@@ -97,7 +100,7 @@ export const SITE = {
     /** Remise accordée au filleul sur son premier projet, en pourcent. */
     filleulRemise: 10,
     /** Les deux branches au choix du parrain, par filleul signé. */
-    parrainRecompenseA: "1 mois d'abonnement Premium (89 €) offert",
+    parrainRecompenseA: "1 mois d'abonnement Premium offert (valeur à partir de 89 €)",
     parrainRecompenseB: '−10 % sur sa propre prestation non encore signée',
     /** Formulation courte, pour un titre ou une carte. */
     parrainCourt: '1 mois Premium offert ou −10 %',
@@ -167,16 +170,6 @@ export const SERVICES = [
     badge: 'Sur mesure',
   },
   {
-    id: 'site-association',
-    titre: 'Site association',
-    prix: 149,
-    unite: '€',
-    delai: '7 jours ouvrés',
-    desc: 'Site loi 1901 avec adhésion en ligne, agenda des événements et formulaire de bénévolat.',
-    href: '/services/site-association',
-    badge: null,
-  },
-  {
     id: 'marketing-digital',
     titre: 'Marketing digital',
     prix: null,
@@ -197,3 +190,25 @@ export const SERVICES = [
     badge: null,
   },
 ] as const
+
+/**
+ * Un prix tel qu'il doit s'afficher partout sur le site.
+ *
+ * Les montants de `SITE.pricing` sont des planchers : le prix définitif
+ * dépend du périmètre et se fixe au devis. Les afficher nus — « 449 € » —
+ * les fait lire comme des tarifs arrêtés, ce qu'ils ne sont pas. Cette
+ * fonction est le seul endroit où la formule est écrite, pour qu'elle reste
+ * la même d'un écran à l'autre.
+ *
+ * L'espace avant l'euro est insécable : « 449 €» ne doit jamais se couper
+ * en fin de ligne.
+ */
+export function aPartirDe(montant: number, suffixe = '€'): string {
+  return `à partir de ${montant.toLocaleString('fr-FR')}\u00a0${suffixe}`
+}
+
+/** Variante capitalisée, pour un début de phrase ou un intitulé. */
+export function APartirDe(montant: number, suffixe = '€'): string {
+  const t = aPartirDe(montant, suffixe)
+  return t.charAt(0).toUpperCase() + t.slice(1)
+}

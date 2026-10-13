@@ -2,8 +2,8 @@ import type { Metadata } from 'next'
 import { SITE } from '@/config/site'
 
 export const metadata: Metadata = {
-  title: 'Rédaction blog SEO — Articles optimisés dès 25€',
-  description: 'Articles de blog optimisés SEO rédigés et relus par des humains. Formules à l\'unité (25€) ou en pack mensuel (89€/159€). Résultats mesurables en 3 mois.',
+  title: 'Rédaction blog SEO — Articles optimisés dès à partir de 25 €',
+  description: 'Articles de blog optimisés SEO rédigés et relus par des humains. Formules à l\'unité (à partir de 25 €) ou en pack mensuel (à partir de 89 €/à partir de 159 €). Résultats mesurables en 3 mois.',
   alternates: { canonical: `${SITE.url}/services/redaction-blog-seo` },
   openGraph: {
     url: `${SITE.url}/services/redaction-blog-seo`,

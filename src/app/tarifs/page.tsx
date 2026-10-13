@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import Link from 'next/link'
 import { CheckCircle, ChevronRight } from 'lucide-react'
-import { SITE } from '@/config/site'
+import { SITE, aPartirDe } from '@/config/site'
 import MiniHero from '@/components/ui/MiniHero'
 import PricingCards from '@/components/tarifs/PricingCards'
 import TarifsShelf from '@/components/tarifs/TarifsShelf'
@@ -10,13 +10,13 @@ import DeclareScene from '@/webgl/DeclareScene'
 import AncrageScene from '@/webgl/AncrageScene'
 
 export const metadata = {
-  title: `Tarifs création site internet — À partir de ${SITE.pricing.vitrine}€`,
-  description: `Tarifs transparents pour la création de sites internet. Site vitrine ${SITE.pricing.vitrine}€, e-commerce ${SITE.pricing.ecommerce}€, système de gestion ${SITE.pricing.gestion}€. Pas de frais cachés.`,
+  title: `Tarifs création site internet — ${aPartirDe(SITE.pricing.vitrine)}`,
+  description: `Tarifs transparents pour la création de sites internet. Site vitrine ${aPartirDe(SITE.pricing.vitrine)}, e-commerce ${aPartirDe(SITE.pricing.ecommerce)}, système de gestion ${aPartirDe(SITE.pricing.gestion)}. Pas de frais cachés.`,
   alternates: { canonical: `${SITE.url}/tarifs` },
   openGraph: {
     url: `${SITE.url}/tarifs`,
     title: `Tarifs création site internet — Stackup Agency`,
-    description: `Tarifs transparents. Site vitrine dès ${SITE.pricing.vitrine}€, livraison en ${SITE.delais.vitrine}.`,
+    description: `Tarifs transparents. Site vitrine ${aPartirDe(SITE.pricing.vitrine)}, livraison en ${SITE.delais.vitrine}.`,
     type: 'website',
   },
 }
@@ -25,7 +25,7 @@ const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
   mainEntity: [
-    { '@type': 'Question', name: 'Combien coûte un site internet professionnel ?', acceptedAnswer: { '@type': 'Answer', text: `Chez Stackup Agency, un site vitrine professionnel coûte ${SITE.pricing.vitrine}€. Un site multi-pages coûte ${SITE.pricing.multipages}€. Une boutique en ligne coûte ${SITE.pricing.ecommerce}€. Un système de gestion sur mesure coûte à partir de ${SITE.pricing.gestion}€. Ces prix sont tout inclus : design, développement, SEO, hébergement 12 mois et SSL.` } },
+    { '@type': 'Question', name: 'Combien coûte un site internet professionnel ?', acceptedAnswer: { '@type': 'Answer', text: `Chez Stackup Agency, un site vitrine professionnel est proposé ${aPartirDe(SITE.pricing.vitrine)}. Un site multi-pages est proposé ${aPartirDe(SITE.pricing.multipages)}. Une boutique en ligne est proposé ${aPartirDe(SITE.pricing.ecommerce)}. Un système de gestion sur mesure coûte ${aPartirDe(SITE.pricing.gestion)}. Ces prix sont tout inclus : design, développement, SEO, hébergement 12 mois et SSL.` } },
     { '@type': 'Question', name: "Y a-t-il des frais cachés ?", acceptedAnswer: { '@type': 'Answer', text: "Non, le prix affiché est le prix final. L'hébergement, le SSL et la formation de base sont inclus la première année. À partir de la 2e année, une maintenance optionnelle est proposée." } },
     { '@type': 'Question', name: "Comment se déroule le paiement ?", acceptedAnswer: { '@type': 'Answer', text: `Le paiement se fait en deux fois : ${SITE.conditions.acomptePourcent} % d'acompte au démarrage du projet, ${SITE.conditions.soldePourcent} % à la livraison. Paiement en trois fois possible au-delà de ${SITE.conditions.paiementTroisFoisDes} €. Modes acceptés : virement bancaire ou carte bancaire.` } },
     { '@type': 'Question', name: "Proposez-vous des facilités de paiement ?", acceptedAnswer: { '@type': 'Answer', text: "Oui, pour les projets supérieurs à 500€, nous pouvons étudier un échelonnement sur 3 mensualités sans frais. Mentionnez-le dans votre demande de devis." } },
@@ -47,7 +47,7 @@ export default function TarifsPage() {
 
       <MiniHero signature="echelle"
         title="Tarifs clairs, sans surprise"
-        subtitle={`Site vitrine à partir de ${SITE.pricing.vitrine}€, tout inclus : design, développement, SEO, hébergement 12 mois et SSL. Devis gratuit sous 72h.`}
+        subtitle={`Site vitrine ${aPartirDe(SITE.pricing.vitrine)}, tout inclus : design, développement, SEO, hébergement 12 mois et SSL. Devis gratuit sous 72h.`}
         breadcrumb={[{ name: 'Tarifs' }]}
       />
 
@@ -86,15 +86,6 @@ export default function TarifsPage() {
               inclus: ['Catalogue illimité', 'Paiement en ligne sécurisé', 'Gestion stocks', 'Emails auto', 'Click & Collect', 'Hébergement 12 mois'],
               href: '/services/site-ecommerce',
               highlight: true,
-            },
-            {
-              titre: 'Site association',
-              prix: SITE.pricing.association,
-              delai: SITE.delais.association,
-              desc: 'Site professionnel pour associations loi 1901 avec adhésion et événements.',
-              inclus: ['Design associatif', 'Formulaire d\'adhésion', 'Calendrier', 'Hébergement 12 mois', 'SSL', 'Formation'],
-              href: '/services/site-association',
-              highlight: false,
             },
           ]} />
         </section>
@@ -148,7 +139,7 @@ export default function TarifsPage() {
               <div key={m.titre} className="rounded-2xl border border-navy/20 p-5 hover:border-electric/30 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
                 <div className="flex items-center justify-between mb-3">
                   <h3 className="font-bold text-foreground">{m.titre}</h3>
-                  <span className="text-xl font-bold text-navy">{m.prix}€<span className="text-sm font-normal text-foreground/70">/mois</span></span>
+                  <span className="text-right leading-tight"><span className="block text-[0.6rem] uppercase tracking-[0.12em] text-navy/70">à partir de</span><span className="text-xl font-bold text-navy">{m.prix}€<span className="text-sm font-normal text-foreground/70">/mois</span></span></span>
                 </div>
                 <ul className="space-y-1.5">
                   {m.inclus.map(item => (
@@ -177,7 +168,7 @@ export default function TarifsPage() {
                 {('highlight' in p && p.highlight) && <div className="text-xs font-semibold text-navy mb-2 uppercase tracking-wide">Le plus populaire</div>}
                 <div className="flex items-center justify-between mb-3">
                   <h3 className="font-bold text-foreground">{p.titre}</h3>
-                  <span className="text-xl font-bold text-navy">{p.prix}€<span className="text-sm font-normal text-foreground/70">{p.unite}</span></span>
+                  <span className="text-right leading-tight"><span className="block text-[0.6rem] uppercase tracking-[0.12em] text-navy/70">à partir de</span><span className="text-xl font-bold text-navy">{p.prix}€<span className="text-sm font-normal text-foreground/70">{p.unite}</span></span></span>
                 </div>
                 <ul className="space-y-1.5">
                   {p.inclus.map(item => (
@@ -195,7 +186,7 @@ export default function TarifsPage() {
               <span className="font-semibold text-foreground text-sm">Accès technique blog</span>
               <span className="text-[#475569] text-sm ml-2">— Installation du blog sur votre site existant</span>
             </div>
-            <span className="font-bold text-navy flex-shrink-0">49€ <span className="text-[#475569] font-normal text-xs">une fois</span></span>
+            <span className="font-bold text-navy flex-shrink-0 text-right leading-tight"><span className="block text-[0.6rem] uppercase tracking-[0.12em] text-navy/70 font-normal">à partir de</span>49&nbsp;€ <span className="text-[#475569] font-normal text-xs">une fois</span></span>
           </div>
         </section>
 
@@ -204,7 +195,7 @@ export default function TarifsPage() {
           <h2 className="text-2xl font-bold text-foreground mb-6">Questions sur les tarifs</h2>
           <div className="space-y-3">
             {[
-              { q: 'Combien coûte un site internet professionnel ?', a: `Chez Stackup Agency, un site vitrine professionnel coûte ${SITE.pricing.vitrine}€, tout inclus. Un site multi-pages coûte ${SITE.pricing.multipages}€. Une boutique en ligne coûte ${SITE.pricing.ecommerce}€. Un système de gestion sur mesure coûte à partir de ${SITE.pricing.gestion}€.` },
+              { q: 'Combien coûte un site internet professionnel ?', a: `Chez Stackup Agency, un site vitrine professionnel est proposé ${aPartirDe(SITE.pricing.vitrine)}, tout inclus. Un site multi-pages est proposé ${aPartirDe(SITE.pricing.multipages)}. Une boutique en ligne est proposé ${aPartirDe(SITE.pricing.ecommerce)}. Un système de gestion sur mesure coûte ${aPartirDe(SITE.pricing.gestion)}.` },
               { q: 'Y a-t-il des frais cachés ?', a: "Non, le prix affiché est le prix final. L'hébergement, le SSL et la formation de base sont inclus la première année. Pas de mauvaise surprise." },
               { q: 'Comment se déroule le paiement ?', a: `${SITE.conditions.acomptePourcent} % d'acompte au démarrage, ${SITE.conditions.soldePourcent} % à la livraison. Paiement en trois fois possible au-delà de ${SITE.conditions.paiementTroisFoisDes} €. Virement bancaire ou carte bancaire.` },
               { q: 'Proposez-vous des facilités de paiement ?', a: "Oui, pour les projets supérieurs à 500€, un échelonnement sur 3 mensualités sans frais est possible. Mentionnez-le dans votre demande." },
@@ -234,10 +225,10 @@ export default function TarifsPage() {
           <div className="flex-1">
             <div className="text-xs font-semibold text-gold uppercase tracking-widest mb-1">Programme parrainage</div>
             <h3 className="font-bold text-foreground mb-1">
-              Parrainez un professionnel : 1 mois Premium (89 €) offert ou −10 % sur votre prestation
+              Parrainez un professionnel : 1 mois Premium offert (valeur à partir de 89 €) ou −10 % sur votre prestation
             </h3>
             <p className="text-sm text-[#475569]">
-              Votre filleul bénéficie de −10% sur son premier projet. Valeur jusqu'à 89€ pour vous.
+              Votre filleul bénéficie de −10% sur son premier projet. Valeur : à partir de 89 € pour vous.
             </p>
           </div>
           <Link href="/parrainage" className="flex-shrink-0 px-5 py-2.5 bg-gold hover:bg-gold/80 text-ink text-sm font-semibold rounded-xl transition-colors">

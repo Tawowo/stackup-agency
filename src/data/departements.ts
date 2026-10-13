@@ -76,7 +76,7 @@ export const DEPARTEMENTS: Departement[] = [
     ],
     faq: [
       { q: 'Intervenez-vous à Orléans et dans tout le Loiret ?', a: 'Oui. La création de site se fait à distance (visio, téléphone, partage d’écran) avec la même qualité de suivi qu’en présentiel. Des déplacements à Orléans sont possibles pour les projets qui le justifient — Tours est à une heure de route.' },
-      { q: 'Quels types d’entreprises du Loiret accompagnez-vous ?', a: 'Commerces et restaurants d’Orléans métropole, artisans du Montargois et du Giennois, prestataires logistiques, professions libérales… Nos offres s’adaptent au besoin : site vitrine dès 449 €, e-commerce dès 1 647 €, gestion sur mesure dès 1 447 €.' },
+      { q: 'Quels types d’entreprises du Loiret accompagnez-vous ?', a: 'Commerces et restaurants d’Orléans métropole, artisans du Montargois et du Giennois, prestataires logistiques, professions libérales… Nos offres s’adaptent au besoin : site vitrine à partir de 449 €, e-commerce à partir de 1 647 €, gestion sur mesure à partir de 1 447 €.' },
       { q: 'Le tarif est-il le même qu’à Tours ?', a: 'Oui. Nos prix sont les mêmes partout en France : ils sont affichés publiquement sur notre page tarifs et n’augmentent pas selon votre localisation.' },
     ],
   },
@@ -140,7 +140,7 @@ export const DEPARTEMENTS: Departement[] = [
       'Toury', 'Janville-en-Beauce', 'Sours', 'Berchères-les-Pierres',
     ],
     faq: [
-      { q: 'Pourquoi choisir une agence de Tours plutôt qu’une agence parisienne ?', a: 'Pour la même qualité technique, nos tarifs sont deux à cinq fois inférieurs aux agences parisiennes — et ils sont affichés publiquement. Le suivi à distance (visio, téléphone) est le même qu’avec un prestataire francilien, sans les tarifs franciliens.' },
+      { q: 'Pourquoi choisir une agence de Tours plutôt qu’une agence parisienne ?', a: 'Nos tarifs sont affichés publiquement, ce qui vous permet de comparer vous-même. Le suivi à distance (visio, téléphone) est le même qu’avec un prestataire francilien, et la structure est plus légère : pas de bureaux à amortir ni de couches commerciales.' },
       { q: 'Accompagnez-vous les PME industrielles du département ?', a: 'Oui. Sites B2B, catalogues de capacités, formulaires de demandes techniques : nous construisons des sites crédibles pour les donneurs d’ordre, avec un SEO pensé pour les requêtes métier.' },
       { q: 'Quel est le délai pour un site vitrine en Eure-et-Loir ?', a: 'Le même que partout : à partir de 10 jours ouvrés après validation de la maquette, quel que soit votre emplacement dans le département.' },
     ],
@@ -237,7 +237,7 @@ export const DEPARTEMENTS: Departement[] = [
     ],
     faq: [
       { q: 'Intervenez-vous au Mans depuis Tours ?', a: 'Oui : Le Mans est à moins d’une heure de Tours. La majorité des projets sarthois se mènent entièrement à distance, avec un rendez-vous physique possible au démarrage si le projet le justifie.' },
-      { q: 'Accompagnez-vous les producteurs pour la vente en ligne ?', a: 'Oui. Vente directe de produits fermiers ou artisanaux, click & collect, expédition : notre offre e-commerce démarre à 1 647 € et se chiffre précisément au devis selon votre catalogue.' },
+      { q: 'Accompagnez-vous les producteurs pour la vente en ligne ?', a: 'Oui. Vente directe de produits fermiers ou artisanaux, click & collect, expédition : notre offre e-commerce est proposée à partir de 1 647 € et se chiffre précisément au devis selon votre catalogue.' },
       { q: 'Quels sont vos délais pour la Sarthe ?', a: 'Les mêmes que partout : site vitrine à partir de 10 jours ouvrés après validation de la maquette, devis gratuit sous 72 h.' },
     ],
   },
@@ -271,7 +271,7 @@ export const DEPARTEMENTS: Departement[] = [
     faq: [
       { q: 'Travaillez-vous avec les vignerons du Saumurois ?', a: 'La vente directe de vin en ligne est l’un de nos cas d’usage phares : boutique conforme (mentions alcool), réservation de dégustations, expédition. Offre e-commerce à partir de 1 647 €, devis précis selon la gamme.' },
       { q: 'Angers est-elle dans votre zone d’intervention ?', a: 'Oui. Angers est à une heure de Tours ; le suivi se fait à distance comme pour tous nos clients, avec la même réactivité (réponse sous 72 h ouvrées, livraison en 10 jours ouvrés pour un site vitrine).' },
-      { q: 'Quels tarifs pour une entreprise du Maine-et-Loire ?', a: 'Les mêmes que partout en France, affichés publiquement : site vitrine dès 449 €, multi-pages dès 749 €, e-commerce dès 1 647 €, gestion sur mesure dès 1 447 €.' },
+      { q: 'Quels tarifs pour une entreprise du Maine-et-Loire ?', a: 'Les mêmes que partout en France, affichés publiquement : site vitrine à partir de 449 €, multi-pages à partir de 749 €, e-commerce à partir de 1 647 €, gestion sur mesure à partir de 1 447 €.' },
     ],
   },
   {
@@ -335,7 +335,7 @@ export const DEPARTEMENTS: Departement[] = [
     faq: [
       { q: 'Travaillez-vous avec les acteurs du tourisme du Marais poitevin ?', a: 'Oui : embarcadères, gîtes, chambres d’hôtes, loueurs de vélos… Un site avec réservation directe capte la clientèle qui prépare sa venue en ligne, sans commission de plateforme.' },
       { q: 'À quelle distance de Tours se trouvent les Deux-Sèvres ?', a: 'Niort est à environ 2 h de Tours : les projets se mènent intégralement à distance, comme pour la majorité de nos clients partout en France, avec la même réactivité.' },
-      { q: 'Quels tarifs pour les Deux-Sèvres ?', a: 'Les mêmes qu’ailleurs, affichés publiquement : site vitrine dès 449 €, e-commerce dès 1 647 €, système de gestion dès 1 447 €. Devis gratuit sous 72 h.' },
+      { q: 'Quels tarifs pour les Deux-Sèvres ?', a: 'Les mêmes qu’ailleurs, affichés publiquement : site vitrine à partir de 449 €, e-commerce à partir de 1 647 €, système de gestion à partir de 1 447 €. Devis gratuit sous 72 h.' },
     ],
   },
   {
@@ -367,7 +367,7 @@ export const DEPARTEMENTS: Departement[] = [
     faq: [
       { q: 'Créez-vous des sites pour les vignerons de Chablis ?', a: 'Oui. Vente directe en ligne, présentation des cuvées, réservation de dégustations et export : notre offre e-commerce à partir de 1 647 € couvre ces besoins, avec les mentions légales alcool intégrées.' },
       { q: 'L’Yonne est-elle dans votre zone d’intervention habituelle ?', a: 'L’Yonne prolonge notre zone d’intervention Centre-Val de Loire vers le nord-est. Les projets se mènent intégralement à distance (visio, téléphone, partage d’écran), aux mêmes tarifs affichés partout en France.' },
-      { q: 'Quels tarifs pour une entreprise de l’Yonne ?', a: 'Les mêmes que partout : site vitrine dès 449 €, e-commerce dès 1 647 €, système de gestion dès 1 447 €. Devis gratuit sous 72 h, livraison en 10 jours ouvrés pour un site vitrine.' },
+      { q: 'Quels tarifs pour une entreprise de l’Yonne ?', a: 'Les mêmes que partout : site vitrine à partir de 449 €, e-commerce à partir de 1 647 €, système de gestion à partir de 1 447 €. Devis gratuit sous 72 h, livraison en 10 jours ouvrés pour un site vitrine.' },
     ],
   },
   {
@@ -460,7 +460,7 @@ export const DEPARTEMENTS: Departement[] = [
     ],
     faq: [
       { q: 'Pourquoi si peu d’agences travaillent-elles en Creuse ?', a: 'La faible densité et l’éloignement des métropoles découragent les agences traditionnelles, organisées autour du rendez-vous physique. Notre méthode 100 % à distance supprime cette barrière : mêmes tarifs, même délai, même qualité qu’ailleurs en France.' },
-      { q: 'Créez-vous des sites pour les artisans d’art (tapisserie) ?', a: 'Oui : portfolio soigné, présentation des créations, vente en ligne si besoin. Un site vitrine dès 449 € ou une boutique en ligne dès 1 647 € selon votre activité.' },
+      { q: 'Créez-vous des sites pour les artisans d’art (tapisserie) ?', a: 'Oui : portfolio soigné, présentation des créations, vente en ligne si besoin. Un site vitrine à partir de 449 € ou une boutique en ligne à partir de 1 647 € selon votre activité.' },
       { q: 'Quel délai pour un site en Creuse ?', a: 'Le même que partout : à partir de 10 jours ouvrés après validation de la maquette, devis gratuit sous 72 h, suivi intégral à distance.' },
     ],
   },

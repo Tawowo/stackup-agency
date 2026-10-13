@@ -37,7 +37,7 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
-import { SITE } from '@/config/site'
+import { SITE, aPartirDe } from '@/config/site'
 import LogoMarque from '@/components/ui/LogoMarque'
 import { useBande, type Offre } from '@/store/bande'
 
@@ -55,7 +55,7 @@ const MOTS: { mot: string; offre: Offre; delai: string }[] = [
 
 /** Les quatre cotes du bas, toutes tirées de `site.ts`. */
 const COTES = [
-  { valeur: `${SITE.pricing.vitrine} €`, libelle: 'tout inclus' },
+  { valeur: aPartirDe(SITE.pricing.vitrine), libelle: 'tout inclus' },
   { valeur: SITE.delais.vitrine, libelle: "de l’idée à la mise en ligne" },
   { valeur: '72 h', libelle: 'délai de réponse' },
   { valeur: '100 %', libelle: 'le code est à vous' },
