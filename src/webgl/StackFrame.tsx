@@ -4,7 +4,7 @@
  * pixel. Il porte aussi le repli 2D (le logo SVG) quand la 3D n'est pas rendue.
  */
 import { useEffect, useRef, type ReactNode } from 'react'
-import LogoMarque from '@/components/ui/LogoMarque'
+import Fallback2D from './Fallback2D'
 import { useScene } from './store'
 
 export default function StackFrame({ className = '', children }: { className?: string; children?: ReactNode }) {
@@ -32,7 +32,7 @@ export default function StackFrame({ className = '', children }: { className?: s
   return (
     <div ref={ref} className={`su-frame ${className}`} data-su-frame="">
       <div className="su-repli" aria-hidden="true">
-        <LogoMarque avecTexte={false} taille={0} />
+        <Fallback2D />
       </div>
       {children}
     </div>

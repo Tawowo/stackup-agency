@@ -1,20 +1,14 @@
-import StackFrame from '@/webgl/StackFrame'
+import Ouverture from '@/experiences/ouverture/Ouverture'
 
-/* Phase 0 : la pile au repos, calée à gauche sur la grille. Le hero (moment 00)
-   arrive en phase 1 ; rien de l'ancien contenu n'est migré ici. */
 export default function Accueil() {
   return (
-    <main className="mx-auto grid min-h-svh max-w-[1440px] grid-cols-12 gap-x-6 px-6">
-      <StackFrame className="col-span-12 my-[6vh] min-h-[48svh] md:col-span-6 md:min-h-[60svh]" />
-      <section className="col-span-12 flex flex-col justify-end pb-[10vh] md:col-span-6 md:col-start-7">
+    <main>
+      <Ouverture />
+      {/* Les moments 01 à 09 arrivent en phases 2 et 3. Cette section réserve la place. */}
+      <section id="strates" className="mx-auto flex min-h-[80svh] max-w-[1440px] items-end px-6 pb-[12vh]" aria-label="Suite">
         <p className="su-mono" style={{ color: 'var(--su-texte-doux)' }}>
-          00 — Chantier · phase 0
+          01 — Les strates · phase 2
         </p>
-        <h1 className="su-display mt-4" style={{ fontSize: 'clamp(2.75rem, 7vw, 6rem)' }}>
-          Sites et outils
-          <br />
-          sur mesure.
-        </h1>
       </section>
     </main>
   )

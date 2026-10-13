@@ -2,6 +2,10 @@ import type { Metadata, Viewport } from 'next'
 import './globals.css'
 import { inter, jetbrains, poppins } from './fonts'
 import SceneMount from '@/webgl/SceneMount'
+import Nav from '@/components/layout/Nav'
+import Defilement from '@/components/layout/Defilement'
+import Curseur from '@/components/ui/Curseur'
+import '@/styles/chrome.css'
 
 export const metadata: Metadata = {
   title: 'Stackup Agency — Sites et outils sur mesure, Tours',
@@ -21,7 +25,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="fr" className={`${poppins.variable} ${inter.variable} ${jetbrains.variable}`}>
       <body>
         <SceneMount />
+        <Defilement />
+        <Nav />
         <div className="su-page">{children}</div>
+        <Curseur />
       </body>
     </html>
   )

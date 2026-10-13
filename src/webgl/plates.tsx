@@ -20,6 +20,8 @@ import { useScene } from './store'
 export interface PlatesHandle {
   /** Écrit le layout cible dans B (A reçoit l'état courant) et remet uMorph à 0. */
   setTarget: (name: LayoutName) => void
+  /** Pose A et B explicitement (morph piloté par une expérience). */
+  setPair: (a: LayoutName, b: LayoutName | null) => void
   murA: number
   murB: number
 }
@@ -108,6 +110,15 @@ export function Plates({ count, handleRef }: { count: number; handleRef: React.R
     const h: PlatesHandle = {
       murA: first.mur,
       murB: first.mur,
+      setPair: (a, b) => {
+        const da = compute(a)
+        const db = b ? compute(b) : da
+        write(geometry, 'A', da)
+        write(geometry, 'B', db)
+        h.murA = da.mur
+        h.murB = db.mur
+        currentRef.current = b ?? a
+      },
       setTarget: (name) => {
         const st = useScene.getState()
         snapshot(geometry, u.uMorph.value, u.uDelay.value)
@@ -120,10 +131,14 @@ export function Plates({ count, handleRef }: { count: number; handleRef: React.R
         st.setMorph(0)
       },
     }
+    if (s.target) h.setPair(s.layout, s.target)
     handleRef.current = h
     // Un changement de paramètres de pile recalcule la cible en place.
+    const CLES = ['parNiveau', 'ecart', 'torsion', 'rayon', 'chantier', 'echelle', 'hauteur'] as const
     const unsub = useScene.subscribe((st, prev) => {
-      if (st.params !== prev.params && currentRef.current === 'pile') {
+      if (st.params === prev.params || currentRef.current !== 'pile') return
+      if (CLES.every((k) => st.params[k] === prev.params[k])) return
+      {
         const d = compute('pile')
         write(geometry, 'B', d)
         h.murB = d.mur

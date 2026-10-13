@@ -77,6 +77,19 @@ const poses = mesures.map((m, i) => {
   }
 })
 
+/* Les trois parallélogrammes en coordonnées SVG (repli 2D), ordre d'empilement :
+   haut, bas (ambre), puis milieu devant. */
+const quads = mesures.map((m) => {
+  const yAt = (edge, x) => edge[0][1] + slope(edge[0], edge[1]) * (x - edge[0][0])
+  const pts = [
+    [m.xL, yAt(m.haut, m.xL)],
+    [m.xR, yAt(m.haut, m.xR)],
+    [m.xR, yAt(m.bas, m.xR)],
+    [m.xL, yAt(m.bas, m.xL)],
+  ]
+  return { nom: m.nom, couleur: m.couleur, points: pts.map(([x, y]) => `${x.toFixed(1)},${y.toFixed(1)}`).join(' ') }
+})
+
 const out = `/* GÉNÉRÉ PAR scripts/logo-trace.mjs — ne pas éditer à la main. */
 
 /** Boîte du décalque SVG (LogoMarque), en unités SVG. */
@@ -107,6 +120,9 @@ export interface PoseLogo {
 }
 
 /** Les trois plaques du logo, au repos (projection orthographique de face). */
+/** Les trois plaques en polygones SVG (viewBox 0 0 ${VIEW.w} ${VIEW.h}), pour le repli 2D. */
+export const LOGO_QUADS = ${JSON.stringify(quads, null, 2)} as const
+
 export const LOGO_POSES: readonly PoseLogo[] = ${JSON.stringify(
   poses.map((p) => ({ index: p.index, nom: p.nom, couleur: p.couleur, x: p.x, y: p.y, z: p.z, rotY: p.rotY, rotZ: p.rotZ })),
   null,

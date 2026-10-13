@@ -8,7 +8,11 @@ export interface Etat {
   /** Paramètres d'URL ajoutés à la route. */
   query?: string
   /** Geste à exécuter avant la capture. */
-  action?: 'drag'
+  action?: 'drag' | 'menu'
+  /** Limiter à certaines largeurs (par défaut : 1440 et 390). */
+  largeurs?: number[]
+  /** Position de scroll, en fraction de la distance épinglée du moment 00. */
+  scroll?: number
   /** Attente supplémentaire après le chargement, en ms (animations de scène). */
   attente?: number
   /** Ne pas prendre la variante mouvement réduit. */
@@ -39,6 +43,15 @@ export const ROUTES: Route[] = [
   {
     route: '/',
     dossier: 'accueil',
-    etats: [{ nom: 'haut', query: QUALITE, attente: 1200 }],
+    etats: [
+      { nom: '00-p0', query: QUALITE, attente: 1800 },
+      { nom: '00-p025', query: QUALITE, scroll: 0.25, attente: 1600 },
+      { nom: '00-p05', query: QUALITE, scroll: 0.5, attente: 1600 },
+      { nom: '00-p1', query: QUALITE, scroll: 1, attente: 1800 },
+      { nom: '00-drag', query: QUALITE, action: 'drag', attente: 1200, sansRm: true },
+      { nom: '00-menu', query: QUALITE, action: 'menu', attente: 1000, sansRm: true, largeurs: [390] },
+      { nom: '00-sans-webgl', query: 'webgl=0', attente: 1500, sansRm: true },
+      { nom: '00-sans-webgl-p1', query: 'webgl=0', scroll: 1, attente: 1500, sansRm: true },
+    ],
   },
 ]

@@ -6,7 +6,7 @@
 import dynamic from 'next/dynamic'
 import { useEffect, useState } from 'react'
 import { detecterPalier } from './quality'
-import { useScene } from './store'
+import { useScene, type SceneParams } from './store'
 
 const Scene = dynamic(() => import('./Scene'), { ssr: false })
 
@@ -25,6 +25,17 @@ export default function SceneMount() {
     const reduit = mq.matches
     setReduced(reduit)
     if (q.get('still') === '1' || reduit) setStill(true)
+    // Diagnostics (captures, logo-check) : valables sur toute route.
+    const st = useScene.getState()
+    const proj = q.get('proj')
+    if (proj !== null) st.setProjection(Number(proj))
+    const p: Partial<SceneParams> = {}
+    if (q.get('mur') === '0') p.mur = 0
+    if (q.get('ombre') === '0') p.ombre = 0
+    if (q.get('grain') === '0') p.grain = 0
+    if (q.get('plaques') === '0') p.plaques = 0
+    if (Object.keys(p).length) st.setParams(p)
+    if (q.get('fond') === 'ivoire') st.forcerNuit(0)
     detecterPalier().then((tier) => {
       if (!vivant) return
       setTier(tier)

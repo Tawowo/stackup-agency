@@ -1,6 +1,6 @@
 {
   "genere": "2026-10-13",
-  "phase": 0,
+  "phase": 1,
   "captures": [
     {
       "fichier": "docs/qa/shots/lab/logo-1440.png",
@@ -203,51 +203,9 @@
       "corrige": false
     },
     {
-      "fichier": "docs/qa/shots/accueil/haut-1440.png",
-      "route": "/",
-      "etat": "haut",
-      "largeur": 1440,
-      "rm": false,
-      "visible": "Stub de phase 0 : le logo au repos calé sur les colonnes 1-6, le titre display (Poppins 700) en bas à droite, étiquette mono au-dessus. Aucun contenu migré.",
-      "defauts": [
-        "Première capture : le logo ignorait sa boîte et se centrait à l'écran (la caméra orbitait autour de la pile) — corrigé : caméra fixe, dérive et parallaxe appliquées au groupe"
-      ],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/accueil/haut-1440-rm.png",
-      "route": "/",
-      "etat": "haut",
-      "largeur": 1440,
-      "rm": true,
-      "visible": "Idem, figé.",
-      "defauts": [],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/accueil/haut-390.png",
-      "route": "/",
-      "etat": "haut",
-      "largeur": 390,
-      "rm": false,
-      "visible": "Logo pleine largeur dans le tiers supérieur, titre dessous sur deux lignes.",
-      "defauts": [],
-      "corrige": true
-    },
-    {
-      "fichier": "docs/qa/shots/accueil/haut-390-rm.png",
-      "route": "/",
-      "etat": "haut",
-      "largeur": 390,
-      "rm": true,
-      "visible": "Idem, figé.",
-      "defauts": [],
-      "corrige": true
-    },
-    {
       "fichier": "docs/qa/shots/logo-check/capture-1440.png",
       "route": "/lab",
-      "etat": "logo-check",
+      "etat": "logo-check-lab",
       "largeur": 1440,
       "rm": true,
       "visible": "Capture du contrôle de superposition (ivoire, sans mur ni ombre, figé). Écart 1,05 % de la boîte (seuil 2 %), ratio 0,6371 vs 0,64 (0,45 %). Le diff ne montre que des liserés d'un pixel sur les arêtes longues.",
@@ -259,11 +217,271 @@
     {
       "fichier": "docs/qa/shots/logo-check/capture-390.png",
       "route": "/lab",
-      "etat": "logo-check",
+      "etat": "logo-check-lab",
       "largeur": 390,
       "rm": true,
       "visible": "Écart 1,08 %, ratio 0,6371. Tenu.",
       "defauts": [],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/accueil/00-p0-1440.png",
+      "route": "/",
+      "etat": "00-p0",
+      "largeur": 1440,
+      "rm": false,
+      "visible": "Hero au repos : nav (logo + lettrage, cinq entrées, action contour), le logo exact immense sur les colonnes 1-5, ombre longue, halo ; à droite en bas, « Sites et outils / sur mesure. » en Poppins 700 ~120 px qui touche le bord, la ligne, deux actions (ambre à reflet, contour), quatre cotes réelles en bas (logo 566, titre 228, conteneur 1440, ligne de base 583).",
+      "defauts": [
+        "Première capture : la tour déjà construite à p = 0 — la bascule de layout sur p > 0 courait contre le montage différé de la scène ; corrigé : la paire A = logo / B = pile est posée explicitement (store `target`) et uMorph seul bouge"
+      ],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/accueil/00-p0-1440-rm.png",
+      "route": "/",
+      "etat": "00-p0",
+      "largeur": 1440,
+      "rm": true,
+      "visible": "Mouvement réduit : même composition, logo figé (pas de dérive, pas de balayage), texte posé sans animation, pas d'épinglage.",
+      "defauts": [],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/accueil/00-p0-390.png",
+      "route": "/",
+      "etat": "00-p0",
+      "largeur": 390,
+      "rm": false,
+      "visible": "Mobile : nav réduite (logo, bouton Menu 44 px), logo dans le tiers supérieur à 78 % de largeur, étiquette, titre sur deux lignes, ligne, deux actions empilées pleine largeur, deux cotes (logo 267, titre 97).",
+      "defauts": [],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/accueil/00-p0-390-rm.png",
+      "route": "/",
+      "etat": "00-p0",
+      "largeur": 390,
+      "rm": true,
+      "visible": "Idem, figé.",
+      "defauts": [],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/accueil/00-p025-1440.png",
+      "route": "/",
+      "etat": "00-p025",
+      "largeur": 1440,
+      "rm": false,
+      "visible": "p = 0,25 : les plaques du logo ont pris de l'épaisseur (×1,75), l'ombre s'allonge, les premières plaques arrivent de l'arrière-plan en petits éclats ; les cotes s'effacent (opacité 1 − 1,6 p) ; barre de progression ambre en haut.",
+      "defauts": [],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/accueil/00-p025-1440-rm.png",
+      "route": "/",
+      "etat": "00-p025",
+      "largeur": 1440,
+      "rm": true,
+      "visible": "Mouvement réduit : pas d'épinglage, la page n'a pas de distance à défiler, identique à p = 0.",
+      "defauts": [],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/accueil/00-p025-390.png",
+      "route": "/",
+      "etat": "00-p025",
+      "largeur": 390,
+      "rm": false,
+      "visible": "Mobile p = 0,25 : épaisseur, éclats en vol autour du logo, la nav reste lisible.",
+      "defauts": [],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/accueil/00-p025-390-rm.png",
+      "route": "/",
+      "etat": "00-p025",
+      "largeur": 390,
+      "rm": true,
+      "visible": "Idem p = 0 figé.",
+      "defauts": [],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/accueil/00-p05-1440.png",
+      "route": "/",
+      "etat": "00-p05",
+      "largeur": 1440,
+      "rm": false,
+      "visible": "p = 0,5 : la perspective est engagée (les plaques du logo fuient), des dizaines de plaques en vol en arc vers la tour, le titre reste net.",
+      "defauts": [
+        "Les plaques en vol traversent la zone du titre (positions hors champ réparties sur ±4,5 unités) — à resserrer côté gauche si cela gêne la lecture ; non bloquant"
+      ],
+      "corrige": false
+    },
+    {
+      "fichier": "docs/qa/shots/accueil/00-p05-1440-rm.png",
+      "route": "/",
+      "etat": "00-p05",
+      "largeur": 1440,
+      "rm": true,
+      "visible": "Idem p = 0 figé.",
+      "defauts": [],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/accueil/00-p05-390.png",
+      "route": "/",
+      "etat": "00-p05",
+      "largeur": 390,
+      "rm": false,
+      "visible": "Mobile p = 0,5 : plaques en vol, perspective, titre dessous intact.",
+      "defauts": [],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/accueil/00-p05-390-rm.png",
+      "route": "/",
+      "etat": "00-p05",
+      "largeur": 390,
+      "rm": true,
+      "visible": "Idem p = 0 figé.",
+      "defauts": [],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/accueil/00-p1-1440.png",
+      "route": "/",
+      "etat": "00-p1",
+      "largeur": 1440,
+      "rm": false,
+      "visible": "p = 1 : perspective pleine, la tour torsadée construite derrière le logo incliné (pose x −0,12, y +0,22), épaisseur ×2,5, mur reculé ; le titre et les actions à droite n'ont pas bougé ; cotes effacées.",
+      "defauts": [],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/accueil/00-p1-1440-rm.png",
+      "route": "/",
+      "etat": "00-p1",
+      "largeur": 1440,
+      "rm": true,
+      "visible": "Idem p = 0 figé.",
+      "defauts": [],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/accueil/00-p1-390.png",
+      "route": "/",
+      "etat": "00-p1",
+      "largeur": 390,
+      "rm": false,
+      "visible": "Mobile p = 1 : la tour derrière le logo, le titre dessous. La tour est coupée par le haut de l'écran (débordement voulu).",
+      "defauts": [],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/accueil/00-p1-390-rm.png",
+      "route": "/",
+      "etat": "00-p1",
+      "largeur": 390,
+      "rm": true,
+      "visible": "Idem p = 0 figé.",
+      "defauts": [],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/accueil/00-drag-1440.png",
+      "route": "/",
+      "etat": "00-drag",
+      "largeur": 1440,
+      "rm": false,
+      "visible": "Drag de 240 px à p = 0 : le logo seul tourne (~65°), épaisseur et arête ambre visibles ; le curseur (point + anneau ambre) est capturé au point de relâchement.",
+      "defauts": [],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/accueil/00-drag-390.png",
+      "route": "/",
+      "etat": "00-drag",
+      "largeur": 390,
+      "rm": false,
+      "visible": "Drag tactile simulé à p = 0 : le logo a tourné puis amorce son retour.",
+      "defauts": [],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/accueil/00-sans-webgl-1440.png",
+      "route": "/",
+      "etat": "00-sans-webgl",
+      "largeur": 1440,
+      "rm": false,
+      "visible": "webgl = 0 : repli 2D, les trois plaques SVG exactes dans la boîte, en navy-clair avec un liseré ambre (le navy pur disparaît sur l'encre), le reste de la page identique.",
+      "defauts": [
+        "Première version : plaques ivoire (la variable du brin de la nav) — corrigé avec une teinte propre au repli"
+      ],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/accueil/00-sans-webgl-390.png",
+      "route": "/",
+      "etat": "00-sans-webgl",
+      "largeur": 390,
+      "rm": false,
+      "visible": "Idem en portrait.",
+      "defauts": [],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/accueil/00-sans-webgl-p1-1440.png",
+      "route": "/",
+      "etat": "00-sans-webgl-p1",
+      "largeur": 1440,
+      "rm": false,
+      "visible": "Repli 2D à p = 1 : sept plaques fantômes se sont déployées vers le haut derrière le logo (translation et échelle pilotées par --su-p), le logo s'est légèrement rétracté.",
+      "defauts": [],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/accueil/00-sans-webgl-p1-390.png",
+      "route": "/",
+      "etat": "00-sans-webgl-p1",
+      "largeur": 390,
+      "rm": false,
+      "visible": "Idem en portrait.",
+      "defauts": [],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/logo-check/capture-1440.png",
+      "route": "/",
+      "etat": "logo-check-hero",
+      "largeur": 1440,
+      "rm": true,
+      "visible": "Superposition sur le hero (ivoire forcé, figé, sans mur ni ombre) : écart 1,17 % de la boîte, ratio 0,6364 vs 0,64 (0,57 %). Tenu.",
+      "defauts": [
+        "Première passe : le hero forçait nuit = 1 par-dessus `?fond=ivoire` — corrigé par une nuit forcée prioritaire dans le store"
+      ],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/logo-check/capture-390.png",
+      "route": "/",
+      "etat": "logo-check-hero",
+      "largeur": 390,
+      "rm": true,
+      "visible": "Écart 1,43 %, ratio 0,6367. Tenu.",
+      "defauts": [],
+      "corrige": true
+    },
+    {
+      "fichier": "docs/qa/shots/accueil/00-menu-390.png",
+      "route": "/",
+      "etat": "00-menu",
+      "largeur": 390,
+      "rm": false,
+      "visible": "Menu mobile ouvert : panneau encre plein écran, six lamelles (numéro mono ambre + entrée en Poppins display) séparées par des filets, la barre (logo, bouton « Fermer ») reste visible au-dessus. Le panneau est `inert` fermé, le focus est piégé ouvert.",
+      "defauts": [
+        "Première capture : le panneau recouvrait la barre (logo et bouton Fermer cachés) — corrigé par un z-index sur la barre"
+      ],
       "corrige": true
     }
   ]

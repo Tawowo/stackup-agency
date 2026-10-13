@@ -32,8 +32,6 @@ export interface SceneParams extends PileParams {
   epaisseur: number
   arc: number
   retard: number
-  /** 1 = orthographique, 0 = perspective. */
-  projection: number
   ambiant: number
   cle: number
   fresnel: number
@@ -49,7 +47,6 @@ export const PARAMS_DEFAUT: SceneParams = {
   epaisseur: 1,
   arc: 0.6,
   retard: 0.25,
-  projection: 1,
   parNiveau: 3,
   ecart: 0.14,
   torsion: 0.12,
@@ -68,10 +65,25 @@ export const PARAMS_DEFAUT: SceneParams = {
   plaques: 1,
 }
 
+export interface Pose {
+  x: number
+  y: number
+}
+
 interface SceneState {
   layout: LayoutName
   morph: number
+  /** 1 = orthographique, 0 = perspective. */
+  projection: number
+  /** Orientation de base de la pile, imposée par l'expérience (radians). */
+  pose: Pose
+  /** Le scroll écrit uMorph lui-même : aucun tween au changement de layout. */
+  scrub: boolean
+  /** Cible de morph pilotée par l'expérience : A = layout, B = target, uMorph écrit par le scroll. */
+  target: LayoutName | null
   nuit: number
+  /** Diagnostic (`?fond=ivoire`) : la nuit forcée l'emporte sur les expériences. */
+  nuitForcee: number | null
   accent: string
   frame: Frame | null
   tier: Tier
@@ -88,7 +100,12 @@ interface SceneState {
   ready: boolean
   setLayout: (l: LayoutName) => void
   setMorph: (m: number) => void
+  setProjection: (p: number) => void
+  setPose: (p: Pose) => void
+  setScrub: (s: boolean) => void
+  setTarget: (t: LayoutName | null) => void
   setNuit: (n: number) => void
+  forcerNuit: (n: number | null) => void
   setAccent: (a: string) => void
   setFrame: (f: Frame | null) => void
   setTier: (t: Tier) => void
@@ -106,7 +123,12 @@ interface SceneState {
 export const useScene = create<SceneState>((set) => ({
   layout: 'logo',
   morph: 0,
+  projection: 1,
+  pose: { x: 0, y: 0 },
+  scrub: false,
+  target: null,
   nuit: 1,
+  nuitForcee: null,
   accent: '#F69106',
   frame: null,
   tier: 'high',
@@ -123,7 +145,12 @@ export const useScene = create<SceneState>((set) => ({
   ready: false,
   setLayout: (layout) => set({ layout }),
   setMorph: (morph) => set({ morph }),
-  setNuit: (nuit) => set({ nuit }),
+  setProjection: (projection) => set({ projection }),
+  setPose: (pose) => set({ pose }),
+  setScrub: (scrub) => set({ scrub }),
+  setTarget: (target) => set({ target }),
+  setNuit: (nuit) => set((st) => ({ nuit: st.nuitForcee ?? nuit })),
+  forcerNuit: (nuitForcee) => set((st) => ({ nuitForcee, nuit: nuitForcee ?? st.nuit })),
   setAccent: (accent) => set({ accent }),
   setFrame: (frame) => set({ frame }),
   setTier: (tier) => set({ tier }),

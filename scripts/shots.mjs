@@ -47,6 +47,7 @@ export async function capturer({ route, dossier, etats }, browser, filtreEtat) {
   for (const etat of etats) {
     if (filtreEtat && etat.nom !== filtreEtat) continue
     for (const taille of TAILLES) {
+      if (etat.largeurs && !etat.largeurs.includes(Number(taille.nom))) continue
       for (const rm of [false, true]) {
         if (rm && etat.sansRm) continue
         const ctx = await browser.newContext({
@@ -60,6 +61,20 @@ export async function capturer({ route, dossier, etats }, browser, filtreEtat) {
         const url = `${BASE}${route}${etat.query ? `?${etat.query}` : ''}`
         await page.goto(url, { waitUntil: 'networkidle' })
         await page.waitForSelector('html[data-su-ready="1"]', { timeout: 20000 }).catch(() => {})
+        if (etat.scroll !== undefined) {
+          await page.evaluate((frac) => {
+            const el = document.querySelector('[data-moment="00"]')
+            const dist = el ? el.getBoundingClientRect().height - window.innerHeight : window.innerHeight
+            const y = Math.round(dist * frac)
+            const lenis = window.__suLenis
+            if (lenis) lenis.scrollTo(y, { immediate: true })
+            window.scrollTo(0, y)
+          }, etat.scroll)
+          await page.waitForTimeout(900)
+        }
+        if (etat.action === 'menu') {
+          await page.locator('.su-nav__menu').click()
+        }
         if (etat.action === 'drag') {
           const box = await page.locator('[data-su-frame]').boundingBox()
           const cx = box.x + box.width / 2

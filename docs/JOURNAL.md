@@ -65,3 +65,46 @@ le retour après drag trop rapide pour être capturé ; AGENTS.md généré par 
 épinglée 150 vh, ortho → perspective pilotée par le scroll, `logo` → `pile`, titre déplié par mots,
 quatre cotes mesurées, curseur, repli 2D animé, mouvement réduit, mobile 390 ; captures p = 0 / 0,25 /
 0,5 / 1 × 2 largeurs × (normal, rm) + sans WebGL ; logo-check sur `/`.
+
+## 2026-10-13 — Phase 1 : le hero (moment 00)
+
+**Plan (10 lignes).**
+1. Store : `projection`, `pose` (orientation de base par expérience) et `scrub` (le scroll écrit uMorph, pas de tween) sortent de `params`.
+2. Paramètres d'URL globaux (still, webgl, quality, proj, mur, ombre, fond) lus dans SceneMount : `logo-check` marche sur `/`.
+3. Lenis sur `gsap.ticker` + ScrollTrigger ; barre de progression ambre ; pas de Lenis en mouvement réduit.
+4. Nav : LogoMarque, cinq entrées, action ; suit `--su-nuit` ; menu mobile en lamelles, `inert` fermé, focus piégé.
+5. Primitives : Action (ambre plein à reflet −18°, contour, lien), Cote (mesure réelle), Curseur (point + anneau amorti, pointeur fin seulement).
+6. Expérience OUVERTURE : section épinglée 150 vh (120 vh mobile), p → uMorph (scrub 0,6), ortho → perspective, épaisseur ×2,5, pose de la tour.
+7. Titre déplié par mots (SplitText, rotateX −90° → 0, arête ambre), ligne, deux actions, quatre cotes (deux sur mobile).
+8. Repli 2D : trois plaques SVG (quads exportés par logo-trace) + plaques fantômes qui se déploient avec `--su-p`.
+9. Mouvement réduit : pas d'épinglage, logo figé, texte instantané. Pages de chantier pour les routes de la nav.
+10. Captures `/` : p = 0 / 0,25 / 0,5 / 1 × 2 largeurs × (normal, rm), drag, sans WebGL ; logo-check sur `/` ; rapport.
+
+**Ce qui est visible à la fin de la phase 1** (`/`) : la nav (logo exact + lettrage, cinq entrées,
+action), le logo immense à gauche qui respire, le titre « Sites et outils / sur mesure. » qui se déplie
+mot par mot avec son arête ambre, la ligne, deux actions, quatre cotes mesurées en bas (deux sur
+mobile). Au scroll, section épinglée : épaisseur ×2,5, ortho → perspective, les plaques arrivent de
+l'arrière-plan et bâtissent la tour derrière le logo incliné ; le drag tourne la pile ; le curseur
+ambre suit le pointeur fin et s'ouvre sur les actions ; barre de progression ambre ; menu mobile en
+lamelles. Sans WebGL : le logo SVG exact et sept plaques fantômes qui se déploient avec le scroll.
+Mouvement réduit : logo figé, texte posé, pas d'épinglage. Six routes de la nav existent en pages
+de chantier (phase indiquée, rien d'inventé).
+
+**Captures lues** : 23 états du hero + 2 logo-check (45 entrées dans `rapport.json`). Défauts trouvés
+en regardant, corrigés : tour déjà construite à p = 0 (la bascule « p > 0 » courait contre le montage
+différé de la scène → paire A/B explicite dans le store) ; repli 2D en ivoire ; panneau du menu
+par-dessus la barre ; le hero écrasait `?fond=ivoire` (nuit forcée prioritaire). Non corrigé, noté :
+à p = 0,5 des plaques en vol traversent la zone du titre.
+
+**Superposition sur le hero** : 1,17 % en 1440, 1,43 % en 390 (seuil 2 %).
+
+**Décisions.** Lenis installé (liste § 5), avancé par `gsap.ticker` ; SplitText et ScrollTrigger
+viennent du paquet `gsap` (licence standard, gratuits). L'ombre, la dérive et la parallaxe sont des
+rotations du groupe autour de son centre, la caméra ne bouge jamais : la pile reste calée au pixel sur
+sa boîte HTML. Le repli 2D est 100 % CSS (`--su-p`), aucun JS par trame.
+
+**Pas fait en phase 1.** Gyroscope (phase 7) ; vidéo Playwright du scroll (phase 3) ; cadence sur
+vrai GPU ; raccourcis clavier ⌘K / G / ? (phase 5-7) ; le retour après drag reste rapide.
+
+**Prochaine étape — phase 2** : layouts `strates`, `page`, `multi`, `boutique`, `logiciel` réglés sur
+`/lab`, puis moments 01 (DÉCOUPE), 02 (ASSEMBLAGE, ivoire), 03 (PELLICULE, captures des démos), 04 (Seuil).

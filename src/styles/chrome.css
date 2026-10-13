@@ -1,0 +1,274 @@
+/* ───────── Barre de progression ───────── */
+.su-progression {
+  position: fixed;
+  inset: 0 0 auto 0;
+  height: 2px;
+  background: var(--su-ambre);
+  transform-origin: left;
+  transform: scaleX(0);
+  z-index: 60;
+  pointer-events: none;
+}
+
+/* ───────── Nav ───────── */
+.su-nav {
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: 50;
+  color: var(--su-texte);
+}
+.su-nav__barre {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: auto 1fr auto auto;
+  align-items: center;
+  gap: var(--su-gouttiere);
+  max-width: var(--su-conteneur-scene);
+  margin: 0 auto;
+  padding: 18px var(--su-gouttiere);
+}
+.su-nav__logo {
+  display: inline-flex;
+  color: var(--su-texte);
+  height: 34px;
+}
+.su-nav__entrees {
+  display: flex;
+  gap: 28px;
+  justify-content: center;
+}
+.su-nav__lien {
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--su-texte);
+  text-decoration: none;
+  position: relative;
+  padding: 6px 0;
+}
+.su-nav__lien::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  background: var(--su-ambre);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--su-geste) var(--su-glisse);
+}
+.su-nav__lien:hover::after,
+.su-nav__lien:focus-visible::after,
+.su-nav__lien[aria-current='page']::after {
+  transform: scaleX(1);
+}
+.su-nav__menu {
+  display: none;
+  min-height: 44px;
+  padding: 0 14px;
+  border: 1px solid var(--su-texte-doux);
+  border-radius: 4px;
+  background: transparent;
+  color: var(--su-texte);
+}
+.su-nav__panneau {
+  display: none;
+}
+@media (max-width: 899px) {
+  .su-nav__entrees,
+  .su-nav__action {
+    display: none;
+  }
+  .su-nav__menu {
+    display: inline-flex;
+    align-items: center;
+  }
+  .su-nav__panneau {
+    display: block;
+    position: fixed;
+    inset: 0;
+    padding: 96px var(--su-gouttiere) 40px;
+    background: var(--su-encre);
+    color: var(--su-ivoire);
+    clip-path: inset(0 0 100% 0);
+    transition: clip-path var(--su-pose-duree) var(--su-pose);
+  }
+  .su-nav[data-ouvert='1'] .su-nav__panneau {
+    clip-path: inset(0);
+  }
+  .su-nav__strates {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .su-nav__strate {
+    border-top: 1px solid color-mix(in srgb, var(--su-graphite) 35%, transparent);
+    clip-path: inset(0 100% 0 0);
+    transition: clip-path var(--su-pose-duree) var(--su-pose);
+    transition-delay: calc(var(--su-cascade) * var(--i));
+  }
+  .su-nav[data-ouvert='1'] .su-nav__strate {
+    clip-path: inset(0);
+  }
+  .su-nav__strate-lien {
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    padding: 18px 0;
+    font-size: clamp(1.75rem, 8vw, 2.5rem);
+    color: inherit;
+    text-decoration: none;
+    min-height: 44px;
+  }
+  .su-nav__num {
+    color: var(--su-ambre-clair);
+  }
+}
+
+/* ───────── Action ───────── */
+.su-action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0 22px;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 0.9375rem;
+  text-decoration: none;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid transparent;
+  transition: transform var(--su-reflexe) var(--su-glisse), box-shadow var(--su-reflexe) var(--su-glisse);
+}
+.su-action--plein {
+  background: var(--su-ambre);
+  color: var(--su-encre);
+  box-shadow: var(--su-ombre);
+}
+.su-action--plein::before {
+  /* Reflet à −18°. */
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(calc(90deg + var(--su-lumiere-angle)), rgba(255, 255, 255, 0.28), transparent 45%);
+  pointer-events: none;
+}
+.su-action--contour {
+  background: transparent;
+  color: var(--su-texte);
+  border-color: color-mix(in srgb, var(--su-texte) 55%, transparent);
+}
+.su-action--lien {
+  padding: 0;
+  min-height: 0;
+  border-radius: 0;
+  color: var(--su-accent-texte);
+  border-bottom: 1px solid currentColor;
+}
+.su-action:hover,
+.su-action:focus-visible {
+  transform: translate(-1px, -1px);
+}
+.su-action--plein:hover,
+.su-action--plein:focus-visible {
+  box-shadow: calc(var(--su-ombre-x) * 1.4) calc(var(--su-ombre-y) * 1.4) 0 rgba(6, 11, 20, 0.5);
+}
+.su-action:focus-visible {
+  outline: 2px solid var(--su-ambre-clair);
+  outline-offset: 3px;
+}
+.su-action__texte {
+  position: relative;
+}
+
+/* ───────── Cote ───────── */
+.su-cote {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--su-font-mono), ui-monospace, monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--su-texte-doux);
+  white-space: nowrap;
+}
+.su-cote__trait {
+  width: 28px;
+  height: 1px;
+  background: currentColor;
+  position: relative;
+}
+.su-cote__trait::before,
+.su-cote__trait::after {
+  content: '';
+  position: absolute;
+  top: -3px;
+  width: 1px;
+  height: 7px;
+  background: currentColor;
+}
+.su-cote__trait::before {
+  left: 0;
+}
+.su-cote__trait::after {
+  right: 0;
+}
+.su-cote__valeur {
+  color: var(--su-texte);
+}
+
+/* ───────── Curseur ───────── */
+.su-curseur__point,
+.su-curseur__anneau {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 70;
+  opacity: 0;
+  will-change: transform;
+}
+:root[data-su-curseur='1'] .su-curseur__point,
+:root[data-su-curseur='1'] .su-curseur__anneau {
+  display: block;
+}
+:root[data-su-curseur='1'] body {
+  cursor: none;
+}
+:root[data-su-curseur='1'] a,
+:root[data-su-curseur='1'] button {
+  cursor: none;
+}
+.su-curseur__point {
+  width: 8px;
+  height: 8px;
+  margin: -4px 0 0 -4px;
+  border-radius: 50%;
+  background: var(--su-ambre);
+}
+.su-curseur__anneau {
+  width: 32px;
+  height: 32px;
+  margin: -16px 0 0 -16px;
+  border-radius: 50%;
+  border: 1px solid var(--su-ambre);
+  display: grid;
+  place-items: center;
+  font-family: var(--su-font-mono), monospace;
+  font-size: 0.625rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--su-encre);
+  transition: width var(--su-geste) var(--su-pose), height var(--su-geste) var(--su-pose), margin var(--su-geste) var(--su-pose), background var(--su-geste);
+}
+.su-curseur__anneau[data-ouvert='1'] {
+  width: 64px;
+  height: 64px;
+  margin: -32px 0 0 -32px;
+  background: var(--su-ambre);
+}

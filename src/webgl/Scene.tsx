@@ -46,11 +46,27 @@ function Rig() {
   // Layout cible : les pages écrivent `layout` dans le store, le moteur morphe.
   useEffect(() => {
     let prev = useScene.getState().layout
+    let prevTarget = useScene.getState().target
     return useScene.subscribe((s) => {
-      if (s.layout !== prev && platesRef.current) {
+      const p = platesRef.current
+      if (!p) return
+      if (s.target !== prevTarget) {
+        // Une expérience pose la paire A → B et écrit uMorph elle-même.
+        prevTarget = s.target
         prev = s.layout
-        platesRef.current.setTarget(s.layout)
-        if (!s.still) {
+        gsap.killTweensOf(u.uMorph)
+        p.setPair(s.layout, s.target)
+        if (!s.target) u.uMorph.value = 0
+        return
+      }
+      if (s.layout !== prev) {
+        prev = s.layout
+        if (s.target) {
+          p.setPair(s.layout, s.target)
+          return
+        }
+        p.setTarget(s.layout)
+        if (!s.still && !s.scrub) {
           gsap.to(u.uMorph, { value: 1, duration: 1.1, ease: 'power2.inOut', onUpdate: () => useScene.getState().setMorph(u.uMorph.value) })
         }
       }
@@ -115,8 +131,8 @@ function Rig() {
       u.uAccent.value.copy(accent)
 
       // Projection : ortho ↔ perspective.
-      camera.blend = s.params.projection
-      u.uOrtho.value = s.params.projection
+      camera.blend = s.projection
+      u.uOrtho.value = s.projection
       camera.updateProjectionMatrix()
 
       // Cadrage : la boîte HTML → position et échelle du groupe.
@@ -153,7 +169,7 @@ function Rig() {
         // reste calée au pixel sur sa boîte HTML. La caméra ne bouge jamais.
         const dx = s.still ? 0 : (Math.sin((t * 2 * Math.PI) / 12) * 2 * Math.PI) / 180
         const dy = s.still ? 0 : (Math.sin((t * 2 * Math.PI) / 17) * 1.2 * Math.PI) / 180
-        g.rotation.set(spin.x + dy + orbit.y, spin.y + dx + orbit.x, 0)
+        g.rotation.set(spin.x + dy + orbit.y + s.pose.x, spin.y + dx + orbit.x + s.pose.y, 0)
         // Mur et halo.
         const p = platesRef.current
         const murLocal = p ? p.murA + (p.murB - p.murA) * u.uMorph.value : -0.3

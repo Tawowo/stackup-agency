@@ -31,16 +31,11 @@ export default function LabBench({ hud = true }: { hud?: boolean }) {
     const s = useScene.getState()
     const u = stackUniforms()
     const p: Partial<SceneParams> = {}
-    const proj = q.get('proj')
-    if (proj !== null) p.projection = Number(proj)
-    if (q.get('mur') === '0') p.mur = 0
-    if (q.get('ombre') === '0') p.ombre = 0
     for (const k of Object.keys(PARAMS_DEFAUT) as (keyof SceneParams)[]) {
       const v = q.get(k)
       if (v !== null) p[k] = Number(v)
     }
-    s.setParams(p)
-    if (q.get('fond') === 'ivoire') s.setNuit(0)
+    if (Object.keys(p).length) s.setParams(p)
     const l = q.get('layout') as LayoutName | null
     const m = q.get('morph')
     if (l && LAYOUTS.includes(l) && l !== s.layout) {
@@ -70,9 +65,13 @@ export default function LabBench({ hud = true }: { hud?: boolean }) {
     import('tweakpane').then(({ Pane }) => {
       if (annule) return
       const s = useScene.getState()
-      const params = { ...s.params }
+      const params = { ...s.params, projection: s.projection }
       const p = new Pane({ container: paneRef.current!, title: 'Stack Engine' })
-      const push = () => useScene.getState().setParams({ ...params })
+      const push = () => {
+        const { projection, ...reste } = params
+        useScene.getState().setParams(reste)
+        useScene.getState().setProjection(projection)
+      }
       const f1 = p.addFolder({ title: 'Plaque & morph' })
       f1.addBinding(params, 'epaisseur', { min: 0, max: 4, step: 0.05 }).on('change', push)
       f1.addBinding(params, 'arc', { min: 0, max: 2, step: 0.05 }).on('change', push)
@@ -104,7 +103,7 @@ export default function LabBench({ hud = true }: { hud?: boolean }) {
       })
       f4.addBinding(etat, 'isolate', { min: -1, max: 5, step: 1 }).on('change', (e) => useScene.getState().setIsolate(e.value))
       p.addButton({ title: 'Réinitialiser' }).on('click', () => {
-        Object.assign(params, PARAMS_DEFAUT)
+        Object.assign(params, PARAMS_DEFAUT, { projection: 1 })
         push()
         p.refresh()
       })
@@ -117,6 +116,7 @@ export default function LabBench({ hud = true }: { hud?: boolean }) {
   }, [])
 
   const aller = (l: LayoutName) => {
+    useScene.getState().setTarget(null)
     if (l === layout) {
       // Rejouer le morph depuis l'autre forme.
       const autre = LAYOUTS.find((x) => x !== l)!

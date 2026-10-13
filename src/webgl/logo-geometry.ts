@@ -28,6 +28,25 @@ export interface PoseLogo {
 }
 
 /** Les trois plaques du logo, au repos (projection orthographique de face). */
+/** Les trois plaques en polygones SVG (viewBox 0 0 146 229), pour le repli 2D. */
+export const LOGO_QUADS = [
+  {
+    "nom": "haut",
+    "couleur": "navy",
+    "points": "2.0,60.8 144.0,1.0 144.0,49.0 2.0,107.9"
+  },
+  {
+    "nom": "milieu",
+    "couleur": "navy",
+    "points": "0.5,68.2 144.5,124.8 144.5,171.2 0.5,114.8"
+  },
+  {
+    "nom": "bas",
+    "couleur": "ambre",
+    "points": "1.0,181.0 144.0,126.1 144.0,171.0 1.0,228.0"
+  }
+] as const
+
 export const LOGO_POSES: readonly PoseLogo[] = [
   {
     "index": 0,
