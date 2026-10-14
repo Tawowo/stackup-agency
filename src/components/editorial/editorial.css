@@ -120,3 +120,31 @@
   border: 0;
   border-top: 1px solid color-mix(in srgb, var(--su-graphite) 30%, transparent);
 }
+/* Code et tableaux longs : défilement dans leur bloc, jamais la page entière. */
+.su-prose pre {
+  max-width: 100%;
+  overflow-x: auto;
+  padding: 14px 16px;
+  border-radius: 4px;
+  background: var(--su-navy);
+  color: var(--su-ivoire);
+  font-size: 0.875rem;
+  line-height: 1.55;
+}
+.su-prose pre code {
+  padding: 0;
+  background: none;
+  color: inherit;
+}
+.su-prose code {
+  overflow-wrap: anywhere;
+}
+.su-prose table {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+}
+.su-prose img {
+  max-width: 100%;
+  height: auto;
+}

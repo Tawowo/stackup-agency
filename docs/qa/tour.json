@@ -1,0 +1,3907 @@
+{
+ "date": "2026-10-14T00:37:20.834Z",
+ "total": 432,
+ "ko": 7,
+ "resultats": [
+  {
+   "route": "/",
+   "statut": 200,
+   "texte": 5286,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [
+    "Failed to load resource: the server responded with a status of 404 (Not Found)"
+   ],
+   "ok": false,
+   "suite": "transitoire du serveur de dev (rechargement à chaud) — resondé OK"
+  },
+  {
+   "route": "/realisations",
+   "statut": 200,
+   "texte": 1187,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/services",
+   "statut": 200,
+   "texte": 3233,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/solutions",
+   "statut": 200,
+   "texte": 3366,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/tarifs",
+   "statut": 200,
+   "texte": 3761,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/a-propos",
+   "statut": 200,
+   "texte": 1426,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/contact",
+   "statut": 200,
+   "texte": 676,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/faq",
+   "statut": 200,
+   "texte": 2785,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/comparatif/wix-wordpress-sur-mesure",
+   "statut": 200,
+   "texte": 4816,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/parrainage",
+   "statut": 200,
+   "texte": 2257,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/outils",
+   "statut": 200,
+   "texte": 967,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/outils/audit-site",
+   "statut": 200,
+   "texte": 714,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/outils/studio-de-style",
+   "statut": 200,
+   "texte": 1677,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/ressources",
+   "statut": 200,
+   "texte": 1310,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/ressources/cahier-des-charges",
+   "statut": 200,
+   "texte": 1899,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/ressources/documents",
+   "statut": 200,
+   "texte": 3225,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/agence-web",
+   "statut": 200,
+   "texte": 2249,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/creation-site-internet",
+   "statut": 200,
+   "texte": 3753,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/zones-intervention",
+   "statut": 200,
+   "texte": 1861,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog",
+   "statut": 200,
+   "texte": 62549,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/mentions-legales",
+   "statut": 200,
+   "texte": 2679,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/cgv",
+   "statut": 200,
+   "texte": 7567,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/politique-confidentialite",
+   "statut": 200,
+   "texte": 3791,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/cookies",
+   "statut": 200,
+   "texte": 1834,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/plan-du-site",
+   "statut": 200,
+   "texte": 19331,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/realisations/au-pain-dore",
+   "statut": 200,
+   "texte": 966,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/realisations/demo-videaste",
+   "statut": 200,
+   "texte": 2306,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/realisations/chateau-lumieres",
+   "statut": 200,
+   "texte": 953,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/realisations/maison-elise",
+   "statut": 200,
+   "texte": 856,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/realisations/prestige-immo",
+   "statut": 200,
+   "texte": 874,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/realisations/lolivier-dashboard",
+   "statut": 200,
+   "texte": 904,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/realisations/chateau-fleury",
+   "statut": 200,
+   "texte": 909,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/services/site-vitrine",
+   "statut": 200,
+   "texte": 2815,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/services/site-multi-pages",
+   "statut": 200,
+   "texte": 2733,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/services/site-ecommerce",
+   "statut": 200,
+   "texte": 2708,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/services/systeme-gestion",
+   "statut": 200,
+   "texte": 2949,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/solutions/prise-rendez-vous-en-ligne",
+   "statut": 200,
+   "texte": 3014,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/solutions/gestion-devis-factures",
+   "statut": 200,
+   "texte": 2776,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/solutions/click-and-collect",
+   "statut": 200,
+   "texte": 2679,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/solutions/reservation-restaurant",
+   "statut": 200,
+   "texte": 2713,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/solutions/commande-en-ligne-livraison",
+   "statut": 200,
+   "texte": 2596,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/solutions/programme-fidelite",
+   "statut": 200,
+   "texte": 2768,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/solutions/caisse-enregistreuse",
+   "statut": 200,
+   "texte": 2754,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/solutions/gestion-stocks",
+   "statut": 200,
+   "texte": 2578,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/solutions/crm-sur-mesure",
+   "statut": 200,
+   "texte": 2687,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/solutions/portail-client",
+   "statut": 200,
+   "texte": 2774,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/solutions/planning-employes",
+   "statut": 200,
+   "texte": 2769,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/solutions/menu-qr-code",
+   "statut": 200,
+   "texte": 2590,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/solutions/tableau-de-bord",
+   "statut": 200,
+   "texte": 2830,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/solutions/reservation-location",
+   "statut": 200,
+   "texte": 2685,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/solutions/galerie-client-photographe",
+   "statut": 200,
+   "texte": 3145,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/services-locaux/creation-site-restaurant",
+   "statut": 200,
+   "texte": 2890,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/services-locaux/creation-site-artisan",
+   "statut": 200,
+   "texte": 2956,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/services-locaux/creation-site-commerce",
+   "statut": 200,
+   "texte": 2919,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/services-locaux/creation-boutique-en-ligne",
+   "statut": 200,
+   "texte": 2899,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/services-locaux/developpement-application-metier",
+   "statut": 200,
+   "texte": 2895,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/services-locaux/referencement-local-seo",
+   "statut": 200,
+   "texte": 2920,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/agence-web/tours",
+   "statut": 200,
+   "texte": 1777,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/agence-web/orleans",
+   "statut": 200,
+   "texte": 1814,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/agence-web/blois",
+   "statut": 200,
+   "texte": 1825,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/agence-web/chartres",
+   "statut": 200,
+   "texte": 1802,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/agence-web/dreux",
+   "statut": 200,
+   "texte": 1763,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/agence-web/bourges",
+   "statut": 200,
+   "texte": 1774,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/agence-web/chateauroux",
+   "statut": 200,
+   "texte": 1768,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/agence-web/amboise",
+   "statut": 200,
+   "texte": 1863,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/agence-web/chinon",
+   "statut": 200,
+   "texte": 1784,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/agence-web/vendome",
+   "statut": 200,
+   "texte": 1807,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/agence-web/chateaudun",
+   "statut": 200,
+   "texte": 1814,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/agence-web/loches",
+   "statut": 200,
+   "texte": 1822,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/agence-web/joue-les-tours",
+   "statut": 200,
+   "texte": 1858,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/agence-web/vierzon",
+   "statut": 200,
+   "texte": 1761,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/agence-web/le-mans",
+   "statut": 200,
+   "texte": 1789,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/agence-web/angers",
+   "statut": 200,
+   "texte": 1814,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/agence-web/nantes",
+   "statut": 200,
+   "texte": 1786,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/agence-web/saumur",
+   "statut": 200,
+   "texte": 1814,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/agence-web/laval",
+   "statut": 200,
+   "texte": 1736,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [
+    "pageerror Internal Next.js error: Router action dispatched before initialization."
+   ],
+   "ok": false,
+   "suite": "transitoire du serveur de dev (rechargement à chaud) — resondé OK"
+  },
+  {
+   "route": "/agence-web/caen",
+   "statut": 200,
+   "texte": 1748,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/agence-web/rouen",
+   "statut": 200,
+   "texte": 1787,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/agence-web/evreux",
+   "statut": 200,
+   "texte": 1772,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/agence-web/alencon",
+   "statut": 200,
+   "texte": 1806,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/agence-web/lisieux",
+   "statut": 200,
+   "texte": 1862,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/agence-web/rambouillet",
+   "statut": 200,
+   "texte": 1860,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/agence-web/anet",
+   "statut": 200,
+   "texte": 1786,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/agence-web/vernouillet",
+   "statut": 200,
+   "texte": 1794,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/agence-web/nogent-le-rotrou",
+   "statut": 200,
+   "texte": 1871,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/agence-web/departement/indre-et-loire",
+   "statut": 200,
+   "texte": 7149,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/agence-web/departement/loiret",
+   "statut": 200,
+   "texte": 8260,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/agence-web/departement/loir-et-cher",
+   "statut": 200,
+   "texte": 6975,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/agence-web/departement/eure-et-loir",
+   "statut": 200,
+   "texte": 8619,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/agence-web/departement/cher",
+   "statut": 200,
+   "texte": 7066,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/agence-web/departement/indre",
+   "statut": 200,
+   "texte": 6308,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/agence-web/departement/sarthe",
+   "statut": 200,
+   "texte": 8394,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/agence-web/departement/maine-et-loire",
+   "statut": 200,
+   "texte": 5767,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/agence-web/departement/vienne",
+   "statut": 200,
+   "texte": 6181,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/agence-web/departement/deux-sevres",
+   "statut": 200,
+   "texte": 6421,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/agence-web/departement/yonne",
+   "statut": 200,
+   "texte": 9021,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/agence-web/departement/nievre",
+   "statut": 200,
+   "texte": 7380,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/agence-web/departement/allier",
+   "statut": 200,
+   "texte": 7429,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/agence-web/departement/creuse",
+   "statut": 200,
+   "texte": 6988,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/agence-web/departement/orne",
+   "statut": 200,
+   "texte": 9534,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/creation-site-internet/videaste",
+   "statut": 200,
+   "texte": 1978,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/creation-site-internet/agence-immobiliere",
+   "statut": 200,
+   "texte": 1934,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/creation-site-internet/restaurant",
+   "statut": 200,
+   "texte": 1883,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/creation-site-internet/pizzeria",
+   "statut": 200,
+   "texte": 1841,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/creation-site-internet/boulangerie-patisserie",
+   "statut": 200,
+   "texte": 1950,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/creation-site-internet/plombier",
+   "statut": 200,
+   "texte": 1916,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/creation-site-internet/electricien",
+   "statut": 200,
+   "texte": 1980,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/creation-site-internet/salon-coiffure",
+   "statut": 200,
+   "texte": 1894,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/creation-site-internet/avocat",
+   "statut": 200,
+   "texte": 2032,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/creation-site-internet/expert-comptable",
+   "statut": 200,
+   "texte": 2030,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/creation-site-internet/garage-automobile",
+   "statut": 200,
+   "texte": 1921,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/creation-site-internet/hotel-chambres-hotes",
+   "statut": 200,
+   "texte": 1905,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/creation-site-internet/chauffagiste-climatisation",
+   "statut": 200,
+   "texte": 1953,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/creation-site-internet/paysagiste-jardinier",
+   "statut": 200,
+   "texte": 1933,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/creation-site-internet/osteopathe",
+   "statut": 200,
+   "texte": 1924,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/creation-site-internet/institut-beaute",
+   "statut": 200,
+   "texte": 1869,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/creation-site-internet/photographe",
+   "statut": 200,
+   "texte": 1930,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/creation-site-internet/fleuriste",
+   "statut": 200,
+   "texte": 1955,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/creation-site-internet/gite-location-saisonniere",
+   "statut": 200,
+   "texte": 1786,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/creation-site-internet/kebab-fast-food",
+   "statut": 200,
+   "texte": 1738,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/creation-site-internet/food-truck",
+   "statut": 200,
+   "texte": 1823,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/creation-site-internet/brasserie-bar",
+   "statut": 200,
+   "texte": 1834,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/creation-site-internet/cafe-salon-the",
+   "statut": 200,
+   "texte": 1775,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/creation-site-internet/restaurant-gastronomique",
+   "statut": 200,
+   "texte": 1914,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/creation-site-internet/traiteur-evenementiel",
+   "statut": 200,
+   "texte": 1868,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/creation-site-internet/boucherie-charcuterie",
+   "statut": 200,
+   "texte": 1840,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/creation-site-internet/chocolatier",
+   "statut": 200,
+   "texte": 1787,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/creation-site-internet/glacier",
+   "statut": 200,
+   "texte": 1758,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/creation-site-internet/epicerie-fine",
+   "statut": 200,
+   "texte": 1750,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/creation-site-internet/cave-vins-spiritueux",
+   "statut": 200,
+   "texte": 1842,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/creation-site-internet/fromager",
+   "statut": 200,
+   "texte": 1731,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/creation-site-internet/primeur",
+   "statut": 200,
+   "texte": 1730,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/creation-site-internet/poissonnier",
+   "statut": 200,
+   "texte": 1716,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/creation-site-internet/librairie-papeterie",
+   "statut": 200,
+   "texte": 1813,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/creation-site-internet/tabac-presse",
+   "statut": 200,
+   "texte": 1815,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/creation-site-internet/magasin-sport",
+   "statut": 200,
+   "texte": 1821,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/creation-site-internet/magasin-jouets",
+   "statut": 200,
+   "texte": 1741,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/creation-site-internet/boutique-decoration",
+   "statut": 200,
+   "texte": 1754,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/creation-site-internet/magasin-informatique",
+   "statut": 200,
+   "texte": 1734,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/creation-site-internet/opticien",
+   "statut": 200,
+   "texte": 1779,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/creation-site-internet/bijouterie-horlogerie",
+   "statut": 200,
+   "texte": 1818,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/creation-site-internet/vetements-enfants",
+   "statut": 200,
+   "texte": 1790,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/creation-site-internet/boutique-mode",
+   "statut": 200,
+   "texte": 1739,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/creation-site-internet/cosmetiques-naturels",
+   "statut": 200,
+   "texte": 1845,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/creation-site-internet/jardinerie-animalerie",
+   "statut": 200,
+   "texte": 1793,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/creation-site-internet/macon-renovateur",
+   "statut": 200,
+   "texte": 1780,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/creation-site-internet/couvreur-charpentier",
+   "statut": 200,
+   "texte": 1806,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/creation-site-internet/menuisier-ebeniste",
+   "statut": 200,
+   "texte": 1754,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/creation-site-internet/peintre-decorateur",
+   "statut": 200,
+   "texte": 1816,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/creation-site-internet/carreleur-sol",
+   "statut": 200,
+   "texte": 1789,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/creation-site-internet/serrurier-depannage",
+   "statut": 200,
+   "texte": 1847,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/creation-site-internet/cuisiniste",
+   "statut": 200,
+   "texte": 1790,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/creation-site-internet/pisciniste",
+   "statut": 200,
+   "texte": 1828,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/creation-site-internet/vitrier",
+   "statut": 200,
+   "texte": 1792,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/creation-site-internet/ramoneur",
+   "statut": 200,
+   "texte": 1801,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/creation-site-internet/facadier",
+   "statut": 200,
+   "texte": 1818,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/creation-site-internet/terrassier",
+   "statut": 200,
+   "texte": 1839,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/creation-site-internet/cabinet-medical",
+   "statut": 200,
+   "texte": 1859,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/creation-site-internet/kinesitherapeute",
+   "statut": 200,
+   "texte": 1801,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/creation-site-internet/dentiste",
+   "statut": 200,
+   "texte": 1848,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/creation-site-internet/pharmacie-parapharmacie",
+   "statut": 200,
+   "texte": 1817,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/creation-site-internet/veterinaire",
+   "statut": 200,
+   "texte": 1766,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/creation-site-internet/psychologue",
+   "statut": 200,
+   "texte": 1773,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/creation-site-internet/sophrologue",
+   "statut": 200,
+   "texte": 1739,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/creation-site-internet/naturopathe",
+   "statut": 200,
+   "texte": 1804,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/creation-site-internet/salle-de-sport",
+   "statut": 200,
+   "texte": 1740,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/creation-site-internet/notaire",
+   "statut": 200,
+   "texte": 1936,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/creation-site-internet/architecte",
+   "statut": 200,
+   "texte": 1893,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/creation-site-internet/courtier-credit",
+   "statut": 200,
+   "texte": 1896,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/creation-site-internet/diagnostiqueur-immobilier",
+   "statut": 200,
+   "texte": 1795,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/creation-site-internet/agence-evenementielle",
+   "statut": 200,
+   "texte": 1960,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/creation-site-internet/organisme-formation",
+   "statut": 200,
+   "texte": 1854,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/creation-site-internet/auto-ecole",
+   "statut": 200,
+   "texte": 1841,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/creation-site-internet/camping",
+   "statut": 200,
+   "texte": 1735,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/creation-site-internet/ecole-danse-musique",
+   "statut": 200,
+   "texte": 1721,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/creation-site-internet/tatoueur",
+   "statut": 200,
+   "texte": 1688,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/creation-site-internet/toiletteur",
+   "statut": 200,
+   "texte": 1723,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/categorie/creation-sites",
+   "statut": 200,
+   "texte": 18156,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/categorie/strategie",
+   "statut": 200,
+   "texte": 10942,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/categorie/applications-metier",
+   "statut": 200,
+   "texte": 6886,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/categorie/seo-local",
+   "statut": 200,
+   "texte": 8837,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/categorie/ecommerce",
+   "statut": 200,
+   "texte": 5684,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/categorie/marketing",
+   "statut": 200,
+   "texte": 10942,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/categorie/technique",
+   "statut": 200,
+   "texte": 18156,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/categorie/seo",
+   "statut": 200,
+   "texte": 6163,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/categorie/creation",
+   "statut": 200,
+   "texte": 18156,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/categorie/ia",
+   "statut": 200,
+   "texte": 6886,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/categorie/juridique",
+   "statut": 200,
+   "texte": 10942,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/categorie/redaction",
+   "statut": 200,
+   "texte": 10942,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/categorie/commerce",
+   "statut": 200,
+   "texte": 5684,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/categorie/professions-liberales",
+   "statut": 200,
+   "texte": 3046,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/categorie/restaurants",
+   "statut": 200,
+   "texte": 4568,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/categorie/artisans",
+   "statut": 200,
+   "texte": 3046,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/categorie/design",
+   "statut": 200,
+   "texte": 18156,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/categorie/entrepreneuriat",
+   "statut": 200,
+   "texte": 10942,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/categorie/digital",
+   "statut": 200,
+   "texte": 6886,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/categorie/performance",
+   "statut": 200,
+   "texte": 18156,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/categorie/outils",
+   "statut": 200,
+   "texte": 6886,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/categorie/associations",
+   "statut": 200,
+   "texte": 384,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/afficher-tarifs-photographe-site",
+   "statut": 200,
+   "texte": 6810,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/annuaires-artisan-houzz-pages-jaunes",
+   "statut": 200,
+   "texte": 6026,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/artisan-google-business-ou-site",
+   "statut": 200,
+   "texte": 6592,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/automatiser-avis-clients-photographe",
+   "statut": 200,
+   "texte": 6711,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/budget-web-tpe-premiere-annee",
+   "statut": 200,
+   "texte": 5852,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/click-collect-boulangerie-sans-commission",
+   "statut": 200,
+   "texte": 5315,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/combien-photos-livrer-par-seance",
+   "statut": 200,
+   "texte": 6620,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/devis-site-internet-pourquoi-ecarts",
+   "statut": 200,
+   "texte": 6927,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/erreurs-site-artisan-clients",
+   "statut": 200,
+   "texte": 7196,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/fiche-google-business-photographe",
+   "statut": 200,
+   "texte": 6913,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/filigrane-droits-auteur-photos-en-ligne",
+   "statut": 200,
+   "texte": 7010,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/frais-caches-creation-site",
+   "statut": 200,
+   "texte": 6096,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/galerie-client-abonnement-ou-outil-propre",
+   "statut": 200,
+   "texte": 6021,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/livrer-galerie-mariage-processus",
+   "statut": 200,
+   "texte": 7302,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/payer-site-internet-plusieurs-fois",
+   "statut": 200,
+   "texte": 5688,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/photographe-instagram-ou-site",
+   "statut": 200,
+   "texte": 7248,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/pixieset-jingoo-pictime-cout-reel-abonnements",
+   "statut": 200,
+   "texte": 7038,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/portfolio-photographe-10-regles",
+   "statut": 200,
+   "texte": 7380,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/prix-logiciel-sur-mesure",
+   "statut": 200,
+   "texte": 6236,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/prix-site-internet-artisan-2026",
+   "statut": 200,
+   "texte": 5854,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/prix-site-internet-restaurant-2026",
+   "statut": 200,
+   "texte": 6184,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/prix-site-photographe-2026",
+   "statut": 200,
+   "texte": 6351,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/questions-devis-site-internet",
+   "statut": 200,
+   "texte": 6510,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/repondre-devis-plus-vite-artisan",
+   "statut": 200,
+   "texte": 6448,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/seo-local-photographe-mariage",
+   "statut": 200,
+   "texte": 7367,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/site-internet-abonnement-ou-achat",
+   "statut": 200,
+   "texte": 6463,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/site-internet-gratuit-cout-cache",
+   "statut": 200,
+   "texte": 6292,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/site-paysagiste-visiteurs-chantiers",
+   "statut": 200,
+   "texte": 5915,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/site-photographe-fonctionnalites-indispensables",
+   "statut": 200,
+   "texte": 9427,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/site-photographe-wordpress-wix-squarespace-sur-mesure",
+   "statut": 200,
+   "texte": 7975,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/site-vitrine-449-inclus",
+   "statut": 200,
+   "texte": 7213,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/trouver-clients-plombier-google",
+   "statut": 200,
+   "texte": 6732,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/vendre-photos-en-ligne-tirages-albums",
+   "statut": 200,
+   "texte": 7422,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/ecommerce-mode-site-web",
+   "statut": 200,
+   "texte": 6635,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/google-maps-integration-site",
+   "statut": 200,
+   "texte": 6642,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/instagram-artisan-guide",
+   "statut": 200,
+   "texte": 6972,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/maintenance-site-web-guide",
+   "statut": 200,
+   "texte": 6144,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/netlinking-tpe-guide",
+   "statut": 200,
+   "texte": 9566,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/paa-seo-local-gratuit",
+   "statut": 200,
+   "texte": 7954,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/seo-ecommerce-guide",
+   "statut": 200,
+   "texte": 7418,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/site-web-tours-conversion",
+   "statut": 200,
+   "texte": 8537,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/tunnels-achat-ecommerce",
+   "statut": 200,
+   "texte": 7450,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/amazon-marketplace-vs-site-propre",
+   "statut": 200,
+   "texte": 6374,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/blog-seo-tpe-artisan",
+   "statut": 200,
+   "texte": 8405,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/ecommerce-artisanat-guide",
+   "statut": 200,
+   "texte": 6610,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/erreurs-404-seo-guide",
+   "statut": 200,
+   "texte": 7060,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/externaliser-redaction-blog-seo",
+   "statut": 200,
+   "texte": 9404,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/frequence-publication-blog-seo",
+   "statut": 200,
+   "texte": 9893,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/paa-hebergement-site",
+   "statut": 200,
+   "texte": 6933,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/redaction-article-seo-guide",
+   "statut": 200,
+   "texte": 9461,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/site-web-medecin-kine",
+   "statut": 200,
+   "texte": 9995,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/site-web-menuisier",
+   "statut": 200,
+   "texte": 6028,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/blog-restaurant-site-web",
+   "statut": 200,
+   "texte": 9344,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/emailing-prospection-tpe",
+   "statut": 200,
+   "texte": 6684,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/paa-site-web-ventes",
+   "statut": 200,
+   "texte": 7493,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/portfolio-digital-creatif",
+   "statut": 200,
+   "texte": 6984,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/seo-blois-entreprises",
+   "statut": 200,
+   "texte": 5824,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/site-web-photographe",
+   "statut": 200,
+   "texte": 6437,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/google-ads-petit-budget",
+   "statut": 200,
+   "texte": 6169,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/livraison-ecommerce-guide",
+   "statut": 200,
+   "texte": 6584,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/paa-wordpress-vs-agence",
+   "statut": 200,
+   "texte": 6550,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/seo-angers-entreprises",
+   "statut": 200,
+   "texte": 6389,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/seo-local-artisan-batiment-2026",
+   "statut": 200,
+   "texte": 10001,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/seo-tours-pme",
+   "statut": 200,
+   "texte": 10238,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/site-web-avocat",
+   "statut": 200,
+   "texte": 5714,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/accessibilite-site-web-guide",
+   "statut": 200,
+   "texte": 9534,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/cgv-boutique-en-ligne",
+   "statut": 200,
+   "texte": 7306,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/meta-ads-tpe-guide",
+   "statut": 200,
+   "texte": 7628,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/paa-site-web-necessaire",
+   "statut": 200,
+   "texte": 7079,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/rich-snippets-guide",
+   "statut": 200,
+   "texte": 7512,
+   "deborde": true,
+   "h1": 1,
+   "erreurs": [],
+   "ok": false,
+   "suite": "corrigé (grille de lecture minmax, code/tableaux défilants) — resondé"
+  },
+  {
+   "route": "/blog/seo-le-mans-entreprises",
+   "statut": 200,
+   "texte": 6923,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/site-web-artisan-electricien",
+   "statut": 200,
+   "texte": 8140,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/blog-artisan-guide",
+   "statut": 200,
+   "texte": 7484,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/newsletter-site-web-guide",
+   "statut": 200,
+   "texte": 7311,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/paa-delai-creation-site",
+   "statut": 200,
+   "texte": 6690,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/reseaux-sociaux-tpe-guide",
+   "statut": 200,
+   "texte": 7689,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/site-web-coiffeur",
+   "statut": 200,
+   "texte": 6771,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/tarif-agence-web-france",
+   "statut": 200,
+   "texte": 6456,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/linkedin-tpe-b2b-guide",
+   "statut": 200,
+   "texte": 7283,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/paa-combien-coute-site-web",
+   "statut": 200,
+   "texte": 6760,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/seo-on-page-guide-complet",
+   "statut": 200,
+   "texte": 6708,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/seo-orleans-commerces",
+   "statut": 200,
+   "texte": 9825,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/vitesse-mobile-optimisation",
+   "statut": 200,
+   "texte": 7257,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/automatisation-tpe-outils-2026",
+   "statut": 200,
+   "texte": 6891,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/landing-page-publicite-guide",
+   "statut": 200,
+   "texte": 6547,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/rgpd-site-web-2026",
+   "statut": 200,
+   "texte": 7930,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/site-web-coach-sportif",
+   "statut": 200,
+   "texte": 9095,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/ecommerce-alimentaire-guide",
+   "statut": 200,
+   "texte": 6967,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/refonte-site-web-budget",
+   "statut": 200,
+   "texte": 6403,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/site-web-carreleur",
+   "statut": 200,
+   "texte": 4521,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/site-web-comptable-expert",
+   "statut": 200,
+   "texte": 7054,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/chatgpt-gemini-outil-tpe",
+   "statut": 200,
+   "texte": 7121,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/google-analytics-4-guide-tpe",
+   "statut": 200,
+   "texte": 7566,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/dropshipping-site-web-guide",
+   "statut": 200,
+   "texte": 7427,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/google-search-console-guide-tpe",
+   "statut": 200,
+   "texte": 7303,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/ai-overviews-seo-tpe",
+   "statut": 200,
+   "texte": 8700,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/site-web-macon",
+   "statut": 200,
+   "texte": 4504,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/site-web-peintre",
+   "statut": 200,
+   "texte": 5969,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/chatgpt-apparence-resultats-google",
+   "statut": 200,
+   "texte": 8074,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/comment-jai-cree-un-systeme-de-gestion-complet-en-100h",
+   "statut": 200,
+   "texte": 7467,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/photos-produits-ecommerce",
+   "statut": 200,
+   "texte": 6268,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/brasseur-artisanal-site-web",
+   "statut": 200,
+   "texte": 8001,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/site-web-traiteur",
+   "statut": 200,
+   "texte": 7205,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/recyclerie-site-web",
+   "statut": 200,
+   "texte": 7701,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/conciergerie-airbnb-site-web",
+   "statut": 200,
+   "texte": 7807,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/site-web-food-truck",
+   "statut": 200,
+   "texte": 7914,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/site-web-coach-professionnel",
+   "statut": 200,
+   "texte": 7966,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/site-web-blois",
+   "statut": 200,
+   "texte": 6685,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/site-internet-angers",
+   "statut": 200,
+   "texte": 7311,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/les-5-erreurs-digitales-des-petits-commerces",
+   "statut": 200,
+   "texte": 6987,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/site-web-le-mans",
+   "statut": 200,
+   "texte": 8002,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/site-internet-orleans",
+   "statut": 200,
+   "texte": 8354,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/site-vitrine-tours",
+   "statut": 200,
+   "texte": 8253,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/calendrier-editorial-methode-simple",
+   "statut": 200,
+   "texte": 6871,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/10-erreurs-seo-site-web",
+   "statut": 200,
+   "texte": 13202,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/7-raisons-boutique-site-web",
+   "statut": 200,
+   "texte": 9054,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/agence-immobiliere-site-web-2026",
+   "statut": 200,
+   "texte": 9895,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/articles-blog-ia-seo-2026",
+   "statut": 200,
+   "texte": 7557,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/content-refresh-anciens-articles",
+   "statut": 200,
+   "texte": 6812,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/agenda-en-ligne-coach-formateur",
+   "statut": 200,
+   "texte": 9689,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/application-fidelite-sur-mesure",
+   "statut": 200,
+   "texte": 7329,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/application-gestion-chantiers",
+   "statut": 200,
+   "texte": 7301,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/externaliser-redaction-blog-guide",
+   "statut": 200,
+   "texte": 6759,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/temps-redaction-article-blog",
+   "statut": 200,
+   "texte": 6100,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/application-gestion-rdv",
+   "statut": 200,
+   "texte": 9071,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/application-livraison-interne",
+   "statut": 200,
+   "texte": 7453,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/application-livraison-restaurant",
+   "statut": 200,
+   "texte": 9475,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/application-reservation-location",
+   "statut": 200,
+   "texte": 7665,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/automatisation-processus-pme",
+   "statut": 200,
+   "texte": 7436,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/avis-clients-artisan-strategie",
+   "statut": 200,
+   "texte": 8247,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/avis-google-strategie-complete",
+   "statut": 200,
+   "texte": 9171,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/boutique-en-ligne-artisan-par-ou-commencer",
+   "statut": 200,
+   "texte": 8402,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/blog-immobilier-sujets-mandats",
+   "statut": 200,
+   "texte": 6590,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/mesurer-roi-seo-kpis-tableau-bord-tpe",
+   "statut": 200,
+   "texte": 11871,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/redacteur-web-freelance-ou-agence",
+   "statut": 200,
+   "texte": 5694,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/boutique-en-ligne-artisanat-local",
+   "statut": 200,
+   "texte": 9409,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/boutique-en-ligne-createur-mode",
+   "statut": 200,
+   "texte": 10564,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/carte-qr-code-restaurant-menu",
+   "statut": 200,
+   "texte": 8506,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/click-and-collect-mise-en-place",
+   "statut": 200,
+   "texte": 7721,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/click-collect-boucherie-charcuterie",
+   "statut": 200,
+   "texte": 10239,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/click-collect-restaurant-guide",
+   "statut": 200,
+   "texte": 8786,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/acheter-articles-blog-plateformes",
+   "statut": 200,
+   "texte": 6272,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/commandes-emporter-gestion-restaurant",
+   "statut": 200,
+   "texte": 8530,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/couleurs-qui-convertissent",
+   "statut": 200,
+   "texte": 8174,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/cout-seo-local-pme",
+   "statut": 200,
+   "texte": 7702,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/idees-articles-blog-artisan",
+   "statut": 200,
+   "texte": 8064,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/cout-site-internet-2026",
+   "statut": 200,
+   "texte": 8635,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/crm-sur-mesure-pme",
+   "statut": 200,
+   "texte": 9195,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/design-site-influence-ventes",
+   "statut": 200,
+   "texte": 7847,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/devis-en-ligne-artisan",
+   "statut": 200,
+   "texte": 8174,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/e-commerce-produits-locaux-terroir",
+   "statut": 200,
+   "texte": 10319,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/ecrire-article-blog-google",
+   "statut": 200,
+   "texte": 8701,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/erp-artisan-pme",
+   "statut": 200,
+   "texte": 7278,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/idees-articles-blog-restaurant",
+   "statut": 200,
+   "texte": 8222,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/seo-ia-generative-ai-overviews-google",
+   "statut": 200,
+   "texte": 11117,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/erreurs-seo-local",
+   "statut": 200,
+   "texte": 9159,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/fiche-google-business-optimisation",
+   "statut": 200,
+   "texte": 12097,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/fidelisation-clients-restaurant",
+   "statut": 200,
+   "texte": 8687,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/gestion-caisse-sur-mesure",
+   "statut": 200,
+   "texte": 8686,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/gestion-planning-employes",
+   "statut": 200,
+   "texte": 7648,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/gestion-stock-restaurant-digital",
+   "statut": 200,
+   "texte": 9145,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/gestion-stocks-digitale",
+   "statut": 200,
+   "texte": 9531,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/google-ads-restaurant",
+   "statut": 200,
+   "texte": 9014,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/google-my-business-guide-commercants",
+   "statut": 200,
+   "texte": 8910,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/hebergement-web-choisir",
+   "statut": 200,
+   "texte": 9281,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/instagram-restaurant-strategie",
+   "statut": 200,
+   "texte": 9035,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/intranet-entreprise-communication",
+   "statut": 200,
+   "texte": 7410,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/refonte-site-web-seo-redirections-301",
+   "statut": 200,
+   "texte": 12348,
+   "deborde": true,
+   "h1": 1,
+   "erreurs": [],
+   "ok": false,
+   "suite": "corrigé (grille de lecture minmax, code/tableaux défilants) — resondé"
+  },
+  {
+   "route": "/blog/lancer-activite-en-ligne-guide",
+   "statut": 200,
+   "texte": 9605,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/landing-page-vs-site-vitrine",
+   "statut": 200,
+   "texte": 8870,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/logiciel-facturation-devis-auto",
+   "statut": 200,
+   "texte": 9262,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/logo-identite-visuelle-base",
+   "statut": 200,
+   "texte": 8236,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/marketplace-producteurs-locaux",
+   "statut": 200,
+   "texte": 7918,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/menu-digital-vs-menu-papier",
+   "statut": 200,
+   "texte": 7775,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/menu-en-ligne-restaurant-seo",
+   "statut": 200,
+   "texte": 8825,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/micro-entreprise-digitale-guide",
+   "statut": 200,
+   "texte": 8926,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/no-show-reservation-restaurant",
+   "statut": 200,
+   "texte": 8935,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/nom-de-domaine-choisir",
+   "statut": 200,
+   "texte": 8917,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/outils-digitaux-entrepreneur-2026",
+   "statut": 200,
+   "texte": 8667,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/personal-branding-image-en-ligne",
+   "statut": 200,
+   "texte": 8341,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/portail-client-extranet",
+   "statut": 200,
+   "texte": 8890,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/portfolio-artisan-digital",
+   "statut": 200,
+   "texte": 8421,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/portfolio-digital-artisan-art",
+   "statut": 200,
+   "texte": 11495,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/pourquoi-concurrent-vous-depasse-google",
+   "statut": 200,
+   "texte": 7774,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/pourquoi-site-charge-lentement",
+   "statut": 200,
+   "texte": 7949,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/pourquoi-votre-restaurant-perd-des-clients-sans-site-web",
+   "statut": 200,
+   "texte": 7111,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/core-web-vitals-2026-guide-technique",
+   "statut": 200,
+   "texte": 10453,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/prise-rdv-en-ligne-plombier-electricien",
+   "statut": 200,
+   "texte": 9467,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/quest-ce-que-le-responsive-design",
+   "statut": 200,
+   "texte": 7628,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/refonte-site-web-guide",
+   "statut": 200,
+   "texte": 7874,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/refonte-site-web-quand-pourquoi",
+   "statut": 200,
+   "texte": 9242,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/remplir-restaurant-digital",
+   "statut": 200,
+   "texte": 8915,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/vitesse-chargement-site-guide-technique-complet",
+   "statut": 200,
+   "texte": 13856,
+   "deborde": true,
+   "h1": 1,
+   "erreurs": [],
+   "ok": false,
+   "suite": "corrigé (grille de lecture minmax, code/tableaux défilants) — resondé"
+  },
+  {
+   "route": "/blog/reservation-en-ligne-reduire-no-shows",
+   "statut": 200,
+   "texte": 7642,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/reservation-en-ligne-spa-wellness",
+   "statut": 200,
+   "texte": 9427,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/rgpd-petites-entreprises",
+   "statut": 200,
+   "texte": 8370,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/salon-coiffure-agenda-en-ligne",
+   "statut": 200,
+   "texte": 7855,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/seo-artisan-batiment",
+   "statut": 200,
+   "texte": 8830,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/seo-local-commerce",
+   "statut": 200,
+   "texte": 10988,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/seo-local-google-maps-2026",
+   "statut": 200,
+   "texte": 10466,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/donnees-structurees-schema-org-commerces-locaux",
+   "statut": 200,
+   "texte": 11488,
+   "deborde": true,
+   "h1": 1,
+   "erreurs": [],
+   "ok": false,
+   "suite": "corrigé (grille de lecture minmax, code/tableaux défilants) — resondé"
+  },
+  {
+   "route": "/blog/seo-local-restaurant",
+   "statut": 200,
+   "texte": 10340,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/seo-local-sans-site-web",
+   "statut": 200,
+   "texte": 8347,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/seo-local-vs-google-ads",
+   "statut": 200,
+   "texte": 9719,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/google-search-console-guide-avance-seo",
+   "statut": 200,
+   "texte": 12195,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/site-ecommerce-prix-guide",
+   "statut": 200,
+   "texte": 8557,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/site-vitrine-prix-comparatif",
+   "statut": 200,
+   "texte": 8710,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/site-web-accessible-handicap",
+   "statut": 200,
+   "texte": 9402,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/recherche-vocale-seo-local-pres-de-moi",
+   "statut": 200,
+   "texte": 10036,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/audit-seo-technique-checklist-50-points",
+   "statut": 200,
+   "texte": 15034,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/site-web-mobile-first",
+   "statut": 200,
+   "texte": 8957,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/site-web-multilingue-tourisme",
+   "statut": 200,
+   "texte": 9547,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/site-web-multipage-guide",
+   "statut": 200,
+   "texte": 8687,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/maillage-interne-cocon-semantique-seo",
+   "statut": 200,
+   "texte": 10633,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/strategie-longue-traine-tpe-clients-locaux",
+   "statut": 200,
+   "texte": 11114,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/site-web-rapide-performance",
+   "statut": 200,
+   "texte": 8489,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/eeat-expertise-autorite-confiance-google",
+   "statut": 200,
+   "texte": 10123,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/site-web-vs-application-mobile",
+   "statut": 200,
+   "texte": 8028,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/ssl-https-site-web",
+   "statut": 200,
+   "texte": 8654,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/optimiser-images-web-webp-avif-seo",
+   "statut": 200,
+   "texte": 11236,
+   "deborde": true,
+   "h1": 1,
+   "erreurs": [],
+   "ok": false,
+   "suite": "corrigé (grille de lecture minmax, code/tableaux défilants) — resondé"
+  },
+  {
+   "route": "/blog/systeme-caisse-restaurant-2026",
+   "statut": 200,
+   "texte": 9661,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/netlinking-local-backlinks-region-methodes",
+   "statut": 200,
+   "texte": 7635,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/tableau-de-bord-dirigeant",
+   "statut": 200,
+   "texte": 9032,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/tendances-web-design-2026-guide",
+   "statut": 200,
+   "texte": 9144,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/trouver-premiers-clients",
+   "statut": 200,
+   "texte": 8855,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/tunnel-vente-site-web-pme",
+   "statut": 200,
+   "texte": 9622,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/ux-design-experience-convertit",
+   "statut": 200,
+   "texte": 8528,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/vendre-creations-en-ligne-artisans",
+   "statut": 200,
+   "texte": 8826,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/vente-en-ligne-antiquaire-brocante",
+   "statut": 200,
+   "texte": 9626,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/index-mobile-first-google-optimiser-site-mobile",
+   "statut": 200,
+   "texte": 12638,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/vitesse-site-web-impact-ventes",
+   "statut": 200,
+   "texte": 9354,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/vitrine-digitale-artisan-batiment",
+   "statut": 200,
+   "texte": 9905,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/wordpress-vs-sur-mesure",
+   "statut": 200,
+   "texte": 11306,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  }
+ ],
+ "ko_apres_correction": 0
+}

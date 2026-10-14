@@ -132,7 +132,7 @@
 }
 @media (max-width: 900px) {
   .su-lec__grille {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
   /* Mobile : la pile s'imprime en tête d'article (pas de marge collante qui
      passerait sur le texte) ; le sommaire reste dans le flux de l'article. */

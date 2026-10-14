@@ -1,6 +1,6 @@
 {
- "genere": "2026-10-13",
- "phase": "fabrique",
+ "genere": "2026-10-14",
+ "phase": "nuit — pages-mondes, gabarits, QA",
  "captures": [
   {
    "fichier": "docs/qa/shots/contact/vide-1440.png",
@@ -1295,6 +1295,202 @@
    "rm": true,
    "visible": "Scroll complet en mouvement réduit (189 trames) : logo figé (× 0,6 hors du hero) qui glisse de boîte en boîte sans morph, lumière par frontières posée sans tween, titres posés, aucun épinglage.",
    "defauts": []
+  },
+  {
+   "fichier": "docs/qa/shots/realisations/intro-1440.png",
+   "route": "/realisations",
+   "etat": "intro",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Intro de la Galerie : le S à gauche, titre « Entrez dans la galerie. » à droite, le hall (écrans) attend au fond à droite, hors du titre.",
+   "defauts": [
+    "Première passe : écrans du hall derrière le titre — hall décalé au fond à droite pendant l'intro (travel −1 → 0)"
+   ],
+   "corrige": true
+  },
+  {
+   "fichier": "docs/qa/shots/realisations/hall-p05-390.png",
+   "route": "/realisations",
+   "etat": "hall-p05",
+   "largeur": 390,
+   "rm": false,
+   "visible": "Mobile, mi-parcours : écran « Maison Élise » allumé, plein cadre au-dessus du cartel 04/07, boutons Voir la fiche / Ouvrir la démo.",
+   "defauts": [
+    "Première passe : écran invisible — un pseudo-élément « inset 0 -100vw » élargissait la page à 780 px (canvas 2×) ; remplacé par une largeur 100vw centrée"
+   ],
+   "corrige": true
+  },
+  {
+   "fichier": "docs/qa/shots/realisations/fiche-1440.png",
+   "route": "/realisations/au-pain-dore",
+   "etat": "fiche",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Fiche : ariane, « Démo · Site vitrine », titre, capture dans un cadre de plaques (pellicule), puis le dossier.",
+   "defauts": [
+    "Première passe : titre et capture se chevauchaient (capture en absolu à 190 px) — capture remise dans le flux, l'élément partagé recalé par FLIP"
+   ],
+   "corrige": true
+  },
+  {
+   "fichier": "docs/qa/shots/realisations/liste-1440.png",
+   "route": "/realisations",
+   "etat": "liste",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Grille des 7 démos, étiquette « Démo » sur chacune, fond d'encre opaque (le hall ne traverse plus les vignettes).",
+   "defauts": [],
+   "corrige": true
+  },
+  {
+   "fichier": "docs/qa/shots/a-propos/p07-1440.png",
+   "route": "/a-propos",
+   "etat": "p07",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Atelier de nuit : cadre de plaques autour de la photo, engagements écrits en lumière (le 1er plein, les 2 suivants en tracé).",
+   "defauts": [
+    "Première passe : le travelling caméra faisait sortir le cadre de la photo — la figure entière grandit d'un bloc"
+   ],
+   "corrige": true
+  },
+  {
+   "fichier": "docs/qa/shots/a-propos/p1-390.png",
+   "route": "/a-propos",
+   "etat": "p1",
+   "largeur": 390,
+   "rm": false,
+   "visible": "Mobile : photo encadrée, tampon logo, trois engagements lisibles.",
+   "defauts": [
+    "« Un prix écrit avant de commencer » coupé au bord droit — viewBox élargi à 1000"
+   ],
+   "corrige": true
+  },
+  {
+   "fichier": "docs/qa/shots/solutions/tableau-pose-390.png",
+   "route": "/solutions",
+   "etat": "tableau-pose",
+   "largeur": 390,
+   "rm": false,
+   "visible": "Palette en grille 2 colonnes, blocs ivoire lisibles (« Posé » ambre clair), plan de travail dessous.",
+   "defauts": [
+    "Première passe : blocs transparents navy sur navy — fond ivoire creusé"
+   ],
+   "corrige": true
+  },
+  {
+   "fichier": "docs/qa/shots/services/fin-1440.png",
+   "route": "/services",
+   "etat": "fin",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Fin de la compilation sur ivoire : la bascule nuit → ivoire est complète.",
+   "defauts": [
+    "Première passe : nuit figée à 0,5 (dernière section trop courte) — frontière avancée"
+   ],
+   "corrige": true
+  },
+  {
+   "fichier": "docs/qa/shots/locales/agence-web_tours-hero-1440.png",
+   "route": "/agence-web/tours",
+   "etat": "hero",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Gabarit local signé : ariane, « Indre-et-Loire (37) · Centre-Val de Loire », titre, actions ; S massif imprimé à droite, cote mono en dessous.",
+   "defauts": [
+    "Première passe : pile coupée en haut (boîte trop haute) — boîte 58 svh alignée en bas"
+   ],
+   "corrige": true
+  },
+  {
+   "fichier": "docs/qa/shots/locales/agence-web_departement_indre-et-loire-corps-1440.png",
+   "route": "/agence-web/departement/indre-et-loire",
+   "etat": "corps",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Économie, métiers (plaques ivoire), offres avec cadrans « à partir de ».",
+   "defauts": [
+    "Première passe : cadrans figés sur des valeurs intermédiaires (224, 0323) — rotation d'une traite à l'entrée"
+   ],
+   "corrige": true
+  },
+  {
+   "fichier": "docs/qa/shots/blog/article-390.png",
+   "route": "/blog/10-erreurs-seo-site-web",
+   "etat": "article",
+   "largeur": 390,
+   "rm": false,
+   "visible": "Article mobile : titre, chapô, auteur Mathéo Reboul ; pile imprimée en tête d'article.",
+   "defauts": [
+    "Première passe : chapô en gras navy illisible sur navy et pile collante sur le texte — couleur héritée, pile dans le flux"
+   ],
+   "corrige": true
+  },
+  {
+   "fichier": "docs/qa/shots/traversee/_services-Tarifs-1600-1440.png",
+   "route": "/tarifs",
+   "etat": "traversee",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Traversée /services → /tarifs : la page se replie, le sol se dissout, /tarifs se déplie ; arrivée avec la scène 3D (tapis).",
+   "defauts": [
+    "Première passe : arrivée en repli 2D — le forçage ?quality= ne survivait pas à la navigation (session)"
+   ],
+   "corrige": true
+  },
+  {
+   "fichier": "docs/qa/shots/contact/enveloppe-1440.png",
+   "route": "/contact",
+   "etat": "enveloppe",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Après l'envoi : la pile se plie en enveloppe (bords, rabat), le logo la scelle ; bouton « Envoi… ».",
+   "defauts": [
+    "Mobile : la pile était hors écran — la page remonte vers elle avant le pliage"
+   ],
+   "corrige": true
+  },
+  {
+   "fichier": "docs/qa/shots/legal/page-qui-n-existe-pas-haut-1440.png",
+   "route": "/404",
+   "etat": "haut",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "404 : « 404 » en contour, titre, cinq portes ; la plaque ambre est tombée au sol, plaques éparses.",
+   "defauts": [],
+   "corrige": true
+  },
+  {
+   "fichier": "docs/qa/shots/legal/cgv-corps-1440.png",
+   "route": "/cgv",
+   "etat": "corps",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "CGV sur ivoire : sommaire en marge, tableau des prix « à partir de » lu dans SITE.",
+   "defauts": [],
+   "corrige": true
+  },
+  {
+   "fichier": "docs/qa/shots/outils/outils_studio-de-style-haut-1440.png",
+   "route": "/outils/studio-de-style",
+   "etat": "haut",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Studio de style : choix d'activité/ambiance à gauche, maquette fictive à droite.",
+   "defauts": [
+    "Contraste de la barre d'adresse (axe) corrigé"
+   ],
+   "corrige": true
+  },
+  {
+   "fichier": "docs/qa/shots/outils/ressources_documents-corps-1440.png",
+   "route": "/ressources/documents",
+   "etat": "corps",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Documents : cartes « En cours de mise à jour » (PDF retirés : identité légale erronée).",
+   "defauts": [],
+   "corrige": true
   }
  ]
 }
