@@ -16,7 +16,7 @@ const CAS = [
   { nom: 'accueil-1440', viewport: { width: 1440, height: 900 }, rm: false, pas: 36 },
   { nom: 'accueil-390', viewport: { width: 390, height: 844 }, rm: false, mobile: true, pas: 28 },
   { nom: 'accueil-1440-rm', viewport: { width: 1440, height: 900 }, rm: true, pas: 60 },
-  // Une vidéo par page-monde (desktop) ; le pas s'adapte pour ~260 trames.
+  // Une vidéo par page-monde (desktop) ; le pas s'adapte pour ~140 trames (`--cas=pages`).
   ...['/tarifs', '/realisations', '/services', '/solutions', '/a-propos', '/contact', '/blog/10-erreurs-seo-site-web', '/agence-web/tours'].map((route) => ({
     nom: route.slice(1).replace(/\//g, '_') + '-1440',
     route,
@@ -25,11 +25,11 @@ const CAS = [
     pas: 0,
   })),
 ]
-const seul = process.argv.find((a) => a.startsWith('--cas='))?.split('=')[1]
+const seul = process.argv.find((a) => a.startsWith('--cas='))?.split('=')[1]?.split(',')
 mkdirSync('docs/qa/videos', { recursive: true })
 const browser = await chromium.launch({ executablePath: CHROMIUM, args: ARGS })
 for (const c of CAS) {
-  if (seul && c.nom !== seul) continue
+  if (seul && !seul.includes(c.nom) && !(seul.includes('pages') && c.route)) continue
   const dir = `docs/qa/videos/_trames-${c.nom}`
   rmSync(dir, { recursive: true, force: true })
   mkdirSync(dir, { recursive: true })
@@ -44,7 +44,7 @@ for (const c of CAS) {
     await page.screenshot({ path: `${dir}/${String(n++).padStart(5, '0')}.jpg`, type: 'jpeg', quality: 70 })
   }
   for (let k = 0; k < 12; k++) await trame()
-  const pas = c.pas || Math.max(24, Math.round(total / 260))
+  const pas = c.pas || Math.max(24, Math.round(total / 140))
   for (let y = 0; y <= total; y += pas) {
     await page.evaluate((yy) => {
       window.__suLenis?.scrollTo(yy, { immediate: true })

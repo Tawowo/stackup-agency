@@ -81,9 +81,20 @@ paramètre `fuite` (l'enveloppe file au fond), la page merci la fait revenir. SE
 - Nav : voile du fond courant dès 40 px de scroll (le texte ne passe plus sous le logo).
 - PageSpeed Insights (gratuit, sans IA) reste la source de l'audit de site ; clé `PAGESPEED_API_KEY` facultative.
 
-**En cours.** Pages documents (gabarit `src/gabarits/document/`) : légales + plan du site + 404 animée
-(`eboulis`), outils (audit, studio de style), ressources (cahier des charges, documents), FAQ, comparatif,
-parrainage. Captures à relire : contact (enveloppe/départ), traversée, galerie mobile.
+**Fait ensuite.** Gabarit Document (`src/gabarits/document/`) : mentions, CGV, confidentialité, cookies, plan
+du site, 404 en éboulis (`src/webgl/layouts/eboulis.ts`) ; outils (audit PageSpeed `src/lib/audit.ts`, studio de
+style `src/experiences/outils/`) ; ressources (cahier des charges imprimable, documents), FAQ, comparatif,
+parrainage (`src/experiences/ressources/`, `/api/parrainage`). Redirections branchées dans `next.config.ts`
+(80 × 308). Traversée vérifiée en capture (`scripts/sonde-traversee.mjs`). axe : 0 violation sur 23 routes ×
+2 largeurs (`scripts/axe.mjs`). Sans JS : `@media (scripting: none)` ouvre toutes les découpes
+(`scripts/sans-js.mjs`). Tour des 432 routes du sitemap (`scripts/tour.mjs` → `docs/qa/tour.json`) : 0 défaut
+après correction. `npm run verify` vert. OG + icônes (`scripts/og.mjs`). GSAP/Lenis/three différés.
 
-**Reste à faire.** Brancher redirections ; vidéos par page ; QA (axe, contraste, sans JS, perf, toutes les
-routes du sitemap capturées au moins une fois, `npm run verify`) ; rapport final en tête de ce journal.
+**Décisions de la seconde moitié.**
+- Les 12 PDF de `public/documents` portent un autre nom et un SIRET étranger au site : tous retirés de la page.
+- `conforme()` neutralise aussi « sous 72 h », « livré en N jours » et l'offre association (149 € → offre une page).
+- Pages légales : identité (titulaire, SIRET, médiateur) laissée « [à compléter par le propriétaire] ».
+
+**Reste à faire.** Vidéos des pages-mondes (`node scripts/videos.mjs --cas=pages`, ~140 trames chacune) ;
+JS initial au-dessus du budget sur l'accueil (342 ko gz) et les pages qui importent GSAP au rendu — prochaine
+étape : importer GSAP à la demande dans chaque expérience comme dans `Cadran.tsx`.

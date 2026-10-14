@@ -197,7 +197,7 @@ function Rig() {
         // Le mot s'écrit dans la zone libre : moitié droite sur grand écran, haut de l'écran sur mobile.
         const Wu = size.width / PX_PAR_UNITE
         const Hu = size.height / PX_PAR_UNITE
-        if (size.width >= 768) u.uMotCadre.value.set(Wu * 0.22, Hu * 0.12, 0.8, Math.min(Wu * 0.22, 3.4))
+        if (size.width >= 768) u.uMotCadre.value.set(Wu * 0.2, Hu * 0.12, 0.8, Math.min(Wu * 0.19, 3))
         else u.uMotCadre.value.set(0, Hu * 0.22, 0.8, Wu * 0.42)
       }
       u.uFlash.value = prm.flash
