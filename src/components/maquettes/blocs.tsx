@@ -320,7 +320,7 @@ export function Contenu({ role, ctx = {} }: { role: Role; ctx?: ContexteBloc }) 
     const ev: [number, number, number, string, string][] = [
       [2, 2, 1, 'Chantier Dupont', '#2f6f5e'],
       [3, 3, 2, 'Pose escalier', '#8a5a2b'],
-      [4, 4, 1, 'RDV devis', '#d9701c'],
+      [4, 4, 1, 'RDV devis', '#b85a0d'],
       [5, 2, 2, 'Atelier : cuisine Roux', '#1f4c97'],
       [6, 3, 1, 'Livraison', '#6a4aa0'],
     ]

@@ -71,7 +71,7 @@ export default function MondeFaq({ echanges, qui }: { echanges: Echange[]; qui: 
             </p>
           )}
           {etape === 2 && (
-            <p key={`p${k}`} className="mw-bulle mw-bulle--r mw-bulle--points" aria-label="En train d’écrire">
+            <p key={`p${k}`} className="mw-bulle mw-bulle--r mw-bulle--points" role="status" aria-label="En train d’écrire">
               <i />
               <i />
               <i />

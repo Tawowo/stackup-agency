@@ -9,11 +9,11 @@
 .mq {
   --mq-creme: #fbf6ec;
   --mq-texte: #2b2118;
-  --mq-doux: #7a6a58;
+  --mq-doux: #65574a;
   --mq-bois: #8a5a2b;
   --mq-bois-clair: #c48a4f;
   --mq-vert: #2f6f5e;
-  --mq-cta: #d9701c;
+  --mq-cta: #b85a0d;
   --mq-trait: #e6dccb;
   container-type: inline-size;
   position: relative;
@@ -463,7 +463,7 @@
   font-weight: 600;
   color: #15283f;
 }
-.mq-dash-haut small { font-weight: 500; font-size: 1.45cqw; color: #6c7c90; }
+.mq-dash-haut small { font-weight: 500; font-size: 1.45cqw; color: #566679; }
 .mq-kpi {
   height: 100%;
   padding: 1.4cqw 1.8cqw;
@@ -473,9 +473,9 @@
   flex-direction: column;
   justify-content: center;
 }
-.mq-kpi small { font-size: 1.4cqw; color: #6c7c90; }
+.mq-kpi small { font-size: 1.4cqw; color: #566679; }
 .mq-kpi b { font-family: var(--su-font-display), sans-serif; font-size: 3.4cqw; line-height: 1.1; color: #15283f; }
-.mq-kpi i { font-style: normal; font-size: 1.3cqw; font-weight: 600; color: #1d8a5a; }
+.mq-kpi i { font-style: normal; font-size: 1.3cqw; font-weight: 600; color: #14704a; }
 .mq-planning {
   height: 100%;
   padding: 1.4cqw;
@@ -486,7 +486,7 @@
   grid-template-rows: 2.6cqw repeat(4, 1fr);
   gap: 0.5cqw;
   font-size: 1.25cqw;
-  color: #6c7c90;
+  color: #566679;
 }
 .mq-planning .t { align-self: center; text-align: center; }
 .mq-planning .h { display: flex; align-items: center; justify-content: flex-end; padding-right: 0.5cqw; }
@@ -507,7 +507,7 @@
   display: flex;
   flex-direction: column;
 }
-.mq-graph small { font-size: 1.35cqw; color: #6c7c90; }
+.mq-graph small { font-size: 1.35cqw; color: #566679; }
 .mq-graph svg { flex: 1; min-height: 0; width: 100%; }
 .mq-liste {
   height: 100%;
@@ -576,7 +576,7 @@
 }
 .mq-onglets span[data-on='1'] { background: #15283f; color: #fff; }
 .mq-table { width: 100%; border-collapse: collapse; }
-.mq-table th { text-align: left; font-size: 1.3cqw; letter-spacing: 0.06em; text-transform: uppercase; color: #6c7c90; padding: 0.7cqw 1cqw; border-bottom: 0.3cqw solid #15283f; }
+.mq-table th { text-align: left; font-size: 1.3cqw; letter-spacing: 0.06em; text-transform: uppercase; color: #566679; padding: 0.7cqw 1cqw; border-bottom: 0.3cqw solid #15283f; }
 .mq-table td { padding: 1cqw; border-bottom: 0.2cqw solid #e5e9ef; font-size: 1.65cqw; }
 .mq-table em { font-style: normal; font-size: 1.3cqw; font-weight: 700; padding: 0.3cqw 1cqw; border-radius: 1cqw; background: #e1f3ea; color: #1d6b47; }
 .mq-table em.o { background: #fdecd3; color: #9a4507; }
@@ -605,7 +605,7 @@
   font-family: var(--su-font-mono), monospace;
   font-size: 2.8cqw;
 }
-.mq-adresse-grande svg { width: 2.6cqw; height: 2.6cqw; color: #1d8a5a; }
+.mq-adresse-grande svg { width: 2.6cqw; height: 2.6cqw; color: #14704a; }
 .mq-adresse-grande em {
   margin-left: auto;
   font-style: normal;
@@ -822,7 +822,7 @@
   color: #4c4338;
   box-shadow: 0 0 0 0.3cqw var(--su-ambre);
 }
-.mq-en__cadenas svg { width: 2.2cqw; height: 2.2cqw; color: #1d8a5a; display: block; }
+.mq-en__cadenas svg { width: 2.2cqw; height: 2.2cqw; color: #14704a; display: block; }
 .mq-en__url b { font-weight: 500; color: #15283f; }
 .mq-en__curseur { display: inline-block; width: 0.25cqw; height: 2.2cqw; margin-left: 0.2cqw; background: #d9701c; vertical-align: middle; }
 .mq-en__badge { position: absolute; right: 4cqw; bottom: 3.4cqw; z-index: 4; padding: 1cqw 2.2cqw; border-radius: 1.4cqw; background: #1d8a5a; color: #fff; font-size: 1.8cqw; font-weight: 700; letter-spacing: 0.04em; }

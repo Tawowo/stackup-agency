@@ -140,7 +140,7 @@ export default function Strates() {
             </h2>
           </header>
           <div ref={vue} className="su-ecl" data-actif={actif} data-isole={isole >= 0 ? '1' : '0'} data-fini={fini ? '1' : '0'}>
-            <div className="su-ecl__stage" aria-hidden="true">
+            <div className="su-ecl__stage" aria-hidden="true" inert>
               {COUCHES.map((c, k) => (
                 <div key={c.num} className="su-ecl__calque" style={{ '--i': k } as React.CSSProperties} data-on={actif === k ? '1' : actif === -1 ? '' : '0'} onClick={() => choisir(k)}>
                   <Calque k={k} uid={`ec${k}`} />

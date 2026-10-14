@@ -29,7 +29,7 @@ export default function Navigateur({
 }) {
   return (
     <div className={`mq ${className}`} data-pret={pret ? '1' : '0'} style={{ '--mq-ratio': ratio, ...style } as CSSProperties}>
-      <div className="mq__fen">
+      <div className="mq__fen" aria-hidden="true">
         <div className="mq__barre">
           <span className="mq__point" />
           <span className="mq__point" />
