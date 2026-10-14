@@ -71,10 +71,7 @@
   grid-row: 1 / span 3;
   display: flex;
   align-items: center;
-}
-.su-off__cadre {
-  width: 100%;
-  height: min(78svh, 100%);
+  pointer-events: none;
 }
 .su-off__panneau {
   grid-column: 1 / span 4;
@@ -96,50 +93,10 @@
   color: var(--su-navy);
 }
 
-/* ───────── Maquette HTML (découpe, cascade) ───────── */
-.su-maq {
-  position: absolute;
-  inset: 0;
-  display: grid;
-  place-items: center;
-  pointer-events: none;
-}
-/* La boîte 146 × 229 ajustée dans le cadre, comme la scène. */
-.su-maq__boite {
-  position: relative;
-  aspect-ratio: 146 / 229;
-  height: 100%;
-  max-width: 100%;
-  max-height: 100%;
-}
-@supports not (aspect-ratio: 1) {
-  .su-maq__boite {
-    width: 100%;
-  }
-}
-.su-maq__bloc {
-  position: absolute;
-  border: 1px solid color-mix(in srgb, var(--su-navy) 40%, transparent);
-  background: color-mix(in srgb, var(--su-navy) 5%, transparent);
-  border-radius: 2px;
-  clip-path: inset(0 100% 0 0);
-  animation: su-decoupe 620ms var(--su-pose) forwards;
-  animation-delay: calc(var(--k, 0) * 70ms + 350ms);
-}
-@keyframes su-decoupe {
-  to {
-    clip-path: inset(0);
-  }
-}
-.su-maq__bloc--bouton,
-.su-maq__bloc--panier,
-.su-maq__bloc--hub {
-  border-color: var(--su-ambre);
-  background: color-mix(in srgb, var(--su-ambre) 12%, transparent);
-}
-.su-maq__bloc--texte,
-.su-maq__bloc--prix {
-  border-style: dashed;
+/* La fenêtre de la maquette : une vraie fenêtre de navigateur, posée et ombrée. */
+.su-off__fenetre {
+  width: 100%;
+  filter: drop-shadow(0 28px 40px rgba(13, 44, 76, 0.28));
 }
 
 @media (max-width: 767px) {
@@ -172,9 +129,6 @@
   .su-off__scene {
     grid-column: 1 / -1;
     grid-row: 3;
-  }
-  .su-off__cadre {
-    height: 40svh;
   }
   .su-off__panneau {
     grid-column: 1 / -1;

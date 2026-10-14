@@ -1,21 +1,21 @@
 'use client'
 /**
- * MOMENT 02 — L'OFFRE. Mécanisme : ASSEMBLAGE. La lumière s'allume (ivoire).
- * Sélecteur vertical de quatre offres (clavier, tap) ; la pile se réassemble
- * en la forme choisie et une maquette HTML s'assemble par-dessus, par découpe.
- * Fiche de fabrication et prix en Cadran. Rotation automatique toutes les 7 s
- * jusqu'à la première interaction.
+ * MOMENT 02 — L'OFFRE. Mécanisme : MÉTAMORPHOSE. La lumière s'allume (ivoire).
+ * Quatre offres, chacune une vraie mini-maquette dans une fenêtre de navigateur :
+ * une page d'accueil d'artisan, trois pages en éventail, une boutique dont le
+ * panier se remplit, un tableau de bord. Les mêmes dix dalles de matière glissent
+ * d'une maquette à l'autre, puis s'ouvrent sur l'interface réelle (découpe).
+ * Sélecteur clavier / tap ; rotation automatique jusqu'à la première interaction.
  */
 import { useEffect, useRef, useState } from 'react'
-import StackFrame from '@/webgl/StackFrame'
-import { useScene } from '@/webgl/store'
 import { gsap, initGsap } from '@/lib/gsap'
-import { arriverParScroll } from '../arrivee'
 import Action from '@/components/ui/Action'
 import Cadran from '@/components/ui/Cadran'
 import Fiche from '@/components/ui/Fiche'
+import Morph from '@/components/maquettes/Morph'
+import { useScene } from '@/webgl/store'
+import { EMPLACEMENTS, EMPLACEMENT_VIDE, URLS } from './emplacements'
 import { OFFRES_SCENE, offreDe } from './offres'
-import Maquette from './Maquette'
 import './offre.css'
 
 export default function Offre() {
@@ -23,45 +23,60 @@ export default function Offre() {
   const [actif, setActif] = useState(0)
   const [interagi, setInteragi] = useState(false)
   const [visible, setVisible] = useState(false)
+  const [prete, setPrete] = useState('')
+  const [pan, setPan] = useState({ cle: '', n: 0 })
   const tabs = useRef<(HTMLButtonElement | null)[]>([])
+  const o = OFFRES_SCENE[actif]!
+  const offre = offreDe(o.id)
+  // La clé d'un état « posé » : changer d'offre ou sortir du champ referme les dalles.
+  const cle = `${actif}-${visible ? 1 : 0}`
+  const pret = visible && prete === cle
+  const panier = pan.cle === cle ? pan.n : 0
 
-  // Entrée dans la section : la pile morphe vers la première offre, pilotée par le scroll.
   useEffect(() => {
     initGsap()
     const el = section.current
     if (!el) return
-    const o = OFFRES_SCENE[0]!
-    return arriverParScroll(el, {
-      moment: '02',
-      layout: o.layout,
-      pose: o.pose,
-      projection: o.projection,
-      onPrise: () => setVisible(true),
-      onSortie: () => setVisible(false),
-    })
+    const io = new IntersectionObserver(([e]) => setVisible(!!e?.isIntersecting && (e?.intersectionRatio ?? 0) > 0.3), { threshold: [0, 0.3, 0.6] })
+    io.observe(el)
+    const st = useScene.getState()
+    const prise = () => st.setMoment('02')
+    prise()
+    return () => io.disconnect()
   }, [])
 
-  // La scène suit l'offre active (tween de layout, pas de scrub).
+  // Les dalles prennent leur place, puis s'ouvrent sur l'interface (découpe).
   useEffect(() => {
     if (!visible) return
-    const o = OFFRES_SCENE[actif]!
-    const s = useScene.getState()
-    if (s.moment !== '02' || s.reduced) return
-    s.setScrub(false)
-    s.setTarget(null)
-    s.setPose(o.pose)
-    s.setProjection(o.projection)
-    s.setLayout(o.layout)
-  }, [actif, visible])
-
-  // Rotation automatique tant que personne n'a interagi.
-  useEffect(() => {
-    if (interagi || !visible) return
-    const d = gsap.delayedCall(7, () => setActif((a) => (a + 1) % OFFRES_SCENE.length))
+    const reduit = useScene.getState().reduced
+    const d = gsap.delayedCall(reduit ? 0 : 1, () => setPrete(cle))
     return () => {
       d.kill()
     }
-  }, [actif, interagi, visible])
+  }, [cle, visible])
+
+  // La boutique : le panier se remplit, article après article, puis se vide.
+  useEffect(() => {
+    if (!pret || o.maquette !== 'boutique') return
+    let n = 0
+    const d = gsap.delayedCall(1, function suite() {
+      n = n >= 5 ? 0 : n + 1
+      setPan({ cle, n })
+      d.restart(true).duration(n === 5 ? 2.6 : 1.1)
+    })
+    return () => {
+      d.kill()
+    }
+  }, [pret, o.maquette, cle])
+
+  // Rotation automatique tant que personne n'a interagi.
+  useEffect(() => {
+    if (interagi || !pret) return
+    const d = gsap.delayedCall(o.maquette === 'boutique' ? 9 : 6, () => setActif((a) => (a + 1) % OFFRES_SCENE.length))
+    return () => {
+      d.kill()
+    }
+  }, [actif, interagi, pret, o.maquette])
 
   const choisir = (k: number) => {
     setInteragi(true)
@@ -82,9 +97,6 @@ export default function Offre() {
       tabs.current[k]?.focus()
     }
   }
-
-  const o = OFFRES_SCENE[actif]!
-  const offre = offreDe(o.id)
 
   return (
     <section ref={section} className="su-off" data-moment="02" data-nuit="0" data-titre="L’offre" id="offre" aria-labelledby="su-off-titre">
@@ -122,10 +134,8 @@ export default function Offre() {
             )
           })}
         </div>
-        <div className="su-off__scene">
-          <StackFrame className="su-off__cadre">
-            <Maquette key={o.id} offre={o} />
-          </StackFrame>
+        <div className="su-off__scene" aria-hidden="true">
+          <Morph emplacements={visible ? EMPLACEMENTS[o.maquette] : EMPLACEMENT_VIDE} pret={pret} url={URLS[o.maquette]} ctx={{ panier, uid: 'off' }} className="su-off__fenetre" />
         </div>
         <div className="su-off__panneau" id="su-off-panneau" role="tabpanel" aria-labelledby={`su-off-tab-${o.id}`}>
           <p className="su-off__prix">

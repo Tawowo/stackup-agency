@@ -8,7 +8,7 @@ export interface OffreScene {
   pose: { x: number; y: number }
   projection: number
   fiche: LigneFiche[]
-  /** Maquette HTML : blocs assemblés par découpe (proportions dans la boîte). */
+  /** Maquette HTML : dalles qui se métamorphosent en une vraie interface. */
   maquette: 'page' | 'multi' | 'boutique' | 'logiciel'
 }
 
