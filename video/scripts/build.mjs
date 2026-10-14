@@ -113,7 +113,7 @@ function entree({ format, montage, decalage = 0, duree = null, echelle = 1, id }
     <script>window.FILM = ${JSON.stringify(film)};</script>
   </head>
   <body>
-    <div id="root" data-composition-id="${id}" data-start="0" data-width="${L}" data-height="${H}" data-duration="${D}" data-fps="60" style="--u:${(H / 1080).toFixed(5)}px; --uw:${(L / 1920).toFixed(5)}px;">
+    <div id="root" data-composition-id="${id}" data-start="0" data-width="${L}" data-height="${H}" data-duration="${D}" data-fps="60" style="--u:${(Math.min(L, H) / 1080).toFixed(5)}px; --uw:${(L / 1920).toFixed(5)}px;">
       <div id="ciel"></div>
       <div id="code"></div>
       <canvas id="scene" width="${L}" height="${H}"></canvas>

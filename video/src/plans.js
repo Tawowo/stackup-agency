@@ -23,7 +23,7 @@ export function construire(X) {
   const P = F.portrait;
   const SQ = F.carre;
   const L = F.L, H = F.H;
-  const u = H / 1080; // unité typographique
+  const u = Math.min(L, H) / 1080; // unité typographique (petit côté du cadre)
 
   // ── Tailles d'écran selon le format ────────────────────────────────────
   const SP = P ? { w: 2.4, h: 4.0, cw: 960, ch: 1600, cols: 10, rows: 16 } : { w: 4.0, h: 2.5, cw: 1600, ch: 1000, cols: 16, rows: 10 };
@@ -64,7 +64,7 @@ export function construire(X) {
 
   // ── Zones de texte selon le format ─────────────────────────────────────
   const Z = {
-    bas: P ? { x: 0.5 * L, y: 0.07 * H, w: 0.9 * L, h: 0.2 * H, ancre: "centre" } : { x: 0.5 * L, y: 0.655 * H, w: 0.92 * L, h: 0.21 * H, ancre: "centre" },
+    bas: P || SQ ? { x: 0.5 * L, y: (SQ ? 0.05 : 0.07) * H, w: 0.9 * L, h: (SQ ? 0.17 : 0.2) * H, ancre: "centre" } : { x: 0.5 * L, y: 0.655 * H, w: 0.92 * L, h: 0.21 * H, ancre: "centre" },
     cote: P ? { x: 0.5 * L, y: 0.06 * H, w: 0.9 * L, h: 0.22 * H, ancre: "centre" } : SQ ? { x: 0.5 * L, y: 0.05 * H, w: 0.9 * L, h: 0.25 * H, ancre: "centre" } : { x: 0.05 * L, y: 0.18 * H, w: 0.37 * L, h: 0.64 * H, ancre: "gauche" },
     centre: P ? { x: 0.5 * L, y: 0.1 * H, w: 0.92 * L, h: 0.36 * H, ancre: "centre" } : { x: 0.5 * L, y: 0.2 * H, w: 0.92 * L, h: 0.56 * H, ancre: "centre" },
   };
@@ -296,7 +296,7 @@ export function construire(X) {
     return {
       cible,
       boite: P ? [SP.w * 1.25, SP.h * 1.3] : [SP.w * 1.6, SP.h * 1.75],
-      decalage: P ? [0, -0.06] : SQ ? [0, -0.08] : [0, 0.12],
+      decalage: P ? [0, -0.06] : SQ ? [0, -0.1] : [0, 0.12],
       marge: lerp(1, 0.55, asp),
       lacet: derive(t, 3) * 0.04 + (P ? 0 : 0.05),
       tangage: derive(t, 4) * 0.03 + 0.03,
@@ -365,7 +365,7 @@ export function construire(X) {
   function camera3(t) {
     const k = k3;
     const LR = LARGEUR_RUBAN;
-    const base = { cible: [0, 0.05, 0], boite: [LR * 2.1, 5.6], fov: 34, decalage: P ? [0, -0.07] : SQ ? [0, 0.06] : [0, 0.07] };
+    const base = { cible: [0, 0.05, 0], boite: [LR * 2.1, 5.6], fov: 34, decalage: P ? [0, -0.07] : SQ ? [0, -0.09] : [0, 0.07] };
     if (t < k.assemblage) {
       const s = prog(t, k.debut, k.assemblage);
       return { ...base, boite: [LR * 2.6, lerp(7.4, 6.0, s)], lacet: -0.12 * s + derive(t, 5) * 0.02, tangage: 0.05, roulis: 0.03 * (1 - s) };
@@ -485,8 +485,8 @@ export function construire(X) {
       const tt = prog(t, k.debut, k.tableau ?? k.fin);
       return {
         cible: [0, 0.1, 0],
-        boite: P ? [SP.w * 1.14, SP.h * 1.2] : SQ ? [SP.w * 1.15, SP.h * 1.85] : [SP.w * 1.75, SP.h * 1.75],
-        decalage: P ? [0, -0.11] : SQ ? [0, -0.13] : [0.215, 0],
+        boite: P ? [SP.w * 1.4, SP.h * 1.5] : SQ ? [SP.w * 1.15, SP.h * 1.85] : [SP.w * 1.75, SP.h * 1.75],
+        decalage: P ? [0, -0.135] : SQ ? [0, -0.13] : [0.215, 0],
         marge: lerp(1.5, 1.0, ent) - 0.06 * tt,
         lacet: (P ? 0.1 : 0.2) - 0.16 * tt + derive(t, 10) * 0.03,
         tangage: 0.06 + derive(t, 11) * 0.02,
@@ -499,8 +499,8 @@ export function construire(X) {
     const st = slots.tel;
     return {
       cible: [lerp(0, st[0] * plonge, s), lerp(0.1, st[1] * plonge, s), lerp(0, st[2] * plonge, s)],
-      boite: P ? [lerp(SP.w * 1.14, 5.0, s) - 0.5 * pousse, lerp(SP.h * 1.2, 9.2, s) - 0.9 * pousse] : [lerp(SP.w * 1.75, 15.2, s) - 1.4 * pousse, lerp(SP.h * 1.75, 5.4, s) - 0.6 * pousse],
-      decalage: [lerp(P ? 0 : 0.215, 0, s), lerp(P ? -0.11 : 0, P ? -0.02 : 0.02, s)],
+      boite: P ? [lerp(SP.w * 1.4, 5.0, s) - 0.5 * pousse, lerp(SP.h * 1.5, 9.2, s) - 0.9 * pousse] : [lerp(SP.w * 1.75, 15.2, s) - 1.4 * pousse, lerp(SP.h * 1.75, 5.4, s) - 0.6 * pousse],
+      decalage: [lerp(P ? 0 : 0.215, 0, s), lerp(P ? -0.135 : 0, P ? -0.02 : 0.02, s)],
       marge: lerp(1, 0.06, plonge),
       lacet: lerp(0.06, -0.1, s) - 0.16 * pousse + derive(t, 10) * 0.03,
       tangage: lerp(0.06, 0.13, s) - 0.04 * pousse,
@@ -572,7 +572,7 @@ export function construire(X) {
     g5.visible = t < k.ia + 0.4;
     const rx = lerp(-1.02, -0.12, seg(t, k.recompression, k.demo + 0.3, E.inout3));
     const sortieDemo = seg(t, k.cle - 0.1, k.cle + 0.5, E.inout3);
-    g5.position.set(P ? 0 : lerp(0, 5.5, sortieDemo), P ? lerp(0, 3.2, sortieDemo) : lerp(0, 1.2, sortieDemo), lerp(0, -7, sortieDemo));
+    g5.position.set(P ? 0 : lerp(0, 5.5, sortieDemo), P ? lerp(0, -3.6, sortieDemo) : lerp(0, 1.2, sortieDemo), lerp(0, -7, sortieDemo));
     g5.rotation.set(rx, (P ? 0 : 0.35) + derive(t, 13) * 0.04 + lerp(0, 0.5, sortieDemo), P ? 0 : 0.0);
     g5.scale.setScalar(lerp(1, 0.45, sortieDemo));
     const ecart = piste([[k.debut, 0.02], [k.eclate + 0.5, P ? 0.75 : 0.62, E.pose], [k.recompression, P ? 0.82 : 0.68, E.lin], [k.recompression + 0.35, 0.0, E.in3]])(t);
@@ -601,9 +601,9 @@ export function construire(X) {
     cle.visible = t > k.cle - 0.05 && t < k.ia + 0.5;
     if (cle.visible) {
       const out = seg(t, k.ia - 0.15, k.ia + 0.35, E.in3);
-      cle.position.set(P ? 0.25 : 2.35, (P ? -0.6 : 0.1) + out * 3, out * 6);
+      cle.position.set(P ? -0.15 : 2.35, (P ? -0.6 : 0.1) + out * 3, out * 6);
       cle.rotation.set(0.25, -0.5 + (t - k.cle) * 0.7, 0.1);
-      cle.scale.setScalar(P ? 1.0 : 1.1);
+      cle.scale.setScalar(P ? 0.82 : 1.1);
       morceauxCle.forEach((m) => {
         const v = m.userData;
         const a = E.pose(clamp((t - k.cle - v.r1 * 0.25) / 0.45));
@@ -633,13 +633,13 @@ export function construire(X) {
     const s1 = seg(t, k.cle - 0.25, k.cle + 0.25, E.inout3), s2 = seg(t, k.ia - 0.25, k.ia + 0.25, E.inout3);
     const c = [0, 1, 2].map((d) => lerp(lerp(cibles[0][d], cibles[1][d], s1), cibles[2][d], s2));
     void phase;
-    const boites = P ? [[SP.w * 1.35, SP.h * 1.9], [3.4, 4.8], [SP.w * 1.12, SP.h * 1.18]] : [[SP.w * 2.4, SP.h * 2.9], [5.4, 3.6], [SP.w * 1.62, SP.h * 1.62]];
+    const boites = P ? [[SP.w * 1.45, SP.h * 2.0], [3.4, 5.6], [SP.w * 1.4, SP.h * 1.5]] : [[SP.w * 2.4, SP.h * 2.9], [5.4, 3.6], [SP.w * 1.62, SP.h * 1.62]];
     const b = [0, 1].map((d) => lerp(lerp(boites[0][d], boites[1][d], s1), boites[2][d], s2));
     const titreLa = seg(t, k.demo - 0.5, k.demo, E.inout3);
     return {
       cible: [c[0], c[1] + 0.95 * (1 - titreLa), c[2]],
       boite: b,
-      decalage: P ? [0, lerp(-0.02, -0.1, titreLa)] : SQ ? [0, lerp(-0.02, -0.12, titreLa)] : [lerp(0, 0.215, titreLa), 0],
+      decalage: P ? [0, lerp(-0.04, -0.135, titreLa)] : SQ ? [0, lerp(-0.02, -0.12, titreLa)] : [lerp(0, 0.215, titreLa), 0],
       marge: lerp(0.4, 1, em),
       lacet: (P ? 0.06 : 0.12) + derive(t, 15) * 0.05 + 0.05 * Math.sin(t * 0.6),
       tangage: 0.1 + derive(t, 16) * 0.03,
@@ -676,7 +676,7 @@ export function construire(X) {
     dom.typo.appendChild(s);
     const largeurS = (deuxLignes ? 18 : texteS.length) * px * 0.6;
     s.style.left = `${z.ancre === "centre" ? z.x - largeurS / 2 : z.x}px`;
-    s.style.top = `${z.ancre === "centre" ? z.y + z.h + 16 * u : z.y + z.h * 0.82}px`;
+    s.style.top = `${z.ancre === "centre" ? parseFloat(T6b.el.style.top) + T6b.hauteur + 18 * u : z.y + z.h * 0.82}px`;
     s.style.clipPath = "inset(0% 100% 0% 0%)";
     tl.fromTo(s, { clipPath: "inset(0% 100% 0% 0%)" }, { clipPath: "inset(0% 0% 0% 0%)", duration: 0.45, ease: "power3.out" }, k6.fige);
     tl.to(s, { yPercent: 120, clipPath: "inset(0% 0% 100% 0%)", duration: 0.25, ease: "power3.in" }, k6.fin - 0.35);
@@ -703,8 +703,8 @@ export function construire(X) {
     const pousse = seg(t, k.cadran - 0.2, k.fige + 0.3, E.inout2);
     return {
       cible: [0, P ? -0.25 : 0.1, 0],
-      boite: P ? [SP.w * 1.12, SP.h * 1.18] : SQ ? [SP.w * 1.12, SP.h * 1.8] : [SP.w * 1.62, SP.h * 1.62],
-      decalage: P ? [0, -0.11] : SQ ? [0, -0.13] : [0.215, 0],
+      boite: P ? [SP.w * 1.4, SP.h * 1.5] : SQ ? [SP.w * 1.3, SP.h * 2.15] : [SP.w * 1.62, SP.h * 1.62],
+      decalage: P ? [0, -0.135] : SQ ? [0, -0.13] : [0.215, 0],
       marge: lerp(1.08, 0.94, pousse) - 0.04 * prog(t, k.debut, k.fin),
       lacet: (P ? 0.08 : 0.16) - 0.08 * prog(t, k.debut, k.fin) + derive(t, 18) * 0.03,
       tangage: 0.06 + derive(t, 19) * 0.02,

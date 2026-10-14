@@ -109,9 +109,9 @@ async function demarrer() {
   // Sous-titres incrustés (variable de composition `sousTitres`).
   const vars = window.__hyperframes?.getVariables?.() ?? {};
   if (vars.sousTitres) {
-    const u = H / 1080;
+    const u = Math.min(L, H) / 1080;
     sousTitres(dom.soustitres, tl, montage.sousTitres, F.portrait
-      ? { bas: 0.205 * H, px: 50 * u, largeurMax: 0.88 * L }
+      ? { bas: 0.17 * H, px: 58 * u, largeurMax: 0.9 * L }
       : F.carre
         ? { bas: 0.045 * H, px: 42 * u, largeurMax: 0.86 * L }
         : { bas: 0.05 * H, px: 42 * u, largeurMax: 0.72 * L });
