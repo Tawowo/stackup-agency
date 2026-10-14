@@ -14,10 +14,14 @@ declare -A CALQUE=( [16x9]=formats/soustitres-16x9 [9x16]=formats/soustitres-ver
 MINIATURE=1.55
 for f in ${@:-16x9 9x16 1x1 9x16-20s}; do
   sortie=livrables/stackup-pub-$f.mp4
-  echo "── $f : rendu du film"
-  npx hyperframes render "${PROJET[$f]}" --fps 60 --crf 18 --output "$sortie"
+  if [ -n "${REPRENDRE:-}" ] && [ -s "$sortie" ]; then
+    echo "── $f : film déjà rendu (REPRENDRE), on le garde"
+  else
+    echo "── $f : rendu du film"
+    npx hyperframes render "${PROJET[$f]}" --fps 60 --crf 18 --output "$sortie"
+  fi
   echo "── $f : calque de sous-titres (HyperFrames, fond transparent)"
-  npx hyperframes render "${CALQUE[$f]}" --fps 60 --format mov --output "livrables/.calque-$f.mov"
+  npx hyperframes render "${CALQUE[$f]}" --fps 60 --format mov --workers 2 --protocol-timeout 900000 --output "livrables/.calque-$f.mov"
   echo "── $f : incrustation des sous-titres"
   ffmpeg -loglevel error -y -i "$sortie" -i "livrables/.calque-$f.mov" \
     -filter_complex "[0:v][1:v]overlay=0:0:format=auto,format=yuv420p[v]" -map "[v]" -map 0:a \

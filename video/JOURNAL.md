@@ -8,6 +8,7 @@
 - `stackup-pub-1x1.mp4` : 1080×1080, 45 s
 - `stackup-pub-9x16-20s.mp4` : 1080×1920, 19,5 s (plans 1, 3, 4 resserré, 7)
 - les mêmes en `-soustitres.mp4`, plus `thumbnail-<format>.png` pour chaque format
+- Vérifiés au ffprobe : résolutions et durées exactes, 60/1 i/s, audio AAC stéréo 48 kHz, −13 LUFS intégrés et crête à −1,2 dBFS. Une planche-contact finale par format a été relue.
 
 **Provisoire** : la voix (Piper `fr_FR-tom-medium`, locale) et la musique (lit de synthèse à 120 BPM, `audio/musique.mp3`). Les bruitages sont définitifs, mais remplaçables.
 
@@ -60,3 +61,18 @@ ELEVENLABS_API_KEY=… ELEVENLABS_VOICE_ID=<voix FR masculine> python3 scripts/v
 - Sous-titres : rendus par HyperFrames en calque transparent (ProRes 4444), puis incrustés par ffmpeg sur le film propre. Toutes les images restent produites par HyperFrames ; on évite seulement de rendre deux fois la 3D (environ 37 min par version de 45 s).
 - Miniatures : l'image de l'accroche (1,55 s, « IL VOUS RAPPORTE QUOI ? » sur l'éclatement), une par format.
 - Prévisualisation Studio ouverte (`npx hyperframes preview --background`) avant les rendus de livraison, comme le prévoit le workflow.
+- Rendus finaux : 16:9 en 37 min, 9:16 en 44 min, 1:1 en 26 min, 20 s en 18 min (WebGL logiciel, 4 cœurs). Calques de sous-titres en 4 à 7 min chacun.
+- Calque de sous-titres 9:16 tombé une fois en dépassement de délai Chrome (ProRes 1080×1920). Relancé avec `--workers 2 --protocol-timeout 900000`, et `REPRENDRE=1` évite de rendre à nouveau un film déjà fait.
+- Critères d'acceptation vérifiés sur les planches finales :
+  - accroche lisible à 1,25 s ;
+  - les 7 plans sont présents et dans l'ordre, sans aucun plan fixe hors logo final (1,5 s, 43,5–45) ;
+  - URL et logo exacts à la fin ;
+  - sous-titres synchronisés sur la voix réelle ;
+  - musique à −18 dB sous la voix ;
+  - aucune promesse interdite ;
+  - le 9:16 est une vraie composition verticale.
+- Limites connues :
+  - en 9:16, le bas de quelques écrans 3D (démo, IA, estimateur) descend dans les 15 % du bas ; les textes, sous-titres, URL, logo et appel restent tous au-dessus ;
+  - le curseur de l'URL reste en fin de champ pendant la frappe ;
+  - les montants affichés dans la boutique et le tableau de bord sont des valeurs de démonstration ;
+  - le mixage est vérifié par la mesure (niveaux, LUFS), pas à l'oreille.
