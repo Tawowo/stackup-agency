@@ -1,0 +1,295 @@
+{
+ "total": 19.5,
+ "plans": {
+  "1": {
+   "debut": 0,
+   "fin": 3.5
+  },
+  "3": {
+   "debut": 3.5,
+   "fin": 7.5
+  },
+  "4": {
+   "debut": 7.5,
+   "fin": 13.5
+  },
+  "7": {
+   "debut": 13.5,
+   "fin": 19.5
+  }
+ },
+ "sons": [
+  {
+   "t": 0.1,
+   "type": "souffle"
+  },
+  {
+   "t": 1,
+   "type": "impact"
+  },
+  {
+   "t": 1,
+   "type": "verre"
+  },
+  {
+   "t": 3.05,
+   "type": "whoosh"
+  },
+  {
+   "t": 3.5,
+   "type": "montee",
+   "duree": 0.75
+  },
+  {
+   "t": 3.75,
+   "type": "clac"
+  },
+  {
+   "t": 4,
+   "type": "clac"
+  },
+  {
+   "t": 4.25,
+   "type": "impact"
+  },
+  {
+   "t": 4.5,
+   "type": "tick",
+   "gain": 0.5
+  },
+  {
+   "t": 4.604,
+   "type": "tick",
+   "gain": 0.5
+  },
+  {
+   "t": 4.708,
+   "type": "tick",
+   "gain": 0.5
+  },
+  {
+   "t": 4.813,
+   "type": "tick",
+   "gain": 0.5
+  },
+  {
+   "t": 4.917,
+   "type": "tick",
+   "gain": 0.5
+  },
+  {
+   "t": 5.021,
+   "type": "tick",
+   "gain": 0.5
+  },
+  {
+   "t": 5.125,
+   "type": "tick",
+   "gain": 0.5
+  },
+  {
+   "t": 5.229,
+   "type": "tick",
+   "gain": 0.5
+  },
+  {
+   "t": 5.333,
+   "type": "tick",
+   "gain": 0.5
+  },
+  {
+   "t": 5.438,
+   "type": "tick",
+   "gain": 0.5
+  },
+  {
+   "t": 5.542,
+   "type": "tick",
+   "gain": 0.5
+  },
+  {
+   "t": 5.646,
+   "type": "tick",
+   "gain": 0.5
+  },
+  {
+   "t": 4.75,
+   "type": "clac"
+  },
+  {
+   "t": 6.25,
+   "type": "souffle"
+  },
+  {
+   "t": 7.5,
+   "type": "whoosh"
+  },
+  {
+   "t": 9.5,
+   "type": "pliage"
+  },
+  {
+   "t": 9.95,
+   "type": "tic"
+  },
+  {
+   "t": 10.2,
+   "type": "tic"
+  },
+  {
+   "t": 10.45,
+   "type": "tic"
+  },
+  {
+   "t": 10.75,
+   "type": "pliage"
+  },
+  {
+   "t": 11.25,
+   "type": "tick",
+   "gain": 0.45
+  },
+  {
+   "t": 11.375,
+   "type": "tick",
+   "gain": 0.45
+  },
+  {
+   "t": 11.5,
+   "type": "tick",
+   "gain": 0.45
+  },
+  {
+   "t": 11.625,
+   "type": "tick",
+   "gain": 0.45
+  },
+  {
+   "t": 11.75,
+   "type": "tick",
+   "gain": 0.45
+  },
+  {
+   "t": 11.875,
+   "type": "tick",
+   "gain": 0.45
+  },
+  {
+   "t": 12,
+   "type": "tick",
+   "gain": 0.45
+  },
+  {
+   "t": 12.125,
+   "type": "tick",
+   "gain": 0.45
+  },
+  {
+   "t": 13.5,
+   "type": "aspiration",
+   "duree": 1
+  },
+  {
+   "t": 14.5,
+   "type": "impact"
+  },
+  {
+   "t": 14.583,
+   "type": "tic",
+   "gain": 0.35
+  },
+  {
+   "t": 14.684,
+   "type": "tic",
+   "gain": 0.35
+  },
+  {
+   "t": 14.785,
+   "type": "tic",
+   "gain": 0.35
+  },
+  {
+   "t": 14.885,
+   "type": "tic",
+   "gain": 0.35
+  },
+  {
+   "t": 14.986,
+   "type": "tic",
+   "gain": 0.35
+  },
+  {
+   "t": 15.087,
+   "type": "tic",
+   "gain": 0.35
+  },
+  {
+   "t": 15.188,
+   "type": "tic",
+   "gain": 0.35
+  },
+  {
+   "t": 15.288,
+   "type": "tic",
+   "gain": 0.35
+  },
+  {
+   "t": 15.389,
+   "type": "tic",
+   "gain": 0.35
+  },
+  {
+   "t": 15.49,
+   "type": "tic",
+   "gain": 0.35
+  },
+  {
+   "t": 15.591,
+   "type": "tic",
+   "gain": 0.35
+  },
+  {
+   "t": 15.691,
+   "type": "tic",
+   "gain": 0.35
+  },
+  {
+   "t": 15.792,
+   "type": "tic",
+   "gain": 0.35
+  },
+  {
+   "t": 15.893,
+   "type": "tic",
+   "gain": 0.35
+  },
+  {
+   "t": 15.994,
+   "type": "tic",
+   "gain": 0.35
+  },
+  {
+   "t": 16.094,
+   "type": "tic",
+   "gain": 0.35
+  },
+  {
+   "t": 16.195,
+   "type": "tic",
+   "gain": 0.35
+  },
+  {
+   "t": 16.898,
+   "type": "clac"
+  },
+  {
+   "t": 16.5,
+   "type": "montee",
+   "duree": 1.5
+  },
+  {
+   "t": 18,
+   "type": "impactFinal"
+  }
+ ]
+}

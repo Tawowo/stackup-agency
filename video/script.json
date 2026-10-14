@@ -120,7 +120,279 @@
         "p7a",
         "p7b",
         "p7c"
-      ]
+      ],
+      "vitesse": 1.116,
+      "duree": 45.0,
+      "calage": {
+        "p1": {
+          "debut": 0.25,
+          "fin": 2.53
+        },
+        "p2a": {
+          "debut": 3.25,
+          "fin": 4.631
+        },
+        "p2b": {
+          "debut": 5.0,
+          "fin": 6.304
+        },
+        "p2c": {
+          "debut": 6.5,
+          "fin": 8.285
+        },
+        "p3a": {
+          "debut": 9.25,
+          "fin": 12.443
+        },
+        "p3b": {
+          "debut": 12.75,
+          "fin": 14.058
+        },
+        "p4a": {
+          "debut": 14.75,
+          "fin": 16.197
+        },
+        "p4b": {
+          "debut": 16.5,
+          "fin": 17.473
+        },
+        "p4c": {
+          "debut": 17.75,
+          "fin": 19.674
+        },
+        "p4d": {
+          "debut": 20.0,
+          "fin": 21.972
+        },
+        "p5a": {
+          "debut": 22.75,
+          "fin": 25.024
+        },
+        "p5b": {
+          "debut": 25.25,
+          "fin": 26.397
+        },
+        "p5c": {
+          "debut": 26.75,
+          "fin": 29.828
+        },
+        "p6a": {
+          "debut": 30.75,
+          "fin": 31.655
+        },
+        "p6b": {
+          "debut": 32.0,
+          "fin": 35.013
+        },
+        "p7a": {
+          "debut": 35.75,
+          "fin": 36.944
+        },
+        "p7b": {
+          "debut": 37.25,
+          "fin": 38.928
+        },
+        "p7c": {
+          "debut": 39.25,
+          "fin": 43.533
+        }
+      },
+      "plans": [
+        {
+          "plan": 1,
+          "debut": 0.0,
+          "fin": 3.0
+        },
+        {
+          "plan": 2,
+          "debut": 3.0,
+          "fin": 9.0
+        },
+        {
+          "plan": 3,
+          "debut": 9.0,
+          "fin": 14.5
+        },
+        {
+          "plan": 4,
+          "debut": 14.5,
+          "fin": 22.5
+        },
+        {
+          "plan": 5,
+          "debut": 22.5,
+          "fin": 30.5
+        },
+        {
+          "plan": 6,
+          "debut": 30.5,
+          "fin": 35.5
+        },
+        {
+          "plan": 7,
+          "debut": 35.5,
+          "fin": 45.0
+        }
+      ],
+      "sousTitres": [
+        {
+          "texte": "Votre site…",
+          "debut": 0.25,
+          "fin": 0.82,
+          "phrase": "p1"
+        },
+        {
+          "texte": "il vous rapporte quoi, vraiment ?",
+          "debut": 0.82,
+          "fin": 2.53,
+          "phrase": "p1"
+        },
+        {
+          "texte": "Introuvable sur Google.",
+          "debut": 3.25,
+          "fin": 4.631,
+          "phrase": "p2a"
+        },
+        {
+          "texte": "Oublié en deux secondes.",
+          "debut": 5.0,
+          "fin": 6.304,
+          "phrase": "p2b"
+        },
+        {
+          "texte": "Et rien pour vous faire gagner du temps.",
+          "debut": 6.5,
+          "fin": 8.285,
+          "phrase": "p2c"
+        },
+        {
+          "texte": "Chez Stackup,",
+          "debut": 9.25,
+          "fin": 9.954,
+          "phrase": "p3a"
+        },
+        {
+          "texte": "on fabrique des sites et",
+          "debut": 9.954,
+          "fin": 11.252,
+          "phrase": "p3a"
+        },
+        {
+          "texte": "des outils sur mesure.",
+          "debut": 11.252,
+          "fin": 12.443,
+          "phrase": "p3a"
+        },
+        {
+          "texte": "Couche après couche.",
+          "debut": 12.75,
+          "fin": 14.058,
+          "phrase": "p3b"
+        },
+        {
+          "texte": "Un site qui se démarque.",
+          "debut": 14.75,
+          "fin": 16.197,
+          "phrase": "p4a"
+        },
+        {
+          "texte": "Une boutique qui vend.",
+          "debut": 16.5,
+          "fin": 17.473,
+          "phrase": "p4b"
+        },
+        {
+          "texte": "Un outil qui vous fait gagner des heures.",
+          "debut": 17.75,
+          "fin": 19.674,
+          "phrase": "p4c"
+        },
+        {
+          "texte": "Sur ordinateur comme sur téléphone.",
+          "debut": 20.0,
+          "fin": 21.972,
+          "phrase": "p4d"
+        },
+        {
+          "texte": "Vous voyez votre démo",
+          "debut": 22.75,
+          "fin": 23.861,
+          "phrase": "p5a"
+        },
+        {
+          "texte": "avant de vous engager.",
+          "debut": 23.861,
+          "fin": 25.024,
+          "phrase": "p5a"
+        },
+        {
+          "texte": "Le site vous appartient.",
+          "debut": 25.25,
+          "fin": 26.397,
+          "phrase": "p5b"
+        },
+        {
+          "texte": "Et on le prépare pour",
+          "debut": 26.75,
+          "fin": 27.864,
+          "phrase": "p5c"
+        },
+        {
+          "texte": "être trouvé sur Google…",
+          "debut": 27.864,
+          "fin": 29.085,
+          "phrase": "p5c"
+        },
+        {
+          "texte": "et par les IA.",
+          "debut": 29.085,
+          "fin": 29.828,
+          "phrase": "p5c"
+        },
+        {
+          "texte": "Combien ça coûte ?",
+          "debut": 30.75,
+          "fin": 31.655,
+          "phrase": "p6a"
+        },
+        {
+          "texte": "Estimez votre projet en deux minutes,",
+          "debut": 32.0,
+          "fin": 34.144,
+          "phrase": "p6b"
+        },
+        {
+          "texte": "sur notre site.",
+          "debut": 34.144,
+          "fin": 35.013,
+          "phrase": "p6b"
+        },
+        {
+          "texte": "Stackup Agency.",
+          "debut": 35.75,
+          "fin": 36.944,
+          "phrase": "p7a"
+        },
+        {
+          "texte": "Sites et outils sur mesure.",
+          "debut": 37.25,
+          "fin": 38.928,
+          "phrase": "p7b"
+        },
+        {
+          "texte": "Rendez-vous sur stackup-agency.fr :",
+          "debut": 39.25,
+          "fin": 41.629,
+          "phrase": "p7c"
+        },
+        {
+          "texte": "le premier appel est offert.",
+          "debut": 41.629,
+          "fin": 43.533,
+          "phrase": "p7c"
+        }
+      ],
+      "moteur": "piper fr_FR-tom-medium (local, provisoire)"
     },
     "court20": {
       "cible": 20,
@@ -131,7 +403,120 @@
         "p4b",
         "p4c",
         "p7c"
-      ]
+      ],
+      "vitesse": 1.0,
+      "duree": 19.5,
+      "calage": {
+        "p1": {
+          "debut": 0.25,
+          "fin": 2.783
+        },
+        "p3a": {
+          "debut": 3.75,
+          "fin": 7.164
+        },
+        "p4a": {
+          "debut": 7.75,
+          "fin": 9.357
+        },
+        "p4b": {
+          "debut": 9.75,
+          "fin": 10.75
+        },
+        "p4c": {
+          "debut": 11.0,
+          "fin": 13.087
+        },
+        "p7c": {
+          "debut": 13.75,
+          "fin": 18.379
+        }
+      },
+      "plans": [
+        {
+          "plan": 1,
+          "debut": 0.0,
+          "fin": 3.5
+        },
+        {
+          "plan": 3,
+          "debut": 3.5,
+          "fin": 7.5
+        },
+        {
+          "plan": 4,
+          "debut": 7.5,
+          "fin": 13.5
+        },
+        {
+          "plan": 7,
+          "debut": 13.5,
+          "fin": 19.5
+        }
+      ],
+      "sousTitres": [
+        {
+          "texte": "Votre site…",
+          "debut": 0.25,
+          "fin": 0.883,
+          "phrase": "p1"
+        },
+        {
+          "texte": "il vous rapporte quoi, vraiment ?",
+          "debut": 0.883,
+          "fin": 2.783,
+          "phrase": "p1"
+        },
+        {
+          "texte": "Chez Stackup,",
+          "debut": 3.75,
+          "fin": 4.502,
+          "phrase": "p3a"
+        },
+        {
+          "texte": "on fabrique des sites et",
+          "debut": 4.502,
+          "fin": 5.891,
+          "phrase": "p3a"
+        },
+        {
+          "texte": "des outils sur mesure.",
+          "debut": 5.891,
+          "fin": 7.164,
+          "phrase": "p3a"
+        },
+        {
+          "texte": "Un site qui se démarque.",
+          "debut": 7.75,
+          "fin": 9.357,
+          "phrase": "p4a"
+        },
+        {
+          "texte": "Une boutique qui vend.",
+          "debut": 9.75,
+          "fin": 10.75,
+          "phrase": "p4b"
+        },
+        {
+          "texte": "Un outil qui vous fait gagner des heures.",
+          "debut": 11.0,
+          "fin": 13.087,
+          "phrase": "p4c"
+        },
+        {
+          "texte": "Rendez-vous sur stackup-agency.fr :",
+          "debut": 13.75,
+          "fin": 16.322,
+          "phrase": "p7c"
+        },
+        {
+          "texte": "le premier appel est offert.",
+          "debut": 16.322,
+          "fin": 18.379,
+          "phrase": "p7c"
+        }
+      ],
+      "moteur": "piper fr_FR-tom-medium (local, provisoire)"
     }
   }
 }

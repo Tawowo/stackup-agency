@@ -13,3 +13,11 @@
 - Voix : aucune clé TTS dans l'environnement. Voix provisoire locale Piper `fr_FR-tom-medium` (homme, 44,1 kHz), lancée via sherpa-onnx. Le modèle vient des releases GitHub de sherpa-onnx (HuggingFace est bloqué). Écartées : `gilles-low` (16 kHz, phonèmes nasaux perdus) et `upmc` (22 kHz).
 - Prix : `config.json` met `prixVitrine` à 500 comme le demande le brief. ATTENTION, le site affiche « à partir de 449 € » : il faut mettre 449 dans `config.json` pour aligner la vidéo sur le site.
 - Estimateur (plan 6) : comme sur le site, le cadran se fige sur « à partir de {prixVitrine} € » et jamais sur un prix ferme (règle du `Configurateur.tsx`). Aucune fourchette inventée.
+- Voix calée par `scripts/voix.py` : synthèse phrase par phrase et silences rognés. Coupes de plan sur le temps (0,5 s), phrases sur le demi-temps, voix lancée un demi-temps après chaque coupe. La vitesse est ajustée automatiquement pour tenir la cible : 45,0 s (vitesse 1,116) et 19,5 s pour le montage 20 s.
+- Plans obtenus (montage complet) : P1 0–3, P2 3–9, P3 9–14,5, P4 14,5–22,5, P5 22,5–30,5, P6 30,5–35,5, P7 35,5–45 (dont le logo fixe 43,5–45).
+- Montage 20 s : p1, p3a, p4a, p4b, p4c, p7c. On retire « Couche après couche » et « Sur ordinateur… » pour tenir 19,5 s.
+- Prononciation : l'URL est dite « Stackup Agency point f r », « IA » est dit « i a » (champ `tts` de `script.json`). Les phonèmes espeak de « Stackup Agency » sont corrects (anglais).
+- Chorégraphie (`src/choregraphie.js`) : chaque événement visuel et chaque bruitage est calé sur une phrase ou une coupe. Le même module sert au film et au design sonore.
+- Musique : lit de travail synthétisé en numpy (Ré mineur, nappe filtrée, grosse caisse, basse en croches, charleston et arpège à partir du plan 4), puis normalisé et encodé en mp3 par ffmpeg. Choix de numpy plutôt que des expressions `aevalsrc` de ffmpeg, pour un rendu plus musical à contraintes égales (synthèse pure, aucune œuvre protégée).
+- Bruitages synthétisés (impact, verre, whoosh, clac, rature, clic, tick du cadran, tic du panier, pliage, ding, montée, aspiration, impact final), placés depuis `audio/cues-<montage>.json`.
+- Mixage dans HyperFrames : voix à 0 dB, musique à −18 dB (`data-volume` 0,126), sons à −10 dB (0,316). La musique s'éteint sur le logo par une automation de volume. Mix intégré mesuré : −17,2 LUFS.
