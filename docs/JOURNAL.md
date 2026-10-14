@@ -1,5 +1,24 @@
 # Journal du chantier — Stackup Agency V5
 
+## Rapport de la mission « montrer la vraie chose » (2026-10-14) — à lire en premier
+
+**Prévisualisation Vercel** : https://stackup-agency-gmgoikl9v-tawowo-s-projects.vercel.app (commit 4e4835a, branche `claude/new-session-26nojr`).
+`npm run verify` vert · 432 routes du sitemap ouvertes : 0 défaut · axe WCAG 2.1 AA : 0 violation · sans JS : contenu intégral.
+
+**Règle appliquée.** Chaque animation montre la vraie chose ; les plaques ne sont plus que matière (hero, fond) et transition.
+1. **Hero** : le S est un objet rigide (plus de respiration ni de dérive) ; ruban refait à l'exact, plis vérifiés à DPR 3 (`scripts/logo-zoom.mjs`, 1,75 % / 0,36 %).
+2. **Cinq couches** : vue éclatée de vrais calques (maquette, textes+photo, code, tableau de clients, serveur+adresse) qui fusionnent en un site fini ; clic = présentation de face.
+3. **Ce qu'on fabrique** : page d'artisan, trois pages en éventail, boutique au panier qui se remplit, tableau de bord ; métamorphose des mêmes dalles.
+4. **Réalisations** : vrai portable en alu + téléphone en 3D, capture qui défile, lumière sur le métal ; fiche avec portable HTML.
+5. **Modules** : fenêtre d'application + douze cartes ; clic = la carte vole, impulsion de données, le module s'intègre.
+6. **Mots de particules supprimés** (jamais nets) ; titres HTML.
+7. **Comment on travaille** : un projet qui évolue (carnet → démo → code → mise en ligne → santé du site).
+8. **Toutes les familles** : menu Ressources ; footer complet partout ; villes/départements/zones = carte en relief ; métiers = outil puis site du métier ; blog = bibliothèque feuilletable ; outils, FAQ (conversation), 404 (fenêtre vide), services locaux (maquette, page de résultats Google).
+
+**Imparfait.** JS initial 251 ko gz sur l'accueil (budget 180 hors GSAP), ~150 ko ailleurs ; Lighthouse non lancé ; perf GPU réelle non mesurée.
+Photo de visage toujours absente (voir plus bas) ; le téléphone de la galerie recadre la capture desktop ; maquettes = entreprises fictives (Aubert, Atelier du bois) ;
+sans JS, les noms de villes de la carte sont masqués (listés plus bas) ; vidéos non régénérées pour cette mission (`node scripts/videos.mjs`).
+
 ## Rapport de la nuit (2026-10-14) — à lire en premier
 
 **Prévisualisation Vercel** : https://stackup-agency-kktwoccwo-tawowo-s-projects.vercel.app (commit 2866bc2, branche
