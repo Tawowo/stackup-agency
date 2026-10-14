@@ -5,8 +5,14 @@
  */
 export const MOTS = ['', 'COUCHES', 'OFFRES', 'DÉMOS', 'PAS QUE', 'MODULES', 'À PARTIR DE', 'MÉTHODE', 'ATELIER', 'À VOUS'] as const
 
-/** Le mot de chaque moment de l'accueil (data-moment → index dans MOTS). */
-export const MOT_DU_MOMENT: Record<string, number> = { '01': 1, '02': 2, '03': 3, '04': 4, '05': 5, '06': 6, '07': 7, '08': 8, '09': 9 }
+/**
+ * Le mot de chaque moment de l'accueil (data-moment → index dans MOTS).
+ * VIDE depuis la mission « montrer la vraie chose » : un mot écrit par un nuage de
+ * particules n'est jamais parfaitement net (la règle : un mot illisible se supprime).
+ * Les titres de chaque moment sont en vraie typographie HTML ; « à partir de » vit
+ * dans les cadrans de prix. Le mécanisme (uMot / uForme) reste branché, inactif.
+ */
+export const MOT_DU_MOMENT: Record<string, number> = {}
 
 /** Échantillonne `n` points dans le texte, rendu sur un canvas : coordonnées dans [-1, 1] × [-r, r]. */
 export function pointsDuMot(mot: string, n: number): Float32Array {

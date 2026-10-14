@@ -139,3 +139,8 @@ JS initial au-dessus du budget sur l'accueil (342 ko gz) et les pages qui import
 - Décision : géométrie du ruban refaite à l'exact (`scripts/logo-trace.mjs`) : une plaque canonique + cisaillement par
   bande (`aShear`), x ∈ [L, R] identique, haut devant milieu devant ambre, arêtes droites milieu/ambre confondues.
   Superposition à DPR 3 (`scripts/logo-zoom.mjs`) : plis nets, écart total 1,75 % en trop / 0,36 % en moins.
+- Décision : les mots de particules (COUCHES, OFFRES…) sont supprimés (jamais parfaitement nets) ; les titres HTML suffisent.
+- Décision : bibliothèque de maquettes HTML/CSS/SVG (`src/components/maquettes/`) = la vraie chose ; les plaques ne font
+  plus que la matière (hero, fond) et la transition (métamorphose de dalles dans « Ce qu'on fabrique »).
+- Décision : « Comment on travaille » : scène en `position: fixed` + découpe (un calque épinglé laissait un fantôme).
+- Décision : réalisations : portable/téléphone en 3D (géométrie extrudée + environnement de pièce généré, sans fichier).
