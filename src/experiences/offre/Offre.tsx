@@ -37,11 +37,16 @@ export default function Offre() {
     initGsap()
     const el = section.current
     if (!el) return
-    const io = new IntersectionObserver(([e]) => setVisible(!!e?.isIntersecting && (e?.intersectionRatio ?? 0) > 0.3), { threshold: [0, 0.3, 0.6] })
+    const io = new IntersectionObserver(
+      ([e]) => {
+        const v = !!e?.isIntersecting && (e?.intersectionRatio ?? 0) > 0.3
+        setVisible(v)
+        // Le moment se prend à l'entrée seulement (jamais au montage : le hero garde la main).
+        if (v) useScene.getState().setMoment('02')
+      },
+      { threshold: [0, 0.3, 0.6] },
+    )
     io.observe(el)
-    const st = useScene.getState()
-    const prise = () => st.setMoment('02')
-    prise()
     return () => io.disconnect()
   }, [])
 

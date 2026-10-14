@@ -106,9 +106,16 @@ export default function Machines() {
     initGsap()
     const el = section.current
     if (!el) return
-    const io = new IntersectionObserver(([e]) => setVisible(!!e?.isIntersecting && (e?.intersectionRatio ?? 0) > 0.35), { threshold: [0, 0.35, 0.7] })
+    const io = new IntersectionObserver(
+      ([e]) => {
+        const v = !!e?.isIntersecting && (e?.intersectionRatio ?? 0) > 0.35
+        setVisible(v)
+        // Le moment se prend à l'entrée seulement (jamais au montage : le hero garde la main).
+        if (v) useScene.getState().setMoment('05')
+      },
+      { threshold: [0, 0.35, 0.7] },
+    )
     io.observe(el)
-    useScene.getState().setMoment('05')
     return () => io.disconnect()
   }, [])
 
