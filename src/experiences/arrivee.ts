@@ -9,7 +9,7 @@
  * interactions de la section (onglets, aiguille) peuvent ensuite la changer.
  */
 import { ScrollTrigger, gsap } from '@/lib/gsap'
-import { stackUniforms } from '@/webgl/engine'
+import { MORPH } from '@/webgl/morph'
 import type { LayoutName, LayoutParams } from '@/webgl/layouts'
 import { useScene, type Pose, type SceneParams } from '@/webgl/store'
 
@@ -34,7 +34,6 @@ export interface Arrivee {
 const lisser = gsap.parseEase('power2.inOut')
 
 export function arriverParScroll(el: HTMLElement, o: Arrivee): () => void {
-  const u = stackUniforms()
   type Phase = 'hors' | 'rampe' | 'commis'
   let phase: Phase = 'hors'
   // La forme d'où l'on vient (la forme finale de la section précédente).
@@ -77,7 +76,7 @@ export function arriverParScroll(el: HTMLElement, o: Arrivee): () => void {
       }
       if (p <= 0) {
         // Rendue à la section précédente : elle reprend la main par ses propres déclencheurs.
-        if (phase === 'rampe' && mienne()) u.uMorph.value = 0
+        if (phase === 'rampe' && mienne()) MORPH.value = 0
         phase = 'hors'
         return
       }
@@ -99,7 +98,7 @@ export function arriverParScroll(el: HTMLElement, o: Arrivee): () => void {
         s.setPair(avant?.layout ?? s.layout, o.layout, { a: avant?.params, b: o.paramsB })
         phase = 'rampe'
       }
-      if (mienne()) u.uMorph.value = lisser(p)
+      if (mienne()) MORPH.value = lisser(p)
     },
   })
   // La section reprend la main quand on y revient (d'en bas) : forme commise, pose, calme.

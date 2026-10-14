@@ -8,7 +8,7 @@
  */
 import { useEffect, useRef } from 'react'
 import StackFrame from '@/webgl/StackFrame'
-import { stackUniforms } from '@/webgl/engine'
+import { MORPH } from '@/webgl/morph'
 import { useScene } from '@/webgl/store'
 import { useDragPile } from '@/webgl/useDragPile'
 import { useExclusion } from '@/webgl/useExclusion'
@@ -33,7 +33,6 @@ export default function Ouverture() {
     const h1 = titre.current
     if (!el || !st || !h1) return
     const s = useScene.getState()
-    const u = stackUniforms()
     const reduit = s.reduced
     const mobile = window.innerWidth < 768
 
@@ -45,7 +44,7 @@ export default function Ouverture() {
     s.setScrub(true)
     s.setParams({ retard: 0.9, flash: 1, epaisseur: 1, arc: 0 })
     s.setPair(reduit ? 'logo' : 'empileDepart', reduit ? null : 'empile')
-    u.uMorph.value = 0
+    MORPH.value = 0
     s.setProjection(1)
     s.setPose({ x: 0, y: 0 })
     s.setActive(true)
@@ -103,7 +102,7 @@ export default function Ouverture() {
             const t = Math.min(1, Math.max(0, (p - a) / (b - a)))
             return t * t * (3 - 2 * t)
           }
-          u.uMorph.value = Math.min(1, p / 0.78)
+          MORPH.value = Math.min(1, p / 0.78)
           el.style.setProperty('--su-p', p.toFixed(4))
           const sc = useScene.getState()
           sc.setProjection(1 - lisse(0, 0.3))
@@ -123,7 +122,7 @@ export default function Ouverture() {
       sc.setProjection(1)
       sc.setPose({ x: 0, y: 0 })
       sc.setParams({ epaisseur: 1, retard: 0.25, flash: 0, arc: 0.6 })
-      u.uMorph.value = 0
+      MORPH.value = 0
     }
   }, [])
 

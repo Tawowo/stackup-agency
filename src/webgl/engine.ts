@@ -3,6 +3,7 @@
  * Un seul objet, créé une fois ; le ticker l'écrit, les shaders le lisent.
  */
 import { Color, Vector2, Vector3, Vector4 } from 'three'
+import { MORPH } from './morph'
 
 export const PLAQUES_PAR_PALIER = { ultra: 1200, high: 800, medium: 450, low: 220 } as const
 
@@ -19,7 +20,7 @@ export function directionLumiere(): Vector3 {
 export function createStackUniforms() {
   return {
     uTime: { value: 0 },
-    uMorph: { value: 0 },
+    uMorph: MORPH,
     uScan: { value: 0 },
     uPointer: { value: new Vector3() },
     uPointerActive: { value: 0 },

@@ -1,9 +1,7 @@
 import { Matrix4, PerspectiveCamera } from 'three'
+import { DISTANCE, PX_PAR_UNITE } from './echelle'
 
-/** 1 unité monde = 100 px CSS au plan z = 0. */
-export const PX_PAR_UNITE = 100
-/** Distance de la caméra perspective au plan de la pile. */
-export const DISTANCE = 6.5
+export { DISTANCE, PX_PAR_UNITE }
 
 /**
  * CAMÉRA MÉLANGÉE — la matrice de projection est l'interpolation, élément par

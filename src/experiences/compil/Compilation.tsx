@@ -8,7 +8,7 @@
  */
 import { useEffect, useRef, useState } from 'react'
 import StackFrame from '@/webgl/StackFrame'
-import { stackUniforms } from '@/webgl/engine'
+import { MORPH } from '@/webgl/morph'
 import { useScene } from '@/webgl/store'
 import type { LayoutName } from '@/webgl/layouts'
 import { gsap, ScrollTrigger, initGsap } from '@/lib/gsap'
@@ -30,7 +30,6 @@ function Section({ prog, avant, index }: { prog: Programme; avant: LayoutName; i
     const el = section.current
     const st = scene.current
     if (!el || !st) return
-    const u = stackUniforms()
     const reduit = useScene.getState().reduced
     const prendre = () => {
       const s = useScene.getState()
@@ -58,7 +57,7 @@ function Section({ prog, avant, index }: { prog: Programme; avant: LayoutName; i
           const q = reduit ? 1 : self.progress
           setP(q)
           // Le code s'écrit sur 0 → 0,8 ; la forme se compile sur 0,1 → 0,95.
-          if (!reduit) u.uMorph.value = Math.min(1, Math.max(0, (q - 0.1) / 0.85))
+          if (!reduit) MORPH.value = Math.min(1, Math.max(0, (q - 0.1) / 0.85))
         },
       })
     }, el)

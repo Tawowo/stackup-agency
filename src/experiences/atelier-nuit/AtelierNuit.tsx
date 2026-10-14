@@ -9,7 +9,7 @@
  */
 import { useEffect, useRef, useState } from 'react'
 import StackFrame from '@/webgl/StackFrame'
-import { stackUniforms } from '@/webgl/engine'
+import { MORPH } from '@/webgl/morph'
 import { useScene } from '@/webgl/store'
 import { gsap, ScrollTrigger, initGsap } from '@/lib/gsap'
 import { SITE } from '@/config/site'
@@ -37,7 +37,6 @@ export default function AtelierNuit() {
     const el = section.current
     const st = scene.current
     if (!el || !st) return
-    const u = stackUniforms()
     const s = useScene.getState()
     const reduit = s.reduced
     s.setMoment('atelier-nuit')
@@ -48,7 +47,7 @@ export default function AtelierNuit() {
     s.setProjection(0.3)
     s.setPose({ x: 0.1, y: -0.18 })
     s.setPair('logo', reduit ? null : 'cadre')
-    u.uMorph.value = 0
+    MORPH.value = 0
     const ctx = gsap.context(() => {
       ScrollTrigger.create({
         trigger: el,
@@ -64,7 +63,7 @@ export default function AtelierNuit() {
           // s'approche : la figure entière (cadre 3D + photo) grandit d'un bloc, le
           // cadre ne quitte jamais la photo (pas de travelling caméra ici).
           const m = Math.min(1, q / 0.45)
-          u.uMorph.value = m
+          MORPH.value = m
           const f = 1 - m * m * (3 - 2 * m)
           useScene.getState().setPose({ x: 0.1 * f, y: -0.18 * f })
         },

@@ -8,7 +8,7 @@
  */
 import { useEffect, useRef, useState } from 'react'
 import StackFrame from '@/webgl/StackFrame'
-import { stackUniforms } from '@/webgl/engine'
+import { MORPH } from '@/webgl/morph'
 import { useScene } from '@/webgl/store'
 import { ScrollTrigger, initGsap } from '@/lib/gsap'
 import { arriverParScroll } from '../arrivee'
@@ -30,7 +30,6 @@ export default function Methode() {
     initGsap()
     const el = section.current
     if (!el) return
-    const u = stackUniforms()
     // Arrivée : la jauge devient la structure de la page (étape 1), pilotée par le scroll.
     const arret = arriverParScroll(el, { moment: '07', layout: 'methode', pose: { x: 0.08, y: -0.25 }, projection: 0.4, params: { etape: 1 } })
     // Puis les étapes 2 à 5 s'assemblent : chaque carte, en passant de 80 % à 45 %
@@ -64,7 +63,7 @@ export default function Methode() {
           s.setScrub(true)
           s.setPair('methode', 'methode', { a: { etape: k }, b: { etape: k + 1 } })
         }
-        u.uMorph.value = t * t * (3 - 2 * t)
+        MORPH.value = t * t * (3 - 2 * t)
       },
     })
     return () => {

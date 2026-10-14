@@ -8,7 +8,7 @@
  */
 import { useEffect, useRef, useState } from 'react'
 import StackFrame from '@/webgl/StackFrame'
-import { stackUniforms } from '@/webgl/engine'
+import { MORPH } from '@/webgl/morph'
 import { useScene } from '@/webgl/store'
 import { useExclusion } from '@/webgl/useExclusion'
 import { gsap, ScrollTrigger, SplitText, initGsap } from '@/lib/gsap'
@@ -38,7 +38,6 @@ export default function Strates() {
     const st = scene.current
     const h2 = titre.current
     if (!el || !st || !h2) return
-    const u = stackUniforms()
     const reduit = useScene.getState().reduced
     const mobile = window.innerWidth < 768
 
@@ -87,10 +86,10 @@ export default function Strates() {
         }
         if (q < 0.8) {
           poser('ouvre')
-          u.uMorph.value = Math.min(1, q / 0.6)
+          MORPH.value = Math.min(1, q / 0.6)
         } else {
           poser('ferme')
-          u.uMorph.value = (q - 0.8) / 0.2
+          MORPH.value = (q - 0.8) / 0.2
         }
       }
       if (reduit) {
@@ -110,7 +109,7 @@ export default function Strates() {
           const p = self.progress
           if (p <= 0 || p >= 1) return
           poser('arrive')
-          u.uMorph.value = p * p * (3 - 2 * p)
+          MORPH.value = p * p * (3 - 2 * p)
         },
         onLeaveBack: () => {
           // Rendue au hero : il reprend la main par son propre épinglage.

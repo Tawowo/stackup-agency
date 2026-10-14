@@ -6,7 +6,7 @@
  */
 import { useEffect, useRef, useState } from 'react'
 import StackFrame from '@/webgl/StackFrame'
-import { stackUniforms } from '@/webgl/engine'
+import { MORPH } from '@/webgl/morph'
 import { useScene } from '@/webgl/store'
 import { ScrollTrigger, initGsap } from '@/lib/gsap'
 
@@ -16,7 +16,6 @@ export default function Lecture({ sommaire, children }: { sommaire: { id: string
   useEffect(() => {
     initGsap()
     const s = useScene.getState()
-    const u = stackUniforms()
     s.setMoment('lecture')
     s.setMonde('fabrique')
     s.setScrub(true)
@@ -24,7 +23,7 @@ export default function Lecture({ sommaire, children }: { sommaire: { id: string
     s.setProjection(0.3)
     s.setPose({ x: 0.08, y: -0.26 })
     s.setPair(s.reduced ? 'logo' : 'empileDepart', s.reduced ? null : 'empile')
-    u.uMorph.value = 0
+    MORPH.value = 0
     const el = corps.current
     const st = el
       ? ScrollTrigger.create({
@@ -33,7 +32,7 @@ export default function Lecture({ sommaire, children }: { sommaire: { id: string
           end: 'bottom bottom',
           scrub: true,
           onUpdate: (self) => {
-            if (useScene.getState().moment === 'lecture' && !useScene.getState().reduced) u.uMorph.value = self.progress
+            if (useScene.getState().moment === 'lecture' && !useScene.getState().reduced) MORPH.value = self.progress
           },
         })
       : null
