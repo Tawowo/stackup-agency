@@ -9,7 +9,6 @@
  * lecteurs d'écran et sans JS.
  */
 import { useEffect, useRef } from 'react'
-import { gsap, ScrollTrigger, initGsap } from '@/lib/gsap'
 
 const COLONNE = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
 
@@ -17,7 +16,6 @@ export default function Cadran({ valeur, prefixe = '', suffixe = '', className =
   const texte = new Intl.NumberFormat('fr-FR', { maximumFractionDigits: 0 }).format(valeur)
   const ref = useRef<HTMLSpanElement>(null)
   useEffect(() => {
-    initGsap()
     const el = ref.current
     if (!el) return
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
@@ -31,21 +29,32 @@ export default function Cadran({ valeur, prefixe = '', suffixe = '', className =
       el.dataset.scrub = etat.p >= 1 ? '0' : '1'
     }
     poser()
-    const tourner = () => gsap.to(etat, { p: 1, duration: 0.9, ease: 'power3.out', overwrite: true, onUpdate: poser })
-    const st = ScrollTrigger.create({
-      trigger: el,
-      start: 'top 96%',
-      onEnter: () => tourner(),
-      onEnterBack: () => tourner(),
-      onLeaveBack: () => {
+    // GSAP est importé à la demande : le cadran ne l'impose pas au chargement de la page.
+    let vivant = true
+    let nettoyer = () => {}
+    import('@/lib/gsap').then(({ gsap, ScrollTrigger, initGsap }) => {
+      if (!vivant) return
+      initGsap()
+      const tourner = () => gsap.to(etat, { p: 1, duration: 0.9, ease: 'power3.out', overwrite: true, onUpdate: poser })
+      const st = ScrollTrigger.create({
+        trigger: el,
+        start: 'top 96%',
+        onEnter: () => tourner(),
+        onEnterBack: () => tourner(),
+        onLeaveBack: () => {
+          gsap.killTweensOf(etat)
+          etat.p = 0
+          poser()
+        },
+      })
+      nettoyer = () => {
+        st.kill()
         gsap.killTweensOf(etat)
-        etat.p = 0
-        poser()
-      },
+      }
     })
     return () => {
-      st.kill()
-      gsap.killTweensOf(etat)
+      vivant = false
+      nettoyer()
     }
   }, [])
   return (

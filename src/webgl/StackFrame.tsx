@@ -11,7 +11,6 @@
  */
 import { useEffect, useRef, type ReactNode } from 'react'
 import Fallback2D from './Fallback2D'
-import gsap from 'gsap'
 import { useScene } from './store'
 
 const registre = new Set<HTMLElement>()
@@ -48,7 +47,8 @@ function armer() {
   window.addEventListener('resize', elire)
   // Une boîte peut se déplacer sans changer de taille (polices, grille, épinglage) :
   // le ticker unique relit les boîtes à chaque trame (lectures seules, pas d'écriture DOM).
-  gsap.ticker.add(elire)
+  // GSAP est importé à la demande : il reste hors du chemin critique.
+  import('gsap').then(({ gsap }) => gsap.ticker.add(elire))
 }
 
 export default function StackFrame({ className = '', children }: { className?: string; children?: ReactNode }) {

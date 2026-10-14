@@ -197,3 +197,14 @@ body {
     display: none;
   }
 }
+
+/* SANS JAVASCRIPT (règle 6) : aucun état masqué par défaut. Les découpes d'apparition
+   attendent un script pour s'ouvrir ; sans script, tout est déjà découvert. */
+@media (scripting: none) {
+  [class*='su-'] {
+    clip-path: none !important;
+  }
+  .su-str__texte {
+    max-height: none !important;
+  }
+}

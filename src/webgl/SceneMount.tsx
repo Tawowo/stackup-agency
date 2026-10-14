@@ -7,7 +7,6 @@ import dynamic from 'next/dynamic'
 import { useEffect, useState } from 'react'
 import { detecterPalier } from './quality'
 import { useScene, type SceneParams } from './store'
-import { stackUniforms } from './engine'
 
 const Scene = dynamic(() => import('./Scene'), { ssr: false })
 
@@ -46,7 +45,8 @@ export default function SceneMount() {
     if (Object.keys(p).length) st.setParams(p)
     if (q.get('fond') === 'ivoire') st.forcerNuit(0)
     if (process.env.NODE_ENV !== 'production') {
-      ;(window as unknown as { __su?: unknown }).__su = { scene: useScene, u: stackUniforms() }
+      // three reste hors du chemin critique : le moteur n'est importé qu'à la demande.
+      import('./engine').then(({ stackUniforms }) => ((window as unknown as { __su?: unknown }).__su = { scene: useScene, u: stackUniforms() }))
     }
     detecterPalier().then((tier) => {
       if (!vivant) return
