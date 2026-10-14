@@ -1,6 +1,6 @@
 {
  "genere": "2026-10-14",
- "phase": "nuit — pages-mondes, gabarits, QA",
+ "phase": "mission 2 — montrer la vraie chose",
  "captures": [
   {
    "fichier": "docs/qa/shots/contact/vide-1440.png",
@@ -1489,6 +1489,228 @@
    "largeur": 1440,
    "rm": false,
    "visible": "Documents : cartes « En cours de mise à jour » (PDF retirés : identité légale erronée).",
+   "defauts": [],
+   "corrige": true
+  },
+  {
+   "fichier": "docs/qa/shots/accueil/00-p04-1440.png",
+   "route": "/",
+   "etat": "00-p04",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Hero p=0,4 : le S est massif, imprimé couche par couche, bandes rigides ; jointures exactes aux deux plis.",
+   "defauts": [
+    "Première passe : S figé à p=0 (Offre/Modules volaient le moment au montage) — prise du moment seulement à l'entrée"
+   ],
+   "corrige": true
+  },
+  {
+   "fichier": "docs/qa/shots/logo-check/zoom-diff.png",
+   "route": "/",
+   "etat": "logo-zoom",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Superposition à DPR 3 : plis nets, écart total 1,75 % en trop / 0,36 % en moins.",
+   "defauts": [
+    "Bande qui dépassait à droite : arêtes milieu/ambre confondues, cisaillement par bande"
+   ],
+   "corrige": true
+  },
+  {
+   "fichier": "docs/qa/shots/accueil/01-p06-1440.png",
+   "route": "/",
+   "etat": "01-p06",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Vue éclatée : cinq calques en perspective (design, contenu, code, données, hébergement), chacun montre sa vraie chose ; le calque actif s'allume.",
+   "defauts": [],
+   "corrige": true
+  },
+  {
+   "fichier": "docs/qa/shots/accueil/01-p1-1440.png",
+   "route": "/",
+   "etat": "01-p1",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Les calques se compriment : le site fini dans une fenêtre de navigateur.",
+   "defauts": [
+    "Calque design trop chargé : tailles de texte réduites"
+   ],
+   "corrige": true
+  },
+  {
+   "fichier": "docs/qa/shots/accueil/02-une-page-1440.png",
+   "route": "/",
+   "etat": "02-une-page",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Offre « Site une page » : vraie page d'accueil d'artisan (photo, titre, Demander un devis).",
+   "defauts": [],
+   "corrige": true
+  },
+  {
+   "fichier": "docs/qa/shots/accueil/02-boutique-1440.png",
+   "route": "/",
+   "etat": "02-boutique",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Offre « Boutique » : grille de produits avec prix, panier qui se remplit.",
+   "defauts": [
+    "Mobile : lisible à 390 px"
+   ],
+   "corrige": true
+  },
+  {
+   "fichier": "docs/qa/shots/accueil/02-outil-1440.png",
+   "route": "/",
+   "etat": "02-outil",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Offre « Outil de gestion » : tableau de bord (menu, chiffres, planning, graphique, liste).",
+   "defauts": [
+    "Menu latéral qui retournait à la ligne — nowrap"
+   ],
+   "corrige": true
+  },
+  {
+   "fichier": "docs/qa/shots/accueil/05-module-7-1440.png",
+   "route": "/",
+   "etat": "05-module-7",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Les modules : fenêtre d'application au centre, douze cartes autour, un module intégré (onglet + écran).",
+   "defauts": [
+    "En-tête trop haut : titre et cartes resserrés"
+   ],
+   "corrige": true
+  },
+  {
+   "fichier": "docs/qa/shots/accueil/07-p07-1440.png",
+   "route": "/",
+   "etat": "07-p07",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Comment on travaille : le même projet de site, étape 4 (mise en ligne, adresse tapée, cadenas).",
+   "defauts": [
+    "Fantôme sous la scène (position: sticky) — scène en position fixe + découpe"
+   ],
+   "corrige": true
+  },
+  {
+   "fichier": "docs/qa/shots/realisations/hall-p05-1440.png",
+   "route": "/realisations",
+   "etat": "hall-p05",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Galerie : portable en aluminium (clavier gravé, pavé, charnière) et téléphone, capture qui défile.",
+   "defauts": [
+    "Première passe : vu par en dessous, couvercle dans le mauvais sens — inclinaison et charnière corrigées"
+   ],
+   "corrige": true
+  },
+  {
+   "fichier": "docs/qa/shots/realisations/fiche-1440.png",
+   "route": "/realisations/au-pain-dore",
+   "etat": "fiche",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Fiche : la capture dans un portable (lunette noire, châssis alu), plus de cadre de plaques.",
+   "defauts": [],
+   "corrige": true
+  },
+  {
+   "fichier": "docs/qa/shots/accueil/menu-ressources-1440.png",
+   "route": "/",
+   "etat": "menu-ressources",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Menu Ressources déroulé : cinq portes avec une ligne chacune.",
+   "defauts": [],
+   "corrige": true
+  },
+  {
+   "fichier": "docs/qa/shots/accueil/footer-1440.png",
+   "route": "/",
+   "etat": "footer",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Footer complet : agence, services, outils de gestion, métiers, villes, journal, outils gratuits, légal.",
+   "defauts": [],
+   "corrige": true
+  },
+  {
+   "fichier": "docs/qa/shots/locales/agence-web_tours-hero-1440.png",
+   "route": "/agence-web/tours",
+   "etat": "hero",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Ville : carte en relief, Tours en pilier ambre, voisines cliquables.",
+   "defauts": [
+    "Voisines vides (slugs) corrigées ; hydratation (arrondis)"
+   ],
+   "corrige": true
+  },
+  {
+   "fichier": "docs/qa/shots/temps/_creation_site_internet_plombier-9500-1440.png",
+   "route": "/creation-site-internet/plombier",
+   "etat": "monde",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Métier : l'outil du plombier (tableau de bord) puis la maquette de son site.",
+   "defauts": [],
+   "corrige": true
+  },
+  {
+   "fichier": "docs/qa/shots/blog/kiosque-1440.png",
+   "route": "/blog",
+   "etat": "kiosque",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Blog : bibliothèque de couvertures colorées par rayon, feuilletables.",
+   "defauts": [
+    "Couvertures toutes bleues — un article par rayon"
+   ],
+   "corrige": true
+  },
+  {
+   "fichier": "docs/qa/shots/outils/outils-haut-1440.png",
+   "route": "/outils",
+   "etat": "haut",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Outils : établi aux quatre outils en miniature (jauges, nuanciers, fiche cochée, documents).",
+   "defauts": [],
+   "corrige": true
+  },
+  {
+   "fichier": "docs/qa/shots/offre/faq-haut-1440.png",
+   "route": "/faq",
+   "etat": "haut",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "FAQ : conversation question / réponse de Mathéo Reboul.",
+   "defauts": [
+    "CLS 0,137 — fenêtre à hauteur fixe"
+   ],
+   "corrige": true
+  },
+  {
+   "fichier": "docs/qa/shots/legal/page-qui-n-existe-pas-haut-1440.png",
+   "route": "/404",
+   "etat": "haut",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "404 : fenêtre de navigateur au contenu manquant, 404 en étiquette ambre.",
+   "defauts": [],
+   "corrige": true
+  },
+  {
+   "fichier": "docs/qa/shots/locales/services-locaux_referencement-local-seo-hero-1440.png",
+   "route": "/services-locaux/referencement-local-seo",
+   "etat": "hero",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Référencement local : une vraie page de résultats Google, Menuiserie Aubert en tête.",
    "defauts": [],
    "corrige": true
   }
