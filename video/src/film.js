@@ -108,7 +108,7 @@ async function demarrer() {
 
   // Sous-titres incrustés (variable de composition `sousTitres`).
   const vars = window.__hyperframes?.getVariables?.() ?? {};
-  if (vars.sousTitres) {
+  if (vars.sousTitres || FILM.calqueSousTitres) {
     const u = Math.min(L, H) / 1080;
     sousTitres(dom.soustitres, tl, montage.sousTitres, F.portrait
       ? { bas: 0.17 * H, px: 58 * u, largeurMax: 0.9 * L }

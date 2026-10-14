@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="src/film.css" />
     <script src="vendor/gsap.min.js"></script>
     <script type="importmap">{ "imports": { "three": "./vendor/three.module.min.js" } }</script>
-    <script>window.FILM = {"format":"9x16","montage":"court20","largeur":1080,"hauteur":1920,"decalage":0,"echelle":1,"sans3D":false};</script>
+    <script>window.FILM = {"format":"9x16","montage":"court20","largeur":1080,"hauteur":1920,"decalage":0,"echelle":1,"sans3D":false,"calqueSousTitres":false};</script>
   </head>
   <body>
     <div id="root" data-composition-id="stackup-9x16-court20" data-start="0" data-width="1080" data-height="1920" data-duration="19.5" data-fps="60" data-fx-chain="{&quot;version&quot;:1,&quot;nodes&quot;:[{&quot;type&quot;:&quot;gain&quot;,&quot;id&quot;:&quot;m1&quot;,&quot;label&quot;:&quot;Niveau de diffusion&quot;,&quot;params&quot;:{&quot;gain&quot;:3}},{&quot;type&quot;:&quot;truepeak&quot;,&quot;id&quot;:&quot;m2&quot;,&quot;label&quot;:&quot;Plafond true-peak&quot;,&quot;params&quot;:{&quot;ceiling&quot;:-1.5,&quot;lookahead&quot;:3,&quot;release&quot;:80}}]}" style="--u:1.00000px; --uw:0.56250px;">
@@ -31,7 +31,7 @@
       <div id="soustitres"></div>
       <div id="voile"></div>
       <audio id="voix" src="audio/voix-court20.wav" data-start="0" data-media-start="0" data-duration="19.5" data-track-index="10" data-volume="1"></audio>
-      <audio id="musique" src="audio/musique.mp3" data-start="0" data-media-start="0" data-duration="19.5" data-track-index="11" data-volume="0.1259" data-automation="{&quot;version&quot;:1,&quot;lanes&quot;:[{&quot;target&quot;:&quot;volume&quot;,&quot;points&quot;:[{&quot;t&quot;:0,&quot;v&quot;:1},{&quot;t&quot;:17.95,&quot;v&quot;:1},{&quot;t&quot;:19.1,&quot;v&quot;:0,&quot;curve&quot;:-0.4}]}]}"></audio>
+      <audio id="musique" src="audio/musique.mp3" data-start="0" data-media-start="0" data-duration="19.5" data-track-index="11" data-volume="0.1259" data-automation="{&quot;version&quot;:1,&quot;lanes&quot;:[{&quot;target&quot;:&quot;volume&quot;,&quot;points&quot;:[{&quot;t&quot;:0,&quot;v&quot;:0.1259},{&quot;t&quot;:17.95,&quot;v&quot;:0.1259},{&quot;t&quot;:19.1,&quot;v&quot;:0,&quot;curve&quot;:-0.4}]}]}"></audio>
       <audio id="sons" src="audio/sons-court20.wav" data-start="0" data-media-start="0" data-duration="19.5" data-track-index="12" data-volume="0.3162"></audio>
     </div>
     <script type="module">

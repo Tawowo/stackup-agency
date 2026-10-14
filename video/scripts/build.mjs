@@ -58,7 +58,7 @@ const VOL_SONS = DB(-10);
 
 const attr = (obj) => JSON.stringify(obj).replace(/&/g, "&amp;").replace(/"/g, "&quot;");
 
-function entree({ format, montage, decalage = 0, duree = null, echelle = 1, id, sans3D = false }) {
+function entree({ format, montage, decalage = 0, duree = null, echelle = 1, id, sans3D = false, calqueSousTitres = false }) {
   const f = FORMATS[format];
   const L = Math.round(f.largeur * echelle);
   const H = Math.round(f.hauteur * echelle);
@@ -72,8 +72,9 @@ function entree({ format, montage, decalage = 0, duree = null, echelle = 1, id, 
       {
         target: "volume",
         points: [
-          { t: 0, v: 1 },
-          { t: Math.max(0, fixe - decalage - 0.05), v: 1 },
+          // valeurs ABSOLUES : la courbe remplace data-volume (−18 dB = 0,126)
+          { t: 0, v: VOL_MUSIQUE },
+          { t: Math.max(0, fixe - decalage - 0.05), v: VOL_MUSIQUE },
           { t: Math.max(0.01, fixe - decalage + 1.1), v: 0, curve: -0.4 },
         ],
       },
@@ -95,8 +96,10 @@ function entree({ format, montage, decalage = 0, duree = null, echelle = 1, id, 
     hauteur: H,
     decalage,
     echelle,
-    sans3D,
+    sans3D: sans3D || calqueSousTitres,
+    calqueSousTitres,
   };
+  const fond = calqueSousTitres ? "transparent" : "#0b1e36";
   return `<!doctype html>
 <!-- Généré par scripts/build.mjs — ne pas éditer à la main. -->
 <html lang="fr" data-composition-variables="${attr([
@@ -115,7 +118,7 @@ function entree({ format, montage, decalage = 0, duree = null, echelle = 1, id, 
       @font-face { font-family: "Inter"; font-weight: 700; src: url("fonts/inter-latin-700-normal.woff2") format("woff2"); }
       @font-face { font-family: "JetBrains Mono"; font-weight: 500; src: url("fonts/jetbrains-mono-latin-500-normal.woff2") format("woff2"); }
       @font-face { font-family: "JetBrains Mono"; font-weight: 700; src: url("fonts/jetbrains-mono-latin-700-normal.woff2") format("woff2"); }
-      html, body { margin: 0; width: ${L}px; height: ${H}px; overflow: hidden; background: #0b1e36; }
+      html, body { margin: 0; width: ${L}px; height: ${H}px; overflow: hidden; background: ${fond}; }${calqueSousTitres ? " #root { background: transparent !important; } #ciel, #code, #scene, #calque, #typo, #voile { display: none !important; }" : ""}
     </style>
     <link rel="stylesheet" href="src/film.css" />
     <script src="vendor/gsap.min.js"></script>
@@ -131,9 +134,9 @@ function entree({ format, montage, decalage = 0, duree = null, echelle = 1, id, 
       <div id="typo"></div>
       <div id="soustitres"></div>
       <div id="voile"></div>
-      <audio id="voix" src="audio/voix-${montage}.wav" data-start="0" data-media-start="${decalage}" data-duration="${D}" data-track-index="10" data-volume="1"></audio>
+      ${calqueSousTitres ? "" : `<audio id="voix" src="audio/voix-${montage}.wav" data-start="0" data-media-start="${decalage}" data-duration="${D}" data-track-index="10" data-volume="1"></audio>
       <audio id="musique" src="audio/musique.mp3" data-start="0" data-media-start="${decalage}" data-duration="${D}" data-track-index="11" data-volume="${VOL_MUSIQUE}" data-automation="${attr(automation)}"></audio>
-      <audio id="sons" src="audio/sons-${montage}.wav" data-start="0" data-media-start="${decalage}" data-duration="${D}" data-track-index="12" data-volume="${VOL_SONS}"></audio>
+      <audio id="sons" src="audio/sons-${montage}.wav" data-start="0" data-media-start="${decalage}" data-duration="${D}" data-track-index="12" data-volume="${VOL_SONS}"></audio>`}
     </div>
     <script type="module">
       import { timelinePrete } from "./src/film.js";
@@ -177,6 +180,12 @@ if (apercu) {
     const d = s.dossier === "." ? RACINE : projetFrere(s.dossier);
     writeFileSync(join(d, "index.html"), entree({ ...s, id }));
     console.log(`${s.dossier}/index.html : ${s.format} ${s.montage} ${script.montages[s.montage].duree} s`);
+  }
+  // Calques de sous-titres (fond transparent), incrustés sur les rendus propres.
+  for (const s of SORTIES) {
+    const nom = s.dossier === "." ? "16x9" : s.dossier.split("/").pop();
+    const d = projetFrere(`formats/soustitres-${nom}`);
+    writeFileSync(join(d, "index.html"), entree({ ...s, id: `soustitres-${nom}`, calqueSousTitres: true }));
   }
   // Projet d'audit DOM (hyperframes check) : même film, sans dessin 3D.
   for (const f of ["16x9", "9x16", "1x1"]) {

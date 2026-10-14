@@ -1,6 +1,25 @@
 # Journal de production : film Stackup Agency
 
-<!-- RAPPORT FINAL : à rédiger en tête, une fois les rendus vérifiés -->
+## Rapport final
+
+**Livrables** (dossier `video/livrables/`, 60 i/s, H.264 + AAC) :
+- `stackup-pub-16x9.mp4` : 1920×1080, 45 s
+- `stackup-pub-9x16.mp4` : 1080×1920, 45 s (format principal, composé en vertical)
+- `stackup-pub-1x1.mp4` : 1080×1080, 45 s
+- `stackup-pub-9x16-20s.mp4` : 1080×1920, 19,5 s (plans 1, 3, 4 resserré, 7)
+- les mêmes en `-soustitres.mp4`, plus `thumbnail-<format>.png` pour chaque format
+
+**Provisoire** : la voix (Piper `fr_FR-tom-medium`, locale) et la musique (lit de synthèse à 120 BPM, `audio/musique.mp3`). Les bruitages sont définitifs, mais remplaçables.
+
+**Voix finale, avec une clé** : depuis `video/`, une des deux commandes, puis `npm run film`. Tous les timings se recalent seuls.
+```
+GOOGLE_TTS_API_KEY=… GOOGLE_TTS_VOICE=fr-FR-Chirp3-HD-Charon python3 scripts/voix.py --moteur google
+ELEVENLABS_API_KEY=… ELEVENLABS_VOICE_ID=<voix FR masculine> python3 scripts/voix.py --moteur elevenlabs
+```
+
+**Remplacer la musique** : déposer le nouveau fichier à la place de `video/audio/musique.mp3` (même nom), puis lancer `npm run film` (= `bash scripts/rendre.sh`). La musique passe à −18 dB et s'éteint sur le logo automatiquement. Pour un seul format : `bash scripts/rendre.sh 9x16`.
+
+**Prix et démo** : `video/config.json` (`prixVitrine`, actuellement 500 comme demandé ; **le site affiche 449**), puis `npm run film`.
 
 ## Décisions (une ligne chacune)
 
@@ -35,3 +54,9 @@
 - Logo officiel sur fond navy : variante sombre du site (`LogoMarque` : brins ivoire #F5F3EE, ambre #F69106, lettrage extrait en masque alpha de `stackup-mot.png`). Proportions mesurées sur le PNG officiel : ruban 144 × 226, lettrage décalé de 0,336 × la hauteur du ruban. Le PNG lui-même a un fond blanc opaque et ne peut pas se poser sur du navy.
 - Unité typographique calée sur le petit côté du cadre, pour que le 9:16 ne soit pas surdimensionné. Sous-titres : en 9:16, bas de la plaque à 17 % du bas, donc rien d'important dans les 15 % du bas.
 - Contrôle : `scripts/qc.sh <format> <plan>` rend le plan en basse définition et produit une planche-contact (une image toutes les 0,25 s). Les sept plans 16:9 ont été relus et corrigés. Les formats 9:16, 1:1 et 9:16-20 s ont été vérifiés image par image avec sous-titres.
+- Audit `hyperframes check` : sa limite fixe de 120 s ne suffit pas à rendre la 3D en WebGL logiciel. L'audit DOM (mise en page, contraste) passe donc par `formats/controle-*` (même film, sans dessin 3D) : 0 erreur, 44/44 textes conformes WCAG AA sur les trois formats. Si WebGL est absent, le film bascule sur un rendu factice au lieu de bloquer.
+- Bus maître : +3 dB puis limiteur true-peak à −1,5 dBTP.
+- Bug de mixage trouvé au premier rendu : une automation de volume remplace `data-volume` au lieu de s'y appliquer, et la musique sortait 14 dB trop fort. La courbe porte maintenant la valeur absolue (0,126 = −18 dB). Rendus relancés.
+- Sous-titres : rendus par HyperFrames en calque transparent (ProRes 4444), puis incrustés par ffmpeg sur le film propre. Toutes les images restent produites par HyperFrames ; on évite seulement de rendre deux fois la 3D (environ 37 min par version de 45 s).
+- Miniatures : l'image de l'accroche (1,55 s, « IL VOUS RAPPORTE QUOI ? » sur l'éclatement), une par format.
+- Prévisualisation Studio ouverte (`npx hyperframes preview --background`) avant les rendus de livraison, comme le prévoit le workflow.
