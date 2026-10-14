@@ -102,3 +102,8 @@ Court par obligation (≤ 150 lignes). Les sessions anciennes sont condensées ;
   plus que la matière (hero, fond) et la transition (métamorphose de dalles dans « Ce qu'on fabrique »).
 - Décision : « Comment on travaille » : scène en `position: fixed` + découpe (un calque épinglé laissait un fantôme).
 - Décision : réalisations : portable/téléphone en 3D (géométrie extrudée + environnement de pièce généré, sans fichier).
+
+## Mission « grille tarifaire + estimateur » (décisions, 1 ligne chacune)
+- `exceljs` ajouté en dépendance de dev : seule lib qui lit l'xlsx avec les formules ; sert uniquement à `npm run tarifs`, jamais embarquée dans le site.
+- Excel (`docs/tarifs/`) = source unique ; `scripts/tarifs-depuis-excel.mjs` lit par onglet + code → `src/config/tarifs.generated.ts` (151 lignes). Ligne retirée de l'Excel = 0 € / absente après `npm run tarifs`.
+- Moteur `src/domain/devis/` : reproduit le Simulateur à l'identique, y compris ses particularités (temps sans variantes boutique ; pages à référencer sans pages en série ; options boutique/outil comptées même si la boutique/l'outil est « Non »). Tests : 3 cas de référence + 5.
