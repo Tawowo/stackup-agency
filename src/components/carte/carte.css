@@ -7,6 +7,9 @@
   --carte-p: 0;
   width: 100%;
   container-type: inline-size;
+  /* Le plan incliné ne doit jamais élargir la page. */
+  overflow-x: clip;
+  overflow-y: visible;
 }
 .su-carte__scene {
   perspective: 1500px;

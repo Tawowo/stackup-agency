@@ -121,7 +121,9 @@ export default function CarteRelief({ epingles, libelle }: { epingles: Epingle[]
     else LW = LH * ratio
     const cx = (Math.min(...lons) + Math.max(...lons)) / 2
     const cy = lat0
-    const pos = (lat: number, lon: number) => ({ x: 50 + (((lon - cx) * k) / LW) * 100, y: 50 - ((lat - cy) / LH) * 100 })
+    // Arrondi à 3 décimales : le serveur et le navigateur calculent cos() à un ulp près (sinon : hydratation différente).
+    const arr = (v: number) => Math.round(v * 1000) / 1000
+    const pos = (lat: number, lon: number) => ({ x: arr(50 + (((lon - cx) * k) / LW) * 100), y: arr(50 - ((lat - cy) / LH) * 100) })
     return { pos }
   }, [epingles])
 

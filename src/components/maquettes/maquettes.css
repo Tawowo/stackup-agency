@@ -654,10 +654,10 @@
   gap: 3cqw;
   font-family: Georgia, 'Times New Roman', serif;
 }
-.mq-brut h1 { margin: 0 0 1.4cqw; font-size: 4.6cqw; line-height: 1.06; font-weight: 700; }
+.mq-brut__t1 { display: block; margin: 0 0 1.4cqw; font-size: 4.6cqw; line-height: 1.06; font-weight: 700; }
 .mq-brut p { margin: 0 0 1.2cqw; font-size: 2cqw; line-height: 1.45; }
 .mq-brut small { display: block; font-size: 1.5cqw; color: #555; font-style: italic; margin-top: 0.8cqw; }
-.mq-brut h2 { margin: 1.6cqw 0 0.6cqw; font-size: 2.4cqw; }
+.mq-brut__t2 { display: block; margin: 1.6cqw 0 0.6cqw; font-size: 2.4cqw; }
 .mq-brut__photo { border: 0.3cqw solid #111; align-self: start; }
 .mq-brut__photo svg { display: block; width: 100%; height: auto; filter: grayscale(0.15); }
 .mq-brut__alt { font-family: var(--su-font-mono), monospace; font-size: 1.35cqw; color: #333; background: #f1f1f1; padding: 0.5cqw 1cqw; margin-top: 0.8cqw; }

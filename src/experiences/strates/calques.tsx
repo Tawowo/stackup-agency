@@ -87,9 +87,9 @@ export function CalqueContenu({ uid }: { uid: string }) {
     <Navigateur url="textes-et-photos" cadenas={false} ratio="16 / 10">
       <div className="mq-brut">
         <div>
-          <h1>Cuisines, escaliers et rangements sur mesure</h1>
+          <p className="mq-brut__t1">Cuisines, escaliers et rangements sur mesure</p>
           <p>Un atelier, un artisan, des meubles dessinés pour votre maison.</p>
-          <h2>Trois savoir-faire</h2>
+          <p className="mq-brut__t2">Trois savoir-faire</p>
           <p>Cuisines, dessinées à la pièce. Escaliers en chêne, hêtre ou frêne. Rangements : placards et dressings.</p>
           <small>Demander un devis</small>
         </div>
