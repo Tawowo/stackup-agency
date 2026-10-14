@@ -1,0 +1,74 @@
+/* PLAN DU SITE — groupes en display, familles en mono, liens en colonnes.
+   Les longues listes (journal, villes, métiers) passent en colonnes serrées. */
+.su-plan {
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+}
+.su-plan__groupe {
+  border-top: 1px solid color-mix(in srgb, var(--su-graphite) 35%, transparent);
+  padding-top: 20px;
+}
+.su-plan__titre {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  margin: 0 0 18px;
+  font-size: clamp(1.6rem, 2.4vw, 2rem);
+  line-height: 1.1;
+  scroll-margin-top: 100px;
+}
+.su-plan__compte {
+  color: var(--su-accent-texte);
+  font-size: 0.75rem;
+  font-weight: 400;
+}
+.su-plan__famille + .su-plan__famille {
+  margin-top: 26px;
+}
+.su-plan__sous {
+  margin: 0 0 10px;
+  color: var(--su-texte-doux);
+  font-size: 0.75rem;
+  font-weight: 400;
+}
+.su-plan__liste {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  columns: 3 220px;
+  column-gap: 32px;
+  font-size: 0.9375rem;
+  line-height: 1.45;
+}
+.su-plan__liste li {
+  break-inside: avoid;
+  padding: 3px 0;
+}
+.su-plan__liste--dense {
+  columns: 4 200px;
+  font-size: 0.8125rem;
+}
+.su-plan__liste a {
+  color: var(--su-texte);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+.su-plan__liste a:hover,
+.su-plan__liste a:focus-visible {
+  color: var(--su-accent-texte);
+  border-bottom-color: currentColor;
+}
+.su-plan__liste a:focus-visible {
+  outline: 2px solid var(--su-ambre-clair);
+  outline-offset: 2px;
+}
+@media (max-width: 767px) {
+  .su-plan__liste,
+  .su-plan__liste--dense {
+    columns: 1;
+  }
+  .su-plan__liste li {
+    padding: 6px 0;
+  }
+}

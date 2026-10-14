@@ -103,12 +103,16 @@ export default function Formulaire({ c, projet, objet }: { c: string | null; pro
         const suite = () => router.push(`/contact/merci?envoye=${j.envoye ? '1' : '0'}`)
         setMessage('Demande envoyée. Elle part.')
         if (sc.reduced) return suite()
+        // La pile doit être vue : on remonte vers elle (mobile surtout) pendant qu'elle se plie.
+        const lenis = (window as unknown as { __suLenis?: { scrollTo: (y: number, o: { duration: number }) => void } }).__suLenis
+        if (lenis) lenis.scrollTo(0, { duration: 0.9 })
+        else window.scrollTo({ top: 0, behavior: 'smooth' })
         sc.setParams({ retard: 0.5, arc: 0.4 })
         sc.setLayout('enveloppe')
         const f = { v: 0 }
         gsap.to(f, {
           v: 1,
-          delay: 1.1,
+          delay: 1.4,
           duration: 1.1,
           ease: 'power2.in',
           onUpdate: () => useScene.getState().setParams({ fuite: f.v }),

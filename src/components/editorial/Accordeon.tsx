@@ -11,11 +11,11 @@ export interface Question {
   r: string
 }
 
-export default function Accordeon({ questions, className = '' }: { questions: Question[]; className?: string }) {
+export default function Accordeon({ questions, className = '', groupe = 'su-acc' }: { questions: Question[]; className?: string; groupe?: string }) {
   return (
     <div className={`su-acc ${className}`}>
       {questions.map((x, i) => (
-        <details key={x.q} className="su-acc__item" name="su-acc" open={i === 0}>
+        <details key={x.q} className="su-acc__item" name={groupe} open={i === 0}>
           <summary className="su-acc__q">
             <span className="su-mono su-acc__num">0{i + 1}</span>
             {x.q}

@@ -1,0 +1,482 @@
+/* RESSOURCES, DOCUMENTS, COMPARATIF, PARRAINAGE — styles partagés des pages documents. */
+.su-res {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+  color: var(--su-texte);
+}
+.su-res__entete {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}
+.su-res__section {
+  scroll-margin-top: 110px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.su-res__h2 {
+  margin: 0;
+  font-family: var(--su-font-display), sans-serif;
+  font-size: clamp(1.6rem, 2.4vw, 2rem);
+  line-height: 1.15;
+  scroll-margin-top: 110px;
+}
+.su-res__chapo {
+  margin: 0;
+  max-width: 62ch;
+  color: var(--su-texte-doux);
+}
+.su-res__etiquette {
+  margin: 0;
+  color: var(--su-accent-texte);
+}
+
+/* Cartes-plaques : la règle ambre se trace au survol et au focus. */
+.su-res__grille {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
+  gap: 20px;
+}
+.su-res__carte {
+  position: relative;
+  height: 100%;
+  padding: 22px 22px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--su-navy);
+}
+.su-res__carte::after {
+  content: '';
+  position: absolute;
+  left: 22px;
+  right: 22px;
+  bottom: 0;
+  height: 3px;
+  background: var(--su-ambre);
+  clip-path: inset(0 100% 0 0);
+  transition: clip-path var(--su-geste) var(--su-pose);
+}
+.su-res__carte:hover::after,
+.su-res__carte:focus-visible::after,
+.su-res__carte:focus-within::after {
+  clip-path: inset(0);
+}
+a.su-res__carte:focus-visible {
+  outline: 2px solid var(--su-ambre);
+  outline-offset: 3px;
+}
+.su-res__carte-titre {
+  margin: 0;
+  font-family: var(--su-font-display), sans-serif;
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1.2;
+}
+.su-res__carte-texte {
+  margin: 0;
+  font-size: 0.9375rem;
+  line-height: 1.55;
+  color: var(--su-graphite-ivoire);
+}
+.su-res__carte-pied {
+  margin-top: auto;
+  padding-top: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 18px;
+}
+.su-res__cote {
+  color: var(--su-graphite-ivoire);
+  font-size: 0.75rem;
+}
+.su-res__lien {
+  color: var(--su-ambre-texte);
+  font-weight: 600;
+  font-size: 0.9375rem;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+}
+.su-res__lien:focus-visible {
+  outline: 2px solid var(--su-ambre);
+  outline-offset: 2px;
+}
+.su-res__carte[data-revision='1'] {
+  box-shadow: none;
+  outline: 1px dashed color-mix(in srgb, var(--su-graphite) 60%, transparent);
+  outline-offset: -1px;
+}
+.su-res__note {
+  margin: 0;
+  font-size: 0.9375rem;
+  color: var(--su-texte-doux);
+}
+.su-res__note a {
+  color: var(--su-accent-texte);
+}
+
+/* Liens de fin de page. */
+.su-res__suite {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 28px;
+  padding-top: 24px;
+  border-top: 1px solid color-mix(in srgb, var(--su-graphite) 35%, transparent);
+}
+
+/* FAQ — thèmes. */
+.su-faq__theme + .su-faq__theme {
+  margin-top: 56px;
+}
+.su-faq__theme h2 {
+  margin-bottom: 0.6em;
+}
+
+/* COMPARATIF — un tableau qui devient des plaques sur mobile. */
+.su-cmp {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9375rem;
+  line-height: 1.5;
+}
+.su-cmp caption {
+  text-align: left;
+  padding-bottom: 12px;
+  color: var(--su-texte-doux);
+  font-size: 0.875rem;
+}
+.su-cmp th,
+.su-cmp td {
+  padding: 16px 14px;
+  text-align: left;
+  vertical-align: top;
+  border-bottom: 1px solid color-mix(in srgb, var(--su-graphite) 30%, transparent);
+}
+.su-cmp thead th {
+  font-family: var(--su-font-display), sans-serif;
+  font-size: 1.05rem;
+  border-bottom: 2px solid var(--su-navy);
+}
+.su-cmp thead th[data-nous='1'] {
+  border-bottom-color: var(--su-ambre);
+}
+.su-cmp tbody th {
+  width: 22%;
+  font-family: var(--su-font-display), sans-serif;
+  font-weight: 600;
+}
+.su-cmp td[data-nous='1'] {
+  background: color-mix(in srgb, var(--su-ambre) 7%, transparent);
+}
+.su-cmp__verdict {
+  display: block;
+  margin-bottom: 4px;
+  font-family: var(--su-font-mono), monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--su-graphite-ivoire);
+}
+.su-cmp__verdict[data-v='fort'] {
+  color: var(--su-ambre-texte);
+}
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    /* Chaque cellule se découpe de gauche à droite en entrant dans la vue (CSS seul, sans JS). */
+    .su-cmp tbody th,
+    .su-cmp tbody td {
+      animation: su-cmp-decoupe linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 80%;
+    }
+  }
+}
+@keyframes su-cmp-decoupe {
+  from {
+    clip-path: inset(0 100% 0 0);
+  }
+  to {
+    clip-path: inset(0);
+  }
+}
+.su-cmp-quand {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+  gap: 20px;
+}
+.su-cmp-quand .su-res__carte ul {
+  margin: 0;
+  padding-left: 1.2em;
+  font-size: 0.9375rem;
+  line-height: 1.55;
+}
+.su-cmp-quand .su-res__carte li + li {
+  margin-top: 6px;
+}
+.su-cmp-quand .su-res__carte li::marker {
+  color: var(--su-ambre-texte);
+}
+@media (max-width: 760px) {
+  .su-cmp thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+  }
+  .su-cmp,
+  .su-cmp tbody,
+  .su-cmp tr,
+  .su-cmp th,
+  .su-cmp td {
+    display: block;
+    width: 100%;
+  }
+  .su-cmp tbody tr {
+    margin-bottom: 18px;
+    padding: 6px 16px 10px;
+    border-radius: 4px;
+    background: var(--su-ivoire-creuse);
+    color: var(--su-navy);
+    box-shadow: var(--su-ombre);
+  }
+  .su-cmp tbody th {
+    width: auto;
+    padding: 12px 0 6px;
+    font-size: 1.1rem;
+    border-bottom: 2px solid var(--su-navy);
+  }
+  .su-cmp td {
+    padding: 10px 0;
+  }
+  .su-cmp td::before {
+    content: attr(data-col);
+    display: block;
+    font-weight: 700;
+    font-family: var(--su-font-display), sans-serif;
+  }
+  .su-cmp td[data-nous='1'] {
+    background: none;
+  }
+  .su-cmp tr td:last-child {
+    border-bottom: 0;
+  }
+}
+
+/* PARRAINAGE */
+.su-par__etapes {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+  gap: 20px;
+}
+.su-par__recompenses {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr));
+  gap: 20px;
+}
+.su-par__recompense {
+  padding: 26px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.su-par__chiffre {
+  margin: 0;
+  font-family: var(--su-font-display), sans-serif;
+  font-weight: 700;
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  line-height: 1.1;
+}
+.su-par__ou {
+  margin: 0;
+  font-family: var(--su-font-mono), monospace;
+  font-size: 0.8125rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--su-ambre-clair);
+}
+.su-plaque--ivoire .su-par__ou {
+  color: var(--su-ambre-texte);
+}
+.su-par__recompense ul {
+  margin: 0;
+  padding-left: 1.2em;
+  font-size: 0.9375rem;
+  line-height: 1.55;
+}
+.su-par__recompense li + li {
+  margin-top: 6px;
+}
+.su-par__recompense li::marker {
+  color: var(--su-ambre);
+}
+.su-plaque--encre .su-par__recompense-texte,
+.su-plaque--encre li {
+  color: color-mix(in srgb, var(--su-ivoire) 82%, transparent);
+}
+.su-par__form {
+  padding: 24px clamp(18px, 3vw, 32px) 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.su-par__deux {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+.su-par__bloc {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.su-par__legende {
+  padding: 0;
+  margin-bottom: 4px;
+  color: var(--su-ambre-texte);
+}
+.su-par__champ {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.su-par__champ label {
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+.su-par__champ input,
+.su-par__champ textarea {
+  min-height: 46px;
+  padding: 10px 12px;
+  border: 1px solid color-mix(in srgb, var(--su-navy) 30%, transparent);
+  border-radius: 4px;
+  background: var(--su-ivoire);
+  color: var(--su-navy);
+  font: inherit;
+  font-size: 1rem;
+}
+.su-par__champ textarea {
+  resize: vertical;
+}
+.su-par__champ input:focus-visible,
+.su-par__champ textarea:focus-visible,
+.su-par__accord input:focus-visible {
+  outline: 2px solid var(--su-ambre);
+  outline-offset: 2px;
+}
+.su-par__champ[data-erreur='1'] input {
+  border-color: #b3261e;
+  border-width: 2px;
+}
+.su-par__erreur {
+  margin: 0;
+  font-size: 0.8125rem;
+  color: #8a1c15;
+  font-weight: 600;
+}
+.su-par__accord label {
+  display: grid;
+  grid-template-columns: 18px 1fr;
+  gap: 12px;
+  align-items: start;
+  font-size: 0.875rem;
+  color: var(--su-graphite-ivoire);
+  cursor: pointer;
+}
+.su-par__accord input {
+  width: 18px;
+  height: 18px;
+  margin-top: 2px;
+  accent-color: var(--su-ambre);
+}
+.su-par__miel {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+.su-par__annonce {
+  margin: 0;
+  min-height: 1.5em;
+  font-weight: 600;
+  color: var(--su-ambre-texte);
+}
+.su-par__annonce[data-etat='erreur'] {
+  color: #8a1c15;
+}
+.su-par__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px 24px;
+}
+.su-par__merci {
+  padding: 28px clamp(18px, 3vw, 32px);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: flex-start;
+  animation: su-par-decoupe var(--su-pose-duree) var(--su-pose) backwards;
+}
+.su-par__merci:focus {
+  outline: none;
+}
+@keyframes su-par-decoupe {
+  from {
+    clip-path: inset(0 100% 0 0);
+  }
+  to {
+    clip-path: inset(0);
+  }
+}
+@media (max-width: 640px) {
+  .su-par__deux {
+    grid-template-columns: 1fr;
+  }
+  .su-par__actions .su-action {
+    width: 100%;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .su-res__carte::after {
+    transition: none;
+  }
+  .su-par__merci {
+    animation: none;
+  }
+}
+
+/* Une Action posée dans la prose garde ses couleurs (la prose colore ses liens). */
+.su-prose .su-action--plein {
+  color: var(--su-encre);
+  text-decoration: none;
+}
+.su-prose .su-action--contour {
+  color: var(--su-texte);
+  text-decoration: none;
+}

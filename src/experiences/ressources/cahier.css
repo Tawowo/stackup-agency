@@ -1,0 +1,397 @@
+/* LE CAHIER DES CHARGES — plaques de questions (dépliage), feuille générée (découpe), impression. */
+.su-cdc {
+  max-width: 880px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  color: var(--su-texte);
+}
+.su-cdc__form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.su-cdc__h2 {
+  margin: 0;
+  font-family: var(--su-font-display), sans-serif;
+  font-size: clamp(1.6rem, 2.4vw, 2rem);
+  line-height: 1.15;
+}
+
+/* Le suivi : un trait qui se trace. */
+.su-cdc__suivi {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.su-cdc__compteur {
+  margin: 0;
+  color: var(--su-accent-texte);
+}
+.su-cdc__trace {
+  width: 100%;
+  height: 4px;
+  overflow: visible;
+}
+.su-cdc__trace line {
+  stroke-width: 2;
+  vector-effect: non-scaling-stroke;
+}
+.su-cdc__trace-fond {
+  stroke: color-mix(in srgb, var(--su-graphite) 40%, transparent);
+}
+.su-cdc__trace-plein {
+  stroke: var(--su-ambre);
+  stroke-dasharray: 1;
+  transition: stroke-dashoffset var(--su-pose-duree) var(--su-pose);
+}
+
+/* La pile de plaques. */
+.su-cdc__pile {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  perspective: 1400px;
+}
+.su-cdc__etape {
+  padding: 0;
+  overflow: hidden;
+}
+.su-cdc__tete-etape {
+  margin: 0;
+  font-size: inherit;
+  font-weight: inherit;
+}
+.su-cdc__bouton-etape {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  width: 100%;
+  min-height: 56px;
+  padding: 16px 20px;
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+}
+button.su-cdc__bouton-etape {
+  cursor: pointer;
+}
+button.su-cdc__bouton-etape:focus-visible {
+  outline: 2px solid var(--su-ambre);
+  outline-offset: -4px;
+}
+.su-cdc__num {
+  color: var(--su-ambre-texte);
+}
+.su-cdc__titre-etape {
+  font-family: var(--su-font-display), sans-serif;
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+.su-cdc__etat {
+  margin-left: auto;
+  color: var(--su-graphite-ivoire);
+  font-size: 0.75rem;
+}
+.su-cdc__etape[data-etat='a-venir'] {
+  box-shadow: none;
+  background: color-mix(in srgb, var(--su-ivoire-creuse) 55%, transparent);
+  outline: 1px dashed color-mix(in srgb, var(--su-graphite) 50%, transparent);
+  outline-offset: -1px;
+}
+.su-cdc__etape[data-etat='a-venir'] .su-cdc__titre-etape {
+  color: var(--su-graphite-ivoire);
+}
+.su-cdc__etape[data-etat='active'] {
+  border-top: 3px solid var(--su-ambre);
+}
+.su-cdc__resume {
+  margin: -8px 20px 16px calc(20px + 2ch + 14px);
+  font-family: var(--su-font-mono), monospace;
+  font-size: 0.8125rem;
+  color: var(--su-graphite-ivoire);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.su-cdc__corps-etape {
+  padding: 0 20px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  transform-origin: 50% 0;
+}
+.su-cdc__etape[data-etat='active'] .su-cdc__corps-etape {
+  animation: su-cdc-depli var(--su-pose-duree) var(--su-pose) backwards;
+}
+@keyframes su-cdc-depli {
+  from {
+    transform: rotateX(-86deg);
+  }
+}
+.su-cdc__intro {
+  margin: 0;
+  color: var(--su-graphite-ivoire);
+}
+
+/* Champs. */
+.su-cdc__champ {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.su-cdc__label {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  padding: 0;
+  margin-bottom: 4px;
+}
+.su-cdc__champ input,
+.su-cdc__champ textarea {
+  min-height: 46px;
+  padding: 10px 12px;
+  border: 1px solid color-mix(in srgb, var(--su-navy) 30%, transparent);
+  border-radius: 4px;
+  background: var(--su-ivoire);
+  color: var(--su-navy);
+  font: inherit;
+  font-size: 1rem;
+}
+.su-cdc__champ textarea {
+  resize: vertical;
+}
+.su-cdc__champ input:focus-visible,
+.su-cdc__champ textarea:focus-visible {
+  outline: 2px solid var(--su-ambre);
+  outline-offset: 2px;
+}
+.su-cdc__aide {
+  margin: 0;
+  font-size: 0.8125rem;
+  color: var(--su-graphite-ivoire);
+}
+.su-cdc__groupe {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  min-width: 0;
+}
+.su-cdc__options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.su-cdc__option {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 44px;
+  padding: 8px 14px;
+  border: 1px solid color-mix(in srgb, var(--su-navy) 28%, transparent);
+  border-radius: 4px;
+  background: var(--su-ivoire);
+  font-size: 0.9375rem;
+  cursor: pointer;
+  transition: border-color var(--su-reflexe) var(--su-glisse), background-color var(--su-reflexe) var(--su-glisse);
+}
+.su-cdc__option input {
+  margin: 0;
+  width: 18px;
+  height: 18px;
+  accent-color: var(--su-ambre);
+}
+.su-cdc__option:has(input:checked) {
+  border-color: var(--su-ambre);
+  box-shadow: inset 0 0 0 1px var(--su-ambre);
+  background: color-mix(in srgb, var(--su-ambre) 12%, var(--su-ivoire));
+}
+.su-cdc__option:has(input:focus-visible) {
+  outline: 2px solid var(--su-ambre);
+  outline-offset: 2px;
+}
+.su-cdc__nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: space-between;
+  padding-top: 6px;
+}
+.su-cdc__nav .su-action--plein:only-child {
+  margin-left: auto;
+}
+.su-cdc__envoi {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 24px;
+}
+.su-cdc__note {
+  margin: 0;
+  font-size: 0.875rem;
+  color: var(--su-texte-doux);
+}
+.su-cdc__note:empty {
+  display: none;
+}
+
+/* La feuille générée : découpée de haut en bas. */
+.su-cdc__feuille {
+  scroll-margin-top: 110px;
+  padding: clamp(24px, 4vw, 52px);
+  background: var(--su-ivoire);
+  color: var(--su-navy);
+  border: 1px solid color-mix(in srgb, var(--su-navy) 16%, transparent);
+  border-radius: 4px;
+  box-shadow: var(--su-ombre);
+  animation: su-cdc-decoupe var(--su-scene) var(--su-pose) backwards;
+}
+@keyframes su-cdc-decoupe {
+  from {
+    clip-path: inset(0 0 100% 0);
+  }
+  to {
+    clip-path: inset(0);
+  }
+}
+.su-cdc__feuille-tete {
+  padding-bottom: 18px;
+  margin-bottom: 8px;
+  border-bottom: 3px solid var(--su-ambre);
+}
+.su-cdc__feuille-etiquette,
+.su-cdc__feuille-date {
+  margin: 0;
+  color: var(--su-ambre-texte);
+}
+.su-cdc__feuille-date {
+  margin-top: 10px;
+  color: var(--su-graphite-ivoire);
+}
+.su-cdc__feuille-titre {
+  margin: 10px 0 0;
+  font-size: clamp(1.8rem, 3.6vw, 2.8rem);
+  line-height: 1.05;
+}
+.su-cdc__feuille-titre:focus {
+  outline: none;
+}
+.su-cdc__section {
+  padding-top: 22px;
+  break-inside: avoid;
+}
+.su-cdc__section-titre {
+  margin: 0 0 8px;
+  font-family: var(--su-font-display), sans-serif;
+  font-size: 1.2rem;
+}
+.su-cdc__section-titre .su-mono {
+  color: var(--su-ambre-texte);
+  margin-right: 8px;
+}
+.su-cdc__lignes {
+  margin: 0;
+}
+.su-cdc__ligne {
+  display: grid;
+  grid-template-columns: minmax(0, 16rem) minmax(0, 1fr);
+  gap: 16px;
+  padding: 9px 0;
+  border-top: 1px solid color-mix(in srgb, var(--su-navy) 12%, transparent);
+}
+.su-cdc__ligne dt {
+  font-size: 0.875rem;
+  color: var(--su-graphite-ivoire);
+}
+.su-cdc__ligne dd {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+.su-cdc__ligne dd[data-vide='1'] {
+  color: var(--su-graphite-ivoire);
+  font-style: italic;
+}
+.su-cdc__feuille-actions {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+}
+.su-cdc__feuille-boutons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.su-cdc__feuille .su-action--contour {
+  color: var(--su-navy);
+  border-color: color-mix(in srgb, var(--su-navy) 55%, transparent);
+}
+.su-cdc__feuille .su-action--lien {
+  color: var(--su-ambre-texte);
+}
+
+@media (max-width: 640px) {
+  .su-cdc__ligne {
+    grid-template-columns: 1fr;
+    gap: 2px;
+  }
+  .su-cdc__resume {
+    margin-left: 20px;
+  }
+  .su-cdc__nav .su-action,
+  .su-cdc__feuille-boutons .su-action {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .su-cdc__etape[data-etat='active'] .su-cdc__corps-etape,
+  .su-cdc__feuille {
+    animation: none;
+  }
+  .su-cdc__trace-plein {
+    transition: none;
+  }
+}
+
+/* IMPRESSION — seule la feuille sort : tout ce qui n'est ni elle, ni dedans, ni un de ses parents disparaît. */
+@media print {
+  @page {
+    margin: 16mm;
+  }
+  body *:not(:has(.su-cdc__feuille)):not(.su-cdc__feuille):not(.su-cdc__feuille *) {
+    display: none !important;
+  }
+  body,
+  body :has(.su-cdc__feuille) {
+    display: block !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    min-height: 0 !important;
+    max-width: none !important;
+    background: #fff !important;
+    box-shadow: none !important;
+    transform: none !important;
+    clip-path: none !important;
+  }
+  .su-cdc__feuille {
+    animation: none !important;
+    box-shadow: none;
+    border: 0;
+    padding: 0;
+    background: #fff;
+    color: #000;
+  }
+  .su-cdc__feuille-actions {
+    display: none !important;
+  }
+  .su-cdc__ligne dt {
+    color: #444;
+  }
+}

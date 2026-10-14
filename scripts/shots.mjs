@@ -170,7 +170,7 @@ export async function capturer({ route, dossier, etats }, browser, filtreEtat) {
           await page.fill('#su-ctc-projet', 'Un site pour mon atelier de menuiserie à Tours, avec une galerie de chantiers.')
           await page.locator('input[name="rgpd"]').check()
           await page.locator('.su-ctc__form button[type="submit"]').click()
-          await page.waitForTimeout(etat.action === 'ctc-envoyer' ? 1000 : 1750)
+          await page.waitForTimeout(etat.action === 'ctc-envoyer' ? 1200 : 2050)
         }
         if (etat.action?.startsWith('onglet')) {
           const k = Number(etat.action.slice(6))
