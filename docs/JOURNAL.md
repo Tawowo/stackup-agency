@@ -1,5 +1,16 @@
 # Journal du chantier — Stackup Agency V5
 
+## Rapport de la mission « grille tarifaire + estimateur » (2026-10-14) — à lire en premier
+
+**Prévisualisation Vercel** : https://stackup-agency-k3s6epe8h-tawowo-s-projects.vercel.app (commit 76af473, branche `claude/new-session-26nojr`).
+`npm run verify` vert · 28 tests dont les 3 de référence (Hydr'eaux 4 050 € / 3 650–4 660 € / 90 €/mois ; ToutouBien 4 130 € / 3 720–4 750 € / 173 €/mois ; vitrine démo+visio 500 € reste 455 € / 450–580 €) · 432 routes ouvertes : 0 défaut · axe 0 violation (estimateur, étapes 2 à 10, référencement, contact) · sans JS : contenu intégral · accueil 251 ko de JS (inchangé), /tarifs 266 ko.
+1. **Excel = source unique** : `npm run tarifs` lit les 11 onglets par nom et par code (151 lignes) → `tarifs.generated.ts` + `prix-publics.generated.ts` ; une ligne retirée de l'Excel disparaît (essai fait avec F07).
+2. **Moteur** `src/domain/devis/` : reproduit le Simulateur à l'identique (dégressivité, série, référencement, IA, boutique, outil, urgence, remise, arrondi, fourchette, déductions, acompte, temps, taux horaire, délai, abonnement).
+3. **Estimateur** `/tarifs#estimer` : 5 raccourcis, 9 étapes passables, récap fixe (fourchette seule), URL partageable (zod), chaîne 3D vivante ; ancien configurateur et studio de style supprimés (301 → `/tarifs#estimer`).
+4. **Contact** : jeton + action (appel 30 min / démo) ; le serveur recalcule le prix exact et l'envoie, avec temps estimé et taux horaire, au seul e-mail de Mathéo (parcours testé : `node scripts/parcours-estimateur.mjs`).
+5. **Site** : « à partir de » du moteur partout (offres, services, villes, métiers, FAQ, CGV, JSON-LD) ; textes et 300 articles passés en jetons `{{prix:…}}` ; Starter/Pro/Premium remplacés par l'abonnement composé + 3 exemples ; inclus, parcours client (accueil et tarifs), page `/services/referencement`, services à la carte ; durées fixes retirées (3 slugs renommés + 301).
+6. **Imparfait** : articles de blog réécrits par lots d'agents (totaux chiffrés remplacés par du qualitatif) → relecture éditoriale conseillée ; les 301 sont des 308 (comportement Next) ; mini-aperçus des niveaux = pages HTML/CSS animées, pas le vrai site ; pas de Lighthouse ni de balayage HawkScan (pas de clé).
+
 ## Rapport de la mission « montrer la vraie chose » (2026-10-14) — à lire en premier
 
 **Prévisualisation Vercel** : https://stackup-agency-gmgoikl9v-tawowo-s-projects.vercel.app (commit 4e4835a, branche `claude/new-session-26nojr`).
