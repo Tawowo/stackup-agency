@@ -837,3 +837,27 @@
 .mq-sante em { margin-left: auto; font-style: normal; font-family: var(--su-font-mono), monospace; font-size: 1.8cqw; color: #8ea3bf; }
 .mq-sante li[data-vert='1'] em { color: #35d07f; }
 .mq-sante__pied { margin: auto 0 0; font-size: 2cqw; color: #8ea3bf; }
+
+/* Visuel d'un métier : un grand pictogramme sur la teinte de la catégorie. */
+.mq-visuel {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  border-radius: 1cqw;
+  background: radial-gradient(120% 120% at 30% 20%, color-mix(in srgb, var(--teinte) 60%, #fff), var(--teinte));
+  color: rgba(255, 255, 255, 0.92);
+}
+.mq-visuel svg { width: 38%; height: 38%; stroke-width: 1.2; }
+.mq-monde { position: relative; width: 100%; }
+.mq-monde__legende {
+  margin: 1.4cqw 0 0;
+  text-align: center;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--su-ambre-clair);
+}
+
+.mq-carte > div { min-width: 0; }
+.mq-carte b, .mq-carte span { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }

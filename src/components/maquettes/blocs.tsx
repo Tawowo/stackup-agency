@@ -56,11 +56,24 @@ const KPI = [
   { label: 'Rendez-vous demain', val: '3', delta: 'dont 1 sur chantier' },
 ]
 
+export interface MetierBloc {
+  /** « Plombier », « Pizzeria »… (nom affiché de l'entreprise fictive). */
+  nom: string
+  accroche: string
+  etiquette: string
+  cartes: string[]
+  /** Pictogramme et teinte de la catégorie. */
+  picto: 'couvert' | 'marteau' | 'sac' | 'etoile' | 'dossier' | 'calendrier' | 'cube'
+  teinte: string
+}
+
 export interface ContexteBloc {
   /** Nombre d'articles dans le panier (boutique). */
   panier?: number
   /** Id unique par instance (ids SVG). */
   uid?: string
+  /** Page de métier : remplace les textes de l'artisan fictif par ceux du métier. */
+  metier?: MetierBloc
 }
 
 function Menu({ actif = 0 }: { actif?: number }) {
@@ -96,11 +109,13 @@ function Fenetre({ chemin, children }: { chemin: string; children: React.ReactNo
 export function Contenu({ role, ctx = {} }: { role: Role; ctx?: ContexteBloc }) {
   const uid = ctx.uid ?? 'm'
   if (role === 'vide') return null
+  const m = ctx.metier
   if (role === 'nav')
     return (
-      <div className="mq-nav">
+      <div className="mq-nav" style={m ? ({ '--mq-bois': m.teinte } as CSSProperties) : undefined}>
         <span className="mq-logo">
-          Aubert<i>.</i>
+          {m ? m.nom : 'Aubert'}
+          <i>.</i>
         </span>
         <span className="mq-lien">Savoir-faire</span>
         <span className="mq-lien">Réalisations</span>
@@ -110,18 +125,39 @@ export function Contenu({ role, ctx = {} }: { role: Role; ctx?: ContexteBloc }) 
     )
   if (role === 'hero')
     return (
-      <div className="mq-hero">
-        <span className="mq-etiquette">Menuiserie · Tours</span>
-        <h3 className="mq-h1">Cuisines, escaliers et rangements sur mesure</h3>
-        <p className="mq-p">Un atelier, un artisan, des meubles dessinés pour votre maison.</p>
+      <div className="mq-hero" style={m ? ({ '--mq-bois': m.teinte } as CSSProperties) : undefined}>
+        <span className="mq-etiquette">{m ? m.etiquette : 'Menuiserie · Tours'}</span>
+        <h3 className="mq-h1" style={m ? { fontSize: '3.7cqw' } : undefined}>
+          {m ? m.accroche : 'Cuisines, escaliers et rangements sur mesure'}
+        </h3>
+        <p className="mq-p">{m ? 'Votre site, pensé pour votre métier : clair, rapide, à votre image.' : 'Un atelier, un artisan, des meubles dessinés pour votre maison.'}</p>
         <span className="mq-btn" style={{ alignSelf: 'flex-start' }}>
           Demander un devis
         </span>
       </div>
     )
+  if (role === 'photo' && m)
+    return (
+      <div className="mq-visuel" style={{ '--teinte': m.teinte } as CSSProperties}>
+        <Picto nom={m.picto} />
+      </div>
+    )
   if (role === 'photo') return <PhotoEscalier id={`${uid}-ph`} />
   if (role.startsWith('carte-')) {
-    const c = CARTES[Number(role.slice(6))]!
+    const k = Number(role.slice(6))
+    if (m) {
+      const t = (m.cartes[k] ?? '').split(/[:—,(]/)[0]!.trim()
+      return (
+        <div className="mq-carte" style={{ '--mq-vert': m.teinte } as CSSProperties}>
+          <Picto nom="coche" />
+          <div>
+            <b>{t}</b>
+            <span>Inclus dans votre site</span>
+          </div>
+        </div>
+      )
+    }
+    const c = CARTES[k]!
     return (
       <div className="mq-carte">
         <Picto nom={c.picto} />
@@ -267,7 +303,7 @@ export function Contenu({ role, ctx = {} }: { role: Role; ctx?: ContexteBloc }) 
     return (
       <div className="mq-dash-haut">
         <span>Tableau de bord</span>
-        <small>Menuiserie Aubert · cette semaine</small>
+        <small>{m ? `${m.nom} · maquette` : 'Menuiserie Aubert · cette semaine'}</small>
       </div>
     )
   if (role.startsWith('kpi-')) {
