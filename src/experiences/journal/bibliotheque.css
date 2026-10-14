@@ -1,0 +1,166 @@
+/*
+ * LA BIBLIOTHÈQUE — couvertures en perspective sur une étagère. --o = décalage
+ * au centre (…, -1, 0, 1, …). Mouvement ambiant : le livre central flotte.
+ */
+.su-bib {
+  --larg: clamp(200px, 17vw, 260px);
+  width: 100%;
+  container-type: inline-size;
+  /* Rien ne déborde de la page : l'éventail est borné (sinon le viewport mobile s'élargit). */
+  overflow-x: clip;
+  overflow-y: visible;
+  padding-bottom: 40px;
+}
+.su-bib__scene {
+  position: relative;
+  height: calc(var(--larg) * 1.62);
+  perspective: 1500px;
+  perspective-origin: 50% 40%;
+  outline-offset: 6px;
+}
+.su-bib__scene:focus-visible {
+  outline: 2px solid var(--su-ambre-clair);
+}
+.su-bib__livre {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: var(--larg);
+  height: calc(var(--larg) * 1.42);
+  margin-left: calc(var(--larg) / -2);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 18px 18px 16px 26px;
+  border: 0;
+  border-radius: 3px 8px 8px 3px;
+  background: linear-gradient(135deg, color-mix(in srgb, var(--teinte) 82%, #fff), var(--teinte) 55%, color-mix(in srgb, var(--teinte) 70%, #000));
+  color: #fffdf9;
+  text-align: left;
+  text-decoration: none;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transform-origin: 50% 100%;
+  transform: translateX(calc(var(--x) * var(--larg))) translateZ(calc(var(--d) * var(--larg) * -0.3)) rotateY(calc(var(--r) * 1deg));
+  filter: brightness(calc(1 - var(--d) * 0.17));
+  box-shadow: 0 30px 40px rgba(2, 8, 18, 0.5), inset -2px 0 0 rgba(255, 255, 255, 0.12);
+  transition: transform 0.7s var(--su-pose), filter 0.5s;
+}
+.su-bib__livre[data-centre='1'] {
+  box-shadow: 0 40px 60px rgba(2, 8, 18, 0.6), 0 0 0 2px var(--su-ambre), inset -2px 0 0 rgba(255, 255, 255, 0.18);
+}
+.su-bib__livre:focus-visible {
+  outline: 2px solid var(--su-ambre-clair);
+  outline-offset: 3px;
+}
+.su-bib__dos {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 14px;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.35), rgba(255, 255, 255, 0.1) 60%, transparent);
+  border-radius: 3px 0 0 3px;
+}
+.su-bib__tranche {
+  position: absolute;
+  right: -5px;
+  top: 3px;
+  bottom: 3px;
+  width: 5px;
+  background: repeating-linear-gradient(180deg, #f4efe4 0 2px, #d8d0bd 2px 3px);
+  border-radius: 0 3px 3px 0;
+}
+.su-bib__rayon {
+  font-size: 0.6875rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255, 253, 249, 0.82);
+}
+.su-bib__pic {
+  display: grid;
+  place-items: center;
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: rgba(255, 253, 249, 0.16);
+}
+.su-bib__pic svg {
+  width: 28px;
+  height: 28px;
+}
+.su-bib__titre {
+  font-family: var(--su-font-display), sans-serif;
+  font-weight: 700;
+  font-size: clamp(1.02rem, 1.25vw, 1.2rem);
+  line-height: 1.16;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.su-bib__pied {
+  margin-top: auto;
+  font-size: 0.6875rem;
+  color: rgba(255, 253, 249, 0.8);
+}
+/* L'étagère : une planche qui reflète la lumière sous les couvertures. */
+.su-bib__etagere {
+  position: absolute;
+  left: -8%;
+  right: -8%;
+  top: calc(var(--larg) * 1.42);
+  height: 18px;
+  background: linear-gradient(180deg, #a9743c, #6c4620);
+  transform: translateZ(0) rotateX(78deg);
+  transform-origin: 50% 0;
+  box-shadow: 0 30px 40px rgba(2, 8, 18, 0.55);
+  border-radius: 2px;
+}
+.su-bib__commandes {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  margin-top: 12px;
+}
+.su-bib__fleche {
+  min-width: 48px;
+  min-height: 48px;
+  border: 1px solid color-mix(in srgb, var(--su-graphite) 60%, transparent);
+  border-radius: 50%;
+  background: transparent;
+  color: var(--su-ivoire);
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+.su-bib__fleche:hover:not(:disabled),
+.su-bib__fleche:focus-visible {
+  border-color: var(--su-ambre);
+  color: var(--su-ambre-clair);
+}
+.su-bib__fleche:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+.su-bib__compte {
+  color: var(--su-texte-doux);
+}
+.su-bib__vide {
+  color: var(--su-texte-doux);
+}
+@media (prefers-reduced-motion: no-preference) {
+  .su-bib__livre[data-centre='1'] {
+    animation: su-bib-flotte 6s ease-in-out infinite;
+  }
+}
+@keyframes su-bib-flotte {
+  50% { translate: 0 -8px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .su-bib__livre { transition-duration: 0.01ms; }
+}
+@media (max-width: 767px) {
+  .su-bib { --larg: min(54vw, 230px); }
+}

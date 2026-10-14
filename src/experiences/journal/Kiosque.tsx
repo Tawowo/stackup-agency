@@ -8,7 +8,7 @@
  */
 import { useEffect, useMemo, useState } from 'react'
 import Link from 'next/link'
-import StackFrame from '@/webgl/StackFrame'
+import Bibliotheque from './Bibliotheque'
 import { useScene } from '@/webgl/store'
 import type { Article } from '@/lib/blog'
 import './journal.css'
@@ -33,7 +33,7 @@ export default function Kiosque({ articles, rayons, rayonInitial = '', titre = '
     s.setParams({ retard: 0.25, flash: 0, arc: 0.6 })
     s.setProjection(0.4)
     s.setPose({ x: 0.1, y: -0.25 })
-    if (!s.reduced) s.setLayout('empile')
+    if (!s.reduced) s.setLayout('logo')
   }, [])
   const filtre = useMemo(() => {
     const t = q
@@ -49,6 +49,17 @@ export default function Kiosque({ articles, rayons, rayonInitial = '', titre = '
       return t.split(/\s+/).every((m) => h.includes(m))
     })
   }, [q, rayon, articles, rayons])
+  // Sans filtre : un article par rayon (étagère variée), complété par les plus récents.
+  const couvertures = useMemo(() => {
+    const rayonDe = (a: (typeof articles)[number]) => rayons.find((r) => r.categories.includes(a.categorie))?.id ?? 'creation'
+    let liste = filtre.slice(0, 12)
+    if (!rayon && !q.trim()) {
+      const vus = new Set<string>()
+      const un = filtre.filter((a) => (vus.has(rayonDe(a)) ? false : (vus.add(rayonDe(a)), true)))
+      liste = [...un, ...filtre.filter((a) => !un.includes(a))].slice(0, 12)
+    }
+    return liste.map((a) => ({ slug: a.slug, titre: a.titre, etiquette: a.etiquette, lecture: a.lecture, rayon: rayonDe(a) }))
+  }, [filtre, rayon, q, rayons])
   const une = filtre[0]
   const reste = filtre.slice(1)
   return (
@@ -69,8 +80,8 @@ export default function Kiosque({ articles, rayons, rayonInitial = '', titre = '
               </span>
             </label>
           </div>
-          <div className="su-jou__pile" aria-hidden="true">
-            <StackFrame className="su-jou__cadre" />
+          <div className="su-jou__biblio">
+            <Bibliotheque couvertures={couvertures} />
           </div>
         </div>
       </section>
