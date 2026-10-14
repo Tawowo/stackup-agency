@@ -5,3 +5,4 @@ qa/frames/
 node_modules/
 *.log
 .modeles/
+qc/

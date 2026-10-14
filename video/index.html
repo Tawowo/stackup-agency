@@ -34,6 +34,11 @@
       <audio id="musique" src="audio/musique.mp3" data-start="0" data-media-start="0" data-duration="45" data-track-index="11" data-volume="0.1259" data-automation="{&quot;version&quot;:1,&quot;lanes&quot;:[{&quot;target&quot;:&quot;volume&quot;,&quot;points&quot;:[{&quot;t&quot;:0,&quot;v&quot;:1},{&quot;t&quot;:43.45,&quot;v&quot;:1},{&quot;t&quot;:44.6,&quot;v&quot;:0,&quot;curve&quot;:-0.4}]}]}"></audio>
       <audio id="sons" src="audio/sons-complet.wav" data-start="0" data-media-start="0" data-duration="45" data-track-index="12" data-volume="0.3162"></audio>
     </div>
-    <script type="module" src="src/film.js"></script>
+    <script type="module">
+      import { timelinePrete } from "./src/film.js";
+      timelinePrete.then(({ tl }) => {
+        window.__timelines["stackup-16x9"] = tl;
+      });
+    </script>
   </body>
 </html>

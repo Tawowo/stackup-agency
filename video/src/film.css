@@ -1,0 +1,256 @@
+/* Le film Stackup — calques du cadre. Unités : --u = 1 px d'un cadre 1080 de haut. */
+
+#root {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #0b1e36;
+  font-family: Inter, sans-serif;
+  color: #fffdf9;
+}
+
+/* Le ciel : navy profond, dégradé RADIAL (un dégradé linéaire plein cadre
+   crée des bandes à la compression H.264). */
+#ciel {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(120% 80% at 50% 115%, rgba(246, 145, 6, 0.10) 0%, rgba(246, 145, 6, 0) 45%),
+    radial-gradient(140% 110% at 50% 30%, #123056 0%, #102a4a 38%, #0b1e36 70%, #081628 100%);
+}
+
+/* Le code vivant, en arrière-plan, flou : la profondeur de champ du fond. */
+#code {
+  position: absolute;
+  inset: -10% -5%;
+  font-family: "JetBrains Mono", monospace;
+  font-size: calc(var(--u) * 22);
+  line-height: 1.75;
+  color: rgba(125, 179, 234, 0.16);
+  white-space: pre;
+  filter: blur(calc(var(--u) * 1.6));
+  overflow: hidden;
+}
+#code .col {
+  position: absolute;
+  top: 0;
+  width: 34%;
+}
+#code b {
+  color: rgba(246, 145, 6, 0.32);
+  font-weight: 500;
+}
+
+#scene {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Étiquettes accrochées aux objets 3D, logo DOM, etc. */
+#calque {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+.etiquette {
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-family: "JetBrains Mono", monospace;
+  font-weight: 700;
+  font-size: calc(var(--u) * 30);
+  letter-spacing: 0.08em;
+  color: #fbbf24;
+  background: rgba(11, 30, 54, 0.82);
+  border: calc(var(--u) * 2) solid rgba(246, 145, 6, 0.75);
+  border-radius: calc(var(--u) * 8);
+  padding: calc(var(--u) * 6) calc(var(--u) * 14);
+  white-space: nowrap;
+  opacity: 0;
+}
+.etiquette.claire {
+  color: #0c1626;
+  background: #fbbf24;
+  border-color: #fbbf24;
+}
+
+/* Typographie cinétique */
+#typo {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+.titre {
+  position: absolute;
+  font-family: Poppins, sans-serif;
+  font-weight: 700;
+  line-height: 0.98;
+  letter-spacing: -0.02em;
+  color: #fffdf9;
+  text-transform: uppercase;
+  white-space: nowrap;
+  text-shadow: 0 0 0.22em rgba(6, 16, 32, 0.55), 0 0.04em 0.12em rgba(6, 16, 32, 0.5);
+}
+.titre .ligne {
+  position: relative;
+  display: block;
+  overflow: visible;
+  perspective: calc(var(--u) * 900);
+}
+.titre .masque {
+  display: block;
+  overflow: hidden;
+  padding: 0.04em 0.02em 0.08em;
+  margin: -0.04em -0.02em -0.08em;
+}
+.titre .contenu {
+  display: block;
+  position: relative;
+  perspective: calc(var(--u) * 900);
+}
+.titre .lettre,
+.titre .mot {
+  display: inline-block;
+  transform-origin: 50% 100%;
+  will-change: transform;
+}
+.titre .ambre {
+  color: #f69106;
+}
+.titre .barre {
+  position: absolute;
+  left: 0;
+  top: 8%;
+  width: 100%;
+  height: 84%;
+  background: #f69106;
+  transform-origin: 0 50%;
+  transform: scaleX(0);
+}
+.titre .rature {
+  position: absolute;
+  left: -2%;
+  top: 46%;
+  width: 104%;
+  height: 0.13em;
+  background: #f69106;
+  transform-origin: 0 50%;
+  transform: scaleX(0);
+  box-shadow: 0 0 calc(var(--u) * 24) rgba(246, 145, 6, 0.6);
+}
+.titre .tranche {
+  position: absolute;
+  inset: 0;
+}
+.sous {
+  position: absolute;
+  font-family: "JetBrains Mono", monospace;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: #fbbf24;
+  white-space: nowrap;
+}
+
+/* Sous-titres : plaque navy translucide, Inter semi-gras, 2 lignes max. */
+#soustitres {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+.st {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 86%;
+  text-align: center;
+  opacity: 0;
+}
+.st .plaque {
+  display: inline-block;
+  background: rgba(11, 30, 54, 0.78);
+  border: calc(var(--u) * 2) solid rgba(255, 253, 249, 0.14);
+  border-radius: calc(var(--u) * 14);
+  padding: calc(var(--u) * 10) calc(var(--u) * 26) calc(var(--u) * 12);
+  overflow: hidden;
+}
+.st .txt {
+  display: block;
+  font-family: Inter, sans-serif;
+  font-weight: 600;
+  color: #fffdf9;
+  line-height: 1.25;
+}
+
+/* Le logo officiel (variante sombre du site) */
+.lockup {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+.lockup svg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: block;
+}
+.lockup .mot {
+  position: absolute;
+  background-color: #fffdf9;
+  -webkit-mask-image: url("../assets/stackup-mot.png");
+  mask-image: url("../assets/stackup-mot.png");
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
+.url {
+  position: absolute;
+  font-family: Poppins, sans-serif;
+  font-weight: 700;
+  color: #fffdf9;
+  white-space: nowrap;
+  letter-spacing: -0.01em;
+}
+.url .curseur {
+  display: inline-block;
+  width: 0.08em;
+  height: 0.9em;
+  margin-left: 0.04em;
+  background: #f69106;
+  vertical-align: -0.08em;
+}
+.appel {
+  position: absolute;
+  font-family: Inter, sans-serif;
+  font-weight: 700;
+  color: #0c1626;
+  background: #f69106;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+/* Voile : le noir du plan 3, le grain, le vignettage. */
+#voile {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(120% 90% at 50% 50%, rgba(0, 0, 0, 0) 55%, rgba(4, 10, 20, 0.55) 100%);
+}
+#voile .noir {
+  position: absolute;
+  inset: 0;
+  background: #02060c;
+  opacity: 0;
+}
+#voile .flash {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(60% 60% at 50% 50%, rgba(255, 214, 150, 0.95), rgba(246, 145, 6, 0.0) 70%);
+  opacity: 0;
+  mix-blend-mode: screen;
+}

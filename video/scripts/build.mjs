@@ -7,7 +7,7 @@
  *   node scripts/build.mjs --apercu 16x9 --plan 4 [--echelle 0.5]
  *        → apercu.html : un seul plan, en basse définition, pour le contrôle
  */
-import { readFileSync, writeFileSync, mkdirSync } from "node:fs";
+import { readFileSync, writeFileSync, mkdirSync, existsSync, symlinkSync, rmSync, copyFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { choregraphie } from "../src/choregraphie.js";
@@ -23,12 +23,28 @@ export const FORMATS = {
   "1x1": { largeur: 1080, hauteur: 1080 },
 };
 
+/* Une seule composition racine par projet (règle HyperFrames) : le 16:9 est
+   video/index.html ; chaque autre format est un petit projet frère dans
+   video/formats/<nom>/, qui partage src/, audio/, fonts/… par liens. */
 const SORTIES = [
-  { fichier: "index.html", format: "16x9", montage: "complet" },
-  { fichier: "vertical.html", format: "9x16", montage: "complet" },
-  { fichier: "carre.html", format: "1x1", montage: "complet" },
-  { fichier: "vertical-20s.html", format: "9x16", montage: "court20" },
+  { dossier: ".", format: "16x9", montage: "complet" },
+  { dossier: "formats/vertical", format: "9x16", montage: "complet" },
+  { dossier: "formats/carre", format: "1x1", montage: "complet" },
+  { dossier: "formats/vertical-20s", format: "9x16", montage: "court20" },
 ];
+const PARTAGES = ["src", "audio", "fonts", "vendor", "assets"];
+
+function projetFrere(dossier) {
+  const d = join(RACINE, dossier);
+  mkdirSync(d, { recursive: true });
+  for (const p of PARTAGES) {
+    const lien = join(d, p);
+    if (!existsSync(lien)) symlinkSync(join("..", "..", p), lien);
+  }
+  for (const f of ["hyperframes.json"]) copyFileSync(join(RACINE, f), join(d, f));
+  writeFileSync(join(d, "meta.json"), JSON.stringify({ id: dossier.split("/").pop(), name: dossier.split("/").pop() }, null, 2));
+  return d;
+}
 
 const arg = (nom) => {
   const i = process.argv.indexOf(`--${nom}`);
@@ -109,7 +125,12 @@ function entree({ format, montage, decalage = 0, duree = null, echelle = 1, id }
       <audio id="musique" src="audio/musique.mp3" data-start="0" data-media-start="${decalage}" data-duration="${D}" data-track-index="11" data-volume="${VOL_MUSIQUE}" data-automation="${attr(automation)}"></audio>
       <audio id="sons" src="audio/sons-${montage}.wav" data-start="0" data-media-start="${decalage}" data-duration="${D}" data-track-index="12" data-volume="${VOL_SONS}"></audio>
     </div>
-    <script type="module" src="src/film.js"></script>
+    <script type="module">
+      import { timelinePrete } from "./src/film.js";
+      timelinePrete.then(({ tl }) => {
+        window.__timelines["${id}"] = tl;
+      });
+    </script>
   </body>
 </html>
 `;
@@ -137,15 +158,14 @@ if (apercu) {
   const p = m.plans.find((x) => x.plan === plan);
   const debut = arg("debut") ? Number(arg("debut")) : p.debut;
   const fin = arg("fin") ? Number(arg("fin")) : p.fin;
-  writeFileSync(
-    join(RACINE, "apercu.html"),
-    entree({ format: apercu, montage, decalage: debut, duree: +(fin - debut).toFixed(3), echelle, id: "apercu" }),
-  );
-  console.log(`apercu.html : ${apercu} ${montage} plan ${plan} [${debut}–${fin}] ×${echelle}`);
+  const d = projetFrere("formats/apercu");
+  writeFileSync(join(d, "index.html"), entree({ format: apercu, montage, decalage: debut, duree: +(fin - debut).toFixed(3), echelle, id: "apercu" }));
+  console.log(`formats/apercu : ${apercu} ${montage} plan ${plan} [${debut}–${fin}] ×${echelle}`);
 } else {
   for (const s of SORTIES) {
     const id = `stackup-${s.format}${s.montage === "complet" ? "" : "-" + s.montage}`;
-    writeFileSync(join(RACINE, s.fichier), entree({ ...s, id }));
-    console.log(`${s.fichier} : ${s.format} ${s.montage} ${script.montages[s.montage].duree} s`);
+    const d = s.dossier === "." ? RACINE : projetFrere(s.dossier);
+    writeFileSync(join(d, "index.html"), entree({ ...s, id }));
+    console.log(`${s.dossier}/index.html : ${s.format} ${s.montage} ${script.montages[s.montage].duree} s`);
   }
 }
