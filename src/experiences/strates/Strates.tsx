@@ -1,50 +1,83 @@
 'use client'
 /**
- * MOMENT 01 — LES STRATES. Mécanisme : DÉCOUPE.
- * « Un site, c'est cinq couches. » Épinglé sur 250 vh : la pile se découpe en
- * cinq lamelles qui s'écartent une à une (retard par lamelle), étiquetées à
- * gauche ; clic / tap / touches 1-5 isolent une strate ; à la fin les lamelles
- * se referment en une seule plaque épaisse.
+ * MOMENT 01 — LES STRATES. Mécanisme : VUE ÉCLATÉE.
+ * « Un site, c'est cinq couches. » Comme une vue éclatée d'iPhone : cinq
+ * calques superposés en perspective, chacun montrant ce qu'il est (la maquette
+ * colorée, les textes et photos, de vraies lignes de code, un tableau de
+ * clients, l'adresse et le serveur). Épinglé : les calques se séparent, chacun
+ * s'allume quand son titre est actif, puis ils se compressent en un seul
+ * écran, le site fini, net, dans une fenêtre de navigateur. Clic (ou 1-5) sur
+ * un calque : il sort de la pile et se présente de face.
  */
 import { useEffect, useRef, useState } from 'react'
-import StackFrame from '@/webgl/StackFrame'
-import { MORPH } from '@/webgl/morph'
 import { useScene } from '@/webgl/store'
-import { useExclusion } from '@/webgl/useExclusion'
 import { gsap, ScrollTrigger, SplitText, initGsap } from '@/lib/gsap'
+import { CalqueCode, CalqueContenu, CalqueDesign, CalqueDonnees, CalqueHebergement } from './calques'
 import './strates.css'
 
 export const COUCHES = [
-  { num: '01', nom: 'Design', ligne: 'Ce que vos clients voient.', texte: 'Une mise en page dessinée pour votre métier, pas un thème acheté. Vos couleurs, vos photos, votre ton.' },
-  { num: '02', nom: 'Contenu', ligne: 'Ce qu’ils lisent.', texte: 'Les textes et les pages qui répondent aux questions de vos clients, écrits avec vous, pensés pour les moteurs de recherche.' },
-  { num: '03', nom: 'Code', ligne: 'Ce qui fait tout tenir.', texte: 'Le site est construit à la main, sans extension ni abonnement. Il est rapide, et il vous appartient.' },
-  { num: '04', nom: 'Données', ligne: 'Vos clients, vos commandes, vos rendez-vous.', texte: 'Formulaires, commandes, rendez-vous : vos informations restent chez vous, exportables à tout moment.' },
-  { num: '05', nom: 'Hébergement et nom de domaine', ligne: 'Ce qui le rend accessible.', texte: 'Mise en ligne, nom de domaine, certificat, sauvegardes : douze mois inclus, puis vous décidez.' },
+  { num: '01', nom: 'Design', court: 'Design', ligne: 'Ce que vos clients voient.', texte: 'Une mise en page dessinée pour votre métier, pas un thème acheté. Vos couleurs, vos photos, votre ton.' },
+  { num: '02', nom: 'Contenu', court: 'Contenu', ligne: 'Ce qu’ils lisent.', texte: 'Les textes et les pages qui répondent aux questions de vos clients, écrits avec vous, pensés pour les moteurs de recherche.' },
+  { num: '03', nom: 'Code', court: 'Code', ligne: 'Ce qui fait tout tenir.', texte: 'Le site est construit à la main, sans extension ni abonnement. Il est rapide, et il vous appartient.' },
+  { num: '04', nom: 'Données', court: 'Données', ligne: 'Vos clients, vos commandes, vos rendez-vous.', texte: 'Formulaires, commandes, rendez-vous : vos informations restent chez vous, exportables à tout moment.' },
+  { num: '05', nom: 'Hébergement et nom de domaine', court: 'Hébergement', ligne: 'Ce qui le rend accessible.', texte: 'Mise en ligne, nom de domaine, certificat, sauvegardes : douze mois inclus, puis vous décidez.' },
 ]
 
-const EXCLUSION_01 = ['.su-str__tete', '.su-str__liste']
+const lisse = (a: number, b: number, x: number) => {
+  const t = Math.min(1, Math.max(0, (x - a) / (b - a)))
+  return t * t * (3 - 2 * t)
+}
+
+function Calque({ k, uid }: { k: number; uid: string }) {
+  if (k === 0) return <CalqueDesign uid={uid} />
+  if (k === 1) return <CalqueContenu uid={uid} />
+  if (k === 2) return <CalqueCode />
+  if (k === 3) return <CalqueDonnees />
+  return <CalqueHebergement />
+}
 
 export default function Strates() {
   const section = useRef<HTMLElement>(null)
   const scene = useRef<HTMLDivElement>(null)
   const titre = useRef<HTMLHeadingElement>(null)
+  const vue = useRef<HTMLDivElement>(null)
   const [isole, setIsole] = useState(-1)
-  const [p, setP] = useState(0)
-  useExclusion(EXCLUSION_01, p > 0 && p < 1)
+  const [actifScroll, setActifScroll] = useState(-1)
+  const [fini, setFini] = useState(false)
 
   useEffect(() => {
     initGsap()
     const el = section.current
     const st = scene.current
     const h2 = titre.current
-    if (!el || !st || !h2) return
+    const v = vue.current
+    if (!el || !st || !h2 || !v) return
     const reduit = useScene.getState().reduced
     const mobile = window.innerWidth < 768
 
     const split = new SplitText(h2, { type: 'words', wordsClass: 'su-str__mot', aria: 'none' })
+    let dernierActif = -2
+    let dernierFini = false
+    const appliquer = (q: number) => {
+      // Séparation (0,03 → 0,45), calques allumés un à un (0,1 → 0,82), fusion en un écran (0,84 → 0,98).
+      const sep = lisse(0.03, 0.45, q)
+      const fusion = lisse(0.84, 0.98, q)
+      v.style.setProperty('--sep', sep.toFixed(4))
+      v.style.setProperty('--face', fusion.toFixed(4))
+      v.style.setProperty('--merge', fusion.toFixed(4))
+      const k = q < 0.1 || q > 0.82 ? -1 : Math.min(4, Math.floor((q - 0.1) / 0.144))
+      if (k !== dernierActif) {
+        dernierActif = k
+        setActifScroll(k)
+      }
+      const f = q > 0.9
+      if (f !== dernierFini) {
+        dernierFini = f
+        setFini(f)
+      }
+    }
     const ctx = gsap.context(() => {
       if (!reduit) {
-        // Le titre se déplie mot par mot, piloté par le scroll (réversible).
         gsap.set(split.words, { rotateX: -90, transformOrigin: '50% 100%' })
         gsap.to(split.words, {
           rotateX: 0,
@@ -53,82 +86,30 @@ export default function Strates() {
           scrollTrigger: { trigger: el, start: 'top 90%', end: 'top 30%', scrub: true },
         })
       }
-      // La scène, en trois rampes toutes pilotées par le scroll : à l'approche
-      // (le haut de la section monte du bas du viewport jusqu'en haut), la tour
-      // du hero se replie en pile de lamelles fermée ; épinglée, les lamelles
-      // s'ouvrent une à une ; à la fin elles se referment en une plaque épaisse.
-      let phase: 'arrive' | 'ouvre' | 'ferme' | null = null
-      const poser = (ph: 'arrive' | 'ouvre' | 'ferme') => {
-        const s = useScene.getState()
-        if (phase === ph && s.moment === '01') return
-        phase = ph
-        s.setMoment('01')
-        s.setParams({ isoPush: 0.35, isoDim: 0.65 })
-        if (reduit) return
-        s.setPose({ x: 0.5, y: -0.22 })
-        s.setProjection(0.5)
-        s.setScrub(true)
-        // L'approche : le S massif se recompose en pile de lamelles sans se disperser
-        // (pas d'arc, presque pas de retard : une seule forme qui se transforme).
-        s.setParams({ arc: ph === 'arrive' ? 0 : 0.6, retard: ph === 'arrive' ? 0.12 : 0.25, flash: 0 })
-        if (ph === 'arrive') s.setPair('empile', 'strates', { b: { ouverture: 0 } })
-        else if (ph === 'ouvre') s.setPair('strates', 'strates', { a: { ouverture: 0 }, b: { ouverture: 1 } })
-        else s.setPair('strates', 'strates', { a: { ouverture: 1 }, b: { ouverture: 0 } })
-      }
-      // La phase ne dépend que de la progression : l'ordre des rappels
-      // (onEnter / onUpdate) n'a pas d'importance, même sur un saut.
-      const appliquer = (q: number) => {
-        setP(q)
-        el.style.setProperty('--su-p', q.toFixed(4))
-        if (reduit) {
-          poser('ouvre')
-          return
-        }
-        if (q < 0.8) {
-          poser('ouvre')
-          MORPH.value = Math.min(1, q / 0.6)
-        } else {
-          poser('ferme')
-          MORPH.value = (q - 0.8) / 0.2
-        }
-      }
       if (reduit) {
-        // Mouvement réduit : pas d'épinglage, tout est posé ; la section ne
-        // fait que prendre la main sur la scène (logo figé) en entrant.
-        appliquer(1)
-        ScrollTrigger.create({ trigger: el, start: 'top 60%', end: 'bottom 40%', onEnter: () => poser('ouvre'), onEnterBack: () => poser('ouvre') })
+        // Mouvement réduit : la vue éclatée reste posée, aucun épinglage.
+        appliquer(0.5)
         return
       }
-      // L'approche : rampe « haut de section au bas du viewport → en haut ».
-      ScrollTrigger.create({
-        trigger: el,
-        start: 'top bottom',
-        end: 'top top',
-        scrub: true,
-        onUpdate: (self) => {
-          const p = self.progress
-          if (p <= 0 || p >= 1) return
-          poser('arrive')
-          MORPH.value = p * p * (3 - 2 * p)
-        },
-        onLeaveBack: () => {
-          // Rendue au hero : il reprend la main par son propre épinglage.
-          phase = null
-        },
-      })
       ScrollTrigger.create({
         trigger: el,
         start: 'top top',
-        end: () => `+=${Math.round(window.innerHeight * (mobile ? 1.5 : 2.5))}`,
+        end: () => `+=${Math.round(window.innerHeight * (mobile ? 2 : 3))}`,
         pin: st,
         scrub: true,
         onEnter: (self) => appliquer(self.progress),
         onEnterBack: (self) => appliquer(self.progress),
         onUpdate: (self) => appliquer(self.progress),
       })
+      ScrollTrigger.create({
+        trigger: el,
+        start: 'top 60%',
+        end: 'bottom 40%',
+        onEnter: () => useScene.getState().setMoment('01'),
+        onEnterBack: () => useScene.getState().setMoment('01'),
+      })
     }, el)
 
-    // Clavier : 1-5 isole, Échap revient. Désactivé dans les champs.
     const key = (e: KeyboardEvent) => {
       const t = e.target as HTMLElement | null
       if (t && (t.tagName === 'INPUT' || t.tagName === 'TEXTAREA' || t.isContentEditable)) return
@@ -142,15 +123,11 @@ export default function Strates() {
       window.removeEventListener('keydown', key)
       ctx.revert()
       split.revert()
-      useScene.getState().setIsolate(-1)
     }
   }, [])
 
-  useEffect(() => {
-    useScene.getState().setIsolate(isole)
-  }, [isole])
-
   const choisir = (k: number) => setIsole((cur) => (cur === k ? -1 : k))
+  const actif = isole >= 0 ? isole : actifScroll
 
   return (
     <section ref={section} className="su-str" data-moment="01" data-nuit="1" data-titre="Les strates" id="strates" aria-labelledby="su-str-titre">
@@ -162,12 +139,38 @@ export default function Strates() {
               Un site, c’est cinq couches.
             </h2>
           </header>
-          <div className="su-str__cadre-zone">
-            <StackFrame className="su-str__cadre" />
+          <div ref={vue} className="su-ecl" data-actif={actif} data-isole={isole >= 0 ? '1' : '0'} data-fini={fini ? '1' : '0'}>
+            <div className="su-ecl__stage" aria-hidden="true">
+              {COUCHES.map((c, k) => (
+                <div key={c.num} className="su-ecl__calque" style={{ '--i': k } as React.CSSProperties} data-on={actif === k ? '1' : actif === -1 ? '' : '0'} onClick={() => choisir(k)}>
+                  <Calque k={k} uid={`ec${k}`} />
+                  <span className="su-ecl__tag su-mono">
+                    {c.num} · {c.court}
+                  </span>
+                </div>
+              ))}
+              <span className="su-ecl__axe su-ecl__axe--a" />
+              <span className="su-ecl__axe su-ecl__axe--b" />
+              <span className="su-ecl__axe su-ecl__axe--c" />
+              <span className="su-ecl__axe su-ecl__axe--d" />
+            </div>
+            {isole >= 0 && (
+              <div className="su-ecl__devant" key={isole} aria-hidden="true" onClick={() => setIsole(-1)}>
+                <div className="su-ecl__devant-fen">
+                  <Calque k={isole} uid="ecd" />
+                </div>
+                <p className="su-ecl__devant-leg su-mono">
+                  {COUCHES[isole]!.num} · {COUCHES[isole]!.court} — toucher pour la remettre dans la pile
+                </p>
+              </div>
+            )}
+            <p className="su-ecl__fini su-display" data-visible={fini ? '1' : '0'}>
+              Le site fini, en une seule pièce.
+            </p>
           </div>
           <ol className="su-str__liste" aria-label="Les cinq couches">
             {COUCHES.map((c, k) => (
-              <li key={c.num} className="su-str__couche" data-isole={isole === k ? '1' : isole === -1 ? '' : '0'} data-ouverte={p > 0.08 + k * 0.11 ? '1' : '0'}>
+              <li key={c.num} className="su-str__couche" data-actif={actif === k ? '1' : '0'} data-ouverte={actif >= 0 && k <= Math.max(actif, actifScroll) ? '1' : '0'}>
                 <button type="button" className="su-str__bouton" aria-pressed={isole === k} onClick={() => choisir(k)}>
                   <span className="su-mono su-str__num">{c.num}</span>
                   <span className="su-str__nom">{c.nom}</span>
@@ -177,7 +180,7 @@ export default function Strates() {
               </li>
             ))}
           </ol>
-          <p className="su-str__fin" data-visible={p > 0.86 ? '1' : '0'}>
+          <p className="su-str__fin">
             <span className="su-display">Nous fabriquons les cinq.</span>
             <span className="su-str__fin-ligne">Vous êtes propriétaire des cinq.</span>
           </p>
