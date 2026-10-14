@@ -13,7 +13,7 @@ export default function Seuil({ children, id }: { children: string; id?: string 
     const el = ref.current
     if (!el) return
     const reduit = window.matchMedia('(prefers-reduced-motion: reduce)').matches
-    const split = new SplitText(el, { type: 'words', wordsClass: 'su-seuil__mot' })
+    const split = new SplitText(el, { type: 'words', wordsClass: 'su-seuil__mot', aria: 'none' })
     if (reduit) return () => split.revert()
     // Piloté par le scroll (réversible, jamais en cours de route).
     gsap.set(split.words, { rotateX: -90, transformOrigin: '50% 100%' })

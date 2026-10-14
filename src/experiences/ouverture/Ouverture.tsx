@@ -51,7 +51,7 @@ export default function Ouverture() {
     s.setActive(true)
 
     // Le titre se déplie mot par mot depuis sa ligne de base.
-    const split = new SplitText(h1, { type: 'words', wordsClass: 'su-ouv__mot' })
+    const split = new SplitText(h1, { type: 'words', wordsClass: 'su-ouv__mot', aria: 'none' })
     const mots = split.words
     const ctx = gsap.context(() => {
       if (reduit) {

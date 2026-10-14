@@ -9,14 +9,16 @@ export interface LigneFiche {
 
 export default function Fiche({ lignes, titre = 'Fiche de fabrication', className = '' }: { lignes: LigneFiche[]; titre?: string; className?: string }) {
   return (
-    <dl className={`su-fiche ${className}`} aria-label={titre}>
-      <div className="su-fiche__titre">{titre}</div>
-      {lignes.map((l) => (
-        <div key={l.cle} className="su-fiche__ligne">
-          <dt>{l.cle}</dt>
-          <dd>{l.valeur}</dd>
-        </div>
-      ))}
-    </dl>
+    <div className={`su-fiche ${className}`} role="group" aria-label={titre}>
+      <p className="su-fiche__titre">{titre}</p>
+      <dl className="su-fiche__lignes">
+        {lignes.map((l) => (
+          <div key={l.cle} className="su-fiche__ligne">
+            <dt>{l.cle}</dt>
+            <dd>{l.valeur}</dd>
+          </div>
+        ))}
+      </dl>
+    </div>
   )
 }

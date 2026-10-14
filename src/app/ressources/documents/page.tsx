@@ -34,7 +34,9 @@ interface Doc {
  * responsable de traitement (politique de confidentialité). Ils restent
  * listés, sans lien, jusqu'à ce que le propriétaire les régénère.
  */
-const EN_REVISION = new Set(['cgv.pdf', 'contrat-prestation.pdf', 'politique-confidentialite.pdf'])
+// Tous les PDF actuels portent une identité légale (nom, SIRET) qui n'est pas celle du site ;
+// ils restent retirés jusqu'à leur régénération par le propriétaire (voir docs/JOURNAL.md).
+const EN_REVISION = new Set(['cgv.pdf', 'contrat-prestation.pdf', 'politique-confidentialite.pdf', 'avenant-contrat.pdf', 'bon-de-commande.pdf', 'cession-droits.pdf', 'contrat-maintenance.pdf', 'devis-type.pdf', 'facture-type.pdf', 'mentions-legales.pdf', 'nda-confidentialite.pdf', 'pv-livraison.pdf'])
 
 const GROUPES: { id: string; nom: string; docs: Doc[] }[] = [
   {

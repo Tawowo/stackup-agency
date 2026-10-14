@@ -243,6 +243,10 @@
 .su-plaque--ivoire {
   background: var(--su-ivoire-creuse);
   color: var(--su-navy);
+  /* Une plaque claire garde des textes « jour », même posée sur la nuit. */
+  --su-texte: var(--su-navy);
+  --su-texte-doux: var(--su-graphite-ivoire);
+  --su-accent-texte: var(--su-ambre-texte);
 }
 .su-plaque--encre {
   background: var(--su-encre-2);
@@ -278,7 +282,11 @@
   font-size: 0.8125rem;
   letter-spacing: 0.04em;
 }
+.su-fiche__lignes {
+  margin: 0;
+}
 .su-fiche__titre {
+  margin: 0;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   font-size: 0.6875rem;

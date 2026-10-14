@@ -27,7 +27,7 @@ export default function Depart() {
     const h2 = titre.current
     if (!el || !h2) return
     const reduit = useScene.getState().reduced
-    const split = new SplitText(h2, { type: 'words', wordsClass: 'su-dep__mot' })
+    const split = new SplitText(h2, { type: 'words', wordsClass: 'su-dep__mot', aria: 'none' })
     const ctx = gsap.context(() => {
       if (!reduit) {
         gsap.set(split.words, { rotateX: -90, transformOrigin: '50% 100%' })

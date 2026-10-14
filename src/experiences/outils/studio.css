@@ -125,7 +125,7 @@
   margin-left: 12px;
   font-family: var(--su-font-mono), monospace;
   font-size: 0.6875rem;
-  color: color-mix(in srgb, var(--st-texte) 60%, transparent);
+  color: color-mix(in srgb, var(--st-texte) 78%, transparent);
 }
 /* Le contenu change : la page se redécoupe (vocabulaire : découpe). */
 .su-sty__site {

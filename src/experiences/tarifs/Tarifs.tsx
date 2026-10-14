@@ -51,7 +51,7 @@ export default function Tarifs({ initiale }: { initiale: Configuration }) {
     s.setProjection(0.35)
     s.setCalme(false)
     if (!s.reduced) s.setLayout('cadran')
-    const split = new SplitText(h1, { type: 'words', wordsClass: 'su-tar__mot' })
+    const split = new SplitText(h1, { type: 'words', wordsClass: 'su-tar__mot', aria: 'none' })
     const ctx = gsap.context(() => {
       if (!s.reduced) {
         gsap.set(split.words, { rotateX: -90, transformOrigin: '50% 100%' })

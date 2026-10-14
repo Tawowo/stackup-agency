@@ -1,6 +1,6 @@
 /**
  * VIDÉOS — un scroll entier de l'accueil, en desktop (1440), mobile (390) et
- * mouvement réduit. L'enregistrement natif de Playwright ne produit pas de
+ * mouvement réduit, puis une vidéo par page-monde (desktop). L'enregistrement natif de Playwright ne produit pas de
  * trames sous SwiftShader : on capture donc des trames (screenshot JPEG, une
  * par pas de scroll) et ffmpeg (celui de Playwright) les assemble en WebM.
  * Sortie : docs/qa/videos/<nom>.webm.
@@ -16,6 +16,14 @@ const CAS = [
   { nom: 'accueil-1440', viewport: { width: 1440, height: 900 }, rm: false, pas: 36 },
   { nom: 'accueil-390', viewport: { width: 390, height: 844 }, rm: false, mobile: true, pas: 28 },
   { nom: 'accueil-1440-rm', viewport: { width: 1440, height: 900 }, rm: true, pas: 60 },
+  // Une vidéo par page-monde (desktop) ; le pas s'adapte pour ~260 trames.
+  ...['/tarifs', '/realisations', '/services', '/solutions', '/a-propos', '/contact', '/blog/10-erreurs-seo-site-web', '/agence-web/tours'].map((route) => ({
+    nom: route.slice(1).replace(/\//g, '_') + '-1440',
+    route,
+    viewport: { width: 1440, height: 900 },
+    rm: false,
+    pas: 0,
+  })),
 ]
 const seul = process.argv.find((a) => a.startsWith('--cas='))?.split('=')[1]
 mkdirSync('docs/qa/videos', { recursive: true })
@@ -27,7 +35,7 @@ for (const c of CAS) {
   mkdirSync(dir, { recursive: true })
   const ctx = await browser.newContext({ viewport: c.viewport, isMobile: !!c.mobile, hasTouch: !!c.mobile, reducedMotion: c.rm ? 'reduce' : 'no-preference' })
   const page = await ctx.newPage()
-  await page.goto(`${BASE}/?quality=high`, { waitUntil: 'networkidle' })
+  await page.goto(`${BASE}${c.route ?? '/'}?quality=high&pane=0`, { waitUntil: 'networkidle' })
   await page.waitForSelector('html[data-su-ready="1"]', { timeout: 20000 }).catch(() => {})
   await page.waitForTimeout(1500)
   const total = await page.evaluate(() => document.documentElement.scrollHeight - window.innerHeight)
@@ -36,7 +44,8 @@ for (const c of CAS) {
     await page.screenshot({ path: `${dir}/${String(n++).padStart(5, '0')}.jpg`, type: 'jpeg', quality: 70 })
   }
   for (let k = 0; k < 12; k++) await trame()
-  for (let y = 0; y <= total; y += c.pas) {
+  const pas = c.pas || Math.max(24, Math.round(total / 260))
+  for (let y = 0; y <= total; y += pas) {
     await page.evaluate((yy) => {
       window.__suLenis?.scrollTo(yy, { immediate: true })
       window.scrollTo(0, yy)

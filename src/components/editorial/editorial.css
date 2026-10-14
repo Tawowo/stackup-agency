@@ -111,6 +111,7 @@
 .su-prose code {
   font-family: var(--su-font-mono), monospace;
   font-size: 0.9em;
+  color: var(--su-navy);
   background: var(--su-ivoire-creuse);
   padding: 1px 5px;
   border-radius: 3px;

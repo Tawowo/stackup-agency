@@ -42,7 +42,7 @@ export default function Strates() {
     const reduit = useScene.getState().reduced
     const mobile = window.innerWidth < 768
 
-    const split = new SplitText(h2, { type: 'words', wordsClass: 'su-str__mot' })
+    const split = new SplitText(h2, { type: 'words', wordsClass: 'su-str__mot', aria: 'none' })
     const ctx = gsap.context(() => {
       if (!reduit) {
         // Le titre se déplie mot par mot, piloté par le scroll (réversible).
