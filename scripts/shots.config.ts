@@ -232,6 +232,8 @@ export const ROUTES: Route[] = [
     ['/agence-web/departement/indre-et-loire', 'loc-dep'],
     ['/creation-site-internet/plombier', 'loc-metier'],
     ['/services-locaux/creation-site-restaurant', 'loc-service'],
+    ['/services-locaux/creation-boutique-en-ligne', 'loc-service'],
+    ['/services-locaux/referencement-local-seo', 'loc-service'],
     ['/zones-intervention', 'loc-zones'],
   ] as [string, string][]).map(([route, m]): Route => ({
     route,

@@ -1,9 +1,19 @@
 import { notFound } from 'next/navigation'
 import { SERVICES_LOCAUX } from '@/data/services-locaux'
 import Locale from '@/gabarits/locale/Locale'
-import { FORME_SERVICE_LOCAL, sansDelai } from '@/gabarits/locale/formes'
+import MondeService from '@/components/mondes/MondeService'
+import MondeSerp from '@/components/mondes/MondeSerp'
+import { sansDelai } from '@/gabarits/locale/formes'
 import { conforme } from '@/lib/conformite'
 import { JsonLd, ORIGINE, faqPage, filAriane, meta } from '@/lib/seo'
+
+const MAQUETTE: Record<string, 'page' | 'multi' | 'boutique' | 'logiciel'> = {
+  'creation-site-restaurant': 'page',
+  'creation-site-artisan': 'page',
+  'creation-site-commerce': 'multi',
+  'creation-boutique-en-ligne': 'boutique',
+  'developpement-application-metier': 'logiciel',
+}
 
 export const dynamicParams = false
 export function generateStaticParams() {
@@ -38,7 +48,7 @@ export default async function PageServiceLocal({ params }: { params: Promise<{ s
       />
       <Locale
         moment="loc-service"
-        forme={FORME_SERVICE_LOCAL[slug] ?? 'page'}
+        monde={slug === 'referencement-local-seo' ? <MondeSerp /> : <MondeService maquette={MAQUETTE[slug] ?? 'page'} />}
         ariane={[
           { href: '/', nom: 'Accueil' },
           { href: '/services', nom: 'Services' },
