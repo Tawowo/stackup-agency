@@ -55,7 +55,7 @@
 
 /* ───────── FAQ : la conversation ───────── */
 .mw-faq__fenetre {
-  min-height: 340px;
+  height: 380px; /* hauteur fixe : une réponse plus longue ne décale jamais la page (CLS) */
   display: flex;
   flex-direction: column;
   border-radius: 14px;
@@ -68,7 +68,7 @@
 .mw-faq__entete b { display: block; font-family: var(--su-font-display), sans-serif; }
 .mw-faq__entete small { color: #9fb2c8; }
 .mw-faq__pastille { display: grid; place-items: center; width: 38px; height: 38px; border-radius: 50%; background: var(--su-ambre); color: var(--su-encre); font-weight: 700; font-family: var(--su-font-display), sans-serif; }
-.mw-faq__fil { display: flex; flex-direction: column; gap: 12px; padding: 18px; flex: 1; justify-content: flex-end; }
+.mw-faq__fil { display: flex; flex-direction: column; gap: 12px; padding: 18px; flex: 1; justify-content: flex-end; min-height: 0; overflow: hidden; }
 .mw-bulle { margin: 0; max-width: 88%; padding: 12px 16px; border-radius: 16px; font-size: 0.9375rem; line-height: 1.45; animation: mw-bulle 0.5s var(--su-pose) both; }
 .mw-bulle--q { align-self: flex-start; background: #fff; box-shadow: inset 0 0 0 1px #ddd5c3; border-bottom-left-radius: 4px; font-weight: 600; }
 .mw-bulle--r { align-self: flex-end; background: #14263d; color: #fff; border-bottom-right-radius: 4px; }
