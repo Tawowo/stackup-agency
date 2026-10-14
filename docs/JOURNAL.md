@@ -1,5 +1,38 @@
 # Journal du chantier — Stackup Agency V5
 
+## Rapport de la nuit (2026-10-14) — à lire en premier
+
+**Prévisualisation Vercel** : https://stackup-agency-kktwoccwo-tawowo-s-projects.vercel.app (commit 2866bc2, branche
+`claude/new-session-26nojr`). `npm run verify` vert. 432 routes du sitemap ouvertes une à une : toutes en 200, sans
+erreur console ni débordement (`docs/qa/tour.json`). axe WCAG 2.1 AA : 0 violation (23 routes × 1440/390). Sans JS :
+contenu intégral. 80 anciennes URL redirigées (308), aucune ne finit en 404.
+
+**Pages terminées.** Accueil (10 moments, hero « impression »). Mondes : /tarifs (chaîne d'assemblage),
+/realisations + 7 fiches (galerie), /services + 4 fiches (du code au pixel), /solutions + 15 fiches (tableau de
+bord), /a-propos (atelier de nuit), /contact (enveloppe qui part au fond) + merci. Traversée entre toutes les pages.
+Blog : 233 articles en ligne + 67 programmés (publiés à leur date), 30 rubriques, RSS. Local : 30 villes,
+18 départements (communes filtrables), 79 métiers, 6 services locaux, zones. Outils : audit de site, studio de
+style, cahier des charges, documents, FAQ, comparatif, parrainage. Légal : mentions, CGV, confidentialité, cookies,
+plan du site, 404 animée. SEO : métadonnées, JSON-LD, sitemap, robots, OG, icônes.
+
+**Imparfait, en clair.**
+- JS initial (gzip) : accueil 243 ko (budget 180 hors GSAP : ~188), /tarifs 239, pages intérieures 147 (budget 140).
+  Lighthouse non lancé (outil absent ici) ; perf GPU réelle non mesurée (SwiftShader seulement).
+- Vidéos : accueil et /tarifs refaites ; les autres pages se génèrent avec `node scripts/videos.mjs --cas=pages`
+  (non versionnées, trop lourdes).
+- Galerie : le « téléphone » montre un recadrage de la capture desktop (pas de vraie capture mobile).
+- Audit de site : Google PageSpeed refuse sans clé (quota partagé épuisé) ; résultat jamais vu rendu.
+- Studio de style sur mobile : l'aperçu n'est pas collant. 404 sur mobile : une plaque frôle l'étiquette.
+
+**Ce que le propriétaire doit fournir.**
+1. La photo de visage en fichier : `public/images/source/matheo-reboul.jpg`, puis `node scripts/portrait.mjs`
+   (le message ne contenait pas de fichier ; la photo de l'atelier sert en attendant).
+2. Vraies réalisations (et captures mobiles) ; les 7 actuelles restent étiquetées « Démo ».
+3. Clés Vercel : `RESEND_API_KEY`, `CONTACT_TO`, `CONTACT_FROM` (contact, parrainage), `PAGESPEED_API_KEY` (audit).
+4. Identité légale : titulaire, SIRET, médiateur (marqués « [à compléter] »), hébergeur (Vercel ou OVH ?).
+5. Les 12 PDF de `public/documents` à régénérer (autre nom, SIRET étranger, offre association, délais) : retirés.
+6. À confirmer : récompense du parrainage, « domaine inclus tant que la maintenance court », rapport SEO mensuel.
+
 Court par obligation (≤ 150 lignes). Les sessions anciennes sont condensées ; le détail est dans git.
 
 ## Acquis (phases 0 à 4 et « La Fabrique »)
