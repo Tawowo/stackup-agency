@@ -7,6 +7,7 @@
  * seuls la scène et le filtre des communes sont des îlots client.
  */
 import Link from 'next/link'
+import type { ReactNode } from 'react'
 import type { LayoutName } from '@/webgl/layouts'
 import StackFrame from '@/webgl/StackFrame'
 import ScenePage from '@/components/ScenePage'
@@ -39,13 +40,15 @@ export interface PropsLocale {
   faq?: { q: string; a: string }[]
   appel?: string
   offres?: boolean
+  /** Le monde de la page (carte, maquette…) : remplace la pile dans l'en-tête. */
+  monde?: ReactNode
 }
 
 export default function Locale(p: PropsLocale) {
   return (
     <main id="contenu">
       <article className="su-loc">
-        <ScenePage moment={p.moment} forme={p.forme ?? 'empile'} projection={0.35} pose={{ x: 0.1, y: -0.3 }} />
+        <ScenePage moment={p.moment} forme={p.monde ? 'logo' : (p.forme ?? 'empile')} projection={0.35} pose={{ x: 0.1, y: -0.3 }} />
         <header className="su-loc__hero" data-moment={p.moment} data-nuit="1">
           <div className="su-loc__hero-grille">
             <div className="su-loc__texte">
@@ -67,12 +70,16 @@ export default function Locale(p: PropsLocale) {
                 </Action>
               </div>
             </div>
-            <div className="su-loc__scene" aria-hidden="true">
-              <StackFrame className="su-loc__cadre" />
-              <span className="su-mono su-loc__repere">
-                {SITE.ville} · {p.etiquette}
-              </span>
-            </div>
+            {p.monde ? (
+              <div className="su-loc__monde">{p.monde}</div>
+            ) : (
+              <div className="su-loc__scene" aria-hidden="true">
+                <StackFrame className="su-loc__cadre" />
+                <span className="su-mono su-loc__repere">
+                  {SITE.ville} · {p.etiquette}
+                </span>
+              </div>
+            )}
           </div>
         </header>
         <div className="su-loc__corps" data-moment={`${p.moment}-corps`} data-nuit="0">

@@ -2,6 +2,9 @@ import { notFound } from 'next/navigation'
 import { VILLES, getVille } from '@/data/villes'
 import { DEPARTEMENTS } from '@/data/departements'
 import Locale from '@/gabarits/locale/Locale'
+import CarteRelief from '@/components/carte/CarteRelief'
+import { epinglesVille } from '@/components/carte/epingles'
+import { GEO } from '@/data/geo'
 import { sansDelai } from '@/gabarits/locale/formes'
 import { conforme } from '@/lib/conformite'
 import { JsonLd, ORIGINE, faqPage, filAriane, meta } from '@/lib/seo'
@@ -12,7 +15,6 @@ export function generateStaticParams() {
   return VILLES.map((v) => ({ ville: v.slug }))
 }
 
-const slugDe = (nom: string) => VILLES.find((v) => v.ville === nom)?.slug
 
 export async function generateMetadata({ params }: { params: Promise<{ ville: string }> }) {
   const v = getVille((await params).ville)
@@ -33,7 +35,21 @@ export default async function PageVille({ params }: { params: Promise<{ ville: s
     { q: `Combien coûte un site internet à ${v.ville} ?`, a: `Un site une page à partir de ${offre('une-page').aPartirDe} €, un site de plusieurs pages à partir de ${offre('multi-pages').aPartirDe} €, une boutique à partir de ${offre('boutique').aPartirDe} €. Le devis précis dépend de votre projet.` },
     { q: 'Puis-je voir mon site avant de m’engager ?', a: 'Oui : on vous montre une première version avant toute signature. Vous décidez ensuite.' },
   ])
-  const voisins = v.villesVoisines.map((n) => ({ nom: n, href: slugDe(n) ? `/agence-web/${slugDe(n)}` : '' })).filter((l) => l.href)
+  // `villesVoisines` donne des slugs ; la carte complète avec les villes les plus proches (distance à vol d'oiseau).
+  const g0 = GEO[v.slug]
+  const proches = g0
+    ? VILLES.filter((x) => x.slug !== v.slug && GEO[x.slug])
+        .map((x) => ({ x, d: Math.hypot(GEO[x.slug]!.lat - g0.lat, (GEO[x.slug]!.lon - g0.lon) * 0.68) }))
+        .sort((p, q) => p.d - q.d)
+        .slice(0, 5)
+        .map((o) => o.x.slug)
+    : []
+  const slugsVoisins = [...new Set([...v.villesVoisines, ...proches])].filter((sl) => VILLES.some((x) => x.slug === sl)).slice(0, 7)
+  const epingles = epinglesVille(
+    v.slug,
+    slugsVoisins.map((sl) => ({ slug: sl, nom: VILLES.find((x) => x.slug === sl)!.ville, href: `/agence-web/${sl}` })),
+  )
+  const voisins = slugsVoisins.map((sl) => ({ nom: VILLES.find((x) => x.slug === sl)!.ville, href: `/agence-web/${sl}` }))
   return (
     <>
       <JsonLd
@@ -49,7 +65,7 @@ export default async function PageVille({ params }: { params: Promise<{ ville: s
       />
       <Locale
         moment="loc-ville"
-        forme="empile"
+        monde={<CarteRelief epingles={epingles} libelle={`Carte de ${v.ville} et des villes voisines`} />}
         ariane={[
           { href: '/', nom: 'Accueil' },
           { href: '/agence-web', nom: 'Agence web' },

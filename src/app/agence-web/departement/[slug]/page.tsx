@@ -3,6 +3,9 @@ import { DEPARTEMENTS, getArticles, getDepartement } from '@/data/departements'
 import { COMMUNES_PAR_DEPARTEMENT } from '@/data/communes-groupes'
 import { VILLES } from '@/data/villes'
 import Locale from '@/gabarits/locale/Locale'
+import CarteRelief from '@/components/carte/CarteRelief'
+import type { Epingle } from '@/components/carte/epingles'
+import { CHEF_LIEU, GEO } from '@/data/geo'
 import { sansDelai } from '@/gabarits/locale/formes'
 import { conforme } from '@/lib/conformite'
 import { JsonLd, ORIGINE, faqPage, filAriane, meta } from '@/lib/seo'
@@ -30,6 +33,17 @@ export default async function PageDepartement({ params }: { params: Promise<{ sl
   const a = getArticles(d.slug)
   const faq = sansDelai(d.faq.map((f) => ({ q: f.q, a: conforme(f.a) })))
   const villes = VILLES.filter((v) => v.departement === d.nom)
+  const cl = GEO[CHEF_LIEU[d.slug] ?? '']
+  const epingles: Epingle[] = cl ? [{ id: CHEF_LIEU[d.slug]!, nom: cl.nom, lat: cl.lat, lon: cl.lon, role: 'cible' }] : []
+  for (const v of villes) {
+    const g = GEO[v.slug]
+    if (g && v.slug !== CHEF_LIEU[d.slug]) epingles.push({ id: v.slug, nom: g.nom, lat: g.lat, lon: g.lon, role: 'voisin', href: `/agence-web/${v.slug}` })
+  }
+  // Repères : les chefs-lieux voisins, pour situer le département.
+  for (const [slug, cle] of Object.entries(CHEF_LIEU)) {
+    const g = GEO[cle]
+    if (slug !== d.slug && g && cl && Math.hypot((g.lat - cl.lat) * 1, (g.lon - cl.lon) * 0.68) < 1.3 && !epingles.some((e) => e.id === cle)) epingles.push({ id: cle, nom: g.nom, lat: g.lat, lon: g.lon, role: 'repere', href: `/agence-web/departement/${slug}` })
+  }
   return (
     <>
       <JsonLd
@@ -45,7 +59,7 @@ export default async function PageDepartement({ params }: { params: Promise<{ sl
       />
       <Locale
         moment="loc-dep"
-        forme="strates"
+        monde={<CarteRelief epingles={epingles} libelle={`Carte du département ${d.nom}`} />}
         ariane={[
           { href: '/', nom: 'Accueil' },
           { href: '/agence-web', nom: 'Agence web' },

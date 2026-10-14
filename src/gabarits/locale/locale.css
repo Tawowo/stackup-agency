@@ -10,7 +10,8 @@
   align-items: end;
 }
 .su-loc__texte {
-  grid-column: 1 / span 7;
+  grid-column: 1 / span 6;
+  grid-row: 1;
 }
 .su-loc__ariane {
   display: flex;
@@ -252,6 +253,9 @@
   .su-loc__hero-grille {
     padding-top: 90px;
   }
+  .su-loc__texte {
+    grid-row: 2;
+  }
   .su-loc__texte,
   .su-loc__scene {
     grid-column: 1 / -1;
@@ -274,5 +278,21 @@
   .su-loc__epcis,
   .su-loc__offres {
     grid-template-columns: 1fr;
+  }
+}
+
+/* Le monde de la page : à droite du texte, plus large que la scène par défaut. */
+.su-loc__monde {
+  grid-column: 7 / span 6;
+  grid-row: 1;
+  align-self: center;
+  min-width: 0;
+}
+@media (max-width: 767px) {
+  .su-loc__monde {
+    grid-column: 1 / -1;
+    grid-row: 1;
+    margin-bottom: 8px;
+    padding-bottom: 6vw;
   }
 }

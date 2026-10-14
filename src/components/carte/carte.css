@@ -1,0 +1,163 @@
+/*
+ * LA CARTE EN RELIEF — un plan incliné en perspective, des épingles qui
+ * se dressent (piliers), la ville ciblée qui s'allume. Mouvement permanent :
+ * onde sous la cible, lueur lente. Tout reste lisible à plat (mouvement réduit).
+ */
+.su-carte {
+  --carte-p: 0;
+  width: 100%;
+  container-type: inline-size;
+}
+.su-carte__scene {
+  perspective: 1500px;
+  perspective-origin: 50% 20%;
+  padding: 6cqw 0 2cqw;
+}
+.su-carte__plan {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  transform-style: preserve-3d;
+  transform: rotateX(calc(52deg - 14deg * var(--carte-p))) rotateZ(calc(-9deg + 7deg * var(--carte-p))) scale(calc(0.96 + 0.1 * var(--carte-p)));
+  border-radius: 1.4cqw;
+  box-shadow: 0 5cqw 8cqw rgba(2, 8, 18, 0.65), 0 0 0 1px rgba(140, 190, 235, 0.35);
+}
+.su-carte__relief {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+}
+.su-carte__liens {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+.su-carte__lien {
+  fill: none;
+  stroke: var(--su-ambre-clair);
+  stroke-width: 1.4;
+  stroke-dasharray: 1 0.012;
+  stroke-opacity: 0.8;
+  stroke-dashoffset: calc(1 - clamp(0, (var(--carte-p) * 3.2 + 0.25 - var(--i) * 0.08), 1));
+}
+.su-carte__ville {
+  position: absolute;
+  width: 0;
+  height: 0;
+  transform-style: preserve-3d;
+  color: var(--su-ivoire);
+  text-decoration: none;
+}
+.su-carte__point {
+  position: absolute;
+  left: -0.6cqw;
+  top: -0.6cqw;
+  width: 1.2cqw;
+  height: 1.2cqw;
+  border-radius: 50%;
+  background: #c5d8ee;
+  box-shadow: 0 0 0 0.3cqw rgba(197, 216, 238, 0.28);
+}
+/* Le pilier : une barre qui se dresse hors du plan (hauteur en cqw). */
+.su-carte__pilier {
+  position: absolute;
+  left: -0.18cqw;
+  top: 0;
+  width: 0.36cqw;
+  height: var(--h, 3.2cqw);
+  transform-origin: 50% 0;
+  transform: rotateX(-90deg);
+  background: linear-gradient(0deg, rgba(197, 216, 238, 0.85), rgba(197, 216, 238, 0));
+  transform: rotateX(-90deg) scaleY(calc(0.3 + 0.7 * clamp(0, var(--carte-p) * 4 + 0.4 - var(--i) * 0.06, 1)));
+}
+/* L'étiquette se redresse face au spectateur (billboard). */
+.su-carte__nom {
+  position: absolute;
+  left: 1.2cqw;
+  top: -2.6cqw;
+  transform-origin: 0 100%;
+  transform: translateZ(3.6cqw) rotateZ(calc(9deg - 7deg * var(--carte-p))) rotateX(calc(-52deg + 14deg * var(--carte-p)));
+  padding: 0.5cqw 1.1cqw;
+  border-radius: 0.6cqw;
+  background: rgba(8, 20, 36, 0.82);
+  font-size: 1.9cqw;
+  font-weight: 600;
+  white-space: nowrap;
+  letter-spacing: 0.01em;
+}
+.su-carte__ville[data-role='voisin'] .su-carte__nom {
+  color: #dfeaf8;
+  font-weight: 500;
+}
+a.su-carte__ville:hover .su-carte__nom,
+a.su-carte__ville:focus-visible .su-carte__nom {
+  background: var(--su-ambre);
+  color: var(--su-encre);
+}
+a.su-carte__ville:focus-visible {
+  outline: none;
+}
+a.su-carte__ville:focus-visible .su-carte__point {
+  box-shadow: 0 0 0 0.7cqw var(--su-ambre-clair);
+}
+/* La cible : pilier ambre haut, point lumineux, onde permanente. */
+.su-carte__ville[data-role='cible'] {
+  z-index: 3;
+}
+.su-carte__ville[data-role='cible'] .su-carte__pilier {
+  --h: 9cqw;
+  width: 0.7cqw;
+  left: -0.35cqw;
+  background: linear-gradient(0deg, var(--su-ambre), rgba(246, 145, 6, 0));
+  transform: rotateX(-90deg) scaleY(1);
+}
+.su-carte__ville[data-role='cible'] .su-carte__point {
+  left: -1.3cqw;
+  top: -1.3cqw;
+  width: 2.6cqw;
+  height: 2.6cqw;
+  background: var(--su-ambre-clair);
+  box-shadow: 0 0 3cqw 1cqw rgba(246, 145, 6, 0.65);
+}
+.su-carte__ville[data-role='cible'] .su-carte__nom {
+  top: -3.2cqw;
+  transform: translateZ(9.6cqw) rotateZ(calc(9deg - 7deg * var(--carte-p))) rotateX(calc(-52deg + 14deg * var(--carte-p)));
+  background: var(--su-ambre);
+  color: var(--su-encre);
+  font-size: 2.8cqw;
+  font-weight: 700;
+}
+.su-carte__onde {
+  position: absolute;
+  left: -7cqw;
+  top: -7cqw;
+  width: 14cqw;
+  height: 14cqw;
+  border-radius: 50%;
+  border: 0.3cqw solid var(--su-ambre-clair);
+  opacity: 0;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .su-carte__onde {
+    animation: su-onde 3.2s ease-out infinite;
+  }
+  .su-carte__ville[data-role='cible'] .su-carte__point {
+    animation: su-lueur 2.4s ease-in-out infinite;
+  }
+}
+@keyframes su-onde {
+  0% { transform: scale(0.15); opacity: 0.9; }
+  100% { transform: scale(1); opacity: 0; }
+}
+@keyframes su-lueur {
+  50% { box-shadow: 0 0 4cqw 1.6cqw rgba(246, 145, 6, 0.8); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .su-carte__plan { transform: rotateX(48deg) rotateZ(-4deg); }
+  .su-carte__lien { stroke-dashoffset: 0; }
+  .su-carte__pilier { transform: rotateX(-90deg) scaleY(1); }
+  .su-carte__nom { transform: translateZ(3.6cqw) rotateZ(4deg) rotateX(-48deg); }
+}

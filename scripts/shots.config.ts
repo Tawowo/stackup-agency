@@ -228,6 +228,7 @@ export const ROUTES: Route[] = [
   },
   ...([
     ['/agence-web/tours', 'loc-ville'],
+    ['/agence-web/le-mans', 'loc-ville'],
     ['/agence-web/departement/indre-et-loire', 'loc-dep'],
     ['/creation-site-internet/plombier', 'loc-metier'],
     ['/services-locaux/creation-site-restaurant', 'loc-service'],

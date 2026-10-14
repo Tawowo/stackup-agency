@@ -1,4 +1,7 @@
 import Locale from '@/gabarits/locale/Locale'
+import CarteRelief from '@/components/carte/CarteRelief'
+import type { Epingle } from '@/components/carte/epingles'
+import { CHEF_LIEU, GEO } from '@/data/geo'
 import { DEPARTEMENTS } from '@/data/departements'
 import { VILLES } from '@/data/villes'
 import { getCommunesGrandTotal } from '@/data/communes-groupes'
@@ -21,12 +24,16 @@ export const metadata = meta({
 
 export default function Zones() {
   const total = getCommunesGrandTotal()
+  const epingles: Epingle[] = DEPARTEMENTS.map((d) => {
+    const g = GEO[CHEF_LIEU[d.slug] ?? '']!
+    return { id: d.slug, nom: g.nom, lat: g.lat, lon: g.lon, role: d.slug === 'indre-et-loire' ? ('cible' as const) : ('voisin' as const), href: `/agence-web/departement/${d.slug}` }
+  }).filter((e) => e.nom)
   return (
     <>
       <JsonLd data={filAriane([{ nom: 'Accueil', chemin: '/' }, { nom: 'Zones d’intervention', chemin: '/zones-intervention' }])} />
       <Locale
         moment="loc-zones"
-        forme="strates"
+        monde={<CarteRelief epingles={epingles} libelle="Carte des départements couverts, autour de Tours" />}
         ariane={[
           { href: '/', nom: 'Accueil' },
           { href: '/zones-intervention', nom: 'Zones d’intervention' },
