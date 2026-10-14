@@ -5,21 +5,21 @@
 .su-mac__grille {
   max-width: var(--su-conteneur-scene);
   margin: 0 auto;
-  padding: 96px var(--su-gouttiere) 64px;
+  padding: 88px var(--su-gouttiere) 40px;
   min-height: 100svh;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: auto 1fr;
   column-gap: var(--su-gouttiere);
-  row-gap: 24px;
+  row-gap: 22px;
 }
 .su-mac__tete {
-  grid-column: 1 / span 4;
-  grid-row: 1 / span 2;
+  grid-column: 1 / span 8;
+  grid-row: 1;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 18px;
+  gap: 16px;
 }
 .su-mac__etiquette {
   color: var(--su-texte-doux);
@@ -27,176 +27,274 @@
 }
 .su-mac__titre {
   margin: 0;
-  font-size: clamp(2.2rem, 3.6vw, 3.6rem);
+  font-size: clamp(2rem, 3.1vw, 3.1rem);
   color: var(--su-ivoire);
+  max-width: 30ch;
 }
 .su-mac__ligne {
   margin: 0;
-  max-width: 36ch;
+  max-width: 62ch;
   color: var(--su-texte-doux);
   font-size: 1.0625rem;
 }
-.su-mac__reseau {
-  grid-column: 5 / span 5;
-  grid-row: 1 / span 2;
+.su-mac__actions {
   display: flex;
   align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
 }
-.su-mac__cadre {
+.su-mac__reset {
+  min-height: 44px;
+  padding: 0 14px;
+  background: none;
+  border: 1px solid color-mix(in srgb, var(--su-graphite) 60%, transparent);
+  border-radius: 4px;
+  color: var(--su-texte);
+  cursor: pointer;
+}
+.su-mac__reset:hover,
+.su-mac__reset:focus-visible {
+  border-color: var(--su-ambre);
+}
+
+/* Les cartes de modules : icône, nom, état. */
+.su-mac__cartes {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  grid-row: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 9px;
+}
+.su-mac__cartes--g { grid-column: 1 / span 3; }
+.su-mac__cartes--d { grid-column: 10 / span 3; }
+.su-mac__carte {
+  display: grid;
+  grid-template-columns: 48px 1fr auto;
+  align-items: center;
+  gap: 14px;
   width: 100%;
-  height: min(80svh, 100%);
+  min-height: 60px;
+  padding: 6px 14px 6px 8px;
+  border: 1px solid color-mix(in srgb, var(--su-graphite) 40%, transparent);
+  border-radius: 6px;
+  background: color-mix(in srgb, var(--su-encre-2) 80%, transparent);
+  color: var(--su-ivoire);
+  text-align: left;
+  cursor: pointer;
+  transition: border-color var(--su-geste), background var(--su-geste), transform var(--su-reflexe) var(--su-glisse);
 }
-.su-mac__noeuds {
+.su-mac__carte:hover,
+.su-mac__carte:focus-visible {
+  border-color: var(--su-ambre);
+  transform: translateY(-2px);
+}
+.su-mac__carte:focus-visible {
+  outline: 2px solid var(--su-ambre-clair);
+  outline-offset: 2px;
+}
+.su-mac__pic {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 44px;
+  border-radius: 4px;
+  background: var(--su-navy-clair);
+  color: var(--su-ivoire);
+}
+.su-mac__pic svg {
+  width: 26px;
+  height: 26px;
+}
+.su-mac__nom {
+  font-family: var(--su-font-display), sans-serif;
+  font-weight: 600;
+  font-size: 1.0625rem;
+  line-height: 1.15;
+}
+.su-mac__etat {
+  font-size: 0.6875rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--su-ambre-clair);
+}
+.su-mac__carte[data-dedans='1'] {
+  background: color-mix(in srgb, var(--su-ambre) 14%, var(--su-encre-2));
+  border-color: color-mix(in srgb, var(--su-ambre) 60%, transparent);
+}
+.su-mac__carte[data-dedans='1'] .su-mac__pic {
+  background: var(--su-ambre);
+  color: var(--su-encre);
+}
+.su-mac__carte[data-dedans='1'] .su-mac__etat {
+  color: var(--su-ivoire);
+}
+.su-mac__carte[data-actif='1'] {
+  box-shadow: 0 0 0 2px var(--su-ambre);
+}
+/* La copie qui vole vers l'application (créée à l'exécution). */
+.su-mac__vol {
+  position: fixed;
+  z-index: 60;
+  margin: 0;
+  pointer-events: none;
+  box-shadow: 0 20px 40px rgba(3, 10, 22, 0.55);
+}
+.su-mac__fil {
+  position: fixed;
+  inset: 0;
+  z-index: 59;
+  pointer-events: none;
+}
+
+/* La fenêtre d'application. */
+.su-mac__app {
+  grid-column: 4 / span 6;
+  grid-row: 2;
+  align-self: center;
+  pointer-events: none;
+}
+.su-mac__fen {
+  width: 100%;
+}
+.mq-app {
   position: absolute;
   inset: 0;
   display: grid;
-  place-items: center;
+  grid-template-columns: 25cqw 1fr;
+  background: #f3f6fa;
 }
-.su-mac__noeuds:focus-visible {
-  outline: 2px solid var(--su-ambre-clair);
-  outline-offset: 6px;
-}
-/* La boîte 146 × 229 ajustée dans le cadre. */
-.su-mac__noeuds::before {
-  content: '';
-  grid-area: 1 / 1;
-  aspect-ratio: 146 / 229;
-  height: 100%;
-  max-width: 100%;
-}
-.su-mac__noeud {
-  position: absolute;
-  transform: translate(-50%, 44px);
-  min-height: 32px;
-  padding: 6px 10px;
-  border: 1px solid color-mix(in srgb, var(--su-graphite) 45%, transparent);
-  border-radius: 4px;
-  background: var(--su-encre-2);
-  color: var(--su-ivoire);
-  font-size: 0.6875rem;
-  cursor: pointer;
-  white-space: nowrap;
-  transition: border-color var(--su-reflexe), color var(--su-reflexe), box-shadow var(--su-reflexe);
-}
-.su-mac__noeud[data-actif='1'] {
-  border-color: var(--su-ambre);
-  color: var(--su-ambre-clair);
-  box-shadow: var(--su-ombre);
-}
-.su-mac__plaque {
-  grid-column: 10 / span 3;
-  grid-row: 1 / span 2;
-  align-self: center;
-  padding: 20px;
-  min-height: 360px;
-}
-/* ───── Maquette animée ───── */
-.su-mac__ecran > * {
-  clip-path: inset(0 100% 0 0);
-  animation: su-decoupe 620ms var(--su-pose) forwards;
-  animation-delay: calc(var(--k, 0) * 70ms + 150ms);
-}
-.su-mac__barre {
+.mq-app__menu {
   display: flex;
-  justify-content: space-between;
-  gap: 12px;
-  padding-bottom: 12px;
-  border-bottom: 1px solid color-mix(in srgb, var(--su-graphite) 35%, transparent);
-  color: var(--su-ambre-clair);
+  flex-direction: column;
+  gap: 0.8cqw;
+  padding: 2.2cqw 1.6cqw;
+  background: #14263d;
+  color: #cbd7e6;
+  overflow: hidden;
 }
-.su-mac__statut {
-  color: var(--su-ivoire);
-  padding: 2px 8px;
-  border-radius: 3px;
-  background: color-mix(in srgb, var(--su-ambre) 22%, transparent);
-  transition: background var(--su-geste);
+.mq-app__menu > b {
+  font-family: var(--su-font-display), sans-serif;
+  color: #fff;
+  font-size: 2.6cqw;
+  margin-bottom: 1.2cqw;
 }
-.su-mac__chiffre {
+.mq-app__onglet {
+  display: flex;
+  align-items: center;
+  gap: 1.1cqw;
+  padding: 1.2cqw 1.2cqw;
+  border-radius: 0.9cqw;
+  font-size: 1.9cqw;
+  white-space: nowrap;
+  animation: mq-decoupe 0.6s var(--su-pose) both;
+}
+.mq-app__onglet svg { width: 2.4cqw; height: 2.4cqw; flex: 0 0 auto; }
+.mq-app__onglet[data-on='1'] {
+  background: #1f3b5d;
+  color: #fff;
+  box-shadow: inset 0.4cqw 0 0 var(--su-ambre);
+}
+.mq-app__vide {
+  margin-top: auto;
+  padding: 1.1cqw 1.2cqw;
+  border: 0.25cqw dashed #4a6285;
+  border-radius: 0.9cqw;
+  font-size: 1.6cqw;
+  color: #8ea3bf;
+}
+.mq-app__ecran {
+  display: flex;
+  flex-direction: column;
+  gap: 2.2cqw;
+  padding: 3cqw 3.4cqw;
+  color: #15283f;
+  animation: mq-decoupe 0.7s var(--su-pose) both;
+}
+.mq-app__titre {
+  display: flex;
+  align-items: center;
+  gap: 1.4cqw;
+  font-size: 2.5cqw;
+}
+.mq-app__titre svg { width: 3.4cqw; height: 3.4cqw; color: var(--mq-cta); }
+.mq-app__titre b { font-family: var(--su-font-display), sans-serif; }
+.mq-app__titre em {
+  margin-left: auto;
+  font-style: normal;
+  font-size: 1.7cqw;
+  font-weight: 700;
+  padding: 0.5cqw 1.6cqw;
+  border-radius: 2cqw;
+  background: #e1f3ea;
+  color: #1d6b47;
+}
+.mq-app__titre em[data-s='0'] { background: #fdecd3; color: #9a4507; }
+.mq-app__kpi {
+  margin: 0;
   display: flex;
   align-items: baseline;
-  gap: 10px;
-  margin: 18px 0 14px;
+  gap: 1.6cqw;
 }
-.su-mac__cadran {
-  font-size: 2.6rem;
-  color: var(--su-ivoire);
-}
-.su-mac__unite {
-  color: var(--su-texte-doux);
-  font-size: 0.875rem;
-}
-.su-mac__liste {
+.mq-app__kpi b { font-family: var(--su-font-display), sans-serif; font-size: 8cqw; line-height: 1; color: #15283f; }
+.mq-app__kpi span { font-size: 2.2cqw; color: #5b6c82; }
+.mq-app__lignes {
   list-style: none;
   margin: 0;
   padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  font-size: 0.875rem;
+  gap: 1cqw;
 }
-.su-mac__liste li {
+.mq-app__lignes li {
   display: flex;
   align-items: center;
-  gap: 10px;
-  padding: 8px 10px;
-  border-radius: 3px;
-  background: color-mix(in srgb, var(--su-ivoire) 5%, transparent);
+  gap: 1.4cqw;
+  padding: 1.5cqw 2cqw;
+  border-radius: 1cqw;
+  background: #fff;
+  box-shadow: inset 0 0 0 0.25cqw #e1e7ef;
+  font-size: 2cqw;
+  animation: mq-decoupe 0.6s var(--su-pose) both;
+  animation-delay: calc(var(--k) * 110ms + 250ms);
 }
-.su-mac__puce {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: var(--su-graphite);
-  transition: background var(--su-geste), box-shadow var(--su-geste);
-}
-.su-mac__puce[data-on='1'] {
-  background: var(--su-ambre);
-  box-shadow: 0 0 0 3px color-mix(in srgb, var(--su-ambre) 30%, transparent);
-}
-.su-mac__fonctions {
+.mq-app__puce { width: 1.4cqw; height: 1.4cqw; border-radius: 50%; background: #c5d0de; transition: background 0.3s; }
+.mq-app__puce[data-on='1'] { background: var(--su-ambre); }
+.mq-app__fonctions {
   list-style: none;
-  margin: 18px 0 0;
-  padding: 14px 0 0;
-  border-top: 1px solid color-mix(in srgb, var(--su-graphite) 35%, transparent);
+  margin: auto 0 0;
+  padding: 0;
   display: flex;
-  flex-direction: column;
-  gap: 6px;
-  color: var(--su-texte-doux);
-  font-size: 0.6875rem;
-  text-transform: none;
-  letter-spacing: 0.02em;
+  flex-wrap: wrap;
+  gap: 1cqw;
+}
+.mq-app__fonctions li {
+  padding: 0.7cqw 1.5cqw;
+  border-radius: 2cqw;
+  background: #e6edf6;
+  color: #3d526c;
+  font-size: 1.5cqw;
+}
+
+@media (max-width: 1023px) {
+  .su-mac__tete { grid-column: 1 / -1; }
+  .su-mac__titre { max-width: none; }
+  .su-mac__app { grid-column: 1 / -1; grid-row: 2; }
+  .su-mac__cartes--g { grid-column: 1 / span 6; grid-row: 3; }
+  .su-mac__cartes--d { grid-column: 7 / span 6; grid-row: 3; }
 }
 @media (max-width: 767px) {
-  .su-mac__grille {
-    padding-top: 84px;
-    grid-template-rows: auto auto auto;
-    row-gap: 16px;
-  }
-  .su-mac__tete {
-    grid-column: 1 / -1;
-    grid-row: 1;
-  }
-  .su-mac__titre {
-    font-size: clamp(2rem, 9vw, 3rem);
-  }
-  .su-mac__reseau {
-    grid-column: 1 / -1;
-    grid-row: 2;
-  }
-  .su-mac__cadre {
-    height: 52svh;
-  }
-  .su-mac__noeud {
-    transform: translate(-50%, 30px);
-    font-size: 0.625rem;
-    padding: 5px 8px;
-  }
-  .su-mac__plaque {
-    grid-column: 1 / -1;
-    grid-row: 3;
-    min-height: 0;
-  }
-  .su-mac__tete .su-action {
-    align-self: stretch;
-  }
+  .su-mac__grille { padding-top: 84px; row-gap: 20px; }
+  .su-mac__titre { font-size: clamp(2rem, 8.5vw, 2.8rem); }
+  .su-mac__carte { grid-template-columns: 40px 1fr; padding: 8px; min-height: 56px; gap: 10px; }
+  .su-mac__pic { width: 40px; height: 40px; }
+  .su-mac__pic svg { width: 22px; height: 22px; }
+  .su-mac__etat { display: none; }
+  .su-mac__nom { font-size: 0.9375rem; }
+  .su-mac__cartes { gap: 8px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .mq-app__onglet, .mq-app__ecran, .mq-app__lignes li { animation: none; }
 }

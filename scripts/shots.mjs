@@ -137,7 +137,12 @@ export async function capturer({ route, dossier, etats }, browser, filtreEtat) {
         if (etat.action === 'regle') await page.locator('.su-fso__curseur input').fill('3')
         if (etat.action === 'lampe') await page.locator('.su-atn__interrupteur').click()
         if (etat.action === 'touche3') await page.keyboard.press('3')
-        if (etat.action?.startsWith('noeud')) await page.locator('.su-mac__noeud').nth(Number(etat.action.slice(5)) - 1).click()
+        if (etat.action?.startsWith('noeud')) {
+          const n = Number(etat.action.slice(5)) - 1
+          await page.locator('.su-mac__carte').nth(n).scrollIntoViewIfNeeded()
+          await page.locator('.su-mac__carte').nth(n).click()
+          await page.waitForTimeout(1600)
+        }
         if (etat.action === 'focus-offre2') await page.locator('.su-prix__offre').nth(1).focus()
         if (etat.action?.startsWith('conf-')) {
           await page.locator('.su-conf__type').nth(1).click()

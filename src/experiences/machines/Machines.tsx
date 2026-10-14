@@ -1,134 +1,263 @@
 'use client'
 /**
- * MOMENT 05 — LA SALLE DES MACHINES. Mécanisme : MODULES.
- * La pile en réseau de modules (plaques-nœuds reliées par des plaques fines),
- * chaque nœud une solution réelle du catalogue. Clic / tap / clavier sur un
- * nœud : il s'allume, les arêtes s'éclairent, et une maquette HTML animée du
- * module s'assemble par découpe dans une Plaque à droite. Rotation automatique
- * toutes les 6 s jusqu'à la première interaction. Aucun logiciel fonctionnel.
+ * MOMENT 05 — LES MODULES. Mécanisme : COMPOSITION.
+ * « Votre outil, composé des modules dont vous avez besoin. » Au centre, une
+ * vraie fenêtre d'application de gestion ; autour, douze modules en cartes
+ * lisibles. Clic (ou Entrée) sur une carte : elle vole vers l'application, une
+ * impulsion de données court le long du lien, le module s'intègre (un onglet,
+ * un écran). Tant que personne n'a cliqué, un module s'ajoute tout seul.
+ * Ce n'est pas un logiciel fonctionnel : les écrans sont des maquettes (règle 7).
  */
 import { useEffect, useRef, useState } from 'react'
-import StackFrame from '@/webgl/StackFrame'
+import Navigateur from '@/components/maquettes/Navigateur'
+import { Picto } from '@/components/maquettes/illustrations'
 import { useScene } from '@/webgl/store'
-import { noeud } from '@/webgl/layouts/machines'
-import { LOGO_VIEW, SVG_PAR_UNITE } from '@/webgl/logo-geometry'
 import { gsap, initGsap } from '@/lib/gsap'
-import { arriverParScroll } from '../arrivee'
 import Action from '@/components/ui/Action'
-import Plaque from '@/components/ui/Plaque'
-import { MODULES } from './modules'
-import MaquetteModule from './Maquette'
+import { ICONES, MAQUETTES, MODULES } from './modules'
 import './machines.css'
 
-const W = LOGO_VIEW.w / SVG_PAR_UNITE
-const H = LOGO_VIEW.h / SVG_PAR_UNITE
+const DEPART = [0, 1]
+
+function Ecran({ k, statut }: { k: number; statut: number }) {
+  const mod = MODULES[k]!
+  const m = MAQUETTES[mod.slug]!
+  return (
+    <div className="mq-app__ecran" key={mod.slug}>
+      <div className="mq-app__titre">
+        <Picto nom={ICONES[mod.slug] ?? 'dossier'} />
+        <b>{mod.nom}</b>
+        <em data-s={statut % m.statuts.length}>{m.statuts[statut % m.statuts.length]}</em>
+      </div>
+      <p className="mq-app__kpi">
+        <b>{m.chiffre}</b>
+        <span>{m.unite}</span>
+      </p>
+      <ul className="mq-app__lignes">
+        {m.lignes.map((l, i) => (
+          <li key={l} style={{ '--k': i } as React.CSSProperties}>
+            <span className="mq-app__puce" data-on={i === statut % m.lignes.length ? '1' : '0'} />
+            {l}
+          </li>
+        ))}
+      </ul>
+      <ul className="mq-app__fonctions" aria-hidden="true">
+        {mod.fonctions.map((f) => (
+          <li key={f}>{f}</li>
+        ))}
+      </ul>
+    </div>
+  )
+}
+
+/** Une impulsion de données : un tracé qui se dessine de la carte à la fenêtre, un point en tête. */
+function impulsion(de: DOMRect, vers: DOMRect) {
+  const ns = 'http://www.w3.org/2000/svg'
+  const svg = document.createElementNS(ns, 'svg')
+  svg.setAttribute('class', 'su-mac__fil')
+  svg.setAttribute('width', String(window.innerWidth))
+  svg.setAttribute('height', String(window.innerHeight))
+  const x0 = de.left + de.width / 2
+  const y0 = de.top + de.height / 2
+  const x1 = vers.left + vers.width / 2
+  const y1 = vers.top + vers.height / 2
+  const path = document.createElementNS(ns, 'path')
+  path.setAttribute('d', `M${x0} ${y0} C ${x0 + (x1 - x0) * 0.5} ${y0}, ${x0 + (x1 - x0) * 0.5} ${y1}, ${x1} ${y1}`)
+  path.setAttribute('fill', 'none')
+  path.setAttribute('stroke', '#FFB84D')
+  path.setAttribute('stroke-width', '2')
+  path.setAttribute('stroke-linecap', 'round')
+  path.setAttribute('pathLength', '1')
+  path.setAttribute('stroke-dasharray', '1')
+  path.setAttribute('stroke-dashoffset', '1')
+  const point = document.createElementNS(ns, 'circle')
+  point.setAttribute('r', '6')
+  point.setAttribute('fill', '#FFFDF9')
+  svg.append(path, point)
+  document.body.appendChild(svg)
+  const longueur = path.getTotalLength()
+  const etat = { p: 0 }
+  gsap.to(etat, {
+    p: 1,
+    duration: 0.9,
+    ease: 'power2.inOut',
+    onUpdate: () => {
+      path.setAttribute('stroke-dashoffset', String(1 - etat.p))
+      const pt = path.getPointAtLength(longueur * etat.p)
+      point.setAttribute('cx', String(pt.x))
+      point.setAttribute('cy', String(pt.y))
+    },
+    onComplete: () => svg.remove(),
+  })
+}
 
 export default function Machines() {
   const section = useRef<HTMLElement>(null)
-  const [actif, setActif] = useState(0)
+  const appRef = useRef<HTMLDivElement>(null)
+  const cartes = useRef<(HTMLButtonElement | null)[]>([])
+  const [installes, setInstalles] = useState<number[]>(DEPART)
+  const [actif, setActif] = useState(1)
   const [interagi, setInteragi] = useState(false)
   const [visible, setVisible] = useState(false)
-  const portrait = useScene((s) => s.params.portrait) > 0.5
-  const boutons = useRef<(HTMLButtonElement | null)[]>([])
+  const [statut, setStatut] = useState(0)
+  const enVol = useRef(false)
 
   useEffect(() => {
     initGsap()
     const el = section.current
     if (!el) return
-    const arret = arriverParScroll(el, {
-      moment: '05',
-      layout: 'machines',
-      pose: { x: 0.12, y: -0.1 },
-      projection: 0.6,
-      params: { modules: MODULES.length, isoPush: 0, isoDim: 0.42 },
-      onPrise: () => setVisible(true),
-      onSortie: () => setVisible(false),
-    })
-    return () => {
-      arret()
-      useScene.getState().setIsolate(-1)
-    }
+    const io = new IntersectionObserver(([e]) => setVisible(!!e?.isIntersecting && (e?.intersectionRatio ?? 0) > 0.35), { threshold: [0, 0.35, 0.7] })
+    io.observe(el)
+    useScene.getState().setMoment('05')
+    return () => io.disconnect()
   }, [])
 
+  // Le statut des lignes de l'écran change tout seul, lentement.
   useEffect(() => {
     if (!visible) return
-    useScene.getState().setIsolate(actif + 1)
-    return () => useScene.getState().setIsolate(-1)
-  }, [actif, visible])
-
-  useEffect(() => {
-    if (interagi || !visible) return
-    const d = gsap.delayedCall(6, () => setActif((a) => (a + 1) % MODULES.length))
+    const d = gsap.delayedCall(2.4, function boucle() {
+      setStatut((s) => s + 1)
+      d.restart(true)
+    })
     return () => {
       d.kill()
     }
-  }, [actif, interagi, visible])
+  }, [visible])
+
+  const integrer = (k: number) => {
+    if (installes.includes(k)) {
+      setActif(k)
+      return
+    }
+    const carte = cartes.current[k]
+    const app = appRef.current
+    const fin = () => {
+      setInstalles((l) => (l.includes(k) ? l : [...l, k]))
+      setActif(k)
+      enVol.current = false
+    }
+    if (!carte || !app || useScene.getState().reduced) return fin()
+    if (enVol.current) return
+    enVol.current = true
+    const de = carte.getBoundingClientRect()
+    const cible = app.querySelector('.mq-app__menu')?.getBoundingClientRect() ?? app.getBoundingClientRect()
+    // La carte s'envole (une copie) vers le menu de l'application, une impulsion de données la suit.
+    const vol = carte.cloneNode(true) as HTMLElement
+    vol.classList.add('su-mac__vol')
+    Object.assign(vol.style, { left: `${de.left}px`, top: `${de.top}px`, width: `${de.width}px`, height: `${de.height}px` })
+    document.body.appendChild(vol)
+    impulsion(de, app.getBoundingClientRect())
+    gsap.to(vol, {
+      x: cible.left + cible.width / 2 - (de.left + de.width / 2),
+      y: cible.top + cible.height * 0.7 - (de.top + de.height / 2),
+      scale: 0.35,
+      rotate: de.left < cible.left ? 6 : -6,
+      duration: 0.85,
+      ease: 'power3.inOut',
+      onComplete: () => {
+        vol.remove()
+        fin()
+      },
+    })
+  }
 
   const choisir = (k: number) => {
     setInteragi(true)
-    setActif(k)
-  }
-  const clavier = (e: React.KeyboardEvent) => {
-    const n = MODULES.length
-    let k = -1
-    if (e.key === 'ArrowRight' || e.key === 'ArrowDown') k = (actif + 1) % n
-    if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') k = (actif - 1 + n) % n
-    if (k < 0) return
-    e.preventDefault()
-    choisir(k)
-    boutons.current[k]?.focus()
+    integrer(k)
   }
 
-  const mod = MODULES[actif]!
+  // Tant que personne n'a cliqué : un module s'ajoute tout seul, jusqu'à six.
+  useEffect(() => {
+    if (interagi || !visible || installes.length >= 6) return
+    const d = gsap.delayedCall(3.2, () => {
+      const k = MODULES.findIndex((_, i) => !installes.includes(i))
+      if (k >= 0) integrer(k)
+    })
+    return () => {
+      d.kill()
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [interagi, visible, installes])
+
+  const recomposer = () => {
+    setInteragi(true)
+    setInstalles(DEPART)
+    setActif(1)
+  }
+
+  const carte = (k: number) => {
+    const m = MODULES[k]!
+    const dedans = installes.includes(k)
+    return (
+      <li key={m.slug}>
+        <button
+          ref={(r) => {
+            cartes.current[k] = r
+          }}
+          type="button"
+          className="su-mac__carte"
+          data-dedans={dedans ? '1' : '0'}
+          data-actif={actif === k ? '1' : '0'}
+          aria-pressed={dedans}
+          onClick={() => choisir(k)}
+        >
+          <span className="su-mac__pic">
+            <Picto nom={ICONES[m.slug] ?? 'dossier'} />
+          </span>
+          <span className="su-mac__nom">{m.court}</span>
+          <span className="su-mac__etat su-mono">{dedans ? 'Intégré' : 'Ajouter'}</span>
+          <span className="sr-only">{dedans ? `Afficher le module ${m.nom}` : `Intégrer le module ${m.nom} à votre application`}</span>
+        </button>
+      </li>
+    )
+  }
+
   return (
-    <section ref={section} className="su-mac" data-moment="05" data-nuit="1" data-titre="Salle des machines" id="machines" aria-labelledby="su-mac-titre">
+    <section ref={section} className="su-mac" data-moment="05" data-nuit="1" data-titre="Les modules" id="machines" aria-labelledby="su-mac-titre">
       <div className="su-mac__grille">
         <header className="su-mac__tete">
-          <p className="su-mono su-mac__etiquette">05 — La salle des machines</p>
+          <p className="su-mono su-mac__etiquette">05 — Les modules</p>
           <h2 id="su-mac-titre" className="su-display su-mac__titre">
-            Des outils qui vous
-            <br />
-            appartiennent.
+            Votre outil, composé des modules dont vous avez besoin.
           </h2>
           <p className="su-mac__ligne">
-            Devis, factures, planning, rendez-vous, click &amp; collect : fabriqués pour votre métier, sans abonnement, données à vous.
+            Chaque carte est un module. Cliquez-en une : elle s’intègre à votre application. Sans abonnement, données à vous.
           </p>
-          <Action href="/contact?objet=Outil%20sur%20mesure" mot="Écrire">
-            Parler de votre outil
-          </Action>
+          <div className="su-mac__actions">
+            <Action href="/contact?objet=Outil%20sur%20mesure" mot="Écrire">
+              Parler de votre outil
+            </Action>
+            <button type="button" className="su-mac__reset su-mono" onClick={recomposer}>
+              Recomposer
+            </button>
+          </div>
         </header>
-        <div className="su-mac__reseau">
-          <StackFrame className="su-mac__cadre">
-            {/* Les nœuds HTML : un bouton par module, calé sur la plaque (ortho). */}
-            <div className="su-mac__noeuds" role="listbox" aria-label="Les modules" aria-activedescendant={`su-mac-${mod.slug}`} tabIndex={0} onKeyDown={clavier}>
-              {MODULES.map((m, k) => {
-                const p = noeud(k, MODULES.length, portrait)
-                return (
-                  <button
-                    key={m.slug}
-                    id={`su-mac-${m.slug}`}
-                    ref={(r) => {
-                      boutons.current[k] = r
-                    }}
-                    type="button"
-                    role="option"
-                    aria-selected={k === actif}
-                    tabIndex={-1}
-                    className="su-mac__noeud su-mono"
-                    data-actif={k === actif ? '1' : '0'}
-                    style={{ left: `${((p.x + W / 2) / W) * 100}%`, top: `${((H / 2 - p.y) / H) * 100}%` }}
-                    onClick={() => choisir(k)}
-                  >
-                    {m.court}
-                  </button>
-                )
-              })}
+        <ul className="su-mac__cartes su-mac__cartes--g" aria-label="Modules, première moitié">
+          {MODULES.slice(0, 6).map((_, k) => carte(k))}
+        </ul>
+        <div ref={appRef} className="su-mac__app" role="group" aria-label="Application de gestion, maquette">
+          <Navigateur url="mon-outil.menuiserie-aubert.fr" ratio="16 / 11" className="su-mac__fen">
+            <div className="mq-app">
+              <div className="mq-app__menu">
+                <b>Mon outil</b>
+                {installes.map((k) => (
+                  <span key={k} className="mq-app__onglet" data-on={actif === k ? '1' : '0'}>
+                    <Picto nom={ICONES[MODULES[k]!.slug] ?? 'dossier'} />
+                    {MODULES[k]!.court}
+                  </span>
+                ))}
+                <span className="mq-app__vide">+ un module</span>
+              </div>
+              <Ecran k={actif} statut={statut} />
             </div>
-          </StackFrame>
+          </Navigateur>
+          <p className="sr-only" aria-live="polite">
+            Module affiché : {MODULES[actif]!.nom}
+          </p>
         </div>
-        <Plaque variante="encre" className="su-mac__plaque" aria-live="polite">
-          <MaquetteModule key={mod.slug} slug={mod.slug} />
-        </Plaque>
+        <ul className="su-mac__cartes su-mac__cartes--d" aria-label="Modules, seconde moitié">
+          {MODULES.slice(6).map((_, k) => carte(k + 6))}
+        </ul>
       </div>
     </section>
   )

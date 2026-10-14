@@ -16,6 +16,22 @@ const COURT: Record<string, string> = {
   'tableau-de-bord': 'Tableau de bord',
 }
 
+/** Pictogramme de chaque module (voir components/maquettes/illustrations). */
+export const ICONES: Record<string, 'dossier' | 'calendrier' | 'horloge' | 'sac' | 'personnes' | 'cube' | 'caisse' | 'etoile' | 'carte' | 'couvert' | 'qr' | 'graphique'> = {
+  'gestion-devis-factures': 'dossier',
+  'planning-employes': 'calendrier',
+  'prise-rendez-vous-en-ligne': 'horloge',
+  'click-and-collect': 'sac',
+  'portail-client': 'personnes',
+  'gestion-stocks': 'cube',
+  'caisse-enregistreuse': 'caisse',
+  'programme-fidelite': 'etoile',
+  'crm-sur-mesure': 'carte',
+  'reservation-restaurant': 'couvert',
+  'menu-qr-code': 'qr',
+  'tableau-de-bord': 'graphique',
+}
+
 /** Les douze modules de la Salle des machines : des solutions réelles du catalogue. */
 export const MODULES = [
   'gestion-devis-factures',
