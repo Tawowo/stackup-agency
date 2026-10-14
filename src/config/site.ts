@@ -1,8 +1,15 @@
 /**
  * SOURCE UNIQUE du contenu commercial (PROMPT-REFONTE § 12).
- * Prix toujours « à partir de ». Aucune durée, aucun comparatif, aucun
- * « hébergement France », aucune offre association.
+ * Prix toujours « à partir de », calculés par le moteur à partir de l'Excel. Aucune durée
+ * fixe (seul un délai indicatif du moteur), aucun comparatif, aucun « hébergement France »,
+ * aucune offre association.
  */
+import { LIGNES, PARAMS } from './tarifs.generated.ts'
+import { aPartirDe } from '../domain/devis/offres.ts'
+
+const description = (code: string) => LIGNES.find((l) => l.code === code)?.description ?? ''
+const nombreDe = (code: string, defaut: number) => Number(LIGNES.find((l) => l.code === code)?.unite.match(/\d+/)?.[0] ?? defaut)
+
 export type IdOffre = 'une-page' | 'multi-pages' | 'boutique' | 'outil'
 
 export interface Offre {
@@ -20,80 +27,51 @@ export const SITE = {
   departement: 'Indre-et-Loire',
   email: 'contact@stackup-agency.fr',
   telephone: '',
-  /** Conditions de fabrication (reprises de l'ancien site). */
+  /** Conditions de fabrication : les nombres viennent de l'Excel (Paramètres, Parcours client). */
   conditions: {
-    acomptePourcent: 40,
-    soldePourcent: 60,
-    revisionsIncluses: 3,
+    acomptePourcent: Math.round(PARAMS.acompte * 100),
+    soldePourcent: 100 - Math.round(PARAMS.acompte * 100),
+    /** Séries de modifications sur la maquette (P06). */
+    revisionsIncluses: nombreDe('P06', 2),
+    /** Rendez-vous de finalisation inclus (P04). */
+    rendezVousInclus: nombreDe('P04', 3),
+    /** Un mois d'ajustements après la mise en ligne (P07). */
     supportJours: 30,
+    /** Tarif horaire au-delà de ce qui est inclus (P05). */
+    tarifHoraire: LIGNES.find((l) => l.code === 'P05')?.prix ?? 0,
   },
   social: {
     linkedin: 'https://www.linkedin.com/in/stackup-agency-5756943aa/',
     instagram: 'https://www.instagram.com/stackup.agency/',
     facebook: 'https://www.facebook.com/profile.php?id=61588724591496',
   },
+  /** Offres : prix = configuration minimale passée dans le moteur (jamais écrit à la main). */
   offres: [
     {
       id: 'une-page',
       nom: 'Site une page',
-      aPartirDe: 449,
-      inclus: [
-        'Design sur mesure',
-        'Page unique + mentions légales',
-        'Formulaire de contact',
-        'Référencement local',
-        'Hébergement 12 mois et SSL',
-        'Nom de domaine offert la 1re année',
-        'Code propriétaire',
-      ],
+      aPartirDe: aPartirDe('une-page'),
+      inclus: [description('L01'), 'Page d’accueil sur mesure, au niveau d’animation de votre choix', 'Autres pages et fonctionnalités à la carte', 'Nom de domaine offert la première année'],
     },
     {
       id: 'multi-pages',
       nom: 'Site multi-pages',
-      aPartirDe: 749,
-      inclus: [
-        "Jusqu'à 10 pages",
-        'Blog et galerie',
-        'Formulaires avancés',
-        'Statistiques',
-        'Hébergement 12 mois et SSL',
-        'Nom de domaine offert la 1re année',
-        'Code propriétaire',
-      ],
+      aPartirDe: aPartirDe('multi-pages'),
+      inclus: ['Autant de pages que nécessaire, chacune à son niveau', `Pages moins chères à partir de la ${PARAMS.pleinTarifJusqua + 1}e`, 'Blog, galerie, rendez-vous… à la carte', 'Référencement local au choix', 'Nom de domaine offert la première année'],
     },
     {
       id: 'boutique',
       nom: 'Boutique en ligne',
-      aPartirDe: 1647,
-      inclus: [
-        'Catalogue et paiement',
-        'Gestion des stocks',
-        'E-mails automatiques',
-        'Click & Collect',
-        'Hébergement 12 mois et SSL',
-        'Code propriétaire',
-      ],
+      aPartirDe: aPartirDe('boutique'),
+      inclus: [description('B00'), 'Catalogue : à l’unité ou importé depuis un fichier', 'Click & collect, points relais… en option'],
     },
     {
       id: 'outil',
       nom: 'Outil de gestion sur mesure',
-      aPartirDe: 1447,
-      inclus: [
-        'Développement sur mesure',
-        "Espace d'administration",
-        'Formation',
-        'Vos données vous appartiennent',
-        'Sans abonnement obligatoire',
-      ],
+      aPartirDe: aPartirDe('outil'),
+      inclus: [description('O00'), `${LIGNES.filter((l) => l.famille === 'outil' && l.code !== 'O00').length} modules au choix, selon votre métier`, 'Vos données vous appartiennent'],
     },
   ] as const satisfies readonly Offre[],
-  maintenance: [
-    { id: 'starter', nom: 'Starter', prix: 29 },
-    { id: 'pro', nom: 'Pro', prix: 44 },
-    { id: 'premium', nom: 'Premium', prix: 89 },
-  ] as const,
-  redaction: { article: 25, pack4: 89, pack8: 159 },
-  supplements: { revision: '25 à 35 €', pageSupplementaire: 60, retraitMention: 100 },
   mentions: { tva: 'TVA non applicable, art. 293 B du CGI', devisValable: '30 jours' },
 } as const
 

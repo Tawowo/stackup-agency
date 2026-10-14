@@ -268,7 +268,6 @@ export const ROUTES: Route[] = [
     ['/page-qui-n-existe-pas', 'legal'],
     ['/outils', 'outils'],
     ['/outils/audit-site', 'outils'],
-    ['/outils/studio-de-style', 'outils'],
     ['/ressources', 'outils'],
     ['/ressources/cahier-des-charges', 'outils'],
     ['/ressources/documents', 'outils'],

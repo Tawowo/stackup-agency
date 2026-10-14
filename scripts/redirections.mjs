@@ -9,8 +9,9 @@ const vieilles = await ancien.redirects()
 const nouvelles = [
   { source: '/laboratoire', destination: '/solutions', permanent: true },
   { source: '/laboratoire/:path*', destination: '/solutions', permanent: true },
-  { source: '/configurateur', destination: '/tarifs', permanent: true },
-  { source: '/devis', destination: '/tarifs', permanent: true },
+  { source: '/configurateur', destination: '/tarifs#estimer', permanent: true },
+  { source: '/devis', destination: '/tarifs#estimer', permanent: true },
+  { source: '/outils/studio-de-style', destination: '/tarifs#estimer', permanent: true },
   { source: '/tarifs/:plan', destination: '/tarifs', permanent: true },
   { source: '/services/marketing-digital', destination: '/services', permanent: true },
   { source: '/services/maintenance-support', destination: '/tarifs', permanent: true },

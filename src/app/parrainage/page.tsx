@@ -8,7 +8,6 @@ import Document from '@/gabarits/document/Document'
 import Accordeon from '@/components/editorial/Accordeon'
 import Plaque from '@/components/ui/Plaque'
 import Parrainage from '@/experiences/ressources/Parrainage'
-import { SITE } from '@/config/site'
 import { JsonLd, faqPage, filAriane, meta } from '@/lib/seo'
 import '@/experiences/ressources/ressources.css'
 
@@ -17,17 +16,16 @@ import '@/experiences/ressources/ressources.css'
  * (ancien/src/config/site.ts › parrainage, et la page /parrainage) : le filleul
  * a −10 % sur son premier projet ; le parrain choisit, par filleul signé, entre
  * un mois d'abonnement Premium offert et −10 % sur sa propre prestation non
- * encore signée. Volontairement hors de site.ts (consigne de session) ; le prix
- * du mois Premium, lui, est lu dans SITE.maintenance.
+ * encore signée. Volontairement hors de site.ts (consigne de session). L'abonnement
+ * étant composé à la carte, la récompense est « un mois d'abonnement offert ».
  */
 const FILLEUL_REMISE = 10
 const PARRAIN_REMISE = 10
-const PREMIUM = SITE.maintenance.find((m) => m.id === 'premium')!
-const RECOMPENSE_A = `1 mois d’abonnement ${PREMIUM.nom} offert (${PREMIUM.prix} €)`
+const RECOMPENSE_A = '1 mois de votre abonnement offert'
 const RECOMPENSE_B = `−${PARRAIN_REMISE} % sur votre propre prestation non encore signée`
 
 export const metadata = meta({
-  titre: `Parrainage — un mois ${PREMIUM.nom} offert ou −${PARRAIN_REMISE} % | Stackup Agency`,
+  titre: `Parrainage — un mois d’abonnement offert ou −${PARRAIN_REMISE} % | Stackup Agency`,
   description: `Recommandez Stackup Agency à un professionnel. À la signature de son projet, vous choisissez : ${RECOMPENSE_A} ou −${PARRAIN_REMISE} % sur votre prestation. Votre filleul : −${FILLEUL_REMISE} % sur son premier projet.`,
   chemin: '/parrainage',
 })
@@ -62,7 +60,7 @@ const FAQ = [
   },
   {
     q: 'Quand la récompense est-elle activée ?',
-    r: `À la signature du projet de votre filleul, à condition que la mise en relation ait été signalée avant. La remise de −${PARRAIN_REMISE} % ne s’applique qu’à une prestation pas encore signée ni payée : si tout est déjà réglé de votre côté, la récompense est le mois ${PREMIUM.nom}.`,
+    r: `À la signature du projet de votre filleul, à condition que la mise en relation ait été signalée avant. La remise de −${PARRAIN_REMISE} % ne s’applique qu’à une prestation pas encore signée ni payée : si tout est déjà réglé de votre côté, la récompense est le mois d’abonnement offert.`,
   },
 ]
 
@@ -116,7 +114,7 @@ export default async function Page({ searchParams }: { searchParams: Promise<Rec
             <div className="su-par__recompenses">
               <Plaque as="article" variante="encre" className="su-par__recompense">
                 <p className="su-par__ou">Pour vous, le parrain · au choix</p>
-                <p className="su-par__chiffre">1 mois {PREMIUM.nom} offert</p>
+                <p className="su-par__chiffre">1 mois d’abonnement offert</p>
                 <p className="su-par__ou">ou</p>
                 <p className="su-par__chiffre">−{PARRAIN_REMISE} % sur votre prestation</p>
                 <ul>

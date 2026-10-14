@@ -10,7 +10,7 @@ import '@/experiences/ressources/ressources.css'
 
 export const metadata = meta({
   titre: 'Ressources gratuites — cahier des charges, documents, outils | Stackup Agency',
-  description: 'Préparez votre projet web : un cahier des charges à remplir et imprimer, les documents contractuels en PDF, un audit de site et un studio de style. Gratuit, sans inscription.',
+  description: 'Préparez votre projet web : un cahier des charges à remplir et imprimer, les documents contractuels en PDF, un audit de site et un estimateur de prix. Gratuit, sans inscription.',
   chemin: '/ressources',
 })
 
@@ -37,11 +37,11 @@ const RESSOURCES = [
     action: 'Lancer un audit',
   },
   {
-    href: '/outils/studio-de-style',
+    href: '/tarifs#estimer',
     etiquette: 'Outil gratuit',
-    titre: 'Studio de style',
-    texte: 'Essayez des couleurs et des typographies sur des maquettes de site, et repartez avec une direction visuelle à nous transmettre.',
-    action: 'Ouvrir le studio',
+    titre: 'Estimateur de prix',
+    texte: 'Site, boutique ou outil de gestion : une fourchette de prix qui se précise à chaque choix, à partager ou à envoyer avec votre demande.',
+    action: 'Estimer mon projet',
   },
 ]
 

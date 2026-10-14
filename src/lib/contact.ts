@@ -19,8 +19,12 @@ export const ContactSchema = z.object({
     .default(''),
   preference: z.enum(['email', 'telephone']).default('email'),
   rgpd: z.literal(true, { message: 'Il faut accepter que nous gardions votre message pour vous répondre.' }),
-  /** Configuration venue de /tarifs, sérialisée. */
-  configuration: z.string().max(400).default(''),
+  /** Résumé lisible de l'estimation venue de /tarifs. */
+  configuration: z.string().max(2500).default(''),
+  /** Jeton d'estimation (même format que `?e=` de /tarifs) : le serveur recalcule le prix exact. */
+  estimation: z.string().max(2400).default(''),
+  /** Ce que le visiteur demande : l'appel gratuit ou la démo. */
+  action: z.enum(['appel', 'demo', '']).default(''),
   /** Pot de miel : doit rester vide. */
   site_web: z.string().max(0).default(''),
 })

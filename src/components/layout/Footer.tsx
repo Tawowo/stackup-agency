@@ -124,7 +124,7 @@ export default function Footer() {
                 <Link href="/outils/audit-site">Audit de site</Link>
               </li>
               <li>
-                <Link href="/outils/studio-de-style">Studio de style</Link>
+                <Link href="/tarifs#estimer">Estimer mon projet</Link>
               </li>
               <li>
                 <Link href="/ressources/cahier-des-charges">Cahier des charges</Link>

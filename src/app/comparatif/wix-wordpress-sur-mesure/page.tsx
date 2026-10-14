@@ -9,7 +9,8 @@ import Link from 'next/link'
 import Document from '@/gabarits/document/Document'
 import Action from '@/components/ui/Action'
 import Plaque from '@/components/ui/Plaque'
-import { SITE, formatAPartirDe, offre } from '@/config/site'
+import { formatAPartirDe, offre } from '@/config/site'
+import { exemplesAbonnement } from '@/domain/devis/offres'
 import { JsonLd, filAriane, meta } from '@/lib/seo'
 import '@/experiences/ressources/ressources.css'
 
@@ -33,7 +34,7 @@ interface Ligne {
   nous: Case
 }
 
-const MAINTENANCE = SITE.maintenance[0].prix
+const ABONNEMENT_MIN = exemplesAbonnement()[0]!.mensuel
 
 const LIGNES: Ligne[] = [
   {
@@ -46,7 +47,7 @@ const LIGNES: Ligne[] = [
     critere: 'Frais récurrents',
     wix: { n: 'faible', mot: 'Abonnement obligatoire', t: 'Un abonnement mensuel est nécessaire pour garder le site en ligne, avec votre nom de domaine et sans publicité de la plateforme.' },
     wp: { n: 'moyen', mot: 'Selon les choix', t: 'Le logiciel est gratuit ; l’hébergement ne l’est pas, ni souvent les thèmes et extensions payants, facturés à l’année.' },
-    nous: { n: 'moyen', mot: 'Au choix', t: `Hébergement et SSL compris 12 mois. Ensuite, l’hébergement à votre charge, ou la maintenance à partir de ${MAINTENANCE} € par mois, sans engagement de durée.` },
+    nous: { n: 'moyen', mot: 'Au choix', t: `Nom de domaine offert la première année. Ensuite, l’hébergement à votre charge, ou un abonnement composé selon vos besoins, à partir d’environ ${ABONNEMENT_MIN} € par mois, sans engagement, préavis d’un mois.` },
   },
   {
     critere: 'Coût de départ',

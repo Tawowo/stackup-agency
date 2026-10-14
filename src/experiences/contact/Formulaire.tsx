@@ -9,7 +9,9 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { CHAMPS_ORDRE, ContactSchema, OBJETS, type ContactEntree } from '@/lib/contact'
-import { deserialiser, lignesFiche, resumer, type Configuration } from '@/lib/configuration'
+import { calculer } from '@/domain/devis/calcul'
+import { decoder } from '@/domain/devis/etat'
+import { euros, fourchetteTexte, lignesConfig, resumeTexte } from '@/domain/devis/resume'
 import { gsap } from '@/lib/gsap'
 import { useScene } from '@/webgl/store'
 import StackFrame from '@/webgl/StackFrame'
@@ -21,20 +23,29 @@ import './contact.css'
 
 type Champs = Record<string, string>
 
-export default function Formulaire({ c, projet, objet }: { c: string | null; projet: string; objet: string }) {
-  const config: Configuration = useMemo(() => deserialiser(c), [c])
+export default function Formulaire({ e, action, projet, objet }: { e: string | null; action: string; projet: string; objet: string }) {
+  const est = useMemo(() => decoder(e), [e])
+  const config = est.cfg
+  const aProjet = config.accueil !== 'Aucun' || config.outil.actif || config.boutique.active
+  const resultat = useMemo(() => calculer(config), [config])
+  const fiche = useMemo(
+    () => (aProjet ? [...lignesConfig(config, est.metier), { cle: 'Création', valeur: fourchetteTexte(resultat) }, ...(resultat.abonnement.mensuel > 0 ? [{ cle: 'Abonnement estimé', valeur: `environ ${euros(resultat.abonnement.mensuel)} par mois` }] : []), { cle: 'Délai indicatif', valeur: `${resultat.delaiSemaines.min} à ${resultat.delaiSemaines.max} semaines` }] : []),
+    [aProjet, config, est.metier, resultat],
+  )
   const [v, setV] = useState<ContactEntree>({
     prenom: '',
     nom: '',
     entreprise: '',
     metier: '',
-    objet: (OBJETS as readonly string[]).includes(objet) ? (objet as (typeof OBJETS)[number]) : config.type === 'outil' ? 'Outil sur mesure' : config.type ? 'Site' : ('' as never),
+    objet: (OBJETS as readonly string[]).includes(objet) ? (objet as (typeof OBJETS)[number]) : aProjet ? (config.accueil === 'Aucun' && config.outil.actif ? 'Outil sur mesure' : 'Site') : ('' as never),
     projet,
     email: '',
     telephone: '',
     preference: 'email',
     rgpd: false as never,
-    configuration: resumer(config),
+    configuration: aProjet ? [resumeTexte(config, est.metier), `Création ${fourchetteTexte(resultat)}`, resultat.abonnement.mensuel > 0 ? `Abonnement estimé : environ ${euros(resultat.abonnement.mensuel)} par mois` : ''].filter(Boolean).join('\n') : '',
+    estimation: aProjet ? (e ?? '') : '',
+    action: action === 'demo' || action === 'appel' ? action : '',
     site_web: '',
   })
   const [erreurs, setErreurs] = useState<Champs>({})
@@ -164,7 +175,7 @@ export default function Formulaire({ c, projet, objet }: { c: string | null; pro
           <div className="su-ctc__scene" aria-hidden="true">
             <StackFrame className="su-ctc__cadre" />
           </div>
-          {config.type && <Fiche lignes={lignesFiche(config)} titre="Votre configuration" className="su-ctc__fiche" />}
+          {aProjet && <Fiche lignes={fiche} titre="Votre estimation" className="su-ctc__fiche" />}
         </header>
 
         <form className="su-ctc__form" onSubmit={envoyer} noValidate aria-describedby="su-ctc-annonce">
@@ -209,7 +220,21 @@ export default function Formulaire({ c, projet, objet }: { c: string | null; pro
                 </p>
               )}
             </div>
-            {config.type && <input type="hidden" name="configuration" value={v.configuration} />}
+            <div className="su-ctc__champ">
+              <span id="su-ctc-action-l">Ce que vous souhaitez</span>
+              <div className="su-ctc__pref" role="radiogroup" aria-labelledby="su-ctc-action-l">
+                <label>
+                  <input type="radio" name="action" checked={v.action === 'appel'} onChange={() => maj('action', 'appel')} /> Réserver mon appel gratuit (30 min)
+                </label>
+                <label>
+                  <input type="radio" name="action" checked={v.action === 'demo'} onChange={() => maj('action', 'demo')} /> Demander ma démo
+                </label>
+                <label>
+                  <input type="radio" name="action" checked={!v.action} onChange={() => maj('action', '')} /> Autre demande
+                </label>
+              </div>
+            </div>
+            {aProjet && <input type="hidden" name="configuration" value={v.configuration} />}
           </Plaque>
 
           <Plaque as="fieldset" className="su-ctc__plaque">

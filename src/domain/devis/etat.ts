@@ -205,3 +205,10 @@ export const RACCOURCIS: Raccourci[] = [
       ),
   },
 ]
+
+/** Lien vers l'estimateur, éventuellement sur une étape ou avec une configuration. */
+export function lienEstimateur(p: Partial<EtatEstimateur> = {}): string {
+  const e = { ...ETAT_VIDE(), ...p }
+  const vide = encoder(e) === encoder(ETAT_VIDE())
+  return vide ? '/tarifs#estimer' : `/tarifs?e=${encoder(e)}#estimer`
+}

@@ -30,7 +30,6 @@ export const PAGES_FIXES: Route[] = [
   { chemin: '/parrainage', nom: 'Parrainage', groupe: 'offre', priorite: 0.4 },
   { chemin: '/outils', nom: 'Outils gratuits', groupe: 'outils', priorite: 0.6 },
   { chemin: '/outils/audit-site', nom: 'Audit de site', groupe: 'outils', priorite: 0.6 },
-  { chemin: '/outils/studio-de-style', nom: 'Studio de style', groupe: 'outils', priorite: 0.5 },
   { chemin: '/ressources', nom: 'Ressources', groupe: 'outils', priorite: 0.5 },
   { chemin: '/ressources/cahier-des-charges', nom: 'Cahier des charges', groupe: 'outils', priorite: 0.5 },
   { chemin: '/ressources/documents', nom: 'Documents PDF', groupe: 'outils', priorite: 0.5 },

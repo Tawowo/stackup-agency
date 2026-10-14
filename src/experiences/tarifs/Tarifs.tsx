@@ -1,38 +1,30 @@
 'use client'
 /**
- * /tarifs — « Le Configurateur de pile ». Hero : la pile en cadran, le titre,
- * le configurateur. Puis les quatre offres détaillées, la maintenance, et
- * l'action finale vers /contact.
+ * /tarifs — « Estimez votre projet ». Un hero court (la chaîne d'assemblage de la
+ * Fabrique), puis l'estimateur, le parcours client, ce qui est inclus, les offres
+ * « à partir de », l'abonnement composé et les services à la carte.
  */
-import { useCallback, useEffect, useRef, useState } from 'react'
-import { useDragPile } from '@/webgl/useDragPile'
-import PlanTechnique from './PlanTechnique'
+import { useEffect, useRef } from 'react'
+import Link from 'next/link'
 import StackFrame from '@/webgl/StackFrame'
+import { useDragPile } from '@/webgl/useDragPile'
 import { useScene } from '@/webgl/store'
 import { gsap, SplitText, initGsap } from '@/lib/gsap'
 import { SITE } from '@/config/site'
-import { OFFRES_SCENE } from '@/experiences/offre/offres'
-import type { Configuration } from '@/lib/configuration'
+import { CONFIGS_OFFRES } from '@/domain/devis/offres'
+import { ETAT_VIDE, encoder, type EtatEstimateur } from '@/domain/devis/etat'
 import Action from '@/components/ui/Action'
-import Cadran from '@/components/ui/Cadran'
-import Fiche from '@/components/ui/Fiche'
 import Plaque from '@/components/ui/Plaque'
-import Configurateur from './Configurateur'
+import ParcoursClient from '@/components/tarifs/ParcoursClient'
+import InclusCreation from '@/components/tarifs/InclusCreation'
+import AbonnementCompose from '@/components/tarifs/AbonnementCompose'
+import ALaCarte from '@/components/tarifs/ALaCarte'
+import Estimateur from '@/experiences/estimateur/Estimateur'
 import './tarifs.css'
 
-const MAINTENANCE_LIGNES = [
-  { nom: 'Mises à jour et sauvegardes', plans: [true, true, true] },
-  { nom: 'Surveillance et remise en ligne', plans: [true, true, true] },
-  { nom: 'Modifications de contenu', plans: [false, true, true] },
-  { nom: 'Évolutions et nouvelles fonctions', plans: [false, false, true] },
-  { nom: 'Priorité de traitement', plans: [false, false, true] },
-]
-
-export default function Tarifs({ initiale }: { initiale: Configuration }) {
+export default function Tarifs({ initial }: { initial: EtatEstimateur }) {
   const page = useRef<HTMLElement>(null)
   const titre = useRef<HTMLHeadingElement>(null)
-  const [conf, setConf] = useState<Configuration>(initiale)
-  const surConfig = useCallback((c: Configuration) => setConf(c), [])
   const bind = useDragPile()
   useEffect(() => {
     initGsap()
@@ -58,7 +50,6 @@ export default function Tarifs({ initiale }: { initiale: Configuration }) {
         gsap.to(split.words, { rotateX: 0, duration: 0.62, ease: 'power3.out', stagger: 0.07, delay: 0.15 })
       }
     }, el)
-    // La lecture (offres, maintenance) se fait sur ivoire : voir `data-nuit` et <Lumiere />.
     return () => {
       ctx.revert()
       split.revert()
@@ -72,139 +63,78 @@ export default function Tarifs({ initiale }: { initiale: Configuration }) {
   return (
     <main ref={page} className="su-tar" data-moment="tarifs">
       <section className="su-tar__hero" data-moment="tarifs-hero" data-nuit="1" aria-labelledby="su-tar-titre">
-        <PlanTechnique c={conf} />
         <div className="su-tar__grille">
-          <div className="su-tar__scene" {...bind()} role="img" aria-label="Le produit en construction sur la chaîne ; faites-le tourner">
+          <header className="su-tar__tete">
+            <p className="su-mono su-tar__etiquette">Tarifs · l’estimateur</p>
+            <h1 ref={titre} id="su-tar-titre" className="su-display su-tar__titre">
+              Combien coûte votre projet ?
+            </h1>
+            <p className="su-tar__ligne">
+              Répondez à quelques questions simples, ou partez d’un projet tout prêt : une fourchette de prix se précise à chaque choix, et la chaîne d’assemblage ci-contre construit votre projet sous vos yeux.
+            </p>
+            <p className="su-tar__actions">
+              <Action href="#estimer">Estimer mon projet</Action>
+              <Action href="/contact?a=appel" variante="contour">
+                Réserver mon appel gratuit
+              </Action>
+            </p>
+          </header>
+          <div className="su-tar__scene" {...bind()} role="img" aria-label="Le produit en construction sur la chaîne d’assemblage ; faites-le tourner">
             <StackFrame className="su-tar__cadre" />
           </div>
-          <header className="su-tar__tete">
-            <p className="su-mono su-tar__etiquette">Tarifs · le configurateur</p>
-            <h1 ref={titre} id="su-tar-titre" className="su-display su-tar__titre">
-              Choisissez ce qu’on empile.
-            </h1>
-            <p className="su-tar__ligne">Un type, des fonctions, des options : le plancher se recalcule à chaque choix, et part avec vous vers le devis.</p>
-          </header>
-          <div className="su-tar__conf">
-            <Configurateur initiale={initiale} onConfig={surConfig} />
-          </div>
         </div>
       </section>
+
+      <Estimateur initial={initial} />
+      <ParcoursClient id="parcours" />
+      <InclusCreation />
 
       <section className="su-tar__offres" data-moment="tarifs-offres" data-nuit="0" aria-labelledby="su-tar-offres">
-        <div className="su-tar__grille">
+        <div className="su-tar__grille su-tar__grille--offres">
           <h2 id="su-tar-offres" className="su-display su-tar__h2">
-            Les quatre offres,
-            <br />
-            en entier.
+            Les quatre points de départ
           </h2>
+          <p className="su-tar__sous">Chaque prix est un « à partir de » : la plus petite version de l’offre. Ouvrez-la dans l’estimateur pour l’agrandir à votre mesure.</p>
           <ul className="su-tar__liste">
-            {SITE.offres.map((o, k) => {
-              const sc = OFFRES_SCENE.find((x) => x.id === o.id)!
-              return (
-                <li key={o.id} id={o.id}>
-                  <Plaque as="article" className="su-tar__offre" aria-labelledby={`su-tar-${o.id}`}>
-                    <p className="su-mono su-tar__num">0{k + 1}</p>
-                    <h3 id={`su-tar-${o.id}`} className="su-tar__nom">
-                      {o.nom}
-                    </h3>
-                    <p className="su-tar__prix">
-                      <Cadran valeur={o.aPartirDe} prefixe="à partir de" suffixe="€" />
-                    </p>
-                    <ul className="su-tar__inclus" aria-label="Inclus">
-                      {o.inclus.map((i) => (
-                        <li key={i}>{i}</li>
-                      ))}
-                    </ul>
-                    <Fiche lignes={sc.fiche} className="su-tar__fiche" />
-                    <Action href={`/contact?c=${encodeURIComponent(`t=${o.id}`)}`} variante="contour" mot="Devis">
-                      Demander un devis
-                    </Action>
-                  </Plaque>
-                </li>
-              )
-            })}
-          </ul>
-          <aside className="su-tar__supplements" aria-labelledby="su-tar-sup">
-            <h3 id="su-tar-sup" className="su-mono">
-              En supplément
-            </h3>
-            <dl className="su-tar__sup-liste">
-              <div>
-                <dt>Révision au-delà des révisions incluses</dt>
-                <dd className="su-tabular">{SITE.supplements.revision}</dd>
-              </div>
-              <div>
-                <dt>Page supplémentaire</dt>
-                <dd className="su-tabular">{SITE.supplements.pageSupplementaire} €</dd>
-              </div>
-              <div>
-                <dt>Retrait de la mention « Réalisé par Stackup Agency »</dt>
-                <dd className="su-tabular">{SITE.supplements.retraitMention} €</dd>
-              </div>
-            </dl>
-            <p className="su-tar__mention su-mono">
-              {SITE.mentions.tva}. Devis valable {SITE.mentions.devisValable}.
-            </p>
-          </aside>
-        </div>
-      </section>
-
-      <section className="su-tar__maint" aria-labelledby="su-tar-maint">
-        <div className="su-tar__grille">
-          <h2 id="su-tar-maint" className="su-display su-tar__h2">
-            La maintenance,
-            <br />
-            si vous la voulez.
-          </h2>
-          <ul className="su-tar__plans">
-            {SITE.maintenance.map((m, k) => (
-              <li key={m.id}>
-                <Plaque as="article" className="su-tar__plan" data-plan={m.id}>
+            {SITE.offres.map((o, k) => (
+              <li key={o.id} id={o.id}>
+                <Plaque as="article" className="su-tar__offre" aria-labelledby={`su-tar-${o.id}`}>
                   <p className="su-mono su-tar__num">0{k + 1}</p>
-                  <h3 className="su-tar__nom">{m.nom}</h3>
+                  <h3 id={`su-tar-${o.id}`} className="su-tar__nom">
+                    {o.nom}
+                  </h3>
                   <p className="su-tar__prix">
-                    <Cadran valeur={m.prix} suffixe="€/mois" />
+                    <span className="su-tar__prix-pre">à partir de</span> <span className="su-tabular">{o.aPartirDe.toLocaleString('fr-FR')} €</span>
                   </p>
-                  <ul className="su-tar__inclus">
-                    {MAINTENANCE_LIGNES.filter((l) => l.plans[k]).map((l) => (
-                      <li key={l.nom}>{l.nom}</li>
+                  <ul className="su-tar__inclus" aria-label="Inclus">
+                    {o.inclus.map((i) => (
+                      <li key={i}>{i}</li>
                     ))}
                   </ul>
+                  <Link className="su-tar__lien" href={`/tarifs?e=${encoder({ ...ETAT_VIDE(), cfg: CONFIGS_OFFRES[o.id] })}#estimer`}>
+                    Ouvrir dans l’estimateur
+                  </Link>
                 </Plaque>
               </li>
             ))}
           </ul>
-          <table className="su-tar__table su-mono">
-            <caption className="sr-only">Comparaison des plans de maintenance</caption>
-            <thead>
-              <tr>
-                <th scope="col">Inclus</th>
-                {SITE.maintenance.map((m) => (
-                  <th key={m.id} scope="col">
-                    {m.nom}
-                  </th>
-                ))}
-              </tr>
-            </thead>
-            <tbody>
-              {MAINTENANCE_LIGNES.map((l) => (
-                <tr key={l.nom}>
-                  <th scope="row">{l.nom}</th>
-                  {l.plans.map((p, k) => (
-                    <td key={k} aria-label={p ? 'inclus' : 'non inclus'}>
-                      {p ? '●' : '—'}
-                    </td>
-                  ))}
-                </tr>
-              ))}
-            </tbody>
-          </table>
+          <p className="su-tar__mention su-mono">
+            {SITE.mentions.tva}. Devis valable {SITE.mentions.devisValable}.
+          </p>
+        </div>
+      </section>
+
+      <AbonnementCompose />
+      <ALaCarte />
+
+      <section className="su-tar__maint" aria-labelledby="su-tar-final" data-nuit="0">
+        <div className="su-tar__grille">
           <p className="su-tar__final">
-            <span className="su-display su-tar__final-titre">Un devis, pas une estimation.</span>
-            <span>Tout ce que vous avez empilé ci-dessus arrive pré-rempli dans le formulaire.</span>
-            <Action href="/contact" mot="Devis">
-              Recevoir un devis
-            </Action>
+            <span id="su-tar-final" className="su-display su-tar__final-titre">
+              Un devis, pas une estimation.
+            </span>
+            <span>Le prix exact se fixe avec vous, après un appel et une démo de votre page d’accueil.</span>
+            <Action href="/contact?a=appel">Réserver mon appel gratuit (30 min)</Action>
           </p>
         </div>
       </section>

@@ -2,6 +2,10 @@
 import { NextResponse } from 'next/server'
 import { gabaritAccuse, gabaritContact } from '@/lib/email'
 import type { Contact } from '@/lib/contact'
+import { encoder } from '@/domain/devis/etat'
+import { HYDREAUX_SCAN } from '@/domain/devis/exemples'
+import { blocInterne, fourchetteTexte, resumeTexte } from '@/domain/devis/resume'
+import { calculer } from '@/domain/devis/calcul'
 
 export async function GET(req: Request) {
   if (process.env.NODE_ENV === 'production' && process.env.VERCEL_ENV === 'production') return new NextResponse('Indisponible', { status: 404 })
@@ -16,10 +20,12 @@ export async function GET(req: Request) {
     telephone: '06 12 34 56 78',
     preference: 'telephone',
     rgpd: true,
-    configuration: 'Type : Site multi-pages\nFonctions : Formulaire, Galerie, Prise de rendez-vous\nMaintenance : Pro, 44 €/mois\nPlancher : à partir de 749 €',
+    configuration: `${resumeTexte(HYDREAUX_SCAN)}\nCréation ${fourchetteTexte(calculer(HYDREAUX_SCAN))}`,
+    estimation: encoder({ cfg: HYDREAUX_SCAN, metier: '', etape: 10 }),
+    action: 'demo',
     site_web: '',
   }
   const quel = new URL(req.url).searchParams.get('quel')
-  const g = quel === 'accuse' ? gabaritAccuse(d) : gabaritContact(d, { date: new Date('2026-10-13T10:00:00Z') })
+  const g = quel === 'accuse' ? gabaritAccuse(d, fourchetteTexte(calculer(HYDREAUX_SCAN))) : gabaritContact(d, { date: new Date('2026-10-13T10:00:00Z'), interne: blocInterne(HYDREAUX_SCAN) })
   return new NextResponse(g.html, { headers: { 'content-type': 'text/html; charset=utf-8' } })
 }

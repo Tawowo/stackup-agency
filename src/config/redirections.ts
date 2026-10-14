@@ -1,6 +1,6 @@
 /**
  * REDIRECTIONS 301 — générées par scripts/redirections.mjs (ne pas éditer à la main).
- * 71 reprises de l'ancien site + 9 pour les pages retirées en V5.
+ * 71 reprises de l'ancien site + 10 pour les pages retirées en V5.
  */
 import type { Redirect } from 'next/dist/lib/load-custom-routes'
 
@@ -378,12 +378,17 @@ export const REDIRECTIONS: Redirect[] = [
   },
   {
     "source": "/configurateur",
-    "destination": "/tarifs",
+    "destination": "/tarifs#estimer",
     "permanent": true
   },
   {
     "source": "/devis",
-    "destination": "/tarifs",
+    "destination": "/tarifs#estimer",
+    "permanent": true
+  },
+  {
+    "source": "/outils/studio-de-style",
+    "destination": "/tarifs#estimer",
     "permanent": true
   },
   {

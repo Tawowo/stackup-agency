@@ -6,6 +6,10 @@
 import Link from 'next/link'
 import Document from '@/gabarits/document/Document'
 import { SITE, formatAPartirDe } from '@/config/site'
+import { LIGNES } from '@/config/tarifs.generated'
+import { euros } from '@/domain/devis/resume'
+
+const prixDe = (code: string) => LIGNES.find((l) => l.code === code)?.prix ?? 0
 import { JsonLd, filAriane, meta } from '@/lib/seo'
 
 export const metadata = meta({
@@ -100,12 +104,14 @@ export default function CGV() {
                 <td>{formatAPartirDe(o)}</td>
               </tr>
             ))}
-            {SITE.maintenance.map((m) => (
-              <tr key={m.id}>
-                <td>Maintenance {m.nom}</td>
-                <td>{formatAPartirDe(m.prix)} par mois</td>
-              </tr>
-            ))}
+            <tr>
+              <td>Abonnement mensuel (facultatif)</td>
+              <td>composé selon vos besoins, calculé au devis</td>
+            </tr>
+            <tr>
+              <td>Démo de la page d’accueil et visio de conseil</td>
+              <td>{euros(prixDe('P02'))} et {euros(prixDe('P03'))}, déduites du prix si vous continuez</td>
+            </tr>
           </tbody>
         </table>
         <p>
@@ -141,17 +147,17 @@ export default function CGV() {
 
         <h2 id="revisions">7. Révisions</h2>
         <p>
-          Chaque offre inclut {C.revisionsIncluses} révisions, sauf mention différente au devis. Une révision est une demande groupée de modifications (textes, couleurs, images, mise en page) dans la limite du design validé. L’ajout de pages ou de fonctionnalités n’est pas une révision. Une révision supplémentaire est facturée {SITE.supplements.revision} selon l’offre.
+          Chaque création inclut {C.rendezVousInclus} rendez-vous de finalisation et {C.revisionsIncluses} séries de modifications sur la maquette avant le développement final. Une série est une demande groupée de modifications (textes, couleurs, images, mise en page) dans la limite du design validé. L’ajout de pages ou de fonctionnalités n’en est pas une. Au-delà, le temps supplémentaire est facturé {C.tarifHoraire} € de l’heure, toujours annoncé avant d’être fait.
         </p>
 
         <h2 id="support">8. Support après livraison</h2>
         <p>
-          Un support technique est inclus pendant <strong>{C.supportJours} jours</strong> après la livraison : il couvre la correction des anomalies imputables à {SITE.nom}. Au-delà, toute intervention technique relève d’un abonnement de maintenance ou d’un devis.
+          Un mois d’ajustements est inclus après la mise en ligne : les petites modifications du périmètre prévu sont gratuites, et la correction des anomalies imputables à {SITE.nom} est assurée. Au-delà, toute intervention relève de l’abonnement (maintenance, heures de modifications) ou d’un devis.
         </p>
 
         <h2 id="hebergement">9. Hébergement et nom de domaine</h2>
         <p>
-          Lorsque l’offre l’inclut, la première année d’hébergement et de certificat SSL (et de nom de domaine, selon l’offre) est comprise dans le prix. Les renouvellements sont ensuite à la charge du client, au tarif du prestataire technique. En cas de départ, {SITE.nom} transfère l’ensemble des accès (hébergement, nom de domaine, fichiers), sans frais ni rétention, une fois les sommes dues réglées.
+          Le nom de domaine est offert la première année. Ensuite, il est inclus dans l’abonnement ; sans abonnement, son renouvellement et celui de l’hébergement sont à la charge du client, au tarif du prestataire technique. En cas de départ, {SITE.nom} transfère l’ensemble des accès (hébergement, nom de domaine, fichiers), sans frais ni rétention, une fois les sommes dues réglées.
         </p>
 
         <h2 id="propriete">10. Propriété intellectuelle</h2>
@@ -159,7 +165,7 @@ export default function CGV() {
           Une fois le solde intégralement réglé, le client devient pleinement propriétaire du code source et des éléments créés pour son projet. Il peut librement les réutiliser, les modifier ou les héberger ailleurs, sans restriction de la part de {SITE.nom}. Les éléments de tiers intégrés (bibliothèques libres, polices, images sous licence) restent régis par leurs propres licences.
         </p>
         <p>
-          Sauf opposition écrite du client à la signature du devis, {SITE.nom} peut présenter la réalisation dans son portfolio. Une mention « Réalisé par {SITE.nom} » figure par défaut en pied de page ; son retrait peut être demandé moyennant un supplément de {SITE.supplements.retraitMention} €.
+          Sauf opposition écrite du client à la signature du devis, {SITE.nom} peut présenter la réalisation dans son portfolio. Une mention « Réalisé par {SITE.nom} » figure par défaut en pied de page ; son retrait peut être demandé gratuitement.
         </p>
 
         <h2 id="retractation">11. Droit de rétractation</h2>

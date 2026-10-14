@@ -2,12 +2,16 @@
 /**
  * LE MONDE DES OUTILS — un établi : les quatre outils posés côte à côte, chacun
  * en miniature VRAIE : la jauge de l'audit (aiguille qui balaie), les nuanciers
- * du studio de style, la fiche du cahier des charges qui se coche, la pile de
+ * de l'estimateur de prix, la fiche du cahier des charges qui se coche, la pile de
  * documents. Cartes cliquables vers chaque outil.
  */
 import Link from 'next/link'
 import { Picto } from '@/components/maquettes/illustrations'
+import { calculer } from '@/domain/devis/calcul'
+import { RACCOURCIS } from '@/domain/devis/etat'
 import './mondes.css'
+
+const fourchetteSimple = calculer(RACCOURCIS[0]!.etat().cfg).fourchette
 
 const C = 2 * Math.PI * 34
 const ANNEAU = [
@@ -34,23 +38,21 @@ export default function MondeOutils() {
         </svg>
         <span className="mw-outil__note">Exemple de résultat</span>
       </Link>
-      <Link href="/outils/studio-de-style" className="mw-outil mw-outil--studio">
-        <span className="mw-outil__titre su-mono">Studio de style</span>
-        <div className="mw-nuanciers" aria-hidden="true">
+      <Link href="/tarifs#estimer" className="mw-outil mw-outil--studio">
+        <span className="mw-outil__titre su-mono">Estimateur de prix</span>
+        <div className="mw-curseurs" aria-hidden="true">
           {[
-            ['#fbf6ec', '#8a5a2b', '#2f6f5e', '#d9701c'],
-            ['#f1efe6', '#16384d', '#3d7f9e', '#f2b64b'],
-            ['#fdf2f4', '#7a2f55', '#c9566f', '#2a3a59'],
-          ].map((rang, i) => (
-            <div key={i} className="mw-nuancier" style={{ '--i': i } as React.CSSProperties}>
-              {rang.map((c) => (
-                <span key={c} style={{ background: c }} />
-              ))}
-              <b>Aa</b>
+            ['Accueil', 0.7],
+            ['Pages', 0.45],
+            ['Google', 0.6],
+          ].map(([nom, v], i) => (
+            <div key={nom as string} className="mw-curseur" style={{ '--i': i, '--v': v } as React.CSSProperties}>
+              <span>{nom}</span>
+              <i />
             </div>
           ))}
         </div>
-        <span className="mw-outil__note">Palette, typo, mise en page</span>
+        <span className="mw-outil__note su-tabular">{`Entre ${fourchetteSimple.bas.toLocaleString('fr-FR')} et ${fourchetteSimple.haut.toLocaleString('fr-FR')} €`}</span>
       </Link>
       <Link href="/ressources/cahier-des-charges" className="mw-outil mw-outil--cahier">
         <span className="mw-outil__titre su-mono">Cahier des charges</span>

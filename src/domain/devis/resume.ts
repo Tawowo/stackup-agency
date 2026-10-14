@@ -94,3 +94,11 @@ export function blocInterne(cfg: ConfigDevis): LigneResume[] {
     { cle: 'Détail par bloc', valeur: r.blocs.filter((b) => b.montant > 0).map((b) => `${b.libelle} ${euros(b.montant)}`).join(' · ') },
   ]
 }
+
+/** Fourchette d'un bloc, avec les mêmes bornes et le même arrondi que le total. */
+export function fourchetteBloc(r: ResultatDevis, montant: number): { bas: number; haut: number } {
+  const p = TARIFS.params
+  const facteur = r.totalBrut > 0 ? r.apresCoefficient / r.totalBrut : 1
+  const arrondi = (x: number) => Math.round(x / p.arrondi) * p.arrondi
+  return { bas: arrondi(montant * facteur * p.fourchetteBas), haut: arrondi(montant * facteur * p.fourchetteHaut) }
+}

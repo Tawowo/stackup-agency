@@ -1,6 +1,6 @@
 /**
  * /outils — l'index des outils gratuits : deux outils interactifs (audit,
- * studio de style) et deux ressources à télécharger. Rendu serveur.
+ * estimateur de prix) et deux ressources à télécharger. Rendu serveur.
  */
 import Link from 'next/link'
 import Document from '@/gabarits/document/Document'
@@ -9,14 +9,14 @@ import { JsonLd, filAriane, meta } from '@/lib/seo'
 import '@/experiences/outils/outils.css'
 
 export const metadata = meta({
-  titre: 'Outils gratuits — audit de site, studio de style, ressources',
+  titre: 'Outils gratuits — audit de site, estimateur de prix, ressources',
   description: 'Mesurez votre site avec Google, essayez l’allure de votre futur site, préparez votre projet avec un cahier des charges et nos documents contractuels. Gratuit, sans inscription.',
   chemin: '/outils',
 })
 
 const OUTILS = [
   { href: '/outils/audit-site', nom: 'Audit de site', genre: 'Outil', texte: 'Une adresse, une mesure Google PageSpeed Insights : performance, accessibilité et SEO sur 100, et les priorités expliquées en français.' },
-  { href: '/outils/studio-de-style', nom: 'Studio de style', genre: 'Outil', texte: 'Activité, ambiance, palette, typographie, mise en page : l’accueil fictif de votre site se recompose en direct. Vous repartez avec une fiche de style.' },
+  { href: '/tarifs#estimer', nom: 'Estimateur de prix', genre: 'Outil', texte: 'Site, boutique ou outil de gestion : répondez à quelques questions simples et voyez une fourchette de prix se préciser à chaque choix.' },
   { href: '/ressources/cahier-des-charges', nom: 'Cahier des charges', genre: 'Ressource', texte: 'Les bonnes questions à se poser avant de demander un site ou un outil, dans l’ordre où on les pose.' },
   { href: '/ressources/documents', nom: 'Documents en PDF', genre: 'Ressource', texte: 'Les documents qui encadrent un projet : conditions générales, contrats de prestation et de maintenance, cession de droits, modèles de devis et de facture.' },
 ]

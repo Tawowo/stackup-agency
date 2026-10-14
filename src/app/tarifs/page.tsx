@@ -1,14 +1,15 @@
 import type { Metadata } from 'next'
 import Tarifs from '@/experiences/tarifs/Tarifs'
-import { deserialiser } from '@/lib/configuration'
+import { decoder } from '@/domain/devis/etat'
+import { PRIX_PLANCHER } from '@/domain/devis/offres'
 
 export const metadata: Metadata = {
-  title: 'Tarifs — le configurateur de pile · Stackup Agency',
-  description: 'Choisissez ce qu’on empile : type de site ou d’outil, fonctions, options. Le plancher se recalcule, toujours « à partir de ».',
+  title: 'Tarifs — estimez votre projet · Stackup Agency',
+  description: `Estimez votre site, votre boutique ou votre outil : une fourchette qui se précise à chaque choix, un site vitrine dès ${PRIX_PLANCHER()} €. Appel gratuit, démo avant de signer.`,
 }
 
 export default async function Page({ searchParams }: { searchParams: Promise<Record<string, string | string[] | undefined>> }) {
   const q = await searchParams
-  const c = typeof q.c === 'string' ? q.c : null
-  return <Tarifs initiale={deserialiser(c)} />
+  const e = typeof q.e === 'string' ? q.e : null
+  return <Tarifs initial={decoder(e)} />
 }

@@ -10,7 +10,7 @@ export const ENTREES = [
 /** Le menu « Ressources » (nav) : tout ce qui n'est pas une page principale, une porte chacun. */
 export const RESSOURCES = [
   { href: '/blog', nom: 'Le journal', ligne: '300 articles pour créer son site, être trouvé, vendre' },
-  { href: '/outils', nom: 'Outils gratuits', ligne: 'Audit de site, studio de style, cahier des charges' },
+  { href: '/outils', nom: 'Outils gratuits', ligne: 'Audit de site, estimateur de prix, cahier des charges' },
   { href: '/faq', nom: 'Questions fréquentes', ligne: 'Prix, propriété du code, hébergement, suivi' },
   { href: '/zones-intervention', nom: 'Zones d’intervention', ligne: 'Tours, la région, et toute la France à distance' },
   { href: '/parrainage', nom: 'Parrainage', ligne: 'Recommandez-nous, vous y gagnez aussi' },

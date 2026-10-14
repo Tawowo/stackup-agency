@@ -7,6 +7,9 @@ import { NextResponse, type NextRequest } from 'next/server'
 import { ContactSchema } from '@/lib/contact'
 import { gabaritAccuse, gabaritContact } from '@/lib/email'
 import { SITE } from '@/config/site'
+import { calculer } from '@/domain/devis/calcul'
+import { decoder } from '@/domain/devis/etat'
+import { blocInterne, fourchetteTexte } from '@/domain/devis/resume'
 
 const FENETRE_MS = 10 * 60 * 1000
 const MAX_PAR_FENETRE = 5
@@ -43,14 +46,22 @@ export async function POST(req: NextRequest) {
   }
   const d = r.data
   const date = new Date()
-  const demande = gabaritContact(d, { date, ip })
-  const accuse = gabaritAccuse(d)
+  // Le prix exact est recalculé ici, côté serveur, à partir du jeton : il ne vient jamais du navigateur
+  // et ne repart jamais vers le client (seulement dans l'e-mail reçu par le fondateur).
+  const etat = d.estimation ? decoder(d.estimation) : null
+  const projet = etat && (etat.cfg.accueil !== 'Aucun' || etat.cfg.outil.actif || etat.cfg.boutique.active)
+  const interne = projet ? blocInterne(etat.cfg) : undefined
+  const fourchette = projet ? fourchetteTexte(calculer(etat.cfg)) : ''
+  const demande = gabaritContact(d, { date, ip, interne })
+  const accuse = gabaritAccuse(d, fourchette)
 
   const cle = process.env.RESEND_API_KEY
   const destinataire = process.env.CONTACT_TO || SITE.email
   if (!cle) {
     console.info('[contact] message reçu (Resend non configuré)', { sujet: demande.sujet, email: d.email })
-    return NextResponse.json({ ok: true, envoye: false }, { status: 202 })
+    // Hors production seulement : le texte de l'e-mail pour vérifier son contenu (jamais en ligne).
+    const apercu = process.env.NODE_ENV !== 'production' ? { apercu: { sujet: demande.sujet, texte: demande.texte, accuse: accuse.texte } } : {}
+    return NextResponse.json({ ok: true, envoye: false, ...apercu }, { status: 202 })
   }
   try {
     const { Resend } = await import('resend')

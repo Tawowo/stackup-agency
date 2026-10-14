@@ -10,6 +10,8 @@ import MondeFaq from '@/components/mondes/MondeFaq'
 import Accordeon from '@/components/editorial/Accordeon'
 import Action from '@/components/ui/Action'
 import { SITE, formatAPartirDe } from '@/config/site'
+import { LIGNES } from '@/config/tarifs.generated'
+import { exemplesAbonnement } from '@/domain/devis/offres'
 import { conforme } from '@/lib/conformite'
 import { JsonLd, faqPage, filAriane, meta } from '@/lib/seo'
 import '@/experiences/ressources/ressources.css'
@@ -21,7 +23,8 @@ export const metadata = meta({
 })
 
 const C = SITE.conditions
-const [starter, pro, premium] = SITE.maintenance
+const aboMin = exemplesAbonnement()[0]!.mensuel
+const rapport = LIGNES.find((l) => l.code === 'A17')
 const offres = SITE.offres.map((o) => `${o.nom} : ${formatAPartirDe(o)}`).join(' ; ')
 
 const THEMES: { id: string; titre: string; questions: { q: string; r: string }[] }[] = [
@@ -31,15 +34,15 @@ const THEMES: { id: string; titre: string; questions: { q: string; r: string }[]
     questions: [
       {
         q: 'Comment se déroule la création de mon site ?',
-        r: `1. Prise de contact et échange sur votre besoin. 2. Devis et bon de commande. 3. Acompte de ${C.acomptePourcent} %. 4. Maquette. 5. Développement. 6. Vos retours et les ajustements (${C.revisionsIncluses} révisions comprises). 7. Mise en ligne. 8. Prise en main : on vous montre comment faire vivre votre site.`,
+        r: `1. Prise de contact et échange sur votre besoin. 2. Devis et bon de commande. 3. Acompte de ${C.acomptePourcent} %. 4. Maquette. 5. Développement. 6. Vos retours et les ajustements (${C.revisionsIncluses} séries de modifications comprises sur la maquette, puis un mois d’ajustements après la mise en ligne). 7. Mise en ligne. 8. Prise en main : on vous montre comment faire vivre votre site.`,
       },
       {
         q: 'Combien de temps faut-il pour créer mon site ?',
-        r: 'Le calendrier est fixé ensemble au devis. Il dépend du périmètre du projet et du moment où vos contenus (textes, photos, accès) sont prêts, et il est écrit avant de commencer.',
+        r: 'L’estimateur de la page tarifs donne un délai indicatif, calculé à partir du travail que représente votre projet. Le calendrier est ensuite fixé ensemble au devis : il dépend du périmètre et du moment où vos contenus (textes, photos, accès) sont prêts, et il est écrit avant de commencer.',
       },
       {
         q: 'Combien de modifications puis-je demander ?',
-        r: `${C.revisionsIncluses} séries de retours sont comprises dans chaque projet. Au-delà, une révision supplémentaire est facturée ${SITE.supplements.revision}, et toujours annoncée avant d’être faite.`,
+        r: `${C.revisionsIncluses} séries de retours sont comprises dans chaque projet. Au-delà, le temps supplémentaire est facturé ${C.tarifHoraire} € de l’heure, et toujours annoncé avant d’être fait.`,
       },
       {
         q: 'Travaillez-vous à distance ou en présentiel ?',
@@ -57,7 +60,7 @@ const THEMES: { id: string; titre: string; questions: { q: string; r: string }[]
     questions: [
       {
         q: 'Quels sont vos tarifs ?',
-        r: `${offres}. Le prix exact dépend de votre projet et il est fixé au devis. Les sites comprennent le design, le développement, le référencement de base, l’hébergement et le certificat SSL pendant 12 mois.`,
+        r: `${offres}. Le prix exact dépend de votre projet et il est fixé au devis. Ces prix comprennent le design, le développement, la mise en ligne et le nom de domaine offert la première année. L’hébergement et la maintenance se règlent dans un abonnement mensuel facultatif, composé selon vos besoins.`,
       },
       {
         q: 'Y a-t-il des frais cachés ?',
@@ -87,11 +90,11 @@ const THEMES: { id: string; titre: string; questions: { q: string; r: string }[]
       },
       {
         q: 'Que se passe-t-il après les 12 mois d’hébergement inclus ?',
-        r: `Deux possibilités : un abonnement de maintenance, à partir de ${starter.prix} € par mois, ou la reprise de votre code pour l’héberger vous-même. Le nom de domaine, offert la première année, reste ensuite à votre charge, sauf abonnement de maintenance actif.`,
+        r: `Deux possibilités : un abonnement composé selon vos besoins, à partir d’environ ${aboMin} € par mois pour un site d’une page, ou la reprise de votre code pour l’héberger vous-même. Le nom de domaine, offert la première année, reste ensuite à votre charge, sauf abonnement actif : il est alors inclus.`,
       },
       {
         q: 'Mon site sera-t-il sécurisé ?',
-        r: `Chaque site est livré en HTTPS, avec un certificat SSL. Les mises à jour, les sauvegardes et les corrections suivies dans le temps font partie de la maintenance, à partir de ${starter.prix} € par mois, sans engagement de durée.`,
+        r: `Chaque site est livré en HTTPS, avec un certificat SSL. Les mises à jour, les sauvegardes et les corrections suivies dans le temps font partie de l’abonnement, à partir d’environ ${aboMin} € par mois, sans engagement, préavis d’un mois.`,
       },
       {
         q: 'Mon site s’affichera-t-il bien sur mobile ?',
@@ -109,7 +112,7 @@ const THEMES: { id: string; titre: string; questions: { q: string; r: string }[]
       },
       {
         q: 'Proposez-vous un suivi du référencement ?',
-        r: `Oui, dans les abonnements de maintenance ${pro.nom} et ${premium.nom} : un rapport mensuel et des recommandations d’amélioration.`,
+        r: `Oui, en option dans l’abonnement : un rapport mensuel d’une page (visites, demandes reçues, évolution)${rapport ? `, à partir de ${rapport.prix} € par mois` : ''}.`,
       },
       {
         q: 'Comment être visible localement ?',
