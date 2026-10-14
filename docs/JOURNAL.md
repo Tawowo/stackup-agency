@@ -18,7 +18,7 @@ plan du site, 404 animée. SEO : métadonnées, JSON-LD, sitemap, robots, OG, ic
 **Imparfait, en clair.**
 - JS initial (gzip) : accueil 243 ko (budget 180 hors GSAP : ~188), /tarifs 239, pages intérieures 147 (budget 140).
   Lighthouse non lancé (outil absent ici) ; perf GPU réelle non mesurée (SwiftShader seulement).
-- Vidéos : accueil et /tarifs refaites ; les autres pages se génèrent avec `node scripts/videos.mjs --cas=pages`
+- Vidéos : accueil, /tarifs et /realisations refaites ; les autres pages se génèrent avec `node scripts/videos.mjs --cas=pages`
   (non versionnées, trop lourdes).
 - Galerie : le « téléphone » montre un recadrage de la capture desktop (pas de vraie capture mobile).
 - Audit de site : Google PageSpeed refuse sans clé (quota partagé épuisé) ; résultat jamais vu rendu.
