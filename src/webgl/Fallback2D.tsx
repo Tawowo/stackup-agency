@@ -24,9 +24,9 @@ export default function Fallback2D() {
           />
         ))}
       </g>
-      <polygon points={haut.points} className="su-repli__plaque su-repli__plaque--haut" />
       <polygon points={bas.points} className="su-repli__plaque su-repli__plaque--ambre" />
       <polygon points={milieu.points} className="su-repli__plaque su-repli__plaque--milieu" />
+      <polygon points={haut.points} className="su-repli__plaque su-repli__plaque--haut" />
     </svg>
   )
 }

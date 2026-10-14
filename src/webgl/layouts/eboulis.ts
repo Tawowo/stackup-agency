@@ -62,6 +62,7 @@ export function eboulis(n: number): LayoutData {
   for (let i = 0; i < 2; i++) {
     const p = LOGO_POSES[i]!
     setInstance(d, i, p.x, p.y, p.z, 0, p.rotY, p.rotZ, 1, 0, 0.1)
+    d.shear[i] = p.shear
   }
   poser(d, 2, AMBRE)
   let i = 3

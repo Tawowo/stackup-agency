@@ -10,6 +10,7 @@ export function logo(n: number): LayoutData {
   for (let i = 0; i < n; i++) {
     const p = LOGO_POSES[i]
     if (p) setInstance(d, i, p.x, p.y, p.z, 0, p.rotY, p.rotZ, 1, 0)
+    if (p) d.shear[i] = p.shear
     else horsChamp(d, i)
   }
   return d

@@ -47,6 +47,7 @@ export function enveloppe(n: number): LayoutData {
   // Le cachet : le logo à 32 %, posé sur la pointe du rabat.
   LOGO_POSES.forEach((p, j) => {
     setInstance(d, j, p.x * 0.32, cy - 0.12 + p.y * 0.32, 0.06, 0, p.rotY, p.rotZ, 0.32, 4, 0.92)
+    d.shear[j] = p.shear
   })
   for (; i < n; i++) horsChamp(d, i)
   return d

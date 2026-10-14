@@ -29,6 +29,7 @@ export function cadre(n: number): LayoutData {
   // Le tampon : le logo à 30 %, au coin bas-droit, devant le cadre.
   LOGO_POSES.forEach((p, j) => {
     setInstance(d, j, W / 2 - 0.05 + p.x * 0.3, cy - H / 2 - 0.08 + p.y * 0.3, 0.06, 0, p.rotY, p.rotZ, 0.3, 3, 0.85)
+    d.shear[j] = p.shear
   })
   for (; i < n; i++) horsChamp(d, i)
   return d

@@ -49,6 +49,7 @@ export function pile(n: number, o: PileOptions = PILE_DEFAUT): LayoutData {
   for (let i = 0; i < base; i++) {
     const p = LOGO_POSES[i]!
     setInstance(d, i, p.x, p.y, p.z, 0, p.rotY, p.rotZ, 1, 0)
+    d.shear[i] = p.shear
   }
   for (let k = 0; k < dispo; k++) {
     const i = base + k

@@ -68,6 +68,7 @@ export function buildInstanced(n: number) {
     g.setAttribute(`aPos${k}`, new InstancedBufferAttribute(new Float32Array(n * 3), 3))
     g.setAttribute(`aRot${k}`, new InstancedBufferAttribute(new Float32Array(n * 3), 3))
     g.setAttribute(`aScale${k}`, new InstancedBufferAttribute(new Float32Array(n), 1))
+    g.setAttribute(`aShear${k}`, new InstancedBufferAttribute(new Float32Array(n), 1))
   }
   g.boundingSphere = null
   return g
@@ -80,7 +81,9 @@ function write(g: InstancedBufferGeometry, k: 'A' | 'B', d: LayoutData) {
   ;(pos.array as Float32Array).set(d.pos)
   ;(rot.array as Float32Array).set(d.rot)
   ;(sc.array as Float32Array).set(d.scale)
-  pos.needsUpdate = rot.needsUpdate = sc.needsUpdate = true
+  const sh = g.getAttribute(`aShear${k}`) as InstancedBufferAttribute
+  ;(sh.array as Float32Array).set(d.shear)
+  pos.needsUpdate = rot.needsUpdate = sc.needsUpdate = sh.needsUpdate = true
   if (k === 'B') {
     const gr = g.getAttribute('aGroup') as InstancedBufferAttribute
     ;(gr.array as Float32Array).set(d.group)
@@ -128,6 +131,7 @@ function snapshot(g: InstancedBufferGeometry, morph: number, delay: number) {
     ['Pos', 3],
     ['Rot', 3],
     ['Scale', 1],
+    ['Shear', 1],
   ] as const) {
     const a = g.getAttribute(`a${name}A`) as InstancedBufferAttribute
     const b = g.getAttribute(`a${name}B`) as InstancedBufferAttribute

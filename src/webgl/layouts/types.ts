@@ -6,6 +6,8 @@ export interface LayoutData {
   group: Float32Array
   /** Ordre d'arrivée (0 → 1) : multiplié par uDelay dans le shader. */
   delay: Float32Array
+  /** Cisaillement par plaque (écart de pente, extrémités verticales conservées) : les trois bandes du logo. */
+  shear: Float32Array
   /** Profondeur (z local) du mur qui reçoit l'ombre, derrière la forme. */
   mur: number
 }
@@ -17,6 +19,7 @@ export function allocate(n: number): LayoutData {
     scale: new Float32Array(n),
     group: new Float32Array(n),
     delay: new Float32Array(n),
+    shear: new Float32Array(n),
     mur: -0.3,
   }
   for (let i = 0; i < n; i++) d.delay[i] = seed(i, 11)

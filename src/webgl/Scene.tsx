@@ -304,9 +304,12 @@ function Rig() {
         // Dérive (orbite ±2° sur 12 s) et parallaxe du pointeur (±3°) :
         // appliquées au groupe, autour de son propre centre, pour que la pile
         // reste calée au pixel sur sa boîte HTML.
+        // C'est la CAMÉRA qui vit, pas les bandes : la dérive s'éteint en projection
+        // orthographique (le logo au repos est exact), et rien ne bouge par plaque.
         const fige = s.still || s.calme
-        const dx = fige ? 0 : (Math.sin((t * 2 * Math.PI) / 12) * 2 * Math.PI) / 180
-        const dy = fige ? 0 : (Math.sin((t * 2 * Math.PI) / 17) * 1.2 * Math.PI) / 180
+        const vie = 1 - lisse.proj
+        const dx = fige ? 0 : (Math.sin((t * 2 * Math.PI) / 12) * 2 * Math.PI * vie) / 180
+        const dy = fige ? 0 : (Math.sin((t * 2 * Math.PI) / 17) * 1.2 * Math.PI * vie) / 180
         g.rotation.set(spin.x + dy + orbit.y + lisse.px, spin.y + dx + orbit.x + lisse.py, 0)
         g.updateMatrixWorld()
         // Le monde (code vivant) suit la pile sans tourner avec elle.

@@ -1,93 +1,76 @@
 /**
- * DÉCALQUE DU LOGO → GÉOMÉTRIE DE LA PLAQUE.
+ * LE RUBAN DU LOGO → GÉOMÉTRIE EXACTE DES TROIS BANDES.
  *
- * Entrée : les deux tracés SVG de `LogoMarque.tsx` (coordonnées relevées sur
- * `public/Logo_Stackup-Agency.png`, repère 146 × 229). Le logo est un ruban
- * plié : trois bandes (navy, navy, ambre), chacune un parallélogramme à
- * extrémités verticales. Ce script :
- *   1. isole les trois parallélogrammes à partir des sommets des tracés ;
- *   2. en déduit UNE plaque canonique (largeur, hauteur d'extrémité, pente du
- *      pli) partagée par toutes les instances du Stack Engine ;
- *   3. écrit la pose exacte des trois plaques du logo (centre, rotation
- *      résiduelle, miroir, couleur) dans `src/webgl/logo-geometry.ts`.
+ * Le logo officiel (`public/Logo_Stackup-Agency.png`) est UN ruban plié : trois
+ * bandes (navy, navy, ambre), chacune un parallélogramme à extrémités
+ * verticales, toutes alignées sur les mêmes bords gauche et droit. Relevé au
+ * pixel (échelle 1 u = 1/100 unité monde, repère 146 × 229) :
  *
- * Les bandes du logo n'ont pas toutes exactement la même pente (0,42 / 0,39 /
- * 0,38). Une seule géométrie + une rotation résiduelle par plaque reproduit la
- * silhouette avec une erreur < 0,3 % de l'aire (mesurée par logo-check).
+ *   haut    arête gauche 60,8 → 107,9 ; droite 1 → 49       pente 0,4135
+ *   milieu  arête gauche …    → 114,8 ; droite …  → 171,2    pente 0,3917
+ *   bas     arête gauche 181  → 228   ; droite 126 → 173     pente 0,3846
+ *
+ * Contraintes de pli (relevées sur le PNG, vérifiées par logo-zoom.mjs) :
+ *  - la bande du haut est DEVANT celle du milieu (le pli gauche : le bord
+ *    gauche du S est une seule droite verticale) ;
+ *  - la bande du milieu est devant l'ambre, et leurs arêtes droites SE
+ *    CONFONDENT (aucune barbe d'ambre qui dépasse à droite) ;
+ *  - les trois bandes occupent exactement x ∈ [L, R] : aucun débord latéral.
+ *
+ * Une seule plaque canonique (largeur, hauteur, pente moyenne) sert à tout le
+ * Stack Engine ; chaque bande du logo se cisaille de sa pente propre (`shear`),
+ * ce qui garde les extrémités rigoureusement verticales (une rotation
+ * résiduelle, elle, les inclinait et faisait déborder les bandes).
  */
 import { writeFileSync } from 'node:fs'
 
 const VIEW = { w: 146, h: 229 }
-const RUBAN_NAVY = 'M144 1 L144 49 L50 88 L145 125 L144 171 L87 148 L1 115 L0 68 L4 60 Z'
-const RUBAN_AMBRE = 'M87 148 L144 171 L144 173 L1 228 L1 181 Z'
+const L = 0.5
+const R = 144
+const D = R - L
+const H = 46.8
+const U = 100
 
-function points(d) {
-  return d.match(/[ML]\s*[\d.]+\s+[\d.]+/g).map((s) => s.slice(1).trim().split(/\s+/).map(Number))
-}
-const N = points(RUBAN_NAVY)
-const A = points(RUBAN_AMBRE)
-const slope = (p, q) => (q[1] - p[1]) / (q[0] - p[0])
+const kHaut = 0.4135
+const kMilieu = 0.3917
+const kBas = 0.3846
+const k0 = (kHaut + kMilieu + kBas) / 3
 
-/* Chaque bande : deux arêtes longues (haut, bas) données par deux points
-   chacune, et deux extrémités verticales xL / xR. Les points sont lus dans
-   l'ordre du tracé (voir le commentaire du composant). */
+// Centres (SVG, y vers le bas) : haut et milieu lus sur le PNG ; l'ambre est
+// calé pour que son arête droite se confonde avec celle du milieu.
+const cHaut = (60.8 + H / 2 + 1.5 + H / 2) / 2
+const milieuBasGauche = 114.8
+const milieuBasDroite = 171.2
+const cMilieu = (milieuBasGauche + milieuBasDroite) / 2 - H / 2
+const milieuDroiteHaut = milieuBasDroite - H
+const cBas = (milieuDroiteHaut + H / 2) + (kBas * D) / 2
+
 const bandes = [
-  { nom: 'haut', couleur: 'navy', haut: [N[8], N[0]], bas: [N[2], N[1]], xL: 2, xR: 144 },
-  { nom: 'milieu', couleur: 'navy', haut: [N[7], N[3]], bas: [N[6], N[4]], xL: 0.5, xR: 144.5 },
-  { nom: 'bas', couleur: 'ambre', haut: [A[4], A[0]], bas: [A[3], A[1]], xL: 1, xR: 144 },
+  { nom: 'haut', couleur: 'navy', k: kHaut, c: cHaut, miroir: false, z: 0.04 },
+  { nom: 'milieu', couleur: 'navy', k: kMilieu, c: cMilieu, miroir: true, z: 0.02 },
+  { nom: 'bas', couleur: 'ambre', k: kBas, c: cBas, miroir: false, z: 0 },
 ]
 
-const mesures = bandes.map((b) => {
-  const kH = slope(b.haut[0], b.haut[1])
-  const kB = slope(b.bas[0], b.bas[1])
-  const k = (kH + kB) / 2
-  const yAt = (edge, x) => edge[0][1] + slope(edge[0], edge[1]) * (x - edge[0][0])
-  const hL = yAt(b.bas, b.xL) - yAt(b.haut, b.xL)
-  const hR = yAt(b.bas, b.xR) - yAt(b.haut, b.xR)
-  const cx = (b.xL + b.xR) / 2
-  const cy = (yAt(b.haut, cx) + yAt(b.bas, cx)) / 2
-  return { ...b, k, w: b.xR - b.xL, h: (hL + hR) / 2, cx, cy }
-})
+const cx = (L + R) / 2
+const poses = bandes.map((b, i) => ({
+  index: i,
+  nom: b.nom,
+  couleur: b.couleur,
+  x: +((cx - VIEW.w / 2) / U).toFixed(5),
+  y: +((VIEW.h / 2 - b.c) / U).toFixed(5),
+  z: b.z,
+  rotY: b.miroir ? Math.PI : 0,
+  rotZ: 0,
+  shear: +(b.k - k0).toFixed(5),
+}))
 
-/* Plaque canonique : moyennes. La pente est exprimée en repère monde (y vers
-   le haut), donc signe inversé par rapport au SVG. Les bandes « haut » et
-   « bas » descendent vers la gauche (k SVG < 0 → pente monde > 0) ; la bande
-   du milieu est la même plaque retournée (miroir en x = rotation π autour
-   de Y). */
-const w = mesures.reduce((s, m) => s + m.w, 0) / 3
-const h = mesures.reduce((s, m) => s + m.h, 0) / 3
-const kAbs = mesures.reduce((s, m) => s + Math.abs(m.k), 0) / 3
-const pente = Math.atan(kAbs)
-const U = 100 // 1 unité monde = 100 unités SVG
-
-const poses = mesures.map((m, i) => {
-  const miroir = m.k > 0 // la bande du milieu descend vers la droite
-  const kMonde = -m.k * (miroir ? -1 : 1) // pente de cette bande, dans le repère de la plaque
-  const rotZ = Math.atan(kMonde) - pente // résidu après la pente canonique
-  return {
-    index: i,
-    nom: m.nom,
-    couleur: m.couleur,
-    x: +((m.cx - VIEW.w / 2) / U).toFixed(5),
-    y: +((VIEW.h / 2 - m.cy) / U).toFixed(5),
-    z: i === 1 ? 0.045 : 0, // le milieu passe devant : c'est le pli
-    rotY: miroir ? Math.PI : 0,
-    rotZ: +(miroir ? -rotZ : rotZ).toFixed(5),
-    pente: +m.k.toFixed(4),
-  }
-})
-
-/* Les trois parallélogrammes en coordonnées SVG (repli 2D), ordre d'empilement :
-   haut, bas (ambre), puis milieu devant. */
-const quads = mesures.map((m) => {
-  const yAt = (edge, x) => edge[0][1] + slope(edge[0], edge[1]) * (x - edge[0][0])
-  const pts = [
-    [m.xL, yAt(m.haut, m.xL)],
-    [m.xR, yAt(m.haut, m.xR)],
-    [m.xR, yAt(m.bas, m.xR)],
-    [m.xL, yAt(m.bas, m.xL)],
-  ]
-  return { nom: m.nom, couleur: m.couleur, points: pts.map(([x, y]) => `${x.toFixed(1)},${y.toFixed(1)}`).join(' ') }
+// Polygones SVG exacts (repli 2D) : montant (haut, bas) ou descendant (milieu, miroir).
+const quads = bandes.map((b) => {
+  const s = b.miroir ? -1 : 1 // sens de la pente à l'écran (SVG : y diminue vers la droite si la bande monte)
+  const yg = b.c + s * (b.k * D) / 2
+  const yd = b.c - s * (b.k * D) / 2
+  const pts = [[L, yg - H / 2], [R, yd - H / 2], [R, yd + H / 2], [L, yg + H / 2]]
+  return { nom: b.nom, couleur: b.couleur, points: pts.map(([x, y]) => `${x.toFixed(1)},${y.toFixed(1)}`).join(' ') }
 })
 
 const out = `/* GÉNÉRÉ PAR scripts/logo-trace.mjs — ne pas éditer à la main. */
@@ -100,12 +83,12 @@ export const SVG_PAR_UNITE = ${U}
 
 /** Plaque canonique : parallélogramme à extrémités verticales, en unités monde. */
 export const PLAQUE = {
-  largeur: ${(w / U).toFixed(5)},
-  hauteur: ${(h / U).toFixed(5)},
-  /** Angle du pli (pente des arêtes longues), en radians. */
-  pente: ${pente.toFixed(5)},
+  largeur: ${(D / U).toFixed(5)},
+  hauteur: ${(H / U).toFixed(5)},
+  /** Angle du pli (pente moyenne des trois bandes), en radians. */
+  pente: ${Math.atan(k0).toFixed(5)},
   /** Épaisseur : 2 % de la largeur. */
-  epaisseur: ${((0.02 * w) / U).toFixed(5)},
+  epaisseur: ${((0.02 * D) / U).toFixed(5)},
 } as const
 
 export interface PoseLogo {
@@ -117,19 +100,16 @@ export interface PoseLogo {
   z: number
   rotY: number
   rotZ: number
+  /** Écart de pente à la plaque canonique (cisaillement, extrémités restent verticales). */
+  shear: number
 }
 
-/** Les trois plaques du logo, au repos (projection orthographique de face). */
-/** Les trois plaques en polygones SVG (viewBox 0 0 ${VIEW.w} ${VIEW.h}), pour le repli 2D. */
+/** Les trois bandes en polygones SVG (viewBox 0 0 ${VIEW.w} ${VIEW.h}), pour le repli 2D. */
 export const LOGO_QUADS = ${JSON.stringify(quads, null, 2)} as const
 
-export const LOGO_POSES: readonly PoseLogo[] = ${JSON.stringify(
-  poses.map((p) => ({ index: p.index, nom: p.nom, couleur: p.couleur, x: p.x, y: p.y, z: p.z, rotY: p.rotY, rotZ: p.rotZ })),
-  null,
-  2,
-)}
+/** Les trois plaques du logo, au repos (projection orthographique de face). */
+export const LOGO_POSES: readonly PoseLogo[] = ${JSON.stringify(poses, null, 2)}
 `
 writeFileSync(new URL('../src/webgl/logo-geometry.ts', import.meta.url), out)
-console.table(mesures.map((m) => ({ bande: m.nom, w: m.w.toFixed(1), h: m.h.toFixed(1), pente: m.k.toFixed(4), cx: m.cx.toFixed(1), cy: m.cy.toFixed(1) })))
-console.log('plaque canonique', { w: w.toFixed(2), h: h.toFixed(2), pente: `${((pente * 180) / Math.PI).toFixed(2)}°` })
 console.table(poses)
+console.log(quads)

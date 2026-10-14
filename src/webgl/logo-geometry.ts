@@ -8,12 +8,12 @@ export const SVG_PAR_UNITE = 100
 
 /** Plaque canonique : parallélogramme à extrémités verticales, en unités monde. */
 export const PLAQUE = {
-  largeur: 1.43000,
-  hauteur: 0.46657,
-  /** Angle du pli (pente des arêtes longues), en radians. */
-  pente: 0.38099,
+  largeur: 1.43500,
+  hauteur: 0.46800,
+  /** Angle du pli (pente moyenne des trois bandes), en radians. */
+  pente: 0.37757,
   /** Épaisseur : 2 % de la largeur. */
-  epaisseur: 0.02860,
+  epaisseur: 0.02870,
 } as const
 
 export interface PoseLogo {
@@ -25,57 +25,62 @@ export interface PoseLogo {
   z: number
   rotY: number
   rotZ: number
+  /** Écart de pente à la plaque canonique (cisaillement, extrémités restent verticales). */
+  shear: number
 }
 
-/** Les trois plaques du logo, au repos (projection orthographique de face). */
-/** Les trois plaques en polygones SVG (viewBox 0 0 146 229), pour le repli 2D. */
+/** Les trois bandes en polygones SVG (viewBox 0 0 146 229), pour le repli 2D. */
 export const LOGO_QUADS = [
   {
     "nom": "haut",
     "couleur": "navy",
-    "points": "2.0,60.8 144.0,1.0 144.0,49.0 2.0,107.9"
+    "points": "0.5,60.8 144.0,1.5 144.0,48.3 0.5,107.6"
   },
   {
     "nom": "milieu",
     "couleur": "navy",
-    "points": "0.5,68.2 144.5,124.8 144.5,171.2 0.5,114.8"
+    "points": "0.5,68.1 144.0,124.3 144.0,171.1 0.5,114.9"
   },
   {
     "nom": "bas",
     "couleur": "ambre",
-    "points": "1.0,181.0 144.0,126.1 144.0,171.0 1.0,228.0"
+    "points": "0.5,179.6 144.0,124.4 144.0,171.2 0.5,226.4"
   }
 ] as const
 
+/** Les trois plaques du logo, au repos (projection orthographique de face). */
 export const LOGO_POSES: readonly PoseLogo[] = [
   {
     "index": 0,
     "nom": "haut",
     "couleur": "navy",
-    "x": 0,
-    "y": 0.59811,
-    "z": 0,
+    "x": -0.0075,
+    "y": 0.5995,
+    "z": 0.04,
     "rotY": 0,
-    "rotZ": 0.01508
+    "rotZ": 0,
+    "shear": 0.0169
   },
   {
     "index": 1,
     "nom": "milieu",
     "couleur": "navy",
-    "x": -0.005,
-    "y": -0.0525,
-    "z": 0.045,
+    "x": -0.0075,
+    "y": -0.051,
+    "z": 0.02,
     "rotY": 3.141592653589793,
-    "rotZ": 0.00709
+    "rotZ": 0,
+    "shear": -0.0049
   },
   {
     "index": 2,
     "nom": "bas",
     "couleur": "ambre",
-    "x": -0.005,
-    "y": -0.62032,
+    "x": -0.0075,
+    "y": -0.60895,
     "z": 0,
     "rotY": 0,
-    "rotZ": -0.00812
+    "rotZ": 0,
+    "shear": -0.012
   }
 ]

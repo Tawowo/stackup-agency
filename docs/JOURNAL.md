@@ -131,3 +131,11 @@ après correction. `npm run verify` vert. OG + icônes (`scripts/og.mjs`). GSAP/
 **Reste à faire.** Vidéos des pages-mondes (`node scripts/videos.mjs --cas=pages`, ~140 trames chacune) ;
 JS initial au-dessus du budget sur l'accueil (342 ko gz) et les pages qui importent GSAP au rendu — prochaine
 étape : importer GSAP à la demande dans chaque expérience comme dans `Cadran.tsx`.
+
+## 2026-10-14 — Règle prioritaire : montrer la vraie chose (mission 2)
+
+- Décision : le S est un objet rigide (plus de respiration, de dérive par plaque, de lentille qui soulève) ; seules
+  la lumière et la caméra vivent (la dérive de caméra s'éteint en projection orthographique).
+- Décision : géométrie du ruban refaite à l'exact (`scripts/logo-trace.mjs`) : une plaque canonique + cisaillement par
+  bande (`aShear`), x ∈ [L, R] identique, haut devant milieu devant ambre, arêtes droites milieu/ambre confondues.
+  Superposition à DPR 3 (`scripts/logo-zoom.mjs`) : plis nets, écart total 1,75 % en trop / 0,36 % en moins.

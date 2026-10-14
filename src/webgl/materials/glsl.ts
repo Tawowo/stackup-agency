@@ -49,7 +49,7 @@ float hash12(vec2 p) {
 
 /**
  * Transformation d'instance partagée par le matériau des plaques et celui de
- * l'ombre : morph A→B en arc avec retard, respiration, lentille du pointeur,
+ * l'ombre : morph A→B en arc avec retard, cisaillement, lentille du pointeur (lumière),
  * isolation. Produit `world` (repère du groupe) et la matrice de rotation.
  */
 export const INSTANCE = /* glsl */ `
@@ -63,6 +63,8 @@ attribute float aScaleA;
 attribute vec3 aPosB;
 attribute vec3 aRotB;
 attribute float aScaleB;
+attribute float aShearA;
+attribute float aShearB;
 attribute float aFlip;
 
 uniform float uTime;
@@ -96,15 +98,10 @@ Inst instance(vec3 position) {
   // (sauf pendant l'impression : la couche descend à plat, déjà alignée)
   e.y += sin(3.14159265 * t) * (aSeed - 0.5) * 1.2 * (1.0 - uFlash) * min(uArc / 0.6, 1.0);
   float sc = mix(aScaleA, aScaleB, t);
+  float shear = mix(aShearA, aShearB, t);
 
-  // Respiration : ±1,5 % d'échelle (période 6 s, déphasée), et un va-et-vient
-  // en profondeur. En orthographique, les trois plaques du logo ne respirent
-  // qu'en profondeur : la silhouette reste exacte.
-  float ph = uTime * 1.0471976 + aSeed * 6.2831853;
-  float logoPlate = step(aIndex, 2.5);
-  float inPlane = 1.0 - uOrtho * logoPlate;
-  float breath = 1.0 + 0.015 * sin(ph) * uBreath * inPlane;
-  float zb = 0.035 * sin(ph) * uBreath;
+  // Aucune respiration, aucune dérive : au repos, chaque plaque est RIGIDE. Seules
+  // la lumière et la caméra vivent (le S du logo est un objet, pas un organisme).
 
   // Lentille : les plaques sous le pointeur se soulèvent de 6 % et s'allument.
   float pd = distance(pos.xy, uPointer.xy);
@@ -134,9 +131,11 @@ Inst instance(vec3 position) {
 
   // Bascule (clic) : la plaque pivote sur son axe long et avance vers le spectateur.
   mat3 R = rotXYZ(e) * rotXYZ(vec3(0.0, 3.14159265 * aFlip, 0.0));
-  vec3 local = position * vec3(1.0, 1.0, uEpaisseur) * sc * breath;
+  // Cisaillement : la pente propre de la bande du logo, extrémités toujours verticales.
+  vec3 sheared = vec3(position.x, position.y + shear * position.x, position.z);
+  vec3 local = sheared * vec3(1.0, 1.0, uEpaisseur) * sc;
   vec3 world = R * local + pos;
-  world.z += zb + lens * 0.09 + sin(3.14159265 * aFlip) * 0.45 * sc;
+  world.z += sin(3.14159265 * aFlip) * 0.45 * sc;
 
   Inst r;
   r.world = world;

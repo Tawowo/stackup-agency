@@ -21,6 +21,7 @@ export function empile(n: number, couches = 20): LayoutData {
   for (let i = 0; i < base; i++) {
     const p = LOGO_POSES[i]!
     setInstance(d, i, p.x, p.y, p.z, 0, p.rotY, p.rotZ, 1, 0, 0)
+    d.shear[i] = p.shear
   }
   let i = base
   for (let k = 1; k <= L; k++) {
@@ -29,6 +30,7 @@ export function empile(n: number, couches = 20): LayoutData {
       // Retard : couche par couche, les trois plaques d'une couche presque ensemble.
       // Groupe 99 : copie de la plaque ambre (elle reste ambre, le S massif garde ses couleurs).
       setInstance(d, i, p.x, p.y, p.z - k * PAS_COUCHE, 0, p.rotY, p.rotZ, 1, j === 2 ? GROUPE_AMBRE : k, (k - 1 + j * 0.12) / Math.max(1, L))
+      d.shear[i] = p.shear
       i++
     }
   }

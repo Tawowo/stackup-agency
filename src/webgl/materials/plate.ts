@@ -195,6 +195,10 @@ void main() {
   col += mix(AMBRE_CLAIR, IVOIRE, 0.2) * vFlash * (0.6 * vFace + 0.9 * side);
   col = mix(col, IVOIRE, rimMasque * min(vFlash, 1.0) * 0.8);
 
+  // Le dessous du ruban : la bande du milieu se montre par son envers, un cran plus sombre
+  // (comme sur le logo officiel : #0F3868 devant, #0C2A50 derrière le pli).
+  col *= 1.0 - 0.16 * vDos * (ambre ? 0.0 : 1.0) * (1.0 - smoothstep(0.5, 0.6, vFlip)) * (1.0 - clamp(vFlash, 0.0, 1.0));
+
   // Face produit : au dos d'une plaque basculée.
   float dos = vDos * vFace * smoothstep(0.5, 0.6, vFlip);
   col = mix(col, produit(vUv, uTime) * (0.75 + 0.3 * diff), dos);
