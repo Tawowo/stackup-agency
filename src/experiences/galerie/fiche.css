@@ -33,36 +33,55 @@
   width: 100%;
   max-width: 1200px;
 }
-.su-fic__capture {
+.su-fic__portable {
   position: relative;
-  z-index: 1;
+  padding: 0 4%;
+}
+/* L'écran : lunette noire, coins arrondis, reflet de verre. */
+.su-fic__ecran {
+  position: relative;
+  padding: 1.4% 1.4% 1.6%;
+  border-radius: 18px 18px 6px 6px;
+  background: #05070b;
+  box-shadow: 0 0 0 2px #aab0b9, 0 0 0 4px #7b828c, 0 40px 90px rgba(3, 10, 22, 0.6);
+}
+.su-fic__capture {
   display: block;
   width: 100%;
   height: auto;
-  border-radius: 4px;
-  box-shadow: 0 30px 80px rgba(6, 14, 28, 0.55);
+  border-radius: 6px;
 }
-/* Cadre de plaques : la boîte d'ancrage est dimensionnée pour que le cadre `pellicule`
-   (2,5 × 1,4 unités) entoure la capture. */
-.su-fic__cadre-zone {
+.su-fic__reflet {
   position: absolute;
-  inset: 0;
-  display: grid;
-  place-items: center;
+  inset: 1.4%;
+  border-radius: 6px;
+  background: linear-gradient(115deg, transparent 38%, rgba(255, 255, 255, 0.07) 46%, transparent 54%);
   pointer-events: none;
 }
-.su-fic__cadre {
-  width: 58.4%;
-  height: 0;
-  padding-bottom: 92%;
-  margin-top: -46%;
-  margin-bottom: -46%;
+/* Le châssis : aluminium brossé, encoche du pouce. */
+.su-fic__chassis {
+  position: relative;
+  height: clamp(10px, 1.6vw, 22px);
+  margin: 0 -3%;
+  border-radius: 2px 2px 16px 16px / 2px 2px 100% 100%;
+  background: linear-gradient(180deg, #e6e9ee 0%, #b9bec7 40%, #8e949d 100%);
+  box-shadow: 0 18px 30px rgba(3, 10, 22, 0.45);
+}
+.su-fic__encoche {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 14%;
+  height: 55%;
+  transform: translateX(-50%);
+  border-radius: 0 0 10px 10px;
+  background: linear-gradient(180deg, #8b919b, #a6acb5);
 }
 .su-fic__actions {
   display: flex;
   gap: 12px;
   flex-wrap: wrap;
-  margin-top: 40px;
+  margin-top: 56px;
 }
 .su-fic__corps {
   display: grid;

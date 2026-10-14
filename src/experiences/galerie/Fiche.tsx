@@ -8,7 +8,6 @@
  */
 import { useEffect, useRef } from 'react'
 import Link from 'next/link'
-import StackFrame from '@/webgl/StackFrame'
 import { useScene } from '@/webgl/store'
 import { gsap, initGsap } from '@/lib/gsap'
 import Action from '@/components/ui/Action'
@@ -27,9 +26,9 @@ export default function Fiche({ projet: p, suivant }: { projet: Projet; suivant:
     s.setAccent(p.accent)
     s.setScrub(false)
     s.setParams({ glisse: 0, largeur: 30, retard: 0.25, flash: 0, arc: 0.6 })
-    s.setProjection(0.15)
-    s.setPose({ x: 0.04, y: -0.06 })
-    if (!s.reduced) s.setLayout('pellicule')
+    s.setProjection(1)
+    s.setPose({ x: 0, y: 0 })
+    if (!s.reduced) s.setLayout('logo')
     // L'élément partagé de la galerie finit sa course sur la capture réelle
     // (recalage FLIP), puis s'efface : la capture prend le relais sans saut.
     const img = capture.current
@@ -61,10 +60,15 @@ export default function Fiche({ projet: p, suivant }: { projet: Projet; suivant:
         <p className="su-fic__type">{p.type}</p>
       </header>
       <div className="su-fic__visuel">
-        <div className="su-fic__cadre-zone" aria-hidden="true">
-          <StackFrame className="su-fic__cadre" />
+        <div className="su-fic__portable">
+          <div className="su-fic__ecran">
+            <img ref={capture} className="su-fic__capture" src={p.capture} alt={`Capture d’écran de la démo ${p.nom}`} width={1200} height={558} />
+            <span className="su-fic__reflet" aria-hidden="true" />
+          </div>
+          <div className="su-fic__chassis" aria-hidden="true">
+            <span className="su-fic__encoche" />
+          </div>
         </div>
-        <img ref={capture} className="su-fic__capture" src={p.capture} alt={`Capture d’écran de la démo ${p.nom}`} width={1200} height={558} />
       </div>
       <div className="su-fic__actions">
         <Action href={p.url}>Ouvrir la démo</Action>
