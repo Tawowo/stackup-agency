@@ -67,3 +67,60 @@ test('une ligne retirée de la grille vaut 0', () => {
   const sans = calculer(configDe({ accueil: 'Classique', options: { F99: 3 } }))
   assert.equal(sans.total, 500)
 })
+
+import { encoder, decoder, RACCOURCIS, assainir } from '../src/domain/devis/etat.ts'
+import { aPartirDe, exemplesAbonnement } from '../src/domain/devis/offres.ts'
+import { blocInterne, resumeClient, lignesConfig } from '../src/domain/devis/resume.ts'
+import { inclusCreation } from '../src/domain/devis/inclus.ts'
+
+test('URL : aller-retour sans perte, jeton court, entrée hostile neutralisée', () => {
+  for (const r of RACCOURCIS) {
+    const e = r.etat()
+    const j = encoder(e)
+    assert.ok(j.length < 600, `${r.id} : ${j.length} caractères`)
+    assert.deepEqual(decoder(j), e)
+  }
+  assert.deepEqual(decoder('%%%pas-du-base64').cfg.accueil, 'Aucun')
+  const hostile = Buffer.from(JSON.stringify({ c: { accueil: '<script>', options: { F99: 5, ZZ: 'x', F02: 999 }, pagesSerie: -4 } })).toString('base64url')
+  const d = decoder(hostile)
+  assert.equal(d.cfg.accueil, 'Aucun')
+  assert.equal(d.cfg.pagesSerie, 0)
+  assert.deepEqual(d.cfg.options, {})
+})
+
+test('les 5 raccourcis donnent un total cohérent et une fourchette', () => {
+  for (const r of RACCOURCIS) {
+    const res = calculer(r.etat().cfg)
+    assert.ok(res.total >= 500, r.id)
+    assert.ok(res.fourchette.bas < res.total && res.total < res.fourchette.haut, r.id)
+  }
+})
+
+test('à partir de : une page Classique = 500 €, offres croissantes, abonnements calculés', () => {
+  assert.equal(aPartirDe('une-page'), 500)
+  assert.ok(aPartirDe('multi-pages') > 500 && aPartirDe('boutique') > aPartirDe('multi-pages'))
+  const ex = exemplesAbonnement()
+  assert.equal(ex[0].mensuel, 26) // 10 + 15 + 0,5 → 25,5 arrondi
+  assert.ok(ex.every((x) => x.mensuel > 0) && ex[0].mensuel < ex[1].mensuel && ex[1].mensuel < ex[2].mensuel)
+})
+
+test("l'e-mail interne contient le prix exact ; le résumé client jamais", () => {
+  const interne = blocInterne(HYDREAUX_SCAN).map((l) => `${l.cle} ${l.valeur}`).join('\n')
+  assert.match(interne, /4\s?050 €/)
+  assert.match(interne, /Taux horaire effectif/)
+  const client = resumeClient(HYDREAUX_SCAN) + lignesConfig(HYDREAUX_SCAN).map((l) => l.valeur).join(' ')
+  assert.doesNotMatch(client, /4\s?050/)
+  assert.match(client, /3\s?650 € et 4\s?660 €/)
+})
+
+test('inclus : 3 rendez-vous, 2 séries, mois d’ajustements, domaine, propriété, mention', () => {
+  const ids = inclusCreation().map((i) => i.id)
+  assert.deepEqual(ids, ['rdv', 'modifs', 'mois', 'domaine', 'propriete', 'mention'])
+  assert.match(inclusCreation()[0].texte, /^3 rendez-vous/)
+})
+
+test('assainir : une boutique ramène un site, un outil désactivé retire ses modules', () => {
+  const c = assainir(configDe({ boutique: { active: true, produits: 5, import: false, variantes: 0, categories: 0 }, options: { O01: 1, B05: 1 } }))
+  assert.equal(c.accueil, 'Classique')
+  assert.deepEqual(c.options, { B05: 1 })
+})
