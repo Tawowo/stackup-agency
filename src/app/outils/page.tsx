@@ -4,6 +4,7 @@
  */
 import Link from 'next/link'
 import Document from '@/gabarits/document/Document'
+import MondeOutils from '@/components/mondes/MondeOutils'
 import { JsonLd, filAriane, meta } from '@/lib/seo'
 import '@/experiences/outils/outils.css'
 
@@ -31,7 +32,7 @@ export default function Page() {
       />
       <Document
         moment="outils"
-        forme="empile"
+        monde={<MondeOutils />}
         ariane={[
           { href: '/', nom: 'Accueil' },
           { href: '/outils', nom: 'Outils' },

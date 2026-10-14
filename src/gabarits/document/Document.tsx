@@ -26,15 +26,17 @@ export interface PropsDocument {
   entete?: ReactNode
   children: ReactNode
   large?: boolean
+  /** Le monde de la page (maquette, scène…) : remplace la pile à droite de l'en-tête. */
+  monde?: ReactNode
 }
 
 export default function Document(p: PropsDocument) {
   return (
     <main id="contenu" className="su-doc">
-      <ScenePage moment={p.moment} forme={p.forme ?? 'logo'} projection={0.5} pose={{ x: 0.08, y: -0.22 }} />
+      <ScenePage moment={p.moment} forme={p.monde ? 'logo' : (p.forme ?? 'logo')} projection={0.5} pose={{ x: 0.08, y: -0.22 }} />
       <header className="su-doc__tete" data-moment={p.moment} data-nuit="1">
         <div className="su-doc__tete-grille">
-          <div className="su-doc__texte">
+          <div className="su-doc__texte" data-large={p.monde ? '1' : '0'}>
             {p.ariane && (
               <nav className="su-mono su-doc__ariane" aria-label="Fil d’Ariane">
                 {p.ariane.map((l, i) => (
@@ -50,10 +52,14 @@ export default function Document(p: PropsDocument) {
             {p.chapo && <p className="su-doc__chapo">{p.chapo}</p>}
             {p.entete}
           </div>
-          <div className="su-doc__scene" aria-hidden="true">
-            <StackFrame className="su-doc__cadre" />
-            {p.maj && <span className="su-mono su-doc__maj">Mis à jour le {p.maj}</span>}
-          </div>
+          {p.monde ? (
+            <div className="su-doc__monde">{p.monde}</div>
+          ) : (
+            <div className="su-doc__scene" aria-hidden="true">
+              <StackFrame className="su-doc__cadre" />
+              {p.maj && <span className="su-mono su-doc__maj">Mis à jour le {p.maj}</span>}
+            </div>
+          )}
         </div>
       </header>
       <div className="su-doc__corps" data-moment={`${p.moment}-corps`} data-nuit="0">

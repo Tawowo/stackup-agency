@@ -6,6 +6,7 @@
  */
 import Link from 'next/link'
 import Document from '@/gabarits/document/Document'
+import MondeFaq from '@/components/mondes/MondeFaq'
 import Accordeon from '@/components/editorial/Accordeon'
 import Action from '@/components/ui/Action'
 import { SITE, formatAPartirDe } from '@/config/site'
@@ -155,6 +156,7 @@ export default function Page() {
         etiquette={`${PROPRES.reduce((n, t) => n + t.questions.length, 0)} questions · ${PROPRES.length} thèmes`}
         titre="Les questions qu’on nous pose avant de commencer."
         chapo="Prix, déroulé, propriété, hébergement, référencement : les réponses courtes. Pour le reste, on en parle de vive voix."
+        monde={<MondeFaq qui={SITE.fondateur} echanges={PROPRES.flatMap((t) => t.questions.slice(0, 1)).map((x) => ({ q: x.q, r: x.r.length > 190 ? `${x.r.slice(0, 187).replace(/\s+\S*$/, '')}…` : x.r }))} />}
         sommaire={PROPRES.map((t) => ({ id: t.id, titre: t.titre }))}
       >
         {PROPRES.map((t) => (

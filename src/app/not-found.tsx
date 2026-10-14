@@ -7,6 +7,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import StackFrame from '@/webgl/StackFrame'
+import Monde404 from '@/components/mondes/Monde404'
 import ScenePage from '@/components/ScenePage'
 import SolEboulis from '@/experiences/eboulis/SolEboulis'
 import { SITE, formatAPartirDe, offre } from '@/config/site'
@@ -56,6 +57,7 @@ export default function Introuvable() {
           </nav>
         </div>
         <div className="su-404__scene" aria-hidden="true">
+          <Monde404 />
           <StackFrame className="su-404__cadre" />
         </div>
       </div>
