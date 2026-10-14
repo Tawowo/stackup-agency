@@ -1,17 +1,16 @@
 'use client'
 /**
- * MOMENT 07 — LA MÉTHODE. Mécanisme : ASSEMBLAGE SÉQUENTIEL. Nuit → 1.
- * Cinq étapes, sans dates ni durées. À chaque étape franchie par le scroll,
- * un groupe de plaques s'assemble jusqu'à former une page complète ; le
- * numéro se déplie en display XL, le texte en découpe. L'étape 02 (la démo
- * avant la vente) est mise en avant : une plaque ambre.
+ * MOMENT 07 — LA MÉTHODE. Mécanisme : UN PROJET QUI ÉVOLUE.
+ * Cinq étapes, sans dates ni durées. Le même projet de site avance au rythme
+ * du scroll : un croquis sur un carnet, la démo dans un navigateur (mise en
+ * avant : la démo avant la vente), le code qui s'écrit pendant que le design
+ * se construit, la mise en ligne, le suivi. Le numéro se déplie, le texte se
+ * découpe.
  */
 import { useEffect, useRef, useState } from 'react'
-import StackFrame from '@/webgl/StackFrame'
-import { MORPH } from '@/webgl/morph'
 import { useScene } from '@/webgl/store'
 import { ScrollTrigger, initGsap } from '@/lib/gsap'
-import { arriverParScroll } from '../arrivee'
+import { Chantier } from './Chantier'
 import './methode.css'
 
 export const ETAPES = [
@@ -25,50 +24,60 @@ export const ETAPES = [
 export default function Methode() {
   const section = useRef<HTMLElement>(null)
   const [etape, setEtape] = useState(0)
+  const [e, setE] = useState(0)
+  const [enVue, setEnVue] = useState(false)
 
   useEffect(() => {
     initGsap()
     const el = section.current
     if (!el) return
-    // Arrivée : la jauge devient la structure de la page (étape 1), pilotée par le scroll.
-    const arret = arriverParScroll(el, { moment: '07', layout: 'methode', pose: { x: 0.08, y: -0.25 }, projection: 0.4, params: { etape: 1 } })
-    // Puis les étapes 2 à 5 s'assemblent : chaque carte, en passant de 80 % à 45 %
-    // du viewport, ajoute son groupe à la page (texte révélé au même seuil).
+    const reduit = useScene.getState().reduced
+    // Le chantier est un décor HTML : la pile reste le logo au repos, discrète.
+    const prise = () => {
+      const s = useScene.getState()
+      s.setMoment('07')
+      s.setScrub(false)
+      s.setProjection(1)
+      s.setPose({ x: 0, y: 0 })
+      if (!s.reduced) s.setLayout('logo')
+    }
+    // Chaque carte, en passant de 80 % à 45 % du viewport, fait avancer le projet d'un cran.
     // Tout dérive de la position des cartes : identique à la remontée.
-    let paire = -1
     const etapes = Array.from(el.querySelectorAll<HTMLElement>('.su-met__etape'))
     const st = ScrollTrigger.create({
       trigger: el,
       start: 'top bottom',
       end: 'bottom top',
+      onEnter: prise,
+      onEnterBack: prise,
       onUpdate: () => {
-        const s = useScene.getState()
-        if (s.moment !== '07') return
         const H = window.innerHeight
-        let e = 1
-        let franchies = 1
+        let v = 0
+        let franchies = 0
         etapes.forEach((carte, i) => {
-          if (i === 0) return
           const top = carte.getBoundingClientRect().top
-          const t = Math.min(1, Math.max(0, (0.8 * H - top) / (0.35 * H)))
-          e += t
-          if (t > 0) franchies = i + 1
+          const t = Math.min(1, Math.max(0, (0.85 * H - top) / (0.4 * H)))
+          v += t
+          if (t > 0.05) franchies = i + 1
         })
-        const k = Math.min(4, Math.floor(e))
-        const t = e - k
+        // Plateaux : chaque étape tient lisible ; la découpe vers la suivante est brève.
+        const k = Math.min(5, Math.floor(v))
+        const f = Math.min(1, Math.max(0, (v - k - 0.3) / 0.4))
+        setE(reduit ? 5 : Math.min(5, k + f * f * (3 - 2 * f)))
         setEtape(franchies)
-        if (s.reduced) return
-        if (k !== paire) {
-          paire = k
-          s.setScrub(true)
-          s.setPair('methode', 'methode', { a: { etape: k }, b: { etape: k + 1 } })
-        }
-        MORPH.value = t * t * (3 - 2 * t)
       },
     })
+    // La scène est FIXE (jamais déplacée par le défilement : un calque déplacé laissait un
+    // fantôme dans le compositeur) ; elle se découvre par découpe tant que la section est en vue.
+    const vue = ScrollTrigger.create({
+      trigger: el,
+      start: 'top 62%',
+      end: 'bottom 70%',
+      onToggle: (self) => setEnVue(self.isActive),
+    })
     return () => {
-      arret()
       st.kill()
+      vue.kill()
     }
   }, [])
 
@@ -83,8 +92,9 @@ export default function Methode() {
             travaille.
           </h2>
         </header>
-        <div className="su-met__scene">
-          <StackFrame className="su-met__cadre" />
+        <div className="su-met__place" aria-hidden="true" />
+        <div className="su-met__scene" data-vue={enVue ? '1' : '0'}>
+          <Chantier e={e} />
         </div>
         <ol className="su-met__etapes" aria-label="Les cinq étapes">
           {ETAPES.map((e, k) => (

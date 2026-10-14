@@ -731,3 +731,109 @@
   background: var(--mq-creme);
   clip-path: inset(0 calc((1 - var(--merge, 0)) * 100%) 0 0);
 }
+
+/* ───────── Le chantier (Comment on travaille) ───────── */
+.mq-chantier {
+  container-type: inline-size;
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 11;
+  border-radius: 1.6cqw;
+  overflow: hidden;
+  background: radial-gradient(120% 120% at 30% 20%, #20405f, #0e2238);
+  box-shadow: 0 2.4cqw 6cqw rgba(3, 10, 22, 0.55);
+}
+.mq-sc { position: absolute; inset: 0; background: radial-gradient(120% 120% at 30% 20%, #20405f, #0e2238); }
+.mq-chantier__etape {
+  position: absolute;
+  left: 2cqw;
+  top: 1.6cqw;
+  z-index: 9;
+  padding: 0.7cqw 1.6cqw;
+  border-radius: 1cqw;
+  background: rgba(8, 20, 36, 0.75);
+  color: var(--su-ambre-clair);
+  font-size: 1.7cqw;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+/* 1 · le carnet */
+.mq-carnet {
+  position: absolute;
+  left: 18cqw;
+  right: 18cqw;
+  top: 7cqw;
+  bottom: 4cqw;
+  padding: 3cqw 3cqw 3cqw 6.4cqw;
+  background: #f6efdc;
+  background-image: repeating-linear-gradient(transparent 0 4.6cqw, #d9d0b6 4.6cqw 4.8cqw);
+  border-radius: 0.8cqw;
+  transform: rotate(-2.4deg);
+  box-shadow: 0 2cqw 4cqw rgba(0, 0, 0, 0.45);
+}
+.mq-carnet__spirales {
+  position: absolute;
+  left: 1.6cqw;
+  top: 2cqw;
+  bottom: 2cqw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.mq-carnet__spirales i { width: 3cqw; height: 1.2cqw; border-radius: 1cqw; background: #8a8f98; box-shadow: inset 0 -0.3cqw 0 #5e636b; }
+.mq-croquis { width: 100%; height: 100%; }
+.mq-croquis path { fill: none; stroke: #2a3550; stroke-width: 0.9; stroke-linecap: round; stroke-linejoin: round; }
+.mq-carnet__note { position: absolute; right: 2.4cqw; bottom: 1.4cqw; font-size: 1.5cqw; color: #8a7d5e; letter-spacing: 0.06em; }
+.mq-crayon { position: absolute; right: -6cqw; bottom: 7cqw; width: 22cqw; transform: rotate(-22deg); filter: drop-shadow(0 0.8cqw 0.8cqw rgba(0, 0, 0, 0.35)); }
+/* 2 · la démo */
+.mq-demo { position: absolute; inset: 0; }
+.mq-demo__fen { position: absolute !important; left: 22cqw; right: 3cqw; top: 8cqw; width: auto !important; }
+.mq-demo__fen .mq__fen { box-shadow: 0 0 0 0.6cqw var(--su-ambre), 0 0 5cqw rgba(246, 145, 6, 0.5), 0 2.4cqw 6cqw rgba(3, 10, 22, 0.55); }
+.mq-demo__badge { position: absolute; left: 22cqw; top: 2.4cqw; padding: 0.9cqw 2cqw; border-radius: 1cqw; background: var(--su-ambre); color: #0b1e36; font-size: 1.7cqw; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; }
+.mq-demo__carnet { position: absolute; left: 2cqw; bottom: 3cqw; width: 18cqw; height: 24cqw; }
+.mq-carnet--petit { left: 0; right: 0; top: 0; bottom: 0; padding: 1.2cqw 1.2cqw 1.2cqw 2.6cqw; transform: rotate(-5deg); background-image: none; }
+.mq-carnet--petit .mq-carnet__spirales { left: 0.6cqw; top: 1cqw; bottom: 1cqw; }
+.mq-carnet--petit .mq-carnet__spirales i { width: 1.2cqw; height: 0.5cqw; }
+.mq-carnet--petit .mq-carnet__note, .mq-carnet--petit .mq-crayon { display: none; }
+/* 3 · fabrication : code + design en parallèle */
+.mq-fab { position: absolute; inset: 0; display: grid; grid-template-columns: 38% 1fr; gap: 2cqw; padding: 7cqw 2.4cqw 2.4cqw; }
+.mq-fab__code { border-radius: 1.2cqw; overflow: hidden; background: #0d1b2e; box-shadow: 0 1.6cqw 4cqw rgba(0, 0, 0, 0.45); }
+.mq-fab__page { align-self: center; }
+/* 4 · mise en ligne */
+.mq-ligne-en { position: absolute; inset: 0; padding: 7cqw 4cqw 3cqw; }
+.mq-en__fen { width: 100%; }
+.mq-en__page { position: absolute; inset: 0; }
+.mq-en__nuit { position: absolute; inset: 0; background: #091525; z-index: 8; pointer-events: none; }
+.mq-en__adresse {
+  position: absolute;
+  left: 11cqw;
+  right: 6cqw;
+  top: 8.4cqw;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  gap: 1cqw;
+  height: 3.8cqw;
+  padding: 0 2cqw;
+  border-radius: 1.9cqw;
+  background: #fbf9f4;
+  font-family: var(--su-font-mono), monospace;
+  font-size: 2.1cqw;
+  color: #4c4338;
+  box-shadow: 0 0 0 0.3cqw var(--su-ambre);
+}
+.mq-en__cadenas svg { width: 2.2cqw; height: 2.2cqw; color: #1d8a5a; display: block; }
+.mq-en__url b { font-weight: 500; color: #15283f; }
+.mq-en__curseur { display: inline-block; width: 0.25cqw; height: 2.2cqw; margin-left: 0.2cqw; background: #d9701c; vertical-align: middle; }
+.mq-en__badge { position: absolute; right: 4cqw; bottom: 3.4cqw; z-index: 4; padding: 1cqw 2.2cqw; border-radius: 1.4cqw; background: #1d8a5a; color: #fff; font-size: 1.8cqw; font-weight: 700; letter-spacing: 0.04em; }
+/* 5 · suivi */
+.mq-sante { position: absolute; inset: 0; padding: 7.5cqw 6cqw 4cqw; display: flex; flex-direction: column; gap: 2cqw; color: #dfeaf8; }
+.mq-sante__titre { margin: 0; display: flex; align-items: center; gap: 1.2cqw; font-family: var(--su-font-display), sans-serif; font-size: 3cqw; color: #fff; }
+.mq-sante__titre svg { width: 3.4cqw; height: 3.4cqw; color: var(--su-ambre-clair); }
+.mq-sante ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 1.2cqw; }
+.mq-sante li { display: flex; align-items: center; gap: 2cqw; padding: 1.7cqw 2.4cqw; border-radius: 1.2cqw; background: rgba(255, 255, 255, 0.07); font-size: 2.3cqw; }
+.mq-sante__led { width: 2.2cqw; height: 2.2cqw; border-radius: 50%; background: #55657a; box-shadow: inset 0 -0.3cqw 0 rgba(0, 0, 0, 0.3); transition: background 0.4s, box-shadow 0.4s; }
+.mq-sante li[data-vert='1'] .mq-sante__led { background: #35d07f; box-shadow: 0 0 1.8cqw #35d07f; }
+.mq-sante em { margin-left: auto; font-style: normal; font-family: var(--su-font-mono), monospace; font-size: 1.8cqw; color: #8ea3bf; }
+.mq-sante li[data-vert='1'] em { color: #35d07f; }
+.mq-sante__pied { margin: auto 0 0; font-size: 2cqw; color: #8ea3bf; }
