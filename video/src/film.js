@@ -120,11 +120,14 @@ async function demarrer() {
   const decalage = FILM.decalage || 0;
   const rendreA = (temps) => {
     const t = temps + decalage;
-    rendre(monde, t, film.poser, film.obturation(t));
+    // Projet de contrôle (formats/controle) : la scène se calcule, rien ne se
+    // dessine, pour que l'audit DOM de `hyperframes check` tienne dans sa limite.
+    if (FILM.sans3D) film.poser(t);
+    else rendre(monde, t, film.poser, film.obturation(t));
   };
   window.addEventListener("hf-seek", (e) => rendreA(e.detail.time));
   // compilation des programmes et premier dessin
-  monde.renderer.compile(monde.scene, monde.camera);
+  if (!FILM.sans3D) monde.renderer.compile(monde.scene, monde.camera);
   rendreA(window.__hfThreeTime || 0);
 
   let maitre = tl;

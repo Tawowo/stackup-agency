@@ -25,7 +25,16 @@ export const C3 = {
 export const SOL_Y = -2.6;
 
 export function creerMonde(canvas, L, H) {
-  const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true, preserveDrawingBuffer: true });
+  let renderer;
+  try {
+    renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true, preserveDrawingBuffer: true });
+  } catch (e) {
+    // Sans WebGL (outil d'audit sans GPU logiciel), le film reste vérifiable :
+    // la scène se calcule, rien ne se dessine. Le rendu final, lui, a WebGL.
+    console.warn("WebGL indisponible : rendu 3D désactivé pour cette session.", e?.message);
+    const rien = () => {};
+    renderer = { setPixelRatio: rien, setSize: rien, setClearColor: rien, setRenderTarget: rien, clear: rien, render: rien, compile: rien, outputColorSpace: null, toneMapping: 0, toneMappingExposure: 1, factice: true };
+  }
   renderer.setPixelRatio(1);
   renderer.setSize(L, H, false);
   renderer.setClearColor(0x000000, 0);

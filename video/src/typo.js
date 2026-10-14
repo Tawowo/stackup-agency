@@ -60,14 +60,16 @@ export function creerTitre(parent, { id, lignes, px, x, y, ancre = "gauche", sty
     };
     if (style === "morceaux") {
       // trois tranches horizontales du même texte, qui se recollent
-      contenu.style.color = "transparent";
-      remplir(contenu, false);
+      // texte fantôme : il donne sa taille à la ligne, sans être peint
+      const fantome = document.createElement("span");
+      fantome.style.visibility = "hidden";
+      remplir(fantome, false);
+      contenu.appendChild(fantome);
       const tranches = [];
       for (let k = 0; k < 3; k++) {
         const tr = document.createElement("div");
         tr.className = "tranche";
         tr.style.clipPath = `inset(${k * 33.4}% -5% ${100 - (k + 1) * 33.4}% -5%)`;
-        tr.style.color = "#FFFDF9"; // le contenu est transparent : les tranches portent la couleur
         remplir(tr, false);
         contenu.appendChild(tr);
         tranches.push(tr);

@@ -58,7 +58,7 @@ const VOL_SONS = DB(-10);
 
 const attr = (obj) => JSON.stringify(obj).replace(/&/g, "&amp;").replace(/"/g, "&quot;");
 
-function entree({ format, montage, decalage = 0, duree = null, echelle = 1, id }) {
+function entree({ format, montage, decalage = 0, duree = null, echelle = 1, id, sans3D = false }) {
   const f = FORMATS[format];
   const L = Math.round(f.largeur * echelle);
   const H = Math.round(f.hauteur * echelle);
@@ -79,6 +79,15 @@ function entree({ format, montage, decalage = 0, duree = null, echelle = 1, id }
       },
     ],
   };
+  // Bus maître : +3 dB puis limiteur true-peak (−1,5 dBTP), pour un niveau
+  // proche des −14 LUFS des plateformes sans écrêter.
+  const maitre = {
+    version: 1,
+    nodes: [
+      { type: "gain", id: "m1", label: "Niveau de diffusion", params: { gain: 3 } },
+      { type: "truepeak", id: "m2", label: "Plafond true-peak", params: { ceiling: -1.5, lookahead: 3, release: 80 } },
+    ],
+  };
   const film = {
     format,
     montage,
@@ -86,6 +95,7 @@ function entree({ format, montage, decalage = 0, duree = null, echelle = 1, id }
     hauteur: H,
     decalage,
     echelle,
+    sans3D,
   };
   return `<!doctype html>
 <!-- Généré par scripts/build.mjs — ne pas éditer à la main. -->
@@ -113,9 +123,9 @@ function entree({ format, montage, decalage = 0, duree = null, echelle = 1, id }
     <script>window.FILM = ${JSON.stringify(film)};</script>
   </head>
   <body>
-    <div id="root" data-composition-id="${id}" data-start="0" data-width="${L}" data-height="${H}" data-duration="${D}" data-fps="60" style="--u:${(Math.min(L, H) / 1080).toFixed(5)}px; --uw:${(L / 1920).toFixed(5)}px;">
+    <div id="root" data-composition-id="${id}" data-start="0" data-width="${L}" data-height="${H}" data-duration="${D}" data-fps="60" data-fx-chain="${attr(maitre)}" style="--u:${(Math.min(L, H) / 1080).toFixed(5)}px; --uw:${(L / 1920).toFixed(5)}px;">
       <div id="ciel"></div>
-      <div id="code"></div>
+      <div id="code" aria-hidden="true" data-layout-ignore></div>
       <canvas id="scene" width="${L}" height="${H}"></canvas>
       <div id="calque"></div>
       <div id="typo"></div>
@@ -167,5 +177,10 @@ if (apercu) {
     const d = s.dossier === "." ? RACINE : projetFrere(s.dossier);
     writeFileSync(join(d, "index.html"), entree({ ...s, id }));
     console.log(`${s.dossier}/index.html : ${s.format} ${s.montage} ${script.montages[s.montage].duree} s`);
+  }
+  // Projet d'audit DOM (hyperframes check) : même film, sans dessin 3D.
+  for (const f of ["16x9", "9x16", "1x1"]) {
+    const d = projetFrere(`formats/controle-${f}`);
+    writeFileSync(join(d, "index.html"), entree({ format: f, montage: "complet", id: `controle-${f}`, sans3D: true }));
   }
 }
