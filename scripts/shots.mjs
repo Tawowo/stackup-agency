@@ -177,6 +177,7 @@ export async function capturer({ route, dossier, etats }, browser, filtreEtat) {
           await page.locator('.su-ctc__form button[type="submit"]').click()
           await page.waitForTimeout(etat.action === 'ctc-envoyer' ? 1200 : 2050)
         }
+        if (etat.action === 'ressources') await page.locator('.su-nav__ress-bouton').click()
         if (etat.action?.startsWith('onglet')) {
           const k = Number(etat.action.slice(6))
           await page.locator('.su-off__onglet').nth(k - 1).click()

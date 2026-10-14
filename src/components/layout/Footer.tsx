@@ -1,9 +1,24 @@
 import Link from 'next/link'
 import LogoMarque from '@/components/ui/LogoMarque'
-import { ENTREES } from './entrees'
+import { ENTREES, RESSOURCES } from './entrees'
 import { SITE } from '@/config/site'
+import { SERVICES } from '@/data/services'
+import { SOLUTIONS } from '@/data/solutions'
+import { METIERS } from '@/data/metiers'
+import { VILLES } from '@/data/villes'
+import { DEPARTEMENTS } from '@/data/departements'
+import { SERVICES_LOCAUX } from '@/data/services-locaux'
+import { RAYONS } from '@/lib/blog'
 
-/** FOOTER — logo exact, navigation, mentions. Pas de filigrane, pas d'étoiles. */
+/** Les métiers et villes les plus demandés (priorité P1 des données) : le footer en cite quelques-uns, le reste est à un clic. */
+const METIERS_PHARES = METIERS.filter((m) => m.priorite === 'P1').slice(0, 7)
+const VILLES_PHARES = VILLES.filter((v) => v.priorite === 'P1').slice(0, 7)
+
+/**
+ * FOOTER COMPLET — logo exact, puis toutes les familles de pages : offres,
+ * outils de gestion, métiers, villes, journal, outils gratuits, légal. Chaque
+ * famille a sa porte « tout voir ». Pas de filigrane, pas d'étoiles.
+ */
 export default function Footer() {
   return (
     <footer className="su-footer">
@@ -19,27 +34,135 @@ export default function Footer() {
             {SITE.email}
           </a>
         </div>
-        <nav className="su-footer__nav" aria-label="Pied de page">
-          <ul>
-            {[...ENTREES, { href: '/contact', nom: 'Contact' }].map((e) => (
-              <li key={e.href}>
-                <Link href={e.href}>{e.nom}</Link>
+        <nav className="su-footer__familles" aria-label="Pied de page">
+          <div className="su-footer__famille">
+            <h2>L’agence</h2>
+            <ul>
+              {[...ENTREES, { href: '/contact', nom: 'Contact' }].map((e) => (
+                <li key={e.href}>
+                  <Link href={e.href}>{e.nom}</Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="su-footer__famille">
+            <h2>Services</h2>
+            <ul>
+              {Object.entries(SERVICES).map(([slug, s]) => (
+                <li key={slug}>
+                  <Link href={`/services/${slug}`}>{s.title}</Link>
+                </li>
+              ))}
+              {Object.entries(SERVICES_LOCAUX)
+                .slice(0, 3)
+                .map(([slug, s]) => (
+                  <li key={slug}>
+                    <Link href={`/services-locaux/${slug}`}>{s.title.replace('Création de site web pour ', 'Site pour ').replace('Création de ', '')}</Link>
+                  </li>
+                ))}
+            </ul>
+          </div>
+          <div className="su-footer__famille">
+            <h2>Outils de gestion</h2>
+            <ul>
+              {SOLUTIONS.slice(0, 6).map((s) => (
+                <li key={s.slug}>
+                  <Link href={`/solutions/${s.slug}`}>{s.nom}</Link>
+                </li>
+              ))}
+              <li>
+                <Link href="/solutions">Les {SOLUTIONS.length} outils →</Link>
               </li>
-            ))}
-          </ul>
+            </ul>
+          </div>
+          <div className="su-footer__famille">
+            <h2>Métiers</h2>
+            <ul>
+              {METIERS_PHARES.map((m) => (
+                <li key={m.slug}>
+                  <Link href={`/creation-site-internet/${m.slug}`}>{m.metier.charAt(0).toUpperCase() + m.metier.slice(1)}</Link>
+                </li>
+              ))}
+              <li>
+                <Link href="/creation-site-internet">Les {METIERS.length} métiers →</Link>
+              </li>
+            </ul>
+          </div>
+          <div className="su-footer__famille">
+            <h2>Villes</h2>
+            <ul>
+              {VILLES_PHARES.map((v) => (
+                <li key={v.slug}>
+                  <Link href={`/agence-web/${v.slug}`}>{v.ville}</Link>
+                </li>
+              ))}
+              <li>
+                <Link href="/agence-web">Les {VILLES.length} villes →</Link>
+              </li>
+              <li>
+                <Link href="/zones-intervention">{DEPARTEMENTS.length} départements →</Link>
+              </li>
+            </ul>
+          </div>
+          <div className="su-footer__famille">
+            <h2>Le journal</h2>
+            <ul>
+              {RAYONS.slice(0, 6).map((r) => (
+                <li key={r.id}>
+                  <Link href={`/blog/categorie/${r.id}`}>{r.nom}</Link>
+                </li>
+              ))}
+              <li>
+                <Link href="/blog">Tous les articles →</Link>
+              </li>
+            </ul>
+          </div>
+          <div className="su-footer__famille">
+            <h2>Outils gratuits</h2>
+            <ul>
+              <li>
+                <Link href="/outils/audit-site">Audit de site</Link>
+              </li>
+              <li>
+                <Link href="/outils/studio-de-style">Studio de style</Link>
+              </li>
+              <li>
+                <Link href="/ressources/cahier-des-charges">Cahier des charges</Link>
+              </li>
+              <li>
+                <Link href="/ressources/documents">Documents</Link>
+              </li>
+              {RESSOURCES.filter((r) => ['/faq', '/parrainage'].includes(r.href)).map((r) => (
+                <li key={r.href}>
+                  <Link href={r.href}>{r.nom}</Link>
+                </li>
+              ))}
+              <li>
+                <Link href="/comparatif/wix-wordpress-sur-mesure">Wix, WordPress ou sur mesure</Link>
+              </li>
+            </ul>
+          </div>
         </nav>
-        <ul className="su-footer__legal su-mono">
-          <li>
-            <Link href="/mentions-legales">Mentions légales</Link>
-          </li>
-          <li>
-            <Link href="/politique-confidentialite">Confidentialité</Link>
-          </li>
-          <li>
-            <Link href="/cgv">CGV</Link>
-          </li>
-          <li>{SITE.mentions.tva}</li>
-        </ul>
+        <div className="su-footer__bas su-mono">
+          <ul>
+            <li>
+              <Link href="/mentions-legales">Mentions légales</Link>
+            </li>
+            <li>
+              <Link href="/politique-confidentialite">Confidentialité</Link>
+            </li>
+            <li>
+              <Link href="/cgv">CGV</Link>
+            </li>
+            <li>
+              <Link href="/cookies">Cookies</Link>
+            </li>
+            <li>
+              <Link href="/plan-du-site">Plan du site</Link>
+            </li>
+          </ul>
+          <span>{SITE.mentions.tva}</span>
+        </div>
       </div>
     </footer>
   )

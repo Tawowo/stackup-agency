@@ -3,6 +3,7 @@ import './globals.css'
 import { inter, jetbrains, poppins } from './fonts'
 import SceneMount from '@/webgl/SceneMount'
 import Nav from '@/components/layout/Nav'
+import Footer from '@/components/layout/Footer'
 import AnimationsDifferees from '@/components/layout/AnimationsDifferees'
 import '@/styles/chrome.css'
 
@@ -26,7 +27,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <SceneMount />
         <div className="su-lueur" aria-hidden="true" />
         <Nav />
-        <div className="su-page">{children}</div>
+        <div className="su-page">
+          {children}
+          <Footer />
+        </div>
         <AnimationsDifferees />
       </body>
     </html>

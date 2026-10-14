@@ -8,7 +8,6 @@ import Prix from '@/experiences/prix/Prix'
 import Methode from '@/experiences/methode/Methode'
 import Atelier from '@/experiences/atelier/Atelier'
 import Depart from '@/experiences/depart/Depart'
-import Footer from '@/components/layout/Footer'
 import Rail from '@/components/layout/Rail'
 
 export default function Accueil() {
@@ -26,7 +25,6 @@ export default function Accueil() {
         <Atelier />
         <Depart />
       </main>
-      <Footer />
       <Rail />
     </>
   )

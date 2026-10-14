@@ -8,7 +8,7 @@ export interface Etat {
   /** Paramètres d'URL ajoutés à la route. */
   query?: string
   /** Geste à exécuter avant la capture. */
-  action?: 'drag' | 'menu' | 'touche3' | 'onglet2' | 'onglet3' | 'onglet4' | 'noeud2' | 'noeud7' | 'focus-offre2' | 'conf-type' | 'conf-fonctions' | 'conf-options' | 'ctc-vide' | 'ctc-remplir' | 'torche' | 'clic-plaque' | 'tab-poser' | 'regle' | 'lampe' | 'ctc-envoyer' | 'ctc-depart'
+  action?: 'drag' | 'menu' | 'touche3' | 'onglet2' | 'onglet3' | 'onglet4' | 'noeud2' | 'noeud7' | 'focus-offre2' | 'conf-type' | 'conf-fonctions' | 'conf-options' | 'ctc-vide' | 'ctc-remplir' | 'torche' | 'clic-plaque' | 'tab-poser' | 'regle' | 'lampe' | 'ctc-envoyer' | 'ctc-depart' | 'ressources'
   /** Limiter à certaines largeurs (par défaut : 1440 et 390). */
   largeurs?: number[]
   /** Position de scroll, en fraction de la distance épinglée du moment visé (par défaut 00). */
@@ -124,6 +124,7 @@ export const ROUTES: Route[] = [
       { nom: '08-atelier', query: QUALITE, moment: '08', scroll: 0, attente: 2200 },
       { nom: '09-depart', query: QUALITE, moment: '09', scroll: 0, attente: 2400 },
       { nom: 'footer', query: QUALITE, moment: '09', scroll: 2, attente: 1800, sansRm: true },
+      { nom: 'menu-ressources', query: QUALITE, action: 'ressources', attente: 900, sansRm: true, largeurs: [1440] },
     ],
   },
   {

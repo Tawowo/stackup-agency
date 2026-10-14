@@ -9,18 +9,38 @@ import { usePathname } from 'next/navigation'
 import { useEffect, useRef, useState } from 'react'
 import LogoMarque from '@/components/ui/LogoMarque'
 import Action from '@/components/ui/Action'
-import { ENTREES } from './entrees'
+import { ENTREES, RESSOURCES } from './entrees'
 
 
 export default function Nav() {
   const panneau = useRef<HTMLDivElement>(null)
   const bouton = useRef<HTMLButtonElement>(null)
+  const ress = useRef<HTMLDivElement>(null)
+  const [ressEtat, setRessEtat] = useState({ chemin: '', ouvert: false })
   const chemin = usePathname()
   // L'état d'ouverture est lié à la route : naviguer referme le menu sans effet.
   const [etat, setEtat] = useState({ chemin, ouvert: false })
   const ouvert = etat.chemin === chemin && etat.ouvert
+  // Le menu Ressources se referme quand la route change.
+  const ressOuvert = ressEtat.chemin === chemin && ressEtat.ouvert
+  const setRessOuvert = (f: boolean | ((o: boolean) => boolean)) => setRessEtat((e) => ({ chemin, ouvert: typeof f === 'function' ? f(e.chemin === chemin && e.ouvert) : f }))
   const setOuvert = (f: boolean | ((o: boolean) => boolean)) =>
     setEtat((e) => ({ chemin, ouvert: typeof f === 'function' ? f(e.chemin === chemin && e.ouvert) : f }))
+
+  // Menu Ressources : Échap et clic à l'extérieur le referment.
+  useEffect(() => {
+    if (!ressOuvert) return
+    const echap = (e: KeyboardEvent) => e.key === 'Escape' && setRessEtat((x) => ({ ...x, ouvert: false }))
+    const dehors = (e: MouseEvent) => {
+      if (ress.current && !ress.current.contains(e.target as Node)) setRessEtat((x) => ({ ...x, ouvert: false }))
+    }
+    document.addEventListener('keydown', echap)
+    document.addEventListener('mousedown', dehors)
+    return () => {
+      document.removeEventListener('keydown', echap)
+      document.removeEventListener('mousedown', dehors)
+    }
+  }, [ressOuvert])
 
   // Focus piégé + Échap.
   useEffect(() => {
@@ -76,6 +96,31 @@ export default function Nav() {
               {e.nom}
             </Link>
           ))}
+          <div className="su-nav__ress" ref={ress} onBlur={(e) => !e.currentTarget.contains(e.relatedTarget) && setRessOuvert(false)}>
+            <button
+              type="button"
+              className="su-nav__lien su-nav__ress-bouton"
+              aria-expanded={ressOuvert}
+              aria-controls="su-ress"
+              data-actif={RESSOURCES.some((r) => chemin.startsWith(r.href)) ? '1' : '0'}
+              onClick={() => setRessOuvert((o) => !o)}
+            >
+              Ressources
+              <svg viewBox="0 0 10 6" width="10" height="6" aria-hidden="true">
+                <path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </button>
+            <ul id="su-ress" className="su-nav__ress-liste" inert={!ressOuvert}>
+              {RESSOURCES.map((r, i) => (
+                <li key={r.href} style={{ '--i': i } as React.CSSProperties}>
+                  <Link href={r.href} className="su-nav__ress-lien" onClick={() => setRessOuvert(false)}>
+                    <b>{r.nom}</b>
+                    <span>{r.ligne}</span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
         </nav>
         <div className="su-nav__action">
           <Action href="/contact" variante="contour" mot="Écrire">
@@ -95,7 +140,7 @@ export default function Nav() {
       </div>
       <div id="su-menu" ref={panneau} className="su-nav__panneau" inert={!ouvert}>
         <ul className="su-nav__strates">
-          {[...ENTREES, { href: '/contact', nom: 'Parler de votre projet' }].map((e, i) => (
+          {[...ENTREES, ...RESSOURCES, { href: '/contact', nom: 'Parler de votre projet' }].map((e, i) => (
             <li key={e.href} className="su-nav__strate" style={{ '--i': i } as React.CSSProperties}>
               <Link href={e.href} className="su-display su-nav__strate-lien" aria-current={chemin === e.href ? 'page' : undefined}>
                 <span className="su-mono su-nav__num">0{i + 1}</span>
