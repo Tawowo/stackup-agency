@@ -9,7 +9,7 @@ category: "seo-local"
 keywords: ["création site internet Angers", "agence web Angers", "site web Maine-et-Loire", "freelance web Angers"]
 ---
 
-**Créer un site internet à Angers coûte entre 449€ et 3 000€ selon le prestataire et le niveau de complexité.** Angers, ville de 154 000 habitants (agglomération Angers Loire Métropole : 280 000 hab.), est une ville dynamique avec un tissu universitaire actif, un secteur viticole renommé et une économie tertiaire bien développée.
+**Créer un site internet à Angers coûte entre {{prix:une-page}} € et 3 000€ selon le prestataire et le niveau de complexité.** Angers, ville de 154 000 habitants (agglomération Angers Loire Métropole : 280 000 hab.), est une ville dynamique avec un tissu universitaire actif, un secteur viticole renommé et une économie tertiaire bien développée.
 
 ---
 
@@ -33,27 +33,24 @@ Les tarifs web ne varient pas selon la ville mais selon le prestataire choisi. V
 
 ### Site vitrine (5 pages)
 - Template plateforme : 0-25€/mois (mais limitations SEO)
-- Prestataire spécialisé : 449€ à 1 000€
+- Prestataire spécialisé : {{prix:une-page}} € à 1 000€
 - Agence locale : 900€ à 2 500€
 
 ### Site multi-pages (10-20 pages)
-- Prestataire spécialisé : 749€ à 1 500€
+- Prestataire spécialisé : {{prix:multi-pages}} € à 1 500€
 - Agence locale : 1 500€ à 4 000€
 
 ### Boutique en ligne
-- Solution standard : 1 647€ à 2 500€
+- Solution standard : {{prix:boutique}} € à 2 500€
 - E-commerce avancé : 2 500€ à 6 000€+
-
-### Site association
-- Prestataire spécialisé : 149€ à 600€
 
 ---
 
 ## Délais de livraison : ce que vous pouvez exiger
 
-Un site vitrine livré en 10 jours ouvrés est possible avec les bons prestataires. Ce délai est garanti contractuellement par les prestataires spécialisés — il n'est pas garanti par les agences généralistes qui jonglent avec plusieurs clients.
+Un site vitrine peut être mis en ligne rapidement avec un prestataire organisé. Exigez dans tous les cas un planning écrit au devis, avec des jalons, quel que soit le prestataire.
 
-**Ce que vous pouvez faire pour respecter ce délai :**
+**Ce que vous pouvez faire pour tenir ce planning :**
 1. Préparez vos textes avant de commander (description de l'activité, liste des services, texte "À propos")
 2. Rassemblez vos photos (logo en haute résolution, photos de votre lieu ou de vos réalisations)
 3. Soyez disponible pour valider la maquette dans les 48h suivant sa livraison
@@ -104,16 +101,16 @@ Un domaine viticole en Anjou cherche à vendre en direct ses bouteilles et à pr
 4. Une galerie photos de qualité (vignes, cave, étiquettes)
 5. Un blog sur les millésimes, la viticulture et l'actualité du domaine
 
-Ce projet correspond à notre [formule e-commerce à partir de 1 647€](/tarifs), complétée par une stratégie de contenu. Le [blog SEO](/services/redaction-blog-seo) peut amplifier la visibilité sur les requêtes à longue traîne.
+Ce projet correspond à notre [formule e-commerce à partir de {{prix:boutique}} €](/tarifs), complétée par une stratégie de contenu. Le [blog SEO](/services/redaction-blog-seo) peut amplifier la visibilité sur les requêtes à longue traîne.
 
 ---
 
 ## Ce qu'offre Stackup Agency pour les entreprises angevines
 
 [Stackup Agency](/tarifs) propose :
-- [Site vitrine](/services/site-vitrine) à partir de 449€, livré en 10 jours ouvrés
-- [Site multi-pages](/services/site-multi-pages) à partir de 749€, livré en 17 jours ouvrés
-- [Boutique en ligne](/services/site-ecommerce) à partir de 1 647€, livré en 21 jours ouvrés
+- [Site vitrine](/services/site-vitrine) à partir de {{prix:une-page}} €
+- [Site multi-pages](/services/site-multi-pages) à partir de {{prix:multi-pages}} €
+- [Boutique en ligne](/services/site-ecommerce) à partir de {{prix:boutique}} €
 
 Intervention à distance sur toute la France, y compris Angers et le Maine-et-Loire.
 

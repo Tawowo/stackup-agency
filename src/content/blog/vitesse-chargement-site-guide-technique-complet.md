@@ -233,6 +233,6 @@ Quatre leviers : (1) Auditer et supprimer les scripts inutilisés (plugins aband
 
 ---
 
-La performance web est un effort continu, pas un projet ponctuel. Les sites que nous développons avec notre [plan Premium](/tarifs/premium) bénéficient d'un monitoring mensuel des Core Web Vitals et d'optimisations préventives à chaque mise à jour. Contactez-nous pour un audit de performance offert.
+La performance web est un effort continu, pas un projet ponctuel. Les sites que nous développons peuvent s'accompagner, dans l'[abonnement mensuel facultatif](/tarifs#abonnement) composé à la carte, d'un monitoring mensuel des Core Web Vitals et d'optimisations préventives à chaque mise à jour. Prenez rendez-vous pour un appel découverte gratuit de 30 minutes.
 
 [Prendre rendez-vous gratuitement](/contact)

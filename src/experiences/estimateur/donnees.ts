@@ -93,3 +93,13 @@ export const PHRASE_IA: Record<string, string> = {
   Essentielle: 'Votre activité est décrite proprement pour que les assistants s’y retrouvent.',
   Avancée: 'On répond aux questions de vos clients et on vérifie régulièrement ce que disent les IA.',
 }
+
+export const TITRE_PORTEE: Record<string, string> = {
+  Aucun: 'Pas pour l’instant',
+  Essentiel: 'Être trouvé par votre nom',
+  Local: 'Être trouvé dans votre ville',
+  Régional: 'Être trouvé dans tout votre département',
+  National: 'Être trouvé partout en France',
+}
+export const TITRE_IA: Record<string, string> = { Aucune: 'Pas pour l’instant', Essentielle: 'Être compris par les IA', Avancée: 'Être cité par les IA' }
+

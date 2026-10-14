@@ -52,7 +52,7 @@ Dans les jours qui suivent la mise en ligne du nouveau site, plusieurs vérifica
 |---|---|
 | Audit et recensement des URLs indexées | 2 à 5 jours |
 | Construction de la table de correspondance | 3 à 7 jours selon la taille du site |
-| Développement et contenu du nouveau site | 10 à 21 jours ouvrés (selon le type de site) |
+| Développement et contenu du nouveau site | Calendrier fixé au devis, selon le projet |
 | Mise en place des redirections + bascule DNS | 1 à 2 jours |
 | Suivi post-migration en Search Console | 4 à 8 semaines |
 

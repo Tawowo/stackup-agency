@@ -4,7 +4,7 @@
  * en bas sur mobile. Une FOURCHETTE de création (jamais le prix exact), l'abonnement
  * estimé, le délai indicatif, le détail par bloc, ce qui est inclus.
  */
-import { useState } from 'react'
+import { useState, useSyncExternalStore } from 'react'
 import Action from '@/components/ui/Action'
 import StackFrame from '@/webgl/StackFrame'
 import { calculer } from '@/domain/devis/calcul'
@@ -12,10 +12,12 @@ import { inclusCreation, auDela } from '@/domain/devis/inclus'
 import { euros, fourchetteBloc } from '@/domain/devis/resume'
 import type { ConfigDevis } from '@/domain/devis/types'
 
+const abonne = () => () => {}
 const rien = (cfg: ConfigDevis) => cfg.accueil === 'Aucun' && !cfg.outil.actif && !cfg.boutique.active
 
 export default function Recap({ cfg, jeton, vue }: { cfg: ConfigDevis; jeton: string; vue: boolean }) {
   const [ouvert, setOuvert] = useState(false)
+  const monte = useSyncExternalStore(abonne, () => true, () => false)
   const r = calculer(cfg)
   const vide = rien(cfg)
   const blocs = r.blocs.filter((b) => b.montant > 0)
@@ -49,9 +51,11 @@ export default function Recap({ cfg, jeton, vue }: { cfg: ConfigDevis; jeton: st
           <span className="su-est__recap-val su-tabular">{abo > 0 ? <><span className="su-est__long">environ <b>{euros(abo)}</b> par mois</span><span className="su-est__court"><b>{euros(abo)}</b> / mois</span></> : 'sans abonnement'}</span>
         </p>
       </div>
-      <button type="button" className="su-est__recap-bascule" aria-expanded={ouvert} aria-controls="su-est-recap-corps" onClick={() => setOuvert((o) => !o)}>
-        {ouvert ? 'Replier' : 'Voir le détail'}
-      </button>
+      {monte && (
+        <button type="button" className="su-est__recap-bascule" aria-expanded={ouvert} aria-controls="su-est-recap-corps" onClick={() => setOuvert((o) => !o)}>
+          {ouvert ? 'Replier' : 'Voir le détail'}
+        </button>
+      )}
       <div id="su-est-recap-corps" className="su-est__recap-corps">
         {!vide && (
           <p className="su-est__recap-ligne su-est__recap-ligne--doux">

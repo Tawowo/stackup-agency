@@ -9,7 +9,7 @@ category: "creation-sites"
 keywords: ["prix site photographe", "site internet photographe cout", "creation site photographe"]
 ---
 
-**Réponse directe :** en 2026, un site de photographe coûte de 0 € (portfolio sur plateforme gratuite, avec ses limites) à plus de 5 000 € en agence traditionnelle. Chez Stackup Agency : site vitrine-portfolio sur mesure à partir de 449 €, site multi-pages à partir de 749 €, et système de galeries clients (l'alternative aux abonnements Pixieset) à partir de 1 447 €. Hébergement 12 mois et nom de domaine offerts la première année.
+**Réponse directe :** en 2026, un site de photographe coûte de 0 € (portfolio sur plateforme gratuite, avec ses limites) à plus de 5 000 € en agence traditionnelle. Chez Stackup Agency : site vitrine-portfolio sur mesure à partir de {{prix:une-page}} €, site multi-pages à partir de {{prix:multi-pages}} €, et système de galeries clients (l'alternative aux abonnements Pixieset) à partir de {{prix:outil}} €. Nom de domaine offert la première année ; l'hébergement relève de l'abonnement mensuel facultatif, sans engagement.
 
 ## Ce qu'un site de photographe doit faire (et que les autres sites ne font pas)
 
@@ -33,41 +33,41 @@ Un thème photo + un intégrateur. Le résultat dépend entièrement du soin app
 
 Beau travail possible, mais le devis inclut la structure de l'agence. Peu de photographes indépendants rentabilisent cet investissement.
 
-### Sur mesure Stackup (449 à 1 647 €)
+### Sur mesure Stackup (à partir de {{prix:une-page}} €)
 
 | Besoin | Offre | Prix |
 |---|---|---|
-| Portfolio + contact + SEO local | Site vitrine | à partir de 449 € |
-| Portfolio + blog + pages par prestation (mariage, portrait, corporate) | Site multi-pages | à partir de 749 € |
-| Galeries clients privées (alternative Pixieset) | Système sur mesure | à partir de 1 447 €* |
-| Vente de tirages en ligne | Boutique | à partir de 1 647 € |
+| Portfolio + contact + SEO local | Site vitrine | à partir de {{prix:une-page}} € |
+| Portfolio + blog + pages par prestation (mariage, portrait, corporate) | Site multi-pages | à partir de {{prix:multi-pages}} € |
+| Galeries clients privées (alternative Pixieset) | Système sur mesure | à partir de {{prix:outil}} €* |
+| Vente de tirages en ligne | Boutique | à partir de {{prix:boutique}} € |
 
-*\*Le prix s'affine selon le périmètre (± 500 € autour de ce tarif dans la majorité des projets).*
+*\*Le prix exact se fixe au devis, selon ce que vous choisissez.*
 
-Tout est sur mesure, livré avec hébergement 12 mois et nom de domaine offerts la première année, scores de performance ≥ 90 — l'exigence n°1 d'un site d'images.
+Tout est sur mesure, avec nom de domaine offert la première année, scores de performance ≥ 90 — l'exigence n°1 d'un site d'images.
 
 ## Les postes cachés à anticiper (quel que soit le prestataire)
 
-- **Le nom de domaine** après la première année : 10 à 20 €/an (inclus dans nos formules de maintenance).
-- **La maintenance** : sauvegardes, mises à jour, sécurité — dès 29 €/mois chez nous, optionnelle.
+- **Le nom de domaine** après la première année : 10 à 20 €/an (inclus dans l'abonnement à partir de la 2ᵉ année).
+- **La maintenance** : sauvegardes, mises à jour, sécurité — dans l'abonnement mensuel facultatif, sans engagement (à partir d'environ {{abo:min}} € par mois pour un site d'une page).
 - **Les galeries clients par abonnement** si vous restez sur Pixieset et consorts : 240 à 480 €/an, pour toujours ([le calcul détaillé est ici](/blog/pixieset-jingoo-pictime-cout-reel-abonnements)).
-- **Le SEO continu** si vous visez des requêtes concurrentielles : articles réguliers, dès 25 €/article ou 89 €/mois.
+- **Le SEO continu** si vous visez des requêtes concurrentielles : des articles réguliers peuvent s'ajouter à l'abonnement.
 
 ## Comment dimensionner VOTRE budget
 
 Trois profils types, trois réponses :
 
-**Vous démarrez (première année d'activité)** : site vitrine à 449 €. L'essentiel est d'exister proprement sur Google avec un portfolio rapide et une page contact qui qualifie. Le reste attendra vos premiers mariages.
+**Vous démarrez (première année d'activité)** : site vitrine à partir de {{prix:une-page}} €. L'essentiel est d'exister proprement sur Google avec un portfolio rapide et une page contact qui qualifie. Le reste attendra vos premiers mariages.
 
-**Vous êtes installé, vous voulez remplir le calendrier** : site multi-pages à 749 € avec une page par prestation (mariage, grossesse, corporate…) — c'est ce qui permet de ranker sur chaque requête — plus, si le cœur de votre activité est le mariage, le système de galeries à 1 447 € pour remplacer l'abonnement.
+**Vous êtes installé, vous voulez remplir le calendrier** : site multi-pages à partir de {{prix:multi-pages}} € avec une page par prestation (mariage, grossesse, corporate…) — c'est ce qui permet de ranker sur chaque requête — plus, si le cœur de votre activité est le mariage, le système de galeries à partir de {{prix:outil}} € pour remplacer l'abonnement.
 
-**Vous vendez des tirages** : ajoutez la dimension boutique (1 647 €) ou intégrez la vente à vos galeries. Zéro commission sur vos ventes.
+**Vous vendez des tirages** : ajoutez la dimension boutique (à partir de {{prix:boutique}} €) ou intégrez la vente à vos galeries. Zéro commission sur vos ventes.
 
 ## En résumé
 
 - Fourchette 2026 : 0 € (plateforme, avec dépendance) à 8 000 € (agence classique).
 - Le critère technique n°1 d'un site de photographe : la **vitesse malgré les images**.
-- Chez Stackup : 449 € (vitrine-portfolio), 749 € (multi-pages), 1 447 € (galeries clients), 1 647 € (boutique) — sur mesure, tout inclus la première année.
+- Chez Stackup, à partir de {{prix:une-page}} € (vitrine-portfolio), de {{prix:multi-pages}} € (multi-pages), de {{prix:outil}} € (galeries clients) et de {{prix:boutique}} € (boutique) — sur mesure, nom de domaine offert la première année.
 - Pensez coût sur 5 ans, abonnements compris : c'est là que les modèles se départagent.
 
 ## Questions fréquentes
@@ -76,13 +76,13 @@ Trois profils types, trois réponses :
 Instagram est votre flux, pas votre vitrine : l'algorithme décide qui voit quoi, la recherche Google n'y accède pas, et un compte peut disparaître. Le site capte les recherches « photographe + ville » — celles des clients qui ont un budget et une date.
 
 **Combien de temps pour être en ligne ?**
-À partir de 10 jours ouvrés après validation de la maquette pour un site vitrine. Les galeries sur mesure se planifient entre deux saisons.
+Cela dépend du périmètre, fixé au devis. Les galeries sur mesure se planifient entre deux saisons.
 
 **Puis-je migrer mon portfolio existant ?**
 Oui : images, textes et, si votre site actuel a de l'historique, les redirections nécessaires pour conserver votre référencement.
 
 **Le site m'appartient-il vraiment ?**
-À 100 % : code, contenus, domaine, accès. C'est contractuel, et c'est ce qui différencie un investissement d'une location.
+Au paiement complet : code, design, contenus, domaine, accès. C'est contractuel, et c'est ce qui différencie un investissement d'une location.
 
 ---
 

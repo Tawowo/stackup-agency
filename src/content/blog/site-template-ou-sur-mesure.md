@@ -44,7 +44,7 @@ Il est possible de pousser la personnalisation d'un template au-delà des couleu
 
 Un site sur mesure n'a aucune structure préexistante à respecter : chaque section est pensée pour représenter ce qui rend l'entreprise réellement différente — son ton, ses services précis, ses preuves concrètes (réalisations, avis, chiffres réels). Le risque de ressemblance avec un concurrent disparaît par construction, puisque le design n'a jamais été acheté ailleurs.
 
-Cette différenciation a un coût : un site vitrine sur mesure démarre à 449 €, contre un template qui peut coûter aussi peu que 0 € à 60 € à l'achat. La question à se poser n'est pas seulement le prix d'entrée, mais l'effet réel sur la perception des visiteurs et, in fine, sur le taux de conversion.
+Cette différenciation a un coût : un site vitrine sur mesure démarre à {{prix:une-page}} €, contre un template qui peut coûter aussi peu que 0 € à 60 € à l'achat. La question à se poser n'est pas seulement le prix d'entrée, mais l'effet réel sur la perception des visiteurs et, in fine, sur le taux de conversion.
 
 ## Comment vérifier si un concurrent utilise le même template que vous
 
@@ -73,10 +73,10 @@ Oui pour démarrer, mais dans un marché local concurrentiel où plusieurs prest
 Non. La structure des sections, la hiérarchie de contenu et les animations restent identiques à tous les autres sites utilisant le même template, même avec une palette de couleurs différente.
 
 **Un site sur mesure prend-il plus de temps à créer qu'un site avec template ?**
-Oui, généralement 10 à 21 jours ouvrés selon le type de site, contre une mise en ligne possible en quelques heures avec un template. Le délai supplémentaire finance la conception spécifique de chaque section.
+Oui, une mise en ligne en quelques heures est possible avec un template, alors qu'un site sur mesure demande un temps de conception propre à chaque section. Ce temps supplémentaire finance la conception spécifique de chacune.
 
 **Les templates premium sont-ils vraiment moins chers sur la durée ?**
-À l'achat, oui. Mais l'abonnement mensuel de la plateforme qui héberge le template (Wix, Squarespace) continue de s'accumuler chaque année, contrairement à un site sur mesure payé une fois.
+À l'achat, oui. Mais l'abonnement mensuel de la plateforme qui héberge le template (Wix, Squarespace) continue de s'accumuler chaque année, contrairement à un site sur mesure acheté une fois, avec un abonnement facultatif, sans engagement.
 
 ---
 

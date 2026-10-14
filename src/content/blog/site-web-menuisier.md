@@ -81,7 +81,7 @@ Requêtes principales :
 
 ## Tarifs pour un site de menuisier
 
-Notre [formule site vitrine à 449€](/tarifs) est adaptée pour un site de menuisier avec galerie, services et formulaire de devis. Livraison garantie en [10 jours ouvrés](/tarifs).
+Notre [formule site vitrine à partir de {{prix:une-page}} €](/tarifs) est adaptée pour un site de menuisier avec galerie, services et formulaire de devis.
 
 ---
 

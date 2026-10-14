@@ -195,3 +195,5 @@
   .su-tg__ligne { flex-direction: column; gap: 6px; }
   .su-tg__ligne-prix { text-align: left; white-space: normal; }
 }
+
+.su-tg--inclus .su-tg__coches { margin-top: 28px; }

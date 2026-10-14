@@ -45,7 +45,7 @@ Le plus utile pour les articles de blog et les pages de service. Quand Google l'
       "name": "Combien coûte un site vitrine ?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Un site vitrine coûte entre 449€ et 2 000€ selon la complexité. Chez Stackup Agency, le site vitrine est à partir de 449€ livré en 10 jours ouvrés."
+        "text": "Un site vitrine coûte entre {{prix:une-page}} € et 2 000€ selon la complexité. Chez Stackup Agency, le site vitrine est à partir de {{prix:une-page}} €, le prix exact se fixant au devis."
       }
     }
   ]

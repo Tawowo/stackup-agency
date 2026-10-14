@@ -9,7 +9,7 @@ category: "creation-sites"
 keywords: ["vendre photos en ligne", "vendre tirages photo en ligne", "boutique photo en ligne photographe"]
 ---
 
-**Réponse directe :** vendre ses photos en ligne repose sur deux briques distinctes : un espace de sélection privé où le client choisit ses favoris (inclus dans une galerie de livraison), et une boutique où il commande tirages, albums ou fichiers numériques. Les plateformes par abonnement (Pixieset, Pic-Time) intègrent les deux avec un labo partenaire, contre commission. Une boutique sur mesure, à partir de 1 647 €, vend sans commission mais laisse le photographe choisir librement son labo d'impression.
+**Réponse directe :** vendre ses photos en ligne repose sur deux briques distinctes : un espace de sélection privé où le client choisit ses favoris (inclus dans une galerie de livraison), et une boutique où il commande tirages, albums ou fichiers numériques. Les plateformes par abonnement (Pixieset, Pic-Time) intègrent les deux avec un labo partenaire, contre commission. Une boutique sur mesure, à partir de {{prix:boutique}} €, vend sans commission mais laisse le photographe choisir librement son labo d'impression.
 
 ## Les deux moments de la vente en ligne
 
@@ -31,7 +31,7 @@ La contrepartie : un abonnement qui tourne entre 240 et 480 € par an ([le calc
 
 ## Comment une boutique sur mesure gère la vente
 
-Un site e-commerce sur mesure (à partir de 1 647 € chez Stackup) fonctionne différemment : le photographe crée son propre catalogue de produits (tirages en plusieurs formats, albums, fichiers numériques téléchargeables), fixe librement ses prix, et encaisse l'intégralité de la vente — zéro commission, quel que soit le volume vendu.
+Un site e-commerce sur mesure (à partir de {{prix:boutique}} € chez Stackup) fonctionne différemment : le photographe crée son propre catalogue de produits (tirages en plusieurs formats, albums, fichiers numériques téléchargeables), fixe librement ses prix, et encaisse l'intégralité de la vente — zéro commission, quel que soit le volume vendu.
 
 La différence structurelle : la boutique ne gère pas nativement l'impression physique. Le photographe reste libre de choisir son propre labo d'impression (souvent moins cher et de meilleure qualité qu'un labo imposé par une plateforme) et d'organiser la production, ou de se concentrer sur la vente de fichiers numériques haute définition, sans logistique d'impression du tout.
 
@@ -41,7 +41,7 @@ Pour la sélection de favoris avant achat, elle s'organise dans la galerie clien
 
 | Critère | Plateforme (Pixieset, Pic-Time...) | Boutique sur mesure Stackup |
 |---|---|---|
-| Coût | 240-480 €/an, à vie | 1 647 € une fois, puis maintenance optionnelle dès 29 €/mois |
+| Coût | 240-480 €/an, à vie | À partir de {{prix:boutique}} € une fois, puis abonnement facultatif, sans engagement |
 | Commission sur les ventes | Oui, variable selon l'offre | Aucune |
 | Impression physique | Labo partenaire intégré, automatique | Labo au choix du photographe, à organiser |
 | Marque visible | Celle de la plateforme | 100 % celle du photographe |
@@ -60,7 +60,7 @@ Pour la sélection de favoris avant achat, elle s'organise dans la galerie clien
 
 - Vendre des photos en ligne combine deux briques : la sélection (galerie privée) et l'achat (boutique).
 - Les plateformes d'abonnement intègrent tout avec un labo partenaire, contre commission et abonnement à vie.
-- Une boutique sur mesure (dès 1 647 €) supprime la commission mais laisse le choix du labo au photographe.
+- Une boutique sur mesure (dès {{prix:boutique}} €) supprime la commission mais laisse le choix du labo au photographe.
 - Le bon choix dépend du poids réel de la vente de produits physiques dans votre chiffre d'affaires.
 
 ## Questions fréquentes

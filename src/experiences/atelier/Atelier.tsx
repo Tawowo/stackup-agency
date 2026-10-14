@@ -5,6 +5,7 @@
  * d'image de stock), nom, titre, trois paragraphes courts, trois questions en
  * accordéon. La pile est à l'arrêt, ombre longue.
  */
+import { PRIX_PUBLICS } from '@/config/prix-publics.generated'
 import { useEffect, useRef } from 'react'
 import StackFrame from '@/webgl/StackFrame'
 import { initGsap } from '@/lib/gsap'
@@ -14,10 +15,11 @@ import Accordeon from '@/components/editorial/Accordeon'
 import Portrait from '@/components/ui/Portrait'
 import './atelier.css'
 
+const PRIX_DEMO = PRIX_PUBLICS.demo
 const QUESTIONS = [
   { q: 'Pourquoi des outils sur mesure plutôt qu’un abonnement ?', r: 'Un abonnement vous loue un outil pensé pour tout le monde. Un outil sur mesure est fait pour votre façon de travailler, il vous appartient, et il ne s’arrête pas le jour où vous cessez de payer.' },
   { q: 'Que se passe-t-il si je veux changer de prestataire ?', r: 'Vous partez avec le code, les données et les accès. Tout est documenté pour qu’un autre développeur puisse reprendre le travail.' },
-  { q: 'La démo avant signature, c’est vraiment gratuit ?', r: 'Oui. Une première version de votre site, faite à partir de ce que vous nous avez dit, avant tout engagement. Si elle ne vous parle pas, vous ne devez rien.' },
+  { q: 'Combien coûte la démo avant signature ?', r: `${PRIX_DEMO} €. C’est la page d’accueil de votre futur site, faite à votre image, pour que vous jugiez sur pièce avant de décider. Si vous continuez, ce prix est déduit de celui de votre projet.` },
 ]
 
 export default function Atelier() {

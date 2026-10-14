@@ -18,7 +18,7 @@ export default function ParcoursClient({ titre = 'Comment ça se passe', niveau 
     demo && {
       n: '2',
       nom: 'La démo de votre page d’accueil',
-      duree: 'Votre future page d’accueil',
+      duree: 'Votre page d’accueil',
       prix: euros(demo.prix),
       texte: `${demo.description} Son prix est déduit si vous continuez.`,
     },

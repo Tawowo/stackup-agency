@@ -76,7 +76,7 @@ Requêtes à cibler :
 
 ## Tarifs pour un site de peintre
 
-Notre [formule site vitrine à 449€](/tarifs) couvre les besoins d'un peintre : services, réalisations, certifications, formulaire de devis. Livraison garantie en [10 jours ouvrés](/tarifs).
+Notre [formule site vitrine à partir de {{prix:une-page}} €](/tarifs) couvre les besoins d'un peintre : services, réalisations, certifications, formulaire de devis.
 
 ---
 

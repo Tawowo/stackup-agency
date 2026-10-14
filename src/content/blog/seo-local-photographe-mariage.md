@@ -58,7 +58,7 @@ Un blog avec des articles répondant aux questions concrètes des futurs mariés
 
 ## Un exemple concret de mise en œuvre
 
-Un photographe basé à Tours qui couvre l'Indre-et-Loire, le Loir-et-Cher et le Loiret aurait intérêt à structurer : une page d'accueil optimisée sur « photographe mariage Tours », trois pages secondaires pour les départements voisins, une fiche Google Business à jour avec au moins 20 photos récentes, et une demande d'avis systématique après chaque livraison de galerie. C'est exactement ce que permet le site multi-pages à partir de 749 €, avec le blog SEO en complément dès 25 €/article ou 89 €/mois en formule continue.
+Un photographe basé à Tours qui couvre l'Indre-et-Loire, le Loir-et-Cher et le Loiret aurait intérêt à structurer : une page d'accueil optimisée sur « photographe mariage Tours », trois pages secondaires pour les départements voisins, une fiche Google Business à jour avec au moins 20 photos récentes, et une demande d'avis systématique après chaque livraison de galerie. C'est exactement ce que permet le site multi-pages à partir de {{prix:multi-pages}} €, avec le blog SEO en complément, à {{abo:article}} € l'article dans l'abonnement facultatif.
 
 ## En résumé
 

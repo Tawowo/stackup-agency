@@ -43,7 +43,7 @@ Le moment le plus favorable pour demander un avis Google se situe juste après l
 
 ## Ce qu'une galerie sur mesure automatise
 
-Un système de galeries développé sur mesure (à partir de 1 447 € chez Stackup, un investissement unique) prend en charge plusieurs de ces étapes sans intervention manuelle répétée :
+Un système de galeries développé sur mesure (à partir de {{prix:outil}} € chez Stackup, un investissement unique) prend en charge plusieurs de ces étapes sans intervention manuelle répétée :
 
 - **Lien unique, QR code ou code d'accès** généré automatiquement à la création de la galerie.
 - **Expiration automatique** à la date choisie, sans avoir à surveiller ni relancer.
@@ -61,7 +61,7 @@ C'est la différence structurelle avec l'envoi manuel par e-mail ou par un servi
 | E-mail avec pièces jointes | Faible (fichiers dispersés) | Manuelle, par e-mail | Manuelle, souvent oubliée | Gratuit, mais chronophage |
 | Service de transfert générique | Moyenne (lien qui expire vite) | Absente | Manuelle | Gratuit à faible coût |
 | Plateforme d'abonnement (Pixieset, Pic-Time) | Élevée | Intégrée | Semi-automatisable | 240-480 €/an, à vie |
-| Galerie sur mesure Stackup | Élevée, personnalisable | Intégrée, liée au quota | Automatique | 1 447 € une fois |
+| Galerie sur mesure Stackup | Élevée, personnalisable | Intégrée, liée au quota | Automatique | À partir de {{prix:outil}} €, une fois |
 
 ## En résumé
 

@@ -131,7 +131,7 @@ Le maillage interne ne se construit pas en un jour. Pour une PME qui part de zé
 
 C'est un travail qui s'inscrit dans la durée, mais les effets sur le [positionnement local](/blog/strategie-longue-traine-tpe-clients-locaux) se font sentir dès 2 à 3 mois après les premières optimisations.
 
-Notre [plan Starter](/tarifs/starter) inclut une architecture de contenu initiale avec les bases du maillage interne. Les plans [Pro](/tarifs/pro) et [Premium](/tarifs/premium) vont plus loin avec un suivi éditorial mensuel.
+Chez Stackup Agency, l'architecture de contenu initiale et les bases du maillage interne se posent dès la création du site. Un suivi éditorial mensuel peut ensuite s'ajouter à votre [abonnement](/tarifs#abonnement), facultatif et sans engagement.
 
 ## FAQ
 

@@ -129,11 +129,11 @@ Formulaire, téléphone, adresse, horaires, carte
 
 ## Budget
 
-| Formule | Prix | Délai | Adapté si |
-|---|---|---|---|
-| Site vitrine 5 pages | 449€ | 10 jours ouvrés | Cabinet de 1-2 associés, démarrage |
-| Site multi-pages 10 pages | 749€ | 17 jours ouvrés | Cabinet avec plusieurs segments |
-| Site avec espace articles | 1 447€ | 21 jours ouvrés | Cabinet qui veut publier régulièrement |
+| Formule | Prix | Adapté si |
+|---|---|---|
+| Site vitrine 5 pages | À partir de {{prix:une-page}} € | Cabinet de 1-2 associés, démarrage |
+| Site multi-pages 10 pages | À partir de {{prix:multi-pages}} € | Cabinet avec plusieurs segments |
+| Site avec espace articles | À partir de {{prix:outil}} € | Cabinet qui veut publier régulièrement |
 
 ---
 

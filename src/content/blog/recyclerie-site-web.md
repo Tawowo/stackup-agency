@@ -100,20 +100,19 @@ Pour la plupart des recycleries, la galerie sans achat en ligne est le bon compr
 
 ---
 
-## Budget et délais pour un site de recyclerie
+## Budget pour un site de recyclerie
 
-### Formule site association (149€ — notre tarif spécifique)
+### Site une page (à partir de {{prix:une-page}} €)
 
-Notre [formule site association à 149€](/tarifs) couvre les besoins essentiels :
-- 5 pages fonctionnelles (accueil, donner, acheter, bénévolat, contact)
+Notre [site une page, à partir de {{prix:une-page}} €](/tarifs) couvre les besoins essentiels :
+- 5 rubriques (accueil, donner, acheter, bénévolat, contact) sur une même page
 - Design sobre et accessible
 - SEO de base
-- Hébergement 12 mois, SSL
-- Livraison en [7 jours ouvrés](/tarifs)
+- Hébergement et SSL dans l'abonnement facultatif, sans engagement
 
-### Formule site vitrine (449€) pour une ressourcerie plus développée
+### Site multi-pages (à partir de {{prix:multi-pages}} €) pour une ressourcerie plus développée
 
-Si vous avez besoin d'un calendrier d'événements, d'une galerie photos de produits, d'un espace presse ou d'une page de témoignages bénévoles, le [site vitrine à 449€](/tarifs) offre plus de flexibilité.
+Si vous avez besoin d'un calendrier d'événements, d'une galerie photos de produits, d'un espace presse ou d'une page de témoignages bénévoles, le [site multi-pages, à partir de {{prix:multi-pages}} €](/tarifs) offre plus de flexibilité. Le prix exact se fixe au devis, selon ce que vous choisissez.
 
 ---
 
@@ -137,7 +136,7 @@ Une fiche bien complète avec vos horaires, vos catégories (magasin d'occasion,
 ## FAQ
 
 **Une recyclerie a-t-elle droit à un site web gratuit avec certains dispositifs ?**
-Il existe des dispositifs d'accompagnement numérique pour les associations (exemple : associations territoriales, dispositifs régionaux). Ces accompagnements offrent parfois des modules de création de site, mais avec des résultats souvent médiocres. Un site sur mesure à 149€ est souvent plus efficace qu'un site "gratuit" de mauvaise qualité.
+Il existe des dispositifs d'accompagnement numérique pour les associations (exemple : associations territoriales, dispositifs régionaux). Ces accompagnements offrent parfois des modules de création de site, mais avec des résultats souvent médiocres. Un site sur mesure, à partir de {{prix:une-page}} €, est souvent plus efficace qu'un site "gratuit" de mauvaise qualité.
 
 **Comment mesurer l'impact du site sur nos dons et bénévoles ?**
 Installez Google Analytics 4 (gratuit) et configurez des objectifs : soumission du formulaire de contact, clics sur l'email ou le téléphone. Notez également l'augmentation des demandes de don et de bénévolat dans les semaines suivant la mise en ligne.

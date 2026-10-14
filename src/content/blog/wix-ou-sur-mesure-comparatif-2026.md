@@ -9,7 +9,7 @@ category: "creation-sites"
 keywords: ["wix ou sur mesure", "comparatif wix", "wix vs site sur mesure", "quitter wix"]
 ---
 
-**Wix facture entre 17 € et 59 €/mois selon le plan, soit 200 à 700 €/an, à vie, sans jamais devenir propriétaire du site.** Un site sur mesure coûte 449 € à 1 647 € une seule fois, avec un domaine offert la première année. Sur 5 ans, l'écart se resserre voire s'inverse selon le plan Wix choisi — mais la vraie différence n'est pas seulement financière : c'est la propriété du code, la vitesse, et la liberté de faire évoluer le site sans les limites de la plateforme.
+**Wix facture entre 17 € et 59 €/mois selon le plan, soit 200 à 700 €/an, à vie, sans jamais devenir propriétaire du site.** Un site sur mesure s'achète une seule fois, à partir de {{prix:une-page}} € (à partir de {{prix:boutique}} € pour une boutique), avec un domaine offert la première année, puis un abonnement facultatif, sans engagement. Sur 5 ans, l'écart se resserre voire s'inverse selon le plan Wix choisi — mais la vraie différence n'est pas seulement financière : c'est la propriété du code, la vitesse, et la liberté de faire évoluer le site sans les limites de la plateforme.
 
 ## Wix en 2026 : ce qui a vraiment changé
 
@@ -46,21 +46,21 @@ Un site sur mesure (comme ceux livrés par Stackup Agency, en Next.js) est écri
 - **Le design réellement unique** : sans contrainte de template, chaque section est conçue pour le projet — animations, mise en page, identité visuelle.
 - **L'évolutivité** : ajouter une fonctionnalité complexe (système de réservation propriétaire, espace client, catalogue avancé) ne se heurte à aucune limite de plateforme.
 
-La contrepartie : un investissement initial plus élevé et un délai de livraison de 10 à 21 jours ouvrés selon le type de site, contre une mise en ligne immédiate côté Wix.
+La contrepartie : un investissement initial plus élevé et un temps de conception plus long, contre une mise en ligne immédiate côté Wix.
 
 ## Le comparatif chiffré sur 5 ans
 
 | | Wix (plan Business, ~35 €/mois) | Site sur mesure |
 |---|---|---|
-| Coût de création | 0 € (temps personnel non compté) | 449 € à 1 647 € selon le type |
-| Coût annuel | 420 €/an | 0 € (hors maintenance optionnelle) |
-| Coût sur 5 ans | 2 100 € | 449 € à 1 647 € + maintenance optionnelle 29-89 €/mois |
+| Coût de création | 0 € (temps personnel non compté) | À partir de {{prix:une-page}} € (à partir de {{prix:boutique}} € pour une boutique) |
+| Coût annuel | 420 €/an | Aucun, hors abonnement facultatif (hébergement, maintenance), sans engagement |
+| Coût sur 5 ans | 2 100 € | Achat unique, puis abonnement facultatif |
 | Propriété du site | Non — dépendant de Wix à vie | Oui — code livré au client |
 | Nom de domaine | Facturé séparément | Offert la 1ʳᵉ année |
 | Performances (PageSpeed mobile) | 60-80 en moyenne | 90-100 en moyenne |
 | Portabilité | Aucune (pas d'export) | Totale (hébergeable n'importe où) |
 
-Même sans souscrire à une maintenance mensuelle, un site sur mesure devient moins cher que Wix dès la 4ᵉ ou 5ᵉ année. Avec une maintenance active à 29 €/mois, l'écart se resserre mais le client garde un avantage décisif : il possède le site, quoi qu'il arrive à l'abonnement.
+Un site sur mesure s'achète une fois, puis l'abonnement mensuel est facultatif et sans engagement : l'écart avec Wix dépend du plan Wix choisi et des options que vous retenez. Avec un abonnement actif, l'écart se resserre mais le client garde un avantage décisif : s'il arrête l'abonnement, il garde son site et ses fichiers.
 
 ## Quand Wix reste un choix pertinent
 
@@ -70,13 +70,13 @@ Wix garde du sens pour tester une idée d'activité avant tout investissement, p
 
 Dès que le site doit générer des clients de façon durable — SEO local, conversion, crédibilité face à des concurrents mieux positionnés — la performance et la propriété du site pèsent plus lourd que la rapidité de mise en ligne. C'est particulièrement vrai pour les artisans, commerçants et indépendants qui comptent sur leur site comme canal d'acquisition principal, pas comme simple carte de visite en ligne.
 
-Une démonstration personnalisée avant tout engagement permet de comparer concrètement le rendu et les performances d'un site sur mesure face à l'existant, sans surprise ni pression commerciale.
+Après un appel découverte gratuit de 30 minutes, une démo de la page d'accueil ({{carte:demo}} €, déduite du prix si vous continuez) permet de comparer concrètement le rendu et les performances d'un site sur mesure face à l'existant.
 
 ## En résumé
 
 - Wix coûte 200 à 700 €/an à vie, sans jamais rendre le site propriété du client.
-- Un site sur mesure coûte 449 € à 1 647 € une fois, domaine offert la 1ʳᵉ année, avec des performances nettement supérieures (90-100 vs 60-80 en PageSpeed mobile).
-- Sur 5 ans, le sur mesure devient généralement moins cher, tout en offrant la propriété totale du code.
+- Un site sur mesure s'achète une fois, à partir de {{prix:une-page}} € (à partir de {{prix:boutique}} € pour une boutique), domaine offert la 1ʳᵉ année, avec des performances nettement supérieures (90-100 vs 60-80 en PageSpeed mobile).
+- Sur 5 ans, l'écart se resserre voire s'inverse selon le plan Wix, et le sur mesure offre la propriété totale du code.
 - Wix reste pertinent pour tester une activité ou un besoin ponctuel ; le sur mesure s'impose dès que le site doit générer des clients durablement.
 
 ## Questions fréquentes
@@ -94,7 +94,7 @@ Non. Le nom de domaine, certaines applications avancées et les options e-commer
 Non, si le prestataire livre un CMS ou une interface d'administration pensée pour un non-développeur. La différence n'est pas dans l'usage quotidien mais dans la structure technique sous-jacente.
 
 **Combien de temps pour recevoir un site sur mesure ?**
-10 jours ouvrés pour un site vitrine, 17 jours pour un site multi-pages, 21 jours pour une boutique en ligne, contre une mise en ligne immédiate sur Wix — mais sans le travail de personnalisation déjà inclus dans ces délais.
+Plus longtemps qu'une mise en ligne immédiate sur Wix : le temps dépend du type de site et de la rapidité de vos retours sur la maquette, et il inclut le travail de personnalisation que Wix ne fait pas à votre place.
 
 ---
 

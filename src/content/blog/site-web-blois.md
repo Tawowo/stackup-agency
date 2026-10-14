@@ -9,7 +9,7 @@ category: "seo-local"
 keywords: ["création site web Blois", "agence web Blois", "site internet Loir-et-Cher", "freelance web Blois"]
 ---
 
-**Créer un site web à Blois coûte entre 449€ et 2 000€ selon le prestataire et la complexité du projet.** Blois, préfecture du Loir-et-Cher (45 000 habitants, agglomération 100 000 hab.) est une ville touristique et résidentielle au cœur du Val de Loire. Son tissu économique, composé majoritairement de TPE et d'artisans, présente des besoins de digitalisation croissants.
+**Créer un site web à Blois coûte à partir de {{prix:une-page}} € et peut atteindre 2 000€ selon le prestataire et la complexité du projet.** Blois, préfecture du Loir-et-Cher (45 000 habitants, agglomération 100 000 hab.) est une ville touristique et résidentielle au cœur du Val de Loire. Son tissu économique, composé majoritairement de TPE et d'artisans, présente des besoins de digitalisation croissants.
 
 ---
 
@@ -35,10 +35,9 @@ Les tarifs pratiqués dans le Loir-et-Cher sont alignés sur le marché national
 
 | Besoin | Budget minimum | Ce qui est inclus |
 |---|---|---|
-| Site vitrine 5 pages | 449€ | Design, SEO de base, hébergement 12 mois |
-| Site multi-pages | 749€ | Jusqu'à 15 pages, blog, SEO |
-| Boutique en ligne | 1 647€ | Paiement sécurisé, gestion stocks |
-| Site association | 149€ | Fonctionnalités associatives de base |
+| Site vitrine 5 pages | À partir de {{prix:une-page}} € | Design, SEO de base, domaine offert la 1re année |
+| Site multi-pages | À partir de {{prix:multi-pages}} € | Jusqu'à 15 pages, blog, SEO |
+| Boutique en ligne | À partir de {{prix:boutique}} € | Paiement sécurisé, gestion stocks |
 
 **Attention aux offres très bas prix** : un site à 200€ est généralement un template générique, sans optimisation SEO réelle et sans code propriétaire. À ce prix, vous n'êtes souvent pas propriétaire du code.
 
@@ -46,7 +45,7 @@ Les tarifs pratiqués dans le Loir-et-Cher sont alignés sur le marché national
 
 ## Délais de livraison : ce que vous pouvez attendre
 
-Un site vitrine en 10 jours ouvrés est réalisable si votre prestataire est spécialisé et organisé. Pour y arriver, les contenus (textes, photos, logo) doivent être fournis dès le démarrage.
+Un site vitrine peut être mis en ligne rapidement si votre prestataire est spécialisé et organisé. Pour y arriver, les contenus (textes, photos, logo) doivent être fournis dès le démarrage.
 
 Les agences généralistes annoncent souvent 4 à 8 semaines — un délai qui ne reflète pas la complexité technique mais plutôt la charge de travail et l'organisation interne.
 
@@ -72,18 +71,18 @@ Si vous intervenez sur Blois et les communes environnantes (Vendôme, Romorantin
 
 ## Ce que Stackup Agency propose pour les entreprises blésoise
 
-[Stackup Agency](/tarifs) accompagne les TPE et artisans de toute la France, y compris du Loir-et-Cher, avec des sites web livrés rapidement et à des tarifs transparents.
+[Stackup Agency](/tarifs) accompagne les TPE et artisans de toute la France, y compris du Loir-et-Cher, avec des sites web sur mesure et des tarifs transparents.
 
-- [Site vitrine](/services/site-vitrine) à partir de 449€ — 10 jours ouvrés garanti
-- [Site multi-pages](/services/site-multi-pages) à partir de 749€ — 17 jours ouvrés garanti
-- Code propriétaire à 100%, hébergement 12 mois inclus
+- [Site vitrine](/services/site-vitrine) à partir de {{prix:une-page}} €
+- [Site multi-pages](/services/site-multi-pages) à partir de {{prix:multi-pages}} €
+- Code et design à vous au paiement complet, nom de domaine offert la première année, hébergement dans l'abonnement facultatif, sans engagement
 
 ---
 
 ## FAQ
 
 **Y a-t-il des prestataires web à Blois même ?**
-Oui, quelques prestataires sont implantés localement. Pour un site vitrine ou multi-pages standard, un prestataire distant spécialisé offre souvent une meilleure valeur — délais plus courts, tarifs plus compétitifs — sans inconvénient pratique (tout se fait à distance).
+Oui, quelques prestataires sont implantés localement. Pour un site vitrine ou multi-pages standard, un prestataire distant spécialisé offre souvent une meilleure valeur — tarifs plus compétitifs — sans inconvénient pratique (tout se fait à distance).
 
 **Mon activité est très liée au tourisme. Dois-je créer du contenu spécifiquement pour les touristes ?**
 Absolument. Créez des pages ou articles ciblant les recherches des touristes en planification ("que visiter à Blois", "week-end Val de Loire", "activités enfants Loir-et-Cher"). Ce contenu génère du trafic qualifié et des réservations.

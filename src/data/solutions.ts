@@ -1,3 +1,4 @@
+import { jetonsProfond } from '../lib/jetons'
 export interface Solution {
   slug: string
   nom: string
@@ -14,7 +15,7 @@ export interface Solution {
   intro: string
 }
 
-export const SOLUTIONS: Solution[] = [
+const BRUT_SOLUTIONS: Solution[] = [
   {
     slug: 'prise-rendez-vous-en-ligne',
     nom: 'Prise de rendez-vous en ligne',
@@ -51,7 +52,7 @@ export const SOLUTIONS: Solution[] = [
     exempleContexte: "Un cabinet d'ostéopathie de 2 praticiens reçoit en moyenne 80 appels téléphoniques par semaine pour des prises de rendez-vous. Chaque appel dure entre 2 et 4 minutes — soit jusqu'à 5 heures perdues par semaine à gérer l'agenda.",
     exempleFonctionnement: "Avec un système de prise de rendez-vous sur mesure, 70 à 80% des réservations se font en ligne, hors heures d'ouverture. Les rappels automatiques réduisent les no-shows de 40 à 60%. Les praticiens retrouvent du temps pour se concentrer sur leur cœur de métier.",
     faq: [
-      { q: 'Combien coûte un système de prise de rendez-vous sur mesure ?', a: "Le développement d'un système de prise de rendez-vous sur mesure chez Stackup Agency démarre à 1 447€ — le prix s'affine selon le périmètre (± 500 € autour de ce tarif dans la majorité des projets). Ce montant couvre l'interface client, le tableau de bord professionnel, les rappels automatiques et l'intégration sur votre site." },
+      { q: 'Combien coûte un système de prise de rendez-vous sur mesure ?', a: "Le développement d'un système de prise de rendez-vous sur mesure chez Stackup Agency démarre à {{prix:outil}} € — le prix exact se fixe au devis, selon les modules choisis. Ce montant couvre l'interface client, le tableau de bord professionnel, les rappels automatiques et l'intégration sur votre site." },
       { q: 'Quelle est la différence avec Doctolib ou Calendly ?', a: 'Doctolib facture une commission sur chaque rendez-vous ou un abonnement mensuel élevé. Calendly est générique et non adapté à votre activité spécifique. Notre solution est développée pour votre métier, sans commission, et vos données restent en France.' },
       { q: 'Les clients peuvent-ils annuler leur rendez-vous en ligne ?', a: "Oui. Les clients reçoivent un lien d'annulation dans leur email de confirmation. Vous pouvez configurer un délai minimal d'annulation (ex : pas d'annulation moins de 2h avant). En cas d'annulation, le créneau se libère automatiquement." },
       { q: 'Peut-on gérer plusieurs praticiens ou points de vente ?', a: "Oui. Le système peut gérer autant d'agendas que nécessaire. Chaque praticien ou espace dispose de son propre agenda avec ses créneaux, ses services et sa durée de rendez-vous." },
@@ -651,9 +652,9 @@ export const SOLUTIONS: Solution[] = [
       'Vos galeries restent en ligne tant que VOUS le décidez',
     ],
     exempleContexte: "Un photographe de mariage livre 25 galeries par an. Avec un service par abonnement à 30 €/mois, il paiera 360 € cette année, 1 800 € sur 5 ans, 3 600 € sur 10 ans — sans jamais rien posséder. Chaque hausse de tarif de la plateforme s'impose à lui.",
-    exempleFonctionnement: "Avec un système de galeries sur mesure à partir de 1 447 € (le prix s'affine selon le périmètre, ± 500 € dans la majorité des projets), l'investissement est amorti en 3 à 4 ans par rapport à l'abonnement — puis c'est terminé : plus aucun coût récurrent hors hébergement. L'outil porte votre marque, vos règles, vos quotas.",
+    exempleFonctionnement: "Avec un système de galeries sur mesure à partir de {{prix:outil}} € (le prix exact se fixe au devis, selon les modules choisis), l'investissement est amorti en 3 à 4 ans par rapport à l'abonnement — puis c'est terminé : plus aucun coût récurrent hors hébergement. L'outil porte votre marque, vos règles, vos quotas.",
     faq: [
-      { q: 'Combien coûte un système de galeries clients sur mesure ?', a: "À partir de 1 447 € — le prix s'affine selon le périmètre (± 500 € autour de ce tarif dans la majorité des projets). À comparer aux 240-480 €/an d'un abonnement type Pixieset : l'investissement est généralement amorti en 3 à 4 ans, puis l'outil ne coûte plus que son hébergement." },
+      { q: 'Combien coûte un système de galeries clients sur mesure ?', a: "À partir de {{prix:outil}} € — le prix exact se fixe au devis, selon les modules choisis. À comparer aux 240-480 €/an d'un abonnement type Pixieset : l'investissement est généralement amorti en 3 à 4 ans, puis l'outil ne coûte plus que son hébergement." },
       { q: 'Qu\'est-ce que je perds par rapport à Pixieset ?', a: "Honnêtement : la boutique de tirages intégrée avec labo partenaire automatisé est le point fort des plateformes. Sur mesure, la vente de tirages passe par vos propres partenaires labo — sans commission, mais avec un envoi manuel ou semi-automatisé selon le périmètre choisi. Pour le reste (galeries privées, favoris, filigrane, téléchargements), vous ne perdez rien et vous gagnez la propriété." },
       { q: 'Mes galeries existantes peuvent-elles être migrées ?', a: 'Oui. Les photos sont réimportées dans votre nouveau système, galerie par galerie. Nous préparons la migration avec vous pour que vos clients en cours ne perdent aucun accès.' },
       { q: 'Le système gère-t-il les favoris et la sélection client ?', a: "Oui. Vos clients marquent leurs favoris directement dans la galerie ; vous récupérez la liste pour les retouches, l'album ou les tirages. C'est le même flux de travail que sur les plateformes d'abonnement." },
@@ -665,3 +666,5 @@ export const SOLUTIONS: Solution[] = [
 export function getSolution(slug: string): Solution | undefined {
   return SOLUTIONS.find(s => s.slug === slug)
 }
+
+export const SOLUTIONS: Solution[] = jetonsProfond(BRUT_SOLUTIONS)

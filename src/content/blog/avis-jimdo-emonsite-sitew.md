@@ -64,19 +64,19 @@ Pour un budget très serré (moins de 15 €/mois) et un besoin strictement basi
 
 | | Éditeur low-cost (~12 €/mois en moyenne) | Site sur mesure |
 |---|---|---|
-| Coût sur 5 ans | ~720 € | 449 € à 1 647 € une fois |
+| Coût sur 5 ans | ~720 € | Achat unique (à partir de {{prix:une-page}} €), puis abonnement facultatif |
 | Propriété du site | Non | Oui |
 | Performances SEO | Limitées | Optimales |
 | Évolutivité | Restreinte | Totale |
 
-Même sur ces plans d'entrée particulièrement accessibles, le coût cumulé sur 5 ans rejoint ou dépasse celui d'un site vitrine sur mesure — sans jamais offrir la propriété ni les performances d'un site codé spécifiquement pour l'activité.
+Même sur ces plans d'entrée particulièrement accessibles, le coût s'accumule mois après mois — sans jamais offrir la propriété ni les performances d'un site codé spécifiquement pour l'activité, alors qu'un site sur mesure est un achat unique, suivi d'un abonnement facultatif et sans engagement.
 
 ## En résumé
 
 - Jimdo, e-monsite et SiteW ciblent les petits budgets avec une interface et un support en français, à des prix souvent inférieurs à Wix.
 - Leur écosystème d'extensions et leur rendu visuel par défaut restent en retrait face aux grands constructeurs internationaux.
 - Ces solutions atteignent rapidement leurs limites dès qu'un besoin fonctionnel spécifique ou un SEO local avancé devient nécessaire.
-- Sur 5 ans, leur coût cumulé rejoint souvent celui d'un site sur mesure, sans jamais offrir la propriété du site.
+- Leur coût s'accumule mois après mois sans jamais offrir la propriété du site, alors qu'un site sur mesure est un achat unique, suivi d'un abonnement facultatif.
 
 ## Questions fréquentes
 

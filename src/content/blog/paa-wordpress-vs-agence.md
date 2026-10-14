@@ -9,7 +9,7 @@ category: "creation"
 keywords: ["WordPress vs agence web", "faire site soi-même", "WordPress ou prestataire", "créer site WordPress seul"]
 ---
 
-**Créer son site WordPress soi-même semble gratuit. En pratique, ça coûte entre 80€ et 500€/an, plus 40 à 80 heures de votre temps.** Faire appel à une agence ou un prestataire coûte entre 449€ et 3 000€ une seule fois. Selon votre situation, l'un ou l'autre est plus pertinent.
+**Créer son site WordPress soi-même semble gratuit. En pratique, ça coûte entre 80€ et 500€/an, plus 40 à 80 heures de votre temps.** Faire appel à une agence ou un prestataire coûte à partir de {{prix:une-page}} €, en achat unique, avec un abonnement mensuel facultatif ensuite pour l'hébergement et la maintenance. Selon votre situation, l'un ou l'autre est plus pertinent.
 
 Voici la comparaison honnête.
 
@@ -48,19 +48,18 @@ WordPress est la cible numéro un des hackers parmi les CMS. Des mises à jour r
 
 ## Ce que coûte un prestataire web
 
-### Site vitrine sur mesure (449€ à 1 500€)
+### Site vitrine sur mesure (à partir de {{prix:une-page}} €)
 
-- Livré en 10 jours ouvrés (Stackup Agency : 10 jours ouvrés garanti)
 - Design personnalisé
 - SEO de base inclus
-- Hébergement 1ère année inclus
+- Nom de domaine offert la première année
 - SSL inclus
 - Zero temps de votre côté (hors fourniture des contenus)
 
 ### Maintenance annuelle ensuite
 
-Après la première année, les coûts courants sont :
-- Hébergement : inclus dans un plan de maintenance ou ~100€/an en autonomie
+Après la mise en ligne, les coûts courants sont :
+- Hébergement : dans l'abonnement mensuel facultatif de l'agence (sans engagement), ou ~100€/an en autonomie
 - Maintenance technique : 0€ (si vous gérez) à 500€+/an (si vous externalisez)
 
 ---
@@ -69,15 +68,15 @@ Après la première année, les coûts courants sont :
 
 | | WordPress soi-même | Prestataire |
 |---|---|---|
-| Coût de création | 0€ (mais 40h de votre temps) | 449€ (10h de votre temps) |
-| Coûts récurrents an 1 | 120€ + mises à jour | Inclus |
-| Coûts récurrents an 2 | 120€ + mises à jour | 100-350€/an |
-| Coûts récurrents an 3 | 120€ + mises à jour | 100-350€/an |
-| **Total 3 ans (coûts directs)** | **~360€ + votre temps** | **~649-1 050€** |
+| Coût de création | 0€ (mais 40h de votre temps) | À partir de {{prix:une-page}} € (10h de votre temps) |
+| Coûts récurrents an 1 | 120€ + mises à jour | Abonnement facultatif, sans engagement |
+| Coûts récurrents an 2 | 120€ + mises à jour | Abonnement facultatif, sans engagement |
+| Coûts récurrents an 3 | 120€ + mises à jour | Abonnement facultatif, sans engagement |
+| **Total 3 ans (coûts directs)** | **~360€ + votre temps** | **Achat unique, puis abonnement facultatif selon ce que vous choisissez** |
 | **Qualité du résultat** | Variable | Prévisible |
 | **Risque de sécurité** | Élevé si mal maintenu | Faible |
 
-Sur 3 ans, la différence de coût direct est faible (300 à 700€). La vraie différence est dans le temps investi et la fiabilité du résultat.
+Sur 3 ans, la vraie différence est dans le temps investi et la fiabilité du résultat.
 
 ---
 
@@ -128,7 +127,7 @@ Avec beaucoup de travail d'optimisation, oui. En pratique, les sites WordPress s
 Oui. Votre contenu peut être exporté (textes, images). Le design devra être refait. Si votre domaine est à votre nom chez un registrar (OVH, Gandi), le transfert est simple.
 
 **Y a-t-il un risque de se retrouver bloqué avec un prestataire ?**
-Oui, si le prestataire est propriétaire de votre code. Vérifiez que le contrat stipule explicitement que vous êtes propriétaire du code à 100% à la livraison. Chez Stackup Agency, c'est systématiquement le cas.
+Oui, si le prestataire est propriétaire de votre code. Vérifiez que le contrat stipule explicitement que vous êtes propriétaire du code à 100% à la livraison. Chez Stackup Agency, le code et le design vous appartiennent au paiement complet.
 
 **WordPress.com est-il différent de WordPress.org ?**
 Complètement. WordPress.org est le logiciel libre que vous installez sur votre hébergeur. WordPress.com est une plateforme hébergée avec des limitations importantes (pas de plugins personnalisés sur les plans bas de gamme). Pour un site professionnel, c'est WordPress.org qu'on utilise.

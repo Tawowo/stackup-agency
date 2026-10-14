@@ -86,7 +86,7 @@ Requêtes à cibler :
 
 ## Tarifs pour un site de maçon
 
-Notre [formule site vitrine à 449€](/tarifs) convient pour un site de maçon avec pages de services, réalisations, certifications et formulaire de devis. Livraison garantie en [10 jours ouvrés](/tarifs).
+Notre [formule site vitrine à partir de {{prix:une-page}} €](/tarifs) convient pour un site de maçon avec pages de services, réalisations, certifications et formulaire de devis.
 
 ---
 
@@ -102,7 +102,7 @@ Photographiez vos propres chantiers avec un smartphone récent en bonne lumière
 La certification Qualibat permet d'être référencé sur l'annuaire Qualibat.com et d'autres annuaires officiels — ce qui génère des liens entrants de qualité vers votre site. Ces liens renforcent indirectement votre SEO.
 
 **Faut-il une page séparée pour chaque commune d'intervention ?**
-Si vous intervenez sur de nombreuses communes, des pages spécifiques ("maçon Blois", "maçon Vendôme", "maçon Romorantin") améliorent votre visibilité sur chacune. La [formule multi-pages à 749€](/tarifs) est adaptée pour ce besoin.
+Si vous intervenez sur de nombreuses communes, des pages spécifiques ("maçon Blois", "maçon Vendôme", "maçon Romorantin") améliorent votre visibilité sur chacune. La [formule multi-pages à partir de {{prix:multi-pages}} €](/tarifs) est adaptée pour ce besoin.
 
 **Mon site doit-il mentionner les aides à la rénovation (MaPrimeRénov') ?**
 Si vous réalisez des travaux éligibles aux aides, le mentionner sur votre site attire des clients qui cherchent "travaux éligibles MaPrimeRénov [ville]". C'est un argument commercial fort en 2026.

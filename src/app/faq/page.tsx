@@ -11,6 +11,7 @@ import Accordeon from '@/components/editorial/Accordeon'
 import Action from '@/components/ui/Action'
 import { SITE, formatAPartirDe } from '@/config/site'
 import { LIGNES } from '@/config/tarifs.generated'
+import { PRIX_PUBLICS } from '@/config/prix-publics.generated'
 import { exemplesAbonnement } from '@/domain/devis/offres'
 import { conforme } from '@/lib/conformite'
 import { JsonLd, faqPage, filAriane, meta } from '@/lib/seo'
@@ -23,6 +24,7 @@ export const metadata = meta({
 })
 
 const C = SITE.conditions
+const paiement4 = PRIX_PUBLICS.paiement4FoisDes.toLocaleString('fr-FR')
 const aboMin = exemplesAbonnement()[0]!.mensuel
 const rapport = LIGNES.find((l) => l.code === 'A17')
 const offres = SITE.offres.map((o) => `${o.nom} : ${formatAPartirDe(o)}`).join(' ; ')
@@ -68,7 +70,7 @@ const THEMES: { id: string; titre: string; questions: { q: string; r: string }[]
       },
       {
         q: 'Comment se déroule le paiement ?',
-        r: `${C.acomptePourcent} % d’acompte à la commande, ${C.soldePourcent} % à la livraison. Par virement, carte bancaire ou PayPal. ${SITE.mentions.tva}.`,
+        r: `${C.acomptePourcent} % d’acompte à la signature du devis, le solde à la livraison (en deux fois), ou ${C.acomptePourcent} % à la signature, 30 % à la maquette et 30 % à la livraison (en trois fois). Au-delà de ${paiement4} €, un paiement en quatre fois est possible. ${SITE.mentions.tva}.`,
       },
       {
         q: 'Existe-t-il des aides pour financer mon site ?',
@@ -89,7 +91,7 @@ const THEMES: { id: string; titre: string; questions: { q: string; r: string }[]
         r: 'Par défaut sur Vercel, une plateforme d’hébergement professionnelle, en HTTPS. Le code étant à vous, un autre hébergeur reste possible : le choix se discute au devis.',
       },
       {
-        q: 'Que se passe-t-il après les 12 mois d’hébergement inclus ?',
+        q: 'Que se passe-t-il après la première année ?',
         r: `Deux possibilités : un abonnement composé selon vos besoins, à partir d’environ ${aboMin} € par mois pour un site d’une page, ou la reprise de votre code pour l’héberger vous-même. Le nom de domaine, offert la première année, reste ensuite à votre charge, sauf abonnement actif : il est alors inclus.`,
       },
       {
@@ -108,7 +110,7 @@ const THEMES: { id: string; titre: string; questions: { q: string; r: string }[]
     questions: [
       {
         q: 'Le référencement est-il inclus ?',
-        r: 'Un référencement de base est compris dans chaque projet : balises titre et description, structure HTML sémantique, données structurées, plan du site XML, pages rapides et adaptées au mobile.',
+        r: 'Il se choisit : de « Être trouvé par votre nom » à « Être trouvé partout en France », en cinq niveaux, plus une visibilité dans les IA et des modules à la carte. Le détail est sur la page référencement. Aucun positionnement ne peut être garanti : cela dépend de la concurrence, du temps et de Google.',
       },
       {
         q: 'Proposez-vous un suivi du référencement ?',
@@ -116,7 +118,7 @@ const THEMES: { id: string; titre: string; questions: { q: string; r: string }[]
       },
       {
         q: 'Comment être visible localement ?',
-        r: 'Chaque site est préparé pour la recherche locale : données structurées d’entreprise locale, plan d’accès, et des pages pensées pour votre ville et votre département.',
+        r: 'Avec le niveau « Être trouvé dans votre ville » (ou plus large) : mots-clés locaux, fiche Google, pages pensées pour votre ville. Vous le choisissez dans l’estimateur ou sur la page référencement.',
       },
     ],
   },

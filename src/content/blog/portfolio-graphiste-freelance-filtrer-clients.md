@@ -67,7 +67,7 @@ Oui, garder uniquement les projets représentatifs de l'activité et du style ac
 En donnant du contexte à chaque projet et en assumant un positionnement clair, ce qui attire naturellement des demandes alignées et décourage les demandes hors cible.
 
 **Quel est le budget pour un site portfolio de graphiste freelance sur mesure ?**
-À partir de 449 € pour un site vitrine, livré en 10 jours ouvrés, avec une structure pensée pour mettre en valeur chaque projet individuellement.
+À partir de {{prix:une-page}} € pour un site vitrine, avec une structure pensée pour mettre en valeur chaque projet individuellement.
 
 ---
 

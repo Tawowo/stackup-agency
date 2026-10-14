@@ -17,7 +17,7 @@ C'est l'erreur la plus coûteuse. Un commerce sans site web est invisible pour t
 
 **Ce que ça vous coûte** : un consommateur qui ne trouve pas votre site (ou qui tombe sur un site qui ressemble à celui d'une entreprise fermée) passe directement à votre concurrent le mieux référencé.
 
-**La solution** : un site vitrine professionnel, même simple, suffit pour la majorité des petits commerces. Il doit afficher vos horaires, votre adresse, vos services, vos photos et un moyen de contact. Mis à jour une fois par an, il fait le job. Découvrez nos [offres de création de site vitrine](/services/site-vitrine) à partir de 449€, livrées en 10 jours.
+**La solution** : un site vitrine professionnel, même simple, suffit pour la majorité des petits commerces. Il doit afficher vos horaires, votre adresse, vos services, vos photos et un moyen de contact. Mis à jour une fois par an, il fait le job. Découvrez nos [offres de création de site vitrine](/services/site-vitrine) à partir de {{prix:une-page}} €.
 
 ## Erreur n°2 : Google My Business non revendiqué ou mal renseigné
 
@@ -73,4 +73,4 @@ La bonne nouvelle : aucune de ces corrections n'est irréalisable. La plupart pe
 
 ---
 
-*Vous avez identifié l'une de ces erreurs dans votre commerce ? Découvrez nos [offres adaptées aux commerces locaux](/services/site-vitrine) et obtenez un devis gratuit sous 72h.*
+*Vous avez identifié l'une de ces erreurs dans votre commerce ? Découvrez nos [offres adaptées aux commerces locaux](/services/site-vitrine) et prenez rendez-vous pour un appel découverte gratuit de 30 minutes.*

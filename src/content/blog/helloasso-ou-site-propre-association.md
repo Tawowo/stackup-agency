@@ -22,7 +22,7 @@ En revanche, HelloAsso n'est pas conçu pour être le site vitrine d'une associa
 | Critère | HelloAsso | Site internet propre |
 |---|---|---|
 | Rôle principal | Collecte de paiements (dons, adhésions, billetterie) | Vitrine, présentation, référencement, communication |
-| Coût | Gratuit, financé par pourboires volontaires du payeur | À partir de 149 €, achat unique |
+| Coût | Gratuit, financé par pourboires volontaires du payeur | À partir de {{prix:une-page}} €, achat unique |
 | Identité visuelle | Charte imposée par la plateforme | Personnalisée à l'image de l'association |
 | Nom de domaine | Sous-domaine helloasso.com | Nom de domaine propre, offert la 1ʳᵉ année |
 | Référencement Google | Très limité, page noyée parmi des milliers d'autres | Optimisable pour apparaître sur les recherches locales |
@@ -36,7 +36,7 @@ Cette combinaison évite l'écueil le plus fréquent observé chez les associati
 
 ## Quand un module de paiement intégré au site devient pertinent
 
-Pour une association qui gère un volume significatif d'adhésions ou d'événements payants, intégrer directement le paiement en ligne au site plutôt que de renvoyer systématiquement vers une plateforme externe simplifie le parcours du membre : une seule adresse, une seule interface, sans rupture visuelle entre le site et le formulaire de paiement. L'offre Site Association de Stackup Agency inclut ce formulaire de contact et d'adhésion en ligne dès la livraison, sans dépendance à un service tiers pour la collecte de base.
+Pour une association qui gère un volume significatif d'adhésions ou d'événements payants, intégrer directement le paiement en ligne au site plutôt que de renvoyer systématiquement vers une plateforme externe simplifie le parcours du membre : une seule adresse, une seule interface, sans rupture visuelle entre le site et le formulaire de paiement. Un site Stackup Agency, d'une page ou multi-pages, peut intégrer un formulaire de contact et d'adhésion en ligne, sans dépendance à un service tiers pour la collecte de base.
 
 Cela n'exclut pas de continuer à utiliser HelloAsso pour des cas spécifiques comme les cagnottes ponctuelles ou les événements qui bénéficient de sa visibilité propre au sein de sa communauté d'utilisateurs.
 
@@ -70,7 +70,7 @@ Rarement pour des recherches précises liées à l'association, car la page est 
 Non, une interface d'administration simple permet de mettre à jour les événements et actualités sans connaissance technique, avec une formation incluse à la livraison.
 
 **Quel est le budget minimum pour un site propre d'association ?**
-À partir de 149 €, livré en 7 jours ouvrés, un montant pensé pour rester compatible avec les budgets associatifs les plus serrés.
+À partir de {{prix:une-page}} € pour un site d'une page, en achat unique ; le prix exact se fixe au devis, selon ce que vous choisissez. Un abonnement facultatif, sans engagement, peut s'y ajouter pour l'hébergement et la maintenance.
 
 ---
 

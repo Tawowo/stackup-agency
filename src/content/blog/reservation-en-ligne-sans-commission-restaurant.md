@@ -63,7 +63,7 @@ Oui, en partie — TheFork agrège une audience qui cherche un restaurant sans i
 Oui, à condition que le volume de réservations en ligne soit suffisant pour justifier l'investissement plutôt qu'une simple gestion téléphonique.
 
 **Combien coûte un système de réservation sur mesure ?**
-À partir de 1 447 €, prix affiné selon le périmètre exact (créneaux, grandes tablées, intégration à la fiche Google), acheté une fois.
+À partir de {{prix:outil}} €, prix affiné selon le périmètre exact (créneaux, grandes tablées, intégration à la fiche Google), acheté une fois.
 
 **Peut-on garder une présence sur TheFork tout en ayant son propre système ?**
 Oui, certains restaurants gardent une présence réduite sur la plateforme pour la visibilité, tout en orientant leur communication propre (site, réseaux, fiche Google) vers leur système sans commission.

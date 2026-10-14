@@ -38,7 +38,7 @@ Instagram excelle pour construire une communauté, montrer les coulisses du mét
 | Contrôle du contenu et de l'audience | Limité (règles de la plateforme) | Total |
 | Risque de disparition du compte | Réel (suspension, piratage) | Aucun (hébergement propre) |
 | Conversion en demande de devis | Faible (friction du lien en bio) | Directe (formulaire qualifiant) |
-| Coût | Gratuit | À partir de 449 € |
+| Coût | Gratuit | À partir de {{prix:une-page}} € |
 
 ## Le bon usage : les deux ensemble, pas l'un contre l'autre
 
@@ -48,14 +48,14 @@ Concrètement : un photographe qui ne vit que d'Instagram laisse filer toutes le
 
 ## À quel moment investir dans un site quand on démarre
 
-Pour un photographe qui débute, la priorité immédiate est souvent de construire un book — Instagram peut servir de vitrine temporaire le temps des premières prestations. Mais dès que l'activité vise une clientèle qui cherche activement un photographe (mariage, portrait professionnel, immobilier), un site vitrine devient la priorité : c'est le seul canal qui capte cette recherche d'intention. Un site vitrine à partir de 449 €, livré en 10 jours ouvrés, suffit à démarrer sérieusement sans attendre d'avoir « assez » de travail à montrer.
+Pour un photographe qui débute, la priorité immédiate est souvent de construire un book — Instagram peut servir de vitrine temporaire le temps des premières prestations. Mais dès que l'activité vise une clientèle qui cherche activement un photographe (mariage, portrait professionnel, immobilier), un site vitrine devient la priorité : c'est le seul canal qui capte cette recherche d'intention. Un site vitrine à partir de {{prix:une-page}} € suffit à démarrer sérieusement sans attendre d'avoir « assez » de travail à montrer.
 
 ## En résumé
 
 - Instagram capte l'attention d'une audience déjà acquise ; un site capte l'intention de recherche active.
 - L'algorithme, la dépendance à la plateforme et le risque de disparition du compte limitent structurellement Instagram comme canal principal.
 - Le bon calcul combine les deux : Instagram pour la relation et la notoriété, le site pour la conversion et le référencement.
-- Un site vitrine à partir de 449 € suffit à capter les recherches Google dès le démarrage de l'activité.
+- Un site vitrine à partir de {{prix:une-page}} € suffit à capter les recherches Google dès le démarrage de l'activité.
 
 ## Questions fréquentes
 

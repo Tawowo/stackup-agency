@@ -1,6 +1,6 @@
 ---
 title: "Site d'association loi 1901 : le guide complet"
-excerpt: "Adhésions, dons, bénévoles, calendrier, subventions, RGPD : tout ce qu'un site d'association loi 1901 doit couvrir, avec les bonnes pratiques et les coûts réels, à partir de 149 €."
+excerpt: "Adhésions, dons, bénévoles, calendrier, subventions, RGPD : tout ce qu'un site d'association loi 1901 doit couvrir, avec les bonnes pratiques et les coûts réels, à partir de {{prix:une-page}} €."
 date: "2026-08-17"
 publishAt: "2027-01-12"
 readTime: 18
@@ -9,7 +9,7 @@ category: "associations"
 keywords: ["site association loi 1901", "site internet association", "creer site web association", "site association guide complet"]
 ---
 
-**Un site d'association loi 1901 utile combine cinq fonctions : une présentation claire de la mission, un formulaire d'adhésion et de don en ligne, un calendrier des événements, un espace de recrutement des bénévoles, et une conformité RGPD sur les données collectées — l'ensemble tient dans une offre à partir de 149 €, livrée en 7 jours ouvrés.** Ce guide couvre chacune de ces briques, dans l'ordre où une association gagne à les mettre en place.
+**Un site d'association loi 1901 utile combine cinq fonctions : une présentation claire de la mission, un formulaire d'adhésion et de don en ligne, un calendrier des événements, un espace de recrutement des bénévoles, et une conformité RGPD sur les données collectées — l'ensemble se construit sur un site une page ou multi-pages, à partir de {{prix:une-page}} €.** Ce guide couvre chacune de ces briques, dans l'ordre où une association gagne à les mettre en place.
 
 ## Pourquoi une association a besoin d'un site, même petite
 
@@ -57,9 +57,9 @@ Au-delà de ces fonctions destinées au public, un site internet tenu à jour se
 
 Une association qui collecte des adhésions, des dons ou des candidatures de bénévoles traite des données personnelles au sens du RGPD, exactement comme n'importe quelle organisation. Le [minimum vital à respecter](/blog/rgpd-association-minimum-vital) : informer clairement les personnes de l'usage de leurs données, sécuriser l'accès aux fichiers sensibles, et limiter la conservation dans le temps — avec une vigilance renforcée pour les associations qui accueillent des mineurs (clubs sportifs, centres de loisirs).
 
-## Combien coûte un site d'association, et pour quel délai
+## Combien coûte un site d'association
 
-L'offre Site Association de Stackup Agency est **à partir de 149 €, livrée en 7 jours ouvrés**, un tarif pensé pour rester compatible avec les budgets serrés des structures associatives. Elle inclut le formulaire de contact et d'adhésion en ligne, le nom de domaine offert la première année, et une formation à l'administration du contenu pour que les bénévoles puissent gérer eux-mêmes les événements et actualités, sans dépendre d'un prestataire à chaque mise à jour. Toutes les pièces justificatives nécessaires (devis, facture, description des prestations) peuvent être fournies pour une éventuelle demande de subvention numérique.
+Une association prend le site une page ou multi-pages comme tout le monde : **à partir de {{prix:une-page}} €** pour une page, **à partir de {{prix:multi-pages}} €** pour plusieurs pages. Le prix exact se fixe au devis, selon ce que vous choisissez (formulaire de contact et d'adhésion en ligne, par exemple). Le nom de domaine est offert la première année, et une formation à l'administration du contenu pour que les bénévoles puissent gérer eux-mêmes les événements et actualités, sans dépendre d'un prestataire à chaque mise à jour. Toutes les pièces justificatives nécessaires (devis, facture, description des prestations) peuvent être fournies pour une éventuelle demande de subvention numérique.
 
 ## Qui gère le site une fois livré, quand les bénévoles changent chaque année
 
@@ -76,14 +76,14 @@ Une préoccupation fréquente des associations, particulièrement celles dont le
 ## En résumé
 
 - Un site d'association utile combine présentation de la mission, adhésions en ligne, dons, calendrier et recrutement de bénévoles.
-- L'offre Site Association démarre à 149 €, livrée en 7 jours ouvrés, avec formation incluse pour une gestion autonome par les bénévoles.
+- Une association prend le site une page ou multi-pages, à partir de {{prix:une-page}} €, avec une formation à l'administration pour une gestion autonome par les bénévoles.
 - Le site sert aussi de support direct pour les dossiers de subvention, grâce à une page d'historique des actions tenue à jour.
 - La conformité RGPD sur les données des adhérents, donateurs et bénévoles reste obligatoire, avec une vigilance renforcée pour les mineurs.
 
 ## Questions fréquentes
 
 **Quel budget prévoir pour un site d'association complet ?**
-À partir de 149 € pour une livraison en 7 jours ouvrés, incluant le formulaire d'adhésion et le nom de domaine offert la première année.
+À partir de {{prix:une-page}} € pour un site d'une page, le prix exact se fixant au devis selon ce que vous choisissez (formulaire d'adhésion, par exemple). Le nom de domaine est offert la première année.
 
 **Un site est-il vraiment utile pour une toute petite association locale ?**
 Oui, dès qu'elle organise des événements ou recherche des membres au-delà de son cercle immédiat — le site touche un public que le bouche-à-oreille n'atteint pas.
@@ -95,8 +95,8 @@ Non, l'interface d'administration est conçue pour être utilisée sans connaiss
 Oui, une nouvelle brique (module de don, calendrier enrichi, espace bénévoles) peut être ajoutée au fil du temps selon l'évolution de l'association.
 
 **Combien de temps avant que le site soit en ligne ?**
-7 jours ouvrés à partir de la validation du projet, un délai pensé pour permettre une mise en ligne rapide, y compris avant un événement important comme la rentrée associative.
+Le calendrier se cale avec vous au moment du devis, en fonction de la date à laquelle vous avez besoin du site, par exemple avant un événement important comme la rentrée associative.
 
 ---
 
-*Pour aller plus loin : [Adhésions en ligne](/blog/adhesions-en-ligne-association) · [HelloAsso ou site propre](/blog/helloasso-ou-site-propre-association) · [Recruter des bénévoles via son site](/blog/recruter-benevoles-site-association) · [Notre offre Site Association](/services/site-association)*
+*Pour aller plus loin : [Adhésions en ligne](/blog/adhesions-en-ligne-association) · [HelloAsso ou site propre](/blog/helloasso-ou-site-propre-association) · [Recruter des bénévoles via son site](/blog/recruter-benevoles-site-association) · [Créer le site de votre association](/services/site-association)*

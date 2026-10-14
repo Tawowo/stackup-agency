@@ -9,7 +9,7 @@ category: "creation-sites"
 keywords: ["restaurant site ou reseaux", "site web restaurant", "instagram ou site restaurant", "référencement restaurant Google"]
 ---
 
-**Réponse directe :** les réseaux sociaux et le site web ne jouent pas le même rôle et se complètent plutôt qu'ils ne s'opposent. Instagram et Facebook servent à créer l'envie et fidéliser une communauté déjà conquise ; le site web capte les recherches Google ("restaurant [ville]") où se prend la décision de réserver, et reste votre seule vitrine que vous possédez et contrôlez entièrement. Pour un budget serré, un site vitrine à partir de 449 € doit précéder ou accompagner l'investissement en réseaux sociaux, pas le suivre.
+**Réponse directe :** les réseaux sociaux et le site web ne jouent pas le même rôle et se complètent plutôt qu'ils ne s'opposent. Instagram et Facebook servent à créer l'envie et fidéliser une communauté déjà conquise ; le site web capte les recherches Google ("restaurant [ville]") où se prend la décision de réserver, et reste votre seule vitrine que vous possédez et contrôlez entièrement. Pour un budget serré, un site vitrine à partir de {{prix:une-page}} € doit précéder ou accompagner l'investissement en réseaux sociaux, pas le suivre.
 
 ---
 
@@ -107,13 +107,13 @@ Les restaurants sont un des secteurs les plus cherchés localement sur Google. P
 
 ## Budget et options pour un site de restaurant
 
-| Option | Budget | Délai | Autonomie |
-|---|---|---|---|
-| Site vitrine simple (menu statique) | 449€ | 10 jours ouvrés | Faible |
-| Site multi-pages (menu + réservation) | 749€ | 17 jours ouvrés | Moyenne |
-| Site avec espace admin (mise à jour menu autonome) | 1 447€ | 21 jours ouvrés | Élevée |
+| Option | Budget | Autonomie |
+|---|---|---|
+| Site vitrine simple (menu statique) | À partir de {{prix:une-page}} € | Faible |
+| Site multi-pages (menu + réservation) | À partir de {{prix:multi-pages}} € | Moyenne |
+| Site avec espace admin (mise à jour menu autonome) | À partir de {{prix:outil}} € | Élevée |
 
-Pour la grande majorité des restaurants indépendants, le site vitrine (449€) ou multi-pages (749€) est suffisant. La mise à jour du menu peut être gérée par votre agence web si elle change peu fréquemment.
+Pour la grande majorité des restaurants indépendants, le site vitrine (à partir de {{prix:une-page}} €) ou multi-pages (à partir de {{prix:multi-pages}} €) est suffisant. La mise à jour du menu peut être gérée par votre agence web si elle change peu fréquemment.
 
 ---
 
@@ -127,15 +127,15 @@ Les deux outils répondent à des besoins différents — la question n'est pas 
 | Propriété | Dépendant de la plateforme (algorithme, changement de règles) | 100 % possédé et contrôlé |
 | Visible sur "restaurant [ville]" | Rarement | C'est son rôle premier |
 | Menu, horaires, réservation | Difficiles à structurer clairement | Toujours accessibles et à jour |
-| Budget de départ | Temps (contenu régulier) ou budget pub | À partir de 449 €, une fois |
+| Budget de départ | Temps (contenu régulier) ou budget pub | À partir de {{prix:une-page}} €, une fois |
 
-**Pour un restaurant qui démarre avec un budget limité**, le site vitrine à 449 € reste prioritaire : c'est lui qui capte les recherches Google où se prend la décision finale de réserver, et il fonctionne même sans production de contenu régulière. Les réseaux sociaux viennent ensuite, en complément, pour construire la fidélité et le bouche-à-oreille digital — un sujet détaillé dans notre [stratégie Instagram pour restaurant](/blog/instagram-restaurant-strategie).
+**Pour un restaurant qui démarre avec un budget limité**, le site vitrine à partir de {{prix:une-page}} € reste prioritaire : c'est lui qui capte les recherches Google où se prend la décision finale de réserver, et il fonctionne même sans production de contenu régulière. Les réseaux sociaux viennent ensuite, en complément, pour construire la fidélité et le bouche-à-oreille digital — un sujet détaillé dans notre [stratégie Instagram pour restaurant](/blog/instagram-restaurant-strategie).
 
 ## En résumé
 
 - Le site web et les réseaux sociaux répondent à des besoins différents : conversion sur Google d'un côté, fidélisation d'une communauté de l'autre.
 - Un site web reste votre seule vitrine réellement possédée, non soumise aux changements d'algorithme d'une plateforme tierce.
-- Pour un budget de départ limité, le site vitrine à 449 € est prioritaire sur l'investissement en réseaux sociaux.
+- Pour un budget de départ limité, le site vitrine à partir de {{prix:une-page}} € est prioritaire sur l'investissement en réseaux sociaux.
 - Les deux canaux se renforcent mutuellement une fois en place : le site convertit les recherches, les réseaux entretiennent la relation entre deux visites.
 
 ---

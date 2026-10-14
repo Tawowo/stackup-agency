@@ -12,6 +12,8 @@ const nouvelles = [
   { source: '/configurateur', destination: '/tarifs#estimer', permanent: true },
   { source: '/devis', destination: '/tarifs#estimer', permanent: true },
   { source: '/outils/studio-de-style', destination: '/tarifs#estimer', permanent: true },
+  { source: '/blog/site-vitrine-449-inclus', destination: '/blog/site-vitrine-inclus', permanent: true },
+  { source: '/blog/idee-mise-en-ligne-10-jours-methode', destination: '/blog/idee-mise-en-ligne-methode', permanent: true },
   { source: '/tarifs/:plan', destination: '/tarifs', permanent: true },
   { source: '/services/marketing-digital', destination: '/services', permanent: true },
   { source: '/services/maintenance-support', destination: '/tarifs', permanent: true },

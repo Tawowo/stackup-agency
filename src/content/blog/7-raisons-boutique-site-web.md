@@ -67,19 +67,19 @@ Un commerçant avec 150 avis 4,8 étoiles visible sur son site inspire immédiat
 
 | Investissement | Coût indicatif | Effet dans le temps |
 |---|---|---|
-| Site vitrine sur mesure (449 € à 1 500 €) | Une fois | Travaille 24h/24, 365 jours/an, effet cumulatif |
+| Site vitrine sur mesure (à partir de {{prix:une-page}} €) | Une fois | Travaille 24h/24, 365 jours/an, effet cumulatif |
 | Publicité dans un journal local | 300 à 800 €/insertion | Ponctuel, sans effet cumulatif |
 | Stand sur un salon | 500 à 2 000 € pour 2 jours | Ponctuel |
-| Boutique en ligne (à partir de 1 647 €) | Une fois | Vente au-delà de la zone de chalandise locale |
+| Boutique en ligne (à partir de {{prix:boutique}} €) | Une fois | Vente au-delà de la zone de chalandise locale |
 
-Un site professionnel pour une boutique démarre à 449 € (site vitrine, 10 jours ouvrés), avec un domaine offert la première année. Contrairement à une publicité ponctuelle, c'est un investissement unique qui continue de travailler des mois, voire des années après sa mise en ligne.
+Un site professionnel pour une boutique démarre à partir de {{prix:une-page}} € (site vitrine), avec un domaine offert la première année. Contrairement à une publicité ponctuelle, c'est un investissement unique qui continue de travailler des mois, voire des années après sa mise en ligne.
 
 ## En résumé
 
 - 78 % des recherches locales aboutissent à une visite en boutique — sans site visible, ces recherches se terminent chez un concurrent.
 - Un site web reste accessible 24h/24 pour répondre aux questions pratiques (stock, horaires, livraison) même en dehors des heures d'ouverture.
 - Contrairement aux réseaux sociaux, un site appartient entièrement au commerçant, sans dépendre d'un algorithme ou d'une suspension de compte.
-- Le retour sur investissement d'un site professionnel est généralement atteint en quelques mois, pour un coût de départ de 449 €.
+- Le retour sur investissement d'un site professionnel est généralement atteint en quelques mois, pour un coût de départ à partir de {{prix:une-page}} €.
 
 ## Questions fréquentes
 

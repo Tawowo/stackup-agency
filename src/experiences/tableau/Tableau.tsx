@@ -8,6 +8,7 @@
  * de bord son compteur (Cadran) et son graphique, tracé à la pose.
  * Les chiffres sont fictifs et affichés comme tels.
  */
+import { offre } from '@/config/site'
 import { useEffect, useMemo, useRef, useState } from 'react'
 import Link from 'next/link'
 import { useDrag } from '@use-gesture/react'
@@ -210,7 +211,7 @@ export default function Tableau() {
         <h2 id="su-tab-cat" className="su-display su-tab__cat-titre">
           Les quinze outils du catalogue
         </h2>
-        <p className="su-tab__ligne">Chacun se fabrique seul ou se branche aux autres. Développement à partir de 1 447 €, sans abonnement obligatoire.</p>
+        <p className="su-tab__ligne">Chacun se fabrique seul ou se branche aux autres. Développement à partir de {offre('outil').aPartirDe.toLocaleString('fr-FR')} €, abonnement facultatif.</p>
         <ul className="su-tab__liste">
           {SOLUTIONS.map((s) => (
             <li key={s.slug}>

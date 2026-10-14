@@ -80,7 +80,7 @@ Envoyez une newsletter régulière (une fois par mois suffit) présentant vos cr
 | Concurrence directe visible | Oui, sur le même annuaire | Non |
 | Propriété de la relation client | Non — chez Etsy | Oui, entièrement |
 | Personnalisation de la boutique | Limitée au gabarit Etsy | Totale |
-| Coût de création | Gratuit (mais commission à vie) | 449 € à 1 647 € une fois |
+| Coût de création | Gratuit (mais commission à vie) | À partir de {{prix:boutique}} €, une fois |
 
 ## En résumé
 

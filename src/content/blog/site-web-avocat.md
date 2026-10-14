@@ -108,7 +108,7 @@ Ces requêtes sont traitées par le blog. L'article qui répond à la question p
 
 ## Tarifs pour un site d'avocat
 
-Un site de cabinet d'avocats correspond généralement à notre [formule multi-pages à 749€](/tarifs) — avec les pages d'accueil, domaines d'intervention multiples, équipe, honoraires, blog et contact. Livraison garantie en [17 jours ouvrés](/tarifs).
+Un site de cabinet d'avocats correspond généralement à notre [formule multi-pages à partir de {{prix:multi-pages}} €](/tarifs) — avec les pages d'accueil, domaines d'intervention multiples, équipe, honoraires, blog et contact.
 
 ---
 

@@ -84,14 +84,14 @@ Chaque type d'événement mérite idéalement sa propre page (mariage, entrepris
 
 ## Tarifs pour un site de traiteur
 
-Notre [formule site vitrine à 449 €](/tarifs) couvre les besoins d'un traiteur qui démarre : accueil, formules, galerie, témoignages, contact/devis, livraison en 10 jours ouvrés. Pour une page dédiée par type d'événement avec un blog SEO local, la [formule multi-pages à 749 €](/services/site-multi-pages) est plus adaptée. Pour la vente de plats à emporter en click & collect, une [boutique en ligne à partir de 1 647 €](/tarifs) intègre la gestion des créneaux de retrait.
+Notre [formule site vitrine à partir de {{prix:une-page}} €](/tarifs) couvre les besoins d'un traiteur qui démarre : accueil, formules, galerie, témoignages, contact/devis. Pour une page dédiée par type d'événement avec un blog SEO local, la [formule multi-pages à partir de {{prix:multi-pages}} €](/services/site-multi-pages) est plus adaptée. Pour la vente de plats à emporter en click & collect, une [boutique en ligne à partir de {{prix:boutique}} €](/tarifs) intègre la gestion des créneaux de retrait.
 
 ## En résumé
 
 - Un traiteur sans site web laisse aux concurrents les demandes de mariages et d'événements d'entreprise, recherchées en ligne bien à l'avance.
 - Des formules structurées par type d'événement, avec un prix indicatif, qualifient les demandes avant le premier contact.
 - La galerie photo et les témoignages sont les deux éléments qui pèsent le plus sur la décision, à distance, sans avoir goûté la cuisine.
-- Le site vitrine à 449 € couvre l'essentiel ; la vente en click & collect suppose une boutique en ligne dédiée.
+- Le site vitrine à partir de {{prix:une-page}} € couvre l'essentiel ; la vente en click & collect suppose une boutique en ligne dédiée.
 
 ## FAQ
 
@@ -105,7 +105,7 @@ Proposez un ou deux événements tests à tarif réduit en échange de photos pr
 Si vous affichez des menus, mentionner les principaux allergènes (gluten, lactose, fruits à coque…) ou proposer de les adapter sur demande rassure les clients ayant des contraintes alimentaires.
 
 **Peut-on vendre des plats traiteur en ligne (click & collect) ?**
-Oui. Certains traiteurs proposent des commandes à emporter via leur site. Notre [formule e-commerce à partir de 1 647 €](/tarifs) est adaptée pour ce cas avec gestion des créneaux de retrait.
+Oui. Certains traiteurs proposent des commandes à emporter via leur site. Notre [formule e-commerce à partir de {{prix:boutique}} €](/tarifs) est adaptée pour ce cas avec gestion des créneaux de retrait.
 
 **Est-ce que les plateformes comme TheFork ou Deliveroo concernent les traiteurs ?**
 TheFork est orienté restauration sur place. Deliveroo/Uber Eats peuvent convenir pour des plats à emporter standards, mais pas pour la traitance événementielle. Votre propre site reste indispensable pour l'activité événementielle.

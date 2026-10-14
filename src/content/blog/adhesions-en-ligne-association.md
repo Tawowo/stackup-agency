@@ -53,7 +53,7 @@ Pour une association qui gère aussi l'inscription à des activités spécifique
 
 ## Ce que cela coûte de mettre ce système en place
 
-L'offre Site Association de Stackup Agency est **à partir de 149 €, livrée en 7 jours ouvrés**, et inclut le formulaire de contact et d'adhésion en ligne dès le départ — le nom de domaine est offert la première année. L'association reste propriétaire de son site et forme ses bénévoles à l'administration du contenu, pour gérer les événements et actualités en autonomie sans dépendre d'un prestataire à chaque mise à jour. Ce tarif est pensé pour rester compatible avec les budgets serrés d'une structure associative, avec les justificatifs nécessaires pour une éventuelle demande de subvention numérique.
+Une association prend chez Stackup Agency le site une page ou multi-pages, comme tout le monde : **à partir de {{prix:une-page}} €** pour une page, le prix exact se fixant au devis, selon ce que vous choisissez. Le formulaire de contact et d'adhésion en ligne peut être prévu dès le départ — le nom de domaine est offert la première année. L'association reste propriétaire de son site au paiement complet, et l'abonnement mensuel (hébergement, maintenance…) est facultatif et sans engagement. Les devis détaillés fournissent les justificatifs nécessaires pour une éventuelle demande de subvention numérique.
 
 ## En résumé
 
@@ -68,13 +68,13 @@ L'offre Site Association de Stackup Agency est **à partir de 149 €, livrée e
 Dans la majorité des cas oui, mais rien n'empêche de garder une option papier en complément pour les adhérents qui le préfèrent — l'essentiel est que l'option en ligne existe pour capter les inscriptions spontanées.
 
 **Le paiement en ligne est-il adapté à une petite association sans compétence technique ?**
-Oui, le formulaire et le paiement sont intégrés dès la livraison du site, sans configuration technique à gérer par les bénévoles au quotidien.
+Oui, le formulaire et le paiement peuvent être intégrés dès la mise en ligne du site, sans configuration technique à gérer par les bénévoles au quotidien.
 
 **Peut-on collecter des informations spécifiques à notre activité (certificat médical, taille de vêtement) ?**
 Oui, les champs du formulaire s'adaptent à l'activité de l'association — sportive, culturelle, caritative — pour collecter exactement les informations nécessaires.
 
-**Combien de temps pour mettre en place l'adhésion en ligne sur notre site ?**
-L'offre Site Association est livrée en 7 jours ouvrés, formulaire d'adhésion inclus dès la mise en ligne.
+**Comment mettre en place l'adhésion en ligne sur notre site ?**
+Le formulaire d'adhésion se prévoit dès la création du site ; le prix exact se fixe au devis, selon ce que vous choisissez.
 
 **Que devient l'ancienne liste papier des adhérents existants ?**
 Elle peut être intégrée à la base en ligne au lancement, pour repartir avec une liste unique et à jour dès la première rentrée sous le nouveau système.

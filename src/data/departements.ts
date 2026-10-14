@@ -1,3 +1,4 @@
+import { jetonsProfond } from '../lib/jetons'
 export interface Departement {
   slug: string
   nom: string
@@ -12,7 +13,7 @@ export interface Departement {
   faq: { q: string; a: string }[]
 }
 
-export const DEPARTEMENTS: Departement[] = [
+const BRUT_DEPARTEMENTS: Departement[] = [
   {
     slug: 'indre-et-loire',
     nom: 'Indre-et-Loire',
@@ -43,8 +44,8 @@ export const DEPARTEMENTS: Departement[] = [
     ],
     faq: [
       { q: 'Peut-on se rencontrer en personne en Indre-et-Loire ?', a: 'Oui. Stackup Agency est basée à Tours : pour les projets du département, un rendez-vous physique est possible, à l’agence ou dans vos locaux. Le premier rendez-vous est offert et sans engagement.' },
-      { q: 'Travaillez-vous avec les petites communes du département ?', a: 'Oui, et c’est même le cœur de notre activité : commerces de Loches, artisans de Chinon, gîtes d’Azay-le-Rideau… La création de site se fait à distance ou en rendez-vous, au même tarif partout : à partir de 449 € pour un site vitrine.' },
-      { q: 'Combien coûte un site internet en Indre-et-Loire ?', a: 'Les tarifs sont les mêmes dans tout le département : site vitrine à partir de 449 €, site multi-pages à partir de 749 €, boutique en ligne à partir de 1 647 €, système de gestion à partir de 1 447 €. Devis gratuit sous 72 h.' },
+      { q: 'Travaillez-vous avec les petites communes du département ?', a: 'Oui, et c’est même le cœur de notre activité : commerces de Loches, artisans de Chinon, gîtes d’Azay-le-Rideau… La création de site se fait à distance ou en rendez-vous, au même tarif partout : à partir de {{prix:une-page}} € pour un site vitrine.' },
+      { q: 'Combien coûte un site internet en Indre-et-Loire ?', a: 'Les tarifs sont les mêmes dans tout le département : site vitrine à partir de {{prix:une-page}} €, site multi-pages à partir de {{prix:multi-pages}} €, boutique en ligne à partir de {{prix:boutique}} €, système de gestion à partir de {{prix:outil}} €. Devis gratuit sous 72 h.' },
     ],
   },
   {
@@ -76,7 +77,7 @@ export const DEPARTEMENTS: Departement[] = [
     ],
     faq: [
       { q: 'Intervenez-vous à Orléans et dans tout le Loiret ?', a: 'Oui. La création de site se fait à distance (visio, téléphone, partage d’écran) avec la même qualité de suivi qu’en présentiel. Des déplacements à Orléans sont possibles pour les projets qui le justifient — Tours est à une heure de route.' },
-      { q: 'Quels types d’entreprises du Loiret accompagnez-vous ?', a: 'Commerces et restaurants d’Orléans métropole, artisans du Montargois et du Giennois, prestataires logistiques, professions libérales… Nos offres s’adaptent au besoin : site vitrine dès 449 €, e-commerce dès 1 647 €, gestion sur mesure dès 1 447 €.' },
+      { q: 'Quels types d’entreprises du Loiret accompagnez-vous ?', a: 'Commerces et restaurants d’Orléans métropole, artisans du Montargois et du Giennois, prestataires logistiques, professions libérales… Nos offres s’adaptent au besoin : site vitrine dès {{prix:une-page}} €, e-commerce dès {{prix:boutique}} €, gestion sur mesure dès {{prix:outil}} €.' },
       { q: 'Le tarif est-il le même qu’à Tours ?', a: 'Oui. Nos prix sont les mêmes partout en France : ils sont affichés publiquement sur notre page tarifs et n’augmentent pas selon votre localisation.' },
     ],
   },
@@ -142,7 +143,7 @@ export const DEPARTEMENTS: Departement[] = [
     faq: [
       { q: 'Pourquoi choisir une agence de Tours plutôt qu’une agence parisienne ?', a: 'Pour la même qualité technique, nos tarifs sont deux à cinq fois inférieurs aux agences parisiennes — et ils sont affichés publiquement. Le suivi à distance (visio, téléphone) est le même qu’avec un prestataire francilien, sans les tarifs franciliens.' },
       { q: 'Accompagnez-vous les PME industrielles du département ?', a: 'Oui. Sites B2B, catalogues de capacités, formulaires de demandes techniques : nous construisons des sites crédibles pour les donneurs d’ordre, avec un SEO pensé pour les requêtes métier.' },
-      { q: 'Quel est le délai pour un site vitrine en Eure-et-Loir ?', a: 'Le même que partout : à partir de 10 jours ouvrés après validation de la maquette, quel que soit votre emplacement dans le département.' },
+      { q: 'Quel est le délai pour un site vitrine en Eure-et-Loir ?', a: 'Le même que partout : le calendrier se fixe ensemble au devis, quel que soit votre emplacement dans le département. L’estimateur de la page tarifs donne un délai indicatif.' },
     ],
   },
   {
@@ -172,9 +173,9 @@ export const DEPARTEMENTS: Departement[] = [
       'Graçay', 'Massay', 'Foëcy', 'Vignoux-sur-Barangeon', 'Argent-sur-Sauldre', 'Blancafort', 'Léré', 'Belleville-sur-Loire',
     ],
     faq: [
-      { q: 'Créez-vous des sites de vente en ligne pour les vignerons ?', a: 'Oui. Vente directe de vin en ligne (avec les mentions légales alcool obligatoires), réservation de dégustations, expédition France et export : notre offre e-commerce à partir de 1 647 € couvre ces besoins, avec un devis précis selon votre gamme.' },
+      { q: 'Créez-vous des sites de vente en ligne pour les vignerons ?', a: 'Oui. Vente directe de vin en ligne (avec les mentions légales alcool obligatoires), réservation de dégustations, expédition France et export : notre offre e-commerce à partir de {{prix:boutique}} € couvre ces besoins, avec un devis précis selon votre gamme.' },
       { q: 'Travaillez-vous à distance avec les entreprises du Cher ?', a: 'Oui, intégralement : visio, téléphone, partage d’écran. C’est ce qui nous permet de servir Bourges, Vierzon ou Sancerre aux mêmes tarifs affichés que partout en France.' },
-      { q: 'Combien coûte un site vitrine à Bourges ?', a: 'À partir de 449 €, tout inclus (design sur mesure, SEO de base, hébergement 12 mois, nom de domaine offert la première année). Devis gratuit sous 72 h.' },
+      { q: 'Combien coûte un site vitrine à Bourges ?', a: 'À partir de {{prix:une-page}} €, tout inclus (design sur mesure, SEO de base, nom de domaine offert la première année). Devis gratuit sous 72 h.' },
     ],
   },
   {
@@ -184,7 +185,7 @@ export const DEPARTEMENTS: Departement[] = [
     region: 'Centre-Val de Loire',
     chefLieu: 'Châteauroux',
     intro:
-      "Dans l'Indre, où les grandes agences ne se déplacent pas, Stackup Agency apporte le même niveau de site web qu'aux entreprises des métropoles : à distance, à prix fixes, livré en 10 jours ouvrés. De Châteauroux au Blanc, d'Issoudun à La Châtre.",
+      "Dans l'Indre, où les grandes agences ne se déplacent pas, Stackup Agency apporte le même niveau de site web qu'aux entreprises des métropoles : à distance, avec des prix « à partir de » annoncés d'avance. De Châteauroux au Blanc, d'Issoudun à La Châtre.",
     economie:
       "L'Indre est un département rural et industrieux : Châteauroux garde une base aéroportuaire et logistique singulière (l'un des plus longs tarmacs d'Europe), Issoudun une tradition industrielle, et le Parc naturel de la Brenne — pays des mille étangs — nourrit un tourisme nature en croissance. C'est aussi l'un des départements les moins couverts par les prestataires web : les artisans, commerces et hébergements y font face à des offres rares, chères ou dépassées. Notre modèle 100 % à distance y prend tout son sens : mêmes tarifs, même qualité, même délai qu'en métropole.",
     metiersPhares: [
@@ -205,7 +206,7 @@ export const DEPARTEMENTS: Departement[] = [
     ],
     faq: [
       { q: 'Pourquoi peu d’agences travaillent-elles dans l’Indre ?', a: 'Les agences traditionnelles fonctionnent au rendez-vous physique et concentrent leurs efforts sur les métropoles. Notre méthode 100 % à distance supprime cette barrière : les entreprises de Châteauroux, du Blanc ou de La Châtre ont accès aux mêmes prestations, aux mêmes prix affichés.' },
-      { q: 'Comment se passe un projet à distance ?', a: 'Un appel de découverte, un devis sous 72 h, une maquette à valider, puis la livraison en 10 jours ouvrés. Tout se fait par visio, téléphone et email — vous validez chaque étape.' },
+      { q: 'Comment se passe un projet à distance ?', a: 'Un appel de découverte, la démo de votre page d’accueil, une visio de conseil, un devis détaillé, puis la création. Tout se fait par visio, téléphone et email — vous validez chaque étape.' },
       { q: 'Un gîte en Brenne a-t-il vraiment besoin d’un site ?', a: 'Le Parc de la Brenne attire une clientèle nature qui prépare ses séjours en ligne. Un site avec réservation directe évite les commissions des plateformes et capte cette clientèle en direct — souvent rentabilisé en une saison.' },
     ],
   },
@@ -237,8 +238,8 @@ export const DEPARTEMENTS: Departement[] = [
     ],
     faq: [
       { q: 'Intervenez-vous au Mans depuis Tours ?', a: 'Oui : Le Mans est à moins d’une heure de Tours. La majorité des projets sarthois se mènent entièrement à distance, avec un rendez-vous physique possible au démarrage si le projet le justifie.' },
-      { q: 'Accompagnez-vous les producteurs pour la vente en ligne ?', a: 'Oui. Vente directe de produits fermiers ou artisanaux, click & collect, expédition : notre offre e-commerce démarre à 1 647 € et se chiffre précisément au devis selon votre catalogue.' },
-      { q: 'Quels sont vos délais pour la Sarthe ?', a: 'Les mêmes que partout : site vitrine à partir de 10 jours ouvrés après validation de la maquette, devis gratuit sous 72 h.' },
+      { q: 'Accompagnez-vous les producteurs pour la vente en ligne ?', a: 'Oui. Vente directe de produits fermiers ou artisanaux, click & collect, expédition : notre offre e-commerce démarre à {{prix:boutique}} € et se chiffre précisément au devis selon votre catalogue.' },
+      { q: 'Quels sont vos délais pour la Sarthe ?', a: 'Le calendrier se fixe ensemble au devis, comme partout ; l’estimateur de la page tarifs donne un délai indicatif.' },
     ],
   },
   {
@@ -269,9 +270,9 @@ export const DEPARTEMENTS: Departement[] = [
       'Vernantes', 'Noyant-Villages', 'Beaufort-en-Anjou', 'Mazé-Milon', 'La Ménitré',
     ],
     faq: [
-      { q: 'Travaillez-vous avec les vignerons du Saumurois ?', a: 'La vente directe de vin en ligne est l’un de nos cas d’usage phares : boutique conforme (mentions alcool), réservation de dégustations, expédition. Offre e-commerce à partir de 1 647 €, devis précis selon la gamme.' },
-      { q: 'Angers est-elle dans votre zone d’intervention ?', a: 'Oui. Angers est à une heure de Tours ; le suivi se fait à distance comme pour tous nos clients, avec la même réactivité (réponse sous 72 h ouvrées, livraison en 10 jours ouvrés pour un site vitrine).' },
-      { q: 'Quels tarifs pour une entreprise du Maine-et-Loire ?', a: 'Les mêmes que partout en France, affichés publiquement : site vitrine dès 449 €, multi-pages dès 749 €, e-commerce dès 1 647 €, gestion sur mesure dès 1 447 €.' },
+      { q: 'Travaillez-vous avec les vignerons du Saumurois ?', a: 'La vente directe de vin en ligne est l’un de nos cas d’usage phares : boutique conforme (mentions alcool), réservation de dégustations, expédition. Offre e-commerce à partir de {{prix:boutique}} €, devis précis selon la gamme.' },
+      { q: 'Angers est-elle dans votre zone d’intervention ?', a: 'Oui. Angers est à une heure de Tours ; le suivi se fait à distance comme pour tous nos clients, avec la même réactivité.' },
+      { q: 'Quels tarifs pour une entreprise du Maine-et-Loire ?', a: 'Les mêmes que partout en France, affichés publiquement : site vitrine dès {{prix:une-page}} €, multi-pages dès {{prix:multi-pages}} €, e-commerce dès {{prix:boutique}} €, gestion sur mesure dès {{prix:outil}} €.' },
     ],
   },
   {
@@ -303,7 +304,7 @@ export const DEPARTEMENTS: Departement[] = [
     faq: [
       { q: 'Intervenez-vous à Poitiers depuis Tours ?', a: 'Oui : Poitiers est à une heure de Tours. Les projets de la Vienne se mènent à distance (visio, téléphone) avec la même qualité de suivi, aux mêmes tarifs affichés.' },
       { q: 'Accompagnez-vous les professions libérales ?', a: 'C’est l’une de nos spécialités : avocats, thérapeutes, experts-comptables… Un site sobre et rassurant, conforme aux règles de communication de votre profession, avec prise de rendez-vous en option.' },
-      { q: 'Quel budget prévoir pour un site dans la Vienne ?', a: 'Site vitrine à partir de 449 €, tout inclus la première année (hébergement, nom de domaine). Devis gratuit sous 72 h, prix identiques partout en France.' },
+      { q: 'Quel budget prévoir pour un site dans la Vienne ?', a: 'Site vitrine à partir de {{prix:une-page}} €, tout inclus la première année (hébergement, nom de domaine). Devis gratuit sous 72 h, prix identiques partout en France.' },
     ],
   },
   {
@@ -335,7 +336,7 @@ export const DEPARTEMENTS: Departement[] = [
     faq: [
       { q: 'Travaillez-vous avec les acteurs du tourisme du Marais poitevin ?', a: 'Oui : embarcadères, gîtes, chambres d’hôtes, loueurs de vélos… Un site avec réservation directe capte la clientèle qui prépare sa venue en ligne, sans commission de plateforme.' },
       { q: 'À quelle distance de Tours se trouvent les Deux-Sèvres ?', a: 'Niort est à environ 2 h de Tours : les projets se mènent intégralement à distance, comme pour la majorité de nos clients partout en France, avec la même réactivité.' },
-      { q: 'Quels tarifs pour les Deux-Sèvres ?', a: 'Les mêmes qu’ailleurs, affichés publiquement : site vitrine dès 449 €, e-commerce dès 1 647 €, système de gestion dès 1 447 €. Devis gratuit sous 72 h.' },
+      { q: 'Quels tarifs pour les Deux-Sèvres ?', a: 'Les mêmes qu’ailleurs, affichés publiquement : site vitrine dès {{prix:une-page}} €, e-commerce dès {{prix:boutique}} €, système de gestion dès {{prix:outil}} €. Devis gratuit sous 72 h.' },
     ],
   },
   {
@@ -365,9 +366,9 @@ export const DEPARTEMENTS: Departement[] = [
       'Escamps', 'Courson-les-Carrières', 'Chemilly-sur-Yonne', 'Seignelay',
     ],
     faq: [
-      { q: 'Créez-vous des sites pour les vignerons de Chablis ?', a: 'Oui. Vente directe en ligne, présentation des cuvées, réservation de dégustations et export : notre offre e-commerce à partir de 1 647 € couvre ces besoins, avec les mentions légales alcool intégrées.' },
+      { q: 'Créez-vous des sites pour les vignerons de Chablis ?', a: 'Oui. Vente directe en ligne, présentation des cuvées, réservation de dégustations et export : notre offre e-commerce à partir de {{prix:boutique}} € couvre ces besoins, avec les mentions légales alcool intégrées.' },
       { q: 'L’Yonne est-elle dans votre zone d’intervention habituelle ?', a: 'L’Yonne prolonge notre zone d’intervention Centre-Val de Loire vers le nord-est. Les projets se mènent intégralement à distance (visio, téléphone, partage d’écran), aux mêmes tarifs affichés partout en France.' },
-      { q: 'Quels tarifs pour une entreprise de l’Yonne ?', a: 'Les mêmes que partout : site vitrine dès 449 €, e-commerce dès 1 647 €, système de gestion dès 1 447 €. Devis gratuit sous 72 h, livraison en 10 jours ouvrés pour un site vitrine.' },
+      { q: 'Quels tarifs pour une entreprise de l’Yonne ?', a: 'Les mêmes que partout : site vitrine dès {{prix:une-page}} €, e-commerce dès {{prix:boutique}} €, système de gestion dès {{prix:outil}} €. Devis détaillé après un appel gratuit et la démo de votre page d’accueil.' },
     ],
   },
   {
@@ -398,7 +399,7 @@ export const DEPARTEMENTS: Departement[] = [
     faq: [
       { q: 'Travaillez-vous avec les gîtes du Morvan ?', a: 'Oui : un site avec réservation directe (calendrier, acompte en ligne) permet aux hébergements du Morvan de capter les randonneurs et cyclistes de la Loire à vélo sans commission de plateforme.' },
       { q: 'Intervenez-vous dans toute la Nièvre à distance ?', a: 'Oui, intégralement à distance : visio, téléphone, partage d’écran. C’est le même modèle qui nous permet de servir Nevers, Cosne ou Clamecy aux tarifs affichés publiquement.' },
-      { q: 'Combien coûte un site vitrine dans la Nièvre ?', a: 'À partir de 449 €, tout inclus (design sur mesure, SEO de base, hébergement 12 mois, nom de domaine offert la première année). Devis gratuit sous 72 h.' },
+      { q: 'Combien coûte un site vitrine dans la Nièvre ?', a: 'À partir de {{prix:une-page}} €, tout inclus (design sur mesure, SEO de base, nom de domaine offert la première année). Devis gratuit sous 72 h.' },
     ],
   },
   {
@@ -428,9 +429,9 @@ export const DEPARTEMENTS: Departement[] = [
       'Tronget',
     ],
     faq: [
-      { q: 'Créez-vous des sites pour les instituts et thermes de Vichy ?', a: 'Oui : prise de rendez-vous en ligne, présentation des soins, avis clients mis en avant. Un site vitrine à partir de 449 € ou un système de réservation sur mesure selon vos besoins.' },
+      { q: 'Créez-vous des sites pour les instituts et thermes de Vichy ?', a: 'Oui : prise de rendez-vous en ligne, présentation des soins, avis clients mis en avant. Un site vitrine à partir de {{prix:une-page}} € ou un système de réservation sur mesure selon vos besoins.' },
       { q: 'Intervenez-vous dans tout l’Allier à distance ?', a: 'Oui, intégralement à distance : visio, téléphone, partage d’écran. Même qualité de suivi et mêmes tarifs affichés qu’ailleurs en France, pour Vichy, Montluçon ou Moulins.' },
-      { q: 'Quel budget pour un site internet dans l’Allier ?', a: 'Site vitrine à partir de 449 €, multi-pages à partir de 749 €, e-commerce à partir de 1 647 €. Devis gratuit sous 72 h, livraison en 10 jours ouvrés pour un site vitrine.' },
+      { q: 'Quel budget pour un site internet dans l’Allier ?', a: 'Site vitrine à partir de {{prix:une-page}} €, multi-pages à partir de {{prix:multi-pages}} €, e-commerce à partir de {{prix:boutique}} €. Devis détaillé après un appel gratuit et la démo de votre page d’accueil.' },
     ],
   },
   {
@@ -460,8 +461,8 @@ export const DEPARTEMENTS: Departement[] = [
     ],
     faq: [
       { q: 'Pourquoi si peu d’agences travaillent-elles en Creuse ?', a: 'La faible densité et l’éloignement des métropoles découragent les agences traditionnelles, organisées autour du rendez-vous physique. Notre méthode 100 % à distance supprime cette barrière : mêmes tarifs, même délai, même qualité qu’ailleurs en France.' },
-      { q: 'Créez-vous des sites pour les artisans d’art (tapisserie) ?', a: 'Oui : portfolio soigné, présentation des créations, vente en ligne si besoin. Un site vitrine dès 449 € ou une boutique en ligne dès 1 647 € selon votre activité.' },
-      { q: 'Quel délai pour un site en Creuse ?', a: 'Le même que partout : à partir de 10 jours ouvrés après validation de la maquette, devis gratuit sous 72 h, suivi intégral à distance.' },
+      { q: 'Créez-vous des sites pour les artisans d’art (tapisserie) ?', a: 'Oui : portfolio soigné, présentation des créations, vente en ligne si besoin. Un site vitrine dès {{prix:une-page}} € ou une boutique en ligne dès {{prix:boutique}} € selon votre activité.' },
+      { q: 'Quel délai pour un site en Creuse ?', a: 'Le même que partout : le calendrier se fixe ensemble au devis, avec un suivi intégral à distance. L’estimateur de la page tarifs donne un délai indicatif.' },
     ],
   },
   {
@@ -491,9 +492,9 @@ export const DEPARTEMENTS: Departement[] = [
       'Putanges-le-Lac', 'Juvigny Val d’Andaine', 'Trun', 'Vimoutiers',
     ],
     faq: [
-      { q: 'Créez-vous des sites pour les artisans d’art de l’Orne ?', a: 'Oui : dentelliers, créateurs et artisans d’art bénéficient d’un site portfolio soigné pour présenter leur savoir-faire et vendre en ligne si besoin, à partir de 449 € en vitrine ou 1 647 € en boutique.' },
+      { q: 'Créez-vous des sites pour les artisans d’art de l’Orne ?', a: 'Oui : dentelliers, créateurs et artisans d’art bénéficient d’un site portfolio soigné pour présenter leur savoir-faire et vendre en ligne si besoin, à partir de {{prix:une-page}} € en vitrine ou {{prix:boutique}} € en boutique.' },
       { q: 'Intervenez-vous à Alençon et dans tout le département ?', a: 'Oui, intégralement à distance (visio, téléphone, partage d’écran), aux mêmes tarifs affichés partout en France, pour Alençon, Flers, Argentan ou les communes du Perche.' },
-      { q: 'Quel budget pour un site internet dans l’Orne ?', a: 'Site vitrine à partir de 449 €, multi-pages à partir de 749 €, e-commerce à partir de 1 647 €. Devis gratuit sous 72 h, livraison en 10 jours ouvrés pour un site vitrine.' },
+      { q: 'Quel budget pour un site internet dans l’Orne ?', a: 'Site vitrine à partir de {{prix:une-page}} €, multi-pages à partir de {{prix:multi-pages}} €, e-commerce à partir de {{prix:boutique}} €. Devis détaillé après un appel gratuit et la démo de votre page d’accueil.' },
     ],
   },
 ]
@@ -524,3 +525,5 @@ const ARTICLES: Record<string, { dans: string; de: string }> = {
 export function getArticles(slug: string): { dans: string; de: string } {
   return ARTICLES[slug] || { dans: 'le ', de: 'du ' }
 }
+
+export const DEPARTEMENTS: Departement[] = jetonsProfond(BRUT_DEPARTEMENTS)

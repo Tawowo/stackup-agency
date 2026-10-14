@@ -65,7 +65,7 @@ Cela dépend de l'autonomie souhaitée — un site propre au comité offre plus 
 Un bon référencement sur le nom du village et des événements permet d'apparaître dans les recherches des habitants des communes voisines ou des touristes de passage.
 
 **Quel est le budget pour ce type de site simple ?**
-L'offre Site Association démarre à 149 €, livrée en 7 jours ouvrés, un format adapté à un comité des fêtes ou une petite structure locale.
+Un comité des fêtes ou une petite structure locale prend le site une page ou multi-pages comme tout le monde : à partir de {{prix:une-page}} € pour une page. Le prix exact se fixe au devis, selon ce que vous choisissez.
 
 ---
 

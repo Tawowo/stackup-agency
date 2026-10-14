@@ -104,9 +104,7 @@ Des articles comme "Comment préparer sa séance photo à [ville]", "Les plus be
 
 ## Tarifs pour un site de photographe
 
-Un site portfolio pour photographe professionnel correspond à notre [formule site vitrine à 449€](/tarifs) pour un site simple (5 pages, galerie par catégorie, contact). Pour un site avec plusieurs galeries étendues, blog et système de réservation, la [formule multi-pages à 749€](/services/site-multi-pages) est plus adaptée.
-
-La livraison est garantie en [10 jours ouvrés](/tarifs) pour la formule vitrine.
+Un site portfolio pour photographe professionnel correspond à notre [formule site vitrine à partir de {{prix:une-page}} €](/tarifs) pour un site simple (5 pages, galerie par catégorie, contact). Pour un site avec plusieurs galeries étendues, blog et système de réservation, la [formule multi-pages à partir de {{prix:multi-pages}} €](/services/site-multi-pages) est plus adaptée.
 
 ---
 

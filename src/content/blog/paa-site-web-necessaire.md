@@ -90,12 +90,12 @@ Reconnaissons quelques situations où vous pouvez différer :
 
 La bonne question n'est pas si vous avez besoin d'un site, mais quel site vous avez besoin et quand le créer.
 
-- **Site vitrine (449€)** : adapté pour les indépendants, artisans, prestataires de service qui veulent une présence professionnelle sans fonctionnalités complexes
-- **Site multi-pages (749€)** : pour ceux qui ont plusieurs services distincts ou qui veulent un blog
-- **E-commerce (1 647€)** : si vous vendez des produits en ligne
+- **Site vitrine (à partir de {{prix:une-page}} €)** : adapté pour les indépendants, artisans, prestataires de service qui veulent une présence professionnelle sans fonctionnalités complexes
+- **Site multi-pages (à partir de {{prix:multi-pages}} €)** : pour ceux qui ont plusieurs services distincts ou qui veulent un blog
+- **E-commerce (à partir de {{prix:boutique}} €)** : si vous vendez des produits en ligne
 - **Système de gestion** : si votre métier implique des processus que vous voulez digitaliser (réservations, devis automatiques, gestion de projet)
 
-Pour la plupart des TPE, un [site vitrine à 449€](/tarifs) livré en 10 jours est le premier investissement digital le plus rentable.
+Pour la plupart des TPE, un [site vitrine à partir de {{prix:une-page}} €](/tarifs) est le premier investissement digital le plus rentable.
 
 ---
 

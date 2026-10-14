@@ -67,7 +67,7 @@ Oui, l'interface d'administration est conçue pour être utilisée sans connaiss
 Non, il vient en complément : il simplifie la collecte des informations côté club avant transmission à la fédération, il ne remplace pas le système fédéral officiel.
 
 **Combien coûte un site pour un club sportif ?**
-L'offre Site Association démarre à 149 €, livrée en 7 jours ouvrés, adaptée aux besoins spécifiques d'un club (calendrier, licences, résultats).
+Un club prend le site une page ou multi-pages comme tout le monde : à partir de {{prix:une-page}} € pour une page. Le prix exact se fixe au devis, selon ce que vous choisissez (calendrier, licences, résultats).
 
 ---
 

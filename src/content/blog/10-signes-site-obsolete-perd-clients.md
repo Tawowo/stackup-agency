@@ -68,7 +68,7 @@ Non, une correction ciblée suffit généralement pour un ou deux signes isolés
 Il couvre bien les aspects techniques (vitesse, mobile, structure), mais certains signes (informations obsolètes, absence de preuve sociale) nécessitent une évaluation humaine complémentaire.
 
 **Combien coûte la refonte d'un site qui cumule plusieurs de ces signes ?**
-À partir de 449 € pour un site vitrine refondu, livré en 10 jours ouvrés, un investissement généralement rentabilisé rapidement face au coût des opportunités perdues chaque mois.
+À partir de {{prix:une-page}} € pour un site vitrine refondu (le prix exact se fixe au devis, selon ce que vous choisissez), un investissement généralement rentabilisé rapidement face au coût des opportunités perdues chaque mois.
 
 ---
 

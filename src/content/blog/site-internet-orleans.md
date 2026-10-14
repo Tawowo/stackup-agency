@@ -9,7 +9,7 @@ category: "seo-local"
 keywords: ["création site internet Orléans", "agence web Orléans", "site web Loiret", "freelance web Orléans"]
 ---
 
-**Créer un site internet à Orléans en 2026 coûte entre 449€ et 3 000€ selon la complexité du projet et le prestataire choisi.** Orléans, préfecture du Loiret et ville universitaire de 120 000 habitants (agglomération : 290 000), dispose d'un tissu économique dense dominé par les PME, les commerces de proximité et un secteur tertiaire actif.
+**Créer un site internet à Orléans en 2026 coûte entre {{prix:une-page}} € et 3 000€ selon la complexité du projet et le prestataire choisi.** Orléans, préfecture du Loiret et ville universitaire de 120 000 habitants (agglomération : 290 000), dispose d'un tissu économique dense dominé par les PME, les commerces de proximité et un secteur tertiaire actif.
 
 Voici tout ce que vous devez savoir avant de lancer votre projet web dans le Loiret.
 
@@ -35,33 +35,32 @@ Le paysage des prestataires web est fragmenté : quelques agences établies, des
 
 | Type de site | Fourchette basse | Fourchette haute | Ce qui varie |
 |---|---|---|---|
-| Site vitrine 5 pages | 449€ | 1 800€ | Code sur mesure vs template, SEO inclus ou non |
-| Site multi-pages 10-15 pages | 749€ | 3 500€ | Complexité du design, nombre de fonctionnalités |
-| Boutique en ligne | 1 647€ | 5 000€+ | Nombre de produits, paiement, logistique |
-| Site association | 149€ | 800€ | Fonctionnalités spécifiques (adhésion, agenda) |
+| Site vitrine 5 pages | {{prix:une-page}} € | 1 800€ | Code sur mesure vs template, SEO inclus ou non |
+| Site multi-pages 10-15 pages | {{prix:multi-pages}} € | 3 500€ | Complexité du design, nombre de fonctionnalités |
+| Boutique en ligne | {{prix:boutique}} € | 5 000€+ | Nombre de produits, paiement, logistique |
 
 Ces fourchettes reflètent le marché français, pas uniquement orléanais — les tarifs web ne varient pas significativement d'une ville à l'autre.
 
 ### Ce qui explique les écarts de prix
 
-Un site à 449€ et un site à 1 800€ peuvent se ressembler visuellement. Les vraies différences sont souvent :
+Un site à {{prix:une-page}} € et un site à 1 800€ peuvent se ressembler visuellement. Les vraies différences sont souvent :
 - **La vitesse de chargement** : code optimisé vs template chargé
 - **Le SEO technique** : balises, données structurées, sitemap — inclus ou facturés en option
 - **La propriété du code** : vous ou votre prestataire ?
 - **La réactivité du support** : réponse en heures ou en semaines ?
-- **Les délais** : 10 jours ouvrés garantis ou "selon le planning"
+- **Le planning** : un calendrier écrit au devis ou "selon le planning"
 
 ---
 
 ## Délais de livraison à Orléans : ce qu'il faut savoir
 
-Un site vitrine peut être livré en 10 jours ouvrés avec un prestataire organisé et des contenus fournis à temps. Cette promesse est tenue par les prestataires spécialisés qui ont standardisé leur processus de production.
+Un site vitrine peut être mis en ligne rapidement avec un prestataire organisé et des contenus fournis à temps. Quel que soit le prestataire, demandez un planning écrit au devis.
 
 À l'inverse, certaines agences annoncent 6 à 12 semaines de délai — non par complexité accrue, mais par surcharge ou manque d'organisation interne.
 
 **Ce qui allonge les délais :** fournir les textes et photos tardivement, multiplier les allers-retours sur des éléments secondaires, changer le brief en cours de projet.
 
-**Ce qui permet de respecter 10 jours :** avoir ses textes prêts avant de commander, répondre rapidement aux demandes de validation, approuver la maquette en une à deux sessions.
+**Ce qui permet de tenir le planning :** avoir ses textes prêts avant de commander, répondre rapidement aux demandes de validation, approuver la maquette en une à deux sessions.
 
 ---
 
@@ -89,7 +88,7 @@ La proximité géographique est un critère moins important qu'on ne le croit. L
 
 - **Le portfolio** : des sites réels en ligne, vérifiables
 - **Les avis clients** : sur Google, pas uniquement sur le site du prestataire
-- **Le contrat** : délai garanti, propriété du code, conditions de maintenance
+- **Le contrat** : planning écrit, propriété du code, conditions de maintenance
 - **La réactivité** : temps de réponse aux emails et appels
 
 Un prestataire spécialisé basé à Tours peut livrer un site pour un commerce orléanais avec autant d'efficacité qu'un prestataire local — et souvent à meilleur rapport qualité/prix.
@@ -111,9 +110,9 @@ Les kinésithérapeutes, ostéopathes et infirmières libérales ont besoin d'un
 
 ## Ce qu'offre Stackup Agency pour les entreprises orléanaises
 
-[Stackup Agency](/tarifs) propose des sites vitrines à [partir de 449€](/tarifs) avec un délai garanti de 10 jours ouvrés. Intervention à distance sur toute la France — y compris Orléans, le Loiret et la région Centre-Val de Loire.
+[Stackup Agency](/tarifs) propose des sites vitrines à [partir de {{prix:une-page}} €](/tarifs). Intervention à distance sur toute la France — y compris Orléans, le Loiret et la région Centre-Val de Loire.
 
-Inclus : design sur mesure, code performant, SEO de base, hébergement 12 mois, SSL, formation.
+Inclus : design sur mesure, code performant, SEO de base, nom de domaine offert la première année, formation. L'hébergement se choisit dans l'abonnement facultatif, sans engagement.
 
 ---
 

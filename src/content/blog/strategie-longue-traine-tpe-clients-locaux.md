@@ -120,7 +120,7 @@ Patience est le maître mot. Contrairement aux campagnes Google Ads qui génère
 
 Pour mesurer : utilisez Search Console (évolution des impressions et positions sur vos requêtes cibles) et GA4 (trafic organique et conversions). Notre guide sur la [mesure du ROI SEO](/blog/mesurer-roi-seo-kpis-tableau-bord-tpe) détaille les KPIs à suivre.
 
-Chez Stackup Agency, notre [plan Starter à 29€/mois](/tarifs/starter) inclut une stratégie de mots-clés longue traîne adaptée à votre activité, et les [plans Pro](/tarifs/pro) et [Premium](/tarifs/premium) ajoutent la production de contenu optimisé.
+Chez Stackup Agency, l'[abonnement mensuel facultatif](/tarifs#abonnement), sans engagement et composé à la carte, peut inclure une stratégie de mots-clés longue traîne adaptée à votre activité (suivi du référencement local à partir de {{abo:suivi-local}} € par mois) ainsi que la production de contenu optimisé (un article de blog à {{abo:article}} €).
 
 ## FAQ
 

@@ -53,6 +53,9 @@ export default function Footer() {
                   <Link href={`/services/${slug}`}>{s.title}</Link>
                 </li>
               ))}
+              <li>
+                <Link href="/services/referencement">Référencement</Link>
+              </li>
               {Object.entries(SERVICES_LOCAUX)
                 .slice(0, 3)
                 .map(([slug, s]) => (

@@ -105,11 +105,11 @@ Créez une page pour chaque catégorie principale. Le titre de la page doit incl
 
 ---
 
-## Tarifs et délais pour un site d'électricien
+## Tarifs pour un site d'électricien
 
-Un site vitrine pour artisan électricien avec pages de services, réalisations et formulaire de contact correspond à notre [formule site vitrine à 449€](/tarifs), livrée en [10 jours ouvrés](/tarifs).
+Un site vitrine pour artisan électricien avec pages de services, réalisations et formulaire de contact correspond à notre [formule site vitrine à partir de {{prix:une-page}} €](/tarifs).
 
-Pour un site avec pages localisées multiples (une page par commune d'intervention), la [formule multi-pages à 749€](/services/site-multi-pages) est plus adaptée.
+Pour un site avec pages localisées multiples (une page par commune d'intervention), la [formule multi-pages à partir de {{prix:multi-pages}} €](/services/site-multi-pages) est plus adaptée.
 
 ---
 

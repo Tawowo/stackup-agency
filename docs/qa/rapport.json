@@ -1,6 +1,6 @@
 {
  "genere": "2026-10-14",
- "phase": "mission 2 — montrer la vraie chose",
+ "phase": "mission 3 — grille tarifaire et estimateur",
  "captures": [
   {
    "fichier": "docs/qa/shots/contact/vide-1440.png",
@@ -123,152 +123,6 @@
    "largeur": 1440,
    "rm": false,
    "visible": "Accusé envoyé au visiteur : « Bonjour Camille, », réponse personnelle annoncée selon la préférence, citation du projet, signature.",
-   "defauts": [],
-   "corrige": true
-  },
-  {
-   "fichier": "docs/qa/shots/tarifs/vide-1440.png",
-   "route": "/tarifs",
-   "etat": "vide",
-   "largeur": 1440,
-   "rm": false,
-   "visible": "Hero : la jauge en arc de plaques (aiguille ambre à 0) dans la colonne gauche collante, « Choisissez ce qu'on empile. » déplié, la ligne, puis le configurateur : plaque 01 · Type (quatre radios avec « à partir de »), 02 · Fonctions (attente d'un type), 03 · Options.",
-   "defauts": [
-    "Première passe : jauge coupée en bas (cadre centré trop haut) — cadre 62 svh aligné en haut ; légendes sur le bord des plaques — flottées, plaques en flex"
-   ],
-   "corrige": true
-  },
-  {
-   "fichier": "docs/qa/shots/tarifs/vide-1440-rm.png",
-   "route": "/tarifs",
-   "etat": "vide",
-   "largeur": 1440,
-   "rm": true,
-   "visible": "Mouvement réduit : logo figé à la place de la jauge, titre posé, configurateur identique.",
-   "defauts": [],
-   "corrige": true
-  },
-  {
-   "fichier": "docs/qa/shots/tarifs/vide-390.png",
-   "route": "/tarifs",
-   "etat": "vide",
-   "largeur": 390,
-   "rm": false,
-   "visible": "Mobile : jauge au-dessus, titre, puis les plaques du configurateur pleine largeur, un bouton par ligne.",
-   "defauts": [],
-   "corrige": true
-  },
-  {
-   "fichier": "docs/qa/shots/tarifs/vide-390-rm.png",
-   "route": "/tarifs",
-   "etat": "vide",
-   "largeur": 390,
-   "rm": true,
-   "visible": "Idem, logo figé.",
-   "defauts": [],
-   "corrige": true
-  },
-  {
-   "fichier": "docs/qa/shots/tarifs/type-1440.png",
-   "route": "/tarifs",
-   "etat": "type",
-   "largeur": 1440,
-   "rm": false,
-   "visible": "Type « Site multi-pages » choisi (radio ambre, curseur « Choisir ») : la pile se réassemble en la variante compacte de l'éventail (trois pages empilées, bouton ambre), 02 · Fonctions se remplit des six fonctions compatibles.",
-   "defauts": [
-    "Première passe : la forme débordait du cadre et les modules sortaient à droite — variante compacte, échelle 0,74, colonne des modules à 0,52"
-   ],
-   "corrige": true
-  },
-  {
-   "fichier": "docs/qa/shots/tarifs/type-390.png",
-   "route": "/tarifs",
-   "etat": "type",
-   "largeur": 390,
-   "rm": false,
-   "visible": "Mobile : pile compacte au-dessus, type choisi en ambre.",
-   "defauts": [],
-   "corrige": true
-  },
-  {
-   "fichier": "docs/qa/shots/tarifs/fonctions-1440.png",
-   "route": "/tarifs",
-   "etat": "fonctions",
-   "largeur": 1440,
-   "rm": false,
-   "visible": "Formulaire, Galerie, Blog cochés (cases ambre) : trois modules 2 × 2 s'allument dans la colonne droite de la pile, reliés par de petites plaques.",
-   "defauts": [],
-   "corrige": true
-  },
-  {
-   "fichier": "docs/qa/shots/tarifs/fonctions-390.png",
-   "route": "/tarifs",
-   "etat": "fonctions",
-   "largeur": 390,
-   "rm": false,
-   "visible": "Mobile : trois cases cochées, focus visible sur Blog.",
-   "defauts": [],
-   "corrige": true
-  },
-  {
-   "fichier": "docs/qa/shots/tarifs/options-1440.png",
-   "route": "/tarifs",
-   "etat": "options",
-   "largeur": 1440,
-   "rm": false,
-   "visible": "Maintenance Pro et Pack 4 articles : le Cadran affiche « à partir de 838 € » (749 + 89), « + 44 €/mois de maintenance », « Précisé au devis : Formulaire, Galerie, Blog. » ; aucune durée nulle part.",
-   "defauts": [],
-   "corrige": true
-  },
-  {
-   "fichier": "docs/qa/shots/tarifs/options-390.png",
-   "route": "/tarifs",
-   "etat": "options",
-   "largeur": 390,
-   "rm": false,
-   "visible": "Mobile : options en colonne, Pro et Pack 4 sélectionnés.",
-   "defauts": [],
-   "corrige": true
-  },
-  {
-   "fichier": "docs/qa/shots/tarifs/offres-1440.png",
-   "route": "/tarifs",
-   "etat": "offres",
-   "largeur": 1440,
-   "rm": false,
-   "visible": "Ivoire : « Les quatre offres, en entier. », quatre Plaques avec Cadran, toutes les inclusions, Fiche de fabrication, « Demander un devis » ; la jauge du hero finit sa course collante en haut.",
-   "defauts": [
-    "La jauge du hero reste visible en haut de la section ivoire au point de bascule — à arbitrer en phase 7"
-   ],
-   "corrige": false
-  },
-  {
-   "fichier": "docs/qa/shots/tarifs/offres-390.png",
-   "route": "/tarifs",
-   "etat": "offres",
-   "largeur": 390,
-   "rm": false,
-   "visible": "Mobile : Plaques empilées.",
-   "defauts": [],
-   "corrige": true
-  },
-  {
-   "fichier": "docs/qa/shots/tarifs/maintenance-1440.png",
-   "route": "/tarifs",
-   "etat": "maintenance",
-   "largeur": 1440,
-   "rm": false,
-   "visible": "Trois plans (Starter 29, Pro 44, Premium 89 €/mois) en Plaques avec leurs inclusions, tableau mono de comparaison (● / —), « Un devis, pas une estimation. » et l'action finale.",
-   "defauts": [],
-   "corrige": true
-  },
-  {
-   "fichier": "docs/qa/shots/tarifs/maintenance-390.png",
-   "route": "/tarifs",
-   "etat": "maintenance",
-   "largeur": 390,
-   "rm": false,
-   "visible": "Mobile : plans empilés, tableau resserré.",
    "defauts": [],
    "corrige": true
   },
@@ -1427,18 +1281,6 @@
    "corrige": true
   },
   {
-   "fichier": "docs/qa/shots/traversee/_services-Tarifs-1600-1440.png",
-   "route": "/tarifs",
-   "etat": "traversee",
-   "largeur": 1440,
-   "rm": false,
-   "visible": "Traversée /services → /tarifs : la page se replie, le sol se dissout, /tarifs se déplie ; arrivée avec la scène 3D (tapis).",
-   "defauts": [
-    "Première passe : arrivée en repli 2D — le forçage ?quality= ne survivait pas à la navigation (session)"
-   ],
-   "corrige": true
-  },
-  {
    "fichier": "docs/qa/shots/contact/enveloppe-1440.png",
    "route": "/contact",
    "etat": "enveloppe",
@@ -1468,18 +1310,6 @@
    "rm": false,
    "visible": "CGV sur ivoire : sommaire en marge, tableau des prix « à partir de » lu dans SITE.",
    "defauts": [],
-   "corrige": true
-  },
-  {
-   "fichier": "docs/qa/shots/outils/outils_studio-de-style-haut-1440.png",
-   "route": "/outils/studio-de-style",
-   "etat": "haut",
-   "largeur": 1440,
-   "rm": false,
-   "visible": "Studio de style : choix d'activité/ambiance à gauche, maquette fictive à droite.",
-   "defauts": [
-    "Contraste de la barre d'adresse (axe) corrigé"
-   ],
    "corrige": true
   },
   {
@@ -1713,6 +1543,559 @@
    "visible": "Référencement local : une vraie page de résultats Google, Menuiserie Aubert en tête.",
    "defauts": [],
    "corrige": true
+  },
+  {
+   "fichier": "docs/qa/shots/estimateur/etape-01-1440.png",
+   "route": "/tarifs",
+   "etat": "estimateur étape 1",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Étape 1, Quel est votre projet ? : trois cartes à cocher (site, boutique, outil), cochées ici toutes les trois ; récapitulatif à droite : fourchette, abonnement, délai indicatif, détail et inclus repliés."
+  },
+  {
+   "fichier": "docs/qa/shots/estimateur/etape-01-390.png",
+   "route": "/tarifs",
+   "etat": "estimateur étape 1",
+   "largeur": 390,
+   "rm": false,
+   "visible": "Étape 1, Quel est votre projet ? : trois cartes à cocher (site, boutique, outil), cochées ici toutes les trois ; récapitulatif à droite : fourchette, abonnement, délai indicatif, détail et inclus repliés."
+  },
+  {
+   "fichier": "docs/qa/shots/estimateur/etape-02-1440.png",
+   "route": "/tarifs",
+   "etat": "estimateur étape 2",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Étape 2, allure de l'accueil : quatre cartes avec une vraie mini-page animée chacune (Classique fixe, Animé qui se découpe, Signature sombre avec bandeau, Immersif avec plaques 3D), prix d'un site d'une page par niveau.",
+   "defauts": [
+    "Immersif : le titre passait sous les plaques 3D → plaques décalées à droite",
+    "Signature : titre sur trois lignes → corps réduit"
+   ],
+   "corrige": true
+  },
+  {
+   "fichier": "docs/qa/shots/estimateur/etape-02-390.png",
+   "route": "/tarifs",
+   "etat": "estimateur étape 2",
+   "largeur": 390,
+   "rm": false,
+   "visible": "Étape 2, allure de l'accueil : quatre cartes avec une vraie mini-page animée chacune (Classique fixe, Animé qui se découpe, Signature sombre avec bandeau, Immersif avec plaques 3D), prix d'un site d'une page par niveau.",
+   "defauts": [
+    "Immersif : le titre passait sous les plaques 3D → plaques décalées à droite",
+    "Signature : titre sur trois lignes → corps réduit"
+   ],
+   "corrige": true
+  },
+  {
+   "fichier": "docs/qa/shots/estimateur/etape-03-1440.png",
+   "route": "/tarifs",
+   "etat": "estimateur étape 3",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Étape 3, autres pages : mode « répartir » (quatre compteurs −/+ avec saisie), explication de la dégressivité, pages par ville ou par métier en curseur + saisie.",
+   "defauts": [
+    "Piste du curseur noire et lourde → piste claire, pouce ambre"
+   ],
+   "corrige": true
+  },
+  {
+   "fichier": "docs/qa/shots/estimateur/etape-03-390.png",
+   "route": "/tarifs",
+   "etat": "estimateur étape 3",
+   "largeur": 390,
+   "rm": false,
+   "visible": "Étape 3, autres pages : mode « répartir » (quatre compteurs −/+ avec saisie), explication de la dégressivité, pages par ville ou par métier en curseur + saisie.",
+   "defauts": [
+    "Piste du curseur noire et lourde → piste claire, pouce ambre"
+   ],
+   "corrige": true
+  },
+  {
+   "fichier": "docs/qa/shots/estimateur/etape-04-1440.png",
+   "route": "/tarifs",
+   "etat": "estimateur étape 4",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Étape 4, Google et IA : cinq cartes de portée décrites par leur résultat sur une seule rangée, trois cartes IA avec la phrase sur ChatGPT, Gemini et Google, modules à la carte dépliables, « aucun positionnement ne peut être garanti ».",
+   "defauts": [
+    "Cinq portées réparties 4 + 1 → une rangée de cinq",
+    "Titre et phrase de carte redondants → phrases complémentaires"
+   ],
+   "corrige": true
+  },
+  {
+   "fichier": "docs/qa/shots/estimateur/etape-04-390.png",
+   "route": "/tarifs",
+   "etat": "estimateur étape 4",
+   "largeur": 390,
+   "rm": false,
+   "visible": "Étape 4, Google et IA : cinq cartes de portée décrites par leur résultat sur une seule rangée, trois cartes IA avec la phrase sur ChatGPT, Gemini et Google, modules à la carte dépliables, « aucun positionnement ne peut être garanti ».",
+   "defauts": [
+    "Cinq portées réparties 4 + 1 → une rangée de cinq",
+    "Titre et phrase de carte redondants → phrases complémentaires"
+   ],
+   "corrige": true
+  },
+  {
+   "fichier": "docs/qa/shots/estimateur/etape-05-1440.png",
+   "route": "/tarifs",
+   "etat": "estimateur étape 5",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Étape 5, fonctions et effets : recherche, sept groupes par besoin (Recevoir des demandes, Prendre des rendez-vous, Montrer mon travail…), cartes à cocher avec prix « dès » et nombre si besoin.",
+   "defauts": [
+    "Code interne « C04 » visible dans une description → nettoyé",
+    "Carte interactive classée « Autres idées » → rangée dans Montrer mon travail"
+   ],
+   "corrige": true
+  },
+  {
+   "fichier": "docs/qa/shots/estimateur/etape-05-390.png",
+   "route": "/tarifs",
+   "etat": "estimateur étape 5",
+   "largeur": 390,
+   "rm": false,
+   "visible": "Étape 5, fonctions et effets : recherche, sept groupes par besoin (Recevoir des demandes, Prendre des rendez-vous, Montrer mon travail…), cartes à cocher avec prix « dès » et nombre si besoin.",
+   "defauts": [
+    "Code interne « C04 » visible dans une description → nettoyé",
+    "Carte interactive classée « Autres idées » → rangée dans Montrer mon travail"
+   ],
+   "corrige": true
+  },
+  {
+   "fichier": "docs/qa/shots/estimateur/etape-06-1440.png",
+   "route": "/tarifs",
+   "etat": "estimateur étape 6",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Étape 6, contenus : « Je fournis mes textes » / « Stackup les rédige », compteurs de pages et d'articles, autres coups de main."
+  },
+  {
+   "fichier": "docs/qa/shots/estimateur/etape-06-390.png",
+   "route": "/tarifs",
+   "etat": "estimateur étape 6",
+   "largeur": 390,
+   "rm": false,
+   "visible": "Étape 6, contenus : « Je fournis mes textes » / « Stackup les rédige », compteurs de pages et d'articles, autres coups de main."
+  },
+  {
+   "fichier": "docs/qa/shots/estimateur/etape-07-1440.png",
+   "route": "/tarifs",
+   "etat": "estimateur étape 7",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Étape 7, boutique : produits, variantes, catégories (curseur + saisie) avec « un produit = une fiche… », import d'un fichier, dix options.",
+   "defauts": [
+    "Cartes collées sans espace → marges ajoutées"
+   ],
+   "corrige": true
+  },
+  {
+   "fichier": "docs/qa/shots/estimateur/etape-07-390.png",
+   "route": "/tarifs",
+   "etat": "estimateur étape 7",
+   "largeur": 390,
+   "rm": false,
+   "visible": "Étape 7, boutique : produits, variantes, catégories (curseur + saisie) avec « un produit = une fiche… », import d'un fichier, dix options.",
+   "defauts": [
+    "Cartes collées sans espace → marges ajoutées"
+   ],
+   "corrige": true
+  },
+  {
+   "fichier": "docs/qa/shots/estimateur/etape-08-1440.png",
+   "route": "/tarifs",
+   "etat": "estimateur étape 8",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Étape 8, outil de gestion : choix du métier (huit), modules par catégorie filtrés par métier, nombre d'utilisateurs avec la majoration expliquée, neuf options dont l'assistant IA et son coût refacturé."
+  },
+  {
+   "fichier": "docs/qa/shots/estimateur/etape-08-390.png",
+   "route": "/tarifs",
+   "etat": "estimateur étape 8",
+   "largeur": 390,
+   "rm": false,
+   "visible": "Étape 8, outil de gestion : choix du métier (huit), modules par catégorie filtrés par métier, nombre d'utilisateurs avec la majoration expliquée, neuf options dont l'assistant IA et son coût refacturé."
+  },
+  {
+   "fichier": "docs/qa/shots/estimateur/etape-09-1440.png",
+   "route": "/tarifs",
+   "etat": "estimateur étape 9",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Étape 9, suivi après la mise en ligne : abonnement facultatif, publications et articles, quatre niveaux de suivi, suivi IA, fiche Google, rapport, heures, paiement annuel.",
+   "defauts": [
+    "Cartes de suivi collées à la grille suivante → espacement"
+   ],
+   "corrige": true
+  },
+  {
+   "fichier": "docs/qa/shots/estimateur/etape-09-390.png",
+   "route": "/tarifs",
+   "etat": "estimateur étape 9",
+   "largeur": 390,
+   "rm": false,
+   "visible": "Étape 9, suivi après la mise en ligne : abonnement facultatif, publications et articles, quatre niveaux de suivi, suivi IA, fiche Google, rapport, heures, paiement annuel.",
+   "defauts": [
+    "Cartes de suivi collées à la grille suivante → espacement"
+   ],
+   "corrige": true
+  },
+  {
+   "fichier": "docs/qa/shots/estimateur/etape-10-1440.png",
+   "route": "/tarifs",
+   "etat": "estimateur étape 10",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Fin : fourchette en phrase, bilan complet du projet, deux actions (appel gratuit 30 min, démo), copie du lien."
+  },
+  {
+   "fichier": "docs/qa/shots/estimateur/etape-10-390.png",
+   "route": "/tarifs",
+   "etat": "estimateur étape 10",
+   "largeur": 390,
+   "rm": false,
+   "visible": "Fin : fourchette en phrase, bilan complet du projet, deux actions (appel gratuit 30 min, démo), copie du lien."
+  },
+  {
+   "fichier": "docs/qa/shots/estimateur/raccourci-simple-1440.png",
+   "route": "/tarifs",
+   "etat": "raccourci « Un site simple pour être présent »",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Les cinq points de départ avec leur fourchette ; « Un site simple pour être présent » chargé, bilan de l'étape finale correspondant.",
+   "defauts": [
+    "Cinq cartes étroites coupées (« celui-ci ») → grille 3 + 2"
+   ],
+   "corrige": true
+  },
+  {
+   "fichier": "docs/qa/shots/estimateur/raccourci-simple-390.png",
+   "route": "/tarifs",
+   "etat": "raccourci « Un site simple pour être présent »",
+   "largeur": 390,
+   "rm": false,
+   "visible": "Les cinq points de départ avec leur fourchette ; « Un site simple pour être présent » chargé, bilan de l'étape finale correspondant.",
+   "defauts": [
+    "Cinq cartes étroites coupées (« celui-ci ») → grille 3 + 2"
+   ],
+   "corrige": true
+  },
+  {
+   "fichier": "docs/qa/shots/estimateur/raccourci-demarque-1440.png",
+   "route": "/tarifs",
+   "etat": "raccourci « Un site qui se démarque »",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Les cinq points de départ avec leur fourchette ; « Un site qui se démarque » chargé, bilan de l'étape finale correspondant."
+  },
+  {
+   "fichier": "docs/qa/shots/estimateur/raccourci-demarque-390.png",
+   "route": "/tarifs",
+   "etat": "raccourci « Un site qui se démarque »",
+   "largeur": 390,
+   "rm": false,
+   "visible": "Les cinq points de départ avec leur fourchette ; « Un site qui se démarque » chargé, bilan de l'étape finale correspondant."
+  },
+  {
+   "fichier": "docs/qa/shots/estimateur/raccourci-spectaculaire-1440.png",
+   "route": "/tarifs",
+   "etat": "raccourci « Un site spectaculaire comme celui-ci »",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Les cinq points de départ avec leur fourchette ; « Un site spectaculaire comme celui-ci » chargé, bilan de l'étape finale correspondant."
+  },
+  {
+   "fichier": "docs/qa/shots/estimateur/raccourci-spectaculaire-390.png",
+   "route": "/tarifs",
+   "etat": "raccourci « Un site spectaculaire comme celui-ci »",
+   "largeur": 390,
+   "rm": false,
+   "visible": "Les cinq points de départ avec leur fourchette ; « Un site spectaculaire comme celui-ci » chargé, bilan de l'étape finale correspondant."
+  },
+  {
+   "fichier": "docs/qa/shots/estimateur/raccourci-boutique-1440.png",
+   "route": "/tarifs",
+   "etat": "raccourci « Une boutique en ligne »",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Les cinq points de départ avec leur fourchette ; « Une boutique en ligne » chargé, bilan de l'étape finale correspondant."
+  },
+  {
+   "fichier": "docs/qa/shots/estimateur/raccourci-boutique-390.png",
+   "route": "/tarifs",
+   "etat": "raccourci « Une boutique en ligne »",
+   "largeur": 390,
+   "rm": false,
+   "visible": "Les cinq points de départ avec leur fourchette ; « Une boutique en ligne » chargé, bilan de l'étape finale correspondant."
+  },
+  {
+   "fichier": "docs/qa/shots/estimateur/raccourci-outil-1440.png",
+   "route": "/tarifs",
+   "etat": "raccourci « Un outil pour gérer mon activité »",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Les cinq points de départ avec leur fourchette ; « Un outil pour gérer mon activité » chargé, bilan de l'étape finale correspondant."
+  },
+  {
+   "fichier": "docs/qa/shots/estimateur/raccourci-outil-390.png",
+   "route": "/tarifs",
+   "etat": "raccourci « Un outil pour gérer mon activité »",
+   "largeur": 390,
+   "rm": false,
+   "visible": "Les cinq points de départ avec leur fourchette ; « Un outil pour gérer mon activité » chargé, bilan de l'étape finale correspondant."
+  },
+  {
+   "fichier": "docs/qa/shots/estimateur/vue-hero-1440.png",
+   "route": "/tarifs",
+   "etat": "hero",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Hero « Combien coûte votre projet ? » : titre et deux actions, la chaîne d'assemblage 3D visible.",
+   "defauts": [
+    "Le portique de la chaîne traversait le texte (desktop) → texte à droite, scène à gauche"
+   ],
+   "corrige": true
+  },
+  {
+   "fichier": "docs/qa/shots/estimateur/vue-estimer-1440.png",
+   "route": "/tarifs",
+   "etat": "estimateur en vue réelle",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Feuille ivoire à gauche, récapitulatif à droite avec la chaîne 3D vivante dans son cadre (desktop) ; barre fixe repliée en bas (mobile).",
+   "defauts": [
+    "Section ivoire opaque : la chaîne 3D était masquée → fond nuit, feuille ivoire, cadre transparent",
+    "Page de 852 px sur mobile : un .sr-only débordait du défilement horizontal → position: relative"
+   ],
+   "corrige": true
+  },
+  {
+   "fichier": "docs/qa/shots/estimateur/vue-hero-390.png",
+   "route": "/tarifs",
+   "etat": "hero",
+   "largeur": 390,
+   "rm": false,
+   "visible": "Hero « Combien coûte votre projet ? » : titre et deux actions, la chaîne d'assemblage 3D visible.",
+   "defauts": [
+    "Le portique de la chaîne traversait le texte (desktop) → texte à droite, scène à gauche"
+   ],
+   "corrige": true
+  },
+  {
+   "fichier": "docs/qa/shots/estimateur/vue-estimer-390.png",
+   "route": "/tarifs",
+   "etat": "estimateur en vue réelle",
+   "largeur": 390,
+   "rm": false,
+   "visible": "Feuille ivoire à gauche, récapitulatif à droite avec la chaîne 3D vivante dans son cadre (desktop) ; barre fixe repliée en bas (mobile).",
+   "defauts": [
+    "Section ivoire opaque : la chaîne 3D était masquée → fond nuit, feuille ivoire, cadre transparent",
+    "Page de 852 px sur mobile : un .sr-only débordait du défilement horizontal → position: relative"
+   ],
+   "corrige": true
+  },
+  {
+   "fichier": "docs/qa/shots/estimateur/vue-recap-ouvert-390.png",
+   "route": "/tarifs",
+   "etat": "barre récap dépliée (mobile)",
+   "largeur": 390,
+   "rm": false,
+   "visible": "Barre dépliée : fourchette, abonnement, délai indicatif, détail par bloc, inclus, deux actions.",
+   "defauts": [
+    "Valeurs coupées à droite (largeur 852) → corrigé avec le débordement",
+    "Fourchette sur trois lignes → version courte « X – Y € »"
+   ],
+   "corrige": true
+  },
+  {
+   "fichier": "docs/qa/shots/estimateur/depart-vide-1440.png",
+   "route": "/tarifs",
+   "etat": "point de départ vide",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Estimateur sans configuration : les cinq raccourcis puis l'étape 1."
+  },
+  {
+   "fichier": "docs/qa/shots/estimateur/depart-vide-390.png",
+   "route": "/tarifs",
+   "etat": "point de départ vide",
+   "largeur": 390,
+   "rm": false,
+   "visible": "Estimateur sans configuration : les cinq raccourcis puis l'étape 1."
+  },
+  {
+   "fichier": "docs/qa/shots/estimateur/contact-prerempli-1440.png",
+   "route": "/contact?a=demo&e=…",
+   "etat": "contact pré-rempli",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Contact : fiche « Votre estimation » (fourchette, abonnement, délai indicatif), choix « Demander ma démo » pré-coché, jamais le prix exact.",
+   "defauts": [
+    "Libellé « FONCTIONNALITÉS » chevauchait sa valeur → colonne de libellé élargie"
+   ],
+   "corrige": true
+  },
+  {
+   "fichier": "docs/qa/shots/tarifs/tarifs-parcours-1440.png",
+   "route": "/tarifs",
+   "etat": "tarifs-parcours",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Comment ça se passe : quatre cartes reliées (appel 30 min gratuit, démo 15 €, visio 1 h 30 30 €, devis), « déduit si vous continuez »."
+  },
+  {
+   "fichier": "docs/qa/shots/tarifs/tarifs-parcours-390.png",
+   "route": "/tarifs",
+   "etat": "tarifs-parcours",
+   "largeur": 390,
+   "rm": false,
+   "visible": "Comment ça se passe : quatre cartes reliées (appel 30 min gratuit, démo 15 €, visio 1 h 30 30 €, devis), « déduit si vous continuez »."
+  },
+  {
+   "fichier": "docs/qa/shots/tarifs/tarifs-inclus-1440.png",
+   "route": "/tarifs",
+   "etat": "tarifs-inclus",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Inclus dans chaque création : 3 rendez-vous, 2 séries de modifications, un mois d'ajustements, domaine offert, propriété, mention retirable ; au-delà 40 €/h."
+  },
+  {
+   "fichier": "docs/qa/shots/tarifs/tarifs-inclus-390.png",
+   "route": "/tarifs",
+   "etat": "tarifs-inclus",
+   "largeur": 390,
+   "rm": false,
+   "visible": "Inclus dans chaque création : 3 rendez-vous, 2 séries de modifications, un mois d'ajustements, domaine offert, propriété, mention retirable ; au-delà 40 €/h."
+  },
+  {
+   "fichier": "docs/qa/shots/tarifs/tarifs-offres-1440.png",
+   "route": "/tarifs",
+   "etat": "tarifs-offres",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Quatre points de départ « à partir de » calculés par le moteur (500, 700, 1 780, 1 550 €) avec lien vers l'estimateur.",
+   "defauts": [
+    "Puces des listes absentes → rétablies"
+   ],
+   "corrige": true
+  },
+  {
+   "fichier": "docs/qa/shots/tarifs/tarifs-offres-390.png",
+   "route": "/tarifs",
+   "etat": "tarifs-offres",
+   "largeur": 390,
+   "rm": false,
+   "visible": "Quatre points de départ « à partir de » calculés par le moteur (500, 700, 1 780, 1 550 €) avec lien vers l'estimateur.",
+   "defauts": [
+    "Puces des listes absentes → rétablies"
+   ],
+   "corrige": true
+  },
+  {
+   "fichier": "docs/qa/shots/tarifs/tarifs-abonnement-1440.png",
+   "route": "/tarifs",
+   "etat": "tarifs-abonnement",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Abonnement composé selon vos besoins : trois exemples calculés (26, 95, 212 €/mois), lien « Composer le mien » vers l'étape 9."
+  },
+  {
+   "fichier": "docs/qa/shots/tarifs/tarifs-abonnement-390.png",
+   "route": "/tarifs",
+   "etat": "tarifs-abonnement",
+   "largeur": 390,
+   "rm": false,
+   "visible": "Abonnement composé selon vos besoins : trois exemples calculés (26, 95, 212 €/mois), lien « Composer le mien » vers l'étape 9."
+  },
+  {
+   "fichier": "docs/qa/shots/tarifs/tarifs-a-la-carte-1440.png",
+   "route": "/tarifs",
+   "etat": "tarifs-a-la-carte",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Services à la carte pour un site existant : lignes avec prix, dont gratuit, + %, au coût réel."
+  },
+  {
+   "fichier": "docs/qa/shots/tarifs/tarifs-a-la-carte-390.png",
+   "route": "/tarifs",
+   "etat": "tarifs-a-la-carte",
+   "largeur": 390,
+   "rm": false,
+   "visible": "Services à la carte pour un site existant : lignes avec prix, dont gratuit, + %, au coût réel."
+  },
+  {
+   "fichier": "docs/qa/shots/tarifs/tarifs-hero-1440.png",
+   "route": "/tarifs",
+   "etat": "tarifs-hero",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Hero de la page tarifs."
+  },
+  {
+   "fichier": "docs/qa/shots/tarifs/tarifs-hero-390.png",
+   "route": "/tarifs",
+   "etat": "tarifs-hero",
+   "largeur": 390,
+   "rm": false,
+   "visible": "Hero de la page tarifs."
+  },
+  {
+   "fichier": "docs/qa/shots/tarifs/accueil-parcours-1440.png",
+   "route": "/",
+   "etat": "accueil-parcours",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Section « Comment ça se passe » sur l'accueil (mêmes quatre étapes)."
+  },
+  {
+   "fichier": "docs/qa/shots/tarifs/accueil-parcours-390.png",
+   "route": "/",
+   "etat": "accueil-parcours",
+   "largeur": 390,
+   "rm": false,
+   "visible": "Section « Comment ça se passe » sur l'accueil (mêmes quatre étapes)."
+  },
+  {
+   "fichier": "docs/qa/shots/tarifs/referencement-1440.png",
+   "route": "/services/referencement",
+   "etat": "referencement",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Page référencement entière : cinq portées par résultat, visibilité dans les IA, modules à la carte, suivi mensuel, encart « Ce que nous ne promettons pas ».",
+   "defauts": [
+    "Titres de cartes en ivoire sur blanc (axe) → couleur forcée navy"
+   ],
+   "corrige": true
+  },
+  {
+   "fichier": "docs/qa/shots/tarifs/referencement-390.png",
+   "route": "/services/referencement",
+   "etat": "referencement",
+   "largeur": 390,
+   "rm": false,
+   "visible": "Page référencement entière : cinq portées par résultat, visibilité dans les IA, modules à la carte, suivi mensuel, encart « Ce que nous ne promettons pas ».",
+   "defauts": [
+    "Titres de cartes en ivoire sur blanc (axe) → couleur forcée navy"
+   ],
+   "corrige": true
+  },
+  {
+   "fichier": "docs/qa/shots/outils/outils-haut-1440.png",
+   "route": "/outils",
+   "etat": "haut de page",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Quatre miniatures dont « Estimateur de prix » (curseurs et fourchette) qui remplace le studio de style ; deux cartes d'outils."
+  },
+  {
+   "fichier": "docs/qa/shots/outils/outils-haut-390.png",
+   "route": "/outils",
+   "etat": "haut de page",
+   "largeur": 390,
+   "rm": false,
+   "visible": "Quatre miniatures dont « Estimateur de prix » (curseurs et fourchette) qui remplace le studio de style ; deux cartes d'outils."
   }
  ]
 }

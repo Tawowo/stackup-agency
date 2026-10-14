@@ -25,7 +25,7 @@ Trois grandes familles de solutions s'offrent à une boutique qui démarre : les
 |---|---|---|---|
 | Shopify | Faible | Abonnement + commissions qui grandissent avec le volume | Lancement rapide, test de marché |
 | Prestashop | Gratuit à l'achat, coût d'intégration | Hébergement + maintenance à gérer | Compétence technique disponible en interne |
-| Boutique sur mesure | 1 647 € à partir | Aucun coût récurrent obligatoire | Activité stable, besoins spécifiques, volume établi |
+| Boutique sur mesure | À partir de {{prix:boutique}} € | Abonnement facultatif, sans engagement | Activité stable, besoins spécifiques, volume établi |
 
 Pour une activité qui débute sans certitude de volume, une solution SaaS reste souvent le choix le plus prudent à court terme. Pour un projet déjà validé avec un volume de vente prévisible, une boutique sur mesure devient rapidement plus rentable, sans commission qui grandit avec le succès.
 
@@ -68,12 +68,12 @@ Une fois la boutique en ligne, la priorité se déplace vers la mesure et l'ajus
 | Phase | Durée indicative |
 |---|---|
 | Validation de l'offre | 1 à 3 semaines |
-| Choix de la plateforme et développement | 3 semaines (SaaS) à 21 jours ouvrés (sur mesure) |
+| Choix de la plateforme et développement | Quelques semaines (SaaS) ; selon le périmètre pour du sur mesure |
 | Structuration du catalogue et fiches produits | 1 à 4 semaines selon le volume |
 | Mise en place paiement et livraison | 1 à 2 semaines, en parallèle du développement |
 | Vérification légale (CGV, RGPD) | Quelques jours, en parallèle |
 | Préparation SEO | En continu dès la conception |
-| **Durée totale avant lancement** | **4 à 10 semaines selon la complexité** |
+| **Durée totale avant lancement** | **Variable selon la complexité du projet** |
 
 ## Les erreurs les plus fréquentes d'un premier projet e-commerce
 
@@ -101,7 +101,7 @@ Pour un premier lancement incertain, une solution SaaS reste souvent le point de
 ## Questions fréquentes
 
 **Combien coûte l'ouverture d'une boutique en ligne complète ?**
-Cela dépend de la plateforme choisie : une solution SaaS démarre avec un abonnement mensuel modeste, une boutique sur mesure à partir de 1 647 € une fois, sans coût récurrent obligatoire ensuite.
+Cela dépend de la plateforme choisie : une solution SaaS démarre avec un abonnement mensuel modeste, une boutique sur mesure à partir de {{prix:boutique}} € en achat unique, avec ensuite un abonnement facultatif, sans engagement.
 
 **Combien de temps avant qu'une boutique en ligne génère ses premières ventes ?**
 Avec un lancement bien préparé (offre validée, SEO pensé dès le départ), les premières ventes organiques apparaissent généralement en quelques semaines à quelques mois, en complément d'une éventuelle acquisition payante plus rapide.

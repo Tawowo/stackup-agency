@@ -91,7 +91,7 @@ keywords: ["questions devis site", "choisir agence web", "devis site internet ch
 Tout dépend desquelles. Une réponse faible sur les questions 3 ou 5 se négocie (exigez l'écrit). Une réponse faible sur les questions 1 ou 9 ne se négocie pas : partez.
 
 **Comment Stackup répond-il à ces 10 questions ?**
-Propriété totale contractuelle, sur mesure systématique, périmètre écrit au devis, coûts récurrents publics (maintenance optionnelle dès 29 €/mois, domaine offert la 1re année), délais contractuels (dès 10 jours ouvrés), scores ≥ 90 vérifiables sur [nos démonstrations en ligne](/realisations), SEO technique détaillé, 30 jours de support inclus, réversibilité native (Next.js, standard du marché), démos publiques consultables.
+Propriété totale contractuelle, sur mesure systématique, périmètre écrit au devis, coûts récurrents publics (abonnement facultatif, sans engagement, à partir d'environ {{abo:min}} € par mois pour un site d'une page ; domaine offert la 1re année), planning cadré au devis, scores ≥ 90 vérifiables sur [nos démonstrations en ligne](/realisations), SEO technique détaillé, un mois d'ajustements inclus après la mise en ligne, réversibilité native (Next.js, standard du marché), démos publiques consultables.
 
 **Faut-il un cahier des charges avant de demander des devis ?**
 C'est l'idéal : les devis deviennent comparables. [Notre modèle est gratuit.](/ressources/cahier-des-charges)

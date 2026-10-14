@@ -41,7 +41,7 @@ Savoir en fin de journée combien de commandes sont réservées pour le lendemai
 
 ## Comment le mettre en place
 
-Un système de click & collect pour boulangerie combine une page produits (pains, viennoiseries, pâtisseries) avec quantités disponibles, un choix de créneau de retrait, et un paiement en ligne sécurisé. Pour une boulangerie qui démarre, une [boutique en ligne à partir de 1 647 €](/tarifs) couvre ce besoin — livrée en 21 jours ouvrés, avec gestion des créneaux et des stocks.
+Un système de click & collect pour boulangerie combine une page produits (pains, viennoiseries, pâtisseries) avec quantités disponibles, un choix de créneau de retrait, et un paiement en ligne sécurisé. Pour une boulangerie qui démarre, une [boutique en ligne à partir de {{prix:boutique}} €](/tarifs) couvre ce besoin — avec gestion des créneaux et des stocks.
 
 ## En résumé
 
@@ -59,7 +59,7 @@ Oui, même à volume modeste : il réduit d'abord la friction pour les clients p
 Non, les produits du quotidien (pain classique) se vendent bien en spontané. La réservation apporte le plus de valeur sur les produits en quantité limitée ou les commandes spéciales.
 
 **Combien de temps pour mettre en place ce système ?**
-Une boutique en ligne complète avec gestion des créneaux est livrée en 21 jours ouvrés chez Stackup Agency.
+Cela dépend du projet : le prix exact se fixe au devis, après un appel découverte gratuit de 30 minutes, selon ce que vous choisissez.
 
 **Un simple formulaire de contact suffit-il pour commencer ?**
 Pour tester la demande, oui. Mais un vrai système avec paiement et gestion des stocks en temps réel est nécessaire dès que le volume de commandes devient régulier.

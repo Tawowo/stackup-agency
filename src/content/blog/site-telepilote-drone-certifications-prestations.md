@@ -65,7 +65,7 @@ Oui, cela évite les malentendus sur les délais de prestation et démontre une 
 Oui, particulièrement pour des prestations en zone urbaine ou proche d'infrastructures, où le client cherche une protection en cas d'incident pendant le vol.
 
 **Combien coûte un site professionnel pour un télépilote de drone ?**
-À partir de 449 € pour un site vitrine avec portfolio organisé par secteur, livré en 10 jours ouvrés.
+À partir de {{prix:une-page}} € pour un site vitrine avec portfolio organisé par secteur ; le prix exact se fixe au devis, selon ce que vous choisissez.
 
 ---
 

@@ -12,7 +12,7 @@ import { euros } from '@/domain/devis/resume'
 import type { ConfigDevis } from '@/domain/devis/types'
 import ApercuNiveau from './Apercus'
 import { CarteCase, CartesRadio, Compteur, Partie } from './controles'
-import { IA_PHRASE, METIERS, PHRASE_IA, PHRASE_PORTEE, estMultiple, groupesFonctionnalites, modulesOutil, nettoyer } from './donnees'
+import { IA_PHRASE, METIERS, PHRASE_IA, PHRASE_PORTEE, TITRE_IA, TITRE_PORTEE, estMultiple, groupesFonctionnalites, modulesOutil, nettoyer } from './donnees'
 
 export type Maj = (f: (c: ConfigDevis) => ConfigDevis) => void
 interface P {
@@ -158,15 +158,6 @@ export function EtapePages({ cfg, maj, repartir, setRepartir }: P & { repartir: 
 }
 
 // ───────── 4. Google ─────────
-const TITRE_PORTEE: Record<string, string> = {
-  Aucun: 'Pas pour l’instant',
-  Essentiel: 'Être trouvé par votre nom',
-  Local: 'Être trouvé dans votre ville',
-  Régional: 'Être trouvé dans tout votre département',
-  National: 'Être trouvé partout en France',
-}
-const TITRE_IA: Record<string, string> = { Aucune: 'Pas pour l’instant', Essentielle: 'Être compris par les IA', Avancée: 'Être cité par les IA' }
-
 export function EtapeGoogle({ cfg, maj }: P) {
   const seo = LIGNES.filter((l) => l.famille === 'seo')
   const concernees = calculer(cfg).pagesReferencees

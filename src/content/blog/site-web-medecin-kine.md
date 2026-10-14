@@ -133,13 +133,13 @@ Un blog médical ou kinésithérapeutique peut exister sous réserve de :
 
 ---
 
-## Budget et délais
+## Budget
 
-| Type de site | Budget | Délai |
-|---|---|---|
-| Site vitrine simple (5 pages, Doctolib intégré) | 449€ | 10 jours ouvrés |
-| Site multi-pages (8-12 pages, blog) | 749€ | 17 jours ouvrés |
-| Site avec gestion de contenu autonome | 1 447€ | 21 jours ouvrés |
+| Type de site | Budget |
+|---|---|
+| Site vitrine simple (5 pages, Doctolib intégré) | À partir de {{prix:une-page}} € |
+| Site multi-pages (8-12 pages, blog) | À partir de {{prix:multi-pages}} € |
+| Site avec gestion de contenu autonome | À partir de {{prix:outil}} € |
 
 L'intégration du widget Doctolib est incluse dans toutes nos formules — elle ne nécessite qu'un copier-coller de code fourni par Doctolib.
 

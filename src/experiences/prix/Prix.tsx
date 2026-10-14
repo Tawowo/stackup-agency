@@ -19,7 +19,7 @@ import './prix.css'
 const ENGAGEMENTS = [
   { nom: 'Démo avant signature', d: 'M4 16 l8 8 l16 -16' },
   { nom: 'Code et données à vous', d: 'M6 6 h20 v20 h-20 z M11 16 h10' },
-  { nom: 'Pas d’abonnement obligatoire', d: 'M4 16 h24 M16 4 v24' },
+  { nom: 'Abonnement facultatif, sans engagement', d: 'M4 16 h24 M16 4 v24' },
 ]
 
 export default function Prix() {

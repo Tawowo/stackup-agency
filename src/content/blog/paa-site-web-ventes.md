@@ -66,7 +66,7 @@ Un lead entrant qui ne reçoit pas de réponse dans les 24h a de grandes chances
 
 Un artisan sans site web dépend du bouche-à-oreille et des plateformes d'intermédiation (Houzz, Habitissimo). Ces plateformes prennent des commissions et les leads sont partagés avec des concurrents.
 
-Avec un site optimisé pour les requêtes locales ("plombier urgence [ville]", "électricien [département]"), l'artisan capte des demandes directement — sans commission. L'investissement de 449€ se rembourse en une ou deux missions.
+Avec un site optimisé pour les requêtes locales ("plombier urgence [ville]", "électricien [département]"), l'artisan capte des demandes directement — sans commission. L'investissement (à partir de {{prix:une-page}} €) se rembourse souvent en quelques missions.
 
 ### Restaurants et commerces
 

@@ -8,6 +8,7 @@ import Prix from '@/experiences/prix/Prix'
 import Methode from '@/experiences/methode/Methode'
 import Atelier from '@/experiences/atelier/Atelier'
 import Depart from '@/experiences/depart/Depart'
+import ParcoursClient from '@/components/tarifs/ParcoursClient'
 import Rail from '@/components/layout/Rail'
 
 export default function Accueil() {
@@ -22,6 +23,7 @@ export default function Accueil() {
         <Machines />
         <Prix />
         <Methode />
+        <ParcoursClient id="parcours" />
         <Atelier />
         <Depart />
       </main>

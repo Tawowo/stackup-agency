@@ -77,4 +77,4 @@ La bonne décision se prend avec une analyse complète de votre contexte : type 
 
 ---
 
-*Vous souhaitez mettre en place un système de caisse adapté à votre restaurant ? L'équipe Stackup Agency vous accompagne de A à Z, de la conception à la mise en ligne. [Contactez-nous pour un devis gratuit](/contact) — réponse garantie sous 72h.*
+*Vous souhaitez mettre en place un système de caisse adapté à votre restaurant ? L'équipe Stackup Agency vous accompagne de A à Z, de la conception à la mise en ligne. [Prenez rendez-vous pour un appel découverte gratuit de 30 minutes](/contact).*

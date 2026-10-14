@@ -1,6 +1,6 @@
 /**
  * REDIRECTIONS 301 — générées par scripts/redirections.mjs (ne pas éditer à la main).
- * 71 reprises de l'ancien site + 10 pour les pages retirées en V5.
+ * 71 reprises de l'ancien site + 12 pour les pages retirées en V5.
  */
 import type { Redirect } from 'next/dist/lib/load-custom-routes'
 
@@ -389,6 +389,16 @@ export const REDIRECTIONS: Redirect[] = [
   {
     "source": "/outils/studio-de-style",
     "destination": "/tarifs#estimer",
+    "permanent": true
+  },
+  {
+    "source": "/blog/site-vitrine-449-inclus",
+    "destination": "/blog/site-vitrine-inclus",
+    "permanent": true
+  },
+  {
+    "source": "/blog/idee-mise-en-ligne-10-jours-methode",
+    "destination": "/blog/idee-mise-en-ligne-methode",
     "permanent": true
   },
   {

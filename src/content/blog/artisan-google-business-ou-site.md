@@ -13,7 +13,7 @@ keywords: ["artisan google business", "artisan google business ou site internet"
 
 ## Pourquoi ce choix se pose pour tant d'artisans
 
-Un artisan qui débute son activité digitale, avec un temps et un budget limités, doit prioriser. Deux options gratuites ou peu coûteuses s'offrent souvent en premier réflexe : créer une fiche Google Business Profile (gratuite), ou investir dans un site internet (à partir de quelques centaines d'euros). La confusion vient du fait que ces deux outils semblent parfois redondants — tous deux apparaissent dans les résultats Google pour une recherche locale.
+Un artisan qui débute son activité digitale, avec un temps et un budget limités, doit prioriser. Deux options gratuites ou peu coûteuses s'offrent souvent en premier réflexe : créer une fiche Google Business Profile (gratuite), ou investir dans un site internet (à partir de {{prix:une-page}} €). La confusion vient du fait que ces deux outils semblent parfois redondants — tous deux apparaissent dans les résultats Google pour une recherche locale.
 
 ## Ce que fait la fiche Google Business, et ses limites
 
@@ -31,8 +31,8 @@ Un site capte aussi des recherches que la fiche Google Business ne capte pas dir
 
 | Critère | Fiche Google Business | Site internet |
 |---|---|---|
-| Coût | Gratuit | À partir de 449 € |
-| Temps de mise en place | Quelques dizaines de minutes | À partir de 10 jours ouvrés |
+| Coût | Gratuit | À partir de {{prix:une-page}} € |
+| Temps de mise en place | Quelques dizaines de minutes | Selon le projet |
 | Visibilité dans le pack local | Oui, directement | Indirecte (renforce le classement) |
 | Portfolio détaillé de réalisations | Très limité | Complet |
 | Formulaire de contact qualifiant | Non | Oui |
@@ -43,7 +43,7 @@ Un site capte aussi des recherches que la fiche Google Business ne capte pas dir
 
 **Semaine 1** : créer et optimiser la fiche Google Business Profile — catégorie précise, zone d'intervention, premières photos de réalisations, description avec les mots-clés naturels de l'activité. C'est gratuit et rapide, aucune raison d'attendre.
 
-**Dès que le budget le permet** : investir dans un site vitrine (à partir de 449 €) qui approfondit ce que la fiche ne peut pas montrer — portfolio complet, prestations détaillées, formulaire de contact qualifiant. Le site renforce en retour la crédibilité de la fiche Google Business (lien vers le site visible sur la fiche).
+**Dès que le budget le permet** : investir dans un site vitrine (à partir de {{prix:une-page}} €) qui approfondit ce que la fiche ne peut pas montrer — portfolio complet, prestations détaillées, formulaire de contact qualifiant. Le site renforce en retour la crédibilité de la fiche Google Business (lien vers le site visible sur la fiche).
 
 **Une fois l'activité installée** : envisager un site multi-pages avec une page par prestation, pour capter davantage de recherches spécifiques et construire un référencement local durable au-delà du seul pack local.
 

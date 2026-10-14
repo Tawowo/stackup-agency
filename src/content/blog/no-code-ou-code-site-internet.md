@@ -33,9 +33,9 @@ Les outils no-code modernes ont aussi élargi leurs capacités : Webflow permet 
 
 | Critère | No-code | Code sur mesure |
 |---|---|---|
-| Rapidité de mise en ligne | Très élevée | Modérée (10 à 21 jours ouvrés) |
-| Coût initial | Faible à modéré | Plus élevé (449 € à 1 647 €) |
-| Coût récurrent | Abonnement à vie | Nul (hors maintenance optionnelle) |
+| Rapidité de mise en ligne | Très élevée | Modérée (selon le projet) |
+| Coût initial | Faible à modéré | Plus élevé (à partir de {{prix:une-page}} €) |
+| Coût récurrent | Abonnement à vie | Achat unique, puis abonnement facultatif, sans engagement |
 | Plafond de personnalisation | Réel, atteint tôt ou tard | Aucun |
 | Performances techniques | Limitées par la plateforme | Maximales, optimisées pour le projet |
 | Propriété du site | Non | Oui, code livré |
@@ -71,7 +71,7 @@ Oui, c'est l'un de ses meilleurs usages : valider une idée rapidement avant d'i
 Le contenu (textes, images) est récupérable manuellement. Le design et la structure technique doivent être reconstruits, aucun export réel n'étant possible depuis la plupart des plateformes no-code.
 
 **Le no-code est-il vraiment moins cher sur le long terme ?**
-Pas nécessairement. L'abonnement mensuel s'accumule sans limite dans le temps, alors qu'un site codé sur mesure représente un investissement unique, potentiellement plus rentable dès la 3ᵉ à 5ᵉ année.
+Pas nécessairement. L'abonnement mensuel s'accumule sans limite dans le temps, alors qu'un site codé sur mesure représente un investissement unique, potentiellement plus rentable sur la durée.
 
 **Un site no-code peut-il bien référencer sur Google ?**
 Oui pour les bases du SEO, mais les performances techniques (facteur de classement officiel) restent structurellement limitées par la plateforme, un désavantage face à un site codé et optimisé spécifiquement.

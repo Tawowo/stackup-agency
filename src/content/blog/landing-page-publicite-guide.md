@@ -30,7 +30,7 @@ Quand vous payez un clic Google Ads 2€, l'utilisateur qui arrive sur votre lan
 Ce que l'utilisateur voit sans scroller doit suffire à le convaincre de rester :
 
 - **Titre (H1)** : reformulation de l'intention de l'annonce + bénéfice principal
-  - Bon : "Créez votre site vitrine en 10 jours ouvrés — Devis gratuit"
+  - Bon : "Créez votre site vitrine sur mesure — Appel gratuit"
   - Mauvais : "Bienvenue chez Stackup Agency"
 - **Sous-titre** : complément d'information sur le bénéfice ou la preuve
 - **CTA principal** : un seul bouton, couleur contrastée, texte d'action ("Demander mon devis" vs "Envoyer")
@@ -39,7 +39,7 @@ Ce que l'utilisateur voit sans scroller doit suffire à le convaincre de rester 
 ### 2. La preuve sociale
 
 Immédiatement après le hero ou en sidebar :
-- **Chiffres clés** : "127 sites créés", "Délai garanti 10 jours ouvrés", "4,9/5 sur Google"
+- **Chiffres clés** : "127 sites créés", "4,9/5 sur Google"
 - **Logos de clients** (si B2B)
 - **Avis clients** : 2-3 verbatims courts avec prénom, ville et contexte
 
@@ -56,7 +56,7 @@ Ce qui est inclus, ce qui est exclu. Sous forme de liste courte, pas de paragrap
 
 Les raisons pour lesquelles un prospect hésite — et les réponses :
 - "Et si je change d'avis ?" → Le code vous appartient à 100%, vous pouvez transférer
-- "Vous livrerez vraiment en 10 jours ?" → Délai garanti contractuellement
+- "Vous tiendrez vraiment le calendrier ?" → Calendrier écrit au devis
 
 ### 5. CTA répété
 

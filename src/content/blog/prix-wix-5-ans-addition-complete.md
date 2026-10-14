@@ -81,14 +81,14 @@ Wix propose des adresses e-mail professionnelles (via Google Workspace intégré
 
 | | Wix (scénario activité de service) | Site sur mesure |
 |---|---|---|
-| Coût de création | 0 € | 449 € à 749 € selon le type |
-| Coût sur 5 ans (applications comprises) | ~4 280 € | 449-749 € + maintenance optionnelle (29-89 €/mois) |
-| Coût maintenance optionnelle sur 5 ans | Inclus dans les postes ci-dessus | ~1 740 à 5 340 € selon le palier choisi |
-| **Total réaliste sur 5 ans** | **~4 280 €** | **~2 189 € à 6 089 €, selon le niveau de maintenance souscrit** |
-| Propriété du site à l'issue des 5 ans | Non, dépendant de l'abonnement à vie | Oui, quoi qu'il arrive à un éventuel contrat de maintenance |
+| Coût de création | 0 € | À partir de {{prix:une-page}} € selon le type |
+| Coût sur 5 ans (applications comprises) | ~4 280 € | Achat unique, puis abonnement mensuel facultatif |
+| Coût maintenance optionnelle sur 5 ans | Inclus dans les postes ci-dessus | Abonnement facultatif, sans engagement, composé à la carte |
+| **Total réaliste sur 5 ans** | **~4 280 €** | **Achat unique, puis abonnement facultatif selon ce que vous choisissez** |
+| Propriété du site à l'issue des 5 ans | Non, dépendant de l'abonnement à vie | Oui, au paiement complet, quoi qu'il arrive à l'abonnement |
 | Performances techniques | 60-80 en moyenne sur PageSpeed mobile | 90-100 en moyenne |
 
-Même en comparant un site sur mesure avec le palier de maintenance le plus complet (89 €/mois), le coût sur 5 ans reste dans une fourchette comparable à Wix équipé de ses applications nécessaires — avec, en plus, la propriété totale du site et de meilleures performances techniques. Sans souscrire à aucune maintenance, l'écart devient nettement favorable au sur mesure.
+Côté sur mesure, le coût se compose d'un achat unique, puis d'un abonnement facultatif et sans engagement que vous composez à la carte : vous gardez la propriété totale du site et bénéficiez de meilleures performances techniques, et vous pouvez arrêter l'abonnement quand vous le souhaitez, alors qu'un site Wix dépend de son abonnement à vie.
 
 ## Ce que Wix ne facture jamais mais que le site perd malgré tout
 
@@ -106,7 +106,7 @@ Avant de choisir un plan Wix (ou toute plateforme par abonnement équivalente), 
 
 - Le prix affiché de Wix (à partir de 17 €/mois) ne couvre que le strict minimum : nom de domaine, applications, stockage et e-mail professionnel s'ajoutent rapidement.
 - Une activité de service courante (réservation, avis clients) atteint généralement 4 000 à 4 500 € de coût réel sur 5 ans, tous postes compris.
-- Un site sur mesure, même avec une maintenance complète souscrite sur 5 ans, reste dans une fourchette comparable ou inférieure, avec en plus la propriété totale du site.
+- Un site sur mesure se paie en achat unique, suivi d'un abonnement facultatif et sans engagement, avec en plus la propriété totale du site.
 - Vérifier le tarif sans engagement (souvent 30 à 50 % plus élevé que le prix annuel affiché) est indispensable avant toute comparaison de plateformes.
 
 ## Questions fréquentes
@@ -124,7 +124,7 @@ Oui, en renonçant à certaines fonctionnalités professionnelles utiles. Le com
 Wix, comme la plupart des plateformes SaaS, ajuste régulièrement ses tarifs. Un plan souscrit aujourd'hui n'a pas de garantie de prix fixe sur 5 ans.
 
 **Un site sur mesure sans aucune maintenance mensuelle reste-t-il fonctionnel dans la durée ?**
-Oui, le site continue de fonctionner sans abonnement obligatoire. La maintenance optionnelle couvre les mises à jour techniques, la sécurité et les évolutions — utile mais non indispensable au fonctionnement de base du site.
+Oui, mais il faut alors héberger le site et assurer soi-même les mises à jour : l'abonnement est facultatif et sans engagement, et si vous l'arrêtez vous gardez votre site et vos fichiers. Il couvre l'hébergement, les mises à jour techniques, la sécurité et les évolutions — utile mais non obligatoire.
 
 ---
 

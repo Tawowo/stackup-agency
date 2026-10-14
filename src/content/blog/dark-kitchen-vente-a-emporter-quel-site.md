@@ -66,7 +66,7 @@ Les plateformes comme Uber Eats ou Deliveroo apportent une visibilité initiale 
 Oui, même sans salle accessible au public — la fiche reste un point d'entrée pour les recherches locales, avec la mention claire qu'il s'agit d'un établissement de vente à emporter ou en livraison uniquement.
 
 **Faut-il un site e-commerce complet pour une dark kitchen ?**
-Généralement oui, avec gestion des commandes, des zones de livraison et du paiement en ligne intégrés — une [boutique en ligne à partir de 1 647 €](/tarifs) couvre ce besoin.
+Généralement oui, avec gestion des commandes, des zones de livraison et du paiement en ligne intégrés — une [boutique en ligne à partir de {{prix:boutique}} €](/tarifs) couvre ce besoin.
 
 **Peut-on gérer plusieurs marques de dark kitchen depuis un seul site ?**
 C'est possible avec une structure de site adaptée (une page ou un sous-domaine par marque), mais cela complexifie l'expérience de commande — à évaluer selon le volume de chaque marque.

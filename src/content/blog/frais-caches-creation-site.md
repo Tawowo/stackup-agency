@@ -21,19 +21,19 @@ Un frais caché n'est presque jamais un mensonge — c'est une **omission struct
 
 Le grand classique. Le domaine est « inclus » la première année ; le renouvellement arrive à 40, 50, 60 €/an — pour un .fr qui coûte 8 à 15 € chez n'importe quel registrar. Sur 10 ans : 300 à 500 € de marge invisible.
 
-**La parade :** demandez qui est propriétaire du domaine (ce doit être VOUS) et le prix de renouvellement écrit. Chez Stackup : domaine offert la première année, puis à votre charge au prix réel — ou inclus dans la maintenance dès 29 €/mois.
+**La parade :** demandez qui est propriétaire du domaine (ce doit être VOUS) et le prix de renouvellement écrit. Chez Stackup : domaine offert la première année, puis inclus dans l'abonnement mensuel facultatif (sans engagement) à partir de la 2ᵉ année.
 
 ### 2. L'hébergement « offert » à durée floue
 
 « Hébergement inclus ! » — pour 3 mois, 6 mois ? Puis la facture tombe : 15 à 30 €/mois pour un hébergement mutualisé qui en vaut 5.
 
-**La parade :** durée d'inclusion écrite + prix de la suite écrit. (Chez nous : 12 mois inclus, puis maintenance optionnelle affichée publiquement.)
+**La parade :** durée d'inclusion écrite + prix de la suite écrit. (Chez nous : l'hébergement n'est pas inclus dans le prix de création ; il fait partie de l'abonnement mensuel facultatif, sans engagement, dont le prix est affiché publiquement.)
 
 ### 3. Les retouches facturées dès le lendemain
 
 Le site est livré vendredi ; lundi, vous voyez une faute dans un titre : 80 € la retouche. Sans période de support définie, chaque ajustement est un devis.
 
-**La parade :** une période de support post-livraison écrite au contrat. Le standard décent est 30 jours.
+**La parade :** une période de support post-livraison écrite au contrat. Un standard décent : un mois d'ajustements inclus après la mise en ligne.
 
 ### 4. Les « options » qui n'en sont pas
 
@@ -81,7 +81,7 @@ Un prestataire qui remplit ce tableau sans frémir est un prestataire avec qui l
 ## Questions fréquentes
 
 **Chez Stackup, quels sont exactement les coûts après l'année 1 ?**
-Deux options, publiques : autonomie complète (vous reprenez hébergement ~5-10 €/mois et domaine ~12 €/an — le site est à vous) ou maintenance dès 29 €/mois (hébergement, domaine, sauvegardes, mises à jour techniques inclus). Rien d'autre, rien d'obligatoire.
+Deux options, publiques : autonomie complète (vous reprenez hébergement ~5-10 €/mois et domaine ~12 €/an — le site est à vous) ou l'abonnement mensuel facultatif, sans engagement, composé à la carte (hébergement, maintenance, publications, suivi du référencement, heures de modifications…), à partir d'environ {{abo:min}} € par mois pour un site d'une page, domaine inclus à partir de la 2ᵉ année. Rien d'obligatoire.
 
 **Un devis très détaillé est-il un gage de sérieux ?**
 C'est un bon signal, à condition que le détail porte sur les inclus/exclus et les coûts récurrents — pas seulement sur la décomposition technique de la création.
@@ -94,4 +94,4 @@ Oui — cherchez spécifiquement les avis à 1-2 étoiles mentionnant « frais �
 
 ---
 
-*Pour aller plus loin : [Les 10 questions à poser avant de signer](/blog/questions-devis-site-internet) · [Ce qui est inclus dans notre site à 449 €](/blog/site-vitrine-449-inclus) · [Nos tarifs publics](/tarifs)*
+*Pour aller plus loin : [Les 10 questions à poser avant de signer](/blog/questions-devis-site-internet) · [Ce qui est inclus dans notre site à {{prix:une-page}} €](/blog/site-vitrine-inclus) · [Nos tarifs publics](/tarifs)*

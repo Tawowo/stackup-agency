@@ -1,3 +1,4 @@
+import { jetonsProfond } from '../lib/jetons'
 /**
  * SERVICES LOCAUX — les six pages de l'ancien site (/services-locaux/[slug]),
  * reprises sans étapes chiffrées ni délais (règle 8). Les FAQ qui parlent de
@@ -16,11 +17,11 @@ export type ServiceLocal = {
   faq: { q: string; a: string }[]
 }
 
-export const SERVICES_LOCAUX: Record<string, ServiceLocal> = {
+const BRUT_SERVICES_LOCAUX: Record<string, ServiceLocal> = {
   'creation-site-restaurant': {
     title: 'Création de site web pour restaurant',
     metaTitle: 'Site web restaurant — Réservation en ligne',
-    metaDesc: 'Créez un site web professionnel pour votre restaurant : réservation en ligne, menu digital, SEO local, click & collect Dès 449€.',
+    metaDesc: 'Créez un site web professionnel pour votre restaurant : réservation en ligne, menu digital, SEO local, click & collect Dès {{prix:une-page}} €.',
     hero: {
       headline: 'Le site web qui remplit votre restaurant',
       subheadline: 'Réservation en ligne, menu digital, SEO local et click & collect — tout ce dont votre établissement a besoin pour attirer plus de clients.',
@@ -48,7 +49,7 @@ export const SERVICES_LOCAUX: Record<string, ServiceLocal> = {
       { title: 'Galerie photo', desc: 'Mise en valeur de vos plats, de votre salle et de votre équipe. La première impression se fait en ligne.', icon: '📸' },
       { title: 'Gestion des avis', desc: 'Stratégie pour obtenir plus d\'avis Google positifs et y répondre professionnellement.', icon: '⭐' },
     ],
-    price: { from: 'À partir de 449€', details: 'Site vitrine complet, menu digital, réservation en ligne, SEO local. Pas de frais cachés.' },
+    price: { from: 'À partir de {{prix:une-page}} €', details: 'Site vitrine complet, menu digital, réservation en ligne, SEO local. Pas de frais cachés.' },
     faq: [
       { q: 'Combien de temps pour créer mon site ?', a: 'Nous livrons en 10 jours ouvrés après validation de la maquette.' },
       { q: 'Est-ce que je peux modifier mon menu moi-même ?', a: 'Oui, nous vous formons à la gestion du contenu. Modifier une carte prend moins de 5 minutes.' },
@@ -60,7 +61,7 @@ export const SERVICES_LOCAUX: Record<string, ServiceLocal> = {
   'creation-site-artisan': {
     title: 'Création de site web pour artisan',
     metaTitle: 'Site web artisan — Devis en ligne et SEO local',
-    metaDesc: 'Site web professionnel pour artisans : portfolio chantiers, devis en ligne, prise de RDV, SEO local. Générez des leads qualifiés Dès 449€.',
+    metaDesc: 'Site web professionnel pour artisans : portfolio chantiers, devis en ligne, prise de RDV, SEO local. Générez des leads qualifiés Dès {{prix:une-page}} €.',
     hero: {
       headline: 'Le site qui remplit votre carnet de commandes',
       subheadline: 'Portfolio de réalisations, formulaire de devis, prise de RDV en ligne et SEO local — attirez des clients qualifiés dans votre secteur.',
@@ -88,7 +89,7 @@ export const SERVICES_LOCAUX: Record<string, ServiceLocal> = {
       { title: 'Labels et certifications', desc: 'Mise en avant de vos qualifications RGE, Qualibat, assurances. Rassurer le client avant de le voir.', icon: '✅' },
       { title: 'Avis clients', desc: 'Collecte d\'avis Google automatisée. Construisez votre réputation en ligne.', icon: '⭐' },
     ],
-    price: { from: 'À partir de 449€', details: 'Portfolio, formulaire de devis, SEO local, Google Business. Formation incluse.' },
+    price: { from: 'À partir de {{prix:une-page}} €', details: 'Portfolio, formulaire de devis, SEO local, Google Business. Formation incluse.' },
     faq: [
       { q: 'Je n\'ai pas de photos de mes chantiers, c\'est un problème ?', a: 'Non. Nous vous conseillons sur comment photographier facilement vos chantiers avec un smartphone. Des photos simples bien cadrées suffisent.' },
       { q: 'Mon site sera visible sur quelle zone géographique ?', a: 'Nous optimisons votre référencement sur votre commune et les communes environnantes selon votre rayon d\'intervention.' },
@@ -100,7 +101,7 @@ export const SERVICES_LOCAUX: Record<string, ServiceLocal> = {
   'creation-site-commerce': {
     title: 'Création de site web pour commerce',
     metaTitle: 'Site web commerce — Click & collect, SEO local',
-    metaDesc: 'Site web professionnel pour votre commerce : catalogue en ligne, click & collect, horaires, SEO local. Attirez des clients et vendez en ligne. Dès 449€.',
+    metaDesc: 'Site web professionnel pour votre commerce : catalogue en ligne, click & collect, horaires, SEO local. Attirez des clients et vendez en ligne. Dès {{prix:une-page}} €.',
     hero: {
       headline: 'Votre commerce mérite d\'être visible en ligne',
       subheadline: 'Catalogue produits, horaires, click & collect et SEO local — combattez les pure players avec un site web qui convertit les visiteurs en clients.',
@@ -128,9 +129,9 @@ export const SERVICES_LOCAUX: Record<string, ServiceLocal> = {
       { title: 'Carte cadeau digitale', desc: 'Vendez des cartes cadeaux en ligne. Idéal pour les fêtes et les offres promotionnelles.', icon: '🎁' },
       { title: 'Newsletter locale', desc: 'Restez en contact avec vos clients fidèles. Annonces, promotions, nouveautés.', icon: '📧' },
     ],
-    price: { from: 'À partir de 449€', details: 'Site vitrine + catalogue + SEO local. Click & collect disponible en option.' },
+    price: { from: 'À partir de {{prix:une-page}} €', details: 'Site vitrine + catalogue + SEO local. Click & collect disponible en option.' },
     faq: [
-      { q: 'Je vends des centaines de produits, est-ce faisable ?', a: 'Oui. Nous pouvons créer une boutique e-commerce complète avec gestion des stocks. Devis personnalisé à partir de 749€.' },
+      { q: 'Je vends des centaines de produits, est-ce faisable ?', a: 'Oui. Nous pouvons créer une boutique e-commerce complète avec gestion des stocks. Devis personnalisé à partir de {{prix:multi-pages}} €.' },
       { q: 'Mes horaires changent souvent, comment les mettre à jour ?', a: 'Vous les modifiez vous-même en 2 clics depuis votre espace d\'administration. Votre Google Business est synchronisé.' },
       { q: 'Le click & collect prend-il une commission ?', a: 'Aucune commission. Vous encaissez 100% du montant des commandes.' },
       { q: 'Puis-je vendre en ligne et en boutique en même temps ?', a: 'Oui, c\'est précisément l\'objectif. Le stock est géré en temps réel pour éviter les ruptures.' },
@@ -139,8 +140,8 @@ export const SERVICES_LOCAUX: Record<string, ServiceLocal> = {
 
   'creation-boutique-en-ligne': {
     title: 'Création de boutique en ligne',
-    metaTitle: 'Boutique en ligne sur mesure — dès 1 647 €',
-    metaDesc: 'Lancez votre boutique en ligne sur mesure : paiement sécurisé, gestion des stocks, livraison, SEO e-commerce. Développement professionnel dès 1 647 €.',
+    metaTitle: 'Boutique en ligne sur mesure — dès {{prix:boutique}} €',
+    metaDesc: 'Lancez votre boutique en ligne sur mesure : paiement sécurisé, gestion des stocks, livraison, SEO e-commerce. Développement professionnel dès {{prix:boutique}} €.',
     hero: {
       headline: 'Votre boutique en ligne, à vous',
       subheadline: 'Paiement sécurisé, gestion des stocks, livraison automatisée, SEO e-commerce — tout pour vendre en ligne sans dépendre d\'Amazon ou d\'Etsy.',
@@ -168,7 +169,7 @@ export const SERVICES_LOCAUX: Record<string, ServiceLocal> = {
       { title: 'Avis produits', desc: 'Les clients laissent des avis sur vos produits. Ça rassure et ça convertit.', icon: '⭐' },
       { title: 'Analytics & rapports', desc: 'Tableau de bord avec ventes, panier moyen, produits les plus vendus. Pilotez votre activité.', icon: '📊' },
     ],
-    price: { from: 'À partir de 1 647 €', details: 'Boutique complète, paiement en ligne sécurisé, livraison, SEO. Formation à la gestion incluse.' },
+    price: { from: 'À partir de {{prix:boutique}} €', details: 'Boutique complète, paiement en ligne sécurisé, livraison, SEO. Formation à la gestion incluse.' },
     faq: [
       { q: 'Y a-t-il des commissions sur mes ventes ?', a: 'Seuls les frais bancaires du prestataire de paiement s\'appliquent (de l\'ordre de 1,5% + 0,25€ par transaction pour les cartes européennes). Stackup ne prend aucune commission.' },
       { q: 'Combien de produits puis-je avoir ?', a: 'Autant que vous voulez. Notre boutique gère des catalogues de 10 à 10 000 produits.' },
@@ -180,7 +181,7 @@ export const SERVICES_LOCAUX: Record<string, ServiceLocal> = {
   'developpement-application-metier': {
     title: 'Développement d\'application métier sur mesure',
     metaTitle: 'Application métier sur mesure — CRM et ERP',
-    metaDesc: 'Développement d\'application métier sur mesure : CRM, ERP, gestion planning, facturation automatique. Remplacez Excel et les logiciels génériques. Dès 1 447€.',
+    metaDesc: 'Développement d\'application métier sur mesure : CRM, ERP, gestion planning, facturation automatique. Remplacez Excel et les logiciels génériques. Dès {{prix:outil}} €.',
     hero: {
       headline: 'Remplacez vos outils obsolètes par une application sur mesure',
       subheadline: 'CRM, gestion planning, facturation automatique, tableau de bord temps réel — une seule application qui fait tout ce que vous avez besoin.',
@@ -208,9 +209,9 @@ export const SERVICES_LOCAUX: Record<string, ServiceLocal> = {
       { title: 'Portail client', desc: 'Espace sécurisé où vos clients suivent leurs commandes, documents, factures.', icon: '🔐' },
       { title: 'Notifications temps réel', desc: 'Alertes email, SMS ou push pour vos équipes et vos clients. Rien n\'est oublié.', icon: '🔔' },
     ],
-    price: { from: 'À partir de 1 447€', details: 'Application sur mesure, hébergement sécurisé, formation équipe, support 3 mois. Le prix s\'affine selon le périmètre (± 500 € autour de ce tarif dans la majorité des projets).' },
+    price: { from: 'À partir de {{prix:outil}} €', details: 'Application sur mesure, hébergement sécurisé, formation équipe, un mois d\'ajustements après la mise en ligne. Le prix exact se fixe au devis, selon les modules choisis.' },
     faq: [
-      { q: 'Combien de temps pour développer mon application ?', a: 'Entre 4 et 12 semaines selon la complexité. Nous définissons ensemble le planning lors du cadrage.' },
+      { q: 'Combien de temps pour développer mon application ?', a: 'Cela dépend du nombre de modules choisis : l’estimateur de la page tarifs donne un délai indicatif, et le planning se définit ensemble lors du cadrage.' },
       { q: 'Est-ce que mes données sont sécurisées ?', a: 'Oui. Hébergement en Europe, chiffrement des données, sauvegardes quotidiennes, conformité RGPD.' },
       { q: 'Puis-je faire évoluer l\'application plus tard ?', a: 'Absolument. On développe en pensant à l\'évolutivité. Ajouter une fonctionnalité est simple et bien documenté.' },
       { q: 'Est-ce que l\'application fonctionne sur mobile ?', a: 'Oui, toutes nos applications sont responsives et accessibles depuis smartphone et tablette.' },
@@ -220,7 +221,7 @@ export const SERVICES_LOCAUX: Record<string, ServiceLocal> = {
   'referencement-local-seo': {
     title: 'Référencement local SEO',
     metaTitle: 'Référencement local — Apparaître sur Google Maps',
-    metaDesc: 'Référencement local SEO : Google Business Profile, mots-clés locaux, backlinks, avis clients. Apparaissez en premier sur Google dans votre ville. Dès 189€/mois.',
+    metaDesc: 'Référencement local SEO : Google Business Profile, mots-clés locaux, backlinks, avis clients. Apparaissez en premier sur Google dans votre ville. Dès {{abo:suivi-local}} €/mois.',
     hero: {
       headline: 'Apparaître en premier sur Google dans votre ville',
       subheadline: 'Google Business Profile optimisé, mots-clés locaux, stratégie d\'avis et backlinks — tout pour dominer les résultats de recherche locaux.',
@@ -248,7 +249,7 @@ export const SERVICES_LOCAUX: Record<string, ServiceLocal> = {
       { title: 'Stratégie avis clients', desc: 'Système automatisé pour obtenir plus d\'avis Google positifs de vos clients satisfaits.', icon: '⭐' },
       { title: 'Reporting mensuel', desc: 'Rapport mensuel de votre positionnement, du trafic et des leads générés.', icon: '📊' },
     ],
-    price: { from: 'À partir de 189€/mois', details: 'Audit initial, optimisation Google Business, suivi mensuel. Engagement 6 mois minimum recommandé.' },
+    price: { from: 'À partir de {{abo:suivi-local}} €/mois', details: 'Audit initial, optimisation Google Business, suivi mensuel. Sans engagement, préavis d\'un mois.' },
     faq: [
       { q: 'En combien de temps verrai-je des résultats ?', a: 'Entre 2 et 4 mois pour les premiers résultats visibles. En 6 mois, votre positionnement est significativement amélioré.' },
       { q: 'J\'ai déjà un site web, avez-vous besoin de le refaire ?', a: 'Non, on peut optimiser votre site existant. Si des modifications importantes sont nécessaires, on vous le dira clairement.' },
@@ -257,3 +258,5 @@ export const SERVICES_LOCAUX: Record<string, ServiceLocal> = {
     ],
   },
 }
+
+export const SERVICES_LOCAUX: Record<string, ServiceLocal> = jetonsProfond(BRUT_SERVICES_LOCAUX)

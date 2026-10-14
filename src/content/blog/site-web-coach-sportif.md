@@ -112,12 +112,12 @@ Un blog sur votre spécialité attire des prospects en phase de réflexion :
 
 ## Budget pour un site de coach sportif
 
-| Formule | Prix | Délai | Contenu |
-|---|---|---|---|
-| Site vitrine (5 pages) | 449€ | 10 jours ouvrés | Accueil, À propos, Offres, Témoignages, Contact |
-| Site multi-pages (8-10 pages) | 749€ | 17 jours ouvrés | + Blog, Programme en ligne, Page spécialité |
+| Formule | Prix | Contenu |
+|---|---|---|
+| Site vitrine (5 pages) | À partir de {{prix:une-page}} € | Accueil, À propos, Offres, Témoignages, Contact |
+| Site multi-pages (8-10 pages) | À partir de {{prix:multi-pages}} € | + Blog, Programme en ligne, Page spécialité |
 
-Pour un coach qui démarre, la formule vitrine à 449€ est suffisante. Elle peut évoluer vers le multi-pages quand l'activité se développe.
+Pour un coach qui démarre, la formule vitrine à partir de {{prix:une-page}} € est suffisante. Elle peut évoluer vers le multi-pages quand l'activité se développe.
 
 ---
 
@@ -154,4 +154,4 @@ Oui. Si vous donnez des conseils nutritionnels ou médicaux sans les qualificati
 - Le positionnement clair (public visé, méthode, résultats concrets) qualifie les prospects avant même le premier contact.
 - Le SEO local reste prioritaire pour un coach en présentiel ; les requêtes de niche (spécialité + public) captent une demande complémentaire qualifiée.
 
-Voir aussi : [site web pour coach professionnel](/blog/site-web-coach-professionnel), [Instagram pour artisans](/blog/instagram-artisan-guide), [création de site vitrine à partir de 449€](/tarifs).
+Voir aussi : [site web pour coach professionnel](/blog/site-web-coach-professionnel), [Instagram pour artisans](/blog/instagram-artisan-guide), [création de site vitrine à partir de {{prix:une-page}} €](/tarifs).

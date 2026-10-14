@@ -98,7 +98,7 @@ Les assistants vocaux lisent souvent la featured snippet (encadré en position 0
 
 La quasi-totalité des recherches vocales locales se font depuis un smartphone. Si votre site met 6 secondes à charger sur mobile 4G, vous perdez ces visiteurs — et Google le sait.
 
-Visez un **LCP < 2,5 secondes sur mobile** pour la recherche vocale locale. Notre guide sur la [vitesse de chargement](/blog/vitesse-chargement-site-guide-technique-complet) couvre les optimisations techniques. Si votre site a été conçu avec notre [plan Starter](/tarifs/starter), les optimisations mobile de base sont déjà en place. Les [plans Pro](/tarifs/pro) et [Premium](/tarifs/premium) incluent un monitoring de performance continu.
+Visez un **LCP < 2,5 secondes sur mobile** pour la recherche vocale locale. Notre guide sur la [vitesse de chargement](/blog/vitesse-chargement-site-guide-technique-complet) couvre les optimisations techniques. Un site conçu par nos soins intègre les optimisations mobile de base ([voir comment estimer votre projet](/tarifs#estimer)), et l'[abonnement facultatif](/tarifs#abonnement), composé à la carte, permet d'y ajouter de la maintenance.
 
 ## Citations locales et cohérence NAP
 

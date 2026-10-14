@@ -90,7 +90,7 @@ Répétez ce cycle avec des sujets différents. En 3 mois, vous avez 12 à 24 ar
 
 Un calendrier éditorial vous permet de déléguer la rédaction à un prestataire externe en restant maître des sujets. Vous validez la liste des articles, vous passez les briefs, le prestataire produit.
 
-Notre [service de rédaction blog SEO](/services/redaction-blog-seo) fonctionne exactement ainsi : nous construisons le calendrier éditorial ensemble, vous validez, nous rédigeons. Le Pack Autorité (159€/mois — 8 articles) inclut la stratégie de contenu sur 3 mois.
+Notre [service de rédaction blog SEO](/services/redaction-blog-seo) fonctionne exactement ainsi : nous construisons le calendrier éditorial ensemble, vous validez, nous rédigeons. L'abonnement mensuel facultatif, sans engagement, peut inclure des articles de blog ({{abo:article}} € l'article).
 
 Pour aller plus loin, lisez notre guide sur [l'externalisation complète de la rédaction blog](/blog/externaliser-redaction-blog-guide).
 

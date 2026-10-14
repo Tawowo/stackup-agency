@@ -121,13 +121,13 @@ La vente d'alcool en ligne est légale en France pour les adultes. Vous devez :
 
 ## Tarifs pour un site de brasserie artisanale
 
-| Besoin | Formule | Prix | Délai |
-|---|---|---|---|
-| Site vitrine (sans boutique) | Site vitrine | 449€ | 10 jours ouvrés |
-| Site avec catalogue et boutique | Site e-commerce | 1 647€ | 21 jours ouvrés |
-| Système de réservation visite | Site multi-pages | 749€ | 17 jours ouvrés |
+| Besoin | Formule | Prix |
+|---|---|---|
+| Site vitrine (sans boutique) | Site vitrine | À partir de {{prix:une-page}} € |
+| Site avec catalogue et boutique | Site e-commerce | À partir de {{prix:boutique}} € |
+| Système de réservation visite | Site multi-pages | À partir de {{prix:multi-pages}} € |
 
-Pour une brasserie qui commence, un [site vitrine à 449€](/tarifs) avec catalogue de bières non marchand et formulaire de contact pour les commandes B2B est souvent le bon point de départ. La boutique en ligne peut être ajoutée dans un second temps.
+Pour une brasserie qui commence, un [site vitrine à partir de {{prix:une-page}} €](/tarifs) avec catalogue de bières non marchand et formulaire de contact pour les commandes B2B est souvent le bon point de départ. La boutique en ligne peut être ajoutée dans un second temps.
 
 ---
 

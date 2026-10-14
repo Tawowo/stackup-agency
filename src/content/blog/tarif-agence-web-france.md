@@ -102,7 +102,7 @@ Chez Stackup Agency, nous fonctionnons comme une micro-agence spécialisée :
 - Intervention directe des fondateurs sur chaque projet
 - Spécialisation sur les sites vitrines, e-commerces et systèmes de gestion pour TPE
 
-Résultat : [site vitrine à partir de 449€](/tarifs), livré en [10 jours ouvrés](/tarifs), avec la même qualité technique qu'une agence régionale à 2 000€.
+Résultat : [site vitrine à partir de {{prix:une-page}} €](/tarifs), avec la même qualité technique qu'une agence régionale à 2 000€.
 
 ---
 

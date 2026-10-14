@@ -65,7 +65,7 @@ C'est la même logique que les FAQ sur votre site — mais appliquée à l'ensem
 
 ### 2. Les données chiffrées vérifiables
 
-Les IA aiment les chiffres. "Un site vitrine coûte entre 449€ et 2 000€" est plus extractible que "un site vitrine a un prix variable". Si vous avez des tarifs publics, des délais garantis, des statistiques sectorielles — mettez-les en avant.
+Les IA aiment les chiffres. "Un site vitrine coûte à partir de {{prix:une-page}} €, le prix exact se fixant au devis" est plus extractible que "un site vitrine a un prix variable". Si vous avez des tarifs publics, des délais garantis, des statistiques sectorielles — mettez-les en avant.
 
 ### 3. Les données structurées Schema.org
 

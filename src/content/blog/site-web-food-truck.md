@@ -103,19 +103,19 @@ Pour un food truck qui commence, un formulaire de demande de privatisation suffi
 
 ## Tarifs pour un site de food truck
 
-Un site pour food truck est généralement un site vitrine de 5 à 8 pages avec quelques fonctionnalités simples. Ce type de projet correspond à notre [formule site vitrine à partir de 449€](/tarifs), livrée en 10 jours ouvrés.
+Un site pour food truck est généralement un site vitrine de 5 à 8 pages avec quelques fonctionnalités simples. Ce type de projet correspond à notre [formule site vitrine à partir de {{prix:une-page}} €](/tarifs).
 
-Si vous souhaitez intégrer un système de commande en ligne ou une billetterie pour des événements, un [site multi-pages à partir de 749€](/services/site-multi-pages) ou un système sur mesure sera plus adapté.
+Si vous souhaitez intégrer un système de commande en ligne ou une billetterie pour des événements, un [site multi-pages à partir de {{prix:multi-pages}} €](/services/site-multi-pages) ou un système sur mesure sera plus adapté.
 
-### Ce qui est inclus dans un site vitrine food truck à 449€
+### Ce qui est inclus dans un site vitrine food truck à partir de {{prix:une-page}} €
 
 - Design personnalisé (couleurs de votre charte, photos de vos plats)
 - Menu en ligne modifiable
 - Page agenda (mise à jour via CMS simple)
 - Formulaire de privatisation
 - SEO local (pour apparaître sur "food truck [votre ville]")
-- Hébergement 12 mois, SSL inclus
-- Livraison en 10 jours ouvrés
+- Nom de domaine offert la première année (hébergement et SSL dans l'abonnement facultatif, sans engagement)
+- Un mois d'ajustements après la mise en ligne
 
 ---
 

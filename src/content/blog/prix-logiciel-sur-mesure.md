@@ -9,7 +9,7 @@ category: "applications-metier"
 keywords: ["prix logiciel sur mesure", "cout application metier", "logiciel gestion sur mesure prix"]
 ---
 
-**Réponse directe :** un logiciel de gestion sur mesure pour TPE (réservations, devis-factures, stocks, fiches clients, tableau de bord) démarre à 1 447 € chez Stackup Agency — le prix s'affine selon le périmètre, à ± 500 € autour de ce tarif dans la majorité des projets. Les projets plus vastes (multi-utilisateurs complexes, intégrations multiples) se chiffrent au devis. À comparer aux SaaS par abonnement : 30 à 150 €/mois pour toujours, soit 1 800 à 9 000 € sur 5 ans, sans jamais rien posséder.
+**Réponse directe :** un logiciel de gestion sur mesure pour TPE (réservations, devis-factures, stocks, fiches clients, tableau de bord) démarre à partir de {{prix:outil}} € chez Stackup Agency — le prix exact se fixe au devis, selon ce que vous choisissez. Les projets plus vastes (multi-utilisateurs complexes, intégrations multiples) se chiffrent au devis. À comparer aux SaaS par abonnement : 30 à 150 €/mois pour toujours, soit 1 800 à 9 000 € sur 5 ans, sans jamais rien posséder.
 
 ## De quoi parle-t-on exactement ?
 
@@ -26,7 +26,7 @@ Un « logiciel de gestion sur mesure », c'est un outil développé pour VOTRE f
 
 ### 1. Le nombre de « briques » fonctionnelles
 
-Chaque bloc (réservation, facturation, stocks…) a un coût de conception et de développement. Un outil = une brique bien faite coûte 1 447 € ± 500 €. Un outil = quatre briques interconnectées se chiffre spécifiquement au devis.
+Chaque bloc (réservation, facturation, stocks…) a un coût de conception et de développement. Un outil = une brique bien faite coûte à partir de {{prix:outil}} €. Un outil = quatre briques interconnectées se chiffre spécifiquement au devis.
 
 ### 2. Les rôles et utilisateurs
 
@@ -42,17 +42,17 @@ Migrer 2 000 fiches clients depuis Excel ou un ancien logiciel demande un travai
 
 ## Le calcul face aux SaaS, sans caricature
 
-| | SaaS générique (50 €/mois moyen) | Sur mesure (1 447 € ± 500 €) |
+| | SaaS générique (50 €/mois moyen) | Sur mesure (à partir de {{prix:outil}} €) |
 |---|---|---|
-| Année 1 | 600 € | 1 447 € |
-| Année 3 | 1 800 € | ~1 550 € (hébergement inclus maintenance) |
-| Année 5 | 3 000 € | ~1 650 € |
-| Année 10 | 6 000 € | ~1 900 € |
+| Année 1 | 600 € | Achat unique, à partir de {{prix:outil}} € |
+| Année 3 | 1 800 € | Pas d'abonnement obligatoire |
+| Année 5 | 3 000 € | Pas d'abonnement obligatoire |
+| Année 10 | 6 000 € | Pas d'abonnement obligatoire |
 | Adapté à VOS processus | ⚠️ 80 % du besoin | ✅ 100 % |
-| Vos données | Chez l'éditeur, à ses conditions | ✅ En France, à vous |
+| Vos données | Chez l'éditeur, à ses conditions | ✅ À vous |
 | Si vous arrêtez de payer | ❌ Tout disparaît | ✅ L'outil reste |
 
-Le croisement se fait vers la **3e année**. Mais le facteur décisif est souvent ailleurs : le SaaS générique impose ses processus ; l'outil sur mesure épouse les vôtres. Les 20 % du besoin que le SaaS ne couvre pas sont précisément ceux qui vous font perdre du temps chaque jour.
+Le facteur décisif est souvent ailleurs : le SaaS générique impose ses processus ; l'outil sur mesure épouse les vôtres. Les 20 % du besoin que le SaaS ne couvre pas sont précisément ceux qui vous font perdre du temps chaque jour.
 
 ## Quand le SaaS reste le bon choix
 
@@ -66,25 +66,23 @@ Le sur-mesure gagne quand votre façon de travailler est votre avantage concurre
 
 ## Comment se passe un projet, concrètement
 
-1. **Appel de cadrage** (gratuit) : on comprend votre flux de travail réel.
-2. **Devis précis sous 72 h** : périmètre écrit, prix ferme, délai contractuel.
+1. **Appel découverte** (gratuit, 30 minutes) : on comprend votre flux de travail réel.
+2. **Devis précis** : périmètre écrit, prix ferme.
 3. **Maquette des écrans** : vous validez avant tout développement.
 4. **Développement et tests** avec vos données réelles.
 5. **Formation et livraison** : l'outil est à vous — code compris.
-6. **Support 30 jours inclus**, maintenance optionnelle ensuite (dès 29 €/mois).
-
-Délai : sur mesure selon le périmètre, fixé au devis.
+6. **Un mois d'ajustements** après la mise en ligne, puis abonnement facultatif, sans engagement.
 
 ## En résumé
 
-- Prix d'entrée du sur-mesure TPE : **1 447 €**, ± 500 € selon le périmètre dans la majorité des projets.
+- Prix d'entrée du sur-mesure TPE : **à partir de {{prix:outil}} €**, le prix exact se fixant au devis, selon ce que vous choisissez.
 - Les 4 curseurs du devis : briques fonctionnelles, rôles, intégrations, reprise de données.
-- Croisement financier avec le SaaS vers la 3e année — et l'adéquation métier fait le reste.
-- L'outil vous appartient : données dans l'Union européenne, code remis, aucune dépendance.
+- Un achat unique plutôt qu'un abonnement perpétuel — et l'adéquation métier fait le reste.
+- L'outil vous appartient au paiement complet : code remis, aucune dépendance.
 
 ## Questions fréquentes
 
-**Pourquoi 1 447 € quand certains devis d'agences annoncent 15 000 € ?**
+**Pourquoi à partir de {{prix:outil}} € quand certains devis d'agences annoncent 15 000 € ?**
 Même logique que pour les sites : structure légère, méthode industrialisée, briques éprouvées réassemblées sur mesure. [L'explication détaillée vaut pour les logiciels aussi.](/blog/devis-site-internet-pourquoi-ecarts)
 
 **L'outil fonctionne-t-il sur mobile ?**
@@ -94,7 +92,7 @@ Oui — accessible depuis un navigateur, il s'adapte au téléphone et à la tab
 C'est l'avantage structurel du sur-mesure : on ajoute une brique à VOTRE outil. En SaaS, on espère que l'éditeur y pense — au prix de l'éditeur.
 
 **Puis-je voir des exemples avant de m'engager ?**
-Oui : une démonstration adaptée à votre métier vous est présentée avant tout engagement. Nous montrons avant de vendre.
+Oui : après un appel découverte gratuit de 30 minutes, une démo de la page d'accueil ({{carte:demo}} €) vous est présentée, déduite du prix si vous continuez. Nous montrons avant de vendre.
 
 ---
 

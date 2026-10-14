@@ -144,4 +144,4 @@ Ni l'un ni l'autre — Tailwind gère le style, pas la structure HTML. Un dével
 **Mon concurrent n'a aucune accessibilité et est mieux classé que moi. L'accessibilité n'influence pas Google ?**
 L'accessibilité est un facteur indirect. L'impact est réel mais rarement décisif face à des différences majeures de contenu ou de backlinks. Traitez l'accessibilité comme une amélioration de l'expérience utilisateur et de la couverture SEO, pas comme le levier principal de classement.
 
-Voir aussi : [vitesse mobile optimisation](/blog/vitesse-mobile-optimisation), [guide SEO on-page](/blog/seo-on-page-guide-complet) et [création de site web à partir de 449€](/tarifs).
+Voir aussi : [vitesse mobile optimisation](/blog/vitesse-mobile-optimisation), [guide SEO on-page](/blog/seo-on-page-guide-complet) et [création de site web à partir de {{prix:une-page}} €](/tarifs).

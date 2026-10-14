@@ -82,7 +82,7 @@ Requêtes à cibler :
 
 ## Tarifs pour un site de carreleur
 
-Notre [formule site vitrine à 449€](/tarifs) avec galerie, services et formulaire de devis. Livraison garantie en [10 jours ouvrés](/tarifs).
+Notre [formule site vitrine à partir de {{prix:une-page}} €](/tarifs) avec galerie, services et formulaire de devis.
 
 ---
 

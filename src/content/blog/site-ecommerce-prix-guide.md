@@ -133,4 +133,4 @@ Le SEO d'une boutique en ligne est spécifique : optimisation des fiches produit
 
 Créer une boutique en ligne rentable est un projet entrepreneurial à part entière — pas une simple formalité technique. Les plateformes ont rendu la création accessible, mais elles n'ont pas rendu la rentabilité automatique. Bien budgéter son projet e-commerce, c'est se donner les moyens de construire quelque chose qui dure.
 
-Besoin d'un site web professionnel ? [Contactez Stackup Agency](/contact) — devis gratuit en 24h.
+Besoin d'un site web professionnel ? [Contactez Stackup Agency](/contact) — appel découverte gratuit de 30 minutes.

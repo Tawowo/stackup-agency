@@ -55,9 +55,9 @@ Sans cet audit, vous risquez de perdre votre référencement actuel ou de répé
 
 ### 4. Développement (le plus gros poste)
 
-- Site vitrine : 449€ à 1 800€
-- Site multi-pages : 749€ à 3 000€
-- E-commerce : 1 647€ à 6 000€
+- Site vitrine : {{prix:une-page}} € à 1 800€
+- Site multi-pages : {{prix:multi-pages}} € à 3 000€
+- E-commerce : {{prix:boutique}} € à 6 000€
 
 ### 5. Redirections 301 (important pour le SEO)
 
@@ -78,9 +78,9 @@ Validation que tout fonctionne (formulaires, paiement, liens, mobile) avant mise
 
 | Type de site | Budget refonte indicatif |
 |---|---|
-| Site vitrine 5 pages | 449€ à 1 200€ |
-| Site multi-pages 10-15 pages | 749€ à 2 500€ |
-| Boutique e-commerce | 1 647€ à 5 000€+ |
+| Site vitrine 5 pages | {{prix:une-page}} € à 1 200€ |
+| Site multi-pages 10-15 pages | {{prix:multi-pages}} € à 2 500€ |
+| Boutique e-commerce | {{prix:boutique}} € à 5 000€+ |
 
 **À ces montants, ajoutez :**
 - 200€ à 500€ si vous avez besoin de rédaction de nouveaux textes

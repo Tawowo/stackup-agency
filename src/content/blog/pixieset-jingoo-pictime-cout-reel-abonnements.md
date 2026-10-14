@@ -8,7 +8,7 @@ category: "creation-sites"
 keywords: ["alternative pixieset", "prix pixieset", "galerie client photographe cout"]
 ---
 
-**Réponse directe :** un abonnement de galeries clients coûte entre 240 et 480 € par an selon la plateforme et la formule — soit 1 200 à 2 400 € sur 5 ans, et le double sur 10 ans. Ces montants financent un outil qui ne vous appartiendra jamais : si vous arrêtez de payer, vos galeries disparaissent. Un système de galeries sur mesure (à partir de 1 447 €, une fois) s'amortit en 3 à 4 ans, puis ne coûte plus que son hébergement.
+**Réponse directe :** un abonnement de galeries clients coûte entre 240 et 480 € par an selon la plateforme et la formule — soit 1 200 à 2 400 € sur 5 ans, et le double sur 10 ans. Ces montants financent un outil qui ne vous appartiendra jamais : si vous arrêtez de payer, vos galeries disparaissent. Un système de galeries sur mesure (à partir de {{prix:outil}} €, une fois) vous appartient, avec ensuite un abonnement facultatif, sans engagement, pour l'hébergement.
 
 ## Le piège n'est pas le prix — c'est la durée
 
@@ -64,19 +64,19 @@ Un système de galeries clients sur mesure reprend le cœur du flux de travail p
 - partage par lien ou QR code, statistiques de consultation ;
 - vente de photos supplémentaires **sans commission**.
 
-Chez Stackup Agency, ce système est développé à partir de **1 447 €** — une fois. Le prix s'affine selon le périmètre (± 500 € autour de ce tarif dans la majorité des projets). Ensuite : plus aucun coût récurrent hors hébergement (quelques euros par mois, inclus dans nos formules de maintenance dès 29 €/mois si vous préférez déléguer).
+Chez Stackup Agency, ce système est développé à partir de **{{prix:outil}} €** — une fois. Le prix exact se fixe au devis, selon ce que vous choisissez. Ensuite : aucun coût récurrent obligatoire, seulement un abonnement mensuel facultatif et sans engagement pour l'hébergement et la maintenance si vous préférez déléguer.
 
 ### Le point d'équilibre
 
-| | Abonnement (350 €/an moyen) | Outil sur mesure (1 447 € + hébergement) |
+| | Abonnement (350 €/an moyen) | Outil sur mesure |
 |---|---|---|
-| Année 1 | 350 € | 1 447 € |
-| Année 3 | 1 050 € | ~1 550 € |
-| **Année 4** | **1 400 €** | **~1 600 €** — croisement |
-| Année 5 | 1 750 € | ~1 650 € |
-| Année 10 | 3 500 € | ~1 900 € |
+| Année 1 | 350 € | Achat unique, à partir de {{prix:outil}} € |
+| Année 3 | 1 050 € | Pas d'abonnement obligatoire |
+| Année 4 | 1 400 € | Pas d'abonnement obligatoire |
+| Année 5 | 1 750 € | Pas d'abonnement obligatoire |
+| Année 10 | 3 500 € | Pas d'abonnement obligatoire |
 
-L'amortissement se fait en 3 à 4 ans. Toutes les années suivantes sont, financièrement, des années gagnées — et l'outil, lui, reste.
+Chaque année supplémentaire alourdit la facture de l'abonnement, alors que l'outil acheté reste à vous.
 
 ### Ce que vous perdez, honnêtement
 
@@ -86,7 +86,7 @@ La boutique de tirages automatisée avec labo partenaire est difficile à égale
 
 - Les abonnements de galeries coûtent 1 200 à 2 400 € sur 5 ans, pour toujours, sans jamais rien posséder.
 - Leur vrai point fort : la boutique de tirages automatisée. Leur vrai coût : la dépendance.
-- Un système sur mesure (dès 1 447 €) s'amortit en 3 à 4 ans et vous appartient définitivement.
+- Un système sur mesure (à partir de {{prix:outil}} €) vous appartient définitivement, avec un abonnement facultatif et sans engagement.
 - La migration de vos galeries existantes se prépare — et se fait.
 
 ## Questions fréquentes
@@ -101,7 +101,7 @@ Le même raisonnement s'applique à la livraison vidéo : espace client privé, 
 Oui, c'est le même flux : le client marque ses favoris, vous récupérez la liste pour les retouches, l'album ou les tirages.
 
 **Que se passe-t-il si Stackup disparaît ?**
-Le code vous appartient et vous est remis : n'importe quel développeur peut reprendre l'outil. C'est exactement l'inverse du risque plateforme.
+Le code vous appartient au paiement complet et vous est remis : n'importe quel développeur peut reprendre l'outil. C'est exactement l'inverse du risque plateforme.
 
 ---
 

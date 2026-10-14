@@ -77,11 +77,11 @@ C'est la métrique qui permet de comparer le SEO aux autres canaux. Exemple :
 
 | Canal | Coût mensuel | Leads/mois | Coût par lead |
 |---|---|---|---|
-| SEO (plan Pro Stackup) | 44 €/mois | 12 leads | 3,70 €/lead |
+| SEO (suivi local mensuel Stackup) | {{abo:suivi-local}} €/mois | 12 leads | À calculer avec votre abonnement |
 | Google Ads | 500 €/mois | 8 leads | 62,50 €/lead |
 | Facebook Ads | 300 €/mois | 5 leads | 60 €/lead |
 
-Ce tableau est fictif mais illustre une réalité fréquente : le SEO, une fois installé, génère les leads les moins chers. Le défi est qu'il faut investir 6 à 12 mois avant d'atteindre ce stade.
+Ce tableau est fictif mais illustre une réalité fréquente : le SEO, une fois installé, génère des leads nettement moins chers que la publicité payante. Le défi est qu'il faut investir 6 à 12 mois avant d'atteindre ce stade.
 
 **Attention** : incluez dans l'investissement SEO le temps interne passé (création de contenu, gestion de blog) et pas seulement le forfait agence.
 
@@ -122,14 +122,14 @@ La formule de base :
 
 Exemple concret pour une PME tourangelle :
 
-- **Investissement SEO sur 12 mois** : 44 €/mois × 12 = 528 € (plan Pro Stackup)
+- **Investissement SEO sur 12 mois** : le total de votre abonnement de suivi et du temps interne passé (à renseigner avec vos propres chiffres)
 - **Leads organiques sur 12 mois** : 0 à mois 3, puis montée progressive, total = 85 leads
 - **Taux de conversion leads → clients** : 20 % = 17 clients
 - **Valeur moyenne d'un client** : 800 € (devis moyen)
 - **Valeur totale générée** : 17 × 800 = 13 600 €
-- **ROI = ((13 600 - 528) / 528) × 100 = 2 476 %**
+- **ROI** : appliquez la formule ci-dessus avec votre investissement réel — plus il est faible par rapport à la valeur générée, plus le ROI est élevé
 
-Ce calcul est simplifié (il ne tient pas compte de la lifetime value client, ni du temps interne), mais il illustre pourquoi le SEO est l'un des canaux marketing les plus rentables sur le long terme.
+Ce calcul est simplifié (il ne tient pas compte de la lifetime value client), mais il montre comment poser le raisonnement pour votre propre activité.
 
 ## SEO vs Google Ads : lequel est plus rentable ?
 
@@ -185,6 +185,6 @@ Formule simplifiée : (Nombre de leads organiques × Taux de conversion en clien
 
 Mesurer le SEO n'est pas optionnel — c'est la condition pour optimiser votre stratégie, justifier vos investissements et démontrer la valeur du référencement naturel à vos parties prenantes. Commencez avec les outils gratuits, construisez votre tableau de bord, et réviser-le chaque mois.
 
-Nos [plans Starter (29€/mois)](/tarifs/starter), [Pro (44€/mois)](/tarifs/pro) et [Premium (89€/mois)](/tarifs/premium) incluent un reporting mensuel de vos KPIs SEO.
+Notre [abonnement mensuel](/tarifs#abonnement), facultatif et sans engagement, peut inclure un reporting mensuel de vos KPIs SEO.
 
 [Prendre rendez-vous gratuitement](/contact)

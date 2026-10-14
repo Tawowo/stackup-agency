@@ -105,7 +105,7 @@ Les pages catégories ont un fort potentiel SEO. Ajoutez 200 à 300 mots de text
 
 **WooCommerce (WordPress) :**
 - Idéal pour les catalogues < 500 références
-- Budget création : à partir de 1 647€ (notre formule e-commerce)
+- Budget création : à partir de {{prix:boutique}} € (notre formule e-commerce)
 - Nombreux plugins mode : filtres avancés, liste de souhaits, lookbook
 
 **Shopify :**

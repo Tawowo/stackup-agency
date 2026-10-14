@@ -10,6 +10,10 @@
   display: none !important;
 }
 .su-est__gauche {
+  --su-texte: var(--su-navy);
+  --su-texte-doux: var(--su-graphite-ivoire);
+  --su-accent-texte: var(--su-ambre-texte);
+  color: var(--su-navy);
   min-width: 0;
   padding: 44px 40px 40px;
   border-radius: 4px;
@@ -735,7 +739,7 @@
   color: #2b2118;
 }
 .su-ap__t2 {
-  color: #b85a0d;
+  color: #9c4a0b;
   margin-bottom: 1cqw;
 }
 .su-ap__p {

@@ -9,7 +9,7 @@ category: "ecommerce"
 keywords: ["prestashop ou shopify", "prestashop vs shopify", "meilleure solution ecommerce france", "prestashop shopify comparatif"]
 ---
 
-**Prestashop est un logiciel open source gratuit à l'achat mais qui demande un hébergement, une maintenance et souvent des modules payants pour fonctionner correctement ; Shopify facture un abonnement mensuel fixe plus des commissions sur les ventes ; une boutique sur mesure s'achète une fois, sans coût récurrent obligatoire.** Le choix dépend surtout du niveau d'autonomie technique disponible et du volume de vente visé.
+**Prestashop est un logiciel open source gratuit à l'achat mais qui demande un hébergement, une maintenance et souvent des modules payants pour fonctionner correctement ; Shopify facture un abonnement mensuel fixe plus des commissions sur les ventes ; une boutique sur mesure s'achète une fois, avec un abonnement facultatif et sans engagement ensuite.** Le choix dépend surtout du niveau d'autonomie technique disponible et du volume de vente visé.
 
 ## Prestashop : la solution française historique
 
@@ -28,9 +28,9 @@ Shopify inverse la logique : tout est inclus dans l'abonnement (hébergement, s�
 | Critère | Prestashop | Shopify | Boutique sur mesure |
 |---|---|---|---|
 | Coût du logiciel | Gratuit | Inclus dans l'abonnement | Inclus dans le prix de création |
-| Hébergement | À gérer séparément (30-150 €/mois) | Inclus | Inclus la 1ʳᵉ année, puis maintenance optionnelle |
+| Hébergement | À gérer séparément (30-150 €/mois) | Inclus | Dans l'abonnement mensuel facultatif, sans engagement |
 | Commission sur les ventes | Aucune | 0,5 % à 2 % selon le plan et le moyen de paiement | Aucune |
-| Maintenance technique | À la charge du commerçant ou d'un prestataire | Gérée par Shopify | Maintenance optionnelle (29-89 €/mois) |
+| Maintenance technique | À la charge du commerçant ou d'un prestataire | Gérée par Shopify | Dans l'abonnement mensuel facultatif |
 | Personnalisation | Totale (accès au code) | Limitée par la structure Shopify | Totale |
 | Modules/applications | Écosystème français riche, souvent payant | Plus de 8 000 applications, souvent payantes | Développé sur mesure selon le besoin réel |
 | Autonomie technique requise | Élevée | Faible | Faible (avec interface adaptée livrée) |
@@ -39,11 +39,11 @@ Shopify inverse la logique : tout est inclus dans l'abonnement (hébergement, s�
 
 | Poste | Prestashop | Shopify | Sur mesure |
 |---|---|---|---|
-| Coût de création/installation | 0 € (logiciel) + intégration | 0 € | 1 647 € |
-| Hébergement sur 3 ans | ~2 160 € (60 €/mois) | Inclus | Inclus 1 an, puis ~1 060 € (29 €/mois optionnel) |
+| Coût de création/installation | 0 € (logiciel) + intégration | 0 € | À partir de {{prix:boutique}} € |
+| Hébergement sur 3 ans | ~2 160 € (60 €/mois) | Inclus | Dans l'abonnement facultatif, composé à la carte |
 | Modules/applications sur 3 ans | ~600 € | ~1 800 € (50 €/mois moyen) | 0 € (fonctionnalités incluses) |
 | Abonnement plateforme sur 3 ans | 0 € | ~2 700 € (75 €/mois moyen) | 0 € |
-| **Total indicatif sur 3 ans** | **~2 760 € + temps de maintenance** | **~4 500 €** | **~1 647 € à 2 707 €** |
+| **Total indicatif sur 3 ans** | **~2 760 € + temps de maintenance** | **~4 500 €** | **Achat unique, puis abonnement facultatif** |
 
 Ce calcul exclut volontairement les frais de paiement bancaire (environ 2,9 % + 0,30 € par transaction), identiques quelle que soit la plateforme choisie, car ils rémunèrent le prestataire de paiement et non la solution e-commerce elle-même.
 
@@ -67,7 +67,7 @@ Quelle que soit la solution choisie, une boutique en ligne française doit respe
 
 - Prestashop est gratuit à l'achat mais cache des coûts réels d'hébergement, de modules et de maintenance technique.
 - Shopify facture un abonnement fixe plus des commissions qui grandissent avec le succès de l'activité.
-- Une boutique sur mesure s'achète une fois, sans commission ni abonnement obligatoire, avec une personnalisation totale.
+- Une boutique sur mesure s'achète une fois, sans commission, avec un abonnement facultatif et sans engagement, et une personnalisation totale.
 - Le bon choix dépend surtout de la compétence technique disponible en interne et du volume de vente visé à moyen terme.
 
 ## Questions fréquentes

@@ -93,9 +93,7 @@ Les requêtes à cibler :
 
 ## Tarifs pour un site de salon de coiffure
 
-Notre [formule site vitrine à 449€](/tarifs) couvre les besoins d'un salon standard : accueil, prestations/tarifs, galerie, équipe, réservation (intégration d'un outil tiers), contact.
-
-Livraison garantie en [10 jours ouvrés](/tarifs).
+Notre [formule site vitrine à partir de {{prix:une-page}} €](/tarifs) couvre les besoins d'un salon standard : accueil, prestations/tarifs, galerie, équipe, réservation (intégration d'un outil tiers), contact.
 
 ---
 
@@ -114,7 +112,7 @@ Répondez toujours calmement et professionnellement aux avis négatifs. Une rép
 Mentionner des marques reconnues (L'Oréal Professionnel, Kérastase, Wella...) peut rassurer sur la qualité des produits. Vérifiez que vous respectez les conditions d'utilisation des marques si vous utilisez leurs logos.
 
 **Peut-on intégrer une boutique pour vendre des produits capillaires en ligne ?**
-Oui. Certains salons vendent leurs produits en ligne entre les rendez-vous. Notre [formule e-commerce à partir de 1 647€](/tarifs) est adaptée si vous souhaitez une boutique complète.
+Oui. Certains salons vendent leurs produits en ligne entre les rendez-vous. Notre [formule e-commerce à partir de {{prix:boutique}} €](/tarifs) est adaptée si vous souhaitez une boutique complète.
 
 ## En résumé
 

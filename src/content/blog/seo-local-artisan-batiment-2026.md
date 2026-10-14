@@ -150,7 +150,7 @@ Les visiteurs qui cherchent à bénéficier de MaPrimeRénov' ou des CEE filtren
 Non. Une seule fiche pour votre adresse principale, avec la zone de service déclarée pour couvrir toutes vos communes d'intervention. Les fiches multiples pour un même artisan violant les conditions Google peuvent être supprimées.
 
 **Mon site est vieux et pas mobile. Dois-je refondre ou juste optimiser ?**
-Si votre site n'est pas responsive (adapté au mobile), vous perdez 60-70% de votre potentiel de conversion. Une refonte est recommandée. Pour un site vitrine artisan, le budget est de [449€ à 1 200€](/tarifs).
+Si votre site n'est pas responsive (adapté au mobile), vous perdez 60-70% de votre potentiel de conversion. Une refonte est recommandée. Pour un site vitrine artisan, le budget démarre [à partir de {{prix:une-page}} €](/tarifs), le prix exact se fixant au devis.
 
 **Est-ce que les plateformes (MyTravaux, Houzz, Allovoisins) remplacent un site web ?**
 Non. Ces plateformes prennent une commission sur chaque devis (parfois 10 à 30%) et ne vous appartiennent pas. Un site propre + SEO local vous construit un actif durable sans commission.

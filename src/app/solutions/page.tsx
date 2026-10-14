@@ -1,10 +1,11 @@
+import { jetons } from '@/lib/jetons'
 import type { Metadata } from 'next'
 import Tableau from '@/experiences/tableau/Tableau'
 import { meta, filAriane, JsonLd } from '@/lib/seo'
 
 export const metadata: Metadata = meta({
   titre: 'Outils de gestion sur mesure — devis, rendez-vous, stocks, caisse | Stackup Agency',
-  description: 'Assemblez votre outil : devis et factures, prise de rendez-vous, planning, stocks, caisse, fidélité. Développement sur mesure à partir de 1 447 €, sans abonnement obligatoire.',
+  description: jetons('Assemblez votre outil : devis et factures, prise de rendez-vous, planning, stocks, caisse, fidélité. Développement sur mesure à partir de {{prix:outil}} €, abonnement facultatif.'),
   chemin: '/solutions',
 })
 

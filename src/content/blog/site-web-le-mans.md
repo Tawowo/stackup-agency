@@ -9,7 +9,7 @@ category: "seo-local"
 keywords: ["création site web Le Mans", "agence web Le Mans", "site internet Sarthe", "freelance web Le Mans"]
 ---
 
-**Un site web au Mans coûte entre 449€ et 2 500€ selon le type de prestataire et la complexité du projet.** Le Mans, ville de 145 000 habitants (agglomération Le Mans Métropole : 220 000 hab.), bénéficie d'une économie mixte alliant industrie, automobile, tourisme sportif et services aux entreprises.
+**Un site web au Mans coûte à partir de {{prix:une-page}} € et peut dépasser 2 500€ selon le type de prestataire et la complexité du projet.** Le Mans, ville de 145 000 habitants (agglomération Le Mans Métropole : 220 000 hab.), bénéficie d'une économie mixte alliant industrie, automobile, tourisme sportif et services aux entreprises.
 
 Ce guide compare les options disponibles pour les TPE sarthoises qui veulent se lancer en ligne.
 
@@ -31,9 +31,9 @@ La Sarthe présente plusieurs particularités qui influencent les besoins en pr�
 
 ### Ce que vous pouvez attendre selon votre budget
 
-**Moins de 449€** : templates génériques sur plateforme, sans personnalisation réelle, avec limitations SEO importantes. Acceptable pour tester rapidement, pas pour bâtir une présence durable.
+**Moins de {{prix:une-page}} €** : templates génériques sur plateforme, sans personnalisation réelle, avec limitations SEO importantes. Acceptable pour tester rapidement, pas pour bâtir une présence durable.
 
-**Entre 449€ et 800€** : site vitrine sur mesure avec SEO de base. La fourchette des prestataires spécialisés. [Stackup Agency propose ce format à partir de 449€](/tarifs), livré en 10 jours ouvrés.
+**De {{prix:une-page}} € à 800€** : site vitrine sur mesure avec SEO de base. La fourchette des prestataires spécialisés. [Stackup Agency propose ce format à partir de {{prix:une-page}} €](/tarifs).
 
 **Entre 800€ et 2 000€** : site multi-pages plus développé, avec design avancé, animations, ou intégrations spécifiques. Pour des projets qui nécessitent plus de pages ou de fonctionnalités.
 
@@ -47,12 +47,11 @@ Les délais annoncés par les prestataires manceaux (et français en général) 
 
 | Type de prestataire | Délai annoncé | Délai réel fréquent |
 |---|---|---|
-| Micro-agence spécialisée | 10 jours ouvrés | 10-15 jours ouvrés |
 | Freelance expérimenté | 2-4 semaines | 3-6 semaines |
 | Agence généraliste | 4-8 semaines | 6-12 semaines |
 | Plateforme self-service | Immédiat | Immédiat (si vous faites tout) |
 
-Le délai de 10 jours ouvrés est tenu par les prestataires qui ont standardisé leur processus — c'est-à-dire qui ont un workflow précis : brief → maquette → développement → livraison, sans allers-retours inutiles.
+Un délai court n'est tenu que par les prestataires qui ont standardisé leur processus — c'est-à-dire qui ont un workflow précis : brief → maquette → développement → livraison, sans allers-retours inutiles.
 
 **Votre rôle dans le délai :** fournissez textes et photos dans les 48h suivant le démarrage, répondez aux questions de votre prestataire sous 24h, validez la maquette en une session.
 
@@ -108,7 +107,7 @@ Un prestataire spécialisé à distance qui comprend les enjeux locaux et les be
 
 ## Ce qu'offre Stackup Agency
 
-[Stackup Agency](/services/site-vitrine) propose des [sites vitrines à partir de 449€](/tarifs), livrés en [10 jours ouvrés](/tarifs) garanti contractuellement. Hébergement 12 mois inclus, SSL inclus, code appartenant au client.
+[Stackup Agency](/services/site-vitrine) propose des [sites vitrines à partir de {{prix:une-page}} €](/tarifs). Nom de domaine offert la première année, hébergement dans l'abonnement facultatif (sans engagement), code et design appartenant au client au paiement complet.
 
 Nous intervenons à distance sur toute la France — y compris Le Mans et la Sarthe.
 

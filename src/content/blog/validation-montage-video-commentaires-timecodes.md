@@ -65,7 +65,7 @@ Oui, il s'applique à tout projet de montage vidéo nécessitant une validation 
 Non, il intervient en complément, côté relation client, pour la phase de validation — le montage lui-même reste réalisé avec les outils professionnels habituels du vidéaste.
 
 **Comment mettre en place ce système sur son propre site ?**
-Il s'intègre à un espace client privé développé sur mesure, disponible via l'offre Système de gestion de Stackup Agency, à partir de 1 447 €.
+Il s'intègre à un espace client privé développé sur mesure, disponible via l'offre Système de gestion de Stackup Agency, à partir de {{prix:outil}} €.
 
 ---
 

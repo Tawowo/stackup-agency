@@ -1,3 +1,4 @@
+import { jetonsProfond } from '../lib/jetons'
 export interface Metier {
   slug: string
   metier: string
@@ -12,7 +13,7 @@ export interface Metier {
   faq: { q: string; a: string }[]
 }
 
-export const METIERS: Metier[] = [
+const BRUT_METIERS: Metier[] = [
   {
     slug: 'videaste',
     metier: 'vidéaste',
@@ -326,7 +327,7 @@ export const METIERS: Metier[] = [
       'Respect des règles déontologiques de la profession',
     ],
     faq: [
-      { q: 'Est-ce moins cher que Doctolib ?', a: 'La création de site est un investissement unique à partir de 449€, sans abonnement mensuel ni commission sur chaque rendez-vous — contrairement aux 150-200€/mois de Doctolib.' },
+      { q: 'Est-ce moins cher que Doctolib ?', a: 'La création de site est un investissement unique à partir de {{prix:une-page}} €, sans abonnement mensuel ni commission sur chaque rendez-vous — contrairement aux 150-200€/mois de Doctolib.' },
       { q: 'Puis-je garder Doctolib en parallèle ?', a: 'Oui. Votre site propre génère des rendez-vous directs en parallèle, ce qui réduit progressivement votre dépendance à la plateforme.' },
     ],
   },
@@ -1594,3 +1595,5 @@ export const CATEGORIES_METIERS: Record<string, string> = {
   'services': 'Services & professions libérales',
   'tourisme': 'Tourisme & loisirs',
 }
+
+export const METIERS: Metier[] = jetonsProfond(BRUT_METIERS)

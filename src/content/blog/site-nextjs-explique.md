@@ -39,7 +39,7 @@ Nike, TikTok, Netflix ou Twitch utilisent Next.js pour la même raison qu'une TP
 
 ## Next.js n'est pas réservé aux grandes entreprises
 
-L'idée reçue la plus fréquente : Next.js serait une technologie "trop lourde" ou "trop chère" pour un petit site. En réalité, la complexité de mise en œuvre dépend du projet, pas de la technologie elle-même. Un site vitrine d'artisan en Next.js peut être livré en 10 jours ouvrés, exactement dans les mêmes délais qu'un site WordPress professionnel bien construit — la différence se joue sur les performances obtenues, pas sur le temps de développement.
+L'idée reçue la plus fréquente : Next.js serait une technologie "trop lourde" ou "trop chère" pour un petit site. En réalité, la complexité de mise en œuvre dépend du projet, pas de la technologie elle-même. Un site vitrine d'artisan en Next.js peut être mis en ligne dans des délais comparables à ceux d'un site WordPress professionnel bien construit — la différence se joue sur les performances obtenues, pas sur le temps de développement.
 
 ## Ce qu'il faut vérifier avant de choisir Next.js pour son projet
 
@@ -66,7 +66,7 @@ Les moteurs de réponse par IA (ChatGPT, Google AI Overviews, Perplexity) privil
 Non, à condition que le prestataire livre une interface de gestion adaptée (CMS headless ou back-office dédié) pensée pour un non-développeur, exactement comme pour un site WordPress.
 
 **Next.js coûte-t-il plus cher que WordPress à développer ?**
-Le coût dépend du prestataire et de la complexité du projet, pas uniquement de la technologie. Un site vitrine sur mesure en Next.js démarre à 449 €, dans une fourchette comparable à un site WordPress professionnel équivalent.
+Le coût dépend du prestataire et de la complexité du projet, pas uniquement de la technologie. Un site vitrine sur mesure en Next.js démarre à partir de {{prix:une-page}} €, dans une fourchette comparable à un site WordPress professionnel équivalent.
 
 **Un petit artisan a-t-il vraiment besoin de Next.js ?**
 La performance influence directement le classement Google et le taux de conversion, quel que soit le secteur. Pour un artisan qui dépend du référencement local pour trouver des clients, l'avantage est réel, pas réservé aux grandes marques.

@@ -21,6 +21,7 @@ export const PAGES_FIXES: Route[] = [
   { chemin: '/', nom: 'Accueil', groupe: 'principal', priorite: 1 },
   { chemin: '/realisations', nom: 'Réalisations', groupe: 'principal', priorite: 0.9 },
   { chemin: '/services', nom: 'Services', groupe: 'principal', priorite: 0.9 },
+  { chemin: '/services/referencement', nom: 'Référencement', groupe: 'offre', priorite: 0.8 },
   { chemin: '/solutions', nom: 'Outils de gestion', groupe: 'principal', priorite: 0.9 },
   { chemin: '/tarifs', nom: 'Tarifs', groupe: 'principal', priorite: 0.9 },
   { chemin: '/a-propos', nom: 'À propos', groupe: 'principal', priorite: 0.7 },

@@ -9,7 +9,7 @@ category: "creation-sites"
 keywords: ["meilleur site pour photographe", "wordpress ou wix photographe", "squarespace photographe avis"]
 ---
 
-**Réponse directe :** pour un site de photographe, Squarespace offre les meilleurs templates visuels prêts à l'emploi (à partir de 16 €/mois), WordPress la flexibilité la plus large mais demande une vraie maintenance technique, Wix la simplicité mais des limites de performance sur les galeries lourdes. Le sur mesure (à partir de 449 €, sans abonnement obligatoire) est la seule option qui combine performance optimisée pour les images, propriété totale et zéro dépendance à une plateforme tierce.
+**Réponse directe :** pour un site de photographe, Squarespace offre les meilleurs templates visuels prêts à l'emploi (à partir de 16 €/mois), WordPress la flexibilité la plus large mais demande une vraie maintenance technique, Wix la simplicité mais des limites de performance sur les galeries lourdes. Le sur mesure (à partir de {{prix:une-page}} €, abonnement facultatif, sans engagement) est la seule option qui combine performance optimisée pour les images, propriété totale et zéro dépendance à une plateforme tierce.
 
 ## Les critères qui comptent vraiment pour un photographe
 
@@ -39,7 +39,7 @@ Un site développé sur mesure part d'une feuille blanche : chaque ligne de code
 
 La contrepartie est un investissement initial plus élevé qu'un abonnement mensuel à bas coût — mais sans les frais récurrents indéfinis d'un abonnement plateforme, et avec la propriété entière du code et du contenu.
 
-**Coût réel chez Stackup** : à partir de 449 € (vitrine), 749 € (multi-pages), 1 447 € (avec galeries clients) — une fois, hébergement et domaine offerts la première année, sans abonnement obligatoire ensuite.
+**Coût réel chez Stackup** : à partir de {{prix:une-page}} € (vitrine), à partir de {{prix:multi-pages}} € (multi-pages), à partir de {{prix:outil}} € (avec galeries clients) — à l'achat, nom de domaine offert la première année, puis abonnement facultatif, sans engagement.
 
 ## Le tableau comparatif complet
 
@@ -49,8 +49,8 @@ La contrepartie est un investissement initial plus élevé qu'un abonnement mens
 | Performance mobile (images lourdes) | Variable, souvent faible sans optimisation | Limitée | Correcte | Optimale (≥ 90 visé) |
 | Design réellement unique | Possible mais exige du travail | Limité au template | Bon, mais reste un template | Total |
 | Galerie client privée native | Via plugin tiers | Non | Non | Oui, sur mesure |
-| Maintenance technique requise | Élevée | Faible (gérée par la plateforme) | Faible (gérée par la plateforme) | Optionnelle, dès 29 €/mois |
-| Coût sur 5 ans (hors option galerie) | 300-1 500 € | 1 000-2 000 € | 950-2 900 € | 449-749 € + hébergement optionnel |
+| Maintenance technique requise | Élevée | Faible (gérée par la plateforme) | Faible (gérée par la plateforme) | Optionnelle, dans l'abonnement facultatif |
+| Coût sur 5 ans (hors option galerie) | 300-1 500 € | 1 000-2 000 € | 950-2 900 € | Achat unique, puis abonnement facultatif |
 | Propriété du site | Oui (auto-hébergé) | Non (locataire de la plateforme) | Non (locataire de la plateforme) | Totale |
 
 ## Comment choisir selon votre situation
@@ -59,14 +59,14 @@ La contrepartie est un investissement initial plus élevé qu'un abonnement mens
 
 **Vous êtes à l'aise techniquement et voulez une flexibilité maximale sans investissement initial élevé** : WordPress, à condition d'accepter la charge de maintenance ou de la déléguer.
 
-**Vous voulez un site qui vous appartient, optimisé pour vos images, avec une galerie client intégrée et sans abonnement mensuel obligatoire** : le sur mesure devient rapidement le calcul le plus rationnel, en particulier si vous envisagez l'activité sur plusieurs années.
+**Vous voulez un site qui vous appartient, optimisé pour vos images, avec une galerie client intégrée et un abonnement facultatif plutôt qu'une mensualité imposée** : le sur mesure devient rapidement le calcul le plus rationnel, en particulier si vous envisagez l'activité sur plusieurs années.
 
 ## En résumé
 
 - Squarespace offre le meilleur rendu visuel prêt à l'emploi pour un photographe, avec des limites de personnalisation.
 - WordPress offre la plus grande flexibilité mais demande une vraie vigilance technique.
 - Wix est simple mais structurellement limité en performance sur les galeries lourdes.
-- Le sur mesure est la seule option qui combine performance optimisée, propriété totale et galerie client native, pour un investissement initial plus élevé mais sans abonnement obligatoire.
+- Le sur mesure est la seule option qui combine performance optimisée, propriété totale et galerie client native, pour un investissement initial plus élevé, avec un abonnement facultatif et sans engagement.
 
 ## Questions fréquentes
 
@@ -77,10 +77,10 @@ Oui : les images, textes et contenus se récupèrent, et les redirections néces
 En théorie oui, avec un thème léger, un hébergement performant et une maintenance rigoureuse — en pratique, cela demande un investissement en temps ou en prestataire qui rapproche vite le coût réel de celui d'un développement sur mesure.
 
 **Combien de temps pour avoir un site sur mesure, comparé à une plateforme ?**
-Une plateforme permet de publier en quelques heures avec un template. Un site sur mesure demande à partir de 10 jours ouvrés, en échange d'un résultat entièrement personnalisé.
+Une plateforme permet de publier en quelques heures avec un template. Un site sur mesure demande davantage de temps, dont le planning se fixe avec vous au devis, en échange d'un résultat entièrement personnalisé.
 
 **Le sur mesure convient-il à un photographe qui débute tout juste ?**
-Oui : le site vitrine à 449 € est justement pensé pour ce cas — l'essentiel (portfolio, contact, SEO local) sans le budget d'un projet plus complexe.
+Oui : le site vitrine à partir de {{prix:une-page}} € est justement pensé pour ce cas — l'essentiel (portfolio, contact, SEO local) sans le budget d'un projet plus complexe.
 
 ---
 

@@ -101,7 +101,7 @@ Les prix de la rédaction web SEO varient beaucoup selon le prestataire, le nive
 **En pack mensuel :**
 Les packs mensuels sont généralement plus économiques à l'article. Pour 4 articles par mois, comptez entre 80 et 200€ selon le prestataire. Pour 8 articles par mois, entre 150 et 400€.
 
-**Critère de choix :** ne choisissez pas uniquement sur le prix. Un article à 15€ qui ne se positionne jamais vaut zéro. Un article à 25€ qui génère 50 visiteurs qualifiés par mois pendant 2 ans vaut des centaines d'euros.
+**Critère de choix :** ne choisissez pas uniquement sur le prix. Un article à 15€ qui ne se positionne jamais vaut zéro. Un article à quelques dizaines d'euros qui génère 50 visiteurs qualifiés par mois pendant 2 ans vaut des centaines d'euros.
 
 ## Le bon processus pour une collaboration réussie
 
@@ -135,4 +135,4 @@ Prévoyez une réunion mensuelle de 30 minutes avec votre rédacteur pour faire 
 
 Externaliser la rédaction de votre blog n'est pas une dépense — c'est un investissement en référencement naturel. Chaque article publié est une page supplémentaire indexée, une requête supplémentaire couverte, une porte d'entrée supplémentaire vers votre site.
 
-À 25€ par article ou 89€ par mois pour 4 articles, c'est l'un des investissements marketing les plus rentables pour une TPE ou un artisan — à condition de choisir un prestataire sérieux et de maintenir la régularité sur le long terme.
+À quelques dizaines d'euros par article, c'est l'un des investissements marketing les plus rentables pour une TPE ou un artisan — à condition de choisir un prestataire sérieux et de maintenir la régularité sur le long terme.

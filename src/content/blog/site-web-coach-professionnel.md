@@ -88,7 +88,7 @@ Un blog vous positionne en expert sur votre domaine. Répondez aux questions que
 
 ---
 
-## Tarifs et délais pour un site de coach professionnel
+## Tarifs pour un site de coach professionnel
 
 Un site vitrine de coach comprend généralement :
 - 5 à 8 pages (accueil, à propos, 2-3 services, blog optionnel, contact)
@@ -97,9 +97,9 @@ Un site vitrine de coach comprend généralement :
 - Formulaire de contact ou intégration Calendly
 - SEO de base (balises, Schema.org, sitemap)
 
-Ce type de projet correspond à notre [formule site vitrine à partir de 449€](/tarifs), livrée en [10 jours ouvrés](/tarifs) garanti.
+Ce type de projet correspond à notre [formule site vitrine à partir de {{prix:une-page}} €](/tarifs).
 
-Pour un site avec blog actif et intégration de newsletter, notre [formule site multi-pages à partir de 749€](/services/site-multi-pages) est plus adaptée.
+Pour un site avec blog actif et intégration de newsletter, notre [formule site multi-pages à partir de {{prix:multi-pages}} €](/services/site-multi-pages) est plus adaptée.
 
 ---
 

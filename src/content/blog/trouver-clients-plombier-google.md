@@ -49,7 +49,7 @@ Le meilleur moment pour demander un avis à un client de plomberie se situe just
 
 ## Un exemple concret de mise en œuvre
 
-Un plombier basé en périphérie de Tours qui intervient sur 15 communes aurait intérêt à : optimiser sa fiche Google Business avec des horaires étendus pour les urgences, structurer un site avec des pages distinctes « dépannage urgent », « installation sanitaire », « rénovation salle de bain », et demander systématiquement un avis à la fin de chaque intervention réussie. C'est le type de structure que permet un site multi-pages à partir de 749 €, avec un formulaire de contact qui indique clairement délai et zone d'intervention.
+Un plombier basé en périphérie de Tours qui intervient sur 15 communes aurait intérêt à : optimiser sa fiche Google Business avec des horaires étendus pour les urgences, structurer un site avec des pages distinctes « dépannage urgent », « installation sanitaire », « rénovation salle de bain », et demander systématiquement un avis à la fin de chaque intervention réussie. C'est le type de structure que permet un site multi-pages à partir de {{prix:multi-pages}} €, avec un formulaire de contact qui indique clairement délai et zone d'intervention.
 
 ## En résumé
 

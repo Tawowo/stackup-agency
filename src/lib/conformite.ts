@@ -4,14 +4,11 @@
  * de l'agence, aucun comparatif « × moins cher », aucune mention d'hébergement
  * en France ou en Europe comme argument de l'agence.
  */
-import { offre } from '@/config/site'
-
-const UNE_PAGE = new Intl.NumberFormat('fr-FR').format(offre('une-page').aPartirDe)
+import { jetons } from './jetons'
 
 const REGLES: [RegExp, string][] = [
   // Plus d'offre « site association » (règle 8) : l'offre d'entrée est le site une page.
   [/(offre|formule) site association/gi, '$1 Site une page'],
-  [/\b149\s?€/g, `${UNE_PAGE} €`],
   // Durées de livraison de l'agence : la proposition disparaît, le calendrier se fixe au devis.
   [/(?:,|\s+et)?\s*(?:pour une livraison|une livraison|la même livraison|livraison|livrée?s?|livrés?) en \d+\s*(?:(?:à|-|–)\s*\d+\s*)?(?:jours ouvrés|jours|semaines)/gi, ''],
   [/nous livrons en \d+\s*jours ouvrés/gi, 'le calendrier est fixé ensemble au devis,'],
@@ -32,7 +29,7 @@ const REGLES: [RegExp, string][] = [
 export function conforme(texte: string): string {
   let t = texte
   for (const [re, par] of REGLES) t = t.replace(re, par)
-  return t
+  return jetons(t)
 }
 
 export function conformeListe(l: readonly string[]): string[] {

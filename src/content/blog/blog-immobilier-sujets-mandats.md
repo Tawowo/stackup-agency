@@ -72,7 +72,7 @@ Un guide de décision avec les critères clés : rendement locatif vs plus-value
 
 Une agence immobilière qui publie un article par semaine sur son marché local se positionne comme l'expert incontournable. En pratique, 2 à 4 articles par mois sont suffisants pour progresser en SEO local.
 
-Notre [service de rédaction blog SEO](/services/redaction-blog-seo) inclut la recherche de mots-clés locaux, la structure SEO et le maillage interne vers vos pages de service. Le Pack Visibilité (89€/mois — 4 articles) est particulièrement adapté aux agences immobilières qui veulent une présence éditoriale régulière sans s'en occuper.
+Notre [service de rédaction blog SEO](/services/redaction-blog-seo) inclut la recherche de mots-clés locaux, la structure SEO et le maillage interne vers vos pages de service. L'abonnement mensuel facultatif, sans engagement, peut inclure des articles de blog ({{abo:article}} € l'article) : une formule adaptée aux agences immobilières qui veulent une présence éditoriale régulière sans s'en occuper.
 
 Consultez aussi notre guide complet sur [l'externalisation de la rédaction blog](/blog/externaliser-redaction-blog-guide).
 

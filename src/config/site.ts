@@ -4,11 +4,10 @@
  * fixe (seul un délai indicatif du moteur), aucun comparatif, aucun « hébergement France »,
  * aucune offre association.
  */
-import { LIGNES, PARAMS } from './tarifs.generated.ts'
-import { aPartirDe } from '../domain/devis/offres.ts'
+import { PRIX_PUBLICS as P } from './prix-publics.generated.ts'
 
-const description = (code: string) => LIGNES.find((l) => l.code === code)?.description ?? ''
-const nombreDe = (code: string, defaut: number) => Number(LIGNES.find((l) => l.code === code)?.unite.match(/\d+/)?.[0] ?? defaut)
+const aPartirDe = (id: keyof typeof P.offres) => P.offres[id]
+const description = (code: keyof typeof P.descriptions) => P.descriptions[code]
 
 export type IdOffre = 'une-page' | 'multi-pages' | 'boutique' | 'outil'
 
@@ -29,16 +28,16 @@ export const SITE = {
   telephone: '',
   /** Conditions de fabrication : les nombres viennent de l'Excel (Paramètres, Parcours client). */
   conditions: {
-    acomptePourcent: Math.round(PARAMS.acompte * 100),
-    soldePourcent: 100 - Math.round(PARAMS.acompte * 100),
+    acomptePourcent: P.acomptePourcent,
+    soldePourcent: 100 - P.acomptePourcent,
     /** Séries de modifications sur la maquette (P06). */
-    revisionsIncluses: nombreDe('P06', 2),
+    revisionsIncluses: P.seriesIncluses,
     /** Rendez-vous de finalisation inclus (P04). */
-    rendezVousInclus: nombreDe('P04', 3),
+    rendezVousInclus: P.rdvInclus,
     /** Un mois d'ajustements après la mise en ligne (P07). */
     supportJours: 30,
     /** Tarif horaire au-delà de ce qui est inclus (P05). */
-    tarifHoraire: LIGNES.find((l) => l.code === 'P05')?.prix ?? 0,
+    tarifHoraire: P.tarifHoraire,
   },
   social: {
     linkedin: 'https://www.linkedin.com/in/stackup-agency-5756943aa/',
@@ -57,7 +56,7 @@ export const SITE = {
       id: 'multi-pages',
       nom: 'Site multi-pages',
       aPartirDe: aPartirDe('multi-pages'),
-      inclus: ['Autant de pages que nécessaire, chacune à son niveau', `Pages moins chères à partir de la ${PARAMS.pleinTarifJusqua + 1}e`, 'Blog, galerie, rendez-vous… à la carte', 'Référencement local au choix', 'Nom de domaine offert la première année'],
+      inclus: ['Autant de pages que nécessaire, chacune à son niveau', `Pages moins chères à partir de la ${P.pleinTarifJusqua + 1}e`, 'Blog, galerie, rendez-vous… à la carte', 'Référencement local au choix', 'Nom de domaine offert la première année'],
     },
     {
       id: 'boutique',
@@ -69,7 +68,7 @@ export const SITE = {
       id: 'outil',
       nom: 'Outil de gestion sur mesure',
       aPartirDe: aPartirDe('outil'),
-      inclus: [description('O00'), `${LIGNES.filter((l) => l.famille === 'outil' && l.code !== 'O00').length} modules au choix, selon votre métier`, 'Vos données vous appartiennent'],
+      inclus: [description('O00'), `${P.nbModulesOutil} modules au choix, selon votre métier`, 'Vos données vous appartiennent'],
     },
   ] as const satisfies readonly Offre[],
   mentions: { tva: 'TVA non applicable, art. 293 B du CGI', devisValable: '30 jours' },
@@ -81,7 +80,7 @@ export function offre(id: IdOffre): Offre {
 
 const euros = new Intl.NumberFormat('fr-FR', { maximumFractionDigits: 0 })
 
-/** Toute mention de prix dans l'interface passe ici : « à partir de 449 € ». */
+/** Toute mention de prix dans l'interface passe ici : « à partir de X € ». */
 export function formatAPartirDe(o: Offre | number): string {
   const n = typeof o === 'number' ? o : o.aPartirDe
   return `à partir de ${euros.format(n)} €`

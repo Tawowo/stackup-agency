@@ -70,13 +70,13 @@ Enfin, la sécurité est devenue un enjeu majeur : WordPress est la cible de 90 
 
 | Critère | WordPress optimisé | Sur mesure |
 |---|---|---|
-| Coût de création | Généralement 20 à 40 % moins cher à fonctionnalité égale | 449 € à 1 647 € selon le type de site |
+| Coût de création | Généralement 20 à 40 % moins cher à fonctionnalité égale | À partir de {{prix:une-page}} € (à partir de {{prix:boutique}} € pour une boutique) |
 | Performances (PageSpeed mobile) | 60-85 selon l'optimisation | 90-100 en standard |
 | Sécurité | Cible n°1 des attaques sur CMS, maintenance nécessaire | Surface d'attaque minimale, pas de plugins tiers |
 | Prise en main autonome | Excellente (éditeur Gutenberg) | Bonne, via CMS headless ou interface dédiée |
 | Écosystème d'extensions | Plus de 60 000 plugins | Développé sur mesure selon le besoin réel |
 | Propriété du site | Oui (mais dépendant de l'écosystème de plugins) | Oui, sans aucune dépendance tierce |
-| Coût de maintenance annuel | 50 à 300 €/mois pour une maintenance sérieuse | 29 à 89 €/mois selon le palier, mises à jour techniques incluses dès le premier |
+| Coût de maintenance annuel | 50 à 300 €/mois pour une maintenance sérieuse | Abonnement facultatif, sans engagement, composé à la carte (mises à jour techniques, hébergement…) |
 
 ## Les erreurs les plus courantes
 

@@ -1,6 +1,6 @@
 ---
 title: "Combien coûte un site web professionnel en 2026 ? (réponse directe)"
-excerpt: "Site vitrine : 449€. Site multi-pages : 749€. E-commerce : 1647€. Détail complet des tarifs, de ce qui est inclus, et des pièges à éviter."
+excerpt: "Site vitrine : à partir de {{prix:une-page}} €. Site multi-pages : à partir de {{prix:multi-pages}} €. E-commerce : à partir de {{prix:boutique}} €. Détail complet des tarifs, de ce qui est inclus, et des pièges à éviter."
 date: "2026-07-24"
 updated: "2026-07-28"
 readTime: 7
@@ -9,42 +9,36 @@ category: "creation"
 keywords: ["combien coûte un site web", "prix site internet professionnel", "tarif site web 2026", "coût création site"]
 ---
 
-**Le prix d'un site web professionnel en France varie de 149€ à plusieurs dizaines de milliers d'euros.** Cette fourchette est inutile sans contexte. Voici les tarifs réels selon le type de site dont vous avez besoin.
+**Le prix d'un site web professionnel en France varie de quelques centaines d'euros à plusieurs dizaines de milliers d'euros.** Cette fourchette est inutile sans contexte. Voici les tarifs réels selon le type de site dont vous avez besoin.
 
 ---
 
 ## Les tarifs de création de site web en 2026
 
-### Site vitrine (5 pages)
+### Site vitrine (une page)
 
-**Prix chez Stackup Agency : 449€**
+**Prix chez Stackup Agency : à partir de {{prix:une-page}} €**
 
-Inclut : design personnalisé, 5 pages (accueil, services, à propos, réalisations, contact), formulaire de contact, SEO de base (balises, sitemap, Schema.org), hébergement 12 mois, SSL, formation.
+Inclut : design personnalisé, une page structurée en sections (accueil, services, à propos, réalisations, contact), formulaire de contact, SEO de base (balises, sitemap, Schema.org), SSL, nom de domaine offert la première année, formation. Le prix exact se fixe au devis, selon ce que vous choisissez.
 
 **Fourchette marché :** 300€ à 2 000€ selon le prestataire.
 
 À quoi servent les 300€ et les 2 000€ ?
 - 300€ : template WordPress ou Wix, peu de personnalisation, SEO limité
-- 449€-800€ : design sur mesure, SEO inclus, code propriétaire
-- 1 000€-2 000€ : agence avec frais de structure — qualité comparable à 449€-800€
-
-### Site association
-
-**Prix chez Stackup Agency : 149€**
-
-Pour les associations, MJC, clubs sportifs et structures à but non lucratif. Design adapté, fonctionnalités associatives (agenda, adhésion, contact), livré en 7 jours ouvrés.
+- À partir de {{prix:une-page}} € : design sur mesure, SEO inclus, code propriétaire
+- 1 000€-2 000€ : agence avec frais de structure — qualité comparable à un prestataire indépendant à partir de {{prix:une-page}} €
 
 ### Site multi-pages (jusqu'à 15 pages)
 
-**Prix chez Stackup Agency : 749€**
+**Prix chez Stackup Agency : à partir de {{prix:multi-pages}} €**
 
-Pour les entreprises avec plusieurs services à présenter, une galerie de réalisations étendue ou un blog. Inclut tout ce qui est dans le site vitrine + jusqu'à 15 pages.
+Pour les entreprises et associations avec plusieurs services à présenter, une galerie de réalisations étendue ou un blog. Inclut tout ce qui est dans le site vitrine + jusqu'à 15 pages.
 
 **Fourchette marché :** 600€ à 4 000€.
 
 ### Boutique en ligne (e-commerce)
 
-**Prix chez Stackup Agency : 1 647€**
+**Prix chez Stackup Agency : à partir de {{prix:boutique}} €**
 
 Paiement en ligne sécurisé, gestion des stocks et des commandes, livraison configurable, jusqu'à 100 produits au départ, design sur mesure, SEO e-commerce.
 
@@ -52,7 +46,7 @@ Paiement en ligne sécurisé, gestion des stocks et des commandes, livraison con
 
 ### Système de gestion (ERP, CRM, app métier)
 
-**Prix chez Stackup Agency : à partir de 1 447€**
+**Prix chez Stackup Agency : à partir de {{prix:outil}} €**
 
 Applications sur mesure : gestion de RDV, suivi de commandes, intranet, tableau de bord de gestion. Les fonctionnalités déterminent le budget réel.
 
@@ -130,7 +124,7 @@ Le site web a des coûts récurrents souvent sous-estimés :
 | SSL (souvent inclus hébergement) | 0€ à 70€/an |
 | Maintenance (mises à jour, sauvegardes) | 0€ (si vous le faites) à 500€+/an |
 
-Chez Stackup Agency, l'hébergement est inclus la première année. Ensuite, nos [plans de maintenance](/tarifs) démarrent à 29€/mois.
+Chez Stackup Agency, l'hébergement n'est pas inclus dans le prix de création : il fait partie de l'abonnement mensuel facultatif, sans engagement, à partir d'environ {{abo:min}} € par mois pour un site d'une page. Le nom de domaine est offert la première année, puis inclus dans l'abonnement. Voir nos [abonnements](/tarifs).
 
 ---
 
@@ -143,7 +137,7 @@ Oui, avec Wix, Squarespace ou WordPress.com. Mais les versions gratuites affiche
 Cela dépend du statut de votre prestataire. Les auto-entrepreneurs sous le seuil de franchise de TVA (actuellement 36 800€ pour les prestations de service) ne facturent pas de TVA. Les autres facturent 20% de TVA. Précisez si vous avez besoin d'une facture TTC.
 
 **Le moins cher est-il forcément le moins bon ?**
-Non. Le prix d'un site web dépend du modèle économique du prestataire, pas uniquement de la qualité. Un prestataire spécialisé qui travaille en remote sur un segment précis peut livrer un site de haute qualité à 449€. Une agence avec bureaux peut livrer un site médiocre à 2 000€.
+Non. Le prix d'un site web dépend du modèle économique du prestataire, pas uniquement de la qualité. Un prestataire spécialisé qui travaille en remote sur un segment précis peut livrer un site de haute qualité à partir de {{prix:une-page}} €. Une agence avec bureaux peut livrer un site médiocre à 2 000€.
 
 **Combien coûte la refonte d'un site existant ?**
 Une refonte partielle (nouveau design, contenu conservé) coûte généralement 60-80% du prix d'un site neuf. Une refonte complète avec migration de contenu est proche du prix d'un nouveau site.

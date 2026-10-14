@@ -22,7 +22,8 @@
   align-items: center;
 }
 .su-tar__tete {
-  grid-column: 1 / span 6;
+  grid-column: 6 / span 7;
+  grid-row: 1;
   perspective: 900px;
 }
 .su-tar__etiquette {
@@ -51,7 +52,8 @@
   margin: 28px 0 0;
 }
 .su-tar__scene {
-  grid-column: 7 / span 6;
+  grid-column: 1 / span 5;
+  grid-row: 1;
   pointer-events: none;
 }
 .su-tar__cadre {
@@ -117,6 +119,7 @@
 .su-tar__inclus {
   margin: 0;
   padding-left: 1.1em;
+  list-style: disc;
   display: grid;
   gap: 6px;
   flex: 1;
@@ -150,7 +153,7 @@
 @media (max-width: 1099px) {
   .su-tar__liste { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .su-tar__tete,
-  .su-tar__scene { grid-column: 1 / -1; }
+  .su-tar__scene { grid-column: 1 / -1; grid-row: auto; }
   .su-tar__hero { padding-top: 96px; min-height: 0; }
   .su-tar__cadre { height: 38svh; }
 }

@@ -84,13 +84,13 @@ La règle simple : si une fonctionnalité n'aide pas un visiteur à décider ou 
 
 ## Comment ces fonctionnalités s'intègrent chez Stackup
 
-Un site vitrine-portfolio à partir de 449 € couvre déjà les fonctionnalités 1, 2, 3, 5, 9, 10 et 11 — la base solide pour démarrer ou remplacer un site vieillissant. Le site multi-pages à partir de 749 € ajoute une page dédiée par prestation et le blog SEO local (fonctionnalités 1 et 7 renforcées). La galerie client privée relève du système sur mesure, à partir de 1 447 € — un investissement unique qui remplace un abonnement mensuel à vie ([le calcul complet est ici](/blog/pixieset-jingoo-pictime-cout-reel-abonnements)). Tout est livré avec hébergement et nom de domaine offerts la première année.
+Un site vitrine-portfolio à partir de {{prix:une-page}} € couvre déjà les fonctionnalités 1, 2, 3, 5, 9, 10 et 11 — la base solide pour démarrer ou remplacer un site vieillissant. Le site multi-pages à partir de {{prix:multi-pages}} € ajoute une page dédiée par prestation et le blog SEO local (fonctionnalités 1 et 7 renforcées). La galerie client privée relève du système sur mesure, à partir de {{prix:outil}} € — un investissement unique qui remplace un abonnement mensuel à vie ([le calcul complet est ici](/blog/pixieset-jingoo-pictime-cout-reel-abonnements)). Le nom de domaine est offert la première année ; l'hébergement relève de l'abonnement facultatif, sans engagement.
 
 ## En résumé
 
 - 12 fonctionnalités comptent réellement : portfolio par prestation, vitesse malgré les images, formulaire qualifiant, galerie client privée, page tarifs, avis Google, blog SEO local, calendrier, mentions légales, mobile-first, liens réseaux sociaux, vente de tirages en option.
 - Les gadgets (musique auto, compteur de visiteurs, animations lourdes) n'ajoutent aucune conversion et pénalisent la vitesse.
-- Chez Stackup : la base est couverte dès 449 €, le multi-pages à 749 € et la galerie client à partir de 1 447 €.
+- Chez Stackup : la base est couverte à partir de {{prix:une-page}} €, le multi-pages à partir de {{prix:multi-pages}} € et la galerie client à partir de {{prix:outil}} €.
 
 ## Questions fréquentes
 

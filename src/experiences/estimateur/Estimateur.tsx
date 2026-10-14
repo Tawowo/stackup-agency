@@ -263,6 +263,7 @@ export default function Estimateur({ initial }: { initial: EtatEstimateur }) {
               </div>
             )}
             <noscript>
+              <style>{'.su-est__recap{position:static!important;display:block!important}.su-est__recap-corps{display:block!important}.su-est__recap-scene{display:block!important}'}</style>
               <p className="su-est__aide">L’estimateur demande JavaScript pour calculer. Vous pouvez aussi nous écrire directement : nous établissons l’estimation avec vous.</p>
             </noscript>
           </div>

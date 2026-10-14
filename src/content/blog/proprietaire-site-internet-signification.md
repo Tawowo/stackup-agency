@@ -70,7 +70,7 @@ C'est un signal d'alerte sur la nature réelle de la propriété de votre site �
 Non, chez Stackup Agency, elle fait partie intégrante de chaque offre, sans surcoût ni option distincte à ajouter.
 
 **Un site sur mesure coûte-t-il plus cher qu'un site sur plateforme SaaS ?**
-À l'achat initial, souvent un peu plus, mais sans abonnement obligatoire dans la durée — l'équation s'inverse généralement en faveur du sur mesure après quelques années.
+À l'achat initial, souvent un peu plus, mais avec un abonnement facultatif, sans engagement — l'équation s'inverse généralement en faveur du sur mesure après quelques années.
 
 ---
 

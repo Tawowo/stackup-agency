@@ -15,7 +15,7 @@ import '@/experiences/ressources/ressources.css'
  * CONDITIONS DU PARRAINAGE — reprises telles quelles de l'ancien site
  * (ancien/src/config/site.ts › parrainage, et la page /parrainage) : le filleul
  * a −10 % sur son premier projet ; le parrain choisit, par filleul signé, entre
- * un mois d'abonnement Premium offert et −10 % sur sa propre prestation non
+ * un mois d'abonnement offert et −10 % sur sa propre prestation non
  * encore signée. Volontairement hors de site.ts (consigne de session). L'abonnement
  * étant composé à la carte, la récompense est « un mois d'abonnement offert ».
  */

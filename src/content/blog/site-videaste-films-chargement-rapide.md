@@ -69,7 +69,7 @@ Un filtre par catégorie (mariage, corporate, publicité, clip) permet à chaque
 Oui en partie, car les moteurs de recherche lisent mal le contenu vidéo lui-même — un texte descriptif accompagnant chaque projet reste indispensable pour être trouvé sur Google.
 
 **Combien coûte un site sur mesure pour un vidéaste ?**
-À partir de 449 € pour un site vitrine, livré en 10 jours ouvrés, avec possibilité d'ajouter un espace client privé pour la livraison des films.
+À partir de {{prix:une-page}} € pour un site vitrine, avec possibilité d'ajouter un espace client privé pour la livraison des films.
 
 ---
 

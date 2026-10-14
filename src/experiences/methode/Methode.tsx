@@ -7,15 +7,18 @@
  * se construit, la mise en ligne, le suivi. Le numéro se déplie, le texte se
  * découpe.
  */
+import { PRIX_PUBLICS } from '@/config/prix-publics.generated'
 import { useEffect, useRef, useState } from 'react'
 import { useScene } from '@/webgl/store'
 import { ScrollTrigger, initGsap } from '@/lib/gsap'
 import { Chantier } from './Chantier'
 import './methode.css'
 
+const PRIX_DEMO = PRIX_PUBLICS.demo
+
 export const ETAPES = [
   { num: '01', nom: 'On se parle', texte: 'Un rendez-vous, chez vous ou en visio. Vous racontez votre métier, vos clients, ce qui vous fait perdre du temps.' },
-  { num: '02', nom: 'On vous montre avant de vous vendre', texte: 'Une démo de votre site, gratuite, avant toute signature. Vous jugez sur pièce, pas sur promesse.', ambre: true },
+  { num: '02', nom: 'On vous montre avant de vous vendre', texte: `La démo de votre page d’accueil, avant toute signature (${PRIX_DEMO} €, déduits du prix si vous continuez). Vous jugez sur pièce, pas sur promesse.`, ambre: true },
   { num: '03', nom: 'On fabrique', texte: 'Vous suivez l’avancement, vous relisez, vous demandez des ajustements. Rien n’est figé avant votre accord.' },
   { num: '04', nom: 'On met en ligne', texte: 'Nom de domaine, hébergement, certificat, formation : vous repartez avec les clés et vous savez vous en servir.' },
   { num: '05', nom: 'On reste là', texte: 'Maintenance, évolutions, nouvelles fonctions : l’outil grandit avec vous, à votre rythme.' },

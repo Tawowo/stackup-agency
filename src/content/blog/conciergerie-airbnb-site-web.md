@@ -105,14 +105,14 @@ Un blog sur des sujets comme "comment optimiser son annonce Airbnb", "les règle
 
 ## Tarifs pour un site de conciergerie
 
-Un site de conciergerie correspond généralement à un [site multi-pages à partir de 749€](/tarifs) :
+Un site de conciergerie correspond généralement à un [site multi-pages à partir de {{prix:multi-pages}} €](/tarifs) :
 - Accueil, services, zone d'intervention, témoignages, contact
 - Formulaire de simulation ou de prise de RDV
 - Pages localisées par zone
 - SEO local optimisé
-- Hébergement 12 mois inclus
+- Domaine offert la première année
 
-La livraison est garantie en [17 jours ouvrés](/tarifs).
+Le prix exact se fixe au devis, selon ce que vous choisissez ([nos tarifs](/tarifs)).
 
 ---
 

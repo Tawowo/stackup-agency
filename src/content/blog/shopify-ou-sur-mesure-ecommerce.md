@@ -9,7 +9,7 @@ category: "ecommerce"
 keywords: ["shopify ou sur mesure", "shopify vs sur mesure", "prix shopify", "alternative shopify"]
 ---
 
-**Shopify coûte entre 29 $ et 299 $/mois selon le plan, plus 0,5 % à 2 % de commission sur chaque vente en plus des frais de paiement — une boutique sur mesure coûte 1 647 € une fois, sans commission sur les ventes.** Sur un volume de vente modeste, Shopify reste compétitif. Dès que le chiffre d'affaires grandit, les commissions cumulées peuvent dépasser largement le coût d'une boutique sur mesure amortie sur plusieurs années.
+**Shopify coûte entre 29 $ et 299 $/mois selon le plan, plus 0,5 % à 2 % de commission sur chaque vente en plus des frais de paiement — une boutique sur mesure s'achète une fois, à partir de {{prix:boutique}} €, sans commission sur les ventes.** Sur un volume de vente modeste, Shopify reste compétitif. Dès que le chiffre d'affaires grandit, les commissions cumulées peuvent dépasser largement le coût d'une boutique sur mesure amortie sur plusieurs années.
 
 ## Comment Shopify facture réellement une boutique
 
@@ -23,21 +23,21 @@ Shopify combine deux coûts distincts, souvent sous-estimés au moment du choix 
 
 | Poste | Shopify (plan Basic) | Boutique sur mesure |
 |---|---|---|
-| Abonnement mensuel | 29 $ (~27 €) | 0 € |
+| Abonnement mensuel | 29 $ (~27 €) | Facultatif, sans engagement |
 | Frais de paiement (~3 %) | ~90 €/mois | ~90 €/mois (identiques, indépendants de la plateforme) |
 | Applications tierces | ~30 €/mois en moyenne | 0 € (fonctionnalités incluses) |
-| Coût de création | 0 € | 1 647 € |
-| **Total sur 3 ans** | **~5 292 €** | **~1 647 € + maintenance optionnelle** |
+| Coût de création | 0 € | À partir de {{prix:boutique}} € |
+| **Total sur 3 ans** | **~5 292 €** | **Achat unique, puis abonnement facultatif** |
 
 ### Scénario 2 : boutique établie, 15 000 €/mois de chiffre d'affaires
 
 | Poste | Shopify (plan Shopify) | Boutique sur mesure |
 |---|---|---|
-| Abonnement mensuel | 79 $ (~73 €) | 0 € |
+| Abonnement mensuel | 79 $ (~73 €) | Facultatif, sans engagement |
 | Frais de paiement (~3 %) | ~450 €/mois | ~450 €/mois |
 | Applications tierces | ~60 €/mois en moyenne | 0 € |
-| Coût de création | 0 € | 1 647 € |
-| **Total sur 3 ans** | **~21 228 €** | **~1 647 € + maintenance optionnelle** |
+| Coût de création | 0 € | À partir de {{prix:boutique}} € |
+| **Total sur 3 ans** | **~21 228 €** | **Achat unique, puis abonnement facultatif** |
 
 Les frais de paiement (autour de 3 %) existent quelle que soit la plateforme choisie — ils rémunèrent la banque ou le prestataire de paiement, pas Shopify. La vraie différence se joue sur l'abonnement mensuel et les applications tierces, qui s'accumulent chaque mois sans jamais s'arrêter côté Shopify.
 
@@ -63,7 +63,7 @@ Les frais de paiement (autour de 3 %) existent quelle que soit la plateforme cho
 
 ## Une boutique sur mesure : ce qui change
 
-Une boutique e-commerce sur mesure (à partir de 1 647 €, livrée en 21 jours ouvrés) intègre les fonctionnalités nécessaires au projet sans dépendre d'applications tierces payantes accumulées mois après mois : gestion des stocks, panier, paiement en ligne sécurisé, fiches produits optimisées SEO, structure d'URL entièrement personnalisable. Le client reste propriétaire de son code et de ses données, sans commission additionnelle sur les ventes au-delà des frais de paiement bancaires classiques, identiques quelle que soit la plateforme.
+Une boutique e-commerce sur mesure (à partir de {{prix:boutique}} €, le prix exact se fixant au devis) intègre les fonctionnalités nécessaires au projet sans dépendre d'applications tierces payantes accumulées mois après mois : gestion des stocks, panier, paiement en ligne sécurisé, fiches produits optimisées SEO, structure d'URL entièrement personnalisable. Le client reste propriétaire de son code et de ses données, sans commission additionnelle sur les ventes au-delà des frais de paiement bancaires classiques, identiques quelle que soit la plateforme.
 
 ## Quand Shopify reste le bon choix
 
@@ -76,8 +76,8 @@ Dès que le volume de vente dépasse quelques milliers d'euros par mois de faço
 ## En résumé
 
 - Shopify coûte 29 $ à 299 $/mois plus des commissions variables et des applications tierces qui s'accumulent chaque mois.
-- Une boutique sur mesure coûte 1 647 € une fois, sans commission additionnelle au-delà des frais de paiement bancaires standards.
-- Sur un volume de vente de 3 000 à 15 000 €/mois, le coût Shopify sur 3 ans dépasse largement celui d'une boutique sur mesure équivalente.
+- Une boutique sur mesure s'achète une fois, à partir de {{prix:boutique}} €, sans commission additionnelle au-delà des frais de paiement bancaires standards ; l'abonnement qui s'y ajoute est facultatif et sans engagement.
+- Sur un volume de vente de 3 000 à 15 000 €/mois, le coût Shopify cumulé sur 3 ans devient élevé, alors que la boutique sur mesure reste un achat unique, puis un abonnement facultatif.
 - Shopify garde du sens pour un lancement rapide à l'international ; le sur mesure devient plus rentable dès que le volume de vente se stabilise.
 
 ## Questions fréquentes

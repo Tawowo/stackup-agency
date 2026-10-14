@@ -59,18 +59,18 @@ Soyons justes, trois cas légitimes :
 
 Pour une activité professionnelle qui doit inspirer confiance et être trouvée sur Google, le gratuit coûte plus qu'il ne rapporte — en euros comme en image.
 
-## L'alternative au même ordre de prix
+## L'alternative : acheter plutôt que louer
 
-C'est le calcul que peu de gens font : la formule Wix « correcte » (~25 €/mois) coûte **449 € en 18 mois**. Exactement le prix d'un site vitrine sur mesure chez Stackup Agency — design unique, performances ≥ 90, SEO propre, hébergement 12 mois et nom de domaine offerts la première année, et un site qui **vous appartient**.
+C'est le calcul que peu de gens font : la formule Wix « correcte » (~25 €/mois) coûte 450 € en 18 mois, sans que rien de ce que vous avez payé ne vous appartienne. Un site vitrine sur mesure chez Stackup Agency démarre à partir de {{prix:une-page}} € — design unique, performances ≥ 90, SEO propre, nom de domaine offert la première année, et un site qui **vous appartient**.
 
-À 18 mois, les deux options ont coûté pareil. À 5 ans, l'écart est de 1 000 à 1 900 € — en faveur du site possédé, qui entre-temps a construit VOTRE référencement, pas celui d'un sous-domaine.
+Avec Wix, les mensualités continuent sans fin et sans propriété. Avec un site possédé, l'abonnement est facultatif et sans engagement, et le site a entre-temps construit VOTRE référencement, pas celui d'un sous-domaine.
 
 ## En résumé
 
 - Le site gratuit est un tunnel vers l'abonnement : sous-domaine + pub + fonctions bridées rendent l'usage professionnel impossible.
 - Coût réel sur 5 ans en formule utilisable : 1 000 à 2 400 €, sans propriété.
 - Les coûts invisibles : visibilité Google sacrifiée, dizaines d'heures investies, migration totale à la sortie.
-- Au même budget sur 18 mois, un site sur mesure possédé existe : c'est une question de calcul, pas de moyens.
+- Un site sur mesure possédé est accessible : un achat unique, puis un abonnement facultatif, c'est une question de choix, pas de moyens.
 
 ## Questions fréquentes
 
@@ -83,8 +83,8 @@ Pas nécessairement dans l'urgence. Si le site remplit sa mission, planifiez la 
 **Peut-on migrer sans perdre son référencement ?**
 Oui, avec des redirections propres — quand le site a un vrai domaine. Depuis un sous-domaine gratuit, il y a peu à conserver : c'est l'occasion de repartir proprement.
 
-**Un site à 449 €, sans abonnement obligatoire, où est le piège ?**
-Il n'y en a pas — le modèle est différent : nous vendons la création, pas la dépendance. Après la première année incluse, maintenance optionnelle dès 29 €/mois ou autonomie complète. [Le détail est public.](/blog/site-vitrine-449-inclus)
+**Un site à partir de {{prix:une-page}} €, avec un abonnement facultatif et sans engagement, où est le piège ?**
+Il n'y en a pas — le modèle est différent : nous vendons la création, pas la dépendance. Après la première année (nom de domaine offert), l'abonnement est facultatif, à partir d'environ {{abo:min}} € par mois pour un site d'une page, ou vous gérez en autonomie complète. [Le détail est public.](/blog/site-vitrine-inclus)
 
 ---
 

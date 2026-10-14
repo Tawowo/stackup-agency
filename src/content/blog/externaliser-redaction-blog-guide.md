@@ -63,7 +63,7 @@ Avant de rédiger, un bon prestataire vous soumet une liste de sujets pour le mo
 Une fois le calendrier validé, voici comment se déroule la livraison type :
 
 1. **Brief d'article** — le prestataire vous envoie un plan (H2/H3) avant de rédiger. Vous validez ou ajustez.
-2. **Rédaction** — 3 à 5 jours ouvrés selon la longueur.
+2. **Rédaction** — le délai dépend de la longueur et se convient avec le prestataire.
 3. **Livraison en brouillon** — dans votre CMS ou dans un Google Doc partagé.
 4. **Votre retour** — un aller-retour de corrections inclus dans chaque article.
 5. **Publication** — assurée par le prestataire en pack, ou par vous en achat à l'unité.
@@ -89,7 +89,7 @@ Les tarifs varient selon la qualité attendue et le prestataire choisi :
 | Pack 8 articles/mois | 100€ à 350€/mois |
 | Avec suivi SEO intégré | +20 à 30% |
 
-Chez Stackup Agency, le [Pack Visibilité est à 89€/mois](/services/redaction-blog-seo) pour 4 articles avec suivi SEO, et le Pack Autorité à 159€/mois pour 8 articles + 2 content-refresh mensuels.
+Chez Stackup Agency, l'[abonnement mensuel facultatif](/services/redaction-blog-seo), sans engagement et composé à la carte, propose des articles de blog à {{abo:article}} € l'article et des rapports de suivi à {{abo:rapport}} €.
 
 ## Les erreurs à éviter
 

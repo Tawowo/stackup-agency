@@ -1,0 +1,25 @@
+.su-ref { display: grid; gap: 64px; --su-texte: var(--su-navy); --su-texte-doux: var(--su-graphite-ivoire); --su-accent-texte: var(--su-ambre-texte); color: var(--su-navy); }
+.su-ref__titre { margin: 0 0 12px; font-family: var(--su-font-display), system-ui, sans-serif; font-size: clamp(1.7rem, 3vw, 2.5rem); line-height: 1.12; color: var(--su-navy); }
+.su-ref__titre--petit { font-size: 1.5rem; }
+.su-ref__intro { margin: 0 0 24px; max-width: 70ch; line-height: 1.6; color: var(--su-graphite-ivoire); }
+.su-ref__cartes { list-style: none; margin: 0; padding: 0; display: grid; gap: 16px; grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.su-ref__cartes--3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.su-ref__carte { display: flex; flex-direction: column; gap: 8px; padding: 20px; background: #fff; border: 1.5px solid #d9d2c3; border-radius: 4px; box-shadow: 8px -3px 0 rgba(6, 14, 28, 0.1); }
+.su-ref__niveau { margin: 0; font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--su-ambre-texte); font-weight: 700; }
+.su-ref__carte-titre { margin: 0; color: var(--su-navy); font-size: 1.1875rem; line-height: 1.25; font-family: var(--su-font-display), system-ui, sans-serif; }
+.su-ref__texte { margin: 0; line-height: 1.5; color: #3f4f63; }
+.su-ref__texte--doux { font-size: 0.875rem; color: var(--su-graphite-ivoire); flex: 1; }
+.su-ref__prix { margin: 8px 0 0; font-weight: 700; color: var(--su-navy); }
+.su-ref__prix span { font-weight: 500; color: var(--su-graphite-ivoire); }
+.su-ref__liste { list-style: none; margin: 0; padding: 0; border-top: 1.5px solid #d9d2c3; }
+.su-ref__ligne { display: flex; justify-content: space-between; gap: 24px; padding: 14px 0; border-bottom: 1.5px solid #d9d2c3; }
+.su-ref__ligne-nom { margin: 0; font-weight: 700; }
+.su-ref__ligne-texte { margin: 4px 0 0; max-width: 70ch; line-height: 1.5; color: #3f4f63; }
+.su-ref__ligne-prix { margin: 0; white-space: nowrap; font-weight: 700; text-align: right; }
+.su-ref__ligne-prix span { font-weight: 500; color: var(--su-graphite-ivoire); }
+.su-ref__honnete { padding: 28px; border-left: 5px solid var(--su-ambre); background: var(--su-ivoire-creuse); }
+.su-ref__honnete p { max-width: 72ch; line-height: 1.6; }
+.su-ref__actions { display: flex; flex-wrap: wrap; align-items: center; gap: 16px; margin: 22px 0 0; }
+.su-ref__lien { color: var(--su-ambre-texte); font-weight: 700; text-decoration: underline; }
+@media (max-width: 1099px) { .su-ref__cartes { grid-template-columns: repeat(2, minmax(0, 1fr)); } .su-ref__cartes--3 { grid-template-columns: minmax(0, 1fr); } }
+@media (max-width: 760px) { .su-ref { gap: 44px; } .su-ref__cartes { grid-template-columns: minmax(0, 1fr); } .su-ref__ligne { flex-direction: column; gap: 6px; } .su-ref__ligne-prix { text-align: left; white-space: normal; } }

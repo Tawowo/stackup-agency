@@ -246,3 +246,34 @@ export const LIGNES: Ligne[] = ${JSON.stringify(lignes, null, 2)}
 writeFileSync(SORTIE, entete + corps)
 console.log(`✓ ${SORTIE.replace(racine + '/', '')} — ${lignes.length} lignes, ${niveaux.length} niveaux, ${portees.length} portées, ${iaNiveaux.length} niveaux IA`)
 
+// ───────── Fichier léger : les montants publics, calculés par le moteur ─────────
+// Les pages d'accueil, les données éditoriales et les jetons n'ont pas besoin du catalogue entier :
+// ils lisent ce petit fichier, produit par le moteur à partir de l'Excel.
+const { aPartirDe, exemplesAbonnement } = await import('../src/domain/devis/offres.ts')
+const ligne = (code) => lignes.find((l) => l.code === code)
+const unite = (code, defaut) => Number(ligne(code)?.unite.match(/\d+/)?.[0] ?? defaut)
+const publics = {
+  offres: { 'une-page': aPartirDe('une-page'), 'multi-pages': aPartirDe('multi-pages'), boutique: aPartirDe('boutique'), outil: aPartirDe('outil') },
+  abonnementMin: exemplesAbonnement()[0].mensuel,
+  suiviLocal: ligne('A14')?.prix ?? 0,
+  publication: ligne('A12')?.prix ?? 0,
+  article: ligne('A13')?.prix ?? 0,
+  rapport: ligne('A17')?.prix ?? 0,
+  heureMois: ligne('A18')?.prix ?? 0,
+  tarifHoraire: ligne('P05')?.prix ?? 0,
+  demo: ligne('P02')?.prix ?? 0,
+  visio: ligne('P03')?.prix ?? 0,
+  acomptePourcent: Math.round(params.acompte * 100),
+  pleinTarifJusqua: params.pleinTarifJusqua,
+  paiement4FoisDes: params.paiement4FoisDes,
+  rdvInclus: unite('P04', 3),
+  seriesIncluses: unite('P06', 2),
+  nbModulesOutil: lignes.filter((l) => l.famille === 'outil' && l.code !== 'O00').length,
+  descriptions: { L01: ligne('L01')?.description ?? '', B00: ligne('B00')?.description ?? '', O00: ligne('O00')?.description ?? '' },
+}
+const SORTIE2 = join(racine, 'src/config/prix-publics.generated.ts')
+writeFileSync(
+  SORTIE2,
+  `// FICHIER GÉNÉRÉ par scripts/tarifs-depuis-excel.mjs (résultats du moteur de devis). Ne pas modifier : \`npm run tarifs\`.\n\nexport const PRIX_PUBLICS = ${JSON.stringify(publics, null, 2)} as const\n`,
+)
+console.log(`✓ ${SORTIE2.replace(racine + '/', '')}`)

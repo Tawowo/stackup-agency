@@ -35,7 +35,7 @@ Les annuaires et plateformes de mise en relation existent depuis longtemps sous 
 
 | Critère | Plateformes (Pages Jaunes, Houzz, Travaux.com) | Site propre + fiche Google Business |
 |---|---|---|
-| Coût | Abonnement et/ou commission récurrents | Investissement initial (dès 449 €), fiche gratuite |
+| Coût | Abonnement et/ou commission récurrents | Investissement initial (dès {{prix:une-page}} €), fiche gratuite |
 | Exclusivité du lead | Souvent partagé entre plusieurs artisans | Exclusif |
 | Actif durable | Aucun, s'arrête avec l'abonnement | Oui, continue de générer des demandes |
 | Différenciation de marque | Très limitée | Totale |

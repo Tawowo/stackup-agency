@@ -72,7 +72,7 @@ Une agence dispose d'une équipe — rédacteurs, stratège SEO, éditeur — qu
 
 ## Ce que nous proposons chez Stackup Agency
 
-Notre [service de rédaction blog SEO](/services/redaction-blog-seo) fonctionne comme une agence, avec les tarifs d'un freelance structuré. L'article à 25€ à l'unité, le Pack Visibilité à 89€/mois (4 articles) et le Pack Autorité à 159€/mois (8 articles + content-refresh) couvrent les trois cas d'usage les plus courants. Le suivi SEO est intégré dans les packs — vous recevez un rapport mensuel des positions sans le demander.
+Notre [service de rédaction blog SEO](/services/redaction-blog-seo) fonctionne comme une agence. Les articles se composent à la carte dans l'abonnement facultatif, sans engagement : un article de blog à {{abo:article}} €, et un rapport de suivi à {{abo:rapport}} € si vous souhaitez suivre vos positions.
 
 ## FAQ
 

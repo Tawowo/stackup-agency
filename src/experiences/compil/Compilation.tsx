@@ -13,9 +13,7 @@ import { useScene } from '@/webgl/store'
 import type { LayoutName } from '@/webgl/layouts'
 import { gsap, ScrollTrigger, initGsap } from '@/lib/gsap'
 import { SITE } from '@/config/site'
-import { LIGNES } from '@/config/tarifs.generated'
-import { lienEstimateur } from '@/domain/devis/etat'
-import { exemplesAbonnement } from '@/domain/devis/offres'
+import { PRIX_PUBLICS } from '@/config/prix-publics.generated'
 import Action from '@/components/ui/Action'
 import Cadran from '@/components/ui/Cadran'
 import { PROGRAMMES, type Programme } from './programmes'
@@ -171,17 +169,17 @@ export default function Compilation() {
         <ul className="su-cmp__autour">
           <li className="su-plaque">
             <h3>Maintenance</h3>
-            <p>Hébergement, mises à jour, sauvegardes, corrections : un abonnement composé selon vos besoins, à partir d’environ {exemplesAbonnement()[0]!.mensuel} € par mois, sans engagement, préavis d’un mois.</p>
-            <a href={lienEstimateur({ etape: 9 })}>Composer mon abonnement</a>
+            <p>Hébergement, mises à jour, sauvegardes, corrections : un abonnement composé selon vos besoins, à partir d’environ {PRIX_PUBLICS.abonnementMin} € par mois, sans engagement, préavis d’un mois.</p>
+            <a href="/tarifs?e=eyJzIjo5fQ#estimer">Composer mon abonnement</a>
           </li>
           <li className="su-plaque">
             <h3>Rédaction</h3>
             <p>Articles et pages écrits pour vos clients et pour Google, relus avec vous avant publication.</p>
-            <a href={lienEstimateur({ etape: 6 })}>Estimer la rédaction</a>
+            <a href="/tarifs?e=eyJzIjo2fQ#estimer">Estimer la rédaction</a>
           </li>
           <li className="su-plaque">
             <h3>Démo avant signature</h3>
-            <p>Votre future page d’accueil, à votre image, avant tout engagement : {LIGNES.find((l) => l.code === 'P02')?.prix ?? 0} €, déduits du prix si vous continuez. Vous jugez sur pièce.</p>
+            <p>Votre future page d’accueil, à votre image, avant tout engagement : {PRIX_PUBLICS.demo} €, déduits du prix si vous continuez. Vous jugez sur pièce.</p>
             <a href="/contact?a=demo">La demander</a>
           </li>
         </ul>

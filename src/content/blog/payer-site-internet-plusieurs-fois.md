@@ -18,7 +18,7 @@ Pourquoi ce découpage s'est-il imposé partout ?
 - **L'acompte de 30 %** engage les deux parties : il réserve le créneau de production et couvre le travail de conception (maquette, structure). Vous êtes sûr que le projet démarre ; le prestataire est sûr que vous êtes sérieux.
 - **Le solde de 70 % à la livraison** vous protège : l'essentiel du paiement n'intervient que quand le site est là, conforme à la maquette validée.
 
-Pour un site vitrine à 449 €, cela donne : **135 € au démarrage, 314 € à la livraison** — dix jours ouvrés plus tard.
+Pour un site vitrine à partir de {{prix:une-page}} €, cela donne **30 % au démarrage et 70 % à la livraison**, calculés sur le prix exact fixé au devis.
 
 ## Ce qui existe ailleurs, et comment le lire
 
@@ -32,7 +32,7 @@ Pour un site vitrine à 449 €, cela donne : **135 € au démarrage, 314 € �
 
 ## L'échelonnement sur les projets plus importants
 
-Pour une boutique en ligne (à partir de 1 647 €) ou un système de gestion (à partir de 1 447 €, ± 500 € selon le périmètre), un paiement en trois temps se pratique couramment, calé sur les jalons du projet :
+Pour une boutique en ligne (à partir de {{prix:boutique}} €) ou un système de gestion (à partir de {{prix:outil}} €, le prix exact se fixe au devis, selon ce que vous choisissez), un paiement en trois temps se pratique couramment, calé sur les jalons du projet :
 
 1. **Au démarrage** : l'acompte engage la conception.
 2. **À la validation de la maquette** : le développement commence sur une base que vous avez approuvée.
@@ -72,8 +72,8 @@ On la retravaille — c'est compris dans le processus. Le développement ne dém
 Le taux de 30 % est notre standard ; sur les projets importants, l'échéancier en trois temps le remplace naturellement. Ce qui n'est pas négociable : démarrer sans aucun engagement réciproque.
 
 **Proposez-vous un paiement en 10 fois comme certaines plateformes ?**
-Non, et c'est volontaire : les « facilités » très longues transforment un achat en abonnement psychologique. Nos prix (dès 449 €) sont pensés pour rester accessibles sans crédit.
+Non, et c'est volontaire : les « facilités » très longues transforment un achat en abonnement psychologique. Nos prix (à partir de {{prix:une-page}} €) sont pensés pour rester accessibles sans crédit.
 
 ---
 
-*Pour aller plus loin : [Ce qui est inclus dans le site à 449 €](/blog/site-vitrine-449-inclus) · [Les frais cachés à éviter](/blog/frais-caches-creation-site) · [Demander un devis](/devis)*
+*Pour aller plus loin : [Ce qui est inclus dans un site vitrine](/blog/site-vitrine-inclus) · [Les frais cachés à éviter](/blog/frais-caches-creation-site) · [Demander un devis](/devis)*

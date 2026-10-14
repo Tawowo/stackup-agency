@@ -65,7 +65,7 @@ Sans sauvegarde récente, une attaque ou une erreur humaine peut détruire irré
 - Revue du contenu (pages obsolètes, liens cassés)
 - Mise à jour des mentions légales si nécessaire
 
-### Maintenance complète (plan pro)
+### Maintenance complète
 
 En plus du basique :
 - **Monitoring 24h/24** : alerte instantanée si le site tombe
@@ -75,31 +75,16 @@ En plus du basique :
 
 ---
 
-## Les plans de maintenance Stackup Agency
+## L'abonnement de maintenance Stackup Agency
 
-Chez Stackup Agency, nous proposons trois plans de maintenance :
+Chez Stackup Agency, il n'y a pas de formule toute faite : l'abonnement mensuel est facultatif, sans engagement (préavis d'un mois), et se compose à la carte, à partir d'environ {{abo:min}} € par mois pour un site d'une page. Vous choisissez parmi :
+- l'hébergement et les sauvegardes
+- la maintenance et les mises à jour de sécurité
+- les publications et le suivi du référencement
+- un rapport mensuel
+- des heures de modifications
 
-**Starter — 29€/mois**
-- Hébergement haute performance
-- Sauvegardes quotidiennes
-- Mises à jour sécurité
-- Monitoring disponibilité
-- Support email (48h)
-
-**Pro — 44€/mois**
-- Tout Starter +
-- Rapport mensuel performances
-- Support prioritaire (24h)
-- 1h de modifications/mois incluse
-
-**Premium — 89€/mois**
-- Tout Pro +
-- Rapport SEO mensuel
-- 3h de modifications/mois incluses
-- Support téléphonique
-- Audit sécurité trimestriel
-
-Ces plans sont accessibles depuis notre [page tarifs](/tarifs).
+Si vous arrêtez, vous gardez votre site et vos fichiers. Le détail est sur notre [page tarifs](/tarifs#abonnement).
 
 ---
 
@@ -122,9 +107,9 @@ La maintenance en autonomie est risquée si vous :
 
 | Scénario | Coût estimé |
 |---|---|
-| Maintenance annuelle (29€/mois) | 348€/an |
+| Maintenance préventive (abonnement facultatif) | Un abonnement mensuel, composé à la carte |
 | Nettoyage d'un site hacké (sans sauvegarde) | 500€ à 2 000€ |
-| Refonte complète suite à attaque (sans sauvegarde) | 449€ à 1 500€ |
+| Refonte complète suite à attaque (sans sauvegarde) | À partir de {{prix:une-page}} € |
 | Perte de revenus pendant une coupure (e-commerce) | Variable |
 | Blacklisting Google + récupération SEO | 3-6 mois de trafic perdu |
 
@@ -143,13 +128,13 @@ La maintenance préventive est systématiquement moins coûteuse que la gestion 
 6. Soumettez une demande de révision à Google si votre site a été blacklisté
 
 **La maintenance est-elle incluse dans la création du site ?**
-Elle est incluse la première année chez Stackup Agency (hébergement + sauvegardes). Pour une maintenance pro avec support et modifications, nos plans démarrent à 29€/mois.
+Non : l'hébergement n'est pas inclus dans le prix de création, il fait partie de l'abonnement mensuel facultatif, sans engagement, composé à la carte (hébergement, maintenance, modifications…), à partir d'environ {{abo:min}} € par mois pour un site d'une page. Le nom de domaine est offert la première année, puis inclus dans l'abonnement. Un mois d'ajustements est inclus après la mise en ligne.
 
-**Peut-on changer de plan de maintenance ?**
-Oui. Vous pouvez upgrader ou résilier à tout moment avec un préavis d'un mois. Il n'y a pas d'engagement annuel obligatoire.
+**Peut-on changer d'abonnement ?**
+Oui. Vous pouvez modifier ou résilier à tout moment avec un préavis d'un mois. Il n'y a pas d'engagement, et vous gardez votre site et vos fichiers si vous arrêtez.
 
 **La maintenance couvre-t-elle les modifications de contenu ?**
-Pas dans les plans de base. Les plans Pro (1h/mois) et Premium (3h/mois) incluent des heures de modifications. Les modifications supplémentaires sont facturées à l'heure.
+Pas par défaut. Des heures de modifications peuvent être ajoutées à votre abonnement (une heure par mois : {{abo:heure}} €). Au-delà du compris, l'heure est facturée {{tarif:heure}} €.
 
 **Mon site n'est pas sous WordPress. La maintenance est-elle différente ?**
-Pour les sites en Next.js (nos réalisations), la maintenance technique est différente mais les principes restent les mêmes : sauvegardes, monitoring, mises à jour des dépendances. Nos plans de maintenance couvrent tous les sites que nous réalisons, quelle que soit la technologie.
+Pour les sites en Next.js (nos réalisations), la maintenance technique est différente mais les principes restent les mêmes : sauvegardes, monitoring, mises à jour des dépendances. Notre abonnement couvre tous les sites que nous réalisons, quelle que soit la technologie.

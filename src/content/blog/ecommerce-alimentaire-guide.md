@@ -106,7 +106,7 @@ Pour une boutique alimentaire artisanale, WooCommerce est la technologie la plus
 - Extensions spécialisées (WooCommerce Subscriptions pour les abonnements)
 - Intégration des transporteurs français
 
-**Budget :** Notre [formule e-commerce](/tarifs) à partir de 1 647€ couvre les fonctionnalités de base. Les fonctionnalités avancées (abonnements, gestion de stock complexe) sont disponibles en option.
+**Budget :** Notre [formule e-commerce](/tarifs) à partir de {{prix:boutique}} € couvre les fonctionnalités de base. Les fonctionnalités avancées (abonnements, gestion de stock complexe) sont disponibles en option.
 
 ---
 

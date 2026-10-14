@@ -46,7 +46,7 @@ Cette esthétique a un prix : moins de liberté de personnalisation que Wix, une
 | Design par défaut | Très soigné | Correct | Unique, conçu pour le projet |
 | Support en français | Limité | Bon | Direct avec le prestataire |
 | SEO local | Limité | Correct | Optimisé dès la conception |
-| Prix mensuel | ~23 à 49 $/mois | 17 à 59 €/mois | 0 € après l'achat unique |
+| Prix mensuel | ~23 à 49 $/mois | 17 à 59 €/mois | Achat unique, puis abonnement facultatif |
 | Propriété du site | Non | Non | Oui, code livré au client |
 | Performances (PageSpeed mobile) | 65-85 | 60-80 | 90-100 |
 
@@ -58,7 +58,7 @@ L'argument du sur mesure ne se limite pas au SEO : la propriété totale du site
 
 ## Combien coûte réellement Squarespace sur plusieurs années
 
-Le plan Business Squarespace (le plus courant pour un usage professionnel) tourne autour de 33 $/mois facturé annuellement, soit environ 33 € au taux de change actuel — auquel s'ajoutent le nom de domaine et les éventuelles extensions payantes. Sur 5 ans, la facture dépasse fréquemment 1 800 à 2 000 €, sans jamais devenir propriétaire du site. Un site sur mesure à 449-1 647 € payé une fois, avec un domaine offert la première année, devient structurellement moins cher dès la 3ᵉ ou 4ᵉ année, tout en offrant de meilleures performances techniques.
+Le plan Business Squarespace (le plus courant pour un usage professionnel) tourne autour de 33 $/mois facturé annuellement, soit environ 33 € au taux de change actuel — auquel s'ajoutent le nom de domaine et les éventuelles extensions payantes. Sur 5 ans, la facture dépasse fréquemment 1 800 à 2 000 €, sans jamais devenir propriétaire du site. Un site sur mesure se paie en une fois (à partir de {{prix:une-page}} €), avec un domaine offert la première année, puis un abonnement facultatif et sans engagement : le site vous appartient au paiement complet, avec de meilleures performances techniques.
 
 ## En résumé
 
