@@ -1,0 +1,7 @@
+_tmp/
+renders/
+.hyperframes/
+qa/frames/
+node_modules/
+*.log
+.modeles/

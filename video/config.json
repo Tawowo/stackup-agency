@@ -1,0 +1,15 @@
+{
+  "prixVitrine": 500,
+  "devise": "€",
+  "url": "stackup-agency.fr",
+  "demo": {
+    "etiquette": "Démo",
+    "phrase": "Votre démo avant de décider"
+  },
+  "appel": "Appel découverte offert",
+  "estimateur": {
+    "titre": "Estimez en 2 minutes",
+    "choix": ["Un site qui se démarque", "Une boutique en ligne", "Un outil de gestion"],
+    "etapes": ["Votre projet", "Vos besoins", "Votre échéance", "Synthèse"]
+  }
+}

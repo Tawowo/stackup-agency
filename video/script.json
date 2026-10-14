@@ -1,0 +1,137 @@
+{
+  "bpm": 120,
+  "voix": {
+    "moteur": "piper fr_FR-tom-medium (sherpa-onnx, local, provisoire)",
+    "note": "Les champs debut/fin sont recalculés par scripts/voix.py à partir de la durée réelle de chaque phrase. Ne pas les éditer à la main."
+  },
+  "phrases": [
+    {
+      "id": "p1",
+      "plan": 1,
+      "texte": "Votre site… il vous rapporte quoi, vraiment ?"
+    },
+    {
+      "id": "p2a",
+      "plan": 2,
+      "texte": "Introuvable sur Google."
+    },
+    {
+      "id": "p2b",
+      "plan": 2,
+      "texte": "Oublié en deux secondes."
+    },
+    {
+      "id": "p2c",
+      "plan": 2,
+      "texte": "Et rien pour vous faire gagner du temps."
+    },
+    {
+      "id": "p3a",
+      "plan": 3,
+      "texte": "Chez Stackup, on fabrique des sites et des outils sur mesure."
+    },
+    {
+      "id": "p3b",
+      "plan": 3,
+      "texte": "Couche après couche."
+    },
+    {
+      "id": "p4a",
+      "plan": 4,
+      "texte": "Un site qui se démarque."
+    },
+    {
+      "id": "p4b",
+      "plan": 4,
+      "texte": "Une boutique qui vend."
+    },
+    {
+      "id": "p4c",
+      "plan": 4,
+      "texte": "Un outil qui vous fait gagner des heures."
+    },
+    {
+      "id": "p4d",
+      "plan": 4,
+      "texte": "Sur ordinateur comme sur téléphone."
+    },
+    {
+      "id": "p5a",
+      "plan": 5,
+      "texte": "Vous voyez votre démo avant de vous engager."
+    },
+    {
+      "id": "p5b",
+      "plan": 5,
+      "texte": "Le site vous appartient."
+    },
+    {
+      "id": "p5c",
+      "plan": 5,
+      "texte": "Et on le prépare pour être trouvé sur Google… et par les IA.",
+      "tts": "Et on le prépare pour être trouvé sur Google… et par les i a."
+    },
+    {
+      "id": "p6a",
+      "plan": 6,
+      "texte": "Combien ça coûte ?"
+    },
+    {
+      "id": "p6b",
+      "plan": 6,
+      "texte": "Estimez votre projet en deux minutes, sur notre site."
+    },
+    {
+      "id": "p7a",
+      "plan": 7,
+      "texte": "Stackup Agency."
+    },
+    {
+      "id": "p7b",
+      "plan": 7,
+      "texte": "Sites et outils sur mesure."
+    },
+    {
+      "id": "p7c",
+      "plan": 7,
+      "texte": "Rendez-vous sur stackup-agency.fr : le premier appel est offert.",
+      "tts": "Rendez-vous sur Stackup Agency point f r : le premier appel est offert."
+    }
+  ],
+  "montages": {
+    "complet": {
+      "cible": 45,
+      "phrases": [
+        "p1",
+        "p2a",
+        "p2b",
+        "p2c",
+        "p3a",
+        "p3b",
+        "p4a",
+        "p4b",
+        "p4c",
+        "p4d",
+        "p5a",
+        "p5b",
+        "p5c",
+        "p6a",
+        "p6b",
+        "p7a",
+        "p7b",
+        "p7c"
+      ]
+    },
+    "court20": {
+      "cible": 20,
+      "phrases": [
+        "p1",
+        "p3a",
+        "p4a",
+        "p4b",
+        "p4c",
+        "p7c"
+      ]
+    }
+  }
+}
