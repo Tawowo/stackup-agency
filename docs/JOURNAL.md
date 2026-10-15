@@ -1,69 +1,30 @@
 # Journal du chantier — Stackup Agency V5
 
-## Rapport de la mission « grille tarifaire + estimateur » (2026-10-14) — à lire en premier
 
-**Prévisualisation Vercel** : https://stackup-agency-k3s6epe8h-tawowo-s-projects.vercel.app (commit 76af473, branche `claude/new-session-26nojr`).
-`npm run verify` vert · 28 tests dont les 3 de référence (Hydr'eaux 4 050 € / 3 650–4 660 € / 90 €/mois ; ToutouBien 4 130 € / 3 720–4 750 € / 173 €/mois ; vitrine démo+visio 500 € reste 455 € / 450–580 €) · 432 routes ouvertes : 0 défaut · axe 0 violation (estimateur, étapes 2 à 10, référencement, contact) · sans JS : contenu intégral · accueil 251 ko de JS (inchangé), /tarifs 266 ko.
-1. **Excel = source unique** : `npm run tarifs` lit les 11 onglets par nom et par code (151 lignes) → `tarifs.generated.ts` + `prix-publics.generated.ts` ; une ligne retirée de l'Excel disparaît (essai fait avec F07).
-2. **Moteur** `src/domain/devis/` : reproduit le Simulateur à l'identique (dégressivité, série, référencement, IA, boutique, outil, urgence, remise, arrondi, fourchette, déductions, acompte, temps, taux horaire, délai, abonnement).
-3. **Estimateur** `/tarifs#estimer` : 5 raccourcis, 9 étapes passables, récap fixe (fourchette seule), URL partageable (zod), chaîne 3D vivante ; ancien configurateur et studio de style supprimés (301 → `/tarifs#estimer`).
-4. **Contact** : jeton + action (appel 30 min / démo) ; le serveur recalcule le prix exact et l'envoie, avec temps estimé et taux horaire, au seul e-mail de Mathéo (parcours testé : `node scripts/parcours-estimateur.mjs`).
-5. **Site** : « à partir de » du moteur partout (offres, services, villes, métiers, FAQ, CGV, JSON-LD) ; textes et 300 articles passés en jetons `{{prix:…}}` ; Starter/Pro/Premium remplacés par l'abonnement composé + 3 exemples ; inclus, parcours client (accueil et tarifs), page `/services/referencement`, services à la carte ; durées fixes retirées (3 slugs renommés + 301).
-6. **Imparfait** : articles de blog réécrits par lots d'agents (totaux chiffrés remplacés par du qualitatif) → relecture éditoriale conseillée ; les 301 sont des 308 (comportement Next) ; mini-aperçus des niveaux = pages HTML/CSS animées, pas le vrai site ; pas de Lighthouse ni de balayage HawkScan (pas de clé).
+## Rapport de la mission 4 « réalisations réelles, estimateur pas à pas, documents » (2026-10-15) — à lire en premier
 
-## Rapport de la mission « montrer la vraie chose » (2026-10-14) — à lire en premier
+**Prévisualisation Vercel** : __PREVIEW__ (branche `claude/new-session-26nojr`).
+`npm run verify` vert (typecheck, lint, 29 tests dont les 3 de référence mis à jour, build) · `npm run test:e2e` : 14 tests (5 raccourcis + parcours perso + étapes sautées, 1440 et 390) · axe WCAG 2.1 AA : 0 violation (21 routes × 2 largeurs) · `scripts/contraste.mjs` (contraste mesuré sur le rendu WebGL réel) : défauts corrigés, voir « Imparfait ».
+1. **Réalisations** : anciennes démos supprimées (7 × 301 → `/realisations`). Tennis Club Savigné-Gizeux (« En ligne ») et Artibox (« En développement », lien « Tester la démo ») avec les captures fournies, rognées et recadrées au même ratio : chaque écran (3D et HTML) est rempli exactement, du haut vers le bas, ordinateur + téléphone réel. Vérifié à 1440/1024/768/390.
+2. **Accueil, modules** : 8 cartes (Planning, Clients, Rendez-vous + O31–O35) ; l'écran montre ce que fait chaque module (onde → phrase → devis, carte de conseil IA, statut « Transmise ») ; lien vers la démo.
+3. **/solutions** refait autour d'Artibox (captures, catalogue O01–O35 avec automatisation et IA en tête, métiers, prix du moteur) ; 13 fiches liées aux modules, 2 en 301.
+4. **Démo 15 € et visio 30 €** : facturées à part, plus aucune « déduction » (Excel v2, moteur, site, e-mails, PDF) ; tests de référence : Hydr'eaux 4 050 €, ToutouBien 4 130 €, Vitrine 500 € (acompte 200 €).
+5. **Estimateur pas à pas** : une étape visible, barre « Étape k sur N · nom » (N s'adapte), choix précédents résumés et cliquables, boutons toujours au même endroit, retour en haut + focus au titre, étapes sans objet sautées, recommandation « Notre conseil si vous hésitez », mots simples.
+6. **Textes et lisibilité** : phrase du fondateur ; légendes de `/contact` et engagements d'`/a-propos` en vrai texte plein ; portrait détouré (`scripts/portrait.mjs`, fond remplacé par l'ambiance de la marque), cadre de plaques calé sur la photo ; **07 64 02 08 98** partout (icône tel: en barre, pied de page, contact, mentions, JSON-LD, pages locales).
+7. **Cahier des charges** : menu Ressources (premier), `/tarifs`, fin de l'estimateur (config reprise), `/contact`, accueil ; envoi à Mathéo (avec la configuration) et PDF téléchargeable.
+8. **Documents** : `npm run documents` → 11 PDF (CGV, abonnement, devis + bon de commande, PV, cession, sous-traitance RGPD, rétractation, confidentialité + cookies, guide d'accueil, règlement du parrainage, grille tarifaire) ; variables dans `site.ts`.
+9. **Parrainage** : 4 formules en cartes, montants dans `site.ts`, formulaire avec choix de la formule, bonus au 3e filleul.
+**Manque / à fournir** : SIRET, médiateur de la consommation, assurance RCP (placeholders `[à compléter]`, `site.ts`) ; textes juridiques à faire relire (`documentsValides: false`) ; captures supplémentaires si souhaitées (aucune manquante).
+**Tennis club — robots.txt / sitemap** : NON VÉRIFIABLE (le conteneur n'accède pas au site). Texte du site : « de nombreuses pages », sans chiffre. À lancer depuis votre poste : `node scripts/verifier-robots.mjs https://tennis-club-savigne-gizeux.fr` (dit si GPTBot, ClaudeBot, Google-Extended, PerplexityBot… sont bloqués ; si oui, cela contredit la « visibilité dans les IA » vendue).
+**Imparfait** : contraste de la 3D derrière le texte résolu sur mobile en estompant la marque (pages de lecture), pas en déplaçant le texte ; l'audit de contraste saute de longues pages pilotées au scroll (accueil validé par captures) ; JS initial de l'accueil au-dessus du budget (inchangé) ; textes juridiques non relus par un juriste.
 
-**Prévisualisation Vercel** : https://stackup-agency-gmgoikl9v-tawowo-s-projects.vercel.app (commit 4e4835a, branche `claude/new-session-26nojr`).
-`npm run verify` vert · 432 routes du sitemap ouvertes : 0 défaut · axe WCAG 2.1 AA : 0 violation · sans JS : contenu intégral.
 
-**Règle appliquée.** Chaque animation montre la vraie chose ; les plaques ne sont plus que matière (hero, fond) et transition.
-1. **Hero** : le S est un objet rigide (plus de respiration ni de dérive) ; ruban refait à l'exact, plis vérifiés à DPR 3 (`scripts/logo-zoom.mjs`, 1,75 % / 0,36 %).
-2. **Cinq couches** : vue éclatée de vrais calques (maquette, textes+photo, code, tableau de clients, serveur+adresse) qui fusionnent en un site fini ; clic = présentation de face.
-3. **Ce qu'on fabrique** : page d'artisan, trois pages en éventail, boutique au panier qui se remplit, tableau de bord ; métamorphose des mêmes dalles.
-4. **Réalisations** : vrai portable en alu + téléphone en 3D, capture qui défile, lumière sur le métal ; fiche avec portable HTML.
-5. **Modules** : fenêtre d'application + douze cartes ; clic = la carte vole, impulsion de données, le module s'intègre.
-6. **Mots de particules supprimés** (jamais nets) ; titres HTML.
-7. **Comment on travaille** : un projet qui évolue (carnet → démo → code → mise en ligne → santé du site).
-8. **Toutes les familles** : menu Ressources ; footer complet partout ; villes/départements/zones = carte en relief ; métiers = outil puis site du métier ; blog = bibliothèque feuilletable ; outils, FAQ (conversation), 404 (fenêtre vide), services locaux (maquette, page de résultats Google).
+## Rapports précédents (résumé)
 
-**Imparfait.** JS initial 251 ko gz sur l'accueil (budget 180 hors GSAP), ~150 ko ailleurs ; Lighthouse non lancé ; perf GPU réelle non mesurée.
-Photo de visage toujours absente (voir plus bas) ; le téléphone de la galerie recadre la capture desktop ; maquettes = entreprises fictives (Aubert, Atelier du bois) ;
-sans JS, les noms de villes de la carte sont masqués (listés plus bas) ; vidéos non régénérées pour cette mission (`node scripts/videos.mjs`).
+- **Nuit (14/10)** : V5 construite de bout en bout (accueil en 10 moments, mondes par famille de pages, 300 articles, 432 routes ouvertes sans défaut, axe 0 violation, contenu intégral sans JS, 80 redirections).
+- **« Montrer la vraie chose » (14/10)** : chaque animation montre la vraie chose (cinq couches, maquettes réelles, galerie 3D, modules, méthode) ; plaques réduites à la matière et aux transitions.
+- **« Grille tarifaire + estimateur » (14/10)** : Excel = source unique (`npm run tarifs`), moteur `src/domain/devis/` testé (3 cas de référence), estimateur `/tarifs#estimer`, prix « à partir de » partout via jetons `{{prix:…}}`.
 
-## Rapport de la nuit (2026-10-14) — à lire en premier
-
-**Prévisualisation Vercel** : https://stackup-agency-kktwoccwo-tawowo-s-projects.vercel.app (commit 2866bc2, branche
-`claude/new-session-26nojr`). `npm run verify` vert. 432 routes du sitemap ouvertes une à une : toutes en 200, sans
-erreur console ni débordement (`docs/qa/tour.json`). axe WCAG 2.1 AA : 0 violation (23 routes × 1440/390). Sans JS :
-contenu intégral. 80 anciennes URL redirigées (308), aucune ne finit en 404.
-
-**Pages terminées.** Accueil (10 moments, hero « impression »). Mondes : /tarifs (chaîne d'assemblage),
-/realisations + 7 fiches (galerie), /services + 4 fiches (du code au pixel), /solutions + 15 fiches (tableau de
-bord), /a-propos (atelier de nuit), /contact (enveloppe qui part au fond) + merci. Traversée entre toutes les pages.
-Blog : 233 articles en ligne + 67 programmés (publiés à leur date), 30 rubriques, RSS. Local : 30 villes,
-18 départements (communes filtrables), 79 métiers, 6 services locaux, zones. Outils : audit de site, studio de
-style, cahier des charges, documents, FAQ, comparatif, parrainage. Légal : mentions, CGV, confidentialité, cookies,
-plan du site, 404 animée. SEO : métadonnées, JSON-LD, sitemap, robots, OG, icônes.
-
-**Imparfait, en clair.**
-- JS initial (gzip) : accueil 243 ko (budget 180 hors GSAP : ~188), /tarifs 239, pages intérieures 147 (budget 140).
-  Lighthouse non lancé (outil absent ici) ; perf GPU réelle non mesurée (SwiftShader seulement).
-- Vidéos : accueil, /tarifs et /realisations refaites ; les autres pages se génèrent avec `node scripts/videos.mjs --cas=pages`
-  (non versionnées, trop lourdes).
-- Galerie : le « téléphone » montre un recadrage de la capture desktop (pas de vraie capture mobile).
-- Audit de site : Google PageSpeed refuse sans clé (quota partagé épuisé) ; résultat jamais vu rendu.
-- Studio de style sur mobile : l'aperçu n'est pas collant. 404 sur mobile : une plaque frôle l'étiquette.
-
-**Ce que le propriétaire doit fournir.**
-1. La photo de visage en fichier : `public/images/source/matheo-reboul.jpg`, puis `node scripts/portrait.mjs`
-   (le message ne contenait pas de fichier ; la photo de l'atelier sert en attendant).
-2. Vraies réalisations (et captures mobiles) ; les 7 actuelles restent étiquetées « Démo ».
-3. Clés Vercel : `RESEND_API_KEY`, `CONTACT_TO`, `CONTACT_FROM` (contact, parrainage), `PAGESPEED_API_KEY` (audit).
-4. Identité légale : titulaire, SIRET, médiateur (marqués « [à compléter] »), hébergeur (Vercel ou OVH ?).
-5. Les 12 PDF de `public/documents` à régénérer (autre nom, SIRET étranger, offre association, délais) : retirés.
-6. À confirmer : récompense du parrainage, « domaine inclus tant que la maintenance court », rapport SEO mensuel.
-
-Court par obligation (≤ 150 lignes). Les sessions anciennes sont condensées ; le détail est dans git.
 
 ## Acquis (phases 0 à 4 et « La Fabrique »)
 

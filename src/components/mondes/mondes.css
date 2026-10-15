@@ -28,7 +28,7 @@
 }
 .mw-outil:focus-visible { outline: none; }
 .mw-outil__titre { font-size: 0.6875rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--su-ambre-clair); }
-.mw-outil__note { margin-top: auto; font-size: 0.8125rem; color: var(--su-graphite); }
+.mw-outil__note { margin-top: auto; font-size: 0.8125rem; color: var(--su-gris-nuit); }
 .mw-outil svg { width: 100%; height: auto; }
 .mw-anneau { animation: mw-anneau 1.6s var(--su-pose) both; animation-delay: calc(var(--i) * 160ms); }
 @keyframes mw-anneau { from { stroke-dashoffset: 213.6; } }

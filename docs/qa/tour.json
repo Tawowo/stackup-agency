@@ -1,12 +1,12 @@
 {
- "date": "2026-10-14T14:23:33.587Z",
- "total": 432,
+ "date": "2026-10-15T11:15:28.547Z",
+ "total": 426,
  "ko": 0,
  "resultats": [
   {
    "route": "/",
    "statut": 200,
-   "texte": 10724,
+   "texte": 10101,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -15,7 +15,7 @@
   {
    "route": "/realisations",
    "statut": 200,
-   "texte": 1187,
+   "texte": 875,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -24,7 +24,7 @@
   {
    "route": "/services",
    "statut": 200,
-   "texte": 3360,
+   "texte": 3325,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -42,7 +42,7 @@
   {
    "route": "/solutions",
    "statut": 200,
-   "texte": 3360,
+   "texte": 5484,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -51,7 +51,7 @@
   {
    "route": "/tarifs",
    "statut": 200,
-   "texte": 7768,
+   "texte": 7650,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -60,7 +60,7 @@
   {
    "route": "/a-propos",
    "statut": 200,
-   "texte": 1426,
+   "texte": 1345,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -69,7 +69,7 @@
   {
    "route": "/contact",
    "statut": 200,
-   "texte": 765,
+   "texte": 936,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -78,7 +78,7 @@
   {
    "route": "/faq",
    "statut": 200,
-   "texte": 3134,
+   "texte": 3412,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -96,7 +96,7 @@
   {
    "route": "/parrainage",
    "statut": 200,
-   "texte": 2238,
+   "texte": 3666,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -105,7 +105,7 @@
   {
    "route": "/outils",
    "statut": 200,
-   "texte": 1223,
+   "texte": 1229,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -141,7 +141,7 @@
   {
    "route": "/ressources/documents",
    "statut": 200,
-   "texte": 3225,
+   "texte": 3937,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -150,7 +150,7 @@
   {
    "route": "/agence-web",
    "statut": 200,
-   "texte": 2249,
+   "texte": 2312,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -159,7 +159,7 @@
   {
    "route": "/creation-site-internet",
    "statut": 200,
-   "texte": 3753,
+   "texte": 3816,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -168,7 +168,7 @@
   {
    "route": "/zones-intervention",
    "statut": 200,
-   "texte": 1937,
+   "texte": 2000,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -177,7 +177,7 @@
   {
    "route": "/blog",
    "statut": 200,
-   "texte": 63780,
+   "texte": 64066,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -186,7 +186,7 @@
   {
    "route": "/mentions-legales",
    "statut": 200,
-   "texte": 2679,
+   "texte": 2738,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -195,7 +195,7 @@
   {
    "route": "/cgv",
    "statut": 200,
-   "texte": 7717,
+   "texte": 7866,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -213,7 +213,7 @@
   {
    "route": "/cookies",
    "statut": 200,
-   "texte": 1834,
+   "texte": 1908,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -222,70 +222,25 @@
   {
    "route": "/plan-du-site",
    "statut": 200,
-   "texte": 19346,
+   "texte": 19232,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
    "ok": true
   },
   {
-   "route": "/realisations/au-pain-dore",
+   "route": "/realisations/tennis-club-savigne-gizeux",
    "statut": 200,
-   "texte": 966,
+   "texte": 1564,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
    "ok": true
   },
   {
-   "route": "/realisations/demo-videaste",
+   "route": "/realisations/logiciel-gestion-artisans",
    "statut": 200,
-   "texte": 2306,
-   "deborde": false,
-   "h1": 1,
-   "erreurs": [],
-   "ok": true
-  },
-  {
-   "route": "/realisations/chateau-lumieres",
-   "statut": 200,
-   "texte": 953,
-   "deborde": false,
-   "h1": 1,
-   "erreurs": [],
-   "ok": true
-  },
-  {
-   "route": "/realisations/maison-elise",
-   "statut": 200,
-   "texte": 856,
-   "deborde": false,
-   "h1": 1,
-   "erreurs": [],
-   "ok": true
-  },
-  {
-   "route": "/realisations/prestige-immo",
-   "statut": 200,
-   "texte": 874,
-   "deborde": false,
-   "h1": 1,
-   "erreurs": [],
-   "ok": true
-  },
-  {
-   "route": "/realisations/lolivier-dashboard",
-   "statut": 200,
-   "texte": 904,
-   "deborde": false,
-   "h1": 1,
-   "erreurs": [],
-   "ok": true
-  },
-  {
-   "route": "/realisations/chateau-fleury",
-   "statut": 200,
-   "texte": 909,
+   "texte": 1826,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -330,7 +285,7 @@
   {
    "route": "/solutions/prise-rendez-vous-en-ligne",
    "statut": 200,
-   "texte": 2979,
+   "texte": 1904,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -339,7 +294,7 @@
   {
    "route": "/solutions/gestion-devis-factures",
    "statut": 200,
-   "texte": 2776,
+   "texte": 2162,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -348,7 +303,7 @@
   {
    "route": "/solutions/click-and-collect",
    "statut": 200,
-   "texte": 2679,
+   "texte": 1711,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -357,16 +312,7 @@
   {
    "route": "/solutions/reservation-restaurant",
    "statut": 200,
-   "texte": 2713,
-   "deborde": false,
-   "h1": 1,
-   "erreurs": [],
-   "ok": true
-  },
-  {
-   "route": "/solutions/commande-en-ligne-livraison",
-   "statut": 200,
-   "texte": 2596,
+   "texte": 1726,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -375,7 +321,7 @@
   {
    "route": "/solutions/programme-fidelite",
    "statut": 200,
-   "texte": 2768,
+   "texte": 1619,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -384,7 +330,7 @@
   {
    "route": "/solutions/caisse-enregistreuse",
    "statut": 200,
-   "texte": 2754,
+   "texte": 1692,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -393,7 +339,7 @@
   {
    "route": "/solutions/gestion-stocks",
    "statut": 200,
-   "texte": 2578,
+   "texte": 1610,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -402,7 +348,7 @@
   {
    "route": "/solutions/crm-sur-mesure",
    "statut": 200,
-   "texte": 2687,
+   "texte": 1852,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -411,7 +357,7 @@
   {
    "route": "/solutions/portail-client",
    "statut": 200,
-   "texte": 2774,
+   "texte": 1760,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -420,7 +366,7 @@
   {
    "route": "/solutions/planning-employes",
    "statut": 200,
-   "texte": 2769,
+   "texte": 1723,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -429,7 +375,7 @@
   {
    "route": "/solutions/menu-qr-code",
    "statut": 200,
-   "texte": 2590,
+   "texte": 1616,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -438,7 +384,7 @@
   {
    "route": "/solutions/tableau-de-bord",
    "statut": 200,
-   "texte": 2830,
+   "texte": 1732,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -447,16 +393,7 @@
   {
    "route": "/solutions/reservation-location",
    "statut": 200,
-   "texte": 2685,
-   "deborde": false,
-   "h1": 1,
-   "erreurs": [],
-   "ok": true
-  },
-  {
-   "route": "/solutions/galerie-client-photographe",
-   "statut": 200,
-   "texte": 3109,
+   "texte": 1765,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -465,7 +402,7 @@
   {
    "route": "/services-locaux/creation-site-restaurant",
    "statut": 200,
-   "texte": 3153,
+   "texte": 3238,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -474,7 +411,7 @@
   {
    "route": "/services-locaux/creation-site-artisan",
    "statut": 200,
-   "texte": 3222,
+   "texte": 2998,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -483,7 +420,7 @@
   {
    "route": "/services-locaux/creation-site-commerce",
    "statut": 200,
-   "texte": 3246,
+   "texte": 2974,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -492,7 +429,7 @@
   {
    "route": "/services-locaux/creation-boutique-en-ligne",
    "statut": 200,
-   "texte": 3093,
+   "texte": 2952,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -501,7 +438,7 @@
   {
    "route": "/services-locaux/developpement-application-metier",
    "statut": 200,
-   "texte": 3320,
+   "texte": 2933,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -510,7 +447,7 @@
   {
    "route": "/services-locaux/referencement-local-seo",
    "statut": 200,
-   "texte": 3163,
+   "texte": 3226,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -519,7 +456,7 @@
   {
    "route": "/agence-web/tours",
    "statut": 200,
-   "texte": 1850,
+   "texte": 1913,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -528,7 +465,7 @@
   {
    "route": "/agence-web/orleans",
    "statut": 200,
-   "texte": 1879,
+   "texte": 1942,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -537,7 +474,7 @@
   {
    "route": "/agence-web/blois",
    "statut": 200,
-   "texte": 1880,
+   "texte": 1943,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -546,7 +483,7 @@
   {
    "route": "/agence-web/chartres",
    "statut": 200,
-   "texte": 1870,
+   "texte": 1933,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -555,7 +492,7 @@
   {
    "route": "/agence-web/dreux",
    "statut": 200,
-   "texte": 1826,
+   "texte": 1889,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -564,7 +501,7 @@
   {
    "route": "/agence-web/bourges",
    "statut": 200,
-   "texte": 1839,
+   "texte": 1902,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -573,7 +510,7 @@
   {
    "route": "/agence-web/chateauroux",
    "statut": 200,
-   "texte": 1840,
+   "texte": 1903,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -582,7 +519,7 @@
   {
    "route": "/agence-web/amboise",
    "statut": 200,
-   "texte": 1934,
+   "texte": 1997,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -591,7 +528,7 @@
   {
    "route": "/agence-web/chinon",
    "statut": 200,
-   "texte": 1842,
+   "texte": 1905,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -600,7 +537,7 @@
   {
    "route": "/agence-web/vendome",
    "statut": 200,
-   "texte": 1890,
+   "texte": 1953,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -609,7 +546,7 @@
   {
    "route": "/agence-web/chateaudun",
    "statut": 200,
-   "texte": 1888,
+   "texte": 1951,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -618,7 +555,7 @@
   {
    "route": "/agence-web/loches",
    "statut": 200,
-   "texte": 1902,
+   "texte": 1965,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -627,7 +564,7 @@
   {
    "route": "/agence-web/joue-les-tours",
    "statut": 200,
-   "texte": 1906,
+   "texte": 1969,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -636,7 +573,7 @@
   {
    "route": "/agence-web/vierzon",
    "statut": 200,
-   "texte": 1826,
+   "texte": 1889,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -645,7 +582,7 @@
   {
    "route": "/agence-web/le-mans",
    "statut": 200,
-   "texte": 1877,
+   "texte": 1940,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -654,7 +591,7 @@
   {
    "route": "/agence-web/angers",
    "statut": 200,
-   "texte": 1859,
+   "texte": 1922,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -663,7 +600,7 @@
   {
    "route": "/agence-web/nantes",
    "statut": 200,
-   "texte": 1829,
+   "texte": 1892,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -672,7 +609,7 @@
   {
    "route": "/agence-web/saumur",
    "statut": 200,
-   "texte": 1875,
+   "texte": 1938,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -681,7 +618,7 @@
   {
    "route": "/agence-web/laval",
    "statut": 200,
-   "texte": 1791,
+   "texte": 1854,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -690,7 +627,7 @@
   {
    "route": "/agence-web/caen",
    "statut": 200,
-   "texte": 1804,
+   "texte": 1867,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -699,7 +636,7 @@
   {
    "route": "/agence-web/rouen",
    "statut": 200,
-   "texte": 1854,
+   "texte": 1917,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -708,7 +645,7 @@
   {
    "route": "/agence-web/evreux",
    "statut": 200,
-   "texte": 1846,
+   "texte": 1909,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -717,7 +654,7 @@
   {
    "route": "/agence-web/alencon",
    "statut": 200,
-   "texte": 1887,
+   "texte": 1950,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -726,7 +663,7 @@
   {
    "route": "/agence-web/lisieux",
    "statut": 200,
-   "texte": 1913,
+   "texte": 1976,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -735,7 +672,7 @@
   {
    "route": "/agence-web/rambouillet",
    "statut": 200,
-   "texte": 1927,
+   "texte": 1990,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -744,7 +681,7 @@
   {
    "route": "/agence-web/anet",
    "statut": 200,
-   "texte": 1850,
+   "texte": 1913,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -753,7 +690,7 @@
   {
    "route": "/agence-web/vernouillet",
    "statut": 200,
-   "texte": 1851,
+   "texte": 1914,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -762,7 +699,7 @@
   {
    "route": "/agence-web/nogent-le-rotrou",
    "statut": 200,
-   "texte": 1951,
+   "texte": 2014,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -771,7 +708,7 @@
   {
    "route": "/agence-web/departement/indre-et-loire",
    "statut": 200,
-   "texte": 7185,
+   "texte": 7248,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -780,7 +717,7 @@
   {
    "route": "/agence-web/departement/loiret",
    "statut": 200,
-   "texte": 8287,
+   "texte": 8350,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -789,7 +726,7 @@
   {
    "route": "/agence-web/departement/loir-et-cher",
    "statut": 200,
-   "texte": 7011,
+   "texte": 7074,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -798,7 +735,7 @@
   {
    "route": "/agence-web/departement/eure-et-loir",
    "statut": 200,
-   "texte": 8619,
+   "texte": 8682,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -807,7 +744,7 @@
   {
    "route": "/agence-web/departement/cher",
    "statut": 200,
-   "texte": 7091,
+   "texte": 7154,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -816,7 +753,7 @@
   {
    "route": "/agence-web/departement/indre",
    "statut": 200,
-   "texte": 6369,
+   "texte": 6432,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -825,7 +762,7 @@
   {
    "route": "/agence-web/departement/sarthe",
    "statut": 200,
-   "texte": 8404,
+   "texte": 8467,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -834,7 +771,7 @@
   {
    "route": "/agence-web/departement/maine-et-loire",
    "statut": 200,
-   "texte": 5775,
+   "texte": 5838,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -843,7 +780,7 @@
   {
    "route": "/agence-web/departement/vienne",
    "statut": 200,
-   "texte": 6190,
+   "texte": 6253,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -852,7 +789,7 @@
   {
    "route": "/agence-web/departement/deux-sevres",
    "statut": 200,
-   "texte": 6399,
+   "texte": 6462,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -861,7 +798,7 @@
   {
    "route": "/agence-web/departement/yonne",
    "statut": 200,
-   "texte": 9011,
+   "texte": 9074,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -870,7 +807,7 @@
   {
    "route": "/agence-web/departement/nievre",
    "statut": 200,
-   "texte": 7389,
+   "texte": 7452,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -879,7 +816,7 @@
   {
    "route": "/agence-web/departement/allier",
    "statut": 200,
-   "texte": 7433,
+   "texte": 7496,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -888,7 +825,7 @@
   {
    "route": "/agence-web/departement/creuse",
    "statut": 200,
-   "texte": 6995,
+   "texte": 7058,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -897,7 +834,7 @@
   {
    "route": "/agence-web/departement/orne",
    "statut": 200,
-   "texte": 9543,
+   "texte": 9606,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -906,7 +843,7 @@
   {
    "route": "/creation-site-internet/videaste",
    "statut": 200,
-   "texte": 2439,
+   "texte": 2042,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -915,7 +852,7 @@
   {
    "route": "/creation-site-internet/agence-immobiliere",
    "statut": 200,
-   "texte": 2389,
+   "texte": 1982,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -924,7 +861,7 @@
   {
    "route": "/creation-site-internet/restaurant",
    "statut": 200,
-   "texte": 2327,
+   "texte": 1928,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -933,7 +870,7 @@
   {
    "route": "/creation-site-internet/pizzeria",
    "statut": 200,
-   "texte": 2281,
+   "texte": 1884,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -942,7 +879,7 @@
   {
    "route": "/creation-site-internet/boulangerie-patisserie",
    "statut": 200,
-   "texte": 2418,
+   "texte": 2007,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -951,7 +888,7 @@
   {
    "route": "/creation-site-internet/plombier",
    "statut": 200,
-   "texte": 2368,
+   "texte": 1971,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -960,7 +897,7 @@
   {
    "route": "/creation-site-internet/electricien",
    "statut": 200,
-   "texte": 2438,
+   "texte": 2038,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -969,7 +906,7 @@
   {
    "route": "/creation-site-internet/salon-coiffure",
    "statut": 200,
-   "texte": 2362,
+   "texte": 1956,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -978,7 +915,7 @@
   {
    "route": "/creation-site-internet/avocat",
    "statut": 200,
-   "texte": 2463,
+   "texte": 2068,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -987,7 +924,7 @@
   {
    "route": "/creation-site-internet/expert-comptable",
    "statut": 200,
-   "texte": 2481,
+   "texte": 2076,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -996,7 +933,7 @@
   {
    "route": "/creation-site-internet/garage-automobile",
    "statut": 200,
-   "texte": 2374,
+   "texte": 1968,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -1005,7 +942,7 @@
   {
    "route": "/creation-site-internet/hotel-chambres-hotes",
    "statut": 200,
-   "texte": 2384,
+   "texte": 1971,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -1014,7 +951,7 @@
   {
    "route": "/creation-site-internet/chauffagiste-climatisation",
    "statut": 200,
-   "texte": 2443,
+   "texte": 2026,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -1023,7 +960,7 @@
   {
    "route": "/creation-site-internet/paysagiste-jardinier",
    "statut": 200,
-   "texte": 2411,
+   "texte": 2000,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -1032,7 +969,7 @@
   {
    "route": "/creation-site-internet/osteopathe",
    "statut": 200,
-   "texte": 2379,
+   "texte": 2023,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -1041,7 +978,7 @@
   {
    "route": "/creation-site-internet/institut-beaute",
    "statut": 200,
-   "texte": 2339,
+   "texte": 1932,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -1050,7 +987,7 @@
   {
    "route": "/creation-site-internet/photographe",
    "statut": 200,
-   "texte": 2371,
+   "texte": 1971,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -1059,7 +996,7 @@
   {
    "route": "/creation-site-internet/fleuriste",
    "statut": 200,
-   "texte": 2407,
+   "texte": 2009,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -1068,7 +1005,7 @@
   {
    "route": "/creation-site-internet/gite-location-saisonniere",
    "statut": 200,
-   "texte": 2271,
+   "texte": 1803,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -1077,7 +1014,7 @@
   {
    "route": "/creation-site-internet/kebab-fast-food",
    "statut": 200,
-   "texte": 2194,
+   "texte": 1788,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -1086,7 +1023,7 @@
   {
    "route": "/creation-site-internet/food-truck",
    "statut": 200,
-   "texte": 2267,
+   "texte": 1868,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -1095,7 +1032,7 @@
   {
    "route": "/creation-site-internet/brasserie-bar",
    "statut": 200,
-   "texte": 2286,
+   "texte": 1882,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -1104,7 +1041,7 @@
   {
    "route": "/creation-site-internet/cafe-salon-the",
    "statut": 200,
-   "texte": 2235,
+   "texte": 1827,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -1113,7 +1050,7 @@
   {
    "route": "/creation-site-internet/restaurant-gastronomique",
    "statut": 200,
-   "texte": 2386,
+   "texte": 1973,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -1122,7 +1059,7 @@
   {
    "route": "/creation-site-internet/traiteur-evenementiel",
    "statut": 200,
-   "texte": 2334,
+   "texte": 1924,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -1131,7 +1068,7 @@
   {
    "route": "/creation-site-internet/boucherie-charcuterie",
    "statut": 200,
-   "texte": 2306,
+   "texte": 1896,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -1140,7 +1077,7 @@
   {
    "route": "/creation-site-internet/chocolatier",
    "statut": 200,
-   "texte": 2233,
+   "texte": 1833,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -1149,7 +1086,7 @@
   {
    "route": "/creation-site-internet/glacier",
    "statut": 200,
-   "texte": 2196,
+   "texte": 1800,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -1158,7 +1095,7 @@
   {
    "route": "/creation-site-internet/epicerie-fine",
    "statut": 200,
-   "texte": 2210,
+   "texte": 1808,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -1167,7 +1104,7 @@
   {
    "route": "/creation-site-internet/cave-vins-spiritueux",
    "statut": 200,
-   "texte": 2298,
+   "texte": 1898,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -1176,7 +1113,7 @@
   {
    "route": "/creation-site-internet/fromager",
    "statut": 200,
-   "texte": 2181,
+   "texte": 1784,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -1185,7 +1122,7 @@
   {
    "route": "/creation-site-internet/primeur",
    "statut": 200,
-   "texte": 2178,
+   "texte": 1782,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -1194,7 +1131,7 @@
   {
    "route": "/creation-site-internet/poissonnier",
    "statut": 200,
-   "texte": 2172,
+   "texte": 1772,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -1203,7 +1140,7 @@
   {
    "route": "/creation-site-internet/librairie-papeterie",
    "statut": 200,
-   "texte": 2287,
+   "texte": 1877,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -1212,7 +1149,7 @@
   {
    "route": "/creation-site-internet/tabac-presse",
    "statut": 200,
-   "texte": 2273,
+   "texte": 1872,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -1221,7 +1158,7 @@
   {
    "route": "/creation-site-internet/magasin-sport",
    "statut": 200,
-   "texte": 2287,
+   "texte": 1882,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -1230,7 +1167,7 @@
   {
    "route": "/creation-site-internet/magasin-jouets",
    "statut": 200,
-   "texte": 2209,
+   "texte": 1803,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -1239,7 +1176,7 @@
   {
    "route": "/creation-site-internet/boutique-decoration",
    "statut": 200,
-   "texte": 2232,
+   "texte": 1821,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -1248,7 +1185,7 @@
   {
    "route": "/creation-site-internet/magasin-informatique",
    "statut": 200,
-   "texte": 2232,
+   "texte": 1810,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -1257,7 +1194,7 @@
   {
    "route": "/creation-site-internet/opticien",
    "statut": 200,
-   "texte": 2229,
+   "texte": 1832,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -1266,7 +1203,7 @@
   {
    "route": "/creation-site-internet/bijouterie-horlogerie",
    "statut": 200,
-   "texte": 2294,
+   "texte": 1884,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -1275,7 +1212,7 @@
   {
    "route": "/creation-site-internet/vetements-enfants",
    "statut": 200,
-   "texte": 2276,
+   "texte": 1861,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -1284,7 +1221,7 @@
   {
    "route": "/creation-site-internet/boutique-mode",
    "statut": 200,
-   "texte": 2205,
+   "texte": 1800,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -1293,7 +1230,7 @@
   {
    "route": "/creation-site-internet/cosmetiques-naturels",
    "statut": 200,
-   "texte": 2319,
+   "texte": 1910,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -1302,7 +1239,7 @@
   {
    "route": "/creation-site-internet/jardinerie-animalerie",
    "statut": 200,
-   "texte": 2271,
+   "texte": 1859,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -1311,7 +1248,7 @@
   {
    "route": "/creation-site-internet/macon-renovateur",
    "statut": 200,
-   "texte": 2250,
+   "texte": 1843,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -1320,7 +1257,7 @@
   {
    "route": "/creation-site-internet/couvreur-charpentier",
    "statut": 200,
-   "texte": 2284,
+   "texte": 1873,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -1329,7 +1266,7 @@
   {
    "route": "/creation-site-internet/menuisier-ebeniste",
    "statut": 200,
-   "texte": 2228,
+   "texte": 1819,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -1338,7 +1275,7 @@
   {
    "route": "/creation-site-internet/peintre-decorateur",
    "statut": 200,
-   "texte": 2290,
+   "texte": 1882,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -1347,7 +1284,7 @@
   {
    "route": "/creation-site-internet/carreleur-sol",
    "statut": 200,
-   "texte": 1787,
+   "texte": 1850,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -1356,7 +1293,7 @@
   {
    "route": "/creation-site-internet/serrurier-depannage",
    "statut": 200,
-   "texte": 2301,
+   "texte": 1903,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -1365,7 +1302,7 @@
   {
    "route": "/creation-site-internet/cuisiniste",
    "statut": 200,
-   "texte": 2246,
+   "texte": 1847,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -1374,7 +1311,7 @@
   {
    "route": "/creation-site-internet/pisciniste",
    "statut": 200,
-   "texte": 2284,
+   "texte": 1885,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -1383,7 +1320,7 @@
   {
    "route": "/creation-site-internet/vitrier",
    "statut": 200,
-   "texte": 2242,
+   "texte": 1846,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -1392,7 +1329,7 @@
   {
    "route": "/creation-site-internet/ramoneur",
    "statut": 200,
-   "texte": 2253,
+   "texte": 1856,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -1401,7 +1338,7 @@
   {
    "route": "/creation-site-internet/facadier",
    "statut": 200,
-   "texte": 2270,
+   "texte": 1873,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -1410,7 +1347,7 @@
   {
    "route": "/creation-site-internet/terrassier",
    "statut": 200,
-   "texte": 2295,
+   "texte": 1896,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -1419,7 +1356,7 @@
   {
    "route": "/creation-site-internet/cabinet-medical",
    "statut": 200,
-   "texte": 2323,
+   "texte": 1919,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -1428,7 +1365,7 @@
   {
    "route": "/creation-site-internet/kinesitherapeute",
    "statut": 200,
-   "texte": 2267,
+   "texte": 1862,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -1437,7 +1374,7 @@
   {
    "route": "/creation-site-internet/dentiste",
    "statut": 200,
-   "texte": 2298,
+   "texte": 1901,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -1446,7 +1383,7 @@
   {
    "route": "/creation-site-internet/pharmacie-parapharmacie",
    "statut": 200,
-   "texte": 2269,
+   "texte": 1871,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -1455,7 +1392,7 @@
   {
    "route": "/creation-site-internet/veterinaire",
    "statut": 200,
-   "texte": 2222,
+   "texte": 1822,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -1464,7 +1401,7 @@
   {
    "route": "/creation-site-internet/psychologue",
    "statut": 200,
-   "texte": 2229,
+   "texte": 1829,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -1473,7 +1410,7 @@
   {
    "route": "/creation-site-internet/sophrologue",
    "statut": 200,
-   "texte": 2195,
+   "texte": 1795,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -1482,7 +1419,7 @@
   {
    "route": "/creation-site-internet/naturopathe",
    "statut": 200,
-   "texte": 2260,
+   "texte": 1860,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -1491,7 +1428,7 @@
   {
    "route": "/creation-site-internet/salle-de-sport",
    "statut": 200,
-   "texte": 2202,
+   "texte": 1799,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -1500,7 +1437,7 @@
   {
    "route": "/creation-site-internet/notaire",
    "statut": 200,
-   "texte": 2369,
+   "texte": 1973,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -1509,7 +1446,7 @@
   {
    "route": "/creation-site-internet/architecte",
    "statut": 200,
-   "texte": 2332,
+   "texte": 1933,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -1518,7 +1455,7 @@
   {
    "route": "/creation-site-internet/courtier-credit",
    "statut": 200,
-   "texte": 2351,
+   "texte": 1944,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -1527,7 +1464,7 @@
   {
    "route": "/creation-site-internet/diagnostiqueur-immobilier",
    "statut": 200,
-   "texte": 2264,
+   "texte": 1850,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -1536,7 +1473,7 @@
   {
    "route": "/creation-site-internet/agence-evenementielle",
    "statut": 200,
-   "texte": 2421,
+   "texte": 2011,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -1545,7 +1482,7 @@
   {
    "route": "/creation-site-internet/organisme-formation",
    "statut": 200,
-   "texte": 2317,
+   "texte": 1906,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -1554,7 +1491,7 @@
   {
    "route": "/creation-site-internet/auto-ecole",
    "statut": 200,
-   "texte": 2280,
+   "texte": 1881,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -1563,7 +1500,7 @@
   {
    "route": "/creation-site-internet/camping",
    "statut": 200,
-   "texte": 2182,
+   "texte": 1786,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -1572,7 +1509,7 @@
   {
    "route": "/creation-site-internet/ecole-danse-musique",
    "statut": 200,
-   "texte": 2200,
+   "texte": 1787,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -1581,7 +1518,7 @@
   {
    "route": "/creation-site-internet/tatoueur",
    "statut": 200,
-   "texte": 2137,
+   "texte": 1740,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -1590,7 +1527,7 @@
   {
    "route": "/creation-site-internet/toiletteur",
    "statut": 200,
-   "texte": 2176,
+   "texte": 1777,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -1599,7 +1536,7 @@
   {
    "route": "/blog/categorie/creation-sites",
    "statut": 200,
-   "texte": 19388,
+   "texte": 19674,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -1653,7 +1590,7 @@
   {
    "route": "/blog/categorie/technique",
    "statut": 200,
-   "texte": 19388,
+   "texte": 19674,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -1671,7 +1608,7 @@
   {
    "route": "/blog/categorie/creation",
    "statut": 200,
-   "texte": 19388,
+   "texte": 19674,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -1743,7 +1680,7 @@
   {
    "route": "/blog/categorie/design",
    "statut": 200,
-   "texte": 19388,
+   "texte": 19674,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -1770,7 +1707,7 @@
   {
    "route": "/blog/categorie/performance",
    "statut": 200,
-   "texte": 19388,
+   "texte": 19674,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -1959,7 +1896,7 @@
   {
    "route": "/blog/prix-logiciel-sur-mesure",
    "statut": 200,
-   "texte": 6236,
+   "texte": 6201,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -2005,6 +1942,15 @@
    "route": "/blog/repondre-devis-plus-vite-artisan",
    "statut": 200,
    "texte": 6448,
+   "deborde": false,
+   "h1": 1,
+   "erreurs": [],
+   "ok": true
+  },
+  {
+   "route": "/blog/reservation-en-ligne-sans-commission-restaurant",
+   "statut": 200,
+   "texte": 5944,
    "deborde": false,
    "h1": 1,
    "erreurs": [],
@@ -2067,7 +2013,7 @@
   {
    "route": "/blog/site-vitrine-inclus",
    "statut": 200,
-   "texte": 7927,
+   "texte": 7887,
    "deborde": false,
    "h1": 1,
    "erreurs": [],

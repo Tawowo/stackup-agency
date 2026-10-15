@@ -8,7 +8,7 @@ export const meta = {
 }
 
 export function corps(ctx) {
-  const { e, s, prix, euros } = ctx
+  const { e, prix, euros } = ctx
   const c = (t) => `<p class="cases" style="margin:3px 0"><span></span>${t}</p>`
   return `
 <h2>1. Le projet</h2>

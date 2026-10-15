@@ -47,7 +47,7 @@ export interface PropsLocale {
 export default function Locale(p: PropsLocale) {
   return (
     <main id="contenu">
-      <article className="su-loc">
+      <article className="su-loc" data-lecture="1">
         <ScenePage moment={p.moment} forme={p.monde ? 'logo' : (p.forme ?? 'empile')} projection={0.35} pose={{ x: 0.1, y: -0.3 }} />
         <header className="su-loc__hero" data-moment={p.moment} data-nuit="1">
           <div className="su-loc__hero-grille">

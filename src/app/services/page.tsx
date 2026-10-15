@@ -11,7 +11,7 @@ export const metadata: Metadata = meta({
 
 export default function Page() {
   return (
-    <main>
+    <main data-lecture="1">
       <JsonLd data={filAriane([{ nom: 'Accueil', chemin: '/' }, { nom: 'Services', chemin: '/services' }])} />
       <Compilation />
     </main>

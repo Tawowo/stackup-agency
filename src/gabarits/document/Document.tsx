@@ -32,7 +32,7 @@ export interface PropsDocument {
 
 export default function Document(p: PropsDocument) {
   return (
-    <main id="contenu" className="su-doc">
+    <main id="contenu" className="su-doc" data-lecture="1">
       <ScenePage moment={p.moment} forme={p.monde ? 'logo' : (p.forme ?? 'logo')} projection={0.5} pose={{ x: 0.08, y: -0.22 }} />
       <header className="su-doc__tete" data-moment={p.moment} data-nuit="1">
         <div className="su-doc__tete-grille">

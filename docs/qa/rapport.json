@@ -2199,6 +2199,107 @@
     "« Clients / contacts (CRM) » → « Clients et contacts »"
    ],
    "corrige": true
+  },
+  {
+   "fichier": "docs/qa/shots/a-propos/p1-1440.png",
+   "route": "/a-propos",
+   "etat": "fin du scroll",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Portrait détouré sur le fond de la marque, cadre de plaques calé sur la photo ; engagements en texte plein lisible.",
+   "defauts": [
+    "Contour orange illisible → texte plein",
+    "Cadre décalé de la photo → fenêtre calée sur l'ouverture du cadre"
+   ],
+   "corrige": true
+  },
+  {
+   "fichier": "docs/qa/shots/a-propos/p1-390.png",
+   "route": "/a-propos",
+   "etat": "fin du scroll",
+   "largeur": 390,
+   "rm": false,
+   "visible": "Même composition sur mobile, engagements sur plusieurs lignes lisibles."
+  },
+  {
+   "fichier": "docs/qa/shots/contact/pleine-1440.png",
+   "route": "/contact",
+   "etat": "page entière",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Légendes 01/02/03 en pastilles navy sur la plaque ; téléphone et e-mail avec le portrait.",
+   "defauts": [
+    "Légendes orange sur bord de plaque → pastilles navy/ivoire"
+   ],
+   "corrige": true
+  },
+  {
+   "fichier": "docs/qa/shots/contact/pleine-390.png",
+   "route": "/contact",
+   "etat": "page entière",
+   "largeur": 390,
+   "rm": false,
+   "visible": "Idem mobile ; icône téléphone cliquable dans la barre, numéro dans le pied de page."
+  },
+  {
+   "fichier": "docs/qa/shots/accueil/08-atelier-1440.png",
+   "route": "/",
+   "etat": "08 L’atelier",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Portrait détouré, phrase du fondateur mise à jour, numéro dans la barre."
+  },
+  {
+   "fichier": "docs/qa/shots/accueil/09-depart-1440.png",
+   "route": "/",
+   "etat": "09 Le départ",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Lien « Décrivez votre projet en détail » (cahier des charges) sous le formulaire."
+  },
+  {
+   "fichier": "docs/qa/shots/parrainage/parrainage-1440.png",
+   "route": "/parrainage",
+   "etat": "page entière",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Quatre cartes de formules avec exemple chiffré, bonus de fidélité, règles, formulaire avec choix de formule.",
+   "defauts": [
+    "Bloc bonus : texte clair sur fond navy"
+   ],
+   "corrige": true
+  },
+  {
+   "fichier": "docs/qa/shots/parrainage/parrainage-390.png",
+   "route": "/parrainage",
+   "etat": "page entière",
+   "largeur": 390,
+   "rm": false,
+   "visible": "Cartes empilées, formulaire avec boutons radio lisibles."
+  },
+  {
+   "fichier": "docs/qa/shots/ressources/documents-1440.png",
+   "route": "/ressources/documents",
+   "etat": "page entière",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "11 documents en trois groupes, pages et poids, mention « version de travail » sur les textes juridiques."
+  },
+  {
+   "fichier": "docs/qa/shots/ressources/documents-390.png",
+   "route": "/ressources/documents",
+   "etat": "page entière",
+   "largeur": 390,
+   "rm": false,
+   "visible": "Cartes empilées."
+  },
+  {
+   "fichier": "docs/qa/shots/ressources/cahier-1440.png",
+   "route": "/ressources/cahier-des-charges",
+   "etat": "cahier généré",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Boutons « Envoyer à Mathéo Reboul », « Télécharger en PDF », « Imprimer »."
   }
  ]
 }

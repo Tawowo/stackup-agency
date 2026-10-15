@@ -19,7 +19,7 @@ const manifeste = []
 const browser = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium-1194/chrome-linux/chrome' })
 for (const f of fichiers) {
   const m = await import(`./documents/${f}`)
-  const { slug, titre, sousTitre, description, groupe, revue } = m.meta
+  const { slug, titre, sousTitre, revue } = m.meta
   attendus.add(`${slug}.pdf`)
   if (filtre.length && !filtre.includes(slug)) continue
   const html = enveloppe({ titre, sousTitre, corps: m.corps(ctx), ctx })

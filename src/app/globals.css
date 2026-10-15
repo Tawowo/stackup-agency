@@ -39,6 +39,10 @@ body {
   .su-canvas {
     opacity: calc(0.18 + 0.82 * var(--su-nuit));
   }
+  /* Pages de lecture (fiches, documents, tarifs…) : la nuit aussi, la marque s'efface à moitié derrière le texte. */
+  body:has([data-lecture]) .su-canvas {
+    opacity: calc(0.18 + 0.32 * var(--su-nuit));
+  }
 }
 .su-canvas canvas {
   display: block;

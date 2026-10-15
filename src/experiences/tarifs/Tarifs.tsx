@@ -61,7 +61,7 @@ export default function Tarifs({ initial }: { initial: EtatEstimateur }) {
   }, [])
 
   return (
-    <main ref={page} className="su-tar" data-moment="tarifs">
+    <main ref={page} className="su-tar" data-lecture="1" data-moment="tarifs">
       <section className="su-tar__hero" data-moment="tarifs-hero" data-nuit="1" aria-labelledby="su-tar-titre">
         <div className="su-tar__grille">
           <header className="su-tar__tete">

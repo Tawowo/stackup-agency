@@ -35,7 +35,7 @@ export default function Hub({ groupes, metiers, prix, total }: { groupes: Groupe
   }, [])
 
   return (
-    <article className="su-hub" data-moment="solutions" data-nuit="1">
+    <article className="su-hub" data-lecture="1" data-moment="solutions" data-nuit="1">
       <header className="su-hub__tete">
         <p className="su-mono su-hub__etiquette">Outils de gestion</p>
         <h1 className="su-display su-hub__titre">Un logiciel de gestion, fait pour votre métier.</h1>

@@ -35,7 +35,7 @@ export default function Fiche({ projet: p, suivant }: { projet: Projet; suivant:
 
   const enLigne = p.statut === 'En ligne'
   return (
-    <article className="su-fic" data-moment="fiche" data-nuit="1" style={{ '--accent': p.accent } as React.CSSProperties}>
+    <article className="su-fic" data-lecture="1" data-moment="fiche" data-nuit="1" style={{ '--accent': p.accent } as React.CSSProperties}>
       <header className="su-fic__tete">
         <nav className="su-mono su-fic__ariane" aria-label="Fil d’Ariane">
           <Link href="/realisations">Réalisations</Link> <span aria-hidden="true">/</span> <span>{p.nom}</span>

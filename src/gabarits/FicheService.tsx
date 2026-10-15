@@ -53,7 +53,7 @@ export default function FicheService({ slug, service: s, forme, prix, autres }: 
   }, [slug, forme, s.process.length])
 
   return (
-    <article className="su-fsv" data-moment={`service-${slug}`} data-nuit="1">
+    <article className="su-fsv" data-lecture="1" data-moment={`service-${slug}`} data-nuit="1">
       <div className="su-fsv__hero">
         <div className="su-fsv__texte">
           <nav className="su-mono su-fsv__ariane" aria-label="Fil d’Ariane">

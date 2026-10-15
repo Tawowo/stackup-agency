@@ -7,7 +7,6 @@ export interface Metier {
   requetePrincipale: string
   variantes: string[]
   serviceLie: string
-  demoUrl?: string
   intro: string
   inclus: string[]
   faq: { q: string; a: string }[]
@@ -22,7 +21,6 @@ const BRUT_METIERS: Metier[] = [
     requetePrincipale: 'site internet vidéaste',
     variantes: ['site web videaste', 'création site vidéaste', 'portfolio vidéaste en ligne', 'site vidéaste mariage', 'livraison vidéo client'],
     serviceLie: 'systeme-gestion',
-    demoUrl: 'https://demo-videaste-vitrine.vercel.app',
     intro: "Un vidéaste vend de l'émotion et de la précision — son site doit prouver les deux. Portfolio cinématographique qui met vos films en avant, et surtout : un espace de livraison client intégré (commentaires horodatés sur la timeline, versions V1/V2/V3, liens privés) qui remplace les abonnements Frame.io ou Vimeo Pro. Payez une fois, possédez votre outil.",
     inclus: [
       'Portfolio de films avec lecture immersive et showreel',
@@ -327,7 +325,7 @@ const BRUT_METIERS: Metier[] = [
       'Respect des règles déontologiques de la profession',
     ],
     faq: [
-      { q: 'Est-ce moins cher que Doctolib ?', a: 'La création de site est un investissement unique à partir de {{prix:une-page}} €, sans abonnement mensuel ni commission sur chaque rendez-vous — contrairement aux 150-200€/mois de Doctolib.' },
+      { q: 'Est-ce moins cher que Doctolib ?', a: 'La création de site démarre à partir de {{prix:une-page}} €, sans commission sur chaque rendez-vous ; l’abonnement mensuel de maintenance est facultatif. Comparez avec ce que vous payez aujourd’hui à votre plateforme de réservation.' },
       { q: 'Puis-je garder Doctolib en parallèle ?', a: 'Oui. Votre site propre génère des rendez-vous directs en parallèle, ce qui réduit progressivement votre dépendance à la plateforme.' },
     ],
   },
@@ -402,7 +400,7 @@ const BRUT_METIERS: Metier[] = [
     requetePrincipale: 'site internet gîte',
     variantes: ['site web location saisonnière', 'réservation gite sans commission', 'site airbnb indépendant'],
     serviceLie: 'site-vitrine',
-    intro: "Chaque réservation directe sur votre propre site vous fait économiser 15 à 20% de commission Airbnb ou Abritel. Pour un gîte à 100€/nuit avec 200 nuitées par an, c'est entre 3 000 et 4 000€ économisés chaque année.",
+    intro: "Chaque réservation directe sur votre propre site vous évite la commission d’une plateforme de réservation : à vous de comparer avec ce que vous payez aujourd’hui.",
     inclus: [
       'Calendrier de disponibilités en temps réel',
       'Moteur de réservation avec paiement en ligne (acompte ou total)',

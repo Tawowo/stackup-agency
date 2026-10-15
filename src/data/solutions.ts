@@ -32,7 +32,7 @@ const FAQ_DONNEES = {
 }
 const FAQ_DEMO = {
   q: 'Puis-je voir un outil avant de décider ?',
-  a: 'Oui : la démo du logiciel de gestion de Stackup est en ligne et se teste librement. Pour votre activité, une démonstration de votre propre outil peut être préparée avant le devis (démo à 15 €).',
+  a: 'Oui : la démo du logiciel de gestion de Stackup est en ligne et se teste librement. Pour votre activité, une démonstration de votre propre outil peut être préparée avant le devis (démo à {{carte:demo}} €).',
 }
 
 const BRUT_SOLUTIONS: Solution[] = [

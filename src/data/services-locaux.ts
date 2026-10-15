@@ -33,7 +33,7 @@ const BRUT_SERVICES_LOCAUX: Record<string, ServiceLocal> = {
         'Votre restaurant n\'apparaît pas en premier sur Google Maps',
         'Vous perdez des réservations faute de système en ligne',
         'Votre menu n\'est pas visible ou pas à jour sur internet',
-        'Les plateformes comme TheFork prennent 2€ par couvert',
+        'Les plateformes de réservation prélèvent souvent une commission par couvert',
         'Vous dépendez des avis Tripadvisor sans maîtriser votre image',
       ],
     },

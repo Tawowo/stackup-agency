@@ -47,7 +47,7 @@ export default function FicheSolution({ s }: { s: DonneesSolution }) {
   }, [s.slug])
 
   return (
-    <article className="su-fso" data-moment={`solution-${s.slug}`} data-nuit="1">
+    <article className="su-fso" data-lecture="1" data-moment={`solution-${s.slug}`} data-nuit="1">
       <div className="su-fso__hero">
         <div className="su-fso__texte">
           <nav className="su-mono su-fso__ariane" aria-label="Fil d’Ariane">

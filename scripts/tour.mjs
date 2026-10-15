@@ -17,7 +17,7 @@ for (const r of routes) {
   const erreurs = []
   page.on('console', (m) => m.type() === 'error' && erreurs.push(m.text().slice(0, 200)))
   page.on('pageerror', (e) => erreurs.push('pageerror ' + e.message.slice(0, 200)))
-  const rep = await page.goto(`${BASE}${r}${r.includes('?') ? '&' : '?'}webgl=0`, { waitUntil: 'load', timeout: 120000 }).catch((e) => null)
+  const rep = await page.goto(`${BASE}${r}${r.includes('?') ? '&' : '?'}webgl=0`, { waitUntil: 'load', timeout: 120000 }).catch(() => null)
   await page.waitForTimeout(500)
   const etat = await page.evaluate(() => ({ texte: document.querySelector('main')?.innerText.trim().length ?? 0, deborde: document.documentElement.scrollWidth > innerWidth + 1, h1: document.querySelectorAll('h1').length })).catch(() => ({ texte: 0, deborde: false, h1: 0 }))
   await page.screenshot({ path: `docs/qa/tour/${r.replace(/\W+/g, '_') || 'accueil'}.jpg`, type: 'jpeg', quality: 50 }).catch(() => {})
