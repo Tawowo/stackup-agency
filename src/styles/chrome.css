@@ -20,9 +20,10 @@
 .su-nav::before {
   content: '';
   position: absolute;
-  inset: 0 0 -28px 0;
+  inset: 0 0 -22px 0;
   pointer-events: none;
-  background: linear-gradient(to bottom, var(--su-fond) 0%, color-mix(in srgb, var(--su-fond) 88%, transparent) 62%, transparent 100%);
+  /* Opaque derrière le logo et les liens (le texte qui défile n'y passe jamais), puis un fondu sous la barre. */
+  background: linear-gradient(to bottom, var(--su-fond) 0%, var(--su-fond) 74%, transparent 100%);
   opacity: 0;
   transition: opacity var(--su-geste);
 }

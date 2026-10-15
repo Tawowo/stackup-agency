@@ -162,3 +162,13 @@
   .su-tar__offres,
   .su-tar__maint { padding: 56px 0; }
 }
+
+.su-tar__secondaire {
+  margin: 18px 0 0;
+  max-width: 52ch;
+  color: var(--su-texte-doux);
+}
+.su-tar__secondaire a {
+  color: var(--su-accent-texte);
+  font-weight: 600;
+}

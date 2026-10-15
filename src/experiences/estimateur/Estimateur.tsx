@@ -271,6 +271,9 @@ export default function Estimateur({ initial }: { initial: EtatEstimateur }) {
                 </Action>
               </div>
               <p className="su-est__aide">
+                Vous savez déjà ce que vous voulez ? <a className="su-est__lien" href={`/ressources/cahier-des-charges?e=${jeton}`}>Décrivez votre projet en détail</a> : vos choix d’ici sont repris dans le cahier des charges.
+              </p>
+              <p className="su-est__aide">
                 <button type="button" className="su-est__lien" onClick={copier}>
                   {copie ? 'Lien copié' : 'Copier le lien de cette estimation'}
                 </button>{' '}

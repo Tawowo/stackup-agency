@@ -77,6 +77,9 @@ export default function Depart() {
               Recevoir une démo
             </Action>
           </form>
+          <p className="su-dep__secondaire">
+            Vous savez déjà ce que vous voulez ? <a href="/ressources/cahier-des-charges">Décrivez votre projet en détail</a>
+          </p>
         </div>
       </div>
     </section>

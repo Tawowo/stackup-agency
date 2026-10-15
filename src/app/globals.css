@@ -33,6 +33,13 @@ body {
   z-index: 0;
   pointer-events: none;
 }
+/* Sur téléphone, la marque 3D passe derrière le texte courant : à la lumière du jour elle s'efface aux trois quarts,
+   pour que le texte reste lu sur un fond clair (contraste ≥ 4,5 : 1). La nuit, rien ne change. */
+@media (max-width: 767px) {
+  .su-canvas {
+    opacity: calc(0.18 + 0.82 * var(--su-nuit));
+  }
+}
 .su-canvas canvas {
   display: block;
   width: 100% !important;

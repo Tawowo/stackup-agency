@@ -307,3 +307,8 @@
 
 .su-ctc__fiche .su-fiche__ligne { grid-template-columns: 15ch 1fr; }
 .su-ctc__fiche .su-fiche__ligne dt { overflow-wrap: anywhere; }
+
+.su-ctc__lien {
+  color: var(--su-accent-texte);
+  font-weight: 600;
+}

@@ -182,6 +182,9 @@ export default function Formulaire({ e, action, projet, objet }: { e: string | n
               <a href={`mailto:${SITE.email}`}>{SITE.email}</a>
             </p>
           </div>
+          <p className="su-ctc__ligne">
+            Vous savez déjà ce que vous voulez ? <a className="su-ctc__lien" href="/ressources/cahier-des-charges">Décrivez votre projet en détail</a>.
+          </p>
           <div className="su-ctc__scene" aria-hidden="true">
             <StackFrame className="su-ctc__cadre" />
           </div>

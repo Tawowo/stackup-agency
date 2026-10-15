@@ -29,6 +29,7 @@ export default async function Page({ searchParams }: { searchParams: Promise<Rec
   const q = await searchParams
   const initiale = lireReponses(q)
   const genere = q.genere === '1'
+  const jeton = typeof q.e === 'string' ? q.e.slice(0, 2400) : ''
   return (
     <>
       <JsonLd
@@ -57,7 +58,7 @@ export default async function Page({ searchParams }: { searchParams: Promise<Rec
         large
       >
         <div className="su-res">
-          <Cahier initiale={initiale} genere={genere} />
+          <Cahier initiale={initiale} genere={genere} jeton={jeton} />
 
           <div className="su-prose">
             <h2 id="pourquoi">Pourquoi écrire un cahier des charges ?</h2>

@@ -9,6 +9,7 @@ export const ENTREES = [
 
 /** Le menu « Ressources » (nav) : tout ce qui n'est pas une page principale, une porte chacun. */
 export const RESSOURCES = [
+  { href: '/ressources/cahier-des-charges', nom: 'Cahier des charges', ligne: 'Décrivez votre projet en détail, étape par étape' },
   { href: '/blog', nom: 'Le journal', ligne: '300 articles pour créer son site, être trouvé, vendre' },
   { href: '/outils', nom: 'Outils gratuits', ligne: 'Audit de site, estimateur de prix, cahier des charges' },
   { href: '/faq', nom: 'Questions fréquentes', ligne: 'Prix, propriété du code, hébergement, suivi' },

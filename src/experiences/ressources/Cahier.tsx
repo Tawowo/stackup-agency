@@ -12,13 +12,18 @@ import { flushSync } from 'react-dom'
 import type Lenis from 'lenis'
 import Action from '@/components/ui/Action'
 import Plaque from '@/components/ui/Plaque'
+import { calculer } from '@/domain/devis/calcul'
+import { decoder } from '@/domain/devis/etat'
+import { euros, fourchetteTexte, lignesConfig } from '@/domain/devis/resume'
+import { creerPdf, type BlocPdf } from '@/lib/pdf-simple'
+import { SITE } from '@/config/site'
 import { ETAPES, nbRepondues, objetContact, resume, sections, texte, valeur, versParams, type Question, type Reponses } from './cahier-modele'
 import './cahier.css'
 
 const CHEMIN = '/ressources/cahier-des-charges'
 const abonnement = () => () => {}
 
-export default function Cahier({ initiale, genere: genereInitial }: { initiale: Reponses; genere: boolean }) {
+export default function Cahier({ initiale, genere: genereInitial, jeton = '' }: { initiale: Reponses; genere: boolean; jeton?: string }) {
   // false au rendu serveur et à l'hydratation, true ensuite : le mode « pas à pas » n'existe qu'avec JS.
   const js = useSyncExternalStore(
     abonnement,
@@ -67,7 +72,29 @@ export default function Cahier({ initiale, genere: genereInitial }: { initiale: 
     }
   }
 
-  const lienContact = `/contact?objet=${encodeURIComponent(objetContact(r))}&projet=${encodeURIComponent(resume(r))}`
+  const lienContact = `/contact?objet=${encodeURIComponent(objetContact(r))}&projet=${encodeURIComponent(resume(r))}${jeton ? `&e=${encodeURIComponent(jeton)}` : ''}&a=appel`
+
+  // Le PDF du visiteur : ses réponses, et son estimation (fourchette seulement) s'il en a fait une.
+  const telechargerPdf = () => {
+    const blocs: BlocPdf[] = [{ type: 'titre', texte: 'Cahier des charges — projet web' }, { type: 'texte', texte: `Établi sur ${SITE.url.replace('https://', '')} le ${new Date().toLocaleDateString('fr-FR')}, pour ${SITE.nom} (${SITE.fondateur}).` }]
+    for (const s of sections(r)) {
+      blocs.push({ type: 'sous-titre', texte: `${s.num}. ${s.titre}` })
+      for (const l of s.lignes) blocs.push({ type: 'puce', texte: `${l.cle} : ${l.valeur || '—'}` })
+    }
+    if (jeton) {
+      const e = decoder(jeton)
+      const res = calculer(e.cfg)
+      blocs.push({ type: 'sous-titre', texte: 'Votre estimation (indicative)' })
+      for (const l of lignesConfig(e.cfg, e.metier)) blocs.push({ type: 'puce', texte: `${l.cle} : ${l.valeur}` })
+      blocs.push({ type: 'texte', texte: `Création ${fourchetteTexte(res)}${res.abonnement.mensuel > 0 ? `, abonnement environ ${euros(res.abonnement.mensuel)} par mois` : ''}. Le prix exact est fixé au devis. ${SITE.mentions.tva}.` })
+    }
+    const url = URL.createObjectURL(new Blob([creerPdf(blocs, `${SITE.nom} — ${SITE.telephone}`) as BlobPart], { type: 'application/pdf' }))
+    const a = document.createElement('a')
+    a.href = url
+    a.download = 'cahier-des-charges.pdf'
+    a.click()
+    setTimeout(() => URL.revokeObjectURL(url), 4000)
+  }
   const avance = js ? (genere ? 1 : etape / total) : 0
 
   return (
@@ -187,10 +214,19 @@ export default function Cahier({ initiale, genere: genereInitial }: { initiale: 
           ))}
           <footer className="su-cdc__feuille-actions">
             <div className="su-cdc__feuille-boutons">
-              {js && <Action onClick={() => window.print()}>Imprimer / PDF</Action>}
-              <Action href={lienContact} variante={js ? 'contour' : 'plein'}>
-                Envoyer à Stackup Agency
+              <Action href={lienContact} variante="plein">
+                Envoyer à Mathéo Reboul
               </Action>
+              {js && (
+                <Action variante="contour" onClick={telechargerPdf}>
+                  Télécharger en PDF
+                </Action>
+              )}
+              {js && (
+                <Action variante="lien" onClick={() => window.print()}>
+                  Imprimer
+                </Action>
+              )}
             </div>
             {js ? (
               <Action variante="lien" onClick={copier}>
