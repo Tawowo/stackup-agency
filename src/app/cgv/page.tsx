@@ -58,6 +58,9 @@ export default function CGV() {
         maj="13 octobre 2026"
         sommaire={SOMMAIRE}
       >
+        <p>
+          Version {SITE.documents.version} du {SITE.documents.dateVersion}. Ces conditions existent aussi en <a href="/documents/cgv.pdf">PDF à télécharger</a>.
+        </p>
         <h2 id="prestataire">1. Identification du prestataire</h2>
         <ul>
           <li>
@@ -67,16 +70,16 @@ export default function CGV() {
             <strong>Fondateur :</strong> {SITE.fondateur}
           </li>
           <li>
-            <strong>Forme juridique et titulaire :</strong> [à compléter par le propriétaire]
+            <strong>Forme juridique et titulaire :</strong> {SITE.entreprise.forme}, {SITE.entreprise.exploitant} ({SITE.entreprise.identite})
           </li>
           <li>
-            <strong>Adresse :</strong> 706 rue des Cormiers, 37340 Savigné-sur-Lathan
+            <strong>Adresse :</strong> {SITE.entreprise.adresse}
           </li>
           <li>
             <strong>E-mail :</strong> <a href={`mailto:${SITE.email}`}>{SITE.email}</a>
           </li>
           <li>
-            <strong>SIRET :</strong> [à compléter par le propriétaire]
+            <strong>SIRET :</strong> {SITE.entreprise.siret}
           </li>
           <li>
             <strong>TVA :</strong> {SITE.mentions.tva}
@@ -134,7 +137,7 @@ export default function CGV() {
         </ul>
         <p>Paiement par virement bancaire, PayPal ou carte bancaire.</p>
         <p>
-          En cas de retard de paiement : pénalités au taux de trois fois le taux d’intérêt légal, et indemnité forfaitaire de 40 € pour frais de recouvrement (art. L. 441-10 et D. 441-5 du Code de commerce).
+          En cas de retard de paiement : pénalités au taux de trois fois le taux d’intérêt légal, et indemnité forfaitaire de {SITE.conditions.indemniteRecouvrement} € pour frais de recouvrement (art. L. 441-10 et D. 441-5 du Code de commerce).
         </p>
 
         <h2 id="calendrier">6. Calendrier, livraison et réception</h2>
@@ -200,7 +203,7 @@ export default function CGV() {
 
         <h2 id="mediation">17. Médiation de la consommation</h2>
         <p>
-          Conformément à l’article L. 612-1 du Code de la consommation, le client particulier peut recourir gratuitement à un médiateur de la consommation en cas de litige non résolu à l’amiable. Médiateur compétent : [à compléter par le propriétaire].
+          Conformément à l’article L. 612-1 du Code de la consommation, le client particulier peut recourir gratuitement à un médiateur de la consommation en cas de litige non résolu à l’amiable. Médiateur compétent : {SITE.entreprise.mediateur}.
         </p>
 
         <h2 id="droit">18. Droit applicable et juridiction</h2>

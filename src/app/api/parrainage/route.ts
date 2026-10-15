@@ -6,7 +6,7 @@
  * renvoyé vers /parrainage avec le résultat dans l'URL.
  */
 import { NextResponse, type NextRequest } from 'next/server'
-import { ParrainageSchema, type Parrainage } from '@/lib/parrainage'
+import { LIBELLE_FORMULE, ParrainageSchema, type Parrainage } from '@/lib/parrainage'
 import { echapper } from '@/lib/email'
 import { SITE } from '@/config/site'
 
@@ -38,11 +38,11 @@ function gabarit(d: Parrainage, date: Date) {
 <h1 style="margin:8px 0 0;font:700 22px/1.2 Poppins,Inter,system-ui,sans-serif;color:#0D2C4C">${echapper(d.parrainNom)} recommande ${echapper(d.filleulNom)}</h1>
 </td></tr>
 <tr><td style="padding:12px 16px"><table role="presentation" width="100%" style="border-collapse:collapse">
-${ligne('Parrain', d.parrainNom)}${ligne('E-mail parrain', d.parrainEmail)}${ligne('Filleul', d.filleulNom)}${ligne('E-mail filleul', d.filleulEmail)}${ligne('Message', d.message)}${ligne('Accord du filleul', 'Confirmé par le parrain')}
+${ligne('Parrain', d.parrainNom)}${ligne('E-mail parrain', d.parrainEmail)}${ligne('Filleul', d.filleulNom)}${ligne('E-mail filleul', d.filleulEmail)}${ligne('Formule choisie', LIBELLE_FORMULE[d.formule])}${ligne('Message', d.message)}${ligne('Accord du filleul', 'Confirmé par le parrain')}
 </table></td></tr>
 <tr><td style="padding:12px 28px 24px;font:12px/1.5 Inter,system-ui,sans-serif;color:#64748B">Envoyé depuis ${echapper(SITE.url)}/parrainage. Répondre à ce message écrit au parrain.</td></tr>
 </table></body></html>`
-  const texte = [`Parrainage — ${d.parrainNom} recommande ${d.filleulNom}`, `Parrain : ${d.parrainNom} <${d.parrainEmail}>`, `Filleul : ${d.filleulNom} <${d.filleulEmail}>`, d.message && `Message :\n${d.message}`, 'Accord du filleul : confirmé par le parrain']
+  const texte = [`Parrainage — ${d.parrainNom} recommande ${d.filleulNom}`, `Parrain : ${d.parrainNom} <${d.parrainEmail}>`, `Filleul : ${d.filleulNom} <${d.filleulEmail}>`, `Formule choisie : ${LIBELLE_FORMULE[d.formule]}`, d.message && `Message :\n${d.message}`, 'Accord du filleul : confirmé par le parrain']
     .filter(Boolean)
     .join('\n\n')
   return { sujet, html, texte }
@@ -60,7 +60,7 @@ export async function POST(req: NextRequest) {
     if (classique) {
       const f = await req.formData()
       const t = (k: string) => String(f.get(k) ?? '')
-      corps = { parrainNom: t('parrainNom'), parrainEmail: t('parrainEmail'), filleulNom: t('filleulNom'), filleulEmail: t('filleulEmail'), message: t('message'), accord: f.get('accord') === 'on', site_web: t('site_web') }
+      corps = { parrainNom: t('parrainNom'), parrainEmail: t('parrainEmail'), filleulNom: t('filleulNom'), filleulEmail: t('filleulEmail'), formule: t('formule'), message: t('message'), accord: f.get('accord') === 'on', site_web: t('site_web') }
     } else corps = await req.json()
   } catch {
     return classique ? retour('erreur') : NextResponse.json({ ok: false, erreur: 'Requête illisible.' }, { status: 400 })

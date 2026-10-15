@@ -80,7 +80,7 @@ export default function MondeOutils() {
             </span>
           ))}
         </div>
-        <span className="mw-outil__note">Modèles à venir</span>
+        <span className="mw-outil__note">Modèles à télécharger</span>
       </Link>
     </div>
   )

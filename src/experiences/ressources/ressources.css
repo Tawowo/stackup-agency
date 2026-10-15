@@ -480,3 +480,78 @@ a.su-res__carte:focus-visible {
   color: var(--su-texte);
   text-decoration: none;
 }
+
+/* Parrainage : quatre cartes de formules, bonus, règles. */
+.su-par__cartes {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+.su-par__carte {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.su-par__chiffre {
+  margin: 0;
+  font-family: var(--su-font-display), sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--su-navy);
+}
+.su-par__exemple {
+  margin: 0;
+  padding: 8px 10px;
+  border-left: 3px solid var(--su-ambre);
+  background: var(--su-ivoire);
+  font-size: 0.9375rem;
+}
+.su-par__bonus {
+  margin-top: 18px;
+}
+.su-par__note {
+  margin: 14px 0 0;
+  font-size: 0.875rem;
+  color: var(--su-texte-doux);
+  max-width: 70ch;
+}
+.su-par__regles {
+  margin: 0 0 14px;
+  padding-left: 1.2em;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-width: 72ch;
+}
+.su-par__formules {
+  margin-top: 4px;
+}
+.su-par__aide {
+  margin: 0 0 8px;
+  font-size: 0.9375rem;
+}
+.su-par__radio {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 44px;
+  font-weight: 600;
+}
+.su-par__radio input {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--su-ambre);
+}
+@media (max-width: 767px) {
+  .su-par__cartes {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.su-par__form {
+  color-scheme: light;
+}
+.su-par__bonus .su-res__carte-texte,
+.su-par__bonus .su-res__etiquette {
+  color: var(--su-ivoire);
+}

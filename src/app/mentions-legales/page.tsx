@@ -54,10 +54,10 @@ export default function MentionsLegales() {
             <strong>Fondateur :</strong> {SITE.fondateur}
           </li>
           <li>
-            <strong>Forme juridique et titulaire :</strong> [à compléter par le propriétaire]
+            <strong>Forme juridique et titulaire :</strong> {SITE.entreprise.forme}, {SITE.entreprise.exploitant} ({SITE.entreprise.identite})
           </li>
           <li>
-            <strong>Adresse :</strong> 706 rue des Cormiers, 37340 Savigné-sur-Lathan
+            <strong>Adresse :</strong> {SITE.entreprise.adresse}
           </li>
           <li>
             <strong>E-mail :</strong> <a href={`mailto:${SITE.email}`}>{SITE.email}</a>
@@ -66,7 +66,7 @@ export default function MentionsLegales() {
             <strong>Téléphone :</strong> <a href={SITE.telephoneLien}>{SITE.telephone}</a>
           </li>
           <li>
-            <strong>SIRET :</strong> [à compléter par le propriétaire]
+            <strong>SIRET :</strong> {SITE.entreprise.siret}
           </li>
           <li>
             <strong>TVA :</strong> {SITE.mentions.tva}

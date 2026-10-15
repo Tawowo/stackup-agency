@@ -9,15 +9,15 @@ import { useRef, useState, useSyncExternalStore } from 'react'
 import { flushSync } from 'react-dom'
 import Action from '@/components/ui/Action'
 import Plaque from '@/components/ui/Plaque'
-import { ParrainageSchema, type ParrainageEntree } from '@/lib/parrainage'
+import { FORMULES, LIBELLE_FORMULE, ParrainageSchema, type Formule, type ParrainageEntree } from '@/lib/parrainage'
 import { SITE } from '@/config/site'
 
 type Champs = Record<string, string>
 type Cle = 'parrainNom' | 'parrainEmail' | 'filleulNom' | 'filleulEmail'
 const abonnement = () => () => {}
 
-export default function Parrainage({ resultat }: { resultat: 'merci' | 'erreur' | null }) {
-  const [v, setV] = useState<ParrainageEntree>({ parrainNom: '', parrainEmail: '', filleulNom: '', filleulEmail: '', message: '', accord: false as never, site_web: '' })
+export default function Parrainage({ resultat, formuleInitiale = 'argent' }: { resultat: 'merci' | 'erreur' | null; formuleInitiale?: Formule }) {
+  const [v, setV] = useState<ParrainageEntree>({ parrainNom: '', parrainEmail: '', filleulNom: '', filleulEmail: '', formule: formuleInitiale, message: '', accord: false as never, site_web: '' })
   const [erreurs, setErreurs] = useState<Champs>({})
   const [etat, setEtat] = useState<'saisie' | 'envoi' | 'erreur' | 'merci'>(resultat === 'merci' ? 'merci' : resultat === 'erreur' ? 'erreur' : 'saisie')
   const [message, setMessage] = useState(resultat === 'erreur' ? `La demande n’est pas passée. Vérifiez les champs, ou écrivez-nous à ${SITE.email}.` : '')
@@ -80,7 +80,7 @@ export default function Parrainage({ resultat }: { resultat: 'merci' | 'erreur' 
         <p className="su-res__carte-titre">Merci. La mise en relation est notée.</p>
         <p className="su-res__carte-texte">{SITE.fondateur} vous répond personnellement pour la confirmer, à vous et à votre filleul.</p>
         <Action href="/realisations" variante="lien">
-          Voir les démos à montrer à votre filleul
+          Voir les réalisations à montrer à votre filleul
         </Action>
       </Plaque>
     )
@@ -124,6 +124,17 @@ export default function Parrainage({ resultat }: { resultat: 'merci' | 'erreur' 
           {champ('filleulEmail', 'Son e-mail', { type: 'email', autoComplete: 'off', inputMode: 'email' })}
         </fieldset>
       </div>
+      <fieldset className="su-par__bloc su-par__formules" data-erreur={erreurs.formule ? '1' : '0'}>
+        <legend className="su-mono su-par__legende">03 · Votre formule</legend>
+        <p className="su-par__aide">Vous choisissez une seule formule par filleul. Les montants exacts sont écrits dans les cartes ci-dessus et dans le règlement.</p>
+        {FORMULES.map((f) => (
+          <label key={f} className="su-par__radio">
+            <input type="radio" name="formule" value={f} checked={v.formule === f} onChange={() => maj('formule', f)} />
+            <span>{LIBELLE_FORMULE[f]}</span>
+          </label>
+        ))}
+        {erreurs.formule && <p className="su-par__erreur">{erreurs.formule}</p>}
+      </fieldset>
       <div className="su-par__champ">
         <label htmlFor="su-par-message">Son projet en quelques mots (facultatif)</label>
         <textarea id="su-par-message" name="message" rows={3} maxLength={2000} value={v.message} onChange={(e) => maj('message', e.target.value)} />

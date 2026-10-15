@@ -1,7 +1,7 @@
 /**
  * COOKIES — reprise de l'ancienne page, mise à jour : la V5 ne dépose aucun
  * cookie (ni thème, ni consentement, ni mesure d'audience). Seule une clé de
- * stockage de session sert à la transition galerie → fiche.
+ * stockage de session mémorise le niveau de qualité 3D forcé par l'adresse (?quality=).
  */
 import Link from 'next/link'
 import Document from '@/gabarits/document/Document'
@@ -58,9 +58,9 @@ export default function Cookies() {
           <tbody>
             <tr>
               <td>
-                <code>su-partage</code>
+                <code>su-quality</code>
               </td>
-              <td>Enchaîner l’animation entre la galerie des réalisations et la fiche ouverte</td>
+              <td>Garder le niveau de qualité de l’affichage 3D quand il est choisi dans l’adresse (paramètre ?quality=, usage de test) ; absente en navigation normale</td>
               <td>Jusqu’à la fermeture de l’onglet</td>
             </tr>
           </tbody>

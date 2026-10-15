@@ -1,68 +1,86 @@
 /**
- * /parrainage — le programme tel que l'ancien site le décrivait (une seule
- * version : celle de l'ancien SITE.parrainage), trois temps, les deux
- * récompenses, le formulaire, la FAQ (JSON-LD FAQPage).
+ * /parrainage — quatre formules au choix du parrain. Chaque montant vient de SITE.parrainage (src/config/site.ts) ;
+ * les exemples chiffrés sont calculés à partir d'un « à partir de » du moteur, jamais écrits à la main.
  */
 import Link from 'next/link'
 import Document from '@/gabarits/document/Document'
 import Accordeon from '@/components/editorial/Accordeon'
 import Plaque from '@/components/ui/Plaque'
 import Parrainage from '@/experiences/ressources/Parrainage'
+import { FORMULES, type Formule } from '@/lib/parrainage'
+import { SITE } from '@/config/site'
+import { aPartirDe } from '@/domain/devis/offres'
+import { euros } from '@/domain/devis/resume'
 import { JsonLd, faqPage, filAriane, meta } from '@/lib/seo'
 import '@/experiences/ressources/ressources.css'
 
-/*
- * CONDITIONS DU PARRAINAGE — reprises telles quelles de l'ancien site
- * (ancien/src/config/site.ts › parrainage, et la page /parrainage) : le filleul
- * a −10 % sur son premier projet ; le parrain choisit, par filleul signé, entre
- * un mois d'abonnement offert et −10 % sur sa propre prestation non
- * encore signée. Volontairement hors de site.ts (consigne de session). L'abonnement
- * étant composé à la carte, la récompense est « un mois d'abonnement offert ».
- */
-const FILLEUL_REMISE = 10
-const PARRAIN_REMISE = 10
-const RECOMPENSE_A = '1 mois de votre abonnement offert'
-const RECOMPENSE_B = `−${PARRAIN_REMISE} % sur votre propre prestation non encore signée`
+const P = SITE.parrainage
+/** Création d'exemple : la boutique, au « à partir de » du moteur. Elle sert aux quatre exemples chiffrés. */
+const EXEMPLE = aPartirDe('boutique')
+const argent = Math.min(P.argent.maximum, Math.max(P.argent.minimum, Math.round((EXEMPLE * P.argent.pourcent) / 100)))
+const credit = Math.round((EXEMPLE * P.credit.pourcent) / 100)
+const mois = EXEMPLE > P.abonnement.seuil2 ? P.abonnement.mois2 : EXEMPLE > P.abonnement.seuil1 ? P.abonnement.mois1 : 0
+const partageParrain = Math.round((EXEMPLE * P.partage.parrainPourcent) / 100)
+const partageFilleul = Math.round((EXEMPLE * P.partage.filleulPourcent) / 100)
 
 export const metadata = meta({
-  titre: `Parrainage — un mois d’abonnement offert ou −${PARRAIN_REMISE} % | Stackup Agency`,
-  description: `Recommandez Stackup Agency à un professionnel. À la signature de son projet, vous choisissez : ${RECOMPENSE_A} ou −${PARRAIN_REMISE} % sur votre prestation. Votre filleul : −${FILLEUL_REMISE} % sur son premier projet.`,
+  titre: 'Parrainage — quatre formules au choix | Stackup Agency',
+  description: `Recommandez Stackup Agency à un professionnel et choisissez votre récompense : argent, crédit, mois d’abonnement offerts ou partage avec votre filleul. Au 3e filleul signé, une prestation offerte.`,
   chemin: '/parrainage',
 })
 
-const TEMPS = [
+const CARTES: { id: Formule; nom: string; chiffre: string; pour: string; texte: string; exemple: string }[] = [
   {
-    titre: 'Vous nous signalez la mise en relation',
-    texte: 'Parlez de nous à un professionnel qui a besoin d’un site ou d’un outil, et signalez-le-nous avant qu’il signe son devis, avec le formulaire ci-dessous.',
+    id: 'argent',
+    nom: 'Récompense en argent',
+    chiffre: `${P.argent.pourcent} % de la création`,
+    pour: 'Ouverte à tous, clients ou non',
+    texte: `${P.argent.pourcent} % du montant de la création signée par votre filleul, au minimum ${euros(P.argent.minimum)} et au maximum ${euros(P.argent.maximum)}. Versée quand votre filleul a tout payé.`,
+    exemple: `Création de ${euros(EXEMPLE)} : ${euros(argent)} pour vous.`,
   },
   {
-    titre: 'Votre filleul signe son projet',
-    texte: 'Votre filleul, un nouveau client, signe son devis. C’est cette signature qui déclenche votre récompense.',
+    id: 'credit',
+    nom: 'Crédit Stackup',
+    chiffre: `${P.credit.pourcent} % en crédit`,
+    pour: 'Pour mes propres projets',
+    texte: `${P.credit.pourcent} % du montant du projet de votre filleul, en crédit sur vos prochaines prestations (pages, modules, évolutions), valable ${P.credit.moisValidite} mois. La plus avantageuse en valeur quand vous êtes déjà client.`,
+    exemple: `Création de ${euros(EXEMPLE)} : ${euros(credit)} de crédit pour vous.`,
   },
   {
-    titre: 'Vous choisissez votre récompense',
-    texte: `${RECOMPENSE_A}, ou ${RECOMPENSE_B}. Une récompense par filleul signé.`,
+    id: 'abonnement',
+    nom: 'Mois d’abonnement offerts',
+    chiffre: `${P.abonnement.mois1} à ${P.abonnement.mois2} mois offerts`,
+    pour: 'Pour les parrains abonnés',
+    texte: `${P.abonnement.mois1} mois offerts si la création de votre filleul dépasse ${euros(P.abonnement.seuil1)}, ${P.abonnement.mois2} mois au-delà de ${euros(P.abonnement.seuil2)}. Réservée aux parrains qui ont un abonnement.`,
+    exemple: mois ? `Création de ${euros(EXEMPLE)} : ${mois} mois offerts pour vous.` : `Création de ${euros(EXEMPLE)} : pas de mois offert (sous le seuil).`,
+  },
+  {
+    id: 'partage',
+    nom: 'Partage avec mon filleul',
+    chiffre: `${P.partage.parrainPourcent} % + ${P.partage.filleulPourcent} %`,
+    pour: 'Pour que votre filleul y gagne aussi',
+    texte: `${P.partage.parrainPourcent} % pour vous et ${P.partage.filleulPourcent} % de remise pour votre filleul, sur le montant de sa création. Il a une bonne raison de venir de votre part.`,
+    exemple: `Création de ${euros(EXEMPLE)} : ${euros(partageParrain)} pour vous, ${euros(partageFilleul)} de remise pour votre filleul.`,
   },
 ]
 
-const FAQ = [
-  {
-    q: 'Quelle est la récompense du parrain ?',
-    r: `À la signature du projet de votre filleul, vous choisissez : ${RECOMPENSE_A}, ou ${RECOMPENSE_B}. Une récompense par filleul signé, cumulable sur plusieurs filleuls.`,
-  },
-  {
-    q: 'Quelle est la remise du filleul ?',
-    r: `Votre filleul a −${FILLEUL_REMISE} % sur son premier projet, si la mise en relation a été signalée avant la signature de son devis. Il doit être un nouveau client.`,
-  },
-  {
-    q: 'Le parrainage est-il cumulable ?',
-    r: `Oui pour le parrain : une récompense par filleul signé, sur autant de filleuls que vous voulez. La remise du filleul (−${FILLEUL_REMISE} %) ne se cumule pas avec une autre offre.`,
-  },
-  {
-    q: 'Quand la récompense est-elle activée ?',
-    r: `À la signature du projet de votre filleul, à condition que la mise en relation ait été signalée avant. La remise de −${PARRAIN_REMISE} % ne s’applique qu’à une prestation pas encore signée ni payée : si tout est déjà réglé de votre côté, la récompense est le mois d’abonnement offert.`,
-  },
+const REGLES = [
+  'La récompense n’est versée ou accordée que lorsque votre filleul a payé l’intégralité de sa création.',
+  'Votre filleul doit être un nouveau client, et la mise en relation doit être signalée avant la signature de son devis.',
+  'Une seule formule par filleul, choisie par vous au moment de la mise en relation.',
+  'Les montants sont calculés sur la création signée, hors abonnement.',
+  'On ne se parraine pas soi-même (ni son entreprise, ni un proche associé à la même structure).',
 ]
+
+const FAQ = [
+  { q: 'Quelle formule choisir ?', r: `Si vous n’êtes pas client et voulez simplement un remerciement : la récompense en argent. Si vous avez d’autres projets avec nous : le crédit Stackup. Si vous avez un abonnement : les mois offerts. Si vous voulez que votre filleul y gagne aussi : le partage.` },
+  { q: 'Y a-t-il un bonus si je parraine plusieurs personnes ?', r: `Oui : au ${P.fidelite.filleuls}e filleul signé, vous choisissez une prestation offerte : ${P.fidelite.cadeau}.` },
+  { q: 'Quand la récompense est-elle versée ?', r: 'Quand votre filleul a payé l’intégralité de sa création. Pour l’argent, le versement se fait par virement ; pour le crédit et les mois offerts, ils sont inscrits sur votre compte client.' },
+  { q: 'Mon filleul doit-il savoir qu’il est parrainé ?', r: 'Oui : prévenez-le avant de nous le signaler. Nous le contactons une fois que vous avez confirmé son accord.' },
+  { q: 'Où est le règlement complet ?', r: 'Il se télécharge en PDF sur cette page. Il précise chaque formule, les exemples chiffrés et les cas particuliers.' },
+]
+
+const formuleDepuisUrl = (v: string | string[] | undefined): Formule => (FORMULES as readonly string[]).includes(String(v)) ? (v as Formule) : 'argent'
 
 export default async function Page({ searchParams }: { searchParams: Promise<Record<string, string | string[] | undefined>> }) {
   const q = await searchParams
@@ -86,61 +104,60 @@ export default async function Page({ searchParams }: { searchParams: Promise<Rec
         ]}
         etiquette="Parrainage"
         titre="Recommandez un professionnel. Choisissez votre récompense."
-        chapo={`À la signature de son projet : ${RECOMPENSE_A}, ou −${PARRAIN_REMISE} % sur votre propre prestation. Votre filleul a −${FILLEUL_REMISE} % sur son premier projet.`}
+        chapo="Quatre formules, à vous de choisir celle qui vous convient. Et au 3e filleul signé, une prestation offerte en plus."
         large
       >
         <div className="su-res">
-          <section className="su-res__section" aria-labelledby="su-par-temps">
-            <h2 id="su-par-temps" className="su-res__h2">
-              Comment ça marche
+          <section className="su-res__section" aria-labelledby="su-par-formules">
+            <h2 id="su-par-formules" className="su-res__h2">
+              Les quatre formules
             </h2>
-            <ol className="su-par__etapes">
-              {TEMPS.map((t, i) => (
-                <li key={t.titre}>
-                  <Plaque as="article" className="su-res__carte">
-                    <p className="su-mono su-res__etiquette">0{i + 1}</p>
-                    <h3 className="su-res__carte-titre">{t.titre}</h3>
-                    <p className="su-res__carte-texte">{t.texte}</p>
-                  </Plaque>
-                </li>
+            <div className="su-par__cartes">
+              {CARTES.map((c) => (
+                <Plaque key={c.id} as="article" className="su-par__carte">
+                  <p className="su-mono su-res__etiquette">{c.pour}</p>
+                  <h3 className="su-res__carte-titre">{c.nom}</h3>
+                  <p className="su-par__chiffre">{c.chiffre}</p>
+                  <p className="su-res__carte-texte">{c.texte}</p>
+                  <p className="su-par__exemple">Exemple : {c.exemple}</p>
+                  <Link className="su-res__lien" href={`/parrainage?formule=${c.id}#formulaire`}>
+                    Choisir cette formule
+                  </Link>
+                </Plaque>
               ))}
-            </ol>
+            </div>
+            <Plaque as="aside" variante="encre" className="su-par__bonus">
+              <p className="su-mono su-res__etiquette">Bonus de fidélité</p>
+              <p className="su-res__carte-titre">
+                Au {P.fidelite.filleuls}e filleul signé : {P.fidelite.cadeau}.
+              </p>
+              <p className="su-res__carte-texte">Au choix, quelle que soit la formule que vous avez prise pour les précédents.</p>
+            </Plaque>
+            <p className="su-par__note">Les exemples partent d’une création de {euros(EXEMPLE)}, le prix de départ d’une boutique en ligne : un montant d’illustration, pas un engagement. Le prix réel de chaque projet est fixé au devis.</p>
           </section>
 
-          <section className="su-res__section" aria-labelledby="su-par-recompenses">
-            <h2 id="su-par-recompenses" className="su-res__h2">
-              Les deux récompenses
+          <section className="su-res__section" aria-labelledby="su-par-regles">
+            <h2 id="su-par-regles" className="su-res__h2">
+              Les règles, en clair
             </h2>
-            <div className="su-par__recompenses">
-              <Plaque as="article" variante="encre" className="su-par__recompense">
-                <p className="su-par__ou">Pour vous, le parrain · au choix</p>
-                <p className="su-par__chiffre">1 mois d’abonnement offert</p>
-                <p className="su-par__ou">ou</p>
-                <p className="su-par__chiffre">−{PARRAIN_REMISE} % sur votre prestation</p>
-                <ul>
-                  <li>Mise en relation signalée avant la signature du devis du filleul.</li>
-                  <li>Une récompense par filleul signé, cumulable sur plusieurs filleuls.</li>
-                  <li>Les −{PARRAIN_REMISE} % portent sur une prestation pas encore signée ; si tout est réglé, c’est le mois offert.</li>
-                </ul>
-              </Plaque>
-              <Plaque as="article" className="su-par__recompense">
-                <p className="su-par__ou">Pour votre filleul</p>
-                <p className="su-par__chiffre">−{FILLEUL_REMISE} % sur son premier projet</p>
-                <ul>
-                  <li>Sur toutes nos offres : site, boutique, outil de gestion.</li>
-                  <li>Votre nom est mentionné au devis.</li>
-                  <li>Non cumulable avec une autre offre.</li>
-                </ul>
-              </Plaque>
-            </div>
+            <ul className="su-par__regles">
+              {REGLES.map((r) => (
+                <li key={r}>{r}</li>
+              ))}
+            </ul>
+            <p>
+              <a className="su-res__lien" href="/documents/reglement-parrainage.pdf">
+                Télécharger le règlement du parrainage (PDF)
+              </a>
+            </p>
           </section>
 
           <section id="formulaire" className="su-res__section" aria-labelledby="su-par-form">
             <h2 id="su-par-form" className="su-res__h2">
               Signaler une mise en relation
             </h2>
-            <p className="su-res__chapo">Vos coordonnées et celles de votre filleul. Prévenez-le avant : c’est vous qu’il connaît.</p>
-            <Parrainage resultat={resultat} />
+            <p className="su-res__chapo">Vos coordonnées, celles de votre filleul, et la formule que vous choisissez. Prévenez-le avant : c’est vous qu’il connaît.</p>
+            <Parrainage resultat={resultat} formuleInitiale={formuleDepuisUrl(q.formule)} />
           </section>
 
           <section className="su-res__section su-prose" aria-labelledby="su-par-faq">
@@ -153,7 +170,7 @@ export default async function Page({ searchParams }: { searchParams: Promise<Rec
               Les tarifs
             </Link>
             <Link className="su-res__lien" href="/realisations">
-              Les démos
+              Les réalisations
             </Link>
             <Link className="su-res__lien" href="/faq">
               Toutes les questions

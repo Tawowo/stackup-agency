@@ -41,6 +41,8 @@ export const SITE = {
     supportJours: 30,
     /** Tarif horaire au-delà de ce qui est inclus (P05). */
     tarifHoraire: P.tarifHoraire,
+    /** Indemnité forfaitaire de recouvrement entre professionnels (art. D.441-5 du Code de commerce). */
+    indemniteRecouvrement: 40,
   },
   social: {
     linkedin: 'https://www.linkedin.com/in/stackup-agency-5756943aa/',
@@ -75,6 +77,37 @@ export const SITE = {
     },
   ] as const satisfies readonly Offre[],
   mentions: { tva: 'TVA non applicable, art. 293 B du CGI', devisValable: '30 jours' },
+  /**
+   * IDENTITÉ LÉGALE — la seule source pour les mentions légales, les devis et tous les documents PDF
+   * (`npm run documents`). Les champs entre crochets sont à compléter par le propriétaire.
+   */
+  entreprise: {
+    identite: 'Mathéo Reboul EI – Stackup Agency',
+    exploitant: 'Mathéo Reboul',
+    forme: 'Entrepreneur individuel (EI)',
+    adresse: '706 rue des Cormiers, 37340 Savigné-sur-Lathan',
+    siret: '[SIRET à compléter]',
+    mediateur: '[Médiateur de la consommation à compléter : nom, adresse postale et site internet]',
+    assurance: '[Assurance responsabilité civile professionnelle à compléter : assureur et couverture géographique]',
+  },
+  /** Documents PDF : version, date, et mention de relecture (`documentsValides: true` la retire). */
+  documents: {
+    version: '1.0',
+    dateVersion: '15 octobre 2026',
+    documentsValides: false,
+    mentionRelecture: 'Modèle à faire valider par un professionnel du droit avant usage',
+  },
+  /**
+   * PARRAINAGE — quatre formules au choix du parrain. Chaque montant est un paramètre ici ; les pages, le
+   * formulaire et le règlement PDF le lisent. Les montants se calculent hors abonnement, sur la création signée.
+   */
+  parrainage: {
+    argent: { pourcent: 8, minimum: 50, maximum: 400 },
+    credit: { pourcent: 15, moisValidite: 18 },
+    abonnement: { seuil1: 1500, mois1: 2, seuil2: 3000, mois2: 4 },
+    partage: { parrainPourcent: 5, filleulPourcent: 5 },
+    fidelite: { filleuls: 3, cadeau: 'un audit de référencement ou une page supplémentaire offerte' },
+  },
 } as const
 
 export function offre(id: IdOffre): Offre {

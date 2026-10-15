@@ -40,7 +40,8 @@ export async function detecterPalier(): Promise<Tier> {
   try {
     const { getGPUTier } = await import('detect-gpu')
     const g = await Promise.race([
-      getGPUTier(),
+      // Table de performances servie par le site lui-même (public/gpu-benchmarks) : aucune requête vers un tiers.
+      getGPUTier({ benchmarksURL: '/gpu-benchmarks' }),
       new Promise<null>((r) => setTimeout(() => r(null), 1500)),
     ])
     if (g) {

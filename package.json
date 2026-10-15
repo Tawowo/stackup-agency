@@ -24,7 +24,8 @@
     "logo:check": "node scripts/logo-check.mjs",
     "cadence": "node scripts/cadence.mjs",
     "videos": "node scripts/videos.mjs",
-    "test:e2e": "playwright test"
+    "test:e2e": "playwright test",
+    "documents": "node --experimental-strip-types --no-warnings scripts/documents.mjs"
   },
   "dependencies": {
     "@gsap/react": "^2.1.2",

@@ -173,7 +173,7 @@ export default function Page() {
 
         <h2 id="parrainage">Vous connaissez quelqu’un qui a besoin d’un site ?</h2>
         <p>
-          Le <Link href="/parrainage">programme de parrainage</Link> profite à vous deux : une récompense pour vous, une remise pour la personne que vous recommandez.
+          Le <Link href="/parrainage">programme de parrainage</Link> vous propose quatre formules au choix : de l’argent, un crédit sur vos prochains projets, des mois d’abonnement offerts, ou un partage qui donne aussi une remise à la personne que vous recommandez.
         </p>
 
         <h2 id="contact">Une question sans réponse ici ?</h2>
