@@ -226,14 +226,24 @@ export function APartirDe(montant: number, suffixe = '€'): string {
  * compte à rebours n'arriverait jamais à zéro. Le visiteur qui revient une
  * heure plus tard doit voir une heure de moins.
  *
- * Format ISO 8601 avec le fuseau explicite (`Z` = UTC) : sans lui, un
- * navigateur interprète la chaîne dans SON fuseau, et deux visiteurs de
- * continents différents voient deux comptes à rebours différents.
+ * LE DÉCALAGE EST ÉCRIT, ET IL EST ÉCRIT EN HEURE DE PARIS.
  *
- * Posée à 48 h de sa rédaction, le 13 octobre 2026 à 15 h 15 UTC.
+ * `+02:00` plutôt que l'équivalent en UTC (`11:00:00Z`) : les deux désignent
+ * le même instant, mais celui-ci se relit. L'intention était « samedi à
+ * 13 h », et c'est « 13:00 » qui est écrit — personne n'a à refaire la
+ * soustraction pour vérifier.
+ *
+ * Attention au 25 octobre 2026 : la France repasse à UTC+01:00 ce jour-là.
+ * Une date postérieure doit donc porter `+01:00`, sinon elle tombe une heure
+ * à côté de ce qu'on croyait fixer.
+ *
+ * Sans aucun décalage, un navigateur interpréterait la chaîne dans SON
+ * fuseau, et deux visiteurs de continents différents verraient deux comptes
+ * à rebours différents.
+ *
  * Pour la changer : remplacez simplement la chaîne ci-dessous.
  */
-export const MAINTENANCE_FIN = '2026-10-15T15:15:21Z'
+export const MAINTENANCE_FIN = '2026-10-17T13:00:00+02:00'
 
 /**
  * LE MODE MAINTENANCE EST-IL ACTIF ?

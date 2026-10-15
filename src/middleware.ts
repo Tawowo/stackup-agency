@@ -19,9 +19,12 @@
  * unique n'est pas mieux. Le 503 — service temporairement indisponible —
  * est le seul statut qui dise « reviens plus tard, ne touche à rien ».
  *
- * `Retry-After: 172800` (48 h) complète le message : il indique quand
- * repasser. C'est aussi la durée du compte à rebours, et les deux doivent
- * rester cohérents.
+ * `Retry-After` complète le message : il indique quand repasser. Il est
+ * CALCULÉ depuis `MAINTENANCE_FIN`, et non écrit en dur — il l'était, à
+ * 48 h, avec un commentaire affirmant « comme le compte à rebours ». La
+ * première fois que la date a changé, l'affirmation est devenue fausse sans
+ * que rien ne le signale. Deux valeurs qui doivent rester égales ne se
+ * recopient pas : l'une se déduit de l'autre.
  *
  * OÙ CE FICHIER DOIT VIVRE. Dans `src/`, et non à la racine du dépôt : ce
  * projet range son code applicatif sous `src/`, et Next cherche alors le
@@ -38,10 +41,22 @@
 
 import { NextResponse } from 'next/server'
 import { pageMaintenance } from '@/lib/maintenance'
-import { MAINTENANCE_ACTIVE } from '@/config/site'
+import { MAINTENANCE_ACTIVE, MAINTENANCE_FIN } from '@/config/site'
 
-/** Durée annoncée au robot, en secondes. 48 h, comme le compte à rebours. */
-const RETRY_APRES = 172800
+/**
+ * Secondes restantes avant la date de fin, pour l'en-tête `Retry-After`.
+ *
+ * Deux garde-fous : un plancher d'une heure, pour qu'un robot qui passe
+ * APRÈS l'échéance — la date dépassée mais le site encore en maintenance —
+ * ne reçoive ni zéro ni une valeur négative ; et un plafond d'une semaine,
+ * parce qu'une date lointaine inviterait les robots à ne plus revenir
+ * pendant des mois.
+ */
+function retryApres(): number {
+  const reste = Math.ceil((new Date(MAINTENANCE_FIN).getTime() - Date.now()) / 1000)
+  if (!Number.isFinite(reste)) return 3600
+  return Math.min(604800, Math.max(3600, reste))
+}
 
 export function middleware() {
   /* L'ordre compte : la variable d'environnement tranche quand elle existe,
@@ -57,7 +72,7 @@ export function middleware() {
     status: 503,
     headers: {
       'Content-Type': 'text/html; charset=utf-8',
-      'Retry-After': String(RETRY_APRES),
+      'Retry-After': String(retryApres()),
       /* Aucune mise en cache : sans ça, un CDN garderait la page de
          maintenance après la remise en service, et des visiteurs la
          verraient encore alors que le site est revenu. */
