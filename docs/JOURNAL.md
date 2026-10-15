@@ -3,8 +3,8 @@
 
 ## Rapport de la mission 4 « réalisations réelles, estimateur pas à pas, documents » (2026-10-15) — à lire en premier
 
-**Prévisualisation Vercel** : __PREVIEW__ (branche `claude/new-session-26nojr`).
-`npm run verify` vert (typecheck, lint, 29 tests dont les 3 de référence mis à jour, build) · `npm run test:e2e` : 14 tests (5 raccourcis + parcours perso + étapes sautées, 1440 et 390) · axe WCAG 2.1 AA : 0 violation (21 routes × 2 largeurs) · `scripts/contraste.mjs` (contraste mesuré sur le rendu WebGL réel) : défauts corrigés, voir « Imparfait ».
+**Prévisualisation Vercel** : https://stackup-agency-o9lxhm2ka-tawowo-s-projects.vercel.app (commit 51e7f1a) (branche `claude/new-session-26nojr`).
+`npm run verify` vert (typecheck, lint, 29 tests dont les 3 de référence mis à jour, build) · `npm run test:e2e` : 14 tests (5 raccourcis + parcours perso + étapes sautées, 1440 et 390) · axe WCAG 2.1 AA : 0 violation (23 routes × 2 largeurs) · 426 routes du sitemap ouvertes : 0 défaut · contenu intégral sans JS · `scripts/contraste.mjs` (contraste mesuré sur le rendu WebGL réel) : défauts corrigés, voir « Imparfait ».
 1. **Réalisations** : anciennes démos supprimées (7 × 301 → `/realisations`). Tennis Club Savigné-Gizeux (« En ligne ») et Artibox (« En développement », lien « Tester la démo ») avec les captures fournies, rognées et recadrées au même ratio : chaque écran (3D et HTML) est rempli exactement, du haut vers le bas, ordinateur + téléphone réel. Vérifié à 1440/1024/768/390.
 2. **Accueil, modules** : 8 cartes (Planning, Clients, Rendez-vous + O31–O35) ; l'écran montre ce que fait chaque module (onde → phrase → devis, carte de conseil IA, statut « Transmise ») ; lien vers la démo.
 3. **/solutions** refait autour d'Artibox (captures, catalogue O01–O35 avec automatisation et IA en tête, métiers, prix du moteur) ; 13 fiches liées aux modules, 2 en 301.
