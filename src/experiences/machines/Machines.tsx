@@ -2,11 +2,13 @@
 /**
  * MOMENT 05 — LES MODULES. Mécanisme : COMPOSITION.
  * « Votre outil, composé des modules dont vous avez besoin. » Au centre, une
- * vraie fenêtre d'application de gestion ; autour, douze modules en cartes
- * lisibles. Clic (ou Entrée) sur une carte : elle vole vers l'application, une
- * impulsion de données court le long du lien, le module s'intègre (un onglet,
- * un écran). Tant que personne n'a cliqué, un module s'ajoute tout seul.
- * Ce n'est pas un logiciel fonctionnel : les écrans sont des maquettes (règle 7).
+ * fenêtre d'application de gestion ; autour, huit modules en cartes lisibles
+ * (trois essentiels, cinq qui font la différence : devis et factures automatiques,
+ * facture électronique, commande vocale, automatisations, assistant IA).
+ * Clic (ou Entrée) sur une carte : elle vole vers l'application, une impulsion de
+ * données court le long du lien, le module s'intègre et montre ce qu'il fait.
+ * Tant que personne n'a cliqué, un module s'ajoute tout seul. Les écrans sont des
+ * maquettes (règle 7) ; la vraie démo est celle du logiciel réel (lien « Tester la démo »).
  */
 import { useEffect, useRef, useState } from 'react'
 import Navigateur from '@/components/maquettes/Navigateur'
@@ -14,13 +16,96 @@ import { Picto } from '@/components/maquettes/illustrations'
 import { useScene } from '@/webgl/store'
 import { gsap, initGsap } from '@/lib/gsap'
 import Action from '@/components/ui/Action'
+import { PROJETS } from '@/experiences/galerie/projets'
 import { ICONES, MAQUETTES, MODULES } from './modules'
 import './machines.css'
 
-const DEPART = [0, 1]
+const DEPART = [0, 3]
+/** Ordre dans lequel les modules s'ajoutent tout seuls : d'abord ceux qui font la différence. */
+const ORDRE_AUTO = [5, 7, 4, 6, 1, 2]
+const DEMO = PROJETS.find((p) => p.slug === 'logiciel-gestion-artisans')!.url
+
+/** La commande vocale : une onde sonore, puis la phrase dictée devient un devis. */
+function EcranVoix() {
+  return (
+    <div className="mq-app__ecran" key="voix">
+      <div className="mq-app__titre">
+        <Picto nom="micro" />
+        <b>Commande vocale</b>
+        <em data-s="1">Écoute</em>
+      </div>
+      <div className="mq-voix__onde" aria-hidden="true">
+        {Array.from({ length: 28 }, (_, i) => (
+          <span key={i} style={{ '--i': i } as React.CSSProperties} />
+        ))}
+      </div>
+      <p className="mq-voix__phrase">« J’ai vu M. Martin, trois fenêtres PVC, pose comprise. »</p>
+      <div className="mq-voix__devis">
+        <p className="mq-voix__etiquette">Devis créé · prêt à relire</p>
+        <ul>
+          <li>Client : M. Martin</li>
+          <li>3 fenêtres PVC, pose comprise</li>
+          <li>Total : calculé avec vos prix habituels</li>
+        </ul>
+      </div>
+    </div>
+  )
+}
+
+/** L'assistant IA : une carte de conseil qui apparaît sans qu'on lui demande. */
+function EcranIA() {
+  return (
+    <div className="mq-app__ecran" key="ia">
+      <div className="mq-app__titre">
+        <Picto nom="etincelle" />
+        <b>Assistant IA métier</b>
+        <em data-s="1">Nouveau conseil</em>
+      </div>
+      <div className="mq-ia__carte">
+        <p className="mq-ia__etiquette">Conseil du jour</p>
+        <p className="mq-ia__texte">Vous êtes 30 % en avance sur votre objectif du mois.</p>
+        <div className="mq-ia__jauge" aria-hidden="true">
+          <span />
+        </div>
+      </div>
+      <div className="mq-ia__carte mq-ia__carte--2">
+        <p className="mq-ia__etiquette">À ne pas oublier</p>
+        <p className="mq-ia__texte">Le devis Dupont expire demain : voulez-vous le relancer ?</p>
+      </div>
+    </div>
+  )
+}
+
+/** La facture électronique : trois étapes, le statut avance jusqu'à « Transmise ». */
+function EcranFacture({ statut }: { statut: number }) {
+  const etapes = ['Prête', 'Envoyée', 'Transmise']
+  const k = statut % etapes.length
+  return (
+    <div className="mq-app__ecran" key="facture">
+      <div className="mq-app__titre">
+        <Picto nom="enveloppe" />
+        <b>Facture électronique</b>
+        <em data-s={k}>{etapes[k]}</em>
+      </div>
+      <p className="mq-fe__ligne">Facture 2026-118 · Garage Martin</p>
+      <ol className="mq-fe__etapes" aria-label="Étapes de la facture">
+        {etapes.map((e, i) => (
+          <li key={e} data-fait={i <= k ? '1' : '0'}>
+            <span>{i <= k ? '✓' : i + 1}</span>
+            {e}
+          </li>
+        ))}
+      </ol>
+      <p className="mq-fe__note">Envoi et réception par une plateforme agréée. La réforme française s’applique par étapes, à partir de 2026-2027.</p>
+    </div>
+  )
+}
 
 function Ecran({ k, statut }: { k: number; statut: number }) {
   const mod = MODULES[k]!
+  if (mod.slug === 'commande-vocale') return <EcranVoix />
+  if (mod.slug === 'assistant-ia') return <EcranIA />
+  if (mod.slug === 'facture-electronique') return <EcranFacture statut={statut} />
   const m = MAQUETTES[mod.slug]!
   return (
     <div className="mq-app__ecran" key={mod.slug}>
@@ -96,7 +181,7 @@ export default function Machines() {
   const appRef = useRef<HTMLDivElement>(null)
   const cartes = useRef<(HTMLButtonElement | null)[]>([])
   const [installes, setInstalles] = useState<number[]>(DEPART)
-  const [actif, setActif] = useState(1)
+  const [actif, setActif] = useState(3)
   const [interagi, setInteragi] = useState(false)
   const [visible, setVisible] = useState(false)
   const [statut, setStatut] = useState(0)
@@ -173,11 +258,11 @@ export default function Machines() {
     integrer(k)
   }
 
-  // Tant que personne n'a cliqué : un module s'ajoute tout seul, jusqu'à six.
+  // Tant que personne n'a cliqué : un module s'ajoute tout seul, jusqu'aux huit.
   useEffect(() => {
-    if (interagi || !visible || installes.length >= 6) return
+    if (interagi || !visible || installes.length >= MODULES.length) return
     const d = gsap.delayedCall(3.2, () => {
-      const k = MODULES.findIndex((_, i) => !installes.includes(i))
+      const k = ORDRE_AUTO.find((i) => !installes.includes(i)) ?? MODULES.findIndex((_, i) => !installes.includes(i))
       if (k >= 0) integrer(k)
     })
     return () => {
@@ -189,7 +274,7 @@ export default function Machines() {
   const recomposer = () => {
     setInteragi(true)
     setInstalles(DEPART)
-    setActif(1)
+    setActif(3)
   }
 
   const carte = (k: number) => {
@@ -228,10 +313,13 @@ export default function Machines() {
             Votre outil, composé des modules dont vous avez besoin.
           </h2>
           <p className="su-mac__ligne">
-            Chaque carte est un module. Cliquez-en une : elle s’intègre à votre application. Sans abonnement, données à vous.
+            Chaque carte est un module. Cliquez-en une : elle s’intègre à votre application et montre ce qu’elle fait. Vos données restent à vous.
           </p>
           <div className="su-mac__actions">
-            <Action href="/contact?objet=Outil%20sur%20mesure" mot="Écrire">
+            <Action href={DEMO} mot="Tester">
+              Tester la démo
+            </Action>
+            <Action href="/contact?objet=Outil%20sur%20mesure" variante="contour" mot="Écrire">
               Parler de votre outil
             </Action>
             <button type="button" className="su-mac__reset su-mono" onClick={recomposer}>
@@ -240,10 +328,10 @@ export default function Machines() {
           </div>
         </header>
         <ul className="su-mac__cartes su-mac__cartes--g" aria-label="Modules, première moitié">
-          {MODULES.slice(0, 6).map((_, k) => carte(k))}
+          {MODULES.slice(0, 4).map((_, k) => carte(k))}
         </ul>
         <div ref={appRef} className="su-mac__app" role="group" aria-label="Application de gestion, maquette">
-          <Navigateur url="mon-outil.menuiserie-aubert.fr" ratio="16 / 11" className="su-mac__fen">
+          <Navigateur url="mon-outil.exemple.fr" ratio="16 / 11" className="su-mac__fen">
             <div className="mq-app">
               <div className="mq-app__menu">
                 <b>Mon outil</b>
@@ -263,7 +351,7 @@ export default function Machines() {
           </p>
         </div>
         <ul className="su-mac__cartes su-mac__cartes--d" aria-label="Modules, seconde moitié">
-          {MODULES.slice(6).map((_, k) => carte(k + 6))}
+          {MODULES.slice(4).map((_, k) => carte(k + 4))}
         </ul>
       </div>
     </section>

@@ -95,7 +95,7 @@ export function Objet({ type }: { type: 'planche' | 'plateau' | 'tabouret' | 'et
   )
 }
 
-type Pictos = 'dossier' | 'calendrier' | 'horloge' | 'sac' | 'personnes' | 'cube' | 'caisse' | 'etoile' | 'carte' | 'couvert' | 'qr' | 'graphique' | 'marteau' | 'escalier' | 'armoire' | 'loupe' | 'panier' | 'cadenas' | 'coche' | 'accueil' | 'engrenage'
+type Pictos = 'dossier' | 'calendrier' | 'horloge' | 'sac' | 'personnes' | 'cube' | 'caisse' | 'etoile' | 'carte' | 'couvert' | 'qr' | 'graphique' | 'marteau' | 'escalier' | 'armoire' | 'loupe' | 'panier' | 'cadenas' | 'coche' | 'accueil' | 'engrenage' | 'micro' | 'eclair' | 'etincelle' | 'enveloppe'
 
 /** Pictogrammes à trait (24 × 24). */
 export function Picto({ nom, className }: { nom: Pictos; className?: string }) {
@@ -120,6 +120,10 @@ export function Picto({ nom, className }: { nom: Pictos; className?: string }) {
     cadenas: <><rect x="5" y="11" width="14" height="10" rx="2" /><path d="M8 11V8a4 4 0 0 1 8 0v3" /></>,
     coche: <path d="m5 12.5 4.5 4.5L19 7" />,
     accueil: <path d="M4 11 12 4l8 7v9h-5v-6H9v6H4z" />,
+    micro: <path d="M12 3a3 3 0 0 0-3 3v5a3 3 0 0 0 6 0V6a3 3 0 0 0-3-3zM6 11a6 6 0 0 0 12 0M12 17v4M9 21h6" />,
+    eclair: <path d="M13 3 5 13.5h6L10 21l9-11h-6.2z" />,
+    etincelle: <path d="M12 3v5M12 16v5M3 12h5M16 12h5M6 6l2.5 2.5M15.5 15.5 18 18M18 6l-2.5 2.5M8.5 15.5 6 18" />,
+    enveloppe: <path d="M3 6h18v12H3zM3 7l9 7 9-7" />,
     engrenage: <><circle cx="12" cy="12" r="3.2" /><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1" /></>,
   }
   return (
