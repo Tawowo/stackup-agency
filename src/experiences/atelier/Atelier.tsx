@@ -19,7 +19,7 @@ const PRIX_DEMO = PRIX_PUBLICS.demo
 const QUESTIONS = [
   { q: 'Pourquoi des outils sur mesure plutôt qu’un abonnement ?', r: 'Un abonnement vous loue un outil pensé pour tout le monde. Un outil sur mesure est fait pour votre façon de travailler, il vous appartient, et il ne s’arrête pas le jour où vous cessez de payer.' },
   { q: 'Que se passe-t-il si je veux changer de prestataire ?', r: 'Vous partez avec le code, les données et les accès. Tout est documenté pour qu’un autre développeur puisse reprendre le travail.' },
-  { q: 'Combien coûte la démo avant signature ?', r: `${PRIX_DEMO} €. C’est la page d’accueil de votre futur site, faite à votre image, pour que vous jugiez sur pièce avant de décider. Si vous continuez, ce prix est déduit de celui de votre projet.` },
+  { q: 'Combien coûte la démo avant signature ?', r: `${PRIX_DEMO} €. C’est la page d’accueil de votre futur site, faite à votre image, pour que vous jugiez sur pièce avant de décider.` },
 ]
 
 export default function Atelier() {

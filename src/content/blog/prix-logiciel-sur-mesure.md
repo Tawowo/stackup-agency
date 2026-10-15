@@ -92,7 +92,7 @@ Oui — accessible depuis un navigateur, il s'adapte au téléphone et à la tab
 C'est l'avantage structurel du sur-mesure : on ajoute une brique à VOTRE outil. En SaaS, on espère que l'éditeur y pense — au prix de l'éditeur.
 
 **Puis-je voir des exemples avant de m'engager ?**
-Oui : après un appel découverte gratuit de 30 minutes, une démo de la page d'accueil ({{carte:demo}} €) vous est présentée, déduite du prix si vous continuez. Nous montrons avant de vendre.
+Oui : après un appel découverte gratuit de 30 minutes, une démo de la page d'accueil ({{carte:demo}} €) vous est présentée. Nous montrons avant de vendre.
 
 ---
 

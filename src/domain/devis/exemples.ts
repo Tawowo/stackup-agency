@@ -17,4 +17,4 @@ export const TOUTOUBIEN = configDe({
   abonnement: { actif: true, publications: 4, articles: 0, suivi: 'Local', suiviIA: false, liens: 0, ficheGoogle: true, rapport: false, heuresModifs: 0, annuel: false },
 })
 
-export const VITRINE_CLASSIQUE = configDe({ accueil: 'Classique', demoPayee: true, visioPayee: true })
+export const VITRINE_CLASSIQUE = configDe({ accueil: 'Classique' })

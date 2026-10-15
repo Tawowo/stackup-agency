@@ -110,7 +110,7 @@ export default function CGV() {
             </tr>
             <tr>
               <td>Démo de la page d’accueil et visio de conseil</td>
-              <td>{euros(prixDe('P02'))} et {euros(prixDe('P03'))}, déduites du prix si vous continuez</td>
+              <td>{euros(prixDe('P02'))} et {euros(prixDe('P03'))}, facturées à part</td>
             </tr>
           </tbody>
         </table>

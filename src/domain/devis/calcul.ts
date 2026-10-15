@@ -100,9 +100,7 @@ export function calculer(config: ConfigDevis, tarifs: Tarifs = TARIFS): Resultat
   const totalBrut = blocs.reduce((s, x) => s + x.montant, 0)
   const apresCoefficient = totalBrut * p.coefficient * (config.urgence ? 1 + p.majorationUrgence : 1) * (1 - config.remise)
   const total = arrondiA(apresCoefficient, p.arrondi)
-  const deduction = -((config.demoPayee ? t.prix('P02') : 0) + (config.visioPayee ? t.prix('P03') : 0))
-  const reste = total + deduction
-  const acompte = arrondiExcel(reste * p.acompte)
+  const acompte = arrondiExcel(total * p.acompte)
   const bas = arrondiA(total * p.fourchetteBas, p.arrondi)
   const haut = arrondiA(total * p.fourchetteHaut, p.arrondi)
 
@@ -160,8 +158,6 @@ export function calculer(config: ConfigDevis, tarifs: Tarifs = TARIFS): Resultat
     totalBrut,
     apresCoefficient,
     total,
-    deduction,
-    reste,
     acompte,
     fourchette: { bas, haut },
     paiementEn4Fois: total >= p.paiement4FoisDes,

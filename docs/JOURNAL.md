@@ -122,3 +122,6 @@ Court par obligation (≤ 150 lignes). Les sessions anciennes sont condensées ;
 - Fond de l'estimateur : nuit (la chaîne 3D est un canvas derrière le contenu : une section ivoire opaque la masque) ; le contenu est une « feuille » ivoire à gauche, le cadre 3D transparent à droite.
 - Contact : `?e=` + `?a=appel|demo` ; le serveur recalcule le prix exact depuis le jeton (jamais depuis le navigateur) et l'ajoute, avec temps estimé et taux horaire, au seul e-mail de Mathéo. Parcours testé : `node scripts/parcours-estimateur.mjs`.
 - Délai : CLAUDE.md règle 8 disait « aucune durée affichée » ; la mission demande un délai indicatif issu du moteur → seul ce délai est affiché, toujours « indicatif ».
+
+## Mission 4 « réalisations réelles, estimateur pas à pas, documents » — décisions
+- Excel v2 : modules O31–O35 (automatisation et IA) et plus de déduction ; moteur sans `deduction`/`reste` (acompte sur le total), démo 15 € et visio 30 € facturées à part, aucune mention de déduction ni de non-déduction nulle part.

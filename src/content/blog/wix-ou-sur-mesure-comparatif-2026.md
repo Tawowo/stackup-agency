@@ -70,7 +70,7 @@ Wix garde du sens pour tester une idée d'activité avant tout investissement, p
 
 Dès que le site doit générer des clients de façon durable — SEO local, conversion, crédibilité face à des concurrents mieux positionnés — la performance et la propriété du site pèsent plus lourd que la rapidité de mise en ligne. C'est particulièrement vrai pour les artisans, commerçants et indépendants qui comptent sur leur site comme canal d'acquisition principal, pas comme simple carte de visite en ligne.
 
-Après un appel découverte gratuit de 30 minutes, une démo de la page d'accueil ({{carte:demo}} €, déduite du prix si vous continuez) permet de comparer concrètement le rendu et les performances d'un site sur mesure face à l'existant.
+Après un appel découverte gratuit de 30 minutes, une démo de la page d'accueil ({{carte:demo}} €) permet de comparer concrètement le rendu et les performances d'un site sur mesure face à l'existant.
 
 ## En résumé
 

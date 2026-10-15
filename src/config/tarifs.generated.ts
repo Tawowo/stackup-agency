@@ -307,7 +307,7 @@ export const LIGNES: Ligne[] = [
     "prix": 15,
     "heures": 6,
     "unite": "forfait",
-    "note": "15 € ; offerte à ta discrétion. Déduite du devis si le client signe. Plafond conseillé : ~6 h de travail."
+    "note": "15 € ; offerte à ta discrétion. NON déduite du devis (ne pas le préciser au client). Plafond conseillé : ~6 h de travail."
   },
   {
     "code": "P03",
@@ -319,7 +319,7 @@ export const LIGNES: Ligne[] = [
     "prix": 30,
     "heures": 1.5,
     "unite": "forfait",
-    "note": "30 € ; déduite du devis si le client signe."
+    "note": "30 € ; NON déduite du devis (ne pas le préciser au client)."
   },
   {
     "code": "P04",
@@ -1544,6 +1544,66 @@ export const LIGNES: Ligne[] = [
     "heures": 5,
     "unite": "module",
     "note": ""
+  },
+  {
+    "code": "O31",
+    "famille": "outil",
+    "onglet": "Outil de gestion",
+    "groupe": "MODULES — AUTOMATISATION ET INTELLIGENCE ARTIFICIELLE",
+    "libelle": "Devis et factures automatiques",
+    "description": "Le devis se remplit à partir de vos prix habituels ; la facture part toute seule quand le chantier est terminé.",
+    "prix": 450,
+    "heures": 9,
+    "unite": "module",
+    "note": "Suppose O02 et O03."
+  },
+  {
+    "code": "O32",
+    "famille": "outil",
+    "onglet": "Outil de gestion",
+    "groupe": "MODULES — AUTOMATISATION ET INTELLIGENCE ARTIFICIELLE",
+    "libelle": "Facturation électronique conforme",
+    "description": "Envoi et réception des factures électroniques via une plateforme agréée, comme l'impose la réforme française.",
+    "prix": 450,
+    "heures": 9,
+    "unite": "module",
+    "note": "Calendrier de la réforme et plateforme à vérifier au devis ; abonnement de la plateforme refacturé au réel."
+  },
+  {
+    "code": "O33",
+    "famille": "outil",
+    "onglet": "Outil de gestion",
+    "groupe": "MODULES — AUTOMATISATION ET INTELLIGENCE ARTIFICIELLE",
+    "libelle": "Commande vocale",
+    "description": "Vous dictez (« j'ai vu M. Martin, 3 fenêtres PVC… ») et l'outil crée le devis, le rendez-vous ou la tâche.",
+    "prix": 700,
+    "heures": 14,
+    "unite": "module",
+    "note": "+ coût d'usage de la reconnaissance vocale / IA refacturé au réel."
+  },
+  {
+    "code": "O34",
+    "famille": "outil",
+    "onglet": "Outil de gestion",
+    "groupe": "MODULES — AUTOMATISATION ET INTELLIGENCE ARTIFICIELLE",
+    "libelle": "Automatisations sur mesure",
+    "description": "Relances, rappels, tâches répétitives qui se font toutes seules (ex. relance de devis à J+7, rappel de rendez-vous la veille).",
+    "prix": 250,
+    "heures": 5,
+    "unite": "par scénario",
+    "note": ""
+  },
+  {
+    "code": "O35",
+    "famille": "outil",
+    "onglet": "Outil de gestion",
+    "groupe": "MODULES — AUTOMATISATION ET INTELLIGENCE ARTIFICIELLE",
+    "libelle": "Assistant IA métier sur mesure",
+    "description": "Une IA conçue pour votre activité, qui connaît vos prix, vos clients et vos habitudes, et vous conseille sans qu'on lui demande.",
+    "prix": 1200,
+    "heures": 24,
+    "unite": "module",
+    "note": "+ coût d'usage refacturé au réel."
   },
   {
     "code": "OP1",

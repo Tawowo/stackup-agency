@@ -12,8 +12,6 @@ export interface ConfigDevis {
   options: Record<string, number>
   boutique: { active: boolean; produits: number; import: boolean; variantes: number; categories: number }
   outil: { actif: boolean; utilisateurs: number }
-  demoPayee: boolean
-  visioPayee: boolean
   rdvSupplementaires: number
   kmAuDela: number
   urgence: boolean
@@ -46,8 +44,6 @@ export interface ResultatDevis {
   apresCoefficient: number
   /** Prix du devis, arrondi. */
   total: number
-  deduction: number
-  reste: number
   acompte: number
   fourchette: { bas: number; haut: number }
   paiementEn4Fois: boolean

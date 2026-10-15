@@ -20,14 +20,14 @@ export default function ParcoursClient({ titre = 'Comment ça se passe', niveau 
       nom: 'La démo de votre page d’accueil',
       duree: 'Votre page d’accueil',
       prix: euros(demo.prix),
-      texte: `${demo.description} Son prix est déduit si vous continuez.`,
+      texte: `${demo.description} Vous voyez votre site avant de vous engager.`,
     },
     visio && {
       n: '3',
       nom: 'La visio de présentation et de conseil',
       duree: '1 h 30',
       prix: euros(visio.prix),
-      texte: `${visio.description} Son prix est déduit si vous continuez.`,
+      texte: visio.description,
     },
     { n: '4', nom: 'Le devis détaillé, puis la création', duree: 'Prix exact, signé', prix: '', texte: 'Le prix exact est fixé ensemble, par écrit. Vous validez, puis nous fabriquons votre site ou votre outil.' },
   ].filter(Boolean) as { n: string; nom: string; duree: string; prix: string; texte: string }[]
@@ -37,7 +37,7 @@ export default function ParcoursClient({ titre = 'Comment ça se passe', niveau 
         <T id={`${id ?? 'su-parcours'}-t`} className="su-display su-tg__titre">
           {titre}
         </T>
-        <p className="su-tg__intro">Vous jugez sur pièce avant de vous engager. Si vous continuez, la démo et la visio sont déduites du prix de votre projet.</p>
+        <p className="su-tg__intro">Vous jugez sur pièce avant de vous engager : l’appel est gratuit, la démo et la visio sont deux prestations à part, au prix indiqué.</p>
         <ol className="su-tg__etapes">
           {etapes.map((e) => (
             <li key={e.n} className="su-tg__etape">

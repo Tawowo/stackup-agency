@@ -93,7 +93,7 @@ Trois raisons, aucune magique :
 Non. L'hébergement est dans l'abonnement mensuel facultatif, sans engagement, avec un préavis d'un mois ; le nom de domaine y est inclus à partir de la 2ᵉ année. Rien n'est obligatoire, et si vous arrêtez, vous gardez votre site et vos fichiers.
 
 **Puis-je voir des exemples avant de m'engager ?**
-Oui, et mieux : nous montrons avant de vendre. Nos [démonstrations complètes](/realisations) sont consultables en ligne, et, après un appel découverte gratuit de 30 minutes, une démo de votre page d'accueil ({{carte:demo}} €) est possible avant le devis, déduite du prix si vous continuez.
+Oui, et mieux : nous montrons avant de vendre. Après un appel découverte gratuit de 30 minutes, une démo de votre page d'accueil ({{carte:demo}} €) est possible avant le devis ; nos [réalisations](/realisations) montrent aussi le niveau de finition.
 
 **{{prix:une-page}} €, c'est le prix final ou « à partir de » ?**
 C'est « à partir de » : le prix exact se fixe au devis, selon ce que vous choisissez. Des besoins supplémentaires (pages en plus, multilingue, réservation…) sont chiffrés au devis, avant signature — jamais après.

@@ -26,11 +26,10 @@ test('ToutouBien : 4 130 €, 3 720–4 750 €, 173 €/mois', () => {
   assert.ok(Math.abs(r.heures - 78.5714285714286) < 1e-6)
 })
 
-test('Site vitrine Classique 1 page, démo et visio payées : 500 €, reste 455 €, 450–580 €, sans abonnement', () => {
+test('Site vitrine Classique 1 page : 500 €, acompte 200 €, 450–580 €, sans abonnement', () => {
   const r = calculer(VITRINE_CLASSIQUE)
   assert.equal(r.total, 500)
-  assert.equal(r.reste, 455)
-  assert.equal(r.acompte, 182)
+  assert.equal(r.acompte, 200)
   assert.deepEqual(r.fourchette, { bas: 450, haut: 580 })
   assert.equal(r.abonnement.mensuel, 0)
   assert.equal(r.paiementEn4Fois, false)
@@ -123,4 +122,11 @@ test('assainir : une boutique ramène un site, un outil désactivé retire ses m
   const c = assainir(configDe({ boutique: { active: true, produits: 5, import: false, variantes: 0, categories: 0 }, options: { O01: 1, B05: 1 } }))
   assert.equal(c.accueil, 'Classique')
   assert.deepEqual(c.options, { B05: 1 })
+})
+
+test('modules O31 à O35 (automatisation et IA) comptés comme les autres modules', () => {
+  const base = calculer(configDe({ outil: { actif: true, utilisateurs: 1 } })).total
+  const avec = calculer(configDe({ outil: { actif: true, utilisateurs: 1 }, options: { O31: 1, O32: 1, O33: 1, O34: 1, O35: 1 } }))
+  assert.equal(avec.modules, 5)
+  assert.equal(avec.total - base, 3050) // 450 + 450 + 700 + 250 + 1 200 = 3 050
 })

@@ -179,7 +179,7 @@ export default function Compilation() {
           </li>
           <li className="su-plaque">
             <h3>Démo avant signature</h3>
-            <p>Votre future page d’accueil, à votre image, avant tout engagement : {PRIX_PUBLICS.demo} €, déduits du prix si vous continuez. Vous jugez sur pièce.</p>
+            <p>Votre future page d’accueil, à votre image, avant tout engagement : {PRIX_PUBLICS.demo} €. Vous jugez sur pièce.</p>
             <a href="/contact?a=demo">La demander</a>
           </li>
         </ul>

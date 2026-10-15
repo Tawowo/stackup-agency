@@ -26,8 +26,6 @@ const ConfigSchema = z
     outil: z
       .object({ actif: booleen, utilisateurs: z.number().int().min(1).max(500).catch(1) })
       .catch({ actif: false, utilisateurs: 1 }),
-    demoPayee: booleen,
-    visioPayee: booleen,
     rdvSupplementaires: entier(50),
     kmAuDela: entier(2000),
     urgence: booleen,

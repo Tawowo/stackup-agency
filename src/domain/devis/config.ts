@@ -11,8 +11,6 @@ export function configVide(): ConfigDevis {
     options: {},
     boutique: { active: false, produits: 0, import: false, variantes: 0, categories: 0 },
     outil: { actif: false, utilisateurs: 1 },
-    demoPayee: false,
-    visioPayee: false,
     rdvSupplementaires: 0,
     kmAuDela: 0,
     urgence: false,

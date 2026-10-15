@@ -28,7 +28,7 @@ Une méthode structurée pour un site vitrine n'est ni un raccourci qui sacrifie
 
 ## Phase 1 : l'appel découverte et la démo, avant tout engagement
 
-Chez Stackup Agency, rien ne démarre avant un appel découverte gratuit de 30 minutes. Vient ensuite, si vous le souhaitez, une démo de la page d'accueil ({{carte:demo}} €) et une visio de conseil ({{carte:visio}} €) : l'une et l'autre sont déduites du prix si vous poursuivez le projet. Cette démo montre à quoi pourrait ressembler le futur site, avec des éléments déjà orientés vers l'activité et le secteur du client, plutôt qu'une présentation générique. Cette étape répond à une inquiétude fréquente chez les porteurs de petits projets : s'engager sur un résultat qu'ils n'ont pas encore pu visualiser concrètement.
+Chez Stackup Agency, rien ne démarre avant un appel découverte gratuit de 30 minutes. Vient ensuite, si vous le souhaitez, une démo de la page d'accueil ({{carte:demo}} €) et une visio de conseil ({{carte:visio}} €) : deux prestations à part, au prix indiqué. Cette démo montre à quoi pourrait ressembler le futur site, avec des éléments déjà orientés vers l'activité et le secteur du client, plutôt qu'une présentation générique. Cette étape répond à une inquiétude fréquente chez les porteurs de petits projets : s'engager sur un résultat qu'ils n'ont pas encore pu visualiser concrètement.
 
 Cette approche « on montre avant de vendre » inverse l'ordre habituel de beaucoup d'agences, où le client signe sur la base de maquettes abstraites ou de promesses générales avant de découvrir le résultat réel.
 
@@ -82,7 +82,7 @@ Une méthode maîtrisée n'est pas un argument marketing déconnecté du prix : 
 ## En résumé
 
 - Un site vitrine se construit en six phases structurées : appel découverte et démo, cahier des charges, conception, développement, contenus, tests et mise en ligne.
-- L'appel découverte est gratuit ; la démo de la page d'accueil et la visio de conseil permettent de visualiser concrètement le résultat avant de signer, et sont déduites du prix si vous poursuivez.
+- L'appel découverte est gratuit ; la démo de la page d'accueil et la visio de conseil permettent de visualiser concrètement le résultat avant de signer.
 - Le contenu (textes, photos) est le principal facteur de retard des projets web ; sa collecte démarre dès le cadrage, pas en fin de projet.
 - Cette méthode n'est pas un raccourci qualitatif : elle permet des tarifs accessibles sans compromis sur le résultat.
 
@@ -95,7 +95,7 @@ Oui, à condition que le client fournisse ses contenus dans les temps prévus d�
 Le calendrier s'ajuste en conséquence plutôt que de livrer un site incomplet ; anticiper la collecte des contenus dès le cadrage initial limite fortement ce risque.
 
 **La démo est-elle payante ?**
-L'appel découverte de 30 minutes est gratuit. La démo de la page d'accueil ({{carte:demo}} €) et la visio de conseil ({{carte:visio}} €) sont déduites du prix si vous poursuivez le projet, conformément à l'approche « on montre avant de vendre ».
+L'appel découverte de 30 minutes est gratuit. La démo de la page d'accueil ({{carte:demo}} €) et la visio de conseil ({{carte:visio}} €) permettent de montrer avant de vendre.
 
 **Une méthode structurée signifie-t-elle un site moins abouti ?**
 Non, elle découle d'une organisation structurée et parallélisée, pas d'une réduction du périmètre ou de la qualité du travail réalisé.

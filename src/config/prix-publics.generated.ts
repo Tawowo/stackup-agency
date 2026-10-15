@@ -21,7 +21,7 @@ export const PRIX_PUBLICS = {
   "paiement4FoisDes": 3000,
   "rdvInclus": 3,
   "seriesIncluses": 2,
-  "nbModulesOutil": 30,
+  "nbModulesOutil": 35,
   "descriptions": {
     "L01": "Cadrage, structure du site, adaptation mobile et tablette, mentions légales et confidentialité, formulaire de contact, mise en ligne, tests.",
     "B00": "Panier, paiement par carte, comptes clients, e-mails automatiques (commande, expédition), livraison simple, conditions générales de vente.",
