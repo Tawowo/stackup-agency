@@ -4,7 +4,7 @@
  * en bas sur mobile. Une FOURCHETTE de création (jamais le prix exact), l'abonnement
  * estimé, le délai indicatif, le détail par bloc, ce qui est inclus.
  */
-import { useState, useSyncExternalStore } from 'react'
+import { useEffect, useRef, useState, useSyncExternalStore } from 'react'
 import Action from '@/components/ui/Action'
 import StackFrame from '@/webgl/StackFrame'
 import { calculer } from '@/domain/devis/calcul'
@@ -17,13 +17,27 @@ const rien = (cfg: ConfigDevis) => cfg.accueil === 'Aucun' && !cfg.outil.actif &
 
 export default function Recap({ cfg, jeton, vue }: { cfg: ConfigDevis; jeton: string; vue: boolean }) {
   const [ouvert, setOuvert] = useState(false)
+  const racine = useRef<HTMLElement>(null)
+  // Sur mobile la barre est fixée en bas : on publie sa hauteur pour que les boutons d'étape se posent au-dessus.
+  useEffect(() => {
+    const el = racine.current
+    if (!el) return
+    const pose = () => document.documentElement.style.setProperty('--su-est-recap-h', `${el.getBoundingClientRect().height}px`)
+    pose()
+    const ro = new ResizeObserver(pose)
+    ro.observe(el)
+    return () => {
+      ro.disconnect()
+      document.documentElement.style.removeProperty('--su-est-recap-h')
+    }
+  }, [])
   const monte = useSyncExternalStore(abonne, () => true, () => false)
   const r = calculer(cfg)
   const vide = rien(cfg)
   const blocs = r.blocs.filter((b) => b.montant > 0)
   const abo = r.abonnement.mensuel
   return (
-    <aside className="su-est__recap" data-ouvert={ouvert ? '1' : '0'} data-vue={vue ? '1' : '0'} aria-labelledby="su-est-recap-titre">
+    <aside ref={racine} className="su-est__recap" data-ouvert={ouvert ? '1' : '0'} data-vue={vue ? '1' : '0'} aria-labelledby="su-est-recap-titre">
       <div className="su-est__recap-scene" aria-hidden="true">
         <StackFrame className="su-est__recap-cadre" />
       </div>

@@ -14,6 +14,8 @@ export interface OptionCarte<T extends string> {
   /** Petite mention (« dès 200 € »). */
   mention?: string
   detail?: string
+  /** Repère « Notre conseil » : l'option qu'on peut choisir si on hésite. */
+  conseil?: boolean
 }
 
 /** Un choix parmi plusieurs : radios natifs en cartes. */
@@ -45,6 +47,7 @@ export function CartesRadio<T extends string>({
         return (
           <label key={o.valeur} className="su-est__carte" data-actif={actif ? '1' : '0'}>
             <input type="radio" name={`${uid}-${nom}`} value={o.valeur} checked={actif} onChange={() => onChange(o.valeur)} />
+            {o.conseil && <span className="su-est__conseil">Notre conseil si vous hésitez</span>}
             {o.apercu && <span className="su-est__apercu">{o.apercu}</span>}
             <span className="su-est__carte-titre">{o.titre}</span>
             {o.phrase && <span className="su-est__carte-phrase">{o.phrase}</span>}

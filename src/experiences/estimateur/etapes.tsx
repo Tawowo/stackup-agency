@@ -8,7 +8,7 @@ import { LIGNES, NIVEAUX, NIVEAUX_IA, PARAMS, PORTEES, MAJORATION_UTILISATEURS }
 import type { Ligne } from '@/config/tarifs.generated'
 import { calculer } from '@/domain/devis/calcul'
 import { configDe } from '@/domain/devis/config'
-import { euros } from '@/domain/devis/resume'
+import { euros, libelleClient } from '@/domain/devis/resume'
 import type { ConfigDevis } from '@/domain/devis/types'
 import ApercuNiveau from './Apercus'
 import { CarteCase, CartesRadio, Compteur, Partie } from './controles'
@@ -33,7 +33,7 @@ export function LigneChoix({ l, cfg, maj, aideSupp }: P & { l: Ligne; aideSupp?:
     <CarteCase
       checked={n > 0}
       onChange={(v) => maj((c) => poser(c, l.code, v ? 1 : 0))}
-      titre={l.libelle}
+      titre={libelleClient(l)}
       phrase={[nettoyer(l.description), aideSupp].filter(Boolean).join(' ') || undefined}
       mention={`dès ${prixAffiche(l)}`}
     >
@@ -48,7 +48,7 @@ const prixPlancherNiveau = (id: string) => calculer(configDe({ accueil: id })).t
 export function EtapeProjet({ cfg, maj }: P) {
   return (
     <>
-      <p className="su-est__aide">Vous pouvez en cocher plusieurs : un site avec sa boutique, un site et un outil pour gérer votre activité…</p>
+      <p className="su-est__aide">Cochez ce qui vous intéresse, vous pouvez en cocher plusieurs : un site avec sa boutique, un site et un outil pour gérer votre activité… Si vous hésitez, cochez « Un site internet ».</p>
       <div className="su-est__grille su-est__grille--3">
         <CarteCase
           checked={cfg.accueil !== 'Aucun'}
@@ -79,7 +79,7 @@ export function EtapeAccueil({ cfg, maj }: P) {
   if (cfg.accueil === 'Aucun') return <p className="su-est__aide">Cette étape concerne le site : vous n’en avez pas choisi. Passez à la suite.</p>
   return (
     <>
-      <p className="su-est__aide">C’est la première chose que voit un visiteur. Chaque carte montre ce que donne le niveau, sur une même page d’artisan. Les autres pages se choisissent à l’étape suivante.</p>
+      <p className="su-est__aide">C’est la première page que voit un visiteur. Chaque carte montre ce que donne le niveau, sur une même page d’artisan. Si vous hésitez, gardez « Classique » : vous pourrez changer d’avis avec nous après la démo.</p>
       <CartesRadio
         nom="accueil"
         legende="Allure de la page d’accueil"
@@ -91,6 +91,7 @@ export function EtapeAccueil({ cfg, maj }: P) {
           titre: n.id,
           phrase: n.description,
           apercu: <ApercuNiveau niveau={n.id} />,
+          conseil: n.id === 'Classique',
           mention: `Site d’une page : dès ${euros(prixPlancherNiveau(n.id))}`,
           detail: n.exemple ? `Exemple : ${n.exemple}.` : undefined,
         }))}
@@ -110,7 +111,7 @@ export function EtapePages({ cfg, maj, repartir, setRepartir }: P & { repartir: 
   const fixer = (n: number, id = niveauUnique) => maj((c) => ({ ...c, pages: n > 0 ? { [id]: n } : {} }))
   return (
     <>
-      <p className="su-est__aide">Hors page d’accueil et hors mentions légales (incluses). Exemples : Prestations, À propos, Réalisations, Contact, Tarifs…</p>
+      <p className="su-est__aide">En plus de la page d’accueil. Exemples : Prestations, À propos, Réalisations, Contact, Tarifs… Si vous hésitez, comptez 4 pages ; les mentions légales sont comprises.</p>
       {!repartir ? (
         <>
           <Compteur libelle="Combien d’autres pages ?" valeur={total} max={300} maxCurseur={40} onChange={(n) => fixer(n)} unite="pages" />
@@ -121,7 +122,7 @@ export function EtapePages({ cfg, maj, repartir, setRepartir }: P & { repartir: 
               valeur={niveauUnique}
               onChange={(v) => fixer(total, v)}
               disabled={total === 0}
-              options={niveauxVisibles.map((n) => ({ valeur: n.id, titre: n.id, phrase: n.description, apercu: <ApercuNiveau niveau={n.id} /> }))}
+              options={niveauxVisibles.map((n) => ({ valeur: n.id, titre: n.id, phrase: n.description, apercu: <ApercuNiveau niveau={n.id} />, conseil: n.id === 'Classique' }))}
             />
           </Partie>
         </>
@@ -150,7 +151,7 @@ export function EtapePages({ cfg, maj, repartir, setRepartir }: P & { repartir: 
           Les {PARAMS.pleinTarifJusqua} premières pages sont comptées au tarif plein, ensuite chaque page coûte moins cher (le modèle est déjà fait) : en moyenne {Math.round(r.coefficientDegressivite * 100)} % du tarif sur vos {total} pages.
         </p>
       )}
-      <Partie titre="Une page par ville ou par métier ?" phrase="Pour être trouvé à Tours, à Amboise, à Chinon… ou pour présenter chacun de vos métiers : une page par ville ou par métier, construite sur un même modèle (le modèle compte parmi vos pages). Ces pages coûtent peu.">
+      <Partie titre="Une page par ville ou par métier ?" phrase="Pour qu’on vous trouve en cherchant « plombier à Amboise » ou « plombier à Chinon », on peut créer une page par ville (ou une page par métier), toutes construites sur le même modèle. Ces pages coûtent peu.">
         <Compteur libelle="Pages par ville ou par métier" valeur={cfg.pagesSerie} max={2000} maxCurseur={60} onChange={(n) => maj((c) => ({ ...c, pagesSerie: n }))} unite="pages" />
       </Partie>
     </>
@@ -170,7 +171,7 @@ export function EtapeGoogle({ cfg, maj }: P) {
           legende="Portée du référencement"
           valeur={cfg.portee}
           onChange={(v) => maj((c) => ({ ...c, portee: v }))}
-          options={PORTEES.map((p) => ({ valeur: p.id, titre: TITRE_PORTEE[p.id] ?? p.id, phrase: p.id === 'Aucun' ? 'Le site est en ligne, sans travail de référencement.' : PHRASE_PORTEE[p.id] ?? p.objectif, detail: p.contenu || undefined }))}
+          options={PORTEES.map((p) => ({ valeur: p.id, titre: TITRE_PORTEE[p.id] ?? p.id, phrase: p.id === 'Aucun' ? 'Le site est en ligne, sans travail particulier pour être mieux placé sur Google.' : PHRASE_PORTEE[p.id] ?? p.objectif, detail: p.contenu || undefined, conseil: p.id === 'Local' }))}
           colonnes={5}
         />
       </Partie>
@@ -180,11 +181,11 @@ export function EtapeGoogle({ cfg, maj }: P) {
           legende="Visibilité dans les IA"
           valeur={cfg.ia}
           onChange={(v) => maj((c) => ({ ...c, ia: v }))}
-          options={NIVEAUX_IA.map((p) => ({ valeur: p.id, titre: TITRE_IA[p.id] ?? p.id, phrase: p.id === 'Aucune' ? 'Aucun travail spécifique pour les IA.' : PHRASE_IA[p.id] ?? p.objectif, detail: p.contenu || undefined }))}
+          options={NIVEAUX_IA.map((p) => ({ valeur: p.id, titre: TITRE_IA[p.id] ?? p.id, phrase: p.id === 'Aucune' ? 'Aucun travail spécifique pour les IA.' : PHRASE_IA[p.id] ?? p.objectif, detail: p.contenu || undefined, conseil: p.id === 'Essentielle' }))}
         />
       </Partie>
       <details className="su-est__depliant">
-        <summary>Aller plus loin : des modules de référencement à la carte</summary>
+        <summary>Aller plus loin : des options pour être encore mieux trouvé</summary>
         <div className="su-est__grille su-est__grille--2">
           {seo.map((l) => (
             <LigneChoix key={l.code} l={l} cfg={cfg} maj={maj} />
@@ -272,7 +273,7 @@ export function EtapeBoutique({ cfg, maj }: P) {
   const b = cfg.boutique
   const opts = LIGNES.filter((l) => l.famille === 'boutique' && !['B00', 'B01', 'B02', 'B03', 'B04'].includes(l.code))
   const imp = ligne('B02')
-  if (!b.active) return <p className="su-est__aide">Vous n’avez pas choisi de boutique. Passez à la suite, ou revenez à l’étape 1 pour en ajouter une.</p>
+  if (!b.active) return <p className="su-est__aide">Vous n’avez pas choisi de boutique. Passez à la suite, ou revenez à la première étape pour en ajouter une.</p>
   const maj2 = (p: Partial<ConfigDevis['boutique']>) => maj((c) => ({ ...c, boutique: { ...c.boutique, ...p } }))
   return (
     <>
@@ -302,12 +303,12 @@ export function EtapeOutil({ cfg, maj, metier, setMetier }: P & { metier: string
   const groupes = useMemo(() => modulesOutil(), [])
   const options = LIGNES.filter((l) => l.famille === 'outil-option')
   const sel = METIERS.find((m) => m.id === metier)
-  if (!cfg.outil.actif) return <p className="su-est__aide">Vous n’avez pas choisi d’outil. Passez à la suite, ou revenez à l’étape 1 pour en ajouter un.</p>
+  if (!cfg.outil.actif) return <p className="su-est__aide">Vous n’avez pas choisi d’outil. Passez à la suite, ou revenez à la première étape pour en ajouter un.</p>
   const filtre = (l: Ligne) => tous || !sel || sel.modules.includes(l.code) || qte(cfg, l.code) > 0
   const majoree = MAJORATION_UTILISATEURS.filter((m) => m.taux > 0)
   return (
     <>
-      <p className="su-est__aide">{ligne('O00')?.description} Le tout est compris. Ensuite, vous choisissez les modules dont vous avez besoin.</p>
+      <p className="su-est__aide">Un outil de gestion, c’est un logiciel à vous pour suivre vos clients, vos devis, vos factures ou votre planning. Le socle comprend : {ligne('O00')?.description?.replace(/\.$/, '').toLowerCase()}. Ensuite, vous choisissez les modules dont vous avez besoin.</p>
       <Partie titre="Quel est votre métier ?" phrase="Nous vous montrons d’abord les modules qui servent le plus dans votre métier. Vous pouvez toujours voir tous les modules.">
         <CartesRadio
           nom="metier"
@@ -378,7 +379,7 @@ export function EtapeSuivi({ cfg, maj }: P) {
         checked={a.actif}
         onChange={(v) => maj2({ actif: v })}
         titre="Je veux être accompagné après la mise en ligne"
-        phrase={a.actif ? `Hébergement, sécurité et maintenance : ${euros(r.abonnement.hebergement + r.abonnement.maintenance)} par mois, avant les options ci-dessous.` : 'Sans abonnement, vous gérez vous-même l’hébergement et le renouvellement du nom de domaine.'}
+        phrase={a.actif ? `L’hébergement (l’endroit où le site est stocké), la sécurité et la maintenance : ${euros(r.abonnement.hebergement + r.abonnement.maintenance)} par mois, avant les options ci-dessous.` : 'Sans abonnement, vous gérez vous-même l’hébergement (l’endroit où votre site est stocké) et le renouvellement de votre adresse internet.'}
       />
       {a.actif && (
         <>

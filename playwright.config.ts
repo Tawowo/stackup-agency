@@ -6,6 +6,9 @@ export const ARGS = ['--use-gl=angle', '--use-angle=swiftshader', '--enable-unsa
 
 export default defineConfig({
   testDir: './tests/e2e',
+  timeout: 90_000,
+  workers: 1,
+  use: { baseURL: process.env.E2E_BASE ?? 'http://localhost:3000' },
   projects: [
     {
       name: 'desktop-1440',

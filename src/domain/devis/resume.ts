@@ -9,6 +9,14 @@ export interface LigneResume {
   valeur: string
 }
 
+/** Libellés de l'Excel réécrits en mots du client là où un sigle (CRM, click & collect, HACCP) gênerait. */
+const LIBELLES_CLIENT: Record<string, string> = {
+  O01: 'Clients et contacts',
+  O17: 'Commandes en ligne et retrait en magasin',
+  O24: 'Hygiène et traçabilité (relevés, contrôles, registres)',
+}
+export const libelleClient = (l: { code: string; libelle: string }) => LIBELLES_CLIENT[l.code] ?? l.libelle
+
 export const euros = (n: number) => `${Math.round(n).toLocaleString('fr-FR').replace(/[  ]/g, ' ')} €`
 export const fourchetteTexte = (r: ResultatDevis) => `entre ${euros(r.fourchette.bas)} et ${euros(r.fourchette.haut)}`
 
@@ -28,7 +36,7 @@ export function lignesConfig(cfg: ConfigDevis, metier = '', t: Tarifs = TARIFS):
   const liste = (familles: string[]) =>
     t.lignes
       .filter((l) => familles.includes(l.famille) && (cfg.options[l.code] ?? 0) > 0 && !(l.famille === 'boutique' && ['B00', 'B01', 'B02', 'B03', 'B04'].includes(l.code)))
-      .map((l) => (cfg.options[l.code]! > 1 ? `${l.libelle} ×${cfg.options[l.code]}` : l.libelle))
+      .map((l) => (cfg.options[l.code]! > 1 ? `${libelleClient(l)} ×${cfg.options[l.code]}` : libelleClient(l)))
   const f = liste(['fonctionnalite'])
   if (f.length) out.push({ cle: 'Fonctionnalités', valeur: f.join(', ') })
   const ef = liste(['effet'])

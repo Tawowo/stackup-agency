@@ -2133,6 +2133,72 @@
    "largeur": 390,
    "rm": false,
    "visible": "Fiche d'un module absent de la démo : statut franc « se construit sur mesure », catalogue O19."
+  },
+  {
+   "fichier": "docs/qa/shots/estimateur/e2e/desktop-1440-perso-01.png",
+   "route": "/tarifs",
+   "etat": "étape 2 sur 9 (accueil)",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Progression en haut, une ligne de résumé « Projet : … Modifier », question en clair, option « Notre conseil si vous hésitez », Précédent/Suivant fixes, récapitulatif en colonne.",
+   "defauts": [
+    "Titre et introduction de la page gardés à toutes les étapes → masqués après l'étape 1",
+    "Étape numérotée deux fois → un seul repère"
+   ],
+   "corrige": true
+  },
+  {
+   "fichier": "docs/qa/shots/estimateur/e2e/desktop-1440-perso-03.png",
+   "route": "/tarifs",
+   "etat": "étape 4 sur 9 (Google)",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Question « Voulez-vous qu'on vous trouve sur Google… ? », cinq niveaux en cartes, Local recommandé.",
+   "defauts": [
+    "« référencement » remplacé par des mots simples",
+    "« Voir les 1 choix » → accord corrigé"
+   ],
+   "corrige": true
+  },
+  {
+   "fichier": "docs/qa/shots/estimateur/e2e/desktop-1440-perso-08.png",
+   "route": "/tarifs",
+   "etat": "étape 9 sur 9 (suivi)",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Question sur l'accompagnement, case unique, bouton « Voir mon estimation » : le bouton garde la même place."
+  },
+  {
+   "fichier": "docs/qa/shots/estimateur/e2e/desktop-1440-perso-bilan.png",
+   "route": "/tarifs",
+   "etat": "bilan",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Bilan lisible en mots simples puis « Réserver mon appel gratuit » et « Demander ma démo »."
+  },
+  {
+   "fichier": "docs/qa/shots/estimateur/e2e/mobile-390-perso-07.png",
+   "route": "/tarifs",
+   "etat": "étape 8 sur 9 (outil)",
+   "largeur": 390,
+   "rm": false,
+   "visible": "Barre de progression pleine largeur, les anciens choix repliés (2 lignes visibles), boutons au-dessus de la barre du récapitulatif.",
+   "defauts": [
+    "Boutons recouverts par la barre du récapitulatif → hauteur de la barre publiée en variable CSS"
+   ],
+   "corrige": true
+  },
+  {
+   "fichier": "docs/qa/shots/estimateur/e2e/mobile-390-perso-bilan.png",
+   "route": "/tarifs",
+   "etat": "bilan",
+   "largeur": 390,
+   "rm": false,
+   "visible": "Bilan en lignes empilées, deux actions en pleine largeur.",
+   "defauts": [
+    "« Clients / contacts (CRM) » → « Clients et contacts »"
+   ],
+   "corrige": true
   }
  ]
 }

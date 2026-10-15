@@ -65,15 +65,15 @@ export function modulesOutil(): { titre: string; lignes: Ligne[] }[] {
 
 /** Ce que le visiteur lit, en mots simples. */
 export const ETAPES = [
-  { id: 1, court: 'Projet', titre: 'Quel est votre projet ?' },
-  { id: 2, court: 'Accueil', titre: 'L’allure de votre page d’accueil' },
-  { id: 3, court: 'Pages', titre: 'Les autres pages de votre site' },
-  { id: 4, court: 'Google', titre: 'Être trouvé sur Google et dans les IA' },
-  { id: 5, court: 'Fonctions', titre: 'Ce que votre site sait faire' },
-  { id: 6, court: 'Contenus', titre: 'Les textes de votre site' },
-  { id: 7, court: 'Boutique', titre: 'Votre boutique' },
-  { id: 8, court: 'Outil', titre: 'Votre outil de gestion' },
-  { id: 9, court: 'Suivi', titre: 'Après la mise en ligne' },
+  { id: 1, court: 'Projet', titre: 'Que voulez-vous faire fabriquer ?' },
+  { id: 2, court: 'Accueil', titre: 'À quoi doit ressembler votre page d’accueil ?' },
+  { id: 3, court: 'Pages', titre: 'Combien d’autres pages voulez-vous sur votre site ?' },
+  { id: 4, court: 'Être trouvé sur Google', titre: 'Voulez-vous qu’on vous trouve sur Google et dans les assistants IA ?' },
+  { id: 5, court: 'Fonctions', titre: 'Que doit savoir faire votre site ?' },
+  { id: 6, court: 'Textes', titre: 'Qui écrit les textes de votre site ?' },
+  { id: 7, court: 'Boutique', titre: 'Que vendrez-vous dans votre boutique ?' },
+  { id: 8, court: 'Outil de gestion', titre: 'De quoi avez-vous besoin pour gérer votre activité ?' },
+  { id: 9, court: 'Suivi', titre: 'Voulez-vous être accompagné après la mise en ligne ?' },
 ] as const
 
 /** Phrases par portée et par niveau d'IA (le texte long vient de l'Excel). */

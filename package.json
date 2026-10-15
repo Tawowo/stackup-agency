@@ -23,7 +23,8 @@
     "code:vivant": "node scripts/code-vivant.mjs",
     "logo:check": "node scripts/logo-check.mjs",
     "cadence": "node scripts/cadence.mjs",
-    "videos": "node scripts/videos.mjs"
+    "videos": "node scripts/videos.mjs",
+    "test:e2e": "playwright test"
   },
   "dependencies": {
     "@gsap/react": "^2.1.2",

@@ -15,6 +15,7 @@ import Action from '@/components/ui/Action'
 import { ETAPES } from './donnees'
 import { EtapeAccueil, EtapeBoutique, EtapeContenus, EtapeFonctions, EtapeGoogle, EtapeOutil, EtapePages, EtapeProjet, EtapeSuivi } from './etapes'
 import Recap from './Recap'
+import { resumeEtape } from './resume-etapes'
 import './estimateur.css'
 
 const FIN = 10
@@ -50,6 +51,13 @@ export default function Estimateur({ initial }: { initial: EtatEstimateur }) {
   const titreEtape = useRef<HTMLHeadingElement>(null)
   const precedente = useRef(initial.etape)
   const { cfg, etape } = etat
+  // Les étapes sans objet pour ce projet sont sautées : la progression s'adapte.
+  const actives = ETAPES.filter((e) => applicable(cfg, e.id))
+  const rang = actives.findIndex((e) => e.id === etape)
+  const position = etape === FIN ? actives.length : rang >= 0 ? rang + 1 : 1
+  const nomEtape = etape === FIN ? 'Votre estimation' : (ETAPES.find((e) => e.id === etape)?.titre ?? '')
+  const nomCourt = etape === FIN ? 'Votre estimation' : (ETAPES.find((e) => e.id === etape)?.court ?? '')
+  const precedentes = actives.filter((e) => e.id < etape)
   const jeton = useMemo(() => encoder(etat), [etat])
 
   const maj = useCallback((f: (c: ConfigDevis) => ConfigDevis) => setEtat((e) => ({ ...e, cfg: assainir(f(e.cfg)) })), [])
@@ -97,14 +105,14 @@ export default function Estimateur({ initial }: { initial: EtatEstimateur }) {
     s.setLayout('configurateur')
   }, [sc, cfg, total])
 
-  // Changer d'étape : on ramène l'étape en vue et on y place le focus.
+  // Changer d'étape : la page remonte au HAUT de l'estimateur et le focus va au titre de l'étape.
   useEffect(() => {
     if (precedente.current === etape) return
     precedente.current = etape
     const el = cadre.current
     if (el) {
       const haut = el.getBoundingClientRect().top
-      if (haut < 0 || haut > window.innerHeight * 0.4) window.scrollTo({ top: window.scrollY + haut - 90, behavior: useScene.getState().reduced ? 'auto' : 'smooth' })
+      window.scrollTo({ top: Math.max(0, window.scrollY + haut - 84), behavior: useScene.getState().reduced ? 'auto' : 'smooth' })
     }
     titreEtape.current?.focus({ preventScroll: true })
   }, [etape])
@@ -126,6 +134,16 @@ export default function Estimateur({ initial }: { initial: EtatEstimateur }) {
     }
   }
 
+  const ligneResume = (e: (typeof ETAPES)[number]) => (
+    <li key={e.id}>
+      <button type="button" className="su-est__resume" onClick={() => aller(e.id)}>
+        <span className="su-est__resume-texte">
+          <b>{e.court} :</b> {resumeEtape(e.id, cfg, etat.metier)}
+        </span>
+        <span className="su-est__resume-modifier">Modifier</span>
+      </button>
+    </li>
+  )
   const rendu = (n: number) => {
     switch (n) {
       case 1: return <EtapeProjet cfg={cfg} maj={maj} />
@@ -147,7 +165,7 @@ export default function Estimateur({ initial }: { initial: EtatEstimateur }) {
       <div className="su-est__enveloppe">
         <div className="su-est__colonnes" ref={cadre}>
          <div className="su-est__gauche">
-        <header className="su-est__tete">
+        <header className="su-est__tete" hidden={monte && etape !== 1}>
           <h2 id="su-est-titre" className="su-display su-est__h2">
             Estimez votre projet
           </h2>
@@ -156,7 +174,7 @@ export default function Estimateur({ initial }: { initial: EtatEstimateur }) {
           </p>
         </header>
 
-        <div className="su-est__departs">
+        <div className="su-est__departs" hidden={monte && etape !== 1}>
           <h3 className="su-est__sous-titre">Par où voulez-vous commencer ?</h3>
           <p className="su-est__aide">Un point de départ remplit tout pour vous. Vous pourrez ensuite tout modifier.</p>
           <ul className="su-est__liste-departs">
@@ -181,29 +199,47 @@ export default function Estimateur({ initial }: { initial: EtatEstimateur }) {
         </div>
 
           <div className="su-est__principal">
-            <nav className="su-est__pastilles" aria-label="Étapes de l’estimation">
-              <ol>
-                {ETAPES.map((e) => {
-                  const ok = applicable(cfg, e.id)
-                  return (
-                    <li key={e.id}>
-                      <button type="button" className="su-est__pastille" aria-current={etape === e.id ? 'step' : undefined} data-sans-objet={ok ? '0' : '1'} onClick={() => aller(e.id)}>
-                        <span className="su-mono su-est__pastille-n">{e.id}</span>
-                        <span className="su-est__pastille-nom">{e.court}</span>
-                        {!ok && <span className="sr-only"> (sans objet pour votre projet)</span>}
+            {monte && (
+              <nav className="su-est__progres" aria-label="Progression de l’estimation">
+                <p className="su-est__progres-texte" aria-live="polite">
+                  <b>
+                    Étape {position} sur {actives.length}
+                  </b>{' '}
+                  · {nomCourt}
+                </p>
+                <ol className="su-est__progres-barre" role="list">
+                  {actives.map((e, i) => (
+                    <li key={e.id} data-etat={e.id === etape ? 'en-cours' : i < position - 1 || etape === FIN ? 'fait' : 'a-venir'}>
+                      <button type="button" aria-current={etape === e.id ? 'step' : undefined} onClick={() => aller(e.id)}>
+                        <span className="su-est__progres-trait" aria-hidden="true" />
+                        <span className="su-est__progres-nom">{e.court}</span>
+                        <span className="sr-only">
+                          {' '}
+                          étape {i + 1} sur {actives.length}
+                        </span>
                       </button>
                     </li>
-                  )
-                })}
-              </ol>
-            </nav>
+                  ))}
+                </ol>
+              </nav>
+            )}
+            {monte && etape !== FIN && precedentes.length > 0 && (
+              <div className="su-est__avant">
+                {precedentes.length > 2 && (
+                  <details>
+                    <summary>{precedentes.length - 2 > 1 ? `Voir les ${precedentes.length - 2} choix précédents` : 'Voir le choix précédent'}</summary>
+                    <ul>{precedentes.slice(0, -2).map(ligneResume)}</ul>
+                  </details>
+                )}
+                <ul className="su-est__avant-recent">{precedentes.slice(-2).map(ligneResume)}</ul>
+              </div>
+            )}
 
             {ETAPES.map((e) => {
               const visible = !monte || etape === e.id
               return (
                 <section key={e.id} className="su-est__etape" hidden={!visible} aria-labelledby={`su-est-e${e.id}`}>
                   <h3 id={`su-est-e${e.id}`} ref={etape === e.id ? titreEtape : undefined} tabIndex={-1} className="su-display su-est__etape-titre">
-                    <span className="su-mono su-est__etape-n">Étape {e.id} sur 9</span>
                     {e.titre}
                   </h3>
                   {rendu(e.id)}
@@ -213,8 +249,7 @@ export default function Estimateur({ initial }: { initial: EtatEstimateur }) {
 
             <section className="su-est__etape" hidden={monte && etape !== FIN} aria-labelledby="su-est-fin">
               <h3 id="su-est-fin" ref={etape === FIN ? titreEtape : undefined} tabIndex={-1} className="su-display su-est__etape-titre">
-                <span className="su-mono su-est__etape-n">C’est prêt</span>
-                Votre estimation
+                {nomEtape}
               </h3>
               <p className="su-est__aide">
                 {resultat.total > 0 && !(cfg.accueil === 'Aucun' && !cfg.outil.actif)
