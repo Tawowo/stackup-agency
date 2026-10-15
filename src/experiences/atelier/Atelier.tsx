@@ -49,7 +49,7 @@ export default function Atelier() {
           </h2>
           <p className="su-mono su-ate__role">Fondateur, développeur</p>
           <div className="su-ate__paragraphes">
-            <p>Je fabrique des sites et des outils pour des gens qui ont un métier à faire tourner, pas du temps à perdre dans un logiciel. Sur mesure, parce qu’un artisan et un restaurateur n’ont pas les mêmes journées.</p>
+            <p>Je fabrique des sites et des outils pour des gens qui ont un métier à faire tourner, pas des soirées à perdre sur Wix ou WordPress. Sur mesure, parce qu’un artisan et un restaurateur n’ont pas les mêmes journées.</p>
             <p>Des prix justes, écrits avant de commencer, sans abonnement caché : vous savez ce que vous payez, et ce qui vous appartient à la fin.</p>
             <p>La démo avant la vente, parce qu’un site se juge en le voyant. Vous regardez, vous décidez, et seulement ensuite on signe.</p>
           </div>

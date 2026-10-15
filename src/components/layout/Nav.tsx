@@ -9,6 +9,7 @@ import { usePathname } from 'next/navigation'
 import { useEffect, useRef, useState } from 'react'
 import LogoMarque from '@/components/ui/LogoMarque'
 import Action from '@/components/ui/Action'
+import { SITE } from '@/config/site'
 import { ENTREES, RESSOURCES } from './entrees'
 
 
@@ -127,6 +128,12 @@ export default function Nav() {
             Parler de votre projet
           </Action>
         </div>
+        <a className="su-nav__tel" href={SITE.telephoneLien} aria-label={`Appeler Mathéo Reboul au ${SITE.telephone}`}>
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+            <path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinejoin="round" />
+          </svg>
+          <span className="su-nav__tel-num">{SITE.telephone}</span>
+        </a>
         <button
           ref={bouton}
           type="button"

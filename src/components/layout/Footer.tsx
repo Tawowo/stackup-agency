@@ -33,6 +33,9 @@ export default function Footer() {
           <a className="su-footer__mail" href={`mailto:${SITE.email}`}>
             {SITE.email}
           </a>
+          <a className="su-footer__mail" href={SITE.telephoneLien}>
+            {SITE.telephone}
+          </a>
         </div>
         <nav className="su-footer__familles" aria-label="Pied de page">
           <div className="su-footer__famille">

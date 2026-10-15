@@ -1,2 +1,2 @@
 /* GÉNÉRÉ PAR scripts/portrait.mjs */
-export const PORTRAIT_FACE = false
+export const PORTRAIT_FACE = true

@@ -66,9 +66,12 @@ export default function Locale(p: PropsLocale) {
               <div className="su-loc__actions">
                 <Action href="/contact">{p.appel ?? 'Parler de votre projet'}</Action>
                 <Action href="/realisations" variante="contour">
-                  Voir les démos
+                  Voir les réalisations
                 </Action>
               </div>
+              <p className="su-loc__tel">
+                Ou appelez directement Mathéo Reboul : <a href={SITE.telephoneLien}>{SITE.telephone}</a>
+              </p>
             </div>
             {p.monde ? (
               <div className="su-loc__monde">{p.monde}</div>

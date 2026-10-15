@@ -66,6 +66,8 @@ export default function AtelierNuit() {
           MORPH.value = m
           const f = 1 - m * m * (3 - 2 * m)
           useScene.getState().setPose({ x: 0.1 * f, y: -0.18 * f })
+          // À la fin le cadre est plat, face à vous : il épouse la photo au pixel.
+          useScene.getState().setProjection(0.3 * f)
         },
       })
     }, el)
@@ -115,12 +117,7 @@ export default function AtelierNuit() {
             <ol className="su-atn__engagements" aria-label="Trois engagements">
               {ENGAGEMENTS.map((e, k) => (
                 <li key={e} style={{ '--e': ecrit(k).toFixed(3) } as React.CSSProperties}>
-                  <svg viewBox="0 0 1000 80" className="su-atn__trace" aria-hidden="true">
-                    <text x="0" y="58" pathLength={1}>
-                      {e}
-                    </text>
-                  </svg>
-                  <span className="sr-only">{e}</span>
+                  <span className="su-atn__ligne">{e}</span>
                 </li>
               ))}
             </ol>
@@ -135,7 +132,7 @@ export default function AtelierNuit() {
             et c’est voulu.
           </h2>
           <div className="su-atn__paragraphes">
-            <p>Je fabrique des sites et des outils pour des gens qui ont un métier à faire tourner, pas du temps à perdre dans un logiciel. Un artisan, un restaurateur, une boutique, un cabinet : chacun a ses journées, ses clients, ses contraintes. Un outil sur mesure part de là.</p>
+            <p>Je fabrique des sites et des outils pour des gens qui ont un métier à faire tourner, pas des soirées à perdre sur Wix ou WordPress. Un artisan, un restaurateur, une boutique, un cabinet : chacun a ses journées, ses clients, ses contraintes. Un outil sur mesure part de là.</p>
             <p>Vous parlez à celui qui conçoit, écrit le code et met en ligne. Personne ne transmet votre demande à quelqu’un d’autre ; ce que vous dites en rendez-vous est ce qui est fabriqué.</p>
             <p>La règle de l’atelier est simple : une démo avant de signer, un prix écrit avant de commencer, et à la fin, le code et les données vous appartiennent. Si vous voulez partir un jour, vous partez avec tout.</p>
           </div>

@@ -28,6 +28,7 @@ export function organisation() {
     logo: `${ORIGINE}/Logo_Stackup-Agency.png`,
     image: `${ORIGINE}/Logo_Stackup-Agency.png`,
     email: SITE.email,
+    telephone: SITE.telephoneIntl,
     founder: { '@type': 'Person', name: SITE.fondateur },
     address: { '@type': 'PostalAddress', addressLocality: 'Tours', postalCode: '37000', addressRegion: 'Centre-Val de Loire', addressCountry: 'FR' },
     areaServed: { '@type': 'Country', name: 'France' },

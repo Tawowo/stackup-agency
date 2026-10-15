@@ -63,6 +63,9 @@ export default function MentionsLegales() {
             <strong>E-mail :</strong> <a href={`mailto:${SITE.email}`}>{SITE.email}</a>
           </li>
           <li>
+            <strong>Téléphone :</strong> <a href={SITE.telephoneLien}>{SITE.telephone}</a>
+          </li>
+          <li>
             <strong>SIRET :</strong> [à compléter par le propriétaire]
           </li>
           <li>

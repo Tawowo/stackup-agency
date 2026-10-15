@@ -69,15 +69,36 @@ async function face() {
     const { data, info } = await img.raw().toBuffer({ resolveWithObject: true })
     const W = info.width
     const H = info.height
-    // Fond : clair, peu saturé, connexe aux bords (remplissage par file).
+    // Fond : on estime le gris du mur sur chaque ligne (moyenne des bords gauche et droit, interpolée en x),
+    // puis on remplit depuis les bords les pixels qui lui ressemblent (remplissage par file, 4-connexe).
+    const bord = Math.max(6, Math.round(W * 0.02))
+    const gauche = new Float32Array(H * 3)
+    const droite = new Float32Array(H * 3)
+    for (let y = 0; y < H; y++)
+      for (let c = 0; c < 3; c++) {
+        let g = 0, d = 0
+        for (let k = 0; k < bord; k++) {
+          g += data[(y * W + k) * 3 + c]
+          d += data[(y * W + W - 1 - k) * 3 + c]
+        }
+        gauche[y * 3 + c] = g / bord
+        droite[y * 3 + c] = d / bord
+      }
+    const SEUIL = 20
     const fondPx = (i) => {
+      const y = (i / W) | 0
+      const t = (i % W) / (W - 1)
+      let diff = 0
+      for (let c = 0; c < 3; c++) {
+        const ref = gauche[y * 3 + c] * (1 - t) + droite[y * 3 + c] * t
+        diff = Math.max(diff, Math.abs(data[i * 3 + c] - ref))
+      }
       const r = data[i * 3], g = data[i * 3 + 1], b = data[i * 3 + 2]
-      const max = Math.max(r, g, b), min = Math.min(r, g, b)
-      return max > 175 && max - min < 26
+      return diff < SEUIL && Math.max(r, g, b) - Math.min(r, g, b) < 28
     }
     const masque = new Uint8Array(W * H)
     const file = []
-    for (let x = 0; x < W; x++) file.push(x, (H - 1) * W + x)
+    for (let x = 0; x < W; x++) file.push(x)
     for (let y = 0; y < H; y++) file.push(y * W, y * W + W - 1)
     while (file.length) {
       const i = file.pop()
@@ -90,7 +111,10 @@ async function face() {
       if (y < H - 1) file.push(i + W)
     }
     // Bord adouci (flou du masque).
-    const alpha = await sharp(Buffer.from(masque.map((m) => (m ? 0 : 255))), { raw: { width: W, height: H, channels: 1 } }).blur(1.2).raw().toBuffer()
+    const flou = await sharp(Buffer.from(masque.map((m) => (m ? 0 : 255))), { raw: { width: W, height: H, channels: 1 } }).blur(1.4).raw().toBuffer({ resolveWithObject: true })
+    const nc = flou.info.channels
+    const alpha = new Uint8Array(W * H)
+    for (let i = 0; i < W * H; i++) alpha[i] = flou.data[i * nc]
     for (const nuit of [true, false]) {
       const f = fond(W, H, nuit)
       const out = Buffer.alloc(W * H * 3)

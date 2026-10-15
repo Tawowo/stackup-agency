@@ -93,13 +93,14 @@
   width: 100%;
   height: 100%;
 }
-/* La photo occupe l'intérieur du cadre (1,3 × 1,62 unités sur 1,46 × 2,29, centre y = +0,1). */
+/* La photo occupe l'intérieur du cadre : anneau de plaques 1,3 × 1,62 unités (épaisseur 0,1, centre y = +0,1)
+   dans la boîte 1,46 × 2,29 → ouverture (1,3 − 0,1) × (1,62 − 0,1) : 8,9 % à gauche et à droite, 12,45 % en haut, 21,2 % en bas. */
 .su-atn__photo {
   position: absolute;
-  left: 7%;
-  right: 7%;
-  top: 17%;
-  bottom: 22%;
+  left: 8.9%;
+  right: 8.9%;
+  top: 12.45%;
+  bottom: 21.2%;
   overflow: hidden;
   clip-path: inset(calc((1 - var(--revele, 0)) * 50%) 0 calc((1 - var(--revele, 0)) * 50%) 0);
 }
@@ -119,22 +120,16 @@
   flex-direction: column;
   gap: 4px;
 }
-/* Écrit en lumière : le contour se trace (scroll), puis le plein s'allume. */
-.su-atn__trace {
-  width: min(100%, 800px);
-  height: auto;
-  overflow: visible;
-}
-.su-atn__trace text {
+/* Les engagements : du vrai texte plein, lisible dès le départ ; la lumière se découvre de gauche à droite (découpe). */
+.su-atn__ligne {
+  display: inline-block;
   font-family: var(--su-font-display), sans-serif;
   font-weight: 700;
-  font-size: 56px;
-  fill: color-mix(in srgb, var(--su-ambre-clair) calc(max(0, var(--e) - 0.7) / 0.3 * 100%), transparent);
-  stroke: var(--su-ambre-clair);
-  stroke-width: 1.2;
-  stroke-dasharray: 1;
-  stroke-dashoffset: calc(1 - var(--e));
-  filter: drop-shadow(0 0 calc(var(--e) * 10px) color-mix(in srgb, var(--su-ambre) 60%, transparent));
+  font-size: clamp(1.6rem, 3.4vw, 3.4rem);
+  line-height: 1.15;
+  color: var(--su-ivoire);
+  clip-path: inset(0 calc((1 - var(--e, 1)) * 100%) 0 0);
+  text-shadow: 0 0 calc(var(--e, 1) * 18px) color-mix(in srgb, var(--su-ambre) 45%, transparent);
 }
 .su-atn__recit-grille {
   max-width: var(--su-conteneur-scene);
@@ -200,6 +195,10 @@
   .su-atn__engagements {
     grid-column: 1 / -1;
     grid-row: 3;
+    margin-top: 9svh;
+  }
+  .su-atn__ligne {
+    font-size: clamp(1.4rem, 6.2vw, 2rem);
   }
   .su-atn__h2,
   .su-atn__paragraphes,

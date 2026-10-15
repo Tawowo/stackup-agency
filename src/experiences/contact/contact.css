@@ -34,6 +34,40 @@
   max-width: 40ch;
   color: var(--su-texte-doux);
 }
+.su-ctc__direct {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 12px;
+  border-radius: 4px;
+  background: color-mix(in srgb, var(--su-encre-2) 85%, transparent);
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--su-ivoire) 12%, transparent);
+  max-width: 440px;
+}
+.su-ctc__portrait {
+  flex: 0 0 auto;
+  width: 84px;
+  height: 112px;
+  object-fit: cover;
+  border-radius: 3px;
+}
+.su-ctc__direct p {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  color: var(--su-ivoire);
+}
+.su-ctc__direct span {
+  color: var(--su-texte-doux);
+  font-size: 0.9375rem;
+}
+.su-ctc__direct a {
+  color: var(--su-accent-texte);
+  font-weight: 600;
+  text-decoration: none;
+  min-height: 24px;
+}
 .su-ctc__scene {
   pointer-events: none;
 }
@@ -72,10 +106,20 @@
 .su-ctc__legende {
   /* Flottée : une légende non flottée se dessine sur le bord du fieldset. */
   float: left;
-  width: 100%;
-  padding: 0;
-  margin-bottom: 4px;
-  color: var(--su-ambre-texte);
+  width: auto;
+  max-width: 100%;
+  padding: 6px 12px;
+  margin: 0 0 8px;
+  border-radius: 3px;
+  background: var(--su-navy);
+  color: var(--su-ivoire);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.su-ctc__legende + * {
+  clear: both;
 }
 .su-ctc__deux {
   display: grid;
@@ -126,9 +170,18 @@
   color: #8a1c15;
   font-weight: 600;
 }
+.su-ctc__plaque {
+  color-scheme: light;
+}
+#su-ctc-action-l {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--su-navy);
+}
 .su-ctc__pref {
   display: flex;
-  gap: 20px;
+  flex-wrap: wrap;
+  gap: 4px 20px;
   font-size: 0.9375rem;
 }
 .su-ctc__pref label {

@@ -146,6 +146,31 @@
   background: var(--su-encre-3);
   box-shadow: inset 3px 0 0 var(--su-ambre);
 }
+.su-nav__tel {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  min-width: 44px;
+  justify-content: center;
+  padding: 0 10px;
+  color: var(--su-texte);
+  text-decoration: none;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+.su-nav__tel:hover,
+.su-nav__tel:focus-visible {
+  color: var(--su-ambre-clair);
+}
+.su-nav__tel-num {
+  display: none;
+}
+@media (min-width: 1280px) {
+  .su-nav__tel-num {
+    display: inline;
+  }
+}
 .su-nav__menu {
   display: none;
   min-height: 44px;

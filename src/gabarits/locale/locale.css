@@ -296,3 +296,12 @@
     padding-bottom: 6vw;
   }
 }
+
+.su-loc__tel {
+  margin: 14px 0 0;
+  color: var(--su-texte-doux);
+}
+.su-loc__tel a {
+  color: var(--su-accent-texte);
+  font-weight: 600;
+}

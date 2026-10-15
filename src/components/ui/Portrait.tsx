@@ -17,7 +17,7 @@ export default function Portrait({ fond = 'nuit', className = '', priorite = fal
       sizes="(max-width: 767px) 60vw, 34vw"
       alt={alt}
       width={grand}
-      height={Math.round(grand * 1.25)}
+      height={PORTRAIT_FACE ? Math.round(grand * (4 / 3)) : Math.round(grand * 1.25)}
       loading={priorite ? 'eager' : 'lazy'}
       decoding="async"
     />

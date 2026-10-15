@@ -6,6 +6,7 @@
  * l'accueil est lue et affichée en Fiche. Pendant la saisie, la pile se
  * construit plaque par plaque à chaque champ rempli.
  */
+import Portrait from '@/components/ui/Portrait'
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { CHAMPS_ORDRE, ContactSchema, OBJETS, type ContactEntree } from '@/lib/contact'
@@ -171,7 +172,16 @@ export default function Formulaire({ e, action, projet, objet }: { e: string | n
             <br />
             votre projet.
           </h1>
-          <p className="su-ctc__ligne">Trois plaques à remplir, une réponse personnelle de {SITE.fondateur}. Rien n’est envoyé sans votre accord.</p>
+          <p className="su-ctc__ligne">Trois petites parties à remplir, une réponse personnelle de {SITE.fondateur}. Rien n’est envoyé sans votre accord.</p>
+          <div className="su-ctc__direct">
+            <Portrait fond="nuit" className="su-ctc__portrait" />
+            <p>
+              <b>{SITE.fondateur}</b>
+              <span>Vous préférez parler ? Appelez-moi.</span>
+              <a href={SITE.telephoneLien}>{SITE.telephone}</a>
+              <a href={`mailto:${SITE.email}`}>{SITE.email}</a>
+            </p>
+          </div>
           <div className="su-ctc__scene" aria-hidden="true">
             <StackFrame className="su-ctc__cadre" />
           </div>

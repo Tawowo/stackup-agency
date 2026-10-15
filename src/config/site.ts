@@ -25,7 +25,10 @@ export const SITE = {
   ville: 'Tours',
   departement: 'Indre-et-Loire',
   email: 'contact@stackup-agency.fr',
-  telephone: '',
+  /** Téléphone : affichage, lien tel: et forme internationale (JSON-LD). */
+  telephone: '07 64 02 08 98',
+  telephoneLien: 'tel:+33764020898',
+  telephoneIntl: '+33764020898',
   /** Conditions de fabrication : les nombres viennent de l'Excel (Paramètres, Parcours client). */
   conditions: {
     acomptePourcent: P.acomptePourcent,
