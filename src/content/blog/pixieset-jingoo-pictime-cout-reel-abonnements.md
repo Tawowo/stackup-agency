@@ -105,4 +105,4 @@ Le code vous appartient au paiement complet et vous est remis : n'importe quel d
 
 ---
 
-*Pour aller plus loin : [Notre solution galerie client photographe](/solutions/galerie-client-photographe) · [Système de gestion sur mesure](/services/systeme-gestion) · [Combien coûte un logiciel sur mesure ?](/blog/cout-site-internet-2026)*
+*Pour aller plus loin : [Notre solution galerie client photographe](/solutions) · [Système de gestion sur mesure](/services/systeme-gestion) · [Combien coûte un logiciel sur mesure ?](/blog/cout-site-internet-2026)*

@@ -85,4 +85,4 @@ Les statistiques de consultation permettent de repérer une galerie jamais ouver
 
 ---
 
-*Pour aller plus loin : [Galerie client : abonnement à vie ou outil possédé ?](/blog/galerie-client-abonnement-ou-outil-propre) · [Vendre ses photos en ligne : tirages et albums](/blog/vendre-photos-en-ligne-tirages-albums) · [Notre solution galeries clients](/solutions/galerie-client-photographe) · [Créer un site de photographe](/creation-site-internet/photographe)*
+*Pour aller plus loin : [Galerie client : abonnement à vie ou outil possédé ?](/blog/galerie-client-abonnement-ou-outil-propre) · [Vendre ses photos en ligne : tirages et albums](/blog/vendre-photos-en-ligne-tirages-albums) · [Notre solution galeries clients](/solutions) · [Créer un site de photographe](/creation-site-internet/photographe)*

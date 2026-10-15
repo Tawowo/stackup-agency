@@ -8,7 +8,7 @@ export interface Etat {
   /** Paramètres d'URL ajoutés à la route. */
   query?: string
   /** Geste à exécuter avant la capture. */
-  action?: 'drag' | 'menu' | 'touche3' | 'onglet2' | 'onglet3' | 'onglet4' | 'noeud2' | 'noeud7' | 'focus-offre2' | 'conf-type' | 'conf-fonctions' | 'conf-options' | 'ctc-vide' | 'ctc-remplir' | 'torche' | 'clic-plaque' | 'tab-poser' | 'regle' | 'lampe' | 'ctc-envoyer' | 'ctc-depart' | 'ressources'
+  action?: 'drag' | 'menu' | 'touche3' | 'onglet2' | 'onglet3' | 'onglet4' | `noeud${number}`  | 'focus-offre2' | 'conf-type' | 'conf-fonctions' | 'conf-options' | 'ctc-vide' | 'ctc-remplir' | 'torche' | 'clic-plaque' | 'tab-poser' | 'regle' | 'lampe' | 'ctc-envoyer' | 'ctc-depart' | 'ressources'
   /** Limiter à certaines largeurs (par défaut : 1440 et 390). */
   largeurs?: number[]
   /** Position de scroll, en fraction de la distance épinglée du moment visé (par défaut 00). */
@@ -168,18 +168,18 @@ export const ROUTES: Route[] = [
     route: '/solutions',
     dossier: 'solutions',
     etats: [
-      { nom: 'tableau', query: QUALITE, attente: 2200 },
-      { nom: 'tableau-pose', query: QUALITE, action: 'tab-poser', attente: 1800, sansRm: true },
-      { nom: 'catalogue', query: QUALITE, moment: 'solutions-catalogue', scroll: 0, attente: 1400, sansRm: true },
+      { nom: 'hub', query: QUALITE, attente: 2200 },
     ],
   },
   {
-    route: '/solutions/prise-rendez-vous-en-ligne',
+    route: '/solutions/gestion-devis-factures',
     dossier: 'solutions',
-    etats: [
-      { nom: 'fiche', query: QUALITE, attente: 2200 },
-      { nom: 'fiche-regle', query: QUALITE, action: 'regle', attente: 1400, sansRm: true },
-    ],
+    etats: [{ nom: 'fiche-devis', query: QUALITE, attente: 2200 }],
+  },
+  {
+    route: '/solutions/menu-qr-code',
+    dossier: 'solutions',
+    etats: [{ nom: 'fiche-menu', query: QUALITE, attente: 2200 }],
   },
   {
     route: '/a-propos',

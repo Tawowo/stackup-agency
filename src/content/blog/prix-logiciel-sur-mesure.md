@@ -19,7 +19,7 @@ Un « logiciel de gestion sur mesure », c'est un outil développé pour VOTRE f
 - **Devis-factures** avec suivi des paiements et relances
 - **Gestion de stocks** pour petit commerce ou atelier
 - **Fiches clients / CRM léger** avec historique
-- **Galeries et espaces clients** ([le cas photographe est détaillé ici](/solutions/galerie-client-photographe))
+- **Galeries et espaces clients** ([le cas photographe est détaillé ici](/solutions))
 - **Tableau de bord** : CA, activité, indicateurs métier en un écran
 
 ## Ce qui fait varier le prix (les 4 curseurs)
@@ -96,4 +96,4 @@ Oui : après un appel découverte gratuit de 30 minutes, une démo de la page d'
 
 ---
 
-*Pour aller plus loin : [Notre offre système de gestion](/services/systeme-gestion) · [L'alternative Pixieset pour photographes](/solutions/galerie-client-photographe) · [Toutes nos solutions métier](/solutions)*
+*Pour aller plus loin : [Notre offre système de gestion](/services/systeme-gestion) · [L'alternative Pixieset pour photographes](/solutions) · [Toutes nos solutions métier](/solutions)*

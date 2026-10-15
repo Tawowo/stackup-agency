@@ -86,4 +86,4 @@ Elles font partie de l'abonnement mensuel, facultatif et sans engagement, que vo
 
 ---
 
-*Pour aller plus loin : [Le vrai coût des abonnements Pixieset sur 5 ans](/blog/pixieset-jingoo-pictime-cout-reel-abonnements) · [Notre solution galerie client](/solutions/galerie-client-photographe) · [Créer un site de photographe](/blog/site-web-photographe)*
+*Pour aller plus loin : [Le vrai coût des abonnements Pixieset sur 5 ans](/blog/pixieset-jingoo-pictime-cout-reel-abonnements) · [Notre solution galerie client](/solutions) · [Créer un site de photographe](/blog/site-web-photographe)*

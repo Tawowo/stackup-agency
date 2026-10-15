@@ -1,53 +1,51 @@
 'use client'
 /**
- * FICHE OUTIL — /solutions/[slug]. Le réseau des modules en fond, le module
- * de la fiche allumé. Interaction propre : la règle « avant / avec l'outil »,
- * un curseur qu'on fait glisser (ou flèches) et qui transforme, ligne par
- * ligne, chaque problème du quotidien en la fonction qui le règle.
+ * FICHE OUTIL — /solutions/[slug]. Un module du catalogue de l'outil de gestion. Si le module existe
+ * déjà dans le logiciel réel (Artibox, en développement), un ordinateur montre ses vraies captures
+ * et la démo est à un clic ; sinon la fiche dit franchement que le module se construit sur mesure.
  */
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
 import Link from 'next/link'
 import StackFrame from '@/webgl/StackFrame'
 import { useScene } from '@/webgl/store'
 import Action from '@/components/ui/Action'
 import Cadran from '@/components/ui/Cadran'
 import Accordeon from '@/components/editorial/Accordeon'
-import { SITE } from '@/config/site'
+import { Portable } from '@/components/appareils/Appareils'
+import { PROJETS } from '@/experiences/galerie/projets'
 import './fiche-solution.css'
 
 export interface DonneesSolution {
   slug: string
   nom: string
   intro: string
-  problemes: string[]
+  situations: string[]
   fonctionnalites: string[]
-  avantages: string[]
-  contexte: string
+  dansLaDemo: boolean
+  /** Modules du catalogue (Excel) : code, nom et ce que le module fait. */
+  modules: { code: string; libelle: string; description: string }[]
+  /** « À partir de » du moteur : socle de l'outil + ces modules. */
+  prix: number
   faq: { q: string; a: string }[]
   metiers: { slug: string; nom: string }[]
-  module: number
   voisines: { slug: string; nom: string }[]
 }
 
+const ARTIBOX = PROJETS.find((p) => p.slug === 'logiciel-gestion-artisans')!
+
 export default function FicheSolution({ s }: { s: DonneesSolution }) {
-  const [regle, setRegle] = useState(0)
-  const prix = SITE.offres.find((o) => o.id === 'outil')!.aPartirDe
   useEffect(() => {
     const sc = useScene.getState()
     sc.setMoment(`solution-${s.slug}`)
     sc.setMonde('fabrique')
     sc.setNuit(1)
     sc.setScrub(false)
-    sc.setParams({ retard: 0.25, flash: 0, arc: 0.6, modules: 12, isoPush: 0, isoDim: 0.42 })
+    sc.setParams({ retard: 0.25, flash: 0, arc: 0.6, glisse: 0, largeur: 30 })
     sc.setProjection(0.6)
     sc.setPose({ x: 0.12, y: -0.1 })
-    if (!sc.reduced) sc.setLayout('machines')
-    sc.setIsolate(s.module >= 0 ? s.module + 1 : -1)
-    return () => useScene.getState().setIsolate(-1)
-  }, [s.slug, s.module])
+    if (!sc.reduced) sc.setLayout('logo')
+  }, [s.slug])
 
-  const n = Math.max(s.problemes.length, 1)
-  const lignes = s.problemes.map((p, i) => ({ avant: p, apres: s.fonctionnalites[i] ?? s.avantages[i] ?? '' }))
   return (
     <article className="su-fso" data-moment={`solution-${s.slug}`} data-nuit="1">
       <div className="su-fso__hero">
@@ -58,40 +56,41 @@ export default function FicheSolution({ s }: { s: DonneesSolution }) {
           <h1 className="su-display su-fso__titre">{s.nom}</h1>
           <p className="su-fso__intro">{s.intro}</p>
           <p className="su-fso__prix">
-            <Cadran valeur={prix} prefixe="à partir de" suffixe="€" className="su-fso__cadran" />
+            <Cadran valeur={s.prix} prefixe="outil complet à partir de" suffixe="€" className="su-fso__cadran" />
           </p>
           <div className="su-fso__actions">
-            <Action href={`/contact?objet=${encodeURIComponent(s.nom)}`}>Parler de mon outil</Action>
+            {s.dansLaDemo ? <Action href={ARTIBOX.url}>Tester la démo</Action> : <Action href={`/contact?objet=${encodeURIComponent(s.nom)}`}>Parler de mon outil</Action>}
             <Action href="/solutions" variante="contour">
-              Assembler plusieurs modules
+              Voir le logiciel et tous les modules
             </Action>
           </div>
         </div>
-        <div className="su-fso__scene" aria-hidden="true">
-          <StackFrame className="su-fso__cadre" />
+        <div className="su-fso__scene">
+          {s.dansLaDemo ? (
+            <Portable ecran={ARTIBOX.bureau} nom={ARTIBOX.nom} prioritaire />
+          ) : (
+            <div aria-hidden="true" className="su-fso__cadre-zone">
+              <StackFrame className="su-fso__cadre" />
+            </div>
+          )}
         </div>
       </div>
-      <section className="su-fso__regle" aria-labelledby="su-fso-regle">
-        <h2 id="su-fso-regle" className="su-fso__h2">
-          Avant, et avec l’outil
-        </h2>
-        <label className="su-fso__curseur">
-          <span className="su-mono">Avant</span>
-          <input type="range" min={0} max={n} step={1} value={regle} onChange={(e) => setRegle(Number(e.target.value))} aria-valuetext={`${regle} problème${regle > 1 ? 's' : ''} réglé${regle > 1 ? 's' : ''} sur ${n}`} />
-          <span className="su-mono">Avec l’outil</span>
-        </label>
-        <ul className="su-fso__lignes">
-          {lignes.map((l, i) => (
-            <li key={l.avant} data-regle={i < regle ? '1' : '0'}>
-              <span className="su-fso__avant">{l.avant}</span>
-              <span className="su-fso__apres">{l.apres}</span>
-            </li>
-          ))}
-        </ul>
-      </section>
+      <p className="su-fso__statut" data-demo={s.dansLaDemo ? '1' : '0'}>
+        {s.dansLaDemo
+          ? 'Ce module existe déjà dans Artibox, le logiciel de gestion de Stackup (en développement) : vous pouvez le tester en démo.'
+          : 'Ce module se construit sur mesure à partir du catalogue de l’outil. Il n’est pas dans la démo actuelle : nous le préparons pour votre activité avant le devis.'}
+      </p>
       <div className="su-fso__corps">
         <section>
-          <h2 className="su-fso__h2">Ce que fait l’outil</h2>
+          <h2 className="su-fso__h2">Vous reconnaissez-vous ?</h2>
+          <ul className="su-fso__avantages">
+            {s.situations.map((a) => (
+              <li key={a}>{a}</li>
+            ))}
+          </ul>
+        </section>
+        <section>
+          <h2 className="su-fso__h2">Ce que fait le module</h2>
           <ul className="su-fso__fonctions">
             {s.fonctionnalites.map((f, i) => (
               <li key={f} className="su-plaque">
@@ -101,13 +100,15 @@ export default function FicheSolution({ s }: { s: DonneesSolution }) {
             ))}
           </ul>
         </section>
-        <section className="su-fso__situation">
-          <h2 className="su-fso__h2">Une situation type</h2>
-          <p>{s.contexte}</p>
-          <h3 className="su-fso__h3">Ce qui change pour vous</h3>
-          <ul className="su-fso__avantages">
-            {s.avantages.map((a) => (
-              <li key={a}>{a}</li>
+        <section className="su-fso__catalogue">
+          <h2 className="su-fso__h2">Dans le catalogue de l’outil</h2>
+          <ul className="su-fso__modules">
+            {s.modules.map((m) => (
+              <li key={m.code}>
+                <span className="su-mono">{m.code}</span>
+                <b>{m.libelle}</b>
+                {m.description && <span>{m.description}</span>}
+              </li>
             ))}
           </ul>
         </section>
@@ -128,7 +129,7 @@ export default function FicheSolution({ s }: { s: DonneesSolution }) {
           </section>
         )}
       </div>
-      <nav className="su-fso__voisines" aria-label="Outils qui se branchent bien avec celui-ci">
+      <nav className="su-fso__voisines" aria-label="Modules qui se branchent bien avec celui-ci">
         {s.voisines.map((v) => (
           <Link key={v.slug} href={`/solutions/${v.slug}`} className="su-plaque">
             <span className="su-mono">Se branche avec</span>

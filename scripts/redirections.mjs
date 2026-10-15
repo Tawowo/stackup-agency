@@ -23,6 +23,8 @@ const nouvelles = [
     destination: '/realisations',
     permanent: true,
   })),
+  { source: '/solutions/commande-en-ligne-livraison', destination: '/solutions/click-and-collect', permanent: true },
+  { source: '/solutions/galerie-client-photographe', destination: '/solutions', permanent: true },
   { source: '/services/site-association', destination: '/services', permanent: true },
 ]
 const toutes = [...vieilles, ...nouvelles]

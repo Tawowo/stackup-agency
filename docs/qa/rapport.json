@@ -835,15 +835,6 @@
    ]
   },
   {
-   "fichier": "docs/qa/shots/accueil/05-module-7-1440.png",
-   "route": "/",
-   "etat": "05-module-7",
-   "largeur": 1440,
-   "rm": false,
-   "visible": "Nœud Caisse allumé (isolation : les autres s'assombrissent), maquette Caisse (68 tickets, statut Ouvert).",
-   "defauts": []
-  },
-  {
    "fichier": "docs/qa/shots/accueil/05-repos-390.png",
    "route": "/",
    "etat": "05-repos",
@@ -996,15 +987,6 @@
    "defauts": [
     "Cadran entre deux chiffres (capture avant la fin du tween de 900 ms) — corrigé par le settle après geste"
    ]
-  },
-  {
-   "fichier": "docs/qa/shots/accueil/05-module-2-390.png",
-   "route": "/",
-   "etat": "05-module-2",
-   "largeur": 390,
-   "rm": false,
-   "visible": "Mobile : nœud Planning allumé dans le réseau portrait.",
-   "defauts": []
   },
   {
    "fichier": "docs/qa/shots/accueil/01-arrivee-03-1440.png",
@@ -1270,18 +1252,6 @@
    "visible": "Offre « Outil de gestion » : tableau de bord (menu, chiffres, planning, graphique, liste).",
    "defauts": [
     "Menu latéral qui retournait à la ligne — nowrap"
-   ],
-   "corrige": true
-  },
-  {
-   "fichier": "docs/qa/shots/accueil/05-module-7-1440.png",
-   "route": "/",
-   "etat": "05-module-7",
-   "largeur": 1440,
-   "rm": false,
-   "visible": "Les modules : fenêtre d'application au centre, douze cartes autour, un module intégré (onglet + écran).",
-   "defauts": [
-    "En-tête trop haut : titre et cartes resserrés"
    ],
    "corrige": true
   },
@@ -2087,6 +2057,82 @@
    "largeur": 390,
    "rm": false,
    "visible": "Second projet par balayage horizontal."
+  },
+  {
+   "fichier": "docs/qa/shots/accueil/05-voix-1440.png",
+   "route": "/",
+   "etat": "05 Modules — commande vocale",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Huit modules (Planning, Clients, Rendez-vous + O31–O35) ; l'écran montre l'onde sonore, la phrase dictée puis le devis créé ; boutons « Tester la démo » et « Parler de votre outil »."
+  },
+  {
+   "fichier": "docs/qa/shots/accueil/05-voix-390.png",
+   "route": "/",
+   "etat": "05 Modules — commande vocale",
+   "largeur": 390,
+   "rm": false,
+   "visible": "Même écran sur mobile : titre, boutons, fenêtre d'application puis cartes."
+  },
+  {
+   "fichier": "docs/qa/shots/accueil/05-ia-1440.png",
+   "route": "/",
+   "etat": "05 Modules — assistant IA",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Cartes de conseil : « Vous êtes 30 % en avance sur votre objectif du mois » avec jauge, puis rappel du devis qui expire."
+  },
+  {
+   "fichier": "docs/qa/shots/accueil/05-facture-1440.png",
+   "route": "/",
+   "etat": "05 Modules — facture électronique",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Trois étapes Prête → Envoyée → Transmise, statut « Transmise », note sur la réforme « à partir de 2026-2027 »."
+  },
+  {
+   "fichier": "docs/qa/shots/solutions/hub-1440-0.png",
+   "route": "/solutions",
+   "etat": "haut de page",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Hero : « Un logiciel de gestion, fait pour votre métier », Duo Artibox (vraies captures), « Tester la démo »."
+  },
+  {
+   "fichier": "docs/qa/shots/solutions/hub-390-0.png",
+   "route": "/solutions",
+   "etat": "haut de page",
+   "largeur": 390,
+   "rm": false,
+   "visible": "Hero mobile, appareils entiers sous les boutons."
+  },
+  {
+   "fichier": "docs/qa/shots/solutions/hub-pleine-1440.png",
+   "route": "/solutions",
+   "etat": "page entière",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Ce qu'il fait aujourd'hui, catalogue O01–O35 groupé (automatisation et IA en tête), métiers, prix « à partir de » du moteur, appel à l'action.",
+   "defauts": [
+    "Prix du cadran à 0 en capture pleine page (animation à l'entrée) : valeur présente en lecture normale"
+   ],
+   "corrige": true
+  },
+  {
+   "fichier": "docs/qa/shots/solutions/fiche-devis-pleine-1440.png",
+   "route": "/solutions/gestion-devis-factures",
+   "etat": "page entière",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Fiche liée au vrai logiciel : ordinateur Artibox, statut « existe déjà dans Artibox », modules O02/O03/O04/O31, FAQ sans chiffre inventé."
+  },
+  {
+   "fichier": "docs/qa/shots/solutions/fiche-menu-pleine-390.png",
+   "route": "/solutions/menu-qr-code",
+   "etat": "page entière",
+   "largeur": 390,
+   "rm": false,
+   "visible": "Fiche d'un module absent de la démo : statut franc « se construit sur mesure », catalogue O19."
   }
  ]
 }

@@ -108,4 +108,4 @@ La base reste la même ; seul le contenu du formulaire de contact et la structur
 
 ---
 
-*Pour aller plus loin : [Combien coûte un site de photographe en 2026 ?](/blog/prix-site-photographe-2026) · [Réseaux sociaux pour TPE : le guide](/blog/reseaux-sociaux-tpe-guide) · [Notre solution galeries clients](/solutions/galerie-client-photographe) · [Créer un site de photographe](/creation-site-internet/photographe)*
+*Pour aller plus loin : [Combien coûte un site de photographe en 2026 ?](/blog/prix-site-photographe-2026) · [Réseaux sociaux pour TPE : le guide](/blog/reseaux-sociaux-tpe-guide) · [Notre solution galeries clients](/solutions) · [Créer un site de photographe](/creation-site-internet/photographe)*

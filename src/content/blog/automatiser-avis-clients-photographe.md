@@ -76,4 +76,4 @@ Oui : le principe (demander au moment de la consultation de la galerie) s'appliq
 
 ---
 
-*Pour aller plus loin : [Fiche Google Business photographe : le guide complet](/blog/fiche-google-business-photographe) · [Livrer une galerie de mariage de A à Z](/blog/livrer-galerie-mariage-processus) · [Notre solution galeries clients](/solutions/galerie-client-photographe) · [Créer un site de photographe](/creation-site-internet/photographe)*
+*Pour aller plus loin : [Fiche Google Business photographe : le guide complet](/blog/fiche-google-business-photographe) · [Livrer une galerie de mariage de A à Z](/blog/livrer-galerie-mariage-processus) · [Notre solution galeries clients](/solutions) · [Créer un site de photographe](/creation-site-internet/photographe)*

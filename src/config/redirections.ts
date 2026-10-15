@@ -1,6 +1,6 @@
 /**
  * REDIRECTIONS 301 — générées par scripts/redirections.mjs (ne pas éditer à la main).
- * 71 reprises de l'ancien site + 19 pour les pages retirées en V5.
+ * 71 reprises de l'ancien site + 21 pour les pages retirées en V5.
  */
 import type { Redirect } from 'next/dist/lib/load-custom-routes'
 
@@ -454,6 +454,16 @@ export const REDIRECTIONS: Redirect[] = [
   {
     "source": "/realisations/chateau-fleury",
     "destination": "/realisations",
+    "permanent": true
+  },
+  {
+    "source": "/solutions/commande-en-ligne-livraison",
+    "destination": "/solutions/click-and-collect",
+    "permanent": true
+  },
+  {
+    "source": "/solutions/galerie-client-photographe",
+    "destination": "/solutions",
     "permanent": true
   },
   {

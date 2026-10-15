@@ -86,4 +86,4 @@ Au paiement complet : code, design, contenus, domaine, accès. C'est contractuel
 
 ---
 
-*Pour aller plus loin : [Galerie client : abonnement ou outil possédé ?](/blog/galerie-client-abonnement-ou-outil-propre) · [Notre solution galeries](/solutions/galerie-client-photographe) · [Site de photographe : le guide](/blog/site-web-photographe)*
+*Pour aller plus loin : [Galerie client : abonnement ou outil possédé ?](/blog/galerie-client-abonnement-ou-outil-propre) · [Notre solution galeries](/solutions) · [Site de photographe : le guide](/blog/site-web-photographe)*

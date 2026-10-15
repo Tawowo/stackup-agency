@@ -49,3 +49,10 @@ export function exemplesAbonnement(): ExempleAbonnement[] {
 export function resultatOffre(id: IdOffreDevis): ResultatDevis {
   return calculer(CONFIGS_OFFRES[id])
 }
+
+/** « À partir de » d'un outil composé du socle et des modules donnés (codes de l'Excel). */
+export function prixOutilAvec(codes: string[]): number {
+  const options: Record<string, number> = {}
+  for (const c of codes) options[c] = 1
+  return calculer(configDe({ outil: { actif: true, utilisateurs: 1 }, options })).total
+}

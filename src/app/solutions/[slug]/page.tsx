@@ -3,7 +3,8 @@ import { notFound } from 'next/navigation'
 import FicheSolution from '@/gabarits/FicheSolution'
 import { SOLUTIONS } from '@/data/solutions'
 import { METIERS } from '@/data/metiers'
-import { MODULES } from '@/experiences/machines/modules'
+import { LIGNES } from '@/config/tarifs.generated'
+import { prixOutilAvec } from '@/domain/devis/offres'
 import { conforme, conformeListe } from '@/lib/conformite'
 import { meta, filAriane, faqPage, JsonLd, ORIGINE } from '@/lib/seo'
 
@@ -15,7 +16,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params
   const sol = SOLUTIONS.find((x) => x.slug === slug)
   if (!sol) return {}
-  return meta({ titre: `${sol.nom} sur mesure — outil de gestion | Stackup Agency`, description: conforme(sol.intro).slice(0, 158), chemin: `/solutions/${slug}` })
+  return meta({ titre: `${sol.nom} sur mesure — module d’outil de gestion | Stackup Agency`, description: conforme(sol.intro).slice(0, 158), chemin: `/solutions/${slug}` })
 }
 
 export default async function Page({ params }: { params: Promise<{ slug: string }> }) {
@@ -38,7 +39,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
             { nom: 'Outils de gestion', chemin: '/solutions' },
             { nom: sol.nom, chemin: `/solutions/${slug}` },
           ]),
-          { '@context': 'https://schema.org', '@type': 'Service', name: sol.nom, description: conforme(sol.intro), provider: { '@id': `${ORIGINE}/#agence` }, offers: { '@type': 'Offer', priceCurrency: 'EUR', priceSpecification: { '@type': 'PriceSpecification', minPrice: 1447, priceCurrency: 'EUR' } } },
+          { '@context': 'https://schema.org', '@type': 'Service', name: sol.nom, description: conforme(sol.intro), provider: { '@id': `${ORIGINE}/#agence` }, offers: { '@type': 'Offer', priceCurrency: 'EUR', priceSpecification: { '@type': 'PriceSpecification', minPrice: prixOutilAvec(sol.codes.slice(0, 1)), priceCurrency: 'EUR' } } },
           faqPage(faq),
         ]}
       />
@@ -47,13 +48,16 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
           slug,
           nom: sol.nom,
           intro: conforme(sol.intro),
-          problemes: conformeListe(sol.problemes),
+          situations: conformeListe(sol.situations),
           fonctionnalites: conformeListe(sol.fonctionnalites),
-          avantages: conformeListe(sol.avantages),
-          contexte: conforme(sol.exempleContexte),
+          dansLaDemo: sol.dansLaDemo,
+          modules: sol.codes.map((c) => {
+            const l = LIGNES.find((x) => x.code === c)!
+            return { code: c, libelle: l.libelle, description: l.description }
+          }),
+          prix: prixOutilAvec(sol.codes.slice(0, 1)),
           faq,
           metiers,
-          module: MODULES.findIndex((m) => m.slug === slug),
           voisines,
         }}
       />
