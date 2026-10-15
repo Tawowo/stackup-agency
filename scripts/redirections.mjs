@@ -18,6 +18,11 @@ const nouvelles = [
   { source: '/services/marketing-digital', destination: '/services', permanent: true },
   { source: '/services/maintenance-support', destination: '/tarifs', permanent: true },
   { source: '/services/redaction-blog-seo', destination: '/services', permanent: true },
+  ...['demo-videaste', 'chateau-lumieres', 'maison-elise', 'au-pain-dore', 'prestige-immo', 'lolivier-dashboard', 'chateau-fleury'].map((slug) => ({
+    source: `/realisations/${slug}`,
+    destination: '/realisations',
+    permanent: true,
+  })),
   { source: '/services/site-association', destination: '/services', permanent: true },
 ]
 const toutes = [...vieilles, ...nouvelles]

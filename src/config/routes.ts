@@ -50,7 +50,7 @@ export function routesDynamiques(): Route[] {
   const categories = new Set(articles.map((a) => a.categorie))
   RAYONS.forEach((r) => categories.add(r.id))
   return [
-    ...PROJETS.map((p) => ({ chemin: `/realisations/${p.slug}`, nom: `Démo — ${p.nom}`, groupe: 'principal' as const, priorite: 0.7 })),
+    ...PROJETS.map((p) => ({ chemin: `/realisations/${p.slug}`, nom: `Réalisation — ${p.nom}`, groupe: 'principal' as const, priorite: 0.7 })),
     ...Object.entries(SERVICES).map(([slug, s]) => ({ chemin: `/services/${slug}`, nom: s.title, groupe: 'offre' as const, priorite: 0.8 })),
     ...SOLUTIONS.map((s) => ({ chemin: `/solutions/${s.slug}`, nom: s.nom, groupe: 'offre' as const, priorite: 0.7 })),
     ...Object.entries(SERVICES_LOCAUX).map(([slug, s]) => ({ chemin: `/services-locaux/${slug}`, nom: s.title, groupe: 'offre' as const, priorite: 0.6 })),

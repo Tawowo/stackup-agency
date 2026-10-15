@@ -125,3 +125,5 @@ Court par obligation (≤ 150 lignes). Les sessions anciennes sont condensées ;
 
 ## Mission 4 « réalisations réelles, estimateur pas à pas, documents » — décisions
 - Excel v2 : modules O31–O35 (automatisation et IA) et plus de déduction ; moteur sans `deduction`/`reste` (acompte sur le total), démo 15 € et visio 30 € facturées à part, aucune mention de déduction ni de non-déduction nulle part.
+- Réalisations : captures du propriétaire récupérées dans la transcription de la session (images jointes en cours de message), rognées des barres navigateur/iPhone par `scripts/realisations-captures.mjs` (ratio commun par famille, ancrage en haut, AVIF) ; aucune capture inventée. Écran 3D et écran HTML au même ratio.
+- Tennis Club : nombre de pages, `robots.txt` et sitemap non vérifiables (le conteneur n'accède pas au site) → texte « de nombreuses pages », résultat « non vérifié » dans le rapport.

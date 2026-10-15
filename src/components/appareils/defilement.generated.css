@@ -1,0 +1,36 @@
+/* GÉNÉRÉ : une capture reste affichée, puis la bande glisse jusqu'à la suivante (du haut vers le bas). Dernière case = première. */
+@keyframes ap-def-2 {
+  0.000%, 39.000% { transform: translateY(-0.0000%); animation-timing-function: var(--su-glisse); }
+  50.000%, 89.000% { transform: translateY(-33.3333%); animation-timing-function: var(--su-glisse); }
+  100% { transform: translateY(-66.6667%); }
+}
+@keyframes ap-def-3 {
+  0.000%, 26.000% { transform: translateY(-0.0000%); animation-timing-function: var(--su-glisse); }
+  33.333%, 59.333% { transform: translateY(-25.0000%); animation-timing-function: var(--su-glisse); }
+  66.667%, 92.667% { transform: translateY(-50.0000%); animation-timing-function: var(--su-glisse); }
+  100% { transform: translateY(-75.0000%); }
+}
+@keyframes ap-def-4 {
+  0.000%, 19.500% { transform: translateY(-0.0000%); animation-timing-function: var(--su-glisse); }
+  25.000%, 44.500% { transform: translateY(-20.0000%); animation-timing-function: var(--su-glisse); }
+  50.000%, 69.500% { transform: translateY(-40.0000%); animation-timing-function: var(--su-glisse); }
+  75.000%, 94.500% { transform: translateY(-60.0000%); animation-timing-function: var(--su-glisse); }
+  100% { transform: translateY(-80.0000%); }
+}
+@keyframes ap-def-5 {
+  0.000%, 15.600% { transform: translateY(-0.0000%); animation-timing-function: var(--su-glisse); }
+  20.000%, 35.600% { transform: translateY(-16.6667%); animation-timing-function: var(--su-glisse); }
+  40.000%, 55.600% { transform: translateY(-33.3333%); animation-timing-function: var(--su-glisse); }
+  60.000%, 75.600% { transform: translateY(-50.0000%); animation-timing-function: var(--su-glisse); }
+  80.000%, 95.600% { transform: translateY(-66.6667%); animation-timing-function: var(--su-glisse); }
+  100% { transform: translateY(-83.3333%); }
+}
+@keyframes ap-def-6 {
+  0.000%, 13.000% { transform: translateY(-0.0000%); animation-timing-function: var(--su-glisse); }
+  16.667%, 29.667% { transform: translateY(-14.2857%); animation-timing-function: var(--su-glisse); }
+  33.333%, 46.333% { transform: translateY(-28.5714%); animation-timing-function: var(--su-glisse); }
+  50.000%, 63.000% { transform: translateY(-42.8571%); animation-timing-function: var(--su-glisse); }
+  66.667%, 79.667% { transform: translateY(-57.1429%); animation-timing-function: var(--su-glisse); }
+  83.333%, 96.333% { transform: translateY(-71.4286%); animation-timing-function: var(--su-glisse); }
+  100% { transform: translateY(-85.7143%); }
+}

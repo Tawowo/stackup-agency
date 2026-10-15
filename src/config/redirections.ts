@@ -1,6 +1,6 @@
 /**
  * REDIRECTIONS 301 — générées par scripts/redirections.mjs (ne pas éditer à la main).
- * 71 reprises de l'ancien site + 12 pour les pages retirées en V5.
+ * 71 reprises de l'ancien site + 19 pour les pages retirées en V5.
  */
 import type { Redirect } from 'next/dist/lib/load-custom-routes'
 
@@ -419,6 +419,41 @@ export const REDIRECTIONS: Redirect[] = [
   {
     "source": "/services/redaction-blog-seo",
     "destination": "/services",
+    "permanent": true
+  },
+  {
+    "source": "/realisations/demo-videaste",
+    "destination": "/realisations",
+    "permanent": true
+  },
+  {
+    "source": "/realisations/chateau-lumieres",
+    "destination": "/realisations",
+    "permanent": true
+  },
+  {
+    "source": "/realisations/maison-elise",
+    "destination": "/realisations",
+    "permanent": true
+  },
+  {
+    "source": "/realisations/au-pain-dore",
+    "destination": "/realisations",
+    "permanent": true
+  },
+  {
+    "source": "/realisations/prestige-immo",
+    "destination": "/realisations",
+    "permanent": true
+  },
+  {
+    "source": "/realisations/lolivier-dashboard",
+    "destination": "/realisations",
+    "permanent": true
+  },
+  {
+    "source": "/realisations/chateau-fleury",
+    "destination": "/realisations",
     "permanent": true
   },
   {

@@ -4,8 +4,8 @@ import { PROJETS } from '@/experiences/galerie/projets'
 import { meta, filAriane, JsonLd, ORIGINE } from '@/lib/seo'
 
 export const metadata: Metadata = meta({
-  titre: 'Réalisations — la galerie des démos | Stackup Agency',
-  description: 'Sept démonstrations complètes de sites et d’outils sur mesure, une par métier : boulangerie, hôtel, boutique, immobilier, restaurant, vidéaste, domaine viticole.',
+  titre: 'Réalisations — un site en ligne et notre logiciel de gestion | Stackup Agency',
+  description: 'Le site du Tennis Club Savigné-Gizeux, en ligne, et Artibox, le logiciel de gestion pour artisans, en développement : deux réalisations réelles, avec leurs vraies captures d’écran.',
   chemin: '/realisations',
 })
 

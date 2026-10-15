@@ -1,11 +1,10 @@
 'use client'
 /**
- * /realisations — LA GALERIE. Un hall d'exposition traversé au scroll : la
- * section est épinglée, sa progression (scrub pur) fait avancer le travelling
- * de la scène (`travel`). Le projet en face est présenté en HTML à gauche
- * (nom, type, « Démo », actions). Clic sur un écran 3D ou sur « Voir la fiche » :
- * l'écran grandit jusqu'à la place de la capture dans la fiche (élément
- * partagé), puis la fiche s'ouvre.
+ * /realisations — LA GALERIE. Un hall d'exposition traversé au scroll : la section est épinglée,
+ * sa progression (scrub pur) fait avancer le travelling de la scène (`travel`). Chaque réalisation
+ * est montrée dans un ordinateur et un téléphone dont les écrans affichent les VRAIES captures
+ * (chacune remplit exactement l'écran). Le projet en face est présenté en HTML à gauche (nom, type,
+ * statut, actions). Un clic sur un écran 3D ouvre la fiche.
  */
 import { useEffect, useRef, useState } from 'react'
 import { useRouter } from 'next/navigation'
@@ -13,16 +12,9 @@ import StackFrame from '@/webgl/StackFrame'
 import { useScene } from '@/webgl/store'
 import { gsap, ScrollTrigger, initGsap } from '@/lib/gsap'
 import Action from '@/components/ui/Action'
+import { Duo } from '@/components/appareils/Appareils'
 import { PROJETS } from './projets'
 import './galerie.css'
-
-/** Rectangle cible de la capture dans la fiche (hero) — partagé avec la fiche. */
-export function rectFiche() {
-  const W = window.innerWidth
-  const l = Math.min(1200, W - 48)
-  // Place approximative : la fiche recale l'image sur sa capture réelle à l'arrivée.
-  return { x: (W - l) / 2, y: W < 768 ? 300 : 380, w: l, h: l * (558 / 1200) }
-}
 
 export default function Hall() {
   const section = useRef<HTMLElement>(null)
@@ -70,6 +62,16 @@ export default function Hall() {
           useScene.getState().setAccent(PROJETS[k]!.accent)
         },
       })
+      // Sous la liste (et jusqu'au pied de page), le hall s'efface : plus aucun écran derrière le texte.
+      const liste = document.querySelector('.su-gal__liste')
+      if (liste) {
+        ScrollTrigger.create({
+          trigger: liste,
+          start: 'top 15%',
+          onEnter: () => useScene.getState().setMonde('fabrique'),
+          onLeaveBack: () => useScene.getState().setMonde('galerie'),
+        })
+      }
     }, el)
     return () => {
       ctx.revert()
@@ -81,57 +83,17 @@ export default function Hall() {
     }
   }, [n])
 
-  // Élément partagé : l'écran (3D ou capture HTML) grandit jusqu'à sa place dans la fiche.
+  // Un clic sur un écran 3D ouvre la fiche du projet.
   useEffect(() => {
-    const ouvrir = (slug: string, rect: { x: number; y: number; w: number; h: number }) => {
-      const p = PROJETS.find((q) => q.slug === slug)
-      if (!p) return
-      router.prefetch(`/realisations/${slug}`)
-      const img = document.createElement('img')
-      img.src = p.capture
-      img.alt = ''
-      img.className = 'su-gal__partage'
-      Object.assign(img.style, { left: `${rect.x}px`, top: `${rect.y}px`, width: `${rect.w}px`, height: `${rect.h}px` })
-      document.body.appendChild(img)
-      const cible = rectFiche()
-      const reduit = useScene.getState().reduced
-      gsap.to(img, {
-        left: cible.x,
-        top: cible.y,
-        width: cible.w,
-        height: cible.h,
-        duration: reduit ? 0 : 0.75,
-        ease: 'power3.inOut',
-        onComplete: () => {
-          sessionStorage.setItem('su-partage', slug)
-          router.push(`/realisations/${slug}`)
-          // L'image reste jusqu'à ce que la fiche affiche la sienne (elle la retire).
-          setTimeout(() => img.remove(), 2500)
-        },
-      })
-    }
     const ecoute = (e: Event) => {
-      const d = (e as CustomEvent<{ slug: string; rect: { x: number; y: number; w: number; h: number } }>).detail
-      ouvrir(d.slug, d.rect)
+      const d = (e as CustomEvent<{ slug: string }>).detail
+      router.push(`/realisations/${d.slug}`)
     }
     window.addEventListener('su-galerie', ecoute)
-    ;(window as unknown as { __suOuvrir?: typeof ouvrir }).__suOuvrir = ouvrir
     return () => window.removeEventListener('su-galerie', ecoute)
   }, [router])
 
   const p = PROJETS[courant]!
-  const voirFiche = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    if (e.metaKey || e.ctrlKey) return
-    e.preventDefault()
-    // Depuis le bouton : l'élément partagé part du centre de l'écran courant.
-    const W = window.innerWidth
-    const H = window.innerHeight
-    const w = Math.min(760, W * 0.62)
-    const ouvrir = (window as unknown as { __suOuvrir?: (s: string, r: { x: number; y: number; w: number; h: number }) => void }).__suOuvrir
-    if (ouvrir) ouvrir(p.slug, { x: W < 768 ? (W - w) / 2 : W * 0.42, y: H * 0.28, w, h: w * (558 / 1200) })
-    else router.push(`/realisations/${p.slug}`)
-  }
-
   return (
     <>
       <section className="su-gal__intro" data-moment="galerie-intro" data-nuit="1" aria-labelledby="su-gal-titre">
@@ -147,7 +109,7 @@ export default function Hall() {
               la galerie.
             </h1>
             <p className="su-gal__ligne">
-              Sept démonstrations complètes, une par métier. Ce sont des entreprises fictives et des fonctionnalités réelles : chaque démo s’ouvre, se teste, se manipule. Avancez dans le hall, l’écran que vous approchez s’allume.
+              Un site en ligne et le logiciel maison de Stackup : deux réalisations réelles, montrées avec leurs vraies captures d’écran, sur ordinateur et sur téléphone. Avancez dans le hall, l’écran que vous approchez s’allume.
             </p>
           </div>
         </div>
@@ -158,18 +120,16 @@ export default function Hall() {
             <p className="su-mono su-gal__compteur su-tabular">
               {String(courant + 1).padStart(2, '0')} / {String(n).padStart(2, '0')}
             </p>
-            <p className="su-mono su-gal__demo" style={{ color: p.accent }}>
-              Démo · {p.filtre}
+            <p className="su-mono su-gal__demo" data-statut={p.statut === 'En ligne' ? 'ligne' : 'dev'}>
+              {p.statut}
             </p>
             <h2 className="su-display su-gal__nom">{p.nom}</h2>
             <p className="su-gal__type">{p.type}</p>
             <p className="su-gal__desc">{p.description}</p>
             <div className="su-gal__actions">
-              <Action href={`/realisations/${p.slug}`} onClick={voirFiche}>
-                Voir la fiche
-              </Action>
+              <Action href={`/realisations/${p.slug}`}>Voir la réalisation</Action>
               <Action href={p.url} variante="contour">
-                Ouvrir la démo
+                {p.action}
               </Action>
             </div>
             <ol className="su-gal__jalons" aria-hidden="true">
@@ -182,15 +142,15 @@ export default function Hall() {
       </section>
       <section className="su-gal__liste" data-moment="galerie-liste" data-nuit="1" aria-labelledby="su-gal-liste">
         <h2 id="su-gal-liste" className="su-display su-gal__liste-titre">
-          Toutes les démonstrations
+          Les réalisations
         </h2>
         <ul className="su-gal__grille">
           {PROJETS.map((q) => (
             <li key={q.slug} className="su-gal__carte">
               <a href={`/realisations/${q.slug}`} className="su-gal__lien">
-                <img src={q.capture} alt={`Capture de la démo ${q.nom}`} width={1200} height={558} loading="lazy" />
-                <span className="su-mono su-gal__demo" style={{ color: q.accent }}>
-                  Démo · {q.filtre}
+                <Duo projet={q} />
+                <span className="su-mono su-gal__demo" data-statut={q.statut === 'En ligne' ? 'ligne' : 'dev'}>
+                  {q.statut}
                 </span>
                 <span className="su-gal__carte-nom">{q.nom}</span>
                 <span className="su-gal__type">{q.type}</span>
@@ -199,9 +159,9 @@ export default function Hall() {
           ))}
         </ul>
         <div className="su-gal__fin">
-          <p className="su-display su-gal__fin-titre">Votre métier n’est pas dans la liste ?</p>
-          <p className="su-gal__ligne">On vous fabrique une démo avant de vous demander quoi que ce soit.</p>
-          <Action href="/contact?objet=demo">Demander ma démo</Action>
+          <p className="su-display su-gal__fin-titre">Votre projet sera la prochaine.</p>
+          <p className="su-gal__ligne">Un appel de 30 minutes pour comprendre votre activité, puis la démo de votre future page d’accueil.</p>
+          <Action href="/contact?a=appel">Réserver mon appel gratuit</Action>
         </div>
       </section>
     </>

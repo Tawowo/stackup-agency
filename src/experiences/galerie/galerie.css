@@ -133,8 +133,8 @@
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  gap: 28px var(--su-gouttiere);
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 440px), 1fr));
+  gap: 48px var(--su-gouttiere);
 }
 .su-gal__lien {
   display: flex;
@@ -196,4 +196,20 @@
   .su-gal__desc {
     display: none;
   }
+}
+
+.su-gal__demo[data-statut] {
+  color: var(--su-ivoire);
+}
+.su-gal__demo[data-statut]::before {
+  content: '';
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  margin-right: 8px;
+  border-radius: 50%;
+  background: #4ade80;
+}
+.su-gal__demo[data-statut='dev']::before {
+  background: var(--su-ambre);
 }

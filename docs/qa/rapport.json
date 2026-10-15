@@ -797,89 +797,6 @@
    "defauts": []
   },
   {
-   "fichier": "docs/qa/shots/accueil/03-p0-1440.png",
-   "route": "/",
-   "etat": "03-p0",
-   "largeur": 1440,
-   "rm": false,
-   "visible": "Pellicule, projet 1/5 : cadre de plaques claires continu derrière la capture, plaque ambre teintée de l'accent du projet, sol en perspective avec ombre des rangées, poussière. Lumière revenue à la nuit par la frontière 02→03.",
-   "defauts": []
-  },
-  {
-   "fichier": "docs/qa/shots/accueil/03-p0-1440-rm.png",
-   "route": "/",
-   "etat": "03-p0",
-   "largeur": 1440,
-   "rm": true,
-   "visible": "Mouvement réduit : le logo figé, dimensionné sur la boîte large de la pellicule, passe en géant derrière la capture et le texte.",
-   "defauts": [
-    "Logo figé trop grand hors du hero en mouvement réduit — corrigé : échelle × 0,6 hors du moment 00 (et plus derrière les nœuds de 05)"
-   ]
-  },
-  {
-   "fichier": "docs/qa/shots/accueil/03-p02-1440.png",
-   "route": "/",
-   "etat": "03-p02",
-   "largeur": 1440,
-   "rm": false,
-   "visible": "p = 0,2 → projet 2 (snap) : cadre recentré après le glissement, plaque ambre devenue dorée (accent interpolé), capture du château.",
-   "defauts": []
-  },
-  {
-   "fichier": "docs/qa/shots/accueil/03-p04-1440.png",
-   "route": "/",
-   "etat": "03-p04",
-   "largeur": 1440,
-   "rm": false,
-   "visible": "p = 0,4 → projet 3, accent rose, cadre stable.",
-   "defauts": []
-  },
-  {
-   "fichier": "docs/qa/shots/accueil/03-p06-1440.png",
-   "route": "/",
-   "etat": "03-p06",
-   "largeur": 1440,
-   "rm": false,
-   "visible": "p = 0,6 → projet 3 encore (snap au plus proche), identique à p = 0,4 : la position repose, aucun état intermédiaire figé.",
-   "defauts": []
-  },
-  {
-   "fichier": "docs/qa/shots/accueil/03-p08-1440.png",
-   "route": "/",
-   "etat": "03-p08",
-   "largeur": 1440,
-   "rm": false,
-   "visible": "p = 0,8 → projet 4 (boulangerie), accent ambre.",
-   "defauts": []
-  },
-  {
-   "fichier": "docs/qa/shots/accueil/03-p1-1440.png",
-   "route": "/",
-   "etat": "03-p1",
-   "largeur": 1440,
-   "rm": false,
-   "visible": "p = 1 → projet 5 (agence immobilière), accent teal sur la plaque et l'étiquette.",
-   "defauts": []
-  },
-  {
-   "fichier": "docs/qa/shots/accueil/03-p0-390.png",
-   "route": "/",
-   "etat": "03-p0",
-   "largeur": 390,
-   "rm": false,
-   "visible": "Mobile : cadre de plaques (× 0,6) centré sur la capture, texte dessous dégagé.",
-   "defauts": []
-  },
-  {
-   "fichier": "docs/qa/shots/accueil/03-p06-390.png",
-   "route": "/",
-   "etat": "03-p06",
-   "largeur": 390,
-   "rm": false,
-   "visible": "Mobile, projet 3 : cadre centré sur la capture, accent rose.",
-   "defauts": []
-  },
-  {
    "fichier": "docs/qa/shots/accueil/04-seuil-1440.png",
    "route": "/",
    "etat": "04-seuil",
@@ -1151,52 +1068,6 @@
    "defauts": []
   },
   {
-   "fichier": "docs/qa/shots/realisations/intro-1440.png",
-   "route": "/realisations",
-   "etat": "intro",
-   "largeur": 1440,
-   "rm": false,
-   "visible": "Intro de la Galerie : le S à gauche, titre « Entrez dans la galerie. » à droite, le hall (écrans) attend au fond à droite, hors du titre.",
-   "defauts": [
-    "Première passe : écrans du hall derrière le titre — hall décalé au fond à droite pendant l'intro (travel −1 → 0)"
-   ],
-   "corrige": true
-  },
-  {
-   "fichier": "docs/qa/shots/realisations/hall-p05-390.png",
-   "route": "/realisations",
-   "etat": "hall-p05",
-   "largeur": 390,
-   "rm": false,
-   "visible": "Mobile, mi-parcours : écran « Maison Élise » allumé, plein cadre au-dessus du cartel 04/07, boutons Voir la fiche / Ouvrir la démo.",
-   "defauts": [
-    "Première passe : écran invisible — un pseudo-élément « inset 0 -100vw » élargissait la page à 780 px (canvas 2×) ; remplacé par une largeur 100vw centrée"
-   ],
-   "corrige": true
-  },
-  {
-   "fichier": "docs/qa/shots/realisations/fiche-1440.png",
-   "route": "/realisations/au-pain-dore",
-   "etat": "fiche",
-   "largeur": 1440,
-   "rm": false,
-   "visible": "Fiche : ariane, « Démo · Site vitrine », titre, capture dans un cadre de plaques (pellicule), puis le dossier.",
-   "defauts": [
-    "Première passe : titre et capture se chevauchaient (capture en absolu à 190 px) — capture remise dans le flux, l'élément partagé recalé par FLIP"
-   ],
-   "corrige": true
-  },
-  {
-   "fichier": "docs/qa/shots/realisations/liste-1440.png",
-   "route": "/realisations",
-   "etat": "liste",
-   "largeur": 1440,
-   "rm": false,
-   "visible": "Grille des 7 démos, étiquette « Démo » sur chacune, fond d'encre opaque (le hall ne traverse plus les vignettes).",
-   "defauts": [],
-   "corrige": true
-  },
-  {
    "fichier": "docs/qa/shots/a-propos/p07-1440.png",
    "route": "/a-propos",
    "etat": "p07",
@@ -1424,28 +1295,6 @@
    "defauts": [
     "Fantôme sous la scène (position: sticky) — scène en position fixe + découpe"
    ],
-   "corrige": true
-  },
-  {
-   "fichier": "docs/qa/shots/realisations/hall-p05-1440.png",
-   "route": "/realisations",
-   "etat": "hall-p05",
-   "largeur": 1440,
-   "rm": false,
-   "visible": "Galerie : portable en aluminium (clavier gravé, pavé, charnière) et téléphone, capture qui défile.",
-   "defauts": [
-    "Première passe : vu par en dessous, couvercle dans le mauvais sens — inclinaison et charnière corrigées"
-   ],
-   "corrige": true
-  },
-  {
-   "fichier": "docs/qa/shots/realisations/fiche-1440.png",
-   "route": "/realisations/au-pain-dore",
-   "etat": "fiche",
-   "largeur": 1440,
-   "rm": false,
-   "visible": "Fiche : la capture dans un portable (lunette noire, châssis alu), plus de cadre de plaques.",
-   "defauts": [],
    "corrige": true
   },
   {
@@ -2096,6 +1945,148 @@
    "largeur": 390,
    "rm": false,
    "visible": "Quatre miniatures dont « Estimateur de prix » (curseurs et fourchette) qui remplace le studio de style ; deux cartes d'outils."
+  },
+  {
+   "fichier": "docs/qa/shots/realisations/fiche-tennis-club-savigne-gizeux-1440.png",
+   "route": "/realisations/tennis-club-savigne-gizeux",
+   "etat": "haut de fiche",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Ordinateur + téléphone aux vraies captures du site ; chaque écran est rempli exactement, ancré en haut, sans bande vide ; statut « En ligne » avec pastille verte.",
+   "defauts": [
+    "Statut en couleur d'accent, contraste insuffisant → ivoire",
+    "Bloc « fiche de fabrication » transparent sur le logo 3D → fond d'encre"
+   ],
+   "corrige": true
+  },
+  {
+   "fichier": "docs/qa/shots/realisations/fiche-tennis-club-savigne-gizeux-1024.png",
+   "route": "/realisations/tennis-club-savigne-gizeux",
+   "etat": "haut de fiche",
+   "largeur": 1024,
+   "rm": false,
+   "visible": "Appareils entièrement visibles, téléphone à droite sans recouvrir de texte."
+  },
+  {
+   "fichier": "docs/qa/shots/realisations/fiche-tennis-club-savigne-gizeux-768.png",
+   "route": "/realisations/tennis-club-savigne-gizeux",
+   "etat": "haut de fiche",
+   "largeur": 768,
+   "rm": false,
+   "visible": "Idem à 768 px : ordinateur pleine largeur, téléphone dans le coin bas-droit."
+  },
+  {
+   "fichier": "docs/qa/shots/realisations/fiche-tennis-club-savigne-gizeux-390.png",
+   "route": "/realisations/tennis-club-savigne-gizeux",
+   "etat": "haut de fiche",
+   "largeur": 390,
+   "rm": false,
+   "visible": "Ordinateur et téléphone réduits proportionnellement, rien de coupé."
+  },
+  {
+   "fichier": "docs/qa/shots/realisations/fiche-tennis-pleine-1440.png",
+   "route": "/realisations/tennis-club-savigne-gizeux",
+   "etat": "page entière",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Description sans nombre de pages (« de nombreuses pages »), dix fonctionnalités, réalisation suivante, pied de page."
+  },
+  {
+   "fichier": "docs/qa/shots/realisations/fiche-logiciel-gestion-artisans-1440.png",
+   "route": "/realisations/logiciel-gestion-artisans",
+   "etat": "haut de fiche",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Artibox : captures du tableau de bord/fournisseurs/statistiques dans l'ordinateur, planning/chantiers/pilotage dans le téléphone ; « Tester la démo » ; statut « En développement »."
+  },
+  {
+   "fichier": "docs/qa/shots/realisations/fiche-logiciel-gestion-artisans-1024.png",
+   "route": "/realisations/logiciel-gestion-artisans",
+   "etat": "haut de fiche",
+   "largeur": 1024,
+   "rm": false,
+   "visible": "Appareils entiers, boutons sous les appareils."
+  },
+  {
+   "fichier": "docs/qa/shots/realisations/fiche-logiciel-gestion-artisans-768.png",
+   "route": "/realisations/logiciel-gestion-artisans",
+   "etat": "haut de fiche",
+   "largeur": 768,
+   "rm": false,
+   "visible": "Appareils entiers ; la fiche de fabrication passe sous le texte."
+  },
+  {
+   "fichier": "docs/qa/shots/realisations/fiche-logiciel-gestion-artisans-390.png",
+   "route": "/realisations/logiciel-gestion-artisans",
+   "etat": "haut de fiche",
+   "largeur": 390,
+   "rm": false,
+   "visible": "Appareils entiers ; titre et boutons lisibles."
+  },
+  {
+   "fichier": "docs/qa/shots/realisations/fiche-artibox-pleine-768.png",
+   "route": "/realisations/logiciel-gestion-artisans",
+   "etat": "page entière",
+   "largeur": 768,
+   "rm": false,
+   "visible": "Le bloc fiche de fabrication est lisible (valeurs sur une ligne), note « données fictives »."
+  },
+  {
+   "fichier": "docs/qa/shots/realisations/hall-1440-1500.png",
+   "route": "/realisations",
+   "etat": "hall en scroll (Artibox)",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Ordinateur 3D en perspective, écran rempli par la capture réelle ; cartel à gauche (02/02, statut, actions)."
+  },
+  {
+   "fichier": "docs/qa/shots/realisations/liste-1440-2300.png",
+   "route": "/realisations",
+   "etat": "liste des réalisations",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Deux cartes : ordinateur + téléphone aux vraies captures, statut, nom, type.",
+   "defauts": [
+    "Liste étroite alignée à gauche → deux colonnes",
+    "Hall 3D visible sous la liste et sur le pied de page → effacé (setMonde)"
+   ],
+   "corrige": true
+  },
+  {
+   "fichier": "docs/qa/shots/realisations/liste-390-60p.png",
+   "route": "/realisations",
+   "etat": "liste des réalisations",
+   "largeur": 390,
+   "rm": false,
+   "visible": "Cartes empilées, appareils entiers."
+  },
+  {
+   "fichier": "docs/qa/shots/accueil/03-p0-1440.png",
+   "route": "/",
+   "etat": "03 Réalisations — Tennis Club",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Section d'accueil réduite à deux projets : Duo ordinateur + téléphone, statut « En ligne », titre ivoire.",
+   "defauts": [
+    "Cadre de plaques recoupant le texte → supprimé"
+   ],
+   "corrige": true
+  },
+  {
+   "fichier": "docs/qa/shots/accueil/03-p0-390.png",
+   "route": "/",
+   "etat": "03 Réalisations — Tennis Club",
+   "largeur": 390,
+   "rm": false,
+   "visible": "Appareils en haut, texte dessous."
+  },
+  {
+   "fichier": "docs/qa/shots/accueil/03-p1-390.png",
+   "route": "/",
+   "etat": "03 Réalisations — Artibox",
+   "largeur": 390,
+   "rm": false,
+   "visible": "Second projet par balayage horizontal."
   }
  ]
 }

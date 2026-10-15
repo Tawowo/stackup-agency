@@ -11,33 +11,43 @@
  */
 import { useEffect, useMemo, useRef } from 'react'
 import { useFrame, useThree, type ThreeEvent } from '@react-three/fiber'
-import { BoxGeometry, Color, Group, LinearFilter, Mesh, PlaneGeometry, PMREMGenerator, PointLight, ShaderMaterial, SRGBColorSpace, Texture, TextureLoader, Vector2, Vector3, Vector4 } from 'three'
+import { BoxGeometry, Color, DataTexture, Group, LinearFilter, LinearMipmapLinearFilter, Mesh, PlaneGeometry, PMREMGenerator, PointLight, ShaderMaterial, SRGBColorSpace, Texture, TextureLoader, Vector2, Vector3 } from 'three'
 import { RoomEnvironment } from 'three/examples/jsm/environments/RoomEnvironment.js'
 import { stackUniforms } from '../engine'
 import { useScene } from '../store'
 import { NOISE } from '../materials/glsl'
 import { materiauxAppareils, planArrondi, plaqueArrondie, textureClavier } from './appareils'
+import { RATIO_BUREAU, RATIO_MOBILE } from '@/config/captures-ratios'
 
+export interface BandeEcran {
+  fichier: string
+  cases: number
+}
 export interface ProjetGalerie {
   slug: string
   nom: string
   accent: string
-  capture: string
+  /** Les vraies captures empilées (la première répétée à la fin) : ordinateur et téléphone. */
+  bureau: { bande: BandeEcran | null }
+  mobile: { bande: BandeEcran | null }
 }
 
 const ESPACEMENT = 11
-// Portable : châssis 6,4 × 4,2 ; couvercle 6,4 × 4,05 ; écran 16:10 de 6,0 × 3,75.
+// Les écrans prennent EXACTEMENT le ratio des captures (aucune bande vide, aucun recadrage).
 const LW = 6.4
 const LD = 4.2
 const BASE_H = 0.16
-const COUV_H = 4.05
 const ECR_W = 6.0
-const ECR_H = 3.75
-// Téléphone.
-const TW = 1.28
-const TH = 2.62
+const ECR_H = ECR_W / RATIO_BUREAU
+const COUV_H = ECR_H + 0.3
+// Téléphone : l'écran a le ratio des captures mobiles.
 const TE_W = 1.16
-const TE_H = 2.5
+const TE_H = TE_W / RATIO_MOBILE
+const TW = TE_W + 0.12
+const TH = TE_H + 0.12
+// Une capture reste affichée, puis la bande glisse jusqu'à la suivante (du haut vers le bas).
+const PERIODE = 3.8
+const MAINTIEN = 0.78
 
 const ecranVertex = /* glsl */ `
 uniform vec2 uTaille;
@@ -58,12 +68,12 @@ uniform float uAllume;
 uniform float uSurvol;
 uniform float uBalai;
 uniform vec3 uAccent;
-uniform vec4 uRecadre;
-uniform vec2 uPan;
+uniform float uCases;
+uniform float uDecalage;
 varying vec2 vUv;
 void main() {
-  // La capture DÉFILE dans l'écran : un cadrage plus serré que l'image, qui glisse d'un coin à l'autre.
-  vec2 uv = uRecadre.xy + uPan * (vec2(1.0) - uRecadre.zw - uRecadre.xy) + vUv * uRecadre.zw;
+  // La bande : uCases captures empilées de haut en bas, toutes au ratio de l'écran. uDecalage = case courante (flottante).
+  vec2 uv = vec2(vUv.x, 1.0 - (uDecalage + (1.0 - vUv.y)) / uCases);
   vec3 c = texture2D(uCapture, uv).rgb;
   vec3 eteint = mix(vec3(0.02, 0.04, 0.07), c * 0.18, 0.55);
   vec3 col = mix(eteint, c, uAllume);
@@ -95,6 +105,16 @@ void main() {
   gl_FragColor = vec4(col, fond * cotes * 0.9);
 }
 `
+
+/** Case courante (flottante) de la bande : arrêt sur chaque capture, puis glissement doux vers la suivante. */
+function decalage(t: number, n: number): number {
+  if (n <= 1) return 0
+  const local = (t / PERIODE) % n
+  const k = Math.floor(local)
+  const f = local - k
+  const m = f < MAINTIEN ? 0 : (f - MAINTIEN) / (1 - MAINTIEN)
+  return k + m * m * (3 - 2 * m)
+}
 
 const lisse = (a: number, b: number, x: number) => {
   const t = Math.min(1, Math.max(0, (x - a) / (b - a)))
@@ -153,18 +173,32 @@ export default function Galerie({ projets }: { projets: ProjetGalerie[] }) {
       ilot: plaqueArrondie(0.36, 0.1, 0.05, 0.012, 0.004),
       sol: new PlaneGeometry(60, n * ESPACEMENT + 40),
     }
-    const ecrans = projets.map((p) => {
-      const tex: Texture = chargeur.load(p.capture)
+    const gris = (() => {
+      const t = new DataTexture(new Uint8Array([232, 232, 232, 255]), 1, 1)
+      t.colorSpace = SRGBColorSpace
+      t.needsUpdate = true
+      return t
+    })()
+    const charger = (bande: BandeEcran | null): Texture => {
+      if (!bande) return gris
+      const tex: Texture = chargeur.load(bande.fichier)
       tex.colorSpace = SRGBColorSpace
-      tex.minFilter = LinearFilter
-      tex.generateMipmaps = false
-      const commun = { uTime: u.uTime, uAllume: { value: 0 }, uSurvol: { value: 0 }, uBalai: { value: 0 }, uAccent: { value: new Color(p.accent) }, uCapture: { value: tex } }
+      tex.minFilter = LinearMipmapLinearFilter
+      tex.magFilter = LinearFilter
+      tex.generateMipmaps = true
+      tex.anisotropy = 4
+      return tex
+    }
+    const ecrans = projets.map((p) => {
+      const texB = charger(p.bureau.bande)
+      const texM = charger(p.mobile.bande)
+      const commun = { uTime: u.uTime, uAllume: { value: 0 }, uSurvol: { value: 0 }, uBalai: { value: 0 }, uAccent: { value: new Color(p.accent) } }
       return {
-        // Portable : 60 % de la largeur de la capture (16:10) ; ordinateur au repos, la capture glisse.
-        ecran: new ShaderMaterial({ vertexShader: ecranVertex, fragmentShader: ecranFragment, uniforms: { ...commun, uTaille: { value: new Vector2(ECR_W, ECR_H) }, uRecadre: { value: new Vector4(0, 0, 0.62, 0.83) }, uPan: { value: new Vector2(0, 0) } } }),
-        // Téléphone : le haut de la page, recadré (aperçu — pas une vraie capture mobile).
-        tel: new ShaderMaterial({ vertexShader: ecranVertex, fragmentShader: ecranFragment, uniforms: { ...commun, uTaille: { value: new Vector2(TE_W, TE_H) }, uRecadre: { value: new Vector4(0.36, 0, 0.26, 1) }, uPan: { value: new Vector2(0, 0) } } }),
-        tex,
+        ecran: new ShaderMaterial({ vertexShader: ecranVertex, fragmentShader: ecranFragment, uniforms: { ...commun, uTaille: { value: new Vector2(ECR_W, ECR_H) }, uCapture: { value: texB }, uCases: { value: p.bureau.bande?.cases ?? 1 }, uDecalage: { value: 0 } } }),
+        tel: new ShaderMaterial({ vertexShader: ecranVertex, fragmentShader: ecranFragment, uniforms: { ...commun, uTaille: { value: new Vector2(TE_W, TE_H) }, uCapture: { value: texM }, uCases: { value: p.mobile.bande?.cases ?? 1 }, uDecalage: { value: 0 } } }),
+        n: { bureau: Math.max(1, (p.bureau.bande?.cases ?? 1) - 1), mobile: Math.max(1, (p.mobile.bande?.cases ?? 1) - 1) },
+        texB,
+        texM,
       }
     })
     const sol = new ShaderMaterial({ vertexShader: `varying vec3 vWorld;void main(){vec4 wp=modelMatrix*vec4(position,1.0);vWorld=wp.xyz;gl_Position=projectionMatrix*viewMatrix*wp;}`, fragmentShader: solFragment, uniforms: { uAccent: u.uAccent, uTravel: { value: 0 }, uLongueur: { value: n * ESPACEMENT } }, transparent: true, depthWrite: false })
@@ -180,7 +214,8 @@ export default function Galerie({ projets }: { projets: ProjetGalerie[] }) {
       objets.ecrans.forEach((m) => {
         m.ecran.dispose()
         m.tel.dispose()
-        m.tex.dispose()
+        m.texB.dispose()
+        m.texM.dispose()
       })
     },
     [objets],
@@ -232,10 +267,9 @@ export default function Galerie({ projets }: { projets: ProjetGalerie[] }) {
       m.ecran.uniforms.uAllume!.value = lisse(0.2, 0.7, proche)
       m.tel.uniforms.uAllume!.value = lisse(0.3, 0.8, proche)
       m.ecran.uniforms.uSurvol!.value += (cible - (m.ecran.uniforms.uSurvol!.value as number)) * Math.min(1, dt * 8)
-      // La capture défile : un va-et-vient lent d'un coin à l'autre de l'image, plus vif à l'approche.
-      const ph = t * 0.11 + k * 1.7
-      ;(m.ecran.uniforms.uPan!.value as Vector2).set(0.5 + 0.5 * Math.sin(ph), 0.5 + 0.5 * Math.sin(ph * 0.8 + 1))
-      ;(m.tel.uniforms.uPan!.value as Vector2).set(0.5, 0.5 + 0.5 * Math.sin(ph * 0.9))
+      // Les vraies captures défilent du haut vers le bas : un temps d'arrêt sur chacune, puis un glissement lent.
+      m.ecran.uniforms.uDecalage!.value = decalage(t + k * 1.3, m.n.bureau)
+      m.tel.uniforms.uDecalage!.value = decalage(t + 1.9 + k * 0.7, m.n.mobile)
       // Le portable pivote vers le visiteur en approchant ; le pointeur l'incline.
       g.rotation.set(0.3 - ny * 0.08 * proche, (k % 2 === 0 ? -0.34 : 0.34) * (1 - lisse(0.1, 0.9, proche)) + nx * 0.2 * proche, 0)
       // Le couvercle s'ouvre (fermé à plat → ouvert à ~100°), le téléphone se dresse.

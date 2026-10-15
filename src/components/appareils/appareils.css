@@ -1,0 +1,149 @@
+@import './defilement.generated.css';
+/*
+ * LES APPAREILS EN HTML — un ordinateur portable et un téléphone dont l'écran a EXACTEMENT le ratio
+ * des captures (--ratio) : aucune bande vide, ancrage en haut, coins de l'écran arrondis.
+ * Les captures défilent du haut vers le bas (une bande verticale animée en CSS). Tout en cqw.
+ */
+.ap-ecran {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  aspect-ratio: var(--ratio);
+  background: #e9e7e1;
+}
+.ap-bande {
+  display: block;
+  width: 100%;
+  will-change: transform;
+  animation: none;
+}
+.ap-bande[data-anime='1'] {
+  animation-duration: calc(var(--n) * 3.8s);
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+.ap-bande[data-n='2'] { animation-name: ap-def-2; }
+.ap-bande[data-n='3'] { animation-name: ap-def-3; }
+.ap-bande[data-n='4'] { animation-name: ap-def-4; }
+.ap-bande[data-n='5'] { animation-name: ap-def-5; }
+.ap-bande[data-n='6'] { animation-name: ap-def-6; }
+.ap-ecran:hover .ap-bande,
+.ap-ecran:focus-within .ap-bande {
+  animation-play-state: paused;
+}
+.ap-bande img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: var(--ratio);
+  object-fit: fill;
+  object-position: top;
+  user-select: none;
+}
+.ap-vide {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 6%;
+  text-align: center;
+  font-size: 3.2cqw;
+  line-height: 1.4;
+  color: #5b6573;
+  background: repeating-linear-gradient(135deg, #eceae4 0 14px, #e4e2db 14px 28px);
+}
+/* ───── Ordinateur portable ───── */
+.ap-portable {
+  container-type: inline-size;
+  position: relative;
+  margin: 0;
+  width: 100%;
+}
+.ap-portable__couvercle {
+  width: 88%;
+  margin: 0 auto;
+  padding: 1.3cqw 1.5cqw 1.1cqw;
+  border-radius: 2.2cqw 2.2cqw 0.4cqw 0.4cqw;
+  background: linear-gradient(180deg, #0a0d12, #151a22);
+  box-shadow: 0 0 0 0.25cqw #aeb4bd, 0 1.4cqw 3.4cqw rgba(0, 0, 0, 0.55);
+}
+.ap-portable__ecran {
+  border-radius: 0.7cqw;
+  overflow: hidden;
+  container-type: inline-size;
+}
+.ap-portable__base {
+  position: relative;
+  width: 100%;
+  height: 2.1cqw;
+  border-radius: 0 0 2.4cqw 2.4cqw / 0 0 1.6cqw 1.6cqw;
+  background: linear-gradient(180deg, #d5d9df, #aab0b9 70%, #8f959e);
+  box-shadow: 0 1.6cqw 2.6cqw rgba(0, 0, 0, 0.5);
+}
+.ap-portable__base::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 16%;
+  height: 0.8cqw;
+  transform: translateX(-50%);
+  border-radius: 0 0 1cqw 1cqw;
+  background: #8b919a;
+}
+/* ───── Téléphone ───── */
+.ap-tel {
+  container-type: inline-size;
+  position: relative;
+  margin: 0;
+  width: 100%;
+}
+.ap-tel__cadre {
+  padding: 3.2cqw;
+  border-radius: 14cqw;
+  background: linear-gradient(135deg, #a7a39e, #7d7a76 55%, #9a9691);
+  box-shadow: 0 0 0 0.6cqw #5f5c58 inset, 0 3cqw 6cqw rgba(0, 0, 0, 0.5);
+}
+.ap-tel__verre {
+  position: relative;
+  padding: 1.6cqw;
+  border-radius: 11.6cqw;
+  background: #05070b;
+}
+.ap-tel__ecran {
+  border-radius: 10cqw;
+  overflow: hidden;
+  container-type: inline-size;
+}
+.ap-tel__ilot {
+  position: absolute;
+  left: 50%;
+  top: 4.2cqw;
+  width: 20cqw;
+  height: 5.2cqw;
+  transform: translateX(-50%);
+  border-radius: 3cqw;
+  background: #05070b;
+  z-index: 2;
+}
+@media (prefers-reduced-motion: reduce) {
+  .ap-bande {
+    animation: none !important;
+    transform: none !important;
+  }
+}
+/* ───── Duo ───── */
+.ap-duo {
+  position: relative;
+  width: 100%;
+  padding-bottom: 4%;
+}
+.ap-duo__portable {
+  width: 86%;
+}
+.ap-duo__tel {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 19%;
+}

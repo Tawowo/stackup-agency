@@ -32,7 +32,7 @@ const GROUPES: { id: Groupe; titre: string }[] = [
 
 /** Familles d'adresses : le premier préfixe qui correspond donne le sous-titre. */
 const FAMILLES: { prefixe: string; titre: string }[] = [
-  { prefixe: '/realisations/', titre: 'Réalisations (démos)' },
+  { prefixe: '/realisations/', titre: 'Réalisations' },
   { prefixe: '/services/', titre: 'Services' },
   { prefixe: '/solutions/', titre: 'Outils de gestion' },
   { prefixe: '/services-locaux/', titre: 'Services locaux' },

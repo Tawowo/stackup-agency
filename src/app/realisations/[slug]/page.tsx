@@ -11,7 +11,7 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const p = projetDe((await params).slug)
   if (!p) return {}
-  return meta({ titre: `${p.nom} — démo ${p.filtre.toLowerCase()} | Stackup Agency`, description: p.description, chemin: `/realisations/${p.slug}`, image: p.capture })
+  return meta({ titre: `${p.nom} — ${p.type.toLowerCase()} | Stackup Agency`, description: p.description, chemin: `/realisations/${p.slug}`, image: p.capture })
 }
 
 export default async function Page({ params }: { params: Promise<{ slug: string }> }) {
@@ -28,7 +28,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
             { nom: 'Réalisations', chemin: '/realisations' },
             { nom: p.nom, chemin: `/realisations/${p.slug}` },
           ]),
-          { '@context': 'https://schema.org', '@type': 'CreativeWork', name: `${p.nom} (démonstration)`, url: `${ORIGINE}/realisations/${p.slug}`, image: `${ORIGINE}${p.capture}`, creator: { '@id': `${ORIGINE}/#agence` }, description: p.description },
+          { '@context': 'https://schema.org', '@type': 'CreativeWork', name: p.nom, url: `${ORIGINE}/realisations/${p.slug}`, image: `${ORIGINE}${p.capture}`, creator: { '@id': `${ORIGINE}/#agence` }, description: p.description },
         ]}
       />
       <Fiche projet={p} suivant={{ slug: suivant.slug, nom: suivant.nom }} />
