@@ -75,4 +75,4 @@ Oui, il réduit la charge administrative liée au suivi des acomptes et des rela
 
 ---
 
-*Pour aller plus loin : [Site de vidéaste : montrer ses films sans tuer le chargement](/blog/site-videaste-films-chargement-rapide) · [Graphiste freelance : le portfolio qui filtre les bons clients](/blog/portfolio-graphiste-freelance-filtrer-clients) · [Drone : afficher ses certifications et vendre ses prestations](/blog/site-telepilote-drone-certifications-prestations) · [Système de gestion sur mesure](/services/systeme-gestion)*
+*Pour aller plus loin : [Site de vidéaste : montrer ses films sans tuer le chargement](/creation-site-internet/videaste) · [Graphiste freelance : le portfolio qui filtre les bons clients](/creation-site-internet/photographe) · [Drone : afficher ses certifications et vendre ses prestations](/blog/site-telepilote-drone-certifications-prestations) · [Système de gestion sur mesure](/services/systeme-gestion)*

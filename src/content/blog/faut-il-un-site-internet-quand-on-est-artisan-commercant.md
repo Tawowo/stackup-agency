@@ -64,7 +64,7 @@ Cela dépend de la fréquence à laquelle il change. Un site qui évolue raremen
 - **Cookies** : un consentement est nécessaire pour les traceurs non essentiels.
 - **CGU** : généralement pas obligatoires pour un site vitrine ; **CGV** obligatoires pour vendre.
 - **Données de connexion** : la conservation des logs de connexion incombe aux hébergeurs et aux fournisseurs d’accès. Si vous offrez un wifi à vos clients, la règle peut aussi vous concerner.
-- **Vente d’alcool** : une licence est nécessaire pour vendre du vin ou des spiritueux, y compris en ligne ; voir [Vendre du vin et de l’alcool en ligne](/blog/vendre-vin-alcool-en-ligne-regles).
+- **Vente d’alcool** : une licence est nécessaire pour vendre du vin ou des spiritueux, y compris en ligne ; voir [Vendre du vin et de l’alcool en ligne](/creation-site-internet/cave-vins-spiritueux).
 
 ### Un contrat de création de site est-il obligatoire ?
 

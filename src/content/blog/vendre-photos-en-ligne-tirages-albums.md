@@ -79,4 +79,4 @@ Oui, c'est un développement additionnel qui s'intègre au site existant sans to
 
 ---
 
-*Pour aller plus loin : [Galerie client : abonnement à vie ou outil possédé ?](/blog/galerie-client-abonnement-ou-outil-propre) · [Combien coûte un site de photographe en 2026 ?](/blog/prix-site-photographe-2026) · [Notre solution galeries clients](/solutions) · [Créer un site de photographe](/creation-site-internet/photographe)*
+*Pour aller plus loin : [Galerie client : abonnement à vie ou outil possédé ?](/blog/galerie-client-abonnement-ou-outil-propre) · [Combien coûte un site de photographe en 2026 ?](/blog/cout-site-internet-2026) · [Notre solution galeries clients](/solutions) · [Créer un site de photographe](/creation-site-internet/photographe)*

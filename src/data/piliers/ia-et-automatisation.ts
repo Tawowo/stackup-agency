@@ -244,6 +244,6 @@ export const PILIER: Pilier = {
     { href: '/contact', nom: `Nous contacter`, note: `Décrivez la tâche qui vous fait perdre du temps.` },
     { href: '/politique-confidentialite', nom: `Politique de confidentialité`, note: `Comment ce site traite vos données.` },
   ],
-  maj: `2026-10-30`,
+  maj: `2026-10-29`,
   type: 'service',
 }

@@ -150,7 +150,7 @@ Emballez avec un carton adapté et un calage qui empêche le contenu de bouger, 
 
 ## Colis de produits locaux : pour un client ou pour une entreprise
 
-Pour un **particulier**, soignez la présentation (emballage, carte, mot du producteur) et prévoyez une adresse de livraison distincte de celle du payeur, avec un champ message. Pour une **entreprise** (cadeaux de fin d'année, achats groupés), proposez un devis : quantités, personnalisation, plusieurs adresses, facturation. Votre catalogue se met en valeur avec [une boutique de produits locaux et de terroir](/blog/e-commerce-produits-locaux-terroir) ou [une boutique d'artisanat](/blog/ecommerce-artisanat-guide). Les options de personnalisation (papier cadeau, boîte à votre marque) se prévoient dans la fiche produit, avec le temps de préparation annoncé.
+Pour un **particulier**, soignez la présentation (emballage, carte, mot du producteur) et prévoyez une adresse de livraison distincte de celle du payeur, avec un champ message. Pour une **entreprise** (cadeaux de fin d'année, achats groupés), proposez un devis : quantités, personnalisation, plusieurs adresses, facturation. Votre catalogue se met en valeur avec [une boutique de produits locaux et de terroir](/blog/e-commerce-produits-locaux-terroir) ou [une boutique d'artisanat](/blog/vendre-creations-en-ligne-artisans). Les options de personnalisation (papier cadeau, boîte à votre marque) se prévoient dans la fiche produit, avec le temps de préparation annoncé.
 
 ## Hygiène et emballage pour expédier des produits alimentaires
 

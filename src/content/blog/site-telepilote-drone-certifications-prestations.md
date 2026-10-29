@@ -69,4 +69,4 @@ Oui, particulièrement pour des prestations en zone urbaine ou proche d'infrastr
 
 ---
 
-*Pour aller plus loin : [Site de vidéaste : montrer ses films sans tuer le chargement](/blog/site-videaste-films-chargement-rapide) · [Showreel : les règles d'un demo reel qui décroche des contrats](/blog/showreel-videaste-regles-demo-reel) · [Nos tarifs](/tarifs)*
+*Pour aller plus loin : [Site de vidéaste : montrer ses films sans tuer le chargement](/creation-site-internet/videaste) · [Showreel : les règles d'un demo reel qui décroche des contrats](/blog/showreel-videaste-regles-demo-reel) · [Nos tarifs](/tarifs)*

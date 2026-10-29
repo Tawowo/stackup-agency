@@ -99,4 +99,4 @@ Pas nécessairement pour tester une activité sur quelques mois. Mais dès que l
 
 ---
 
-*Pour aller plus loin : [Wix vs sur mesure : le comparatif honnête 2026](/blog/wix-ou-sur-mesure-comparatif-2026) · [Squarespace en France : forces, limites, alternatives](/blog/avis-squarespace-france) · [Nos services e-commerce](/services/site-ecommerce)*
+*Pour aller plus loin : [Wix vs sur mesure : le comparatif honnête 2026](/blog/site-vitrine-prix-comparatif) · [Squarespace en France : forces, limites, alternatives](/blog/avis-squarespace-france) · [Nos services e-commerce](/services/site-ecommerce)*

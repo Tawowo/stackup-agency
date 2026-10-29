@@ -29,7 +29,7 @@ export function entreesSitemap(famille: string): EntreeSitemap[] {
   const dernier = articles.map((a) => a.maj ?? a.date).sort().at(-1)
   const rayons = new Set(RAYONS.map((r) => `/blog/categorie/${r.id}`))
   return toutesLesRoutes()
-    .filter((r) => familleSitemap(r.chemin) === famille)
+    .filter((r) => familleSitemap(r.chemin) === famille && !rayons.has(r.chemin)) // les rayons du blog sont des listes d'articles (noindex, suivis)
     .map((r) => {
       let lastModified: string | undefined = dates.get(r.chemin)
       if (!lastModified && (r.chemin === '/blog' || rayons.has(r.chemin))) lastModified = dernier

@@ -234,6 +234,6 @@ export const PILIER: Pilier = {
     { href: `/outils/generateur-mentions-legales`, nom: `Générateur de mentions légales` },
     { href: `/contact`, nom: `Parler de votre boutique` },
   ],
-  maj: `2026-10-30`,
+  maj: `2026-10-29`,
   type: 'service',
 }

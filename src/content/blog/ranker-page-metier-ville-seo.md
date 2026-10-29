@@ -2,7 +2,7 @@
 title: "Sortir sur « métier + ville » : l'anatomie d'une page qui ranke"
 excerpt: "Title, H1, réponse directe, maillage, schema : la structure exacte d'une page qui se positionne sur « [métier] + [ville] » — décortiquée section par section."
 date: "2026-08-17"
-publishAt: "2026-10-30"
+publishAt: "2026-10-29"
 readTime: 12
 tag: "SEO Local"
 category: "seo"
@@ -166,4 +166,4 @@ Comparez les deux textes : si plus de 60-70% du contenu est identique en dehors 
 
 ---
 
-*Pour aller plus loin : [Mots-clés locaux : comment les trouver pour votre métier et votre ville](/blog/trouver-mots-cles-locaux-metier-ville) · [Combien de temps pour être visible sur Google ?](/blog/combien-temps-visible-google) · [Apparaître sur Google Maps en premier](/blog/seo-local-google-maps-2026) · [Rédaction de blog SEO](/services/redaction-blog-seo)*
+*Pour aller plus loin : [Mots-clés locaux : comment les trouver pour votre métier et votre ville](/blog/trouver-mots-cles-locaux-metier-ville) · [Combien de temps pour être visible sur Google ?](/blog/combien-temps-visible-google) · [Apparaître sur Google Maps en premier](/blog/apparaitre-google-maps-pack-local) · [Rédaction de blog SEO](/services/redaction-blog-seo)*

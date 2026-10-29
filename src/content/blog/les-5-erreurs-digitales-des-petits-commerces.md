@@ -47,7 +47,7 @@ Les clients veulent pouvoir interagir avec vous en dehors de vos horaires d'ouve
 
 **Ce que ça vous coûte** : chaque appel sans réponse est potentiellement un client perdu. En 2026, 60 % des réservations de restauration se font en ligne ou via app.
 
-**La solution** : intégrer un outil de prise de rendez-vous en ligne (Calendly, Planity pour les salons de beauté, TheFork pour les restaurants) coûte 0€ à 30€/mois et peut être intégré directement dans votre site. Pour les commerces qui vendent des produits, un système de [click & collect](/blog/click-collect-restaurant-guide) ou de commande en ligne peut transformer votre site vitrine en générateur de revenus.
+**La solution** : intégrer un outil de prise de rendez-vous en ligne (Calendly, Planity pour les salons de beauté, TheFork pour les restaurants) coûte 0€ à 30€/mois et peut être intégré directement dans votre site. Pour les commerces qui vendent des produits, un système de [click & collect](/blog/click-collect-boucherie-charcuterie) ou de commande en ligne peut transformer votre site vitrine en générateur de revenus.
 
 ## Erreur n°5 : Ignorer les données et ne jamais mesurer
 

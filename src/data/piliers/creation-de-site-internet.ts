@@ -289,6 +289,6 @@ export const PILIER: Pilier = {
     { href: `/services/site-ecommerce`, nom: `Site e-commerce`, note: `Si vous vendez en ligne` },
     { href: `/contact`, nom: `Demander un devis` },
   ],
-  maj: `2026-10-30`,
+  maj: `2026-10-29`,
   type: 'service',
 }

@@ -129,4 +129,4 @@ Selon votre zone d'intervention. "Angers" pour les requêtes urbaines (client qu
 **La population universitaire d'Angers représente-t-elle une cible intéressante ?**
 Oui pour certains secteurs (logement, restauration, loisirs, services étudiants). Le pic de demande correspond à la rentrée de septembre — anticipez votre contenu et votre présence en ligne dès juillet-août.
 
-Voir aussi : [créer un site web à Angers](/blog/site-internet-angers), [SEO à Tours](/blog/seo-tours-pme), [SEO à Orléans](/blog/seo-orleans-commerces) et nos [tarifs création de site web](/tarifs).
+Voir aussi : [créer un site web à Angers](/agence-web/angers), [SEO à Tours](/agence-web/tours), [SEO à Orléans](/zones-intervention) et nos [tarifs création de site web](/tarifs).

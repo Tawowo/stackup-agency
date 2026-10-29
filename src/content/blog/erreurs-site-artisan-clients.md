@@ -99,4 +99,4 @@ Non : des sites récents construits sur des templates génériques mal configur�
 
 ---
 
-*Pour aller plus loin : [Combien coûte un site internet d'artisan en 2026 ?](/blog/prix-site-internet-artisan-2026) · [Artisan : Google Business Profile ou site internet d'abord ?](/blog/artisan-google-business-ou-site) · [Sites internet par métier](/creation-site-internet)*
+*Pour aller plus loin : [Combien coûte un site internet d'artisan en 2026 ?](/blog/cout-site-internet-2026) · [Artisan : Google Business Profile ou site internet d'abord ?](/blog/artisan-google-business-ou-site) · [Sites internet par métier](/creation-site-internet)*

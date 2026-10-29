@@ -105,4 +105,4 @@ Wix et Squarespace permettent une mise en ligne en quelques heures à quelques j
 
 ---
 
-*Pour aller plus loin : [Wix vs sur mesure : le comparatif honnête 2026](/blog/wix-ou-sur-mesure-comparatif-2026) · [WordPress ou sur mesure : lequel choisir selon votre projet ?](/blog/wordpress-vs-sur-mesure) · [Squarespace en France : forces, limites, alternatives](/blog/avis-squarespace-france) · [Wix vs WordPress vs sur-mesure — Comparatif complet](/comparatif/wix-wordpress-sur-mesure)*
+*Pour aller plus loin : [Wix vs sur mesure : le comparatif honnête 2026](/blog/site-vitrine-prix-comparatif) · [WordPress ou sur mesure : lequel choisir selon votre projet ?](/blog/wordpress-vs-sur-mesure) · [Squarespace en France : forces, limites, alternatives](/blog/avis-squarespace-france) · [Wix vs WordPress vs sur-mesure — Comparatif complet](/comparatif/wix-wordpress-sur-mesure)*

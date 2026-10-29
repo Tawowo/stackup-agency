@@ -116,4 +116,4 @@ Non. Ces badges sont attribués algorithmiquement selon les ventes, les avis et 
 **Amazon Prime est-il indispensable pour bien vendre ?**
 Très fortement recommandé. Les clients Prime (52% des acheteurs Amazon en France) filtrent souvent par "Prime" — ne pas être éligible exclut de cette audience. FBA donne accès à Prime automatiquement.
 
-Voir aussi : [e-commerce artisanat](/blog/ecommerce-artisanat-guide), [dropshipping guide](/blog/dropshipping-site-web-guide) et nos [tarifs boutique e-commerce](/tarifs).
+Voir aussi : [e-commerce artisanat](/blog/vendre-creations-en-ligne-artisans), [dropshipping guide](/blog/dropshipping-site-web-guide) et nos [tarifs boutique e-commerce](/tarifs).

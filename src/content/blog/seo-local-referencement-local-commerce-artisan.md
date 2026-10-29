@@ -56,7 +56,7 @@ Faites le test : cherchez votre métier avec votre ville depuis un téléphone, 
 
 ### Comment faire son référencement local soi-même ?
 
-Les étapes 1, 2, 4, 5 et 7 se font sans prestataire. L'étape 3 se fait seul sur une plateforme simple si le besoin est limité. Un prestataire devient utile pour la structure du site, les pages locales et le suivi. Pour la répartition entre ce qui est gratuit et payant, voir [le SEO local gratuit](/blog/paa-seo-local-gratuit) et [le coût du SEO local](/blog/cout-seo-local-pme).
+Les étapes 1, 2, 4, 5 et 7 se font sans prestataire. L'étape 3 se fait seul sur une plateforme simple si le besoin est limité. Un prestataire devient utile pour la structure du site, les pages locales et le suivi. Pour la répartition entre ce qui est gratuit et payant, voir [le SEO local gratuit](/blog/paa-seo-local-gratuit) et [le coût du SEO local](/blog/seo-local-commerce).
 
 ## Mon adresse est différente selon les sites : que faire ?
 
@@ -155,12 +155,12 @@ Que vous cherchiez une agence « près de chez vous » ou un expert en ligne, la
 - une **mesure** claire : appels, demandes, positions sur des requêtes définies ;
 - pas de promesse de première place.
 
-Chez Stackup Agency, le travail sur la visibilité d'un site se décrit dans les pages [référencement](/services/referencement) et [référencement local](/services/referencement-local). Pour une création de site pensée dès le départ pour la visibilité locale, voir [création de site internet](/services/creation-de-site-internet) et l'[agence web à Tours](/agence-web/tours). Les prix démarrent « à partir de » {{prix:une-page}} € pour un site d'une page ; l'estimateur est sur la page [tarifs](/tarifs).
+Chez Stackup Agency, le travail sur la visibilité d'un site se décrit dans les pages [référencement](/services/referencement) et [référencement local](/services/referencement-local). Pour une création de site pensée dès le départ pour la visibilité locale, voir [création de site internet](/services/creation-de-site-internet) et l'[agence web à Tours](/agence-web/tours). Les prix démarrent à partir de {{prix:une-page}} € pour un site d'une page ; l'estimateur est sur la page [tarifs](/tarifs).
 
 ## Questions fréquentes
 
 **Faut-il un site internet quand on a une boutique de quartier ?**
-Ce n'est pas obligatoire, mais utile. La fiche Google couvre l'essentiel, le site apporte vos produits, vos événements, une adresse stable et la possibilité de recevoir des demandes. Si vous hésitez, voir [le SEO local sans site web](/blog/seo-local-sans-site-web).
+Ce n'est pas obligatoire, mais utile. La fiche Google couvre l'essentiel, le site apporte vos produits, vos événements, une adresse stable et la possibilité de recevoir des demandes. Si vous hésitez, voir [le SEO local sans site web](/blog/seo-local-commerce).
 
 **Combien de temps avant de voir l'effet du référencement local ?**
 Une fiche corrigée peut changer de visibilité assez vite, mais les pages et les avis prennent du temps. Comptez en semaines à mois, sans engagement de résultat.

@@ -32,7 +32,7 @@ const nouvelles = [
   { source: '/agence-web/chateauroux', destination: '/agence-web/departement/indre', permanent: true },
   ...['loiret', 'eure-et-loir', 'cher', 'deux-sevres', 'yonne', 'nievre', 'allier', 'creuse', 'orne'].map((slug) => ({ source: `/agence-web/departement/${slug}`, destination: '/zones-intervention', permanent: true })),
 ]
-// Les 21 catégories de l'ancien blog se regroupent en 9 rayons : une page par rayon, les autres URL de catégorie y mènent.
+// Les anciennes URL de catégorie mènent au journal : les rayons sont des listes noindex, jamais une cible de redirection.
 const blogTs = fs.readFileSync('src/lib/blog.ts', 'utf8')
 const rayons = [...blogTs.matchAll(/\{ id: '([a-z-]+)', nom: '[^']+', categories: \[([^\]]*)\]/g)].map((m) => ({ id: m[1], cats: [...m[2].matchAll(/'([a-z-]+)'/g)].map((c) => c[1]) }))
 const categories = new Set(rayons.flatMap((r) => r.cats))
@@ -43,11 +43,32 @@ for (const dossier of ['src/content/blog', 'ancien/src/content/blog'])
   }
 const parCategorie = [...categories]
   .filter((c) => !rayons.some((r) => r.id === c))
-  .map((c) => ({ source: `/blog/categorie/${c}`, destination: `/blog/categorie/${(rayons.find((r) => r.cats.includes(c)) ?? rayons[0]).id}`, permanent: true }))
+  .map((c) => ({ source: `/blog/categorie/${c}`, destination: '/blog', permanent: true }))
 nouvelles.push(...parCategorie)
 // Articles fusionnés ou retirés par l'audit éditorial (scripts/seo/audit-articles.mjs --appliquer).
 if (fs.existsSync('src/config/redirections-articles.json')) nouvelles.push(...JSON.parse(fs.readFileSync('src/config/redirections-articles.json', 'utf8')))
-const toutes = [...vieilles, ...nouvelles]
+const brut = [...vieilles, ...nouvelles]
+// Aucune chaîne : chaque destination est suivie jusqu'à une URL qui ne redirige plus (anti-boucle à 10 sauts).
+const parSource = new Map(brut.filter((r) => !r.source.includes(':')).map((r) => [r.source, r.destination]))
+const aplatir = (d) => {
+  let cible = d
+  for (let i = 0; i < 10; i++) {
+    const [chemin, ancre] = cible.split('#')
+    const suite = parSource.get(chemin)
+    if (!suite) break
+    cible = ancre && !suite.includes('#') ? `${suite}#${ancre}` : suite
+  }
+  return cible
+}
+// Une cible programmée (publishAt dans le futur) n'est pas encore en ligne : on renvoie vers le journal en attendant.
+const aujourdhui = new Date().toISOString().slice(0, 10)
+const programme = (d) => {
+  const m = d.match(/^\/blog\/([a-z0-9-]+)$/)
+  const f = m && `src/content/blog/${m[1]}.md`
+  const pub = f && fs.existsSync(f) && fs.readFileSync(f, 'utf8').match(/^publishAt:\s*["']?(\d{4}-\d{2}-\d{2})/m)?.[1]
+  return pub && pub > aujourdhui ? '/blog' : d
+}
+const toutes = brut.map((r) => ({ ...r, destination: programme(aplatir(r.destination)) })).filter((r) => r.source !== r.destination)
 const sortie = `/**
  * REDIRECTIONS 301 — générées par scripts/redirections.mjs (ne pas éditer à la main).
  * ${vieilles.length} reprises de l'ancien site + ${nouvelles.length} pour les pages retirées en V5.
@@ -57,4 +78,4 @@ import type { Redirect } from 'next/dist/lib/load-custom-routes'
 export const REDIRECTIONS: Redirect[] = ${JSON.stringify(toutes, null, 2)}
 `
 fs.writeFileSync('src/config/redirections.ts', sortie)
-console.log(toutes.length, 'redirections dont', parCategorie.length, 'catégories de blog → rayons')
+console.log(toutes.length, 'redirections dont', parCategorie.length, 'catégories de blog → /blog')

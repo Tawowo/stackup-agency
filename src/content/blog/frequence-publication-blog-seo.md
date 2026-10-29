@@ -154,4 +154,4 @@ Non, les mêmes principes s'appliquent. Externaliser permet surtout de tenir la 
 
 ---
 
-*Pour aller plus loin : [Calendrier éditorial : la méthode simple](/blog/calendrier-editorial-methode-simple) · [Externaliser la rédaction de son blog](/blog/externaliser-redaction-blog-seo) · [Écrire un article de blog que Google aime](/blog/ecrire-article-blog-google) · [Rédaction de blog SEO](/services/redaction-blog-seo)*
+*Pour aller plus loin : [Calendrier éditorial : la méthode simple](/blog/calendrier-editorial-methode-simple) · [Externaliser la rédaction de son blog](/blog/externaliser-redaction-blog-seo) · [Écrire un article de blog que Google aime](/blog/redaction-article-seo-guide) · [Rédaction de blog SEO](/services/redaction-blog-seo)*

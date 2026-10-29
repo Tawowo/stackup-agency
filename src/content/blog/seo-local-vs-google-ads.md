@@ -138,4 +138,4 @@ Oui, mais plus lentement. Dans les secteurs à forte concurrence (avocat, médec
 
 ---
 
-*Pour aller plus loin : [SEO local : le guide complet pour les TPE](/blog/seo-local-commerce) · [Google Ads avec petit budget : est-ce que ça vaut le coup ?](/blog/google-ads-petit-budget) · [Apparaître sur Google Maps en premier](/blog/seo-local-google-maps-2026) · [Rédaction de blog SEO](/services/redaction-blog-seo)*
+*Pour aller plus loin : [SEO local : le guide complet pour les TPE](/blog/seo-local-commerce) · [Google Ads avec petit budget : est-ce que ça vaut le coup ?](/blog/google-ads-petit-budget) · [Apparaître sur Google Maps en premier](/blog/apparaitre-google-maps-pack-local) · [Rédaction de blog SEO](/services/redaction-blog-seo)*

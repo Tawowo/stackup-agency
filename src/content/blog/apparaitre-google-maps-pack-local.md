@@ -49,7 +49,7 @@ Les étapes, dans l'ordre :
 5. **Compléter** services, produits, description, attributs, zone de service, photos.
 6. **Garder le nom, l'adresse et le téléphone identiques** partout : site, annuaires, réseaux sociaux. L'incohérence brouille la notoriété.
 
-Pour le détail des champs à remplir un par un, lisez notre [guide d'optimisation de la fiche](/blog/fiche-google-business-optimisation) ; pour une méthode d'ensemble, voyez [apparaître en premier sur Google Maps](/blog/seo-local-google-maps-2026). Ici, on se concentre sur ce qu'ils ne traitent pas : les cas où ça ne marche pas comme prévu.
+Pour le détail des champs à remplir un par un, lisez notre [guide d'optimisation de la fiche](/blog/fiche-google-business-optimisation) ; pour une méthode d'ensemble, voyez [apparaître en premier sur Google Maps](/blog/apparaitre-google-maps-pack-local). Ici, on se concentre sur ce qu'ils ne traitent pas : les cas où ça ne marche pas comme prévu.
 
 ### Artisan qui se déplace : comment apparaître sur Google Maps sans local
 
@@ -118,7 +118,7 @@ La fiche répond à la question « où et quoi ». Le site répond à « pourquo
 - des réalisations ou des cas types, avec des photos ;
 - les mentions légales et un formulaire de contact simple.
 
-Si vous n'avez pas encore de site, l'article [peut-on faire du SEO local sans site web](/blog/seo-local-sans-site-web) explique jusqu'où va une fiche seule. Pour un site qui s'y raccorde, voyez notre [site vitrine](/services/site-vitrine) à partir de {{prix:une-page}} € ou une [estimation en ligne](/tarifs).
+Si vous n'avez pas encore de site, l'article [peut-on faire du SEO local sans site web](/blog/seo-local-commerce) explique jusqu'où va une fiche seule. Pour un site qui s'y raccorde, voyez notre [site vitrine](/services/site-vitrine) à partir de {{prix:une-page}} € ou une [estimation en ligne](/tarifs).
 
 ## En combien de temps voit-on un effet
 

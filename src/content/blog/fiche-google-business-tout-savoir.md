@@ -81,7 +81,7 @@ Si vous recevez des clients chez vous (coiffeuse à domicile, cabinet dans une p
 
 ### Entreprise sans adresse physique du tout
 
-Si vous n'avez ni local, ni vraie zone de déplacement (par exemple une activité 100 % en ligne), la fiche Google Business n'est pas toujours le bon outil : Google la réserve aux entreprises qui rencontrent leurs clients en personne, que ce soit chez eux ou chez vous. Dans ce cas, le travail se concentre sur le site, les annuaires et l'optimisation de votre contenu. La page [peut-on faire du SEO local sans site web](/blog/seo-local-sans-site-web) montre les limites d'une présence sans site.
+Si vous n'avez ni local, ni vraie zone de déplacement (par exemple une activité 100 % en ligne), la fiche Google Business n'est pas toujours le bon outil : Google la réserve aux entreprises qui rencontrent leurs clients en personne, que ce soit chez eux ou chez vous. Dans ce cas, le travail se concentre sur le site, les annuaires et l'optimisation de votre contenu. La page [peut-on faire du SEO local sans site web](/blog/seo-local-commerce) montre les limites d'une présence sans site.
 
 ## Exemple de fiche Google Business bien remplie
 
@@ -97,7 +97,7 @@ Voici un exemple type, fictif, pour un plombier-chauffagiste à zone de service.
 - **Site** : lien vers la page qui présente les mêmes services, avec le même numéro de téléphone.
 - **Avis** : tous ont une réponse, y compris les moins bons, sans polémique.
 
-Ce qui fait la différence n'est pas l'ingéniosité mais la complétude et la cohérence : mêmes informations sur la fiche, le site, les annuaires. La [liste en 20 points](/blog/fiche-google-business-optimisation) sert de grille de contrôle. Pour comparer avec un autre cas, la fiche d'un restaurant a ses propres champs (menu, réservation) : voir le [guide pour restaurants](/blog/fiche-google-business-restaurant-guide).
+Ce qui fait la différence n'est pas l'ingéniosité mais la complétude et la cohérence : mêmes informations sur la fiche, le site, les annuaires. La [liste en 20 points](/blog/fiche-google-business-optimisation) sert de grille de contrôle. Pour comparer avec un autre cas, la fiche d'un restaurant a ses propres champs (menu, réservation) : voir le [guide pour restaurants](/creation-site-internet/restaurant).
 
 ## C'est quoi les « performances » Google Business ?
 
@@ -159,7 +159,7 @@ Si la boutique est purement en ligne sans accueil du public, c'est le cas évoqu
 
 ## Faut-il faire appel à quelqu'un pour sa fiche ?
 
-Pas obligatoirement. La création, la vérification et le remplissage de base se font en une séance de travail pour une entreprise simple. Un accompagnement se justifie si vous avez plusieurs établissements, une fiche en double, un litige de propriété ou peu de temps. Notre approche du suivi local est décrite sur la page [référencement local](/services/referencement-local) ; le périmètre et le prix se fixent au devis. Pour les méthodes et les coûts du marché en général, voir [Combien coûte le SEO local pour une PME](/blog/cout-seo-local-pme).
+Pas obligatoirement. La création, la vérification et le remplissage de base se font en une séance de travail pour une entreprise simple. Un accompagnement se justifie si vous avez plusieurs établissements, une fiche en double, un litige de propriété ou peu de temps. Notre approche du suivi local est décrite sur la page [référencement local](/services/referencement-local) ; le périmètre et le prix se fixent au devis. Pour les méthodes et les coûts du marché en général, voir [Combien coûte le SEO local pour une PME](/blog/seo-local-commerce).
 
 Quel que soit le choix, gardez toujours **vous-même l'accès propriétaire** à la fiche. Un prestataire doit être ajouté comme gestionnaire, jamais comme seul propriétaire : si la collaboration s'arrête, la fiche reste à vous.
 

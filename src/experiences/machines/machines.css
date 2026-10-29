@@ -439,11 +439,11 @@
 @media (max-width: 767px) {
   .su-mac__grille { padding-top: 84px; row-gap: 20px; }
   .su-mac__titre { font-size: clamp(2rem, 8.5vw, 2.8rem); }
-  .su-mac__carte { grid-template-columns: 40px 1fr; padding: 8px; min-height: 56px; gap: 10px; }
+  .su-mac__carte { grid-template-columns: 40px minmax(0, 1fr); padding: 8px; min-height: 56px; gap: 10px; }
   .su-mac__pic { width: 40px; height: 40px; }
   .su-mac__pic svg { width: 22px; height: 22px; }
   .su-mac__etat { display: none; }
-  .su-mac__nom { font-size: 0.9375rem; }
+  .su-mac__nom { font-size: 0.9375rem; min-width: 0; overflow-wrap: anywhere; hyphens: auto; }
   .su-mac__cartes { gap: 8px; }
 }
 @media (prefers-reduced-motion: reduce) {

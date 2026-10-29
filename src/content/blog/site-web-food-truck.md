@@ -165,4 +165,4 @@ Au minimum : 3 à 5 photos des plats (bien éclairées), 1 photo de l'extérieur
 
 ---
 
-*Pour aller plus loin : [Site web pour traiteur](/blog/site-web-traiteur) · [SEO local pour restaurants](/blog/seo-local-restaurant) · [Sites internet par métier](/creation-site-internet/restaurant)*
+*Pour aller plus loin : [Site web pour traiteur](/creation-site-internet/traiteur-evenementiel) · [SEO local pour restaurants](/blog/seo-local-restaurant) · [Sites internet par métier](/creation-site-internet/restaurant)*

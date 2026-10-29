@@ -71,4 +71,4 @@ Rarement recommandé pour un showreel court : l'objectif est un impact visuel et
 
 ---
 
-*Pour aller plus loin : [Site de vidéaste : montrer ses films sans tuer le chargement](/blog/site-videaste-films-chargement-rapide) · [Livraison vidéo aux clients : WeTransfer, Vimeo ou votre espace ?](/blog/livrer-video-client-wetransfer-vimeo-espace-prive) · [Nos tarifs](/tarifs)*
+*Pour aller plus loin : [Site de vidéaste : montrer ses films sans tuer le chargement](/creation-site-internet/videaste) · [Livraison vidéo aux clients : WeTransfer, Vimeo ou votre espace ?](/blog/livrer-video-client-wetransfer-vimeo-espace-prive) · [Nos tarifs](/tarifs)*

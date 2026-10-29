@@ -57,7 +57,7 @@ C'est le levier le plus sous-estimé. Un visiteur cherche « dépannage chaudiè
 
 ### Étape 4 : le suivi, avec un outil gratuit
 
-Branchez [Google Search Console](/blog/google-search-console-guide-tpe) : il montre les recherches sur lesquelles votre site apparaît, les pages qui ne sont pas indexées et les erreurs. C'est aussi la réponse à « comment savoir sur quels mots-clés je suis positionné » sans payer d'outil.
+Branchez [Google Search Console](/blog/google-search-console-guide-avance-seo) : il montre les recherches sur lesquelles votre site apparaît, les pages qui ne sont pas indexées et les erreurs. C'est aussi la réponse à « comment savoir sur quels mots-clés je suis positionné » sans payer d'outil.
 
 ## Comment choisir ses mots-clés SEO quand on est artisan ?
 
@@ -133,7 +133,7 @@ Quelques repères, sans citer personne :
 - Il **détaille le prix** et ce qu'il comprend, sans engagement flou.
 - Il ne vous vend pas des liens achetés en masse.
 
-Sur la page [référencement](/services/referencement), vous trouverez comment Stackup Agency travaille ; et la page [référencement local](/services/referencement-local) concerne l'approche par secteur. Pour savoir par quoi commencer chez vous, l'[audit du site](/outils/audit-site) est un bon premier pas. Pour les coûts d'un accompagnement, voir [le coût du SEO local pour une PME](/blog/cout-seo-local-pme).
+Sur la page [référencement](/services/referencement), vous trouverez comment Stackup Agency travaille ; et la page [référencement local](/services/referencement-local) concerne l'approche par secteur. Pour savoir par quoi commencer chez vous, l'[audit du site](/outils/audit-site) est un bon premier pas. Pour les coûts d'un accompagnement, voir [le coût du SEO local pour une PME](/blog/seo-local-commerce).
 
 ## Peut-on référencer son site gratuitement ?
 

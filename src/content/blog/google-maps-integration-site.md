@@ -119,4 +119,4 @@ Vérifiez d'abord que votre fiche Google Business Profile est créée et vérifi
 **OpenStreetMap est-il aussi précis que Google Maps en France ?**
 En zone urbaine, les deux sont comparables. En zone rurale, Google Maps est généralement plus précis. OpenStreetMap est une alternative solide et RGPD-compatible pour les sites qui veulent éviter les cookies Google.
 
-Voir aussi : [SEO local pour TPE](/blog/paa-seo-local-gratuit), [créer un site vitrine à Tours](/blog/site-vitrine-tours) et [RGPD et site web en 2026](/blog/rgpd-site-web-2026).
+Voir aussi : [SEO local pour TPE](/blog/paa-seo-local-gratuit), [créer un site vitrine à Tours](/agence-web/tours) et [RGPD et site web en 2026](/blog/rgpd-site-web-2026).

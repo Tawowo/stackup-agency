@@ -77,4 +77,4 @@ Additionner le coût cumulé des abonnements déjà payés et à venir sur les p
 
 ---
 
-*Pour aller plus loin : [Pixieset, Jingoo, Pic-Time : combien vous coûtent vraiment les abonnements](/blog/pixieset-jingoo-pictime-cout-reel-abonnements) · [Réservation en ligne sans commission : les alternatives à TheFork](/blog/reservation-en-ligne-sans-commission-restaurant) · [Logiciel sur mesure vs SaaS par abonnement](/blog/logiciel-sur-mesure-ou-saas-calcul-5-ans) · [Système de gestion sur mesure](/services/systeme-gestion)*
+*Pour aller plus loin : [Pixieset, Jingoo, Pic-Time : combien vous coûtent vraiment les abonnements](/blog/pixieset-jingoo-pictime-cout-reel-abonnements) · [Réservation en ligne sans commission : les alternatives à TheFork](/blog/systeme-reservation-en-ligne-commission-ou-propriete) · [Logiciel sur mesure vs SaaS par abonnement](/blog/logiciel-sur-mesure-ou-saas-calcul-5-ans) · [Système de gestion sur mesure](/services/systeme-gestion)*

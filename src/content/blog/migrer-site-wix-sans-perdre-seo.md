@@ -86,4 +86,4 @@ Oui, c'est la partie technique la plus sensible d'une migration et elle doit êt
 
 ---
 
-*Pour aller plus loin : [Wix vs sur mesure : le comparatif honnête 2026](/blog/wix-ou-sur-mesure-comparatif-2026) · [Refonte de site : garder son SEO en changeant de site](/blog/refonte-site-web-seo-redirections-301) · [Wix vs WordPress vs sur-mesure — Comparatif complet](/comparatif/wix-wordpress-sur-mesure)*
+*Pour aller plus loin : [Wix vs sur mesure : le comparatif honnête 2026](/blog/site-vitrine-prix-comparatif) · [Refonte de site : garder son SEO en changeant de site](/blog/refonte-site-web-seo-redirections-301) · [Wix vs WordPress vs sur-mesure — Comparatif complet](/comparatif/wix-wordpress-sur-mesure)*

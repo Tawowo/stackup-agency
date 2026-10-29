@@ -146,4 +146,4 @@ Amazon interdit explicitement le dropshipping depuis AliExpress (les colis reçu
 **Comment trouver des fournisseurs dropshipping européens fiables ?**
 Spocket, Faire, Modalyst pour des répertoires intégrés. Pour des fournisseurs spécifiques à une niche, cherchez directement dans les salons professionnels de la filière (Maison & Objet, Première Vision) ou contactez des fabricants français/européens.
 
-Voir aussi : [e-commerce artisanat](/blog/ecommerce-artisanat-guide), [CGV boutique en ligne](/blog/cgv-boutique-en-ligne), [RGPD e-commerce](/blog/rgpd-site-web-2026) et nos [tarifs boutique e-commerce](/tarifs).
+Voir aussi : [e-commerce artisanat](/blog/vendre-creations-en-ligne-artisans), [CGV boutique en ligne](/blog/cgv-boutique-en-ligne), [RGPD e-commerce](/blog/rgpd-site-web-2026) et nos [tarifs boutique e-commerce](/tarifs).

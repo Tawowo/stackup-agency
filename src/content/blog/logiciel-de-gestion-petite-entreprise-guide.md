@@ -112,7 +112,7 @@ Un garage ou un atelier de réparation suit chaque véhicule d'un bout à l'autr
 
 ### Comment gérer des produits en quantité limitée sur un site ?
 
-Si vous vendez des pièces uniques, des séries courtes ou des produits de saison, le site doit lier la **quantité disponible** à la boutique : le stock diminue à chaque commande, le produit passe à « épuisé » ou « sur commande », et vous êtes prévenu. Évitez de dépendre d'une mise à jour manuelle : deux clients peuvent commander la dernière pièce en même temps. Voir [la vente d'artisanat en ligne](/blog/ecommerce-artisanat-guide) pour le contexte, et [la gestion de stock](/blog/gestion-de-stock-petit-commerce-artisan) pour la méthode.
+Si vous vendez des pièces uniques, des séries courtes ou des produits de saison, le site doit lier la **quantité disponible** à la boutique : le stock diminue à chaque commande, le produit passe à « épuisé » ou « sur commande », et vous êtes prévenu. Évitez de dépendre d'une mise à jour manuelle : deux clients peuvent commander la dernière pièce en même temps. Voir [la vente d'artisanat en ligne](/blog/vendre-creations-en-ligne-artisans) pour le contexte, et [la gestion de stock](/blog/gestion-de-stock-petit-commerce-artisan) pour la méthode.
 
 ### Comment donner un espace client à mes clients ?
 

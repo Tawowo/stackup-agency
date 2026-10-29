@@ -4,6 +4,7 @@
  * toléré : le texte courant apparaît en fondu + 8 px. Tout le contenu est dans
  * le DOM, ouvert sans JS (details/summary natif).
  */
+import Lie from './Lie'
 import './editorial.css'
 
 export interface Question {
@@ -20,7 +21,7 @@ export default function Accordeon({ questions, className = '', groupe = 'su-acc'
             <span className="su-mono su-acc__num">0{i + 1}</span>
             {x.q}
           </summary>
-          <p className="su-acc__r">{x.r}</p>
+          <p className="su-acc__r"><Lie t={x.r} /></p>
         </details>
       ))}
     </div>

@@ -124,4 +124,4 @@ Les produits alimentaires périssables sont exemptés du droit de rétractation 
 **La vente de vin sur les réseaux sociaux est-elle légale ?**
 La promotion est autorisée sur les réseaux sous conditions (loi Evin, mentions obligatoires). La vente directe sur les réseaux (Instagram Shopping pour le vin) est en zone grise et déconseillée — passez par votre site propre.
 
-Voir aussi : [site web pour brasseur artisanal](/blog/brasseur-artisanal-site-web), [e-commerce artisanat](/blog/ecommerce-artisanat-guide) et nos [tarifs boutique en ligne](/tarifs).
+Voir aussi : [site web pour brasseur artisanal](/creation-site-internet/cave-vins-spiritueux), [e-commerce artisanat](/blog/vendre-creations-en-ligne-artisans) et nos [tarifs boutique en ligne](/tarifs).

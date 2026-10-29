@@ -73,4 +73,4 @@ Oui, à condition que le volume de devis justifie l'investissement — pour une 
 
 ---
 
-*Pour aller plus loin : [Site artisan : les erreurs qui font fuir les clients](/blog/erreurs-site-artisan-clients) · [Devis en ligne pour artisans](/blog/devis-en-ligne-artisan) · [Combien coûte un site internet d'artisan en 2026 ?](/blog/prix-site-internet-artisan-2026) · [Sites internet par métier](/creation-site-internet)*
+*Pour aller plus loin : [Site artisan : les erreurs qui font fuir les clients](/blog/erreurs-site-artisan-clients) · [Devis en ligne pour artisans](/blog/devis-en-ligne-artisan) · [Combien coûte un site internet d'artisan en 2026 ?](/blog/cout-site-internet-2026) · [Sites internet par métier](/creation-site-internet)*

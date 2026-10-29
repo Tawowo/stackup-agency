@@ -163,4 +163,4 @@ Oui. Google Business permet d'indiquer des "horaires spéciaux". Pour les urgenc
 
 ---
 
-*Pour aller plus loin : [Site électricien : les pages indispensables](/blog/site-web-artisan-electricien) · [Guide netlinking pour TPE](/blog/netlinking-tpe-guide) · [Avis clients : la stratégie pour artisans](/blog/avis-clients-artisan-strategie) · [Créer un site de plombier](/creation-site-internet/plombier)*
+*Pour aller plus loin : [Site électricien : les pages indispensables](/blog/seo-local-commerce) · [Guide netlinking pour TPE](/blog/netlinking-tpe-guide) · [Avis clients : la stratégie pour artisans](/blog/avis-google-strategie-complete) · [Créer un site de plombier](/creation-site-internet/plombier)*

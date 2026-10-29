@@ -134,4 +134,4 @@ Pour des résultats en termes de demandes clients, comptez 3 à 6 mois de public
 **Est-ce que les publicités Instagram accélèrent la croissance ?**
 Oui. Une campagne de 50 à 100€ ciblée géographiquement (votre département) peut générer 200 à 500 visites sur votre profil et des demandes directes. C'est un bon investissement ponctuel pour démarrer, avant que la croissance organique prenne le relais.
 
-Voir aussi : [réseaux sociaux pour TPE](/blog/reseaux-sociaux-tpe-guide), [site web pour artisans maçons](/blog/site-web-macon) et nos [tarifs de création de site vitrine](/tarifs).
+Voir aussi : [réseaux sociaux pour TPE](/blog/reseaux-sociaux-tpe-guide), [site web pour artisans maçons](/blog/seo-local-commerce) et nos [tarifs de création de site vitrine](/tarifs).

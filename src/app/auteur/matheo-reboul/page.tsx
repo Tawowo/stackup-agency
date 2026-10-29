@@ -47,7 +47,7 @@ export default function Page() {
         etiquette="L’auteur"
         titre="Mathéo Reboul."
         chapo="Je conçois, code et mets en ligne des sites et des outils de gestion sur mesure pour des gens qui ont un métier à faire tourner. J’écris ici ce que je répondrais à un client."
-        maj="30 octobre 2026"
+        maj="29 octobre 2026"
       >
         <h2>Qui écrit ces pages</h2>
         <p>

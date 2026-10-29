@@ -27,7 +27,7 @@ Les quatre voies, de la plus légère à la plus complète.
 | Module de réservation sur le site | Un bloc intégré à votre site (extension ou service) | Petite équipe, besoin d'une image cohérente | Dépend de l'extension, à entretenir |
 | Outil sur mesure | Réservation conçue avec votre planning, vos règles et votre site | Plusieurs personnes ou ressources, règles particulières | Coût de départ, dépendance au prestataire |
 
-Un module bien intégré **sur votre propre site** donne un avantage important : le client réserve chez vous, il reste dans votre univers, et vous gardez ses coordonnées. Voir aussi [comment réserver en ligne sans passer par une plateforme](/blog/reservation-en-ligne-sans-commission-restaurant), qui explique la logique dans la restauration, transposable à d'autres métiers.
+Un module bien intégré **sur votre propre site** donne un avantage important : le client réserve chez vous, il reste dans votre univers, et vous gardez ses coordonnées. Voir aussi [comment réserver en ligne sans passer par une plateforme](/blog/systeme-reservation-en-ligne-commission-ou-propriete), qui explique la logique dans la restauration, transposable à d'autres métiers.
 
 ### Comment intégrer une réservation en ligne à son site ?
 
@@ -134,7 +134,7 @@ Les plateformes de réservation répondent à un vrai besoin : elles apportent d
 - **Quelle image de marque** : mes clients réservent-ils chez moi, ou chez la plateforme ?
 - **Que se passe-t-il si les conditions changent ?**
 
-Un petit cabinet, un salon de coiffure ou un institut peut très bien utiliser **les deux** : la plateforme comme canal supplémentaire, et la réservation sur son propre site pour sa clientèle fidèle. Une réservation propre à votre site évite de dépendre d'un tiers. Pour un salon, voir [l'agenda en ligne pour salon de coiffure](/blog/salon-coiffure-agenda-en-ligne).
+Un petit cabinet, un salon de coiffure ou un institut peut très bien utiliser **les deux** : la plateforme comme canal supplémentaire, et la réservation sur son propre site pour sa clientèle fidèle. Une réservation propre à votre site évite de dépendre d'un tiers. Pour un salon, voir [l'agenda en ligne pour salon de coiffure](/creation-site-internet/salon-coiffure).
 
 ### Cas des professionnels de santé
 

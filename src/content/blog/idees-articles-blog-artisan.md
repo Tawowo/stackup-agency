@@ -93,7 +93,7 @@ Compilez des avis clients (avec accord) et racontez chaque projet. C'est de la p
 
 Pour un artisan qui travaille seul ou avec une petite équipe, produire régulièrement du contenu blog est difficile à combiner avec les chantiers. Notre [service de rédaction blog SEO](/services/redaction-blog-seo) permet de déléguer entièrement la production : vous nous donnez le brief (votre ville, votre spécialité, vos tarifs), nous rédigeons et optimisons.
 
-Pour comprendre le processus complet, consultez notre guide sur [l'externalisation de la rédaction](/blog/externaliser-redaction-blog-guide).
+Pour comprendre le processus complet, consultez notre guide sur [l'externalisation de la rédaction](/blog/blog-et-seo-quel-contenu-publier).
 
 ## FAQ
 

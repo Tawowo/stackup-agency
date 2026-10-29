@@ -67,4 +67,4 @@ Pas nécessairement — Vimeo peut rester utile pour l'hébergement technique de
 
 ---
 
-*Pour aller plus loin : [Site de vidéaste : montrer ses films sans tuer le chargement](/blog/site-videaste-films-chargement-rapide) · [Portail client : offrir un espace pro à vos clients](/blog/portail-client-extranet) · [Système de gestion sur mesure](/services/systeme-gestion)*
+*Pour aller plus loin : [Site de vidéaste : montrer ses films sans tuer le chargement](/creation-site-internet/videaste) · [Portail client : offrir un espace pro à vos clients](/blog/portail-client-extranet) · [Système de gestion sur mesure](/services/systeme-gestion)*

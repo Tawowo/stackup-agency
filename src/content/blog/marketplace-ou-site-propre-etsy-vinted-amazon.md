@@ -71,7 +71,7 @@ Etsy est une place de marché dédiée aux créations faites main, aux objets vi
 
 **Est-ce adapté aux créateurs français ?** Oui, des créateurs français y vendent, mais la concurrence internationale existe. Vérifiez les frais de livraison vers vos principaux marchés et les formalités douanières hors de l'Union européenne.
 
-**Alternative à Etsy pour vendre ses créations :** une boutique à vous, adossée à une fiche Google Business, à Instagram et à une newsletter. Voir [Vendre son artisanat en ligne](/blog/ecommerce-artisanat-guide).
+**Alternative à Etsy pour vendre ses créations :** une boutique à vous, adossée à une fiche Google Business, à Instagram et à une newsletter. Voir [Vendre son artisanat en ligne](/blog/vendre-creations-en-ligne-artisans).
 
 ## Leboncoin Pro : c'est quoi, et est-ce rentable pour un commerçant ?
 

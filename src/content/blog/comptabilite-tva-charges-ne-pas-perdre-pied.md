@@ -130,7 +130,7 @@ Ce sigle revient aussi dans votre activité web : **FTP** (File Transfer Protoco
 
 ## Communiquer quand on n'aime pas ça
 
-Une communication minimale tient en trois éléments : une fiche Google Business soignée, un site qui dit clairement ce que vous faites et où, et quelques avis clients. C'est peu, mais cela remplace beaucoup de réseaux sociaux. Notre article sur la [stratégie d'avis clients pour artisans](/blog/avis-clients-artisan-strategie) montre comment les obtenir sans y consacrer vos soirées ; pour un site qui travaille à votre place, voyez la [création de site](/services/creation-de-site-internet).
+Une communication minimale tient en trois éléments : une fiche Google Business soignée, un site qui dit clairement ce que vous faites et où, et quelques avis clients. C'est peu, mais cela remplace beaucoup de réseaux sociaux. Notre article sur la [stratégie d'avis clients pour artisans](/blog/avis-google-strategie-complete) montre comment les obtenir sans y consacrer vos soirées ; pour un site qui travaille à votre place, voyez la [création de site](/services/creation-de-site-internet).
 
 ## Questions fréquentes
 

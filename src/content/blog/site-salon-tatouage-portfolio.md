@@ -74,4 +74,4 @@ Les deux sont complémentaires : le portfolio convainc sur le style et la techni
 
 ---
 
-*Pour aller plus loin : [Portfolio de photographe : 10 règles pour un portfolio qui convertit](/blog/portfolio-photographe-10-regles) · [Institut de beauté : le site qui remplit l'agenda](/blog/site-institut-beaute-remplir-agenda) · [Nos tarifs](/tarifs)*
+*Pour aller plus loin : [Portfolio de photographe : 10 règles pour un portfolio qui convertit](/creation-site-internet/photographe) · [Institut de beauté : le site qui remplit l'agenda](/creation-site-internet/institut-beaute) · [Nos tarifs](/tarifs)*

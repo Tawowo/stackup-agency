@@ -114,4 +114,4 @@ Oui, mais de façon indirecte pour beaucoup de secteurs. Les touristes cherchent
 **Faut-il cibler "Blois" ou "Loir-et-Cher" dans le SEO ?**
 Les deux selon la zone d'intervention. "Blois" pour les requêtes urbaines. "Loir-et-Cher" ou "Val de Loire" pour les prestataires régionaux ou les produits du terroir.
 
-Voir aussi : [site web à Blois](/blog/site-web-blois), [SEO à Tours](/blog/seo-tours-pme), [SEO à Orléans](/blog/seo-orleans-commerces) et nos [tarifs création de site web](/tarifs).
+Voir aussi : [site web à Blois](/blog/site-web-blois), [SEO à Tours](/agence-web/tours), [SEO à Orléans](/zones-intervention) et nos [tarifs création de site web](/tarifs).

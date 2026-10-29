@@ -159,4 +159,4 @@ Pas nécessairement un site séparé, mais une section dédiée sur votre site e
 
 ---
 
-*Pour aller plus loin : [Instagram pour restaurant : stratégie complète](/blog/instagram-restaurant-strategie) · [SEO local pour restaurants](/blog/seo-local-restaurant) · [Site web pour traiteur](/blog/site-web-traiteur) · [Sites internet par métier](/creation-site-internet/restaurant)*
+*Pour aller plus loin : [Instagram pour restaurant : stratégie complète](/blog/instagram-restaurant-strategie) · [SEO local pour restaurants](/blog/seo-local-restaurant) · [Site web pour traiteur](/creation-site-internet/traiteur-evenementiel) · [Sites internet par métier](/creation-site-internet/restaurant)*

@@ -71,4 +71,4 @@ Oui, à condition d'utiliser un code unique non réutilisable, vérifié au mome
 
 ---
 
-*Pour aller plus loin : [Spa, wellness et soins : comment la réservation en ligne double votre taux de remplissage](/blog/reservation-en-ligne-spa-wellness) · [Institut de beauté : le site qui remplit l'agenda](/blog/site-institut-beaute-remplir-agenda) · [Nos services e-commerce](/services/site-ecommerce)*
+*Pour aller plus loin : [Spa, wellness et soins : comment la réservation en ligne double votre taux de remplissage](/blog/reservation-en-ligne-spa-wellness) · [Institut de beauté : le site qui remplit l'agenda](/creation-site-internet/institut-beaute) · [Nos services e-commerce](/services/site-ecommerce)*

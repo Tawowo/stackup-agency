@@ -70,4 +70,4 @@ Souvent quelques semaines pour les premières apparitions dans le pack local, à
 
 ---
 
-*Pour aller plus loin : [Plombier : comment trouver des clients sur Google](/blog/trouver-clients-plombier-google) · [Combien coûte un site internet d'artisan en 2026 ?](/blog/prix-site-internet-artisan-2026) · [Sites internet par métier](/creation-site-internet)*
+*Pour aller plus loin : [Plombier : comment trouver des clients sur Google](/creation-site-internet/plombier) · [Combien coûte un site internet d'artisan en 2026 ?](/blog/cout-site-internet-2026) · [Sites internet par métier](/creation-site-internet)*

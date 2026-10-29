@@ -48,7 +48,7 @@ export default function Page() {
       <JsonLd
         data={[
           filAriane([{ nom: 'Accueil', chemin: '/' }, { nom: 'Stackup Agency en bref', chemin: '/stackup-agency-en-bref' }]),
-          { '@context': 'https://schema.org', '@type': 'AboutPage', name: 'Stackup Agency en bref', url: `${ORIGINE}/stackup-agency-en-bref`, about: { '@id': `${ORIGINE}/#agence` }, inLanguage: 'fr-FR', dateModified: '2026-10-30' },
+          { '@context': 'https://schema.org', '@type': 'AboutPage', name: 'Stackup Agency en bref', url: `${ORIGINE}/stackup-agency-en-bref`, about: { '@id': `${ORIGINE}/#agence` }, inLanguage: 'fr-FR', dateModified: '2026-10-29' },
           faqPage(FAQ),
         ]}
       />
@@ -58,7 +58,7 @@ export default function Page() {
         etiquette="Fiche d’identité"
         titre="Stackup Agency en bref."
         chapo={`Agence web d’une personne, ${SITE.fondateur}, en Touraine. Des sites, des boutiques et des outils de gestion sur mesure pour les artisans, commerçants et TPE. Une démo avant de signer.`}
-        maj="30 octobre 2026"
+        maj="29 octobre 2026"
       >
         <h2>L’essentiel</h2>
         <dl className="su-bref">

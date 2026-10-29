@@ -76,4 +76,4 @@ Rarement nécessaire : une section ou une page dédiée sur le site existant suf
 
 ---
 
-*Pour aller plus loin : [Commandes à emporter : comment les gérer sans se noyer](/blog/commandes-emporter-gestion-restaurant) · [Réservation en ligne sans commission](/blog/reservation-en-ligne-sans-commission-restaurant) · [Combien coûte un site de restaurant en 2026 ?](/blog/prix-site-internet-restaurant-2026) · [Sites internet par métier](/creation-site-internet/restaurant)*
+*Pour aller plus loin : [Commandes à emporter : comment les gérer sans se noyer](/blog/commandes-emporter-gestion-restaurant) · [Réservation en ligne sans commission](/blog/systeme-reservation-en-ligne-commission-ou-propriete) · [Combien coûte un site de restaurant en 2026 ?](/blog/cout-site-internet-2026) · [Sites internet par métier](/creation-site-internet/restaurant)*

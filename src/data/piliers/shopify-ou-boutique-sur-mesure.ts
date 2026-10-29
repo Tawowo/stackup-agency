@@ -281,6 +281,6 @@ export const PILIER: Pilier = {
     { href: '/tarifs', nom: 'Simulateur de tarifs', note: 'Une estimation « à partir de » selon votre projet.' },
     { href: '/contact', nom: 'Parler de votre projet', note: 'Décrire votre commerce et obtenir un avis franc.' },
   ],
-  maj: '2026-10-30',
+  maj: '2026-10-29',
   type: 'comparatif',
 }

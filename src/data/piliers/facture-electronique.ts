@@ -268,6 +268,6 @@ export const PILIER: Pilier = {
     { href: `/tarifs`, nom: `Tarifs`, note: `Estimer votre projet` },
     { href: `/contact`, nom: `Contact`, note: `Parler de votre cas` },
   ],
-  maj: `2026-10-30`,
+  maj: `2026-10-29`,
   type: `service`,
 }

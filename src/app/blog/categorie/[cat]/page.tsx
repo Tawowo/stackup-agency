@@ -24,8 +24,7 @@ export async function generateMetadata({ params }: { params: Promise<{ cat: stri
   const { cat } = await params
   const r = rayon(cat)
   if (!r) return {}
-  const assez = tousLesArticles().filter((a) => r.categories.includes(a.categorie)).length >= 3
-  return meta({ titre: `${r.nom} — le blog de Stackup Agency`, description: `${r.ligne} Les guides du rayon « ${r.nom} » pour les artisans, commerçants et petites entreprises.`, chemin: `/blog/categorie/${cat}`, noindex: !assez })
+  return meta({ titre: `${r.nom} — le blog de Stackup Agency`, description: `${r.ligne} Les guides du rayon « ${r.nom} » pour les artisans, commerçants et petites entreprises.`, chemin: `/blog/categorie/${cat}`, noindex: true })
 }
 
 export default async function Page({ params }: { params: Promise<{ cat: string }> }) {

@@ -92,7 +92,7 @@ Un calendrier éditorial vous permet de déléguer la rédaction à un prestatai
 
 Notre [service de rédaction blog SEO](/services/redaction-blog-seo) fonctionne exactement ainsi : nous construisons le calendrier éditorial ensemble, vous validez, nous rédigeons. L'abonnement mensuel facultatif, sans engagement, peut inclure des articles de blog ({{abo:article}} € l'article).
 
-Pour aller plus loin, lisez notre guide sur [l'externalisation complète de la rédaction blog](/blog/externaliser-redaction-blog-guide).
+Pour aller plus loin, lisez notre guide sur [l'externalisation complète de la rédaction blog](/blog/blog-et-seo-quel-contenu-publier).
 
 ## FAQ
 

@@ -63,7 +63,7 @@ Pour les entreprises qui veulent du contenu de qualité sans gérer un rédacteu
 
 Chez Stackup Agency, [l'article à 25€](/services/redaction-blog-seo) inclut la recherche de mots-clés, la structure SEO, le maillage interne vers vos services et une relecture éditoriale. Ce n'est pas le tarif d'une plateforme bas de gamme, mais c'est ce qu'un article honnêtement optimisé coûte à produire proprement.
 
-Pour aller plus loin sur le sujet, lisez notre comparatif [freelance vs agence de contenu](/blog/redacteur-web-freelance-ou-agence).
+Pour aller plus loin sur le sujet, lisez notre comparatif [freelance vs agence de contenu](/blog/externaliser-redaction-blog-seo).
 
 ## FAQ
 

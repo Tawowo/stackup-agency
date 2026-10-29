@@ -134,4 +134,4 @@ Le socle (fiche GBP, cohérence des informations, demande d'avis) est gratuit et
 
 ---
 
-*Pour aller plus loin : [SEO local : comment apparaître en premier sur Google Maps](/blog/seo-local-google-maps-2026) · [Google Business Profile : le guide complet](/blog/fiche-google-business-optimisation) · [SEO local vs Google Ads : que choisir ?](/blog/seo-local-vs-google-ads) · [Rédaction de blog SEO](/services/redaction-blog-seo)*
+*Pour aller plus loin : [SEO local : comment apparaître en premier sur Google Maps](/blog/apparaitre-google-maps-pack-local) · [Google Business Profile : le guide complet](/blog/fiche-google-business-optimisation) · [SEO local vs Google Ads : que choisir ?](/blog/seo-local-vs-google-ads) · [Rédaction de blog SEO](/services/redaction-blog-seo)*

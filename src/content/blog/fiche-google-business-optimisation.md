@@ -184,4 +184,4 @@ Oui, en cas de violation des règles (nom avec mots-clés, fausses adresses, avi
 
 ---
 
-*Pour aller plus loin : [Apparaître sur Google Maps en premier](/blog/seo-local-google-maps-2026) · [SEO local : le guide complet pour les TPE](/blog/seo-local-commerce) · [Avis Google : stratégie complète](/blog/avis-google-strategie-complete) · [Rédaction de blog SEO](/services/redaction-blog-seo)*
+*Pour aller plus loin : [Apparaître sur Google Maps en premier](/blog/apparaitre-google-maps-pack-local) · [SEO local : le guide complet pour les TPE](/blog/seo-local-commerce) · [Avis Google : stratégie complète](/blog/avis-google-strategie-complete) · [Rédaction de blog SEO](/services/redaction-blog-seo)*

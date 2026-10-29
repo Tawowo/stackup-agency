@@ -5,7 +5,7 @@ export const PILIER: Pilier = {
   chemin: '/services/refonte-de-site-internet',
   titre: `Refonte de site internet : refaire son site sans perdre ses visiteurs`,
   etiquette: `Service · refonte de site`,
-  reponse: `Refaire son site internet consiste à reconstruire ce qui ne fonctionne plus (vitesse, mobile, modification, sécurité) tout en gardant ce qui a de la valeur : vos textes utiles, vos adresses web et votre place dans Google. Chez Stackup, la refonte de site vitrine démarre « à partir de » {{prix:une-page}} € pour une page et « à partir de » {{prix:multi-pages}} € pour un site de plusieurs pages, avec une démo à voir avant de vous engager.`,
+  reponse: `Refaire son site internet consiste à reconstruire ce qui ne fonctionne plus (vitesse, mobile, modification, sécurité) tout en gardant ce qui a de la valeur : vos textes utiles, vos adresses web et votre place dans Google. Chez Stackup, la refonte de site vitrine démarre à partir de {{prix:une-page}} € pour une page et à partir de {{prix:multi-pages}} € pour un site de plusieurs pages, avec une démo à voir avant de vous engager.`,
   titleSeo: `Refonte de site internet : devis et méthode sans perte SEO`,
   descriptionSeo: `Refaire son site sans perdre votre référencement : signes, prix « à partir de », migration Wix ou WordPress, démo avant de signer. Demandez un devis.`,
   sections: [
@@ -186,7 +186,7 @@ export const PILIER: Pilier = {
       id: 'prix-refonte',
       titre: `Combien coûte la refonte d'un site internet ?`,
       paragraphes: [
-        `La refonte d'un site vitrine démarre « à partir de » {{prix:une-page}} € pour un site d'une page, et « à partir de » {{prix:multi-pages}} € pour un site de plusieurs pages. Ce sont des prix de départ : le montant exact dépend de ce que contient votre site, ce que vous calculez vous-même avec l'[estimateur de prix](/tarifs).`,
+        `La refonte d'un site vitrine démarre à partir de {{prix:une-page}} € pour un site d'une page, et à partir de {{prix:multi-pages}} € pour un site de plusieurs pages. Ce sont des prix de départ : le montant exact dépend de ce que contient votre site, ce que vous calculez vous-même avec l'[estimateur de prix](/tarifs).`,
         `Si vous cherchez une refonte « pas chère » : un site refait au rabais, sans redirections ni vérifications, peut faire perdre en trafic bien plus que l'économie réalisée. Notre approche : un prix de départ clair, et la liste de ce qui le fait bouger.`,
       ],
       sous: [
@@ -308,6 +308,6 @@ export const PILIER: Pilier = {
     { href: '/ressources/cahier-des-charges', nom: `Cahier des charges`, note: `Préparer votre demande` },
     { href: '/contact', nom: `Contact`, note: `Parler de votre projet de refonte` },
   ],
-  maj: '2026-10-30',
+  maj: '2026-10-29',
   type: 'service',
 }

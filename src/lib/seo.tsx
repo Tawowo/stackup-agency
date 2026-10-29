@@ -2,6 +2,7 @@
  * SEO — métadonnées et JSON-LD partagés. Une seule origine : stackup-agency.fr.
  */
 import type { Metadata } from 'next'
+import { sansLiens } from '@/components/editorial/Lie'
 import { SITE } from '@/config/site'
 
 export const ORIGINE = 'https://stackup-agency.fr'
@@ -16,7 +17,15 @@ export function titreFinal(titre: string): string {
   if (/stackup/i.test(t)) return t
   if (t.length + MARQUE.length <= 60) return t + MARQUE
   if (t.length + ' | Stackup'.length <= 60) return t + ' | Stackup'
-  return t
+  return raccourcir(t)
+}
+/** Titre de plus de 60 caractères : on garde le segment le plus long qui tient (avant « — », « : », « ? », « ( »), sinon on coupe à la fin d'un mot. */
+function raccourcir(t: string): string {
+  if (t.length <= 60) return t
+  const coupes = [...t.matchAll(/\s[—–:(]\s?|\s\?|,\s/g)].map((m) => m.index!).filter((i) => i >= 25 && i <= 60)
+  if (coupes.length) return t.slice(0, coupes[coupes.length - 1]).replace(/[\s,;:—–(-]+$/, '')
+  const c = t.slice(0, 60)
+  return c.slice(0, c.lastIndexOf(' ')).replace(/[\s,;:—–(-]+$/, '')
 }
 /** Meta description : 155 caractères au plus, coupée à la fin d'un mot. */
 export function descriptionFinale(d: string): string {
@@ -123,7 +132,7 @@ export function faqPage(faq: { q: string; a: string }[]) {
   return {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
-    mainEntity: faq.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+    mainEntity: faq.map((f) => ({ '@type': 'Question', name: sansLiens(f.q), acceptedAnswer: { '@type': 'Answer', text: sansLiens(f.a) } })),
   }
 }
 

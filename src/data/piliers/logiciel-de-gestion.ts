@@ -261,6 +261,6 @@ export const PILIER: Pilier = {
     { href: '/realisations', nom: 'Réalisations' },
     { href: '/contact', nom: 'Nous contacter' },
   ],
-  maj: '2026-10-30',
+  maj: '2026-10-29',
   type: 'service',
 }

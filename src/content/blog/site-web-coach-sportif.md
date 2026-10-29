@@ -154,4 +154,4 @@ Oui. Si vous donnez des conseils nutritionnels ou médicaux sans les qualificati
 - Le positionnement clair (public visé, méthode, résultats concrets) qualifie les prospects avant même le premier contact.
 - Le SEO local reste prioritaire pour un coach en présentiel ; les requêtes de niche (spécialité + public) captent une demande complémentaire qualifiée.
 
-Voir aussi : [site web pour coach professionnel](/blog/site-web-coach-professionnel), [Instagram pour artisans](/blog/instagram-artisan-guide), [création de site vitrine à partir de {{prix:une-page}} €](/tarifs).
+Voir aussi : [site web pour coach professionnel](/creation-site-internet/organisme-formation), [Instagram pour artisans](/blog/instagram-artisan-guide), [création de site vitrine à partir de {{prix:une-page}} €](/tarifs).

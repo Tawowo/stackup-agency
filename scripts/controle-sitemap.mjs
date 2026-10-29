@@ -122,6 +122,8 @@ function analyser(chemin, html, ua) {
   if (!chemin.startsWith('/blog/')) for (const m of texte.matchAll(/à partir de\s*([^\s€]*[\s  ]?[^\s€]*)\s*€/gi)) {
     if (!/^\d{1,3}([   ]\d{3})*$/.test(m[1].trim())) err(chemin, `« à partir de » mal formé : « ${m[0]} »`)
   }
+  // Aucun Markdown brut à l'écran (lien ou gras non rendu).
+  if (/\]\(\/[^)\s]*\)|\*\*[^*\s][^*]*\*\*/.test(texte)) err(chemin, 'Markdown brut visible dans le texte')
   // Un prix « à partir de X € » ne doit pas être répété deux fois d'affilée (roue + texte caché).
   if (/(à partir de\s*\d[\d   ]*€)\s*\1/i.test(texte)) err(chemin, 'prix répété deux fois de suite')
   // Les textes meta ne doivent pas apparaître dans le contenu visible.

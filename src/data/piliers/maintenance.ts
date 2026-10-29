@@ -253,6 +253,6 @@ export const PILIER: Pilier = {
     { href: `/contact`, nom: `Nous contacter`, note: `Pour un état des lieux ou un devis de maintenance.` },
     { href: `/politique-confidentialite`, nom: `Politique de confidentialité`, note: `Comment nous traitons les données.` },
   ],
-  maj: `2026-10-30`,
+  maj: `2026-10-29`,
   type: 'service',
 }

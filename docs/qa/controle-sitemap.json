@@ -1,8 +1,8 @@
 {
- "date": "2026-10-29T01:31:03.952Z",
+ "date": "2026-10-29T09:41:13.613Z",
  "base": "http://localhost:3100",
- "urls": 420,
- "testees": 420,
- "descriptionsRepriseesDuChapo": 256,
+ "urls": 430,
+ "testees": 430,
+ "descriptionsRepriseesDuChapo": 125,
  "erreurs": []
 }

@@ -69,4 +69,4 @@ Il s'intègre à un espace client privé développé sur mesure, disponible via 
 
 ---
 
-*Pour aller plus loin : [Livraison vidéo aux clients : WeTransfer, Vimeo ou votre espace ?](/blog/livrer-video-client-wetransfer-vimeo-espace-prive) · [Site de vidéaste : montrer ses films sans tuer le chargement](/blog/site-videaste-films-chargement-rapide) · [Système de gestion sur mesure](/services/systeme-gestion)*
+*Pour aller plus loin : [Livraison vidéo aux clients : WeTransfer, Vimeo ou votre espace ?](/blog/livrer-video-client-wetransfer-vimeo-espace-prive) · [Site de vidéaste : montrer ses films sans tuer le chargement](/creation-site-internet/videaste) · [Système de gestion sur mesure](/services/systeme-gestion)*

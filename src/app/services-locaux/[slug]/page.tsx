@@ -5,7 +5,7 @@ import MondeService from '@/components/mondes/MondeService'
 import MondeSerp from '@/components/mondes/MondeSerp'
 import { sansDelai } from '@/gabarits/locale/formes'
 import { conforme } from '@/lib/conformite'
-import { JsonLd, ORIGINE, faqPage, filAriane, meta } from '@/lib/seo'
+import { JsonLd, ORIGINE, faqPage, filAriane, meta, offreService } from '@/lib/seo'
 
 const MAQUETTE: Record<string, 'page' | 'multi' | 'boutique' | 'logiciel'> = {
   'creation-site-restaurant': 'page',
@@ -42,7 +42,7 @@ export default async function PageServiceLocal({ params }: { params: Promise<{ s
             { nom: 'Services', chemin: '/services' },
             { nom: s.title, chemin: `/services-locaux/${slug}` },
           ]),
-          { '@context': 'https://schema.org', '@type': 'Service', name: s.title, provider: { '@id': `${ORIGINE}/#agence` }, description: conforme(s.solution.desc) },
+          { '@context': 'https://schema.org', '@type': 'Service', name: s.title, provider: { '@id': `${ORIGINE}/#agence` }, description: conforme(s.solution.desc), offers: offreService('une-page') },
           faqPage(faq),
         ]}
       />

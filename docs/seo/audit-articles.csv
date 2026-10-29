@@ -1,6 +1,8 @@
 slug,titre,mots,statut,categorie,grappe_proche,score_grappe,decision,cible,raison
 guide-site-internet-plombier,Le guide du site internet pour un plombier,2611,publié,artisans,plombier en ligne,0.40,garder,,sujet distinct (grappe la plus proche : 0.40)
-guide-site-internet-boulangerie-patisserie,Le guide du site internet pour une boulangerie-pâtisserie,2598,publié,commerce,boulangerie click and collect,0.53,garder,,sujet distinct (grappe la plus proche : 0.53)
+guide-site-internet-kinesitherapeute,Le guide du site internet pour un cabinet de kinésithérapie,2586,publié,professions-liberales,alternative à doctolib pour un cabinet de kiné,0.50,garder,,sujet distinct (grappe la plus proche : 0.50)
+guide-site-internet-boulangerie-patisserie,Le guide du site internet pour une boulangerie-pâtisserie,2573,publié,commerce,boulangerie click and collect,0.53,garder,,sujet distinct (grappe la plus proche : 0.53)
+guide-site-internet-salon-coiffure,Le guide du site internet pour un salon de coiffure,2550,publié,professions-liberales,site internet pour salon de coiffure,0.36,garder,,sujet distinct (grappe la plus proche : 0.36)
 guide-site-internet-electricien,Le guide du site internet pour un électricien,2543,publié,artisans,logiciel de gestion restaurateur,0.25,garder,,sujet distinct (grappe la plus proche : 0.25)
 ranker-page-metier-ville-seo,Sortir sur « métier + ville » : l'anatomie d'une page qui ranke,2922,programmé 2026-10-30,seo,agence web artisan visibilité locale,0.18,garder,,sujet distinct (grappe la plus proche : 0.18)
 guide-site-internet-restaurant,Le guide du site internet pour un restaurant,2459,publié,restaurants,mettre en place le click and collect restaurant,0.36,garder,,sujet distinct (grappe la plus proche : 0.36)

@@ -188,4 +188,4 @@ Un risque de sanction ordinale, allant de l'avertissement à des mesures discipl
 
 ---
 
-Voir aussi : [site web pour avocat](/blog/site-web-avocat), [SEO local pour TPE](/blog/paa-seo-local-gratuit) et nos [tarifs de création de site web](/tarifs).
+Voir aussi : [site web pour avocat](/creation-site-internet/avocat), [SEO local pour TPE](/blog/paa-seo-local-gratuit) et nos [tarifs de création de site web](/tarifs).

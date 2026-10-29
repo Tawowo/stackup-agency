@@ -4,6 +4,7 @@
  */
 import Link from 'next/link'
 import Accordeon from '@/components/editorial/Accordeon'
+import Lie from '@/components/editorial/Lie'
 import { jetonsProfond } from '@/lib/jetons'
 import type { Pilier } from '@/data/piliers/types'
 
@@ -42,12 +43,12 @@ export default function PilierCorps({ pilier, avecReponse = true }: { pilier: Pi
         <section key={s.id} id={s.id} aria-labelledby={`${s.id}-t`}>
           <h2 id={`${s.id}-t`}>{s.titre}</h2>
           {s.paragraphes.map((t) => (
-            <p key={t.slice(0, 48)}>{t}</p>
+            <p key={t.slice(0, 48)}><Lie t={t} /></p>
           ))}
           {s.liste && (
             <ul>
               {s.liste.map((l) => (
-                <li key={l.slice(0, 48)}>{l}</li>
+                <li key={l.slice(0, 48)}><Lie t={l} /></li>
               ))}
             </ul>
           )}
@@ -55,12 +56,12 @@ export default function PilierCorps({ pilier, avecReponse = true }: { pilier: Pi
             <div key={x.titre}>
               <h3>{x.titre}</h3>
               {x.paragraphes.map((t) => (
-                <p key={t.slice(0, 48)}>{t}</p>
+                <p key={t.slice(0, 48)}><Lie t={t} /></p>
               ))}
               {x.liste && (
                 <ul>
                   {x.liste.map((l) => (
-                    <li key={l.slice(0, 48)}>{l}</li>
+                    <li key={l.slice(0, 48)}><Lie t={l} /></li>
                   ))}
                 </ul>
               )}
@@ -84,14 +85,14 @@ export default function PilierCorps({ pilier, avecReponse = true }: { pilier: Pi
                 {p.comparaison.lignes.map((l) => (
                   <tr key={l.critere}>
                     <th scope="row">{l.critere}</th>
-                    <td>{l.a}</td>
-                    <td>{l.b}</td>
+                    <td><Lie t={l.a} /></td>
+                    <td><Lie t={l.b} /></td>
                   </tr>
                 ))}
               </tbody>
             </table>
           </div>
-          {p.comparaison.note && <p>{p.comparaison.note}</p>}
+          {p.comparaison.note && <p><Lie t={p.comparaison.note} /></p>}
         </section>
       )}
       {p.exemples.length > 0 && (
@@ -100,7 +101,7 @@ export default function PilierCorps({ pilier, avecReponse = true }: { pilier: Pi
           {p.exemples.map((e) => (
             <div key={e.titre}>
               <h3>{e.titre}</h3>
-              <p>{e.texte}</p>
+              <p><Lie t={e.texte} /></p>
             </div>
           ))}
         </section>

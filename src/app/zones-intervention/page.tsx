@@ -7,7 +7,7 @@ import { CHEF_LIEU, GEO } from '@/data/geo'
 import { DEPARTEMENTS } from '@/data/departements'
 import { VILLES } from '@/data/villes'
 import { ZONES, distanceIndicative, modeIntervention, nbCommunes37 } from '@/data/zones'
-import { JsonLd, ORIGINE, faqPage, filAriane, meta } from '@/lib/seo'
+import { JsonLd, ORIGINE, faqPage, filAriane, meta, offreService } from '@/lib/seo'
 import { SITE } from '@/config/site'
 
 export const metadata = meta({
@@ -38,7 +38,7 @@ export default function Zones() {
       <JsonLd
         data={[
           filAriane([{ nom: 'Accueil', chemin: '/' }, { nom: 'Zones d’intervention', chemin: '/zones-intervention' }]),
-          { '@context': 'https://schema.org', '@type': 'Service', name: 'Création de sites internet et d’outils de gestion sur mesure', provider: { '@id': `${ORIGINE}/#agence` }, areaServed: ZONES.map((z) => ({ '@type': 'AdministrativeArea', name: z.nom })) },
+          { '@context': 'https://schema.org', '@type': 'Service', name: 'Création de sites internet et d’outils de gestion sur mesure', provider: { '@id': `${ORIGINE}/#agence` }, offers: offreService('une-page'), areaServed: ZONES.map((z) => ({ '@type': 'AdministrativeArea', name: z.nom })) },
           faqPage(FAQ),
         ]}
       />

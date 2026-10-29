@@ -14,7 +14,7 @@ sources: ["https://developers.google.com", "https://support.google.com"]
 
 **Search Console est l'outil gratuit de Google qui indique si vos pages sont connues, explorées et indexées, et pourquoi elles ne le sont pas. Pour faire indexer un site : l'ajouter à Search Console, vérifier qu'aucun « noindex » ni blocage ne l'en empêche, soumettre le sitemap, puis demander l'indexation des pages clés avec l'outil d'inspection.**
 
-Le but de cet article est précis : comprendre les messages d'indexation et savoir quoi faire pour chacun. Pour une vue d'ensemble des rapports et des indicateurs, voir [Search Console pour les TPE](/blog/google-search-console-guide-tpe) ; pour un usage plus poussé, voir [le guide avancé](/blog/google-search-console-guide-avance-seo).
+Le but de cet article est précis : comprendre les messages d'indexation et savoir quoi faire pour chacun. Pour une vue d'ensemble des rapports et des indicateurs, voir [Search Console pour les TPE](/blog/google-search-console-guide-avance-seo) ; pour un usage plus poussé, voir [le guide avancé](/blog/google-search-console-guide-avance-seo).
 
 ## C'est quoi Google Search Console, et à quoi sert-elle à un artisan ?
 

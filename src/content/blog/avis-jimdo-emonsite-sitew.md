@@ -97,4 +97,4 @@ Pour démarrer, oui. Mais l'absence de données structurées avancées et les pe
 
 ---
 
-*Pour aller plus loin : [Wix vs sur mesure : le comparatif honnête 2026](/blog/wix-ou-sur-mesure-comparatif-2026) · [Squarespace en France : forces, limites, alternatives](/blog/avis-squarespace-france) · [Wix vs WordPress vs sur-mesure — Comparatif complet](/comparatif/wix-wordpress-sur-mesure)*
+*Pour aller plus loin : [Wix vs sur mesure : le comparatif honnête 2026](/blog/site-vitrine-prix-comparatif) · [Squarespace en France : forces, limites, alternatives](/blog/avis-squarespace-france) · [Wix vs WordPress vs sur-mesure — Comparatif complet](/comparatif/wix-wordpress-sur-mesure)*

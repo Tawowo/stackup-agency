@@ -1,6 +1,6 @@
 /**
  * REDIRECTIONS 301 — générées par scripts/redirections.mjs (ne pas éditer à la main).
- * 71 reprises de l'ancien site + 61 pour les pages retirées en V5.
+ * 71 reprises de l'ancien site + 98 pour les pages retirées en V5.
  */
 import type { Redirect } from 'next/dist/lib/load-custom-routes'
 
@@ -28,7 +28,7 @@ export const REDIRECTIONS: Redirect[] = [
   },
   {
     "source": "/blog/pourquoi-votre-restaurant-a-besoin-dun-site-web-en-2026",
-    "destination": "/blog/pourquoi-votre-restaurant-perd-des-clients-sans-site-web",
+    "destination": "/creation-site-internet/restaurant",
     "permanent": true
   },
   {
@@ -43,7 +43,7 @@ export const REDIRECTIONS: Redirect[] = [
   },
   {
     "source": "/blog/seo-local-google-maps-premier",
-    "destination": "/blog/seo-local-google-maps-2026",
+    "destination": "/blog/apparaitre-google-maps-pack-local",
     "permanent": true
   },
   {
@@ -63,7 +63,7 @@ export const REDIRECTIONS: Redirect[] = [
   },
   {
     "source": "/blog/agence-web-anet",
-    "destination": "/agence-web/anet",
+    "destination": "/zones-intervention",
     "permanent": true
   },
   {
@@ -78,12 +78,12 @@ export const REDIRECTIONS: Redirect[] = [
   },
   {
     "source": "/blog/agence-web-caen",
-    "destination": "/agence-web/caen",
+    "destination": "/zones-intervention",
     "permanent": true
   },
   {
     "source": "/blog/agence-web-chateaudun",
-    "destination": "/agence-web/chateaudun",
+    "destination": "/zones-intervention",
     "permanent": true
   },
   {
@@ -93,7 +93,7 @@ export const REDIRECTIONS: Redirect[] = [
   },
   {
     "source": "/blog/agence-web-evreux",
-    "destination": "/agence-web/evreux",
+    "destination": "/zones-intervention",
     "permanent": true
   },
   {
@@ -103,22 +103,22 @@ export const REDIRECTIONS: Redirect[] = [
   },
   {
     "source": "/blog/agence-web-nantes",
-    "destination": "/agence-web/nantes",
+    "destination": "/zones-intervention",
     "permanent": true
   },
   {
     "source": "/blog/agence-web-nogent-le-rotrou",
-    "destination": "/agence-web/nogent-le-rotrou",
+    "destination": "/zones-intervention",
     "permanent": true
   },
   {
     "source": "/blog/agence-web-rambouillet",
-    "destination": "/agence-web/rambouillet",
+    "destination": "/zones-intervention",
     "permanent": true
   },
   {
     "source": "/blog/agence-web-rouen",
-    "destination": "/agence-web/rouen",
+    "destination": "/zones-intervention",
     "permanent": true
   },
   {
@@ -133,22 +133,22 @@ export const REDIRECTIONS: Redirect[] = [
   },
   {
     "source": "/blog/agence-web-vernouillet",
-    "destination": "/agence-web/vernouillet",
+    "destination": "/zones-intervention",
     "permanent": true
   },
   {
     "source": "/blog/seo-local-chartres",
-    "destination": "/agence-web/chartres",
+    "destination": "/zones-intervention",
     "permanent": true
   },
   {
     "source": "/blog/seo-local-dreux",
-    "destination": "/agence-web/dreux",
+    "destination": "/zones-intervention",
     "permanent": true
   },
   {
     "source": "/blog/seo-local-orleans",
-    "destination": "/agence-web/orleans",
+    "destination": "/zones-intervention",
     "permanent": true
   },
   {
@@ -608,67 +608,252 @@ export const REDIRECTIONS: Redirect[] = [
   },
   {
     "source": "/blog/categorie/creation-sites",
-    "destination": "/blog/categorie/creation",
+    "destination": "/blog",
     "permanent": true
   },
   {
     "source": "/blog/categorie/design",
-    "destination": "/blog/categorie/creation",
+    "destination": "/blog",
     "permanent": true
   },
   {
     "source": "/blog/categorie/technique",
-    "destination": "/blog/categorie/creation",
+    "destination": "/blog",
     "permanent": true
   },
   {
     "source": "/blog/categorie/performance",
-    "destination": "/blog/categorie/creation",
+    "destination": "/blog",
     "permanent": true
   },
   {
     "source": "/blog/categorie/ecommerce",
-    "destination": "/blog/categorie/commerce",
+    "destination": "/blog",
     "permanent": true
   },
   {
     "source": "/blog/categorie/applications-metier",
-    "destination": "/blog/categorie/outils",
+    "destination": "/blog",
     "permanent": true
   },
   {
     "source": "/blog/categorie/digital",
-    "destination": "/blog/categorie/outils",
+    "destination": "/blog",
     "permanent": true
   },
   {
     "source": "/blog/categorie/ia",
-    "destination": "/blog/categorie/outils",
+    "destination": "/blog",
     "permanent": true
   },
   {
     "source": "/blog/categorie/professions-liberales",
-    "destination": "/blog/categorie/artisans",
+    "destination": "/blog",
     "permanent": true
   },
   {
     "source": "/blog/categorie/marketing",
-    "destination": "/blog/categorie/strategie",
+    "destination": "/blog",
     "permanent": true
   },
   {
     "source": "/blog/categorie/entrepreneuriat",
-    "destination": "/blog/categorie/strategie",
+    "destination": "/blog",
     "permanent": true
   },
   {
     "source": "/blog/categorie/redaction",
-    "destination": "/blog/categorie/strategie",
+    "destination": "/blog",
     "permanent": true
   },
   {
     "source": "/blog/categorie/juridique",
-    "destination": "/blog/categorie/strategie",
+    "destination": "/blog",
+    "permanent": true
+  },
+  {
+    "source": "/blog/seo-local-google-maps-2026",
+    "destination": "/blog/apparaitre-google-maps-pack-local",
+    "permanent": true
+  },
+  {
+    "source": "/blog/seo-tours-pme",
+    "destination": "/agence-web/tours",
+    "permanent": true
+  },
+  {
+    "source": "/blog/seo-orleans-commerces",
+    "destination": "/zones-intervention",
+    "permanent": true
+  },
+  {
+    "source": "/blog/click-collect-restaurant-guide",
+    "destination": "/blog/click-collect-boucherie-charcuterie",
+    "permanent": true
+  },
+  {
+    "source": "/blog/site-web-tours-conversion",
+    "destination": "/agence-web/tours",
+    "permanent": true
+  },
+  {
+    "source": "/blog/ecrire-article-blog-google",
+    "destination": "/blog/redaction-article-seo-guide",
+    "permanent": true
+  },
+  {
+    "source": "/blog/avis-clients-artisan-strategie",
+    "destination": "/blog/avis-google-strategie-complete",
+    "permanent": true
+  },
+  {
+    "source": "/blog/boutique-en-ligne-artisan-par-ou-commencer",
+    "destination": "/blog",
+    "permanent": true
+  },
+  {
+    "source": "/blog/seo-local-sans-site-web",
+    "destination": "/blog/seo-local-commerce",
+    "permanent": true
+  },
+  {
+    "source": "/blog/site-vitrine-tours",
+    "destination": "/agence-web/tours",
+    "permanent": true
+  },
+  {
+    "source": "/blog/site-internet-orleans",
+    "destination": "/zones-intervention",
+    "permanent": true
+  },
+  {
+    "source": "/blog/cout-seo-local-pme",
+    "destination": "/blog/seo-local-commerce",
+    "permanent": true
+  },
+  {
+    "source": "/blog/brasseur-artisanal-site-web",
+    "destination": "/creation-site-internet/cave-vins-spiritueux",
+    "permanent": true
+  },
+  {
+    "source": "/blog/site-web-le-mans",
+    "destination": "/agence-web/le-mans",
+    "permanent": true
+  },
+  {
+    "source": "/blog/site-web-coach-professionnel",
+    "destination": "/creation-site-internet/organisme-formation",
+    "permanent": true
+  },
+  {
+    "source": "/blog/site-web-artisan-electricien",
+    "destination": "/blog/seo-local-commerce",
+    "permanent": true
+  },
+  {
+    "source": "/blog/idees-articles-blog-restaurant",
+    "destination": "/creation-site-internet/restaurant",
+    "permanent": true
+  },
+  {
+    "source": "/blog/salon-coiffure-agenda-en-ligne",
+    "destination": "/creation-site-internet/salon-coiffure",
+    "permanent": true
+  },
+  {
+    "source": "/blog/site-web-vs-application-mobile",
+    "destination": "/blog/hebergement-web-choisir",
+    "permanent": true
+  },
+  {
+    "source": "/blog/rich-snippets-guide",
+    "destination": "/blog/donnees-structurees-schema-org-commerces-locaux",
+    "permanent": true
+  },
+  {
+    "source": "/blog/google-search-console-guide-tpe",
+    "destination": "/blog/google-search-console-guide-avance-seo",
+    "permanent": true
+  },
+  {
+    "source": "/blog/site-web-traiteur",
+    "destination": "/creation-site-internet/traiteur-evenementiel",
+    "permanent": true
+  },
+  {
+    "source": "/blog/site-internet-angers",
+    "destination": "/agence-web/angers",
+    "permanent": true
+  },
+  {
+    "source": "/blog/pourquoi-votre-restaurant-perd-des-clients-sans-site-web",
+    "destination": "/creation-site-internet/restaurant",
+    "permanent": true
+  },
+  {
+    "source": "/blog/externaliser-redaction-blog-guide",
+    "destination": "/blog/blog-et-seo-quel-contenu-publier",
+    "permanent": true
+  },
+  {
+    "source": "/blog/seo-le-mans-entreprises",
+    "destination": "/agence-web/le-mans",
+    "permanent": true
+  },
+  {
+    "source": "/blog/ecommerce-artisanat-guide",
+    "destination": "/blog/vendre-creations-en-ligne-artisans",
+    "permanent": true
+  },
+  {
+    "source": "/blog/site-web-comptable-expert",
+    "destination": "/creation-site-internet/expert-comptable",
+    "permanent": true
+  },
+  {
+    "source": "/blog/site-web-coiffeur",
+    "destination": "/creation-site-internet/salon-coiffure",
+    "permanent": true
+  },
+  {
+    "source": "/blog/site-web-photographe",
+    "destination": "/creation-site-internet/photographe",
+    "permanent": true
+  },
+  {
+    "source": "/blog/blog-immobilier-sujets-mandats",
+    "destination": "/creation-site-internet/agence-immobiliere",
+    "permanent": true
+  },
+  {
+    "source": "/blog/site-web-menuisier",
+    "destination": "/creation-site-internet/menuisier-ebeniste",
+    "permanent": true
+  },
+  {
+    "source": "/blog/site-web-peintre",
+    "destination": "/creation-site-internet/peintre-decorateur",
+    "permanent": true
+  },
+  {
+    "source": "/blog/site-web-avocat",
+    "destination": "/creation-site-internet/avocat",
+    "permanent": true
+  },
+  {
+    "source": "/blog/redacteur-web-freelance-ou-agence",
+    "destination": "/blog/externaliser-redaction-blog-seo",
+    "permanent": true
+  },
+  {
+    "source": "/blog/site-web-carreleur",
+    "destination": "/creation-site-internet/carreleur-sol",
+    "permanent": true
+  },
+  {
+    "source": "/blog/site-web-macon",
+    "destination": "/blog/seo-local-commerce",
     "permanent": true
   }
 ]

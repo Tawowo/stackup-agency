@@ -92,7 +92,7 @@ Gain total avec IA bien utilisée : environ 30% à 40% du temps. Un article de 4
 
 Au-delà du temps, il y a le coût d'opportunité. Pour un dirigeant de TPE qui facture 80€/h de son temps, un article de 4h coûte 320€ en valeur de son temps — bien plus qu'une prestation externalisée à 25-50€.
 
-C'est la logique de [l'externalisation de la rédaction](/blog/externaliser-redaction-blog-guide) : déléguer la production à quelqu'un dont c'est le métier, pendant que vous gérez votre activité principale.
+C'est la logique de [l'externalisation de la rédaction](/blog/blog-et-seo-quel-contenu-publier) : déléguer la production à quelqu'un dont c'est le métier, pendant que vous gérez votre activité principale.
 
 Notre [service de rédaction blog SEO](/services/redaction-blog-seo) prend en charge toutes les étapes, de la recherche de mots-clés à la mise en forme, à partir de 25€ l'article.
 

@@ -128,4 +128,4 @@ Oui, mais il faut alors héberger le site et assurer soi-même les mises à jour
 
 ---
 
-*Pour aller plus loin : [Wix vs sur mesure : le comparatif honnête 2026](/blog/wix-ou-sur-mesure-comparatif-2026) · [Jimdo, e-monsite, SiteW : que valent les éditeurs français low-cost ?](/blog/avis-jimdo-emonsite-sitew) · [Prestashop vs Shopify vs sur mesure pour le e-commerce français](/blog/prestashop-shopify-sur-mesure-ecommerce) · [Wix vs WordPress vs sur-mesure — Comparatif complet](/comparatif/wix-wordpress-sur-mesure) · [Nos tarifs](/tarifs)*
+*Pour aller plus loin : [Wix vs sur mesure : le comparatif honnête 2026](/blog/site-vitrine-prix-comparatif) · [Jimdo, e-monsite, SiteW : que valent les éditeurs français low-cost ?](/blog/avis-jimdo-emonsite-sitew) · [Prestashop vs Shopify vs sur mesure pour le e-commerce français](/blog/prestashop-shopify-sur-mesure-ecommerce) · [Wix vs WordPress vs sur-mesure — Comparatif complet](/comparatif/wix-wordpress-sur-mesure) · [Nos tarifs](/tarifs)*
