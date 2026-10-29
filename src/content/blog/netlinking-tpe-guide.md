@@ -160,4 +160,4 @@ Commencez par les fondations (annuaires, associations professionnelles), puis mo
 
 ---
 
-*Pour aller plus loin : [Netlinking local : 12 méthodes pour votre région](/blog/netlinking-local-backlinks-region-methodes) · [SEO : les 15 erreurs qui plombent les sites de petites entreprises](/blog/10-erreurs-seo-site-web) · [Le SEO est-il mort avec l'IA ?](/blog/seo-ia-generative-ai-overviews-google) · [Rédaction de blog SEO](/services/redaction-blog-seo)*
+*Pour aller plus loin : [Netlinking local : 12 méthodes pour votre région](/blog/backlinks-liens-entrants-petite-entreprise) · [SEO : les 15 erreurs qui plombent les sites de petites entreprises](/blog/10-erreurs-seo-site-web) · [Le SEO est-il mort avec l'IA ?](/blog/seo-ia-generative-ai-overviews-google) · [Rédaction de blog SEO](/services/redaction-blog-seo)*

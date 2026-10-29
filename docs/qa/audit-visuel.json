@@ -155,6 +155,11 @@
   "problemes": []
  },
  {
+  "chemin": "/lexique",
+  "largeur": 1440,
+  "problemes": []
+ },
+ {
   "chemin": "/ressources/cahier-des-charges",
   "largeur": 1440,
   "problemes": []
@@ -165,7 +170,12 @@
   "problemes": []
  },
  {
-  "chemin": "/blog/adresse-mail-professionnelle-nom-de-domaine",
+  "chemin": "/blog/activite-saisonniere-creux-hiver-carnet-vide",
+  "largeur": 1440,
+  "problemes": []
+ },
+ {
+  "chemin": "/lexique/3d-secure",
   "largeur": 1440,
   "problemes": []
  },
@@ -325,6 +335,11 @@
   "problemes": []
  },
  {
+  "chemin": "/lexique",
+  "largeur": 390,
+  "problemes": []
+ },
+ {
   "chemin": "/ressources/cahier-des-charges",
   "largeur": 390,
   "problemes": []
@@ -335,7 +350,12 @@
   "problemes": []
  },
  {
-  "chemin": "/blog/adresse-mail-professionnelle-nom-de-domaine",
+  "chemin": "/blog/activite-saisonniere-creux-hiver-carnet-vide",
+  "largeur": 390,
+  "problemes": []
+ },
+ {
+  "chemin": "/lexique/3d-secure",
   "largeur": 390,
   "problemes": []
  }

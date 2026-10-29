@@ -127,7 +127,7 @@ Mettez en avant ce qui est proche et concret : vitrine photographiée, offre du 
 
 ## Les liens et mentions locales : par où commencer ?
 
-Un lien depuis un site local (association sportive que vous sponsorisez, commune, office de tourisme, club d'entrepreneurs, fournisseur ou fabricant dont vous êtes revendeur) indique à Google que vous existez dans ce territoire. Un lien depuis une association locale sert au référencement s'il est **naturel et pertinent**, pas s'il est acheté. Demandez une mention à ceux qui vous connaissent, proposez une information utile (page partenaire, article sur un événement). Les [méthodes de netlinking local](/blog/netlinking-local-backlinks-region-methodes) sont détaillées dans un article dédié.
+Un lien depuis un site local (association sportive que vous sponsorisez, commune, office de tourisme, club d'entrepreneurs, fournisseur ou fabricant dont vous êtes revendeur) indique à Google que vous existez dans ce territoire. Un lien depuis une association locale sert au référencement s'il est **naturel et pertinent**, pas s'il est acheté. Demandez une mention à ceux qui vous connaissent, proposez une information utile (page partenaire, article sur un événement). Les [méthodes de netlinking local](/blog/backlinks-liens-entrants-petite-entreprise) sont détaillées dans un article dédié.
 
 ## Comment analyser la concurrence locale sur Google ?
 

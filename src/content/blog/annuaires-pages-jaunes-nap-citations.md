@@ -106,7 +106,7 @@ Pas la liste de cent sites que l'on trouve partout. Visez **quatre catégories**
 
 **2. Les annuaires de votre profession.** Ordre, fédération, syndicat, chambre de métiers, réseau de professionnels, label de qualité si vous en possédez réellement un. Ils sont pertinents pour votre secteur, et un lien d'une organisation reconnue pèse plus qu'un annuaire généraliste.
 
-**3. Les annuaires du territoire.** Site de la mairie ou de la communauté de communes, office de tourisme, association de commerçants de votre ville, CCI. Ces pages sont moins nombreuses, mais très cohérentes avec votre zone. Notre article sur le [netlinking local](/blog/netlinking-local-backlinks-region-methodes) explique comment les obtenir.
+**3. Les annuaires du territoire.** Site de la mairie ou de la communauté de communes, office de tourisme, association de commerçants de votre ville, CCI. Ces pages sont moins nombreuses, mais très cohérentes avec votre zone. Notre article sur le [netlinking local](/blog/backlinks-liens-entrants-petite-entreprise) explique comment les obtenir.
 
 **4. Les plateformes spécialisées**, quand elles apportent vraiment des demandes : avis sur le bâtiment, la restauration, la santé, le mariage… Mesurez ce qu'elles vous apportent avant de payer. Par exemple, [les annuaires de l'artisan](/blog/annuaires-artisan-houzz-pages-jaunes) comparent quelques plateformes du secteur.
 
@@ -134,7 +134,7 @@ Le coût d'entretien est ce qui tue la démarche : une fiche à jour aujourd'hui
 - **Un rappel dans votre agenda** à chaque saison pour parcourir le tableau.
 - **Les mêmes informations sur votre site**, dans le pied de page et la page contact. Votre site devient la source officielle. Notre [audit de site](/outils/audit-site) permet de repérer les écarts les plus visibles ; pour aller plus loin sur l'ensemble, voir la page [référencement local](/services/referencement-local).
 
-Pensez aussi aux **données structurées** (balisage de l'entreprise locale) qui aident les moteurs à lire vos coordonnées : [voir l'article dédié](/blog/donnees-structurees-schema-org-commerces-locaux).
+Pensez aussi aux **données structurées** (balisage de l'entreprise locale) qui aident les moteurs à lire vos coordonnées : [voir l'article dédié](/blog/donnees-structurees-schema-rich-snippets).
 
 ## Questions fréquentes
 

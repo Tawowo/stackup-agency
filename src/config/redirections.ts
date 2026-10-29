@@ -1,6 +1,6 @@
 /**
  * REDIRECTIONS 301 — générées par scripts/redirections.mjs (ne pas éditer à la main).
- * 71 reprises de l'ancien site + 98 pour les pages retirées en V5.
+ * 71 reprises de l'ancien site + 100 pour les pages retirées en V5.
  */
 import type { Redirect } from 'next/dist/lib/load-custom-routes'
 
@@ -768,7 +768,7 @@ export const REDIRECTIONS: Redirect[] = [
   },
   {
     "source": "/blog/rich-snippets-guide",
-    "destination": "/blog/donnees-structurees-schema-org-commerces-locaux",
+    "destination": "/blog",
     "permanent": true
   },
   {
@@ -854,6 +854,16 @@ export const REDIRECTIONS: Redirect[] = [
   {
     "source": "/blog/site-web-macon",
     "destination": "/blog/seo-local-commerce",
+    "permanent": true
+  },
+  {
+    "source": "/blog/donnees-structurees-schema-org-commerces-locaux",
+    "destination": "/blog",
+    "permanent": true
+  },
+  {
+    "source": "/blog/netlinking-local-backlinks-region-methodes",
+    "destination": "/blog",
     "permanent": true
   }
 ]

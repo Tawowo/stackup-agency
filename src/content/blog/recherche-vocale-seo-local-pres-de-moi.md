@@ -54,7 +54,7 @@ Les fiches GBP avec des posts récents (au moins 2 fois par mois) bénéficient 
 
 Répondez à tous les avis — positifs comme négatifs. C'est un signal d'activité et de fiabilité pour Google. Une fiche avec des dizaines d'avis sans aucune réponse inspire moins confiance qu'une fiche avec moins d'avis mais des réponses soignées.
 
-Les données structurées [LocalBusiness](/blog/donnees-structurees-schema-org-commerces-locaux) sur votre site renforcent la cohérence des informations que Google associe à votre établissement.
+Les données structurées [LocalBusiness](/blog/donnees-structurees-schema-rich-snippets) sur votre site renforcent la cohérence des informations que Google associe à votre établissement.
 
 ## Optimiser votre site pour les requêtes conversationnelles
 
@@ -75,7 +75,7 @@ H2 : Quelle est votre zone d'intervention en Indre-et-Loire ?
 → Liste des villes et communes desservies
 ```
 
-Cette structure est idéale pour être extraite par Google et lue par les assistants vocaux. Ajoutez-y des [données structurées FAQPage](/blog/donnees-structurees-schema-org-commerces-locaux) pour maximiser les chances d'apparaître en featured snippet.
+Cette structure est idéale pour être extraite par Google et lue par les assistants vocaux. Ajoutez-y des [données structurées FAQPage](/blog/donnees-structurees-schema-rich-snippets) pour maximiser les chances d'apparaître en featured snippet.
 
 ### Intégrer des signaux géographiques dans le contenu
 
@@ -106,7 +106,7 @@ NAP = Name, Address, Phone number. La cohérence de ces trois informations à tr
 
 Une incohérence — votre adresse est écrite différemment sur votre site et sur Google Maps — peut suffire à nuire à votre positionnement local. Auditez vos citations avec des outils comme Moz Local ou BrightLocal.
 
-La [stratégie de netlinking local](/blog/netlinking-local-backlinks-region-methodes) complète cette approche en renforçant l'autorité de votre site auprès des sources qui comptent dans votre région.
+La [stratégie de netlinking local](/blog/backlinks-liens-entrants-petite-entreprise) complète cette approche en renforçant l'autorité de votre site auprès des sources qui comptent dans votre région.
 
 ## Mesurer le trafic vocal
 

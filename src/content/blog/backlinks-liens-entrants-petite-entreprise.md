@@ -82,7 +82,7 @@ Voici les sources qui fonctionnent pour une entreprise locale, des plus faciles 
 - **Les contributions** : répondre à une question d'un forum de métier, proposer un témoignage ou une tribune dans un blog sectoriel.
 - **Les contenus que l'on cite spontanément** : un guide de prix, une checklist, un schéma explicatif, un petit outil en ligne.
 
-Pour les méthodes régionales plus détaillées, voir [netlinking local et backlinks en région](/blog/netlinking-local-backlinks-region-methodes).
+Pour les méthodes régionales plus détaillées, voir [netlinking local et backlinks en région](/blog/backlinks-liens-entrants-petite-entreprise).
 
 Soyez réaliste : il s'agit de quelques liens par an qui comptent, pas de milliers.
 

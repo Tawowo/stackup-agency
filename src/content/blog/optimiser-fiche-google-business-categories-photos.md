@@ -72,7 +72,7 @@ Dans la modification du profil, section « Horaires » :
 
 Pour un artisan qui intervient sur rendez-vous, indiquez les horaires d'accueil téléphonique plutôt que « 24h/24 », sauf si vous assurez réellement un service permanent. Une promesse non tenue donne des avis négatifs.
 
-**Comment afficher ses horaires et son adresse sur son site ?** Écrivez-les en texte visible dans l'en-tête ou le pied de page, et sur la page contact, exactement comme dans la fiche. Une carte Google Maps intégrée aide le visiteur (voir [Google Maps sur votre site](/blog/google-maps-integration-site)). Vos développeurs peuvent aussi ajouter des données structurées qui décrivent l'établissement aux moteurs de recherche, détaillées dans [données structurées pour les commerces locaux](/blog/donnees-structurees-schema-org-commerces-locaux). L'essentiel est la cohérence : adresse, téléphone et horaires identiques partout.
+**Comment afficher ses horaires et son adresse sur son site ?** Écrivez-les en texte visible dans l'en-tête ou le pied de page, et sur la page contact, exactement comme dans la fiche. Une carte Google Maps intégrée aide le visiteur (voir [Google Maps sur votre site](/blog/google-maps-integration-site)). Vos développeurs peuvent aussi ajouter des données structurées qui décrivent l'établissement aux moteurs de recherche, détaillées dans [données structurées pour les commerces locaux](/blog/donnees-structurees-schema-rich-snippets). L'essentiel est la cohérence : adresse, téléphone et horaires identiques partout.
 
 ## Quelles photos mettre sur sa fiche Google, et combien ?
 

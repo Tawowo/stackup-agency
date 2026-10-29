@@ -161,7 +161,7 @@ La bonne réponse est "les deux, mais différemment". Voici la comparaison honn�
 | 7-9 | Consolidation des positions, augmentation du trafic organique mesurable |
 | 10-12 | ROI positif sur la plupart des secteurs, effet cumulatif visible |
 
-Ces délais supposent un site techniquement sain (consultez notre [checklist d'audit SEO](/blog/audit-seo-technique-checklist-50-points)), du contenu optimisé publié régulièrement, et un minimum de [netlinking local](/blog/netlinking-local-backlinks-region-methodes).
+Ces délais supposent un site techniquement sain (consultez notre [checklist d'audit SEO](/blog/audit-seo-technique-checklist-50-points)), du contenu optimisé publié régulièrement, et un minimum de [netlinking local](/blog/backlinks-liens-entrants-petite-entreprise).
 
 ## FAQ
 

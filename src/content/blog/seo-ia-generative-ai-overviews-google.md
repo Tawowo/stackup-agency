@@ -44,7 +44,7 @@ Les AI Overviews adorent les contenus qui répondent clairement et directement �
 
 **Des listes numérotées et à puces** : les formats structurés sont plus faciles à extraire pour l'IA que des paragraphes denses.
 
-**Des sections FAQ** : les pages avec des FAQ bien structurées (et des [données structurées FAQPage](/blog/donnees-structurees-schema-org-commerces-locaux)) sont surreprésentées dans les AI Overviews.
+**Des sections FAQ** : les pages avec des FAQ bien structurées (et des [données structurées FAQPage](/blog/donnees-structurees-schema-rich-snippets)) sont surreprésentées dans les AI Overviews.
 
 ### 2. Miser sur la profondeur plutôt que la longueur
 

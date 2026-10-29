@@ -162,4 +162,4 @@ Non dans la plupart des cas. Les variantes (couleur, taille) doivent être sur l
 **Les avis clients améliorent-ils le SEO e-commerce ?**
 Oui, de deux façons : ils ajoutent du contenu unique et régulier sur vos fiches (signal de fraîcheur), et avec les données structurées, ils permettent l'affichage d'étoiles dans les résultats Google (meilleur CTR).
 
-Voir aussi : [rich snippets guide](/blog/donnees-structurees-schema-org-commerces-locaux), [vitesse mobile optimisation](/blog/vitesse-mobile-optimisation) et nos [tarifs boutique e-commerce](/tarifs).
+Voir aussi : [rich snippets guide](/blog/donnees-structurees-schema-rich-snippets), [vitesse mobile optimisation](/blog/vitesse-mobile-optimisation) et nos [tarifs boutique e-commerce](/tarifs).

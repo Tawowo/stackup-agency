@@ -155,7 +155,7 @@ Quelques conseils prudents :
 - **Testez** avec les outils officiels de Google pour les résultats enrichis.
 - **N'attendez pas de miracle** : le balisage rend la page éligible à un affichage enrichi, Google reste libre de l'accorder ou non.
 
-Notre article [données structurées pour les commerces locaux](/blog/donnees-structurees-schema-org-commerces-locaux) détaille le balisage d'une entreprise locale.
+Notre article [données structurées pour les commerces locaux](/blog/donnees-structurees-schema-rich-snippets) détaille le balisage d'une entreprise locale.
 
 ## Méthode : reprendre toutes ses balises en une demi-journée
 

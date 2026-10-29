@@ -18,7 +18,7 @@ export default function Accordeon({ questions, className = '', groupe = 'su-acc'
       {questions.map((x, i) => (
         <details key={x.q} className="su-acc__item" name={groupe} open={i === 0}>
           <summary className="su-acc__q">
-            <span className="su-mono su-acc__num">0{i + 1}</span>
+            <span className="su-mono su-acc__num">{String(i + 1).padStart(2, "0")}</span>
             {x.q}
           </summary>
           <p className="su-acc__r"><Lie t={x.r} /></p>

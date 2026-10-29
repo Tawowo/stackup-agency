@@ -29,7 +29,7 @@ L'auteur possède-t-il des connaissances approfondies sur le sujet ? L'expertise
 
 ### Authoritativeness (Autorité)
 
-Le site et l'auteur sont-ils reconnus comme des références dans leur domaine ? L'autorité se mesure notamment par les **backlinks** : si d'autres sites respectés dans votre secteur citent votre site, c'est un signal d'autorité fort. Les mentions dans la presse locale, les interviews, les citations dans des guides professionnels contribuent aussi. Notre guide sur le [netlinking local](/blog/netlinking-local-backlinks-region-methodes) couvre les stratégies adaptées aux PME.
+Le site et l'auteur sont-ils reconnus comme des références dans leur domaine ? L'autorité se mesure notamment par les **backlinks** : si d'autres sites respectés dans votre secteur citent votre site, c'est un signal d'autorité fort. Les mentions dans la presse locale, les interviews, les citations dans des guides professionnels contribuent aussi. Notre guide sur le [netlinking local](/blog/backlinks-liens-entrants-petite-entreprise) couvre les stratégies adaptées aux PME.
 
 ### Trustworthiness (Fiabilité)
 
@@ -57,7 +57,7 @@ Les témoignages sont de l'Experience et de la preuve sociale combinées. Pour m
 - Utilisez de vrais noms et si possible des photos
 - Demandez des avis sur Google Business Profile (ils apparaissent aussi dans les SERP)
 - Créez des pages "études de cas" détaillées avec le problème, la solution et les résultats mesurables
-- Intégrez des données structurées `Review` pour signaler ces avis à Google (voir notre article sur les [données structurées Schema.org](/blog/donnees-structurees-schema-org-commerces-locaux))
+- Intégrez des données structurées `Review` pour signaler ces avis à Google (voir notre article sur les [données structurées Schema.org](/blog/donnees-structurees-schema-rich-snippets))
 
 ### 3. Certifications, labels et affiliations professionnelles
 

@@ -1,15 +1,9 @@
 {
- "date": "2026-10-29T11:54:11.505Z",
+ "date": "2026-10-29T12:03:15.796Z",
  "base": "http://localhost:3100",
  "pages": 580,
  "seuil": 15,
- "pireSimilarite": 22.2,
- "couplesAuDessus": 1,
- "couples": [
-  {
-   "a": "/auteur/matheo-reboul",
-   "b": "/plan-du-site",
-   "similarite": 22.2
-  }
- ]
+ "pireSimilarite": 12.4,
+ "couplesAuDessus": 0,
+ "couples": []
 }

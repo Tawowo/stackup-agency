@@ -85,6 +85,11 @@ if (process.argv.includes('--appliquer')) {
     if (r !== t) fs.writeFileSync(p, r)
   }
   for (const l of aSupprimer) fs.rmSync(path.join(dossier, l.slug + '.md'), { force: true })
-  fs.writeFileSync(path.join(RACINE, 'src/config/redirections-articles.json'), JSON.stringify(redirections, null, 1))
+  // Fusionne avec les redirections déjà écrites : une application précédente ne doit jamais être perdue.
+  const fichierRedir = path.join(RACINE, 'src/config/redirections-articles.json')
+  const deja = fs.existsSync(fichierRedir) ? JSON.parse(fs.readFileSync(fichierRedir, 'utf8')) : []
+  const sources = new Set(redirections.map((r) => r.source))
+  redirections.push(...deja.filter((r) => !sources.has(r.source)))
+  fs.writeFileSync(fichierRedir, JSON.stringify(redirections, null, 1))
   console.log(`appliqué : ${aSupprimer.length} fichiers supprimés, ${redirections.length} redirections 301 écrites (src/config/redirections-articles.json)`)
 }

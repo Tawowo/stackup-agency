@@ -112,7 +112,7 @@ La méthode concrète :
 
 Sur un CMS comme [WordPress](/lexique/wordpress), des extensions ajoutent du balisage automatiquement ; vérifiez ce qu’elles génèrent, car certaines produisent des données erronées ou en double. Sur un site sur mesure, les données se génèrent depuis les contenus du site (nom, horaires, produits), donc elles restent cohérentes avec ce que voit le visiteur. C’est ce que nous faisons sur les sites fabriqués par Stackup Agency : la page de l’entreprise, les fiches de service et le fil d’Ariane sont balisés, sans que vous ayez à y toucher. Les détails du service sont sur la page [référencement](/services/referencement).
 
-Pour une analyse plus complète des types de balisage adaptés aux commerces, lisez aussi [données structurées Schema.org pour les commerces locaux](/blog/donnees-structurees-schema-org-commerces-locaux).
+Pour une analyse plus complète des types de balisage adaptés aux commerces, lisez aussi [données structurées Schema.org pour les commerces locaux](/blog/donnees-structurees-schema-rich-snippets).
 
 ## Comment tester ses données structurées ?
 

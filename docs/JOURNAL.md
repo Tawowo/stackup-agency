@@ -1,5 +1,16 @@
 # Journal du chantier — Stackup Agency V5
 
+## RAPPORT — mission 6 « renforcer tout le SEO » (2026-10-29) — à lire en premier
+
+1. **Univers** : 65 471 formulations (21 424 avant), 13 128 formulations-types distinctes (hors métier et lieu), 5 575 grappes, 380 pages cibles ; mots courts (têtes de 1 à 3 mots), lexique (24 tournures par terme), 150 métiers × 50 besoins, 272 communes × 12 services, 20 métiers ruraux × 272 communes, outils et comparatifs. Ce sont des formulations PLAUSIBLES (aucun volume mesuré), une carte de couverture : jamais une page par combinaison (`scripts/seo/extensions.mjs`).
+2. **Lexique** : `/lexique` + 139 définitions `/lexique/<terme>` (450-800 mots, DefinedTerm + DefinedTermSet + FAQ), pour « c'est quoi X » et les mots courts ; dans le sitemap, le plan du site, `llms.txt`, le menu Ressources et le pied de page.
+3. **Pages métier** : 77 métiers × 7 questions propres (Maps, domaine et e-mail, devis, relances, photos, visibilité, obligations) = 539 réponses uniques ; section « métier voisin » nommant les 74 métiers sans page propre rattachés (`metiers-voisins.ts`).
+4. **Articles du plan** : 47 écrits (verifier-article ✓) : 12 publiés, 35 programmés mardi et vendredi du 10 novembre 2026 au 9 mars 2027 (`scripts/seo/programmer.mjs`) ; 2 fusions de plus (301 conservées : le script fusionne désormais au lieu d'écraser).
+5. **Couverture** (`couverture.mjs`) : grappes bien couvertes 2 047 → 2 970, à enrichir 1 013 → 277. Cannibalisation (`cannibalisation.mjs`) : la page métier et son guide visent la même requête (rôles : vente / conseil, à surveiller en Search Console).
+6. **Technique** : flux RSS `/blog/feed.xml`, IndexNow (`scripts/indexnow.mjs`, simulation par défaut, clé dans `public/`), HowTo sur les piliers, audit HTML (titres, alt, liens, balises : 0 remarque), rayons du blog en noindex, auteur allégé (doublon avec le plan du site), numérotation FAQ à 2 chiffres.
+7. **Contrôles (build de production)** : 580 URL, 0 erreur ; maillage 0 orpheline, ≤3 clics ; similarité max 12,4 % ; 171 redirections, 0 chaîne ; audit visuel 36 pages × 2 largeurs OK ; axe 0 violation ; Lighthouse mobile 97-98 (accueil 97) ; `npm run verify` vert (29 tests) ; e2e 14/14 ; Next 16.4.3 (avis de sécurité).
+8. **Reste à votre charge** : fusionner dans `main` (la production sert la maintenance), INSEE, fiche Google, `node scripts/indexnow.mjs --envoyer` après la mise en ligne, relire les faits juridiques des 139 définitions et 47 articles, inscrire le sitemap dans la Search Console. Les positions ne se jugeront que dans 2 à 6 mois.
+
 ## RAPPORT FINAL — mission 5 « référencement, fluidité, identité légale » (2026-10-29) — à lire en premier
 
 1. **Requêtes** : 21 424 requêtes (Search Console réelle + combinaisons métier × ville × besoin + questions), 2 350 grappes, 239 pages cibles, plan de 104 publications (`docs/seo/`). Aucun volume Keyword Planner : classement par grappe et intention, pas par volume.

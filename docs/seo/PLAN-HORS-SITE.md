@@ -75,6 +75,12 @@ Règle : ne s'inscrire que dans les annuaires **gratuits**, **locaux** ou **thé
 
 Voir `docs/seo/plan-publication.csv` : 104 créneaux (mardi et vendredi, à partir du 10 novembre 2026), classés par potentiel. Chaque ligne donne la requête principale et la grappe visée. Avant publication : relire, ajouter 2 liens internes, mettre à jour la date.
 
+## 4 bis. Après la mise en ligne
+
+- `node scripts/indexnow.mjs --envoyer` : prévient Bing et les moteurs compatibles (simulation sans l'option). Google : sitemap + Search Console.
+- Flux RSS du journal : `https://stackup-agency.fr/blog/feed.xml` (à donner aux annuaires de blogs et à la lettre d'information).
+- Les 35 articles programmés paraissent seuls (mardi et vendredi) : vérifier, à chaque date, qu'ils apparaissent au sitemap.
+
 ## 5. Mesure
 
 Suivi mensuel de 100 requêtes dans `docs/seo/suivi.csv` (Search Console → Performances → filtre sur la requête). Compter aussi, dans les journaux du serveur, les événements `mesure` : vues, `clic_telephone`, `clic_demo`, `estimation_lancee`, `contact_envoye`.

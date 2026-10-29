@@ -183,5 +183,15 @@
   "source": "/blog/site-web-macon",
   "destination": "/blog/seo-local-commerce",
   "permanent": true
+ },
+ {
+  "source": "/blog/donnees-structurees-schema-org-commerces-locaux",
+  "destination": "/blog/donnees-structurees-schema-rich-snippets",
+  "permanent": true
+ },
+ {
+  "source": "/blog/netlinking-local-backlinks-region-methodes",
+  "destination": "/blog/backlinks-liens-entrants-petite-entreprise",
+  "permanent": true
  }
 ]

@@ -134,7 +134,7 @@ Permet à Google d'afficher le fil d'Ariane dans les résultats. Facile à impl�
 Testez chaque page instrumentée sur [search.google.com/test/rich-results](https://search.google.com/test/rich-results). Zéro erreur bloquante requise.
 
 **Point 35 — Suivi via rapport "Résultats enrichis" dans GSC**
-Monitoring mensuel dans Google Search Console pour détecter les nouvelles erreurs après chaque déploiement. Détails dans notre guide sur les [données structurées Schema.org](/blog/donnees-structurees-schema-org-commerces-locaux).
+Monitoring mensuel dans Google Search Console pour détecter les nouvelles erreurs après chaque déploiement. Détails dans notre guide sur les [données structurées Schema.org](/blog/donnees-structurees-schema-rich-snippets).
 
 ---
 
