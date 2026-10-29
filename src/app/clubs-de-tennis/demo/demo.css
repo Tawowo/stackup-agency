@@ -1,0 +1,61 @@
+/* /clubs-de-tennis/demo — rôle par rôle : capture à gauche, étapes à droite ; empilé sur téléphone. */
+.cd-roles {
+  display: grid;
+  gap: 18px;
+  margin-top: 20px;
+}
+.cd-role {
+  display: grid;
+  grid-template-columns: minmax(0, 300px) minmax(0, 1fr);
+  gap: 20px;
+  padding: 18px;
+  align-items: start;
+}
+.cd-role img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  box-shadow: 0 0 0 1px rgba(13, 44, 76, 0.12);
+}
+.cd-role img[data-mobile='1'] {
+  max-width: 200px;
+  justify-self: center;
+}
+.cd-role h3 {
+  margin: 0 0 6px;
+  font-family: var(--su-font-display), sans-serif;
+  font-size: 1.25rem;
+}
+.cd-role h3 span {
+  font-family: var(--su-font-sans), sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  color: var(--su-texte-doux);
+}
+.cd-role p {
+  margin: 0 0 10px;
+}
+.cd-role ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+}
+.cd-role li {
+  display: grid;
+  gap: 2px;
+}
+.cd-role li a {
+  font-weight: 700;
+  color: var(--su-ambre-texte);
+}
+.cd-role li span {
+  color: var(--su-texte-doux);
+  font-size: 0.9375rem;
+}
+@media (max-width: 760px) {
+  .cd-role {
+    grid-template-columns: 1fr;
+  }
+}

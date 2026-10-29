@@ -1,0 +1,472 @@
+/* SIMULATEUR « CLUBS DE TENNIS » — la feuille ivoire de l'estimateur, un récapitulatif collant à droite (ordinateur),
+   une barre en bas (téléphone). Aucune apparition animée : tout est là, tout de suite. */
+
+.cs {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 400px);
+  gap: 28px;
+  align-items: start;
+  color: var(--su-navy);
+}
+.cs--compact {
+  grid-template-columns: minmax(0, 1.25fr) minmax(300px, 1fr);
+}
+.cs-feuille {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.cs-etape {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.cs-etape + .cs-etape {
+  padding-top: 32px;
+  border-top: 1px solid #e3dccd;
+}
+.cs-etape__titre {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-family: var(--su-font-display), sans-serif;
+  font-size: clamp(1.4rem, 2.4vw, 1.75rem);
+  line-height: 1.15;
+}
+.cs-etape__titre .su-mono {
+  color: var(--su-ambre-texte);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* Champs */
+.cs-champs {
+  display: grid;
+  gap: 14px;
+}
+.cs-champs--2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.cs-champs--3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.cs-champ {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+.cs-champ--court {
+  max-width: 420px;
+}
+.cs-champ label {
+  font-weight: 600;
+  font-size: 0.9375rem;
+}
+.cs-champ input,
+.cs-champ select,
+.cs-champ textarea {
+  min-height: 48px;
+  padding: 10px 12px;
+  border-radius: 4px;
+  border: 1.5px solid #c9c1b0;
+  background: #fff;
+  color: var(--su-navy);
+  font: inherit;
+  font-size: 1rem;
+}
+.cs-champ textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+.cs-champ input:focus-visible,
+.cs-champ select:focus-visible,
+.cs-champ textarea:focus-visible {
+  outline: 3px solid var(--su-ambre);
+  outline-offset: 2px;
+  border-color: var(--su-ambre);
+}
+.cs-champ input[aria-invalid='true'] {
+  border-color: #b42318;
+}
+.cs-erreur {
+  margin: 0;
+  color: #b42318;
+  font-size: 0.875rem;
+}
+.cs-categorie {
+  margin: 0;
+  padding: 12px 14px;
+  border-left: 4px solid var(--su-ambre);
+  background: #fff7e8;
+}
+.cs-message {
+  margin: 0;
+}
+
+/* Options */
+.cs-groupe {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  min-width: 0;
+}
+.cs-groupe__titre {
+  margin: 0 0 10px;
+  padding: 0;
+  font-weight: 700;
+}
+.cs-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 12px;
+}
+.cs-indispo {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+.cs-indispo .su-est__case {
+  margin: 0;
+  cursor: not-allowed;
+}
+.cs-quantite {
+  padding: 0 16px 16px;
+}
+.cs-besoins {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 8px;
+}
+.cs-besoin {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  min-height: 44px;
+  padding: 10px 12px;
+  border-radius: 4px;
+  border: 1px solid #d9d2c3;
+  background: #fff;
+  cursor: pointer;
+}
+.cs-besoin input {
+  width: 20px;
+  height: 20px;
+  margin-top: 2px;
+  accent-color: var(--su-ambre-texte);
+}
+
+/* Récapitulatif */
+.cs-cote {
+  position: sticky;
+  top: 96px;
+  min-width: 0;
+}
+.cs-recap {
+  --su-texte: var(--su-ivoire);
+  --su-texte-doux: var(--su-gris-nuit);
+  --su-accent-texte: var(--su-ambre-clair);
+  padding: 24px;
+  border-radius: 4px;
+  background: var(--su-encre-2);
+  color: var(--su-ivoire);
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--su-ivoire) 12%, transparent), var(--su-ombre);
+  border-top: 3px solid var(--su-ambre);
+  scroll-margin-top: 90px;
+}
+.cs-recap__titre {
+  margin: 0 0 4px;
+  font-family: var(--su-font-display), sans-serif;
+  font-size: 1.35rem;
+}
+.cs-recap__formule {
+  margin: 0 0 16px;
+  color: var(--su-ambre-clair);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.cs-chiffres,
+.cs-annees {
+  margin: 0 0 16px;
+  display: grid;
+  gap: 12px;
+}
+.cs-chiffres div,
+.cs-annees div {
+  display: grid;
+  gap: 2px;
+}
+.cs-chiffres dt,
+.cs-annees dt {
+  color: var(--su-gris-nuit);
+  font-size: 0.875rem;
+}
+.cs-chiffres dd,
+.cs-annees dd {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 6px;
+}
+.cs-chiffres strong {
+  font-family: var(--su-font-display), sans-serif;
+  font-size: clamp(1.6rem, 2.6vw, 2rem);
+  line-height: 1.05;
+  font-variant-numeric: tabular-nums;
+}
+.cs-chiffres small {
+  flex-basis: 100%;
+  color: var(--su-gris-nuit);
+  font-size: 0.875rem;
+}
+.cs-annees {
+  grid-template-columns: 1fr 1fr;
+}
+.cs-annees dd {
+  font-weight: 700;
+}
+.cs-mois {
+  width: 100%;
+  margin: 0 0 16px;
+  border-collapse: collapse;
+  font-size: 0.9375rem;
+  font-variant-numeric: tabular-nums;
+}
+.cs-mois caption {
+  text-align: left;
+  margin-bottom: 6px;
+  color: var(--su-gris-nuit);
+  font-size: 0.875rem;
+}
+.cs-mois th,
+.cs-mois td {
+  padding: 6px 4px;
+  border-bottom: 1px solid color-mix(in srgb, var(--su-ivoire) 14%, transparent);
+  text-align: right;
+}
+.cs-mois th:first-child {
+  text-align: left;
+}
+.cs-mois thead th {
+  color: var(--su-gris-nuit);
+  font-weight: 500;
+  font-size: 0.8125rem;
+}
+.cs-detail {
+  margin: 0 0 12px;
+}
+.cs-detail summary {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: var(--su-ambre-clair);
+  font-weight: 600;
+}
+.cs-detail ul {
+  margin: 4px 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 6px;
+  font-size: 0.9375rem;
+}
+.cs-detail li {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+.cs-inclus li {
+  display: list-item;
+  margin-left: 18px;
+  list-style: square;
+}
+.cs-inclus a {
+  color: var(--su-ambre-clair);
+}
+.cs-recap .su-est__alerte,
+.cs-recap .su-est__astuce {
+  color: var(--su-navy);
+  margin-bottom: 12px;
+}
+.cs-mention {
+  margin: 0 0 16px;
+  color: var(--su-gris-nuit);
+  font-size: 0.8125rem;
+}
+.cs-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 10px;
+  margin: 0;
+  scroll-margin-top: 90px;
+}
+.cs-actions__liens {
+  margin: 4px 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+}
+.cs-actions__liens a,
+.cs-lien-bouton {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--su-ambre-clair);
+  font: inherit;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+
+/* Formulaire de demande (dans le récapitulatif) */
+.cs-form {
+  --su-texte: var(--su-navy);
+  margin-top: 8px;
+  padding: 18px;
+  border-radius: 4px;
+  background: var(--su-ivoire);
+  color: var(--su-navy);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.cs-form h4 {
+  margin: 0;
+  font-family: var(--su-font-display), sans-serif;
+  font-size: 1.15rem;
+}
+.cs-form h4:focus {
+  outline: none;
+}
+.cs-form .cs-champs--2 {
+  grid-template-columns: 1fr;
+}
+.cs-form--ok {
+  border-left: 4px solid #1f7a4d;
+}
+.cs-form--ok p {
+  margin: 0;
+}
+.cs-rgpd {
+  margin: 0;
+  display: grid;
+  grid-template-columns: 24px 1fr;
+  gap: 10px;
+  font-size: 0.875rem;
+}
+.cs-rgpd input {
+  width: 20px;
+  height: 20px;
+  margin-top: 2px;
+  accent-color: var(--su-ambre-texte);
+}
+.cs-rgpd a {
+  color: var(--su-ambre-texte);
+}
+.cs-pot {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+.cs-form__envoi {
+  margin: 0;
+}
+.cs-form__envoi .su-action {
+  width: 100%;
+}
+
+/* Barre du téléphone : le total reste visible, un toucher mène au récapitulatif. */
+.cs-barre {
+  display: none;
+}
+
+@media (max-width: 1080px) {
+  .cs,
+  .cs--compact {
+    grid-template-columns: 1fr;
+  }
+  .cs-cote {
+    position: static;
+  }
+  .cs-champs--3 {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 767px) {
+  .cs-feuille.su-est__gauche {
+    padding: 28px 18px;
+  }
+  .cs-champs--2 {
+    grid-template-columns: 1fr;
+  }
+  .cs-barre {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 40;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    min-height: 60px;
+    padding: 8px 16px calc(8px + env(safe-area-inset-bottom));
+    background: var(--su-encre);
+    color: var(--su-ivoire);
+    border-top: 2px solid var(--su-ambre);
+    text-decoration: none;
+    font-size: 0.875rem;
+  }
+  .cs-barre b {
+    display: block;
+    font-size: 1.05rem;
+    font-variant-numeric: tabular-nums;
+  }
+  .cs-barre__voir {
+    color: var(--su-ambre-clair);
+    font-weight: 700;
+  }
+  .cs:not(.cs--compact) {
+    padding-bottom: 72px;
+  }
+}
+
+/* Impression : seulement le récapitulatif (déclenché par le bouton « Imprimer »). */
+@media print {
+  html[data-imprimer='simulation'] body * {
+    visibility: hidden;
+  }
+  html[data-imprimer='simulation'] .cs-recap,
+  html[data-imprimer='simulation'] .cs-recap * {
+    visibility: visible;
+  }
+  html[data-imprimer='simulation'] .cs-recap {
+    position: absolute;
+    inset: 0 0 auto;
+    background: #fff;
+    color: #0d2c4c;
+    box-shadow: none;
+    --su-gris-nuit: #455569;
+    --su-ambre-clair: #873a04;
+  }
+  html[data-imprimer='simulation'] .cs-actions,
+  html[data-imprimer='simulation'] .cs-barre {
+    display: none;
+  }
+  html[data-imprimer='simulation'] .cs-detail[open] summary {
+    display: none;
+  }
+}

@@ -6,7 +6,14 @@
 import Link from 'next/link'
 import Document from '@/gabarits/document/Document'
 import { SITE } from '@/config/site'
+import { COMPANY, adresseComplete } from '@/config/company'
+import Lie from '@/components/editorial/Lie'
+import { jetonsProfond } from '@/lib/jetons'
+import { PROSPECTION } from '@/data/offre-clubs/cgv-plateforme'
+import { PRODUCT_NAME } from '@/config/offre-clubs'
 import { JsonLd, filAriane, meta } from '@/lib/seo'
+
+const PROSPECTION_TEXTE = jetonsProfond(PROSPECTION)
 
 export const metadata = meta({
   titre: 'Politique de confidentialité — Stackup Agency',
@@ -24,6 +31,7 @@ const SOMMAIRE = [
   { id: 'transferts', titre: 'Transferts hors Union européenne' },
   { id: 'droits', titre: 'Vos droits' },
   { id: 'exercer', titre: 'Exercer vos droits' },
+  { id: 'prospection', titre: 'Prospection des clubs' },
   { id: 'cookies', titre: 'Cookies' },
   { id: 'reclamation', titre: 'Réclamation' },
 ]
@@ -41,12 +49,16 @@ export default function PolitiqueConfidentialite() {
         etiquette="Données personnelles"
         titre="Politique de confidentialité"
         chapo="Ce que le formulaire de contact recueille, ce qu’on en fait, et rien de plus. Pas de publicité, pas de revente, pas de pistage."
-        maj="13 octobre 2026"
+        maj="29 octobre 2026"
         sommaire={SOMMAIRE}
       >
         <h2 id="responsable">Responsable du traitement</h2>
         <p>
-          {SITE.nom}, {SITE.departement} — <a href={`mailto:${SITE.email}`}>{SITE.email}</a>. Les coordonnées complètes de l’éditeur figurent dans les <Link href="/mentions-legales">mentions légales</Link>.
+          {COMPANY.denomination}, exerçant sous le nom commercial {COMPANY.nomCommercial} — {adresseComplete()} — SIRET {COMPANY.siret} — <a href={`mailto:${SITE.email}`}>{SITE.email}</a>. Les coordonnées complètes de l’éditeur figurent dans les <Link href="/mentions-legales">mentions légales</Link>.
+        </p>
+
+        <p>
+          Cette politique concerne le site stackup-agency.fr. Les données des adhérents qu’un club gère dans la plateforme {PRODUCT_NAME} relèvent du club, responsable de traitement ; {COMPANY.nomCommercial} y agit comme sous-traitant, selon l’<Link href="/cgv-plateforme#annexe">annexe données des CGV de la plateforme</Link>.
         </p>
 
         <h2 id="donnees">Données collectées</h2>
@@ -58,6 +70,9 @@ export default function PolitiqueConfidentialite() {
           <li>adresse e-mail ;</li>
           <li>numéro de téléphone (facultatif) et moyen de contact préféré ;</li>
           <li>le cas échéant, la configuration composée sur la page tarifs ;</li>
+          <li>
+            pour le <Link href="/clubs-de-tennis/simulateur">simulateur des clubs de tennis</Link> : le nom, la commune et le département du club, ses licenciés et ses choix, votre rôle au club (facultatif) et, pour un devis, votre message ;
+          </li>
           <li>l’adresse IP d’envoi, utilisée pour limiter les envois abusifs et jointe au message reçu.</li>
         </ul>
         <p>Aucune donnée n’est collectée à votre insu. Aucune donnée bancaire n’est traitée sur ce site.</p>
@@ -131,6 +146,13 @@ export default function PolitiqueConfidentialite() {
         <p>
           Écrivez à <a href={`mailto:${SITE.email}`}>{SITE.email}</a> en précisant votre demande. Une réponse vous est apportée dans un délai d’un mois.
         </p>
+
+        <h2 id="prospection">{PROSPECTION_TEXTE.titre}</h2>
+        {PROSPECTION_TEXTE.paragraphes.map((p) => (
+          <p key={p.slice(0, 40)}>
+            <Lie t={p} />
+          </p>
+        ))}
 
         <h2 id="cookies">Cookies</h2>
         <p>
