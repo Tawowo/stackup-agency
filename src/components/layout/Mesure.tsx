@@ -1,5 +1,5 @@
 'use client'
-/** Mesure d'audience anonyme : une vue par page, les clics sur le téléphone et sur « demander ma démo » (voir lib/mesure.ts). */
+/** Mesure d'audience anonyme : une vue par page, les clics sur le téléphone, l'e-mail, la démo, l'appel gratuit et les téléchargements (voir lib/mesure.ts). */
 import { useEffect } from 'react'
 import { usePathname } from 'next/navigation'
 import { suivre } from '@/lib/mesure'
@@ -15,7 +15,10 @@ export default function Mesure() {
       if (!a) return
       const h = a.getAttribute('href') ?? ''
       if (h.startsWith('tel:')) suivre('clic_telephone')
-      else if (h.includes('objet=demo')) suivre('clic_demo')
+      else if (h.startsWith('mailto:')) suivre('clic_email')
+      else if (/[?&]a=demo\b/.test(h)) suivre('clic_demo')
+      else if (/[?&]a=appel\b/.test(h)) suivre('clic_appel')
+      else if (/\.(pdf|docx?|xlsx?)(\?|$)/i.test(h) || a.hasAttribute('download')) suivre('telechargement', h.split('/').pop()?.split('?')[0])
     }
     document.addEventListener('click', clic, { passive: true })
     return () => document.removeEventListener('click', clic)

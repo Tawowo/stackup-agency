@@ -6,14 +6,15 @@ import Nav from '@/components/layout/Nav'
 import Footer from '@/components/layout/Footer'
 import AnimationsDifferees from '@/components/layout/AnimationsDifferees'
 import Mesure from '@/components/layout/Mesure'
+import BarreAppel from '@/components/layout/BarreAppel'
 import { JsonLd } from '@/lib/seo'
 import { grapheGlobal } from '@/lib/schema'
 import '@/styles/chrome.css'
 
 export const metadata: Metadata = {
-  title: 'Stackup Agency — Sites et outils sur mesure, Tours',
+  title: 'Stackup Agency — Sites et outils sur mesure, Touraine',
   description:
-    'Agence web à Tours. Sites et outils de gestion sur mesure pour les artisans, les commerçants et les petites entreprises.',
+    'Agence web en Touraine. Sites et outils de gestion sur mesure pour les artisans, les commerçants et les petites entreprises, à Tours et partout en France.',
   metadataBase: new URL('https://stackup-agency.fr'),
 }
 
@@ -39,6 +40,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <Footer />
         </div>
         <AnimationsDifferees />
+        <BarreAppel />
         <Mesure />
       </body>
     </html>

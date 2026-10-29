@@ -213,3 +213,8 @@
 .su-gal__demo[data-statut='dev']::before {
   background: var(--su-ambre);
 }
+
+/* Texte indexable sous la galerie : la page reste de nuit, les liens suivent l'accent de nuit. */
+.su-real__texte a {
+  color: var(--su-accent-texte);
+}

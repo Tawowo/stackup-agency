@@ -27,11 +27,26 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
 const dateFr = (d: string) => new Date(d).toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' })
 
+const CTA_PAR_CATEGORIE: Record<string, { titre: string; texte: string; href: string; action: string }> = {
+  seo: { titre: 'Votre site est-il bien vu de Google ?', texte: 'Testez-le gratuitement en une minute : titre, description, mobile, sécurité.', href: '/outils/audit-site', action: 'Auditer mon site' },
+  'seo-local': { titre: 'Être trouvé près de chez vous.', texte: 'Fiche Google, pages locales, avis : ce qui compte pour votre zone.', href: '/services/referencement-local', action: 'Voir le référencement local' },
+  creation: { titre: 'Combien coûterait votre site ?', texte: 'Estimez votre projet en quelques minutes, prix « à partir de » affichés.', href: '/tarifs#estimer', action: 'Estimer mon projet' },
+  ecommerce: { titre: 'Une boutique qui vous appartient.', texte: 'Catalogue, paiement, stock : voyez ce qu’une boutique sur mesure change.', href: '/services/site-ecommerce', action: 'Voir la boutique en ligne' },
+  'applications-metier': { titre: 'Un outil qui colle à votre métier.', texte: 'Planning, devis, stock, clients : les modules se combinent à la carte.', href: '/solutions', action: 'Voir les solutions' },
+  ia: { titre: 'L’IA au service de votre quotidien.', texte: 'Automatisations utiles, sans jargon, avec votre accord à chaque étape.', href: '/services/ia-et-automatisation', action: 'Voir l’automatisation' },
+  artisans: { titre: 'Un site fait pour l’artisan.', texte: 'Zone d’intervention, prestations, bouton d’appel : l’essentiel pour être appelé.', href: '/tarifs#estimer', action: 'Estimer mon site' },
+  juridique: { titre: 'Mentions légales : faites-les justes.', texte: 'Un générateur gratuit pour vos mentions légales, à relire avec vos informations.', href: '/outils/generateur-mentions-legales', action: 'Générer mes mentions' },
+  technique: { titre: 'Un site rapide et sain.', texte: 'Maintenance, sauvegardes, mises à jour : confiez-les ou gardez la main.', href: '/services/maintenance', action: 'Voir la maintenance' },
+}
+const CTA_DEFAUT = { titre: 'Un site ou un outil pour votre métier ?', texte: 'Une démo avant de signer, un prix écrit avant de commencer.', href: '/contact?a=demo', action: 'Demander ma démo' }
+const ctaDeCategorie = (c: string) => CTA_PAR_CATEGORIE[c] ?? CTA_DEFAUT
+
 export default async function Page({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params
   const a = await article(slug)
   if (!a) notFound()
   const r = rayonDe(a.categorie)
+  const cta = ctaDeCategorie(a.categorie)
   const lies = articlesLies(a)
   return (
     <main className="su-lec" data-moment="lecture" data-nuit="0">
@@ -93,9 +108,12 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
             </aside>
           )}
           <aside className="su-lec__cta su-plaque">
-            <p className="su-display">Un site ou un outil pour votre métier ?</p>
-            <p>Une démo avant de signer, un prix écrit avant de commencer.</p>
-            <Action href="/contact">Parler de votre projet</Action>
+            <p className="su-display">{cta.titre}</p>
+            <p>{cta.texte}</p>
+            <Action href={cta.href}>{cta.action}</Action>
+            <Action href="/contact?a=appel" variante="contour">
+              Réserver un appel gratuit
+            </Action>
           </aside>
         </Lecture>
         {lies.length > 0 && (

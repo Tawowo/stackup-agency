@@ -68,9 +68,9 @@ export default function Locale(p: PropsLocale) {
               <h1 className="su-display su-loc__titre">{p.titre}</h1>
               <p className="su-loc__intro">{p.intro}</p>
               <div className="su-loc__actions">
-                <Action href="/contact">{p.appel ?? 'Parler de votre projet'}</Action>
-                <Action href="/realisations" variante="contour">
-                  Voir les réalisations
+                <Action href="/tarifs#estimer">{p.appel ?? 'Estimer mon projet'}</Action>
+                <Action href="/contact?a=appel" variante="contour">
+                  Appel gratuit de 30 min
                 </Action>
               </div>
               <p className="su-loc__tel">
@@ -192,7 +192,10 @@ export default function Locale(p: PropsLocale) {
           <section className="su-loc__fin su-plaque su-plaque--encre">
             <p className="su-display">Une démo avant de signer.</p>
             <p>Racontez votre métier en quelques lignes : on vous montre une première version de votre site avant tout engagement.</p>
-            <Action href="/contact?objet=demo">Demander ma démo</Action>
+            <Action href="/contact?a=demo">Demander ma démo</Action>
+            <Action href="/realisations" variante="contour">
+              Voir les réalisations
+            </Action>
           </section>
         </div>
       </article>

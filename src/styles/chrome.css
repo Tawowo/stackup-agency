@@ -695,3 +695,41 @@
   outline: 2px solid var(--su-ambre);
   outline-offset: -2px;
 }
+
+/* ───────── Barre d'appel mobile ───────── */
+.su-barre-appel {
+  display: none;
+}
+@media (max-width: 767px) {
+  .su-barre-appel {
+    position: fixed;
+    inset: auto 0 0 0;
+    z-index: 45;
+    display: grid;
+    grid-template-columns: 1fr 1.6fr;
+    gap: 8px;
+    padding: 8px var(--su-gouttiere) calc(8px + env(safe-area-inset-bottom));
+    background: var(--su-fond);
+    border-top: 1px solid color-mix(in srgb, var(--su-texte) 18%, transparent);
+  }
+  .su-barre-appel a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    font: 600 0.95rem/1 var(--su-font-display, inherit);
+    text-decoration: none;
+    border-radius: 2px;
+  }
+  .su-barre-appel__tel {
+    color: var(--su-texte);
+    border: 1px solid color-mix(in srgb, var(--su-texte) 40%, transparent);
+  }
+  .su-barre-appel__demo {
+    color: var(--su-encre);
+    background: var(--su-ambre);
+  }
+  .su-page {
+    padding-bottom: 64px;
+  }
+}
