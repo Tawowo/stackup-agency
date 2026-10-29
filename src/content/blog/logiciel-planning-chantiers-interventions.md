@@ -1,7 +1,7 @@
 ---
 title: "Logiciel de planning de chantiers et d'interventions"
 seoTitle: "Logiciel de planning chantiers et interventions : choisir"
-excerpt: "Modèle Excel, application d'équipe, rapport d'intervention, suivi de rentabilité, appels manqués : organiser chantiers et interventions sans perdre de temps."
+excerpt: "Modèle Excel, application d'équipe, rapport d'intervention, rentabilité, appels manqués : organisez chantiers et interventions sans perdre de temps."
 date: "2026-10-29"
 updated: "2026-10-29"
 readTime: 12
@@ -49,7 +49,7 @@ Que l'outil soit un produit du marché ou sur mesure, vérifiez : une lecture co
 
 ### Un planning partagé entre le bureau et le terrain
 
-La séparation bureau/terrain est la source de la plupart des malentendus. Le bureau promet un créneau sans savoir qu'un chantier déborde ; le terrain découvre un changement par téléphone. Un planning partagé corrige cela à condition de respecter trois règles : **une seule source** (personne ne tient un planning parallèle), **toute modification passe par l'outil** (pas de coup de fil sans mise à jour), **le terrain remonte l'avancement** en fin de journée. Sans ces règles, l'outil devient une vitrine que plus personne ne regarde.
+La séparation bureau/terrain est la source de la plupart des malentendus. Trois règles la corrigent : une seule source (aucun planning parallèle), toute modification passe par l'outil (pas de coup de fil sans mise à jour), et le terrain remonte l'avancement chaque fin de journée.
 
 ### Un agenda partagé avec les clients pour qu'ils choisissent un créneau
 
@@ -154,10 +154,6 @@ Chaque client a une fiche qui regroupe adresse, équipements installés, interve
 ### J'oublie de facturer certaines interventions : que faire ?
 
 Le remède est de **faire de la facturation une étape du workflow** : une intervention n'est pas « terminée » tant qu'elle n'est pas facturée. L'outil affiche une liste « à facturer » (interventions réalisées sans facture), et vous prévient si un élément reste dans cette liste au-delà d'une durée que vous fixez. Les petites interventions sont les plus oubliées : prévoyez une facturation depuis le téléphone, sur place si possible.
-
-### Comment suivre les interventions d'une équipe de dépannage ?
-
-Pour les interventions urgentes, il faut : une file des demandes (nouvelle, affectée, en route, sur place, terminée), une affectation rapide, un état en temps réel, un rapport simple et un lien avec la facturation. Un tableau en direct pour le bureau et une liste claire pour chaque technicien suffisent. Le suivi des astreintes et des temps de travail doit respecter les règles de votre branche.
 
 ## Appels manqués sur chantier : que faire ?
 
