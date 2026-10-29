@@ -9,7 +9,6 @@
  */
 import { useRef, useState, useSyncExternalStore } from 'react'
 import { flushSync } from 'react-dom'
-import type Lenis from 'lenis'
 import Action from '@/components/ui/Action'
 import Plaque from '@/components/ui/Plaque'
 import { calculer } from '@/domain/devis/calcul'
@@ -292,10 +291,9 @@ function Champ({ q, r, onTexte, onBascule }: { q: Question; r: Reponses; onTexte
   )
 }
 
-/** Amène un élément sous la nav : par Lenis s'il tourne, sinon nativement. */
+/** Amène un élément sous la nav (défilement natif). */
 function defiler(el: HTMLElement | null) {
   if (!el) return
-  const lenis = (window as unknown as { __suLenis?: Lenis }).__suLenis
-  if (lenis) lenis.scrollTo(el, { offset: -110, duration: 1.1 })
-  else el.scrollIntoView({ block: 'start' })
+  const reduit = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+  window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 110, behavior: reduit ? 'auto' : 'smooth' })
 }

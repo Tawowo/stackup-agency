@@ -10,6 +10,8 @@ export function initGsap() {
   fait = true
   gsap.registerPlugin(ScrollTrigger, SplitText)
   gsap.ticker.lagSmoothing(0)
+  // Les rappels onEnter/onLeave ne partent qu'une fois par trame, jamais en rafale pendant un défilement rapide.
+  ScrollTrigger.config({ limitCallbacks: true })
   if (process.env.NODE_ENV !== 'production') {
     ;(window as unknown as { __suST?: unknown }).__suST = ScrollTrigger
   }

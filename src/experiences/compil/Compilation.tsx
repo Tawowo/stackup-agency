@@ -22,9 +22,10 @@ import './compil.css'
 function Section({ prog, avant, index }: { prog: Programme; avant: LayoutName; index: number }) {
   const section = useRef<HTMLElement>(null)
   const scene = useRef<HTMLDivElement>(null)
-  const [p, setP] = useState(0)
+  const [fini, setFini] = useState(false)
   const offre = SITE.offres.find((o) => o.id === prog.offre)!
   const moment = `compil-${index}`
+  const nLignes = prog.lignes.length
 
   useEffect(() => {
     initGsap()
@@ -56,17 +57,17 @@ function Section({ prog, avant, index }: { prog: Programme; avant: LayoutName; i
         onUpdate: (self) => {
           prendre()
           const q = reduit ? 1 : self.progress
-          setP(q)
+          // Aucun rendu React au défilement : la progression passe par une variable CSS, seul « compilé » est un état.
+          st?.style.setProperty('--ecr', (q * 0.8 * nLignes * 1.25).toFixed(4))
+          setFini(q > 0.95)
           // Le code s'écrit sur 0 → 0,8 ; la forme se compile sur 0,1 → 0,95.
           if (!reduit) MORPH.value = Math.min(1, Math.max(0, (q - 0.1) / 0.85))
         },
       })
     }, el)
     return () => ctx.revert()
-  }, [avant, prog.forme, moment])
+  }, [avant, prog.forme, moment, nLignes])
 
-  const n = prog.lignes.length
-  const ecrites = p * 0.8 * n * 1.25
   return (
     <section ref={section} className="su-cmp" data-moment={moment} data-nuit="1" aria-labelledby={`su-cmp-${prog.slug}`}>
       <div ref={scene} className="su-cmp__scene">
@@ -84,14 +85,12 @@ function Section({ prog, avant, index }: { prog: Programme; avant: LayoutName; i
             </figcaption>
             <pre>
               {prog.lignes.map((l, i) => {
-                const t = Math.min(1, Math.max(0, ecrites - i))
                 return (
                   <code
                     key={i}
                     className="su-cmp__l"
-                    data-ecrite={t >= 1 ? '1' : '0'}
                     data-produit={l.groupe >= 0 ? '1' : '0'}
-                    style={{ '--t': t.toFixed(3) } as React.CSSProperties}
+                    style={{ '--t': `clamp(0, calc(var(--ecr, 0) - ${i}), 1)` } as React.CSSProperties}
                     tabIndex={l.groupe >= 0 ? 0 : -1}
                     onMouseEnter={() => l.groupe >= 0 && useScene.getState().setIsolate(l.groupe)}
                     onMouseLeave={() => useScene.getState().setIsolate(-1)}
@@ -106,8 +105,8 @@ function Section({ prog, avant, index }: { prog: Programme; avant: LayoutName; i
                 )
               })}
             </pre>
-            <p className="su-mono su-cmp__statut" data-fini={p > 0.95 ? '1' : '0'}>
-              {p > 0.95 ? '✓ compilé — survolez une ligne pour voir ce qu’elle produit' : '… compilation'}
+            <p className="su-mono su-cmp__statut" data-fini={fini ? '1' : '0'}>
+              {fini ? '✓ compilé — survolez une ligne pour voir ce qu’elle produit' : '… compilation'}
             </p>
           </figure>
           <div className="su-cmp__rendu" aria-hidden="true">

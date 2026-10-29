@@ -29,7 +29,6 @@ const FAQ = [
 export default function AtelierNuit() {
   const section = useRef<HTMLElement>(null)
   const scene = useRef<HTMLDivElement>(null)
-  const [p, setP] = useState(0)
   const [lampe, setLampe] = useState(true)
 
   useEffect(() => {
@@ -57,7 +56,13 @@ export default function AtelierNuit() {
         scrub: true,
         onUpdate: (self) => {
           const q = reduit ? 1 : self.progress
-          setP(q)
+          // Aucun rendu React au défilement : variables CSS posées sur la scène.
+          const sc = scene.current
+          if (sc) {
+            sc.style.setProperty('--revele', Math.min(1, Math.max(0, (q - 0.3) / 0.25)).toFixed(3))
+            sc.style.setProperty('--approche', Math.max(0, (q - 0.45) / 0.55).toFixed(3))
+            ENGAGEMENTS.forEach((_, k) => sc.style.setProperty(`--e${k}`, Math.min(1, Math.max(0, (q - 0.55 - k * 0.12) / 0.14)).toFixed(3)))
+          }
           if (useScene.getState().moment !== 'atelier-nuit') return
           // 0 → 0,45 : le cadre se construit en se tournant face à vous ; ensuite on
           // s'approche : la figure entière (cadre 3D + photo) grandit d'un bloc, le
@@ -88,8 +93,6 @@ export default function AtelierNuit() {
     }
   }, [lampe])
 
-  const revele = Math.min(1, Math.max(0, (p - 0.3) / 0.25))
-  const ecrit = (k: number) => Math.min(1, Math.max(0, (p - 0.55 - k * 0.12) / 0.14))
   return (
     <>
       <section ref={section} className="su-atn" data-moment="atelier-nuit" data-nuit="1" aria-labelledby="su-atn-titre">
@@ -106,7 +109,7 @@ export default function AtelierNuit() {
                 {lampe ? 'Éteindre la pièce, garder la lampe' : 'Rallumer la pièce'}
               </button>
             </header>
-            <figure className="su-atn__portrait" style={{ '--revele': revele.toFixed(3), '--approche': Math.max(0, (p - 0.45) / 0.55).toFixed(3) } as React.CSSProperties}>
+            <figure className="su-atn__portrait">
               <div className="su-atn__cadre-zone" aria-hidden="true">
                 <StackFrame className="su-atn__cadre" />
               </div>
@@ -116,7 +119,7 @@ export default function AtelierNuit() {
             </figure>
             <ol className="su-atn__engagements" aria-label="Trois engagements">
               {ENGAGEMENTS.map((e, k) => (
-                <li key={e} style={{ '--e': ecrit(k).toFixed(3) } as React.CSSProperties}>
+                <li key={e} style={{ '--e': `var(--e${k}, 0)` } as React.CSSProperties}>
                   <span className="su-atn__ligne">{e}</span>
                 </li>
               ))}

@@ -11,7 +11,7 @@ import { PRIX_PUBLICS } from '@/config/prix-publics.generated'
 import { useEffect, useRef, useState } from 'react'
 import { useScene } from '@/webgl/store'
 import { ScrollTrigger, initGsap } from '@/lib/gsap'
-import { Chantier } from './Chantier'
+import { Chantier, etatDe, memeEtat, poserChantier, type EtatChantier } from './Chantier'
 import './methode.css'
 
 const PRIX_DEMO = PRIX_PUBLICS.demo
@@ -27,7 +27,8 @@ export const ETAPES = [
 export default function Methode() {
   const section = useRef<HTMLElement>(null)
   const [etape, setEtape] = useState(0)
-  const [e, setE] = useState(0)
+  const [d, setD] = useState<EtatChantier>(() => etatDe(0))
+  const scene = useRef<HTMLDivElement>(null)
   const [enVue, setEnVue] = useState(false)
 
   useEffect(() => {
@@ -47,6 +48,22 @@ export default function Methode() {
     // Chaque carte, en passant de 80 % à 45 % du viewport, fait avancer le projet d'un cran.
     // Tout dérive de la position des cartes : identique à la remontée.
     const etapes = Array.from(el.querySelectorAll<HTMLElement>('.su-met__etape'))
+    // Positions des cartes dans le document, relevées au refresh : aucune lecture de mise en page pendant le défilement.
+    let hauts: number[] = []
+    const mesurer = () => {
+      hauts = etapes.map((c) => c.getBoundingClientRect().top + window.scrollY)
+    }
+    ScrollTrigger.addEventListener('refresh', mesurer)
+    mesurer()
+    const appliquer = (v: number) => {
+      // Plateaux : chaque étape tient lisible ; la découpe vers la suivante est brève.
+      const k = Math.min(5, Math.floor(v))
+      const f = Math.min(1, Math.max(0, (v - k - 0.3) / 0.4))
+      const e = reduit ? 5 : Math.min(5, k + f * f * (3 - 2 * f))
+      if (scene.current) poserChantier(scene.current, e)
+      const nouveau = etatDe(e)
+      setD((prec) => (memeEtat(prec, nouveau) ? prec : nouveau))
+    }
     const st = ScrollTrigger.create({
       trigger: el,
       start: 'top bottom',
@@ -57,16 +74,14 @@ export default function Methode() {
         const H = window.innerHeight
         let v = 0
         let franchies = 0
-        etapes.forEach((carte, i) => {
-          const top = carte.getBoundingClientRect().top
+        const y = window.scrollY
+        hauts.forEach((haut, i) => {
+          const top = haut - y
           const t = Math.min(1, Math.max(0, (0.85 * H - top) / (0.4 * H)))
           v += t
           if (t > 0.05) franchies = i + 1
         })
-        // Plateaux : chaque étape tient lisible ; la découpe vers la suivante est brève.
-        const k = Math.min(5, Math.floor(v))
-        const f = Math.min(1, Math.max(0, (v - k - 0.3) / 0.4))
-        setE(reduit ? 5 : Math.min(5, k + f * f * (3 - 2 * f)))
+        appliquer(v)
         setEtape(franchies)
       },
     })
@@ -78,7 +93,9 @@ export default function Methode() {
       end: 'bottom 70%',
       onToggle: (self) => setEnVue(self.isActive),
     })
+    appliquer(0)
     return () => {
+      ScrollTrigger.removeEventListener('refresh', mesurer)
       st.kill()
       vue.kill()
     }
@@ -96,8 +113,8 @@ export default function Methode() {
           </h2>
         </header>
         <div className="su-met__place" aria-hidden="true" />
-        <div className="su-met__scene" data-vue={enVue ? '1' : '0'}>
-          <Chantier e={e} />
+        <div ref={scene} className="su-met__scene" data-vue={enVue ? '1' : '0'}>
+          <Chantier d={d} />
         </div>
         <ol className="su-met__etapes" aria-label="Les cinq étapes">
           {ETAPES.map((e, k) => (

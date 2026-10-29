@@ -41,14 +41,31 @@ function elire() {
 function armer() {
   if (armee) return
   armee = true
-  ro = new ResizeObserver(elire)
+  // UNE lecture des boîtes par trame au plus, faite dans le ticker unique, jamais dans les écouteurs de scroll
+  // (ScrollTrigger vient d'y écrire des styles : lire ici forcerait une mise en page par événement).
+  // Les boîtes sont relues à chaque trame tant que ça bouge (scroll, redimensionnement, refresh), puis 4 fois par seconde
+  // au repos (polices, transformations d'entrée) : plus de lecture de mise en page à 60 Hz sur une page immobile.
+  let sale = true
+  let derniere = 0
+  const marquer = () => {
+    sale = true
+  }
+  ro = new ResizeObserver(marquer)
   ro.observe(document.documentElement)
-  window.addEventListener('scroll', elire, { passive: true })
-  window.addEventListener('resize', elire)
-  // Une boîte peut se déplacer sans changer de taille (polices, grille, épinglage) :
-  // le ticker unique relit les boîtes à chaque trame (lectures seules, pas d'écriture DOM).
+  window.addEventListener('scroll', marquer, { passive: true })
+  window.addEventListener('resize', marquer)
   // GSAP est importé à la demande : il reste hors du chemin critique.
-  import('gsap').then(({ gsap }) => gsap.ticker.add(elire))
+  import('@/lib/gsap').then(({ gsap, ScrollTrigger, initGsap }) => {
+    initGsap()
+    ScrollTrigger.addEventListener('refresh', marquer)
+    gsap.ticker.add((temps) => {
+      const ms = temps * 1000
+      if (!sale && ms - derniere < 250) return
+      sale = false
+      derniere = ms
+      elire()
+    })
+  })
 }
 
 export default function StackFrame({ className = '', children }: { className?: string; children?: ReactNode }) {

@@ -1,0 +1,32 @@
+{
+ "route": "/",
+ "mobile": false,
+ "webgl": false,
+ "cpu": "x4",
+ "arret3DParSeconde": 0,
+ "molette100ms": 400,
+ "molette1600ms": 400,
+ "dureeScrollS": 13.4,
+ "tachesLonguesNb": 14,
+ "tacheMax": 97,
+ "tachesCumulMs": 1121,
+ "imageMedianeMs": 67,
+ "imageP95Ms": 250,
+ "imagesSup50ms": 90,
+ "imagesNb": 162,
+ "trames3D": 0,
+ "loafTop": [
+  "chunks/1lha-inyemip4.js z 1205ms",
+  "chunks/3u9nt1zl8wj2h.js tb 941ms",
+  "chunks/1x6obpmlu1_c2.js http://localhost:3100/_next/static/chunks/1x6obpmlu1_c2.js 133ms",
+  "chunks/3u9nt1zl8wj2h.js FrameRequestCallback 100ms",
+  "chunks/2hwjxll53rm2e.js ReadableStreamDefaultReader.read.then 93ms",
+  "chunks/2292qs4-z99yt.js http://localhost:3100/_next/static/chunks/2292qs4-z99yt.js 85ms",
+  "chunks/120m5lyq9-7j3.js t 31ms",
+  "chunks/2hwjxll53rm2e.js Promise.resolve 29ms"
+ ],
+ "loafStyleMs": 397,
+ "loafForceMs": 1493,
+ "inpMs": 272,
+ "images3DParSeconde": 0
+}

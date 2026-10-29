@@ -1,8 +1,8 @@
 'use client'
 /**
- * LA COUCHE D'ANIMATION GLOBALE — défilement (Lenis), lumière, rafraîchissement
+ * LA COUCHE D'ANIMATION GLOBALE — défilement natif, lumière, rafraîchissement
  * des ScrollTriggers, traversée. Chargée après l'hydratation (budget § 10 :
- * GSAP et Lenis hors du chemin critique ; le contenu est déjà là sans elle).
+ * GSAP hors du chemin critique ; le contenu est déjà là sans elle).
  */
 import Defilement from './Defilement'
 import Lumiere from '@/experiences/lumiere'

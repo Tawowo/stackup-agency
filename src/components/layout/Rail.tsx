@@ -3,11 +3,10 @@
  * LE RAIL DE PROFONDEUR — la descente d'un coup d'œil : un repère vertical
  * fixe à gauche (≥ 1360 px) qui liste les moments de l'accueil, marque celui
  * qui occupe le centre du viewport (IntersectionObserver, bande −45 % / −50 %)
- * et y emmène au clic (Lenis) ou au clavier. Les moments sont lus dans le DOM
+ * et y emmène au clic (défilement natif) ou au clavier. Les moments sont lus dans le DOM
  * (`[data-moment][data-titre]`) : rien à maintenir à deux endroits.
  */
 import { useEffect, useState } from 'react'
-import type Lenis from 'lenis'
 
 interface Etage {
   id: string
@@ -40,9 +39,7 @@ export default function Rail() {
   const aller = (id: string) => {
     const el = document.querySelector<HTMLElement>(`[data-moment="${id}"]`)
     if (!el) return
-    const lenis = (window as unknown as { __suLenis?: Lenis }).__suLenis
-    if (lenis) lenis.scrollTo(el, { offset: 0, duration: 1.4 })
-    else el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    el.scrollIntoView({ behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start' })
   }
 
   if (!etages.length) return null

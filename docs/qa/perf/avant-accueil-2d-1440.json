@@ -1,0 +1,20 @@
+{
+ "route": "/",
+ "mobile": false,
+ "webgl": false,
+ "cpu": "x4",
+ "arret3DParSeconde": 0,
+ "molette100ms": 190,
+ "molette1600ms": 400,
+ "dureeScrollS": 20.3,
+ "tachesLonguesNb": 26,
+ "tacheMax": 129,
+ "tachesCumulMs": 2376,
+ "imageMedianeMs": 100,
+ "imageP95Ms": 217,
+ "imagesSup50ms": 151,
+ "imagesNb": 183,
+ "trames3D": 0,
+ "inpMs": 296,
+ "images3DParSeconde": 0
+}

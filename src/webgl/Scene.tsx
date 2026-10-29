@@ -33,6 +33,19 @@ import { useScene } from './store'
 const FLUX_PAR_PALIER = { ultra: 1100, high: 900, medium: 600, low: 300 } as const
 const POUSSIERE_PAR_PALIER = { ultra: 420, high: 360, medium: 220, low: 120 } as const
 
+/**
+ * RENDU À LA DEMANDE — la scène ne dessine que si quelque chose bouge : défilement, pointeur, changement d'état
+ * (layout, cadre, projection…), puis une courte période d'amortissement. Au repos, plus aucun rendu : l'image
+ * reste affichée, le processeur et le GPU sont libres (lecture d'un texte immobile, onglet en arrière-plan).
+ */
+const AMORTISSEMENT_MS = 3200
+let veilleJusqua = 0
+export function reveillerScene(ms = AMORTISSEMENT_MS) {
+  if (typeof performance === 'undefined') return
+  veilleJusqua = Math.max(veilleJusqua, performance.now() + ms)
+}
+const CLES_SILENCIEUSES = new Set(['fps', 'ready'])
+
 function Rig() {
   const u = stackUniforms()
   const set = useThree((s) => s.set)
@@ -102,6 +115,7 @@ function Rig() {
       px.x = e.clientX
       px.y = e.clientY
       px.active = true
+      reveillerScene()
       // La lumière suit le pointeur sur toute la page (calque CSS .su-lueur).
       racine.style.setProperty('--su-mx', `${e.clientX}px`)
       racine.style.setProperty('--su-my', `${e.clientY}px`)
@@ -113,6 +127,7 @@ function Rig() {
     }
     const interactif = (t: EventTarget | null) => t instanceof Element && !!t.closest('a,button,input,select,textarea,label,summary,[data-su-pane]')
     const pdown = (e: PointerEvent) => {
+      reveillerScene()
       down = { x: e.clientX, y: e.clientY, t: performance.now(), cible: interactif(e.target) }
     }
     const pup = (e: PointerEvent) => {
@@ -422,8 +437,25 @@ function Rig() {
       }
       if (!s.ready) s.setReady(true)
     }
-    const tick = (_time: number, deltaMs: number) => pas(deltaMs, true)
+    const tick = (_time: number, deltaMs: number) => {
+      // Défilement : réveille. Sinon, endormi tant que rien ne bouge (et jamais d'onglet caché).
+      if (window.scrollY !== scrollPrec) reveillerScene()
+      if (premier) reveillerScene()
+      if (performance.now() > veilleJusqua) return
+      pas(deltaMs, true)
+    }
     gsap.ticker.add(tick)
+    const eveil = () => reveillerScene()
+    const desabonner = useScene.subscribe((n, prev) => {
+      for (const k in n) {
+        if (CLES_SILENCIEUSES.has(k)) continue
+        if ((n as unknown as Record<string, unknown>)[k] !== (prev as unknown as Record<string, unknown>)[k]) return reveillerScene()
+      }
+    })
+    document.addEventListener('visibilitychange', eveil)
+    window.addEventListener('resize', eveil)
+    window.addEventListener('scroll', eveil, { passive: true })
+    reveillerScene()
     // Captures (SwiftShader, 1-3 i/s) : avance la simulation sans rendre, pour
     // obtenir l'état qu'un visiteur à 60 i/s verrait après `n` trames.
     if (process.env.NODE_ENV !== 'production') (window as unknown as { __suCam?: BlendCamera }).__suCam = camera
@@ -438,6 +470,10 @@ function Rig() {
     }
     return () => {
       gsap.ticker.remove(tick)
+      desabonner()
+      document.removeEventListener('visibilitychange', eveil)
+      window.removeEventListener('resize', eveil)
+      window.removeEventListener('scroll', eveil)
       delete w.__suSettle
     }
   }, [u, camera, advance, size, gl])
@@ -460,13 +496,16 @@ function Rig() {
 
 export default function Scene() {
   const setMode = useScene((s) => s.setMode)
+  // DPR plafonné à 1,5 sur les paliers élevés, à 1 en dessous (le fragment shader des plaques coûte au pixel).
+  const tier = useScene((s) => s.tier)
+  const dpr: number | [number, number] = tier === 'high' || tier === 'ultra' ? [1, 1.5] : 1
   // Diagnostic (/lab) : ?aa=0 coupe l'anticrénelage.
   const aa = typeof window === 'undefined' || new URLSearchParams(window.location.search).get('aa') !== '0'
   return (
     <div className="su-canvas" aria-hidden="true">
       <Canvas
         frameloop="never"
-        dpr={[1, 1.5]}
+        dpr={dpr}
         gl={{ antialias: aa, alpha: false, powerPreference: 'high-performance', stencil: false }}
         eventSource={typeof document !== 'undefined' ? document.body : undefined}
         onCreated={({ gl }) => {

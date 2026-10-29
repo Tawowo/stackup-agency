@@ -116,9 +116,7 @@ export default function Formulaire({ e, action, projet, objet }: { e: string | n
         setMessage('Demande envoyée. Elle part.')
         if (sc.reduced) return suite()
         // La pile doit être vue : on remonte vers elle (mobile surtout) pendant qu'elle se plie.
-        const lenis = (window as unknown as { __suLenis?: { scrollTo: (y: number, o: { duration: number }) => void } }).__suLenis
-        if (lenis) lenis.scrollTo(0, { duration: 0.9 })
-        else window.scrollTo({ top: 0, behavior: 'smooth' })
+        window.scrollTo({ top: 0, behavior: 'smooth' })
         sc.setParams({ retard: 0.5, arc: 0.4 })
         sc.setLayout('enveloppe')
         const f = { v: 0 }
