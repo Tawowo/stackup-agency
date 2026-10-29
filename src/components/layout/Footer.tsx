@@ -2,6 +2,7 @@ import Link from 'next/link'
 import LogoMarque from '@/components/ui/LogoMarque'
 import { ENTREES, RESSOURCES } from './entrees'
 import { SITE } from '@/config/site'
+import { COMPANY } from '@/config/company'
 import { ZONES } from '@/data/zones'
 import { SOLUTIONS } from '@/data/solutions'
 import { METIERS } from '@/data/metiers'
@@ -206,7 +207,9 @@ export default function Footer() {
               <Link href="/plan-du-site">Plan du site</Link>
             </li>
           </ul>
-          <span>{SITE.mentions.tva}</span>
+          <span>
+            {COMPANY.denomination} · SIRET {COMPANY.siret} · {COMPANY.tva}
+          </span>
         </div>
       </div>
     </footer>

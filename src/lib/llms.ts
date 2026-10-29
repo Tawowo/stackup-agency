@@ -37,6 +37,8 @@ export const IDENTITE = [
   `Nom : Stackup Agency (${e.identite})`,
   `Fondateur : ${SITE.fondateur}, ${e.forme.toLowerCase()}`,
   `Adresse : ${e.adresse}`,
+  `SIREN : ${e.siren} ; SIRET : ${e.siret} ; code APE : ${e.ape}`,
+  `Immatriculation : ${e.immatriculation}`,
   `Téléphone : ${SITE.telephone}`,
   `E-mail : ${SITE.email}`,
   `Site : ${ORIGINE}`,

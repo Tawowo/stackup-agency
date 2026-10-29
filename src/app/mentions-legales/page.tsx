@@ -54,7 +54,7 @@ export default function MentionsLegales() {
             <strong>Fondateur :</strong> {SITE.fondateur}
           </li>
           <li>
-            <strong>Forme juridique et titulaire :</strong> {SITE.entreprise.forme}, {SITE.entreprise.exploitant} ({SITE.entreprise.identite})
+            <strong>Forme juridique et titulaire :</strong> {SITE.entreprise.forme}, {SITE.entreprise.identite}
           </li>
           <li>
             <strong>Adresse :</strong> {SITE.entreprise.adresse}
@@ -72,7 +72,7 @@ export default function MentionsLegales() {
             <strong>Code APE :</strong> {SITE.entreprise.ape}
           </li>
           <li>
-            <strong>Début d’activité :</strong> {SITE.entreprise.debutActivite}
+            <strong>Immatriculation :</strong> {SITE.entreprise.immatriculation}
           </li>
           <li>
             <strong>TVA :</strong> {SITE.mentions.tva}

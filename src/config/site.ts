@@ -5,6 +5,7 @@
  * aucune offre association.
  */
 import { PRIX_PUBLICS as P } from './prix-publics.generated.ts'
+import { COMPANY, adresseComplete } from './company.ts'
 
 const aPartirDe = (id: keyof typeof P.offres) => P.offres[id]
 const description = (code: keyof typeof P.descriptions) => P.descriptions[code]
@@ -79,25 +80,27 @@ export const SITE = {
       inclus: [description('O00'), `${P.nbModulesOutil} modules au choix, selon votre métier`, 'Vos données vous appartiennent'],
     },
   ] as const satisfies readonly Offre[],
-  mentions: { tva: 'TVA non applicable, art. 293 B du CGI', devisValable: '30 jours' },
+  mentions: { tva: COMPANY.tva, devisValable: '30 jours' },
   /**
-   * IDENTITÉ LÉGALE — la seule source pour les mentions légales, les devis et tous les documents PDF
-   * (`npm run documents`). Les champs entre crochets sont à compléter par le propriétaire.
+   * IDENTITÉ LÉGALE — lue dans src/config/company.ts (source unique). Mentions légales, devis et documents PDF
+   * (`npm run documents`) passent par ici. Les champs entre crochets restent à compléter par le propriétaire.
    */
   entreprise: {
-    identite: 'Mathéo Reboul EI — Stackup Agency',
-    exploitant: 'Mathéo Reboul',
-    forme: 'Entrepreneur individuel (EI)',
-    /** Adresse (avis de situation INSEE) : rue, puis code postal et commune séparés pour les données structurées. */
-    adresse: '706 rue des Cormiers, 37340 Savigné-sur-Lathan',
-    rue: '706 rue des Cormiers',
-    codePostal: '37340',
-    commune: 'Savigné-sur-Lathan',
-    /** À recopier de l'avis de situation INSEE (non fourni à ce jour) : un champ « [… à compléter] » n'est jamais publié dans le JSON-LD. */
-    siren: '[SIREN à compléter]',
-    siret: '[SIRET à compléter]',
-    ape: '[Code APE à compléter]',
-    debutActivite: '[Date de début d’activité à compléter]',
+    identite: COMPANY.denomination,
+    exploitant: COMPANY.nom,
+    forme: COMPANY.forme,
+    nomCommercial: COMPANY.nomCommercial,
+    nomCommercialRegistre: COMPANY.nomCommercialRegistre,
+    adresse: adresseComplete(false),
+    rue: COMPANY.adresse.rue,
+    codePostal: COMPANY.adresse.codePostal,
+    commune: COMPANY.adresse.commune,
+    siren: COMPANY.siren,
+    siret: COMPANY.siret,
+    ape: `${COMPANY.ape} — ${COMPANY.apeLibelle}`,
+    immatriculation: `${COMPANY.immatriculation.registre}, le ${COMPANY.immatriculation.date}`,
+    /** Date d'immatriculation au RNE (données structurées : foundingDate). */
+    debutActivite: COMPANY.immatriculation.dateIso,
     mediateur: '[Médiateur de la consommation à compléter : nom, adresse postale et site internet]',
     assurance: '[Assurance responsabilité civile professionnelle à compléter : assureur et couverture géographique]',
   },

@@ -4,6 +4,7 @@
 import type { Metadata } from 'next'
 import { sansLiens } from '@/components/editorial/Lie'
 import { SITE } from '@/config/site'
+import { COMPANY, enteteLegal } from '@/config/company'
 
 export const ORIGINE = 'https://stackup-agency.fr'
 
@@ -63,7 +64,7 @@ export function organisation() {
     '@id': `${ORIGINE}/#agence`,
     name: 'Stackup Agency',
     legalName: e.identite,
-    alternateName: 'Mathéo Reboul EI — Stackup Agency',
+    alternateName: [enteteLegal, COMPANY.nomCommercialRegistre],
     url: ORIGINE,
     logo: `${ORIGINE}/Logo_Stackup-Agency.png`,
     image: `${ORIGINE}/Logo_Stackup-Agency.png`,
@@ -99,7 +100,7 @@ export function organisation() {
         priceSpecification: { '@type': 'PriceSpecification', minPrice: prix(id).aPartirDe, priceCurrency: 'EUR', valueAddedTaxIncluded: false },
       })),
     },
-    ...(siret ? { identifier: { '@type': 'PropertyValue', propertyID: 'SIRET', value: siret } } : {}),
+    ...(siret ? { identifier: [{ '@type': 'PropertyValue', propertyID: 'SIREN', value: COMPANY.siren.replace(/\s/g, '') }, { '@type': 'PropertyValue', propertyID: 'SIRET', value: siret.replace(/\s/g, '') }] } : {}),
     ...(debut ? { foundingDate: debut } : {}),
   }
 }

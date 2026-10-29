@@ -27,6 +27,8 @@ const FAITS: [string, string][] = [
   ['Activité', 'Création de sites internet, de boutiques en ligne et d’outils de gestion sur mesure ; référencement ; maintenance'],
   ['Pour qui', 'Artisans, commerçants, TPE, professions libérales'],
   ['Adresse', e.adresse],
+  ['SIREN / SIRET', `${e.siren} / ${e.siret}`],
+  ['Code APE', e.ape],
   ['Zone', `Indre-et-Loire (${nbCommunes37()} communes, ${ZONES.length} communautés de communes), départements voisins ; visio partout en France`],
   ['Téléphone', SITE.telephone],
   ['E-mail', SITE.email],
