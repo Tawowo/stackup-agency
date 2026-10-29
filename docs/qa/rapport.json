@@ -2300,6 +2300,96 @@
    "largeur": 1440,
    "rm": false,
    "visible": "Boutons « Envoyer à Mathéo Reboul », « Télécharger en PDF », « Imprimer »."
+  },
+  {
+   "fichier": "docs/qa/shots/audit-visuel/zones-intervention_touraine-ouest-val-de-loire-1440.png",
+   "route": "/zones-intervention/touraine-ouest-val-de-loire",
+   "etat": "mission 5",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Page de zone phare : fil d'Ariane, étiquette « 28 communes · Indre-et-Loire · zone de l'atelier », h1 « Agence web en Touraine Ouest Val de Loire », chapô, deux actions, téléphone, S du logo à droite.",
+   "defauts": [
+    "Interligne du h1 serré (descendante du g touche la ligne suivante) : accepté, lisible"
+   ],
+   "corrige": false
+  },
+  {
+   "fichier": "docs/qa/shots/audit-visuel/zones-intervention-390.png",
+   "route": "/zones-intervention",
+   "etat": "mission 5",
+   "largeur": 390,
+   "rm": false,
+   "visible": "Hub des zones sur mobile : carte en relief avec Tours au centre et villes voisines, h1, chapô, bouton ambre.",
+   "defauts": [],
+   "corrige": true
+  },
+  {
+   "fichier": "docs/qa/shots/audit-visuel/stackup-agency-en-bref-1440.png",
+   "route": "/stackup-agency-en-bref",
+   "etat": "mission 5",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Fiche d'identité : h1, chapô, tableau « L'essentiel » (nom, fondateur, activité).",
+   "defauts": [
+    "Date de mise à jour affichée « 30 octobre 2026 » (date future) : corrigée en 29 octobre 2026"
+   ],
+   "corrige": true
+  },
+  {
+   "fichier": "docs/qa/shots/audit-visuel/x-pilier-1440.png",
+   "route": "/services/creation-de-site-internet",
+   "etat": "mission 5",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Pilier de service en lecture : sommaire collant à gauche, h2/paragraphes à droite.",
+   "defauts": [
+    "Lien Markdown brut « [site e-commerce](/services/site-ecommerce) » affiché : composant Lie ajouté (liens et gras rendus), contrôle « Markdown brut » ajouté à controle-sitemap"
+   ],
+   "corrige": true
+  },
+  {
+   "fichier": "docs/qa/shots/audit-visuel/x-hub-1440.png",
+   "route": "/zones-intervention",
+   "etat": "mission 5",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Hub : intercommunalités en pastilles avec nombre de communes, quatre prix « à partir de », villes et départements.",
+   "defauts": [],
+   "corrige": true
+  },
+  {
+   "fichier": "docs/qa/shots/audit-visuel/x-outil-390.png",
+   "route": "/outils/calculateur-clients-perdus",
+   "etat": "mission 5",
+   "largeur": 390,
+   "rm": false,
+   "visible": "Calculateur de clients perdus : champs numérotés 01-04 avec consignes, plaque navy.",
+   "defauts": [
+    "Champs sombres sur plaque sombre : bordures lisibles, axe 0 violation, laissé"
+   ],
+   "corrige": false
+  },
+  {
+   "fichier": "docs/qa/shots/audit-visuel/x-guide-390.png",
+   "route": "/blog/guide-site-internet-plombier",
+   "etat": "mission 5",
+   "largeur": 390,
+   "rm": false,
+   "visible": "Guide métier : chapô en gras, h2 en forme de question, paragraphes lisibles.",
+   "defauts": [],
+   "corrige": true
+  },
+  {
+   "fichier": "docs/qa/shots/audit-visuel/accueil-390.png",
+   "route": "/",
+   "etat": "mission 5",
+   "largeur": 390,
+   "rm": false,
+   "visible": "Accueil mobile : section modules (cartes).",
+   "defauts": [
+    "Débordement horizontal de 4 px (nom de module trop long dans une grille 1fr) : minmax(0,1fr) + overflow-wrap"
+   ],
+   "corrige": true
   }
  ]
 }

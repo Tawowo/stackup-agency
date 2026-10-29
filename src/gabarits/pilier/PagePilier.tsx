@@ -6,6 +6,7 @@ import Action from '@/components/ui/Action'
 import PilierCorps, { sommaireDe } from './PilierCorps'
 import { JsonLd, ORIGINE, faqPage, filAriane, meta, offreService } from '@/lib/seo'
 import { SITE } from '@/config/site'
+import { sansLiens } from '@/components/editorial/Lie'
 import { jetonsProfond } from '@/lib/jetons'
 import type { Pilier } from '@/data/piliers/types'
 import './pilier.css'
@@ -19,6 +20,7 @@ export function metaPilier(p: Pilier) {
 
 export default function PagePilier({ pilier }: { pilier: Pilier }) {
   const p = jetonsProfond(pilier)
+  const etapes = p.sections.find((x) => /se déroule|démarre-t-on/i.test(x.titre) && (x.liste?.length ?? 0) >= 3)
   const parent = p.type === 'comparatif' ? { nom: 'Comparatifs', chemin: '/comparatif/wix-wordpress-sur-mesure' } : { nom: 'Services', chemin: '/services' }
   const ariane = [
     { href: '/', nom: 'Accueil' },
@@ -34,6 +36,7 @@ export default function PagePilier({ pilier }: { pilier: Pilier }) {
             ? { '@context': 'https://schema.org', '@type': 'Article', headline: p.titre, description: p.descriptionSeo, dateModified: p.maj, datePublished: p.maj, author: { '@type': 'Person', name: SITE.fondateur, url: `${ORIGINE}/a-propos` }, publisher: { '@id': `${ORIGINE}/#agence` }, mainEntityOfPage: `${ORIGINE}${p.chemin}` }
             : { '@context': 'https://schema.org', '@type': 'Service', name: p.titre, description: p.descriptionSeo, url: `${ORIGINE}${p.chemin}`, provider: { '@id': `${ORIGINE}/#agence` }, areaServed: [{ '@type': 'AdministrativeArea', name: 'Indre-et-Loire' }, { '@type': 'Country', name: 'France' }], serviceType: p.etiquette, offers: offreService(OFFRE_DU_PILIER[p.slug] ?? 'une-page') },
           faqPage(p.faq),
+          ...(etapes ? [{ '@context': 'https://schema.org', '@type': 'HowTo', name: etapes.titre, step: (etapes.liste ?? []).map((l, i) => { const [nom, ...suite] = sansLiens(l).split(' : '); return { '@type': 'HowToStep', position: i + 1, name: nom, text: suite.length ? suite.join(' : ') : nom } }) }] : []),
         ]}
       />
       <Document

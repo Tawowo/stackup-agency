@@ -8,7 +8,7 @@ for (const r of routes) {
   for (const largeur of [1440, 390]) {
     const ctx = await browser.newContext({ viewport: { width: largeur, height: 900 } })
     const page = await ctx.newPage()
-    await page.goto(`http://localhost:3000${r}${r.includes('?') ? '&' : '?'}webgl=0`, { waitUntil: 'networkidle' })
+    await page.goto(`${process.env.BASE ?? "http://localhost:3000"}${r}${r.includes('?') ? '&' : '?'}webgl=0`, { waitUntil: 'networkidle' })
     await page.waitForTimeout(1200)
     const res = await new AxeBuilder({ page }).withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa']).analyze()
     for (const v of res.violations) {
