@@ -1,15 +1,25 @@
 ---
-title: "Fidéliser ses clients : idées simples pour un commerce ou un artisan"
-seoTitle: "Fidéliser ses clients : commerce et artisan, idées"
-excerpt: "Carte de fidélité, rappels, contrats d'entretien, coffrets cadeaux : des moyens simples de faire revenir vos clients, en magasin comme en ligne."
-date: "2026-10-29"
-updated: "2026-10-29"
+title: 'Fidéliser ses clients : idées simples pour un commerce ou un artisan'
+seoTitle: 'Fidéliser ses clients : commerce et artisan, idées'
+excerpt: >-
+  Carte de fidélité, rappels, contrats d'entretien, coffrets cadeaux : des
+  moyens simples de faire revenir vos clients, en magasin comme en ligne.
+date: '2026-11-27'
+updated: '2026-11-27'
 readTime: 12
-tag: "Marketing"
-category: "marketing"
-type: "guide"
-keywords: ["comment fidéliser ses clients quand on est artisan", "carte de fidélité numérique pour petit commerce", "programme de fidélité digital", "comment faire revenir d'anciens clients", "comment fidéliser ses clients en ligne quand on est commerçant"]
-sources: ["https://www.cnil.fr", "https://www.economie.gouv.fr"]
+tag: Marketing
+category: marketing
+type: guide
+keywords:
+  - comment fidéliser ses clients quand on est artisan
+  - carte de fidélité numérique pour petit commerce
+  - programme de fidélité digital
+  - comment faire revenir d'anciens clients
+  - comment fidéliser ses clients en ligne quand on est commerçant
+sources:
+  - 'https://www.cnil.fr'
+  - 'https://www.economie.gouv.fr'
+publishAt: '2026-11-27'
 ---
 
 **Fidéliser, c'est donner à un client une raison simple de revenir, et vous faciliter la tâche pour le lui rappeler.** Pour un commerce ou un artisan, cela passe par un fichier de clients tenu proprement, quelques gestes réguliers (un rappel, un mot, une carte) et un outil qui ne vous prend pas une heure par jour.

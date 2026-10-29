@@ -1,15 +1,26 @@
 ---
-title: "Fiches produits : photos, descriptions et prix qui donnent envie d’acheter"
-seoTitle: "Fiche produit : photos, description, variantes, mentions"
-excerpt: "Écrire une bonne fiche produit : description, photos, tailles, variantes, mentions obligatoires et aide de l'IA. Méthode pour boutiques et artisans."
-date: "2026-10-29"
-updated: "2026-10-29"
+title: 'Fiches produits : photos, descriptions et prix qui donnent envie d’acheter'
+seoTitle: 'Fiche produit : photos, description, variantes, mentions'
+excerpt: >-
+  Écrire une bonne fiche produit : description, photos, tailles, variantes,
+  mentions obligatoires et aide de l'IA. Méthode pour boutiques et artisans.
+date: '2027-02-05'
+updated: '2027-02-05'
 readTime: 12
-tag: "E-commerce"
-category: "ecommerce"
-type: "guide"
-keywords: ["comment écrire une bonne fiche produit", "mentions obligatoires sur une fiche produit", "description de produit artisanal", "variantes de taille et de couleur", "catalogue en ligne ou boutique en ligne"]
-sources: ["https://www.economie.gouv.fr", "https://www.service-public.fr", "https://www.cnil.fr"]
+tag: E-commerce
+category: ecommerce
+type: guide
+keywords:
+  - comment écrire une bonne fiche produit
+  - mentions obligatoires sur une fiche produit
+  - description de produit artisanal
+  - variantes de taille et de couleur
+  - catalogue en ligne ou boutique en ligne
+sources:
+  - 'https://www.economie.gouv.fr'
+  - 'https://www.service-public.fr'
+  - 'https://www.cnil.fr'
+publishAt: '2027-02-05'
 ---
 
 **Une bonne fiche produit répond avant que le client ne pose la question : à quoi ça ressemble, de quoi c'est fait, quelle taille, combien ça coûte, quand je le reçois, et que se passe-t-il si ça ne convient pas.** Les photos rassurent, le texte précise, les mentions obligatoires protègent le vendeur, et la structure des variantes évite les erreurs de commande.

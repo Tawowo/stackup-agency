@@ -1,15 +1,26 @@
 ---
-title: "Trouver des clients professionnels près de chez soi (B2B local)"
-seoTitle: "Trouver des clients professionnels près de chez soi (B2B)"
-excerpt: "Démarchage, site, devis, facture, marchés publics : comment décrocher des clients professionnels locaux sans enfreindre les règles. Méthode pas à pas."
-date: "2026-10-29"
-updated: "2026-10-29"
+title: Trouver des clients professionnels près de chez soi (B2B local)
+seoTitle: Trouver des clients professionnels près de chez soi (B2B)
+excerpt: >-
+  Démarchage, site, devis, facture, marchés publics : comment décrocher des
+  clients professionnels locaux sans enfreindre les règles. Méthode pas à pas.
+date: '2027-01-08'
+updated: '2027-01-08'
 readTime: 11
-tag: "Prospection"
-category: "marketing"
-type: "guide"
-keywords: ["trouver des clients professionnels", "vendre aux professionnels b2b local", "démarchage téléphonique professionnels règles", "bloctel professionnel", "répondre à un marché public tpe"]
-sources: ["https://www.service-public.fr", "https://www.cnil.fr", "https://www.economie.gouv.fr"]
+tag: Prospection
+category: marketing
+type: guide
+keywords:
+  - trouver des clients professionnels
+  - vendre aux professionnels b2b local
+  - démarchage téléphonique professionnels règles
+  - bloctel professionnel
+  - répondre à un marché public tpe
+sources:
+  - 'https://www.service-public.fr'
+  - 'https://www.cnil.fr'
+  - 'https://www.economie.gouv.fr'
+publishAt: '2027-01-08'
 ---
 
 **Pour trouver des clients professionnels près de chez vous, combinez trois leviers : être trouvable (fiche Google, site clair), aller vers les entreprises voisines (courrier, appel, visite ciblés) et rendre l'achat facile (devis rapide, facture conforme).** Le B2B local se gagne rarement avec une seule action, mais un petit nombre de gestes bien faits et répétés suffit à un artisan ou à une TPE.

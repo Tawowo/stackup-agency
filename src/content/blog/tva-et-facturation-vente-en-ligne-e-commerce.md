@@ -1,15 +1,26 @@
 ---
-title: "TVA et facturation d'une vente en ligne : les règles de base"
-seoTitle: "TVA et facture pour une vente en ligne : règles de base"
-excerpt: "TVA française, client européen, guichet unique, facture automatique : les règles de base d'une boutique en ligne, et ce qu'un outil doit gérer."
-date: "2026-10-29"
-updated: "2026-10-29"
+title: 'TVA et facturation d''une vente en ligne : les règles de base'
+seoTitle: 'TVA et facture pour une vente en ligne : règles de base'
+excerpt: >-
+  TVA française, client européen, guichet unique, facture automatique : les
+  règles de base d'une boutique en ligne, et ce qu'un outil doit gérer.
+date: '2027-01-01'
+updated: '2027-01-01'
 readTime: 10
-tag: "E-commerce"
-category: "ecommerce"
-type: "reglementation"
-keywords: ["tva e-commerce", "comment appliquer la tva sur une boutique en ligne", "facture vente en ligne", "guichet unique tva", "tva vente à un client européen"]
-sources: ["https://www.impots.gouv.fr", "https://www.service-public.fr", "https://entreprendre.service-public.fr"]
+tag: E-commerce
+category: ecommerce
+type: reglementation
+keywords:
+  - tva e-commerce
+  - comment appliquer la tva sur une boutique en ligne
+  - facture vente en ligne
+  - guichet unique tva
+  - tva vente à un client européen
+sources:
+  - 'https://www.impots.gouv.fr'
+  - 'https://www.service-public.fr'
+  - 'https://entreprendre.service-public.fr'
+publishAt: '2027-01-01'
 ---
 
 **Sur une vente en ligne à un client en France, vous appliquez la TVA française au taux du produit vendu, sauf si vous êtes en franchise en base ; à un client d'un autre pays européen, les règles dépendent de son statut (particulier ou professionnel) et de vos volumes de vente.** Une facture n'est obligatoire que si le client est un professionnel ou si un particulier la demande, mais une boutique bien conçue l'envoie automatiquement.

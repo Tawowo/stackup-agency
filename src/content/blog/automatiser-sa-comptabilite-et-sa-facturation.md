@@ -1,15 +1,27 @@
 ---
-title: "Automatiser sa facturation, ses justificatifs et son rapprochement bancaire"
-seoTitle: "Automatiser sa facturation et sa comptabilité (TPE)"
-excerpt: "Devis récurrents, acomptes, factures de commandes en ligne, justificatifs, rapprochement bancaire : ce qu'on peut automatiser sans perdre le contrôle."
-date: "2026-10-29"
-updated: "2026-10-29"
+title: 'Automatiser sa facturation, ses justificatifs et son rapprochement bancaire'
+seoTitle: Automatiser sa facturation et sa comptabilité (TPE)
+excerpt: >-
+  Devis récurrents, acomptes, factures de commandes en ligne, justificatifs,
+  rapprochement bancaire : ce qu'on peut automatiser sans perdre le contrôle.
+date: '2027-01-22'
+updated: '2027-01-22'
 readTime: 11
-tag: "Automatisation"
-category: "ia"
-type: "guide"
-keywords: ["automatiser sa facturation", "automatiser sa comptabilité artisan", "rapprochement bancaire automatique", "classer ses justificatifs", "automatiser ses devis", "facturation acomptes automatique"]
-sources: ["https://www.impots.gouv.fr", "https://www.service-public.fr", "https://www.economie.gouv.fr"]
+tag: Automatisation
+category: ia
+type: guide
+keywords:
+  - automatiser sa facturation
+  - automatiser sa comptabilité artisan
+  - rapprochement bancaire automatique
+  - classer ses justificatifs
+  - automatiser ses devis
+  - facturation acomptes automatique
+sources:
+  - 'https://www.impots.gouv.fr'
+  - 'https://www.service-public.fr'
+  - 'https://www.economie.gouv.fr'
+publishAt: '2027-01-22'
 ---
 
 **On automatise bien ce qui se répète à l'identique : envoyer un devis type, transformer un devis accepté en facture, relancer un impayé, classer un justificatif, rapprocher une ligne de banque avec une facture.** On garde la main sur ce qui engage : les prix, les écritures sensibles et la validation par votre comptable.

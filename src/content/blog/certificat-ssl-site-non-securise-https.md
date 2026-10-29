@@ -1,15 +1,26 @@
 ---
-title: "Site « non sécurisé » : certificat SSL et HTTPS"
-seoTitle: "Site « non sécurisé » : réparer son certificat SSL"
-excerpt: "Cadenas barré, « non sécurisé », certificat expiré : pourquoi ça arrive, comment le réparer, qui peut le faire et comment éviter que ça revienne."
-date: "2026-10-29"
-updated: "2026-10-29"
+title: 'Site « non sécurisé » : certificat SSL et HTTPS'
+seoTitle: 'Site « non sécurisé » : réparer son certificat SSL'
+excerpt: >-
+  Cadenas barré, « non sécurisé », certificat expiré : pourquoi ça arrive,
+  comment le réparer, qui peut le faire et comment éviter que ça revienne.
+date: '2026-11-10'
+updated: '2026-11-10'
 readTime: 8
-tag: "Technique"
-category: "technique"
-type: "question"
-keywords: ["site non sécurisé", "certificat ssl expiré", "passer son site en https", "renouveler certificat ssl", "cadenas barré", "certificat ssl gratuit ou payant"]
-sources: ["https://www.cnil.fr", "https://support.google.com/webmasters"]
+tag: Technique
+category: technique
+type: question
+keywords:
+  - site non sécurisé
+  - certificat ssl expiré
+  - passer son site en https
+  - renouveler certificat ssl
+  - cadenas barré
+  - certificat ssl gratuit ou payant
+sources:
+  - 'https://www.cnil.fr'
+  - 'https://support.google.com/webmasters'
+publishAt: '2026-11-10'
 ---
 
 **Quand votre site affiche « non sécurisé » ou un cadenas barré, c'est que le certificat SSL manque, a expiré ou est mal configuré : le navigateur prévient vos visiteurs avant même qu'ils lisent votre page.** Dans la plupart des cas, c'est réparable rapidement, et le certificat lui-même est aujourd'hui gratuit chez la plupart des hébergeurs.

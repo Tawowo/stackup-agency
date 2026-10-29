@@ -1,15 +1,25 @@
 ---
-title: "L’IA va-t-elle remplacer mon métier ? Ce qui change vraiment"
-seoTitle: "L'IA va-t-elle remplacer mon métier ? Artisans, commerces"
-excerpt: "Artisans, commerçants, secrétaires, libéraux : ce que l'IA change et ne change pas dans votre quotidien, et comment vous y préparer sans céder à la peur."
-date: "2026-10-29"
-updated: "2026-10-29"
+title: L’IA va-t-elle remplacer mon métier ? Ce qui change vraiment
+seoTitle: 'L''IA va-t-elle remplacer mon métier ? Artisans, commerces'
+excerpt: >-
+  Artisans, commerçants, secrétaires, libéraux : ce que l'IA change et ne change
+  pas dans votre quotidien, et comment vous y préparer sans céder à la peur.
+date: '2027-02-09'
+updated: '2027-02-09'
 readTime: 8
-tag: "IA"
-category: "ia"
-type: "question"
-keywords: ["l'ia va-t-elle remplacer mon métier", "l'ia va-t-elle remplacer les artisans", "l'ia va-t-elle remplacer les commerçants", "métiers manuels menacés par l'ia", "les réseaux sociaux remplacent-ils un site internet"]
-sources: ["https://www.service-public.fr", "https://www.cnil.fr"]
+tag: IA
+category: ia
+type: question
+keywords:
+  - l'ia va-t-elle remplacer mon métier
+  - l'ia va-t-elle remplacer les artisans
+  - l'ia va-t-elle remplacer les commerçants
+  - métiers manuels menacés par l'ia
+  - les réseaux sociaux remplacent-ils un site internet
+sources:
+  - 'https://www.service-public.fr'
+  - 'https://www.cnil.fr'
+publishAt: '2027-02-09'
 ---
 
 **L'IA ne remplace pas un métier entier : elle remplace des tâches, surtout celles qui consistent à rédiger, trier, recopier et répondre aux mêmes questions.** Un métier de main, de contact ou de responsabilité reste tenu par une personne ; ce qui change, c'est le temps passé sur le reste.

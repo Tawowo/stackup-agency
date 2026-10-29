@@ -1,15 +1,26 @@
 ---
-title: "Fixer ses prix et son taux horaire : méthode simple"
-seoTitle: "Fixer ses prix et son taux horaire d'artisan"
-excerpt: "Prix de revient, marge, seuil de rentabilité, taux horaire : la méthode pas à pas pour fixer vos tarifs et les augmenter sans perdre de clients."
-date: "2026-10-29"
-updated: "2026-10-29"
+title: 'Fixer ses prix et son taux horaire : méthode simple'
+seoTitle: Fixer ses prix et son taux horaire d'artisan
+excerpt: >-
+  Prix de revient, marge, seuil de rentabilité, taux horaire : la méthode pas à
+  pas pour fixer vos tarifs et les augmenter sans perdre de clients.
+date: '2026-12-01'
+updated: '2026-12-01'
 readTime: 13
-tag: "Création"
-category: "creation"
-type: "guide"
-keywords: ["comment fixer ses prix quand on est artisan", "combien facturer une heure de main d'oeuvre", "comment calculer la marge sur un devis", "seuil de rentabilité artisan", "comment augmenter ses prix sans perdre de clients"]
-sources: ["https://www.economie.gouv.fr", "https://www.service-public.fr", "https://entreprendre.service-public.fr"]
+tag: Création
+category: creation
+type: guide
+keywords:
+  - comment fixer ses prix quand on est artisan
+  - combien facturer une heure de main d'oeuvre
+  - comment calculer la marge sur un devis
+  - seuil de rentabilité artisan
+  - comment augmenter ses prix sans perdre de clients
+sources:
+  - 'https://www.economie.gouv.fr'
+  - 'https://www.service-public.fr'
+  - 'https://entreprendre.service-public.fr'
+publishAt: '2026-12-01'
 ---
 
 **Pour fixer un prix, on part de ce que coûte réellement une heure de travail et une unité de matière, on ajoute une marge qui paie ce qui n'est pas facturé directement, puis on compare avec le marché.** Le tarif d'un concurrent est un repère, pas une base de calcul.

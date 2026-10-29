@@ -1,15 +1,24 @@
 ---
-title: "Vérifier sa fiche Google Business : courrier, appel, vidéo, solutions"
-seoTitle: "Vérifier sa fiche Google Business : méthodes et blocages"
-excerpt: "Fiche en attente, vérification refusée ou suspendue ? Voici les méthodes (appel, SMS, courrier, vidéo) et quoi faire à chaque blocage."
-date: "2026-10-29"
-updated: "2026-10-29"
+title: 'Vérifier sa fiche Google Business : courrier, appel, vidéo, solutions'
+seoTitle: 'Vérifier sa fiche Google Business : méthodes et blocages'
+excerpt: >-
+  Fiche en attente, vérification refusée ou suspendue ? Voici les méthodes
+  (appel, SMS, courrier, vidéo) et quoi faire à chaque blocage.
+date: '2026-11-20'
+updated: '2026-11-20'
 readTime: 8
-tag: "Référencement local"
-category: "seo-local"
-type: "question"
-keywords: ["vérifier sa fiche google business", "valider sa fiche google par téléphone", "vérification vidéo google business", "fiche google suspendue", "vérification fiche google refusée"]
-sources: ["https://support.google.com/business"]
+tag: Référencement local
+category: seo-local
+type: question
+keywords:
+  - vérifier sa fiche google business
+  - valider sa fiche google par téléphone
+  - vérification vidéo google business
+  - fiche google suspendue
+  - vérification fiche google refusée
+sources:
+  - 'https://support.google.com/business'
+publishAt: '2026-11-20'
 ---
 
 **Pour vérifier une fiche Google Business, Google propose selon votre activité un appel, un SMS, un e-mail, un courrier postal avec code ou une vidéo ; vous ne choisissez pas toujours.** Si la vérification échoue ou si la fiche est suspendue, la cause est presque toujours une information incohérente (adresse, nom, catégorie) ou une preuve insuffisante : on la corrige, on redépose, on ne multiplie pas les tentatives.

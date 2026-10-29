@@ -1,15 +1,26 @@
 ---
-title: "Comparer des devis d’agences web : comment les lire et quoi vérifier"
-seoTitle: "Comparer des devis d’agence web : grille de lecture"
-excerpt: "Trois devis, trois prix, trois façons de tout écrire : voici la grille pour les lire ligne à ligne, repérer ce qui manque et choisir sans vous tromper."
-date: "2026-10-29"
-updated: "2026-10-29"
+title: 'Comparer des devis d’agences web : comment les lire et quoi vérifier'
+seoTitle: 'Comparer des devis d’agence web : grille de lecture'
+excerpt: >-
+  Trois devis, trois prix, trois façons de tout écrire : voici la grille pour
+  les lire ligne à ligne, repérer ce qui manque et choisir sans vous tromper.
+date: '2027-01-19'
+updated: '2027-01-19'
 readTime: 11
-tag: "Prix et devis"
-category: "creation"
-type: "guide"
-keywords: ["comparer devis agence web", "que doit contenir un devis site internet", "demander un devis boutique en ligne", "devis logiciel sur mesure", "faire un devis sans agence", "hébergement dans un devis agence web"]
-sources: ["https://www.service-public.fr", "https://www.economie.gouv.fr"]
+tag: Prix et devis
+category: creation
+type: guide
+keywords:
+  - comparer devis agence web
+  - que doit contenir un devis site internet
+  - demander un devis boutique en ligne
+  - devis logiciel sur mesure
+  - faire un devis sans agence
+  - hébergement dans un devis agence web
+sources:
+  - 'https://www.service-public.fr'
+  - 'https://www.economie.gouv.fr'
+publishAt: '2027-01-19'
 ---
 
 **Pour comparer des devis d’agences web, ne comparez pas les totaux : alignez les contenus ligne à ligne, vérifiez ce qui est inclus ou absent (hébergement, contenus, propriété du code, maintenance) et posez les mêmes questions à chacun. Un devis moins cher qui oublie la moitié du travail coûte plus cher que celui qui l’a écrit.**

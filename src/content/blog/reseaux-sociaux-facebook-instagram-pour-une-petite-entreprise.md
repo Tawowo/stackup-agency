@@ -1,15 +1,27 @@
 ---
-title: "Réseaux sociaux : Facebook, Instagram, TikTok pour une petite entreprise"
-seoTitle: "Réseaux sociaux pour un commerce : Facebook, Instagram"
-excerpt: "Faut-il être sur Facebook, Instagram ou TikTok quand on est artisan ou commerçant ? Ce qui sert vraiment, quoi publier, et pourquoi garder son propre site."
-date: "2026-10-29"
-updated: "2026-10-29"
+title: 'Réseaux sociaux : Facebook, Instagram, TikTok pour une petite entreprise'
+seoTitle: 'Réseaux sociaux pour un commerce : Facebook, Instagram'
+excerpt: >-
+  Faut-il être sur Facebook, Instagram ou TikTok quand on est artisan ou
+  commerçant ? Ce qui sert vraiment, quoi publier, et pourquoi garder son propre
+  site.
+date: '2026-12-22'
+updated: '2026-12-22'
 readTime: 11
-tag: "Marketing"
-category: "marketing"
-type: "guide"
-keywords: ["instagram commerce de proximité", "facebook commerçant", "faut-il être sur instagram artisan", "vendre sur instagram", "réseaux sociaux petite entreprise", "pourquoi avoir son propre site"]
-sources: ["https://www.service-public.fr", "https://www.impots.gouv.fr"]
+tag: Marketing
+category: marketing
+type: guide
+keywords:
+  - instagram commerce de proximité
+  - facebook commerçant
+  - faut-il être sur instagram artisan
+  - vendre sur instagram
+  - réseaux sociaux petite entreprise
+  - pourquoi avoir son propre site
+sources:
+  - 'https://www.service-public.fr'
+  - 'https://www.impots.gouv.fr'
+publishAt: '2026-12-22'
 ---
 
 **Les réseaux sociaux servent un artisan ou un commerçant s'ils lui apportent des clients et pas seulement des mentions « j'aime ».** Choisissez un ou deux réseaux là où vos clients se trouvent, publiez peu mais régulièrement, et gardez un site à vous comme point d'arrivée de toutes vos publications.

@@ -1,15 +1,27 @@
 ---
-title: "E-reporting : ce que les petites entreprises doivent transmettre"
-seoTitle: "E-reporting : qui est concerné et que transmettre ?"
-excerpt: "E-reporting, e-invoicing : quelles ventes sont concernées, quelles données transmettre, comment, et ce que cela change pour artisans et commerçants."
-date: "2026-10-29"
-updated: "2026-10-29"
+title: 'E-reporting : ce que les petites entreprises doivent transmettre'
+seoTitle: 'E-reporting : qui est concerné et que transmettre ?'
+excerpt: >-
+  E-reporting, e-invoicing : quelles ventes sont concernées, quelles données
+  transmettre, comment, et ce que cela change pour artisans et commerçants.
+date: '2026-12-04'
+updated: '2026-12-04'
 readTime: 12
-tag: "Facture électronique"
-category: "juridique"
-type: "reglementation"
-keywords: ["e-reporting", "e-reporting c’est quoi", "e-reporting particuliers", "e-reporting micro-entreprise", "différence e-invoicing e-reporting", "e-reporting artisan"]
-sources: ["https://www.impots.gouv.fr", "https://www.economie.gouv.fr", "https://www.legifrance.gouv.fr"]
+tag: Facture électronique
+category: juridique
+type: reglementation
+keywords:
+  - e-reporting
+  - e-reporting c’est quoi
+  - e-reporting particuliers
+  - e-reporting micro-entreprise
+  - différence e-invoicing e-reporting
+  - e-reporting artisan
+sources:
+  - 'https://www.impots.gouv.fr'
+  - 'https://www.economie.gouv.fr'
+  - 'https://www.legifrance.gouv.fr'
+publishAt: '2026-12-04'
 ---
 
 **L’e-reporting est la transmission à l’administration fiscale de données sur des opérations qui ne donnent pas lieu à une facture électronique entre entreprises : typiquement les ventes à des particuliers, certaines opérations avec l’étranger et des données de paiement. Le calendrier et les détails techniques étant susceptibles d’évoluer, vérifiez-les sur impots.gouv.fr et economie.gouv.fr avant d’agir.**

@@ -1,15 +1,26 @@
 ---
-title: "TVA non applicable, art. 293 B du CGI : ce que cela implique"
-seoTitle: "TVA non applicable art. 293 B du CGI : sens et seuils"
-excerpt: "Franchise en base de TVA : où mettre la mention 293 B, ce qu'elle change, que faire en cas de dépassement de seuil. Les repères à vérifier chaque année."
-date: "2026-10-29"
-updated: "2026-10-29"
+title: 'TVA non applicable, art. 293 B du CGI : ce que cela implique'
+seoTitle: 'TVA non applicable art. 293 B du CGI : sens et seuils'
+excerpt: >-
+  Franchise en base de TVA : où mettre la mention 293 B, ce qu'elle change, que
+  faire en cas de dépassement de seuil. Les repères à vérifier chaque année.
+date: '2026-12-11'
+updated: '2026-12-11'
 readTime: 10
-tag: "Obligations légales"
-category: "juridique"
-type: "reglementation"
-keywords: ["tva non applicable art 293 b du cgi", "franchise en base de tva", "seuil tva micro-entreprise", "dépassement seuil franchise tva", "mention tva non applicable facture"]
-sources: ["https://www.impots.gouv.fr", "https://www.service-public.fr", "https://entreprendre.service-public.fr"]
+tag: Obligations légales
+category: juridique
+type: reglementation
+keywords:
+  - tva non applicable art 293 b du cgi
+  - franchise en base de tva
+  - seuil tva micro-entreprise
+  - dépassement seuil franchise tva
+  - mention tva non applicable facture
+sources:
+  - 'https://www.impots.gouv.fr'
+  - 'https://www.service-public.fr'
+  - 'https://entreprendre.service-public.fr'
+publishAt: '2026-12-11'
 ---
 
 **« TVA non applicable, art. 293 B du CGI » signifie que vous êtes en franchise en base de TVA : vous ne facturez pas de TVA à vos clients, et vous ne pouvez pas non plus récupérer celle de vos achats.** Cette mention est obligatoire sur vos devis et factures tant que vous bénéficiez du régime ; si vous dépassez les seuils, vous devez facturer la TVA, et c'est la date du dépassement qui compte.

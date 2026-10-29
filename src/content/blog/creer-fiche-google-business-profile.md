@@ -1,15 +1,24 @@
 ---
-title: "Créer sa fiche Google Business Profile pas à pas"
-seoTitle: "Créer une fiche Google Business Profile : pas à pas"
-excerpt: "Créer, vérifier et compléter sa fiche Google Business Profile, gratuitement : étapes, logo, photos, services, lien de réservation, erreurs à éviter."
-date: "2026-10-29"
-updated: "2026-10-29"
+title: Créer sa fiche Google Business Profile pas à pas
+seoTitle: 'Créer une fiche Google Business Profile : pas à pas'
+excerpt: >-
+  Créer, vérifier et compléter sa fiche Google Business Profile, gratuitement :
+  étapes, logo, photos, services, lien de réservation, erreurs à éviter.
+date: '2026-10-29'
+updated: '2026-10-29'
 readTime: 9
-tag: "Google Business"
-category: "seo-local"
-type: "question"
-keywords: ["créer une fiche google business", "comment créer une fiche google gratuitement", "créer une fiche google business sans local", "revendiquer une fiche google", "ajouter un lien de réservation fiche google", "ajouter un gestionnaire fiche google"]
-sources: ["https://support.google.com/business"]
+tag: Google Business
+category: seo-local
+type: question
+keywords:
+  - créer une fiche google business
+  - comment créer une fiche google gratuitement
+  - créer une fiche google business sans local
+  - revendiquer une fiche google
+  - ajouter un lien de réservation fiche google
+  - ajouter un gestionnaire fiche google
+sources:
+  - 'https://support.google.com/business'
 ---
 
 **Créer une fiche Google Business Profile est gratuit : il faut un compte Google, chercher son entreprise pour la revendiquer ou la créer, renseigner ses informations, puis la faire vérifier par Google. Comptez une vingtaine de minutes pour la saisie, et un délai de vérification qui dépend du mode choisi.**

@@ -1,15 +1,26 @@
 ---
-title: "Automatiser les rappels de rendez-vous et les relances par SMS ou e-mail"
-seoTitle: "Rappels SMS et relances automatiques : le guide TPE"
-excerpt: "Appels manqués, rappels de rendez-vous, devis sans réponse : mettez en place des SMS et e-mails automatiques simples, légaux et utiles à votre quotidien."
-date: "2026-10-29"
-updated: "2026-10-29"
+title: Automatiser les rappels de rendez-vous et les relances par SMS ou e-mail
+seoTitle: 'Rappels SMS et relances automatiques : le guide TPE'
+excerpt: >-
+  Appels manqués, rappels de rendez-vous, devis sans réponse : mettez en place
+  des SMS et e-mails automatiques simples, légaux et utiles à votre quotidien.
+date: '2027-01-12'
+updated: '2027-01-12'
 readTime: 11
-tag: "Automatisation"
-category: "ia"
-type: "guide"
-keywords: ["rappel rendez-vous sms automatique", "sms automatique appel manqué", "relance client automatique", "rappel contrôle annuel clients", "automatiser relances devis", "prospection sms commerçant"]
-sources: ["https://www.cnil.fr", "https://www.service-public.fr"]
+tag: Automatisation
+category: ia
+type: guide
+keywords:
+  - rappel rendez-vous sms automatique
+  - sms automatique appel manqué
+  - relance client automatique
+  - rappel contrôle annuel clients
+  - automatiser relances devis
+  - prospection sms commerçant
+sources:
+  - 'https://www.cnil.fr'
+  - 'https://www.service-public.fr'
+publishAt: '2027-01-12'
 ---
 
 **Un rappel automatique envoyé au bon moment économise des appels, limite les rendez-vous oubliés et évite qu'une demande de devis tombe dans l'oubli.** Pour une petite entreprise, quelques messages bien choisis suffisent : un SMS après un appel manqué, un rappel de rendez-vous, une relance de devis, un rappel d'entretien annuel.

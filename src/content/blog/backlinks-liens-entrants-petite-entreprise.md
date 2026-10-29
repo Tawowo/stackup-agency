@@ -1,15 +1,26 @@
 ---
-title: "Backlinks : obtenir des liens entrants quand on est une petite entreprise"
-seoTitle: "Backlinks : obtenir des liens entrants en petite entreprise"
-excerpt: "Qu'est-ce qu'un backlink, à quoi sert-il, comment en obtenir sans payer ni prendre de risque : méthode locale pour artisans, commerçants et TPE."
-date: "2026-10-29"
-updated: "2026-10-29"
+title: 'Backlinks : obtenir des liens entrants quand on est une petite entreprise'
+seoTitle: 'Backlinks : obtenir des liens entrants en petite entreprise'
+excerpt: >-
+  Qu'est-ce qu'un backlink, à quoi sert-il, comment en obtenir sans payer ni
+  prendre de risque : méthode locale pour artisans, commerçants et TPE.
+date: '2027-01-15'
+updated: '2027-01-15'
 readTime: 11
-tag: "Référencement"
-category: "seo"
-type: "guide"
-keywords: ["backlinks", "lien entrant", "netlinking simple", "obtenir des backlinks gratuitement", "backlinks locaux", "acheter des backlinks"]
-sources: ["https://developers.google.com/search", "https://support.google.com/webmasters"]
+tag: Référencement
+category: seo
+type: guide
+keywords:
+  - backlinks
+  - lien entrant
+  - netlinking simple
+  - obtenir des backlinks gratuitement
+  - backlinks locaux
+  - acheter des backlinks
+sources:
+  - 'https://developers.google.com/search'
+  - 'https://support.google.com/webmasters'
+publishAt: '2027-01-15'
 ---
 
 **Un backlink est un lien placé sur le site de quelqu'un d'autre qui renvoie vers le vôtre ; Google s'en sert comme d'une recommandation.** Pour une petite entreprise, quelques liens pertinents et locaux valent mieux qu'une centaine de liens achetés, et ils s'obtiennent surtout en entretenant ses relations réelles.

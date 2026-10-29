@@ -1,15 +1,26 @@
 ---
-title: "Devis en ligne et signature électronique : valable et simple ?"
-seoTitle: "Signature électronique d'un devis : est-elle valable ?"
-excerpt: "Un devis signé en ligne est-il valable ? Signature électronique, bon de commande, devis calculé en ligne : ce qui est permis et comment s'y prendre."
-date: "2026-10-29"
-updated: "2026-10-29"
+title: 'Devis en ligne et signature électronique : valable et simple ?'
+seoTitle: 'Signature électronique d''un devis : est-elle valable ?'
+excerpt: >-
+  Un devis signé en ligne est-il valable ? Signature électronique, bon de
+  commande, devis calculé en ligne : ce qui est permis et comment s'y prendre.
+date: '2026-11-17'
+updated: '2026-11-17'
 readTime: 9
-tag: "Gestion"
-category: "applications-metier"
-type: "question"
-keywords: ["signature électronique devis", "devis en ligne", "faire signer un devis en ligne", "bon de commande ou devis", "devis automatique", "générateur de devis en ligne"]
-sources: ["https://www.service-public.fr", "https://www.economie.gouv.fr"]
+tag: Gestion
+category: applications-metier
+type: question
+keywords:
+  - signature électronique devis
+  - devis en ligne
+  - faire signer un devis en ligne
+  - bon de commande ou devis
+  - devis automatique
+  - générateur de devis en ligne
+sources:
+  - 'https://www.service-public.fr'
+  - 'https://www.economie.gouv.fr'
+publishAt: '2026-11-17'
 ---
 
 **Oui, un devis signé électroniquement est en principe valable, à condition que le procédé permette d'identifier le signataire et de garantir l'intégrité du document.** Pour un artisan, une signature simple suffit dans la grande majorité des cas, et elle accélère l'acceptation.

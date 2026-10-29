@@ -1,15 +1,24 @@
 ---
-title: "Comment répondre à un avis Google (positif ou négatif) : modèles et règles"
-seoTitle: "Répondre à un avis Google : modèles positif et négatif"
-excerpt: "Faut-il répondre à tous les avis Google, dans quel délai, avec l'IA ? Règles, modèles prêts à adapter et erreurs à éviter pour un commerce ou un artisan."
-date: "2026-10-29"
-updated: "2026-10-29"
+title: 'Comment répondre à un avis Google (positif ou négatif) : modèles et règles'
+seoTitle: 'Répondre à un avis Google : modèles positif et négatif'
+excerpt: >-
+  Faut-il répondre à tous les avis Google, dans quel délai, avec l'IA ? Règles,
+  modèles prêts à adapter et erreurs à éviter pour un commerce ou un artisan.
+date: '2026-12-08'
+updated: '2026-12-08'
 readTime: 8
-tag: "Google Business"
-category: "seo-local"
-type: "question"
-keywords: ["répondre à un avis google", "modèle réponse avis positif", "répondre avis négatif google", "répondre aux avis avec l'ia", "droit de réponse avis en ligne"]
-sources: ["https://support.google.com/business"]
+tag: Google Business
+category: seo-local
+type: question
+keywords:
+  - répondre à un avis google
+  - modèle réponse avis positif
+  - répondre avis négatif google
+  - répondre aux avis avec l'ia
+  - droit de réponse avis en ligne
+sources:
+  - 'https://support.google.com/business'
+publishAt: '2026-12-08'
 ---
 
 **Oui, répondez aux avis Google, et en priorité aux négatifs, de manière brève, polie et factuelle.** Votre réponse est publique : elle s'adresse autant au client qui a écrit qu'aux futurs clients qui vous évaluent.

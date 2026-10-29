@@ -1,15 +1,28 @@
 ---
-title: "Logiciel de facturation conforme à la facture électronique : critères et alternatives"
-seoTitle: "Logiciel de facturation conforme facture électronique"
-excerpt: "Faut-il un logiciel pour la facture électronique, existe-t-il du gratuit, et comment vérifier qu’un outil est conforme ? Critères et alternatives."
-date: "2026-10-29"
-updated: "2026-10-29"
+title: >-
+  Logiciel de facturation conforme à la facture électronique : critères et
+  alternatives
+seoTitle: Logiciel de facturation conforme facture électronique
+excerpt: >-
+  Faut-il un logiciel pour la facture électronique, existe-t-il du gratuit, et
+  comment vérifier qu’un outil est conforme ? Critères et alternatives.
+date: '2026-10-29'
+updated: '2026-10-29'
 readTime: 12
-tag: "Facture électronique"
-category: "juridique"
-type: "reglementation"
-keywords: ["logiciel facturation conforme facture électronique", "facture électronique gratuite", "faire une facture électronique sans logiciel", "logiciel de facturation plateforme agréée", "logiciel de caisse facture électronique", "outil de gestion facturation électronique sur mesure"]
-sources: ["https://www.impots.gouv.fr", "https://www.economie.gouv.fr", "https://www.service-public.fr"]
+tag: Facture électronique
+category: juridique
+type: reglementation
+keywords:
+  - logiciel facturation conforme facture électronique
+  - facture électronique gratuite
+  - faire une facture électronique sans logiciel
+  - logiciel de facturation plateforme agréée
+  - logiciel de caisse facture électronique
+  - outil de gestion facturation électronique sur mesure
+sources:
+  - 'https://www.impots.gouv.fr'
+  - 'https://www.economie.gouv.fr'
+  - 'https://www.service-public.fr'
 ---
 
 **Pour émettre des factures électroniques conformes, il faut en pratique un outil capable de produire une facture au format structuré et de la transmettre via une plateforme agréée : un simple PDF ne suffit pas. Cet outil peut être un logiciel du marché, une offre gratuite ou limitée de certaines plateformes, ou un outil sur mesure relié à une plateforme.**

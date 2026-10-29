@@ -116,7 +116,7 @@ export const FAQ_METIERS: Record<string, ContenuLocal['faq']> = {
       a: `Montrez votre matériel de mesure, votre tenue, votre véhicule, un exemple de rapport rendu anonyme et vos certificats. Évitez les photos d’intérieurs de clients, même avec l’adresse masquée : un voisin reconnaît vite la façade. Si vous publiez une photo d’un site pour illustrer une méthode, demandez l’accord du propriétaire. Un court film de présentation de votre déroulé de visite rassure les particuliers qui ne savent pas à quoi s’attendre.`,
     },
     {
-      q: `Pourquoi mon site ne ressort pas quand on cherche « DPE » près de chez moi ?`,
+      q: `Pourquoi mon site ne ressort-il pas pour « DPE » près de chez moi ?`,
       a: `Parce que les plateformes nationales et les gros cabinets occupent les premières places pour les requêtes générales. Votre atout est local : une page par diagnostic et par commune desservie, avec des explications utiles (quand le DPE est demandé, ce qu’il faut préparer). Mettez ces pages à jour quand la réglementation change. Soignez la fiche Google et vérifiez dans la Search Console que chaque page est indexée. Les résultats prennent du temps, mais ils s’additionnent d’un mois à l’autre.`,
     },
     {

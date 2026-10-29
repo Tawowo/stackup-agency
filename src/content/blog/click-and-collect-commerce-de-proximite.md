@@ -1,15 +1,27 @@
 ---
-title: "Click and collect pour un commerce de proximité : mettre en place"
-seoTitle: "Click and collect commerçant : mise en place pas à pas"
-excerpt: "Click and collect : définition, paiement, retraits, commandes non retirées, outils et alternatives à la livraison pour un commerce de proximité."
-date: "2026-10-29"
-updated: "2026-10-29"
+title: 'Click and collect pour un commerce de proximité : mettre en place'
+seoTitle: 'Click and collect commerçant : mise en place pas à pas'
+excerpt: >-
+  Click and collect : définition, paiement, retraits, commandes non retirées,
+  outils et alternatives à la livraison pour un commerce de proximité.
+date: '2026-12-25'
+updated: '2026-12-25'
 readTime: 12
-tag: "E-commerce"
-category: "ecommerce"
-type: "guide"
-keywords: ["click and collect", "click and collect commerçant", "retrait en magasin", "logiciel click and collect", "drive fermier", "commandes non retirées"]
-sources: ["https://www.service-public.fr", "https://www.economie.gouv.fr", "https://www.cnil.fr"]
+tag: E-commerce
+category: ecommerce
+type: guide
+keywords:
+  - click and collect
+  - click and collect commerçant
+  - retrait en magasin
+  - logiciel click and collect
+  - drive fermier
+  - commandes non retirées
+sources:
+  - 'https://www.service-public.fr'
+  - 'https://www.economie.gouv.fr'
+  - 'https://www.cnil.fr'
+publishAt: '2026-12-25'
 ---
 
 **Le click and collect permet à vos clients de commander en ligne et de venir chercher leur commande dans votre boutique : c'est la forme de vente en ligne la plus accessible pour un commerce de proximité.** Il demande peu de logistique, évite les frais d'envoi et ramène le client chez vous, à condition d'organiser le retrait et de cadrer les paiements et les commandes non retirées.

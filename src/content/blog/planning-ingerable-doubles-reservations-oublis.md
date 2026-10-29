@@ -1,15 +1,26 @@
 ---
-title: "Planning ingérable, doubles réservations, oublis : comment s’organiser"
-seoTitle: "Oubli de déclaration, TVA, facturation : que faire"
-excerpt: "Oubli de TVA, de chiffre d'affaires à l'Urssaf, doubles réservations : les bons réflexes pour régulariser vite et mettre en place des rappels simples."
-date: "2026-10-29"
-updated: "2026-10-29"
+title: 'Planning ingérable, doubles réservations, oublis : comment s’organiser'
+seoTitle: 'Oubli de déclaration, TVA, facturation : que faire'
+excerpt: >-
+  Oubli de TVA, de chiffre d'affaires à l'Urssaf, doubles réservations : les
+  bons réflexes pour régulariser vite et mettre en place des rappels simples.
+date: '2027-03-02'
+updated: '2027-03-02'
 readTime: 7
-tag: "Gestion"
-category: "strategie"
-type: "question"
-keywords: ["oubli déclaration tva", "oublié de déclarer chiffre d'affaires urssaf", "éviter les oublis de facturation", "planning ingérable", "doubles réservations"]
-sources: ["https://www.impots.gouv.fr", "https://www.service-public.fr", "https://www.autoentrepreneur.urssaf.fr"]
+tag: Gestion
+category: strategie
+type: question
+keywords:
+  - oubli déclaration tva
+  - oublié de déclarer chiffre d'affaires urssaf
+  - éviter les oublis de facturation
+  - planning ingérable
+  - doubles réservations
+sources:
+  - 'https://www.impots.gouv.fr'
+  - 'https://www.service-public.fr'
+  - 'https://www.autoentrepreneur.urssaf.fr'
+publishAt: '2027-03-02'
 ---
 
 **Un oubli de déclaration se rattrape presque toujours : le plus important est de régulariser vite, sans attendre la relance.** Pour éviter que cela se reproduise, il faut sortir ces échéances de votre tête et les mettre dans un outil qui vous les rappelle, avec votre planning et votre facturation.

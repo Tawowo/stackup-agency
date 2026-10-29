@@ -1,15 +1,25 @@
 ---
-title: "Vendre en ligne sans commission : ce que coûtent vraiment les plateformes"
-seoTitle: "Vendre en ligne sans commission : le vrai coût"
-excerpt: "Abonnement, commission, frais de transaction : calculez ce que vous laissent vraiment les plateformes et voyez comment vendre ou réserver sans commission."
-date: "2026-10-29"
-updated: "2026-10-29"
+title: 'Vendre en ligne sans commission : ce que coûtent vraiment les plateformes'
+seoTitle: 'Vendre en ligne sans commission : le vrai coût'
+excerpt: >-
+  Abonnement, commission, frais de transaction : calculez ce que vous laissent
+  vraiment les plateformes et voyez comment vendre ou réserver sans commission.
+date: '2026-10-29'
+updated: '2026-10-29'
 readTime: 11
-tag: "E-commerce"
-category: "ecommerce"
-type: "guide"
-keywords: ["boutique en ligne sans commission", "vendre en ligne sans commission", "commission plateformes de réservation", "frais de transaction shopify", "logiciel de prise de rdv sans commission", "plateformes de leads artisans coût"]
-sources: ["https://www.economie.gouv.fr", "https://www.service-public.fr"]
+tag: E-commerce
+category: ecommerce
+type: guide
+keywords:
+  - boutique en ligne sans commission
+  - vendre en ligne sans commission
+  - commission plateformes de réservation
+  - frais de transaction shopify
+  - logiciel de prise de rdv sans commission
+  - plateformes de leads artisans coût
+sources:
+  - 'https://www.economie.gouv.fr'
+  - 'https://www.service-public.fr'
 ---
 
 **Une plateforme ne coûte jamais « zéro » : elle se paie par un abonnement, par une commission sur chaque vente ou chaque réservation, par des frais de paiement, ou par les trois à la fois. Vendre sans commission est possible avec un site que vous possédez, mais il a lui aussi un coût de départ et des frais récurrents, qu’il faut comparer honnêtement.**

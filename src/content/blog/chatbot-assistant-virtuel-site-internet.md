@@ -1,15 +1,25 @@
 ---
-title: "Chatbot sur son site : utile pour une petite entreprise ?"
-seoTitle: "Chatbot site internet : utile pour une petite entreprise ?"
-excerpt: "Chatbot, assistant vocal, WhatsApp Business ou secrétariat externalisé : ce qui sert vraiment une petite entreprise, ce qui coûte plus qu'il ne rapporte."
-date: "2026-10-29"
-updated: "2026-10-29"
+title: 'Chatbot sur son site : utile pour une petite entreprise ?'
+seoTitle: 'Chatbot site internet : utile pour une petite entreprise ?'
+excerpt: >-
+  Chatbot, assistant vocal, WhatsApp Business ou secrétariat externalisé : ce
+  qui sert vraiment une petite entreprise, ce qui coûte plus qu'il ne rapporte.
+date: '2027-02-19'
+updated: '2027-02-19'
 readTime: 8
-tag: "IA et automatisation"
-category: "ia"
-type: "question"
-keywords: ["chatbot site internet", "assistant vocal artisan", "secrétariat téléphonique externalisé", "whatsapp business", "assistant virtuel petite entreprise", "centraliser les demandes de devis"]
-sources: ["https://www.cnil.fr"]
+tag: IA et automatisation
+category: ia
+type: question
+keywords:
+  - chatbot site internet
+  - assistant vocal artisan
+  - secrétariat téléphonique externalisé
+  - whatsapp business
+  - assistant virtuel petite entreprise
+  - centraliser les demandes de devis
+sources:
+  - 'https://www.cnil.fr'
+publishAt: '2027-02-19'
 ---
 
 **Pour une petite entreprise, un chatbot est rarement la première chose à mettre en place : un formulaire clair, un numéro qui répond ou rappelle, et une messagerie bien rangée règlent la plupart des besoins.** Un assistant n'est utile que si vos clients posent toujours les mêmes questions, à des heures où vous ne pouvez pas répondre.

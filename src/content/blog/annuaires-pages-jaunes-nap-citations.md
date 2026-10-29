@@ -1,15 +1,26 @@
 ---
-title: "Annuaires, Pages Jaunes et cohérence NAP : utile pour le référencement local ?"
-seoTitle: "Pages Jaunes et annuaires : utiles pour le SEO local ?"
-excerpt: "Pages Jaunes, annuaires, citations locales et cohérence NAP : lesquels valent encore le coup, lesquels éviter, et comment tout vérifier en une soirée."
-date: "2026-10-29"
-updated: "2026-10-29"
+title: 'Annuaires, Pages Jaunes et cohérence NAP : utile pour le référencement local ?'
+seoTitle: 'Pages Jaunes et annuaires : utiles pour le SEO local ?'
+excerpt: >-
+  Pages Jaunes, annuaires, citations locales et cohérence NAP : lesquels valent
+  encore le coup, lesquels éviter, et comment tout vérifier en une soirée.
+date: '2026-10-29'
+updated: '2026-10-29'
 readTime: 11
-tag: "Référencement local"
-category: "seo-local"
-type: "guide"
-keywords: ["pages jaunes référencement", "annuaires professionnels gratuits", "cohérence NAP", "citation locale", "annuaires référencement local", "doublon fiche pages jaunes"]
-sources: ["https://support.google.com/business", "https://developers.google.com/search", "https://www.service-public.fr"]
+tag: Référencement local
+category: seo-local
+type: guide
+keywords:
+  - pages jaunes référencement
+  - annuaires professionnels gratuits
+  - cohérence NAP
+  - citation locale
+  - annuaires référencement local
+  - doublon fiche pages jaunes
+sources:
+  - 'https://support.google.com/business'
+  - 'https://developers.google.com/search'
+  - 'https://www.service-public.fr'
 ---
 
 **Les annuaires ne font plus décoller un référencement, mais une poignée d'entre eux reste utile : ils servent de vérification d'identité à Google et à vos clients, à condition que votre nom, votre adresse et votre téléphone y soient identiques partout.** Pages Jaunes garde un intérêt pour certains publics ; il ne remplace ni votre fiche Google Business Profile ni votre site.

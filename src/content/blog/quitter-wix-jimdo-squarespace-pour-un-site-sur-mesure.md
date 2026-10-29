@@ -1,15 +1,25 @@
 ---
-title: "Quitter Wix, Jimdo ou Squarespace : migrer vers un site à soi"
-seoTitle: "Quitter Wix, Jimdo ou Squarespace : comment migrer"
-excerpt: "Peut-on exporter un site Wix, Jimdo, Squarespace ou Webflow ? Voici ce qui se récupère, ce qui se refait et comment migrer sans perdre vos visites."
-date: "2026-10-29"
-updated: "2026-10-29"
+title: 'Quitter Wix, Jimdo ou Squarespace : migrer vers un site à soi'
+seoTitle: 'Quitter Wix, Jimdo ou Squarespace : comment migrer'
+excerpt: >-
+  Peut-on exporter un site Wix, Jimdo, Squarespace ou Webflow ? Voici ce qui se
+  récupère, ce qui se refait et comment migrer sans perdre vos visites.
+date: '2027-01-26'
+updated: '2027-01-26'
 readTime: 8
-tag: "Refonte"
-category: "creation"
-type: "question"
-keywords: ["quitter wix", "exporter son site wix", "quitter jimdo", "quitter squarespace", "quitter webflow", "migrer vers un site sur mesure"]
-sources: ["https://developers.google.com/search"]
+tag: Refonte
+category: creation
+type: question
+keywords:
+  - quitter wix
+  - exporter son site wix
+  - quitter jimdo
+  - quitter squarespace
+  - quitter webflow
+  - migrer vers un site sur mesure
+sources:
+  - 'https://developers.google.com/search'
+publishAt: '2027-01-26'
 ---
 
 **On peut quitter Wix, Jimdo, Squarespace ou Webflow, mais on ne repart presque jamais avec un site « prêt à brancher » ailleurs.** Ce qui se récupère, ce sont vos textes, vos images, votre nom de domaine et votre référencement si la migration est bien préparée ; la mise en page, elle, se reconstruit.

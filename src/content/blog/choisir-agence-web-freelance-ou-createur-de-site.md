@@ -1,15 +1,25 @@
 ---
-title: "Agence web, freelance ou créateur de site : comment choisir"
-seoTitle: "Choisir une agence web ou un freelance : le guide TPE"
-excerpt: "Agence, freelance ou créateur de site : critères, questions à poser, pièges à éviter et ce qu'il faut exiger par écrit avant de confier votre site."
-date: "2026-10-29"
-updated: "2026-10-29"
+title: 'Agence web, freelance ou créateur de site : comment choisir'
+seoTitle: 'Choisir une agence web ou un freelance : le guide TPE'
+excerpt: >-
+  Agence, freelance ou créateur de site : critères, questions à poser, pièges à
+  éviter et ce qu'il faut exiger par écrit avant de confier votre site.
+date: '2026-10-29'
+updated: '2026-10-29'
 readTime: 12
-tag: "Création de site"
-category: "creation"
-type: "guide"
-keywords: ["choisir une agence web", "choisir un freelance web", "agence web ou freelance", "quelle agence web choisir artisan", "créateur de site ou agence", "meilleure agence web TPE"]
-sources: ["https://www.economie.gouv.fr", "https://www.service-public.fr"]
+tag: Création de site
+category: creation
+type: guide
+keywords:
+  - choisir une agence web
+  - choisir un freelance web
+  - agence web ou freelance
+  - quelle agence web choisir artisan
+  - créateur de site ou agence
+  - meilleure agence web TPE
+sources:
+  - 'https://www.economie.gouv.fr'
+  - 'https://www.service-public.fr'
 ---
 
 **Pour un artisan, un commerçant ou une TPE, le bon choix dépend moins du statut du prestataire (agence, freelance, créateur de site) que de trois vérifications : ce qu'il a déjà réalisé dans votre domaine, ce qui vous appartient à la fin, et qui s'occupe du site ensuite.** Un devis précis, un contrat clair et des accès à votre nom valent plus qu'une belle plaquette.

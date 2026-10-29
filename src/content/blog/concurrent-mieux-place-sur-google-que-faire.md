@@ -1,15 +1,26 @@
 ---
-title: "Mon concurrent est mieux placé que moi sur Google : que faire ?"
-seoTitle: "Concurrent mieux placé sur Google : que faire ?"
-excerpt: "Un concurrent vous passe devant sur Google ? Repérez ce qu’il fait mieux, corrigez l’essentiel et regagnez des clients sans copier ni dépenser à l’aveugle."
-date: "2026-10-29"
-updated: "2026-10-29"
+title: 'Mon concurrent est mieux placé que moi sur Google : que faire ?'
+seoTitle: 'Concurrent mieux placé sur Google : que faire ?'
+excerpt: >-
+  Un concurrent vous passe devant sur Google ? Repérez ce qu’il fait mieux,
+  corrigez l’essentiel et regagnez des clients sans copier ni dépenser à
+  l’aveugle.
+date: '2027-01-29'
+updated: '2027-01-29'
 readTime: 8
-tag: "Visibilité"
-category: "marketing"
-type: "question"
-keywords: ["concurrent mieux placé sur google", "comment se démarquer de la concurrence locale", "pourquoi mon concurrent est mieux classé", "fausse fiche google à mon nom", "mon concurrent a un site et pas moi"]
-sources: ["https://support.google.com/business", "https://developers.google.com/search"]
+tag: Visibilité
+category: marketing
+type: question
+keywords:
+  - concurrent mieux placé sur google
+  - comment se démarquer de la concurrence locale
+  - pourquoi mon concurrent est mieux classé
+  - fausse fiche google à mon nom
+  - mon concurrent a un site et pas moi
+sources:
+  - 'https://support.google.com/business'
+  - 'https://developers.google.com/search'
+publishAt: '2027-01-29'
 ---
 
 **Un concurrent est mieux placé que vous quand Google juge sa fiche, son site et ses avis plus pertinents pour la recherche : on peut presque toujours rattraper l’écart en comparant, point par point, ce qu’il a et ce qui vous manque. Commencez par votre fiche Google, vos avis et une page claire par service, avant de dépenser quoi que ce soit.**

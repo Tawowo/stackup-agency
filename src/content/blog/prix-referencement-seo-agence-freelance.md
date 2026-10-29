@@ -1,15 +1,25 @@
 ---
-title: "Prix d’un référencement SEO : agence, freelance, abonnement"
-seoTitle: "Prix d'un référencement SEO : agence ou freelance ?"
-excerpt: "Combien coûte le référencement naturel pour un artisan ou une TPE ? Agence, freelance, soi-même : ce qui fait varier le prix et comment comparer les devis."
-date: "2026-10-29"
-updated: "2026-10-29"
+title: 'Prix d’un référencement SEO : agence, freelance, abonnement'
+seoTitle: 'Prix d''un référencement SEO : agence ou freelance ?'
+excerpt: >-
+  Combien coûte le référencement naturel pour un artisan ou une TPE ? Agence,
+  freelance, soi-même : ce qui fait varier le prix et comment comparer les
+  devis.
+date: '2026-10-29'
+updated: '2026-10-29'
 readTime: 8
-tag: "Référencement"
-category: "seo"
-type: "question"
-keywords: ["combien coûte le référencement", "prix référencement naturel artisan", "agence seo", "freelance seo", "prix audit seo", "budget référencement local"]
-sources: ["https://developers.google.com/search"]
+tag: Référencement
+category: seo
+type: question
+keywords:
+  - combien coûte le référencement
+  - prix référencement naturel artisan
+  - agence seo
+  - freelance seo
+  - prix audit seo
+  - budget référencement local
+sources:
+  - 'https://developers.google.com/search'
 ---
 
 **Le prix d'un référencement dépend de ce que l'on achète : un audit ponctuel, une mise en place ou un accompagnement mensuel, et de la concurrence sur votre métier.** Pour une petite entreprise locale, les écarts viennent surtout du temps passé et de la pertinence du travail, pas du nom de la structure.

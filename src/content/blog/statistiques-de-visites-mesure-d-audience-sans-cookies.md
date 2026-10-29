@@ -1,15 +1,26 @@
 ---
-title: "Mesurer les visites de son site : statistiques simples et respectueuses"
-seoTitle: "Statistiques de son site : lesquelles suivre, quel outil"
-excerpt: "Quel outil de statistiques pour un petit site, quels chiffres regarder, comment lire les résultats et respecter la vie privée des visiteurs, sans jargon."
-date: "2026-10-29"
-updated: "2026-10-29"
+title: 'Mesurer les visites de son site : statistiques simples et respectueuses'
+seoTitle: 'Statistiques de son site : lesquelles suivre, quel outil'
+excerpt: >-
+  Quel outil de statistiques pour un petit site, quels chiffres regarder,
+  comment lire les résultats et respecter la vie privée des visiteurs, sans
+  jargon.
+date: '2027-02-16'
+updated: '2027-02-16'
 readTime: 11
-tag: "Technique"
-category: "technique"
-type: "guide"
-keywords: ["statistiques site internet artisan", "mesure d'audience sans cookies", "outil de statistiques petit site", "lire les statistiques de son site", "taux de conversion boutique en ligne"]
-sources: ["https://www.cnil.fr", "https://support.google.com/analytics"]
+tag: Technique
+category: technique
+type: guide
+keywords:
+  - statistiques site internet artisan
+  - mesure d'audience sans cookies
+  - outil de statistiques petit site
+  - lire les statistiques de son site
+  - taux de conversion boutique en ligne
+sources:
+  - 'https://www.cnil.fr'
+  - 'https://support.google.com/analytics'
+publishAt: '2027-02-16'
 ---
 
 **Pour un petit site, cinq chiffres suffisent : combien de visiteurs, d'où ils viennent, quelles pages ils lisent, combien vous contactent et sur quel appareil.** Un outil simple, configuré en une heure, vaut mieux qu'un tableau de bord géant que personne n'ouvre.

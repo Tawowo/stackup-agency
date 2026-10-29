@@ -1,15 +1,24 @@
 ---
-title: "Faire gérer sa fiche Google : ce qu’un prestataire fait et ce que cela coûte"
-seoTitle: "Faire gérer sa fiche Google : prestataire et coût"
-excerpt: "Prestataire, freelance ou agence : ce que comprend la gestion d'une fiche Google, ce qui fait varier le prix et comment garder la main sur votre compte."
-date: "2026-10-29"
-updated: "2026-10-29"
+title: 'Faire gérer sa fiche Google : ce qu’un prestataire fait et ce que cela coûte'
+seoTitle: 'Faire gérer sa fiche Google : prestataire et coût'
+excerpt: >-
+  Prestataire, freelance ou agence : ce que comprend la gestion d'une fiche
+  Google, ce qui fait varier le prix et comment garder la main sur votre compte.
+date: '2026-11-24'
+updated: '2026-11-24'
 readTime: 8
-tag: "SEO local"
-category: "seo-local"
-type: "question"
-keywords: ["prestataire pour gérer sa fiche google", "combien coûte la gestion d'une fiche google", "agence google business profile", "retirer l'accès à un ancien gestionnaire de fiche google", "confier la gestion de sa fiche google"]
-sources: ["https://support.google.com/business"]
+tag: SEO local
+category: seo-local
+type: question
+keywords:
+  - prestataire pour gérer sa fiche google
+  - combien coûte la gestion d'une fiche google
+  - agence google business profile
+  - retirer l'accès à un ancien gestionnaire de fiche google
+  - confier la gestion de sa fiche google
+sources:
+  - 'https://support.google.com/business'
+publishAt: '2026-11-24'
 ---
 
 **Faire gérer sa fiche Google par un prestataire est utile si vous n'avez pas le temps de l'animer, mais ce n'est jamais obligatoire : la création et la mise à jour de base sont gratuites et à la portée d'un commerçant.** Le prix dépend de ce que vous déléguez (création seule, suivi mensuel, réponses aux avis) et surtout, quoi qu'il arrive, la fiche doit rester rattachée à votre compte Google.

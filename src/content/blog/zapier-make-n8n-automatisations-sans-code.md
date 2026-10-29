@@ -1,15 +1,23 @@
 ---
-title: "Zapier, Make, n8n : automatiser sans coder, avantages et limites"
-seoTitle: "Zapier ou Make ou n8n : lequel choisir pour une TPE"
-excerpt: "Zapier, Make ou n8n pour une TPE ou un artisan : différences, coût, exemples d'automatisations, limites et moment où passer au sur mesure."
-date: "2026-10-29"
-updated: "2026-10-29"
+title: 'Zapier, Make, n8n : automatiser sans coder, avantages et limites'
+seoTitle: 'Zapier ou Make ou n8n : lequel choisir pour une TPE'
+excerpt: >-
+  Zapier, Make ou n8n pour une TPE ou un artisan : différences, coût, exemples
+  d'automatisations, limites et moment où passer au sur mesure.
+date: '2026-10-29'
+updated: '2026-10-29'
 readTime: 11
-tag: "Automatisation"
-category: "ia"
-type: "guide"
-keywords: ["zapier ou make", "n8n ou zapier", "automatisation sans code petite entreprise", "zapier pour artisan", "alternative à zapier"]
-sources: ["https://www.cnil.fr"]
+tag: Automatisation
+category: ia
+type: guide
+keywords:
+  - zapier ou make
+  - n8n ou zapier
+  - automatisation sans code petite entreprise
+  - zapier pour artisan
+  - alternative à zapier
+sources:
+  - 'https://www.cnil.fr'
 ---
 
 **Zapier, Make et n8n relient vos outils entre eux (formulaire, agenda, tableur, messagerie, facturation) pour qu'une action déclenche automatiquement les suivantes, sans écrire de code.** Zapier est le plus simple à prendre en main, Make offre plus de souplesse visuelle pour des enchaînements complexes, n8n est le plus libre mais demande de l'installer ou de l'héberger. Le bon choix dépend moins de l'outil que de ce que vous voulez automatiser et de qui va s'en occuper.

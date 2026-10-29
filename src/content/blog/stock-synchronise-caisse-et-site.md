@@ -1,14 +1,22 @@
 ---
-title: "Synchroniser le stock entre la caisse et le site internet"
-seoTitle: "Synchroniser le stock caisse et site internet : guide"
-excerpt: "Stock en ligne différent du stock réel ? Excel, logiciel gratuit ou outil sur mesure : comment synchroniser caisse et boutique et éviter les ruptures."
-date: "2026-10-29"
-updated: "2026-10-29"
+title: Synchroniser le stock entre la caisse et le site internet
+seoTitle: 'Synchroniser le stock caisse et site internet : guide'
+excerpt: >-
+  Stock en ligne différent du stock réel ? Excel, logiciel gratuit ou outil sur
+  mesure : comment synchroniser caisse et boutique et éviter les ruptures.
+date: '2026-12-29'
+updated: '2026-12-29'
 readTime: 11
-tag: "E-commerce"
-category: "ecommerce"
-type: "guide"
-keywords: ["synchroniser stock magasin et boutique en ligne", "gestion de stock synchronisée caisse et site internet", "éviter les ruptures de stock boutique en ligne", "logiciel de gestion de stock boutique", "caisse et boutique en ligne synchronisées"]
+tag: E-commerce
+category: ecommerce
+type: guide
+keywords:
+  - synchroniser stock magasin et boutique en ligne
+  - gestion de stock synchronisée caisse et site internet
+  - éviter les ruptures de stock boutique en ligne
+  - logiciel de gestion de stock boutique
+  - caisse et boutique en ligne synchronisées
+publishAt: '2026-12-29'
 ---
 
 **Pour que le stock en ligne corresponde au stock réel, il faut une seule source de vérité : un endroit où le stock est tenu, et que la caisse comme le site lisent et modifient.** Le tableur marche tant que vous vendez peu et que vous êtes seul à le mettre à jour ; au-delà, il faut un outil qui reçoit chaque vente, en magasin comme en ligne, et recalcule la quantité disponible immédiatement.

@@ -1,15 +1,27 @@
 ---
-title: "Vendre du vin, du fromage ou de l'alimentaire en ligne : règles et pièges"
-seoTitle: "Vendre des produits alimentaires et du vin en ligne : règles"
-excerpt: "Déclaration DDPP, étiquetage, allergènes, licence et accises pour le vin : les règles à connaître avant d'ouvrir une boutique alimentaire en ligne."
-date: "2026-10-29"
-updated: "2026-10-29"
+title: 'Vendre du vin, du fromage ou de l''alimentaire en ligne : règles et pièges'
+seoTitle: 'Vendre des produits alimentaires et du vin en ligne : règles'
+excerpt: >-
+  Déclaration DDPP, étiquetage, allergènes, licence et accises pour le vin : les
+  règles à connaître avant d'ouvrir une boutique alimentaire en ligne.
+date: '2026-12-15'
+updated: '2026-12-15'
 readTime: 11
-tag: "E-commerce"
-category: "ecommerce"
-type: "reglementation"
-keywords: ["vendre des produits alimentaires en ligne", "vendre du vin en ligne", "déclaration ddpp vente alimentaire en ligne", "étiquetage produits alimentaires vendus en ligne", "licence vente d'alcool en ligne"]
-sources: ["https://www.service-public.fr", "https://entreprendre.service-public.fr", "https://www.douane.gouv.fr", "https://economie.gouv.fr"]
+tag: E-commerce
+category: ecommerce
+type: reglementation
+keywords:
+  - vendre des produits alimentaires en ligne
+  - vendre du vin en ligne
+  - déclaration ddpp vente alimentaire en ligne
+  - étiquetage produits alimentaires vendus en ligne
+  - licence vente d'alcool en ligne
+sources:
+  - 'https://www.service-public.fr'
+  - 'https://entreprendre.service-public.fr'
+  - 'https://www.douane.gouv.fr'
+  - 'https://economie.gouv.fr'
+publishAt: '2026-12-15'
 ---
 
 **On peut vendre des produits alimentaires et du vin en ligne, à condition d'avoir déclaré son activité auprès des services de l'État, d'étiqueter chaque produit selon la réglementation et, pour l'alcool, de respecter la licence, les droits d'accises et l'interdiction de vente aux mineurs.** Le site n'est que la vitrine : ce sont l'atelier, le stockage, l'emballage et l'expédition qui doivent être en règle.

@@ -1,15 +1,27 @@
 ---
-title: "Images d’un site : texte alternatif, poids, format et référencement"
-seoTitle: "Images de site : choisir, alléger, alt, droits"
-excerpt: "Choisir ses photos, les alléger sans perdre en qualité, remplir le texte alternatif et respecter droits d'auteur et droit à l'image. Le guide pour une TPE."
-date: "2026-10-29"
-updated: "2026-10-29"
+title: 'Images d’un site : texte alternatif, poids, format et référencement'
+seoTitle: 'Images de site : choisir, alléger, alt, droits'
+excerpt: >-
+  Choisir ses photos, les alléger sans perdre en qualité, remplir le texte
+  alternatif et respecter droits d'auteur et droit à l'image. Le guide pour une
+  TPE.
+date: '2026-10-29'
+updated: '2026-10-29'
 readTime: 14
-tag: "SEO"
-category: "seo"
-type: "guide"
-keywords: ["comment choisir ses photos pour son site", "comment alléger les images d'un site web", "comment remplir le texte alternatif des images", "droits d'auteur photos site internet", "photos de chantiers sur son site"]
-sources: ["https://web.dev", "https://developers.google.com/search", "https://www.cnil.fr", "https://www.service-public.fr"]
+tag: SEO
+category: seo
+type: guide
+keywords:
+  - comment choisir ses photos pour son site
+  - comment alléger les images d'un site web
+  - comment remplir le texte alternatif des images
+  - droits d'auteur photos site internet
+  - photos de chantiers sur son site
+sources:
+  - 'https://web.dev'
+  - 'https://developers.google.com/search'
+  - 'https://www.cnil.fr'
+  - 'https://www.service-public.fr'
 ---
 
 **Les bonnes images d'un site sont vraies, nettes, légères et décrites : des photos de votre travail, redimensionnées et compressées avant la mise en ligne, avec un texte alternatif utile et le droit de les publier.** Un site avec des images lourdes charge lentement, et un site avec des photos génériques ne rassure personne.

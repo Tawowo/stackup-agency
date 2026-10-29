@@ -1,15 +1,27 @@
 ---
-title: "Plateforme agréée de facturation électronique : comment choisir ?"
-seoTitle: "Plateforme agréée facture électronique : comment choisir"
-excerpt: "Rôle, critères, tarifs, gratuité, expert-comptable, micro-entreprise : comment choisir sa plateforme agréée de facturation électronique sans se tromper."
-date: "2026-10-29"
-updated: "2026-10-29"
+title: 'Plateforme agréée de facturation électronique : comment choisir ?'
+seoTitle: 'Plateforme agréée facture électronique : comment choisir'
+excerpt: >-
+  Rôle, critères, tarifs, gratuité, expert-comptable, micro-entreprise : comment
+  choisir sa plateforme agréée de facturation électronique sans se tromper.
+date: '2026-12-18'
+updated: '2026-12-18'
 readTime: 12
-tag: "Facture électronique"
-category: "juridique"
-type: "reglementation"
-keywords: ["plateforme agréée facture électronique", "comment choisir une plateforme agréée", "plateforme agréée gratuite", "plateforme agréée micro-entrepreneur", "différence logiciel de facturation plateforme agréée", "quelle plateforme agréée choisir artisan"]
-sources: ["https://www.impots.gouv.fr", "https://www.economie.gouv.fr", "https://www.service-public.fr"]
+tag: Facture électronique
+category: juridique
+type: reglementation
+keywords:
+  - plateforme agréée facture électronique
+  - comment choisir une plateforme agréée
+  - plateforme agréée gratuite
+  - plateforme agréée micro-entrepreneur
+  - différence logiciel de facturation plateforme agréée
+  - quelle plateforme agréée choisir artisan
+sources:
+  - 'https://www.impots.gouv.fr'
+  - 'https://www.economie.gouv.fr'
+  - 'https://www.service-public.fr'
+publishAt: '2026-12-18'
 ---
 
 **Une plateforme agréée est un opérateur autorisé par l’administration à faire circuler vos factures électroniques et à transmettre les données de vos ventes à l’État. Pour la choisir, vérifiez qu’elle figure sur la liste officielle, qu’elle s’intègre à vos outils, que ses conditions de sortie sont claires et que son prix correspond à votre volume réel.**

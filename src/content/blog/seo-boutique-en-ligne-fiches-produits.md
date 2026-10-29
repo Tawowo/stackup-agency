@@ -1,15 +1,26 @@
 ---
-title: "Référencement d’une boutique en ligne : fiches produits, catégories, avis"
-seoTitle: "Référencement boutique en ligne : fiches produits et SEO"
-excerpt: "Structure, catégories, fiches produits, ruptures de stock, Google Merchant Center : la méthode pour référencer une boutique en ligne, même locale."
-date: "2026-10-29"
-updated: "2026-10-29"
+title: 'Référencement d’une boutique en ligne : fiches produits, catégories, avis'
+seoTitle: 'Référencement boutique en ligne : fiches produits et SEO'
+excerpt: >-
+  Structure, catégories, fiches produits, ruptures de stock, Google Merchant
+  Center : la méthode pour référencer une boutique en ligne, même locale.
+date: '2026-11-13'
+updated: '2026-11-13'
 readTime: 12
-tag: "E-commerce"
-category: "ecommerce"
-type: "guide"
-keywords: ["référencement boutique en ligne", "seo fiche produit", "référencer sa boutique en ligne sur google", "seo e-commerce", "optimiser catégories boutique", "google merchant center"]
-sources: ["https://developers.google.com/search", "https://support.google.com/merchants"]
+tag: E-commerce
+category: ecommerce
+type: guide
+keywords:
+  - référencement boutique en ligne
+  - seo fiche produit
+  - référencer sa boutique en ligne sur google
+  - seo e-commerce
+  - optimiser catégories boutique
+  - google merchant center
+sources:
+  - 'https://developers.google.com/search'
+  - 'https://support.google.com/merchants'
+publishAt: '2026-11-13'
 ---
 
 **Référencer une boutique en ligne, c'est faire en sorte que chaque catégorie et chaque fiche produit réponde clairement à une recherche précise, et que Google puisse les explorer sans obstacle.** Les leviers : une structure simple, des textes qui vous appartiennent, des pages produit propres, et un traitement soigné des produits qui disparaissent.

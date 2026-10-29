@@ -1,15 +1,27 @@
 ---
-title: "Caisse enregistreuse : logiciel certifié pour un petit commerce"
-seoTitle: "Logiciel de caisse certifié : règles et choix en 2026"
-excerpt: "Quelle caisse choisir, ce que la loi impose, ticket Z, clôture, stock et caisse qui ne tombe pas juste : le guide pour un petit commerce, sans jargon."
-date: "2026-10-29"
-updated: "2026-10-29"
+title: 'Caisse enregistreuse : logiciel certifié pour un petit commerce'
+seoTitle: 'Logiciel de caisse certifié : règles et choix en 2026'
+excerpt: >-
+  Quelle caisse choisir, ce que la loi impose, ticket Z, clôture, stock et
+  caisse qui ne tombe pas juste : le guide pour un petit commerce, sans jargon.
+date: '2027-01-05'
+updated: '2027-01-05'
 readTime: 12
-tag: "Applications métier"
-category: "applications-metier"
-type: "guide"
-keywords: ["quelle caisse choisir quand on ouvre un commerce", "logiciel de caisse certifié", "règles sur les logiciels de caisse en 2026", "comment faire un ticket z", "comment choisir un système de caisse pour un petit commerce"]
-sources: ["https://www.impots.gouv.fr", "https://www.economie.gouv.fr", "https://www.service-public.fr", "https://www.legifrance.gouv.fr"]
+tag: Applications métier
+category: applications-metier
+type: guide
+keywords:
+  - quelle caisse choisir quand on ouvre un commerce
+  - logiciel de caisse certifié
+  - règles sur les logiciels de caisse en 2026
+  - comment faire un ticket z
+  - comment choisir un système de caisse pour un petit commerce
+sources:
+  - 'https://www.impots.gouv.fr'
+  - 'https://www.economie.gouv.fr'
+  - 'https://www.service-public.fr'
+  - 'https://www.legifrance.gouv.fr'
+publishAt: '2027-01-05'
 ---
 
 **Si vous êtes commerçant assujetti à la TVA et que vous enregistrez vos encaissements avec un logiciel ou un système de caisse, ce dernier doit respecter les conditions d'inaltérabilité, de sécurisation, de conservation et d'archivage fixées par la loi, et vous devez pouvoir le prouver.** Le plus simple pour un petit commerce est d'acheter une caisse dont l'éditeur fournit le certificat ou l'attestation individuelle.

@@ -1,15 +1,24 @@
 ---
-title: "Répondre automatiquement aux e-mails et aux appels manqués"
-seoTitle: "Répondre automatiquement aux appels manqués et e-mails"
-excerpt: "Appel manqué sur chantier, e-mail sans réponse : répondeur, SMS automatique, permanence, transcription. Le guide pour ne plus perdre de clients."
-date: "2026-10-29"
-updated: "2026-10-29"
+title: Répondre automatiquement aux e-mails et aux appels manqués
+seoTitle: Répondre automatiquement aux appels manqués et e-mails
+excerpt: >-
+  Appel manqué sur chantier, e-mail sans réponse : répondeur, SMS automatique,
+  permanence, transcription. Le guide pour ne plus perdre de clients.
+date: '2027-02-12'
+updated: '2027-02-12'
 readTime: 11
-tag: "Automatisation"
-category: "ia"
-type: "guide"
-keywords: ["répondre automatiquement appel manqué", "permanence téléphonique petite entreprise", "répondeur intelligent artisan", "transcription messages vocaux", "réponse automatique e-mail"]
-sources: ["https://www.cnil.fr"]
+tag: Automatisation
+category: ia
+type: guide
+keywords:
+  - répondre automatiquement appel manqué
+  - permanence téléphonique petite entreprise
+  - répondeur intelligent artisan
+  - transcription messages vocaux
+  - réponse automatique e-mail
+sources:
+  - 'https://www.cnil.fr'
+publishAt: '2027-02-12'
 ---
 
 **Un répondeur seul ne suffit plus à un artisan : un client qui tombe sur une messagerie appelle souvent le concurrent suivant.** La solution tient en trois couches : un message d'accueil utile, une réponse automatique immédiate par SMS ou par e-mail, et un moyen de retrouver chaque demande sans rien oublier.

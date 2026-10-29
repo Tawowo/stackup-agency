@@ -1,15 +1,25 @@
 ---
-title: "Choisir ses mots-clés quand on est artisan ou commerçant"
-seoTitle: "Choisir ses mots-clés : méthode pour artisan et commerçant"
-excerpt: "Un mot-clé principal par page, la longue traîne, le nom de domaine, le keyword stuffing : la méthode simple pour choisir ses mots-clés sans jargon."
-date: "2026-10-29"
-updated: "2026-10-29"
+title: Choisir ses mots-clés quand on est artisan ou commerçant
+seoTitle: 'Choisir ses mots-clés : méthode pour artisan et commerçant'
+excerpt: >-
+  Un mot-clé principal par page, la longue traîne, le nom de domaine, le keyword
+  stuffing : la méthode simple pour choisir ses mots-clés sans jargon.
+date: '2027-02-23'
+updated: '2027-02-23'
 readTime: 10
-tag: "Référencement"
-category: "seo"
-type: "guide"
-keywords: ["choisir ses mots-clés", "mot-clé principal par page", "keyword stuffing", "mot-clé longue traîne définition", "mots-clés artisan commerçant"]
-sources: ["https://developers.google.com/search", "https://support.google.com/business"]
+tag: Référencement
+category: seo
+type: guide
+keywords:
+  - choisir ses mots-clés
+  - mot-clé principal par page
+  - keyword stuffing
+  - mot-clé longue traîne définition
+  - mots-clés artisan commerçant
+sources:
+  - 'https://developers.google.com/search'
+  - 'https://support.google.com/business'
+publishAt: '2027-02-23'
 ---
 
 **Un bon mot-clé, c'est la phrase exacte que tape votre futur client quand il a besoin de vous, pas le mot qui vous plaît.** Vous en choisissez un principal par page, vous le placez naturellement dans quelques endroits clés, et vous évitez de répéter la même expression à tout bout de champ.

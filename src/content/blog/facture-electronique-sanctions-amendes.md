@@ -1,15 +1,27 @@
 ---
-title: "Facture électronique : quelles sanctions en cas de manquement ?"
-seoTitle: "Facture électronique : sanctions et amendes encourues"
-excerpt: "Amende, e-reporting oublié, plateforme non choisie : ce que la loi prévoit, ce qui est plafonné et comment l'éviter. Faites le point avant l'échéance."
-date: "2026-10-29"
-updated: "2026-10-29"
+title: 'Facture électronique : quelles sanctions en cas de manquement ?'
+seoTitle: 'Facture électronique : sanctions et amendes encourues'
+excerpt: >-
+  Amende, e-reporting oublié, plateforme non choisie : ce que la loi prévoit, ce
+  qui est plafonné et comment l'éviter. Faites le point avant l'échéance.
+date: '2027-02-02'
+updated: '2027-02-02'
 readTime: 10
-tag: "Juridique"
-category: "juridique"
-type: "reglementation"
-keywords: ["sanction facture électronique", "amende facture électronique obligatoire", "amende e-reporting oubli", "sanctions facture électronique tpe", "pénalité facture électronique en retard"]
-sources: ["https://www.impots.gouv.fr", "https://www.economie.gouv.fr", "https://www.service-public.fr", "https://www.legifrance.gouv.fr"]
+tag: Juridique
+category: juridique
+type: reglementation
+keywords:
+  - sanction facture électronique
+  - amende facture électronique obligatoire
+  - amende e-reporting oubli
+  - sanctions facture électronique tpe
+  - pénalité facture électronique en retard
+sources:
+  - 'https://www.impots.gouv.fr'
+  - 'https://www.economie.gouv.fr'
+  - 'https://www.service-public.fr'
+  - 'https://www.legifrance.gouv.fr'
+publishAt: '2027-02-02'
 ---
 
 **Oui, la loi prévoit des amendes en cas de manquement à la facture électronique, mais elles sont forfaitaires, plafonnées sur l'année et assorties d'une possibilité de régularisation.** Elles visent trois situations : une facture qui n'est pas émise sous forme électronique quand elle devrait l'être, des données d'e-reporting non transmises, et l'absence de plateforme choisie.

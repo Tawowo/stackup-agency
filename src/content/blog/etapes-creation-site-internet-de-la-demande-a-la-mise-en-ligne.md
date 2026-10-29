@@ -1,15 +1,25 @@
 ---
-title: "Les étapes de création d’un site internet, de la demande à la mise en ligne"
-seoTitle: "Étapes de création d’un site internet : de A à Z"
-excerpt: "Cadrage, devis, contenus, maquette, développement, tests, mise en ligne : les étapes d’un site avec une agence, ce qui dépend de vous et les pièges."
-date: "2026-10-29"
-updated: "2026-10-29"
+title: 'Les étapes de création d’un site internet, de la demande à la mise en ligne'
+seoTitle: 'Étapes de création d’un site internet : de A à Z'
+excerpt: >-
+  Cadrage, devis, contenus, maquette, développement, tests, mise en ligne : les
+  étapes d’un site avec une agence, ce qui dépend de vous et les pièges.
+date: '2026-10-29'
+updated: '2026-10-29'
 readTime: 12
-tag: "Création de site"
-category: "creation"
-type: "guide"
-keywords: ["étapes création site internet", "comment créer un site internet étape par étape", "comment se déroule la création d’un site web avec une agence", "comment mettre en ligne son site internet", "étapes d’une refonte de site web", "peut-on faire son site soi-même"]
-sources: ["https://www.service-public.fr", "https://web.dev"]
+tag: Création de site
+category: creation
+type: guide
+keywords:
+  - étapes création site internet
+  - comment créer un site internet étape par étape
+  - comment se déroule la création d’un site web avec une agence
+  - comment mettre en ligne son site internet
+  - étapes d’une refonte de site web
+  - peut-on faire son site soi-même
+sources:
+  - 'https://www.service-public.fr'
+  - 'https://web.dev'
 ---
 
 **Un site internet se crée en huit étapes : cadrage du besoin, devis, rassemblement des contenus, maquette, développement, tests, mise en ligne, puis suivi. Avec une agence, la plupart des retards viennent des contenus et des validations, pas de la technique : savoir ce qu’on attend de vous évite les mauvaises surprises.**

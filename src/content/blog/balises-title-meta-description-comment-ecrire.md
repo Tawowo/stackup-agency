@@ -1,15 +1,26 @@
 ---
-title: "Balises title et meta description : comment les écrire"
-seoTitle: "Balise title et meta description : bien les écrire"
-excerpt: "Title, meta description, h1, h2, balise alt : à quoi elles servent, quelle longueur viser et comment les modifier sur Wix ou WordPress, avec des exemples."
-date: "2026-10-29"
-updated: "2026-10-29"
+title: 'Balises title et meta description : comment les écrire'
+seoTitle: 'Balise title et meta description : bien les écrire'
+excerpt: >-
+  Title, meta description, h1, h2, balise alt : à quoi elles servent, quelle
+  longueur viser et comment les modifier sur Wix ou WordPress, avec des
+  exemples.
+date: '2026-10-29'
+updated: '2026-10-29'
 readTime: 12
-tag: "Référencement"
-category: "seo"
-type: "guide"
-keywords: ["balise title", "meta description", "balise h1", "balise alt", "longueur balise title", "modifier title wix wordpress"]
-sources: ["https://developers.google.com/search", "https://support.google.com/webmasters"]
+tag: Référencement
+category: seo
+type: guide
+keywords:
+  - balise title
+  - meta description
+  - balise h1
+  - balise alt
+  - longueur balise title
+  - modifier title wix wordpress
+sources:
+  - 'https://developers.google.com/search'
+  - 'https://support.google.com/webmasters'
 ---
 
 **La balise title est le titre cliquable de votre page dans les résultats de Google ; la meta description est le court texte qui s'affiche dessous.** Le title pèse dans le classement, la description non, mais elle décide du clic : écrivez-les pour une personne, avec la requête principale en tête.

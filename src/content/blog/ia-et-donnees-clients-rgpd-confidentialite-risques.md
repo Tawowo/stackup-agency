@@ -1,15 +1,26 @@
 ---
-title: "IA et données clients : RGPD, confidentialité et risques"
-seoTitle: "IA et données clients : RGPD, risques pour une TPE"
-excerpt: "Peut-on confier les données de ses clients à une IA ? Les risques, ce que dit le RGPD et les bons réflexes pour une petite entreprise. Faites le tri."
-date: "2026-10-29"
-updated: "2026-10-29"
+title: 'IA et données clients : RGPD, confidentialité et risques'
+seoTitle: 'IA et données clients : RGPD, risques pour une TPE'
+excerpt: >-
+  Peut-on confier les données de ses clients à une IA ? Les risques, ce que dit
+  le RGPD et les bons réflexes pour une petite entreprise. Faites le tri.
+date: '2027-03-09'
+updated: '2027-03-09'
 readTime: 11
-tag: "IA"
-category: "ia"
-type: "reglementation"
-keywords: ["l'ia est-elle dangereuse pour mon entreprise", "risques de l'ia pour une petite entreprise", "données clients et ia rgpd", "dépendance à l'ia petite entreprise", "confier les données de ses clients à une ia"]
-sources: ["https://www.cnil.fr", "https://www.legifrance.gouv.fr", "https://www.service-public.fr"]
+tag: IA
+category: ia
+type: reglementation
+keywords:
+  - l'ia est-elle dangereuse pour mon entreprise
+  - risques de l'ia pour une petite entreprise
+  - données clients et ia rgpd
+  - dépendance à l'ia petite entreprise
+  - confier les données de ses clients à une ia
+sources:
+  - 'https://www.cnil.fr'
+  - 'https://www.legifrance.gouv.fr'
+  - 'https://www.service-public.fr'
+publishAt: '2027-03-09'
 ---
 
 **L'IA n'est pas dangereuse en soi pour une petite entreprise, mais confier des données de clients à un outil sans savoir ce qu'il en fait l'est : vous restez responsable de ces données devant vos clients et devant la CNIL.** Le bon réflexe est de décider, avant d'utiliser un outil, quelles informations il a le droit de voir.

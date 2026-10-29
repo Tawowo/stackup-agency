@@ -1,15 +1,26 @@
 ---
-title: "Devis refusés ou jamais signés : pourquoi, et que faire"
-seoTitle: "Devis refusé ou non signé : pourquoi et que faire"
-excerpt: "Vos devis restent sans réponse ? Les vraies causes d’un devis non signé, comment les suivre, les présenter et rassurer un client qui hésite."
-date: "2026-10-29"
-updated: "2026-10-29"
+title: 'Devis refusés ou jamais signés : pourquoi, et que faire'
+seoTitle: 'Devis refusé ou non signé : pourquoi et que faire'
+excerpt: >-
+  Vos devis restent sans réponse ? Les vraies causes d’un devis non signé,
+  comment les suivre, les présenter et rassurer un client qui hésite.
+date: '2027-03-05'
+updated: '2027-03-05'
 readTime: 7
-tag: "Gestion"
-category: "strategie"
-type: "question"
-keywords: ["devis refusé que faire", "devis non signé pourquoi", "suivre les devis envoyés et acceptés", "présenter un devis pour qu’il soit accepté", "devis accepté peut-on revenir dessus", "rassurer un client qui hésite"]
-sources: ["https://www.service-public.fr", "https://www.economie.gouv.fr"]
+tag: Gestion
+category: strategie
+type: question
+keywords:
+  - devis refusé que faire
+  - devis non signé pourquoi
+  - suivre les devis envoyés et acceptés
+  - présenter un devis pour qu’il soit accepté
+  - devis accepté peut-on revenir dessus
+  - rassurer un client qui hésite
+sources:
+  - 'https://www.service-public.fr'
+  - 'https://www.economie.gouv.fr'
+publishAt: '2027-03-05'
 ---
 
 **Un devis n’est pas signé le plus souvent parce que le client n’a pas compris ce qu’il achète, ne vous fait pas encore confiance, ou a reçu une réponse plus rapide : le prix n’est qu’une cause parmi d’autres. Pour agir, suivez vos devis dans un tableau, relancez avec méthode, et présentez chaque devis comme une réponse à un besoin précis.**

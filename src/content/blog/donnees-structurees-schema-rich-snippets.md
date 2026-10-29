@@ -1,15 +1,26 @@
 ---
-title: "Données structurées : FAQ, avis, horaires dans les résultats Google"
-seoTitle: "Données structurées : à quoi servent-elles vraiment ?"
-excerpt: "Schema.org, JSON-LD, rich snippets : ce que les données structurées font (et ne font plus) pour un site local, comment les ajouter et les tester."
-date: "2026-10-29"
-updated: "2026-10-29"
+title: 'Données structurées : FAQ, avis, horaires dans les résultats Google'
+seoTitle: 'Données structurées : à quoi servent-elles vraiment ?'
+excerpt: >-
+  Schema.org, JSON-LD, rich snippets : ce que les données structurées font (et
+  ne font plus) pour un site local, comment les ajouter et les tester.
+date: '2027-02-26'
+updated: '2027-02-26'
 readTime: 11
-tag: "Référencement"
-category: "seo"
-type: "guide"
-keywords: ["données structurées", "c’est quoi schema.org", "ajouter des données structurées sur un site", "rich snippets", "json-ld artisan", "données structurées site local"]
-sources: ["https://developers.google.com/search", "https://web.dev"]
+tag: Référencement
+category: seo
+type: guide
+keywords:
+  - données structurées
+  - c’est quoi schema.org
+  - ajouter des données structurées sur un site
+  - rich snippets
+  - json-ld artisan
+  - données structurées site local
+sources:
+  - 'https://developers.google.com/search'
+  - 'https://web.dev'
+publishAt: '2027-02-26'
 ---
 
 **Les données structurées sont des informations écrites dans le code d’une page, dans un format que les moteurs comprennent sans deviner : nom de l’entreprise, adresse, horaires, produits, questions-réponses. Elles aident Google à comprendre votre site, mais elles ne garantissent ni un meilleur classement ni l’affichage d’un résultat enrichi.**

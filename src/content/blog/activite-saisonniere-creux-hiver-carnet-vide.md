@@ -1,15 +1,25 @@
 ---
-title: "Activité saisonnière : remplir son carnet de commandes hors saison"
-seoTitle: "Activité saisonnière : remplir son carnet hors saison"
-excerpt: "Creux d'hiver, centre-ville qui se vide : méthode concrète pour lisser une activité saisonnière, tenir la trésorerie et garder un carnet plein."
-date: "2026-10-29"
-updated: "2026-10-29"
+title: 'Activité saisonnière : remplir son carnet de commandes hors saison'
+seoTitle: 'Activité saisonnière : remplir son carnet hors saison'
+excerpt: >-
+  Creux d'hiver, centre-ville qui se vide : méthode concrète pour lisser une
+  activité saisonnière, tenir la trésorerie et garder un carnet plein.
+date: '2026-10-29'
+updated: '2026-10-29'
 readTime: 8
-tag: "Stratégie"
-category: "marketing"
-type: "question"
-keywords: ["activité saisonnière", "lisser la saisonnalité", "saison creuse", "trésorerie saison creuse", "remplir son carnet de commandes", "commerce centre-ville vide"]
-sources: ["https://www.service-public.fr", "https://entreprendre.service-public.fr"]
+tag: Stratégie
+category: marketing
+type: question
+keywords:
+  - activité saisonnière
+  - lisser la saisonnalité
+  - saison creuse
+  - trésorerie saison creuse
+  - remplir son carnet de commandes
+  - commerce centre-ville vide
+sources:
+  - 'https://www.service-public.fr'
+  - 'https://entreprendre.service-public.fr'
 ---
 
 **Une activité saisonnière ne se lisse pas en une saison : elle se travaille en proposant autre chose aux mêmes clients, en allant chercher d'autres clients aux mois calmes, et en préparant la trésorerie avant le creux, pas pendant.** Votre site, votre fiche Google et un fichier clients tenu à jour sont les trois outils qui coûtent le moins cher à mettre en route.
