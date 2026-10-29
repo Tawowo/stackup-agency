@@ -442,9 +442,12 @@
 .su-cadran[data-scrub='1'] .su-cadran__col {
   transition: none;
 }
-.su-cadran__col > span {
+.su-cadran__col::before {
+  /* La colonne 0-9 est du contenu CSS : jamais du texte dans le HTML (donc jamais indexé ni lu). */
+  content: '0\A 1\A 2\A 3\A 4\A 5\A 6\A 7\A 8\A 9';
   display: block;
-  height: 1em;
+  white-space: pre;
+  line-height: 1em;
   /* Poppins n'a pas de chiffres tabulaires : chaque roue prend la largeur du
      chiffre le plus large, on centre pour que le « 7 » ne laisse pas de trou. */
   text-align: center;
@@ -454,6 +457,10 @@
 }
 .su-cadran__sep {
   display: inline-block;
+  white-space: pre;
+}
+.su-cadran__sep::before {
+  content: attr(data-c);
 }
 
 .su-seuil-noyau__cadre {

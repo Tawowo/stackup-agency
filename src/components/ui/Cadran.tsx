@@ -5,12 +5,10 @@
  * viewport et tourne d'une traite (900 ms) : un prix n'est JAMAIS figé sur une
  * valeur intermédiaire quand le scroll s'arrête. Revenir au-dessus le remet à
  * zéro (il retournera à la prochaine entrée). Un changement de valeur ensuite
- * (configurateur) tourne en 900 ms. Le texte réel est présent pour les
- * lecteurs d'écran et sans JS.
+ * (configurateur) tourne en 900 ms. Le texte réel (une seule fois, .sr-only) est présent pour les
+ * lecteurs d'écran, les moteurs de recherche et sans JS ; les roues n'ont aucun texte.
  */
 import { useEffect, useRef } from 'react'
-
-const COLONNE = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
 
 export default function Cadran({ valeur, prefixe = '', suffixe = '', className = '' }: { valeur: number; prefixe?: string; suffixe?: string; className?: string }) {
   const texte = new Intl.NumberFormat('fr-FR', { maximumFractionDigits: 0 }).format(valeur)
@@ -57,23 +55,19 @@ export default function Cadran({ valeur, prefixe = '', suffixe = '', className =
       nettoyer()
     }
   }, [])
+  // Aucun chiffre de roue n'est du texte : les colonnes 0-9 sont dessinées par le CSS (pseudo-éléments), les séparateurs aussi
+  // (attribut data-c). Google et les lecteurs d'écran ne lisent donc que le vrai prix, une seule fois (.sr-only).
   return (
-    <span ref={ref} className={`su-cadran su-tabular ${className}`} data-scrub="1" aria-label={`${prefixe}${texte}${suffixe}`.trim()}>
+    <span ref={ref} className={`su-cadran su-tabular ${className}`} data-scrub="1">
       {prefixe && <span className="su-cadran__pref">{prefixe}</span>}
       <span className="su-cadran__roues" aria-hidden="true">
         {Array.from(texte).map((c, i) =>
           /\d/.test(c) ? (
             <span key={i} className="su-cadran__roue" style={{ '--n': Number(c), '--i': i } as React.CSSProperties}>
-              <span className="su-cadran__col">
-                {COLONNE.map((d) => (
-                  <span key={d}>{d}</span>
-                ))}
-              </span>
+              <span className="su-cadran__col" />
             </span>
           ) : (
-            <span key={i} className="su-cadran__sep">
-              {c}
-            </span>
+            <span key={i} className="su-cadran__sep" data-c={c === '\u202f' || c === '\u00a0' ? ' ' : c} />
           ),
         )}
       </span>
