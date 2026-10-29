@@ -1,6 +1,6 @@
 /**
  * REDIRECTIONS 301 — générées par scripts/redirections.mjs (ne pas éditer à la main).
- * 71 reprises de l'ancien site + 21 pour les pages retirées en V5.
+ * 71 reprises de l'ancien site + 34 pour les pages retirées en V5.
  */
 import type { Redirect } from 'next/dist/lib/load-custom-routes'
 
@@ -398,7 +398,7 @@ export const REDIRECTIONS: Redirect[] = [
   },
   {
     "source": "/blog/idee-mise-en-ligne-10-jours-methode",
-    "destination": "/blog/idee-mise-en-ligne-methode",
+    "destination": "/blog",
     "permanent": true
   },
   {
@@ -469,6 +469,71 @@ export const REDIRECTIONS: Redirect[] = [
   {
     "source": "/services/site-association",
     "destination": "/services",
+    "permanent": true
+  },
+  {
+    "source": "/blog/categorie/creation-sites",
+    "destination": "/blog/categorie/creation",
+    "permanent": true
+  },
+  {
+    "source": "/blog/categorie/design",
+    "destination": "/blog/categorie/creation",
+    "permanent": true
+  },
+  {
+    "source": "/blog/categorie/technique",
+    "destination": "/blog/categorie/creation",
+    "permanent": true
+  },
+  {
+    "source": "/blog/categorie/performance",
+    "destination": "/blog/categorie/creation",
+    "permanent": true
+  },
+  {
+    "source": "/blog/categorie/ecommerce",
+    "destination": "/blog/categorie/commerce",
+    "permanent": true
+  },
+  {
+    "source": "/blog/categorie/applications-metier",
+    "destination": "/blog/categorie/outils",
+    "permanent": true
+  },
+  {
+    "source": "/blog/categorie/digital",
+    "destination": "/blog/categorie/outils",
+    "permanent": true
+  },
+  {
+    "source": "/blog/categorie/ia",
+    "destination": "/blog/categorie/outils",
+    "permanent": true
+  },
+  {
+    "source": "/blog/categorie/professions-liberales",
+    "destination": "/blog/categorie/artisans",
+    "permanent": true
+  },
+  {
+    "source": "/blog/categorie/marketing",
+    "destination": "/blog/categorie/strategie",
+    "permanent": true
+  },
+  {
+    "source": "/blog/categorie/entrepreneuriat",
+    "destination": "/blog/categorie/strategie",
+    "permanent": true
+  },
+  {
+    "source": "/blog/categorie/redaction",
+    "destination": "/blog/categorie/strategie",
+    "permanent": true
+  },
+  {
+    "source": "/blog/categorie/juridique",
+    "destination": "/blog/categorie/strategie",
     "permanent": true
   }
 ]

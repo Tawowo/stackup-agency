@@ -1,3 +1,4 @@
+import { nombreFr } from '@/lib/jetons'
 import { notFound } from 'next/navigation'
 import { DEPARTEMENTS, getArticles, getDepartement } from '@/data/departements'
 import { COMMUNES_PAR_DEPARTEMENT } from '@/data/communes-groupes'
@@ -22,7 +23,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const a = getArticles(d.slug)
   return meta({
     titre: `Création de site internet ${a.dans === "l'" ? "dans l'" : 'dans ' + a.dans}${d.nom} (${d.code})`,
-    description: `Sites vitrine, boutiques et outils sur mesure pour les entreprises ${a.de}${d.nom}. Site une page à partir de ${offre('une-page').aPartirDe} €. Une démo avant de signer.`,
+    description: `Sites vitrine, boutiques et outils sur mesure pour les entreprises ${a.de}${d.nom}. Site une page à partir de ${nombreFr(offre('une-page').aPartirDe)} €. Une démo avant de signer.`,
     chemin: `/agence-web/departement/${d.slug}`,
   })
 }

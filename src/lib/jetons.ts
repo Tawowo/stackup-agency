@@ -7,6 +7,8 @@ import { PRIX_PUBLICS as P } from '../config/prix-publics.generated.ts'
 
 const fr = new Intl.NumberFormat('fr-FR', { maximumFractionDigits: 0 })
 const nombre = (n: number) => fr.format(n).replace(/[\u202f\u00a0]/g, '\u00a0')
+/** Nombre à la française (1 780) pour les textes construits à la main. */
+export const nombreFr = nombre
 
 const VALEURS: Record<string, number> = {
   'prix:une-page': P.offres['une-page'],

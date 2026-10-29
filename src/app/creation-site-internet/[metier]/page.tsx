@@ -1,3 +1,4 @@
+import { nombreFr } from '@/lib/jetons'
 import { notFound } from 'next/navigation'
 import { CATEGORIES_METIERS, METIERS, getMetier } from '@/data/metiers'
 import { SERVICES } from '@/data/services'
@@ -5,6 +6,7 @@ import Locale from '@/gabarits/locale/Locale'
 import MondeMetier from '@/components/maquettes/MondeMetier'
 import type { MetierBloc } from '@/components/maquettes/blocs'
 import { sansDelai } from '@/gabarits/locale/formes'
+import { CONTENU_METIERS } from '@/data/enrichissements'
 import { conforme, conformeListe } from '@/lib/conformite'
 import { JsonLd, ORIGINE, faqPage, filAriane, meta } from '@/lib/seo'
 import { offre } from '@/config/site'
@@ -19,7 +21,7 @@ export async function generateMetadata({ params }: { params: Promise<{ metier: s
   if (!m) return {}
   return meta({
     titre: `Création de site internet pour ${m.metier.toLowerCase()}`,
-    description: conforme(`${m.intro.slice(0, 120)}… Site à partir de ${offre('une-page').aPartirDe} €, une démo avant de signer.`),
+    description: conforme(`${m.intro.slice(0, 120)}… Site à partir de ${nombreFr(offre('une-page').aPartirDe)} €, une démo avant de signer.`),
     chemin: `/creation-site-internet/${m.slug}`,
   })
 }
@@ -38,7 +40,8 @@ const majuscule = (t: string) => t.charAt(0).toUpperCase() + t.slice(1)
 export default async function PageMetier({ params }: { params: Promise<{ metier: string }> }) {
   const m = getMetier((await params).metier)
   if (!m) notFound()
-  const faq = sansDelai(m.faq.map((f) => ({ q: f.q, a: conforme(f.a) })))
+  const local = CONTENU_METIERS[m.slug]
+  const faq = sansDelai([...m.faq, ...(local?.faq ?? [])].map((f) => ({ q: f.q, a: conforme(f.a) })))
   const service = SERVICES[m.serviceLie]
   const cat = CATEGORIE[m.categorie] ?? CATEGORIE.services!
   const premiere = conforme(m.intro).split(/(?<=[.!?])\s/)[0] ?? ''
@@ -75,6 +78,7 @@ export default async function PageMetier({ params }: { params: Promise<{ metier:
         etiquette={CATEGORIES_METIERS[m.categorie] ?? 'Métier'}
         titre={`Le site internet de votre ${m.metier.toLowerCase().replace(/s$/, '')}.`.replace('votre votre', 'votre')}
         intro={conforme(m.intro)}
+        sections={local?.sections}
         fonctions={{ titre: 'Ce qu’on y met', items: conformeListe(m.inclus).map((nom) => ({ nom })) }}
         liens={{
           titre: 'Pour aller plus loin',

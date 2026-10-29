@@ -47,8 +47,9 @@ export const PAGES_FIXES: Route[] = [
 
 export function routesDynamiques(): Route[] {
   const articles = tousLesArticles()
-  const categories = new Set(articles.map((a) => a.categorie))
-  RAYONS.forEach((r) => categories.add(r.id))
+  // Une page de catégorie par rayon ; les anciennes catégories redirigent vers leur rayon.
+  // Une rubrique n'entre au sitemap qu'avec au moins 3 articles publiés : en dessous, la page est trop mince (elle reste accessible, en noindex).
+  const categories = new Set(RAYONS.filter((r) => articles.filter((a) => r.categories.includes(a.categorie)).length >= 3).map((r) => r.id))
   return [
     ...PROJETS.map((p) => ({ chemin: `/realisations/${p.slug}`, nom: `Réalisation — ${p.nom}`, groupe: 'principal' as const, priorite: 0.7 })),
     ...Object.entries(SERVICES).map(([slug, s]) => ({ chemin: `/services/${slug}`, nom: s.title, groupe: 'offre' as const, priorite: 0.8 })),

@@ -13,7 +13,8 @@ const nouvelles = [
   { source: '/devis', destination: '/tarifs#estimer', permanent: true },
   { source: '/outils/studio-de-style', destination: '/tarifs#estimer', permanent: true },
   { source: '/blog/site-vitrine-449-inclus', destination: '/blog/site-vitrine-inclus', permanent: true },
-  { source: '/blog/idee-mise-en-ligne-10-jours-methode', destination: '/blog/idee-mise-en-ligne-methode', permanent: true },
+  // L'article cible est programmé (pas encore en ligne) : on envoie vers le journal tant qu'il n'est pas publié.
+  { source: '/blog/idee-mise-en-ligne-10-jours-methode', destination: '/blog', permanent: true },
   { source: '/tarifs/:plan', destination: '/tarifs', permanent: true },
   { source: '/services/marketing-digital', destination: '/services', permanent: true },
   { source: '/services/maintenance-support', destination: '/tarifs', permanent: true },
@@ -27,6 +28,19 @@ const nouvelles = [
   { source: '/solutions/galerie-client-photographe', destination: '/solutions', permanent: true },
   { source: '/services/site-association', destination: '/services', permanent: true },
 ]
+// Les 21 catégories de l'ancien blog se regroupent en 9 rayons : une page par rayon, les autres URL de catégorie y mènent.
+const blogTs = fs.readFileSync('src/lib/blog.ts', 'utf8')
+const rayons = [...blogTs.matchAll(/\{ id: '([a-z-]+)', nom: '[^']+', categories: \[([^\]]*)\]/g)].map((m) => ({ id: m[1], cats: [...m[2].matchAll(/'([a-z-]+)'/g)].map((c) => c[1]) }))
+const categories = new Set(rayons.flatMap((r) => r.cats))
+for (const dossier of ['src/content/blog', 'ancien/src/content/blog'])
+  for (const f of fs.readdirSync(dossier)) {
+    const c = fs.readFileSync(`${dossier}/${f}`, 'utf8').match(/^category:\s*["']?([a-z-]+)/m)?.[1]
+    if (c) categories.add(c)
+  }
+const parCategorie = [...categories]
+  .filter((c) => !rayons.some((r) => r.id === c))
+  .map((c) => ({ source: `/blog/categorie/${c}`, destination: `/blog/categorie/${(rayons.find((r) => r.cats.includes(c)) ?? rayons[0]).id}`, permanent: true }))
+nouvelles.push(...parCategorie)
 const toutes = [...vieilles, ...nouvelles]
 const sortie = `/**
  * REDIRECTIONS 301 — générées par scripts/redirections.mjs (ne pas éditer à la main).
@@ -37,4 +51,4 @@ import type { Redirect } from 'next/dist/lib/load-custom-routes'
 export const REDIRECTIONS: Redirect[] = ${JSON.stringify(toutes, null, 2)}
 `
 fs.writeFileSync('src/config/redirections.ts', sortie)
-console.log(toutes.length, 'redirections')
+console.log(toutes.length, 'redirections dont', parCategorie.length, 'catégories de blog → rayons')

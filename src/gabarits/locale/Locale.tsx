@@ -32,6 +32,8 @@ export interface PropsLocale {
   intro: string
   forme?: LayoutName
   economie?: { titre: string; texte: string; secteurs?: string[] }
+  /** Sections de texte propres à la page (villes, métiers). */
+  sections?: { titre: string; paragraphes: string[] }[]
   besoins?: { titre: string; items: { nom: string; detail: string }[] }
   points?: { titre: string; items: string[] }
   fonctions?: { titre: string; items: { nom: string; detail?: string }[] }
@@ -99,6 +101,16 @@ export default function Locale(p: PropsLocale) {
               )}
             </section>
           )}
+          {p.sections?.map((s) => (
+            <section key={s.titre} className="su-loc__bloc">
+              <h2 className="su-loc__h2">{s.titre}</h2>
+              {s.paragraphes.map((t) => (
+                <p key={t.slice(0, 40)} className="su-loc__long">
+                  {t}
+                </p>
+              ))}
+            </section>
+          ))}
           {p.points && (
             <section className="su-loc__bloc">
               <h2 className="su-loc__h2">{p.points.titre}</h2>
