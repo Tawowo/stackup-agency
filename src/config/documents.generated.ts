@@ -9,7 +9,7 @@ export const DOCUMENTS: DocumentPdf[] = [
     "groupe": "legal",
     "revue": true,
     "pages": 6,
-    "ko": 486
+    "ko": 489
   },
   {
     "slug": "conditions-abonnement",
@@ -45,7 +45,7 @@ export const DOCUMENTS: DocumentPdf[] = [
     "groupe": "contractuel",
     "revue": true,
     "pages": 3,
-    "ko": 483
+    "ko": 482
   },
   {
     "slug": "sous-traitance-rgpd",
@@ -99,6 +99,6 @@ export const DOCUMENTS: DocumentPdf[] = [
     "groupe": "commercial",
     "revue": false,
     "pages": 7,
-    "ko": 512
+    "ko": 513
   }
 ]

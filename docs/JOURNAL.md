@@ -4,6 +4,7 @@
 ## Mission 5 — fluidité, identité légale, référencement : décisions et avancement (en cours)
 
 - **A. Fluidité** (fait) : Lenis retiré (dépendance supprimée du package.json : défilement natif partout) ; rendu 3D à la demande (endormi 3,2 s après la dernière activité, éveil au scroll/pointeur/changement d'état), DPR 1–1,5 seulement aux paliers high/ultra ; aucun rendu React au scroll (Chantier, Compilation, Atelier : variables CSS) ; lecture des boîtes `StackFrame` une fois par trame ; intro du hero en CSS pur (LCP 7,4 s → 2,0 s) ; la 3D démarre à la première interaction (ou 10 s), le logo SVG du HTML est affiché d'ici là. Lighthouse mobile : accueil 95-97 (49 avant), autres pages 98-100. Mesures : `docs/qa/perf/`, scripts `perf-trace.mjs`, `perf-profil*.mjs`, `lighthouse.mjs`.
+- **B. Identité légale** (fait, **incomplet : l'avis de situation INSEE n'a pas été joint**) : `SITE.entreprise` porte « Mathéo Reboul EI — Stackup Agency », Savigné-sur-Lathan (37340), TVA 293 B ; SIREN, SIRET, code APE, début d'activité = `[… à compléter]` (mentions, CGV, 11 PDF régénérés, JSON-LD : jamais publiés tant qu'entre crochets). Aucune information de l'homonyme « Mathéo Reboul » (prospection B2B) n'est utilisée.
 
 ## Rapport SEO — Search Console (2026-10-29) — à lire en premier
 

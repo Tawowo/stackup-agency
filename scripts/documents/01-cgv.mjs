@@ -22,7 +22,8 @@ export function corps(ctx) {
 <tr><td><strong>Prestataire</strong></td><td>${e.identite}, ${e.forme}</td></tr>
 <tr><td><strong>Titulaire</strong></td><td>${e.exploitant}</td></tr>
 <tr><td><strong>Adresse</strong></td><td>${e.adresse}</td></tr>
-<tr><td><strong>SIRET</strong></td><td>${e.siret}</td></tr>
+<tr><td><strong>SIREN / SIRET</strong></td><td>${e.siren} / ${e.siret}</td></tr>
+<tr><td><strong>Code APE</strong></td><td>${e.ape}</td></tr>
 <tr><td><strong>Contact</strong></td><td>${s.email} · ${s.telephone}</td></tr>
 <tr><td><strong>TVA</strong></td><td>${s.mentions.tva}</td></tr>
 <tr><td><strong>Assurance</strong></td><td>Responsabilité civile professionnelle : ${e.assurance}</td></tr>

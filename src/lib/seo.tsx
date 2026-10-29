@@ -18,21 +18,34 @@ export function meta({ titre, description, chemin, image, type = 'website', noin
   }
 }
 
+/** Un champ encore entre crochets (« [SIRET à compléter] ») n'est pas une donnée : il ne sort jamais dans le JSON-LD. */
+const renseigne = (v: string) => (v.startsWith('[') ? undefined : v)
+
 export function organisation() {
+  const e = SITE.entreprise
+  const siret = renseigne(e.siret)
+  const debut = renseigne(e.debutActivite)
   return {
     '@context': 'https://schema.org',
     '@type': 'ProfessionalService',
     '@id': `${ORIGINE}/#agence`,
     name: 'Stackup Agency',
+    legalName: e.identite,
     url: ORIGINE,
     logo: `${ORIGINE}/Logo_Stackup-Agency.png`,
     image: `${ORIGINE}/Logo_Stackup-Agency.png`,
     email: SITE.email,
     telephone: SITE.telephoneIntl,
-    founder: { '@type': 'Person', name: SITE.fondateur },
-    address: { '@type': 'PostalAddress', addressLocality: 'Tours', postalCode: '37000', addressRegion: 'Centre-Val de Loire', addressCountry: 'FR' },
-    areaServed: { '@type': 'Country', name: 'France' },
+    founder: { '@type': 'Person', name: SITE.fondateur, url: `${ORIGINE}/a-propos` },
+    address: { '@type': 'PostalAddress', streetAddress: e.rue, addressLocality: e.commune, postalCode: e.codePostal, addressRegion: 'Centre-Val de Loire', addressCountry: 'FR' },
+    areaServed: [
+      { '@type': 'AdministrativeArea', name: 'Indre-et-Loire' },
+      { '@type': 'AdministrativeArea', name: 'Centre-Val de Loire' },
+      { '@type': 'AdministrativeArea', name: 'Pays de la Loire' },
+    ],
     priceRange: '€€',
+    ...(siret ? { identifier: { '@type': 'PropertyValue', propertyID: 'SIRET', value: siret } } : {}),
+    ...(debut ? { foundingDate: debut } : {}),
   }
 }
 

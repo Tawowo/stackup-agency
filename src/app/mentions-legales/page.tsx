@@ -66,7 +66,13 @@ export default function MentionsLegales() {
             <strong>Téléphone :</strong> <a href={SITE.telephoneLien}>{SITE.telephone}</a>
           </li>
           <li>
-            <strong>SIRET :</strong> {SITE.entreprise.siret}
+            <strong>SIREN / SIRET :</strong> {SITE.entreprise.siren} / {SITE.entreprise.siret}
+          </li>
+          <li>
+            <strong>Code APE :</strong> {SITE.entreprise.ape}
+          </li>
+          <li>
+            <strong>Début d’activité :</strong> {SITE.entreprise.debutActivite}
           </li>
           <li>
             <strong>TVA :</strong> {SITE.mentions.tva}

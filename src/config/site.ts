@@ -82,11 +82,19 @@ export const SITE = {
    * (`npm run documents`). Les champs entre crochets sont à compléter par le propriétaire.
    */
   entreprise: {
-    identite: 'Mathéo Reboul EI – Stackup Agency',
+    identite: 'Mathéo Reboul EI — Stackup Agency',
     exploitant: 'Mathéo Reboul',
     forme: 'Entrepreneur individuel (EI)',
+    /** Adresse (avis de situation INSEE) : rue, puis code postal et commune séparés pour les données structurées. */
     adresse: '706 rue des Cormiers, 37340 Savigné-sur-Lathan',
+    rue: '706 rue des Cormiers',
+    codePostal: '37340',
+    commune: 'Savigné-sur-Lathan',
+    /** À recopier de l'avis de situation INSEE (non fourni à ce jour) : un champ « [… à compléter] » n'est jamais publié dans le JSON-LD. */
+    siren: '[SIREN à compléter]',
     siret: '[SIRET à compléter]',
+    ape: '[Code APE à compléter]',
+    debutActivite: '[Date de début d’activité à compléter]',
     mediateur: '[Médiateur de la consommation à compléter : nom, adresse postale et site internet]',
     assurance: '[Assurance responsabilité civile professionnelle à compléter : assureur et couverture géographique]',
   },
