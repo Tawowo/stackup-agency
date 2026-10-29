@@ -110,7 +110,7 @@ Par ordre de simplicité :
 3. **Un prestataire de maintenance** qui intervient sur les sites existants ; voir le service [maintenance](/services/maintenance).
 4. **Vous-même**, si le tableau de bord de l'hébergeur propose l'activation en quelques clics.
 
-Préparez ces informations avant d'appeler : l'adresse exacte du site, le message affiché, la date de votre dernière modification du site, le nom de l'hébergeur. Cela accélère le diagnostic. Si vous voulez qu'on regarde l'état de votre site, l'[audit gratuit](/outils/audit-site) signale les problèmes de sécurité visibles, et on peut aussi vous répondre via la [page contact](/contact).
+Préparez ces informations avant d'appeler : l'adresse exacte du site, le message affiché, la date de votre dernière modification du site, le nom de l'hébergeur. Cela accélère le diagnostic. Si vous voulez qu'on regarde l'état de votre site, l'[audit de site](/outils/audit-site) signale les problèmes de sécurité visibles, et on peut aussi vous répondre via la [page contact](/contact).
 
 ## Rien à voir avec le SSL : la certification NF525 des caisses
 

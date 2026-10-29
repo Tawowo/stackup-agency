@@ -1,7 +1,7 @@
 ---
 title: "Devis en ligne et signature électronique : valable et simple ?"
-seoTitle: "Signature électronique d'un devis : valable pour un artisan ?"
-excerpt: "Un devis signé en ligne est-il valable ? Signature électronique, bon de commande, devis calculé automatiquement : ce qui est permis et comment le mettre en place."
+seoTitle: "Signature électronique d'un devis : est-elle valable ?"
+excerpt: "Un devis signé en ligne est-il valable ? Signature électronique, bon de commande, devis calculé en ligne : ce qui est permis et comment s'y prendre."
 date: "2026-10-29"
 updated: "2026-10-29"
 readTime: 9
@@ -18,12 +18,7 @@ sources: ["https://www.service-public.fr", "https://www.economie.gouv.fr"]
 
 Le droit français reconnaît la signature électronique. Le Code civil prévoit qu'elle a la même valeur qu'une signature manuscrite lorsqu'elle utilise un procédé fiable d'identification du signataire qui garantit le lien avec l'acte auquel elle s'attache. Le règlement européen sur l'identification électronique (eIDAS) distingue plusieurs niveaux : signature simple, avancée, qualifiée. Pour un devis d'artisan, le niveau demandé n'a rien d'exceptionnel : c'est un contrat de prestation de service ordinaire. Voir la définition de la [signature électronique](/lexique/signature-electronique).
 
-Ce qui rend la preuve solide en pratique :
-
-- **Un procédé qui identifie la personne** (e-mail personnel, code reçu par SMS, lien unique).
-- **Un document figé après signature**, dont le contenu ne peut plus être modifié.
-- **Une trace horodatée** : date, heure, adresse IP, identité déclarée.
-- **Un exemplaire remis aux deux parties**, au format PDF par exemple.
+Ce qui rend la preuve solide en pratique : un procédé qui identifie la personne (code reçu par SMS, lien personnel), un document figé après signature, une trace horodatée et un exemplaire remis aux deux parties, au format PDF par exemple.
 
 Un simple « bon pour accord » renvoyé par e-mail a déjà une valeur de commencement de preuve. Mais une signature par un outil dédié donne une preuve plus nette en cas de désaccord. Pour la valeur juridique précise dans un cas particulier (gros chantier, client professionnel, litige), consultez service-public.fr ou un professionnel du droit.
 
@@ -51,7 +46,7 @@ Le parcours type, simple pour le client :
 5. **Le document signé est archivé** et envoyé aux deux parties.
 6. **Vous passez au chantier ou à la commande**, avec la certitude qu'il y a un accord écrit.
 
-Pour que le client signe plus facilement : un devis lisible, des lignes claires, un message d'accompagnement court, un point de contact en cas de question. Un devis confus reste sans réponse, signature électronique ou non. Voir [Répondre plus vite aux demandes de devis](/blog/repondre-devis-plus-vite-artisan).
+Pour que le client signe plus facilement : un devis lisible, des lignes claires et un point de contact en cas de question. Voir [Répondre plus vite aux demandes de devis](/blog/repondre-devis-plus-vite-artisan).
 
 Si le client préfère le papier ou n'est pas à l'aise avec l'informatique, gardez cette option. L'outil doit servir, pas exclure.
 
@@ -83,15 +78,7 @@ Pas nécessairement. Un devis signé tient lieu de bon de commande pour la prest
 
 ### Quelles sont les mentions obligatoires d'un bon de commande ?
 
-Un bon de commande doit permettre d'identifier clairement l'accord. En règle générale, on y trouve :
-
-- l'identité des parties (nom, adresse, numéro d'identification de l'entreprise) ;
-- la date ;
-- la désignation précise des produits ou des services commandés ;
-- les quantités et les prix, avec la TVA le cas échéant ;
-- les conditions de paiement ;
-- les modalités et la date ou le délai de livraison convenus ;
-- la signature des parties.
+Un bon de commande doit identifier clairement l'accord : les parties (nom, adresse, numéro d'identification), la date, la désignation précise des produits ou services, les quantités et prix avec la TVA, les conditions de paiement, les modalités de livraison convenues et la signature des parties.
 
 La liste exacte varie selon que vous vendez à un particulier ou à un professionnel. Pour la vente à un consommateur, des informations précontractuelles précises s'ajoutent. Consultez service-public.fr pour vérifier les mentions applicables à votre activité. Et pour un modèle imprimable, reprenez la trame du [modèle de devis](/outils/modele-devis) en adaptant les intitulés.
 
@@ -99,13 +86,7 @@ La liste exacte varie selon que vous vendez à un particulier ou à un professio
 
 C'est l'un des plus gros gains de temps d'un outil de gestion. Quand le devis est accepté, un clic crée la facture à partir des mêmes lignes : plus de ressaisie, moins d'erreurs, aucun oubli. Pour les chantiers longs, on peut générer des factures d'acompte puis une facture de solde.
 
-Vérifiez que votre outil :
-
-- reprend toutes les lignes du devis, y compris les remises ;
-- gère les acomptes et leur déduction sur la facture finale ;
-- numérote les factures de façon continue et sans rupture ;
-- conserve le lien entre le devis, la facture et le règlement ;
-- est préparé à la [facture électronique](/lexique/facture-electronique) qui se met en place progressivement. Voir [Facture électronique : calendrier 2026-2027](/blog/facture-electronique-calendrier-2026-2027).
+Vérifiez que votre outil gère les acomptes, numérote les factures de façon continue et reste prêt pour la [facture électronique](/lexique/facture-electronique), qui se met en place progressivement (voir [Facture électronique : calendrier 2026-2027](/blog/facture-electronique-calendrier-2026-2027)).
 
 Les mentions obligatoires d'une facture sont rappelées dans [Mentions obligatoires sur une facture](/blog/mentions-obligatoires-facture). Si votre volume de devis justifie un outil intégré, un [logiciel de gestion](/services/logiciel-de-gestion) peut lier devis, signature, facture et relance en un seul parcours.
 
@@ -128,26 +109,15 @@ Oui, quand il comprend ce qu'on lui propose. Les clients apprécient d'obtenir u
 
 ### Comment générer des devis automatiquement à partir d'une demande client
 
-Le principe : les réponses du formulaire alimentent directement un modèle de devis dans votre outil de gestion. Vous relisez, ajustez, puis envoyez pour signature. Vous gardez la main sur le prix et le contenu, l'automatisation ne fait que remplir et envoyer. C'est le rôle d'un générateur de devis intégré à un outil sur mesure. Vous trouverez le principe de ces outils dans la page [IA et automatisation](/services/ia-et-automatisation).
+Les réponses du formulaire alimentent un modèle de devis dans votre outil de gestion. Vous relisez, ajustez, puis envoyez pour signature : l'automatisation remplit et envoie, vous gardez la main sur le prix. Voir la page [IA et automatisation](/services/ia-et-automatisation).
 
 ### Comment mieux qualifier une demande de devis en ligne
 
-Plus la demande est précise, moins vous perdez de temps en allers-retours. Demandez dès le départ :
+Demandez dès le départ le type de besoin (en liste de choix), la commune, le délai souhaité, des photos et le moyen de recontact préféré. Si une demande reste floue, un rappel pour poser deux ou trois questions vaut mieux qu'un devis à l'aveugle. Voir aussi [Répondre automatiquement aux e-mails et aux appels manqués](/blog/repondre-automatiquement-aux-e-mails-et-appels-manques).
 
-- le type de besoin, en une liste de choix ;
-- la commune et l'adresse du chantier ;
-- le délai souhaité ;
-- des photos ;
-- le budget approximatif, si vous le jugez utile ;
-- le moyen de recontact préféré et un créneau.
+## Et un devis pour une caisse tactile ou automatique ?
 
-Si une demande est trop floue, un rappel rapide pour poser deux ou trois questions vaut mieux qu'un devis à l'aveugle. Pour répondre vite sans y passer vos soirées, voir [Répondre aux demandes de devis plus vite](/blog/repondre-devis-plus-vite-artisan) et [Répondre automatiquement aux e-mails et aux appels manqués](/blog/repondre-automatiquement-aux-e-mails-et-appels-manques).
-
-## Devis en ligne pour une caisse tactile ou une caisse automatique
-
-Les recherches « devis caisse tactile », « devis caisse automatique » ou « encaisseuse » concernent en général des commerçants qui veulent équiper leur point de vente et demandent un devis à un fournisseur. Ce n'est pas la même question que la signature d'un devis : il s'agit de comparer des offres de matériel et de logiciel de caisse.
-
-Quelques points pour comparer ces devis : ce qui est vendu (matériel, logiciel, abonnement), les frais récurrents, la conformité du logiciel aux règles d'encaissement et de conservation des données en vigueur, la possibilité de récupérer vos données si vous changez, et l'assistance incluse. Détails dans [Système de caisse pour restaurant](/blog/systeme-caisse-restaurant-2026) et [Gestion de caisse sur mesure](/blog/gestion-caisse-sur-mesure).
+Ces recherches concernent plutôt des commerçants qui veulent équiper leur point de vente : il s'agit de comparer des offres de matériel et de logiciel de caisse, pas de signer un devis. Comparez ce qui est vendu, les frais récurrents, la possibilité de récupérer vos données et l'assistance incluse. Voir [Gestion de caisse sur mesure](/blog/gestion-caisse-sur-mesure).
 
 ## Questions fréquentes
 

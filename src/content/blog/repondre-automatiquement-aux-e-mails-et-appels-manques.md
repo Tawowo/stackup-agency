@@ -1,7 +1,7 @@
 ---
 title: "Répondre automatiquement aux e-mails et aux appels manqués"
 seoTitle: "Répondre automatiquement aux appels manqués et e-mails"
-excerpt: "Appel manqué sur chantier, e-mail sans réponse : répondeur, SMS automatique, permanence téléphonique, transcription. Le guide pour ne plus perdre de clients."
+excerpt: "Appel manqué sur chantier, e-mail sans réponse : répondeur, SMS automatique, permanence, transcription. Le guide pour ne plus perdre de clients."
 date: "2026-10-29"
 updated: "2026-10-29"
 readTime: 11
@@ -93,7 +93,7 @@ Lire un message plutôt que l'écouter, c'est gagner du temps et pouvoir le retr
 
 - **Relisez les éléments critiques**: numéros de téléphone, adresses, noms. En cas de doute, réécoutez l'audio.
 - **Conservez l'enregistrement original** tant que la demande n'est pas traitée.
-- **Les données vocales sont des données personnelles.** Quand un service tiers les traite, il devient un sous-traitant au sens du RGPD. Informez les appelants, choisissez un fournisseur qui précise où et comment il conserve les données, et durée de conservation limitée. La cnil.fr propose des fiches pratiques à ce sujet. Voir aussi notre [page sur le RGPD pour les petites entreprises](/blog/rgpd-petites-entreprises) et la définition de la [donnée personnelle](/lexique/donnee-personnelle).
+- **Les données vocales sont des données personnelles.** Quand un service tiers les traite, il devient un sous-traitant au sens du RGPD. Informez les appelants, choisissez un fournisseur qui précise où et comment il conserve les données, avec une durée de conservation limitée. La cnil.fr propose des fiches pratiques à ce sujet. Voir aussi notre [page sur le RGPD pour les petites entreprises](/blog/rgpd-petites-entreprises) et la définition de la [donnée personnelle](/lexique/donnee-personnelle).
 
 ## Transcription de réunion client avec l'IA
 

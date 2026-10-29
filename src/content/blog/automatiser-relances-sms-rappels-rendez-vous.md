@@ -46,7 +46,7 @@ Un SMS de réponse à quelqu'un qui vient de vous appeler est une réponse à sa
 
 ## Combien coûte l'envoi de SMS professionnels ?
 
-Les SMS professionnels s'achètent généralement à l'unité ou par lots chez des fournisseurs spécialisés, et certains outils les intègrent dans un abonnement. Je ne chiffre pas ici : les tarifs changent et dépendent du volume, de la qualité de l'acheminement, du nom d'expéditeur affiché. Pour comparer :
+Les SMS professionnels s'achètent généralement à l'unité ou par lots chez des fournisseurs spécialisés, et certains outils les intègrent dans un abonnement. On ne chiffre pas ici : les tarifs changent et dépendent du volume, de la qualité de l'acheminement, du nom d'expéditeur affiché. Pour comparer :
 
 - demandez le **prix par message à votre volume réel** (dix par jour, ou deux cents par mois ?) ;
 - vérifiez si le **nom d'expéditeur** (votre enseigne plutôt qu'un numéro) est inclus ;
@@ -59,7 +59,7 @@ Un bon test : commencez par un seul scénario sur un mois et comptez le nombre d
 
 Les rappels de rendez-vous sont le cas où l'automatisation paie le plus vite, pour le coiffeur, l'esthéticienne, le kiné, le garage, le restaurant. Un rappel envoyé la veille, avec un lien pour confirmer ou annuler, libère souvent un créneau que vous pouvez reproposer.
 
-Est-ce que les rappels SMS réduisent vraiment les absences ? Les professionnels qui les utilisent le constatent en général, mais je n'avancerai pas de pourcentage : cela dépend de votre clientèle, du délai entre la prise de rendez-vous et le rendez-vous, et de la facilité à annuler. Ce qui est certain, c'est qu'un client qui peut annuler en un clic le fait plus volontiers qu'un client qui doit téléphoner.
+Est-ce que les rappels SMS réduisent vraiment les absences ? Les professionnels qui les utilisent le constatent en général, mais nous n’avancerons pas de pourcentage : cela dépend de votre clientèle, du délai entre la prise de rendez-vous et le rendez-vous, et de la facilité à annuler. Ce qui est certain, c'est qu'un client qui peut annuler en un clic le fait plus volontiers qu'un client qui doit téléphoner.
 
 Un bon rappel contient :
 

@@ -1,7 +1,7 @@
 ---
 title: "Activité saisonnière : remplir son carnet de commandes hors saison"
 seoTitle: "Activité saisonnière : remplir son carnet hors saison"
-excerpt: "Creux d'hiver, centre-ville qui se vide : méthode concrète pour lisser une activité saisonnière, tenir la trésorerie et garder un carnet plein toute l'année."
+excerpt: "Creux d'hiver, centre-ville qui se vide : méthode concrète pour lisser une activité saisonnière, tenir la trésorerie et garder un carnet plein."
 date: "2026-10-29"
 updated: "2026-10-29"
 readTime: 8
@@ -59,8 +59,6 @@ Quelques réflexes qui aident :
 - **Facturez des acomptes** sur les gros travaux et les commandes spéciales, et [relancez vos devis](/blog/relancer-devis-impayes-modeles-de-relance) sans attendre : un devis envoyé en octobre et jamais relancé, c'est un chantier perdu en janvier.
 - **Prévoyez une ligne de trésorerie par écrit**, avant d'en avoir besoin, avec votre banquier. Négocier en urgence est toujours moins confortable.
 
-Un chiffre ne remplace pas votre propre historique : le seul tableau qui compte est celui de votre activité des deux ou trois dernières années.
-
 ## Comment faire tourner un commerce en saison creuse ?
 
 Réduire les coûts sans abîmer l'outil, et utiliser le temps libre pour préparer la saison suivante.
@@ -69,9 +67,7 @@ Les mois calmes sont ceux où l'on peut enfin faire ce qu'on repousse : mettre �
 
 ## Comment arrêter de tout faire soi-même dans son entreprise ?
 
-Le creux est le bon moment pour **automatiser ce qui se répète**. Rappels de rendez-vous, envoi de devis, relances, prise de réservation, réponse aux mêmes questions : chaque tâche automatisée libère de l'énergie pour la haute saison. Commencez par la tâche qui vous fait perdre le plus de temps chaque semaine, pas par la plus spectaculaire. Notre article sur les [rappels et relances automatiques](/blog/automatiser-relances-sms-rappels-rendez-vous) donne des exemples concrets.
-
-Déléguer, c'est aussi prendre un stagiaire, un apprenti, un prestataire pour la comptabilité ou le site. Ce n'est pas un luxe : c'est ce qui permet de passer d'« une personne qui fait tout » à « une entreprise qui tourne ».
+Le creux est le bon moment pour **automatiser ce qui se répète** : rappels de rendez-vous, envoi de devis, relances, réponses aux mêmes questions. Commencez par la tâche qui vous fait perdre le plus de temps chaque semaine. Notre article sur les [rappels et relances automatiques](/blog/automatiser-relances-sms-rappels-rendez-vous) donne des exemples concrets. Déléguer, c'est aussi confier la comptabilité ou le site à un prestataire : de quoi passer d'« une personne qui fait tout » à « une entreprise qui tourne ».
 
 ## Micro-entreprise ou société : quand passer le cap ?
 

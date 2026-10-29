@@ -16,7 +16,7 @@ sources: ["https://support.google.com/business"]
 
 ## Peut-on répondre à un avis Google en tant que professionnel ?
 
-Oui, c'est même prévu pour ça. Dès que vous avez [revendiqué et validé votre fiche](/blog/fiche-google-business-tout-savoir), vous pouvez répondre à chaque avis déposé par un internaute. Votre réponse s'affiche sous l'avis, au nom de votre établissement, et elle est publique. Vous la rédigez depuis votre compte gestionnaire de la fiche.
+Oui, c'est même prévu pour ça. Un [avis Google](/lexique/avis-google) est un commentaire public laissé sur votre fiche : dès que vous avez [revendiqué et validé votre fiche](/blog/fiche-google-business-tout-savoir), vous pouvez répondre à chaque avis déposé par un internaute. Votre réponse s'affiche sous l'avis, au nom de votre établissement, et elle est publique. Vous la rédigez depuis votre compte gestionnaire de la fiche.
 
 Ce que vous ne pouvez pas faire : modifier ou supprimer un avis vous-même. Vous pouvez seulement le signaler s'il enfreint les règles de Google (propos injurieux, spam, avis sans rapport avec votre activité, conflit d'intérêts). La procédure est détaillée dans [Supprimer un faux avis Google](/blog/supprimer-faux-avis-google). Les règles officielles se trouvent sur support.google.com/business.
 
