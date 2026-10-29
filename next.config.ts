@@ -37,6 +37,7 @@ const config: NextConfig = {
   agentRules: false,
   devIndicators: false,
   skipTrailingSlashRedirect: true,
+  experimental: { agentUpgrade: 'security' },
   redirects: async () => redirections(),
 }
 
