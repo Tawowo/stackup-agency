@@ -51,7 +51,7 @@ L'hébergeur est la société qui fait « tourner » votre site. Pour le trouver
 - dans le site, regardez le **pied de page** ou les **mentions légales**, qui doivent indiquer l'hébergeur ;
 - cherchez l'e-mail de bienvenue, qui contient l'identifiant de connexion.
 
-Une fois l'hébergeur identifié, utilisez la procédure de mot de passe oublié. En cas d'échec, le support vous demandera des preuves de votre identité et de votre lien avec le site. Si vous hésitez sur un nouvel hébergeur, voir [quel hébergement choisir](/blog/paa-hebergement-site).
+Une fois l'hébergeur identifié, utilisez la procédure de mot de passe oublié. En cas d'échec, le support vous demandera des preuves de votre identité et de votre lien avec le site. Si vous hésitez sur un nouvel hébergeur, voir [quel hébergement choisir](/blog/quel-hebergement-choisir-site-web).
 
 ## J'ai perdu le mot de passe administrateur de mon site WordPress
 

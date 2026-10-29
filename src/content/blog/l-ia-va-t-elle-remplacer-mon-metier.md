@@ -53,7 +53,7 @@ Les métiers manuels sont moins exposés à l'IA générative que les métiers d
 
 - **La concurrence de ceux qui se rendent visibles mieux que vous.** Un artisan qui répond vite, avec un site clair et des avis, prend les clients de celui qui ne répond pas. Cette concurrence existe déjà, avec ou sans IA.
 - **Les plateformes d'intermédiation**, qui captent la relation avec le client. Voir [artisan : Google Business ou site ?](/blog/artisan-google-business-ou-site).
-- **Les changements de recherche**, avec des réponses synthétiques qui apparaissent avant les liens. Notre article [AI Overviews et SEO pour une TPE](/blog/ai-overviews-seo-tpe) explique comment rester cité.
+- **Les changements de recherche**, avec des réponses synthétiques qui apparaissent avant les liens. Notre article [AI Overviews et SEO pour une TPE](/blog/seo-ia-generative-ai-overviews-google) explique comment rester cité.
 
 La meilleure défense reste un travail visible, des avis authentiques et un site qui dit clairement ce que vous faites et où.
 

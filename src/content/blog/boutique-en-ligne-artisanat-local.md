@@ -3,20 +3,20 @@ title: "Créateurs & artisanat : Etsy ou sa propre boutique ?"
 seoTitle: "Etsy ou boutique en ligne propre pour un créateur ?"
 excerpt: "Etsy apporte du trafic mais prélève des commissions et fixe ses règles. Fiches qui racontent, page atelier, commande sur mesure : réussir sa propre boutique."
 date: "2026-06-14"
-updated: "2026-08-17"
+updated: "2026-10-29"
 tag: "Commerce"
 category: "commerce"
 readTime: 8
 keywords: ["etsy ou site", "etsy vs boutique propre", "quitter etsy", "vendre creations sans etsy"]
 ---
 
-**Etsy prend 15 à 20 % de commission sur chaque vente (frais de mise en ligne, commission sur transaction, publicité Etsy Offsite Ads quasi obligatoire) en échange d'un trafic immédiat ; une boutique propre élimine cette commission à vie, au prix de devoir construire soi-même sa visibilité.** En France, plus de 600 000 artisans exercent leur métier — la plupart vendent en local, certains se sont tournés vers Etsy pour toucher une clientèle plus large, sans toujours mesurer le coût réel de cette dépendance.
+**Etsy prélève des frais sur chaque vente (frais de mise en ligne, commission sur transaction, éventuelle publicité Offsite Ads) en échange d'un trafic immédiat ; une boutique propre supprime cette commission de place de marché, au prix de devoir construire soi-même sa visibilité.** En France, de très nombreux artisans vendent en local, et certains se sont tournés vers Etsy pour toucher une clientèle plus large, sans toujours mesurer le coût réel de cette dépendance.
 
 ## Pourquoi c'est important en 2026
 
-Le mouvement "consommer local" est devenu une vraie tendance de fond, renforcée par les crises successives (Covid, crise énergétique, inflation). **67 % des Français déclarent vouloir acheter davantage de produits artisanaux locaux**, et ils cherchent ces produits en ligne. Pinterest regorge d'inspirations artisanales, Instagram propulse des créateurs locaux à des audiences considérables, et les boutiques en ligne d'artisans bien référencées captent une demande nationale voire internationale pour des pièces uniques.
+Le mouvement "consommer local" est devenu une vraie tendance de fond, renforcée par les crises successives (Covid, crise énergétique, inflation). **De plus en plus de consommateurs disent vouloir acheter davantage de produits artisanaux locaux**, et ils cherchent ces produits en ligne. Pinterest regorge d'inspirations artisanales, Instagram propulse des créateurs locaux à des audiences considérables, et les boutiques en ligne d'artisans bien référencées captent une demande nationale voire internationale pour des pièces uniques.
 
-Les plateformes comme Etsy, La Ruche qui dit Oui ou Toulouse Creative permettent d'accéder rapidement à un marché, mais elles ont des inconvénients majeurs : commissions élevées (15 à 20 % du chiffre d'affaires sur Etsy), standardisation de l'expérience client, algorithmes qui favorisent les vendeurs les plus prolifiques, et surtout : vous n'êtes pas propriétaire de la relation client — c'est Etsy qui l'est.
+Les plateformes comme Etsy, La Ruche qui dit Oui ou Toulouse Creative permettent d'accéder rapidement à un marché, mais elles ont des inconvénients majeurs : commissions et frais qui s'ajoutent à chaque vente (voir la grille actuelle d'Etsy), standardisation de l'expérience client, algorithmes qui favorisent les vendeurs les plus prolifiques, et surtout : vous n'êtes pas propriétaire de la relation client — c'est Etsy qui l'est.
 
 Avoir sa propre boutique en ligne, c'est construire un actif qui vous appartient.
 
@@ -76,7 +76,7 @@ Envoyez une newsletter régulière (une fois par mois suffit) présentant vos cr
 
 | Critère | Etsy | Boutique propre |
 |---|---|---|
-| Coût par vente | 15 à 20 % (frais + commission + publicité Offsite) | 0 % (hors frais de paiement bancaire standards ~2,9 %) |
+| Coût par vente | Frais de mise en ligne + commission + éventuelle publicité Offsite (voir la grille d'Etsy) | Pas de commission de place de marché (hors frais du prestataire de paiement) |
 | Trafic | Immédiat, marché déjà existant | À construire (SEO, réseaux sociaux, bouche-à-oreille) |
 | Concurrence directe visible | Oui, sur le même annuaire | Non |
 | Propriété de la relation client | Non — chez Etsy | Oui, entièrement |
@@ -85,18 +85,18 @@ Envoyez une newsletter régulière (une fois par mois suffit) présentant vos cr
 
 ## En résumé
 
-- Etsy prend 15 à 20 % de commission tous frais compris, en échange d'un trafic immédiat sur un marché déjà constitué.
-- Une boutique propre élimine cette commission à vie, mais demande de construire sa propre visibilité (SEO, réseaux sociaux, newsletter).
+- Etsy prélève des frais et une commission sur chaque vente, en échange d'un trafic immédiat sur un marché déjà constitué.
+- Une boutique propre supprime la commission de place de marché, mais demande de construire sa propre visibilité (SEO, réseaux sociaux, newsletter).
 - Les photos et le storytelling autour du processus de création sont les deux leviers les plus puissants pour convertir en artisanat, sur les deux canaux.
 - La stratégie la plus fréquente : utiliser Etsy pour démarrer et se faire connaître, puis construire en parallèle sa boutique propre pour réduire la dépendance à la commission.
 
 ## Questions fréquentes
 
 **Faut-il choisir entre Etsy et sa propre boutique, ou peut-on faire les deux ?**
-Les deux peuvent coexister : Etsy pour capter de nouveaux clients grâce à son trafic, la boutique propre pour fidéliser sans commission et construire une relation directe.
+Les deux peuvent coexister : Etsy pour capter de nouveaux clients grâce à son trafic, la boutique propre pour fidéliser sans commission de place de marché et construire une relation directe.
 
 **Combien de temps avant qu'une boutique propre génère un trafic comparable à Etsy ?**
-Cela dépend du travail de référencement local et de contenu engagé, généralement plusieurs mois à un an pour une audience significative, contre un trafic immédiat sur Etsy.
+Cela dépend du travail de référencement local et de contenu engagé, souvent plusieurs mois, voire davantage, avant d'obtenir une audience significative, contre un trafic immédiat sur Etsy.
 
 **Etsy convient-il à tous les types de créations artisanales ?**
 Etsy fonctionne bien pour les produits facilement photographiables et standardisables. Les pièces très personnalisées ou sur-mesure trouvent souvent un meilleur écrin sur une boutique propre, sans les contraintes de gabarit d'Etsy.

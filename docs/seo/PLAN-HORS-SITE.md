@@ -24,7 +24,7 @@ C'est elle qui place Stackup dans la carte sur « agence web Tours ». Créer su
 
 - **Photos** : portrait de Mathéo, logo, captures des réalisations (tennis club), 1 photo de l'espace de travail. Pas de photo générique.
 - **Horaires** : les vrais. Les renseigner aussi dans `src/config/site.ts` (champ `horaires`) pour les données structurées.
-- **Lien du site** : `https://stackup-agency.fr/` ; lien « rendez-vous » : `/contact?objet=demo`.
+- **Lien du site** : `https://stackup-agency.fr/` ; lien « rendez-vous » : `/contact?a=demo`.
 - **Messagerie Google** : la désactiver si vous ne répondez pas dans la journée.
 
 ### Premier mois de publications (1 par semaine, 100 à 150 mots, 1 photo, bouton « En savoir plus »)

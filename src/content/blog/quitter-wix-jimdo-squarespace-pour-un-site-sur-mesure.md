@@ -77,7 +77,7 @@ C'est là que se joue la réussite de la migration. Un site qui disparaît d'un 
 5. **Déclarez le nouveau site à la [Search Console](/lexique/search-console)** et soumettez le plan du site ([sitemap](/lexique/sitemap-xml)).
 6. **Surveillez les semaines suivantes.** Une baisse temporaire est fréquente ; une chute durable signale un problème de redirections.
 
-La procédure détaillée est dans [Migrer un site Wix sans perdre son SEO](/blog/migrer-site-wix-sans-perdre-seo) et dans [Refonte et redirections 301](/blog/refonte-site-web-seo-redirections-301).
+La procédure détaillée est dans [Migrer un site Wix sans perdre son SEO](/blog/migrer-site-wix-sans-perdre-seo) et dans [Refonte et redirections 301](/blog/refonte-site-web-guide).
 
 ## Peut-on quitter Shopify facilement ?
 

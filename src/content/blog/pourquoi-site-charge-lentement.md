@@ -3,19 +3,20 @@ title: "Pourquoi votre site charge lentement"
 seoTitle: "Site lent : les causes de lenteur et comment l'accélérer"
 excerpt: "Images lourdes, hébergement faible, trop de plugins, pas de cache : comment diagnostiquer votre site et corriger chaque cause de lenteur dans l'ordre utile."
 date: "2026-05-14"
+updated: "2026-10-29"
 readTime: 6
 tag: "Digital"
 category: "digital"
 keywords: ["site web lent", "améliorer vitesse site", "optimisation performance web"]
 ---
 
-## 3 secondes, c'est tout ce que vous avez
+## Chaque seconde d'attente se paie
 
-Les études sont unanimes : 40 % des internautes abandonnent un site qui prend plus de 3 secondes à charger. Sur mobile, ce chiffre monte à 53 %. Chaque seconde de chargement supplémentaire coûte environ 7 % de conversions en moins.
+Un visiteur qui attend devant une page blanche, surtout sur un téléphone en 4G dans une zone moyennement couverte, ne vous laisse pas beaucoup de temps. Il referme l'onglet et clique sur le résultat suivant. Vous ne verrez jamais cette visite perdue dans vos statistiques, puisqu'elle n'a même pas eu le temps d'être comptée.
 
-Et du côté de Google, la vitesse est un facteur de classement officiel depuis 2010. Un site lent sera systématiquement moins bien positionné qu'un site rapide à contenu équivalent.
+Du côté de Google, la vitesse est un critère de classement reconnu : officiellement pour les recherches sur ordinateur depuis 2010, puis pour les recherches sur mobile quelques années plus tard. Le moteur mesure aujourd'hui l'expérience réelle des visiteurs avec les Core Web Vitals, dont les seuils « bon » sont un LCP inférieur ou égal à 2,5 secondes, un INP inférieur ou égal à 200 millisecondes et un CLS inférieur ou égal à 0,1. À contenu équivalent, un site lent part avec un handicap.
 
-Pourtant, la majorité des sites de PME chargent entre 5 et 12 secondes. C'est catastrophique. Et dans la plupart des cas, c'est corrigeable.
+Bonne nouvelle : sur les sites de petites entreprises, la lenteur vient presque toujours de quelques causes classiques, et dans la plupart des cas elle se corrige.
 
 ## Diagnostic : tester la vitesse de votre site
 
@@ -27,41 +28,41 @@ Avant de chercher des solutions, mesurez le problème :
 
 **WebPageTest** (webpagetest.org) : pour une analyse avancée depuis différentes localisations mondiales.
 
-Un score PageSpeed supérieur à 70/100 est acceptable. Supérieur à 85/100, c'est bon. En dessous de 50/100, vous avez un problème significatif.
+PageSpeed Insights reprend les barèmes de Lighthouse : un score de 90 à 100 est considéré comme bon, de 50 à 89 comme « à améliorer », et en dessous de 50 comme faible. Ne vous fixez pas sur la note elle-même : lisez surtout la liste des opportunités, qui vous dit précisément quoi corriger, et les trois indicateurs Core Web Vitals, qui reflètent ce que vivent vos visiteurs.
 
 ## Cause n°1 : Des images non optimisées
 
-C'est de loin la cause la plus fréquente d'un site lent. Une photo prise avec un appareil photo moderne peut peser 5 à 10 Mo. Si votre site affiche plusieurs de ces photos, le chargement peut prendre une éternité.
+C'est de loin la cause la plus fréquente d'un site lent. Une photo prise avec un appareil moderne ou un smartphone pèse facilement plusieurs mégaoctets. Si votre site affiche plusieurs de ces photos en pleine résolution, le téléphone du visiteur doit tout télécharger avant de pouvoir afficher la page confortablement.
 
 ### Les solutions
 
-**Compresser vos images** : utilisez TinyPNG (tinypng.com) pour réduire le poids de vos images sans perte visible de qualité. Une photo de 3 Mo peut souvent être réduite à 200 Ko.
+**Compresser vos images** : utilisez TinyPNG (tinypng.com) pour réduire le poids de vos images sans perte visible de qualité. Une photo de plusieurs mégaoctets peut le plus souvent être ramenée à quelques centaines de kilooctets sans différence visible à l'écran.
 
-**Utiliser le format WebP** : ce format moderne développé par Google est 25-35 % plus léger que le JPEG à qualité équivalente. La plupart des navigateurs modernes le supportent.
+**Utiliser le format WebP** : ce format moderne développé par Google est sensiblement plus léger que le JPEG à qualité visuelle équivalente. Tous les navigateurs récents l'affichent, et AVIF peut aller encore plus loin pour les photos.
 
 **Adapter la taille** : une image affichée en 800 pixels de large n'a aucun besoin d'être uploadée en 4000 pixels. Redimensionnez vos images avant de les mettre en ligne.
 
 **Le lazy loading** : technique qui charge les images uniquement quand l'utilisateur les approche en scrollant, au lieu de tout charger dès l'ouverture de la page.
 
-> 💡 **Conseil Pro** : Sur WordPress, les plugins ShortPixel ou Smush compressent automatiquement toutes vos images au fur et à mesure que vous les uploadez. Une solution simple qui peut réduire votre temps de chargement de 40 % sans effort supplémentaire.
+> 💡 **Conseil Pro** : Sur WordPress, les plugins ShortPixel ou Smush compressent automatiquement toutes vos images au fur et à mesure que vous les uploadez. Une solution simple qui allège vos pages sans effort supplémentaire une fois configurée.
 
 ## Cause n°2 : Un hébergement de mauvaise qualité
 
 L'hébergement, c'est la puissance du serveur qui répond aux requêtes de votre site. Un hébergement bas de gamme, surchargé, ou géographiquement éloigné de vos visiteurs est une source majeure de lenteur.
 
-Le "Time to First Byte" (TTFB) mesure le temps entre la requête du navigateur et la première réponse du serveur. Un TTFB supérieur à 600ms indique souvent un problème d'hébergement.
+Le "Time to First Byte" (TTFB) mesure le temps entre la requête du navigateur et la première réponse du serveur. Google considère qu'un TTFB d'environ 800 millisecondes ou moins est bon ; au-delà, l'hébergement, la configuration du serveur ou une base de données mal optimisée sont les premiers suspects.
 
 ### Les solutions
 
-Passez à un hébergeur de meilleure qualité. Les hébergeurs mutualisés bon marché (parfois à 1 ou 2 euros par mois) mutualisent tellement de sites sur un même serveur que les performances sont désastreuses.
+Passez à un hébergeur de meilleure qualité. Les offres d'entrée de gamme à prix cassé entassent un très grand nombre de sites sur le même serveur : quand l'un d'eux consomme beaucoup, tous les autres ralentissent.
 
-En France, o2switch, Infomaniak, ou OVHcloud Pro offrent de bien meilleures performances pour 7 à 15 euros par mois.
+Comparez les offres de plusieurs hébergeurs reconnus (o2switch, Infomaniak, OVHcloud, par exemple) sur des critères concrets : serveurs récents, stockage rapide, cache serveur inclus, localisation des serveurs proche de vos visiteurs. Consultez les grilles tarifaires actuelles de chaque éditeur plutôt qu'un comparatif ancien, car les offres évoluent régulièrement. Un hébergement plus performant coûte un peu plus cher, mais l'écart se rattrape vite si votre site vous apporte des demandes.
 
 ## Cause n°3 : Trop de plugins ou d'extensions
 
 Si votre site est sur WordPress, chaque plugin que vous installez ajoute du code qui doit être chargé à chaque page visitée. Certains plugins ajoutent plusieurs fichiers JavaScript et CSS à chaque chargement.
 
-Avoir 30, 40, ou 50 plugins actifs est fréquent sur les sites WordPress anciens — et souvent catastrophique pour les performances.
+Voir des dizaines de plugins actifs est fréquent sur les sites WordPress anciens, installés au fil des années pour une fonction ponctuelle puis jamais retirés — et c'est souvent très pénalisant pour les performances comme pour la sécurité.
 
 ### Les solutions
 
@@ -117,6 +118,6 @@ Selon leur impact/effort :
 
 ## Conclusion
 
-Un site lent est un problème qui se corrige. Avec les bonnes optimisations, il est souvent possible de diviser le temps de chargement par 2 ou 3 en quelques jours.
+Un site lent est un problème qui se corrige. Avec les bonnes optimisations, appliquées dans l'ordre d'impact, le gain est souvent très net : on le voit sur les mesures avant/après, et surtout à l'usage sur un téléphone.
 
 Chez **Stackup Agency**, nous réalisons des audits de performance complets et appliquons les optimisations techniques pour rendre vos sites rapides et performants. Contactez-nous pour un test de vitesse gratuit de votre site.

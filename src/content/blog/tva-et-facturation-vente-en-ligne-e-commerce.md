@@ -104,7 +104,7 @@ Ces questions se rapprochent de [la propriété du site et du code source](/blog
 
 ## Combien facture une agence pour une boutique en ligne ?
 
-Le prix dépend du nombre de produits, des modes de paiement, de la livraison, de la facture automatique, des liaisons avec le stock ou la comptabilité, et de la présence d'un espace client. Chez Stackup, une boutique commence à partir de {{prix:boutique}} ; le [simulateur de tarifs](/tarifs) donne une estimation selon vos options, et le calendrier se fixe ensemble avant de commencer. Pour comprendre ce qui fait varier un devis, voir [pourquoi les devis diffèrent](/blog/devis-site-internet-pourquoi-ecarts), et pour les coûts annexes [les frais cachés de la création d'un site](/blog/frais-caches-creation-site).
+Le prix dépend du nombre de produits, des modes de paiement, de la livraison, de la facture automatique, des liaisons avec le stock ou la comptabilité, et de la présence d'un espace client. Chez Stackup, une boutique commence à partir de {{prix:boutique}} ; le [simulateur de tarifs](/tarifs) donne une estimation selon vos options, et le calendrier se fixe ensemble avant de commencer. Pour comprendre ce qui fait varier un devis, voir [pourquoi les devis diffèrent](/blog/cout-site-internet-2026), et pour les coûts annexes [les frais cachés de la création d'un site](/blog/frais-caches-creation-site).
 
 Comparez toujours ce que contient le prix : la TVA et la facture automatiques sont-elles incluses ? Les exports comptables ? Les mentions légales et conditions de vente ? Voir aussi [le service de boutique en ligne](/services/site-ecommerce).
 

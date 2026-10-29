@@ -134,4 +134,4 @@ Dépend de votre cible. Pour une clientèle française locale, le français est 
 **Faut-il un portfolio différent par type de mission ?**
 Si vous faites deux métiers très différents (photographie de mariage ET photographie de produit), deux sections distinctes clairement séparées (ou deux portfolios) convertissent mieux qu'un seul portfolio mixte qui brouille votre positionnement.
 
-Voir aussi : [tarifs agence web France](/blog/tarif-agence-web-france), [création de site multi-pages](/tarifs) et [site web pour photographe](/creation-site-internet/photographe).
+Voir aussi : [tarifs agence web France](/blog/cout-site-internet-2026), [création de site multi-pages](/tarifs) et [site web pour photographe](/creation-site-internet/photographe).

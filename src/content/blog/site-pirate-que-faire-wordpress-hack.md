@@ -103,7 +103,7 @@ La responsabilité dépend du contrat. En tant qu'éditeur du site, vous êtes r
 
 ## Comment sécuriser son site après un piratage ?
 
-Mises à jour planifiées, sauvegardes hors du serveur, comptes à droits limités, double authentification sur l'hébergement et l'administration, suppression de ce qui est inutile, surveillance de la disponibilité. L'importance de ces gestes est détaillée dans [Maintenance de site web](/blog/maintenance-site-web-guide), et le choix d'un hébergement dans [Quel hébergement choisir](/blog/paa-hebergement-site). Pour un avis sur votre site, vous pouvez [nous écrire](/contact) ou lancer l'[audit de site](/outils/audit-site).
+Mises à jour planifiées, sauvegardes hors du serveur, comptes à droits limités, double authentification sur l'hébergement et l'administration, suppression de ce qui est inutile, surveillance de la disponibilité. L'importance de ces gestes est détaillée dans [Maintenance de site web](/blog/maintenance-site-web-guide), et le choix d'un hébergement dans [Quel hébergement choisir](/blog/quel-hebergement-choisir-site-web). Pour un avis sur votre site, vous pouvez [nous écrire](/contact) ou lancer l'[audit de site](/outils/audit-site).
 
 ## Questions fréquentes
 

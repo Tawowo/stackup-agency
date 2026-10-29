@@ -3,14 +3,14 @@ title: "Google Analytics 4 pour les TPE : ce qu'il faut vraiment suivre"
 seoTitle: "Google Analytics 4 pour TPE : les rapports à suivre"
 excerpt: "GA4 déroute les petites entreprises. Voici les six rapports qui comptent pour une TPE et ce que vous pouvez ignorer. Ouvrez le vôtre avec ce guide."
 date: "2026-07-21"
-updated: "2026-07-30"
+updated: "2026-10-29"
 readTime: 7
 tag: "Marketing Digital"
 category: "marketing"
 keywords: ["Google Analytics 4 TPE", "GA4 guide", "analytics site web PME", "mesure performance site"]
 ---
 
-**Google Analytics 4 est installé sur 60% des sites web, mais moins de 20% des TPE l'utilisent réellement pour prendre des décisions.** La majorité installe le code et n'ouvre plus jamais l'interface. Ce guide identifie les 6 rapports utiles pour une TPE — le reste peut attendre.
+**Google Analytics 4 est très souvent installé sur les sites de TPE, mais rarement utilisé pour prendre des décisions.** On installe le code, puis on n'ouvre plus jamais l'interface. Ce guide identifie les 6 rapports utiles pour une TPE — le reste peut attendre.
 
 ---
 
@@ -58,7 +58,7 @@ Dans GA4 : Admin → Associations de produits → Search Console. Cette connexio
 
 **Ce qu'il vous dit :** Quelles pages attirent le plus de trafic, combien de temps les visiteurs y restent, et quel pourcentage quittent immédiatement (taux de rebond implicite).
 
-**Ce que vous cherchez :** Vos pages de service sont-elles visitées ? Si votre page d'accueil fait 80% du trafic et vos pages de service 5%, c'est un problème de navigation.
+**Ce que vous cherchez :** Vos pages de service sont-elles visitées ? Si votre page d'accueil concentre presque tout le trafic et vos pages de service presque rien, c'est un problème de navigation.
 
 ### Rapport 3 : Rapport en temps réel
 
@@ -82,7 +82,7 @@ Dans GA4 : Admin → Associations de produits → Search Console. Cette connexio
 
 **Ce qu'il vous dit :** Quelle proportion de visiteurs utilise mobile vs desktop vs tablette.
 
-**Ce que vous cherchez :** Si 70% de vos visiteurs sont sur mobile et que votre site n'est pas optimal sur mobile, vous perdez 70% de vos conversions potentielles.
+**Ce que vous cherchez :** Si la majorité de vos visiteurs est sur mobile et que votre site n'y est pas optimal, vous perdez la majorité de vos conversions potentielles.
 
 ### Rapport 6 : Localisation des visiteurs
 
@@ -111,7 +111,7 @@ Ne vous noyez pas dans les données. Un regard hebdomadaire de 10 minutes sur le
 
 GA4 est puissant mais complexe. Deux alternatives sont intéressantes pour les petites structures :
 
-**Plausible Analytics :** Simple, respect de la vie privée, conforme RGPD sans bannière de cookies nécessaire. Interface claire. 9€/mois pour un site. Idéal si vous voulez des données essentielles sans complexité.
+**Plausible Analytics :** Simple, respect de la vie privée, conforme RGPD sans bannière de cookies nécessaire. Interface claire. Service payant (consultez la grille actuelle de l'éditeur). Idéal si vous voulez des données essentielles sans complexité.
 
 **Matomo :** Open-source, auto-hébergeable, très puissant. Plus proche de GA4 en fonctionnalités. Gratuit en auto-hébergement (hébergement à payer).
 
@@ -131,7 +131,7 @@ Non, ce sont deux outils complémentaires. GA4 mesure ce qui se passe sur votre 
 Oui, même avec peu de trafic. GA4 vous dira d'où viennent ces 50 visiteurs et lesquels vous contactent. C'est l'information de base pour améliorer votre référencement ou votre contenu.
 
 **Peut-on installer GA4 sans développeur ?**
-Oui, via Google Tag Manager (GTM). Installez le code GTM sur votre site (opération unique, souvent 15 minutes), puis gérez GA4 et tous vos autres tags (Meta Pixel, Google Ads, etc.) depuis l'interface GTM sans toucher au code.
+Oui, via Google Tag Manager (GTM). Installez le code GTM sur votre site (une opération unique), puis gérez GA4 et tous vos autres tags (Meta Pixel, Google Ads, etc.) depuis l'interface GTM sans toucher au code.
 
 **GA4 fonctionne-t-il avec WordPress ?**
 Oui. Le plugin "Site Kit by Google" installe GA4, Search Console et PageSpeed Insights directement dans votre tableau de bord WordPress en quelques clics.

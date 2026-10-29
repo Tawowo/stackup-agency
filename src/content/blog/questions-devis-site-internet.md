@@ -102,4 +102,4 @@ Pour un site vitrine, oui — le devis gratuit est le standard du marché. Pour 
 
 ---
 
-*Pour aller plus loin : [Pourquoi les devis varient de 500 € à 15 000 €](/blog/devis-site-internet-pourquoi-ecarts) · [Le cahier des charges gratuit](/ressources/cahier-des-charges) · [Demander notre devis](/tarifs#estimer)*
+*Pour aller plus loin : [Pourquoi les devis varient de 500 € à 15 000 €](/blog/cout-site-internet-2026) · [Le cahier des charges gratuit](/ressources/cahier-des-charges) · [Demander notre devis](/tarifs#estimer)*

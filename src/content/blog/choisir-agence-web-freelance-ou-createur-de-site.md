@@ -46,7 +46,7 @@ Le point d'attention général : aucune de ces options n'est la « meilleure » 
 
 **Étape 1 : écrivez votre besoin.** Qui sont vos clients ? Que doit faire le site (présenter, recevoir des demandes de devis, vendre, réserver) ? Quelles pages ? Quels contenus avez-vous déjà (textes, photos, logo) ? Notre [modèle de cahier des charges](/ressources/cahier-des-charges) vous guide en une demi-heure, et l'article [contenus à fournir](/blog/contenus-a-fournir-textes-photos-logo) liste ce qu'on vous demandera.
 
-**Étape 2 : fixez un budget par ordre de grandeur.** Sans chiffrer ici, retenez que ce qui fait varier le prix est connu : nombre de pages, fonctions (boutique, réservation, espace client), rédaction et photos, référencement, maintenance. Utilisez un [estimateur de tarifs](/tarifs) pour situer un projet, et l'article [pourquoi les devis diffèrent](/blog/devis-site-internet-pourquoi-ecarts) pour comprendre les écarts.
+**Étape 2 : fixez un budget par ordre de grandeur.** Sans chiffrer ici, retenez que ce qui fait varier le prix est connu : nombre de pages, fonctions (boutique, réservation, espace client), rédaction et photos, référencement, maintenance. Utilisez un [estimateur de tarifs](/tarifs) pour situer un projet, et l'article [pourquoi les devis diffèrent](/blog/cout-site-internet-2026) pour comprendre les écarts.
 
 **Étape 3 : constituez une liste courte.** Trois prestataires maximum : un proche de chez vous ou de votre secteur, un recommandé par un confrère, un trouvé par vos recherches. Regardez leurs réalisations en ligne, pas seulement les captures d'écran.
 

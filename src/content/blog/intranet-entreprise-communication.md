@@ -2,15 +2,16 @@
 title: "Intranet d'entreprise : améliorer la communication interne"
 seoTitle: "Intranet d’entreprise : améliorer la communication interne"
 date: "2026-05-25"
+updated: "2026-10-29"
 excerpt: "Documents éparpillés, consignes transmises à l’oral : comment un intranet centralise l’information d’une petite équipe. Les fonctions utiles, les écueils."
 tag: "Applications métier"
 category: "applications-metier"
 readTime: 8
 ---
 
-2,5 heures. C'est le temps que les employés passent chaque jour en moyenne à chercher l'information nécessaire à leur travail, selon une étude McKinsey. Emails enterrés dans des boîtes de réception surchargées, documents éparpillés entre Dropbox, SharePoint, les disques locaux et les emails, procédures non documentées transmises oralement : la jungle informationnelle des entreprises coûte cher en productivité et en frustration.
+Combien de temps vos équipes passent-elles chaque jour à chercher une information : un tarif, une procédure, le dernier devis, le bon contact ? Personne ne le mesure, et c'est bien le problème. Emails enterrés dans des boîtes de réception surchargées, documents éparpillés entre Dropbox, SharePoint, les disques locaux et les emails, procédures non documentées transmises oralement : la jungle informationnelle des entreprises coûte cher en productivité et en frustration.
 
-Multiplié par le nombre d'employés et par 220 jours travaillés, c'est une quantité astronomique de temps — et d'argent — consommée par le simple fait de ne pas trouver l'information dont on a besoin pour faire son travail. Un intranet d'entreprise bien conçu peut réduire ce temps de 35 à 50 %, selon les études, tout en renforçant la cohésion d'équipe et la transmission de la culture d'entreprise.
+Multiplié par le nombre d'employés et par les jours travaillés, ce temps de recherche représente une somme de temps — et d'argent — consommée par le simple fait de ne pas trouver l'information dont on a besoin. Faites le test : chronométrez pendant une semaine le temps de recherche de deux ou trois personnes, vous aurez votre propre chiffre. Un intranet d'entreprise bien conçu réduit ce temps tout en renforçant la cohésion d'équipe et la transmission de la culture d'entreprise.
 
 ## Pourquoi c'est important en 2026
 
@@ -22,11 +23,11 @@ Les outils collaboratifs généralistes (Microsoft Teams, Slack, Google Workspac
 
 ## Les erreurs les plus courantes
 
-**Créer un intranet sans gouvernance éditoriale.** Un intranet abandonné avec des articles périmés et des documents qui n'ont pas été mis à jour depuis 3 ans est pire que l'absence d'intranet — il génère de la méfiance et de la confusion. La gouvernance éditoriale (qui publie quoi, qui valide, qui met à jour) doit être définie avant le lancement.
+**Créer un intranet sans gouvernance éditoriale.** Un intranet abandonné avec des articles périmés et des documents qui n'ont pas été mis à jour depuis des années est pire que l'absence d'intranet — il génère de la méfiance et de la confusion. La gouvernance éditoriale (qui publie quoi, qui valide, qui met à jour) doit être définie avant le lancement.
 
 **Reproduire la structure organisationnelle dans l'architecture de l'information.** Organiser l'intranet par département (RH, Finance, Commercial) est une erreur classique. Les utilisateurs cherchent de l'information par usage (je veux poser des congés, je veux savoir comment fonctionne la carte restaurant), pas par département. L'architecture de l'information doit être centrée sur les usages, pas sur l'organigramme.
 
-**Négliger le moteur de recherche.** La navigation arborescente ne suffit pas. 70 % des utilisateurs d'intranet utilisent la recherche en premier pour trouver l'information. Un moteur de recherche performant, qui comprend les synonymes et les requêtes imprécises, est indispensable.
+**Négliger le moteur de recherche.** La navigation arborescente ne suffit pas : devant un outil interne comme sur le web, le premier réflexe est de taper un mot dans la barre de recherche. Un moteur de recherche performant, qui comprend les synonymes et les requêtes imprécises, est indispensable.
 
 **Lancer sans adoption strategy.** Un intranet n'est utile que s'il est utilisé. Le lancement doit être accompagné d'une communication interne, d'une formation, et d'ambassadeurs dans chaque équipe qui encouragent et exemplifient l'utilisation.
 
@@ -53,10 +54,22 @@ Des espaces privés dédiés à chaque projet ou chaque équipe : documents part
 Un parcours d'intégration digital permet aux nouveaux arrivants de découvrir l'entreprise à leur rythme : présentation de l'équipe, valeurs de l'entreprise, procédures administratives, formations obligatoires, contacts clés. Ce parcours structuré réduit le temps d'onboarding, améliore l'expérience de la nouvelle recrue et libère du temps aux managers qui n'ont plus à répéter les mêmes informations à chaque nouvel arrivant.
 
 > **À retenir :**
-> - Les employés perdent 2,5h par jour à chercher l'information (McKinsey) — un intranet peut réduire ce temps de 35 à 50 %
+> - Le temps perdu à chercher l'information est invisible mais réel : mesurez-le avant de lancer un intranet
 > - La gouvernance éditoriale (qui publie quoi) doit être définie avant le lancement
 > - L'architecture de l'information doit être centrée sur les usages, pas sur l'organigramme
-> - Un parcours d'onboarding digital réduit le temps d'intégration de 30 % et améliore la satisfaction des nouvelles recrues
+> - Un parcours d'onboarding digital raccourcit l'intégration et évite aux managers de répéter les mêmes explications
+
+## Par où commencer quand on est une petite équipe
+
+Inutile de viser un portail complet dès le premier jour. Une démarche réaliste tient en cinq étapes :
+
+1. **Listez les dix questions** que l'équipe se pose le plus souvent (où est tel modèle de document, qui valide tel achat, comment poser un congé).
+2. **Rédigez d'abord les réponses** à ces questions, sur des pages courtes, avec un responsable de mise à jour nommé pour chacune.
+3. **Mettez en place la recherche** avant d'enrichir le contenu : un contenu introuvable est un contenu inutile.
+4. **Ouvrez à un groupe pilote** de deux ou trois personnes, recueillez leurs retours, corrigez.
+5. **Étendez progressivement** : annuaire, fil d'actualité, espaces projet, parcours d'accueil des nouveaux arrivants.
+
+Cette progression permet de juger de l'utilité de l'outil sur du concret avant d'investir davantage, et d'éviter l'intranet fantôme que personne n'ouvre.
 
 ## Conclusion
 

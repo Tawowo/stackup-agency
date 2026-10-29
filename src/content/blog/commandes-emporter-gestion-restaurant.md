@@ -3,6 +3,7 @@ title: "Commandes à emporter : comment les gérer sans se noyer"
 seoTitle: "Gérer les commandes à emporter d'un restaurant"
 excerpt: "Pics de commandes, erreurs de préparation, créneaux de retrait : comment organiser la vente à emporter de votre restaurant et choisir les bons outils."
 date: "2026-06-08"
+updated: "2026-10-29"
 readTime: 6
 tag: "Restaurants"
 category: "restaurants"
@@ -11,7 +12,7 @@ keywords: ["commandes à emporter restaurant", "click and collect restaurant", "
 
 ## La vente à emporter : opportunité ou casse-tête ?
 
-Depuis quelques années, la vente à emporter n'est plus un à-côté pour les restaurants — c'est souvent un pilier économique à part entière. Certains établissements réalisent désormais 30 à 40 % de leur chiffre d'affaires via ce canal. Mais sans organisation rigoureuse, l'afflux de commandes à emporter peut perturber le service en salle, épuiser l'équipe, et dégrader la qualité des deux côtés.
+Depuis quelques années, la vente à emporter n'est plus un à-côté pour les restaurants — c'est souvent un pilier économique à part entière. Pour certains établissements, ce canal pèse désormais une part très importante du chiffre d'affaires. Mais sans organisation rigoureuse, l'afflux de commandes à emporter peut perturber le service en salle, épuiser l'équipe, et dégrader la qualité des deux côtés.
 
 Comment tirer le meilleur de la vente à emporter sans sacrifier l'expérience de vos clients en salle ?
 
@@ -35,7 +36,7 @@ Le vendredi soir, tout le monde commande à emporter en même temps. Sans gestio
 
 ## La solution : un système de commande en ligne intégré
 
-La première chose à mettre en place, c'est un système de commande en ligne sur votre propre site web. Pas TheFork, pas Deliveroo — votre propre système, où vous gardez 100 % des revenus et 100 % des données clients.
+La première chose à mettre en place, c'est un système de commande en ligne sur votre propre site web. Pas TheFork, pas Deliveroo — votre propre système, où vous gardez la totalité de la marge (hors frais du prestataire de paiement) et la propriété de vos données clients.
 
 ### Comment ça fonctionne
 
@@ -45,7 +46,7 @@ Le client visite votre site, sélectionne ses plats depuis votre carte à emport
 
 **Zéro appel téléphonique** perturbant le service. **Zéro erreur** de commande due à une mauvaise compréhension. **Pré-paiement systématique** qui élimine les no-shows et les annulations de dernière minute. **Gestion des créneaux horaires** qui vous permet de lisser la charge en cuisine.
 
-> 💡 **Conseil Pro** : Limitez les créneaux de récupération à 2 ou 3 commandes par tranche de 15 minutes. Cela vous permet de gérer la charge en cuisine et d'assurer des délais réalistes. Les clients préfèrent savoir exactement quand venir plutôt que d'attendre dans l'incertitude.
+> 💡 **Conseil Pro** : Limitez le nombre de commandes par créneau de récupération (quelques-unes par quart d'heure, à ajuster selon la taille de votre cuisine). Cela vous permet de gérer la charge en cuisine et d'assurer des délais réalistes. Les clients préfèrent savoir exactement quand venir plutôt que d'attendre dans l'incertitude.
 
 ## Organiser la cuisine pour les deux canaux
 
@@ -56,12 +57,12 @@ Si votre cuisine a la taille minimale, réservez une zone spécifique pour la pr
 ### Définir un menu à emporter réduit et optimisé
 
 Analysez votre carte et sélectionnez les plats qui :
-- Se préparent rapidement (moins de 10 minutes idéalement)
+- Se préparent rapidement (idéalement en quelques minutes)
 - Résistent bien au transport (pas de sauces qui coulent, pas de feuilletés qui ramollissent)
 - Ont une bonne marge (inutile de vendre à perte)
 - Sont populaires (pour simplifier la gestion des stocks)
 
-Une carte de 12 à 15 plats à emporter est généralement plus rentable et plus gérable qu'une carte complète de 40 plats.
+Une carte à emporter courte, limitée aux plats qui voyagent bien, est généralement plus rentable et plus gérable qu'une reprise de la carte complète.
 
 ### Les emballages : un investissement, pas un coût
 
@@ -77,13 +78,13 @@ Les plateformes comme Deliveroo, Uber Eats, ou Just Eat apportent une visibilit�
 
 ### Le contre
 
-Les commissions sont massives : entre 25 et 35 % du montant de la commande. Sur un plat à 15 euros, vous perdez 4 à 5 euros en commission. Sur une année, pour un restaurant actif, cela peut représenter des dizaines de milliers d'euros donnés aux plateformes.
+Les commissions sont massives : elles représentent une part importante du montant de chaque commande (consultez les conditions de chaque plateforme). Rapportée à chaque plat vendu, puis cumulée sur une année d'activité, cette commission représente une somme considérable cédée aux plateformes. Faites le calcul avec votre contrat et votre volume réels.
 
 De plus, les données clients vous échappent complètement. Impossible de recontacter ces clients, de leur proposer une offre spéciale, ou de les fidéliser directement.
 
 ### La stratégie recommandée
 
-Utilisez les plateformes pour la visibilité initiale, mais travaillez en parallèle à développer votre propre canal de commande. Proposez des avantages exclusifs (remise de 10 %, bonus fidélité) sur votre site pour inciter vos clients des plateformes à commander directement chez vous. Progressivement, l'équilibre se rééquilibre en votre faveur.
+Utilisez les plateformes pour la visibilité initiale, mais travaillez en parallèle à développer votre propre canal de commande. Proposez des avantages exclusifs (une remise, un bonus fidélité) sur votre site pour inciter vos clients des plateformes à commander directement chez vous. Progressivement, l'équilibre se rééquilibre en votre faveur.
 
 ## Communiquer sur votre service à emporter
 

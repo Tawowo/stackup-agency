@@ -121,4 +121,4 @@ Pour des contenus génériques de bas niveau, partiellement. Pour des articles d
 **Comment sécuriser mes données avec les outils IA ?**
 Ne partagez pas de données clients, de contrats confidentiels, ou d'informations financières sensibles avec des outils IA grand public (ChatGPT, Gemini). Ces données peuvent être utilisées pour l'entraînement des modèles. Pour des usages professionnels sensibles, des solutions on-premise (Mistral self-hosted) existent.
 
-Voir aussi : [ChatGPT dans les résultats Google](/blog/chatgpt-apparence-resultats-google), [AI Overviews et SEO pour TPE](/blog/ai-overviews-seo-tpe) et nos [services de rédaction blog SEO](/services/referencement).
+Voir aussi : [ChatGPT dans les résultats Google](/blog/seo-ia-generative-ai-overviews-google), [AI Overviews et SEO pour TPE](/blog/seo-ia-generative-ai-overviews-google) et nos [services de rédaction blog SEO](/services/referencement).

@@ -56,7 +56,7 @@ Faites le test : cherchez votre métier avec votre ville depuis un téléphone, 
 
 ### Comment faire son référencement local soi-même ?
 
-Les étapes 1, 2, 4, 5 et 7 se font sans prestataire. L'étape 3 se fait seul sur une plateforme simple si le besoin est limité. Un prestataire devient utile pour la structure du site, les pages locales et le suivi. Pour la répartition entre ce qui est gratuit et payant, voir [le SEO local gratuit](/blog/paa-seo-local-gratuit) et [le coût du SEO local](/blog/seo-local-commerce).
+Les étapes 1, 2, 4, 5 et 7 se font sans prestataire. L'étape 3 se fait seul sur une plateforme simple si le besoin est limité. Un prestataire devient utile pour la structure du site, les pages locales et le suivi. Pour la répartition entre ce qui est gratuit et payant, voir [le SEO local gratuit](/blog/seo-local-gratuit-actions-a-faire-soi-meme) et [le coût du SEO local](/blog/seo-local-commerce).
 
 ## Mon adresse est différente selon les sites : que faire ?
 
@@ -113,7 +113,7 @@ Pour une activité française et locale, un `.fr` est cohérent : il signale cla
 
 ## Référencement local par métier : ce qui change
 
-**Artisan du bâtiment.** Le client cherche un dépannage ou un devis dans un rayon précis, souvent avec urgence. La fiche Google avec zone de service, les photos de chantiers, les avis et les pages par type de travaux comptent plus que la décoration du site. Voir [le SEO pour artisan du bâtiment](/blog/seo-artisan-batiment).
+**Artisan du bâtiment.** Le client cherche un dépannage ou un devis dans un rayon précis, souvent avec urgence. La fiche Google avec zone de service, les photos de chantiers, les avis et les pages par type de travaux comptent plus que la décoration du site. Voir [le SEO pour artisan du bâtiment](/blog/seo-local-artisan-batiment-2026).
 
 **Commerçant de centre-ville.** Les horaires, l'accessibilité, le stationnement, les produits en stock et les événements pèsent beaucoup. Une boutique de quartier gagne à avoir un site même simple : il répond aux questions pratiques et donne une adresse stable aux annuaires.
 

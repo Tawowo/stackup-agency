@@ -3,6 +3,7 @@ title: "Personal branding : pourquoi votre image en ligne compte"
 seoTitle: "Personal branding : soigner son image en ligne"
 excerpt: "Vos prospects vous cherchent sur Google avant de vous appeler. Les quatre piliers d'un personal branding solide, les plateformes et les erreurs à éviter."
 date: "2026-05-16"
+updated: "2026-10-29"
 readTime: 6
 tag: "Entrepreneuriat"
 category: "entrepreneuriat"
@@ -27,7 +28,7 @@ Pour un entrepreneur, un freelance, ou tout professionnel indépendant, un perso
 
 ### Les décisions se prennent avant le premier contact
 
-Quand un prospect potentiel cherche un consultant, un prestataire, ou un partenaire, il élimine 80 % des candidats avant même de les contacter. Il cherche des signaux de confiance et d'expertise : une présence en ligne professionnelle, des témoignages clients, du contenu qui démontre une vraie compétence.
+Quand un prospect potentiel cherche un consultant, un prestataire, ou un partenaire, il écarte une grande partie des candidats avant même de les contacter. Il cherche des signaux de confiance et d'expertise : une présence en ligne professionnelle, des témoignages clients, du contenu qui démontre une vraie compétence.
 
 Si votre présence en ligne est inexistante ou désordonnée, vous n'existez pas dans ce processus de présélection.
 
@@ -52,7 +53,7 @@ Avant de communiquer quoi que ce soit, définissez clairement votre territoire. 
 
 Un positionnement flou génère une image floue. Plus vous êtes précis, plus vous parlez directement aux bonnes personnes.
 
-> 💡 **Conseil Pro** : Ne cherchez pas à plaire à tout le monde. Un positionnement qui parle spécifiquement à une niche précise est infiniment plus efficace qu'un positionnement généraliste. "Je suis consultant en marketing" est oubliable. "J'aide les restaurateurs indépendants à doubler leur taux de remplissage grâce au digital" est mémorable.
+> 💡 **Conseil Pro** : Ne cherchez pas à plaire à tout le monde. Un positionnement qui parle spécifiquement à une niche précise est infiniment plus efficace qu'un positionnement généraliste. "Je suis consultant en marketing" est oubliable. "J'aide les restaurateurs indépendants à remplir leur salle grâce au digital" est mémorable.
 
 ### 2. La cohérence visuelle et éditoriale
 
@@ -86,7 +87,7 @@ Votre personnalité réelle — y compris vos doutes, vos erreurs passées, votr
 
 Si vous ciblez des entreprises, LinkedIn est incontournable. Publiez des articles sur votre expertise, participez aux discussions dans votre secteur, commentez les publications influentes. Objectif : devenir une voix reconnue dans votre domaine.
 
-Fréquence recommandée : 2 à 4 posts par semaine + 10 à 15 commentaires pertinents par semaine.
+Fréquence : choisissez un rythme que vous pouvez tenir (quelques publications et quelques commentaires pertinents par semaine). La régularité compte plus que le volume.
 
 ### Instagram — pour les métiers visuels et le B2C
 
@@ -100,7 +101,7 @@ Toutes vos plateformes sociales doivent converger vers votre site web : votre es
 
 **Publier de manière irrégulière** : trois posts en une semaine, puis le silence pendant un mois. L'audience se désengage et les algorithmes vous pénalisent.
 
-**Parler de soi en permanence** : le personal branding, c'est donner de la valeur à votre audience, pas vous mettre en scène sans cesse. La règle : 80 % de contenu utile pour votre audience, 20 % sur vous.
+**Parler de soi en permanence** : le personal branding, c'est donner de la valeur à votre audience, pas vous mettre en scène sans cesse. La règle : la grande majorité de votre contenu doit être utile à votre audience, et une minorité seulement parler de vous.
 
 **Chercher la perfection** : attendre d'avoir le "parfait" article ou la "parfaite" photo avant de publier. La constance bat la perfection.
 
@@ -115,6 +116,6 @@ Toutes vos plateformes sociales doivent converger vers votre site web : votre es
 
 ## Conclusion
 
-Votre image en ligne est un actif professionnel. Elle se construit avec du temps et de la régularité, mais les résultats sont exponentiels : plus vous êtes visible et cohérent, plus les opportunités viennent à vous naturellement.
+Votre image en ligne est un actif professionnel. Elle se construit avec du temps et de la régularité, mais les résultats s'accumulent : plus vous êtes visible et cohérent, plus les opportunités viennent à vous naturellement.
 
 Chez **Stackup Agency**, nous aidons les entrepreneurs à construire leur présence en ligne de manière cohérente et professionnelle : site web personnel, stratégie de contenu, optimisation des profils. Commençons à travailler votre image ensemble.

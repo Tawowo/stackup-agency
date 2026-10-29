@@ -69,7 +69,7 @@ export default function VotreCommune({ communes, telephone, lienTel }: { commune
                 : `Distance indicative depuis Savigné-sur-Lathan : environ ${exacte.km} km par la route jusqu’au centre de la zone. Rendez-vous ${exacte.surPlace ? 'sur place possible, ou en visio, au choix' : 'en visio, avec un déplacement possible pour une étape clé'}.`}
             </p>
             <p className="su-commune__actions">
-              <a href={lienTel}>Appeler le {telephone}</a> · <Link href="/contact?objet=demo">Demander ma démo</Link> · <Link href={`/zones-intervention/${exacte.zone}`}>Voir la zone</Link>
+              <a href={lienTel}>Appeler le {telephone}</a> · <Link href="/contact?a=demo">Demander ma démo</Link> · <Link href={`/zones-intervention/${exacte.zone}`}>Voir la zone</Link>
             </p>
           </div>
         )}

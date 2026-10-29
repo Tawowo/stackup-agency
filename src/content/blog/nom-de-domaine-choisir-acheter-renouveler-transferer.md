@@ -49,7 +49,7 @@ Gandi et OVHcloud sont deux acteurs français très connus. Un registrar se juge
 - **Les options incluses** : redirection d'e-mail, boîtes de messagerie, certificat.
 - **La facilité à partir** : l'export de la configuration et le code de transfert doivent être simples à obtenir.
 
-Comparer deux registrars, c'est comparer ces six lignes, pas des slogans. Si votre site est hébergé ailleurs, l'hébergeur et le registrar peuvent être deux sociétés différentes, c'est même conseillé : si l'un pose problème, vous gardez l'autre. Pour l'hébergement, voyez [Quel hébergement choisir pour son site web](/blog/paa-hebergement-site).
+Comparer deux registrars, c'est comparer ces six lignes, pas des slogans. Si votre site est hébergé ailleurs, l'hébergeur et le registrar peuvent être deux sociétés différentes, c'est même conseillé : si l'un pose problème, vous gardez l'autre. Pour l'hébergement, voyez [Quel hébergement choisir pour son site web](/blog/quel-hebergement-choisir-site-web).
 
 ## C'est quoi le DNS, et qu'est-ce qu'une zone DNS ?
 

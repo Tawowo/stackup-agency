@@ -205,7 +205,7 @@ Une refonte est le moment le plus risqué. Pour ne pas perdre vos positions :
 4. **Testez la nouvelle boutique avant la mise en ligne**: pages indexables, sitemap, redirections, données structurées.
 5. **Surveillez la Search Console** les semaines suivantes.
 
-Le sujet est traité en détail dans [Refonte de site et SEO : redirections 301](/blog/refonte-site-web-seo-redirections-301). Si vous envisagez une boutique conçue pour votre activité plutôt qu'un modèle générique, la page [Site e-commerce](/services/site-ecommerce) détaille notre démarche.
+Le sujet est traité en détail dans [Refonte de site et SEO : redirections 301](/blog/refonte-site-web-guide). Si vous envisagez une boutique conçue pour votre activité plutôt qu'un modèle générique, la page [Site e-commerce](/services/site-ecommerce) détaille notre démarche.
 
 ## Questions fréquentes
 

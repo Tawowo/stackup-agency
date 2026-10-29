@@ -14,7 +14,7 @@ sources: ["https://developers.google.com", "https://www.impots.gouv.fr"]
 
 **Refaites votre site quand les réparations coûtent plus cher que le neuf, ou quand il ne sait plus faire ce que vos clients attendent : s'afficher correctement sur téléphone, rassurer, donner envie d'appeler ou de réserver. Dans tous les autres cas, une remise à niveau suffit et coûte moins cher.**
 
-Les articles sur la refonte listent en général des signaux d'alerte, un budget ou des étapes SEO. Celui-ci répond à une autre question, plus simple : dans votre cas précis, faut-il réparer, moderniser ou tout reprendre, et dans quel ordre ? Pour le détail des signaux, du budget et des redirections, vous pouvez compléter avec [les 7 signaux qu'il est temps de changer](/blog/refonte-site-web-quand-pourquoi), [le budget et le planning d'une refonte](/blog/refonte-site-web-budget) et [la refonte sans perdre son SEO](/blog/refonte-site-web-seo-redirections-301).
+Les articles sur la refonte listent en général des signaux d'alerte, un budget ou des étapes SEO. Celui-ci répond à une autre question, plus simple : dans votre cas précis, faut-il réparer, moderniser ou tout reprendre, et dans quel ordre ? Pour le détail des signaux, du budget et des redirections, vous pouvez compléter avec [les 7 signaux qu'il est temps de changer](/blog/refonte-site-web-guide), [le budget et le planning d'une refonte](/blog/refonte-site-web-guide) et [la refonte sans perdre son SEO](/blog/refonte-site-web-guide).
 
 ## Comment savoir si mon site est obsolète ?
 
@@ -94,7 +94,7 @@ Deux solutions, à combiner :
 - **Conserver la même adresse** pour les pages qui comptent, chaque fois que c'est possible ;
 - **Rediriger** les anciennes adresses vers les nouvelles par une redirection permanente (dite 301), page par page, en évitant d'envoyer tout vers l'accueil.
 
-Faites la liste des anciennes URL avant la bascule, associez chacune à sa nouvelle page, et contrôlez après la mise en ligne. [Google documente cette opération](https://developers.google.com/search) dans ses recommandations pour changer d'URL. Pour le détail, voir [la refonte sans perdre son SEO](/blog/refonte-site-web-seo-redirections-301), et si vous constatez des pages en erreur après coup, [les erreurs 404 et le SEO](/blog/erreurs-404-seo-guide).
+Faites la liste des anciennes URL avant la bascule, associez chacune à sa nouvelle page, et contrôlez après la mise en ligne. [Google documente cette opération](https://developers.google.com/search) dans ses recommandations pour changer d'URL. Pour le détail, voir [la refonte sans perdre son SEO](/blog/refonte-site-web-guide), et si vous constatez des pages en erreur après coup, [les erreurs 404 et le SEO](/blog/erreurs-404-seo-guide).
 
 ## Mon site parle encore de mon ancienne adresse : comment corriger ?
 

@@ -98,7 +98,7 @@ Pour fixer la méthode et le prix d'un projet, un [site vitrine](/services/site-
 C'est l'élément qui compte le plus pour un artisan ou un commerçant. Le principe technique est simple : un lien de type « téléphone » plutôt qu'un simple texte. En code, il s'écrit ainsi :
 
 ```html
-<a href="tel:+33123456789">Appeler</a>
+<a href="tel:+33XXXXXXXXX">Appeler</a>
 ```
 
 Le numéro est écrit au format international (sans le zéro initial, précédé de +33 pour la France). Sur téléphone, un toucher lance l'appel. Sur ordinateur, le lien ne sert à rien : mieux vaut alors afficher le numéro en toutes lettres.

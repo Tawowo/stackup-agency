@@ -3,14 +3,14 @@ title: "Vitesse mobile : comment accélérer votre site sur smartphone"
 seoTitle: "Vitesse mobile : accélérer son site sur smartphone"
 excerpt: "Un site rapide sur ordinateur peut être lent en 4G. Mesurez votre vitesse mobile et appliquez les six optimisations prioritaires, selon votre type de site."
 date: "2026-07-24"
-updated: "2026-07-30"
+updated: "2026-10-29"
 readTime: 7
 tag: "Performance Web"
 category: "technique"
 keywords: ["vitesse mobile site web", "optimiser site smartphone", "Core Web Vitals mobile", "LCP mobile amélioration"]
 ---
 
-**Un site qui charge en 3 secondes sur desktop peut mettre 8 secondes sur mobile 4G.** Selon Google, 53% des visiteurs mobiles quittent un site qui met plus de 3 secondes à charger. C'est plus de la moitié de votre trafic potentiel perdu avant même que vos visiteurs voient votre contenu.
+**Un site rapide sur ordinateur, sur une connexion fibre, peut se révéler bien plus lent sur un mobile en 4G.** Le processeur du téléphone est moins puissant, le réseau est moins stable, et c'est pourtant sur cet appareil que beaucoup de vos visiteurs vous découvrent. Un visiteur qui attend devant une page vide est un visiteur qui risque de repartir avant d'avoir vu votre contenu, et vous ne le saurez jamais.
 
 ---
 
@@ -21,7 +21,7 @@ Avant d'optimiser, mesurez. Deux outils gratuits :
 **Google PageSpeed Insights (pagespeed.web.dev) :**
 - Testez l'URL de votre page d'accueil ET vos pages de service
 - L'onglet "Mobile" est le plus important — c'est ce que Google mesure pour le classement
-- Score < 50 : urgent, > 75 : acceptable, > 90 : excellent
+- Barème de Lighthouse repris par l'outil : de 90 à 100, bon ; de 50 à 89, à améliorer ; en dessous de 50, faible
 
 **Google Search Console → Core Web Vitals :**
 - Données réelles de vos visiteurs (pas un test en laboratoire)
@@ -34,11 +34,11 @@ Avant d'optimiser, mesurez. Deux outils gratuits :
 
 ### 1. Images au format WebP et dimensions adaptées
 
-Les images sont responsables de 60 à 80% du poids des pages web. Sur mobile, des images trop lourdes sont le problème n°1.
+Les images représentent généralement la plus grande part du poids d'une page web. Sur mobile, des images trop lourdes sont le problème n°1.
 
 **Actions :**
-- Convertissez vos images en WebP (2 à 3 fois plus léger que JPEG à qualité identique)
-- Sur mobile, une image "pleine largeur" fait 390px de large — inutile d'envoyer une image de 2000px
+- Convertissez vos images en WebP (nettement plus léger que le JPEG à qualité visuelle comparable)
+- Sur mobile, une image "pleine largeur" fait de l'ordre de 400 pixels de large — inutile d'envoyer une image de 2000 pixels
 - Utilisez l'attribut `srcset` pour servir la bonne taille selon l'écran
 - Ajoutez `loading="lazy"` sur toutes les images sauf la première visible
 
@@ -62,19 +62,19 @@ Le cache permet au navigateur de stocker les fichiers (CSS, JS, images) lors de 
 
 **Pour WordPress :**
 - Plugin WP Rocket (payant, le meilleur), WP Super Cache ou W3 Total Cache (gratuits)
-- Ces plugins activent aussi la compression Gzip/Brotli, qui réduit la taille des fichiers CSS/JS de 70%
+- Ces plugins activent aussi la compression Gzip/Brotli, qui réduit sensiblement la taille des fichiers CSS/JS transférés
 
 **CDN (Content Delivery Network) :**
 Un CDN distribue vos fichiers depuis des serveurs proches de vos visiteurs. Pour un site français avec des visiteurs en France, Cloudflare (gratuit pour l'essentiel) suffit.
 
 ### 4. Optimiser le LCP (Largest Contentful Paint)
 
-Le LCP est le temps d'affichage de l'élément principal de la page — souvent votre image hero ou votre titre H1. Google considère un LCP < 2,5 secondes comme "bon".
+Le LCP est le temps d'affichage de l'élément principal de la page — souvent votre image hero ou votre titre H1. Google considère un LCP inférieur ou égal à 2,5 secondes comme "bon".
 
 **Sur mobile, les causes fréquentes de LCP lent :**
 - Image hero trop lourde ou au mauvais format
 - Image hero chargée en "lazy" (ne faites pas ça — la première image doit charger immédiatement)
-- Hébergement lent avec TTFB (Time to First Byte) > 600ms
+- Hébergement lent avec un TTFB (Time to First Byte) supérieur à environ 800 millisecondes, seuil au-delà duquel Google ne le juge plus bon
 
 **Actions :**
 - Précachez votre image hero avec `<link rel="preload" as="image">`
@@ -83,12 +83,12 @@ Le LCP est le temps d'affichage de l'élément principal de la page — souvent 
 
 ### 5. Réduire le poids du CSS et JavaScript
 
-Un site WordPress avec 15 plugins peut charger 20 fichiers CSS et 30 fichiers JavaScript. Sur mobile, chaque requête HTTP coûte du temps.
+Un site WordPress qui accumule les plugins peut charger des dizaines de fichiers CSS et JavaScript. Sur mobile, chaque requête HTTP coûte du temps.
 
 **Optimisations :**
 - Concaténez les fichiers CSS en un seul (WP Rocket le fait automatiquement)
 - Supprimez le CSS inutilisé — des outils comme PurgeCSS analysent votre HTML et suppriment les classes non utilisées
-- Minifiez vos fichiers (suppression des espaces, commentaires) — gain de 15 à 30% sur la taille
+- Minifiez vos fichiers (suppression des espaces et commentaires) — un gain sur la taille, à coût nul pour le visiteur
 
 ### 6. Optimiser l'affichage mobile spécifiquement
 
@@ -121,7 +121,7 @@ Un problème de vitesse mobile peut venir du design lui-même :
 ## FAQ
 
 **Mon score PageSpeed Insights est 45 sur mobile. C'est grave ?**
-Oui, c'est un problème à corriger. Un score de 45 indique des problèmes significatifs de performance mobile qui affectent à la fois votre taux de rebond et votre référencement Google. Commencez par les images (souvent le gain le plus rapide) puis les scripts bloquants.
+Oui, c'est un problème à corriger. Un score inférieur à 50 est classé « faible » par Lighthouse et indique des problèmes significatifs de performance mobile qui affectent à la fois votre taux de rebond et votre référencement Google. Commencez par les images (souvent le gain le plus rapide) puis les scripts bloquants.
 
 **Les Core Web Vitals sont-ils vraiment un facteur de classement Google ?**
 Oui, depuis 2021. Mais l'impact est relatif — un site très lent avec un excellent contenu peut quand même se classer. Les CWV deviennent décisifs quand deux sites sont à qualité de contenu égale. Ne négligez pas les CWV mais ne sacrifiez pas la qualité du contenu pour un gain de quelques points.
@@ -130,7 +130,7 @@ Oui, depuis 2021. Mais l'impact est relatif — un site très lent avec un excel
 Testez au minimum : page d'accueil, vos 3 pages de service principales, et une page de blog. Les problèmes peuvent varier d'une page à l'autre (une page avec beaucoup d'images sera plus lente qu'une page de texte).
 
 **Les vidéos en arrière-plan ralentissent-elles vraiment le site ?**
-Oui, massivement. Une vidéo en autoplay en arrière-plan peut ajouter 5 à 20 secondes de chargement sur mobile 4G. Si vous voulez une vidéo hero, utilisez une image statique sur mobile et chargez la vidéo uniquement sur desktop (via media queries CSS ou JavaScript).
+Oui, souvent beaucoup. Une vidéo en autoplay en arrière-plan alourdit fortement le chargement sur mobile 4G. Si vous voulez une vidéo hero, utilisez une image statique sur mobile et chargez la vidéo uniquement sur desktop (via media queries CSS ou JavaScript).
 
 **Quelle est la différence entre vitesse mobile réelle et score PageSpeed Insights ?**
 PageSpeed Insights simule un mobile milieu de gamme sur réseau 4G lent. Vos utilisateurs réels peuvent avoir des appareils plus rapides — mais aussi plus lents. Le score est une estimation de la performance dans des conditions standard, utile pour comparer et suivre vos progrès.

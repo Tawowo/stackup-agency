@@ -217,6 +217,12 @@ export default function Page() {
             <Link className="su-res__lien" href="/faq">
               Questions fréquentes
             </Link>
+            <Link className="su-res__lien" href="/comparatif/squarespace-jimdo-ou-site-sur-mesure">
+              Squarespace, Jimdo ou sur mesure
+            </Link>
+            <Link className="su-res__lien" href="/comparatif">
+              Tous les comparatifs
+            </Link>
           </div>
         </div>
       </Document>

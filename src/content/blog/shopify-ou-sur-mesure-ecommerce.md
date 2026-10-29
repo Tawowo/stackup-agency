@@ -1,8 +1,9 @@
 ---
 title: "Shopify vs boutique sur mesure : le calcul sur 3 ans"
 seoTitle: "Shopify ou boutique sur mesure : le calcul sur trois ans"
-excerpt: "Abonnement, commissions, frais de paiement face à une boutique sur mesure qui vous appartient : le calcul détaillé sur trois ans pour choisir sans angle mort."
+excerpt: "Abonnement, commissions, applications face à une boutique sur mesure qui vous appartient : comment calculer sur trois ans pour choisir sans angle mort."
 date: "2026-08-17"
+updated: "2026-10-29"
 publishAt: "2026-11-04"
 readTime: 8
 tag: "E-commerce"
@@ -10,43 +11,50 @@ category: "ecommerce"
 keywords: ["shopify ou sur mesure", "shopify vs sur mesure", "prix shopify", "alternative shopify"]
 ---
 
-**Shopify coûte entre 29 $ et 299 $/mois selon le plan, plus 0,5 % à 2 % de commission sur chaque vente en plus des frais de paiement — une boutique sur mesure s'achète une fois, à partir de {{prix:boutique}} €, sans commission sur les ventes.** Sur un volume de vente modeste, Shopify reste compétitif. Dès que le chiffre d'affaires grandit, les commissions cumulées peuvent dépasser largement le coût d'une boutique sur mesure amortie sur plusieurs années.
+**Shopify facture un abonnement mensuel qui varie selon le plan, des frais de paiement et, selon les cas, une commission sur les ventes, auxquels s'ajoutent souvent des applications payantes ; une boutique sur mesure s'achète une fois, à partir de {{prix:boutique}} €, sans commission sur les ventes.** Sur un volume de vente modeste, Shopify reste compétitif. Dès que le chiffre d'affaires grandit, les coûts récurrents cumulés peuvent dépasser largement le coût d'une boutique sur mesure amortie sur plusieurs années. Les tarifs de Shopify changeant régulièrement, cet article vous donne la méthode de calcul plutôt qu'une photo périmée : consultez la grille actuelle de l'éditeur et refaites le calcul avec vos propres chiffres.
 
 ## Comment Shopify facture réellement une boutique
 
-Shopify combine deux coûts distincts, souvent sous-estimés au moment du choix : l'abonnement mensuel fixe (29 $ à 299 $ selon le plan Basic, Shopify ou Advanced) et une commission variable sur chaque transaction, sauf si le commerçant utilise exclusivement Shopify Payments — auquel cas la commission de transaction disparaît, mais les frais de paiement classiques (environ 2,9 % + 0,30 $ par transaction en carte) restent dus dans tous les cas.
+Shopify combine plusieurs coûts distincts, souvent sous-estimés au moment du choix :
 
-À cela s'ajoutent fréquemment des applications tierces payantes pour combler les manques natifs de Shopify : gestion avancée des avis clients, programme de fidélité, outils SEO poussés, automatisation email. Une boutique Shopify équipée correctement dépasse souvent 100 à 150 $/mois tous frais confondus, avant même de compter les commissions sur les ventes.
+- **L'abonnement mensuel fixe**, qui dépend du plan choisi (les plans supérieurs ouvrent des fonctions et des conditions plus avantageuses).
+- **Des frais de paiement** par transaction, dus quelle que soit la plateforme, car ils rémunèrent le prestataire de paiement.
+- **Une commission éventuelle sur les ventes**, qui dépend du plan et du moyen de paiement utilisé, et qui peut être supprimée si le commerçant passe exclusivement par la solution de paiement de la plateforme.
+- **Des applications tierces payantes**, fréquemment nécessaires pour combler les manques natifs : gestion avancée des avis clients, programme de fidélité, outils SEO poussés, automatisation e-mail. Chacune se facture souvent à l'abonnement, et leur somme finit par peser plus lourd que prévu.
 
-## Le calcul sur 3 ans : deux scénarios
+La vraie difficulté n'est pas l'un de ces postes pris isolément, mais leur cumul mois après mois, sans jamais s'arrêter tant que la boutique est en ligne.
 
-### Scénario 1 : petite boutique, 3 000 €/mois de chiffre d'affaires
+## Le calcul sur 3 ans : la méthode
 
-| Poste | Shopify (plan Basic) | Boutique sur mesure |
+Voici comment comparer honnêtement les deux options sur 36 mois. Remplacez chaque terme par les tarifs publiés au moment de votre décision, et par vos propres volumes de vente.
+
+| Poste | Shopify | Boutique sur mesure |
 |---|---|---|
-| Abonnement mensuel | 29 $ (~27 €) | Facultatif, sans engagement |
-| Frais de paiement (~3 %) | ~90 €/mois | ~90 €/mois (identiques, indépendants de la plateforme) |
-| Applications tierces | ~30 €/mois en moyenne | 0 € (fonctionnalités incluses) |
-| Coût de création | 0 € | À partir de {{prix:boutique}} € |
-| **Total sur 3 ans** | **~5 292 €** | **Achat unique, puis abonnement facultatif** |
+| Abonnement plateforme | Abonnement mensuel × 36 | Facultatif, sans engagement |
+| Applications tierces | Somme mensuelle des applications × 36 | Fonctionnalités développées pour le projet |
+| Commission éventuelle | Chiffre d'affaires sur 3 ans × taux applicable | Aucune |
+| Frais de paiement | Identiques : à exclure de la comparaison | Identiques : à exclure de la comparaison |
+| Coût de création | Thème et paramétrage à prévoir | À partir de {{prix:boutique}} € |
+| **Nature du coût** | **Récurrent, croissant avec les ventes et les applications** | **Achat unique, puis abonnement facultatif** |
 
-### Scénario 2 : boutique établie, 15 000 €/mois de chiffre d'affaires
+Pour en tirer une décision, calculez le point d'équilibre :
 
-| Poste | Shopify (plan Shopify) | Boutique sur mesure |
-|---|---|---|
-| Abonnement mensuel | 79 $ (~73 €) | Facultatif, sans engagement |
-| Frais de paiement (~3 %) | ~450 €/mois | ~450 €/mois |
-| Applications tierces | ~60 €/mois en moyenne | 0 € |
-| Coût de création | 0 € | À partir de {{prix:boutique}} € |
-| **Total sur 3 ans** | **~21 228 €** | **Achat unique, puis abonnement facultatif** |
+**Point d'équilibre (en mois) = prix de la boutique sur mesure ÷ (coût mensuel total côté Shopify − coût mensuel de l'abonnement facultatif choisi côté sur mesure).**
 
-Les frais de paiement (autour de 3 %) existent quelle que soit la plateforme choisie — ils rémunèrent la banque ou le prestataire de paiement, pas Shopify. La vraie différence se joue sur l'abonnement mensuel et les applications tierces, qui s'accumulent chaque mois sans jamais s'arrêter côté Shopify.
+Exemple de raisonnement, avec des chiffres fictifs uniquement pour illustrer la mécanique : si la boutique sur mesure coûte l'équivalent de dix mensualités de la plateforme (applications comprises), alors elle est remboursée au bout de dix mois d'exploitation, et tous les mois suivants sont à son avantage. Si elle en coûte soixante, vous ne la rentabiliserez qu'au bout de cinq ans, et Shopify est probablement le bon choix. Tout dépend donc de deux inconnues que vous connaissez mieux que nous : votre facture mensuelle actuelle ou prévue côté plateforme, et le temps pendant lequel vous comptez exploiter la boutique.
+
+Deux situations types montrent comment le résultat varie :
+
+- **Petite boutique qui démarre**, avec un chiffre d'affaires encore modeste : l'abonnement de base et quelques applications restent supportables, le point d'équilibre est lointain, et tester le marché sur Shopify est défendable.
+- **Boutique établie**, avec un chiffre d'affaires régulier : les plans supérieurs, les applications et les éventuelles commissions grossissent avec le succès, le point d'équilibre se rapproche, et le sur mesure devient plus rentable.
+
+Les frais de paiement existent quelle que soit la plateforme choisie — ils rémunèrent la banque ou le prestataire de paiement, pas Shopify. La vraie différence se joue sur l'abonnement mensuel et les applications tierces, qui s'accumulent chaque mois côté Shopify.
 
 ## Ce que Shopify fait vraiment bien
 
-**La mise en ligne rapide.** Une boutique basique peut être opérationnelle en quelques jours, avec un catalogue de thèmes prêts à l'emploi.
+**La mise en ligne rapide.** Une boutique basique peut être opérationnelle rapidement, avec un catalogue de thèmes prêts à l'emploi.
 
-**L'écosystème d'applications.** Plus de 8 000 applications couvrent presque tous les besoins additionnels : avis clients, upsell, fidélité, marketing automation.
+**L'écosystème d'applications.** Un très large catalogue d'applications couvre presque tous les besoins additionnels : avis clients, upsell, fidélité, marketing automation.
 
 **La fiabilité technique.** L'infrastructure Shopify est robuste, pensée pour absorber des pics de trafic sans intervention technique du commerçant.
 
@@ -72,19 +80,19 @@ Pour un lancement rapide qui doit tester un marché avant tout investissement st
 
 ## Quand une boutique sur mesure devient plus rentable
 
-Dès que le volume de vente dépasse quelques milliers d'euros par mois de façon stable, l'accumulation des coûts Shopify (abonnement + applications) dépasse généralement le coût d'une boutique sur mesure amortie sur 2 à 3 ans. C'est particulièrement vrai pour un commerce local ou une activité artisanale qui vend en ligne comme complément d'un point de vente physique, sans besoin de la complexité internationale de Shopify.
+Dès que le volume de vente devient régulier et significatif, l'accumulation des coûts Shopify (abonnement + applications + commissions éventuelles) peut dépasser le coût d'une boutique sur mesure amortie sur plusieurs années : c'est le point d'équilibre calculé plus haut qui tranche. C'est particulièrement vrai pour un commerce local ou une activité artisanale qui vend en ligne comme complément d'un point de vente physique, sans besoin de la complexité internationale de Shopify.
 
 ## En résumé
 
-- Shopify coûte 29 $ à 299 $/mois plus des commissions variables et des applications tierces qui s'accumulent chaque mois.
+- Shopify facture un abonnement mensuel selon le plan, plus des commissions éventuelles et des applications tierces qui s'accumulent chaque mois.
 - Une boutique sur mesure s'achète une fois, à partir de {{prix:boutique}} €, sans commission additionnelle au-delà des frais de paiement bancaires standards ; l'abonnement qui s'y ajoute est facultatif et sans engagement.
-- Sur un volume de vente de 3 000 à 15 000 €/mois, le coût Shopify cumulé sur 3 ans devient élevé, alors que la boutique sur mesure reste un achat unique, puis un abonnement facultatif.
+- Pour savoir quand la boutique sur mesure devient plus rentable, calculez votre point d'équilibre avec les tarifs actuels et votre volume de vente réel.
 - Shopify garde du sens pour un lancement rapide à l'international ; le sur mesure devient plus rentable dès que le volume de vente se stabilise.
 
 ## Questions fréquentes
 
 **Les frais de paiement sont-ils différents entre Shopify et une boutique sur mesure ?**
-Non, les frais de paiement (autour de 2,9 % + 0,30 € par transaction) sont fixés par le prestataire de paiement (banque, Shopify Payments ou équivalent), pas par la plateforme e-commerce elle-même.
+Non, les frais de paiement sont fixés par le prestataire de paiement (banque, Shopify Payments ou équivalent), pas par la plateforme e-commerce elle-même.
 
 **Shopify est-il plus simple à gérer au quotidien qu'une boutique sur mesure ?**
 L'interface Shopify est pensée pour l'autonomie complète. Une boutique sur mesure bien conçue peut offrir un niveau d'autonomie équivalent via une interface d'administration dédiée, sans les limites de structure imposées par Shopify.
@@ -93,7 +101,7 @@ L'interface Shopify est pensée pour l'autonomie complète. Une boutique sur mes
 Oui, le catalogue produit, les images et les données clients s'exportent en CSV et peuvent être réimportés dans la nouvelle boutique, sans perte de contenu.
 
 **Combien coûte vraiment une application Shopify populaire ?**
-Entre 10 et 50 $/mois pour la plupart des applications utiles (avis clients, fidélité, SEO avancé), chacune s'ajoutant à l'abonnement de base et se cumulant sur la durée.
+Cela varie d'une application à l'autre, et beaucoup se facturent au mois. Relevez le prix de chaque application dont vous avez besoin sur sa fiche, puis additionnez : ce cumul s'ajoute à l'abonnement de base et pèse sur la durée.
 
 **Une petite boutique doit-elle éviter Shopify dès le départ ?**
 Pas nécessairement pour tester une activité sur quelques mois. Mais dès que l'activité se pérennise, recalculer le coût total réel (abonnement + applications + commissions) permet souvent de constater qu'une boutique sur mesure devient plus rentable.

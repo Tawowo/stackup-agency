@@ -2,6 +2,7 @@
 title: "Google Ads pour restaurant : campagnes qui remplissent les tables"
 seoTitle: "Google Ads pour restaurant : quelles campagnes lancer"
 date: "2026-05-28"
+updated: "2026-10-29"
 excerpt: "Recherche locale, appel, réservation : les campagnes Google Ads utiles à un restaurant et les réglages qui gaspillent le budget. À lire avant de lancer."
 tag: "Restauration"
 category: "restaurants"
@@ -10,7 +11,7 @@ readTime: 7
 
 ## Google Ads pour restaurant : campagnes qui remplissent les tables
 
-Saviez-vous que **les annonces Google génèrent en moyenne 200 % de retour sur investissement dans la restauration** lorsqu'elles sont correctement configurées ? C'est-à-dire que pour 1 € investi en publicité, les restaurateurs récupèrent en moyenne 2 € de chiffre d'affaires supplémentaire. Quand une campagne est bien ciblée et bien optimisée, ce ratio peut monter à 400 ou 500 %.
+Google Ads est l'un des rares leviers où l'on paie pour apparaître au moment précis où quelqu'un cherche une table ou un plat. **Rentable ou non, cela dépend entièrement de la configuration et du suivi** : une campagne bien ciblée, qui renvoie vers la bonne page et dont chaque réservation est comptée, peut rapporter plus qu'elle ne coûte ; une campagne lancée au hasard coûte surtout de l'argent. Aucun ratio moyen ne remplace vos propres chiffres : budget dépensé d'un côté, réservations et chiffre d'affaires attribuables de l'autre.
 
 Le problème : beaucoup de restaurateurs ont tenté Google Ads, dépensé quelques centaines d'euros sans résultats visibles, et ont conclu que « ça ne marchait pas pour les restaurants ». Dans la plupart des cas, l'échec est dû à des erreurs de configuration, pas à l'inefficacité de l'outil.
 
@@ -18,11 +19,11 @@ Le problème : beaucoup de restaurateurs ont tenté Google Ads, dépensé quelqu
 
 ## Pourquoi c'est important en 2026
 
-Google traite **8,5 milliards de recherches par jour** dans le monde, dont une part significative concerne la restauration et la nourriture. En France, des dizaines de milliers de requêtes du type « restaurant ⟨ville⟩ », « où manger ⟨quartier⟩ » ou « livraison pizza ce soir » sont effectuées chaque jour.
+Une part importante des recherches sur Google concerne la restauration et la nourriture. Chaque jour, des habitants de votre ville tapent des requêtes du type « restaurant ⟨ville⟩ », « où manger ⟨quartier⟩ » ou « livraison pizza ce soir ».
 
 L'enjeu de Google Ads pour un restaurant est simple : apparaître en premier quand quelqu'un cherche exactement ce que vous proposez, au moment précis où il est prêt à réserver ou commander.
 
-Contrairement au SEO naturel qui prend 3 à 6 mois pour produire des résultats, Google Ads génère des visites dès le lendemain de l'activation. C'est un levier d'action immédiat, mesurable et maîtrisable.
+Contrairement au SEO naturel, qui demande du temps avant de produire des résultats, Google Ads génère des visites dès l'activation des annonces. C'est un levier d'action immédiat, mesurable et maîtrisable.
 
 En 2026, plusieurs types de campagnes sont particulièrement efficaces pour les restaurants :
 - **Search Ads :** Annonces texte sur les recherches Google
@@ -47,7 +48,7 @@ Sans suivi des conversions (réservations effectuées, appels téléphoniques, f
 
 ### 4. Un budget insuffisant ou mal réparti
 
-Les restaurants ont souvent des heures de pointe très concentrées (12h-14h et 19h-22h). Un budget de 10 €/jour réparti sur 24h est bien moins efficace qu'un budget de 10 €/jour concentré sur les créneaux de recherche active. La planification horaire des enchères est cruciale.
+Les restaurants ont souvent des heures de pointe très concentrées (12h-14h et 19h-22h). Un budget journalier réparti sur 24 h est bien moins efficace que le même budget concentré sur les créneaux de recherche active. La planification horaire des enchères est cruciale.
 
 ---
 
@@ -84,17 +85,17 @@ Pour un restaurant, Google Maps est souvent le premier point de contact. Les cam
 - Les utilisateurs voient directement votre photo, note, et horaires
 - Un clic peut déclencher un appel, un itinéraire ou une visite sur votre site
 
-Budget recommandé : 5 à 15 €/jour pour une visibilité locale solide sur Maps.
+Fixez le budget en partant de ce qu'une réservation supplémentaire vous rapporte, et ajustez-le chaque semaine d'après les résultats réels.
 
 ### Performance Max : la campagne automatisée
 
 Performance Max est le type de campagne le plus récent de Google Ads. Il utilise l'intelligence artificielle pour diffuser vos annonces sur tous les canaux Google simultanément (Search, Maps, YouTube, Display, Gmail).
 
 Pour le configurer efficacement :
-- Fournissez des actifs de qualité : photos de plats professionnelles, vidéos de 15 à 30 secondes, textes variés
+- Fournissez des actifs de qualité : photos de plats professionnelles, vidéos courtes, textes variés
 - Définissez précisément votre zone géographique (rayon autour de votre restaurant)
 - Fixez des objectifs de conversion clairs (réservation, appel, visite)
-- Laissez la campagne tourner au minimum 4 semaines avant d'optimiser (l'IA a besoin de données)
+- Laissez la campagne tourner plusieurs semaines avant d'optimiser (l'IA a besoin de données)
 
 ### Le remarketing : reconvertir les visiteurs
 
@@ -103,7 +104,7 @@ Le remarketing cible les personnes qui ont déjà visité votre site sans réser
 - Ils ont montré un intérêt
 - Il leur manque peut-être juste une offre ou un rappel pour finaliser
 
-Une campagne remarketing avec une offre attractive (« -10 % sur votre première réservation en ligne ») peut convertir 5 à 15 % de ces visiteurs qui seraient autrement perdus.
+Une campagne remarketing avec une offre attractive (« -10 % sur votre première réservation en ligne ») peut ramener une partie de ces visiteurs qui seraient autrement perdus.
 
 ### Les extensions d'annonces indispensables
 
@@ -114,7 +115,7 @@ Les extensions enrichissent vos annonces et améliorent le taux de clic sans co�
 **Extension Liens annexes :** Menu, Réservation, Événements, Contact
 **Extension Prix :** Affiche vos formules et prix directement dans l'annonce
 
-Ces extensions augmentent la visibilité de vos annonces et le taux de clic de 20 à 30 %.
+Ces extensions augmentent la visibilité de vos annonces et donnent plus de raisons de cliquer.
 
 ### Le suivi et l'optimisation continue
 
@@ -134,7 +135,7 @@ Suivez ces métriques clés chaque semaine :
 ---
 
 > **À retenir :**
-> - Google Ads génère des résultats dès le lendemain — c'est le levier d'acquisition le plus rapide
+> - Google Ads génère des visites dès l'activation des annonces — c'est un levier d'acquisition rapide, à condition de mesurer ce qu'il rapporte
 > - Ciblez des mots-clés géolocalisés et qualifiés, jamais des termes génériques
 > - Renvoyez vers une page de destination dédiée à chaque type d'annonce (réservation, commande, événement)
 > - Le suivi des conversions est indispensable pour mesurer le ROI réel de vos campagnes
@@ -143,8 +144,8 @@ Suivez ces métriques clés chaque semaine :
 
 ## Conclusion
 
-Google Ads est l'un des outils publicitaires les plus puissants pour un restaurant, à condition d'être correctement configuré et suivi. Un budget de 300 à 500 € par mois bien investi peut générer 20 à 40 nouvelles réservations supplémentaires par mois — soit un ROI largement positif pour la grande majorité des établissements.
+Google Ads est l'un des outils publicitaires les plus puissants pour un restaurant, à condition d'être correctement configuré et suivi. Le bon réflexe : démarrer avec un budget que vous acceptez de perdre le temps d'apprendre, compter chaque réservation obtenue, puis n'augmenter la dépense que sur les campagnes qui se rentabilisent.
 
 La clé : ne pas se lancer seul si vous n'avez pas l'expertise. Une mauvaise configuration peut dépenser votre budget sans aucun résultat, et décourager définitivement d'un outil qui, bien utilisé, peut transformer votre activité.
 
-Besoin d'un site web pour votre établissement ? [Contactez Stackup Agency](/contact) — réponse garantie sous 72h.
+Besoin d'un site web pour votre établissement ? [Contactez Stackup Agency](/contact) — nous vous répondons personnellement.

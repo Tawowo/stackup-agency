@@ -75,7 +75,7 @@ Tout dépend de votre situation.
 
 **Sur un serveur dédié ou un site sur mesure.** Le certificat s'installe côté serveur, avec un outil de gestion automatique qui obtient et renouvelle les certificats. C'est un travail d'administration à confier à la personne qui gère le serveur.
 
-Pour passer un site entier de HTTP à HTTPS **sans perdre son référencement**, il faut aussi : rediriger chaque ancienne adresse vers la nouvelle, mettre à jour le plan du site, déclarer la version HTTPS dans la Search Console et corriger les liens internes. Les principes sont les mêmes que pour une migration ; voir [rediriger sans perdre son SEO](/blog/refonte-site-web-seo-redirections-301).
+Pour passer un site entier de HTTP à HTTPS **sans perdre son référencement**, il faut aussi : rediriger chaque ancienne adresse vers la nouvelle, mettre à jour le plan du site, déclarer la version HTTPS dans la Search Console et corriger les liens internes. Les principes sont les mêmes que pour une migration ; voir [rediriger sans perdre son SEO](/blog/refonte-site-web-guide).
 
 ## Comment renouveler automatiquement un certificat, et pourquoi il ne se renouvelle pas
 

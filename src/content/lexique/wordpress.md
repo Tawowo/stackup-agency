@@ -42,7 +42,7 @@ Exemple type : un restaurateur fait créer un site WordPress avec un thème adap
 
 ## Pour aller plus loin
 
-- [WordPress ou prestataire sur mesure](/blog/paa-wordpress-vs-agence)
+- [WordPress ou prestataire sur mesure](/blog/wordpress-soi-meme-ou-agence-web)
 - [Site piraté sous WordPress : que faire](/blog/site-pirate-que-faire-wordpress-hack)
 - [Wix, WordPress ou sur mesure : le comparatif](/comparatif/wix-wordpress-sur-mesure)
 - [Maintenance d'un site](/services/maintenance)

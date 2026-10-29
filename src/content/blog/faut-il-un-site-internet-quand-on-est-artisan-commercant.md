@@ -22,7 +22,7 @@ Non. Un artisan, un commerçant ou une profession libérale peut exercer sans si
 
 ## Les artisans sans site internet perdent-ils des clients ?
 
-On ne peut pas chiffrer sérieusement ce que perd un artisan donné, mais le mécanisme est connu : quand un prospect reçoit votre nom (recommandation, camion, carte de visite), il le cherche sur son téléphone. S’il ne trouve rien ou une fiche incomplète, il peut hésiter et appeler quelqu’un d’autre qu’il trouve plus facilement. Posez-vous plutôt la question : voulez-vous élargir votre secteur, choisir vos clients, proposer de nouvelles prestations ? Si oui, un site vous aide. L’article [Est-ce qu’un site web est encore nécessaire en 2026 ?](/blog/paa-site-web-necessaire) approfondit ce point.
+On ne peut pas chiffrer sérieusement ce que perd un artisan donné, mais le mécanisme est connu : quand un prospect reçoit votre nom (recommandation, camion, carte de visite), il le cherche sur son téléphone. S’il ne trouve rien ou une fiche incomplète, il peut hésiter et appeler quelqu’un d’autre qu’il trouve plus facilement. Posez-vous plutôt la question : voulez-vous élargir votre secteur, choisir vos clients, proposer de nouvelles prestations ? Si oui, un site vous aide. L’article [Est-ce qu’un site web est encore nécessaire en 2026 ?](/blog/un-site-web-est-il-necessaire) approfondit ce point.
 
 ### Je n’ai pas de site internet : que faire ?
 
@@ -38,7 +38,7 @@ Une page Facebook est un bon complément, pas toujours un substitut. Elle est gr
 
 ## Est-ce rentable d’avoir un site quand on est artisan ?
 
-Cela dépend de ce que le site vous rapporte, à comparer à ce qu’il coûte. Le coût comprend la création (chez Stackup Agency, un site démarre à partir de {{prix:une-page}} € pour une page, le prix exact se fixant sur devis, avec une estimation sur la [page tarifs](/tarifs)), puis des frais annuels éventuels (nom de domaine, hébergement, maintenance). Le gain, ce sont les demandes de devis et les appels que vous n’auriez pas eus. Pour savoir si c’est rentable, comptez après quelques mois : combien de contacts viennent du site, combien deviennent des chantiers, pour quel montant moyen. Quelques chantiers supplémentaires peuvent suffire à rentabiliser un site simple, mais personne ne peut le garantir à l’avance. Voir aussi [Combien coûte un site web professionnel](/blog/paa-combien-coute-site-web).
+Cela dépend de ce que le site vous rapporte, à comparer à ce qu’il coûte. Le coût comprend la création (chez Stackup Agency, un site démarre à partir de {{prix:une-page}} € pour une page, le prix exact se fixant sur devis, avec une estimation sur la [page tarifs](/tarifs)), puis des frais annuels éventuels (nom de domaine, hébergement, maintenance). Le gain, ce sont les demandes de devis et les appels que vous n’auriez pas eus. Pour savoir si c’est rentable, comptez après quelques mois : combien de contacts viennent du site, combien deviennent des chantiers, pour quel montant moyen. Quelques chantiers supplémentaires peuvent suffire à rentabiliser un site simple, mais personne ne peut le garantir à l’avance. Voir aussi [Combien coûte un site web professionnel](/blog/cout-site-internet-2026).
 
 ## Faut-il payer chaque mois pour son site internet ?
 
@@ -90,7 +90,7 @@ Seulement si le site peut alimenter des tâches répétitives : demandes de devi
 
 ## Quand faut-il refaire son site ?
 
-Les signes qui indiquent qu’il est temps : le site ne s’affiche pas bien sur téléphone, il ne vous apporte plus de contacts, il contient des informations fausses, il est lent, il n’est plus mis à jour techniquement, ou il ne reflète plus votre activité. Avant de tout refaire, demandez-vous si la structure est saine et si une réparation suffit. Si le thème ou l’outil utilisé n’est plus maintenu, par exemple, il vaut mieux repartir sur une base fiable. Voir [Refonte de site web : les signaux](/blog/refonte-site-web-quand-pourquoi).
+Les signes qui indiquent qu’il est temps : le site ne s’affiche pas bien sur téléphone, il ne vous apporte plus de contacts, il contient des informations fausses, il est lent, il n’est plus mis à jour techniquement, ou il ne reflète plus votre activité. Avant de tout refaire, demandez-vous si la structure est saine et si une réparation suffit. Si le thème ou l’outil utilisé n’est plus maintenu, par exemple, il vaut mieux repartir sur une base fiable. Voir [Refonte de site web : les signaux](/blog/refonte-site-web-guide).
 
 ### Faut-il garder l’ancien site pendant la refonte ?
 

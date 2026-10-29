@@ -1,6 +1,8 @@
 /**
  * PAGE PILIER / COMPARATIF — gabarit Document + corps long + données structurées (Service ou Article, FAQPage, BreadcrumbList).
  */
+import Link from 'next/link'
+import { COMPARATIFS } from '@/data/piliers/comparatifs'
 import Document from '@/gabarits/document/Document'
 import Action from '@/components/ui/Action'
 import PilierCorps, { sommaireDe } from './PilierCorps'
@@ -8,6 +10,7 @@ import { JsonLd, ORIGINE, faqPage, filAriane, meta, offreService } from '@/lib/s
 import { SITE } from '@/config/site'
 import { sansLiens } from '@/components/editorial/Lie'
 import { jetonsProfond } from '@/lib/jetons'
+import { liensPublies } from '@/lib/liens-publies'
 import type { Pilier } from '@/data/piliers/types'
 import './pilier.css'
 
@@ -19,9 +22,9 @@ export function metaPilier(p: Pilier) {
 }
 
 export default function PagePilier({ pilier }: { pilier: Pilier }) {
-  const p = jetonsProfond(pilier)
+  const p = liensPublies(jetonsProfond(pilier))
   const etapes = p.sections.find((x) => /se déroule|démarre-t-on/i.test(x.titre) && (x.liste?.length ?? 0) >= 3)
-  const parent = p.type === 'comparatif' ? { nom: 'Comparatifs', chemin: '/comparatif/wix-wordpress-sur-mesure' } : { nom: 'Services', chemin: '/services' }
+  const parent = p.type === 'comparatif' ? { nom: 'Comparatifs', chemin: '/comparatif' } : { nom: 'Services', chemin: '/services' }
   const ariane = [
     { href: '/', nom: 'Accueil' },
     { href: parent.chemin, nom: parent.nom },
@@ -50,13 +53,30 @@ export default function PagePilier({ pilier }: { pilier: Pilier }) {
         entete={
           <p className="su-pil__actions">
             <Action href="/tarifs#estimer">Estimer mon projet</Action>
-            <Action href="/contact?objet=demo" variante="contour">
+            <Action href="/contact?a=demo" variante="contour">
               Demander ma démo
             </Action>
           </p>
         }
       >
-        <PilierCorps pilier={pilier} avecReponse={false} />
+        <PilierCorps pilier={liensPublies(pilier)} avecReponse={false} />
+        {p.type === 'comparatif' && (
+          <section aria-labelledby="autres-comparatifs">
+            <h2 id="autres-comparatifs">Autres comparatifs</h2>
+            <ul>
+              {COMPARATIFS.filter((c) => c.chemin !== p.chemin)
+                .slice(0, 4)
+                .map((c) => (
+                  <li key={c.chemin}>
+                    <Link href={c.chemin}>{c.nom}</Link>
+                  </li>
+                ))}
+              <li>
+                <Link href="/comparatif">Tous les comparatifs</Link>
+              </li>
+            </ul>
+          </section>
+        )}
       </Document>
     </>
   )

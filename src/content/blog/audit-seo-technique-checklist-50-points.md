@@ -206,7 +206,7 @@ Si votre site a de nombreux problèmes, traitez-les dans cet ordre :
 
 ### À quelle fréquence réaliser un audit SEO technique ?
 
-Un audit complet est recommandé tous les 6 mois, ou après tout changement majeur du site (refonte, migration, ajout de fonctionnalités). Un monitoring mensuel via Google Search Console permet de détecter les problèmes ponctuels entre les audits complets. Après une [refonte de site](/blog/refonte-site-web-seo-redirections-301), un audit immédiat est indispensable.
+Un audit complet est recommandé tous les 6 mois, ou après tout changement majeur du site (refonte, migration, ajout de fonctionnalités). Un monitoring mensuel via Google Search Console permet de détecter les problèmes ponctuels entre les audits complets. Après une [refonte de site](/blog/refonte-site-web-guide), un audit immédiat est indispensable.
 
 ### Quels outils gratuits utiliser pour l'audit ?
 

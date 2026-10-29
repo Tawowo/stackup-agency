@@ -1,6 +1,6 @@
 /**
  * REDIRECTIONS 301 — générées par scripts/redirections.mjs (ne pas éditer à la main).
- * 71 reprises de l'ancien site + 100 pour les pages retirées en V5.
+ * 71 reprises de l'ancien site + 120 pour les pages retirées en V5.
  */
 import type { Redirect } from 'next/dist/lib/load-custom-routes'
 
@@ -864,6 +864,106 @@ export const REDIRECTIONS: Redirect[] = [
   {
     "source": "/blog/netlinking-local-backlinks-region-methodes",
     "destination": "/blog",
+    "permanent": true
+  },
+  {
+    "source": "/blog/refonte-site-web-quand-pourquoi",
+    "destination": "/blog/refonte-site-web-guide",
+    "permanent": true
+  },
+  {
+    "source": "/blog/refonte-site-web-budget",
+    "destination": "/blog/refonte-site-web-guide",
+    "permanent": true
+  },
+  {
+    "source": "/blog/refonte-site-web-seo-redirections-301",
+    "destination": "/blog/refonte-site-web-guide",
+    "permanent": true
+  },
+  {
+    "source": "/blog/paa-combien-coute-site-web",
+    "destination": "/blog/cout-site-internet-2026",
+    "permanent": true
+  },
+  {
+    "source": "/blog/tarif-agence-web-france",
+    "destination": "/blog/cout-site-internet-2026",
+    "permanent": true
+  },
+  {
+    "source": "/blog/devis-site-internet-pourquoi-ecarts",
+    "destination": "/blog/cout-site-internet-2026",
+    "permanent": true
+  },
+  {
+    "source": "/blog/seo-artisan-batiment",
+    "destination": "/blog/seo-local-artisan-batiment-2026",
+    "permanent": true
+  },
+  {
+    "source": "/blog/ai-overviews-seo-tpe",
+    "destination": "/blog/seo-ia-generative-ai-overviews-google",
+    "permanent": true
+  },
+  {
+    "source": "/blog/chatgpt-apparence-resultats-google",
+    "destination": "/blog/seo-ia-generative-ai-overviews-google",
+    "permanent": true
+  },
+  {
+    "source": "/blog/portfolio-digital-artisan-art",
+    "destination": "/blog/portfolio-artisan-digital",
+    "permanent": true
+  },
+  {
+    "source": "/blog/google-my-business-guide-commercants",
+    "destination": "/blog/fiche-google-business-optimisation",
+    "permanent": true
+  },
+  {
+    "source": "/blog/site-web-blois",
+    "destination": "/agence-web/blois",
+    "permanent": true
+  },
+  {
+    "source": "/blog/seo-blois-entreprises",
+    "destination": "/agence-web/blois",
+    "permanent": true
+  },
+  {
+    "source": "/blog/seo-angers-entreprises",
+    "destination": "/agence-web/angers",
+    "permanent": true
+  },
+  {
+    "source": "/blog/paa-delai-creation-site",
+    "destination": "/blog/combien-de-temps-creer-site-web",
+    "permanent": true
+  },
+  {
+    "source": "/blog/paa-hebergement-site",
+    "destination": "/blog/quel-hebergement-choisir-site-web",
+    "permanent": true
+  },
+  {
+    "source": "/blog/paa-seo-local-gratuit",
+    "destination": "/blog/seo-local-gratuit-actions-a-faire-soi-meme",
+    "permanent": true
+  },
+  {
+    "source": "/blog/paa-site-web-necessaire",
+    "destination": "/blog/un-site-web-est-il-necessaire",
+    "permanent": true
+  },
+  {
+    "source": "/blog/paa-site-web-ventes",
+    "destination": "/blog/un-site-web-fait-il-vendre",
+    "permanent": true
+  },
+  {
+    "source": "/blog/paa-wordpress-vs-agence",
+    "destination": "/blog/wordpress-soi-meme-ou-agence-web",
     "permanent": true
   }
 ]

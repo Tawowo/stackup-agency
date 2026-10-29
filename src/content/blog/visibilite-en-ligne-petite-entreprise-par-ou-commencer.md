@@ -118,7 +118,7 @@ Tout le monde n'a pas besoin d'une boutique. Mais certaines activités gagnent �
 
 Les règles à connaître : informations précontractuelles claires, conditions générales de vente, droit de rétractation de quatorze jours en vente à distance (avec des exceptions, par exemple pour des produits personnalisés), remboursement par le même moyen de paiement. Sur la **facture** : pour un particulier, elle est en principe remise sur demande pour la vente de biens, mais la règle dépend du type de vente ; vérifiez sur [service-public.fr](https://www.service-public.fr). Pour **livrer à l'étranger**, vérifiez les formalités selon le pays de destination, les droits de douane hors Union européenne et le transporteur.
 
-Avant de vous lancer, vérifiez que le besoin est réel : [Est-ce qu'un site web est encore nécessaire en 2026 ?](/blog/paa-site-web-necessaire) aide à trancher.
+Avant de vous lancer, vérifiez que le besoin est réel : [Est-ce qu'un site web est encore nécessaire en 2026 ?](/blog/un-site-web-est-il-necessaire) aide à trancher.
 
 ## Étape 7 : relayer, sans se disperser
 

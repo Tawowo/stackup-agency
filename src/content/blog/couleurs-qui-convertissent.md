@@ -3,6 +3,7 @@ title: "Les couleurs qui convertissent : psychologie du design web"
 seoTitle: "Couleurs d'un site web : lesquelles font convertir ?"
 excerpt: "La couleur guide le regard. Comment choisir la palette d'un site, la couleur des boutons et un contraste qui incite à vous contacter, avec les pièges."
 date: "2026-06-08"
+updated: "2026-10-29"
 readTime: 6
 tag: "Design"
 category: "design"
@@ -11,7 +12,7 @@ keywords: ["psychologie couleurs web", "couleurs conversion site web", "couleurs
 
 ## La couleur n'est pas qu'une question d'esthétique
 
-Quand Heinz a lancé un ketchup de couleur violette, les ventes ont chuté — malgré une campagne marketing massive. Quand une banque en ligne a changé la couleur de son bouton d'appel à l'action du vert au rouge, ses conversions ont augmenté de 34 %. La couleur influence profondément nos émotions et nos décisions, souvent sans que nous en ayons conscience.
+Un bouton qui se confond avec le fond de la page ne sera pas vu, un texte gris clair ne sera pas lu, une palette criarde fera fuir un visiteur avant le premier mot. La couleur influence nos émotions et nos décisions, souvent sans que nous en ayons conscience — mais son effet précis dépend du contexte, de la marque et du public, et seul un test sur votre propre site peut le mesurer.
 
 En design web, le choix des couleurs est une décision stratégique, pas esthétique. Les bonnes couleurs renforcent votre message, inspirent confiance, et guident les visiteurs vers l'action souhaitée.
 
@@ -19,7 +20,7 @@ En design web, le choix des couleurs est une décision stratégique, pas esthét
 
 ### Le bleu — confiance et professionnalisme
 
-Le bleu est la couleur la plus utilisée par les entreprises de toutes les industries. Et pour cause : il évoque la stabilité, la confiance, la compétence, et le calme. C'est la couleur préférée de la majorité des adultes.
+Le bleu est la couleur la plus utilisée par les entreprises de toutes les industries. Et pour cause : il évoque la stabilité, la confiance, la compétence, et le calme. C'est une couleur appréciée par un très large public.
 
 **Utilisé par** : Facebook, LinkedIn, PayPal, Twitter, IBM, Airbnb.
 
@@ -87,17 +88,18 @@ Le blanc évoque la propreté, la simplicité, et l'espace. Il est indispensable
 
 > 💡 **Conseil Pro** : La règle des 60-30-10. Dans tout design, répartissez vos couleurs ainsi : 60 % couleur dominante (souvent neutre : blanc, gris, beige), 30 % couleur secondaire (votre couleur de marque principale), 10 % couleur d'accent (pour les CTA et éléments importants). Cette répartition crée équilibre et hiérarchie visuelle.
 
-## Les couleurs et la conversion : les données concrètes
+## Les couleurs et la conversion : ce que montrent les tests
 
 ### Les CTA et la couleur
 
-Des milliers de tests A/B ont été menés sur la couleur des boutons d'appel à l'action. Les conclusions :
+De nombreux tests A/B ont été menés sur la couleur des boutons d'appel à l'action. Les enseignements qui reviennent le plus souvent :
 
 - Il n'existe pas de "couleur magique" universelle pour les CTA
 - Ce qui importe, c'est le **contraste** avec le fond de la page
-- Un bouton rouge sur fond blanc convertit généralement très bien
-- Un bouton orange est souvent cité comme l'un des plus performants (il contraste sans être agressif)
-- Les boutons verts associés à un sentiment de "validation" et "sécurité" fonctionnent bien pour les achats
+- Un bouton rouge sur fond blanc se remarque immédiatement, mais à doser pour ne pas stresser
+- Un bouton orange est souvent cité parmi les plus efficaces (il contraste sans être agressif)
+- Les boutons verts, associés à la "validation" et à la "sécurité", sont fréquents sur les étapes d'achat
+- Le seul test qui compte est le vôtre : deux variantes, un même trafic, une durée suffisante
 
 ### L'effet du contexte culturel
 
@@ -129,7 +131,7 @@ Votre bouton principal doit ressortir immédiatement. Si votre couleur de marque
 
 **Contraste insuffisant** : un texte gris clair sur fond blanc peut sembler élégant mais être illisible pour beaucoup d'utilisateurs.
 
-**Ignorer le daltonisme** : environ 8 % des hommes ont une forme de daltonisme. Ne pas différencier des éléments uniquement par la couleur (ajoutez des icônes, des textures, ou des étiquettes textuelles).
+**Ignorer le daltonisme** : environ un homme sur douze a une forme de daltonisme. Ne pas différencier des éléments uniquement par la couleur (ajoutez des icônes, des textures, ou des étiquettes textuelles).
 
 **Changer de couleurs selon les pages** : la cohérence de couleur entre les pages de votre site renforce votre identité de marque. Une palette définie doit s'appliquer uniformément.
 

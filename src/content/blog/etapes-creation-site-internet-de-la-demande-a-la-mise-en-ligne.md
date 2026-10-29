@@ -95,7 +95,7 @@ C’est le moment où le site devient visible de tous. Une [mise en production](
 1. **Nom de domaine.** Il est acheté à votre nom, ou transféré, comme expliqué dans [choisir un nom de domaine](/blog/nom-de-domaine-choisir). Les enregistrements [DNS](/lexique/dns) pointent vers l’hébergement.
 2. **Hébergement.** Le site est installé sur son hébergement définitif ; voir [choisir un hébergeur](/blog/hebergement-web-choisir).
 3. **Sécurité.** Le certificat [HTTPS](/lexique/https) est actif (cadenas dans le navigateur) : [SSL et HTTPS](/blog/ssl-https-site-web).
-4. **Redirections.** S’il s’agit d’une refonte, les anciennes adresses sont redirigées vers les nouvelles, pour ne pas perdre le référencement : [redirections 301](/blog/refonte-site-web-seo-redirections-301).
+4. **Redirections.** S’il s’agit d’une refonte, les anciennes adresses sont redirigées vers les nouvelles, pour ne pas perdre le référencement : [redirections 301](/blog/refonte-site-web-guide).
 5. **Adresse e-mail professionnelle**, si elle est prévue : [adresse mail professionnelle](/blog/adresse-mail-professionnelle-nom-de-domaine).
 6. **Sauvegardes** activées : [sauvegarde et restauration](/blog/sauvegarde-restauration-site-internet).
 7. **Mentions légales, politique de confidentialité et bandeau de cookies** en place si votre site collecte des données : [obligations légales d’un site](/blog/obligations-legales-artisan-commercant-site).
@@ -129,7 +129,7 @@ Si vous préférez déléguer, la page [création de site internet](/services/cr
 Les étapes sont les mêmes, avec trois précautions supplémentaires.
 
 1. **Auditer l’existant** avant de tout jeter : quelles pages reçoivent des visites, lesquelles apportent des contacts. L’[audit gratuit](/outils/audit-site) donne un premier aperçu.
-2. **Préserver le référencement** : liste des anciennes adresses, redirections, conservation des textes performants. Voir [refonte et SEO](/blog/refonte-site-web-seo-redirections-301) et [quand et comment refaire son site](/blog/refaire-son-site-internet-quand-et-comment).
+2. **Préserver le référencement** : liste des anciennes adresses, redirections, conservation des textes performants. Voir [refonte et SEO](/blog/refonte-site-web-guide) et [quand et comment refaire son site](/blog/refaire-son-site-internet-quand-et-comment).
 3. **Prévoir la migration** des contenus, des données et des comptes ; pour quitter une plateforme, voyez [migrer son site Wix sans perdre son SEO](/blog/migrer-site-wix-sans-perdre-seo). La page [refonte de site internet](/services/refonte-de-site-internet) présente la démarche.
 
 ## Ce qui rallonge un projet (et ce qui l’accélère)

@@ -18,7 +18,7 @@ sources: ["https://www.cnil.fr", "https://www.service-public.fr"]
 
 Une adresse du type contact@votre-entreprise.fr rassure un client là où une adresse gratuite grand public laisse un doute. Elle suppose trois choses.
 
-1. **Un nom de domaine.** C'est l'adresse de votre site, que vous louez chaque année auprès d'un bureau d'enregistrement. Il doit être à votre nom : pour savoir comment le choisir et le garder, lisez notre article sur [l'hébergement d'un site](/blog/paa-hebergement-site).
+1. **Un nom de domaine.** C'est l'adresse de votre site, que vous louez chaque année auprès d'un bureau d'enregistrement. Il doit être à votre nom : pour savoir comment le choisir et le garder, lisez notre article sur [l'hébergement d'un site](/blog/quel-hebergement-choisir-site-web).
 2. **Une messagerie rattachée à ce domaine.** Deux grandes familles existent : la messagerie incluse chez votre hébergeur (souvent simple, parfois limitée en espace) et la messagerie d'un grand fournisseur de bureautique en ligne, payante par utilisateur.
 3. **Des enregistrements DNS corrects.** Ce sont les lignes techniques qui disent au monde entier où livrer vos messages et qui prouvent que c'est bien vous qui les envoyez.
 

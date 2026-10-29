@@ -46,7 +46,7 @@ Exemple type : une restauratrice ouvre le formulaire de réservation de son site
 ## Pour aller plus loin
 
 - [SSL et HTTPS pour un site](/blog/ssl-https-site-web)
-- [Refonte de site, SEO et redirections 301](/blog/refonte-site-web-seo-redirections-301)
+- [Refonte de site, SEO et redirections 301](/blog/refonte-site-web-guide)
 - [RGPD et site internet](/blog/rgpd-site-internet-artisan-commercant)
 - [Maintenance d'un site](/services/maintenance)
 

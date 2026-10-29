@@ -46,7 +46,7 @@ Filtrez le rapport par : **Position entre 5 et 20, Impressions > 100**. Ces requ
 
 ### Comparer des périodes
 
-Utilisez la comparaison de périodes (bouton "Comparer" dans le sélecteur de dates) pour mesurer l'impact de vos optimisations. Comparez par exemple la période avant et après une refonte ou un ajout de contenu. La [refonte de site sans perte SEO](/blog/refonte-site-web-seo-redirections-301) requiert ce type de monitoring mensuel.
+Utilisez la comparaison de périodes (bouton "Comparer" dans le sélecteur de dates) pour mesurer l'impact de vos optimisations. Comparez par exemple la période avant et après une refonte ou un ajout de contenu. La [refonte de site sans perte SEO](/blog/refonte-site-web-guide) requiert ce type de monitoring mensuel.
 
 ## Le rapport de couverture : comprendre l'indexation
 
@@ -56,7 +56,7 @@ GSC → Index → Couverture affiche l'état d'indexation de toutes vos URLs en 
 
 **Erreur serveur (5xx)** : votre serveur répond avec une erreur. Cause possible : surcharge, timeout, problème de base de données. À corriger immédiatement — Google arrête de crawler un site qui répond en erreur.
 
-**Redirection incorrecte** : une redirection pointe vers une autre redirection ou une page en erreur. Consultez notre [guide des redirections 301](/blog/refonte-site-web-seo-redirections-301).
+**Redirection incorrecte** : une redirection pointe vers une autre redirection ou une page en erreur. Consultez notre [guide des redirections 301](/blog/refonte-site-web-guide).
 
 **URL soumise avec balise noindex** : vous avez manuellement demandé à Google d'indexer une page (via sitemap ou inspection), mais cette page a une balise noindex. Contradiction à résoudre.
 

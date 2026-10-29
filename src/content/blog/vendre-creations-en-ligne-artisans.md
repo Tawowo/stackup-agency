@@ -3,6 +3,7 @@ title: "Vendre ses créations en ligne : guide complet pour artisans"
 seoTitle: "Vendre ses créations en ligne : guide pour artisans d'art"
 excerpt: "Poterie, bijoux, savons, textiles : de la photo du produit à la première commande, les étapes pour vendre vos créations en ligne sans vous éparpiller."
 date: "2026-01-30"
+updated: "2026-10-29"
 readTime: 8
 tag: "Commerce"
 category: "commerce"
@@ -25,7 +26,7 @@ Tous vos produits ne se prêtent pas à la vente en ligne. Voici les critères �
 
 **Scalabilité** : pouvez-vous reproduire ce produit suffisamment vite pour honorer des commandes en quantité ? Une pièce unique prend du temps ; une série de tasses similaires peut être produite plus facilement.
 
-**Marge** : après frais de plateforme (5 à 15 %), emballage, expédition, et éventuellement retour, quelle marge reste-t-il ? Assurez-vous qu'elle est viable.
+**Marge** : après frais de plateforme (commissions et frais de mise en vente, à relever dans la grille actuelle de chacune), emballage, expédition, et éventuellement retour, quelle marge reste-t-il ? Assurez-vous qu'elle est viable.
 
 ### La photographie : votre investissement le plus rentable
 
@@ -43,9 +44,9 @@ En vente en ligne, la photo est votre seul outil de séduction. Un produit mal p
 
 Beaucoup d'artisans sous-évaluent leur travail. Voici la formule de base :
 
-**Prix de vente = (Coût des matières + Temps de fabrication × Taux horaire) × 2 à 3**
+**Prix de vente = (Coût des matières + Temps de fabrication × Taux horaire) × coefficient**
 
-Le multiplicateur de 2 à 3 couvre les frais généraux (loyer atelier, outils, électricité), les frais de vente en ligne (commission, emballage, expédition), et votre marge bénéficiaire.
+Le coefficient doit couvrir les frais généraux (loyer atelier, outils, électricité), les frais de vente en ligne (commission, emballage, expédition), et votre marge bénéficiaire. Ne le prenez pas dans un article : calculez-le avec votre propre comptabilité, en divisant vos charges annuelles hors matières par le nombre de pièces que vous vendez réellement. Le résultat est souvent plus élevé qu'on ne l'imagine, et il explique pourquoi tant d'artisans travaillent à perte sans le savoir.
 
 Ne vous comparez pas à des produits de grande série fabriqués en usine. Votre valeur, c'est le fait main, le soin apporté, l'unicité. Les clients qui cherchent des créations artisanales l'acceptent — et l'apprécient.
 
@@ -55,15 +56,15 @@ Ne vous comparez pas à des produits de grande série fabriqués en usine. Votre
 
 ### Etsy : la vitrine mondiale de l'artisanat
 
-Etsy, c'est la référence incontournable pour les créateurs. 90 millions d'acheteurs actifs dans le monde, dont une bonne partie qui cherche spécifiquement des produits artisanaux et faits main.
+Etsy, c'est la référence incontournable pour les créateurs. Sa place de marché internationale attire un public qui cherche spécifiquement des produits artisanaux et faits main.
 
 **Avantages :** trafic existant, audience qualifiée, outils intégrés (gestion des commandes, messages, avis), expédition facilitée.
 
-**Inconvénients :** frais élevés (0,20 $/article + 6,5 % de commission + 3 % de frais de transaction), concurrence massive, algorithme opaque.
+**Inconvénients :** des frais à plusieurs niveaux (mise en vente, commission, frais de transaction) dont le détail et les montants changent : consultez la grille actuelle d'Etsy avant de vous lancer. Concurrence massive, algorithme opaque.
 
 **Conseils pour réussir sur Etsy :**
 - Utilisez des tags précis et nombreux dans vos fiches
-- Répondez aux messages dans les 24h (ça améliore votre score vendeur)
+- Répondez rapidement aux messages (la réactivité compte pour votre réputation de vendeur)
 - Encouragez les avis après chaque vente
 - Publiez régulièrement de nouveaux produits pour rester visible
 
@@ -75,9 +76,9 @@ Cela nécessite un catalogue produits relié à votre boutique en ligne (via Fac
 
 ### Votre propre boutique en ligne : l'indépendance totale
 
-À terme, votre objectif devrait être d'avoir votre propre boutique en ligne sur votre propre domaine. C'est là que vous touchez 100 % des revenus, que vous construisez votre marque, et que vous accumulez les données clients.
+À terme, votre objectif devrait être d'avoir votre propre boutique en ligne sur votre propre domaine. C'est là que vous ne versez aucune commission de place de marché, que vous construisez votre marque, et que vous accumulez les données clients. Les frais de paiement bancaire, eux, existent partout.
 
-Les plateformes comme Shopify, WooCommerce, ou Wix permettent de créer une boutique en ligne professionnelle. Comptez quelques semaines pour une mise en place soignée.
+Les plateformes comme Shopify, WooCommerce, ou Wix permettent de créer une boutique en ligne professionnelle. Prévoyez du temps pour une mise en place soignée : photos, fiches produits, mentions légales, livraison. Une boutique sur mesure est aussi possible, pour un site qui vous ressemble et qui vous appartient entièrement.
 
 ### La stratégie multi-canal
 
@@ -107,10 +108,12 @@ Racontez aussi l'histoire du produit : d'où vient l'inspiration, quel moment de
 
 ### Choisir son transporteur
 
-- **Lettre suivie La Poste** : pour les petits bijoux (jusqu'à 3 cm d'épaisseur)
-- **Colissimo** : référence pour les colis jusqu'à 30 kg, avec suivi et assurance
-- **Mondial Relay** : moins cher pour l'Europe, délais légèrement plus longs
+- **Lettre suivie La Poste** : pour les petits bijoux et les objets plats ou légers (vérifiez les dimensions admises)
+- **Colissimo** : référence pour les colis, avec suivi et possibilité d'assurance
+- **Mondial Relay** : une option de point relais souvent plus économique, à comparer sur votre grille
 - **Chronopost** : pour l'express (cadeau de dernière minute, commandes urgentes)
+
+Comparez les tarifs actuels de chaque transporteur pour vos formats de colis types : l'écart peut changer votre marge.
 
 ### L'emballage : un outil marketing
 
@@ -128,7 +131,7 @@ Un bel unboxing génère des photos sur Instagram. Ces photos génèrent de la v
 
 ### Répondre vite
 
-Sur les plateformes de vente, la rapidité de réponse est un critère de classement. Mais c'est surtout une question de confiance : un client qui pose une question et attend 4 jours ira acheter ailleurs.
+Sur les plateformes de vente, la rapidité de réponse est un critère de classement. Mais c'est surtout une question de confiance : un client qui pose une question et attend plusieurs jours ira acheter ailleurs.
 
 ### Gérer les litiges avec élégance
 

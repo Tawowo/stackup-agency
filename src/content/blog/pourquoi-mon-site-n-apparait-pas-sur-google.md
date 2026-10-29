@@ -62,7 +62,7 @@ Une refonte déplace des pages, change des adresses et parfois le nom de domaine
 - Les titres et les textes ont été réécrits sans reprendre les expressions qui fonctionnaient.
 - Le plan du site n'a pas été renvoyé à la Search Console.
 
-La correction consiste à comparer l'ancien et le nouveau site, rétablir les redirections et demander une nouvelle exploration. Détail dans [refonte et redirections 301](/blog/refonte-site-web-seo-redirections-301). Si vous préparez une refonte, la page [refonte de site internet](/services/refonte-de-site-internet) décrit comment ce point est traité dès le départ.
+La correction consiste à comparer l'ancien et le nouveau site, rétablir les redirections et demander une nouvelle exploration. Détail dans [refonte et redirections 301](/blog/refonte-site-web-guide). Si vous préparez une refonte, la page [refonte de site internet](/services/refonte-de-site-internet) décrit comment ce point est traité dès le départ.
 
 ### Le site est lent, mal conçu pour le mobile ou en erreur
 
@@ -109,7 +109,7 @@ Un artisan qui se déplace chez ses clients (plombier, paysagiste, électricien)
 
 ## Comment apparaître dans les aperçus IA de Google ?
 
-Google indique qu'il n'existe pas de balise spéciale pour figurer dans ses aperçus générés par IA : il faut être indexé et jugé utile. Mêmes fondamentaux : un contenu clair, factuel et à jour, qui répond directement aux questions. Détails dans l'article sur les [AI Overviews](/blog/ai-overviews-seo-tpe).
+Google indique qu'il n'existe pas de balise spéciale pour figurer dans ses aperçus générés par IA : il faut être indexé et jugé utile. Mêmes fondamentaux : un contenu clair, factuel et à jour, qui répond directement aux questions. Détails dans l'article sur les [AI Overviews](/blog/seo-ia-generative-ai-overviews-google).
 
 ## L'ancienne adresse de mon entreprise apparaît encore sur internet
 

@@ -3,6 +3,7 @@ title: "Payer son site en plusieurs fois : comment ça marche"
 seoTitle: "Payer son site internet en plusieurs fois : acompte et solde"
 excerpt: "Acompte au démarrage, solde à la livraison, échelonnement sur les gros projets : ce qui est normal, ce qui doit alerter et les questions à poser."
 date: "2026-08-17"
+updated: "2026-10-29"
 publishAt: "2026-09-07"
 readTime: 7
 tag: "Tarifs"
@@ -10,7 +11,7 @@ category: "strategie"
 keywords: ["payer site plusieurs fois", "acompte site internet", "paiement site web"]
 ---
 
-**Réponse directe :** le standard du marché pour un site internet est le paiement en deux fois : un acompte de 30 % au démarrage, le solde de 70 % à la livraison. Chez Stackup Agency, c'est exactement ce modèle, par virement bancaire ou carte (paiement en ligne sécurisé). Un échelonnement supplémentaire peut se discuter au devis pour les projets plus importants. Ce qui doit alerter : un paiement de 100 % avant tout travail, ou un abonnement sans fin qui remplace le prix.
+**Réponse directe :** le modèle le plus courant pour un site internet est le paiement en deux fois : un acompte de 30 % au démarrage, le solde de 70 % à la livraison. Chez Stackup Agency, c'est exactement ce modèle, par virement bancaire ou carte (paiement en ligne sécurisé). Un échelonnement supplémentaire peut se discuter au devis pour les projets plus importants. Ce qui doit alerter : un paiement de 100 % avant tout travail, ou un abonnement sans fin qui remplace le prix.
 
 ## Le modèle standard : 30 / 70
 
@@ -27,9 +28,9 @@ Pour un site vitrine à partir de {{prix:une-page}} €, cela donne **30 % au d�
 |---|---|---|
 | 30 % / 70 % | Standard des indépendants et agences sérieuses | ✅ Équilibré |
 | 50 % / 50 % | Fréquent en agence | ✅ Acceptable, négociez si le délai est long |
-| 3 × ou 4 × sans frais | Projets > 1 500 € | ✅ Légitime — jalonné sur l'avancement |
+| 3 × ou 4 × sans frais | Projets plus importants | ✅ Légitime — jalonné sur l'avancement |
 | 100 % à la commande | Vendeurs pressés | ⚠️ Refusez : plus aucun levier si le projet dérape |
-| 0 € d'entrée mais abonnement à vie | Plateformes et « sites à 39 €/mois » | ⚠️ Ce n'est pas un échelonnement, c'est une location — [le calcul est ici](/blog/site-internet-abonnement-ou-achat) |
+| 0 € d'entrée mais abonnement à vie | Plateformes et « sites à petite mensualité » | ⚠️ Ce n'est pas un échelonnement, c'est une location — [le calcul est ici](/blog/site-internet-abonnement-ou-achat) |
 
 ## L'échelonnement sur les projets plus importants
 
@@ -39,19 +40,20 @@ Pour une boutique en ligne (à partir de {{prix:boutique}} €) ou un système d
 2. **À la validation de la maquette** : le développement commence sur une base que vous avez approuvée.
 3. **À la livraison** : le solde, une fois le site en ligne et conforme.
 
-L'important n'est pas le nombre d'échéances — c'est que **chaque paiement corresponde à un livrable constaté**. Un échéancier calé sur le calendrier (« 300 € le 1er de chaque mois ») plutôt que sur l'avancement doit vous interroger.
+L'important n'est pas le nombre d'échéances — c'est que **chaque paiement corresponde à un livrable constaté**. Un échéancier calé sur le calendrier (« une somme fixe le 1er de chaque mois ») plutôt que sur l'avancement doit vous interroger.
 
 ## Les questions à poser avant de payer quoi que ce soit
 
 - L'acompte est-il **remboursable** si la maquette ne vous convient pas et qu'aucun accord n'est trouvé ? (Chez nous : rien ne se développe sans maquette validée — c'est la protection la plus concrète.)
-- Le solde est-il exigible **à la livraison** ou « à la mise en production » ? Les deux formulations peuvent différer de plusieurs semaines.
+- Le solde est-il exigible **à la livraison** ou « à la mise en production » ? Les deux formulations peuvent correspondre à des dates très différentes.
+- Les échéances et ce qui les déclenche sont-ils **écrits sur le devis signé** ? Un échéancier annoncé à l'oral ne vaut rien en cas de désaccord : exigez que chaque paiement soit associé à un livrable nommé sur le document.
 - Une facture en bonne et due forme est-elle émise à chaque échéance ? (Indispensable pour votre comptabilité — et un signal de sérieux.)
 
 ## Et le financement externe ?
 
 Pour les entreprises, deux pistes complémentaires méritent d'être connues :
 
-- **Les aides régionales à la transformation numérique** : plusieurs régions (dont Centre-Val de Loire selon les dispositifs en vigueur) proposent des chèques numériques couvrant une partie de la création d'un site. Renseignez-vous auprès de votre CCI ou CMA — les dispositifs évoluent chaque année.
+- **Les aides régionales à la transformation numérique** : plusieurs régions (dont Centre-Val de Loire selon les dispositifs en vigueur) proposent des chèques numériques couvrant une partie de la création d'un site. Renseignez-vous auprès de votre CCI ou CMA et sur entreprendre.service-public.fr — les dispositifs évoluent chaque année.
 - **La déductibilité** : la création d'un site professionnel est une charge (ou une immobilisation selon les cas) — parlez-en à votre comptable, l'effort réel après impôt est inférieur au prix affiché.
 
 ## En résumé

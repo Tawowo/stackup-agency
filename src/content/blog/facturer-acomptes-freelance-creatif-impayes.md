@@ -3,6 +3,7 @@ title: "Créatifs : facturer des acomptes et éviter les impayés"
 seoTitle: "Acompte et impayés : la méthode pour les créatifs"
 excerpt: "Vidéaste, graphiste, photographe : un acompte à la commande, un solde avant livraison des fichiers et des CGV écrites limitent les impayés. La méthode."
 date: "2026-08-17"
+updated: "2026-10-29"
 publishAt: "2027-01-24"
 readTime: 17
 tag: "Créatifs"
@@ -28,7 +29,7 @@ Ce schéma en deux temps (acompte + solde avant livraison) constitue la structur
 
 ## Ne jamais livrer les fichiers finaux avant le paiement intégral
 
-La règle la plus importante, et la plus souvent transgressée par manque de fermeté ou par confiance excessive envers un client par ailleurs sympathique : les fichiers finaux, en haute définition et sans filigrane, ne doivent jamais être transmis avant le règlement complet du solde. Un aperçu en basse définition ou avec filigrane peut être partagé pour validation, mais le livrable final reste conditionné au paiement — cette discipline, appliquée systématiquement sans exception, élimine la majorité des situations d'impayé après livraison.
+La règle la plus importante, et la plus souvent transgressée par manque de fermeté ou par confiance excessive envers un client par ailleurs sympathique : les fichiers finaux, en haute définition et sans filigrane, ne doivent jamais être transmis avant le règlement complet du solde. Un aperçu en basse définition ou avec filigrane peut être partagé pour validation, mais le livrable final reste conditionné au paiement — cette discipline, appliquée systématiquement sans exception, limite fortement les situations d'impayé après livraison.
 
 ## Les conditions générales de vente, une protection écrite indispensable
 

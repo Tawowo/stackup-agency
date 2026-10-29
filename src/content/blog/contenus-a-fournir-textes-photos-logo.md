@@ -57,7 +57,7 @@ Pour la page de présentation d’un artisan, il n’existe pas, à notre connai
 
 ## La rédaction des textes coûte-t-elle en plus ?
 
-Cela dépend des prestataires : la rédaction est parfois incluse, parfois proposée en option, parfois entièrement à votre charge. C’est l’une des premières lignes à vérifier sur un devis. Demandez noir sur blanc qui écrit les textes, combien de pages sont couvertes, combien de relectures sont prévues et ce qui se passe si vous changez d’avis en cours de route. Pour situer l’ordre de grandeur global d’un projet, l’[estimateur de prix](/tarifs) donne un prix indicatif « à partir de », et l’article [Combien coûte un site web professionnel](/blog/paa-combien-coute-site-web) explique ce qui le fait varier.
+Cela dépend des prestataires : la rédaction est parfois incluse, parfois proposée en option, parfois entièrement à votre charge. C’est l’une des premières lignes à vérifier sur un devis. Demandez noir sur blanc qui écrit les textes, combien de pages sont couvertes, combien de relectures sont prévues et ce qui se passe si vous changez d’avis en cours de route. Pour situer l’ordre de grandeur global d’un projet, l’[estimateur de prix](/tarifs) donne un prix indicatif « à partir de », et l’article [Combien coûte un site web professionnel](/blog/cout-site-internet-2026) explique ce qui le fait varier.
 
 ### Comment modifier soi-même les textes de son site ?
 
@@ -139,7 +139,7 @@ Pour ne pas retarder le projet, rassemblez ces éléments dans un seul dossier p
 - les accès à votre nom de domaine et à votre fiche Google si elle existe déjà ;
 - trois exemples de sites que vous aimez et un que vous n’aimez pas.
 
-Le calendrier de réalisation se fixe ensemble avant de commencer, en fonction de ce que vous avez déjà en main : plus la matière est prête, moins le projet attend. Pour comprendre ce qui fait varier la durée, lisez [Combien de temps pour créer un site web](/blog/paa-delai-creation-site). Si vous préférez en parler de vive voix, [contactez Stackup Agency](/contact) : Mathéo Reboul vous dira ce qui manque et ce que vous pouvez produire ensemble. Une création de site démarre à partir de {{prix:une-page}} € pour une page, et l’[estimateur](/tarifs) vous donne une base selon vos besoins.
+Le calendrier de réalisation se fixe ensemble avant de commencer, en fonction de ce que vous avez déjà en main : plus la matière est prête, moins le projet attend. Pour comprendre ce qui fait varier la durée, lisez [Combien de temps pour créer un site web](/blog/combien-de-temps-creer-site-web). Si vous préférez en parler de vive voix, [contactez Stackup Agency](/contact) : Mathéo Reboul vous dira ce qui manque et ce que vous pouvez produire ensemble. Une création de site démarre à partir de {{prix:une-page}} € pour une page, et l’[estimateur](/tarifs) vous donne une base selon vos besoins.
 
 ## Questions fréquentes
 

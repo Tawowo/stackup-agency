@@ -58,7 +58,7 @@ Avant une refonte, dressez la liste de toutes les anciennes adresses (le plan du
 
 ## Pour aller plus loin
 
-- [Refonte de site, SEO et redirections 301](/blog/refonte-site-web-seo-redirections-301)
+- [Refonte de site, SEO et redirections 301](/blog/refonte-site-web-guide)
 - [Migrer un site Wix sans perdre son référencement](/blog/migrer-site-wix-sans-perdre-seo)
 - [Erreurs 404 : comment les traiter](/blog/erreurs-404-seo-guide)
 - [Refonte de site internet](/services/refonte-de-site-internet)

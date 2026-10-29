@@ -1,0 +1,69 @@
+.su-abo {
+  margin: 2.2rem 0;
+  padding: clamp(1.1rem, 3vw, 2rem);
+  border-radius: 8px;
+  background: var(--su-encre-2, #0f2742);
+  color: var(--su-ivoire, #f6f1e7);
+}
+.su-abo__titre {
+  margin: 0 0 1rem;
+  font-family: var(--su-font-display), sans-serif;
+  font-size: clamp(1.25rem, 2.2vw, 1.6rem);
+  color: var(--su-ivoire, #f6f1e7);
+}
+.su-abo__champs {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+}
+.su-abo__champs label {
+  display: grid;
+  gap: 0.35rem;
+  font-size: 0.95rem;
+}
+.su-abo__champs input {
+  min-height: 44px;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid color-mix(in srgb, var(--su-ivoire, #f6f1e7) 35%, transparent);
+  border-radius: 6px;
+  background: color-mix(in srgb, #000 25%, transparent);
+  color: inherit;
+  font: inherit;
+}
+.su-abo__champs input:focus-visible {
+  outline: 2px solid var(--su-ambre, #f59e0b);
+  outline-offset: 2px;
+}
+.su-abo__champs small {
+  opacity: 0.75;
+}
+.su-abo__resultat {
+  margin-top: 1.4rem;
+}
+.su-abo__resultat table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+.su-abo__resultat th,
+.su-abo__resultat td {
+  padding: 0.55rem 0.6rem;
+  text-align: left;
+  border-bottom: 1px solid color-mix(in srgb, var(--su-ivoire, #f6f1e7) 22%, transparent);
+}
+.su-abo__resultat thead th {
+  font-weight: 600;
+  color: var(--su-ambre-clair, #fbbf24);
+}
+.su-abo__note {
+  font-size: 0.85rem;
+  opacity: 0.8;
+}
+.su-abo__note a {
+  color: var(--su-ambre-clair, #fbbf24);
+}
+@media (max-width: 640px) {
+  .su-abo__resultat table {
+    font-size: 0.85rem;
+  }
+}

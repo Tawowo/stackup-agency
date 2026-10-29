@@ -121,7 +121,7 @@ url,famille,statut,rang_nouveaute,grappes,requetes,potentiel,impressions_gsc,req
 /blog/adresse-mail-professionnelle-nom-de-domaine,article,existante,,15,127,138,2,Adresse e-mail professionnelle avec son nom de domaine : mise en place
 /blog/vitesse-site-core-web-vitals,article,existante,,8,87,135,704,Vitesse du site et Core Web Vitals : mesurer et améliorer
 /blog/logiciel-de-prise-de-rendez-vous-et-reservation,article,existante,,7,103,134,247,Prise de rendez-vous et réservation en ligne : choisir son outil
-/blog/choisir-agence-web-freelance-ou-createur-de-site,article,à créer — lot 1 (cette mission),1,7,71,119,4,"Agence web, freelance ou créateur de site : comment choisir"
+/blog/choisir-agence-web-freelance-ou-createur-de-site,article,existante,,7,71,119,4,"Agence web, freelance ou créateur de site : comment choisir"
 /blog/cgv-obligatoires-vente-en-ligne,article,existante,,5,108,119,,CGV : obligatoires ? Ce qu’elles doivent contenir
 /blog/chatgpt-pour-artisan-commercant-usages-concrets,article,existante,,8,124,118,57,ChatGPT pour un artisan ou un commerçant : usages concrets et limites
 /blog/site-vitrine-ou-site-complet-quelle-difference,article,existante,,7,92,116,187,"Site vitrine, multi-pages, boutique : quelle différence et lequel choisir ?"
@@ -156,7 +156,7 @@ url,famille,statut,rang_nouveaute,grappes,requetes,potentiel,impressions_gsc,req
 /ressources/cahier-des-charges,autre,existante,,2,64,76,6,cahier des charges
 /agence-web/joue-les-tours,ville/département,existante,,15,61,75,62,création site internet joué-lès-tours
 /blog/facture-electronique-artisan-micro-entrepreneur,article,existante,,6,69,74,,Facture électronique : artisans et micro-entrepreneurs sont-ils concernés ?
-/blog/etapes-creation-site-internet-de-la-demande-a-la-mise-en-ligne,article,à créer — lot 1 (cette mission),2,5,61,74,9,"Les étapes de création d’un site internet, de la demande à la mise en ligne"
+/blog/etapes-creation-site-internet-de-la-demande-a-la-mise-en-ligne,article,existante,,5,61,74,9,"Les étapes de création d’un site internet, de la demande à la mise en ligne"
 /agence-web/chatellerault,ville/département,existante,,14,47,73,,création site web châtellerault
 /agence-web/departement/vienne,ville/département,existante,,14,47,73,,création site web vienne
 /agence-web/departement/maine-et-loire,ville/département,existante,,14,46,72,,création site web maine-et-loire
@@ -170,9 +170,9 @@ url,famille,statut,rang_nouveaute,grappes,requetes,potentiel,impressions_gsc,req
 /blog/seo-local-referencement-local-commerce-artisan,article,existante,,4,54,64,1,Référencement local : être trouvé dans sa ville quand on est artisan ou commerçant
 /blog/contenus-a-fournir-textes-photos-logo,article,existante,,4,57,64,40,"Textes, photos, logo : ce qu’il faut fournir pour son site"
 /blog/site-pirate-que-faire-wordpress-hack,article,existante,,3,55,63,,"Mon site a été piraté : que faire, étape par étape"
-/blog/refonte-site-web-seo-redirections-301,article,existante,,3,69,63,,Refonte et redirections 301 : ne pas perdre son référencement
+/blog/refonte-site-web-guide,article,existante,,3,69,63,,Refonte et redirections 301 : ne pas perdre son référencement
 /blog/images-site-internet-alt-poids-format,article,existante,,4,59,62,1,"Images d’un site : texte alternatif, poids, format et référencement"
-/blog/prix-referencement-seo-agence-freelance,article,à créer — lot 1 (cette mission),3,1,40,60,61,"Prix d’un référencement SEO : agence, freelance, abonnement"
+/blog/prix-referencement-seo-agence-freelance,article,existante,,1,40,60,61,"Prix d’un référencement SEO : agence, freelance, abonnement"
 /blog/sauvegarde-restauration-site-internet,article,existante,,3,50,59,29,Sauvegarder et restaurer son site internet
 /blog/livraison-colissimo-mondial-relay-boutique,article,existante,,7,48,57,33,"Livraison d’une boutique en ligne : Colissimo, Mondial Relay, retrait"
 /blog/logiciel-de-devis-et-facturation-artisan-comment-choisir,article,existante,,4,44,56,1,Logiciel de devis et de facturation pour artisan : comment choisir
@@ -187,7 +187,7 @@ url,famille,statut,rang_nouveaute,grappes,requetes,potentiel,impressions_gsc,req
 /blog/assurance-decennale-rc-pro-artisan,article,existante,,2,41,45,,Assurance décennale et RC pro : qui est concerné ?
 /blog/site-adapte-mobile-responsive-test,article,existante,,2,36,45,71,Site adapté au mobile (responsive) : vérifier et corriger
 /blog/comptabilite-tva-charges-ne-pas-perdre-pied,article,existante,,6,42,45,,"Comptabilité, TVA, charges : ne pas se laisser déborder"
-/blog/zapier-make-n8n-automatisations-sans-code,article,à créer — lot 1 (cette mission),4,3,50,45,,"Zapier, Make, n8n : automatiser sans coder, avantages et limites"
+/blog/zapier-make-n8n-automatisations-sans-code,article,existante,,3,50,45,,"Zapier, Make, n8n : automatiser sans coder, avantages et limites"
 /blog/marketplace-ou-site-propre-etsy-vinted-amazon,article,existante,,4,35,44,,"Marketplace ou site propre : Etsy, Vinted, Amazon, Leboncoin pro"
 /blog/accessibilite-site-web-guide,article,existante,,2,43,44,1,Accessibilité d’un site internet : obligations et bonnes pratiques
 /blog/optimiser-fiche-google-business-categories-photos,article,existante,,6,35,43,,"Optimiser sa fiche Google Business : catégories, description, photos, horaires"
@@ -201,14 +201,14 @@ url,famille,statut,rang_nouveaute,grappes,requetes,potentiel,impressions_gsc,req
 /lexique/paiement-en-ligne,autre,existante,,2,40,37,,paiement en ligne
 /blog/excel-ne-suffit-plus-passer-a-un-outil-sur-mesure,article,existante,,3,35,36,,Quand Excel ne suffit plus : passer à un outil de gestion sur mesure
 /lexique/panier-moyen,autre,existante,,2,41,35,,panier moyen
-/blog/facture-electronique-logiciel-gratuit-conforme,article,à créer — lot 1 (cette mission),5,2,29,35,,Logiciel de facturation conforme à la facture électronique : critères et alternatives
+/blog/facture-electronique-logiciel-gratuit-conforme,article,existante,,2,29,35,,Logiciel de facturation conforme à la facture électronique : critères et alternatives
 /lexique/developpeur-web-freelance,autre,existante,,1,23,35,,c'est quoi développeur web freelance
 /blog/seo-wordpress-wix-shopify-plugins,article,existante,,2,32,34,,"SEO sur WordPress, Wix ou Shopify : ce qui compte vraiment"
 /blog/gestion-de-stock-petit-commerce-artisan,article,existante,,2,29,34,,Gérer son stock quand on est petit commerçant ou artisan
 /lexique/lead,autre,existante,,3,41,32,,lead
-/blog/annuaires-pages-jaunes-nap-citations,article,à créer — lot 1 (cette mission),6,3,25,30,,"Annuaires, Pages Jaunes et cohérence NAP : utile pour le référencement local ?"
+/blog/annuaires-pages-jaunes-nap-citations,article,existante,,3,25,30,,"Annuaires, Pages Jaunes et cohérence NAP : utile pour le référencement local ?"
 /lexique/prise-de-rendez-vous-en-ligne,autre,existante,,1,24,29,,prise de rendez-vous en ligne
-/blog/creer-fiche-google-business-profile,article,à créer — lot 1 (cette mission),7,1,23,29,,Créer sa fiche Google Business Profile pas à pas
+/blog/creer-fiche-google-business-profile,article,existante,,1,23,29,,Créer sa fiche Google Business Profile pas à pas
 /lexique/avis-google,autre,existante,,3,33,29,,c'est quoi avis google
 /lexique/erp,autre,existante,,3,36,28,,erp
 /lexique/newsletter,autre,existante,,3,36,28,,newsletter
@@ -222,10 +222,10 @@ url,famille,statut,rang_nouveaute,grappes,requetes,potentiel,impressions_gsc,req
 /lexique/franchise-en-base-de-tva,autre,existante,,1,23,28,,franchise en base de tva
 /lexique/siret,autre,existante,,1,35,28,,siret
 /lexique/mediateur-de-la-consommation,autre,existante,,1,23,27,,médiateur de la consommation
-/blog/balises-title-meta-description-comment-ecrire,article,à créer — lot 1 (cette mission),8,2,24,27,3,Balises title et meta description : comment les écrire
+/blog/balises-title-meta-description-comment-ecrire,article,existante,,2,24,27,3,Balises title et meta description : comment les écrire
 /creation-site-internet,métier,existante,,3,34,26,,commerçant
 /services/site-vitrine,pilier,existante,,1,29,25,,site vitrine c'est quoi
-/blog/mises-a-jour-wordpress-plugins-risques,article,à créer — lot 1 (cette mission),9,3,21,25,,Mises à jour WordPress et plugins : risques et bonnes pratiques
+/blog/mises-a-jour-wordpress-plugins-risques,article,existante,,3,21,25,,Mises à jour WordPress et plugins : risques et bonnes pratiques
 /lexique/formulaire-de-contact,autre,existante,,1,24,24,,formulaire de contact
 /lexique/front-end-et-back-end,autre,existante,,1,24,24,,front-end et back-end
 /lexique/mise-en-production,autre,existante,,1,24,24,,mise en production
@@ -248,20 +248,20 @@ url,famille,statut,rang_nouveaute,grappes,requetes,potentiel,impressions_gsc,req
 /lexique/taux-de-conversion,autre,existante,,1,24,24,,taux de conversion
 /lexique/taux-de-rebond,autre,existante,,1,24,24,,taux de rebond
 /blog/verification-fiche-google-business,article,existante,,4,20,24,,"Vérifier sa fiche Google Business : courrier, appel, vidéo, solutions"
-/blog/signature-electronique-devis-en-ligne,article,à créer — lot 1 (cette mission),10,4,21,24,3,Devis en ligne et signature électronique : valable et simple ?
-/blog/certificat-ssl-site-non-securise-https,article,à créer — lot 1 (cette mission),11,2,21,24,1,Site « non sécurisé » : certificat SSL et HTTPS
-/blog/seo-boutique-en-ligne-fiches-produits,article,à créer — lot 1 (cette mission),12,3,21,24,,"Référencement d’une boutique en ligne : fiches produits, catégories, avis"
+/blog/signature-electronique-devis-en-ligne,article,existante,,4,21,24,3,Devis en ligne et signature électronique : valable et simple ?
+/blog/certificat-ssl-site-non-securise-https,article,existante,,2,21,24,1,Site « non sécurisé » : certificat SSL et HTTPS
+/blog/seo-boutique-en-ligne-fiches-produits,article,existante,,3,21,24,,"Référencement d’une boutique en ligne : fiches produits, catégories, avis"
 /lexique/agence-web,autre,existante,,1,16,24,,c'est quoi agence web
 /lexique/maintenance-de-site,autre,existante,,1,23,23,,c'est quoi maintenance de site
 /lexique/cannibalisation-de-mots-cles,autre,existante,,1,23,23,,cannibalisation de mots-clés
 /lexique/core-web-vitals,autre,existante,,1,23,23,,core web vitals
 /lexique/google-business-profile,autre,existante,,1,23,23,,google business profile
-/blog/fideliser-ses-clients-petit-commerce-artisan,article,à créer — lot 1 (cette mission),13,3,20,23,19,Fidéliser ses clients : idées simples pour un commerce ou un artisan
-/blog/fixer-ses-prix-et-son-taux-horaire-artisan,article,à créer — lot 1 (cette mission),14,4,22,23,,Fixer ses prix et son taux horaire : méthode simple
-/blog/faire-gerer-sa-fiche-google-prix,article,à créer — lot 1 (cette mission),15,1,15,23,,Faire gérer sa fiche Google : ce qu’un prestataire fait et ce que cela coûte
-/blog/vendre-produits-alimentaires-vin-en-ligne-regles,article,à créer — lot 1 (cette mission),16,2,20,22,4,"Vendre du vin, du fromage ou de l’alimentaire en ligne : règles et pièges"
-/blog/e-reporting-transmission-donnees-facturation,article,à créer — lot 1 (cette mission),17,1,24,22,,E-reporting : ce que les petites entreprises doivent transmettre
-/blog/repondre-aux-avis-google,article,à créer — lot 1 (cette mission),18,2,19,22,,Comment répondre à un avis Google (positif ou négatif) : modèles et règles
+/blog/fideliser-ses-clients-petit-commerce-artisan,article,existante,,3,20,23,19,Fidéliser ses clients : idées simples pour un commerce ou un artisan
+/blog/fixer-ses-prix-et-son-taux-horaire-artisan,article,existante,,4,22,23,,Fixer ses prix et son taux horaire : méthode simple
+/blog/faire-gerer-sa-fiche-google-prix,article,existante,,1,15,23,,Faire gérer sa fiche Google : ce qu’un prestataire fait et ce que cela coûte
+/blog/vendre-produits-alimentaires-vin-en-ligne-regles,article,existante,,2,20,22,4,"Vendre du vin, du fromage ou de l’alimentaire en ligne : règles et pièges"
+/blog/e-reporting-transmission-donnees-facturation,article,existante,,1,24,22,,E-reporting : ce que les petites entreprises doivent transmettre
+/blog/repondre-aux-avis-google,article,existante,,2,19,22,,Comment répondre à un avis Google (positif ou négatif) : modèles et règles
 /lexique/application-web,autre,existante,,1,24,22,,application web
 /lexique/certificat-ssl,autre,existante,,1,24,22,,certificat ssl
 /lexique/charte-graphique,autre,existante,,1,24,22,,charte graphique
@@ -297,13 +297,13 @@ url,famille,statut,rang_nouveaute,grappes,requetes,potentiel,impressions_gsc,req
 /lexique/rich-snippet,autre,existante,,1,24,22,,rich snippet
 /lexique/search-console,autre,existante,,1,24,22,,search console
 /lexique/sitemap-xml,autre,existante,,1,24,22,,sitemap xml
-/blog/tva-non-applicable-article-293-b,article,à créer — lot 1 (cette mission),19,4,20,22,,"TVA non applicable, art. 293 B du CGI : ce que cela implique"
-/blog/facture-electronique-plateforme-agreee-choisir,article,à créer — lot 1 (cette mission),20,1,18,21,,Plateforme agréée de facturation électronique : comment choisir ?
+/blog/tva-non-applicable-article-293-b,article,existante,,4,20,22,,"TVA non applicable, art. 293 B du CGI : ce que cela implique"
+/blog/facture-electronique-plateforme-agreee-choisir,article,existante,,1,18,21,,Plateforme agréée de facturation électronique : comment choisir ?
 /lexique/bandeau-cookies,autre,existante,,1,23,21,,bandeau cookies
-/blog/reseaux-sociaux-facebook-instagram-pour-une-petite-entreprise,article,à créer — lot 1 (cette mission),21,3,18,21,9,"Réseaux sociaux : Facebook, Instagram, TikTok pour une petite entreprise"
+/blog/reseaux-sociaux-facebook-instagram-pour-une-petite-entreprise,article,existante,,3,18,21,9,"Réseaux sociaux : Facebook, Instagram, TikTok pour une petite entreprise"
 /,accueil,existante,,2,55,21,1,stackup agency
 /lexique/google-analytics,autre,existante,,1,23,21,,google analytics
-/blog/click-and-collect-commerce-de-proximite,article,à créer — lot 1 (cette mission),22,2,15,19,14,Click and collect pour un commerce de proximité : mettre en place
+/blog/click-and-collect-commerce-de-proximite,article,existante,,2,15,19,14,Click and collect pour un commerce de proximité : mettre en place
 /lexique/api,autre,existante,,1,24,19,,api
 /lexique/cms,autre,existante,,1,24,19,,cms
 /lexique/dns,autre,existante,,1,24,19,,dns
@@ -334,7 +334,7 @@ url,famille,statut,rang_nouveaute,grappes,requetes,potentiel,impressions_gsc,req
 /lexique/schema-org,autre,existante,,1,24,19,,schema.org
 /lexique/serp,autre,existante,,1,24,19,,serp
 /blog/stock-synchronise-caisse-et-site,article,existante,,1,15,18,,Synchroniser le stock entre la caisse et le site internet
-/blog/tva-et-facturation-vente-en-ligne-e-commerce,article,à créer — lot 1 (cette mission),23,4,16,18,,TVA et facturation d’une vente en ligne : les règles de base
+/blog/tva-et-facturation-vente-en-ligne-e-commerce,article,existante,,4,16,18,,TVA et facturation d’une vente en ligne : les règles de base
 /lexique/prestashop,autre,existante,,1,23,18,,prestashop
 /lexique/woocommerce,autre,existante,,1,23,18,,woocommerce
 /lexique/stripe,autre,existante,,1,23,18,,stripe
@@ -347,11 +347,11 @@ url,famille,statut,rang_nouveaute,grappes,requetes,potentiel,impressions_gsc,req
 /lexique/site-sur-mesure,autre,existante,,1,16,17,,c'est quoi site sur mesure
 /lexique/click-and-collect,autre,existante,,1,16,17,,c'est quoi click and collect
 /lexique/logiciel-de-gestion,autre,existante,,1,16,17,,c'est quoi logiciel de gestion
-/blog/logiciel-de-caisse-enregistreuse-certifie-petit-commerce,article,à créer — lot 1 (cette mission),24,2,15,17,6,Caisse enregistreuse : logiciel certifié pour un petit commerce
-/blog/vendre-ses-services-aux-professionnels-b2b-local,article,à créer — lot 1 (cette mission),25,2,15,17,,Trouver des clients professionnels près de chez soi (B2B local)
-/blog/automatiser-relances-sms-rappels-rendez-vous,article,à créer — lot 1 (cette mission),26,3,15,16,,Automatiser les rappels de rendez-vous et les relances par SMS ou e-mail
-/blog/backlinks-liens-entrants-petite-entreprise,article,à créer — lot 1 (cette mission),27,2,15,16,8,Backlinks : obtenir des liens entrants quand on est une petite entreprise
-/blog/comparatif-devis-agence-web-comment-les-lire,article,à créer — lot 1 (cette mission),28,1,5,16,42,Comparer des devis d’agences web : comment les lire et quoi vérifier
+/blog/logiciel-de-caisse-enregistreuse-certifie-petit-commerce,article,existante,,2,15,17,6,Caisse enregistreuse : logiciel certifié pour un petit commerce
+/blog/vendre-ses-services-aux-professionnels-b2b-local,article,existante,,2,15,17,,Trouver des clients professionnels près de chez soi (B2B local)
+/blog/automatiser-relances-sms-rappels-rendez-vous,article,existante,,3,15,16,,Automatiser les rappels de rendez-vous et les relances par SMS ou e-mail
+/blog/backlinks-liens-entrants-petite-entreprise,article,existante,,2,15,16,8,Backlinks : obtenir des liens entrants quand on est une petite entreprise
+/blog/comparatif-devis-agence-web-comment-les-lire,article,existante,,1,5,16,42,Comparer des devis d’agences web : comment les lire et quoi vérifier
 /lexique/site-e-commerce,autre,existante,,1,16,16,,c'est quoi site e-commerce
 /lexique/site-vitrine,autre,existante,,1,16,16,,c'est quoi site vitrine
 /lexique/site-web,autre,existante,,1,16,16,,c'est quoi site web
@@ -359,9 +359,9 @@ url,famille,statut,rang_nouveaute,grappes,requetes,potentiel,impressions_gsc,req
 /lexique/facture-electronique,autre,existante,,1,16,16,,c'est quoi facture électronique
 /lexique/referencement-naturel,autre,existante,,1,16,16,,c'est quoi référencement naturel
 /lexique/seo-local,autre,existante,,1,16,16,,c'est quoi seo local
-/blog/automatiser-sa-comptabilite-et-sa-facturation,article,à créer — lot 1 (cette mission),29,2,14,15,,"Automatiser sa facturation, ses justificatifs et son rapprochement bancaire"
-/blog/quitter-wix-jimdo-squarespace-pour-un-site-sur-mesure,article,à créer — lot 1 (cette mission),30,2,19,15,,"Quitter Wix, Jimdo ou Squarespace : migrer vers un site à soi"
-/blog/concurrent-mieux-place-sur-google-que-faire,article,à créer — lot 1 (cette mission),31,2,13,13,,Mon concurrent est mieux placé que moi sur Google : que faire ?
+/blog/automatiser-sa-comptabilite-et-sa-facturation,article,existante,,2,14,15,,"Automatiser sa facturation, ses justificatifs et son rapprochement bancaire"
+/blog/quitter-wix-jimdo-squarespace-pour-un-site-sur-mesure,article,existante,,2,19,15,,"Quitter Wix, Jimdo ou Squarespace : migrer vers un site à soi"
+/blog/concurrent-mieux-place-sur-google-que-faire,article,existante,,2,13,13,,Mon concurrent est mieux placé que moi sur Google : que faire ?
 /lexique/shopify,autre,existante,,1,16,13,,c'est quoi shopify
 /lexique/webmaster,autre,existante,,1,16,13,,c'est quoi webmaster
 /lexique/wix,autre,existante,,1,16,13,,c'est quoi wix
@@ -369,13 +369,13 @@ url,famille,statut,rang_nouveaute,grappes,requetes,potentiel,impressions_gsc,req
 /lexique/automatisation,autre,existante,,1,16,13,,c'est quoi automatisation
 /lexique/seo,autre,existante,,1,16,13,,c'est quoi seo
 /blog/facture-electronique-sanctions-amendes,article,existante,,2,13,12,,Facture électronique : quelles sanctions en cas de manquement ?
-/blog/fiches-produits-photos-descriptions-qui-vendent,article,à créer — lot 1 (cette mission),32,2,9,11,,"Fiches produits : photos, descriptions et prix qui donnent envie d’acheter"
-/blog/l-ia-va-t-elle-remplacer-mon-metier,article,à créer — lot 1 (cette mission),33,1,10,9,,L’IA va-t-elle remplacer mon métier ? Ce qui change vraiment
-/blog/statistiques-de-visites-mesure-d-audience-sans-cookies,article,à créer — lot 1 (cette mission),34,1,7,8,,Mesurer les visites de son site : statistiques simples et respectueuses
-/blog/repondre-automatiquement-aux-e-mails-et-appels-manques,article,à créer — lot 1 (cette mission),35,1,7,8,,Répondre automatiquement aux e-mails et aux appels manqués
-/blog/chatbot-assistant-virtuel-site-internet,article,à créer — lot 1 (cette mission),36,1,5,6,,Chatbot sur son site : utile pour une petite entreprise ?
+/blog/fiches-produits-photos-descriptions-qui-vendent,article,existante,,2,9,11,,"Fiches produits : photos, descriptions et prix qui donnent envie d’acheter"
+/blog/l-ia-va-t-elle-remplacer-mon-metier,article,existante,,1,10,9,,L’IA va-t-elle remplacer mon métier ? Ce qui change vraiment
+/blog/statistiques-de-visites-mesure-d-audience-sans-cookies,article,existante,,1,7,8,,Mesurer les visites de son site : statistiques simples et respectueuses
+/blog/repondre-automatiquement-aux-e-mails-et-appels-manques,article,existante,,1,7,8,,Répondre automatiquement aux e-mails et aux appels manqués
+/blog/chatbot-assistant-virtuel-site-internet,article,existante,,1,5,6,,Chatbot sur son site : utile pour une petite entreprise ?
 /blog/mots-cles-artisan-commercant-comment-choisir,article,existante,,1,5,6,,Choisir ses mots-clés quand on est artisan ou commerçant
 /blog/planning-ingerable-doubles-reservations-oublis,article,existante,,1,5,5,,"Planning ingérable, doubles réservations, oublis : comment s’organiser"
-/blog/donnees-structurees-schema-rich-snippets,article,à créer — lot 1 (cette mission),37,1,4,5,,"Données structurées : FAQ, avis, horaires dans les résultats Google"
-/blog/devis-refuses-non-signes-pourquoi-et-que-faire,article,à créer — lot 1 (cette mission),38,1,4,4,,"Devis refusés ou jamais signés : pourquoi, et que faire"
-/blog/ia-et-donnees-clients-rgpd-confidentialite-risques,article,à créer — lot 1 (cette mission),39,1,4,4,,"IA et données clients : RGPD, confidentialité et risques"
+/blog/donnees-structurees-schema-rich-snippets,article,existante,,1,4,5,,"Données structurées : FAQ, avis, horaires dans les résultats Google"
+/blog/devis-refuses-non-signes-pourquoi-et-que-faire,article,existante,,1,4,4,,"Devis refusés ou jamais signés : pourquoi, et que faire"
+/blog/ia-et-donnees-clients-rgpd-confidentialite-risques,article,existante,,1,4,4,,"IA et données clients : RGPD, confidentialité et risques"

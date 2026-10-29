@@ -1,8 +1,9 @@
 ---
 title: "Prestashop vs Shopify vs sur mesure pour le e-commerce français"
 seoTitle: "Prestashop ou Shopify ou sur mesure : lequel en France ?"
-excerpt: "Prestashop gratuit mais à maintenir, Shopify simple avec abonnement et commissions, boutique sur mesure achetée une fois : comparatif et calcul sur 3 ans."
+excerpt: "Prestashop gratuit mais à maintenir, Shopify simple avec abonnement, boutique sur mesure achetée une fois : comparatif et postes de coût sur 3 ans."
 date: "2026-08-17"
+updated: "2026-10-29"
 publishAt: "2026-11-17"
 readTime: 8
 tag: "E-commerce"
@@ -18,35 +19,38 @@ Né en France, Prestashop reste une référence pour les boutiques en ligne fran
 
 **Ce que Prestashop offre** : le logiciel lui-même est gratuit à télécharger et installer, avec un contrôle total sur la personnalisation du code source. Les modules (paiement, marketing, logistique) couvrent une large partie des besoins d'une boutique française standard.
 
-**Ce que Prestashop ne dit pas assez** : le logiciel gratuit cache des coûts réels — hébergement adapté (30 à 150 €/mois selon le trafic), modules premium souvent nécessaires pour des fonctionnalités de base (50 à 300 € à l'achat par module), et une maintenance technique (mises à jour de sécurité, compatibilité des modules entre eux) qui demande soit une compétence interne, soit un prestataire.
+**Ce que Prestashop ne dit pas assez** : le logiciel gratuit cache des coûts réels — un hébergement adapté dont le prix monte avec le trafic, des modules premium souvent nécessaires pour des fonctionnalités de base (achetés à l'unité, à des tarifs variables selon l'éditeur), et une maintenance technique (mises à jour de sécurité, compatibilité des modules entre eux) qui demande soit une compétence interne, soit un prestataire.
 
 ## Shopify : la simplicité clé en main
 
-Shopify inverse la logique : tout est inclus dans l'abonnement (hébergement, sécurité, mises à jour), au prix d'une dépendance totale à la plateforme et de commissions sur chaque vente en plus de l'abonnement mensuel (29 $ à 299 $/mois selon le plan).
+Shopify inverse la logique : tout est inclus dans l'abonnement (hébergement, sécurité, mises à jour), au prix d'une dépendance totale à la plateforme et, selon le plan et le moyen de paiement utilisés, de commissions sur les ventes en plus de l'abonnement mensuel. Les plans, leurs prix et leurs conditions changent : consultez toujours la grille actuelle de Shopify avant de décider.
 
 ## Le comparatif structurel
 
 | Critère | Prestashop | Shopify | Boutique sur mesure |
 |---|---|---|---|
 | Coût du logiciel | Gratuit | Inclus dans l'abonnement | Inclus dans le prix de création |
-| Hébergement | À gérer séparément (30-150 €/mois) | Inclus | Dans l'abonnement mensuel facultatif, sans engagement |
-| Commission sur les ventes | Aucune | 0,5 % à 2 % selon le plan et le moyen de paiement | Aucune |
+| Hébergement | À gérer séparément, coût selon le trafic | Inclus | Dans l'abonnement mensuel facultatif, sans engagement |
+| Commission sur les ventes | Aucune | Possible selon le plan et le moyen de paiement | Aucune |
 | Maintenance technique | À la charge du commerçant ou d'un prestataire | Gérée par Shopify | Dans l'abonnement mensuel facultatif |
 | Personnalisation | Totale (accès au code) | Limitée par la structure Shopify | Totale |
-| Modules/applications | Écosystème français riche, souvent payant | Plus de 8 000 applications, souvent payantes | Développé sur mesure selon le besoin réel |
+| Modules/applications | Écosystème français riche, souvent payant | Très large catalogue d'applications, souvent payantes | Développé sur mesure selon le besoin réel |
 | Autonomie technique requise | Élevée | Faible | Faible (avec interface adaptée livrée) |
 
-## Le calcul sur 3 ans pour une boutique de taille moyenne
+## Les postes de coût à comparer sur 3 ans
+
+Plutôt que d'aligner des montants qui changent d'une année à l'autre (les grilles de Shopify, des hébergeurs et des éditeurs de modules sont revues régulièrement), voici la liste des postes à chiffrer pour une boutique de taille moyenne, à faire remplir avec des devis et des grilles à jour.
 
 | Poste | Prestashop | Shopify | Sur mesure |
 |---|---|---|---|
-| Coût de création/installation | 0 € (logiciel) + intégration | 0 € | À partir de {{prix:boutique}} € |
-| Hébergement sur 3 ans | ~2 160 € (60 €/mois) | Inclus | Dans l'abonnement facultatif, composé à la carte |
-| Modules/applications sur 3 ans | ~600 € | ~1 800 € (50 €/mois moyen) | 0 € (fonctionnalités incluses) |
-| Abonnement plateforme sur 3 ans | 0 € | ~2 700 € (75 €/mois moyen) | 0 € |
-| **Total indicatif sur 3 ans** | **~2 760 € + temps de maintenance** | **~4 500 €** | **Achat unique, puis abonnement facultatif** |
+| Création / installation | Logiciel gratuit, intégration et thème à prévoir | Thème et paramétrage à prévoir | À partir de {{prix:boutique}} € |
+| Hébergement sur 3 ans | Facturé par l'hébergeur, croît avec le trafic | Inclus dans l'abonnement | Dans l'abonnement facultatif, composé à la carte |
+| Modules / applications sur 3 ans | Achats de modules, parfois renouvelés | Abonnements d'applications, cumulés mois après mois | Fonctionnalités développées pour le projet |
+| Abonnement plateforme sur 3 ans | Aucun | Abonnement mensuel, plus commissions éventuelles | Aucun |
+| Maintenance | Temps interne ou prestataire | Gérée par la plateforme | Dans l'abonnement facultatif |
+| **Nature du coût** | **Variable, plus du temps de maintenance** | **Récurrent, croissant avec les ventes et les applications** | **Achat unique, puis abonnement facultatif** |
 
-Ce calcul exclut volontairement les frais de paiement bancaire (environ 2,9 % + 0,30 € par transaction), identiques quelle que soit la plateforme choisie, car ils rémunèrent le prestataire de paiement et non la solution e-commerce elle-même.
+Pour faire le calcul vous-même, additionnez sur 36 mois chaque ligne avec les tarifs publiés au moment de votre décision. Gardez les frais de paiement bancaire hors de la comparaison : ils sont identiques quelle que soit la plateforme choisie, car ils rémunèrent le prestataire de paiement et non la solution e-commerce elle-même. Ajoutez en revanche une ligne pour votre propre temps : une boutique que vous devez dépanner vous-même coûte aussi des heures que vous ne passez pas auprès de vos clients.
 
 ## Prestashop : pour qui c'est le bon choix
 
@@ -83,11 +87,11 @@ Oui, le catalogue produit et les données clients peuvent être exportés puis r
 Oui, chaque fonctionnalité nécessaire (paiement, gestion de stock, avis clients) est développée spécifiquement pour le projet, sans dépendre d'un catalogue d'applications tierces payantes.
 
 **Quelle solution est la moins chère pour démarrer une petite boutique ?**
-À très court terme, Prestashop en autohébergement basique peut être la moins chère à l'entrée. Sur 2-3 ans avec une activité qui se développe, une boutique sur mesure devient généralement la plus rentable.
+À très court terme, Prestashop en autohébergement basique peut être la moins chère à l'entrée. Sur plusieurs années avec une activité qui se développe, une boutique sur mesure peut devenir la plus rentable : c'est ce que le tableau des postes de coût vous permet de vérifier avec des chiffres à jour.
 
 **Faut-il un développeur pour utiliser Prestashop ?**
 Pas obligatoirement pour l'installation de base, mais fortement recommandé dès que des modules premium, une personnalisation du thème ou des intégrations spécifiques sont nécessaires.
 
 ---
 
-*Pour aller plus loin : [Shopify vs boutique sur mesure : le calcul sur 3 ans](/blog/shopify-ou-sur-mesure-ecommerce) · [WordPress : pourquoi votre site est lent](/blog/wordpress-pourquoi-site-lent) · [Nos services e-commerce](/services/site-ecommerce)*
+*Pour aller plus loin : [Shopify vs boutique sur mesure : comparer les coûts sur 3 ans](/blog/shopify-ou-sur-mesure-ecommerce) · [WordPress : pourquoi votre site est lent](/blog/wordpress-pourquoi-site-lent) · [Nos services e-commerce](/services/site-ecommerce)*

@@ -47,7 +47,7 @@ Exemple type : un carreleur possède un site qui reçoit des visites grâce à u
 ## Pour aller plus loin
 
 - [Refonte de site web : le guide](/blog/refonte-site-web-guide).
-- [Refonte et SEO : réussir ses redirections 301](/blog/refonte-site-web-seo-redirections-301).
+- [Refonte et SEO : réussir ses redirections 301](/blog/refonte-site-web-guide).
 - [Service de refonte de site internet](/services/refonte-de-site-internet).
 - [Tarifs](/tarifs) pour situer le projet.
 

@@ -54,7 +54,7 @@ Prenez une feuille ou un tableur, un devis par colonne, et remplissez ligne à l
 4. **Vérifiez la cohérence** : un devis qui promet beaucoup pour peu peut reporter le travail sur vous (vous rédigez tout, vous installez tout) ou utiliser un modèle prêt à l’emploi, ce qui n’est pas un défaut en soi mais change le prix de ce qu’on vous vend.
 5. **Notez ce qui est absent**, pas seulement ce qui est présent : le plus souvent, l’écart de prix entre deux devis tient à une ligne oubliée.
 
-Pour comprendre pourquoi deux devis sérieux peuvent différer fortement, lisez [pourquoi les devis de site internet varient autant](/blog/devis-site-internet-pourquoi-ecarts). Il détaille les facteurs : nombre de pages, fonctions, contenus, méthode, profil du prestataire.
+Pour comprendre pourquoi deux devis sérieux peuvent différer fortement, lisez [pourquoi les devis de site internet varient autant](/blog/cout-site-internet-2026). Il détaille les facteurs : nombre de pages, fonctions, contenus, méthode, profil du prestataire.
 
 ## Quelle grille pour comparer les devis ?
 

@@ -100,7 +100,7 @@ Sur une plateforme comme Wix, vous n'avez pas la main sur le serveur, mais sur l
 
 ## Faut-il changer d'hébergeur si mon site est lent ?
 
-Pas forcément. Un hébergeur est en cause quand le **temps de réponse du serveur** est élevé : l'outil de test indique un « délai de réponse du serveur » long dès le début du chargement, sur plusieurs pages et à plusieurs moments. Si, au contraire, le serveur répond vite et que la lenteur vient des images et des scripts, changer d'hébergeur ne réglera rien. Corrigez d'abord le contenu, et ne changez d'hébergeur que si le problème persiste. Le choix d'un hébergement est détaillé dans [Quel hébergement choisir](/blog/paa-hebergement-site).
+Pas forcément. Un hébergeur est en cause quand le **temps de réponse du serveur** est élevé : l'outil de test indique un « délai de réponse du serveur » long dès le début du chargement, sur plusieurs pages et à plusieurs moments. Si, au contraire, le serveur répond vite et que la lenteur vient des images et des scripts, changer d'hébergeur ne réglera rien. Corrigez d'abord le contenu, et ne changez d'hébergeur que si le problème persiste. Le choix d'un hébergement est détaillé dans [Quel hébergement choisir](/blog/quel-hebergement-choisir-site-web).
 
 ## Comment optimiser les images de mon site ?
 

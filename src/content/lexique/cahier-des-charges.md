@@ -51,7 +51,7 @@ Exemple type : un restaurateur écrit sur une page que le site doit afficher la 
 
 - [Modèle de cahier des charges gratuit](/ressources/cahier-des-charges).
 - Le guide [cahier des charges d'un site internet : modèle gratuit](/blog/cahier-des-charges-site-internet-modele-gratuit).
-- [Pourquoi les devis de sites diffèrent autant](/blog/devis-site-internet-pourquoi-ecarts).
+- [Pourquoi les devis de sites diffèrent autant](/blog/cout-site-internet-2026).
 - [Estimer votre projet](/tarifs).
 
 ## Questions fréquentes

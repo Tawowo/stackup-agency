@@ -62,7 +62,7 @@ Trois voies, selon votre niveau et votre site.
 
 ### Option 1 : la sauvegarde de l'hébergeur
 
-La plupart des hébergeurs proposent des sauvegardes automatiques, parfois incluses, parfois en option. Regardez dans l'espace client : fréquence, durée de conservation, possibilité de restaurer soi-même. **Ne vous y fiez pas comme unique copie** : elle est sur la même infrastructure, et elle peut ne conserver que quelques jours. Pour savoir si votre site est sauvegardé, la réponse est dans cet espace, ou dans les conditions de l'offre ; demandez-le par écrit si ce n'est pas clair. Pour choisir un hébergement, voir [quel hébergement choisir](/blog/paa-hebergement-site) et [les solutions d'hébergement](/blog/hebergement-web-choisir).
+La plupart des hébergeurs proposent des sauvegardes automatiques, parfois incluses, parfois en option. Regardez dans l'espace client : fréquence, durée de conservation, possibilité de restaurer soi-même. **Ne vous y fiez pas comme unique copie** : elle est sur la même infrastructure, et elle peut ne conserver que quelques jours. Pour savoir si votre site est sauvegardé, la réponse est dans cet espace, ou dans les conditions de l'offre ; demandez-le par écrit si ce n'est pas clair. Pour choisir un hébergement, voir [quel hébergement choisir](/blog/quel-hebergement-choisir-site-web) et [les solutions d'hébergement](/blog/hebergement-web-choisir).
 
 ### Option 2 : une extension de sauvegarde
 

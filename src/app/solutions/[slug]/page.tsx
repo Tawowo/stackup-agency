@@ -8,6 +8,9 @@ import { prixOutilAvec } from '@/domain/devis/offres'
 import { conforme, conformeListe } from '@/lib/conformite'
 import { meta, filAriane, faqPage, JsonLd, ORIGINE } from '@/lib/seo'
 import { logiciel } from '@/lib/schema'
+import { CONTENU_SOLUTIONS } from '@/data/solutions-contenu'
+import { liensPublies } from '@/lib/liens-publies'
+import { PRIX_PUBLICS } from '@/config/prix-publics.generated'
 
 export function generateStaticParams() {
   return SOLUTIONS.map((s) => ({ slug: s.slug }))
@@ -30,7 +33,8 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
     .map((m) => METIERS.find((x) => x.slug === m))
     .filter((m): m is NonNullable<typeof m> => !!m)
     .map((m) => ({ slug: m.slug, nom: m.metier.charAt(0).toUpperCase() + m.metier.slice(1) }))
-  const faq = sol.faq.map((f) => ({ q: conforme(f.q), a: conforme(f.a) }))
+  const contenu = liensPublies(CONTENU_SOLUTIONS[slug])
+  const faq = [...sol.faq, ...(contenu?.faq ?? [])].map((f) => ({ q: conforme(f.q), a: conforme(f.a) }))
   return (
     <main>
       <JsonLd
@@ -58,6 +62,8 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
             return { code: c, libelle: l.libelle, description: l.description }
           }),
           prix: prixOutilAvec(sol.codes.slice(0, 1)),
+          abonnementMin: PRIX_PUBLICS.abonnementMin,
+          sections: contenu?.sections.map((x) => ({ titre: conforme(x.titre), paragraphes: x.paragraphes.map(conforme) })),
           faq,
           metiers,
           voisines,

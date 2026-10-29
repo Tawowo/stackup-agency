@@ -16,6 +16,13 @@ import { RACINE, chargerArticles, jetons, jaccard, slugifier, sansAccent, minusc
 const [entete, ...brut] = lireCsv(fs.readFileSync(path.join(RACINE, 'docs/seo/univers-mots-cles.csv'), 'utf8'))
 const rows = brut.filter((r) => r.length > 3).map((r) => Object.fromEntries(entete.map((c, i) => [c, r[i] ?? ''])))
 
+// Les articles fusionnés ou renommés (301) n'existent plus : leurs requêtes vont à la page de destination.
+const redirigees = new Map(JSON.parse(fs.readFileSync(path.join(RACINE, 'src/config/redirections-articles.json'), 'utf8')).map((r) => [r.source, r.destination]))
+for (const r of rows) {
+  let n = 0
+  while (redirigees.has(r.page_cible) && n++ < 5) r.page_cible = redirigees.get(r.page_cible)
+}
+
 const jetonsNom = (s) => new Set(jetons(s))
 const lieuGroupe = (r) => (r.lieu_type === 'commune' || r.lieu_type === 'epci' ? r.epci : r.lieu_slug)
 for (const r of rows) {
@@ -276,4 +283,62 @@ if (process.argv.includes('--briefs')) {
     nb++
   }
   console.log(nb, 'briefs écrits dans scripts/seo/briefs/')
+}
+
+/* ───────── seo/keyword-map.csv : une requête principale = une seule URL ───────── */
+if (process.argv.includes('--keyword-map')) {
+  const lireOpt = (f) => (fs.existsSync(path.join(RACINE, f)) ? lireCsv(fs.readFileSync(path.join(RACINE, f), 'utf8')) : [[], []])
+  const [ec, ...rc] = lireOpt('docs/seo/couverture.csv')
+  const etatCouv = new Map(rc.filter((r) => r.length > 3).map((r) => [r[ec.indexOf('requete_principale')], r[ec.indexOf('etat')]]))
+  const [ex, ...rx] = lireOpt('docs/seo/cannibalisation.csv')
+  const enDouble = new Set(rx.filter((r) => r.length > 3).flatMap((r) => [r[ex.indexOf('page_a')], r[ex.indexOf('page_b')]]).filter((u) => u.startsWith('/blog/')))
+  const ZONE_PROCHE = /\b(tours|saumur|chinon|langeais|bourgueil|chateau la valliere|savigne|joue les tours|saint cyr|chambray|saint avertin|fondettes|la riche|amboise|loches|indre et loire|touraine|maine et loire|anjou|sarthe|la fleche|le mans|val de loire|37|49|72)\b/
+  const couche = (g, principale) => {
+    const t = sansAccent(minuscule(principale))
+    if (/alternative|\bvs\b| ou (wix|wordpress|shopify|squarespace|jimdo|prestashop|woocommerce)|comparatif|quitter|resilier|planity|treatwell|thefork|zenchef|pixieset|obat|tolteck|batappli|henrri|solocal|pages jaunes/.test(t)) return 'E · alternatives et comparatifs'
+    if (g.theme === 'facture électronique' || /facture electronique|rgpd|mentions legales|cookies|cnil|accessibilite|cgv/.test(t)) return 'G · réglementaire et actualité'
+    if (/prix|tarif|combien|cout|budget|pas cher|devis/.test(t)) return 'B · prix et budget'
+    if (g.lieu && ZONE_PROCHE.test(sansAccent(minuscule(g.lieu)))) return 'H · local, zone de proximité'
+    if (g.lieu) return 'I · local, villes éloignées'
+    if (g.metier && /site|web|internet|vitrine|boutique|seo|referencement/.test(t)) return 'C · métier × besoin'
+    if (g.theme === 'logiciel de gestion' || g.theme === 'IA et automatisation') return 'D · logiciels et outils métier'
+    if (g.etape === 'problème' || g.etape === 'pas encore conscient') return 'F · douleurs et problèmes'
+    if (/^(comment|pourquoi|faut il|quel|quelle|que |qu |est ce|peut on|c est quoi)/.test(t) || g.intention === 'information') return 'J · informationnel et questions'
+    return 'A · têtes nationales'
+  }
+  const CONV = { 'B · prix et budget': 5, 'E · alternatives et comparatifs': 5, 'C · métier × besoin': 5, 'D · logiciels et outils métier': 4, 'H · local, zone de proximité': 5, 'A · têtes nationales': 4, 'I · local, villes éloignées': 3, 'F · douleurs et problèmes': 3, 'G · réglementaire et actualité': 2, 'J · informationnel et questions': 2 }
+  const lignes = []
+  const vues = new Set()
+  for (const g of grappes.sort((a, b) => b.score - a.score)) {
+    const principale = g.principale
+    if (vues.has(principale)) continue
+    vues.add(principale)
+    const m0 = g.membres.find((m) => m.requete === principale)
+    const c = couche({ ...g, lieu: m0?.lieu ?? '', metier: m0?.metier ?? '' }, principale)
+    const absente = g.cible.startsWith('/blog/') && !fs.existsSync(path.join(RACINE, 'src/content/blog', g.cible.slice(6) + '.md')) && !fs.existsSync(path.join(RACINE, 'src/content/lexique', g.cible.slice(9) + '.md'))
+    let statut = 'existe'
+    if (absente) statut = 'à créer'
+    else if (etatCouv.get(principale) === 'à enrichir') statut = 'à enrichir'
+    else if (enDouble.has(g.cible)) statut = 'à fusionner'
+    lignes.push({
+      cluster: c,
+      requete_principale: principale,
+      variantes: [...new Set(g.membres.map((m) => m.requete))].filter((q) => q !== principale).slice(0, 30).join(' | '),
+      nb_variantes: Math.min(30, g.membres.length - 1),
+      intention: { information: 'informationnelle', achat: 'transactionnelle', comparaison: 'commerciale', local: 'locale', navigation: 'navigationnelle' }[g.intention] ?? g.intention,
+      conversion_1_5: Math.min(5, CONV[c] + (g.intention === 'achat' ? 1 : 0)),
+      url_cible: g.cible,
+      statut,
+      volume: '',
+      difficulte: '',
+    })
+  }
+  const garde = lignes.filter((l) => l.nb_variantes >= 3 || l.conversion_1_5 >= 4).slice(0, 2500)
+  fs.mkdirSync(path.join(RACINE, 'seo'), { recursive: true })
+  fs.writeFileSync(path.join(RACINE, 'seo/keyword-map.csv'), csv(garde, ['cluster', 'requete_principale', 'variantes', 'nb_variantes', 'intention', 'conversion_1_5', 'url_cible', 'statut', 'volume', 'difficulte']))
+  const parC = {}
+  for (const l of garde) parC[l.cluster] = (parC[l.cluster] ?? 0) + 1
+  const parS = {}
+  for (const l of garde) parS[l.statut] = (parS[l.statut] ?? 0) + 1
+  console.log(`seo/keyword-map.csv : ${garde.length} lignes`, JSON.stringify(parC), JSON.stringify(parS))
 }

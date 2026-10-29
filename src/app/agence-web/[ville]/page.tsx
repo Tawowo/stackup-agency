@@ -9,6 +9,7 @@ import { GEO } from '@/data/geo'
 import { sansDelai } from '@/gabarits/locale/formes'
 import { conforme } from '@/lib/conformite'
 import { CONTENU_VILLES } from '@/data/enrichissements'
+import { liensPublies } from '@/lib/liens-publies'
 import { JsonLd, ORIGINE, faqPage, filAriane, meta, offreService } from '@/lib/seo'
 import { SITE, offre } from '@/config/site'
 
@@ -32,7 +33,7 @@ export default async function PageVille({ params }: { params: Promise<{ ville: s
   const v = getVille((await params).ville)
   if (!v) notFound()
   const dep = DEPARTEMENTS.find((d) => d.nom === v.departement)
-  const local = CONTENU_VILLES[v.slug]
+  const local = liensPublies(CONTENU_VILLES[v.slug])
   const faq = sansDelai([
     { q: `Travaillez-vous avec des entreprises de ${v.ville} ?`, a: `Oui. L'atelier est à ${SITE.ville} ; on échange en visio, par téléphone ou sur place quand c'est utile. Les prix sont les mêmes partout.` },
     { q: `Combien coûte un site internet à ${v.ville} ?`, a: `Un site une page à partir de ${nombreFr(offre('une-page').aPartirDe)} €, un site de plusieurs pages à partir de ${nombreFr(offre('multi-pages').aPartirDe)} €, une boutique à partir de ${nombreFr(offre('boutique').aPartirDe)} €. Le devis précis dépend de votre projet.` },

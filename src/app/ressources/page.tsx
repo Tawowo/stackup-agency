@@ -61,6 +61,7 @@ const OUTILS = [
   { href: '/outils/generateur-mentions-legales', nom: 'Générateur de mentions légales' },
   { href: '/outils/modele-devis', nom: 'Modèle de devis' },
   { href: '/outils/calculateur-clients-perdus', nom: 'Calculateur de clients perdus' },
+  { href: '/outils/calculateur-abonnement-saas', nom: 'Abonnement ou outil sur mesure' },
   { href: '/outils/checklist-facture-electronique', nom: 'Checklist facture électronique' },
 ]
 

@@ -49,8 +49,8 @@ Exemple type : un restaurateur veut un site avec carte, réservation et référe
 
 ## Pour aller plus loin
 
-- [Tarifs d'une agence web en France](/blog/tarif-agence-web-france).
-- [Pourquoi les devis de sites diffèrent autant](/blog/devis-site-internet-pourquoi-ecarts).
+- [Tarifs d'une agence web en France](/blog/cout-site-internet-2026).
+- [Pourquoi les devis de sites diffèrent autant](/blog/cout-site-internet-2026).
 - [Stackup Agency en bref](/stackup-agency-en-bref) et [agence web à Tours](/agence-web/tours).
 - [Estimer votre projet](/tarifs).
 

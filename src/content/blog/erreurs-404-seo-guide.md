@@ -130,4 +130,4 @@ Non. Si quelqu'un a tapé une URL invalide ou si un bot a essayé des URLs aléa
 **Comment surveiller les nouvelles 404 régulièrement ?**
 Google Search Console envoie des alertes par e-mail pour les nouvelles erreurs de couverture. Configurez ces notifications dans vos paramètres Search Console. Une vérification mensuelle dans Search Console est suffisante pour la plupart des TPE.
 
-Voir aussi : [refonte de site web et redirections 301](/blog/refonte-site-web-budget), [guide SEO on-page](/blog/seo-on-page-guide-complet) et nos [tarifs de maintenance de site web](/blog/maintenance-site-web-guide).
+Voir aussi : [refonte de site web et redirections 301](/blog/refonte-site-web-guide), [guide SEO on-page](/blog/seo-on-page-guide-complet) et nos [tarifs de maintenance de site web](/blog/maintenance-site-web-guide).

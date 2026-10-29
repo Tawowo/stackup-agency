@@ -17,6 +17,7 @@ export const metadata = meta({
 const OUTILS = [
   { href: '/outils/audit-site', nom: 'Audit de site', genre: 'Outil', texte: 'Une adresse, une mesure Google PageSpeed Insights : performance, accessibilité et SEO sur 100, et les priorités expliquées en français.' },
   { href: '/outils/generateur-mentions-legales', nom: 'Générateur de mentions légales', genre: 'Outil', texte: 'Statut, éditeur, hébergeur, TVA : le texte de vos mentions légales se compose en direct, à copier ou à imprimer. Tout reste dans votre navigateur.' },
+  { href: '/outils/calculateur-abonnement-saas', nom: 'Abonnement ou outil sur mesure', genre: 'Outil', texte: 'Ce que vous payez chaque mois, cumulé sur 3 et 5 ans, face à un outil de gestion à vous. Vos chiffres, aucune comparaison inventée.' },
   { href: '/outils/calculateur-clients-perdus', nom: 'Calculateur de clients perdus', genre: 'Outil', texte: 'Vos propres hypothèses, un calcul écrit étape par étape et un ordre de grandeur du manque à gagner d’un site peu visible. Jamais une promesse.' },
   { href: '/outils/checklist-facture-electronique', nom: 'Checklist facture électronique', genre: 'Outil', texte: 'Vingt et un points à cocher pour faire le point avant la facture électronique : clients, logiciel, données, comptable. Imprimable, sans avis de conformité.' },
   { href: '/outils/modele-devis', nom: 'Modèle de devis', genre: 'Outil', texte: 'Remplissez votre devis : totaux HT, TVA, TTC et acompte calculés au centime, aperçu à imprimer en PDF ou à copier. Rien n’est envoyé.' },

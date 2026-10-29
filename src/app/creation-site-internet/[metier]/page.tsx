@@ -7,6 +7,7 @@ import MondeMetier from '@/components/maquettes/MondeMetier'
 import type { MetierBloc } from '@/components/maquettes/blocs'
 import { sansDelai } from '@/gabarits/locale/formes'
 import { CONTENU_METIERS } from '@/data/enrichissements'
+import { liensPublies } from '@/lib/liens-publies'
 import { conforme, conformeListe } from '@/lib/conformite'
 import { JsonLd, faqPage, filAriane, meta } from '@/lib/seo'
 import { service as schemaService } from '@/lib/schema'
@@ -42,7 +43,7 @@ const majuscule = (t: string) => t.charAt(0).toUpperCase() + t.slice(1)
 export default async function PageMetier({ params }: { params: Promise<{ metier: string }> }) {
   const m = getMetier((await params).metier)
   if (!m) notFound()
-  const local = CONTENU_METIERS[m.slug]
+  const local = liensPublies(CONTENU_METIERS[m.slug])
   const faq = sansDelai([...m.faq, ...(local?.faq ?? [])].map((f) => ({ q: f.q, a: conforme(f.a) })))
   const service = SERVICES[m.serviceLie]
   const cat = CATEGORIE[m.categorie] ?? CATEGORIE.services!

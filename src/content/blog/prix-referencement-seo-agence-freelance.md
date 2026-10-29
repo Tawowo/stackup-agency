@@ -60,7 +60,7 @@ Un freelance est souvent plus abordable qu'une agence, parce qu'il n'a pas de st
 
 Pour choisir un freelance proche de chez vous, un bon réflexe est de chercher « freelance SEO près de moi » mais surtout de vérifier ses références : pouvez-vous voir des sites qu'il a travaillés ? Peut-il vous expliquer ce qu'il fait en termes simples ? Un prestataire qui ne vous explique rien est un prestataire qui ne vous rendra pas autonome.
 
-La question du comparatif entre agence et indépendant est plus largement traitée dans [Tarif d'une agence web en France](/blog/tarif-agence-web-france) et dans [Pourquoi les devis de site internet sont si différents](/blog/devis-site-internet-pourquoi-ecarts).
+La question du comparatif entre agence et indépendant est plus largement traitée dans [Tarif d'une agence web en France](/blog/cout-site-internet-2026) et dans [Pourquoi les devis de site internet sont si différents](/blog/cout-site-internet-2026).
 
 ## Quel budget prévoir pour le référencement local ?
 
@@ -82,7 +82,7 @@ Un parcours raisonnable pour un débutant sans compétences techniques :
 
 1. **Créez et complétez votre fiche Google Business Profile.** C'est la démarche la plus rentable pour un commerce local. Voir [Fiche Google Business : tout savoir](/blog/fiche-google-business-tout-savoir).
 2. **Vérifiez que votre site est bien indexé** avec la [Search Console](/lexique/search-console).
-3. **Soignez les titres et les textes** de chaque page, avec le métier et la ville. Le guide [SEO local gratuit : par où commencer](/blog/paa-seo-local-gratuit) détaille cette étape.
+3. **Soignez les titres et les textes** de chaque page, avec le métier et la ville. Le guide [SEO local gratuit : par où commencer](/blog/seo-local-gratuit-actions-a-faire-soi-meme) détaille cette étape.
 4. **Demandez des avis** à vos clients satisfaits.
 5. **Publiez régulièrement** de petits contenus utiles.
 

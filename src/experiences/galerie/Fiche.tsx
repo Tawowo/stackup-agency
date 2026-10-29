@@ -77,6 +77,16 @@ export default function Fiche({ projet: p, suivant }: { projet: Projet; suivant:
           />
           {p.note && <p className="su-fic__note">{p.note}</p>}
         </aside>
+        {p.etude.map((x) => (
+          <section key={x.titre} className="su-fic__bloc">
+            <h2 className="su-fic__h2">{x.titre}</h2>
+            {x.paragraphes.map((t) => (
+              <p key={t.slice(0, 40)} className="su-fic__texte">
+                {t}
+              </p>
+            ))}
+          </section>
+        ))}
         <section className="su-fic__bloc su-fic__bloc--large">
           <h2 className="su-fic__h2">{enLigne ? 'Ce que contient le site' : 'Ce que fait le logiciel'}</h2>
           <ul className="su-fic__fonctions">

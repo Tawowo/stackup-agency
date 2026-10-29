@@ -59,7 +59,7 @@ Pour cette requête, Google peut reprendre sa liste dans un encadré. Le lecteur
 
 ## Pour aller plus loin
 
-- [Les AI Overviews de Google et le SEO des TPE](/blog/ai-overviews-seo-tpe)
+- [Les AI Overviews de Google et le SEO des TPE](/blog/seo-ia-generative-ai-overviews-google)
 - [Stratégie de longue traîne pour clients locaux](/blog/strategie-longue-traine-tpe-clients-locaux)
 - [Rédiger un article SEO](/blog/redaction-article-seo-guide)
 - [Le service référencement](/services/referencement)

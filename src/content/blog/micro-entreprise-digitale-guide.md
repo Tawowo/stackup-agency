@@ -3,6 +3,7 @@ title: "Micro-entreprise digitale : tout ce qu'il faut savoir"
 seoTitle: "Micro-entreprise en ligne : création, plafonds, TVA, charges"
 excerpt: "Activité en ligne en micro-entreprise : étapes de création, plafonds, cotisations et piège de la TVA. Les chiffres sont à vérifier sur les sites officiels."
 date: "2026-05-18"
+updated: "2026-10-29"
 readTime: 8
 tag: "Entrepreneuriat"
 category: "entrepreneuriat"
@@ -11,7 +12,7 @@ keywords: ["micro-entreprise digitale", "auto-entrepreneur en ligne", "statut mi
 
 ## La micro-entreprise : le tremplin de l'entrepreneuriat digital
 
-Chaque année, plus de 400 000 micro-entreprises sont créées en France. Et une proportion croissante de ces nouvelles structures exercent une activité exclusivement ou principalement en ligne : freelances, consultants, créateurs de contenu, développeurs, graphistes, coachs...
+Chaque année, de très nombreuses micro-entreprises sont créées en France. Et une part croissante de ces nouvelles structures exercent une activité exclusivement ou principalement en ligne : freelances, consultants, créateurs de contenu, développeurs, graphistes, coachs...
 
 La micro-entreprise (anciennement auto-entreprise) est souvent le premier statut choisi par ces entrepreneurs du digital. Et pour de bonnes raisons : simplicité de création, charges proportionnelles, comptabilité allégée. Mais ce statut a aussi ses limites qu'il faut connaître avant de se lancer.
 
@@ -28,7 +29,7 @@ Ce régime permet de :
 
 ### Démarches en ligne
 
-La création se fait entièrement en ligne sur le site officiel **autoentrepreneur.urssaf.fr**. Votre espace est créé immédiatement, et vous recevez votre numéro SIRET sous quelques jours (parfois sous 24h).
+La création se fait entièrement en ligne sur le site officiel **autoentrepreneur.urssaf.fr**. Votre espace est créé immédiatement, et vous recevez votre numéro SIRET après le traitement de votre dossier par l'administration.
 
 Informations à renseigner :
 - Identité (nom, prénom, date de naissance, adresse)
@@ -40,18 +41,18 @@ Informations à renseigner :
 
 Dès la création, vous devez choisir entre :
 
-**Versement libératoire de l'impôt** : vous payez l'impôt sur le revenu en même temps que vos cotisations sociales, au taux fixe de 1 à 2,2 % selon l'activité. Avantageux si votre taux marginal d'imposition est élevé. Attention : vous devez l'opter lors de la création ou dans les 3 premiers mois.
+**Versement libératoire de l'impôt** : vous payez l'impôt sur le revenu en même temps que vos cotisations sociales, à un taux fixe qui dépend de l'activité (le taux en vigueur est publié sur le site de l'Urssaf). Avantageux si votre taux marginal d'imposition est élevé. Attention : vous devez l'opter lors de la création ou dans les 3 premiers mois.
 
 **Régime classique** : votre chiffre d'affaires est déclaré dans votre déclaration d'impôt sur le revenu annuelle, après abattement forfaitaire. Plus simple à gérer, mais l'impôt est payé l'année suivante.
 
 ## Les plafonds de chiffre d'affaires
 
-La micro-entreprise est soumise à des plafonds de chiffre d'affaires annuel :
+La micro-entreprise est soumise à des plafonds de chiffre d'affaires annuel, fixés par la loi et revalorisés périodiquement. Il existe deux niveaux :
 
-- **Vente de marchandises, fourniture de logement** : 188 700 € (seuil 2026)
-- **Prestations de services BIC ou BNC, professions libérales** : 77 700 €
+- **Vente de marchandises, fourniture de logement** : le plafond le plus élevé
+- **Prestations de services BIC ou BNC, professions libérales** : un plafond nettement plus bas
 
-Si vous dépassez ces plafonds deux années consécutives, vous basculez automatiquement vers un régime fiscal standard.
+Les montants en vigueur sont à lire sur service-public.fr ou sur le site de l'Urssaf, et non dans un article qui peut dater. Si vous dépassez ces plafonds deux années consécutives, vous basculez automatiquement vers un régime fiscal standard.
 
 ### Que faire si vous approchez des plafonds ?
 
@@ -59,12 +60,14 @@ C'est un bon problème à avoir ! Vous avez le temps d'anticiper : consulter un 
 
 ## Les cotisations sociales : fonctionnement et taux
 
-En micro-entreprise, vous payez des cotisations sociales sur votre chiffre d'affaires — pas sur votre bénéfice. Taux en 2026 :
+En micro-entreprise, vous payez des cotisations sociales sur votre chiffre d'affaires — pas sur votre bénéfice. Le taux dépend de la catégorie d'activité, et il est révisé régulièrement :
 
-- **Vente de marchandises** : environ 12,3 %
-- **Prestations de services BIC** : environ 21,2 %
-- **Prestations de services BNC / libéral** : environ 23,1 %
-- **Activités libérales CIPAV** : environ 23,2 %
+- **Vente de marchandises** : le taux le plus bas
+- **Prestations de services BIC** : un taux intermédiaire
+- **Prestations de services BNC / libéral** : un taux plus élevé
+- **Activités libérales relevant de la CIPAV** : un taux propre à cette caisse
+
+Consultez les taux en vigueur sur le site de l'Urssaf avant de bâtir vos prix.
 
 Ces cotisations couvrent : assurance maladie-maternité, retraite de base et complémentaire, invalidité-décès, allocations familiales, CSG/CRDS.
 
@@ -74,9 +77,7 @@ Ce que la micro-entreprise ne couvre pas : l'assurance chômage. Si vous ne trav
 
 ## TVA : le piège à éviter
 
-En micro-entreprise, vous bénéficiez de la **franchise de TVA** tant que vous restez sous certains seuils :
-- 91 900 € pour la vente de marchandises
-- 36 800 € pour les prestations de services
+En micro-entreprise, vous bénéficiez de la **franchise de TVA** tant que vous restez sous certains seuils de chiffre d'affaires, plus élevés pour la vente de marchandises que pour les prestations de services. Ces seuils ont fait l'objet de réformes récentes : vérifiez ceux qui s'appliquent à votre situation sur impots.gouv.fr.
 
 Concrètement : vous ne facturez pas la TVA à vos clients. Vous ne la récupérez pas non plus sur vos achats professionnels. Et vous devez mentionner sur vos factures : "TVA non applicable - art. 293 B du CGI".
 
@@ -113,7 +114,7 @@ La micro-entreprise convient à de nombreuses activités en ligne :
 - Graphisme, illustration, design
 - Développement web et logiciel
 - Conseil, consulting, coaching
-- Formation professionnelle (avec certification ou déclaration DATADOCK)
+- Formation professionnelle (avec déclaration d'activité, et certification Qualiopi si vous visez des financements publics)
 - Vente de produits physiques ou digitaux
 - Photographie, vidéo
 

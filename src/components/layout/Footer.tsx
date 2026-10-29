@@ -154,6 +154,9 @@ export default function Footer() {
                 <Link href="/outils/calculateur-clients-perdus">Clients perdus</Link>
               </li>
               <li>
+                <Link href="/outils/calculateur-abonnement-saas">Abonnement ou sur mesure</Link>
+              </li>
+              <li>
                 <Link href="/outils/checklist-facture-electronique">Facture électronique</Link>
               </li>
               <li>
@@ -174,7 +177,7 @@ export default function Footer() {
                 <Link href="/lexique">Lexique</Link>
               </li>
               <li>
-                <Link href="/comparatif/wix-wordpress-sur-mesure">Wix, WordPress ou sur mesure</Link>
+                <Link href="/comparatif">Comparatifs</Link>
               </li>
             </ul>
           </div>

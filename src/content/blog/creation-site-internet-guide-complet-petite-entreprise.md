@@ -108,7 +108,7 @@ Pour choisir, posez ces questions :
 
 ## Que faire des anciennes pages quand on refait son site ?
 
-Ne les supprimez pas à l’aveugle. Les anciennes pages peuvent avoir des liens entrants et un positionnement dans Google ; si elles disparaissent sans redirection, les visiteurs tombent sur une erreur et vous perdez le bénéfice acquis. Dressez la liste des adresses existantes, décidez pour chacune de la page équivalente du nouveau site et faites rediriger l’ancienne vers la nouvelle. Conservez l’ancien site en ligne jusqu’à ce que le nouveau soit prêt. Le détail technique est dans [Refonte de site et redirections 301](/blog/refonte-site-web-seo-redirections-301), et le service [refonte de site internet](/services/refonte-de-site-internet) couvre ce travail.
+Ne les supprimez pas à l’aveugle. Les anciennes pages peuvent avoir des liens entrants et un positionnement dans Google ; si elles disparaissent sans redirection, les visiteurs tombent sur une erreur et vous perdez le bénéfice acquis. Dressez la liste des adresses existantes, décidez pour chacune de la page équivalente du nouveau site et faites rediriger l’ancienne vers la nouvelle. Conservez l’ancien site en ligne jusqu’à ce que le nouveau soit prêt. Le détail technique est dans [Refonte de site et redirections 301](/blog/refonte-site-web-guide), et le service [refonte de site internet](/services/refonte-de-site-internet) couvre ce travail.
 
 ## Les autres outils d’un débutant : devis, gestion, visibilité
 

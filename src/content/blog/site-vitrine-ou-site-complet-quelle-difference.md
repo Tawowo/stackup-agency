@@ -128,7 +128,7 @@ Comparer un « pack » et un devis sur mesure sans grille est un piège. Posez l
 - Qu'est-ce qui est facturé en plus ?
 - Quel est le calendrier, et à quoi est-il conditionné ?
 
-Les prix de Stackup Agency sont toujours présentés « à partir de » : le montant final dépend de ces réponses. L'[estimateur](/tarifs) permet d'en voir l'ordre de grandeur avant d'écrire à quiconque. Pour un panorama sur les coûts en général, voir [Combien coûte un site web professionnel](/blog/paa-combien-coute-site-web).
+Les prix de Stackup Agency sont toujours présentés « à partir de » : le montant final dépend de ces réponses. L'[estimateur](/tarifs) permet d'en voir l'ordre de grandeur avant d'écrire à quiconque. Pour un panorama sur les coûts en général, voir [Combien coûte un site web professionnel](/blog/cout-site-internet-2026).
 
 ## Comment choisir : un arbre de décision simple
 

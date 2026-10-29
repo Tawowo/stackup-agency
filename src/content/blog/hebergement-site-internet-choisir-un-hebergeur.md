@@ -14,7 +14,7 @@ sources: ["https://www.cnil.fr", "https://www.service-public.fr"]
 
 **Un hébergeur est l'entreprise qui garde les fichiers de votre site sur des serveurs connectés en permanence, pour qu'il s'affiche à toute heure. Pour un petit commerce, choisissez-le sur la sauvegarde, le support, la facilité à partir et la propriété du contrat : le moins cher n'est pas toujours le plus économique, et un contrat à votre nom vous protège de bien des mauvaises surprises.**
 
-Deux articles du site traitent déjà le sujet sous des angles voisins : [quel hébergement choisir pour son site web](/blog/paa-hebergement-site) présente les critères et quelques noms, et [les différentes solutions d'hébergement](/blog/hebergement-web-choisir) explique mutualisé, VPS et dédié. Ici, on s'attache à ce qu'ils ne couvrent pas : qui doit être le titulaire du contrat quand une agence intervient, comment comparer sans se faire piéger, et surtout comment **changer** d'hébergeur ou sortir d'un constructeur sans casser son site.
+Deux articles du site traitent déjà le sujet sous des angles voisins : [quel hébergement choisir pour son site web](/blog/quel-hebergement-choisir-site-web) présente les critères et quelques noms, et [les différentes solutions d'hébergement](/blog/hebergement-web-choisir) explique mutualisé, VPS et dédié. Ici, on s'attache à ce qu'ils ne couvrent pas : qui doit être le titulaire du contrat quand une agence intervient, comment comparer sans se faire piéger, et surtout comment **changer** d'hébergeur ou sortir d'un constructeur sans casser son site.
 
 ## Qu'est-ce qu'un hébergeur de site internet ?
 

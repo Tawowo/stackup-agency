@@ -150,7 +150,7 @@ Chaque message doit permettre de se désabonner facilement. Envoyer des mails de
 
 Votre hébergeur est un **sous-traitant** : il traite des données pour votre compte. Le RGPD demande un **contrat ou des conditions** qui encadrent ce traitement. Chez la plupart des hébergeurs, c'est un document d'accord sur le traitement des données à accepter dans l'espace client.
 
-Le RGPD n'impose pas un hébergeur situé dans un pays précis. Il **encadre les transferts de données hors de l'Union européenne** et exige des garanties. Posez-vous trois questions : où sont stockées les données, quelles garanties l'hébergeur fournit, et quels sous-traitants intervient-il. Pour choisir, voir [quel hébergement choisir](/blog/paa-hebergement-site).
+Le RGPD n'impose pas un hébergeur situé dans un pays précis. Il **encadre les transferts de données hors de l'Union européenne** et exige des garanties. Posez-vous trois questions : où sont stockées les données, quelles garanties l'hébergeur fournit, et quels sous-traitants intervient-il. Pour choisir, voir [quel hébergement choisir](/blog/quel-hebergement-choisir-site-web).
 
 ## Les formulaires de mon site sont-ils conformes ?
 

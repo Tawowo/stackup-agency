@@ -3,6 +3,7 @@ title: "Recherche vocale et SEO local : optimiser \"près de moi\""
 seoTitle: "Recherche vocale « près de moi » : adapter son commerce"
 excerpt: "Les requêtes vocales sont longues et locales. Adaptez votre fiche Google, vos pages et vos questions-réponses pour être cité quand on dit « près de moi »."
 date: "2026-04-05"
+updated: "2026-10-29"
 readTime: 7
 tag: "SEO Local"
 category: "seo-local"
@@ -10,7 +11,7 @@ keywords: ["recherche vocale", "SEO local", "près de moi", "Google Assistant", 
 ---
 
 
-"Dis Siri, trouve-moi un plombier près de chez moi." "Ok Google, pharmacie ouverte maintenant à Tours." Ces requêtes vocales explosent. En France, 39 % des internautes de 18-34 ans utilisent la recherche vocale au moins une fois par semaine selon Médiamétrie (2025). Pour un commerce local, ignorer ce canal, c'est se couper d'un trafic qualifié à fort potentiel de conversion.
+"Dis Siri, trouve-moi un plombier près de chez moi." "Ok Google, pharmacie ouverte maintenant à Tours." Ces requêtes vocales se banalisent, au volant, dans la cuisine ou en marchant dans la rue. Personne ne sait mesurer précisément leur part dans vos visites, mais pour un commerce local, ignorer ce canal, c'est se couper de visiteurs qui ont un besoin immédiat et une intention d'agir.
 
 Car la recherche vocale est fondamentalement différente de la recherche textuelle. Ses requêtes sont plus longues, plus conversationnelles, et massivement locales. Si votre site est optimisé pour la recherche vocale locale, vous interceptez des clients à quelques centaines de mètres de chez vous, prêts à agir immédiatement.
 
@@ -42,14 +43,14 @@ C'est la priorité absolue pour la recherche vocale locale. Google Assistant, Si
 
 - **Nom de l'établissement** : votre vrai nom commercial, sans keyword stuffing (interdit par Google)
 - **Catégorie principale** : la plus précise possible ("Plombier" plutôt que "Artisan")
-- **Catégories secondaires** : ajoutez jusqu'à 9 catégories pertinentes
+- **Catégories secondaires** : ajoutez les catégories pertinentes que Google propose, sans en inventer d'approximatives
 - **Horaires** : précis et mis à jour, y compris horaires spéciaux (jours fériés, fermeture annuelle)
 - **Numéro de téléphone** : affiché et clickable depuis mobile
 - **URL de site web** : pointant vers votre page d'accueil ou une landing page locale
 
 ### Posts et mises à jour régulières
 
-Les fiches GBP avec des posts récents (au moins 2 fois par mois) bénéficient d'une meilleure visibilité dans les résultats locaux et les recherches vocales. Partagez des offres, des actualités, des photos de réalisations.
+Une fiche GBP vivante, avec des posts récents, des photos et des informations à jour, donne un signal d'activité plus rassurant, pour Google comme pour le visiteur qui la consulte. Partagez des offres, des actualités, des photos de réalisations, à un rythme que vous pouvez tenir dans la durée plutôt qu'en rafale puis plus rien.
 
 ### Réponses aux avis
 
@@ -90,16 +91,16 @@ Votre site doit parler de votre territoire. Pas de manière artificielle ("serru
 
 Les assistants vocaux lisent souvent la featured snippet (encadré en position 0) pour répondre aux questions. Pour l'obtenir :
 
-- Répondez directement à la question dans les 40-50 premiers mots d'un paragraphe
+- Répondez directement à la question dans les premières phrases d'un paragraphe, de façon courte et autonome
 - Utilisez des listes à puces pour les "comment faire" et "quels sont les..."
 - Formatez les comparaisons et classements en tableaux
-- Assurez-vous que votre page est déjà bien positionnée sur la requête (les featured snippets viennent généralement des top 5)
+- Assurez-vous que votre page est déjà bien positionnée sur la requête : Google extrait surtout ses réponses de pages qui se classent déjà correctement
 
 ## La vitesse mobile : un prérequis absolu
 
-La quasi-totalité des recherches vocales locales se font depuis un smartphone. Si votre site met 6 secondes à charger sur mobile 4G, vous perdez ces visiteurs — et Google le sait.
+La quasi-totalité des recherches vocales locales se font depuis un smartphone. Si votre site met trop longtemps à s'afficher sur un mobile en 4G, vous perdez ces visiteurs — et Google le sait.
 
-Visez un **LCP < 2,5 secondes sur mobile** pour la recherche vocale locale. Notre guide sur la [vitesse de chargement](/blog/vitesse-chargement-site-guide-technique-complet) couvre les optimisations techniques. Un site conçu par nos soins intègre les optimisations mobile de base ([voir comment estimer votre projet](/tarifs#estimer)), et l'[abonnement facultatif](/tarifs#abonnement), composé à la carte, permet d'y ajouter de la maintenance.
+Visez un **LCP inférieur ou égal à 2,5 secondes sur mobile**, le seuil « bon » défini par Google pour les Core Web Vitals. Notre guide sur la [vitesse de chargement](/blog/vitesse-chargement-site-guide-technique-complet) couvre les optimisations techniques. Un site conçu par nos soins intègre les optimisations mobile de base ([voir comment estimer votre projet](/tarifs#estimer)), et l'[abonnement facultatif](/tarifs#abonnement), composé à la carte, permet d'y ajouter de la maintenance.
 
 ## Citations locales et cohérence NAP
 
@@ -122,7 +123,7 @@ Des indicateurs indirects :
 
 ### Quelle est l'importance de la recherche vocale en France ?
 
-Selon Médiamétrie (2025), 32 % des Français utilisent la recherche vocale au moins une fois par mois. Ce chiffre monte à 47 % chez les 18-34 ans. La croissance est portée par l'adoption des smartphones et des assistants vocaux sur les enceintes connectées (Google Home, Amazon Echo). En part de marché des recherches, la voix représente environ 20 % des requêtes mobiles en France — un chiffre en hausse constante.
+Elle reste un usage complémentaire de la recherche écrite, plus répandu chez les utilisateurs à l'aise avec leur smartphone, et porté par les assistants intégrés aux téléphones, aux voitures et aux enceintes connectées. Nous ne citons volontairement aucun pourcentage : les chiffres qui circulent sur le sujet viennent d'études de nature et de méthode très différentes, et aucun ne permet de savoir combien de clients de votre commerce vous trouveront par la voix. Ce qui compte pour vous, c'est que les bonnes pratiques de la recherche vocale (fiche à jour, pages claires, réponses directes) servent aussi la recherche écrite.
 
 ### Quel type de requêtes sont formulées vocalement ?
 
@@ -134,7 +135,7 @@ Trois piliers : (1) Compléter et maintenir à jour votre fiche Google Business 
 
 ### Google My Business aide-t-il vraiment pour la recherche vocale ?
 
-Oui, de manière significative. Google Business Profile est la source principale que Google Assistant utilise pour répondre aux requêtes locales vocales. Une fiche complète, avec des avis récents et des posts réguliers, apparaît en priorité dans les réponses "près de moi". C'est gratuit, prend 30 minutes à optimiser correctement, et les bénéfices sont immédiats sur les recherches locales.
+Oui, de manière significative. Google Business Profile est la source principale que Google Assistant utilise pour répondre aux requêtes locales vocales. Une fiche complète, avec des avis récents et des posts réguliers, apparaît en priorité dans les réponses "près de moi". C'est gratuit, et une première optimisation soignée de la fiche se fait en une séance de travail ; l'entretien demande ensuite un peu de régularité.
 
 ---
 

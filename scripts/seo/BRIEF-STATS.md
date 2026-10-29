@@ -1,0 +1,13 @@
+# Brief — assainir les chiffres des articles de blog (honnêteté éditoriale)
+
+Contexte : plusieurs articles affichent des pourcentages, parts de marché, commissions, taux ou « études » (Bond Brand, CERIB, FFB, Workforce Institute…) **sans source vérifiable**. Le site ne doit afficher aucun chiffre inventé, aucune étude non citée, aucun taux ou prix de service tiers (Etsy, Deliveroo, Amazon, Uber Eats, Google Ads…).
+
+Pour chaque article de ta liste (`src/content/blog/<slug>.md`), relis le texte et traite chaque affirmation chiffrée :
+1. **Garde** : les chiffres issus de nos propres règles ou de définitions techniques exactes (ex. seuils Core Web Vitals de Google : LCP 2,5 s, INP 200 ms, CLS 0,1 ; répartition de couleurs 60-30-10 donnée comme règle de design ; chiffres purement arithmétiques ou pédagogiques annoncés comme exemple fictif).
+2. **Reformule sans chiffre** : toute statistique, part de marché, « étude », taux de conversion, gain moyen, commission ou prix d’un tiers, dont tu ne peux pas citer une source officielle sûre. Remplace par une formulation qualitative honnête (« une part importante », « selon la configuration », « consultez la grille actuelle de l’éditeur ») ou par un raisonnement chiffré **fictif annoncé comme exemple** (« Exemple type : … »). Ne remplace jamais un chiffre par un autre chiffre inventé.
+3. Si la phrase perd son sens sans le chiffre, réécris-la ; si l’argument repose entièrement sur la statistique, reformule l’argument autour d’une raison concrète (fonctionnement, coût de temps, propriété des données).
+4. Conserve : titre, `seoTitle`, `excerpt`, front-matter, structure h2/h3, liens internes, ton (vouvoiement), longueur (ne descends pas sous 900 mots ; si tu retires beaucoup, compense par du contenu concret et utile). Si le front-matter (`excerpt`, `seoTitle`, `keywords`) contient un chiffre non sourcé, corrige-le (longueurs : seoTitle ≤ 60, excerpt 125–160 caractères).
+5. Ne touche pas `date` ; mets `updated: "2026-10-29"`.
+6. Aucun prix Stackup en chiffres (jetons `{{prix:…}}` si besoin), pas de « × moins cher », pas de durée de livraison, pas de dénigrement.
+
+Vérifie à la fin : `cd /home/user/stackup-agency && node scripts/seo/verifier-article.mjs <slug>` pour chaque article si le script l’accepte (sinon `node scripts/seo/blog-triage.mjs` ne doit plus afficher « sans source » pour tes articles : `grep -c "" seo/blog-triage.csv` puis `grep <slug> seo/blog-triage.csv`). Ne modifie aucun autre fichier que les articles de ta liste (n’écris pas seo/blog-triage.csv : relance-le seulement dans un autre dossier si tu en as besoin). Réponds en une ligne : nombre d’articles traités et ceux où un chiffre a été conservé et pourquoi.

@@ -103,7 +103,7 @@ Trois interlocuteurs possibles, selon le symptôme :
 | Fonction cassée après une modification (menu, formulaire, réservation) | Le prestataire qui a conçu ou maintient le site |
 | Publicités ou redirections étranges, pages que vous n'avez pas créées | Hébergeur et prestataire, en urgence : voir [Mon site a été piraté](/blog/site-pirate-que-faire-wordpress-hack) |
 
-Qui est tenu de maintenir le site ? Cela dépend de ce qui a été convenu. Une création de site n'inclut pas forcément la maintenance : si rien n'est écrit, personne n'est chargé de l'assurer. Vérifiez votre devis ou votre contrat. Les enjeux sont expliqués dans [Maintenance de site web](/blog/maintenance-site-web-guide), et le choix d'un hébergeur dans [Quel hébergement choisir](/blog/paa-hebergement-site).
+Qui est tenu de maintenir le site ? Cela dépend de ce qui a été convenu. Une création de site n'inclut pas forcément la maintenance : si rien n'est écrit, personne n'est chargé de l'assurer. Vérifiez votre devis ou votre contrat. Les enjeux sont expliqués dans [Maintenance de site web](/blog/maintenance-site-web-guide), et le choix d'un hébergeur dans [Quel hébergement choisir](/blog/quel-hebergement-choisir-site-web).
 
 ## Que faire si mon prestataire web ne répond plus ?
 

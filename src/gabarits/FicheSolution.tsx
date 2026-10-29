@@ -13,6 +13,8 @@ import Cadran from '@/components/ui/Cadran'
 import Accordeon from '@/components/editorial/Accordeon'
 import { Portable } from '@/components/appareils/Appareils'
 import { PROJETS } from '@/experiences/galerie/projets'
+import CalculateurAbonnement from '@/experiences/outils/CalculateurAbonnement'
+import Lie from '@/components/editorial/Lie'
 import './fiche-solution.css'
 
 export interface DonneesSolution {
@@ -27,6 +29,10 @@ export interface DonneesSolution {
   /** « À partir de » du moteur : socle de l'outil + ces modules. */
   prix: number
   faq: { q: string; a: string }[]
+  /** Sections rédigées propres à la solution (problème, fonctionnement, ce que le module remplace, préparation). */
+  sections?: { titre: string; paragraphes: string[] }[]
+  /** Abonnement facultatif minimum (moteur de devis), pour le calculateur. */
+  abonnementMin: number
   metiers: { slug: string; nom: string }[]
   voisines: { slug: string; nom: string }[]
 }
@@ -100,6 +106,17 @@ export default function FicheSolution({ s }: { s: DonneesSolution }) {
             ))}
           </ul>
         </section>
+        {s.sections?.map((x) => (
+          <section key={x.titre} className="su-fso__texte-long">
+            <h2 className="su-fso__h2">{x.titre}</h2>
+            {x.paragraphes.map((t) => (
+              <p key={t.slice(0, 40)}>
+                <Lie t={t} />
+              </p>
+            ))}
+          </section>
+        ))}
+        <CalculateurAbonnement prixOutil={s.prix} aboMin={s.abonnementMin} compact />
         <section className="su-fso__catalogue">
           <h2 className="su-fso__h2">Dans le catalogue de l’outil</h2>
           <ul className="su-fso__modules">

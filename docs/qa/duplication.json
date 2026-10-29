@@ -1,9 +1,9 @@
 {
- "date": "2026-10-29T12:03:15.796Z",
+ "date": "2026-10-29T13:30:09.253Z",
  "base": "http://localhost:3100",
- "pages": 580,
+ "pages": 575,
  "seuil": 15,
- "pireSimilarite": 12.4,
+ "pireSimilarite": 13.6,
  "couplesAuDessus": 0,
  "couples": []
 }

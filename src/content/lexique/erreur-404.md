@@ -60,7 +60,7 @@ Ne redirigez pas toutes vos 404 vers l'accueil : cela déroute le visiteur et br
 
 - [Erreurs 404 et SEO : le guide](/blog/erreurs-404-seo-guide)
 - [Site en erreur, page blanche, erreur 500 ou 404](/blog/site-en-erreur-page-blanche-erreur-500-404)
-- [Refonte, SEO et redirections 301](/blog/refonte-site-web-seo-redirections-301)
+- [Refonte, SEO et redirections 301](/blog/refonte-site-web-guide)
 - [Audit gratuit de votre site](/outils/audit-site)
 
 ## Questions fréquentes

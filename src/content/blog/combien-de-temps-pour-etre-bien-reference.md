@@ -80,7 +80,7 @@ Ils se fixent par contrat : renseignez-vous sur ce que couvre l'abonnement (sauv
 
 ## Mon nom de domaine est-il toujours à mon nom
 
-À vérifier avant de lancer un projet de référencement : le domaine doit vous appartenir, et non à l'agence ou au développeur qui l'a acheté. Consultez le compte du bureau d'enregistrement ou demandez au prestataire de vous confirmer qui est le titulaire et qui reçoit les rappels de renouvellement. Un domaine qui expire fait disparaître le site, la messagerie et le référencement d'un coup. Notre article sur [le choix d'un hébergement](/blog/paa-hebergement-site) rappelle les bons réflexes de propriété.
+À vérifier avant de lancer un projet de référencement : le domaine doit vous appartenir, et non à l'agence ou au développeur qui l'a acheté. Consultez le compte du bureau d'enregistrement ou demandez au prestataire de vous confirmer qui est le titulaire et qui reçoit les rappels de renouvellement. Un domaine qui expire fait disparaître le site, la messagerie et le référencement d'un coup. Notre article sur [le choix d'un hébergement](/blog/quel-hebergement-choisir-site-web) rappelle les bons réflexes de propriété.
 
 ## Les autres délais qu'on confond avec le référencement
 

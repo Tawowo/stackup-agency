@@ -85,7 +85,7 @@ Les assistants d'IA qui répondent à des questions s'appuient sur des sources e
 - des **avis et mentions** sur des sites fiables ;
 - un **contenu daté et tenu à jour**.
 
-C'est, au fond, la même hygiène que pour le référencement classique. Notre article sur [Google AI Overviews](/blog/ai-overviews-seo-tpe) détaille le mécanisme côté Google.
+C'est, au fond, la même hygiène que pour le référencement classique. Notre article sur [Google AI Overviews](/blog/seo-ia-generative-ai-overviews-google) détaille le mécanisme côté Google.
 
 ## Reprendre un commerce : comment garder les anciens clients ?
 
