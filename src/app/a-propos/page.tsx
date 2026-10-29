@@ -18,7 +18,7 @@ export default function Page() {
             { nom: 'Accueil', chemin: '/' },
             { nom: 'À propos', chemin: '/a-propos' },
           ]),
-          { '@context': 'https://schema.org', '@type': 'Person', name: SITE.fondateur, jobTitle: 'Fondateur, développeur', worksFor: { '@id': `${ORIGINE}/#agence` }, address: { '@type': 'PostalAddress', addressLocality: 'Tours', addressCountry: 'FR' } },
+          { '@context': 'https://schema.org', '@type': 'ProfilePage', '@id': `${ORIGINE}/a-propos#page`, url: `${ORIGINE}/a-propos`, name: `À propos de ${SITE.fondateur}`, inLanguage: 'fr-FR', mainEntity: { '@id': `${ORIGINE}/#matheo` }, about: { '@id': `${ORIGINE}/#agence` } },
         ]}
       />
       <AtelierNuit />

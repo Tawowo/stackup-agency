@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Tarifs from '@/experiences/tarifs/Tarifs'
 import { decoder } from '@/domain/devis/etat'
 import { JsonLd, filAriane, meta } from '@/lib/seo'
+import { outilGratuit } from '@/lib/schema'
 import { nombreFr } from '@/lib/jetons'
 import { PRIX_PLANCHER } from '@/domain/devis/offres'
 
@@ -16,7 +17,7 @@ export default async function Page({ searchParams }: { searchParams: Promise<Rec
   const e = typeof q.e === 'string' ? q.e : null
   return (
     <>
-      <JsonLd data={filAriane([{ nom: 'Accueil', chemin: '/' }, { nom: 'Tarifs', chemin: '/tarifs' }])} />
+      <JsonLd data={[filAriane([{ nom: 'Accueil', chemin: '/' }, { nom: 'Tarifs', chemin: '/tarifs' }]), outilGratuit({ nom: 'Estimateur de prix de site internet et d’outil de gestion', description: 'Composez votre projet pas à pas : le prix « à partir de » se calcule avec la même grille que le devis.', chemin: '/tarifs' })]} />
       <Tarifs initial={decoder(e)} />
     </>
   )

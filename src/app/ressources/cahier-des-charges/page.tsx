@@ -9,6 +9,7 @@ import Action from '@/components/ui/Action'
 import Cahier from '@/experiences/ressources/Cahier'
 import { lireReponses } from '@/experiences/ressources/cahier-modele'
 import { JsonLd, filAriane, meta } from '@/lib/seo'
+import { outilGratuit } from '@/lib/schema'
 import '@/experiences/ressources/ressources.css'
 
 export const metadata = meta({
@@ -33,11 +34,14 @@ export default async function Page({ searchParams }: { searchParams: Promise<Rec
   return (
     <>
       <JsonLd
-        data={filAriane([
-          { nom: 'Accueil', chemin: '/' },
-          { nom: 'Ressources', chemin: '/ressources' },
-          { nom: 'Cahier des charges', chemin: '/ressources/cahier-des-charges' },
-        ])}
+        data={[
+          filAriane([
+            { nom: 'Accueil', chemin: '/' },
+            { nom: 'Ressources', chemin: '/ressources' },
+            { nom: 'Cahier des charges', chemin: '/ressources/cahier-des-charges' },
+          ]),
+          outilGratuit({ nom: 'Cahier des charges de site internet', description: 'Décrivez votre projet de site ou d’outil en quelques étapes et recevez un cahier des charges prêt à envoyer.', chemin: '/ressources/cahier-des-charges' }),
+        ]}
       />
       <Document
         moment="doc-cahier"

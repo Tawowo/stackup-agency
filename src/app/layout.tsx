@@ -6,7 +6,8 @@ import Nav from '@/components/layout/Nav'
 import Footer from '@/components/layout/Footer'
 import AnimationsDifferees from '@/components/layout/AnimationsDifferees'
 import Mesure from '@/components/layout/Mesure'
-import { JsonLd, organisation, siteWeb } from '@/lib/seo'
+import { JsonLd } from '@/lib/seo'
+import { grapheGlobal } from '@/lib/schema'
 import '@/styles/chrome.css'
 
 export const metadata: Metadata = {
@@ -29,7 +30,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="alternate" type="application/rss+xml" title="Le journal de Stackup Agency" href="/blog/feed.xml" />
       </head>
       <body>
-        <JsonLd data={[organisation(), siteWeb()]} />
+        <JsonLd data={grapheGlobal()} />
         <SceneMount />
         <div className="su-lueur" aria-hidden="true" />
         <Nav />

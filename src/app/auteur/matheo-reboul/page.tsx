@@ -27,17 +27,11 @@ export default function Page() {
           {
             '@context': 'https://schema.org',
             '@type': 'ProfilePage',
-            mainEntity: {
-              '@type': 'Person',
-              '@id': `${ORIGINE}/#matheo`,
-              name: SITE.fondateur,
-              url: `${ORIGINE}/auteur/matheo-reboul`,
-              jobTitle: 'Fondateur de Stackup Agency, développeur web',
-              worksFor: { '@id': `${ORIGINE}/#agence` },
-              address: { '@type': 'PostalAddress', addressLocality: SITE.entreprise.commune, postalCode: SITE.entreprise.codePostal, addressCountry: 'FR' },
-              sameAs: Object.values(SITE.social),
-              knowsAbout: ['création de site internet', 'référencement naturel', 'référencement local', 'logiciel de gestion sur mesure', 'facture électronique', 'automatisation'],
-            },
+            '@id': `${ORIGINE}/auteur/matheo-reboul#page`,
+            url: `${ORIGINE}/auteur/matheo-reboul`,
+            name: `${SITE.fondateur}, auteur des guides de Stackup Agency`,
+            inLanguage: 'fr-FR',
+            mainEntity: { '@id': `${ORIGINE}/#matheo` },
           },
         ]}
       />

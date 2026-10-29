@@ -7,6 +7,7 @@ import Accordeon from '@/components/editorial/Accordeon'
 import Audit from '@/experiences/outils/Audit'
 import { auditer } from '@/lib/audit'
 import { JsonLd, faqPage, filAriane, meta } from '@/lib/seo'
+import { outilGratuit } from '@/lib/schema'
 
 export const maxDuration = 60
 
@@ -36,6 +37,7 @@ export default async function Page({ searchParams }: { searchParams: Promise<Rec
             { nom: 'Outils', chemin: '/outils' },
             { nom: 'Audit de site', chemin: '/outils/audit-site' },
           ]),
+          outilGratuit({ nom: 'Audit de site gratuit', description: 'Analysez gratuitement un site : titre, description, titres, mobile, vitesse, données structurées et conseils concrets.', chemin: '/outils/audit-site' }),
           faqPage(FAQ.map((f) => ({ q: f.q, a: f.r }))),
         ]}
       />

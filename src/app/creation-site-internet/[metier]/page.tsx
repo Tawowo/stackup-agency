@@ -8,7 +8,8 @@ import type { MetierBloc } from '@/components/maquettes/blocs'
 import { sansDelai } from '@/gabarits/locale/formes'
 import { CONTENU_METIERS } from '@/data/enrichissements'
 import { conforme, conformeListe } from '@/lib/conformite'
-import { JsonLd, ORIGINE, faqPage, filAriane, meta, offreService } from '@/lib/seo'
+import { JsonLd, faqPage, filAriane, meta } from '@/lib/seo'
+import { service as schemaService } from '@/lib/schema'
 import { offre } from '@/config/site'
 import { METIERS_VOISINS } from '@/data/metiers-voisins'
 
@@ -66,7 +67,7 @@ export default async function PageMetier({ params }: { params: Promise<{ metier:
             { nom: 'Création de site internet', chemin: '/creation-site-internet' },
             { nom: m.metier, chemin: `/creation-site-internet/${m.slug}` },
           ]),
-          { '@context': 'https://schema.org', '@type': 'Service', name: `Création de site internet pour ${m.metier.toLowerCase()}`, provider: { '@id': `${ORIGINE}/#agence` }, areaServed: [{ '@type': 'AdministrativeArea', name: 'Indre-et-Loire' }, { '@type': 'Country', name: 'France' }], offers: offreService(({ 'site-multi-pages': 'multi-pages', 'site-ecommerce': 'boutique', 'systeme-gestion': 'outil' } as Record<string, 'multi-pages' | 'boutique' | 'outil'>)[m.serviceLie] ?? 'une-page') },
+          schemaService({ nom: `Création de site internet pour ${m.metier.toLowerCase()}`, chemin: `/creation-site-internet/${m.slug}`, description: conforme(m.intro).split(/(?<=[.!?])\s/)[0], audience: m.metier, offre: ({ 'site-multi-pages': 'multi-pages', 'site-ecommerce': 'boutique', 'systeme-gestion': 'outil' } as Record<string, 'multi-pages' | 'boutique' | 'outil'>)[m.serviceLie] ?? 'une-page' }),
           faqPage(faq),
         ]}
       />

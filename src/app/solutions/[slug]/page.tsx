@@ -7,6 +7,7 @@ import { LIGNES } from '@/config/tarifs.generated'
 import { prixOutilAvec } from '@/domain/devis/offres'
 import { conforme, conformeListe } from '@/lib/conformite'
 import { meta, filAriane, faqPage, JsonLd, ORIGINE } from '@/lib/seo'
+import { logiciel } from '@/lib/schema'
 
 export function generateStaticParams() {
   return SOLUTIONS.map((s) => ({ slug: s.slug }))
@@ -40,6 +41,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
             { nom: sol.nom, chemin: `/solutions/${slug}` },
           ]),
           { '@context': 'https://schema.org', '@type': 'Service', name: sol.nom, description: conforme(sol.intro), provider: { '@id': `${ORIGINE}/#agence` }, offers: { '@type': 'Offer', priceCurrency: 'EUR', priceSpecification: { '@type': 'PriceSpecification', minPrice: prixOutilAvec(sol.codes.slice(0, 1)), priceCurrency: 'EUR' } } },
+          logiciel({ nom: sol.nom, description: conforme(sol.intro), chemin: `/solutions/${slug}`, prixMin: prixOutilAvec(sol.codes.slice(0, 1)) }),
           faqPage(faq),
         ]}
       />

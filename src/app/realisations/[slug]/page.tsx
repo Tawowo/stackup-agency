@@ -2,7 +2,8 @@ import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import Fiche from '@/experiences/galerie/Fiche'
 import { PROJETS, projetDe } from '@/experiences/galerie/projets'
-import { meta, filAriane, JsonLd, ORIGINE } from '@/lib/seo'
+import { meta, filAriane, JsonLd } from '@/lib/seo'
+import { realisation, logiciel } from '@/lib/schema'
 
 export function generateStaticParams() {
   return PROJETS.map((p) => ({ slug: p.slug }))
@@ -28,7 +29,8 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
             { nom: 'Réalisations', chemin: '/realisations' },
             { nom: p.nom, chemin: `/realisations/${p.slug}` },
           ]),
-          { '@context': 'https://schema.org', '@type': 'CreativeWork', name: p.nom, url: `${ORIGINE}/realisations/${p.slug}`, image: `${ORIGINE}${p.capture}`, creator: { '@id': `${ORIGINE}/#agence` }, description: p.description },
+          realisation({ nom: p.nom, chemin: `/realisations/${p.slug}`, description: p.description, image: p.capture, url: /^https?:/.test(p.url) ? p.url : undefined, genre: p.type }),
+          ...(p.statut === 'En développement' || /logiciel|gestion/i.test(p.type) ? [logiciel({ nom: p.nom, description: p.description, chemin: `/realisations/${p.slug}`, offre: 'outil', image: p.capture })] : []),
         ]}
       />
       <Fiche projet={p} suivant={{ slug: suivant.slug, nom: suivant.nom }} />

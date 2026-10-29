@@ -32,6 +32,8 @@ export interface Article {
 export interface ArticleComplet extends Article {
   html: string
   faq: { q: string; a: string }[]
+  /** Nombre de mots du texte (données structurées : wordCount). */
+  mots: number
   sommaire: { id: string; titre: string }[]
 }
 
@@ -135,7 +137,7 @@ export async function article(slug: string): Promise<ArticleComplet | null> {
   // Un lien vers un article pas encore publié (programmé) mènerait à une 404 : on garde le texte, sans le lien.
   const publies = new Set(tousLesArticles().map((x) => x.slug))
   rendu = rendu.replace(/<a href="\/blog\/([a-z0-9-]+)\/?">([\s\S]*?)<\/a>/g, (m, slug: string, texte: string) => (publies.has(slug) ? m : texte))
-  return { ...a, html: rendu, faq: faqDe(md), sommaire }
+  return { ...a, html: rendu, faq: faqDe(md), sommaire, mots: md.split(/\s+/).filter(Boolean).length }
 }
 
 export function articlesLies(a: Article, n = 3): Article[] {
