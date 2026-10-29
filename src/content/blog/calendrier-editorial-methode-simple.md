@@ -1,6 +1,7 @@
 ---
 title: "Calendrier éditorial blog : la méthode simple pour ne plus jamais tomber en panne d'idées"
-excerpt: "Comment construire un calendrier éditorial réaliste pour votre blog d'entreprise, sans outil complexe ni agence. Une méthode en 4 étapes applicable en 2 heures."
+seoTitle: "Calendrier éditorial de blog : la méthode en 4 étapes"
+excerpt: "Audit de l'existant, stock d'idées, priorités, planning : bâtissez un calendrier éditorial réaliste pour votre blog d'entreprise, sans outil complexe."
 date: "2026-07-06"
 updated: "2026-07-28"
 readTime: 7
@@ -77,11 +78,11 @@ Un Google Sheets ou un Notion simple suffit. Pas besoin de logiciel dédié.
 
 | Semaine | Sujet | Catégorie | Mot-clé cible |
 |---|---|---|---|
-| Semaine 1 | Prix de notre prestation phare | Commercial | "[prestation] prix [ville]" |
+| Semaine 1 | Prix de notre prestation phare | Commercial | "⟨prestation⟩ prix ⟨ville⟩" |
 | Semaine 2 | Guide pratique pour nos clients | Éducatif | "comment [faire X]" |
-| Semaine 3 | Article saisonnier | Saisonnier | "[besoin] [saison] [ville]" |
+| Semaine 3 | Article saisonnier | Saisonnier | "⟨besoin⟩ ⟨saison⟩ ⟨ville⟩" |
 | Semaine 4 | Content refresh d'un ancien article | Optimisation | [mot-clé existant] |
-| Semaine 5 | Avis sur notre secteur / tendance | Autorité | "[secteur] 2026" |
+| Semaine 5 | Avis sur notre secteur / tendance | Autorité | "⟨secteur⟩ 2026" |
 | Semaine 6 | FAQ clients | Conversion | "questions [votre métier]" |
 
 Répétez ce cycle avec des sujets différents. En 3 mois, vous avez 12 à 24 articles — une base solide pour voir des résultats SEO.
@@ -90,7 +91,7 @@ Répétez ce cycle avec des sujets différents. En 3 mois, vous avez 12 à 24 ar
 
 Un calendrier éditorial vous permet de déléguer la rédaction à un prestataire externe en restant maître des sujets. Vous validez la liste des articles, vous passez les briefs, le prestataire produit.
 
-Notre [service de rédaction blog SEO](/services/redaction-blog-seo) fonctionne exactement ainsi : nous construisons le calendrier éditorial ensemble, vous validez, nous rédigeons. L'abonnement mensuel facultatif, sans engagement, peut inclure des articles de blog ({{abo:article}} € l'article).
+Notre [service de rédaction blog SEO](/services/referencement) fonctionne exactement ainsi : nous construisons le calendrier éditorial ensemble, vous validez, nous rédigeons. L'abonnement mensuel facultatif, sans engagement, peut inclure des articles de blog ({{abo:article}} € l'article).
 
 Pour aller plus loin, lisez notre guide sur [l'externalisation complète de la rédaction blog](/blog/blog-et-seo-quel-contenu-publier).
 

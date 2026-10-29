@@ -1,6 +1,7 @@
 ---
 title: "Google Search Console : guide avancé pour le SEO"
-excerpt: "Maîtrisez Google Search Console comme un expert : couverture d'index, rapport de performances, Core Web Vitals, sitemaps. Guide complet pour PME."
+seoTitle: "Google Search Console : guide avancé pour piloter son SEO"
+excerpt: "Index, performances, Core Web Vitals, sitemaps : comment lire Search Console pour repérer ce qui freine votre référencement. Appliquez-le à votre site."
 date: "2026-04-15"
 readTime: 10
 tag: "SEO"

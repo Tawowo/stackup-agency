@@ -1,6 +1,7 @@
 ---
 title: "Les templates : pourquoi votre site ressemble à celui de votre concurrent"
-excerpt: "Deux entreprises du même secteur qui utilisent le même template ont souvent un site quasi identique. Pourquoi ça arrive, et comment un site sur mesure évite ce piège."
+seoTitle: "Template ou sur mesure : pourquoi les sites se ressemblent"
+excerpt: "Un même template vendu à des milliers d'entreprises donne des sites quasi identiques. Pourquoi, et comment un site sur mesure vous démarque de la concurrence."
 date: "2026-08-17"
 publishAt: "2026-11-09"
 readTime: 7

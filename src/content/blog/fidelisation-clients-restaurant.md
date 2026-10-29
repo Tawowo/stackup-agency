@@ -1,8 +1,9 @@
 ---
 title: "Fidélisation clients restaurant : le programme de fidélité digital qui fait revenir"
+seoTitle: "Programme de fidélité de restaurant : quel format ?"
 date: "2026-05-30"
 updated: "2026-08-17"
-excerpt: "Acquérir un nouveau client coûte 5 fois plus cher que de fidéliser un client existant. Les différents formats de programme de fidélité digital et comment choisir le vôtre."
+excerpt: "Carte à tampons digitale, points, niveaux ou abonnement : les formats de programme de fidélité pour un restaurant et comment choisir celui qui fera revenir."
 tag: "Restaurants"
 category: "restaurants"
 readTime: 9

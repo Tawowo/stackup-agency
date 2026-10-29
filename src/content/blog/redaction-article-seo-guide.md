@@ -1,6 +1,7 @@
 ---
 title: "Comment rédiger un article SEO qui se positionne sur Google en 2026"
-excerpt: "Structure, longueur, mots-clés, maillage interne : tout ce qu'il faut savoir pour écrire des articles de blog qui se positionnent durablement sur Google. Guide pratique et actionnable."
+seoTitle: "Rédiger un article SEO qui se positionne : méthode en étapes"
+excerpt: "Mot-clé cible, plan, longueur, maillage interne : la méthode étape par étape pour écrire un article de blog que Google positionne. Appliquez-la au prochain."
 date: "2026-07-29"
 readTime: 9
 tag: "SEO"

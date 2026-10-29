@@ -1,6 +1,7 @@
 ---
 title: "Pourquoi votre site charge lentement"
-excerpt: "Un site lent fait fuir les visiteurs et plombe votre référencement. Découvrez les causes les plus fréquentes d'un site trop lent et les solutions concrètes pour y remédier."
+seoTitle: "Site lent : les causes de lenteur et comment l'accélérer"
+excerpt: "Images lourdes, hébergement faible, trop de plugins, pas de cache : comment diagnostiquer votre site et corriger chaque cause de lenteur dans l'ordre utile."
 date: "2026-05-14"
 readTime: 6
 tag: "Digital"

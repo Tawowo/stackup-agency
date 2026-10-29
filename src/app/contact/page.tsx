@@ -3,8 +3,8 @@ import { JsonLd, filAriane, meta } from '@/lib/seo'
 import Formulaire from '@/experiences/contact/Formulaire'
 
 export const metadata: Metadata = meta({
-  titre: 'Contact — Stackup Agency',
-  description: 'Parlez-nous de votre projet : site ou outil sur mesure. Réponse personnelle de Mathéo Reboul, démo avant signature.',
+  titre: 'Contact et devis site internet sur mesure | Stackup Agency',
+  description: 'Parlez de votre projet de site ou d’outil de gestion sur mesure : réponse personnelle de Mathéo Reboul, appel découverte gratuit, démo avant de signer.',
   chemin: '/contact',
 })
 

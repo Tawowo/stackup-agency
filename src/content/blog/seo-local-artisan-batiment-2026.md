@@ -1,6 +1,7 @@
 ---
 title: "SEO local artisan : dominer sa ville et ses alentours"
-excerpt: "Fiche Google Business, pages géolocalisées, certifications, avis : les 5 leviers qui font dominer Google à un artisan du bâtiment sur sa ville et les communes voisines en 2026."
+seoTitle: "SEO local artisan : dominer Google sur sa ville et sa zone"
+excerpt: "Fiche Google Business, pages par commune, blog, certifications et avis : cinq leviers qui placent un artisan du bâtiment devant ses concurrents sur sa zone."
 date: "2026-07-27"
 updated: "2026-08-17"
 readTime: 9
@@ -67,7 +68,7 @@ Les artisans du bâtiment ont un avantage unique : leurs clients cherchent exact
 **Requêtes à fort potentiel :**
 
 Pour plombiers :
-- "Prix remplacement chauffe-eau [ville] 2026"
+- "Prix remplacement chauffe-eau ⟨ville⟩ 2026"
 - "Fuite d'eau sous évier : réparer soi-même ou appeler un plombier ?"
 
 Pour électriciens :
@@ -75,8 +76,8 @@ Pour électriciens :
 - "IRVE borne recharge voiture électrique maison 2026 : prix et installation"
 
 Pour maçons/rénovation :
-- "Prix rénovation façade maison [ville] 2026"
-- "MaPrimeRénov' isolation [département] : tout savoir"
+- "Prix rénovation façade maison ⟨ville⟩ 2026"
+- "MaPrimeRénov' isolation ⟨département⟩ : tout savoir"
 
 **Format de ces articles :**
 - Réponse directe à la question en 2-3 phrases sous le H1
@@ -156,7 +157,7 @@ Si votre site n'est pas responsive (adapté au mobile), vous perdez 60-70% de vo
 Non. Ces plateformes prennent une commission sur chaque devis (parfois 10 à 30%) et ne vous appartiennent pas. Un site propre + SEO local vous construit un actif durable sans commission.
 
 **Quel est le retour sur investissement d'un bon SEO local pour un artisan ?**
-Un artisan du bâtiment en position 1-3 sur "plombier [ville]" reçoit en moyenne 15 à 40 appels supplémentaires par mois. À un taux de transformation de 40% et un panier moyen de 500€, c'est 3 000 à 8 000€ de CA mensuel supplémentaire.
+Un artisan du bâtiment en position 1-3 sur "plombier ⟨ville⟩" reçoit en moyenne 15 à 40 appels supplémentaires par mois. À un taux de transformation de 40% et un panier moyen de 500€, c'est 3 000 à 8 000€ de CA mensuel supplémentaire.
 
 **Les horaires d'urgence sur Google Business doivent-ils être différents des horaires normaux ?**
 Oui. Google Business permet d'indiquer des "horaires spéciaux". Pour les urgences (plomberie, électricité), indiquez 24h/24 dans les horaires principaux si c'est vraiment le cas — mais assurez-vous d'être disponible, sinon c'est contre-productif.

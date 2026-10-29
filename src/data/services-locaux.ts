@@ -84,7 +84,7 @@ const BRUT_SERVICES_LOCAUX: Record<string, ServiceLocal> = {
     features: [
       { title: 'Portfolio de réalisations', desc: 'Vos chantiers avant/après présentés professionnellement. Convainquez sans avoir à vous déplacer.', icon: '📸' },
       { title: 'Formulaire de devis en ligne', desc: 'Les clients décrivent leur projet directement en ligne. Vous recevez des leads qualifiés par email.', icon: '📋' },
-      { title: 'SEO local par métier', desc: 'Apparaître sur "plombier [ville]", "électricien [secteur]"... Ciblage géographique précis.', icon: '📍' },
+      { title: 'SEO local par métier', desc: 'Apparaître sur « plombier » + votre ville, « électricien » + votre secteur... Ciblage géographique précis.', icon: '📍' },
       { title: 'Prise de RDV en ligne', desc: 'Calendrier intégré pour planifier vos visites techniques. Réduisez les appels inutiles.', icon: '📅' },
       { title: 'Labels et certifications', desc: 'Mise en avant de vos qualifications RGE, Qualibat, assurances. Rassurer le client avant de le voir.', icon: '✅' },
       { title: 'Avis clients', desc: 'Collecte d\'avis Google automatisée. Construisez votre réputation en ligne.', icon: '⭐' },

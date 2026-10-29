@@ -1,6 +1,7 @@
 ---
 title: "Next.js expliqué aux non-développeurs : pourquoi les grands sites l'utilisent"
-excerpt: "Next.js équipe les sites de Nike, TikTok ou Netflix. Sans jargon technique, voici ce que change cette technologie pour la vitesse, le SEO et l'expérience utilisateur."
+seoTitle: "Next.js expliqué simplement : vitesse, SEO, intérêt réel"
+excerpt: "Next.js rend un site rapide tout en restant lisible par Google. Ce que cela change pour un site vitrine d'artisan ou de commerçant, sans jargon technique."
 date: "2026-08-17"
 publishAt: "2026-11-10"
 readTime: 7

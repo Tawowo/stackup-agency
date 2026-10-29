@@ -1,6 +1,7 @@
 ---
 title: "Recherche vocale et SEO local : optimiser \"près de moi\""
-excerpt: "Optimisez votre site pour la recherche vocale et les requêtes locales \"près de moi\". Guide pratique pour commerces locaux avec Siri, Google Assistant et Alexa."
+seoTitle: "Recherche vocale « près de moi » : adapter son commerce"
+excerpt: "Les requêtes vocales sont longues et locales. Adaptez votre fiche Google, vos pages et vos questions-réponses pour être cité quand on dit « près de moi »."
 date: "2026-04-05"
 readTime: 7
 tag: "SEO Local"

@@ -1,6 +1,7 @@
 ---
 title: "Drone : afficher ses certifications et vendre ses prestations"
-excerpt: "Une belle image aérienne ne suffit pas à rassurer un client professionnel : sans certification affichée clairement, une prestation de télépilote de drone perd en crédibilité face à la concurrence."
+seoTitle: "Site de télépilote de drone : afficher ses certifications"
+excerpt: "Attestation de télépilote, assurance, cadre réglementaire : pourquoi les afficher avant les images et comment présenter vos prestations pour rassurer un pro."
 date: "2026-08-17"
 publishAt: "2027-01-21"
 readTime: 12

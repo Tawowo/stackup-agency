@@ -1,6 +1,7 @@
 ---
 title: "Refonte de site web : budget et planning réalistes en 2026"
-excerpt: "Combien prévoir pour refondre son site web ? Les postes de coût, les pièges à éviter, et les questions à poser avant de signer."
+seoTitle: "Budget de refonte de site web : postes de coût et pièges"
+excerpt: "Quels postes pèsent dans le budget d'une refonte, quand elle est nécessaire et quelles questions poser avant de signer. Évitez les mauvaises surprises."
 date: "2026-07-22"
 updated: "2026-07-28"
 readTime: 7

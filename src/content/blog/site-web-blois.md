@@ -1,6 +1,7 @@
 ---
 title: "Créer un site web à Blois et en Loir-et-Cher : guide 2026"
-excerpt: "Tout ce qu'il faut savoir pour créer un site web à Blois : prix, délais, prestataires locaux. Guide pour commerces et artisans du Loir-et-Cher."
+seoTitle: "Créer un site web à Blois : guide pour artisans et commerces"
+excerpt: "Artisan ou commerçant à Blois ou en Loir-et-Cher : ce qui fait varier le prix d'un site, comment vous démarquer en local et que vérifier avant de choisir."
 date: "2026-07-12"
 updated: "2026-07-28"
 readTime: 6

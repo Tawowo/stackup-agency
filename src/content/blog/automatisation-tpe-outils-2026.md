@@ -1,6 +1,7 @@
 ---
 title: "Automatisation pour TPE : 7 tâches à automatiser dès maintenant"
-excerpt: "Une TPE passe en moyenne 15 heures par semaine sur des tâches répétitives automatisables. Ces 7 automatisations ne nécessitent pas de développeur et sont rentabilisées en quelques jours."
+seoTitle: "Automatisation pour TPE : 7 tâches à automatiser sans coder"
+excerpt: "Réponses aux formulaires, rappels de rendez-vous, relances de factures, demandes d'avis, sauvegardes : sept automatisations sans développeur, avec les outils."
 date: "2026-07-23"
 updated: "2026-07-30"
 readTime: 6
@@ -47,7 +48,7 @@ Avant la liste des automatisations : les outils.
 **Problème :** Chaque formulaire de contact reçu déclenche une réponse manuelle répétitive.
 
 **Solution :**
-- Le formulaire envoie un e-mail automatique de confirmation dans les 30 secondes ("Merci [Prénom], j'ai bien reçu votre demande et vous répondrai dans les 24 heures")
+- Le formulaire envoie un e-mail automatique de confirmation dans les 30 secondes ("Merci ⟨Prénom⟩, j'ai bien reçu votre demande et vous répondrai dans les 24 heures")
 - Les données du formulaire sont aussi envoyées dans une feuille Google Sheets pour un suivi centralisé
 
 **Outils :** Mailchimp / Brevo (e-mail automatique) + Zapier (formulaire → Sheets)

@@ -79,3 +79,8 @@ export const REDIRECTIONS: Redirect[] = ${JSON.stringify(toutes, null, 2)}
 `
 fs.writeFileSync('src/config/redirections.ts', sortie)
 console.log(toutes.length, 'redirections dont', parCategorie.length, 'catégories de blog → /blog')
+
+// Table versionnée, lisible : toutes les 301 du site (source unique : ce script → src/config/redirections.ts → next.config.ts).
+fs.mkdirSync('seo', { recursive: true })
+fs.writeFileSync('seo/redirects.csv', 'source,destination,statut\n' + toutes.map((r) => `${r.source},${r.destination},301`).join('\n') + '\n')
+console.log('seo/redirects.csv écrit :', toutes.length, 'lignes')

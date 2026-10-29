@@ -166,7 +166,7 @@ Si vous avez un point de vente physique et une boutique en ligne, associez les d
 - **La fiche Google Business Profile** représente le magasin. Elle renvoie vers la boutique et les pages de produits, et affiche adresse, horaires, photos. Voir [Fiche Google Business : tout savoir](/blog/fiche-google-business-tout-savoir).
 - **Votre site** affiche l'adresse du magasin, les horaires, un plan, et propose le retrait en magasin. Voir [Click and collect : mise en place](/blog/click-and-collect-mise-en-place).
 - **Les coordonnées** (nom, adresse, téléphone) doivent être identiques partout.
-- **Les pages locales**: une page « Magasin à [ville] » avec photos, horaires, accès, produits disponibles sur place.
+- **Les pages locales**: une page « Magasin à ⟨ville⟩ » avec photos, horaires, accès, produits disponibles sur place.
 - **Les avis du magasin** et ceux de la boutique se complètent. Voir [Obtenir plus d'avis Google](/blog/obtenir-plus-d-avis-google).
 
 Pour un référencement local de la boutique, mettez en avant la zone de livraison ou de retrait, avec des contenus qui mentionnent la commune et la région. Ce travail est plus léger que celui d'une boutique nationale. Notre service de [référencement local](/services/referencement-local) en est la déclinaison.

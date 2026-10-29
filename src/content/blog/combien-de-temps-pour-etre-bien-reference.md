@@ -38,7 +38,7 @@ Avec un site propre et une fiche Google soignée, des premiers signaux (affichag
 
 ### Combien de temps pour être premier sur Google
 
-Aucune durée ne se garantit. Pour des requêtes très locales et peu concurrentielles, on peut y arriver relativement vite ; pour une requête large et disputée, il est possible de ne jamais y arriver, et ce n'est pas nécessaire. Visez plutôt **les requêtes qui amènent des clients** : « électricien urgence [commune] » pèse plus qu'« électricien » tout court. Et regardez aussi le pack local de Google Maps, qui capte une grande partie des recherches locales : voyez [comment apparaître dans le pack local](/blog/apparaitre-google-maps-pack-local).
+Aucune durée ne se garantit. Pour des requêtes très locales et peu concurrentielles, on peut y arriver relativement vite ; pour une requête large et disputée, il est possible de ne jamais y arriver, et ce n'est pas nécessaire. Visez plutôt **les requêtes qui amènent des clients** : « électricien urgence ⟨commune⟩ » pèse plus qu'« électricien » tout court. Et regardez aussi le pack local de Google Maps, qui capte une grande partie des recherches locales : voyez [comment apparaître dans le pack local](/blog/apparaitre-google-maps-pack-local).
 
 ### Combien de temps pour remonter dans Google
 

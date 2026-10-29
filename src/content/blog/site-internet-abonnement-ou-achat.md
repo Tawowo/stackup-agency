@@ -1,6 +1,7 @@
 ---
 title: "Site internet : achat unique ou abonnement mensuel ? Le comparatif sur 5 ans"
-excerpt: "39 €/mois « sans engagement » ou un achat unique à partir de {{prix:une-page}} € ? Le comparatif sur 5 ans, ce que chaque modèle cache, et pourquoi la question de la propriété change tout."
+seoTitle: "Site internet : achat unique ou abonnement mensuel ?"
+excerpt: "Abonnement mensuel ou achat unique : ce que chaque modèle cache sur cinq ans, et pourquoi la propriété du site et du code change tout si vous arrêtez."
 date: "2026-08-17"
 readTime: 9
 tag: "Tarifs"

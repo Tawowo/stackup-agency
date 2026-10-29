@@ -1,6 +1,7 @@
 ---
 title: "RGPD et site web en 2026 : les obligations qui ont vraiment changé"
-excerpt: "Cookies, formulaires, Google Analytics : ce que le RGPD impose réellement aux petits sites en 2026. Checklist pratique et coûts de mise en conformité."
+seoTitle: "RGPD et site web : cookies, formulaires, mentions à vérifier"
+excerpt: "Bannière de cookies, formulaires, outils de mesure : la checklist des obligations RGPD d'un petit site, entre ce qui est obligatoire et ce qui est conseillé."
 date: "2026-07-23"
 updated: "2026-07-28"
 readTime: 8

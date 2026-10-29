@@ -1,8 +1,9 @@
 ---
 title: "Devis-factures : automatiser sans s'abonner à vie"
+seoTitle: "Logiciel de devis et factures : automatiser sans abonnement"
 date: "2026-05-22"
 updated: "2026-08-17"
-excerpt: "Un logiciel de devis-factures automatisé fait gagner des heures chaque semaine. Entre abonnement SaaS et solution sur mesure sans coût récurrent, le comparatif chiffré et les obligations 2026."
+excerpt: "Chaîne devis, commande, facture, relance : ce qu’on automatise, abonnement à vie ou outil à vous, et les points à vérifier sur la facture électronique."
 tag: "Applications métier"
 category: "applications-metier"
 readTime: 9

@@ -1,5 +1,7 @@
 ---
 title: "Tunnel de vente pour PME : transformer votre site vitrine en machine à générer des leads"
+seoTitle: "Tunnel de vente PME : transformer les visites en contacts"
+excerpt: "Votre site reçoit des visites mais le téléphone reste muet ? Les principes d'un tunnel de vente simple, les erreurs à éviter et les actions à mener."
 description: "Un site vitrine qui ne convertit pas est un coût, pas un investissement. Le tunnel de vente transforme chaque visiteur en prospect qualifié. Voici les principes fondamentaux à appliquer."
 date: "2026-02-01"
 category: "strategie"

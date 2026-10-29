@@ -1,6 +1,7 @@
 ---
 title: "Google My Business : guide complet pour commerçants"
-excerpt: "Google Business Profile est l'outil gratuit le plus puissant pour les commerces locaux. Ce guide complet vous explique comment le configurer, l'optimiser, et en tirer le maximum."
+seoTitle: "Google My Business : configurer sa fiche de commerçant"
+excerpt: "Catégories, horaires, photos, avis, publications : configurer et optimiser votre fiche Google Business Profile pour les recherches locales. Guide pas à pas."
 date: "2026-05-28"
 readTime: 8
 tag: "SEO"

@@ -1,8 +1,9 @@
 ---
 title: "Portail client : offrir un espace pro à vos clients (exemples)"
+seoTitle: "Portail client : documents, suivi et messagerie pour clients"
 date: "2026-05-16"
 updated: "2026-08-17"
-excerpt: "Espace documentaire, suivi de commande en temps réel, messagerie sécurisée : un portail client réduit les demandes de support de 40 % en moyenne. Les fonctionnalités concrètes, avec exemples."
+excerpt: "Espace documentaire, suivi de commande et messagerie sécurisée : les fonctionnalités d'un portail client, les erreurs à éviter et des exemples par secteur."
 tag: "Applications métier"
 category: "applications-metier"
 readTime: 9

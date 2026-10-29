@@ -1,5 +1,7 @@
 ---
 title: "Créer son propre système de livraison : l'alternative aux commissions Uber Eats et Deliveroo"
+seoTitle: "Livraison de restaurant sans Uber Eats : votre propre canal"
+excerpt: "Commissions des plateformes, commande sur votre site, lien avec la cuisine, bascule progressive des clients : construire votre propre canal de livraison."
 description: "Uber Eats prélève jusqu'à 30% par commande. Voici comment développer votre propre système de commande en ligne et livraison pour reprendre le contrôle de vos marges."
 date: "2026-06-20"
 category: "restaurants"

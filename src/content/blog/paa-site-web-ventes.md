@@ -1,6 +1,7 @@
 ---
 title: "Un site web augmente-t-il vraiment les ventes ?"
-excerpt: "Données réelles sur l'impact d'un site web professionnel sur les ventes des TPE. Ce qui fonctionne, ce qui ne fonctionne pas, et dans quels délais."
+seoTitle: "Un site web fait-il vraiment vendre ? Ce qui change tout"
+excerpt: "Un site bien conçu amène des clients, un site mal pensé coûte sans rien rapporter. Ce qui change tout, ce qui ne marche pas, et le temps avant les résultats."
 date: "2026-07-28"
 updated: "2026-07-28"
 readTime: 7
@@ -66,12 +67,12 @@ Un lead entrant qui ne reçoit pas de réponse dans les 24h a de grandes chances
 
 Un artisan sans site web dépend du bouche-à-oreille et des plateformes d'intermédiation (Houzz, Habitissimo). Ces plateformes prennent des commissions et les leads sont partagés avec des concurrents.
 
-Avec un site optimisé pour les requêtes locales ("plombier urgence [ville]", "électricien [département]"), l'artisan capte des demandes directement — sans commission. L'investissement (à partir de {{prix:une-page}} €) se rembourse souvent en quelques missions.
+Avec un site optimisé pour les requêtes locales ("plombier urgence ⟨ville⟩", "électricien ⟨département⟩"), l'artisan capte des demandes directement — sans commission. L'investissement (à partir de {{prix:une-page}} €) se rembourse souvent en quelques missions.
 
 ### Restaurants et commerces
 
 Pour un restaurant, le site web permet :
-- D'être trouvé sur "restaurant [cuisine] [quartier]"
+- D'être trouvé sur "restaurant ⟨cuisine⟩ ⟨quartier⟩"
 - D'afficher le menu (réduit les appels pour demander la carte)
 - De gérer les réservations en ligne (réduit les no-shows)
 - De promouvoir les événements (soirées, menus spéciaux)
@@ -80,7 +81,7 @@ L'impact est difficilement isolable des autres actions marketing, mais les resta
 
 ### Professionnels libéraux
 
-Pour un médecin, kiné, coach ou consultant, le site web permet d'apparaître sur les recherches locales de première consultation. Beaucoup de patients ou clients cherchent "kiné [spécialité] [ville]" avant d'appeler — et choisissent le praticien dont le site les rassure le plus.
+Pour un médecin, kiné, coach ou consultant, le site web permet d'apparaître sur les recherches locales de première consultation. Beaucoup de patients ou clients cherchent "kiné ⟨spécialité⟩ ⟨ville⟩" avant d'appeler — et choisissent le praticien dont le site les rassure le plus.
 
 ---
 

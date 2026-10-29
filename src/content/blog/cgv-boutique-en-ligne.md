@@ -1,6 +1,7 @@
 ---
 title: "E-commerce : les obligations légales françaises (CGV, rétractation…)"
-excerpt: "CGV, droit de rétractation de 14 jours, garanties légales, médiation : ce que la loi française impose à toute boutique en ligne, avec les sanctions encourues en cas de manquement."
+seoTitle: "CGV d'une boutique en ligne : mentions et obligations"
+excerpt: "CGV, rétractation de 14 jours, garanties légales, médiation : les mentions obligatoires d'une boutique en ligne, les clauses protectrices et leur rédaction."
 date: "2026-07-26"
 updated: "2026-08-17"
 readTime: 8

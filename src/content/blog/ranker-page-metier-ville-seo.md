@@ -1,6 +1,7 @@
 ---
 title: "Sortir sur « métier + ville » : l'anatomie d'une page qui ranke"
-excerpt: "Title, H1, réponse directe, maillage, schema : la structure exacte d'une page qui se positionne sur « [métier] + [ville] » — décortiquée section par section."
+seoTitle: "Page métier + ville : la structure qui se classe sur Google"
+excerpt: "Title, H1, réponse directe, maillage, données structurées : la structure d'une page « plombier + ville » qui se positionne, décortiquée section par section."
 date: "2026-08-17"
 publishAt: "2026-10-29"
 readTime: 12
@@ -9,7 +10,7 @@ category: "seo"
 keywords: ["ranker metier ville", "page metier ville seo", "anatomie page seo locale", "positionner page metier ville google"]
 ---
 
-**Une page qui ranke sur « [métier] + [ville] » n'est jamais une page générique avec le nom de la ville inséré artificiellement : c'est une page construite autour d'un contenu réellement local, avec une structure technique précise — title optimisé, réponse directe immédiate, preuves locales, maillage vers les pages sœurs, et données structurées.** Cet article décortique, section par section, l'anatomie exacte d'une page qui capte durablement ce type de requête, la requête la plus rentable pour une TPE puisqu'elle combine intention d'achat forte et concurrence limitée à l'échelle locale.
+**Une page qui ranke sur « ⟨métier⟩ + ⟨ville⟩ » n'est jamais une page générique avec le nom de la ville inséré artificiellement : c'est une page construite autour d'un contenu réellement local, avec une structure technique précise — title optimisé, réponse directe immédiate, preuves locales, maillage vers les pages sœurs, et données structurées.** Cet article décortique, section par section, l'anatomie exacte d'une page qui capte durablement ce type de requête, la requête la plus rentable pour une TPE puisqu'elle combine intention d'achat forte et concurrence limitée à l'échelle locale.
 
 ## Pourquoi « métier + ville » est la requête la plus rentable pour une TPE
 
@@ -166,4 +167,4 @@ Comparez les deux textes : si plus de 60-70% du contenu est identique en dehors 
 
 ---
 
-*Pour aller plus loin : [Mots-clés locaux : comment les trouver pour votre métier et votre ville](/blog/trouver-mots-cles-locaux-metier-ville) · [Combien de temps pour être visible sur Google ?](/blog/combien-temps-visible-google) · [Apparaître sur Google Maps en premier](/blog/apparaitre-google-maps-pack-local) · [Rédaction de blog SEO](/services/redaction-blog-seo)*
+*Pour aller plus loin : [Mots-clés locaux : comment les trouver pour votre métier et votre ville](/blog/trouver-mots-cles-locaux-metier-ville) · [Combien de temps pour être visible sur Google ?](/blog/combien-temps-visible-google) · [Apparaître sur Google Maps en premier](/blog/apparaitre-google-maps-pack-local) · [Rédaction de blog SEO](/services/referencement)*

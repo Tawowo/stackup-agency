@@ -1,6 +1,7 @@
 ---
 title: "Les 5 erreurs digitales des petits commerces (et comment les éviter)"
-excerpt: "Pas de site, Google My Business négligé, réseaux sociaux abandonnés... Ces 5 erreurs digitales coûtent chaque jour des clients aux petits commerces. Voici comment les corriger."
+seoTitle: "Les 5 erreurs digitales des petits commerces à corriger"
+excerpt: "Pas de site, fiche Google négligée, réseaux abandonnés : cinq erreurs qui font perdre des clients à un petit commerce, et comment corriger chacune."
 date: "2026-07-10"
 readTime: 6
 tag: "Stratégie"

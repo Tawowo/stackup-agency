@@ -1,7 +1,8 @@
 ---
 title: "Marketplace producteurs locaux : comment fédérer et vendre ensemble"
+seoTitle: "Marketplace de producteurs locaux : créer une vente groupée"
 date: "2026-05-21"
-excerpt: "Guide complet pour créer une marketplace collective de producteurs locaux : modèle économique, fonctionnalités clés, gouvernance et stratégies pour réussir la vente directe groupée en ligne."
+excerpt: "Modèle économique, fonctions clés, gouvernance : comment des producteurs locaux vendent ensemble sur une même plateforme. À décider avant de vous lancer."
 tag: "Commerce"
 category: "commerce"
 readTime: 8

@@ -1,8 +1,9 @@
 ---
 title: "Refonte de site web sans perdre son SEO : guide complet"
-excerpt: "Comment refondre votre site web sans perdre vos positions Google ? Plan de redirections 301, migration SEO, Search Console : la méthode pas à pas."
+seoTitle: "Refonte sans perdre son SEO : redirections 301 pas à pas"
+excerpt: "Redirections 301, audit des pages qui comptent, Search Console, retrait du noindex : la méthode pour refondre votre site sans perdre vos positions Google."
 date: "2026-05-25"
-updated: "2027-01-25"
+updated: "2026-10-29"
 readTime: 9
 tag: "SEO Technique"
 category: "creation-sites"

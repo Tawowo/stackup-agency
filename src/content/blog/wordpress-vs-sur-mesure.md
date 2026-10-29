@@ -1,8 +1,9 @@
 ---
 title: "WordPress ou sur mesure : lequel choisir selon votre projet ?"
+seoTitle: "WordPress ou sur mesure : comment choisir selon le projet"
+excerpt: "Plugins prêts à l'emploi d'un côté, performances et site à vous de l'autre : les forces et limites de chacun, y compris celles du sur mesure, pour décider."
 date: "2026-01-05"
 updated: "2026-08-17"
-excerpt: "WordPress ou développement sur mesure ? Le bon choix dépend de vos besoins réels : plugins prêts à l'emploi côté WordPress, performances et propriété totale côté sur mesure."
 tag: "Création de sites"
 category: "creation-sites"
 readTime: 8

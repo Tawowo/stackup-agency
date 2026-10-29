@@ -1,8 +1,9 @@
 ---
 title: "CRM sur mesure pour TPE : quand ça vaut le coup ?"
+seoTitle: "CRM sur mesure ou CRM du marché : que choisir en TPE ?"
 date: "2026-06-07"
 updated: "2026-08-17"
-excerpt: "Un CRM sur mesure vaut le coup dès que vos process commerciaux dépassent ce qu'un CRM générique peut couvrir sans surcoût. Salesforce coûte 9 000 à 18 000 €/an pour 5 utilisateurs — le calcul complet."
+excerpt: "Quand un CRM générique suffit, quand un CRM sur mesure devient rentable : les critères de décision pour une TPE ou une PME, avec les limites du sur mesure."
 tag: "Applications métier"
 category: "applications-metier"
 readTime: 9

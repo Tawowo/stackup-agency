@@ -1,8 +1,9 @@
 ---
 title: "Gestion des stocks pour petit commerce : la solution simple"
+seoTitle: "Gestion de stock pour petit commerce : méthode simple"
 date: "2026-05-28"
 updated: "2026-08-17"
-excerpt: "Les ruptures de stock coûtent 8 % du chiffre d'affaires en moyenne, le surstockage immobilise 25 % de la trésorerie. Une gestion digitale simple, adaptée à un petit commerce, corrige les deux."
+excerpt: "Scan des entrées et sorties, seuils d’alerte, inventaire tournant : la méthode simple pour éviter ruptures et surstock. À mettre en place dès cette semaine."
 tag: "Applications métier"
 category: "applications-metier"
 readTime: 9

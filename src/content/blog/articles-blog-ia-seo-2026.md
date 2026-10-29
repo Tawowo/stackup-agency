@@ -1,6 +1,7 @@
 ---
 title: "Articles de blog générés par IA et SEO en 2026 : ce qu'il faut vraiment savoir"
-excerpt: "L'IA peut-elle rédiger des articles SEO efficaces ? Ce que Google pense des contenus générés, les risques réels, et comment intégrer l'IA sans pénaliser votre référencement."
+seoTitle: "Articles de blog générés par IA et SEO : que dit Google ?"
+excerpt: "Google pénalise-t-il les textes écrits par une IA ? Sa position, les vrais risques (erreurs, doublons, contenu banal) et comment s'en servir sans nuire au SEO"
 date: "2026-07-01"
 updated: "2026-07-28"
 readTime: 9
@@ -69,7 +70,7 @@ L'IA est un outil d'accélération, pas un substitut à la réflexion éditorial
 - La vérification factuelle.
 - Le call-to-action aligné avec l'offre commerciale.
 
-Chez Stackup Agency, notre processus pour la [rédaction blog SEO](/services/redaction-blog-seo) utilise des outils modernes pour la phase de recherche et de structure, et une relecture et personnalisation humaines systématiques avant chaque livraison. Le contenu brut généré par IA n'est jamais publié sans transformation significative.
+Chez Stackup Agency, notre processus pour la [rédaction blog SEO](/services/referencement) utilise des outils modernes pour la phase de recherche et de structure, et une relecture et personnalisation humaines systématiques avant chaque livraison. Le contenu brut généré par IA n'est jamais publié sans transformation significative.
 
 ## Le cas des AI Overviews (anciennement SGE)
 

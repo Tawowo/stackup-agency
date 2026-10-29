@@ -1,6 +1,7 @@
 ---
 title: "Backlinks pour TPE : 12 façons propres d'obtenir des liens"
-excerpt: "12 méthodes légitimes pour obtenir des backlinks de qualité sans budget colossal : annuaires, presse locale, partenariats, contenus linkables et plus."
+seoTitle: "Backlinks pour une TPE : 12 façons propres d'avoir des liens"
+excerpt: "Annuaires, presse locale, partenariats, contenus à citer : 12 méthodes légitimes pour obtenir des liens sans gros budget, et celles qui exposent à risque."
 date: "2026-07-30"
 updated: "2026-08-17"
 readTime: 8
@@ -160,4 +161,4 @@ Commencez par les fondations (annuaires, associations professionnelles), puis mo
 
 ---
 
-*Pour aller plus loin : [Netlinking local : 12 méthodes pour votre région](/blog/backlinks-liens-entrants-petite-entreprise) · [SEO : les 15 erreurs qui plombent les sites de petites entreprises](/blog/10-erreurs-seo-site-web) · [Le SEO est-il mort avec l'IA ?](/blog/seo-ia-generative-ai-overviews-google) · [Rédaction de blog SEO](/services/redaction-blog-seo)*
+*Pour aller plus loin : [Netlinking local : 12 méthodes pour votre région](/blog/backlinks-liens-entrants-petite-entreprise) · [SEO : les 15 erreurs qui plombent les sites de petites entreprises](/blog/10-erreurs-seo-site-web) · [Le SEO est-il mort avec l'IA ?](/blog/seo-ia-generative-ai-overviews-google) · [Rédaction de blog SEO](/services/referencement)*

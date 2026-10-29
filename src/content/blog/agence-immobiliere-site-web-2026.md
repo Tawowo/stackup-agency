@@ -1,6 +1,7 @@
 ---
 title: "Site internet d'agence immobilière : prix, fonctionnalités et exemples (2026)"
-excerpt: "Combien coûte un site d'agence immobilière en 2026 ? Fonctionnalités indispensables (recherche de biens, estimation, visites), prix réels et erreurs à éviter."
+seoTitle: "Site d'agence immobilière : fonctions clés et erreurs"
+excerpt: "Recherche de biens, estimation en ligne, visite virtuelle, contenu local : ce qu'un site d'agence indépendante doit offrir, et les quatre erreurs à éviter."
 date: "2026-07-04"
 updated: "2026-07-29"
 category: "professions-liberales"

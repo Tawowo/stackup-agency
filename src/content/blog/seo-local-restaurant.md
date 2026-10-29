@@ -1,15 +1,16 @@
 ---
 title: "SEO local pour restaurants : remplir votre salle grâce à Google"
+seoTitle: "SEO local pour restaurant : sortir en tête sur Google"
 date: "2026-04-18"
 updated: "2026-08-17"
-excerpt: "90% des gens cherchent un restaurant sur leur téléphone avant de réserver. Voici comment faire en sorte que ce soit le vôtre qui apparaît en premier sur Google."
+excerpt: "Fiche Google complète, menu en texte et non en PDF, réponses aux avis : les trois leviers pour qu'un restaurant apparaisse en premier près de ses clients."
 tag: "Restaurants"
 category: "seo-local"
 readTime: 9
 keywords: ["seo restaurant", "referencement local restaurant", "restaurant premier sur google"]
 ---
 
-**Réponse directe :** 90 % des consommateurs recherchent un restaurant en ligne avant de s'y rendre, la plupart sur mobile. Pour sortir en tête sur "restaurant [cuisine] [ville]", trois leviers comptent le plus : une fiche Google Business Profile précise et complète (catégorie, menu, photos, avis), un menu en texte HTML lisible par Google (jamais en PDF), et des avis récents auxquels vous répondez sous 48h. Ce guide détaille comment les mettre en place, du plus basique au plus avancé.
+**Réponse directe :** 90 % des consommateurs recherchent un restaurant en ligne avant de s'y rendre, la plupart sur mobile. Pour sortir en tête sur "restaurant ⟨cuisine⟩ ⟨ville⟩", trois leviers comptent le plus : une fiche Google Business Profile précise et complète (catégorie, menu, photos, avis), un menu en texte HTML lisible par Google (jamais en PDF), et des avis récents auxquels vous répondez sous 48h. Ce guide détaille comment les mettre en place, du plus basique au plus avancé.
 
 ---
 
@@ -17,7 +18,7 @@ keywords: ["seo restaurant", "referencement local restaurant", "restaurant premi
 
 La restauration a subi une transformation digitale accélérée depuis 2020. En 2026, plusieurs réalités de marché rendent le SEO local incontournable pour les restaurateurs :
 
-**La recherche "near me" domine.** "Restaurant japonais près de moi", "brunch ouvert dimanche [ville]", "restaurant avec terrasse [quartier]" — ce type de recherche de proximité représente désormais une part majeure du trafic de recherche local. Google Maps est devenu le premier réflexe, avant TripAdvisor ou The Fork.
+**La recherche "near me" domine.** "Restaurant japonais près de moi", "brunch ouvert dimanche ⟨ville⟩", "restaurant avec terrasse ⟨quartier⟩" — ce type de recherche de proximité représente désormais une part majeure du trafic de recherche local. Google Maps est devenu le premier réflexe, avant TripAdvisor ou The Fork.
 
 **The Fork et TripAdvisor ont leurs limites.** Ces plateformes prennent une commission sur chaque réservation (souvent 1 à 1,5€ par couvert). Un restaurant qui génère ses réservations via Google Direct économise ces frais et garde le contact direct avec ses clients.
 
@@ -29,7 +30,7 @@ La restauration a subi une transformation digitale accélérée depuis 2020. En 
 
 **1. Laisser Google générer automatiquement votre fiche.** Google crée parfois des fiches automatiques pour les établissements dont il détecte l'existence. Ces fiches auto-générées sont incomplètes, parfois avec des informations incorrectes. Si vous n'avez pas revendiqué et optimisé votre fiche, vous perdez le contrôle de votre présentation.
 
-**2. Avoir un menu non lisible par Google.** Beaucoup de restaurants publient leur menu en PDF ou en image. Google ne peut pas lire ces formats. Résultat : vos plats ne remontent pas sur des recherches comme "restaurant avec tajine [ville]" ou "sushi à emporter [quartier]". Le menu doit être en texte HTML sur votre site ET renseigné dans GBP.
+**2. Avoir un menu non lisible par Google.** Beaucoup de restaurants publient leur menu en PDF ou en image. Google ne peut pas lire ces formats. Résultat : vos plats ne remontent pas sur des recherches comme "restaurant avec tajine ⟨ville⟩" ou "sushi à emporter ⟨quartier⟩". Le menu doit être en texte HTML sur votre site ET renseigné dans GBP.
 
 **3. Négliger les photos de plats.** Les études montrent qu'une fiche avec des photos de plats professionnelles génère 3 fois plus de clics que la même fiche sans photos. Un investissement de 200-300€ dans une séance photo professionnelle peut se rentabiliser en quelques semaines.
 
@@ -77,8 +78,8 @@ Un site web de restaurant doit être conçu avec deux objectifs : convertir les 
 - À propos / Histoire — le storytelling qui crée la différence
 
 **L'optimisation SEO des pages :**
-- Titre de page : "Restaurant [cuisine] à [ville] | [Nom du restaurant]"
-- Balise H1 : "[Nom du restaurant] — [cuisine] au cœur de [quartier/ville]"
+- Titre de page : "Restaurant ⟨cuisine⟩ à ⟨ville⟩ | ⟨Nom du restaurant⟩"
+- Balise H1 : "⟨Nom du restaurant⟩ — ⟨cuisine⟩ au cœur de [quartier/ville]"
 - Contenu textuel avec mentions naturelles de la ville, du quartier, du type de cuisine
 
 **Le blog ou les actualités.** Un restaurant qui publie régulièrement des articles sur ses nouvelles cartes, ses événements, ses producteurs locaux, ses recettes signature crée du contenu frais qui attire du trafic et renforce le SEO. Même 1 article par mois fait une différence sur la durée.
@@ -99,7 +100,7 @@ Pour Google, la stratégie de collecte d'avis doit être intégrée dans le serv
 
 ### Exploiter le contenu saisonnier
 
-La restauration est profondément saisonnière. Les consommateurs cherchent "restaurant saint-valentin [ville]", "brunch pâques [ville]", "menu de noël [ville]" bien à l'avance.
+La restauration est profondément saisonnière. Les consommateurs cherchent "restaurant saint-valentin ⟨ville⟩", "brunch pâques ⟨ville⟩", "menu de noël ⟨ville⟩" bien à l'avance.
 
 Anticipez ces pics de recherche :
 - Créez des pages dédiées pour chaque événement (menu Saint-Valentin, menu de fête, brunch dominical)

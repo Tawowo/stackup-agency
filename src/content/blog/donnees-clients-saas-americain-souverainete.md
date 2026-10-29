@@ -1,6 +1,7 @@
 ---
 title: "Les données de vos clients chez un SaaS américain : le vrai sujet"
-excerpt: "CRM, facturation, réservation : la plupart des SaaS métier utilisés par les TPE françaises hébergent les données chez des prestataires soumis au droit américain. Ce que ça change vraiment."
+seoTitle: "Données clients chez un SaaS américain : les risques"
+excerpt: "Vos données clients sont souvent chez un prestataire soumis au droit américain. Ce que cela change (RGPD, Cloud Act) et comment vérifier vos outils."
 date: "2026-08-17"
 publishAt: "2026-11-26"
 readTime: 8

@@ -1,6 +1,7 @@
 ---
 title: "Vitesse mobile : comment accélérer votre site sur smartphone"
-excerpt: "60% du trafic web est mobile. Un site lent sur smartphone perd la majorité de ses visiteurs. Les 6 optimisations qui font vraiment la différence en 2026."
+seoTitle: "Vitesse mobile : accélérer son site sur smartphone"
+excerpt: "Un site rapide sur ordinateur peut être lent en 4G. Mesurez votre vitesse mobile et appliquez les six optimisations prioritaires, selon votre type de site."
 date: "2026-07-24"
 updated: "2026-07-30"
 readTime: 7

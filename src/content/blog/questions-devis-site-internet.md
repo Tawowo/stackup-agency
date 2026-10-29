@@ -1,6 +1,7 @@
 ---
 title: "Devis site internet : les 10 questions à poser avant de signer"
-excerpt: "La checklist qui évite 90 % des mauvaises surprises : 10 questions précises à poser à tout prestataire web, avec les bonnes réponses attendues et les signaux d'alarme."
+seoTitle: "Devis de site internet : 10 questions avant de signer"
+excerpt: "Propriété du site, template ou sur mesure, coûts récurrents, réversibilité : dix questions à poser avant de signer un devis, avec les signaux d'alarme."
 date: "2026-08-17"
 publishAt: "2026-09-02"
 readTime: 8
@@ -101,4 +102,4 @@ Pour un site vitrine, oui — le devis gratuit est le standard du marché. Pour 
 
 ---
 
-*Pour aller plus loin : [Pourquoi les devis varient de 500 € à 15 000 €](/blog/devis-site-internet-pourquoi-ecarts) · [Le cahier des charges gratuit](/ressources/cahier-des-charges) · [Demander notre devis](/devis)*
+*Pour aller plus loin : [Pourquoi les devis varient de 500 € à 15 000 €](/blog/devis-site-internet-pourquoi-ecarts) · [Le cahier des charges gratuit](/ressources/cahier-des-charges) · [Demander notre devis](/tarifs#estimer)*

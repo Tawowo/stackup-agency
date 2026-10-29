@@ -46,7 +46,7 @@ Un SMS ou un e-mail est le canal qui rapporte le plus, parce que le lien est sou
 
 Message type par SMS :
 
-> Bonjour Mme Martin, merci pour votre confiance. Si le travail vous a plu, vous nous aideriez beaucoup avec un avis sur Google, 30 secondes suffisent : [lien]. Bonne journée, [Prénom], [Entreprise].
+> Bonjour Mme Martin, merci pour votre confiance. Si le travail vous a plu, vous nous aideriez beaucoup avec un avis sur Google, 30 secondes suffisent : [lien]. Bonne journée, ⟨Prénom⟩, [Entreprise].
 
 Message type par e-mail, avec objet « Votre avis sur notre intervention » :
 

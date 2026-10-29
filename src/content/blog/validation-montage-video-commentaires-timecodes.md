@@ -1,6 +1,7 @@
 ---
 title: "Validation de montage : les commentaires timecodés expliqués"
-excerpt: "« À 1:24, peux-tu couper plus tôt ? » — un commentaire directement posé sur la timeline évite les allers-retours confus par email. Comment fonctionne la validation de montage timecodée et pourquoi elle change tout."
+seoTitle: "Validation de montage vidéo : commentaires timecodés"
+excerpt: "Un commentaire posé à 1:24 sur la timeline évite les e-mails confus. Comment fonctionne la validation de montage timecodée et pour quels projets elle sert."
 date: "2026-08-17"
 publishAt: "2027-01-17"
 readTime: 12

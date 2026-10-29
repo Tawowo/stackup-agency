@@ -1,6 +1,7 @@
 ---
 title: "Payer son site en plusieurs fois : comment ça marche"
-excerpt: "Acompte, solde à la livraison, échelonnement : les modalités de paiement d'un site internet expliquées simplement, avec ce qui est normal, ce qui doit alerter, et nos pratiques."
+seoTitle: "Payer son site internet en plusieurs fois : acompte et solde"
+excerpt: "Acompte au démarrage, solde à la livraison, échelonnement sur les gros projets : ce qui est normal, ce qui doit alerter et les questions à poser."
 date: "2026-08-17"
 publishAt: "2026-09-07"
 readTime: 7
@@ -76,4 +77,4 @@ Non, et c'est volontaire : les « facilités » très longues transforment un ac
 
 ---
 
-*Pour aller plus loin : [Ce qui est inclus dans un site vitrine](/blog/site-vitrine-inclus) · [Les frais cachés à éviter](/blog/frais-caches-creation-site) · [Demander un devis](/devis)*
+*Pour aller plus loin : [Ce qui est inclus dans un site vitrine](/blog/site-vitrine-inclus) · [Les frais cachés à éviter](/blog/frais-caches-creation-site) · [Demander un devis](/tarifs#estimer)*

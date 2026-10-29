@@ -1,6 +1,7 @@
 ---
 title: "10 signes que votre site actuel vous fait perdre des clients"
-excerpt: "Un site qui ne s'affiche pas bien sur mobile, qui charge lentement ou dont le contenu date de plusieurs années fait fuir des clients sans que le dirigeant s'en rende toujours compte. La checklist à vérifier."
+seoTitle: "Site internet obsolète : 10 signes qui font fuir les clients"
+excerpt: "Votre site fait-il fuir vos clients ? Dix signes à vérifier (mobile, lenteur, infos périmées, aucun appel à l'action) et le seuil à partir duquel agir."
 date: "2026-08-18"
 publishAt: "2027-02-02"
 readTime: 13

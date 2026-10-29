@@ -42,7 +42,7 @@ Au-delà, vous perdez du temps et de l'image. Adaptez ce calendrier au métier :
 
 Le SMS convient quand le client est un particulier ou un petit professionnel, et que vous avez déjà échangé par téléphone. Il doit être court et poli.
 
-> Bonjour [Prénom], c'est [Prénom Nom] de [entreprise]. Avez-vous eu le temps de regarder le devis pour [objet] ? Je reste disponible si vous avez des questions. Belle journée.
+> Bonjour ⟨Prénom⟩, c'est [Prénom Nom] de [entreprise]. Avez-vous eu le temps de regarder le devis pour [objet] ? Je reste disponible si vous avez des questions. Belle journée.
 
 ## Modèles de relance de devis
 
@@ -50,9 +50,9 @@ Le SMS convient quand le client est un particulier ou un petit professionnel, et
 
 > Objet : Votre devis pour [objet]
 >
-> Bonjour [Prénom],
+> Bonjour ⟨Prénom⟩,
 >
-> Je me permets de revenir vers vous au sujet du devis du [date] pour [objet]. Y a-t-il un point que je peux préciser, ou un élément que vous aimeriez adapter ?
+> Je me permets de revenir vers vous au sujet du devis du ⟨date⟩ pour [objet]. Y a-t-il un point que je peux préciser, ou un élément que vous aimeriez adapter ?
 >
 > Je peux aussi vous proposer un créneau pour en parler cinq minutes par téléphone.
 >
@@ -61,13 +61,13 @@ Le SMS convient quand le client est un particulier ou un petit professionnel, et
 
 **Seconde relance, avec un angle nouveau**
 
-> Bonjour [Prénom],
+> Bonjour ⟨Prénom⟩,
 >
-> Pour votre projet de [objet], j'ai une disponibilité à partir du [date]. Si vous souhaitez en profiter, je peux bloquer ce créneau dès réception de votre accord. Sinon, dites-le-moi et je ne vous relancerai plus.
+> Pour votre projet de [objet], j'ai une disponibilité à partir du ⟨date⟩. Si vous souhaitez en profiter, je peux bloquer ce créneau dès réception de votre accord. Sinon, dites-le-moi et je ne vous relancerai plus.
 
 **Message de clôture**
 
-> Bonjour [Prénom],
+> Bonjour ⟨Prénom⟩,
 >
 > Sans nouvelles de votre part, je considère que le projet n'est plus d'actualité. Si vous avez besoin de moi plus tard, mon devis reste valable jusqu'au [date de validité]. Bonne continuation.
 
@@ -81,17 +81,17 @@ Avant de relancer, vérifiez trois choses : la facture a bien été envoyée à 
 
 **Étape 1 : le rappel amical, dès l'échéance dépassée.** Un e-mail ou un appel, sans reproche. Joignez la facture.
 
-> Bonjour [Prénom],
+> Bonjour ⟨Prénom⟩,
 >
-> Sauf erreur de ma part, la facture n° [numéro] du [date] n'a pas encore été réglée. Je vous la joins de nouveau. Pouvez-vous me confirmer sa date de règlement ?
+> Sauf erreur de ma part, la facture n° ⟨numéro⟩ du ⟨date⟩ n'a pas encore été réglée. Je vous la joins de nouveau. Pouvez-vous me confirmer sa date de règlement ?
 >
 > Merci d'avance, cordialement.
 
 **Étape 2 : la relance écrite.** Si rien ne bouge au bout d'une à deux semaines, un second message plus ferme, qui rappelle l'échéance et la date convenue.
 
-> Bonjour [Prénom],
+> Bonjour ⟨Prénom⟩,
 >
-> Malgré mon précédent message, la facture n° [numéro] de [montant TTC] échue le [date] reste impayée. Je vous remercie de procéder au règlement sous huit jours ou de m'indiquer la raison du retard. À défaut, je serai contraint d'engager les démarches prévues par la loi.
+> Malgré mon précédent message, la facture n° ⟨numéro⟩ de ⟨montant TTC⟩ échue le ⟨date⟩ reste impayée. Je vous remercie de procéder au règlement sous huit jours ou de m'indiquer la raison du retard. À défaut, je serai contraint d'engager les démarches prévues par la loi.
 
 **Étape 3 : la mise en demeure.** C'est le courrier formel, par lettre recommandée avec accusé de réception.
 
@@ -99,11 +99,11 @@ Avant de relancer, vérifiez trois choses : la facture a bien été envoyée à 
 >
 > Lettre recommandée avec accusé de réception
 >
-> Objet : Mise en demeure de payer la facture n° [numéro]
+> Objet : Mise en demeure de payer la facture n° ⟨numéro⟩
 >
 > Madame, Monsieur,
 >
-> Par la présente, je vous mets en demeure de régler la somme de [montant] correspondant à la facture n° [numéro] du [date], échue le [date], sous huit jours à compter de la réception de ce courrier.
+> Par la présente, je vous mets en demeure de régler la somme de ⟨montant⟩ correspondant à la facture n° ⟨numéro⟩ du ⟨date⟩, échue le ⟨date⟩, sous huit jours à compter de la réception de ce courrier.
 >
 > À défaut, je me verrai contraint d'engager une procédure de recouvrement, les frais et pénalités éventuellement dus restant à votre charge.
 >

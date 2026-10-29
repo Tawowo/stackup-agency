@@ -52,7 +52,7 @@ Quelques demandes que vous pouvez réutiliser en changeant les éléments entre 
 - *Réponse à un avis négatif* : « Voici un avis client : [texte]. Rédige une réponse calme et factuelle, sans reconnaître de faute que je n'ai pas commise, qui propose un échange par téléphone. Trois phrases maximum. »
 - *Relance de devis* : « Rédige une relance courte pour un devis envoyé il y a quelques jours, sans pression, qui propose de répondre aux questions. »
 - *Présentation de chantier* : « À partir de ces notes : [notes]. Rédige un paragraphe pour ma page réalisations, sans superlatifs, avec le problème, la solution et le résultat. »
-- *Liste de contrôle* : « Fais-moi une liste de vérifications avant de quitter un chantier de [type], en cinq points. Je corrigerai avec mon expérience. »
+- *Liste de contrôle* : « Fais-moi une liste de vérifications avant de quitter un chantier de ⟨type⟩, en cinq points. Je corrigerai avec mon expérience. »
 
 ### ChatGPT pour un commerçant de centre-ville
 

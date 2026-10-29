@@ -1,6 +1,7 @@
 ---
 title: "Être propriétaire de son site : ce que ça veut dire concrètement"
-excerpt: "« Vous êtes propriétaire de votre site » sonne comme un argument marketing flou. En pratique, cela couvre le code, le nom de domaine, l'hébergement et la liberté de partir. Ce que ça change vraiment."
+seoTitle: "Être propriétaire de son site internet : ce que cela couvre"
+excerpt: "Code source, nom de domaine, hébergement, liberté de changer de prestataire : ce que veut dire posséder son site, comment le vérifier et pourquoi cela compte."
 date: "2026-08-17"
 publishAt: "2027-01-27"
 readTime: 13

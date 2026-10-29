@@ -37,7 +37,7 @@ export default function Atelier() {
           <div className="su-plaque su-ate__cadre-photo">
             <Portrait fond="ivoire" />
           </div>
-          <figcaption className="su-mono su-ate__legende">Tours, l’atelier</figcaption>
+          <figcaption className="su-mono su-ate__legende">Savigné-sur-Lathan, l’atelier</figcaption>
         </figure>
         <div className="su-ate__scene" aria-hidden="true">
           <StackFrame className="su-ate__cadre" />

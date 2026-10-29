@@ -1,7 +1,8 @@
 ---
 title: "Menu en ligne pour restaurant : comment il booste votre référencement Google"
+seoTitle: "Menu en ligne de restaurant : l’optimiser pour Google"
 date: "2026-05-19"
-excerpt: "Votre menu en ligne n'est pas seulement utile pour vos clients — c'est un puissant levier SEO qui peut vous faire apparaître en première position sur Google. Voici comment l'optimiser."
+excerpt: "Un menu en texte, structuré et à jour aide Google à vous proposer aux bonnes recherches. Les règles pour publier votre carte sans PDF illisible. À appliquer."
 tag: "Restauration"
 category: "restaurants"
 readTime: 6
@@ -9,7 +10,7 @@ readTime: 6
 
 ## Menu en ligne pour restaurant : comment il booste votre référencement Google
 
-**Les recherches incluant « menu » ont augmenté de 65 % sur Google en cinq ans dans le secteur de la restauration.** Les internautes ne cherchent plus seulement « restaurant [ville] » — ils cherchent « menu déjeuner restaurant sushi Lyon » ou « carte végétarienne restaurant Bordeaux ». Si votre menu en ligne est bien structuré et optimisé, il peut être votre meilleur allié pour apparaître en première page Google sur ces requêtes à forte intention d'achat.
+**Les recherches incluant « menu » ont augmenté de 65 % sur Google en cinq ans dans le secteur de la restauration.** Les internautes ne cherchent plus seulement « restaurant ⟨ville⟩ » — ils cherchent « menu déjeuner restaurant sushi Lyon » ou « carte végétarienne restaurant Bordeaux ». Si votre menu en ligne est bien structuré et optimisé, il peut être votre meilleur allié pour apparaître en première page Google sur ces requêtes à forte intention d'achat.
 
 Beaucoup de restaurateurs publient leur menu sous forme de PDF ou d'image. C'est une erreur SEO majeure. Google ne peut pas lire un PDF ou une image de menu — il a besoin de texte structuré pour indexer votre contenu. Ce guide vous explique comment transformer votre menu en ligne en machine à référencement.
 
@@ -73,7 +74,7 @@ Chaque description de plat est une opportunité SEO. Exemples de rédaction opti
 
 **Après (optimisé) :** « Dos de saumon de l'Atlantique grillé sur plancha, accompagné de légumes de saison rôtis et d'une sauce vierge aux herbes fraîches. Notre poisson est sélectionné chaque matin au marché de [votre ville] — 18 € »
 
-La deuxième version est indexée sur : saumon grillé, poisson frais, légumes de saison, herbes fraîches, marché [ville], plancha. Multipliez cela par l'ensemble de votre carte et vous créez un contenu SEO de qualité qui attire des visiteurs organiques.
+La deuxième version est indexée sur : saumon grillé, poisson frais, légumes de saison, herbes fraîches, marché ⟨ville⟩, plancha. Multipliez cela par l'ensemble de votre carte et vous créez un contenu SEO de qualité qui attire des visiteurs organiques.
 
 ### Le schema markup Restaurant et Menu
 

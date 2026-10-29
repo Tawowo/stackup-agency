@@ -1,6 +1,7 @@
 ---
 title: "Pages Jaunes, Houzz, Travaux.com : les annuaires valent-ils le coup ?"
-excerpt: "Commissions, leads partagés avec la concurrence, dépendance à la plateforme : ce que valent vraiment les annuaires et plateformes de mise en relation pour un artisan en 2026."
+seoTitle: "Annuaires d'artisans (Pages Jaunes, Houzz) : utiles ?"
+excerpt: "Commissions, leads partagés, dépendance : ce que coûtent vraiment les annuaires et plateformes de mise en relation à un artisan, et quand les garder."
 date: "2026-08-17"
 publishAt: "2026-10-07"
 readTime: 8

@@ -1,6 +1,8 @@
 ---
 title: "Click & Collect pour boucherie et charcuterie : guide pratique de mise en place"
+seoTitle: "Click and collect pour une boucherie-charcuterie"
 description: "Commandes préparées à l'avance, réservation de pièces maîtresses, abonnements panier : le click & collect ouvre de nouvelles sources de revenus pour votre boucherie."
+excerpt: "Commandes préparées à l'avance, pièces à réserver, paniers à l'abonnement : comment lancer le click and collect de votre boucherie, erreurs à éviter incluses."
 date: "2026-06-11"
 category: "artisans"
 tags: ["boucherie", "charcuterie", "click and collect"]

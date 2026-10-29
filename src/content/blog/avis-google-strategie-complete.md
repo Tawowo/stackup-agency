@@ -1,7 +1,8 @@
 ---
 title: "Avis Google : stratégie complète pour obtenir 50+ avis 5 étoiles"
+seoTitle: "Obtenir des avis Google : la méthode pour dépasser 50 avis"
+excerpt: "Lien d'avis direct, demande automatisée, scripts de message, réponse aux avis négatifs, signalement des faux : bâtissez votre réputation locale sans tricher."
 date: "2026-06-16"
-excerpt: "Les avis Google sont le facteur de confiance numéro 1 pour les consommateurs locaux. Voici comment construire une réputation de 50+ avis sans pratiques douteuses."
 tag: "SEO Local"
 category: "seo-local"
 readTime: 8
@@ -56,7 +57,7 @@ La clé pour atteindre 50+ avis : rendre la demande systématique, pas ponctuell
 **Pour les prestataires de services (artisans, consultants, médecins) :**
 - Configurez un email ou SMS automatique envoyé 48-72h après la prestation
 - Timing optimal : après que le client ait pu constater le résultat de votre travail, mais avant qu'il ne l'ait oublié
-- Message court : "Bonjour [prénom], j'espère que votre [installation/consultation/intervention] vous donne entière satisfaction. Si c'est le cas, un avis sur Google nous aiderait beaucoup : [lien]. Merci et bonne journée."
+- Message court : "Bonjour ⟨prénom⟩, j'espère que votre [installation/consultation/intervention] vous donne entière satisfaction. Si c'est le cas, un avis sur Google nous aiderait beaucoup : [lien]. Merci et bonne journée."
 
 **Pour les commerces physiques :**
 - Affichez un QR code sur votre comptoir avec la mention "Votre avis nous aide à progresser"
@@ -73,10 +74,10 @@ La clé pour atteindre 50+ avis : rendre la demande systématique, pas ponctuell
 La formulation compte. Un message trop formel sera ignoré. Un message trop long ne sera pas lu.
 
 **Version SMS (optimal : 160 caractères):**
-"Bonjour [prénom], merci pour votre confiance ! Votre avis compte beaucoup pour nous : [lien] — 30 secondes suffisent. Merci !"
+"Bonjour ⟨prénom⟩, merci pour votre confiance ! Votre avis compte beaucoup pour nous : [lien] — 30 secondes suffisent. Merci !"
 
 **Version email (objet : "Une minute pour partager votre expérience ?"):**
-"Bonjour [prénom],
+"Bonjour ⟨prénom⟩,
 
 Merci d'avoir fait appel à [nom de votre entreprise] pour [service rendu].
 
@@ -106,7 +107,7 @@ Un avis négatif n'est pas une catastrophe. Géré correctement, il peut même r
 6. **Invitez** à vous recontacter en privé pour résoudre la situation
 
 Exemple de réponse :
-"Bonjour [prénom], merci pour votre retour. Je suis sincèrement désolé que votre expérience n'ait pas été à la hauteur de vos attentes. [Explication factuelle si nécessaire]. Je vous invite à me contacter directement au [téléphone] pour qu'on puisse trouver une solution ensemble. Bien cordialement."
+"Bonjour ⟨prénom⟩, merci pour votre retour. Je suis sincèrement désolé que votre expérience n'ait pas été à la hauteur de vos attentes. [Explication factuelle si nécessaire]. Je vous invite à me contacter directement au [téléphone] pour qu'on puisse trouver une solution ensemble. Bien cordialement."
 
 Ne jamais : attaquer le client, nier les faits de façon agressive, copier-coller des réponses identiques.
 
@@ -119,7 +120,7 @@ Personnalisez chaque réponse :
 - Remerciez pour un détail spécifique mentionné dans l'avis
 - Glissez naturellement un mot-clé ou une localisation
 
-Exemple : "Merci beaucoup pour votre avis, [prénom] ! On est ravis que votre installation de climatisation se soit passée dans les meilleures conditions. Toute l'équipe de [nom] est disponible pour vos futurs besoins de climatisation et plomberie sur [ville]. À bientôt !"
+Exemple : "Merci beaucoup pour votre avis, ⟨prénom⟩ ! On est ravis que votre installation de climatisation se soit passée dans les meilleures conditions. Toute l'équipe de ⟨nom⟩ est disponible pour vos futurs besoins de climatisation et plomberie sur ⟨ville⟩. À bientôt !"
 
 ### Signaler les avis frauduleux
 

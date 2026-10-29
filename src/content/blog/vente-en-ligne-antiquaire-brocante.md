@@ -1,5 +1,7 @@
 ---
 title: "Antiquaire et brocante : toucher des acheteurs du monde entier grâce au digital"
+seoTitle: "Antiquaire et brocante : vendre en ligne à l'international"
+excerpt: "Collectionneurs, décorateurs, amateurs étrangers cherchent vos pièces en ligne. Comment les rendre trouvables, les présenter et vendre hors de votre boutique."
 description: "Une armoire Empire, un service en porcelaine de Limoges : vos pièces intéressent des acheteurs en France et à l'international. Voici comment le digital vous ouvre ces marchés."
 date: "2026-01-26"
 category: "commerce"

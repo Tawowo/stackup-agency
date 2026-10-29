@@ -1,5 +1,7 @@
 ---
 title: "Site web multilingue : comment attirer des clients étrangers et développer votre activité touristique"
+seoTitle: "Site multilingue pour le tourisme : attirer des étrangers"
+excerpt: "Gîte, camping, activité de loisirs : comment un site bien traduit vous rend visible des voyageurs étrangers, les erreurs à éviter et la marche à suivre."
 description: "Un touriste britannique ne cherche pas en français. Un site web multilingue bien optimisé vous rend visible auprès de millions de voyageurs supplémentaires. Guide complet de mise en place."
 date: "2026-03-20"
 category: "strategie"

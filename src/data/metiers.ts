@@ -136,7 +136,7 @@ const BRUT_METIERS: Metier[] = [
       'Formulaire de devis gratuit en ligne',
     ],
     faq: [
-      { q: 'Mon site peut-il générer des appels pour des urgences ?', a: 'Oui, nous optimisons votre site pour les requêtes de type "plombier urgence [ville]" et positionnons votre numéro bien en évidence pour maximiser les appels directs.' },
+      { q: 'Mon site peut-il générer des appels pour des urgences ?', a: 'Oui, nous optimisons votre site pour les requêtes de type « plombier urgence » + votre ville et positionnons votre numéro bien en évidence pour maximiser les appels directs.' },
       { q: 'Comment faire pour que mes clients me laissent des avis ?', a: 'Nous intégrons des liens directs vers Google et Pages Jaunes sur votre site pour faciliter le dépôt d\'avis, et vous fournissons un QR code à remettre avec vos factures.' },
     ],
   },
@@ -972,7 +972,7 @@ const BRUT_METIERS: Metier[] = [
       'Formulaire d\'urgence fuite de toiture',
     ],
     faq: [
-      { q: 'Mon site peut-il capter des urgences après tempête ?', a: 'Oui, nous optimisons une page urgence toiture pour les requêtes locales de type "couvreur urgence [ville]" et affichons votre contact en évidence.' },
+      { q: 'Mon site peut-il capter des urgences après tempête ?', a: 'Oui, nous optimisons une page urgence toiture pour les requêtes locales de type « couvreur urgence » + votre ville et affichons votre contact en évidence.' },
       { q: 'Comment afficher mes garanties décennale et biennale ?', a: 'Nous créons une section dédiée à vos assurances professionnelles, attestations et garanties — un facteur de décision important pour vos clients.' },
     ],
   },
@@ -1112,7 +1112,7 @@ const BRUT_METIERS: Metier[] = [
       'Zone d\'intervention et délais',
     ],
     faq: [
-      { q: 'Mon site peut-il m\'aider à capter les urgences la nuit ?', a: 'Votre site référencé sur "vitrier urgence [ville]" reçoit des visites 24h/24 — vos coordonnées bien affichées permettent aux clients de vous appeler à toute heure.' },
+      { q: 'Mon site peut-il m\'aider à capter les urgences la nuit ?', a: 'Votre site référencé sur « vitrier urgence » + votre ville reçoit des visites 24h/24 — vos coordonnées bien affichées permettent aux clients de vous appeler à toute heure.' },
       { q: 'Comment travailler avec les assurances ?', a: 'Nous créons une page dédiée aux sinistres avec le processus de déclaration et un formulaire de pré-état des dégâts pour faciliter le travail avec les experts.' },
     ],
   },
@@ -1414,7 +1414,7 @@ const BRUT_METIERS: Metier[] = [
       'Partenariats bancaires et réseau mis en avant',
     ],
     faq: [
-      { q: 'Comment générer des leads qualifiés avec mon site ?', a: 'Nous optimisons votre site pour les requêtes de type "courtier crédit [ville]" et créons des formulaires de capture intelligents avec simulation d\'économies — les meilleurs générateurs de leads du secteur.' },
+      { q: 'Comment générer des leads qualifiés avec mon site ?', a: 'Nous optimisons votre site pour les requêtes de type « courtier crédit » + votre ville et créons des formulaires de capture intelligents avec simulation d\'économies — les meilleurs générateurs de leads du secteur.' },
       { q: 'Mon site peut-il présenter des taux en temps réel ?', a: 'Nous pouvons afficher des taux indicatifs avec mention de la date de mise à jour. Des taux en temps réel nécessitent une intégration spécifique que nous évaluons selon vos partenaires bancaires.' },
     ],
   },

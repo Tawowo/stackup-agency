@@ -1,6 +1,7 @@
 ---
 title: "Dark kitchen et vente à emporter : quel site pour quel modèle ?"
-excerpt: "Un restaurant classique avec vente à emporter en complément et une dark kitchen 100 % livraison n'ont pas les mêmes besoins de site. Le comparatif pour choisir la bonne structure."
+seoTitle: "Site de dark kitchen ou vente à emporter : que choisir ?"
+excerpt: "Un restaurant avec vente à emporter et une dark kitchen n'ont pas les mêmes besoins. Comparez les deux structures de site pour choisir la vôtre."
 date: "2026-08-17"
 publishAt: "2026-10-22"
 readTime: 8

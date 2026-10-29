@@ -1,6 +1,7 @@
 ---
 title: "Artisan : répondre aux devis 2× plus vite (et signer plus)"
-excerpt: "Le premier artisan qui répond gagne souvent le chantier, avant même la comparaison des prix. La méthode concrète pour diviser par deux son délai de réponse aux devis."
+seoTitle: "Répondre plus vite aux devis : la méthode pour les artisans"
+excerpt: "Formulaire qui pré-qualifie, notification immédiate, modèle de réponse type : trois leviers pour répondre en premier aux demandes de devis et signer plus."
 date: "2026-08-17"
 publishAt: "2026-10-10"
 readTime: 8

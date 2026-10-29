@@ -1,8 +1,9 @@
 ---
 title: "Référencement payant ou naturel : où mettre son budget en premier ?"
+seoTitle: "SEO ou Google Ads en premier : où placer un budget limité"
 date: "2026-04-16"
 updated: "2026-08-17"
-excerpt: "SEO ou Google Ads en premier quand le budget est limité ? La vraie réponse dépend de votre secteur, votre trésorerie et votre horizon — ce guide compare honnêtement."
+excerpt: "Référencement naturel ou publicité payante quand le budget est serré ? Une comparaison honnête, avec les cas où chaque canal est le bon choix pour une TPE."
 tag: "SEO Local"
 category: "seo-local"
 readTime: 8
@@ -138,4 +139,4 @@ Oui, mais plus lentement. Dans les secteurs à forte concurrence (avocat, médec
 
 ---
 
-*Pour aller plus loin : [SEO local : le guide complet pour les TPE](/blog/seo-local-commerce) · [Google Ads avec petit budget : est-ce que ça vaut le coup ?](/blog/google-ads-petit-budget) · [Apparaître sur Google Maps en premier](/blog/apparaitre-google-maps-pack-local) · [Rédaction de blog SEO](/services/redaction-blog-seo)*
+*Pour aller plus loin : [SEO local : le guide complet pour les TPE](/blog/seo-local-commerce) · [Google Ads avec petit budget : est-ce que ça vaut le coup ?](/blog/google-ads-petit-budget) · [Apparaître sur Google Maps en premier](/blog/apparaitre-google-maps-pack-local) · [Rédaction de blog SEO](/services/referencement)*

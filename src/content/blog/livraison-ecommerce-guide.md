@@ -1,6 +1,7 @@
 ---
 title: "Livraison e-commerce pour TPE : choisir ses transporteurs et sa stratégie"
-excerpt: "La livraison est le point de contact le plus important après l'achat. Ce guide compare les transporteurs disponibles en France pour les petites boutiques en ligne et explique comment structurer une politique de livraison qui fidélise."
+seoTitle: "Livraison e-commerce : choisir ses transporteurs en TPE"
+excerpt: "Colissimo, Mondial Relay, Chronopost : comment comparer les transporteurs et rédiger une politique de livraison claire pour une petite boutique en ligne."
 date: "2026-07-27"
 updated: "2026-07-30"
 readTime: 6

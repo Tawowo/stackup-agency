@@ -1,6 +1,7 @@
 ---
 title: "Créatifs : facturer des acomptes et éviter les impayés"
-excerpt: "Vidéaste, graphiste, photographe, télépilote : un impayé après livraison touche presque tous les indépendants créatifs au moins une fois. La méthode d'acomptes, de conditions et de relance qui limite ce risque."
+seoTitle: "Acompte et impayés : la méthode pour les créatifs"
+excerpt: "Vidéaste, graphiste, photographe : un acompte à la commande, un solde avant livraison des fichiers et des CGV écrites limitent les impayés. La méthode."
 date: "2026-08-17"
 publishAt: "2027-01-24"
 readTime: 17

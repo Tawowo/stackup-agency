@@ -1,6 +1,7 @@
 ---
 title: "Core Web Vitals 2026 : le guide technique complet"
-excerpt: "LCP, INP, CLS : maîtrisez les Core Web Vitals 2026 pour améliorer votre référencement et l'expérience utilisateur de votre site."
+seoTitle: "Core Web Vitals : LCP, INP et CLS expliqués (2026)"
+excerpt: "LCP, INP, CLS : ce que mesure chaque indicateur, les seuils fixés par Google et les corrections à apporter pour une page rapide et stable sur mobile."
 date: "2026-05-12"
 updated: "2026-08-17"
 readTime: 9
@@ -187,4 +188,4 @@ Un site codé sur mesure avec un framework moderne (Next.js) part avec un avanta
 
 ---
 
-*Pour aller plus loin : [Pourquoi votre site charge lentement](/blog/pourquoi-site-charge-lentement) · [Vitesse mobile : le guide d'optimisation](/blog/vitesse-mobile-optimisation) · [Google Search Console : le guide avancé](/blog/google-search-console-guide-avance-seo) · [Rédaction de blog SEO](/services/redaction-blog-seo)*
+*Pour aller plus loin : [Pourquoi votre site charge lentement](/blog/pourquoi-site-charge-lentement) · [Vitesse mobile : le guide d'optimisation](/blog/vitesse-mobile-optimisation) · [Google Search Console : le guide avancé](/blog/google-search-console-guide-avance-seo) · [Rédaction de blog SEO](/services/referencement)*

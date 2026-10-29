@@ -1,6 +1,7 @@
 ---
 title: "Comment faire du SEO local gratuitement en 2026 ?"
-excerpt: "Fiche Google, citations locales, contenu de proximité : les actions SEO local que vous pouvez faire vous-même sans payer une agence."
+seoTitle: "SEO local gratuit : les actions à faire vous-même"
+excerpt: "Fiche Google Business Profile, cohérence NAP, contenu de proximité, liens locaux : un plan en quatre étapes sur 90 jours pour être trouvé près de chez vous."
 date: "2026-07-30"
 updated: "2026-07-30"
 readTime: 8

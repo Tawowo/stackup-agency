@@ -1,6 +1,7 @@
 ---
 title: "Prestashop vs Shopify vs sur mesure pour le e-commerce français"
-excerpt: "Prestashop est gratuit mais demande un hébergement et une maintenance à gérer soi-même. Shopify est simple mais facture un abonnement et des commissions. Le comparatif pour la France."
+seoTitle: "Prestashop ou Shopify ou sur mesure : lequel en France ?"
+excerpt: "Prestashop gratuit mais à maintenir, Shopify simple avec abonnement et commissions, boutique sur mesure achetée une fois : comparatif et calcul sur 3 ans."
 date: "2026-08-17"
 publishAt: "2026-11-17"
 readTime: 8

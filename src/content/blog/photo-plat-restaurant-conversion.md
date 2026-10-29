@@ -1,6 +1,7 @@
 ---
 title: "Photos de plats : pourquoi elles font (ou cassent) vos ventes en ligne"
-excerpt: "Une photo de plat professionnelle multiplie par 3 le taux de clic sur une fiche Google ou une page menu. Ce qui distingue une photo qui vend d'une photo qui ne sert à rien."
+seoTitle: "Photos de plats de restaurant : celles qui font réserver"
+excerpt: "Une bonne photo fait ouvrir la fiche Google et la carte, une photo sombre fait fuir. Ce qui distingue une image qui vend, shooting pro ou smartphone."
 date: "2026-08-17"
 publishAt: "2026-10-16"
 readTime: 7

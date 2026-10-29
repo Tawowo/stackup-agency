@@ -56,13 +56,16 @@ function lire(slug: string) {
   return matter(fs.readFileSync(path.join(DOSSIER, `${slug}.md`), 'utf8'))
 }
 
+/** Aucune date affichée ou publiée dans le futur : une date d'article ou de mise à jour postérieure à aujourd'hui est ramenée à aujourd'hui. */
+const bornee = (d: string) => { const j = new Date().toISOString().slice(0, 10); const x = d.slice(0, 10); return x > j ? j : d }
+
 function normaliser(slug: string, d: Record<string, unknown>): Article {
   return {
     slug,
     titre: conforme(String(d.title ?? slug)),
     extrait: conforme(String(d.excerpt ?? d.description ?? '')),
-    date: String(d.date ?? '2026-01-01'),
-    maj: d.updated ? String(d.updated) : undefined,
+    date: bornee(String(d.date ?? '2026-01-01')),
+    maj: d.updated ? bornee(String(d.updated)) : undefined,
     lecture: Number(d.readTime ?? 6),
     etiquette: String(d.tag ?? ''),
     categorie: String(d.category ?? 'creation'),

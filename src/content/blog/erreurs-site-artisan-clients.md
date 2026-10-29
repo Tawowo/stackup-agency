@@ -1,6 +1,7 @@
 ---
 title: "Site artisan : les erreurs qui font fuir les clients"
-excerpt: "Numéro caché, photos floues, formulaire trop long : les erreurs les plus fréquentes sur les sites d'artisans, avec des exemples concrets et comment les corriger."
+seoTitle: "Site d'artisan : les erreurs qui font fuir les clients"
+excerpt: "Numéro introuvable sur mobile, photos floues, formulaire trop long, zone d'intervention absente : les erreurs des sites d'artisans et comment les corriger."
 date: "2026-08-17"
 publishAt: "2026-10-06"
 readTime: 9

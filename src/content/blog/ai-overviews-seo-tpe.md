@@ -1,6 +1,7 @@
 ---
 title: "Google AI Overviews : comment être cité par l'IA de Google"
-excerpt: "Contenu factuel, structuré, chiffré : ce qui fait qu'un site est cité dans les AI Overviews de Google plutôt qu'ignoré, avec la méthode pour une TPE."
+seoTitle: "Être cité dans les AI Overviews de Google : méthode TPE"
+excerpt: "Quelles requêtes les AI Overviews touchent, lesquelles protègent une TPE locale, et comment structurer vos pages pour être cité plutôt qu'ignoré."
 date: "2026-07-19"
 updated: "2026-08-17"
 readTime: 7
@@ -26,7 +27,7 @@ En 2026, ils apparaissent principalement pour :
 - Les recherches d'information générale
 
 Ils apparaissent moins souvent pour :
-- Les requêtes transactionnelles directes ("acheter X", "commander pizza [ville]")
+- Les requêtes transactionnelles directes ("acheter X", "commander pizza ⟨ville⟩")
 - Les requêtes locales très spécifiques ("plombier urgence Lyon 3e")
 - Les recherches avec intention commerciale forte
 
@@ -69,10 +70,10 @@ Si votre site est cité comme source dans un AI Overview, vous bénéficiez d'un
 ### 1. Concentrez-vous sur les requêtes à intention forte
 
 Plutôt que d'essayer de vous positionner sur des requêtes informatives génériques ("qu'est-ce que le SEO"), concentrez votre contenu sur les requêtes à intention commerciale ou locale :
-- "[Service] [ville]" (plombier Tours, web agency Bordeaux)
-- "prix [produit]" (combien coûte un site vitrine)
+- "⟨Service⟩ ⟨ville⟩" (plombier Tours, web agency Bordeaux)
+- "prix ⟨produit⟩" (combien coûte un site vitrine)
 - "[Problème spécifique] solution" (site web lent comment réparer)
-- "devis [service]"
+- "devis ⟨service⟩"
 
 Ces requêtes sont moins touchées par les AI Overviews.
 
@@ -149,4 +150,4 @@ Pas directement. Vous pouvez utiliser la balise meta `nosnippet` pour empêcher 
 
 ---
 
-*Pour aller plus loin : [Être recommandé par ChatGPT : le SEO de l'ère IA](/blog/chatgpt-apparence-resultats-google) · [Le SEO est-il mort avec l'IA ?](/blog/seo-ia-generative-ai-overviews-google) · [Google Business Profile : le guide complet](/blog/fiche-google-business-optimisation) · [Rédaction de blog SEO](/services/redaction-blog-seo)*
+*Pour aller plus loin : [Être recommandé par ChatGPT : le SEO de l'ère IA](/blog/chatgpt-apparence-resultats-google) · [Le SEO est-il mort avec l'IA ?](/blog/seo-ia-generative-ai-overviews-google) · [Google Business Profile : le guide complet](/blog/fiche-google-business-optimisation) · [Rédaction de blog SEO](/services/referencement)*

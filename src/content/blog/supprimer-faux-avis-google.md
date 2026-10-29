@@ -96,15 +96,15 @@ Les règles d'une bonne réponse :
 
 **Cas d'une critique justifiée :**
 
-> Bonjour [prénom], merci d'avoir pris le temps de nous écrire. Nous sommes désolés que votre passage n'ait pas été à la hauteur. Nous aimerions comprendre ce qui s'est passé pour que cela ne se reproduise pas : pouvez-vous nous joindre au [numéro] ? Cordialement, [nom].
+> Bonjour ⟨prénom⟩, merci d'avoir pris le temps de nous écrire. Nous sommes désolés que votre passage n'ait pas été à la hauteur. Nous aimerions comprendre ce qui s'est passé pour que cela ne se reproduise pas : pouvez-vous nous joindre au ⟨numéro⟩ ? Cordialement, ⟨nom⟩.
 
 **Cas d'une critique que vous jugez injuste :**
 
-> Bonjour, nous avons bien lu votre message. Nous ne retrouvons pas de trace de votre passage dans nos dossiers et nous aimerions comprendre. Pouvez-vous nous contacter au [numéro] pour que nous examinions la situation ensemble ? Cordialement, [nom].
+> Bonjour, nous avons bien lu votre message. Nous ne retrouvons pas de trace de votre passage dans nos dossiers et nous aimerions comprendre. Pouvez-vous nous contacter au ⟨numéro⟩ pour que nous examinions la situation ensemble ? Cordialement, ⟨nom⟩.
 
 **Cas d'un avis que vous pensez faux :**
 
-> Bonjour, nous ne retrouvons pas de commande ou de rendez-vous correspondant à ce nom. Nous avons signalé cet avis à Google. Si vous avez bien été client, merci de nous contacter pour que nous corrigions la situation. Cordialement, [nom].
+> Bonjour, nous ne retrouvons pas de commande ou de rendez-vous correspondant à ce nom. Nous avons signalé cet avis à Google. Si vous avez bien été client, merci de nous contacter pour que nous corrigions la situation. Cordialement, ⟨nom⟩.
 
 Adaptez toujours le texte : une réponse recopiée mot pour mot sur dix avis se repère immédiatement.
 

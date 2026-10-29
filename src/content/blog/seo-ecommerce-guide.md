@@ -1,6 +1,7 @@
 ---
 title: "SEO pour e-commerce : les optimisations qui augmentent vraiment le trafic organique"
-excerpt: "Le SEO e-commerce est différent du SEO de service. Fiches produits, pages catégories, duplicate content, données structurées — les points critiques pour une boutique en ligne."
+seoTitle: "SEO e-commerce : fiches produits, catégories, doublons"
+excerpt: "Variantes, filtres, pagination, données structurées : les problèmes de référencement d'une boutique en ligne et comment les corriger, du produit à la page."
 date: "2026-07-30"
 updated: "2026-07-30"
 readTime: 8
@@ -68,7 +69,7 @@ Un produit en rupture de stock pose un dilemme SEO : supprimer la page = perte d
 
 **Bonne pratique :**
 - Gardez la page produit si vous prévoyez le réapprovisionnement
-- Indiquez clairement "Rupture de stock — disponible le [date]" avec option de notification
+- Indiquez clairement "Rupture de stock — disponible le ⟨date⟩" avec option de notification
 - Si le produit est définitivement arrêté : redirigez vers le produit équivalent ou la catégorie (301)
 - Ne supprimez jamais une page avec des backlinks sans redirection
 

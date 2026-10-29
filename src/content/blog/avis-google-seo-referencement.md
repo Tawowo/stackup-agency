@@ -1,6 +1,7 @@
 ---
 title: "Les avis Google font-ils monter votre référencement ?"
-excerpt: "Oui, mais pas comme on le croit : les avis Google influencent surtout le classement local (Maps), moins le classement organique classique. Ce que confirment les études."
+seoTitle: "Avis Google et référencement : l'effet sur votre classement"
+excerpt: "Les avis Google pèsent surtout sur le classement local (Maps), peu sur le référencement classique. Ce qui compte : nombre, fraîcheur, mots, réponses."
 date: "2026-08-17"
 publishAt: "2026-10-25"
 readTime: 7
@@ -120,4 +121,4 @@ Oui, en le signalant depuis la fiche GBP pour violation des règles (faux compte
 
 ---
 
-*Pour aller plus loin : [Combien de temps pour être visible sur Google ?](/blog/combien-temps-visible-google) · [Fiche Google Business : l'optimisation complète en 20 points](/blog/fiche-google-business-optimisation) · [Avis Google : stratégie complète pour obtenir 50+ avis](/blog/avis-google-strategie-complete) · [Rédaction de blog SEO](/services/redaction-blog-seo)*
+*Pour aller plus loin : [Combien de temps pour être visible sur Google ?](/blog/combien-temps-visible-google) · [Fiche Google Business : l'optimisation complète en 20 points](/blog/fiche-google-business-optimisation) · [Avis Google : stratégie complète pour obtenir 50+ avis](/blog/avis-google-strategie-complete) · [Rédaction de blog SEO](/services/referencement)*

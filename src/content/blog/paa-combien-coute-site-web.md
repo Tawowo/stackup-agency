@@ -1,6 +1,7 @@
 ---
 title: "Combien coûte un site web professionnel en 2026 ? (réponse directe)"
-excerpt: "Site vitrine : à partir de {{prix:une-page}} €. Site multi-pages : à partir de {{prix:multi-pages}} €. E-commerce : à partir de {{prix:boutique}} €. Détail complet des tarifs, de ce qui est inclus, et des pièges à éviter."
+seoTitle: "Combien coûte un site web professionnel ? Réponse directe"
+excerpt: "Vitrine, multi-pages ou boutique : ce qui est inclus, ce qui fait varier le tarif, les coûts récurrents après la mise en ligne et comment comparer deux devis."
 date: "2026-07-24"
 updated: "2026-07-28"
 readTime: 7

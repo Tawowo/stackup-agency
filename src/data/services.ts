@@ -23,7 +23,7 @@ const BRUT_SERVICES: Record<string, Service> = {
   'site-vitrine': {
     title: 'Site Vitrine',
     subtitle: 'Votre présence digitale professionnelle, clé en main.',
-    metaDesc: 'Site vitrine professionnel à partir de {{prix:une-page}} €. Design sur mesure, SEO intégré, responsive mobile. Démo avant signature.',
+    metaDesc: 'Site vitrine professionnel à partir de {{prix:une-page}} €, fabriqué sur mesure : design propre à votre métier, référencement de base, lecture parfaite sur mobile. Démo avant signature.',
     description: `Un site vitrine, c'est votre carte de visite permanente sur internet. Il est disponible 24h/24, 7j/7, et travaille pour vous même quand vous dormez. Chez Stackup Agency, nous créons des sites vitrines qui ne se contentent pas d'exister — ils convertissent des visiteurs en clients.
 
 Nous savons qu'un site web mal conçu peut faire fuir vos prospects en quelques secondes. C'est pourquoi chaque site que nous livrons est optimisé pour trois choses : la vitesse, l'esthétique et la conversion. Pas de modèle générique préfabriqué, pas de constructeur de page limitant — du code sur mesure, performant et évolutif.

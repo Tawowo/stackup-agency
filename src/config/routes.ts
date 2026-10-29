@@ -85,13 +85,18 @@ export function routesDynamiques(): Route[] {
 
 export const toutesLesRoutes = () => [...PAGES_FIXES, ...routesDynamiques()]
 
-/** Famille de sitemap (un fichier par type de page). */
-export type FamilleSitemap = 'pages' | 'services' | 'metiers' | 'zones' | 'ressources'
-export const FAMILLES_SITEMAP: FamilleSitemap[] = ['pages', 'services', 'metiers', 'zones', 'ressources']
+/** Famille de sitemap (un fichier par type de page : suivi de l'indexation par type dans la Search Console). */
+export type FamilleSitemap = 'pages' | 'services' | 'solutions' | 'metiers' | 'villes' | 'blog' | 'realisations' | 'outils' | 'lexique'
+export const FAMILLES_SITEMAP: FamilleSitemap[] = ['pages', 'services', 'solutions', 'metiers', 'villes', 'blog', 'realisations', 'outils', 'lexique']
 export function familleSitemap(chemin: string): FamilleSitemap {
-  if (chemin.startsWith('/creation-site-internet')) return 'metiers'
-  if (chemin.startsWith('/agence-web') || chemin.startsWith('/zones-intervention')) return 'zones'
-  if (chemin.startsWith('/blog') || chemin.startsWith('/ressources') || chemin.startsWith('/lexique')) return 'ressources'
-  if (chemin.startsWith('/services') || chemin.startsWith('/solutions') || chemin.startsWith('/comparatif') || chemin.startsWith('/outils') || chemin.startsWith('/tarifs')) return 'services'
+  const debut = (p: string) => chemin === p || chemin.startsWith(p + '/')
+  if (debut('/creation-site-internet')) return 'metiers'
+  if (debut('/agence-web') || debut('/zones-intervention')) return 'villes'
+  if (debut('/blog')) return 'blog'
+  if (debut('/lexique')) return 'lexique'
+  if (debut('/realisations')) return 'realisations'
+  if (debut('/solutions')) return 'solutions'
+  if (debut('/outils') || debut('/ressources')) return 'outils'
+  if (debut('/services') || debut('/services-locaux') || debut('/comparatif') || debut('/tarifs')) return 'services'
   return 'pages'
 }

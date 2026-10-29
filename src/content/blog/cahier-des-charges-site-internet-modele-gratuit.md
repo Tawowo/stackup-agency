@@ -1,6 +1,7 @@
 ---
 title: "Cahier des charges de site internet : le modèle complet gratuit"
-excerpt: "Un cahier des charges bien rempli évite la moitié des allers-retours d'un projet de site internet. Les sections indispensables, avec un exemple concret, et le modèle gratuit prêt à remplir."
+seoTitle: "Cahier des charges de site internet : le modèle gratuit"
+excerpt: "Contexte, public, fonctionnalités, budget, contenus : les cinq sections d'un cahier des charges d'une ou deux pages, avec un exemple et le modèle à remplir."
 date: "2026-08-17"
 publishAt: "2027-01-25"
 readTime: 13

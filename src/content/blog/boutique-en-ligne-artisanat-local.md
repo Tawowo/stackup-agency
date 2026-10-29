@@ -1,8 +1,9 @@
 ---
 title: "Créateurs & artisanat : Etsy ou sa propre boutique ?"
+seoTitle: "Etsy ou boutique en ligne propre pour un créateur ?"
+excerpt: "Etsy apporte du trafic mais prélève des commissions et fixe ses règles. Fiches qui racontent, page atelier, commande sur mesure : réussir sa propre boutique."
 date: "2026-06-14"
 updated: "2026-08-17"
-excerpt: "Etsy prend 15 à 20 % de commission et impose ses règles, mais apporte du trafic immédiat. Une boutique propre coûte plus cher à construire mais élimine la commission à vie. Le comparatif."
 tag: "Commerce"
 category: "commerce"
 readTime: 8

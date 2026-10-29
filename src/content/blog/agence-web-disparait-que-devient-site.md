@@ -1,6 +1,7 @@
 ---
 title: "Que devient votre site si votre agence disparaît ?"
-excerpt: "Une agence web peut fermer, être rachetée ou simplement devenir injoignable. Ce qui détermine si votre site continue de fonctionner normalement, ou si vous perdez tout du jour au lendemain."
+seoTitle: "Agence web qui disparaît : que devient votre site internet ?"
+excerpt: "Domaine à votre nom, accès à l'hébergement, copie du code : ce qui décide si votre site survit à la disparition de l'agence, et les questions à poser."
 date: "2026-08-17"
 publishAt: "2027-01-30"
 readTime: 13

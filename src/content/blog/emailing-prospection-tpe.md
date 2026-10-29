@@ -1,6 +1,7 @@
 ---
 title: "Emailing de prospection pour TPE : ce qui est légal et ce qui fonctionne"
-excerpt: "L'emailing reste l'un des outils de prospection les plus efficaces en B2B. Mais envoyer des e-mails en masse sans respecter les règles expose à des risques légaux. Ce guide fait le point."
+seoTitle: "Emailing de prospection : règles RGPD et bonnes pratiques"
+excerpt: "Ce que la loi autorise pour prospecter par e-mail en B2B, les mentions et le désabonnement à prévoir, et comment rédiger un message qui obtient une réponse."
 date: "2026-07-28"
 updated: "2026-07-30"
 readTime: 6
@@ -58,7 +59,7 @@ C'est ce qui détermine si l'e-mail est ouvert. Taux d'ouverture moyen de la pro
 
 **Ce qui fonctionne :**
 - Question directe : "Combien de devis perdez-vous chaque semaine ?"
-- Personnalisation : "[Prénom], j'ai vu votre article sur [sujet]"
+- Personnalisation : "⟨Prénom⟩, j'ai vu votre article sur ⟨sujet⟩"
 - Référence commune : "Suite à notre rencontre à [événement]"
 
 **Ce qui ne fonctionne pas :**
@@ -78,7 +79,7 @@ C'est ce qui détermine si l'e-mail est ouvert. Taux d'ouverture moyen de la pro
 
 **Exemple pour Stackup Agency :**
 
-> Bonjour [Prénom],
+> Bonjour ⟨Prénom⟩,
 >
 > J'ai regardé le site de [Entreprise] — vous offrez une belle gamme de services, mais votre page d'accueil ne mentionne pas clairement votre zone géographique d'intervention, ce qui nuit au référencement local.
 >

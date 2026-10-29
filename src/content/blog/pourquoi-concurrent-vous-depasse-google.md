@@ -1,6 +1,7 @@
 ---
 title: "Pourquoi votre concurrent vous dépasse sur Google"
-excerpt: "Votre concurrent est moins bon que vous, mais il apparaît avant vous sur Google. Frustrant ? Voici les vraies raisons et comment renverser la situation."
+seoTitle: "Pourquoi un concurrent vous dépasse sur Google : les causes"
+excerpt: "Liens entrants, vitesse, contenu, avis, structure technique : les cinq raisons pour lesquelles un concurrent moins bon passe devant, et comment le rattraper."
 date: "2026-05-15"
 readTime: 6
 tag: "SEO"

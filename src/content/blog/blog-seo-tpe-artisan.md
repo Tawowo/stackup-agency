@@ -1,6 +1,7 @@
 ---
 title: "Blog SEO pour TPE et artisans : comment attirer des clients sans publicité"
-excerpt: "Un blog SEO bien tenu peut générer du trafic qualifié pendant des années. Voici comment les TPE et artisans peuvent l'utiliser pour se rendre visibles sur Google sans dépenser en publicité."
+seoTitle: "Blog SEO pour artisan et TPE : attirer des clients sans pub"
+excerpt: "Choisir ses mots-clés, structurer un article, tenir un rythme régulier : la méthode pour qu'un blog amène des clients par Google, face à Google Ads."
 date: "2026-07-29"
 readTime: 8
 tag: "SEO"

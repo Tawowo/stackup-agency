@@ -1,7 +1,8 @@
 ---
 title: "Automatisation des processus PME : ce qu'on peut faire avec le digital"
+seoTitle: "Automatisation des processus en PME : par où commencer"
+excerpt: "Flux de documents, relances commerciales, validations, synchronisation d'outils, alertes : les automatisations à lancer en PME et les erreurs à éviter."
 date: "2026-06-18"
-excerpt: "Les employés de PME passent en moyenne 40 % de leur temps sur des tâches répétitives automatisables. L'automatisation des processus libère ce temps pour des activités à vraie valeur ajoutée."
 tag: "Applications métier"
 category: "applications-metier"
 readTime: 9

@@ -1,6 +1,7 @@
 ---
 title: "Comment j'ai créé un système de gestion complet en moins de 100h"
-excerpt: "Retour d'expérience sur la conception et le développement d'un système de gestion sur mesure pour un client — de la spécification au déploiement en moins de 100 heures de travail."
+seoTitle: "Système de gestion sur mesure : retour d'expérience"
+excerpt: "Devis, suivi de fabrication, stocks, facturation : retour d'expérience sur un système de gestion sur mesure pour un atelier de mobilier, du besoin à l'outil."
 date: "2026-07-18"
 readTime: 7
 tag: "Développement"

@@ -1,6 +1,7 @@
 ---
 title: "Artisan : Google Business Profile ou site internet d'abord ?"
-excerpt: "Budget limité, temps compté : par quoi un artisan doit-il commencer entre sa fiche Google Business et son site internet ? La réponse honnête, sans faux dilemme."
+seoTitle: "Fiche Google Business ou site internet : lequel d'abord ?"
+excerpt: "Artisan, fiche Google Business ou site ? Commencez par la fiche, gratuite, puis le site : un tableau comparatif et la séquence à suivre, sans faux dilemme."
 date: "2026-08-17"
 publishAt: "2026-10-04"
 readTime: 8

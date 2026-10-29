@@ -1,7 +1,8 @@
 ---
 title: "Comment remplir son restaurant grâce au digital : stratégie complète"
+seoTitle: "Remplir son restaurant avec le digital : par où commencer"
 date: "2026-05-05"
-excerpt: "Site web, réseaux sociaux, Google Ads, email marketing : découvrez la stratégie digitale complète pour remplir votre restaurant toute l'année."
+excerpt: "Fiche Google, site avec réservation, réseaux sociaux, e-mails : la stratégie digitale d'un restaurateur, canal par canal, pour remplir la salle toute l'année."
 tag: "Restauration"
 category: "restaurants"
 readTime: 8
@@ -19,7 +20,7 @@ Remplir un restaurant en 2026 n'est plus uniquement une question de bouche-à-or
 
 Le parcours d'un client de restaurant en 2026 ressemble à ceci :
 1. Il a faim, ou envie de sortir, ou cherche un endroit pour un repas d'affaires
-2. Il tape sur Google « restaurant [type] [ville] » ou demande à son assistant vocal
+2. Il tape sur Google « restaurant ⟨type⟩ ⟨ville⟩ » ou demande à son assistant vocal
 3. Il compare 2 à 3 résultats (photos, avis, prix, disponibilité)
 4. Il réserve en ligne, immédiatement, sans téléphoner
 
@@ -77,10 +78,10 @@ Une fiche bien optimisée peut doubler votre visibilité sur Google Maps.
 ### Levier 1 : Le SEO local
 
 Travaillez votre référencement naturel sur les requêtes à forte intention d'achat :
-- « restaurant [spécialité] [ville] »
-- « dîner romantique [ville] »
-- « restaurant anniversaire [quartier] »
-- « menu déjeuner [ville] »
+- « restaurant ⟨spécialité⟩ ⟨ville⟩ »
+- « dîner romantique ⟨ville⟩ »
+- « restaurant anniversaire ⟨quartier⟩ »
+- « menu déjeuner ⟨ville⟩ »
 
 Pour chaque requête cible, créez une page dédiée sur votre site avec du contenu original, des photos et votre menu. Le référencement naturel est un investissement long terme (3 à 6 mois avant de voir les résultats) mais durable et gratuit une fois en place.
 
@@ -113,7 +114,7 @@ Les SMS ont des taux d'ouverture supérieurs à 90 % — utilisez-les pour les p
 
 Une fois vos fondations en place, la publicité en ligne amplifie vos résultats :
 
-**Google Ads :** Apparaître en premier pour « restaurant [spécialité] [ville] ». Budget de 300 à 500 € par mois peut générer 20 à 30 nouvelles réservations.
+**Google Ads :** Apparaître en premier pour « restaurant ⟨spécialité⟩ ⟨ville⟩ ». Budget de 300 à 500 € par mois peut générer 20 à 30 nouvelles réservations.
 
 **Facebook & Instagram Ads :** Ciblage géographique précis (rayon de 5 km autour de votre restaurant), ciblage par intérêts (gastronomie, sorties, vin). Efficace pour promouvoir des événements ou des offres spéciales.
 

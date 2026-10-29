@@ -1,7 +1,8 @@
 ---
 title: "SEO pour artisan du bâtiment : être trouvé avant vos concurrents"
+seoTitle: "SEO pour artisan du bâtiment : passer devant vos concurrents"
 date: "2026-05-01"
-excerpt: "Le référencement naturel est le canal d'acquisition le plus rentable sur le long terme pour un artisan du bâtiment. Voici comment le maîtriser sans être un expert technique."
+excerpt: "Fiche Google, pages par métier et par commune, avis, blog : les bases du référencement naturel pour un artisan du bâtiment, sans jargon et sans être expert."
 tag: "Artisans"
 category: "artisans"
 readTime: 7
@@ -46,9 +47,9 @@ Depuis 2021, Google utilise le "Mobile First Indexing" : c'est la version mobile
 Commencez par identifier les recherches que font vos futurs clients. Des outils gratuits comme Google Suggest (les suggestions qui apparaissent quand vous tapez dans Google), Ubersuggest ou AnswerThePublic vous donnent des idées de mots-clés.
 
 Pour un artisan du bâtiment, concentrez-vous sur trois types de requêtes :
-- **Requêtes de services locaux** : "[service] [ville]" (plombier Lyon, électricien Marseille)
-- **Requêtes d'urgence** : "[service] urgence [ville]" (serrurier urgence Paris)
-- **Requêtes informationnelles** : "comment choisir [service]", "prix [service] [ville]", "quel [artisan] pour [problème]"
+- **Requêtes de services locaux** : "⟨service⟩ ⟨ville⟩" (plombier Lyon, électricien Marseille)
+- **Requêtes d'urgence** : "⟨service⟩ urgence ⟨ville⟩" (serrurier urgence Paris)
+- **Requêtes informationnelles** : "comment choisir ⟨service⟩", "prix ⟨service⟩ ⟨ville⟩", "quel ⟨artisan⟩ pour ⟨problème⟩"
 
 ### L'optimisation de chaque page
 
@@ -83,7 +84,7 @@ Publiez régulièrement des articles qui répondent aux questions de vos futurs 
 
 Exemples d'articles efficaces pour un artisan du bâtiment :
 - "Prix d'une réfection de toiture en 2026 : guide complet"
-- "Comment choisir son plombier à [Ville] : 7 critères essentiels"
+- "Comment choisir son plombier à ⟨Ville⟩ : 7 critères essentiels"
 - "Quelles aides pour rénover son chauffage en 2026 ?"
 - "Que faire en cas de fuite d'eau avant l'arrivée du plombier ?"
 

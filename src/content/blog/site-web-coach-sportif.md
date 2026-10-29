@@ -1,6 +1,7 @@
 ---
 title: "Coach sportif : vendre des programmes et des séances en ligne"
-excerpt: "Séances en présentiel, programmes PDF, abonnement à du contenu mensuel : un coach sportif peut vendre au-delà de son temps disponible avec le bon site. Structure et modèles de vente."
+seoTitle: "Site de coach sportif : vendre programmes et séances"
+excerpt: "Programmes PDF, abonnement mensuel ou séances en visio : les trois formats de vente d'un coach sportif depuis son propre site, sans commission de plateforme."
 date: "2026-07-23"
 updated: "2026-08-17"
 readTime: 8
@@ -70,7 +71,7 @@ Le principal frein à l'affichage des tarifs : la peur de faire fuir. La réalit
 
 "Super coach, je recommande !" — inutile. Ce qui convainc :
 
-"En 3 mois avec [Prénom], j'ai perdu 8 kg et j'ai couru mon premier 10km. Pour la première fois de ma vie, le sport est devenu un plaisir — Sandrine, 42 ans, comptable à Tours"
+"En 3 mois avec ⟨Prénom⟩, j'ai perdu 8 kg et j'ai couru mon premier 10km. Pour la première fois de ma vie, le sport est devenu un plaisir — Sandrine, 42 ans, comptable à Tours"
 
 Demandez à vos clients satisfaits de décrire leur situation avant, leur transformation, et leur ressenti. C'est de l'or pour votre marketing.
 
@@ -89,17 +90,17 @@ Prénom, e-mail, téléphone, objectif principal (liste déroulante), message li
 ### Requêtes locales
 
 Si vous êtes coach en présentiel, les requêtes locales sont prioritaires :
-- "coach sportif [ville]"
-- "coach personnel [ville]"
-- "coaching fitness [ville]"
-- "préparation physique [ville]"
+- "coach sportif ⟨ville⟩"
+- "coach personnel ⟨ville⟩"
+- "coaching fitness ⟨ville⟩"
+- "préparation physique ⟨ville⟩"
 
 ### Requêtes de niche
 
 Si vous avez une spécialisation :
 - "coach sportif femme après accouchement"
 - "coach running débutant"
-- "préparation physique seniors [ville]"
+- "préparation physique seniors ⟨ville⟩"
 
 ### Blog éducatif
 

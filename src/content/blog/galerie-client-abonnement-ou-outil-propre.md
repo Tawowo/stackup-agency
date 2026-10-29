@@ -1,6 +1,7 @@
 ---
 title: "Galerie client : abonnement à vie ou outil que vous possédez ? Le comparatif honnête"
-excerpt: "Le match complet entre plateformes de galeries par abonnement et système sur mesure : fonctionnalités, coûts, propriété, limites réelles de chaque camp. Sans caricature."
+seoTitle: "Galerie client photographe : abonnement ou outil à vous"
+excerpt: "Pixieset, Pic-Time ou outil sur mesure : le comparatif fonction par fonction, avec les limites de chaque camp. À lire avant de choisir votre galerie."
 date: "2026-08-17"
 publishAt: "2026-08-24"
 readTime: 9

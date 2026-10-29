@@ -59,7 +59,7 @@ La réponse la plus efficace est un **SMS automatique envoyé à l'appelant just
 
 Que contient un bon SMS d'appel manqué ?
 
-> Bonjour, c'est [nom], [métier]. Je n'ai pas pu répondre, je suis en intervention. Je vous rappelle avant [heure]. Pour une demande de devis, vous pouvez aussi écrire ici ou passer par [adresse du site].
+> Bonjour, c'est ⟨nom⟩, ⟨métier⟩. Je n'ai pas pu répondre, je suis en intervention. Je vous rappelle avant [heure]. Pour une demande de devis, vous pouvez aussi écrire ici ou passer par [adresse du site].
 
 Trois règles : un ton humain, un engagement tenable (ne promettez que ce que vous tiendrez), et un lien vers un moyen d'écrire. Évitez les messages génériques qui sonnent comme un robot, ils produisent l'effet inverse.
 

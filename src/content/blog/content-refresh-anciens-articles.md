@@ -1,6 +1,7 @@
 ---
 title: "Content refresh : comment redonner vie à vos anciens articles de blog"
-excerpt: "Un article qui a perdu ses positions sur Google n'est pas mort. Le content refresh permet de récupérer du trafic perdu en quelques semaines, souvent plus rapidement qu'un nouvel article."
+seoTitle: "Content refresh : redonner vie à vos anciens articles"
+excerpt: "Un article qui a perdu ses positions n'est pas perdu. La méthode de content refresh pour choisir quoi mettre à jour ou réécrire et regagner du trafic."
 date: "2026-06-29"
 updated: "2026-07-28"
 readTime: 7
@@ -76,7 +77,7 @@ Contrairement à un nouvel article, un content refresh produit souvent des résu
 
 ## Intégrer le content refresh dans votre stratégie
 
-Une bonne stratégie de contenu ne se limite pas à la production. Chez Stackup Agency, l'[abonnement mensuel facultatif](/services/redaction-blog-seo), sans engagement, peut inclure des articles de blog ({{abo:article}} € l'article), et une heure de modifications par mois ({{abo:heure}} €) peut servir à entretenir l'existant. L'idée : produire du nouveau contenu tout en entretenant l'existant — les deux leviers fonctionnent en synergie.
+Une bonne stratégie de contenu ne se limite pas à la production. Chez Stackup Agency, l'[abonnement mensuel facultatif](/services/referencement), sans engagement, peut inclure des articles de blog ({{abo:article}} € l'article), et une heure de modifications par mois ({{abo:heure}} €) peut servir à entretenir l'existant. L'idée : produire du nouveau contenu tout en entretenant l'existant — les deux leviers fonctionnent en synergie.
 
 Pour en savoir plus sur la méthode complète, consultez notre guide sur [l'externalisation de la rédaction blog](/blog/blog-et-seo-quel-contenu-publier).
 

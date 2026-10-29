@@ -1,6 +1,7 @@
 ---
 title: "Acheter des articles de blog sur des plateformes : ce que personne ne vous dit"
-excerpt: "Textbroker, Rédacteur.com, Fiverr… Les plateformes de rédaction sont tentantes. Voici ce qu'on y trouve vraiment, les pièges à éviter et quand elles valent le coup."
+seoTitle: "Acheter des articles de blog : les pièges des plateformes"
+excerpt: "Textbroker, Fiverr et consorts : ce qu'on obtient vraiment pour un article à petit prix, les pièges concrets et les cas où une plateforme reste utile."
 date: "2026-06-08"
 updated: "2026-07-28"
 readTime: 7
@@ -61,7 +62,7 @@ Elles ne sont pas à jeter pour autant. Les cas d'usage où elles fonctionnent :
 
 Pour les entreprises qui veulent du contenu de qualité sans gérer un rédacteur freelance individuellement ni passer par une grande agence, la solution intermédiaire existe.
 
-Chez Stackup Agency, [l'article à 25€](/services/redaction-blog-seo) inclut la recherche de mots-clés, la structure SEO, le maillage interne vers vos services et une relecture éditoriale. Ce n'est pas le tarif d'une plateforme bas de gamme, mais c'est ce qu'un article honnêtement optimisé coûte à produire proprement.
+Chez Stackup Agency, [l'article à 25€](/services/referencement) inclut la recherche de mots-clés, la structure SEO, le maillage interne vers vos services et une relecture éditoriale. Ce n'est pas le tarif d'une plateforme bas de gamme, mais c'est ce qu'un article honnêtement optimisé coûte à produire proprement.
 
 Pour aller plus loin sur le sujet, lisez notre comparatif [freelance vs agence de contenu](/blog/externaliser-redaction-blog-seo).
 

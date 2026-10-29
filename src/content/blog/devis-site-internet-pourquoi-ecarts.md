@@ -1,6 +1,7 @@
 ---
 title: "Pourquoi les devis d'agences varient de 500 € à 15 000 € pour « le même site »"
-excerpt: "Trois devis pour un site vitrine : 500 €, 3 500 €, 15 000 €. Comment est-ce possible ? Décryptage honnête de ce que vous payez vraiment dans chaque fourchette de prix."
+seoTitle: "Devis de site internet : pourquoi de tels écarts ?"
+excerpt: "Trois devis pour le même site, trois prix très différents. Les quatre facteurs qui expliquent l'écart et les questions à poser pour comparer à armes égales."
 date: "2026-08-17"
 readTime: 10
 tag: "Tarifs"

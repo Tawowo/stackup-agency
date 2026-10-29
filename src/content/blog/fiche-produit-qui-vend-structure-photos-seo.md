@@ -1,6 +1,7 @@
 ---
 title: "Fiches produits qui vendent : structure, photos, SEO"
-excerpt: "Une fiche produit qui convertit combine une structure précise, des photos qui rassurent et un texte optimisé SEO. Les éléments qui font vraiment la différence, dans l'ordre où ils comptent."
+seoTitle: "Fiche produit qui vend : structure, photos et SEO"
+excerpt: "Photos qui rassurent, informations dans le bon ordre, texte lisible et référencé : la structure d'une fiche produit qui convainc, et quoi soigner en premier."
 date: "2026-08-17"
 publishAt: "2026-12-05"
 readTime: 9

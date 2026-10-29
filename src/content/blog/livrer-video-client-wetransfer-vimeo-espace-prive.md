@@ -1,6 +1,7 @@
 ---
 title: "Livraison vidéo aux clients : WeTransfer, Vimeo ou votre espace ?"
-excerpt: "Un lien WeTransfer qui expire après 7 jours, un lien Vimeo perdu dans une boîte mail : la livraison vidéo par outils génériques crée des frictions évitables. Le comparatif des options pour livrer proprement."
+seoTitle: "Livrer une vidéo à un client : WeTransfer, Vimeo ou espace"
+excerpt: "Lien qui expire, versions éparpillées, commentaires perdus : les limites de WeTransfer et Vimeo pour livrer une vidéo, et l’espace client privé en option."
 date: "2026-08-17"
 publishAt: "2027-01-15"
 readTime: 12

@@ -1,6 +1,7 @@
 ---
 title: "LinkedIn pour TPE B2B : obtenir des clients professionnels sans publicité"
-excerpt: "LinkedIn génère 3 fois plus de leads B2B que Facebook et Twitter réunis. Pour une TPE qui vend aux entreprises, c'est le réseau prioritaire. Ce qui fonctionne en 2026."
+seoTitle: "LinkedIn pour TPE B2B : trouver des clients sans publicité"
+excerpt: "Profil, publications, prise de contact : ce qui marche sur LinkedIn pour une TPE qui vend aux entreprises, sans publicité. Appliquez le plan aujourd’hui."
 date: "2026-07-24"
 updated: "2026-07-30"
 readTime: 7
@@ -95,7 +96,7 @@ La prospection LinkedIn fonctionne quand le message initial n'est pas une vente.
 3. Question ouverte (pas une demande de rdv)
 
 **Exemple (pour une agence web) :**
-"Bonjour [Prénom], j'ai lu votre post sur [sujet]. J'accompagne des entreprises de [secteur] et j'ai remarqué que leur site web génère souvent peu de demandes malgré le trafic — c'est souvent un problème de conversion, pas de visiteurs. Est-ce quelque chose que vous avez analysé pour [Entreprise] ?"
+"Bonjour ⟨Prénom⟩, j'ai lu votre post sur ⟨sujet⟩. J'accompagne des entreprises de ⟨secteur⟩ et j'ai remarqué que leur site web génère souvent peu de demandes malgré le trafic — c'est souvent un problème de conversion, pas de visiteurs. Est-ce quelque chose que vous avez analysé pour [Entreprise] ?"
 
 **À éviter absolument :**
 - "Je me permets de vous contacter pour vous présenter nos services..."

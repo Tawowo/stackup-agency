@@ -1,6 +1,7 @@
 ---
 title: "Pixieset, Jingoo, Pic-Time : combien vous coûtent vraiment les abonnements de galeries sur 5 ans"
-excerpt: "20 à 40 € par mois, ça paraît raisonnable. Sur 5 ans, c'est 1 200 à 2 400 € — pour un outil qui ne sera jamais à vous. Le calcul complet, plateforme par plateforme."
+seoTitle: "Pixieset, Jingoo, Pic-Time : le coût réel sur 5 ans"
+excerpt: "Un abonnement de galeries clients semble léger au mois mais pèse sur la durée, sans jamais vous appartenir. Le calcul par plateforme, et l'alternative."
 date: "2026-08-17"
 readTime: 10
 tag: "Photographes"

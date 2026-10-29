@@ -1,6 +1,8 @@
 ---
 title: "Plombier, électricien, chauffagiste : la prise de RDV en ligne qui remplit votre agenda"
+seoTitle: "Prise de rendez-vous en ligne pour plombier et électricien"
 description: "Un système de prise de rendez-vous en ligne professionnel vous évite des heures de téléphone, réduit les oublis et vous permet d'optimiser vos tournées. Guide complet."
+excerpt: "Moins d'appels, moins d'oublis, des tournées mieux organisées : ce que la réservation en ligne apporte à un artisan du bâtiment, et comment s'y prendre."
 date: "2026-05-12"
 category: "artisans"
 tags: ["plombier", "électricien", "prise de RDV en ligne"]

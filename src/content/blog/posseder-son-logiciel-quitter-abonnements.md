@@ -1,6 +1,7 @@
 ---
 title: "Posséder son outil : pourquoi les pros quittent les abonnements"
-excerpt: "Photographes, coiffeurs, restaurateurs, artisans : de plus en plus de professionnels quittent leurs abonnements SaaS pour un outil qu'ils possèdent. Les raisons, au-delà du prix."
+seoTitle: "Posséder son outil plutôt que louer : quitter les SaaS"
+excerpt: "Hausse de prix imposée, outil générique, données chez un tiers : les raisons qui poussent photographes, coiffeurs et restaurateurs à quitter leurs SaaS."
 date: "2026-08-17"
 publishAt: "2026-11-21"
 readTime: 8

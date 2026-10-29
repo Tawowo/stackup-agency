@@ -1,6 +1,7 @@
 ---
 title: "Audit SEO technique : checklist 50 points complète"
-excerpt: "Checklist audit SEO technique en 50 points : indexation, performance, on-page, mobile, données structurées. Identifiez et corrigez vos problèmes SEO."
+seoTitle: "Audit SEO technique : la checklist complète en 50 points"
+excerpt: "Indexation, performance, on-page, données structurées, mobile, sécurité : 50 points à vérifier dans l'ordre, avec les outils gratuits et les priorités."
 date: "2026-03-30"
 readTime: 12
 tag: "SEO Technique"

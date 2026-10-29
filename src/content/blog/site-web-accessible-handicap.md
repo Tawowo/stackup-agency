@@ -1,7 +1,8 @@
 ---
 title: "Accessibilité web : pourquoi votre site doit être utilisable par tous"
+seoTitle: "Accessibilité d'un site web : obligations et vérifications"
+excerpt: "Votre site est-il utilisable au clavier et avec un lecteur d'écran ? Les principes WCAG, les vérifications de base et les erreurs à corriger d'abord."
 date: "2026-04-14"
-excerpt: "L'accessibilité numérique est une obligation légale pour de nombreux acteurs et un avantage SEO prouvé. Guide pour comprendre les enjeux et agir."
 tag: "Création de sites"
 category: "creation-sites"
 readTime: 7

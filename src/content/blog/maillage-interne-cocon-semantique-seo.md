@@ -1,6 +1,7 @@
 ---
 title: "Maillage interne et cocon sémantique : guide SEO"
-excerpt: "Construisez un cocon sémantique efficace et optimisez votre maillage interne pour booster votre SEO. Méthode pratique pour PME locales."
+seoTitle: "Maillage interne et cocon sémantique : méthode SEO"
+excerpt: "Pages piliers, pages filles, ancres de liens : comment organiser le maillage interne pour aider Google à comprendre vos thèmes. Méthode pour une PME locale."
 date: "2026-03-15"
 readTime: 8
 tag: "SEO"

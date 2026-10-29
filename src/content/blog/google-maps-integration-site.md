@@ -1,6 +1,7 @@
 ---
 title: "Google Maps sur votre site web : intégration et avantages SEO"
-excerpt: "Intégrer Google Maps sur votre site web renforce votre SEO local et aide vos clients à vous trouver. Ce qu'il faut faire et ce qu'il faut éviter."
+seoTitle: "Intégrer Google Maps sur son site : méthode et SEO local"
+excerpt: "Ajouter une carte Google Maps à votre page Contact, ce que cela change pour le SEO local et les pièges sur mobile. Suivez les étapes une à une."
 date: "2026-07-30"
 updated: "2026-07-30"
 readTime: 5

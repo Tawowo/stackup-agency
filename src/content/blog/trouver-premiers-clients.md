@@ -1,6 +1,7 @@
 ---
 title: "Comment trouver ses premiers clients"
-excerpt: "Trouver ses premiers clients est le défi numéro un de tout entrepreneur qui se lance. Voici des stratégies concrètes et actionnables pour décrocher vos premières missions rapidement."
+seoTitle: "Trouver ses premiers clients : méthodes concrètes"
+excerpt: "Réseau personnel, démarchage ciblé, plateformes freelances, contenu, prescripteurs : les méthodes pour décrocher vos premières missions, avec leurs limites."
 date: "2026-02-03"
 readTime: 7
 tag: "Entrepreneuriat"

@@ -1,6 +1,7 @@
 ---
 title: "Ouvrir sa boutique en ligne en 2026 : le guide de A à Z"
-excerpt: "Choix de la plateforme, catalogue, paiement, livraison, obligations légales, SEO : les 8 étapes concrètes pour ouvrir une boutique en ligne qui vend réellement, dans l'ordre où les traiter."
+seoTitle: "Ouvrir une boutique en ligne : les 8 étapes dans l'ordre"
+excerpt: "Valider l'offre, choisir la plateforme, soigner le catalogue, encaisser, livrer, respecter la loi, être trouvé : huit étapes pour une boutique qui vend."
 date: "2026-08-17"
 publishAt: "2026-12-08"
 readTime: 13

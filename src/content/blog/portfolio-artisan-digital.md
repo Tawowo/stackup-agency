@@ -1,7 +1,8 @@
 ---
 title: "Portfolio digital pour artisan : montrer son travail et convaincre sans se déplacer"
+seoTitle: "Portfolio d'artisan en ligne : montrer vos chantiers"
 date: "2026-05-16"
-excerpt: "Un portfolio digital bien conçu peut remplacer une première visite de chantier et convaincre un prospect avant même qu'il vous contacte. Voici comment créer le vôtre."
+excerpt: "Photos avant/après, réalisations classées par métier, coordonnées bien visibles : comment bâtir un portfolio qui convainc un client avant la première visite."
 tag: "Artisans"
 category: "artisans"
 readTime: 6

@@ -1,6 +1,7 @@
 ---
 title: "Professions réglementées santé : les règles de communication en ligne"
-excerpt: "Médecins, kinés, dentistes, infirmiers, sages-femmes : chaque profession de santé réglementée a son ordre et son code de déontologie, mais les grandes lignes interdites se recoupent largement."
+seoTitle: "Site de médecin ou kiné : règles de communication en ligne"
+excerpt: "Pas de témoignages, pas de comparaison, pas de promesse de résultat : les règles de déontologie qui encadrent le site d'un professionnel de santé réglementé."
 date: "2026-07-29"
 updated: "2026-08-17"
 readTime: 9

@@ -1,6 +1,7 @@
 ---
 title: "Hébergement en France : pourquoi c'est mieux (vitesse, droit, RGPD)"
-excerpt: "Un hébergeur situé en France n'est pas qu'un argument marketing : latence réduite pour une clientèle française, droit applicable clair, conformité RGPD simplifiée. Ce que ça change concrètement."
+seoTitle: "Hébergement en France : vitesse, droit applicable et RGPD"
+excerpt: "Latence, droit applicable, données personnelles : ce que change un hébergeur situé en France pour une clientèle française. Les critères à vérifier."
 date: "2026-08-18"
 publishAt: "2027-02-01"
 readTime: 12

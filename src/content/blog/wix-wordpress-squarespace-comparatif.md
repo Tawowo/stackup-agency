@@ -1,6 +1,7 @@
 ---
 title: "Wix vs WordPress vs Squarespace : le match complet"
-excerpt: "Trois logiques différentes : Wix pour la simplicité, WordPress pour la flexibilité par plugins, Squarespace pour le design. Le match complet, critère par critère."
+seoTitle: "Wix, WordPress ou Squarespace : comparatif détaillé"
+excerpt: "Simplicité, flexibilité ou design : prix, SEO, performances et prise en main des trois constructeurs comparés, avec les limites que tous les trois partagent."
 date: "2026-08-17"
 publishAt: "2026-11-05"
 readTime: 9

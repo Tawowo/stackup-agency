@@ -1,0 +1,29 @@
+name: SEO
+on:
+  push:
+    branches: [main, 'claude/**']
+  pull_request:
+jobs:
+  garde-fous:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run verify
+      - name: Serveur de production
+        run: |
+          nohup npx next start -p 3100 > /tmp/next.log 2>&1 &
+          for i in $(seq 1 30); do curl -sf http://localhost:3100/ > /dev/null && break; sleep 2; done
+      - name: Garde-fous SEO (title, meta, h1, canonical, JSON-LD, placeholders, dates, liens)
+        run: npm run seo:check
+      - name: Metas des articles
+        run: npm run seo:meta
+      - name: Maillage (orphelines, profondeur)
+        run: npm run seo:links
+      - name: Lighthouse CI (budgets)
+        run: npx --yes @lhci/cli@0.14.0 autorun --config=lighthouserc.json

@@ -1,6 +1,7 @@
 ---
 title: "Site internet pour food truck : guide pratique 2026"
-excerpt: "Menu en ligne, géolocalisation, prise de commande : ce qu'un site web peut vraiment apporter à un food truck. Guide pratique avec tarifs."
+seoTitle: "Site internet pour food truck : menu, emplacements, commande"
+excerpt: "Menu à jour, emplacements du jour, commande à emporter : ce qu'un site apporte à un food truck, comment le structurer et les bases du référencement local."
 date: "2026-07-14"
 updated: "2026-08-17"
 readTime: 7
@@ -123,10 +124,10 @@ Si vous souhaitez intégrer un système de commande en ligne ou une billetterie 
 
 Les requêtes sur lesquelles se positionner :
 - "food truck [votre ville]"
-- "food truck [votre spécialité] [ville]" (burger, tacos, japonais, etc.)
-- "food truck mariage [département]"
-- "privatisation food truck [ville]"
-- "déjeuner food truck [quartier]"
+- "food truck ⟨votre spécialité⟩ ⟨ville⟩" (burger, tacos, japonais, etc.)
+- "food truck mariage ⟨département⟩"
+- "privatisation food truck ⟨ville⟩"
+- "déjeuner food truck ⟨quartier⟩"
 
 Ces requêtes génèrent du trafic local qualifié. Avec un site optimisé et une fiche Google Business Profile complète, vous pouvez apparaître en bonne position en quelques semaines.
 

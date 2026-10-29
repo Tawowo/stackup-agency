@@ -1,6 +1,7 @@
 ---
 title: "Site no-code vs code : ce que personne ne vous dit"
-excerpt: "Le no-code promet un site sans développeur. Ce qu'on ne dit pas assez : ses limites de performance, de personnalisation et de propriété réapparaissent tôt ou tard."
+seoTitle: "Site no-code ou code sur mesure : les limites à connaître"
+excerpt: "Le no-code tient sa promesse pour un site simple. Performance, personnalisation, propriété : le tableau honnête pour savoir quand passer à un site sur mesure."
 date: "2026-08-17"
 publishAt: "2026-11-12"
 readTime: 7

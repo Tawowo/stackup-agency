@@ -1,6 +1,7 @@
 ---
 title: "Dropshipping et site web : ce que personne ne vous dit en 2026"
-excerpt: "Le dropshipping n'est ni une arnaque ni un eldorado. Ce guide présente la réalité du modèle, les obligations légales souvent ignorées, et comment créer un site dropshipping qui survit."
+seoTitle: "Dropshipping : créer un site qui tient la route en 2026"
+excerpt: "Le dropshipping n'est ni une arnaque ni un eldorado. Marges, délais, obligations légales et fonctionnalités du site : à savoir avant de vous lancer."
 date: "2026-07-20"
 updated: "2026-07-30"
 readTime: 7

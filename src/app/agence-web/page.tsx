@@ -6,7 +6,7 @@ import { SITE } from '@/config/site'
 
 export const metadata = meta({
   titre: 'Agence web — les villes où l’on travaille',
-  description: `Stackup Agency, agence web à ${SITE.ville} : sites et outils sur mesure pour les entreprises de ${VILLES.length} villes et ${DEPARTEMENTS.length} départements. Prix « à partir de », une démo avant de signer.`,
+  description: `Stackup Agency, agence web en Touraine (atelier à ${SITE.ville}) : sites et outils sur mesure pour les entreprises de ${VILLES.length} villes et ${DEPARTEMENTS.length} départements. Prix « à partir de », une démo avant de signer.`,
   chemin: '/agence-web',
 })
 
@@ -22,7 +22,7 @@ export default function AgenceWeb() {
           { href: '/agence-web', nom: 'Agence web' },
         ]}
         etiquette={`${VILLES.length} villes · ${DEPARTEMENTS.length} départements`}
-        titre="Une agence web à Tours, pour toute la région."
+        titre="Une agence web en Touraine, pour toute la région."
         intro="Le même atelier, les mêmes prix, la même démo avant de signer — que vous soyez à deux rues ou à deux heures de route."
         liens={{ titre: 'Les villes', items: VILLES.map((v) => ({ href: `/agence-web/${v.slug}`, nom: v.ville, note: v.departement })) }}
         points={{

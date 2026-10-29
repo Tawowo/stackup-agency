@@ -1,6 +1,7 @@
 ---
 title: "E-E-A-T Google : expertise, autorité, confiance en 2026"
-excerpt: "Comprenez E-E-A-T (Experience, Expertise, Authoritativeness, Trustworthiness) et apprenez à le démontrer sur votre site pour améliorer votre SEO."
+seoTitle: "E-E-A-T de Google : prouver son expertise sur son site"
+excerpt: "Expérience, expertise, autorité, confiance : ce que recouvre E-E-A-T et ce qu'il faut afficher sur votre site (À propos, auteurs, mentions) pour rassurer."
 date: "2026-02-28"
 readTime: 7
 tag: "SEO"

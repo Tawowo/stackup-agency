@@ -1,5 +1,7 @@
 ---
 title: "Spa, wellness et soins : comment la réservation en ligne double votre taux de remplissage"
+seoTitle: "Réservation en ligne pour spa et institut : planning rempli"
+excerpt: "Vos clientes réservent le soir, hors des heures d'ouverture. Comment un système de réservation en ligne adapté au bien-être remplit votre planning."
 description: "Les clients réservent leurs soins à 22h, pas pendant vos heures d'ouverture. Voici comment un système de réservation en ligne adapté au secteur wellness transforme votre planning."
 date: "2026-05-02"
 category: "restaurants"

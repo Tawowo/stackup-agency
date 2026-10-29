@@ -1,5 +1,7 @@
 ---
 title: "Artisan du bâtiment : comment un site web vous positionne face aux grandes entreprises"
+seoTitle: "Site web d'artisan du bâtiment : montrer ses chantiers"
+excerpt: "Plaquiste, menuisier, peintre : un site avec vos chantiers en photos fait gagner la confiance des particuliers. Les erreurs à éviter et les pages à prévoir."
 description: "Plaquiste, menuisier, peintre en bâtiment : un site web professionnel avec portfolio de chantiers est votre meilleur commercial. Voici comment en tirer parti."
 date: "2026-01-15"
 category: "artisans"

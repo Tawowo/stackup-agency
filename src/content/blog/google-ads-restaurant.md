@@ -1,7 +1,8 @@
 ---
 title: "Google Ads pour restaurant : campagnes qui remplissent les tables"
+seoTitle: "Google Ads pour restaurant : quelles campagnes lancer"
 date: "2026-05-28"
-excerpt: "Google Ads bien configuré peut remplir vos tables chaque soir. Découvrez les types de campagnes, les budgets et les erreurs à éviter pour un ROI maximum en restauration."
+excerpt: "Recherche locale, appel, réservation : les campagnes Google Ads utiles à un restaurant et les réglages qui gaspillent le budget. À lire avant de lancer."
 tag: "Restauration"
 category: "restaurants"
 readTime: 7
@@ -17,7 +18,7 @@ Le problème : beaucoup de restaurateurs ont tenté Google Ads, dépensé quelqu
 
 ## Pourquoi c'est important en 2026
 
-Google traite **8,5 milliards de recherches par jour** dans le monde, dont une part significative concerne la restauration et la nourriture. En France, des dizaines de milliers de requêtes du type « restaurant [ville] », « où manger [quartier] » ou « livraison pizza ce soir » sont effectuées chaque jour.
+Google traite **8,5 milliards de recherches par jour** dans le monde, dont une part significative concerne la restauration et la nourriture. En France, des dizaines de milliers de requêtes du type « restaurant ⟨ville⟩ », « où manger ⟨quartier⟩ » ou « livraison pizza ce soir » sont effectuées chaque jour.
 
 L'enjeu de Google Ads pour un restaurant est simple : apparaître en premier quand quelqu'un cherche exactement ce que vous proposez, au moment précis où il est prêt à réserver ou commander.
 
@@ -57,11 +58,11 @@ Les restaurants ont souvent des heures de pointe très concentrées (12h-14h et 
 Les campagnes Search ciblent des personnes qui cherchent activement. C'est le type de campagne le plus direct pour un restaurant.
 
 **Mots-clés à forte conversion :**
-- « restaurant [spécialité] [ville] »
-- « réserver table [ville] ce soir »
-- « livraison [type de cuisine] [ville] »
-- « meilleur [type de restaurant] [quartier] »
-- « restaurant pour anniversaire [ville] »
+- « restaurant ⟨spécialité⟩ ⟨ville⟩ »
+- « réserver table ⟨ville⟩ ce soir »
+- « livraison ⟨type de cuisine⟩ ⟨ville⟩ »
+- « meilleur [type de restaurant] ⟨quartier⟩ »
+- « restaurant pour anniversaire ⟨ville⟩ »
 
 **Structure de campagne recommandée :**
 - Campagne 1 : Réservation table (pour les clients qui veulent venir sur place)
@@ -71,7 +72,7 @@ Les campagnes Search ciblent des personnes qui cherchent activement. C'est le ty
 Chaque groupe d'annonces correspond à un type de recherche spécifique avec une page de destination dédiée.
 
 **Rédaction des annonces :**
-- Titre 1 : Le bénéfice principal (« Restaurant [Spécialité] à [Ville] »)
+- Titre 1 : Le bénéfice principal (« Restaurant ⟨Spécialité⟩ à ⟨Ville⟩ »)
 - Titre 2 : La promesse ou la spécificité (« Produits frais du marché chaque jour »)
 - Titre 3 : L'appel à l'action (« Réservez votre table maintenant »)
 - Description : Détails supplémentaires + urgence (« Tables disponibles ce soir — Réservation en 30 secondes »)

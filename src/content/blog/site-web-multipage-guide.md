@@ -1,7 +1,8 @@
 ---
 title: "Site web multi-pages : quand en avez-vous vraiment besoin ?"
+seoTitle: "Site multi-pages ou une seule page : comment choisir"
+excerpt: "Une page suffit-elle pour votre activité ? Les critères pour rester simple ou passer au multi-pages, la structure minimale et les erreurs à éviter."
 date: "2026-03-18"
-excerpt: "Un site d'une page suffit-il ou avez-vous besoin d'un site multi-pages ? Ce guide vous aide à décider selon votre activité et vos objectifs."
 tag: "Création de sites"
 category: "creation-sites"
 readTime: 6

@@ -1,6 +1,7 @@
 ---
 title: "Site de photographe : les 12 fonctionnalités indispensables"
-excerpt: "Portfolio, galerie privée, formulaire qualifiant... Les 12 fonctionnalités qui font vraiment vendre un site de photographe, et celles qui ne servent qu'à ralentir le chargement."
+seoTitle: "Site de photographe : 12 fonctionnalités qui font vendre"
+excerpt: "Portfolio par prestation, galerie privée, formulaire qualifiant, avis Google : les douze fonctionnalités utiles à un photographe, et celles qui ralentissent."
 date: "2026-08-17"
 publishAt: "2026-09-13"
 readTime: 10

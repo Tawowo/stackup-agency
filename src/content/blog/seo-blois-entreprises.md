@@ -1,6 +1,7 @@
 ---
 title: "SEO à Blois : guide pratique pour commerces et artisans du Loir-et-Cher"
-excerpt: "Blois et son agglomération offrent un marché local moins concurrentiel en SEO que les grandes métropoles ligériennes. Ce guide explique comment en profiter rapidement."
+seoTitle: "SEO à Blois : référencement local pour commerces et artisans"
+excerpt: "Moins de concurrence qu'à Tours ou Orléans : comment un commerce ou un artisan du Loir-et-Cher peut gagner ses premières places sur Google, étape par étape."
 date: "2026-07-28"
 updated: "2026-07-30"
 readTime: 6
@@ -32,7 +33,7 @@ Blois est le chef-lieu du Loir-et-Cher, territoire à dominante rurale avec une 
 **Sur les requêtes locales typiques :**
 - "plombier Blois" : Local Pack souvent occupé par des profils incomplets
 - "restaurant Blois" : forte concurrence touristique mais peu de SEO solide
-- "artisan Blois [spécialité]" : souvent peu ou pas de concurrence SEO
+- "artisan Blois ⟨spécialité⟩" : souvent peu ou pas de concurrence SEO
 
 ---
 

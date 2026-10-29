@@ -1,6 +1,7 @@
 ---
 title: "Pourquoi le design de votre site influence vos ventes"
-excerpt: "En 0,05 secondes, les visiteurs se font une première impression de votre site. Un bon design ne fait pas que plaire — il convertit. Découvrez comment le design influence directement vos ventes."
+seoTitle: "Design de site web et ventes : ce qui fait la différence"
+excerpt: "Confiance, hiérarchie visuelle, bouton d'appel à l'action : les choix de design qui décident un visiteur à vous appeler ou à commander, expliqués simplement."
 date: "2026-06-05"
 readTime: 6
 tag: "Design"

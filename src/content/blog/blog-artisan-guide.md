@@ -1,6 +1,7 @@
 ---
 title: "Créer un blog pour son entreprise artisanale : ce qui vaut vraiment la peine"
-excerpt: "Un blog d'artisan qui génère des clients ne ressemble pas à un blog généraliste. Ce guide explique quels sujets traiter, à quelle fréquence, et pourquoi certains artisans obtiennent 20 demandes par mois grâce à leur contenu."
+seoTitle: "Blog d'artisan : quels sujets traiter pour avoir des clients"
+excerpt: "Prix locaux, diagnostics, aides, avant/après : les contenus d'un blog qui amènent des demandes de devis à un artisan, la fréquence réaliste et les pièges."
 date: "2026-07-25"
 updated: "2026-07-30"
 readTime: 6
@@ -19,10 +20,10 @@ La plupart des conseils sur les blogs d'entreprise parlent de "partager votre pa
 
 Ce qui génère des clients, c'est d'apparaître sur Google quand quelqu'un tape une requête transactionnelle ou informationnelle avec une intention d'achat claire :
 
-- "prix [travaux] [ville] 2026" → décision d'achat imminente
-- "comment savoir si [problème] nécessite [professionnel]" → prospect en phase de recherche
+- "prix ⟨travaux⟩ ⟨ville⟩ 2026" → décision d'achat imminente
+- "comment savoir si ⟨problème⟩ nécessite [professionnel]" → prospect en phase de recherche
 - "durée de vie [équipement]" → prospect qui réfléchit au remplacement
-- "MaPrimeRénov' [travaux] [département]" → prospect motivé, cherche des informations pratiques
+- "MaPrimeRénov' ⟨travaux⟩ ⟨département⟩" → prospect motivé, cherche des informations pratiques
 
 ---
 
@@ -33,7 +34,7 @@ Ce qui génère des clients, c'est d'apparaître sur Google quand quelqu'un tape
 Ce sont les articles avec le plus fort potentiel de conversion. Un prospect qui cherche les prix a une intention d'achat immédiate.
 
 **Format :**
-- Titre : "Prix [travaux] à [ville] en 2026 : fourchettes réelles et comparatif"
+- Titre : "Prix ⟨travaux⟩ à ⟨ville⟩ en 2026 : fourchettes réelles et comparatif"
 - Contenu : tableau des prix selon la taille/complexité, facteurs qui font varier le prix, ce qui est inclus/exclu, comment demander un devis
 - CTA : formulaire de devis intégré dans l'article
 
@@ -56,7 +57,7 @@ Les clients cherchent souvent à comprendre leur problème avant d'appeler un pr
 Les aides à la rénovation (MaPrimeRénov', Eco-PTZ, CEE) sont très cherchées sur Google. Un artisan qui explique comment y accéder attire des prospects déjà motivés par la rénovation.
 
 **Exemples :**
-- "MaPrimeRénov' 2026 : les travaux éligibles et comment en bénéficier en [département]"
+- "MaPrimeRénov' 2026 : les travaux éligibles et comment en bénéficier en ⟨département⟩"
 - "CEE isolation combles perdus : montant et démarches en 2026"
 - "Eco-PTZ : financer sa rénovation énergétique sans apport"
 
@@ -76,7 +77,7 @@ Un blog d'artisan ne nécessite pas de publication hebdomadaire. La qualité et 
 
 **Les 6 premiers articles prioritaires :**
 1. Prix de votre service principal dans votre ville
-2. Guide "comment choisir un [métier] à [ville]"
+2. Guide "comment choisir un ⟨métier⟩ à ⟨ville⟩"
 3. Article sur les aides/subventions applicables à votre secteur
 4. FAQ des questions les plus fréquentes de vos clients
 5. Présentation d'un chantier récent (avec photos)
@@ -104,7 +105,7 @@ Si vous avez un [site vitrine simple](/services/site-vitrine), vous pouvez y int
 - Lier vers votre page de service correspondante
 - Mentionner votre ville et votre zone d'intervention
 
-Pour les artisans avec peu de temps, nos [services de rédaction SEO](/services/redaction-blog-seo) permettent d'externaliser la production d'articles optimisés.
+Pour les artisans avec peu de temps, nos [services de rédaction SEO](/services/referencement) permettent d'externaliser la production d'articles optimisés.
 
 ---
 
@@ -125,4 +126,4 @@ Les deux ont des utilités différentes. LinkedIn touche votre réseau professio
 **Faut-il des photos pour chaque article ?**
 Au minimum une image principale (utilisée pour les partages réseaux sociaux). Des photos de vos réalisations dans l'article augmentent le temps passé sur la page et renforcent la confiance.
 
-Voir aussi : [SEO on-page guide complet](/blog/seo-on-page-guide-complet), [services de rédaction SEO Stackup Agency](/services/redaction-blog-seo) et nos [tarifs création site artisan](/tarifs).
+Voir aussi : [SEO on-page guide complet](/blog/seo-on-page-guide-complet), [services de rédaction SEO Stackup Agency](/services/referencement) et nos [tarifs création site artisan](/tarifs).

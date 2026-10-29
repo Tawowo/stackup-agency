@@ -1,5 +1,7 @@
 ---
 title: "Gestion des stocks restaurant : comment le digital élimine le gaspillage et augmente vos marges"
+seoTitle: "Gestion des stocks de restaurant : réduire le gaspillage"
+excerpt: "Inventaire, fiches techniques, seuils d’alerte : comment le suivi digital des stocks limite le gaspillage et protège vos marges. Les étapes pour démarrer."
 description: "Le gaspillage alimentaire coûte en moyenne 30 000€ par an à un restaurant. Les outils digitaux de gestion des stocks permettent de réduire drastiquement ces pertes."
 date: "2026-05-28"
 category: "restaurants"

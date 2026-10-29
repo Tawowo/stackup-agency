@@ -1,6 +1,7 @@
 ---
 title: "Système de réservation en ligne : commission ou propriété ?"
-excerpt: "Certaines plateformes de réservation prélèvent une commission par client amené, d'autres facturent un abonnement fixe sans commission. Comprendre le modèle avant de choisir."
+seoTitle: "Réservation en ligne : commission ou outil à vous ?"
+excerpt: "Plateforme avec commission par client ou système à vous, sans commission : comment chaque modèle fonctionne, ce que finance la commission et comment trancher."
 date: "2026-08-17"
 publishAt: "2026-11-22"
 readTime: 8

@@ -14,7 +14,7 @@ import './plan.css'
 export const revalidate = 43200
 
 export const metadata = meta({
-  titre: 'Plan du site — Stackup Agency',
+  titre: 'Plan du site : toutes les pages de Stackup Agency',
   description: 'Toutes les pages de Stackup Agency sur une seule : offres, réalisations, outils gratuits, pages locales, articles du journal et pages légales.',
   chemin: '/plan-du-site',
 })

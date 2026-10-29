@@ -1,6 +1,7 @@
 ---
 title: "Combien de temps pour créer un site web ? Ce qui fait varier le délai"
-excerpt: "Les délais de création d'un site web varient du simple au triple selon la complexité, vos contenus et votre réactivité. Ce qui les fait tenir ou exploser, et comment obtenir un calendrier fiable."
+seoTitle: "Combien de temps pour créer un site web ? Les vrais facteurs"
+excerpt: "Complexité, contenus prêts, rapidité de vos validations : ce qui fait tenir ou glisser le calendrier d'un site, et comment obtenir un planning fiable."
 date: "2026-07-25"
 updated: "2026-07-28"
 readTime: 6

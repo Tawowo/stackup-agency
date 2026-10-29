@@ -1,6 +1,7 @@
 ---
 title: "Index mobile-first Google : optimiser votre site mobile"
-excerpt: "Google indexe en priorité la version mobile de votre site. Comprendre le mobile-first indexing et corriger les erreurs fréquentes pour protéger vos positions SEO."
+seoTitle: "Indexation mobile-first : optimiser son site mobile"
+excerpt: "Google évalue d’abord la version mobile de votre site. Les erreurs fréquentes (contenu masqué, lenteur, menus) et leur correction. Vérifiez le vôtre."
 date: "2026-01-20"
 readTime: 8
 tag: "SEO Technique"

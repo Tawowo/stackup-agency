@@ -1,6 +1,7 @@
 ---
 title: "Le SEO est-il mort avec l'IA ? Ce qui change vraiment en 2026"
-excerpt: "AI Overviews, ChatGPT, Perplexity : le SEO n'est pas mort, il se transforme. Ce qui change vraiment en 2026 et ce qui reste identique pour les TPE."
+seoTitle: "Le SEO est-il mort avec l'IA ? Ce qui change pour une TPE"
+excerpt: "AI Overviews, ChatGPT, Perplexity : le SEO se transforme sans disparaître. Ce qui change vraiment, ce qui reste identique et les actions à mener pour une TPE."
 date: "2026-06-01"
 updated: "2026-08-17"
 readTime: 8
@@ -131,4 +132,4 @@ Non, l'inverse : les sites qui investissent maintenant dans un contenu réelleme
 
 ---
 
-*Pour aller plus loin : [Google AI Overviews : comment être cité par l'IA de Google](/blog/ai-overviews-seo-tpe) · [Être recommandé par ChatGPT](/blog/chatgpt-apparence-resultats-google) · [SEO local : le guide complet pour les TPE](/blog/seo-local-commerce) · [Rédaction de blog SEO](/services/redaction-blog-seo)*
+*Pour aller plus loin : [Google AI Overviews : comment être cité par l'IA de Google](/blog/ai-overviews-seo-tpe) · [Être recommandé par ChatGPT](/blog/chatgpt-apparence-resultats-google) · [SEO local : le guide complet pour les TPE](/blog/seo-local-commerce) · [Rédaction de blog SEO](/services/referencement)*

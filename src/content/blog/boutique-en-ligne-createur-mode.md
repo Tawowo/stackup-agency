@@ -1,5 +1,7 @@
 ---
 title: "Créateur de mode et styliste : lancer sa boutique en ligne sans budget marketing"
+seoTitle: "Lancer sa boutique en ligne de créateur de mode sans pub"
+excerpt: "Univers de marque, fiches produits optimisées, journal de création, liste e-mail : comment un créateur de mode lance sa boutique et se fait trouver sans pub."
 description: "Tisserands, créateurs indépendants, stylistes : vendre sa collection en ligne ne nécessite pas un budget publicitaire conséquent si votre site est bien construit. Voici la méthode."
 date: "2026-06-13"
 category: "commerce"

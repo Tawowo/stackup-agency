@@ -1,6 +1,7 @@
 ---
 title: "RGPD pour les petites entreprises : ce qu'il faut savoir"
-excerpt: "Le RGPD s'applique à votre TPE ou PME, même si vous avez moins de 10 salariés. Découvrez vos obligations concrètes et comment vous mettre en conformité sans vous noyer."
+seoTitle: "RGPD pour une petite entreprise : vos obligations concrètes"
+excerpt: "Formulaire de contact, liste d'e-mails, statistiques : ce que le RGPD exige d'une TPE, donnée par donnée, et comment vous mettre en règle sans vous noyer."
 date: "2026-05-01"
 readTime: 7
 tag: "Digital"

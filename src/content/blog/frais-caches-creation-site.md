@@ -1,6 +1,7 @@
 ---
 title: "Les frais cachés de la création de site (et comment les éviter)"
-excerpt: "Renouvellement de domaine surfacturé, hébergement « offert » puis facturé, options devenues indispensables : la liste complète des frais cachés du marché, et la parade pour chacun."
+seoTitle: "Frais cachés d'un site internet : les repérer à temps"
+excerpt: "Renouvellement de domaine, hébergement offert puis facturé, retouches payantes : la liste des frais cachés d'une création de site et la parade pour chacun."
 date: "2026-08-17"
 publishAt: "2026-09-04"
 readTime: 8

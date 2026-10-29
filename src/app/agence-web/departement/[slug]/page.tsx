@@ -43,7 +43,7 @@ export default async function PageDepartement({ params }: { params: Promise<{ sl
   // Repères : les chefs-lieux voisins, pour situer le département.
   for (const [slug, cle] of Object.entries(CHEF_LIEU)) {
     const g = GEO[cle]
-    if (slug !== d.slug && g && cl && Math.hypot((g.lat - cl.lat) * 1, (g.lon - cl.lon) * 0.68) < 1.3 && !epingles.some((e) => e.id === cle)) epingles.push({ id: cle, nom: g.nom, lat: g.lat, lon: g.lon, role: 'repere', href: `/agence-web/departement/${slug}` })
+    if (slug !== d.slug && DEPARTEMENTS.some((x) => x.slug === slug) && g && cl && Math.hypot((g.lat - cl.lat) * 1, (g.lon - cl.lon) * 0.68) < 1.3 && !epingles.some((e) => e.id === cle)) epingles.push({ id: cle, nom: g.nom, lat: g.lat, lon: g.lon, role: 'repere', href: `/agence-web/departement/${slug}` })
   }
   return (
     <>

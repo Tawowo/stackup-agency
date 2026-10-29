@@ -1,8 +1,9 @@
 ---
 title: "Tableau de bord d'activité : piloter sa TPE avec les bons chiffres"
+seoTitle: "Tableau de bord d'activité pour TPE : quels chiffres suivre"
+excerpt: "Dix à quinze indicateurs suffisent pour piloter une TPE : lesquels choisir selon votre métier, comment les mettre à jour seuls, et les pièges à éviter."
 date: "2026-02-10"
 updated: "2026-08-17"
-excerpt: "57 % des dirigeants de PME décident sans données fiables en temps réel. 10 à 15 KPIs bien choisis, mis à jour automatiquement, suffisent à piloter une TPE efficacement. La méthode."
 tag: "Applications métier"
 category: "applications-metier"
 readTime: 9

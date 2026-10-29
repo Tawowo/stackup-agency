@@ -1,6 +1,7 @@
 ---
 title: "WordPress ou agence web : que choisir pour son site en 2026 ?"
-excerpt: "Créer son site soi-même avec WordPress ou passer par une agence : comparatif honnête des coûts, du temps investi et des résultats."
+seoTitle: "WordPress soi-même ou agence web : que choisir en 2026"
+excerpt: "Le coût caché de WordPress en autogestion, ce que fait un prestataire, un comparatif sur trois ans et les cas où chaque option est la bonne. Un avis honnête."
 date: "2026-07-27"
 updated: "2026-07-28"
 readTime: 8

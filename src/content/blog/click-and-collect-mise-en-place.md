@@ -1,6 +1,7 @@
 ---
 title: "Click & collect : comment le mettre en place sans commission (2026)"
-excerpt: "Mettez en place le click & collect sur votre propre site, sans commission par commande. Étapes, coût réel, exemples pour commerces et restaurants."
+seoTitle: "Click and collect sans commission : mise en place"
+excerpt: "Lancez le click and collect sur votre propre site, sans commission par commande : les étapes, les choix techniques, des exemples de commerces et restaurants."
 date: "2026-06-11"
 updated: "2026-07-29"
 readTime: 6

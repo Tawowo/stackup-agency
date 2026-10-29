@@ -21,7 +21,7 @@ const BRUT_DEPARTEMENTS: Departement[] = [
     region: 'Centre-Val de Loire',
     chefLieu: 'Tours',
     intro:
-      "Stackup Agency est basée à Tours : l'Indre-et-Loire est notre département d'origine. Nous y créons des sites internet pour les commerces, artisans, professions libérales et acteurs du tourisme, avec la possibilité de nous rencontrer en personne.",
+      "Stackup Agency est basée en Touraine, à Savigné-sur-Lathan : l'Indre-et-Loire est notre département d'origine. Nous y créons des sites internet pour les commerces, artisans, professions libérales et acteurs du tourisme, avec la possibilité de nous rencontrer en personne.",
     economie:
       "L'Indre-et-Loire vit d'un équilibre rare : une métropole dynamique (Tours et sa première couronne, plus de 300 000 habitants), un tissu industriel et pharmaceutique solide, et une économie touristique portée par les châteaux de la Loire et les vignobles de Vouvray, Chinon, Bourgueil et Montlouis. Les besoins numériques y sont très concrets : les restaurants et hôtels de la vallée de la Loire ont besoin de réservation en ligne, les vignerons de vente directe, les artisans du bâtiment de demandes de devis qualifiées, et les commerces tourangeaux d'une visibilité locale sur Google face aux zones commerciales périphériques.",
     metiersPhares: [
@@ -43,7 +43,7 @@ const BRUT_DEPARTEMENTS: Departement[] = [
       'Yzeures-sur-Creuse',
     ],
     faq: [
-      { q: 'Peut-on se rencontrer en personne en Indre-et-Loire ?', a: 'Oui. Stackup Agency est basée à Tours : pour les projets du département, un rendez-vous physique est possible, à l’agence ou dans vos locaux. Le premier rendez-vous est offert et sans engagement.' },
+      { q: 'Peut-on se rencontrer en personne en Indre-et-Loire ?', a: 'Oui. Stackup Agency est basée à Savigné-sur-Lathan : pour les projets du département, un rendez-vous physique est possible, chez vous ou dans vos locaux (sinon en visio). Le premier rendez-vous est offert et sans engagement.' },
       { q: 'Travaillez-vous avec les petites communes du département ?', a: 'Oui, et c’est même le cœur de notre activité : commerces de Loches, artisans de Chinon, gîtes d’Azay-le-Rideau… La création de site se fait à distance ou en rendez-vous, au même tarif partout : à partir de {{prix:une-page}} € pour un site vitrine.' },
       { q: 'Combien coûte un site internet en Indre-et-Loire ?', a: 'Les tarifs sont les mêmes dans tout le département : site vitrine à partir de {{prix:une-page}} €, site multi-pages à partir de {{prix:multi-pages}} €, boutique en ligne à partir de {{prix:boutique}} €, système de gestion à partir de {{prix:outil}} €. Devis gratuit sous 72 h.' },
     ],
@@ -141,7 +141,7 @@ const BRUT_DEPARTEMENTS: Departement[] = [
       'Toury', 'Janville-en-Beauce', 'Sours', 'Berchères-les-Pierres',
     ],
     faq: [
-      { q: 'Pourquoi choisir une agence de Tours plutôt qu’une agence parisienne ?', a: 'Pour la même qualité technique, nos tarifs sont deux à cinq fois inférieurs aux agences parisiennes — et ils sont affichés publiquement. Le suivi à distance (visio, téléphone) est le même qu’avec un prestataire francilien, sans les tarifs franciliens.' },
+      { q: 'Pourquoi choisir une agence de Touraine plutôt qu’une agence parisienne ?', a: 'Pour un interlocuteur unique qui fabrique lui-même votre site, des prix affichés publiquement (toujours « à partir de ») et un suivi par visio ou téléphone identique où que vous soyez. Les prix sont les mêmes partout en France ; le détail est sur la page des tarifs.' },
       { q: 'Accompagnez-vous les PME industrielles du département ?', a: 'Oui. Sites B2B, catalogues de capacités, formulaires de demandes techniques : nous construisons des sites crédibles pour les donneurs d’ordre, avec un SEO pensé pour les requêtes métier.' },
       { q: 'Quel est le délai pour un site vitrine en Eure-et-Loir ?', a: 'Le même que partout : le calendrier se fixe ensemble au devis, quel que soit votre emplacement dans le département. L’estimateur de la page tarifs donne un délai indicatif.' },
     ],

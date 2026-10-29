@@ -1,6 +1,7 @@
 ---
 title: "20 idées d'articles de blog pour un artisan : sujets qui génèrent des devis"
-excerpt: "Plombier, électricien, menuisier, peintre — ces 20 sujets d'articles sont conçus pour attirer des clients locaux sur Google et transformer le trafic en demandes de devis."
+seoTitle: "Idées d’articles de blog pour artisan : 20 sujets locaux"
+excerpt: "Plombier, électricien, menuisier, peintre : 20 sujets d’articles qui répondent aux questions des clients locaux et peuvent amener des devis. Choisissez-en un."
 date: "2026-06-08"
 updated: "2026-07-28"
 readTime: 7
@@ -30,12 +31,12 @@ Expliquez ce qu'un devis d'artisan doit contenir, les postes habituels, et ce qu
 **3. "Prix d'une rénovation [pièce] : les postes à ne pas oublier"**
 Pour les artisans du bâtiment, un article sur le budget complet d'une salle de bain, d'une cuisine ou d'un appartement entier est très recherché et déclenche des contacts.
 
-**4. "[Prestation] : ce qui est inclus dans notre forfait et ce qui est en option"**
+**4. "⟨Prestation⟩ : ce qui est inclus dans notre forfait et ce qui est en option"**
 Transparence = confiance. Un article qui détaille votre grille tarifaire réduit les mauvaises surprises et vous positionne comme sérieux.
 
 ## Sujets conseils (éduquer avant de vendre)
 
-**5. "Comment savoir si [problème] est urgent ou peut attendre ?"**
+**5. "Comment savoir si ⟨problème⟩ est urgent ou peut attendre ?"**
 Fuite d'eau, problème électrique, fissure dans un mur — les clients cherchent à qualifier l'urgence avant d'appeler. Si vous répondez, vous êtes leur premier contact.
 
 **6. "5 signes que votre [équipement] doit être remplacé"**
@@ -91,7 +92,7 @@ Compilez des avis clients (avec accord) et racontez chaque projet. C'est de la p
 
 ## Comment faire rédiger ces articles efficacement
 
-Pour un artisan qui travaille seul ou avec une petite équipe, produire régulièrement du contenu blog est difficile à combiner avec les chantiers. Notre [service de rédaction blog SEO](/services/redaction-blog-seo) permet de déléguer entièrement la production : vous nous donnez le brief (votre ville, votre spécialité, vos tarifs), nous rédigeons et optimisons.
+Pour un artisan qui travaille seul ou avec une petite équipe, produire régulièrement du contenu blog est difficile à combiner avec les chantiers. Notre [service de rédaction blog SEO](/services/referencement) permet de déléguer entièrement la production : vous nous donnez le brief (votre ville, votre spécialité, vos tarifs), nous rédigeons et optimisons.
 
 Pour comprendre le processus complet, consultez notre guide sur [l'externalisation de la rédaction](/blog/blog-et-seo-quel-contenu-publier).
 

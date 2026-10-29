@@ -1,5 +1,7 @@
 ---
 title: "Refonte de site web : les 7 signaux qui indiquent qu'il est temps de changer"
+seoTitle: "Quand refaire son site web : 7 signaux d'une refonte urgente"
+excerpt: "Chargement lent, site absent sur mobile, design daté, peu de contacts : sept signaux qu'il est temps de refaire votre site, et comment les vérifier."
 description: "Taux de rebond élevé, chargement lent, absence sur mobile, design vieillissant : voici les 7 indicateurs qui signalent qu'une refonte de votre site web est devenue urgente."
 date: "2026-05-06"
 category: "strategie"

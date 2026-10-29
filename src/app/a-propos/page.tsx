@@ -4,8 +4,8 @@ import { SITE } from '@/config/site'
 import { meta, filAriane, JsonLd, ORIGINE } from '@/lib/seo'
 
 export const metadata: Metadata = meta({
-  titre: `À propos — ${SITE.fondateur}, l’atelier Stackup Agency à Tours`,
-  description: `${SITE.fondateur} conçoit, code et met en ligne des sites et des outils sur mesure pour les artisans, commerçants et petites entreprises, depuis Tours.`,
+  titre: `À propos — ${SITE.fondateur}, l’atelier Stackup Agency en Touraine`,
+  description: `${SITE.fondateur} conçoit, code et met en ligne des sites et des outils sur mesure pour les artisans, commerçants et petites entreprises, depuis la Touraine, à Savigné-sur-Lathan.`,
   chemin: '/a-propos',
 })
 

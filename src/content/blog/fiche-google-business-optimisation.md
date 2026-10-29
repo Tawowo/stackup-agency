@@ -1,8 +1,9 @@
 ---
 title: "Fiche Google Business : l'optimisation complète en 20 points"
+seoTitle: "Optimiser sa fiche Google Business : 20 points à vérifier"
 date: "2026-05-30"
 updated: "2026-08-17"
-excerpt: "Nom, catégorie, photos, posts, avis, messagerie : les 20 points à optimiser sur votre fiche Google Business Profile pour dominer les recherches locales."
+excerpt: "Nom, catégories, horaires, photos, avis, messagerie : les 20 points à contrôler sur votre fiche Google Business Profile pour mieux ressortir en local."
 tag: "SEO Local"
 category: "seo-local"
 readTime: 9
@@ -184,4 +185,4 @@ Oui, en cas de violation des règles (nom avec mots-clés, fausses adresses, avi
 
 ---
 
-*Pour aller plus loin : [Apparaître sur Google Maps en premier](/blog/apparaitre-google-maps-pack-local) · [SEO local : le guide complet pour les TPE](/blog/seo-local-commerce) · [Avis Google : stratégie complète](/blog/avis-google-strategie-complete) · [Rédaction de blog SEO](/services/redaction-blog-seo)*
+*Pour aller plus loin : [Apparaître sur Google Maps en premier](/blog/apparaitre-google-maps-pack-local) · [SEO local : le guide complet pour les TPE](/blog/seo-local-commerce) · [Avis Google : stratégie complète](/blog/avis-google-strategie-complete) · [Rédaction de blog SEO](/services/referencement)*

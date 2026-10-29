@@ -1,6 +1,7 @@
 ---
 title: "Squarespace en France : forces, limites, alternatives"
-excerpt: "Squarespace séduit par son design léché, mais reste peu adapté au marché français : support en anglais, SEO local limité, prix en dollars. Le point complet."
+seoTitle: "Squarespace en France : avis, limites et alternatives"
+excerpt: "Beaux modèles, mais support en anglais, SEO local limité et facturation en dollars : forces et limites de Squarespace en France, face à Wix et au sur-mesure."
 date: "2026-08-17"
 publishAt: "2026-11-02"
 readTime: 7

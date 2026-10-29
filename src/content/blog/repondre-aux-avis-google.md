@@ -67,13 +67,13 @@ Si vous découvrez un très ancien avis resté sans réponse, répondez quand m�
 Adaptez toujours : une réponse identique recopiée à dix clients se remarque.
 
 **Avis cinq étoiles avec texte.**
-« Bonjour [prénom], merci pour votre retour. Ça nous fait plaisir que [élément précis cité par le client] vous ait plu. À bientôt, [prénom du gérant]. »
+« Bonjour ⟨prénom⟩, merci pour votre retour. Ça nous fait plaisir que [élément précis cité par le client] vous ait plu. À bientôt, [prénom du gérant]. »
 
 **Avis cinq étoiles sans commentaire.**
-« Bonjour [prénom], merci pour la note et pour votre confiance. Au plaisir de vous revoir. »
+« Bonjour ⟨prénom⟩, merci pour la note et pour votre confiance. Au plaisir de vous revoir. »
 
 **Avis positif avec une petite réserve.**
-« Merci [prénom] pour ces mots. Nous prenons bonne note de [point soulevé] : nous allons y travailler. »
+« Merci ⟨prénom⟩ pour ces mots. Nous prenons bonne note de [point soulevé] : nous allons y travailler. »
 
 Quelques conseils :
 
@@ -94,7 +94,7 @@ La réponse à un avis négatif s'adresse surtout aux lecteurs, pas à l'auteur.
 4. **Proposez un canal pour continuer en privé** (téléphone, e-mail).
 
 **Modèle.**
-« Bonjour [prénom], merci d'avoir pris le temps de nous écrire. Nous sommes désolés que votre expérience n'ait pas été à la hauteur. Nous aimerions comprendre ce qui s'est passé et trouver une solution : pouvez-vous nous joindre au [numéro] ou à [adresse e-mail] ? »
+« Bonjour ⟨prénom⟩, merci d'avoir pris le temps de nous écrire. Nous sommes désolés que votre expérience n'ait pas été à la hauteur. Nous aimerions comprendre ce qui s'est passé et trouver une solution : pouvez-vous nous joindre au ⟨numéro⟩ ou à ⟨adresse e-mail⟩ ? »
 
 Ce qu'il faut éviter :
 
@@ -107,7 +107,7 @@ Ce qu'il faut éviter :
 
 Un avis d'une étoile sans commentaire est frustrant parce qu'on ne sait pas quoi corriger. Répondez simplement et invitez à préciser :
 
-« Bonjour, nous avons vu votre note et nous regrettons que votre expérience vous ait déçu. Nous n'avons pas pu retrouver votre passage : pourriez-vous nous contacter au [numéro] pour que nous comprenions ce qui s'est passé ? »
+« Bonjour, nous avons vu votre note et nous regrettons que votre expérience vous ait déçu. Nous n'avons pas pu retrouver votre passage : pourriez-vous nous contacter au ⟨numéro⟩ pour que nous comprenions ce qui s'est passé ? »
 
 Si vous pensez que l'avis ne correspond à aucun client réel, répondez poliment que vous ne retrouvez pas la visite, puis signalez-le à Google. Notre article [Supprimer un faux avis Google](/blog/supprimer-faux-avis-google) détaille les démarches.
 

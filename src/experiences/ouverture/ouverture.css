@@ -45,11 +45,11 @@
 }
 .su-ouv__titre {
   margin: 0;
-  font-size: clamp(3rem, 8.6vw, 8.6rem);
-  line-height: 0.92;
+  font-size: clamp(2.8rem, 6.4vw, 6.4rem);
+  line-height: 0.95;
   letter-spacing: -0.025em;
   color: var(--su-ivoire);
-  max-width: 11ch;
+  max-width: 13ch;
 }
 .su-ouv__mot {
   display: inline-block;

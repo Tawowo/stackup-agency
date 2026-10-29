@@ -1,7 +1,8 @@
 ---
 title: "No-show en restauration : comment les réduire de 80% avec le digital"
+seoTitle: "No-show au restaurant : réduire les réservations fantômes"
 date: "2026-05-18"
-excerpt: "Les no-shows coûtent en moyenne 3 000 € par mois à un restaurant de 40 couverts. Voici comment la technologie permet de réduire ce fléau de 80 % sans froisser vos clients."
+excerpt: "Un client réserve et ne vient pas, la table reste vide. Rappels automatiques, confirmation, acompte : les leviers numériques contre les no-shows."
 tag: "Restauration"
 category: "restaurants"
 readTime: 7

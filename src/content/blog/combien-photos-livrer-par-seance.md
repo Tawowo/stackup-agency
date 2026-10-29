@@ -1,6 +1,7 @@
 ---
 title: "Combien de photos livrer par séance ? Gérer la sélection client"
-excerpt: "30 photos pour un portrait, 500 pour un mariage : les repères réels par type de séance, et comment structurer la sélection client sans y perdre des heures."
+seoTitle: "Combien de photos livrer par séance photo ?"
+excerpt: "Portrait, naissance, mariage : les repères pour savoir combien de photos livrer par séance, et comment cadrer la sélection du client sans y perdre des heures."
 date: "2026-08-17"
 publishAt: "2026-09-25"
 readTime: 9

@@ -1,6 +1,7 @@
 ---
 title: "Mesurer le ROI SEO : KPIs et tableau de bord pour TPE"
-excerpt: "Comment mesurer le retour sur investissement de votre SEO ? Positions, trafic organique, leads, coût par lead : guide pratique avec tableau de bord pour PME."
+seoTitle: "Mesurer le ROI du SEO : indicateurs et tableau de bord TPE"
+excerpt: "Positions, trafic organique, demandes reçues, coût par contact : les indicateurs et un tableau de bord simple pour savoir si le SEO rapporte. Construisez-le."
 date: "2026-06-15"
 readTime: 8
 tag: "Stratégie"

@@ -1,6 +1,7 @@
 ---
 title: "Mentions légales de site internet : le guide + modèle gratuit"
-excerpt: "Éditeur, hébergeur, directeur de publication, numéro SIRET : les mentions légales d'un site sont obligatoires, même pour un simple site vitrine. Ce qu'il faut inclure, avec un modèle prêt à adapter."
+seoTitle: "Mentions légales d’un site internet : modèle et obligations"
+excerpt: "Éditeur, hébergeur, directeur de publication, SIRET : les mentions légales obligatoires d’un site, avec un modèle à adapter. À vérifier en source officielle."
 date: "2026-08-17"
 publishAt: "2027-01-28"
 readTime: 13
@@ -46,9 +47,9 @@ MENTIONS LÉGALES
 Éditeur du site
 [Nom / Raison sociale], [forme juridique]
 Siège social : [adresse complète]
-SIRET : [numéro]
+SIRET : ⟨numéro⟩
 Email : [contact]
-Téléphone : [numéro]
+Téléphone : ⟨numéro⟩
 
 Directeur de la publication
 [Nom du responsable]

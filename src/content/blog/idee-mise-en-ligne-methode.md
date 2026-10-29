@@ -1,6 +1,7 @@
 ---
 title: "De l'idée à la mise en ligne : les coulisses de notre méthode"
-excerpt: "Un site vitrine sans sacrifier la qualité : cahier des charges, maquette, développement, contenus, tests, mise en ligne. Le déroulé exact, étape par étape, chez Stackup Agency."
+seoTitle: "De l’idée à la mise en ligne d’un site vitrine : la méthode"
+excerpt: "Appel découverte, démo de la page d’accueil avant de signer, conception, contenus, tests : les six phases d’un site vitrine et les livrables de chacune."
 date: "2026-08-18"
 publishAt: "2027-02-06"
 readTime: 18

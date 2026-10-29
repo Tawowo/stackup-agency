@@ -1,6 +1,7 @@
 ---
 title: "Livrer une galerie de mariage : le processus parfait de A à Z"
-excerpt: "Du tri des photos à la demande d'avis automatique : les étapes concrètes d'une livraison de galerie de mariage qui rassure le client et protège votre travail."
+seoTitle: "Livrer une galerie de mariage : le processus en 6 étapes"
+excerpt: "Tri, galerie privée, accès par lien ou QR code, favoris, export, demande d’avis : six étapes pour livrer une galerie de mariage qui rassure. À copier."
 date: "2026-08-17"
 publishAt: "2026-09-19"
 readTime: 10

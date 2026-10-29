@@ -1,6 +1,7 @@
 ---
 title: "Shopify vs boutique sur mesure : le calcul sur 3 ans"
-excerpt: "Shopify facture un abonnement mensuel plus des commissions sur chaque vente. Une boutique sur mesure s'achète une fois. Le calcul détaillé sur 3 ans, sans angle mort."
+seoTitle: "Shopify ou boutique sur mesure : le calcul sur trois ans"
+excerpt: "Abonnement, commissions, frais de paiement face à une boutique sur mesure qui vous appartient : le calcul détaillé sur trois ans pour choisir sans angle mort."
 date: "2026-08-17"
 publishAt: "2026-11-04"
 readTime: 8

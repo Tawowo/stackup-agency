@@ -12,10 +12,12 @@ import Atelier from '@/experiences/atelier/Atelier'
 import Depart from '@/experiences/depart/Depart'
 import ParcoursClient from '@/components/tarifs/ParcoursClient'
 import Rail from '@/components/layout/Rail'
+import { nombreFr } from '@/lib/jetons'
+import { offre } from '@/config/site'
 
 export const metadata: Metadata = meta({
-  titre: 'Stackup Agency — Sites et outils sur mesure, Tours',
-  description: 'Agence web à Tours. Sites, boutiques et outils de gestion sur mesure pour les artisans, les commerçants et les petites entreprises. Une démo avant de signer.',
+  titre: `Création de site internet à partir de ${nombreFr(offre('une-page').aPartirDe)} € | Stackup Agency`,
+  description: 'Création de site internet et d’outils de gestion sur mesure en Touraine et partout en France. Prix affichés, démo avant de signer, code et données à vous.',
   chemin: '',
 })
 

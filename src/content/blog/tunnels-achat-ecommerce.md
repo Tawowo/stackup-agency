@@ -1,6 +1,7 @@
 ---
 title: "Abandon de panier : récupérer les ventes perdues"
-excerpt: "70 % des paniers e-commerce sont abandonnés avant la finalisation. Frais de livraison surprise, compte obligatoire, tunnel trop long : les causes et les solutions concrètes, chiffrées."
+seoTitle: "Abandon de panier : causes et solutions pour vendre plus"
+excerpt: "Frais de livraison découverts trop tard, compte obligatoire, tunnel trop long : causes d'abandon de panier, corrections techniques et relances à prévoir."
 date: "2026-07-30"
 updated: "2026-08-17"
 readTime: 8
@@ -53,7 +54,7 @@ Si votre tunnel a 6 étapes avec des formulaires complexes, simplifiez.
 
 **11% des abandons** viennent d'une information de livraison insuffisante ou de délais jugés trop longs.
 
-**Solution :** Affichez la date estimée de livraison, pas seulement le délai en jours. "Livraison estimée le [date]" est plus rassurant que "3 à 5 jours ouvrés".
+**Solution :** Affichez la date estimée de livraison, pas seulement le délai en jours. "Livraison estimée le ⟨date⟩" est plus rassurant que "3 à 5 jours ouvrés".
 
 ### 6. Options de paiement insuffisantes
 

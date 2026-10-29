@@ -1,7 +1,8 @@
 ---
 title: "Choisir son nom de domaine : guide complet pour les entrepreneurs"
+seoTitle: "Choisir son nom de domaine : extension, nom et pièges"
 date: "2026-05-17"
-excerpt: "Comment choisir le bon nom de domaine pour votre entreprise ? Conseils d'expert sur les extensions, les pièges à éviter et les bonnes pratiques en 2026."
+excerpt: "Court, facile à épeler, en .fr ou .com : les règles pour choisir le nom de domaine de votre entreprise, où l'enregistrer et les erreurs qui coûtent cher."
 tag: "Création de sites"
 category: "creation-sites"
 readTime: 6

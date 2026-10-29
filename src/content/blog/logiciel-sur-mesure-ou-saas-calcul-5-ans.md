@@ -1,6 +1,7 @@
 ---
 title: "Logiciel sur mesure vs SaaS par abonnement : le calcul sur 5 ans"
-excerpt: "Un SaaS coûte peu au départ mais s'accumule à vie. Un logiciel sur mesure coûte plus cher à la création mais s'achète une fois. Le calcul chiffré, poste par poste, sur 5 ans."
+seoTitle: "Logiciel sur mesure ou SaaS : le calcul sur 5 ans"
+excerpt: "Abonnements cumulés ou outil acheté une fois : la méthode poste par poste pour comparer un SaaS et un logiciel sur mesure sur cinq ans. Refaites le calcul."
 date: "2026-08-17"
 publishAt: "2026-11-19"
 readTime: 9

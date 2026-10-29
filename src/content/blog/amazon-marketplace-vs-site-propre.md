@@ -1,6 +1,7 @@
 ---
 title: "Vendre en ligne sans Amazon : reprendre le contrôle de ses marges"
-excerpt: "Amazon prélève 25 à 40 % du prix de vente tous frais compris (commission, FBA, publicité). Une boutique propre élimine cette ponction. Les chiffres réels et la stratégie combinée."
+seoTitle: "Vendre sans Amazon : reprendre la main sur ses marges"
+excerpt: "Commission, FBA, publicité, risque de suspension : ce que coûte vraiment Amazon à un vendeur, ce qu'il apporte, et comment le combiner à une boutique propre."
 date: "2026-07-29"
 updated: "2026-08-17"
 readTime: 7

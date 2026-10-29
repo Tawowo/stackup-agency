@@ -39,6 +39,8 @@ const config: NextConfig = {
   skipTrailingSlashRedirect: true,
   experimental: { agentUpgrade: 'security' },
   redirects: async () => redirections(),
+  // Sitemaps par type : /sitemap-pages.xml, /sitemap-blog.xml… (servis par /sitemap/<type>.xml).
+  rewrites: async () => [{ source: '/sitemap-:famille.xml', destination: '/sitemap/:famille.xml' }],
 }
 
 export default config

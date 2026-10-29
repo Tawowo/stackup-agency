@@ -18,7 +18,7 @@ import Cote from '@/components/ui/Cote'
 import './ouverture.css'
 
 const EXCLUSION_00 = ['.su-ouv__texte', '.su-nav__barre']
-const MOTS_TITRE = ['Sites', 'et', 'outils', 'sur', 'mesure.']
+const MOTS_TITRE = ['Création', 'de', 'sites', 'et', 'd’outils', 'sur', 'mesure.']
 
 export default function Ouverture() {
   const section = useRef<HTMLElement>(null)
@@ -126,7 +126,7 @@ export default function Ouverture() {
               ))}
             </h1>
             <p className="su-ouv__ligne">
-              Pour les artisans, les commerçants et les petites entreprises qui veulent un outil à eux, pas un abonnement.
+              Sites internet, boutiques en ligne et outils de gestion pour les artisans, commerçants et petites entreprises, en Touraine et partout en France : un outil à vous, pas un abonnement.
             </p>
             <div className="su-ouv__actions">
               <Action href="#strates" mot="Voir">

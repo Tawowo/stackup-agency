@@ -1,7 +1,8 @@
 ---
 title: "Application de réservation et location : gérer un parc de biens en ligne"
+seoTitle: "Application de réservation et de location : gérer son parc"
+excerpt: "Réservation en temps réel, contrats, cautions, maintenance, rentabilité par bien : ce qu'une application doit couvrir pour gérer un parc locatif en ligne."
 date: "2026-06-19"
-excerpt: "Gérer manuellement un parc de 20 biens à louer génère 15h de travail administratif par semaine. Une application de réservation en ligne peut automatiser 80 % de ce flux et augmenter le taux d'occupation de 30 %."
 tag: "Applications métier"
 category: "applications-metier"
 readTime: 8

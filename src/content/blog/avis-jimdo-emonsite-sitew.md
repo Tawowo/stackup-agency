@@ -1,6 +1,7 @@
 ---
 title: "Jimdo, e-monsite, SiteW : que valent les éditeurs français low-cost ?"
-excerpt: "Moins chers que Wix, en français dès le départ : Jimdo, e-monsite et SiteW séduisent les petits budgets. Ce qu'ils offrent vraiment, et où ils atteignent leurs limites."
+seoTitle: "Jimdo, e-monsite, SiteW : avis sur ces éditeurs low-cost"
+excerpt: "Ce que proposent vraiment Jimdo, e-monsite et SiteW, où ils conviennent pour un site simple, où ils bloquent, et le calcul sur cinq ans face au sur-mesure."
 date: "2026-08-17"
 publishAt: "2026-11-13"
 readTime: 7

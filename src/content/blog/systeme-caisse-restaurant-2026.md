@@ -1,5 +1,7 @@
 ---
 title: "Système de caisse pour restaurant en 2026 : guide complet pour choisir la bonne solution"
+seoTitle: "Système de caisse pour restaurant : bien choisir en 2026"
+excerpt: "Caisse classique, logiciel en ligne ou système intégré : les critères pour choisir celle qui colle à votre service et les erreurs qui font perdre du temps."
 description: "TPE, logiciel SaaS ou système intégré : comment choisir votre caisse enregistreuse restaurant en 2026 pour gagner en efficacité et réduire les erreurs."
 date: "2026-02-14"
 category: "restaurants"

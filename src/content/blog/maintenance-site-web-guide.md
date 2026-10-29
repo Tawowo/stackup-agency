@@ -1,6 +1,7 @@
 ---
 title: "Maintenance de site web : pourquoi c'est indispensable et combien ça coûte"
-excerpt: "Sauvegardes, mises à jour, monitoring : ce que comprend vraiment une maintenance de site web et pourquoi négliger ce poste est risqué."
+seoTitle: "Maintenance de site web : sauvegardes, mises à jour, suivi"
+excerpt: "Sauvegardes, mises à jour de sécurité, surveillance : ce que comprend une vraie maintenance et les risques d’un site sans suivi. Vérifiez ce que vous avez."
 date: "2026-07-30"
 updated: "2026-07-28"
 readTime: 7

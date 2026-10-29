@@ -1,8 +1,9 @@
 ---
 title: "SEO local : le guide complet pour les TPE en 2026"
+seoTitle: "SEO local pour TPE : le guide complet, fiche Google et avis"
 date: "2026-04-25"
 updated: "2026-08-17"
-excerpt: "Fiche Google Business, avis, citations, contenu hyperlocal : le guide complet du SEO local pour les TPE en 2026, avec ou sans commerce physique."
+excerpt: "Fiche Google Business, avis, citations, contenu hyperlocal : le guide du SEO local pour une TPE, avec point de vente ou qui se déplace chez le client."
 tag: "SEO Local"
 category: "seo-local"
 readTime: 9
@@ -19,9 +20,9 @@ Ce guide couvre l'ensemble du SEO local pour une TPE en 2026, que vous ayez un p
 
 Plusieurs tendances de fond renforcent l'importance du SEO local pour les commerces en 2026 :
 
-**La revalorisation du local.** Les consommateurs cherchent de plus en plus à acheter local, à soutenir les commerces de quartier, à réduire les délais de livraison. Ces recherches passent par Google : "épicerie fine [ville]", "boulangerie artisanale [quartier]", "librairie indépendante [ville]".
+**La revalorisation du local.** Les consommateurs cherchent de plus en plus à acheter local, à soutenir les commerces de quartier, à réduire les délais de livraison. Ces recherches passent par Google : "épicerie fine ⟨ville⟩", "boulangerie artisanale ⟨quartier⟩", "librairie indépendante ⟨ville⟩".
 
-**La recherche de disponibilité produit.** Google Shopping local permet aux commerces d'afficher leurs stocks en temps réel. Un client peut chercher "chaussures de randonnée taille 42 [ville]" et trouver votre magasin si vous avez configuré votre catalogue produit.
+**La recherche de disponibilité produit.** Google Shopping local permet aux commerces d'afficher leurs stocks en temps réel. Un client peut chercher "chaussures de randonnée taille 42 ⟨ville⟩" et trouver votre magasin si vous avez configuré votre catalogue produit.
 
 **Le "click and collect" comme nouveau standard.** Depuis 2020, les consommateurs s'attendent à pouvoir vérifier la disponibilité en ligne avant de se déplacer. Les commerces qui ne proposent pas cette visibilité perdent des clients au profit de ceux qui l'offrent.
 
@@ -31,9 +32,9 @@ Plusieurs tendances de fond renforcent l'importance du SEO local pour les commer
 
 ## Les erreurs les plus courantes
 
-**1. Se concentrer uniquement sur Instagram.** Instagram est utile pour la notoriété et l'engagement, mais il ne génère pas de trafic de recherche. Un client qui cherche "librairie [ville]" sur Google ne trouvera pas votre profil Instagram. Les deux canaux sont complémentaires, pas interchangeables.
+**1. Se concentrer uniquement sur Instagram.** Instagram est utile pour la notoriété et l'engagement, mais il ne génère pas de trafic de recherche. Un client qui cherche "librairie ⟨ville⟩" sur Google ne trouvera pas votre profil Instagram. Les deux canaux sont complémentaires, pas interchangeables.
 
-**2. Négliger les horaires étendus et spéciaux.** Pour un commerce, les horaires sont un critère de recherche. "Pharmacie ouverte dimanche [ville]", "boulangerie ouverte tôt [quartier]" — ces requêtes génèrent des clics si vos horaires sont corrects sur Google. Une erreur d'horaire coûte des visites.
+**2. Négliger les horaires étendus et spéciaux.** Pour un commerce, les horaires sont un critère de recherche. "Pharmacie ouverte dimanche ⟨ville⟩", "boulangerie ouverte tôt ⟨quartier⟩" — ces requêtes génèrent des clics si vos horaires sont corrects sur Google. Une erreur d'horaire coûte des visites.
 
 **3. Pas de catalogue produit en ligne.** Ne pas avoir de catalogue ou d'inventaire visible en ligne en 2026, c'est rater la requête de quelqu'un qui cherche un produit précis avant de se déplacer.
 
@@ -63,7 +64,7 @@ Pour un commerce de proximité, un site web n'a pas besoin d'être un e-commerce
 
 **Catalogue produit.** Même sans achat en ligne, un catalogue avec photos et descriptions améliore le SEO (plus de contenu indexable) et rassure le client avant sa visite.
 
-**Page "Trouver notre boutique".** Une page dédiée avec carte, transports en commun, parking, photos de l'extérieur pour faciliter le repérage. Cette page cible les requêtes "où trouver [produit] à [ville]".
+**Page "Trouver notre boutique".** Une page dédiée avec carte, transports en commun, parking, photos de l'extérieur pour faciliter le repérage. Cette page cible les requêtes "où trouver ⟨produit⟩ à ⟨ville⟩".
 
 **Blog ou actualités.** Les nouveautés produits, les coups de cœur de la semaine, les animations en magasin — un contenu régulier attire du trafic de recherche et fidélise les clients existants.
 
@@ -75,7 +76,7 @@ Google Shopping local permet d'afficher vos produits en stock dans les résultat
 
 ### Stratégie de contenu pour les commerces locaux
 
-**Articles de blog locaux.** "Où trouver des livres en occitan à [ville]", "Guide des cadeaux locaux à [ville] pour Noël", "Les meilleurs thés en vrac à [ville]" — ce type de contenu hyperlocal se positionne sur des requêtes que les grandes chaînes ne couvrent pas.
+**Articles de blog locaux.** "Où trouver des livres en occitan à ⟨ville⟩", "Guide des cadeaux locaux à ⟨ville⟩ pour Noël", "Les meilleurs thés en vrac à ⟨ville⟩" — ce type de contenu hyperlocal se positionne sur des requêtes que les grandes chaînes ne couvrent pas.
 
 **Guides d'achat.** "Comment choisir son vélo de ville", "Guide des fromages de notre région" — ce contenu éducatif attire des clients en phase de recherche, avant même qu'ils sachent où acheter.
 
@@ -87,7 +88,7 @@ Les liens depuis des sites locaux renforcent votre autorité SEO locale :
 
 - **Association de commerçants** de votre rue ou quartier — souvent un site avec annuaire des membres
 - **Office de tourisme local** — si votre commerce est intéressant pour les visiteurs
-- **Blog ou magazine local** — une mention dans un article "Nos boutiques préférées de [ville]" vaut de l'or en SEO
+- **Blog ou magazine local** — une mention dans un article "Nos boutiques préférées de ⟨ville⟩" vaut de l'or en SEO
 - **Presse locale** — un article dans le journal local génère souvent un backlink depuis leur site
 
 ### Et pour une TPE sans point de vente physique (artisans, prestataires) ?
@@ -96,7 +97,7 @@ Le SEO local ne se limite pas aux commerces avec une vitrine. Un plombier, un é
 
 **Le mode "zone de service".** Dans Google Business Profile, activez la zone de service et listez toutes les communes couvertes plutôt qu'une adresse publique. Vous pouvez apparaître sur Google Maps pour des recherches dans chacune de ces zones sans afficher d'adresse physique.
 
-**Une page par ville d'intervention.** Si vous couvrez 5 à 10 communes, une page dédiée par zone (avec un contenu réellement différencié, pas un simple copier-coller du nom de ville) capte les recherches "[métier] + [commune]" mieux qu'une seule page générique.
+**Une page par ville d'intervention.** Si vous couvrez 5 à 10 communes, une page dédiée par zone (avec un contenu réellement différencié, pas un simple copier-coller du nom de ville) capte les recherches "⟨métier⟩ + ⟨commune⟩" mieux qu'une seule page générique.
 
 Le tableau ci-dessous synthétise les priorités selon votre profil.
 
@@ -134,4 +135,4 @@ Le socle (fiche GBP, cohérence des informations, demande d'avis) est gratuit et
 
 ---
 
-*Pour aller plus loin : [SEO local : comment apparaître en premier sur Google Maps](/blog/apparaitre-google-maps-pack-local) · [Google Business Profile : le guide complet](/blog/fiche-google-business-optimisation) · [SEO local vs Google Ads : que choisir ?](/blog/seo-local-vs-google-ads) · [Rédaction de blog SEO](/services/redaction-blog-seo)*
+*Pour aller plus loin : [SEO local : comment apparaître en premier sur Google Maps](/blog/apparaitre-google-maps-pack-local) · [Google Business Profile : le guide complet](/blog/fiche-google-business-optimisation) · [SEO local vs Google Ads : que choisir ?](/blog/seo-local-vs-google-ads) · [Rédaction de blog SEO](/services/referencement)*

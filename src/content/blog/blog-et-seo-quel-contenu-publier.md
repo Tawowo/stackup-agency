@@ -61,7 +61,7 @@ Un assistant d'IA peut vous aider à brasser des idées pour votre métier ; fai
 | Réponse à une question | « Peut-on peindre un radiateur sans le démonter ? » | Trafic qualifié, preuve d'expertise |
 | Guide d'achat ou de choix | « Chaudière ou poêle à granulés : comment choisir » | Aide à la décision |
 | Réalisation racontée | « Rénovation d'une salle de bain de 6 m² : étape par étape » | Preuve, photos, mots-clés locaux |
-| Page locale | « Dépannage plomberie à [commune] » | Visibilité locale |
+| Page locale | « Dépannage plomberie à ⟨commune⟩ » | Visibilité locale |
 | Actualité utile | « Ce qui change au 1er janvier pour vos travaux » | Fraîcheur, confiance |
 
 Évitez les articles d'humeur, les textes de remplissage et les reprises d'un communiqué de presse. Et n'écrivez pas pour un mot-clé que vous n'êtes pas capable de satisfaire : si vous ne faites pas de dépannage urgent, ne l'ajoutez pas.

@@ -1,7 +1,8 @@
 ---
 title: "Hébergement web : les différentes solutions et comment choisir"
+seoTitle: "Hébergement web : mutualisé, VPS ou cloud, que choisir ?"
 date: "2026-05-27"
-excerpt: "Hébergement mutualisé, VPS, serveur dédié ou cloud ? Guide complet pour choisir la solution d'hébergement adaptée à votre site et votre budget."
+excerpt: "Mutualisé, VPS, dédié ou cloud : les différences, les critères et les limites de chaque formule pour un site de TPE. Comparez avant de souscrire."
 tag: "Création de sites"
 category: "creation-sites"
 readTime: 7

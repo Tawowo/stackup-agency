@@ -1,6 +1,7 @@
 ---
 title: "Blog d'entreprise : combien d'articles pour des résultats ?"
-excerpt: "2 articles par mois, 1 par semaine, 8 par semaine ? La fréquence de publication idéale pour un blog SEO dépend de votre secteur — les chiffres et la méthode."
+seoTitle: "Combien d'articles de blog publier pour le SEO ?"
+excerpt: "Pas de nombre magique : Google récompense la régularité et la qualité. Le rythme à viser au démarrage, puis la cadence à tenir selon votre secteur."
 date: "2026-07-29"
 updated: "2026-08-17"
 readTime: 7
@@ -154,4 +155,4 @@ Non, les mêmes principes s'appliquent. Externaliser permet surtout de tenir la 
 
 ---
 
-*Pour aller plus loin : [Calendrier éditorial : la méthode simple](/blog/calendrier-editorial-methode-simple) · [Externaliser la rédaction de son blog](/blog/externaliser-redaction-blog-seo) · [Écrire un article de blog que Google aime](/blog/redaction-article-seo-guide) · [Rédaction de blog SEO](/services/redaction-blog-seo)*
+*Pour aller plus loin : [Calendrier éditorial : la méthode simple](/blog/calendrier-editorial-methode-simple) · [Externaliser la rédaction de son blog](/blog/externaliser-redaction-blog-seo) · [Écrire un article de blog que Google aime](/blog/redaction-article-seo-guide) · [Rédaction de blog SEO](/services/referencement)*

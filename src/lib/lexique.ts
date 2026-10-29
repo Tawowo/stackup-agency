@@ -8,7 +8,7 @@ import matter from 'gray-matter'
 import { remark } from 'remark'
 import html from 'remark-html'
 import { conforme } from './conformite'
-import { ancre } from './blog'
+import { ancre, tousLesArticles } from './blog'
 
 const DOSSIER = path.join(process.cwd(), 'src/content/lexique')
 
@@ -99,6 +99,9 @@ export async function entree(slug: string): Promise<EntreeLexiqueComplete | null
     return `<h2 id="${id}">${t}</h2>`
   })
   rendu = rendu.replace(/href="https:\/\/stackup-agency\.fr\//g, 'href="/')
+  // Un lien vers un article pas encore publié (programmé) ou retiré mènerait à une 404 : on garde le texte, sans le lien.
+  const publies = new Set(tousLesArticles().map((x) => x.slug))
+  rendu = rendu.replace(/<a href="\/blog\/([a-z0-9-]+)\/?">([\s\S]*?)<\/a>/g, (m, lien: string, texte: string) => (publies.has(lien) ? m : texte))
   return { ...e, html: rendu, faq: faqDe(md), sommaire }
 }
 

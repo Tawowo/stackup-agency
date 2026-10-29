@@ -1,7 +1,8 @@
 ---
 title: "Landing page ou site vitrine : quelle solution pour votre activité ?"
+seoTitle: "Landing page ou site vitrine : comment choisir"
 date: "2026-05-23"
-excerpt: "Landing page ou site vitrine multi-pages ? Découvrez quelle solution correspond à votre situation et comment maximiser votre retour sur investissement."
+excerpt: "Une page unique ou un site de plusieurs pages ? Les critères selon votre objectif, votre source de clients et votre budget pour décider. Faites le test."
 tag: "Création de sites"
 category: "creation-sites"
 readTime: 6

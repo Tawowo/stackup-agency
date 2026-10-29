@@ -1,6 +1,7 @@
 ---
 title: "Filigrane, droits d'auteur : protéger ses photos en ligne"
-excerpt: "Filigrane, résolution réduite, mentions de droits d'auteur : les méthodes concrètes pour protéger ses photos en ligne sans gâcher l'expérience du client."
+seoTitle: "Protéger ses photos en ligne : filigrane et droits"
+excerpt: "Filigrane en consultation, basse résolution sur le portfolio, mention des droits d'auteur : trois leviers pour protéger vos photos sans gêner le client."
 date: "2026-08-17"
 publishAt: "2026-09-20"
 readTime: 9

@@ -121,10 +121,10 @@ Oui : une facture au format PDF envoyée par e-mail est aujourd'hui acceptée, �
 Une relance efficace est brève, polie, et propose une action.
 
 **Relance de devis sans réponse :**
-« Bonjour Madame, Monsieur, je me permets de revenir vers vous au sujet du devis du [date] pour [travaux ou prestation]. Avez-vous eu le temps d'en prendre connaissance ? Je reste disponible pour l'ajuster ou répondre à vos questions. Bien cordialement. »
+« Bonjour Madame, Monsieur, je me permets de revenir vers vous au sujet du devis du ⟨date⟩ pour [travaux ou prestation]. Avez-vous eu le temps d'en prendre connaissance ? Je reste disponible pour l'ajuster ou répondre à vos questions. Bien cordialement. »
 
 **Relance de facture impayée (première relance, amiable) :**
-« Bonjour, sauf erreur de ma part, la facture n° [numéro] du [date], d'un montant de [montant], reste à régler à ce jour. Pourriez-vous me confirmer la date de règlement prévue ? Si le paiement est déjà parti, merci de ne pas tenir compte de ce message. Cordialement. »
+« Bonjour, sauf erreur de ma part, la facture n° ⟨numéro⟩ du ⟨date⟩, d'un montant de ⟨montant⟩, reste à régler à ce jour. Pourriez-vous me confirmer la date de règlement prévue ? Si le paiement est déjà parti, merci de ne pas tenir compte de ce message. Cordialement. »
 
 Si la relance amiable reste sans effet, la suite (rappel écrit ferme, puis mise en demeure) suit des règles précises : consultez [service-public.fr](https://www.service-public.fr) pour les démarches. Pour envoyer ces relances sans y penser, un petit outil qui repère les devis restés sans réponse et prépare le message est une bonne application des [logiciels de gestion sur mesure](/services/logiciel-de-gestion).
 

@@ -1,7 +1,8 @@
 ---
 title: "Les 8 erreurs de SEO local qui vous font perdre des clients"
+seoTitle: "Erreurs de SEO local : les 8 qui coûtent des clients"
 date: "2026-05-30"
-excerpt: "Certaines erreurs de SEO local sont silencieuses : elles ne génèrent pas de message d'erreur, elles se contentent de vous coûter des clients invisiblement."
+excerpt: "Coordonnées incohérentes, mauvaise catégorie, fiche abandonnée, avis ignorés : les huit erreurs de SEO local qui coûtent des clients, et comment les corriger."
 tag: "SEO Local"
 category: "seo-local"
 readTime: 8

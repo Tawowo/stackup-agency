@@ -1,6 +1,7 @@
 ---
 title: "Vitesse de chargement : guide technique complet 2026"
-excerpt: "Cache navigateur, CDN, Google Fonts, JavaScript defer : guide technique complet pour accélérer votre site web et améliorer votre score PageSpeed et vos Core Web Vitals."
+seoTitle: "Vitesse de chargement d'un site : guide technique complet"
+excerpt: "Hébergement, CDN, cache navigateur, JavaScript, polices : les leviers techniques pour accélérer votre site et améliorer PageSpeed et Core Web Vitals."
 date: "2026-05-05"
 readTime: 11
 tag: "Performance"

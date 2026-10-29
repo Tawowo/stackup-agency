@@ -1,6 +1,7 @@
 ---
 title: "ChatGPT et Gemini pour les TPE : comment vraiment gagner du temps"
-excerpt: "Les outils IA génératifs peuvent diviser par 3 le temps de production de contenu pour une TPE. Ce guide présente les cas d'usage concrets — et ce qu'il ne faut surtout pas leur déléguer."
+seoTitle: "ChatGPT et Gemini pour une TPE : gagner du temps"
+excerpt: "Premiers jets, e-mails, tri d'informations : les usages de ChatGPT et Gemini qui font gagner du temps à une TPE, et ce qu'il ne faut jamais leur déléguer."
 date: "2026-07-21"
 updated: "2026-07-30"
 readTime: 7
@@ -42,7 +43,7 @@ Vous avez un texte qui fonctionne mais qui manque de style ? L'IA l'améliore en
 
 ### 3. Génération de FAQ et de questions courantes
 
-**Prompt efficace :** "Je suis [métier] à [ville]. Quelles sont les 10 questions les plus fréquentes que mes clients me posent avant de me contacter ? Rédige une réponse courte pour chacune."
+**Prompt efficace :** "Je suis ⟨métier⟩ à ⟨ville⟩. Quelles sont les 10 questions les plus fréquentes que mes clients me posent avant de me contacter ? Rédige une réponse courte pour chacune."
 
 Les réponses générées sont un excellent point de départ pour votre page FAQ ou votre section blog.
 
@@ -96,7 +97,7 @@ Un article généré par IA ressemble à un article généré par IA. Votre expe
 
 ## Workflow recommandé pour les articles de blog
 
-1. **Idée** : "Génère 5 sujets d'articles de blog pour un [métier] à [ville]"
+1. **Idée** : "Génère 5 sujets d'articles de blog pour un ⟨métier⟩ à ⟨ville⟩"
 2. **Structure** : "Propose un plan en 6 parties pour un article sur [sujet choisi]"
 3. **Premier jet** : "Rédige une introduction de 200 mots pour cet article, en adoptant un ton professionnel mais accessible"
 4. **Enrichissement** : Vous ajoutez vos prix réels, vos exemples locaux, votre expertise
@@ -120,4 +121,4 @@ Pour des contenus génériques de bas niveau, partiellement. Pour des articles d
 **Comment sécuriser mes données avec les outils IA ?**
 Ne partagez pas de données clients, de contrats confidentiels, ou d'informations financières sensibles avec des outils IA grand public (ChatGPT, Gemini). Ces données peuvent être utilisées pour l'entraînement des modèles. Pour des usages professionnels sensibles, des solutions on-premise (Mistral self-hosted) existent.
 
-Voir aussi : [ChatGPT dans les résultats Google](/blog/chatgpt-apparence-resultats-google), [AI Overviews et SEO pour TPE](/blog/ai-overviews-seo-tpe) et nos [services de rédaction blog SEO](/services/redaction-blog-seo).
+Voir aussi : [ChatGPT dans les résultats Google](/blog/chatgpt-apparence-resultats-google), [AI Overviews et SEO pour TPE](/blog/ai-overviews-seo-tpe) et nos [services de rédaction blog SEO](/services/referencement).

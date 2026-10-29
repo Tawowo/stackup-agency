@@ -1,6 +1,7 @@
 ---
 title: "Paiement en ligne : ce qu'un commerçant doit savoir avant de choisir"
-excerpt: "Carte bancaire, PayPal, paiement en plusieurs fois : chaque moyen de paiement a un coût, un taux de conversion et un niveau de confiance différents. Le guide pour choisir sans erreur."
+seoTitle: "Paiement en ligne : choisir ses moyens pour un site marchand"
+excerpt: "Carte bancaire, PayPal, paiement en plusieurs fois : coût, sécurité et effet sur la conversion de chaque moyen, et les critères pour choisir un prestataire."
 date: "2026-08-17"
 publishAt: "2026-11-29"
 readTime: 8

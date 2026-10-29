@@ -8,7 +8,7 @@ import { METIERS } from '@/data/metiers'
 import { aPartirDe } from '@/domain/devis/offres'
 
 export const metadata: Metadata = meta({
-  titre: 'Outils de gestion sur mesure — le logiciel Artibox et ses modules | Stackup Agency',
+  titre: 'Logiciel de gestion sur mesure pour artisans et TPE',
   description: jetons('Un logiciel de gestion fait pour votre métier : devis, factures, chantiers, planning, statistiques, avec en option automatisations, facturation électronique, commande vocale et assistant IA. À partir de {{prix:outil}} €.'),
   chemin: '/solutions',
 })

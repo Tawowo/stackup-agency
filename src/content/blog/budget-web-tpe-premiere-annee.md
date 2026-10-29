@@ -1,6 +1,7 @@
 ---
 title: "TPE : le budget web idéal la première année (site, SEO, pub)"
-excerpt: "Combien investir en ligne la première année quand on est artisan, commerçant ou indépendant ? La répartition qui fonctionne, trois budgets types, et les pièges du sur-investissement."
+seoTitle: "Budget web d'une TPE la première année : site, SEO, pub"
+excerpt: "Dans quel ordre dépenser : site, fiche Google, contenu, publicité. Trois budgets types, les pièges du sur-investissement et la suite dès la deuxième année."
 date: "2026-08-17"
 publishAt: "2026-09-09"
 readTime: 8

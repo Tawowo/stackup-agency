@@ -9,7 +9,7 @@ import { SITE } from '@/config/site'
 import { JsonLd, filAriane, meta } from '@/lib/seo'
 
 export const metadata = meta({
-  titre: 'Cookies — Stackup Agency',
+  titre: 'Cookies du site : aucun cookie publicitaire ni traceur',
   description: 'Le site stackup-agency.fr ne dépose aucun cookie publicitaire ni de mesure d’audience. Ce qui est stocké dans votre navigateur, et comment le supprimer.',
   chemin: '/cookies',
 })

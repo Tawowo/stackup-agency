@@ -1,7 +1,8 @@
 ---
 title: "Créer une boutique en ligne : combien ça coûte vraiment ?"
+seoTitle: "Créer une boutique en ligne : les vrais postes de coût"
 date: "2026-04-14"
-excerpt: "Le vrai coût d'un site e-commerce en 2026 : de Shopify au développement sur mesure, tous les postes de dépenses expliqués sans langue de bois."
+excerpt: "De Shopify au développement sur mesure, les postes de dépense d'un site e-commerce : plateforme, paiement, livraison, maintenance. Chiffrez avant de lancer."
 tag: "Création de sites"
 category: "creation-sites"
 readTime: 8

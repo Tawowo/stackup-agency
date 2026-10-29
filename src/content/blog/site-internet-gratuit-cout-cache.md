@@ -1,6 +1,7 @@
 ---
 title: "Site internet gratuit : le vrai coût caché de Wix, Jimdo et consorts"
-excerpt: "« Créez votre site gratuitement » — la promesse la plus rentable du web. Ce que le gratuit coûte réellement en visibilité, en crédibilité et en euros dès qu'on veut travailler sérieusement."
+seoTitle: "Site internet gratuit : ce que cachent Wix, Jimdo et SiteW"
+excerpt: "Publicité de la plateforme, sous-domaine, pas de nom de domaine ni d'e-mail pro : les limites d'un site gratuit et le moment où il faut passer à autre chose."
 date: "2026-08-17"
 publishAt: "2026-08-31"
 readTime: 8

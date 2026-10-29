@@ -1,6 +1,7 @@
 ---
 title: "Vendre ses photos en ligne : tirages, albums et sélection client"
-excerpt: "Tirages, albums, sélection de favoris avant impression : comment un photographe organise la vente de ses photos en ligne, avec ou sans plateforme d'abonnement."
+seoTitle: "Vendre ses photos en ligne : tirages, albums et sélection"
+excerpt: "Espace de sélection privé puis boutique de tirages et d'albums : plateformes à abonnement ou boutique à vous sans commission, selon votre activité."
 date: "2026-08-17"
 publishAt: "2026-09-16"
 readTime: 9

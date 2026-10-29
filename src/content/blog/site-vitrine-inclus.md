@@ -1,6 +1,7 @@
 ---
 title: "Site vitrine à partir de {{prix:une-page}} € : qu'est-ce qui est inclus exactement ?"
-excerpt: "Un site vitrine professionnel à partir de {{prix:une-page}} €, est-ce sérieux ? Voici le détail exact de ce qui est compris, ce qui ne l'est pas, et pourquoi ce prix est possible sans rogner sur la qualité."
+seoTitle: "Site vitrine : ce qui est inclus, ce qui ne l'est pas"
+excerpt: "Que comprend vraiment un site vitrine à prix affiché ? La liste poste par poste, les options à part et ce qui se facture en plus, à lire avant de signer."
 date: "2026-08-17"
 readTime: 9
 tag: "Tarifs"

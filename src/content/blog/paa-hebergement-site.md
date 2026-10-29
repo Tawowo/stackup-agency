@@ -1,6 +1,7 @@
 ---
 title: "Quel hébergement choisir pour son site web en 2026 ?"
-excerpt: "OVH, Vercel, Scaleway, O2switch : comparatif des hébergeurs pour sites TPE en 2026. Ce qui compte vraiment et ce qu'il faut éviter."
+seoTitle: "Quel hébergement choisir pour son site web en 2026 ?"
+excerpt: "Performance, sécurité, sauvegardes, support : les critères qui comptent pour héberger le site d'une TPE, un comparatif des hébergeurs et le bon choix."
 date: "2026-07-29"
 updated: "2026-07-28"
 readTime: 7

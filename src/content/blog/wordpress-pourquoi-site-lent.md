@@ -1,6 +1,7 @@
 ---
 title: "WordPress : pourquoi votre site est lent (et comment le savoir)"
-excerpt: "Un WordPress lent n'est jamais une fatalité : plugins en excès, thème lourd, hébergement mutualisé et images non optimisées sont les 4 causes les plus fréquentes."
+seoTitle: "WordPress lent : les 4 causes et comment les diagnostiquer"
+excerpt: "Plugins en excès, thème surchargé, hébergement mutualisé, images lourdes : repérez la cause de la lenteur de WordPress avec PageSpeed Insights, puis corrigez."
 date: "2026-08-17"
 publishAt: "2026-11-15"
 readTime: 8

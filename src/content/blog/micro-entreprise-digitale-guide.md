@@ -1,6 +1,7 @@
 ---
 title: "Micro-entreprise digitale : tout ce qu'il faut savoir"
-excerpt: "La micro-entreprise est le statut idéal pour tester une activité en ligne. Création, charges, TVA, plafonds, obligations... ce guide répond à toutes vos questions pratiques."
+seoTitle: "Micro-entreprise en ligne : création, plafonds, TVA, charges"
+excerpt: "Activité en ligne en micro-entreprise : étapes de création, plafonds, cotisations et piège de la TVA. Les chiffres sont à vérifier sur les sites officiels."
 date: "2026-05-18"
 readTime: 8
 tag: "Entrepreneuriat"

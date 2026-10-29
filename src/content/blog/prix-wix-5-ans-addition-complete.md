@@ -1,6 +1,7 @@
 ---
 title: "Combien coûte VRAIMENT Wix sur 5 ans (l'addition complète)"
-excerpt: "Abonnement, nom de domaine, applications, stockage supplémentaire : l'addition complète de Wix sur 5 ans dépasse largement le prix affiché du plan mensuel. Le détail chiffré."
+seoTitle: "Prix de Wix sur 5 ans : l'addition complète poste par poste"
+excerpt: "Abonnement, nom de domaine, applications, stockage, e-mail pro : le détail de ce que Wix coûte sur cinq ans, au-delà du plan affiché, et ce qui reste à vous."
 date: "2026-08-17"
 publishAt: "2026-11-18"
 readTime: 12

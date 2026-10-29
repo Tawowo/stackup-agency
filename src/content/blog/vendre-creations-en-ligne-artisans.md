@@ -1,6 +1,7 @@
 ---
 title: "Vendre ses créations en ligne : guide complet pour artisans"
-excerpt: "Poterie, bijoux, savons, textiles... Vendre ses créations en ligne ouvre un marché immense. Ce guide complet vous accompagne de la première photo jusqu'à votre première commande internationale."
+seoTitle: "Vendre ses créations en ligne : guide pour artisans d'art"
+excerpt: "Poterie, bijoux, savons, textiles : de la photo du produit à la première commande, les étapes pour vendre vos créations en ligne sans vous éparpiller."
 date: "2026-01-30"
 readTime: 8
 tag: "Commerce"

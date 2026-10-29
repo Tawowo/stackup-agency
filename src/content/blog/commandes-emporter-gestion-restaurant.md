@@ -1,6 +1,7 @@
 ---
 title: "Commandes à emporter : comment les gérer sans se noyer"
-excerpt: "La vente à emporter est une opportunité de revenus supplémentaires pour votre restaurant. Mais sans organisation et bons outils, elle peut vite devenir un cauchemar. Nos conseils."
+seoTitle: "Gérer les commandes à emporter d'un restaurant"
+excerpt: "Pics de commandes, erreurs de préparation, créneaux de retrait : comment organiser la vente à emporter de votre restaurant et choisir les bons outils."
 date: "2026-06-08"
 readTime: 6
 tag: "Restaurants"

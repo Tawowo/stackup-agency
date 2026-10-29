@@ -1,5 +1,7 @@
 ---
 title: "Menu QR code pour restaurant : mise en place, avantages et retour sur investissement"
+seoTitle: "Menu QR code pour restaurant : mise en place et pièges"
+excerpt: "Un PDF scannable ne suffit pas : plateforme dédiée, lecture mobile, photos, commande à table, mise à jour en direct. Réussir un menu QR code en restaurant."
 description: "Le menu QR code n'est plus une tendance post-COVID : c'est un outil de gestion puissant qui réduit les coûts d'impression et augmente le ticket moyen."
 date: "2026-06-12"
 category: "restaurants"

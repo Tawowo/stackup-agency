@@ -1,6 +1,7 @@
 ---
 title: "Google Analytics 4 pour les TPE : ce qu'il faut vraiment suivre"
-excerpt: "GA4 est plus complexe qu'Universal Analytics. Mais pour une TPE, seuls 6 rapports comptent vraiment. Ce guide se concentre sur l'essentiel."
+seoTitle: "Google Analytics 4 pour TPE : les rapports à suivre"
+excerpt: "GA4 déroute les petites entreprises. Voici les six rapports qui comptent pour une TPE et ce que vous pouvez ignorer. Ouvrez le vôtre avec ce guide."
 date: "2026-07-21"
 updated: "2026-07-30"
 readTime: 7

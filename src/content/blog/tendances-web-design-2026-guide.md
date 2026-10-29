@@ -1,6 +1,7 @@
 ---
 title: "Tendances web design en 2026"
-excerpt: "Le web design évolue constamment. Découvrez les tendances qui dominent le design web en 2026, celles qui perdurent et celles qui émergent, pour garder votre site moderne et performant."
+seoTitle: "Tendances web design 2026 : lesquelles adopter ?"
+excerpt: "Bento, minimalisme, micro-animations, accessibilité, mode sombre : les tendances du web design en 2026, celles qui durent et celles à adopter avec recul."
 date: "2026-02-09"
 readTime: 7
 tag: "Design"

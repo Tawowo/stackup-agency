@@ -1,6 +1,7 @@
 ---
 title: "Réseaux sociaux pour TPE : par où commencer sans se disperser"
-excerpt: "Facebook, Instagram, LinkedIn, TikTok — une TPE ne peut pas tout faire. Ce guide identifie le réseau prioritaire selon votre activité et ce qu'il faut y publier."
+seoTitle: "Réseaux sociaux pour une TPE : quel réseau choisir d'abord"
+excerpt: "Facebook, Instagram, LinkedIn ou TikTok : le réseau prioritaire selon votre métier, ce qu'il faut y publier et pourquoi mieux vaut en tenir un seul que cinq."
 date: "2026-07-25"
 updated: "2026-07-30"
 readTime: 7
@@ -69,7 +70,7 @@ keywords: ["réseaux sociaux TPE", "stratégie réseaux sociaux PME", "Instagram
 **Pourquoi :** TikTok favorise les petits comptes si le contenu est bon. Une TPE sans abonnés peut avoir une vidéo qui fait 100 000 vues. L'algorithme est basé sur la qualité du contenu, pas l'ancienneté du compte.
 
 **Ce qui fonctionne :**
-- "Un jour dans la vie d'un [métier]"
+- "Un jour dans la vie d'un ⟨métier⟩"
 - Tutoriels et conseils courts (60-90 secondes)
 - Démystification de votre métier
 - Transformations spectaculaires

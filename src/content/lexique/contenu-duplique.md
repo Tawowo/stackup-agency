@@ -48,7 +48,7 @@ Les remèdes dépendent de la cause :
 
 ## Exemple concret
 
-Exemple type : un plombier publie six pages « plombier à [ville] » avec le même texte, où seul le nom de la commune change. Google les juge quasi identiques et n'en retient qu'une, parfois la moins utile.
+Exemple type : un plombier publie six pages « plombier à ⟨ville⟩ » avec le même texte, où seul le nom de la commune change. Google les juge quasi identiques et n'en retient qu'une, parfois la moins utile.
 
 Il réécrit chaque page avec des informations propres à la commune : les interventions réellement faites, les types de logements, les spécificités locales, ses horaires de déplacement. Chaque page apporte alors quelque chose que les autres n'ont pas.
 

@@ -1,6 +1,8 @@
 ---
 title: "Artisan d'art et créateur : le portfolio digital qui attire les clients premium"
+seoTitle: "Portfolio d'artisan d'art : vendre ses créations en ligne"
 description: "Bijoutier, céramiste, sculpteur, ébéniste : un portfolio en ligne bien conçu vous permet d'accéder à une clientèle internationale et de vendre vos créations au juste prix."
+excerpt: "Bijoutier, céramiste, ébéniste : présentez vos pièces, racontez votre savoir-faire et fixez un juste prix pour attirer une clientèle exigeante."
 date: "2026-05-15"
 category: "artisans"
 tags: ["artisan d'art", "portfolio digital", "vente créations"]

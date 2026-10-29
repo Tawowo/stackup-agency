@@ -1,6 +1,8 @@
 ---
 title: "Producteurs locaux et terroir : vendre en ligne sans intermédiaire et garder 100% de vos marges"
+seoTitle: "Vendre ses produits du terroir en ligne en direct"
 description: "Producteur fermier, maraîcher, vigneron indépendant : vendre en direct via votre propre boutique en ligne vous permet de conserver l'intégralité de vos marges et de construire une relation client durable."
+excerpt: "Producteur, vigneron, fromager : vendre en direct sur votre propre boutique évite les intermédiaires. Les étapes, les erreurs à éviter, les bases à poser."
 date: "2026-06-03"
 category: "commerce"
 tags: ["produits locaux", "terroir", "vente directe producteur"]
@@ -57,7 +59,7 @@ Les formules les plus efficaces combinent flexibilité et engagement : un panier
 
 ### La visibilité locale et nationale
 
-Avoir un beau site ne suffit pas si personne ne le trouve. Une stratégie de référencement adaptée à votre métier est indispensable. Cela passe d'abord par le référencement local — votre fiche Google Business Profile doit être complète, avec vos horaires de retrait, vos photos, vos avis clients. Les recherches du type "fromage de chèvre artisanal livraison [ville]" ou "panier légumes bio [département]" sont des requêtes à fort potentiel de conversion.
+Avoir un beau site ne suffit pas si personne ne le trouve. Une stratégie de référencement adaptée à votre métier est indispensable. Cela passe d'abord par le référencement local — votre fiche Google Business Profile doit être complète, avec vos horaires de retrait, vos photos, vos avis clients. Les recherches du type "fromage de chèvre artisanal livraison ⟨ville⟩" ou "panier légumes bio ⟨département⟩" sont des requêtes à fort potentiel de conversion.
 
 Au-delà du local, un travail de contenu éditorial — articles de blog sur vos produits, vos saisons, vos méthodes — vous permet de capter une audience nationale qui cherche des producteurs en ligne. Ce travail de fond prend du temps, mais il génère un trafic qualifié durablement, sans coût publicitaire récurrent.
 

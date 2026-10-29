@@ -105,8 +105,8 @@ Sur la protection des données, le numéro de téléphone fait partie des inform
 Trois modèles à adapter (vouvoiement, court, clair) :
 
 - **Rappel simple** : « Bonjour, nous vous rappelons votre rendez-vous demain à [heure] à [lieu]. Pour modifier ou annuler : [lien]. À bientôt, [nom de l'entreprise]. »
-- **Rappel avec confirmation** : « Bonjour [prénom], votre rendez-vous est prévu demain à [heure]. Merci de répondre OUI pour confirmer ou de cliquer ici pour le reporter : [lien]. »
-- **Artisan avec intervention** : « Bonjour, notre technicien passera chez vous demain entre [heure] et [heure]. Merci de vous assurer que l'accès est dégagé. En cas d'empêchement : [numéro]. »
+- **Rappel avec confirmation** : « Bonjour ⟨prénom⟩, votre rendez-vous est prévu demain à [heure]. Merci de répondre OUI pour confirmer ou de cliquer ici pour le reporter : [lien]. »
+- **Artisan avec intervention** : « Bonjour, notre technicien passera chez vous demain entre [heure] et [heure]. Merci de vous assurer que l'accès est dégagé. En cas d'empêchement : ⟨numéro⟩. »
 
 Pas de message commercial dans un rappel de service : c'est une information liée à une prestation, pas une promotion.
 

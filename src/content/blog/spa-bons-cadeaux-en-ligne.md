@@ -1,6 +1,7 @@
 ---
 title: "Spa & bien-être : bons cadeaux en ligne, le relais de croissance"
-excerpt: "Les bons cadeaux représentent une part significative du chiffre d'affaires d'un spa, souvent sous-exploitée. Vendus en ligne, ils deviennent un canal d'acquisition à part entière."
+seoTitle: "Bons cadeaux en ligne pour un spa : vendre toute l'année"
+excerpt: "Un bon cadeau vendu en ligne encaisse sans bloquer de créneau et amène de nouveaux clients. La page à prévoir, l'achat de dernière minute et la fidélisation."
 date: "2026-08-17"
 publishAt: "2026-12-29"
 readTime: 8

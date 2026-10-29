@@ -1,7 +1,8 @@
 ---
 title: "Site web mobile-first : pourquoi c'est indispensable en 2026"
+seoTitle: "Site mobile-first : les critères d'un site vraiment adapté"
+excerpt: "Mobile-first ou simplement responsive ? La différence, les critères qui comptent sur smartphone et les erreurs à corriger sur le site de votre activité."
 date: "2026-03-24"
-excerpt: "63 % du trafic web mondial vient du mobile. Comprendre le mobile-first design et pourquoi votre site doit être pensé pour les smartphones avant tout."
 tag: "Création de sites"
 category: "creation-sites"
 readTime: 7

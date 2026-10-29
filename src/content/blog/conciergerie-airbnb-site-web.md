@@ -1,6 +1,7 @@
 ---
 title: "Site web pour conciergerie Airbnb : attirer plus de propriétaires"
-excerpt: "Un site web professionnel permet à une conciergerie Airbnb de se distinguer des plateformes et de capter des propriétaires directement. Voici comment."
+seoTitle: "Site web de conciergerie Airbnb : attirer des propriétaires"
+excerpt: "Comment une conciergerie se démarque et rassure les propriétaires : les pages à prévoir, les preuves à montrer et le formulaire qui donne envie d'appeler."
 date: "2026-07-15"
 updated: "2026-07-28"
 readTime: 8
@@ -90,10 +91,10 @@ Un formulaire bien conçu génère plus de demandes qualifiées qu'un simple "co
 ## SEO local pour une conciergerie Airbnb
 
 Les requêtes à cibler :
-- "conciergerie Airbnb [ville]"
-- "gestion location saisonnière [ville]"
+- "conciergerie Airbnb ⟨ville⟩"
+- "gestion location saisonnière ⟨ville⟩"
 - "gestion Airbnb [quartier populaire]"
-- "conciergerie location courte durée [département]"
+- "conciergerie location courte durée ⟨département⟩"
 
 Ces requêtes sont souvent peu concurrentielles — les grandes plateformes nationales sont présentes, mais un prestataire local bien référencé peut se positionner en première page.
 

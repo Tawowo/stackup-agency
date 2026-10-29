@@ -1,6 +1,7 @@
 ---
 title: "SEO on-page : guide complet pour optimiser chaque page de votre site"
-excerpt: "Title, meta, H1, maillage interne, vitesse : les optimisations on-page qui ont le plus d'impact sur votre positionnement Google en 2026."
+seoTitle: "SEO on-page : optimiser title, H1 et maillage de chaque page"
+excerpt: "Balise title, meta description, titres, maillage interne, vitesse : les optimisations on-page classées par impact pour améliorer le classement de chaque page."
 date: "2026-07-24"
 updated: "2026-07-28"
 readTime: 8

@@ -1,8 +1,9 @@
 ---
 title: "Prise de rendez-vous en ligne : Calendly, Planity ou le vôtre ?"
+seoTitle: "Rendez-vous en ligne : Calendly, Planity ou votre système"
+excerpt: "Calendly, Planity ou un système intégré à votre site : portail 24h/24, rappels, ressources, facturation. Le comparatif pour choisir selon l'activité."
 date: "2026-06-21"
 updated: "2026-08-17"
-excerpt: "Calendly, Planity et les apps de RDV génériques facturent un abonnement, parfois une commission. Un système propriétaire, intégré au site, élimine ce coût récurrent. Le comparatif."
 tag: "Applications métier"
 category: "applications-metier"
 readTime: 8

@@ -1,7 +1,8 @@
 ---
 title: "Application gestion de chantiers : suivi terrain et reporting en temps réel"
+seoTitle: "Application de gestion de chantiers : budget et terrain"
+excerpt: "Suivi du budget par poste, saisie terrain, plans, sous-traitants, reporting : ce qu'une application de chantier doit faire pour repérer les dérives à temps."
 date: "2026-06-22"
-excerpt: "Les dépassements de budget sur les chantiers atteignent en moyenne 28 %. Une application de suivi de chantier permet de détecter les dérives en temps réel et de sauvegarder la marge."
 tag: "Applications métier"
 category: "applications-metier"
 readTime: 9

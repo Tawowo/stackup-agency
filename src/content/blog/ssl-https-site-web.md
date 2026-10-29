@@ -1,7 +1,8 @@
 ---
 title: "SSL et HTTPS pour votre site web : sécurité et référencement expliqués simplement"
+seoTitle: "SSL et HTTPS : sécuriser son site pour Google et ses clients"
+excerpt: "Le cadenas HTTPS rassure vos visiteurs et compte pour Google. Types de certificats, Let's Encrypt, erreurs courantes et vérifications à faire chez vous."
 date: "2026-02-16"
-excerpt: "Qu'est-ce que le SSL et le HTTPS ? Pourquoi c'est indispensable pour votre site en 2026, tant pour la sécurité que pour le référencement Google."
 tag: "Création de sites"
 category: "creation-sites"
 readTime: 6

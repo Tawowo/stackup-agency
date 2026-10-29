@@ -1,6 +1,7 @@
 ---
 title: "Être recommandé par ChatGPT : le SEO de l'ère IA"
-excerpt: "ChatGPT Search, Perplexity, Bing AI : comment ces moteurs choisissent leurs sources, et ce qu'une TPE doit faire pour être recommandée plutôt qu'ignorée."
+seoTitle: "Être cité par ChatGPT Search : comment ça marche"
+excerpt: "ChatGPT Search, Perplexity et Bing AI citent leurs sources. Voici comment ces moteurs les choisissent et ce que votre site doit faire pour en faire partie."
 date: "2026-07-18"
 updated: "2026-08-17"
 readTime: 8
@@ -134,4 +135,4 @@ Analysez le contenu de votre concurrent : est-il plus détaillé ? Plus chiffré
 
 ---
 
-*Pour aller plus loin : [Google AI Overviews : comment être cité par l'IA de Google](/blog/ai-overviews-seo-tpe) · [Le SEO est-il mort avec l'IA ?](/blog/seo-ia-generative-ai-overviews-google) · [Fiche Google Business : l'optimisation complète](/blog/fiche-google-business-optimisation) · [Rédaction de blog SEO](/services/redaction-blog-seo)*
+*Pour aller plus loin : [Google AI Overviews : comment être cité par l'IA de Google](/blog/ai-overviews-seo-tpe) · [Le SEO est-il mort avec l'IA ?](/blog/seo-ia-generative-ai-overviews-google) · [Fiche Google Business : l'optimisation complète](/blog/fiche-google-business-optimisation) · [Rédaction de blog SEO](/services/referencement)*

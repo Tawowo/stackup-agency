@@ -1,8 +1,9 @@
 ---
 title: "Refonte de site web : le guide complet 2026 (étapes, prix, SEO)"
+seoTitle: "Refonte de site web : étapes, SEO et redirections à prévoir"
 date: "2026-05-08"
 updated: "2026-07-29"
-excerpt: "Quand refaire son site, combien ça coûte, comment ne pas perdre son référencement : le guide complet de la refonte, avec checklist des redirections."
+excerpt: "Quand refaire son site, comment préparer la migration et protéger son référencement : le guide de la refonte, avec la checklist des redirections à contrôler."
 tag: "Création de sites"
 category: "creation-sites"
 readTime: 7

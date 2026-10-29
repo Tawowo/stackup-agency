@@ -127,9 +127,8 @@ export function Contenu({ role, ctx = {} }: { role: Role; ctx?: ContexteBloc }) 
     return (
       <div className="mq-hero" style={m ? ({ '--mq-bois': m.teinte } as CSSProperties) : undefined}>
         <span className="mq-etiquette">{m ? m.etiquette : 'Menuiserie · Tours'}</span>
-        <h3 className="mq-h1" style={m ? { fontSize: '3.7cqw' } : undefined}>
-          {m ? m.accroche : 'Cuisines, escaliers et rangements sur mesure'}
-        </h3>
+        {/* Texte décoratif de la maquette : rendu par CSS (data-t), ni titre ni texte indexable. */}
+        <p className="mq-h1 mq-deco" data-t={m ? m.accroche : 'Cuisines, escaliers et rangements sur mesure'} style={m ? { fontSize: '3.7cqw' } : undefined} />
         <p className="mq-p">{m ? 'Votre site, pensé pour votre métier : clair, rapide, à votre image.' : 'Un atelier, un artisan, des meubles dessinés pour votre maison.'}</p>
         <span className="mq-btn" style={{ alignSelf: 'flex-start' }}>
           Demander un devis
@@ -262,7 +261,7 @@ export function Contenu({ role, ctx = {} }: { role: Role; ctx?: ContexteBloc }) 
     const total = PRODUITS.slice(0, n).reduce((s, p) => s + p.prix, 0)
     return (
       <div className="mq-panier">
-        <h4>Votre panier</h4>
+        <div className="mq-sous-titre">Votre panier</div>
         {PRODUITS.slice(0, 4).map((p, i) => (
           <div key={p.nom} className="mq-ligne-panier" data-vide={i < n ? '0' : '1'}>
             <span>{p.nom}</span>

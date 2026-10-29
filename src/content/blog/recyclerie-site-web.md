@@ -1,6 +1,7 @@
 ---
 title: "Site web pour recyclerie et ressourcerie : guide 2026"
-excerpt: "Comment une recyclerie peut utiliser son site web pour attirer des donateurs, bénévoles et clients. Structure, fonctionnalités, et budget réaliste."
+seoTitle: "Site de recyclerie ou ressourcerie : pages et fonctions clés"
+excerpt: "Dons, bénévolat, vente d'objets reconditionnés : la structure d'un site de recyclerie, page par page, et les fonctions utiles. À lire avant de le bâtir."
 date: "2026-07-16"
 updated: "2026-07-28"
 readTime: 7
@@ -19,7 +20,7 @@ Voici comment construire la présence en ligne d'une recyclerie ou ressourcerie 
 
 ### Attirer des donateurs
 
-Les personnes qui veulent donner des objets cherchent souvent en ligne "où donner mes affaires [ville]" ou "don objets recyclerie [département]". Un site bien référencé sur ces requêtes vous amène des dons directement.
+Les personnes qui veulent donner des objets cherchent souvent en ligne "où donner mes affaires ⟨ville⟩" ou "don objets recyclerie ⟨département⟩". Un site bien référencé sur ces requêtes vous amène des dons directement.
 
 ### Trouver des bénévoles
 
@@ -27,7 +28,7 @@ La plupart des recycleries manquent chroniquement de bénévoles. Un site avec u
 
 ### Vendre des objets reconditionnés
 
-Les clients de recycleries cherchent aussi en ligne ("mobilier recyclé [ville]", "vêtements occasion pas chers [département]"). Un site vitrine qui présente vos catégories de produits (meubles, vêtements, électroménager, livres) attire une clientèle qu'un simple local de quartier ne toucherait pas.
+Les clients de recycleries cherchent aussi en ligne ("mobilier recyclé ⟨ville⟩", "vêtements occasion pas chers ⟨département⟩"). Un site vitrine qui présente vos catégories de produits (meubles, vêtements, électroménager, livres) attire une clientèle qu'un simple local de quartier ne toucherait pas.
 
 ### Communiquer vos actualités et événements
 
@@ -44,7 +45,7 @@ Les financeurs publics et les fondations privées vérifient souvent le site web
 ### Page d'accueil
 
 - Photo de votre lieu, de vos produits ou de votre équipe
-- Mission en une phrase ("Nous collectons, réparons et revendons des objets pour réduire les déchets à [ville]")
+- Mission en une phrase ("Nous collectons, réparons et revendons des objets pour réduire les déchets à ⟨ville⟩")
 - 3 entrées principales : Donner, Acheter, Devenir bénévole
 - Liens vers les actualités récentes et les événements à venir
 
@@ -119,11 +120,11 @@ Si vous avez besoin d'un calendrier d'événements, d'une galerie photos de prod
 ## SEO local pour une recyclerie
 
 Les requêtes sur lesquelles se positionner :
-- "recyclerie [ville]" ou "ressourcerie [ville]"
-- "où donner mes objets [ville]"
-- "don meubles [département]"
-- "vêtements occasion [ville]"
-- "atelier réparation [ville]"
+- "recyclerie ⟨ville⟩" ou "ressourcerie ⟨ville⟩"
+- "où donner mes objets ⟨ville⟩"
+- "don meubles ⟨département⟩"
+- "vêtements occasion ⟨ville⟩"
+- "atelier réparation ⟨ville⟩"
 
 Ces requêtes sont souvent peu concurrentielles localement — les grandes plateformes de seconde main (Vinted, Leboncoin) occupent les premières positions pour les généralistes, mais pas pour les acteurs locaux spécialisés.
 
@@ -148,4 +149,4 @@ Oui. Des solutions comme HelloAsso (gratuit pour les associations françaises) p
 Pour le SEO, les mises à jour régulières sont bénéfiques. Ajoutez vos événements à venir, publiez des photos de vos arrivages exceptionnels, mettez à jour vos horaires saisonniers. 2 à 4 mises à jour par mois suffisent.
 
 **Notre recyclerie est dans une petite ville. Est-ce que le SEO va quand même servir ?**
-Oui. Dans les petites villes, la concurrence locale pour les requêtes "recyclerie + [ville]" est quasiment nulle. Vous pouvez vous positionner en première position avec un site basique bien optimisé.
+Oui. Dans les petites villes, la concurrence locale pour les requêtes "recyclerie + ⟨ville⟩" est quasiment nulle. Vous pouvez vous positionner en première position avec un site basique bien optimisé.

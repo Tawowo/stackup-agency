@@ -1,6 +1,7 @@
 ---
 title: "Salon de tatouage : portfolio, styles et demandes de projet"
-excerpt: "Un site de tatoueur n'est pas une carte de visite, c'est un portfolio qui doit convaincre au premier coup d'œil et filtrer les demandes de projet pertinentes. La structure qui fonctionne."
+seoTitle: "Site de salon de tatouage : portfolio par style, formulaire"
+excerpt: "Portfolio classé par style et formulaire de demande de projet qui filtre les messages mal cadrés : la structure d'un site de tatoueur, au-delà d'Instagram."
 date: "2026-08-17"
 publishAt: "2026-12-17"
 readTime: 8
@@ -42,7 +43,7 @@ Contrairement à d'autres activités, la tarification d'un tatouage dépend fort
 
 ## Le SEO local pour un salon de tatouage
 
-Les recherches qui mènent à un salon de tatouage combinent souvent un style précis et une localisation ("tatoueur réalisme [ville]", "salon de tatouage [quartier]", "tatoueur traditionnel [ville]"). Un site organisé par style, avec un contenu qui reflète naturellement ces requêtes, capte cette demande de longue traîne bien plus efficacement qu'une simple page de contact générique.
+Les recherches qui mènent à un salon de tatouage combinent souvent un style précis et une localisation ("tatoueur réalisme ⟨ville⟩", "salon de tatouage ⟨quartier⟩", "tatoueur traditionnel ⟨ville⟩"). Un site organisé par style, avec un contenu qui reflète naturellement ces requêtes, capte cette demande de longue traîne bien plus efficacement qu'une simple page de contact générique.
 
 ## Les avis et la réputation, un facteur de confiance décisif
 

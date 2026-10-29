@@ -1,6 +1,7 @@
 ---
 title: "Showreel : les règles d'un demo reel qui décroche des contrats"
-excerpt: "Un showreel trop long, sans rythme, qui garde les meilleurs plans pour la fin, perd le client avant la fin du visionnage. Les règles concrètes d'un demo reel efficace pour un vidéaste."
+seoTitle: "Showreel de vidéaste : les règles d'un demo reel efficace"
+excerpt: "Durée, plans d'ouverture, rythme, structure : les règles concrètes pour monter un showreel qui retient un client et lui donne envie de vous écrire."
 date: "2026-08-17"
 publishAt: "2027-01-18"
 readTime: 12

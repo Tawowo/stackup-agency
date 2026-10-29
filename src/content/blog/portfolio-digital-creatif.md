@@ -1,6 +1,7 @@
 ---
 title: "Portfolio en ligne pour créatifs : ce qui fait vraiment la différence"
-excerpt: "Designer, illustrateur, photographe, rédacteur — votre portfolio en ligne est votre premier commercial. Ce qui fait qu'un client choisit de vous contacter ou pas."
+seoTitle: "Portfolio en ligne pour créatif : ce qui fait contacter"
+excerpt: "Designer, illustrateur, photographe ou rédacteur : quoi montrer, quels projets choisir, comment référencer votre portfolio et préférer votre propre site."
 date: "2026-07-28"
 updated: "2026-07-30"
 readTime: 6
@@ -89,7 +90,7 @@ Cette section rassure les clients qui n'ont jamais travaillé avec un freelance 
 Un portfolio qui ne se trouve pas sur Google n'existe pas pour les clients qui ne vous connaissent pas encore.
 
 **Optimisations SEO pour un portfolio :**
-- `<title>` : "Prénom NOM — Designer UI/UX à [ville]" (avec mot-clé métier + ville)
+- `<title>` : "Prénom NOM — Designer UI/UX à ⟨ville⟩" (avec mot-clé métier + ville)
 - Texte alt sur toutes les images : décrivez le travail, pas juste "logo" ou "illustration"
 - URL lisibles : `/projets/identite-visuelle-startup-fintech` plutôt que `/projet?id=47`
 - Fiche Google Business Profile si vous avez une clientèle locale

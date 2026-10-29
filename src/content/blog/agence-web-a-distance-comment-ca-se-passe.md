@@ -1,6 +1,7 @@
 ---
 title: "Travailler avec une agence à distance : comment ça se passe vraiment"
-excerpt: "Pas de rendez-vous en local, tout se fait par visio et par écrit : travailler avec une agence web à distance change certaines habitudes, mais pas la qualité du résultat. Le déroulé concret, étape par étape."
+seoTitle: "Agence web à distance : comment se passe un projet de site"
+excerpt: "Visio, cahier des charges partagé, points d'étape, validations : le déroulé concret d'un projet de site mené à distance, ses limites et leurs parades."
 date: "2026-08-18"
 publishAt: "2027-02-04"
 readTime: 13

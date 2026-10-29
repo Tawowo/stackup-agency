@@ -1,6 +1,7 @@
 ---
 title: "Migrer d'un SaaS vers son propre outil : la méthode sans casse"
-excerpt: "Exporter les données, faire tourner les deux systèmes en parallèle, former les équipes, couper l'abonnement au bon moment : la méthode complète pour migrer sans interrompre l'activité."
+seoTitle: "Migrer d'un SaaS vers un outil à vous, sans casse"
+excerpt: "Exporter les données, faire tourner les deux outils en parallèle, former l'équipe, résilier au bon moment : la méthode en cinq étapes pour quitter un SaaS."
 date: "2026-08-17"
 publishAt: "2026-11-28"
 readTime: 12

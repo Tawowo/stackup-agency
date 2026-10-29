@@ -1,5 +1,7 @@
 ---
 title: "Coach, formateur, consultant : l'agenda en ligne qui professionnalise votre activité"
+seoTitle: "Agenda en ligne pour coach et formateur : mise en place"
+excerpt: "Fini les mails pour caler un rendez-vous : un agenda relié à votre site, des formats de séance distincts, des rappels automatiques et un appel découverte."
 description: "Un agenda en ligne bien intégré à votre site web vous évite les allers-retours email, réduit les no-shows et vous positionne comme un professionnel sérieux. Voici comment le mettre en place."
 date: "2026-06-23"
 category: "professions-liberales"

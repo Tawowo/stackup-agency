@@ -1,5 +1,7 @@
 ---
 title: "Vitesse de chargement d'un site web : comment chaque seconde perdue vous coûte des clients"
+seoTitle: "Vitesse d'un site web : ce que chaque seconde vous coûte"
+excerpt: "Un site lent fait fuir les visiteurs avant la première ligne. Comment auditer sa vitesse, corriger les erreurs courantes et récupérer des contacts."
 description: "Google indique qu'un délai de chargement d'une seconde supplémentaire réduit les conversions de 7%. Voici comment auditer et améliorer la vitesse de votre site pour récupérer ce manque à gagner."
 date: "2026-01-20"
 category: "strategie"

@@ -1,6 +1,7 @@
 ---
 title: "Boutique physique : le site qui ramène du monde en magasin"
-excerpt: "78 % des recherches locales aboutissent à une visite en boutique dans la journée. Un site bien conçu ne remplace pas votre magasin, il ramène du monde dedans. 7 raisons concrètes."
+seoTitle: "Site web pour une boutique physique : 7 raisons d'en créer"
+excerpt: "Un site ne remplace pas votre magasin, il vous fait trouver avant la visite. Sept raisons concrètes pour un commerçant, des avis aux contacts clients."
 date: "2026-07-04"
 updated: "2026-08-17"
 readTime: 7

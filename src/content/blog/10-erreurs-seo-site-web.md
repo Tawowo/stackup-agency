@@ -1,6 +1,7 @@
 ---
 title: "SEO : les 15 erreurs qui plombent les sites de petites entreprises"
-excerpt: "Mots-clés ignorés, site lent, pas de mobile, zéro backlink : les 15 erreurs SEO les plus fréquentes chez les petites entreprises, avec la correction pour chacune."
+seoTitle: "Erreurs SEO d'une petite entreprise : les 15 à corriger"
+excerpt: "Votre site n'apparaît pas sur Google ? Les 15 erreurs SEO les plus courantes (title, vitesse, mobile, liens), chacune avec sa correction pas à pas."
 date: "2026-07-04"
 updated: "2026-08-17"
 readTime: 9
@@ -146,4 +147,4 @@ Oui, la majorité s'applique à toute page web : vitesse, mobile, title/meta des
 
 ---
 
-*Pour aller plus loin : [Audit SEO technique : la checklist en 50 points](/blog/audit-seo-technique-checklist-50-points) · [Core Web Vitals 2026 : le guide technique](/blog/core-web-vitals-2026-guide-technique) · [Google Business Profile : le guide complet](/blog/fiche-google-business-optimisation) · [Rédaction de blog SEO](/services/redaction-blog-seo)*
+*Pour aller plus loin : [Audit SEO technique : la checklist en 50 points](/blog/audit-seo-technique-checklist-50-points) · [Core Web Vitals 2026 : le guide technique](/blog/core-web-vitals-2026-guide-technique) · [Google Business Profile : le guide complet](/blog/fiche-google-business-optimisation) · [Rédaction de blog SEO](/services/referencement)*

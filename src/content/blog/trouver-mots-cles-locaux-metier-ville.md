@@ -1,6 +1,7 @@
 ---
 title: "Mots-clés locaux : comment les trouver pour votre métier et votre ville"
-excerpt: "Google Keyword Planner, Search Console, autocomplétion, questions PAA : la méthode complète pour trouver les mots-clés locaux que tapent vraiment vos clients."
+seoTitle: "Trouver ses mots-clés locaux pour son métier et sa ville"
+excerpt: "Search Console, autocomplétion Google, questions associées : quatre sources gratuites pour trouver les mots-clés locaux de vos clients et les placer."
 date: "2026-08-17"
 publishAt: "2026-10-27"
 readTime: 8
@@ -13,7 +14,7 @@ keywords: ["trouver mots cles", "mots cles locaux", "mots cles metier ville", "r
 
 ## Pourquoi vos mots-clés intuitifs sont souvent faux
 
-Un artisan pense naturellement en termes de métier ("plomberie sanitaire", "rénovation salle de bain complète"). Ses clients, eux, tapent en termes de problème ou de besoin immédiat ("fuite d'eau urgence [ville]", "prix rénovation salle de bain [ville]"). Cet écart de vocabulaire explique pourquoi un site avec un contenu techniquement correct mais mal formulé peine à apparaître : il répond à une question que personne ne pose exactement de cette façon.
+Un artisan pense naturellement en termes de métier ("plomberie sanitaire", "rénovation salle de bain complète"). Ses clients, eux, tapent en termes de problème ou de besoin immédiat ("fuite d'eau urgence ⟨ville⟩", "prix rénovation salle de bain ⟨ville⟩"). Cet écart de vocabulaire explique pourquoi un site avec un contenu techniquement correct mais mal formulé peine à apparaître : il répond à une question que personne ne pose exactement de cette façon.
 
 ## Les 4 sources gratuites pour trouver ses mots-clés locaux
 
@@ -116,4 +117,4 @@ Oui, de plus en plus, avec la progression de la recherche vocale et des assistan
 
 ---
 
-*Pour aller plus loin : [Combien de temps pour être visible sur Google ?](/blog/combien-temps-visible-google) · [Les avis Google font-ils monter votre référencement ?](/blog/avis-google-seo-referencement) · [Stratégie longue traîne pour les TPE](/blog/strategie-longue-traine-tpe-clients-locaux) · [Rédaction de blog SEO](/services/redaction-blog-seo)*
+*Pour aller plus loin : [Combien de temps pour être visible sur Google ?](/blog/combien-temps-visible-google) · [Les avis Google font-ils monter votre référencement ?](/blog/avis-google-seo-referencement) · [Stratégie longue traîne pour les TPE](/blog/strategie-longue-traine-tpe-clients-locaux) · [Rédaction de blog SEO](/services/referencement)*

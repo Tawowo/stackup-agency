@@ -1,7 +1,8 @@
 ---
 title: "Site web rapide : pourquoi la vitesse est votre meilleur argument commercial"
+seoTitle: "Site web rapide : pourquoi la vitesse fait vendre"
+excerpt: "La vitesse de chargement pèse sur vos ventes et votre référencement. Les Core Web Vitals expliqués, les causes de lenteur et les actions à mener en priorité."
 date: "2026-03-03"
-excerpt: "Un site lent vous coûte des clients et du référencement. Découvrez pourquoi la performance web est un levier business majeur en 2026."
 tag: "Création de sites"
 category: "creation-sites"
 readTime: 7

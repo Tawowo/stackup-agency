@@ -1,6 +1,7 @@
 ---
 title: "Optimiser images web : WebP, AVIF et SEO en 2026"
-excerpt: "WebP vs AVIF vs JPEG : quel format choisir ? Guide complet d'optimisation des images pour améliorer votre SEO et la vitesse de votre site web."
+seoTitle: "Optimiser les images web : WebP, AVIF, lazy loading, alt"
+excerpt: "WebP, AVIF ou JPEG : quel format choisir, comment le servir avec la balise picture, charger au bon moment et rédiger un alt utile au SEO et à l'accessibilité."
 date: "2026-02-15"
 readTime: 7
 tag: "Performance"

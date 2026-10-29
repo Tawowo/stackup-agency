@@ -1,6 +1,7 @@
 ---
 title: "Combien de temps pour être visible sur Google ?"
-excerpt: "3 mois, 6 mois, 1 an ? Le délai réel avant d'apparaître sur Google dépend de l'âge du site, de la concurrence et du travail fourni. Les chiffres et les paliers concrets."
+seoTitle: "Combien de temps pour apparaître sur Google ?"
+excerpt: "Un site neuf n'apparaît pas du jour au lendemain. Les paliers réalistes avant d'être visible sur Google et les trois facteurs qui raccourcissent l'attente."
 date: "2026-08-17"
 publishAt: "2026-10-23"
 readTime: 8
@@ -111,4 +112,4 @@ Une refonte bien exécutée avec des redirections 301 correctes préserve géné
 
 ---
 
-*Pour aller plus loin : [SEO local : le guide complet pour les TPE](/blog/seo-local-commerce) · [Core Web Vitals 2026 : le guide technique](/blog/core-web-vitals-2026-guide-technique) · [Blog d'entreprise : combien d'articles pour des résultats ?](/blog/frequence-publication-blog-seo) · [Rédaction de blog SEO](/services/redaction-blog-seo)*
+*Pour aller plus loin : [SEO local : le guide complet pour les TPE](/blog/seo-local-commerce) · [Core Web Vitals 2026 : le guide technique](/blog/core-web-vitals-2026-guide-technique) · [Blog d'entreprise : combien d'articles pour des résultats ?](/blog/frequence-publication-blog-seo) · [Rédaction de blog SEO](/services/referencement)*

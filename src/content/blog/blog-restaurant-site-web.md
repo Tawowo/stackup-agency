@@ -1,6 +1,7 @@
 ---
 title: "Restaurant : site internet ou réseaux sociaux, où investir en premier ?"
-excerpt: "3 restaurants sur 4 n'ont pas de site web en France. Voici pourquoi Instagram et Facebook ne suffisent pas seuls, et comment répartir votre budget entre site et réseaux sociaux."
+seoTitle: "Site internet ou réseaux sociaux pour un restaurant ?"
+excerpt: "Instagram crée l'envie, le site capte les recherches Google et reste à vous. Ce qu'un site de restaurant doit contenir et comment répartir votre budget."
 date: "2026-07-28"
 updated: "2026-08-17"
 readTime: 7
@@ -9,7 +10,7 @@ category: "creation-sites"
 keywords: ["restaurant site ou reseaux", "site web restaurant", "instagram ou site restaurant", "référencement restaurant Google"]
 ---
 
-**Réponse directe :** les réseaux sociaux et le site web ne jouent pas le même rôle et se complètent plutôt qu'ils ne s'opposent. Instagram et Facebook servent à créer l'envie et fidéliser une communauté déjà conquise ; le site web capte les recherches Google ("restaurant [ville]") où se prend la décision de réserver, et reste votre seule vitrine que vous possédez et contrôlez entièrement. Pour un budget serré, un site vitrine à partir de {{prix:une-page}} € doit précéder ou accompagner l'investissement en réseaux sociaux, pas le suivre.
+**Réponse directe :** les réseaux sociaux et le site web ne jouent pas le même rôle et se complètent plutôt qu'ils ne s'opposent. Instagram et Facebook servent à créer l'envie et fidéliser une communauté déjà conquise ; le site web capte les recherches Google ("restaurant ⟨ville⟩") où se prend la décision de réserver, et reste votre seule vitrine que vous possédez et contrôlez entièrement. Pour un budget serré, un site vitrine à partir de {{prix:une-page}} € doit précéder ou accompagner l'investissement en réseaux sociaux, pas le suivre.
 
 ---
 
@@ -76,7 +77,7 @@ La page "Notre histoire" ou "Le chef" humanise votre restaurant et le différenc
 
 ## SEO local pour restaurants : les spécificités
 
-Les restaurants sont un des secteurs les plus cherchés localement sur Google. Pour apparaître dans le Local Pack ("restaurant [ville]") :
+Les restaurants sont un des secteurs les plus cherchés localement sur Google. Pour apparaître dans le Local Pack ("restaurant ⟨ville⟩") :
 
 **Fiche Google Business Profile :**
 - Catégorie : "Restaurant" + catégories secondaires (cuisine italienne, végétarien, etc.)
@@ -98,10 +99,10 @@ Les restaurants sont un des secteurs les plus cherchés localement sur Google. P
 ```
 
 **Mots-clés locaux :**
-- "restaurant [cuisine] [ville]"
-- "restaurant [quartier]"
+- "restaurant ⟨cuisine⟩ ⟨ville⟩"
+- "restaurant ⟨quartier⟩"
 - "restaurant [occasion] : mariage, anniversaire, repas d'affaires"
-- "restaurant avec terrasse [ville]"
+- "restaurant avec terrasse ⟨ville⟩"
 
 ---
 
@@ -125,7 +126,7 @@ Les deux outils répondent à des besoins différents — la question n'est pas 
 |---|---|---|
 | Rôle principal | Créer l'envie, fidéliser une communauté déjà acquise | Capter les recherches Google au moment de la décision |
 | Propriété | Dépendant de la plateforme (algorithme, changement de règles) | 100 % possédé et contrôlé |
-| Visible sur "restaurant [ville]" | Rarement | C'est son rôle premier |
+| Visible sur "restaurant ⟨ville⟩" | Rarement | C'est son rôle premier |
 | Menu, horaires, réservation | Difficiles à structurer clairement | Toujours accessibles et à jour |
 | Budget de départ | Temps (contenu régulier) ou budget pub | À partir de {{prix:une-page}} €, une fois |
 

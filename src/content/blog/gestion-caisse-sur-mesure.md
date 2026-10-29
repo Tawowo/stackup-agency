@@ -1,8 +1,9 @@
 ---
 title: "Caisse enregistreuse : logiciel du commerce vs solution sur mesure"
+seoTitle: "Logiciel de caisse commerce : standard ou sur mesure"
 date: "2026-05-29"
 updated: "2026-08-17"
-excerpt: "80 % des commerces se contentent d'un logiciel de caisse générique (Sumup, Lightspeed, Zelty). Pour les 20 % restants — tarification complexe, multi-sites — le sur mesure devient rentable."
+excerpt: "Sumup, Lightspeed, Zelty ou caisse sur mesure : les critères qui font basculer de l’un à l’autre. Faites le diagnostic de vos besoins avant de payer."
 tag: "Applications métier"
 category: "applications-metier"
 readTime: 9

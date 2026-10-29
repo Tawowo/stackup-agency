@@ -1,6 +1,7 @@
 ---
 title: "Landing page pour vos publicités : ce qui fait vraiment la différence"
-excerpt: "Une bonne landing page triple les conversions d'une campagne Google Ads ou Meta. Ce qu'elle doit contenir, et ce qui ne fonctionne pas."
+seoTitle: "Landing page pour Google Ads : ce qu’elle doit contenir"
+excerpt: "Titre, preuve, formulaire, appel à agir : ce qu’une landing page doit contenir pour transformer le clic d’une pub en demande. Contrôlez la vôtre."
 date: "2026-07-23"
 updated: "2026-07-28"
 readTime: 7

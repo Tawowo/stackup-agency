@@ -1,7 +1,8 @@
 ---
 title: "Application de fidélité sur mesure : pourquoi les solutions génériques ne suffisent pas"
+seoTitle: "Application de fidélité sur mesure ou solution générique ?"
+excerpt: "Pourquoi les programmes de fidélité génériques s'essoufflent et ce qu'apporte un outil sur mesure : récompenses, omnicanal, tableau de bord. Les critères."
 date: "2026-06-22"
-excerpt: "Acquérir un nouveau client coûte 5 à 7 fois plus cher que de fidéliser un client existant. Pourtant, 60 % des programmes de fidélité génériques sont abandonnés dans les 6 mois. Voici pourquoi le sur mesure change tout."
 tag: "Applications métier"
 category: "applications-metier"
 readTime: 8

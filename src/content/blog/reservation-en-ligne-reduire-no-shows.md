@@ -1,6 +1,7 @@
 ---
 title: "Réservation en ligne : comment réduire les no-shows de 40%"
-excerpt: "Les no-shows coûtent cher aux restaurants. Découvrez les stratégies concrètes pour réduire les absences non signalées grâce à la réservation en ligne."
+seoTitle: "Réduire les no-shows d'un restaurant : réservation en ligne"
+excerpt: "Rappels automatiques, confirmation, politique d'annulation : les leviers de la réservation en ligne qui réduisent les tables réservées puis non honorées."
 date: "2026-05-03"
 readTime: 6
 tag: "Restaurants"

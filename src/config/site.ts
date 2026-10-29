@@ -22,7 +22,8 @@ export const SITE = {
   nom: 'Stackup Agency',
   url: 'https://stackup-agency.fr',
   fondateur: 'Mathéo Reboul',
-  ville: 'Tours',
+  /** Commune de l'atelier (adresse réelle). Tours n'est pas l'adresse : c'est la métropole voisine, desservie sur place ou à distance. */
+  ville: 'Savigné-sur-Lathan',
   departement: 'Indre-et-Loire',
   email: 'contact@stackup-agency.fr',
   /** Téléphone : affichage, lien tel: et forme internationale (JSON-LD). */

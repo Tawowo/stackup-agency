@@ -1,6 +1,7 @@
 ---
 title: "Combien de temps pour rédiger un article de blog SEO ? La réalité en 2026"
-excerpt: "Un article de blog bien optimisé prend entre 3h et 8h à produire correctement. Voici le détail par étape, les facteurs qui font varier ce temps, et comment l'optimiser."
+seoTitle: "Temps pour rédiger un article de blog SEO, étape par étape"
+excerpt: "Combien de temps pour écrire un article de blog qui se classe ? Le détail des six étapes, ce qui fait varier le temps et la part que peut prendre l'IA."
 date: "2026-06-22"
 updated: "2026-07-28"
 readTime: 6
@@ -94,7 +95,7 @@ Au-delà du temps, il y a le coût d'opportunité. Pour un dirigeant de TPE qui 
 
 C'est la logique de [l'externalisation de la rédaction](/blog/blog-et-seo-quel-contenu-publier) : déléguer la production à quelqu'un dont c'est le métier, pendant que vous gérez votre activité principale.
 
-Notre [service de rédaction blog SEO](/services/redaction-blog-seo) prend en charge toutes les étapes, de la recherche de mots-clés à la mise en forme, à partir de 25€ l'article.
+Notre [service de rédaction blog SEO](/services/referencement) prend en charge toutes les étapes, de la recherche de mots-clés à la mise en forme, à partir de 25€ l'article.
 
 ## FAQ
 

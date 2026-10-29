@@ -1,6 +1,7 @@
 ---
 title: "Est-ce qu'un site web est encore nécessaire en 2026 ?"
-excerpt: "Réseaux sociaux, Google My Business, Tripadvisor... Pourquoi un site web reste indispensable même quand votre fiche Google est parfaite."
+seoTitle: "Un site web est-il encore nécessaire en 2026 ?"
+excerpt: "Fiche Google, Instagram et Facebook font beaucoup, mais pas tout. Ce qu'un site apporte que ces alternatives ne remplacent pas, et les cas où il attend."
 date: "2026-07-26"
 updated: "2026-07-28"
 readTime: 7

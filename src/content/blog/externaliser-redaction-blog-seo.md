@@ -1,6 +1,7 @@
 ---
 title: "Externaliser la rédaction de son blog SEO : avantages, pièges et prix"
-excerpt: "Déléguer la rédaction de vos articles de blog à un prestataire SEO vous libère du temps et assure une publication régulière. Voici comment bien choisir, quoi demander et combien prévoir."
+seoTitle: "Externaliser la rédaction de son blog : bien choisir"
+excerpt: "Déléguer vos articles libère du temps, à condition de bien choisir. Ce qu'il faut exiger d'un rédacteur, les pièges à éviter et les points à fixer au devis."
 date: "2026-07-29"
 readTime: 8
 tag: "SEO"

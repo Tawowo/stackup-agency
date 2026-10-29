@@ -1,6 +1,7 @@
 ---
 title: "Instagram pour artisans : montrer son savoir-faire et trouver des clients"
-excerpt: "Les artisans qui documentent leur travail sur Instagram génèrent des demandes qualifiées sans publicité. Guide pratique : contenu, fréquence, hashtags locaux."
+seoTitle: "Instagram pour artisan : trouver des clients locaux"
+excerpt: "Quoi publier, à quel rythme, quels hashtags locaux : comment un artisan montre son savoir-faire sur Instagram pour recevoir des demandes. Guide pratique."
 date: "2026-07-30"
 updated: "2026-07-30"
 readTime: 6

@@ -1,6 +1,7 @@
 ---
 title: "Quitter Wix : migrer son site sans perdre son SEO"
-excerpt: "Migrer un site Wix sans perdre son référencement demande une méthode précise : redirections 301, préservation du contenu indexé, et vérification post-migration."
+seoTitle: "Quitter Wix sans perdre son référencement : méthode 301"
+excerpt: "Wix ne s'exporte pas : recensez vos URL, redirigez chacune en 301, republiez un contenu équivalent et vérifiez. Cinq étapes pour garder votre place."
 date: "2026-08-17"
 publishAt: "2026-11-07"
 readTime: 8

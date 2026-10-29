@@ -1,6 +1,7 @@
 ---
 title: "Stratégie longue traîne : capter des clients locaux pour les TPE"
-excerpt: "La longue traîne SEO est la stratégie idéale pour les TPE locales. Moins de concurrence, plus d'intention d'achat : découvrez comment trouver et exploiter ces mots-clés."
+seoTitle: "Mots-clés longue traîne : gagner des clients locaux en TPE"
+excerpt: "Un électricien ne gagnera pas sur « électricien », mais sur des requêtes précises avec sa ville. Comment trouver ces mots-clés et écrire les pages."
 date: "2026-03-10"
 readTime: 7
 tag: "SEO"
@@ -84,7 +85,7 @@ La règle de base : une page = une intention de recherche. Ne créez pas une pag
 **Structure pour une page longue traîne locale :**
 
 ```
-Titre H1 : [Service spécifique] à [Ville] — [Bénéfice clé]
+Titre H1 : [Service spécifique] à ⟨Ville⟩ — [Bénéfice clé]
 Ex: "Installation tableau électrique à Tours : devis gratuit en 48h"
 
 Introduction : répondez à la question principale en 2-3 phrases

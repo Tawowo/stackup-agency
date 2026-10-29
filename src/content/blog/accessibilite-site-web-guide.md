@@ -1,8 +1,9 @@
 ---
 title: "Site accessible (RGAA) : obligations et bonnes pratiques pour une TPE"
-excerpt: "Le RGAA est le référentiel français d'accessibilité numérique, et son périmètre d'obligation s'étend progressivement au-delà du seul secteur public. Les 8 points d'accessibilité les plus impactants pour une TPE."
+seoTitle: "Accessibilité d'un site (RGAA) : 8 points pour une TPE"
+excerpt: "RGAA, WCAG, directive européenne : ce qui concerne une TPE et les huit points d'accessibilité à traiter d'abord (alt, contraste, clavier), avec les tests."
 date: "2026-07-26"
-updated: "2027-02-01"
+updated: "2026-10-29"
 readTime: 7
 tag: "Performance Web"
 category: "technique"

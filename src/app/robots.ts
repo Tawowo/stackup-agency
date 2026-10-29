@@ -12,6 +12,5 @@ export default function robots(): MetadataRoute.Robots {
       { userAgent: ROBOTS_IA, allow: '/', disallow: TECHNIQUE },
     ],
     sitemap: `${ORIGINE}/sitemap.xml`,
-    host: ORIGINE,
   }
 }
