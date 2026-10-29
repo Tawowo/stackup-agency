@@ -53,12 +53,11 @@ Une fois la fiche vérifiée, vous pouvez enrichir chaque rubrique. La logique g
 
 ### Comment ajouter son logo, des photos et une vidéo ?
 
-Dans la rubrique photos, vous trouvez les types « logo », « couverture », « extérieur », « intérieur », « équipe », « produits ». Ajoutez au moins un logo net (carré, bien lisible), une photo de couverture représentative et plusieurs images réelles de votre activité. Pour la vidéo, utilisez le même endroit : une séquence courte, tournée simplement, de votre atelier, de vos plats ou de votre équipe. Les formats et durées acceptés sont donnés par Google. Évitez les images de banque d’images : les clients voient la différence. Pour le choix des images et des catégories, voyez [optimiser sa fiche : catégories et photos](/blog/optimiser-fiche-google-business-categories-photos).
+Dans la rubrique photos, vous trouvez les types « logo », « couverture », « extérieur », « intérieur », « équipe », « produits ». Ajoutez au moins un logo net (carré, bien lisible), une photo de couverture représentative et plusieurs images réelles de votre activité. Pour la vidéo, utilisez le même endroit : une séquence courte, tournée simplement, de votre atelier, de vos plats ou de votre équipe. Les formats et durées acceptés sont donnés par Google. Pour le choix des images et des catégories, voyez [optimiser sa fiche : catégories et photos](/blog/optimiser-fiche-google-business-categories-photos).
 
 ### Comment ajouter des services et des produits ?
 
-Les rubriques « services » et « produits » vous permettent de présenter ce que vous proposez. Pour un restaurant, ce sera le menu et les plats ; pour un artisan, vos prestations ; pour une boutique, vos produits phares. Soyez concret : un nom clair, une courte description, éventuellement un prix indicatif, que vous pouvez aussi ne pas afficher si cela vous gêne. Gardez-les à jour : une fiche avec des services obsolètes dessert plus qu’elle ne sert.
-
+Les rubriques « services » et « produits » vous permettent de présenter ce que vous proposez. Pour un restaurant, ce sera le menu et les plats ; pour un artisan, vos prestations ; pour une boutique, vos produits phares. Soyez concret : un nom clair, une courte description, éventuellement un prix indicatif, que vous pouvez aussi ne pas afficher si cela vous gêne.
 ### Comment ajouter les attributs ?
 
 Les attributs sont des étiquettes que Google propose selon votre catégorie : accessibilité pour personnes à mobilité réduite, paiement sans contact, Wi-Fi, accueil des enfants, devis gratuit, intervention le week-end. Cochez ce qui est vrai et seulement cela. Ils servent aux clients à filtrer et peuvent se retrouver dans les résultats.

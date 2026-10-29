@@ -1,7 +1,7 @@
 import type { ContenuLocal } from './types'
 
 export const FAQ_METIERS: Record<string, ContenuLocal['faq']> = {
-  facadier: [
+  'facadier': [
     {
       q: `Comment un façadier apparaît-il dans la carte Google Maps de sa ville ?`,
       a: `Créez ou revendiquez votre fiche Google, puis choisissez comme catégorie principale celle qui décrit votre cœur de métier, par exemple le ravalement ou les travaux de façade, et complétez avec des catégories secondaires pour l’enduit ou l’isolation. Si vous ne recevez personne dans un local, déclarez plutôt une zone d’intervention et masquez l’adresse. Ajoutez des photos de chantiers terminés, vos horaires et le lien vers votre site. Les avis des syndics et des propriétaires comptent beaucoup : demandez-les à la réception des travaux, quand le résultat est encore sous leurs yeux.`,
@@ -32,7 +32,7 @@ export const FAQ_METIERS: Record<string, ContenuLocal['faq']> = {
     },
   ],
 
-  terrassier: [
+  'terrassier': [
     {
       q: `Comment une entreprise de terrassement ressort-elle sur Google Maps dans son secteur ?`,
       a: `Votre fiche Google doit porter la catégorie la plus proche de votre activité, entreprise de terrassement ou de travaux publics selon votre cas, et mentionner les zones où vous vous déplacez. Votre dépôt n’est pas un lieu d’accueil : masquez l’adresse si vous ne recevez pas de clients. Ajoutez des photos d’engins au travail, d’un terrain nivelé, d’une tranchée refermée proprement. Pour les avis, sollicitez les constructeurs et les maçons avec qui vous travaillez régulièrement : un commentaire d’un professionnel du chantier pèse autant que celui d’un particulier satisfait.`,
@@ -94,7 +94,7 @@ export const FAQ_METIERS: Record<string, ContenuLocal['faq']> = {
     },
   ],
 
-  kinesitherapeute: [
+  'kinesitherapeute': [
     {
       q: `Que faire pour qu’un kiné apparaisse en premier sur Google Maps près des patients ?`,
       a: `Choisissez la catégorie kinésithérapeute comme catégorie principale, puis ajoutez vos spécialités en catégories secondaires si Google les propose. Indiquez l’adresse, les horaires, l’accès pour les personnes à mobilité réduite et le lien de réservation. Ajoutez des photos du plateau technique et de la salle de soins, jamais de patients identifiables. Pour les avis, un panneau discret à l’accueil ou un message après la dernière séance de la prescription fonctionne bien. En cas d’avis négatif, répondez sans confirmer que la personne est suivie chez vous : le secret professionnel vaut aussi en public.`,
@@ -125,7 +125,7 @@ export const FAQ_METIERS: Record<string, ContenuLocal['faq']> = {
     },
   ],
 
-  dentiste: [
+  'dentiste': [
     {
       q: `Comment un chirurgien-dentiste peut-il figurer en bonne place sur Google Maps ?`,
       a: `Sélectionnez la catégorie dentiste, et celle d’orthodontiste ou de chirurgien-dentiste si votre exercice le justifie, puis remplissez adresse, horaires, accessibilité du cabinet et lien de prise de rendez-vous. Des photos du cabinet, de la salle d’attente et du fauteuil rassurent les personnes anxieuses. Pour les avis, un petit carton à l’accueil ou un courriel après un soin termine la visite sur une note positive. Si un patient laisse un commentaire négatif, répondez avec calme et sans citer son dossier : le secret professionnel s’applique à vos réponses publiques.`,
@@ -187,7 +187,7 @@ export const FAQ_METIERS: Record<string, ContenuLocal['faq']> = {
     },
   ],
 
-  veterinaire: [
+  'veterinaire': [
     {
       q: `Comment une clinique vétérinaire apparaît-elle sur Google Maps quand on cherche en urgence ?`,
       a: `La catégorie vétérinaire doit être renseignée en principale. Indiquez les horaires d’ouverture, ceux des consultations sans rendez-vous si vous en proposez, et un numéro qui répond vraiment. Précisez en description les animaux pris en charge : chiens, chats, nouveaux animaux de compagnie, chevaux, animaux d’élevage. Pour les nuits et week-ends, indiquez la marche à suivre si la clinique ne gère pas elle-même ses urgences. Des photos de la clinique et de l’accueil rassurent les propriétaires. Répondez aux avis avec empathie, y compris à ceux qui évoquent un animal perdu, sans détailler le dossier médical.`,
@@ -218,7 +218,7 @@ export const FAQ_METIERS: Record<string, ContenuLocal['faq']> = {
     },
   ],
 
-  psychologue: [
+  'psychologue': [
     {
       q: `Un psychologue doit-il ouvrir une fiche Google et comment la remplir avec discrétion ?`,
       a: `C’est utile, car beaucoup de personnes cherchent un psychologue proche de chez elles, mais le cadre doit rester sobre. Choisissez la catégorie psychologue, indiquez l’adresse (ou masquez-la si vous recevez à domicile), vos jours de consultation et votre lien de prise de rendez-vous. Utilisez des photos du lieu, sans mise en scène. Concernant les avis, beaucoup de psychologues ne les sollicitent pas, par respect du cadre thérapeutique : c’est un choix légitime. Si un avis apparaît, répondez brièvement, sans confirmer qu’il s’agit d’un patient, conformément au secret professionnel.`,
@@ -249,7 +249,7 @@ export const FAQ_METIERS: Record<string, ContenuLocal['faq']> = {
     },
   ],
 
-  sophrologue: [
+  'sophrologue': [
     {
       q: `Comment un sophrologue qui travaille à plusieurs endroits peut-il être trouvé sur Google Maps ?`,
       a: `Si vous recevez dans un cabinet fixe, créez une fiche à cette adresse avec la catégorie la plus proche de votre pratique et vos horaires. Si vous donnez des séances dans des salles louées, mieux vaut éviter de créer plusieurs fiches pour des lieux que vous ne contrôlez pas : Google les refuse souvent. Déclarez plutôt une zone d’intervention et décrivez les lieux dans la présentation. Ajoutez des photos de la salle, sans personne. Pour les avis, un message après un cycle de séances, avec un lien direct vers votre fiche, aide souvent à en obtenir.`,
@@ -280,7 +280,7 @@ export const FAQ_METIERS: Record<string, ContenuLocal['faq']> = {
     },
   ],
 
-  naturopathe: [
+  'naturopathe': [
     {
       q: `Comment un naturopathe peut-il se faire trouver dans la carte Google de sa ville ?`,
       a: `Créez une fiche avec la catégorie qui se rapproche le plus de votre pratique : Google n’en propose pas toujours une exacte, choisissez la plus parlante parmi les options affichées. Renseignez votre adresse de cabinet ou votre zone d’intervention, les horaires de consultation et le lien de réservation. Ajoutez des photos du cabinet et de votre espace d’accueil. Les avis aident beaucoup, mais veillez à ce qu’ils ne contiennent pas d’affirmations de guérison : vous ne pouvez pas les modifier, mais vous pouvez répondre avec une mise au point sobre qui rappelle votre cadre.`,

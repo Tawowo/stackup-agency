@@ -102,6 +102,3 @@ En vente à distance, le droit de rétractation s'applique en principe, avec des
 
 **Comment envoyer des vêtements à ses clients sans se ruiner ?**
 Comparez les transporteurs et les relais selon le poids de vos colis, et proposez le retrait en boutique, qui supprime le coût d'envoi. Un barème simple affiché sur le site évite les mauvaises surprises.
-
-**Quelle différence concrète entre saison creuse et vrai déclin ?**
-Une saison creuse revient à date fixe et se prépare ; un déclin s'installe d'une année sur l'autre malgré les saisons. Comparez vos mêmes mois sur trois ans pour trancher.

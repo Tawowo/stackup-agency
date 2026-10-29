@@ -114,6 +114,10 @@ Dans la [Search Console](/lexique/search-console), des rapports « Amélioration
 
 Attention : « valide » ne veut pas dire « affiché ». Un balisage correct peut très bien ne produire aucun résultat enrichi, car Google choisit au cas par cas.
 
+### Que faire quand le test signale un problème ?
+
+Lisez le message au lieu de le subir : il nomme la propriété fautive et la ligne concernée. Corrigez d’abord les erreurs, qui bloquent l’éligibilité, puis jugez les avertissements au cas par cas. Après correction, republiez la page, relancez le test, puis demandez une nouvelle exploration dans la Search Console. Gardez une trace de ce que vous avez changé, pour savoir quoi annuler en cas de régression.
+
 ## Quelles erreurs éviter ?
 
 - **Balisage de contenu invisible.** Marquer une information qui n’apparaît pas sur la page est contraire aux consignes de Google.

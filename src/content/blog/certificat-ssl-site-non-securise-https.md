@@ -125,8 +125,5 @@ Non, il protège la transmission entre le visiteur et le serveur, pas le site lu
 **Le certificat SSL est-il valable pour tous mes sous-domaines ?**
 Pas forcément : un certificat classique couvre une adresse précise, un certificat « wildcard » couvre tous les sous-domaines d'un domaine. Vérifiez ce qu'il couvre.
 
-**Combien de temps dure un certificat gratuit ?**
-Sa durée est courte et il est conçu pour être renouvelé automatiquement ; vérifiez la date indiquée dans les détails du certificat plutôt que de vous fier à un chiffre fixe.
-
 **Dois-je réindexer mon site après le passage en HTTPS ?**
 Il faut déclarer la version HTTPS dans la Search Console, rediriger les anciennes adresses et mettre à jour le plan du site ; Google se charge ensuite de remplacer les anciennes adresses dans ses résultats.
