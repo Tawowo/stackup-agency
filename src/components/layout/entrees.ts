@@ -12,6 +12,7 @@ export const RESSOURCES = [
   { href: '/ressources/cahier-des-charges', nom: 'Cahier des charges', ligne: 'Décrivez votre projet en détail, étape par étape' },
   { href: '/blog', nom: 'Le journal', ligne: 'Guides, réponses précises et comparatifs' },
   { href: '/outils', nom: 'Outils gratuits', ligne: 'Audit, mentions légales, devis, checklist facture électronique' },
+  { href: '/lexique', nom: 'Lexique', ligne: 'Les mots du web, du SEO et de la gestion, expliqués simplement' },
   { href: '/faq', nom: 'Questions fréquentes', ligne: 'Prix, propriété du code, hébergement, suivi' },
   { href: '/zones-intervention', nom: 'Zones d’intervention', ligne: 'Touraine, 11 communautés de communes, visio partout' },
   { href: '/parrainage', nom: 'Parrainage', ligne: 'Recommandez-nous, vous y gagnez aussi' },

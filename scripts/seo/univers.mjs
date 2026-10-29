@@ -13,6 +13,7 @@
  */
 import fs from 'node:fs'
 import path from 'node:path'
+import { etendre } from './extensions.mjs'
 import { RACINE, chargerMetiers, chargerCommunes37, detecteurMetier, detecteurLieu, VILLES_PAGES, DEPARTEMENTS, PROCHE, EPCI, sansAccent, minuscule, csv, lireCsv } from './lib.mjs'
 
 const metiers = chargerMetiers()
@@ -24,7 +25,7 @@ const parSlug = Object.fromEntries(metiers.map((m) => [m.slug, m]))
 const lignes = new Map() // clé normalisée → ligne
 function ajouter(q, extra) {
   const requete = minuscule(q).replace(/\s+\?$/, '').replace(/^[-–•\s]+/, '')
-  if (requete.length < 6 || requete.split(' ').length > 16) return
+  if (requete.length < 3 || requete.split(' ').length > 16) return
   const cle = sansAccent(requete).replace(/[^a-z0-9 ]/g, ' ').replace(/\s+/g, ' ').trim()
   if (lignes.has(cle)) {
     const l = lignes.get(cle)
@@ -149,6 +150,9 @@ for (const m of metiers) {
   for (const t of PROBLEMES[m.groupe] ?? PROBLEMES.services) ajouter(t.replace('{m}', m.nom), { source: 'pas-encore-conscient', metier: m.slug, patron: 'problème×métier', etape_src: 'pas encore conscient' })
 }
 
+/* ───────── 6. Extensions : têtes de requête, lexique, modificateurs, métiers, communes, comparatifs ───────── */
+const nbExtensions = etendre(ajouter, { metiers, communes, SERVICES })
+
 /* ───────── Classement : thème, étape, intention, type, difficulté, page cible ───────── */
 const TH = [
   ['facture électronique', /facture electronique|facturelec|factur-x|e-?reporting|plateforme agreee|pdp|\bpa\b.*facture/],
@@ -249,7 +253,7 @@ for (const l of lignes.values()) {
   const intention = intentionDe(l.requete, lieu, l.intention_src, marque)
   sortie.push({
     requete: l.requete, intention, etape, theme, metier: metier ? parSlug[metier]?.nom ?? metier : '', metier_slug: metier, lieu: lieu?.nom ?? '', lieu_type: lieu?.type ?? '', lieu_slug: lieu?.slug ?? '', epci: lieu?.epci ?? '',
-    type, volume: '', difficulte: difficulteDe(type, lieu, l.requete, metier), page_cible: pageCible(l.requete, theme, metier, lieu, type, marque, l.source) ?? '', source: l.source,
+    type, volume: '', difficulte: difficulteDe(type, lieu, l.requete, metier), page_cible: l.page ?? pageCible(l.requete, theme, metier, lieu, type, marque, l.source) ?? '', source: l.source,
     impressions_gsc: l.impressions_gsc ?? '', position_gsc: l.position_gsc ?? '', patron: l.patron ?? '',
   })
 }
@@ -260,6 +264,6 @@ fs.mkdirSync(path.join(RACINE, 'docs/seo'), { recursive: true })
 const COL = ['requete', 'intention', 'etape', 'theme', 'metier', 'lieu', 'type', 'volume', 'difficulte', 'page_cible', 'source', 'impressions_gsc', 'position_gsc', 'metier_slug', 'lieu_type', 'lieu_slug', 'epci', 'patron']
 fs.writeFileSync(path.join(RACINE, 'docs/seo/univers-mots-cles.csv'), csv(sortie, COL))
 const compte = (k) => Object.entries(sortie.reduce((a, r) => ((a[r[k]] = (a[r[k]] ?? 0) + 1), a), {})).sort((a, b) => b[1] - a[1]).map(([x, n]) => `${x || '∅'}:${n}`).join('  ')
-console.log(`${sortie.length} requêtes (GSC ${nbGsc}, questions/pas-encore-conscient ${nbQuestions} + gabarits)`)
+console.log(`${sortie.length} requêtes (GSC ${nbGsc}, questions/pas-encore-conscient ${nbQuestions} + gabarits, ${nbExtensions} formulations d'extension générées avant dédoublonnage)`)
 for (const k of ['source', 'intention', 'etape', 'type', 'difficulte', 'theme']) console.log(k.padEnd(10), compte(k))
 console.log('avec page cible directe :', sortie.filter((r) => r.page_cible).length, '· à résoudre par grappe :', sortie.filter((r) => !r.page_cible).length)

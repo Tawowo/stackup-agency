@@ -171,6 +171,9 @@ export default function Footer() {
                 </li>
               ))}
               <li>
+                <Link href="/lexique">Lexique</Link>
+              </li>
+              <li>
                 <Link href="/comparatif/wix-wordpress-sur-mesure">Wix, WordPress ou sur mesure</Link>
               </li>
             </ul>

@@ -9,6 +9,7 @@ import { SERVICES } from '@/data/services'
 import { SERVICES_LOCAUX } from '@/data/services-locaux'
 import { PROJETS } from '@/experiences/galerie/projets'
 import { RAYONS, tousLesArticles } from '@/lib/blog'
+import { toutesLesEntrees } from '@/lib/lexique'
 import { ZONES } from '@/data/zones'
 
 export interface Route {
@@ -48,6 +49,7 @@ export const PAGES_FIXES: Route[] = [
   { chemin: '/outils/calculateur-clients-perdus', nom: 'Calculateur de clients perdus', groupe: 'outils', priorite: 0.6 },
   { chemin: '/outils/checklist-facture-electronique', nom: 'Checklist facture électronique', groupe: 'outils', priorite: 0.6 },
   { chemin: '/ressources', nom: 'Ressources', groupe: 'outils', priorite: 0.5 },
+  { chemin: '/lexique', nom: 'Lexique', groupe: 'outils', priorite: 0.6 },
   { chemin: '/ressources/cahier-des-charges', nom: 'Cahier des charges', groupe: 'outils', priorite: 0.5 },
   { chemin: '/ressources/documents', nom: 'Documents PDF', groupe: 'outils', priorite: 0.5 },
   { chemin: '/agence-web', nom: 'Agence web : les villes', groupe: 'local', priorite: 0.6 },
@@ -77,6 +79,7 @@ export function routesDynamiques(): Route[] {
     ...METIERS.map((m) => ({ chemin: `/creation-site-internet/${m.slug}`, nom: m.metier, groupe: 'local' as const, priorite: 0.5 })),
     ...[...categories].map((c) => ({ chemin: `/blog/categorie/${c}`, nom: c, groupe: 'journal' as const, priorite: 0.4 })),
     ...articles.map((a) => ({ chemin: `/blog/${a.slug}`, nom: a.titre, groupe: 'journal' as const, priorite: 0.5 })),
+    ...toutesLesEntrees().map((e) => ({ chemin: `/lexique/${e.slug}`, nom: `Lexique : ${e.terme}`, groupe: 'outils' as const, priorite: 0.5 })),
   ]
 }
 
@@ -88,7 +91,7 @@ export const FAMILLES_SITEMAP: FamilleSitemap[] = ['pages', 'services', 'metiers
 export function familleSitemap(chemin: string): FamilleSitemap {
   if (chemin.startsWith('/creation-site-internet')) return 'metiers'
   if (chemin.startsWith('/agence-web') || chemin.startsWith('/zones-intervention')) return 'zones'
-  if (chemin.startsWith('/blog') || chemin.startsWith('/ressources')) return 'ressources'
+  if (chemin.startsWith('/blog') || chemin.startsWith('/ressources') || chemin.startsWith('/lexique')) return 'ressources'
   if (chemin.startsWith('/services') || chemin.startsWith('/solutions') || chemin.startsWith('/comparatif') || chemin.startsWith('/outils') || chemin.startsWith('/tarifs')) return 'services'
   return 'pages'
 }

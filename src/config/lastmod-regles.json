@@ -22,6 +22,7 @@
   {"prefixe": "/comparatif", "cle": "comparatif", "chemins": ["src/app/comparatif"]},
   {"prefixe": "/parrainage", "cle": "parrainage", "chemins": ["src/app/parrainage", "src/experiences/ressources/Parrainage.tsx"]},
   {"prefixe": "/outils", "cle": "outils", "chemins": ["src/app/outils", "src/experiences/outils"]},
+  {"prefixe": "/lexique", "cle": "lexique", "chemins": ["src/app/lexique", "src/lib/lexique.ts"]},
   {"prefixe": "/ressources", "cle": "ressources", "chemins": ["src/app/ressources", "src/experiences/ressources", "src/config/documents.generated.ts"]},
   {"prefixe": "/agence-web/departement", "cle": "departements", "chemins": ["src/data/departements.ts", "src/app/agence-web/departement", "src/gabarits/locale"]},
   {"prefixe": "/agence-web", "cle": "villes", "chemins": ["src/data/villes.ts", "src/data/enrichissements/villes.ts", "src/app/agence-web", "src/gabarits/locale"]},

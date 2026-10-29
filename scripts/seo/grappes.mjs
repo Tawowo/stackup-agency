@@ -213,7 +213,7 @@ for (const p of classees) {
   p.famille = familleDe(p.url)
   const slugArticle = p.url.startsWith('/blog/') ? p.url.slice(6) : ''
   const existeArticle = slugArticle && articles.some((a) => a.slug === slugArticle)
-  if (p.nouvelle) {
+  if (p.nouvelle && !existeArticle) {
     rangNouveau++
     p.statut = rangNouveau <= LOT1 ? 'à créer — lot 1 (cette mission)' : 'planifiée (calendrier 12 mois)'
     p.rang = rangNouveau
@@ -238,14 +238,14 @@ fs.writeFileSync(
 // Plan de publication : 2 contenus par semaine pendant 12 mois (104 créneaux), du plus fort potentiel au plus faible :
 // 1. les sujets planifiés ; 2. les grappes volumineuses des sujets « fourre-tout » (un article dédié par grappe) ;
 // 3. les guides par métier des métiers les plus demandés.
-const planifiees = classees.filter((p) => p.statut.startsWith('planifiée')).map((p) => ({ url: p.url, type: 'article', theme: p.theme, requete: p.principale, grappes: p.grappes, potentiel: Math.round(p.score) }))
+const planifiees = classees.filter((p) => p.statut.startsWith('planifiée') || p.statut.startsWith('à créer')).map((p) => ({ url: p.url, type: 'article', theme: p.theme, requete: p.principale, grappes: p.grappes, potentiel: Math.round(p.score) }))
 const dediees = grappes
-  .filter((g) => g.cible.startsWith('/blog/') && g.membres.length >= 8 && g.statut !== 'planifiée (calendrier 12 mois)')
+  .filter((g) => g.cible.startsWith('/blog/') && !g.metier && g.membres.length >= 8 && g.statut !== 'planifiée (calendrier 12 mois)' && !fs.existsSync(path.join(RACINE, 'src/content/blog', `${slugifier(g.principale).split('-').slice(0, 9).join('-')}.md`)))
   .sort((a, b) => b.score - a.score)
   .slice(0, 80)
   .map((g) => ({ url: `/blog/${slugifier(g.principale).split('-').slice(0, 9).join('-')}`, type: 'article (grappe dédiée)', theme: g.theme, requete: g.principale, grappes: 1, potentiel: Math.round(g.score) }))
 const guidesMetier = classees
-  .filter((p) => p.famille === 'métier')
+  .filter((p) => p.famille === 'métier' && !fs.existsSync(path.join(RACINE, 'src/content/blog', `guide-site-internet-${p.url.split('/').pop()}.md`)))
   .slice(0, 20)
   .map((p) => ({ url: `/blog/guide-site-internet-${p.url.split('/').pop()}`, type: 'guide métier', theme: 'création site', requete: `guide du site internet : ${p.url.split('/').pop().replace(/-/g, ' ')}`, grappes: p.grappes, potentiel: Math.round(p.score / 2) }))
 const file = [...planifiees, ...dediees, ...guidesMetier].sort((a, b) => b.potentiel - a.potentiel).slice(0, 104)
@@ -261,3 +261,19 @@ const par = (k) => Object.entries(classees.reduce((a, p) => ((a[p[k]] = (a[p[k]]
 console.log(`${rows.length} requêtes → ${grappes.length} grappes → ${classees.length} pages cibles`)
 console.log('pages par famille :', par('famille'))
 console.log('pages par statut  :', par('statut'))
+
+/* ───────── Briefs de rédaction des pages « à créer » (scripts/seo/briefs/<slug>.json) ───────── */
+const CATEGORIE = { 'création site': 'creation', 'référencement': 'seo', 'référencement local': 'seo-local', 'Google Business': 'seo-local', 'e-commerce': 'ecommerce', 'logiciel de gestion': 'applications-metier', 'IA et automatisation': 'ia', 'facture électronique': 'juridique', 'obligations légales': 'juridique', 'maintenance et sécurité': 'technique', 'prix et devis': 'creation', 'visibilité et clients': 'marketing', "gestion d'entreprise": 'strategie', refonte: 'creation' }
+if (process.argv.includes('--briefs')) {
+  fs.mkdirSync(path.join(RACINE, 'scripts/seo/briefs'), { recursive: true })
+  let nb = 0
+  for (const p of classees.filter((q) => q.statut.startsWith('à créer'))) {
+    const x = sujetParUrl.get(p.url)
+    if (!x || !p.url.startsWith('/blog/')) continue
+    const reqs = [...new Set(grappes.filter((g) => g.cible === p.url).flatMap((g) => g.membres).sort((a, b) => b.poids - a.poids).map((m) => m.requete))].slice(0, 60)
+    const brief = { slug: x.slug, titre: x.titre, theme: x.theme, type: x.type === 'comparatif' ? 'guide' : x.type, categorie: CATEGORIE[x.theme] ?? 'creation', requetes: reqs }
+    fs.writeFileSync(path.join(RACINE, 'scripts/seo/briefs', `${x.slug}.json`), JSON.stringify(brief, null, 1))
+    nb++
+  }
+  console.log(nb, 'briefs écrits dans scripts/seo/briefs/')
+}

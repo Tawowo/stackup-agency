@@ -1,0 +1,30 @@
+{
+ "slug": "certificat-ssl-site-non-securise-https",
+ "titre": "Site « non sécurisé » : certificat SSL et HTTPS",
+ "theme": "maintenance et sécurité",
+ "type": "question",
+ "categorie": "technique",
+ "requetes": [
+  "qui peut me réparer mon certificat ssl",
+  "installation certificat ssl site internet",
+  "comment renouveler automatiquement un certificat ssl",
+  "certificat ssl obligatoire pour une boutique en ligne",
+  "comment passer son site en https",
+  "pourquoi un site sans https fait fuir les clients",
+  "mon site affiche non sécurisé que faire",
+  "faut-il payer pour un certificat ssl",
+  "quand expire le certificat de mon site",
+  "certificat ssl expiré comment renouveler",
+  "comment savoir si mon certificat ssl est valide",
+  "comment installer un certificat ssl sur son site",
+  "mon certificat ssl est expiré mon site est bloqué",
+  "certificat ssl gratuit ou payant quelle différence",
+  "faut-il un certificat ssl pour une boutique en ligne",
+  "mon certificat ssl ne se renouvelle pas automatiquement",
+  "c'est quoi la certification nf525 pour une caisse",
+  "mon site n'est pas en https que faire",
+  "pourquoi mon site est marqué non sécurisé dans le navigateur",
+  "pourquoi le cadenas est barré sur mon site",
+  "site https"
+ ]
+}

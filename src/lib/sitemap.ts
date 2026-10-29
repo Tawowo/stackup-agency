@@ -2,6 +2,7 @@ import { familleSitemap, toutesLesRoutes } from '@/config/routes'
 import { LASTMOD } from '@/config/lastmod.generated'
 import regles from '@/config/lastmod-regles.json'
 import { RAYONS, tousLesArticles } from '@/lib/blog'
+import { toutesLesEntrees } from '@/lib/lexique'
 import { ORIGINE } from '@/lib/seo'
 
 type Regle = { exact?: string; prefixe?: string; cle: string }
@@ -25,7 +26,10 @@ export interface EntreeSitemap {
 /** Les entrées d'un sitemap (une famille de pages) : uniquement des pages 200, indexables, sans redirection ; lastmod = vraie date de mise à jour. */
 export function entreesSitemap(famille: string): EntreeSitemap[] {
   const articles = tousLesArticles()
-  const dates = new Map(articles.map((a) => [`/blog/${a.slug}`, a.maj ?? a.date]))
+  const dates = new Map<string, string>([
+    ...articles.map((a): [string, string] => [`/blog/${a.slug}`, a.maj ?? a.date]),
+    ...toutesLesEntrees().map((e): [string, string] => [`/lexique/${e.slug}`, e.maj]),
+  ])
   const dernier = articles.map((a) => a.maj ?? a.date).sort().at(-1)
   const rayons = new Set(RAYONS.map((r) => `/blog/categorie/${r.id}`))
   return toutesLesRoutes()

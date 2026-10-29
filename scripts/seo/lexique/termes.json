@@ -1,0 +1,697 @@
+[
+ {
+  "slug": "site-web",
+  "terme": "site web",
+  "categorie": "web"
+ },
+ {
+  "slug": "site-vitrine",
+  "terme": "site vitrine",
+  "categorie": "web"
+ },
+ {
+  "slug": "site-one-page",
+  "terme": "site one page",
+  "categorie": "web"
+ },
+ {
+  "slug": "site-multi-pages",
+  "terme": "site multi-pages",
+  "categorie": "web"
+ },
+ {
+  "slug": "site-e-commerce",
+  "terme": "site e-commerce",
+  "categorie": "web"
+ },
+ {
+  "slug": "boutique-en-ligne",
+  "terme": "boutique en ligne",
+  "categorie": "web"
+ },
+ {
+  "slug": "cms",
+  "terme": "CMS",
+  "categorie": "web"
+ },
+ {
+  "slug": "wordpress",
+  "terme": "WordPress",
+  "categorie": "web"
+ },
+ {
+  "slug": "wix",
+  "terme": "Wix",
+  "categorie": "web"
+ },
+ {
+  "slug": "shopify",
+  "terme": "Shopify",
+  "categorie": "web"
+ },
+ {
+  "slug": "woocommerce",
+  "terme": "WooCommerce",
+  "categorie": "web"
+ },
+ {
+  "slug": "webflow",
+  "terme": "Webflow",
+  "categorie": "web"
+ },
+ {
+  "slug": "prestashop",
+  "terme": "PrestaShop",
+  "categorie": "web"
+ },
+ {
+  "slug": "nom-de-domaine",
+  "terme": "nom de domaine",
+  "categorie": "web"
+ },
+ {
+  "slug": "hebergement-web",
+  "terme": "hébergement web",
+  "categorie": "web"
+ },
+ {
+  "slug": "dns",
+  "terme": "DNS",
+  "categorie": "web"
+ },
+ {
+  "slug": "certificat-ssl",
+  "terme": "certificat SSL",
+  "categorie": "web"
+ },
+ {
+  "slug": "https",
+  "terme": "HTTPS",
+  "categorie": "web"
+ },
+ {
+  "slug": "responsive-design",
+  "terme": "responsive design",
+  "categorie": "web"
+ },
+ {
+  "slug": "mobile-first",
+  "terme": "mobile first",
+  "categorie": "web"
+ },
+ {
+  "slug": "ux",
+  "terme": "expérience utilisateur (UX)",
+  "categorie": "web"
+ },
+ {
+  "slug": "ui",
+  "terme": "interface utilisateur (UI)",
+  "categorie": "web"
+ },
+ {
+  "slug": "maquette-de-site",
+  "terme": "maquette de site",
+  "categorie": "web"
+ },
+ {
+  "slug": "charte-graphique",
+  "terme": "charte graphique",
+  "categorie": "web"
+ },
+ {
+  "slug": "front-end-et-back-end",
+  "terme": "front-end et back-end",
+  "categorie": "web"
+ },
+ {
+  "slug": "api",
+  "terme": "API",
+  "categorie": "web"
+ },
+ {
+  "slug": "application-web",
+  "terme": "application web",
+  "categorie": "web"
+ },
+ {
+  "slug": "pwa",
+  "terme": "PWA",
+  "categorie": "web"
+ },
+ {
+  "slug": "no-code",
+  "terme": "no-code",
+  "categorie": "web"
+ },
+ {
+  "slug": "site-sur-mesure",
+  "terme": "site sur mesure",
+  "categorie": "web"
+ },
+ {
+  "slug": "cahier-des-charges",
+  "terme": "cahier des charges",
+  "categorie": "web"
+ },
+ {
+  "slug": "refonte-de-site",
+  "terme": "refonte de site",
+  "categorie": "web"
+ },
+ {
+  "slug": "mise-en-production",
+  "terme": "mise en production",
+  "categorie": "web"
+ },
+ {
+  "slug": "maintenance-de-site",
+  "terme": "maintenance de site",
+  "categorie": "web"
+ },
+ {
+  "slug": "sauvegarde-de-site",
+  "terme": "sauvegarde de site",
+  "categorie": "web"
+ },
+ {
+  "slug": "formulaire-de-contact",
+  "terme": "formulaire de contact",
+  "categorie": "web"
+ },
+ {
+  "slug": "webmaster",
+  "terme": "webmaster",
+  "categorie": "web"
+ },
+ {
+  "slug": "developpeur-web-freelance",
+  "terme": "développeur web freelance",
+  "categorie": "web"
+ },
+ {
+  "slug": "agence-web",
+  "terme": "agence web",
+  "categorie": "web"
+ },
+ {
+  "slug": "seo",
+  "terme": "SEO",
+  "categorie": "seo"
+ },
+ {
+  "slug": "referencement-naturel",
+  "terme": "référencement naturel",
+  "categorie": "seo"
+ },
+ {
+  "slug": "sea",
+  "terme": "SEA",
+  "categorie": "seo"
+ },
+ {
+  "slug": "serp",
+  "terme": "SERP",
+  "categorie": "seo"
+ },
+ {
+  "slug": "balise-title",
+  "terme": "balise title",
+  "categorie": "seo"
+ },
+ {
+  "slug": "meta-description",
+  "terme": "meta description",
+  "categorie": "seo"
+ },
+ {
+  "slug": "balise-h1",
+  "terme": "balise H1",
+  "categorie": "seo"
+ },
+ {
+  "slug": "mot-cle",
+  "terme": "mot-clé",
+  "categorie": "seo"
+ },
+ {
+  "slug": "longue-traine",
+  "terme": "longue traîne",
+  "categorie": "seo"
+ },
+ {
+  "slug": "intention-de-recherche",
+  "terme": "intention de recherche",
+  "categorie": "seo"
+ },
+ {
+  "slug": "backlink",
+  "terme": "backlink",
+  "categorie": "seo"
+ },
+ {
+  "slug": "netlinking",
+  "terme": "netlinking",
+  "categorie": "seo"
+ },
+ {
+  "slug": "maillage-interne",
+  "terme": "maillage interne",
+  "categorie": "seo"
+ },
+ {
+  "slug": "ancre-de-lien",
+  "terme": "ancre de lien",
+  "categorie": "seo"
+ },
+ {
+  "slug": "sitemap-xml",
+  "terme": "sitemap XML",
+  "categorie": "seo"
+ },
+ {
+  "slug": "robots-txt",
+  "terme": "robots.txt",
+  "categorie": "seo"
+ },
+ {
+  "slug": "indexation",
+  "terme": "indexation",
+  "categorie": "seo"
+ },
+ {
+  "slug": "crawl",
+  "terme": "crawl",
+  "categorie": "seo"
+ },
+ {
+  "slug": "search-console",
+  "terme": "Search Console",
+  "categorie": "seo"
+ },
+ {
+  "slug": "google-analytics",
+  "terme": "Google Analytics",
+  "categorie": "seo"
+ },
+ {
+  "slug": "core-web-vitals",
+  "terme": "Core Web Vitals",
+  "categorie": "seo"
+ },
+ {
+  "slug": "lcp",
+  "terme": "LCP",
+  "categorie": "seo"
+ },
+ {
+  "slug": "taux-de-rebond",
+  "terme": "taux de rebond",
+  "categorie": "seo"
+ },
+ {
+  "slug": "taux-de-conversion",
+  "terme": "taux de conversion",
+  "categorie": "seo"
+ },
+ {
+  "slug": "balise-canonical",
+  "terme": "balise canonical",
+  "categorie": "seo"
+ },
+ {
+  "slug": "redirection-301",
+  "terme": "redirection 301",
+  "categorie": "seo"
+ },
+ {
+  "slug": "erreur-404",
+  "terme": "erreur 404",
+  "categorie": "seo"
+ },
+ {
+  "slug": "contenu-duplique",
+  "terme": "contenu dupliqué",
+  "categorie": "seo"
+ },
+ {
+  "slug": "donnees-structurees",
+  "terme": "données structurées",
+  "categorie": "seo"
+ },
+ {
+  "slug": "schema-org",
+  "terme": "schema.org",
+  "categorie": "seo"
+ },
+ {
+  "slug": "rich-snippet",
+  "terme": "rich snippet",
+  "categorie": "seo"
+ },
+ {
+  "slug": "e-e-a-t",
+  "terme": "E-E-A-T",
+  "categorie": "seo"
+ },
+ {
+  "slug": "algorithme-de-google",
+  "terme": "algorithme de Google",
+  "categorie": "seo"
+ },
+ {
+  "slug": "google-business-profile",
+  "terme": "Google Business Profile",
+  "categorie": "seo"
+ },
+ {
+  "slug": "pack-local",
+  "terme": "pack local",
+  "categorie": "seo"
+ },
+ {
+  "slug": "seo-local",
+  "terme": "SEO local",
+  "categorie": "seo"
+ },
+ {
+  "slug": "cannibalisation-de-mots-cles",
+  "terme": "cannibalisation de mots-clés",
+  "categorie": "seo"
+ },
+ {
+  "slug": "noindex",
+  "terme": "noindex",
+  "categorie": "seo"
+ },
+ {
+  "slug": "balise-alt",
+  "terme": "balise alt",
+  "categorie": "seo"
+ },
+ {
+  "slug": "position-zero",
+  "terme": "position zéro",
+  "categorie": "seo"
+ },
+ {
+  "slug": "avis-google",
+  "terme": "avis Google",
+  "categorie": "seo"
+ },
+ {
+  "slug": "citation-locale",
+  "terme": "citation locale",
+  "categorie": "seo"
+ },
+ {
+  "slug": "mentions-legales",
+  "terme": "mentions légales",
+  "categorie": "legal"
+ },
+ {
+  "slug": "cgv",
+  "terme": "CGV",
+  "categorie": "legal"
+ },
+ {
+  "slug": "cgu",
+  "terme": "CGU",
+  "categorie": "legal"
+ },
+ {
+  "slug": "rgpd",
+  "terme": "RGPD",
+  "categorie": "legal"
+ },
+ {
+  "slug": "cnil",
+  "terme": "CNIL",
+  "categorie": "legal"
+ },
+ {
+  "slug": "cookies",
+  "terme": "cookies",
+  "categorie": "legal"
+ },
+ {
+  "slug": "bandeau-cookies",
+  "terme": "bandeau cookies",
+  "categorie": "legal"
+ },
+ {
+  "slug": "politique-de-confidentialite",
+  "terme": "politique de confidentialité",
+  "categorie": "legal"
+ },
+ {
+  "slug": "droit-de-retractation",
+  "terme": "droit de rétractation",
+  "categorie": "legal"
+ },
+ {
+  "slug": "mediateur-de-la-consommation",
+  "terme": "médiateur de la consommation",
+  "categorie": "legal"
+ },
+ {
+  "slug": "rgaa",
+  "terme": "accessibilité web (RGAA)",
+  "categorie": "legal"
+ },
+ {
+  "slug": "siret",
+  "terme": "SIRET",
+  "categorie": "legal"
+ },
+ {
+  "slug": "siren",
+  "terme": "SIREN",
+  "categorie": "legal"
+ },
+ {
+  "slug": "code-ape",
+  "terme": "code APE",
+  "categorie": "legal"
+ },
+ {
+  "slug": "tva",
+  "terme": "TVA",
+  "categorie": "legal"
+ },
+ {
+  "slug": "franchise-en-base-de-tva",
+  "terme": "franchise en base de TVA",
+  "categorie": "legal"
+ },
+ {
+  "slug": "micro-entreprise",
+  "terme": "micro-entreprise",
+  "categorie": "legal"
+ },
+ {
+  "slug": "entreprise-individuelle",
+  "terme": "entreprise individuelle (EI)",
+  "categorie": "legal"
+ },
+ {
+  "slug": "devis",
+  "terme": "devis",
+  "categorie": "legal"
+ },
+ {
+  "slug": "facture",
+  "terme": "facture",
+  "categorie": "legal"
+ },
+ {
+  "slug": "facture-electronique",
+  "terme": "facture électronique",
+  "categorie": "legal"
+ },
+ {
+  "slug": "plateforme-agreee",
+  "terme": "plateforme agréée (PA)",
+  "categorie": "legal"
+ },
+ {
+  "slug": "factur-x",
+  "terme": "Factur-X",
+  "categorie": "legal"
+ },
+ {
+  "slug": "e-reporting",
+  "terme": "e-reporting",
+  "categorie": "legal"
+ },
+ {
+  "slug": "assurance-rc-pro",
+  "terme": "assurance RC Pro",
+  "categorie": "legal"
+ },
+ {
+  "slug": "garantie-decennale",
+  "terme": "garantie décennale",
+  "categorie": "legal"
+ },
+ {
+  "slug": "registre-des-traitements",
+  "terme": "registre des traitements",
+  "categorie": "legal"
+ },
+ {
+  "slug": "donnee-personnelle",
+  "terme": "donnée personnelle",
+  "categorie": "legal"
+ },
+ {
+  "slug": "logiciel-de-gestion",
+  "terme": "logiciel de gestion",
+  "categorie": "gestion"
+ },
+ {
+  "slug": "erp",
+  "terme": "ERP",
+  "categorie": "gestion"
+ },
+ {
+  "slug": "crm",
+  "terme": "CRM",
+  "categorie": "gestion"
+ },
+ {
+  "slug": "application-metier",
+  "terme": "application métier",
+  "categorie": "gestion"
+ },
+ {
+  "slug": "saas",
+  "terme": "SaaS",
+  "categorie": "gestion"
+ },
+ {
+  "slug": "automatisation",
+  "terme": "automatisation",
+  "categorie": "gestion"
+ },
+ {
+  "slug": "workflow",
+  "terme": "workflow",
+  "categorie": "gestion"
+ },
+ {
+  "slug": "chatbot",
+  "terme": "chatbot",
+  "categorie": "gestion"
+ },
+ {
+  "slug": "ia-generative",
+  "terme": "intelligence artificielle générative",
+  "categorie": "gestion"
+ },
+ {
+  "slug": "prompt",
+  "terme": "prompt",
+  "categorie": "gestion"
+ },
+ {
+  "slug": "tableau-de-bord",
+  "terme": "tableau de bord",
+  "categorie": "gestion"
+ },
+ {
+  "slug": "prise-de-rendez-vous-en-ligne",
+  "terme": "prise de rendez-vous en ligne",
+  "categorie": "gestion"
+ },
+ {
+  "slug": "click-and-collect",
+  "terme": "click and collect",
+  "categorie": "gestion"
+ },
+ {
+  "slug": "paiement-en-ligne",
+  "terme": "paiement en ligne",
+  "categorie": "gestion"
+ },
+ {
+  "slug": "stripe",
+  "terme": "Stripe",
+  "categorie": "gestion"
+ },
+ {
+  "slug": "3d-secure",
+  "terme": "3D Secure",
+  "categorie": "gestion"
+ },
+ {
+  "slug": "dropshipping",
+  "terme": "dropshipping",
+  "categorie": "gestion"
+ },
+ {
+  "slug": "marketplace",
+  "terme": "marketplace",
+  "categorie": "gestion"
+ },
+ {
+  "slug": "panier-moyen",
+  "terme": "panier moyen",
+  "categorie": "gestion"
+ },
+ {
+  "slug": "abandon-de-panier",
+  "terme": "abandon de panier",
+  "categorie": "gestion"
+ },
+ {
+  "slug": "newsletter",
+  "terme": "newsletter",
+  "categorie": "gestion"
+ },
+ {
+  "slug": "lead",
+  "terme": "lead",
+  "categorie": "gestion"
+ },
+ {
+  "slug": "landing-page",
+  "terme": "landing page",
+  "categorie": "gestion"
+ },
+ {
+  "slug": "cta",
+  "terme": "appel à l'action (CTA)",
+  "categorie": "gestion"
+ },
+ {
+  "slug": "test-a-b",
+  "terme": "test A/B",
+  "categorie": "gestion"
+ },
+ {
+  "slug": "kpi",
+  "terme": "KPI",
+  "categorie": "gestion"
+ },
+ {
+  "slug": "roi",
+  "terme": "retour sur investissement (ROI)",
+  "categorie": "gestion"
+ },
+ {
+  "slug": "persona",
+  "terme": "persona",
+  "categorie": "gestion"
+ },
+ {
+  "slug": "signature-electronique",
+  "terme": "signature électronique",
+  "categorie": "gestion"
+ },
+ {
+  "slug": "pointage-et-planning",
+  "terme": "pointage et planning",
+  "categorie": "gestion"
+ }
+]

@@ -25,6 +25,9 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="fr" className={`${poppins.variable} ${inter.variable} ${jetbrains.variable}`}>
+      <head>
+        <link rel="alternate" type="application/rss+xml" title="Le journal de Stackup Agency" href="/blog/feed.xml" />
+      </head>
       <body>
         <JsonLd data={[organisation(), siteWeb()]} />
         <SceneMount />
