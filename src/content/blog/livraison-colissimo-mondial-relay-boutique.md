@@ -4,7 +4,7 @@ seoTitle: "Colissimo ou Mondial Relay : livraison d'une boutique"
 excerpt: "Colissimo ou Mondial Relay, frais de port, point relais, colis perdu, produits alimentaires : organisez la livraison de votre petite boutique en ligne."
 date: "2026-10-29"
 updated: "2026-10-29"
-readTime: 12
+readTime: 14
 tag: "E-commerce"
 category: "ecommerce"
 type: "guide"

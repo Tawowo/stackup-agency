@@ -4,7 +4,7 @@ seoTitle: "Prise de rendez-vous en ligne : choisir son outil"
 excerpt: "Sans abonnement, sur votre site ou via une plateforme : comment choisir un outil de rendez-vous, éviter les doubles réservations et réduire les absences."
 date: "2026-10-29"
 updated: "2026-10-29"
-readTime: 12
+readTime: 14
 tag: "Applications métier"
 category: "applications-metier"
 type: "guide"
@@ -195,6 +195,3 @@ Prévoyez un temps tampon entre deux rendez-vous et des durées réalistes par p
 
 **Que faire des données de mes clients si je change d'outil ?**
 Exportez-les avant de résilier, dans un format lisible, et supprimez-les de l'ancien service. Vérifiez le droit d'export avant de vous engager.
-
-**Les rappels par e-mail suffisent-ils ?**
-Le SMS est lu plus vite, mais l'e-mail reste utile pour la confirmation détaillée (adresse, préparation, documents à apporter). Beaucoup d'entreprises combinent les deux.

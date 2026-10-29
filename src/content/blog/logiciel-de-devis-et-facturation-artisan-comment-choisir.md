@@ -1,10 +1,10 @@
 ---
 title: "Logiciel de devis et de facturation pour artisan : comment choisir"
 seoTitle: "Logiciel de devis et facturation artisan : comment choisir"
-excerpt: "Application de devis sur chantier, facture d'acompte, Chorus Pro, abonnement ou outil sur mesure : comparez les solutions de facturation pour artisan et TPE."
+excerpt: "Application de devis sur chantier, facture d'acompte, Chorus Pro, abonnement ou sur mesure : comparez les solutions de facturation pour artisan et TPE."
 date: "2026-10-29"
 updated: "2026-10-29"
-readTime: 12
+readTime: 13
 tag: "Applications métier"
 category: "applications-metier"
 type: "guide"
@@ -75,7 +75,7 @@ Pour choisir un outil, retenez :
 - **Un archivage** qui conserve l'original.
 - **La possibilité de changer** : un outil qui s'enferme sur ses propres formats sera pénible à quitter.
 
-Notre page [facture électronique](/services/facture-electronique) détaille ce que nous mettons en place, et la [checklist de préparation](/outils/checklist-facture-electronique) permet de faire le point en quelques minutes.
+Notre page [facture électronique](/services/facture-electronique) détaille ce que nous mettons en place, et une checklist de préparation permet de faire le point en quelques minutes.
 
 ### Quelle solution de facturation pour un auto-entrepreneur ?
 
@@ -169,7 +169,7 @@ Les limites du sur mesure sont réelles : un coût de départ, un travail de dé
 
 ### Combien coûte un outil de facturation sur mesure pour un artisan ?
 
-Aucun chiffre sérieux sans connaître le périmètre. Ce qui fait varier le prix : le nombre de types de documents (devis, acompte, situation, solde, avoir), les liaisons (site, comptabilité, plateformes publiques), les rôles utilisateurs, l'usage sur mobile et hors ligne, la reprise de vos données actuelles. Chez Stackup, un outil sur mesure démarre à partir de {{prix:outil}} € et le prix se fixe au devis ; l'[estimateur](/tarifs) donne un ordre de grandeur, et la page [logiciel de gestion](/services/logiciel-de-gestion) explique le fonctionnement.
+Aucun chiffre sérieux sans connaître le périmètre. Ce qui fait varier le prix : le nombre de types de documents (devis, acompte, situation, solde, avoir), les liaisons (site, comptabilité, plateformes publiques), les rôles utilisateurs, l'usage sur mobile et hors ligne, la reprise de vos données actuelles. Chez Stackup, un outil sur mesure démarre à partir de {{prix:outil}} € et le prix se fixe au devis ; l'estimateur de tarifs donne un ordre de grandeur, et la page [logiciel de gestion](/services/logiciel-de-gestion) explique le fonctionnement.
 
 ### Alternatives aux logiciels de facturation payants
 

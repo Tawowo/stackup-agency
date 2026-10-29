@@ -4,7 +4,7 @@ seoTitle: "Logiciel de gestion petite entreprise : guide pour TPE"
 excerpt: "Devis, rendez-vous, tableau de bord, espace client, outils d'IA et aides : comment choisir et relier les outils de gestion d'une TPE ou d'un artisan."
 date: "2026-10-29"
 updated: "2026-10-29"
-readTime: 12
+readTime: 14
 tag: "Applications métier"
 category: "applications-metier"
 type: "guide"
@@ -92,7 +92,7 @@ Même sans logiciel, un tableur simple suffit pour démarrer : date, client, obj
 
 ### Automatiser le suivi de trésorerie d'une TPE
 
-Le suivi de trésorerie utile répond à une question : « aurai-je assez sur le compte dans les prochaines semaines ? ». Il se construit avec : les encaissements attendus (factures émises et échéances), les décaissements prévus (fournisseurs, charges, impôts), et le solde actuel. L'automatisation consiste à alimenter les deux premières listes depuis vos factures et vos achats, et à laisser le tableur ou l'outil faire la projection. Le rapprochement bancaire et les écritures restent le travail de votre comptable.
+Le suivi utile répond à une question : « aurai-je assez sur le compte dans les prochaines semaines ? ». Il se construit avec les encaissements attendus (factures émises et échéances), les décaissements prévus (fournisseurs, charges, impôts) et le solde actuel. L'automatisation alimente les deux premières listes depuis vos factures et vos achats ; le rapprochement bancaire et les écritures restent le travail de votre comptable.
 
 ## Automatiser la gestion des rendez-vous, des devis et des interventions
 
@@ -122,7 +122,7 @@ Un espace client permet à vos clients de consulter leurs devis, factures, docum
 
 ### Quels outils pour être visible en ligne quand on est artisan ?
 
-Quatre éléments forment la base : un **site clair** qui présente vos métiers, votre zone et vos réalisations ; une **fiche Google Business** complète (voir [Google Business Profile : tout comprendre](/blog/fiche-google-business-tout-savoir)) ; des **avis** réguliers ; et quelques **annuaires** pertinents. La gestion de la **e-réputation** d'une TPE consiste à surveiller les avis et à y répondre : un tableau avec les nouveaux avis de la semaine et la réponse apportée suffit. Un [audit gratuit](/outils/audit-site) permet de voir où vous en êtes.
+Quatre éléments forment la base : un **site clair** qui présente vos métiers, votre zone et vos réalisations ; une **fiche Google Business** complète (voir [Google Business Profile : tout comprendre](/blog/fiche-google-business-tout-savoir)) ; des **avis** réguliers ; et quelques **annuaires** pertinents. La gestion de la **e-réputation** d'une TPE consiste à surveiller les avis et à y répondre : un tableau avec les nouveaux avis de la semaine et la réponse apportée suffit. Un audit gratuit du site permet de voir où vous en êtes.
 
 ### Existe-t-il un outil gratuit pour trouver des mots-clés ?
 
@@ -130,7 +130,7 @@ Oui, plusieurs approches gratuites : la **Search Console** montre les requêtes 
 
 ### Comment installer le suivi des clics sur le bouton « Appeler » ?
 
-Sur un site, le bouton « Appeler » est un lien téléphonique. Pour compter ses clics, on mesure l'événement de clic sur ce lien avec votre outil de mesure d'audience, directement ou via un gestionnaire de balises. Vous obtenez ainsi un nombre de clics par page et par période. Deux précautions : un clic n'est pas un appel abouti, et le suivi doit respecter la réglementation sur les traceurs (consentement ou outil exempté selon la configuration, voir cnil.fr). La fiche Google propose par ailleurs son propre compteur de clics sur « Appeler ».
+Sur un site, le bouton « Appeler » est un lien téléphonique. On mesure l'événement de clic avec votre outil de mesure d'audience, directement ou via un gestionnaire de balises, et vous obtenez un nombre de clics par page et par période. Deux précautions : un clic n'est pas un appel abouti, et le suivi doit respecter la réglementation sur les traceurs (voir cnil.fr). La fiche Google propose son propre compteur de clics sur « Appeler ».
 
 ### C'est quoi un pare-feu applicatif web ?
 
@@ -183,7 +183,7 @@ Notre offre d'outil sur mesure démarre à partir de {{prix:outil}} € selon le
 ## Questions fréquentes
 
 **Faut-il tout gérer dans un seul logiciel ?**
-Non. Un seul système paraît séduisant, mais il oblige à adopter sa logique. Des outils bien reliés, avec une donnée de référence claire, donnent souvent un meilleur résultat qu'un logiciel unique mal adapté.
+Non. Un seul système oblige à adopter sa logique. Des outils bien reliés, avec une donnée de référence claire, valent souvent mieux qu'un logiciel unique mal adapté.
 
 **Combien de temps faut-il pour mettre en place un outil de gestion ?**
 Cela dépend du périmètre et de la préparation de vos données. Pour un outil sur mesure, le calendrier se fixe ensemble avant de commencer, après avoir défini les premiers usages à couvrir.
@@ -193,6 +193,3 @@ Elles le sont si l'application est bien conçue : authentification, droits par u
 
 **Un logiciel de gestion est-il adapté à une seule personne ?**
 Oui, si le gain est réel : relances, facturation, suivi des devis. Mais pour une activité très simple, un tableur et un bon modèle peuvent suffire.
-
-**Comment former mon équipe à un nouvel outil ?**
-Introduisez-le sur un cas d'usage à la fois, avec une courte démonstration sur un vrai dossier, une personne référente et une période d'essai où l'ancien système reste disponible.

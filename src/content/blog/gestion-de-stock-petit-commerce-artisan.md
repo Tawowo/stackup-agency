@@ -4,7 +4,7 @@ seoTitle: "Gestion de stock pour artisan et petit commerce : méthode"
 excerpt: "Excel suffit-il ? Alerte de stock bas, inventaire, commandes et factures fournisseurs : une méthode simple pour artisans et commerçants, étape par étape."
 date: "2026-10-29"
 updated: "2026-10-29"
-readTime: 10
+readTime: 14
 tag: "Applications métier"
 category: "applications-metier"
 type: "guide"

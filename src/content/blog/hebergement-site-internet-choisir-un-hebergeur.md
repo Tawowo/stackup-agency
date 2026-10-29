@@ -4,7 +4,7 @@ seoTitle: "Choisir un hébergeur de site internet : critères et pièges"
 excerpt: "Hébergeur ou agence, OVH, o2switch ou IONOS, Wix, migration, support injoignable : les critères pour choisir et garder la main sur votre site."
 date: "2026-10-29"
 updated: "2026-10-29"
-readTime: 11
+readTime: 12
 tag: "Technique"
 category: "technique"
 type: "guide"

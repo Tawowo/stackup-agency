@@ -4,7 +4,7 @@ seoTitle: "Gérer ses salariés : heures, congés, embauche en TPE"
 excerpt: "Suivre les heures, gérer les congés, embaucher un premier salarié, calculer son taux horaire : le guide pratique du petit patron, avec les bons réflexes."
 date: "2026-10-29"
 updated: "2026-10-29"
-readTime: 12
+readTime: 14
 tag: "Artisans"
 category: "artisans"
 type: "guide"
@@ -87,7 +87,7 @@ Les étapes principales, à confirmer sur service-public.fr ou urssaf.fr :
 6. **Mettre en place la paie** : bulletin de salaire, déclarations sociales, mutuelle d'entreprise si elle est obligatoire dans votre branche. Beaucoup de patrons confient la paie à leur expert-comptable ou utilisent un service dédié.
 7. **Souscrire les assurances adaptées** et mettre à jour le document d'évaluation des risques.
 
-Pour une première embauche, un échange avec votre comptable ou votre chambre de métiers avant la signature évite la plupart des erreurs. Certaines aides à l'embauche existent selon les périodes ; leur disponibilité change, vérifiez sur les sites officiels.
+Avant de signer, un échange avec votre comptable ou votre chambre de métiers évite la plupart des erreurs. Des aides à l'embauche existent selon les périodes : vérifiez sur les sites officiels.
 
 ## Quand embaucher son premier salarié ?
 
@@ -186,9 +186,6 @@ C'est un problème courant pour un cabinet, un salon ou un commerce, et il se r�
 Un kiné ou un médecin dont les patients demandent l'adresse et les horaires par téléphone gagne en tranquillité en les affichant clairement. Si vous souhaitez un site qui répond à ces questions avant qu'elles ne soient posées, voyez [notre service de création de site](/services/creation-de-site-internet) ou [écrivez-nous](/contact).
 
 ## Questions fréquentes
-
-**Peut-on demander aux salariés de pointer avec leur téléphone personnel ?**
-C'est possible si le salarié est d'accord, mais délicat : vous ne pouvez pas l'exiger sans cadrage, et l'usage de son appareil doit rester proportionné. Un téléphone professionnel fourni par l'entreprise évite la question.
 
 **À partir de quel effectif les obligations changent-elles ?**
 Certaines obligations (représentation du personnel, affichages, règlement intérieur) dépendent de l'effectif. Les seuils sont fixés par le Code du travail ; consultez service-public.fr pour les valeurs en vigueur.

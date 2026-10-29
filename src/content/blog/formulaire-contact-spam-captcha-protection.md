@@ -4,7 +4,7 @@ seoTitle: "Formulaire de contact : bloquer le spam et le sécuriser"
 excerpt: "Spam, messages perdus, captcha, honeypot, chatbot : comment protéger votre formulaire de contact et être sûr de recevoir les vrais messages de vos clients."
 date: "2026-10-29"
 updated: "2026-10-29"
-readTime: 11
+readTime: 14
 tag: "Technique"
 category: "technique"
 type: "guide"

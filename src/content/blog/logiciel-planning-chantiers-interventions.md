@@ -4,7 +4,7 @@ seoTitle: "Logiciel de planning chantiers et interventions : choisir"
 excerpt: "Modèle Excel, application d'équipe, rapport d'intervention, rentabilité, appels manqués : organisez chantiers et interventions sans perdre de temps."
 date: "2026-10-29"
 updated: "2026-10-29"
-readTime: 12
+readTime: 14
 tag: "Applications métier"
 category: "applications-metier"
 type: "guide"
@@ -180,7 +180,7 @@ Cette question dépasse le planning, mais elle se pose à tout artisan en creux 
 
 Seul ou à deux, avec peu de chantiers : tableur ou agenda partagé et modèle de rapport. Équipe de quelques personnes avec chantiers en parallèle : application partagée de planning et de comptes rendus. Interventions nombreuses et récurrentes : application avec affectation, historique et facturation. Besoins particuliers ou plusieurs outils à relier : outil sur mesure.
 
-Un outil sur mesure se justifie quand vos règles (types de chantiers, documents, acomptes) ne rentrent pas dans un produit standard ou quand vous voulez relier planning, devis, factures et site. Notre offre démarre à partir de {{prix:outil}} € selon le périmètre, avec le prix fixé au devis ; le fonctionnement est décrit sur la page [logiciel de gestion](/services/logiciel-de-gestion). L'[estimateur](/tarifs) donne un ordre de grandeur, et vous pouvez [nous contacter](/contact). Limite à connaître : un outil sur mesure dépend d'un prestataire pour ses évolutions ; exigez les accès et les données dès le départ.
+Un outil sur mesure se justifie quand vos règles (types de chantiers, documents, acomptes) ne rentrent pas dans un produit standard ou quand vous voulez relier planning, devis, factures et site. Notre offre démarre à partir de {{prix:outil}} € selon le périmètre, avec le prix fixé au devis ; le fonctionnement est décrit sur la page [logiciel de gestion](/services/logiciel-de-gestion). Vous pouvez [nous contacter](/contact) pour un ordre de grandeur. Limite à connaître : un outil sur mesure dépend d'un prestataire pour ses évolutions ; exigez les accès et les données dès le départ.
 
 ## Questions fréquentes
 

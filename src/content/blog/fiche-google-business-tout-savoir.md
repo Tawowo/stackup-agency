@@ -4,7 +4,7 @@ seoTitle: "Google Business Profile : c'est quoi, gratuit, sans adresse"
 excerpt: "Google My Business, Google Business Profile, adresse cachée, performances, faux mails : les réponses claires pour créer et tenir votre fiche sans erreur."
 date: "2026-10-29"
 updated: "2026-10-29"
-readTime: 10
+readTime: 13
 tag: "SEO local"
 category: "seo-local"
 type: "guide"
