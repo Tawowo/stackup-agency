@@ -10,6 +10,7 @@ import { CONTENU_METIERS } from '@/data/enrichissements'
 import { conforme, conformeListe } from '@/lib/conformite'
 import { JsonLd, ORIGINE, faqPage, filAriane, meta, offreService } from '@/lib/seo'
 import { offre } from '@/config/site'
+import { METIERS_VOISINS } from '@/data/metiers-voisins'
 
 export const dynamicParams = false
 export function generateStaticParams() {
@@ -53,6 +54,8 @@ export default async function PageMetier({ params }: { params: Promise<{ metier:
     picto: cat.picto,
     teinte: cat.teinte,
   }
+  const voisins = METIERS_VOISINS[m.slug] ?? []
+  const listeVoisins = voisins.length > 1 ? `${voisins.slice(0, -1).join(', ')} et ${voisins.at(-1)}` : (voisins[0] ?? '')
   const proches = METIERS.filter((x) => x.categorie === m.categorie && x.slug !== m.slug).slice(0, 10)
   return (
     <>
@@ -79,6 +82,16 @@ export default async function PageMetier({ params }: { params: Promise<{ metier:
         titre={`Le site internet de votre ${m.metier.toLowerCase().replace(/s$/, '')}.`.replace('votre votre', 'votre')}
         intro={conforme(m.intro)}
         sections={local?.sections}
+        apres={
+          voisins.length > 0 ? (
+            <section className="su-loc__bloc">
+              <h2 className="su-loc__h2">Un métier voisin ? Cette page vous concerne aussi</h2>
+              <p className="su-loc__long">
+                Si vous êtes {listeVoisins}, vos besoins en ligne ressemblent à ceux décrits ici : être trouvé près de chez vous, montrer votre travail, faciliter la prise de contact. Le site, la fiche Google et les outils de gestion se construisent à partir de votre activité réelle : décrivez-la lors de l’échange et la démo de votre page d’accueil portera vos mots.
+              </p>
+            </section>
+          ) : undefined
+        }
         fonctions={{ titre: 'Ce qu’on y met', items: conformeListe(m.inclus).map((nom) => ({ nom })) }}
         liens={{
           titre: 'Pour aller plus loin',

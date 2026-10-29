@@ -64,7 +64,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
         maj={dateFr(e.maj)}
         sommaire={e.sommaire}
       >
-        <div dangerouslySetInnerHTML={{ __html: e.html }} />
+        <div className="su-corps-html" dangerouslySetInnerHTML={{ __html: e.html }} />
         {e.sources && e.sources.filter(sourceSure).length > 0 && (
           <section aria-labelledby="sources-t">
             <h2 id="sources-t">Sources officielles</h2>

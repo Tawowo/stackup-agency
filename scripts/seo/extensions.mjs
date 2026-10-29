@@ -96,6 +96,21 @@ const OUTILS = ['wix', 'wordpress', 'shopify', 'squarespace', 'webflow', 'jimdo'
 const FORMES_OUTIL = ['{o} avis', '{o} prix', '{o} tarif', '{o} alternative', '{o} gratuit', '{o} pour artisan', '{o} pour commerçant', '{o} ou site sur mesure', '{o} inconvénients', '{o} limites', '{o} abonnement', '{o} commission', '{o} migration', '{o} quitter', '{o} tuto', '{o} seo']
 const COMPARAISONS = [['wix', 'wordpress'], ['wix', 'shopify'], ['wordpress', 'shopify'], ['woocommerce', 'shopify'], ['prestashop', 'shopify'], ['squarespace', 'wix'], ['webflow', 'wordpress'], ['obat', 'tolteck'], ['obat', 'logiciel sur mesure'], ['tolteck', 'logiciel sur mesure'], ['planity', 'site sur mesure'], ['doctolib', 'site sur mesure'], ['thefork', 'réservation sur son site'], ['ovh', 'o2switch'], ['ionos', 'ovh'], ['chatgpt', 'gemini'], ['zapier', 'make'], ['excel', 'logiciel de gestion'], ['freelance', 'agence web'], ['site vitrine', 'boutique en ligne'], ['site sur mesure', 'cms'], ['wix', 'site sur mesure'], ['wordpress', 'site sur mesure'], ['shopify', 'site sur mesure']]
 
+
+/** Mots isolés du quotidien d'un petit pro en ligne, avec la page qui répond le mieux. */
+const MOTS_SEULS = [
+  ['devis', '/outils/modele-devis'], ['facture', '/services/facture-electronique'], ['facturation', '/services/logiciel-de-gestion'], ['planning', '/services/logiciel-de-gestion'], ['agenda', '/services/logiciel-de-gestion'], ['stock', '/services/logiciel-de-gestion'],
+  ['crm', '/lexique/crm'], ['erp', '/lexique/erp'], ['caisse', '/services/logiciel-de-gestion'], ['rendez-vous', '/services/logiciel-de-gestion'], ['réservation', '/services/logiciel-de-gestion'], ['avis', '/lexique/avis-google'],
+  ['photos', '/blog/images-site-internet-alt-poids-format'], ['logo', '/services/creation-de-site-internet'], ['domaine', '/lexique/nom-de-domaine'], ['hébergement', '/lexique/hebergement-web'], ['mail pro', '/blog/adresse-mail-professionnelle-nom-de-domaine'],
+  ['newsletter', '/lexique/newsletter'], ['boutique', '/services/site-ecommerce'], ['panier', '/lexique/panier-moyen'], ['paiement', '/lexique/paiement-en-ligne'], ['google', '/services/referencement'], ['référencement', '/services/referencement'],
+  ['visibilité', '/services/referencement-local'], ['clients', '/services/referencement-local'], ['prospects', '/lexique/lead'], ['relance', '/services/ia-et-automatisation'], ['automatisation', '/services/ia-et-automatisation'],
+  ['application', '/services/logiciel-de-gestion'], ['logiciel', '/services/logiciel-de-gestion'], ['plateforme', '/services/site-ecommerce'], ['maquette', '/lexique/maquette-de-site'], ['hébergeur', '/lexique/hebergement-web'],
+  ['seo', '/lexique/seo'], ['sea', '/lexique/sea'], ['rgpd', '/lexique/rgpd'], ['cookies', '/lexique/cookies'], ['cgv', '/lexique/cgv'], ['mentions légales', '/lexique/mentions-legales'], ['siret', '/lexique/siret'], ['tva', '/lexique/tva'],
+  ['micro-entreprise', '/lexique/micro-entreprise'], ['auto-entrepreneur', '/lexique/micro-entreprise'], ['artisan', '/creation-site-internet'], ['commerçant', '/creation-site-internet'], ['tpe', '/services/creation-de-site-internet'], ['indépendant', '/services/creation-de-site-internet'],
+]
+const FORMES_MOT_SEUL = ['{w}', '{w} pro', '{w} en ligne', '{w} gratuit', '{w} pas cher', '{w} avis', '{w} comparatif', '{w} pour artisan', '{w} pour commerçant', '{w} pour tpe', '{w} définition', '{w} c\'est quoi', '{w} comment faire', '{w} modèle', '{w} 2026', '{w} tours', '{w} touraine']
+const METIERS_RURAUX = ['plombier', 'électricien', 'maçon', 'coiffeur', 'boulanger', 'restaurant', 'garagiste', 'kinésithérapeute', 'infirmier', 'paysagiste', 'fleuriste', 'boucher', 'menuisier', 'peintre en bâtiment', 'couvreur', 'esthéticienne', 'chauffagiste', 'taxi', 'photographe', 'traiteur']
+
 export function etendre(ajouter, ctx) {
   const { metiers, communes } = ctx
   let n = 0
@@ -131,5 +146,9 @@ export function etendre(ajouter, ctx) {
   // 8. Outils et comparatifs.
   for (const o of OUTILS) for (const f of FORMES_OUTIL) add(f.replace('{o}', o), { source: 'question', patron: 'outil×forme' })
   for (const [a, b] of COMPARAISONS) for (const f of ['{a} ou {b}', '{a} vs {b}', '{a} ou {b} pour un artisan', '{a} ou {b} quel est le meilleur', 'différence entre {a} et {b}', '{a} ou {b} avis', '{a} {b} comparatif', '{a} ou {b} pour une petite entreprise', 'faut-il choisir {a} ou {b}', '{a} contre {b}']) add(f.replaceAll('{a}', a).replaceAll('{b}', b), { source: 'question', patron: 'comparatif', intention_src: 'comparaison' })
+  // 9. Mots isolés × formes.
+  for (const [w, page] of MOTS_SEULS) for (const f of FORMES_MOT_SEUL) add(f.replaceAll('{w}', w), { page, theme: page.startsWith('/lexique') ? undefined : undefined, patron: 'mot isolé' })
+  // 10. Métiers ruraux × toutes les communes d'Indre-et-Loire.
+  for (const m of METIERS_RURAUX) for (const c of communes) { add(`site internet ${m} ${c.nom}`, { theme: 'création site', patron: 'métier×commune' }); add(`création site web ${m} ${c.nom}`, { theme: 'création site', patron: 'métier×commune' }) }
   return n
 }

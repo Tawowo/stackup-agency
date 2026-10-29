@@ -24,6 +24,7 @@ export const LASTMOD: Record<string, string> = {
   "comparatif": "2026-10-29",
   "parrainage": "2026-10-15",
   "outils": "2026-10-29",
+  "lexique": "2026-10-29",
   "ressources": "2026-10-29",
   "departements": "2026-10-29",
   "villes": "2026-10-29",

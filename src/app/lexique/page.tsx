@@ -43,7 +43,7 @@ export default function Page() {
             <section key={r.id} aria-labelledby={`rub-${r.id}`}>
               <h2 id={`rub-${r.id}`}>{r.nom}</h2>
               <p>{r.ligne}</p>
-              <dl>
+              <dl className="su-lex-liste">
                 {liste.map((e) => (
                   <div key={e.slug}>
                     <dt>

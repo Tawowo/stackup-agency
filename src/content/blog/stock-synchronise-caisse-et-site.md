@@ -38,7 +38,7 @@ Un tableur est une bonne réponse dans un cas précis : peu de références, une
 
 Un logiciel de gestion de stock apporte l'historique des mouvements, les alertes de seuil, les codes-barres et, selon les cas, les liaisons avec la caisse et le site. Le raisonnement pour passer de l'un à l'autre est détaillé dans [Excel ne suffit plus : passer à un outil sur mesure](/blog/excel-ne-suffit-plus-passer-a-un-outil-sur-mesure), et pour le quotidien d'un commerce de proximité dans [la gestion de stock d'un petit commerce](/blog/gestion-de-stock-petit-commerce-artisan).
 
-Une règle simple : si vous passez plus de dix minutes par jour à recopier des quantités d'un support à l'autre, ou si vous avez déjà vendu en ligne un article que vous n'aviez plus, le tableur a fait son temps.
+Un tableur ne fait pas non plus un [logiciel de gestion](/lexique/logiciel-de-gestion) : il stocke des chiffres, il n'applique pas de règles. Une règle simple : si vous passez plus de dix minutes par jour à recopier des quantités d'un support à l'autre, ou si vous avez déjà vendu en ligne un article que vous n'aviez plus, le tableur a fait son temps.
 
 ## Existe-t-il un logiciel de gestion de stock gratuit pour une boutique ?
 
@@ -64,7 +64,7 @@ Un outil central (un logiciel de stock, ou un outil développé pour vous) déti
 
 ### 3. Deux systèmes qui s'échangent des données
 
-La caisse garde son stock, le site garde le sien, et une automatisation les met d'accord à intervalles réguliers, ou à chaque vente. C'est la solution des commerçants qui ont déjà une caisse et un site qu'ils ne veulent pas changer. Elle fonctionne bien si l'échange se fait vente par vente ; elle donne des ruptures fantômes si l'échange est quotidien. Le principe de ces automatisations est présenté dans [automatisation des processus pour une PME](/blog/automatisation-processus-pme).
+La caisse garde son stock, le site garde le sien, et une automatisation les met d'accord à intervalles réguliers, ou à chaque vente. C'est la solution des commerçants qui ont déjà une caisse et un site qu'ils ne veulent pas changer. Elle fonctionne bien si l'échange se fait vente par vente ; elle donne des ruptures fantômes si l'échange est quotidien. Le principe de ces automatisations (voir [automatisation](/lexique/automatisation)) est présenté dans [automatisation des processus pour une PME](/blog/automatisation-processus-pme).
 
 Quelle que soit l'architecture, posez-vous la question de la **fréquence** : la mise à jour doit se faire à chaque événement (vente, retour, réception), pas une fois par nuit. Pour un produit en un seul exemplaire (pièce unique, vin d'une cuvée limitée), un décalage de quelques minutes suffit à vendre deux fois.
 

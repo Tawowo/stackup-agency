@@ -7,6 +7,7 @@ import { ZONES } from '@/data/zones'
 import { ORIGINE } from './seo'
 import { jetons, nombreFr } from './jetons'
 import { tousLesArticles } from './blog'
+import { toutesLesEntrees } from './lexique'
 import { PILIER as CREATION } from '@/data/piliers/creation-de-site-internet'
 import { PILIER as REFONTE } from '@/data/piliers/refonte-de-site-internet'
 import { PILIER as REFERENCEMENT } from '@/data/piliers/referencement'
@@ -46,6 +47,7 @@ export function llmsTxt(): string {
   l.push('## Pages de référence', `- [Stackup Agency en bref](${ORIGINE}/stackup-agency-en-bref)`, `- [Tarifs et estimateur](${ORIGINE}/tarifs)`, `- [Réalisations](${ORIGINE}/realisations)`, `- [À propos](${ORIGINE}/a-propos)`, `- [Contact](${ORIGINE}/contact)`, `- [Questions fréquentes](${ORIGINE}/faq)`, '')
   const recents = tousLesArticles().filter((a) => a.maj ?? a.date).slice(0, 25)
   l.push('## Ressources récentes', ...recents.map((a) => `- [${a.titre}](${ORIGINE}/blog/${a.slug})`), '')
+  l.push('## Lexique (définitions courtes)', `- [Tout le lexique](${ORIGINE}/lexique) : ${toutesLesEntrees().length} termes du web, du référencement, du légal et de la gestion`, ...toutesLesEntrees().map((e) => `- [${e.terme}](${ORIGINE}/lexique/${e.slug}) : ${e.definition}`), '')
   l.push('## Optionnel', `- [Plan du site](${ORIGINE}/plan-du-site)`, `- [Version complète pour les assistants](${ORIGINE}/llms-full.txt)`)
   return l.join('\n') + '\n'
 }
@@ -57,5 +59,7 @@ export function llmsFull(): string {
     l.push(`## ${j.titre}`, `URL : ${ORIGINE}${j.chemin}`, '', j.reponse, '')
     for (const q of j.faq.slice(0, 6)) l.push(`**${q.q}** ${q.a}`, '')
   }
+  l.push('## Lexique', '')
+  for (const e of toutesLesEntrees()) l.push(`**${e.terme}** (${ORIGINE}/lexique/${e.slug}) : ${e.definition}`, '')
   return l.join('\n') + '\n'
 }

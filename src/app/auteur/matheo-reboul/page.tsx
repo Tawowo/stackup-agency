@@ -64,9 +64,12 @@ export default function Page() {
         <p>Je ne suis ni juriste, ni expert-comptable. Quand un article touche à la loi (mentions légales, RGPD, facture électronique), je décris les grandes lignes, je cite les sites officiels et je vous renvoie vers votre comptable ou un professionnel du droit pour votre cas précis.</p>
         <h2>Comment ces contenus sont préparés</h2>
         <p>Chaque article répond à une question réellement posée par des artisans et des commerçants. Les règles sont vérifiées sur les sites officiels cités en fin d’article, les prix de Stackup viennent de la grille tarifaire du site (toujours « à partir de »), et aucune statistique n’est inventée. La date de dernière mise à jour est affichée sur chaque page ; une erreur peut m’être signalée à {SITE.email}.</p>
-        <h2>Tous mes articles ({articles.length})</h2>
+        <h2>Mes derniers articles</h2>
+        <p>
+          {articles.length} articles et guides sont réunis dans <Link href="/blog">le journal</Link>, les définitions dans le <Link href="/lexique">lexique</Link>. Les plus récents :
+        </p>
         <ul className="su-bref-liste">
-          {articles.map((a) => (
+          {articles.slice(0, 12).map((a) => (
             <li key={a.slug}>
               <Link href={`/blog/${a.slug}`}>{a.titre}</Link> <span className="su-mono">· {dateFr(a.maj ?? a.date)}</span>
             </li>

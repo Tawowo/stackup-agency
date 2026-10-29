@@ -148,3 +148,29 @@
   max-width: 100%;
   height: auto;
 }
+
+/* Lexique : corps HTML rendu depuis le Markdown, et liste des termes. */
+.su-prose .su-corps-html > * + * {
+  margin-top: 1.1em;
+}
+.su-prose dl.su-lex-liste {
+  display: grid;
+  gap: 1.15rem;
+  margin: 0.8em 0 0;
+}
+.su-prose .su-lex-liste dt {
+  font-family: var(--su-font-display), sans-serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+  line-height: 1.25;
+}
+.su-prose .su-lex-liste dt a {
+  color: var(--su-texte);
+  text-decoration: none;
+  border-bottom: 2px solid var(--su-ambre);
+}
+.su-prose .su-lex-liste dd {
+  margin: 0.25rem 0 0;
+  font-size: 1rem;
+  line-height: 1.6;
+}
