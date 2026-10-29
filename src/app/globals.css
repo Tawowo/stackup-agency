@@ -32,6 +32,20 @@ body {
   inset: 0;
   z-index: 0;
   pointer-events: none;
+  /* Dissolution à l'arrivée : la 3D est montée après la première interaction. */
+  animation: su-canvas-entree 0.6s ease-out backwards;
+}
+@keyframes su-canvas-entree {
+  from {
+    opacity: 0;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .su-canvas,
+  .su-frame > .su-repli {
+    animation: none;
+    transition: none;
+  }
 }
 /* Sur téléphone, la marque 3D passe derrière le texte courant : à la lumière du jour elle s'efface aux trois quarts,
    pour que le texte reste lu sur un fond clair (contraste ≥ 4,5 : 1). La nuit, rien ne change. */
@@ -63,10 +77,13 @@ body {
 .su-frame > .su-repli {
   position: absolute;
   inset: 0;
-  display: none;
-}
-:root[data-su-mode='2d'] .su-frame > .su-repli {
   display: block;
+  transition: opacity 0.6s ease-out;
+}
+/* Le logo SVG est là dès le HTML ; il se dissout quand la 3D prend le relais (jamais en mode 2D, jamais sans WebGL). */
+:root[data-su3d='1'] .su-frame > .su-repli {
+  opacity: 0;
+  pointer-events: none;
 }
 .su-repli svg {
   width: 100%;

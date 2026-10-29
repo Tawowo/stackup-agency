@@ -1,0 +1,33 @@
+{
+ "route": "/",
+ "mobile": true,
+ "webgl": false,
+ "cpu": "x4",
+ "arret3DParSeconde": 0,
+ "molette100ms": 391,
+ "molette1600ms": 391,
+ "dureeScrollS": 10.4,
+ "chargement": {
+  "taches": 7,
+  "cumul": 1115
+ },
+ "tachesLonguesNb": 15,
+ "tacheMax": 118,
+ "tachesCumulMs": 1326,
+ "imageMedianeMs": 17,
+ "imageP95Ms": 167,
+ "imagesSup50ms": 55,
+ "imagesNb": 213,
+ "trames3D": 0,
+ "loafTop": [
+  "chunks/3u9nt1zl8wj2h.js tb 1042ms",
+  "chunks/2hwjxll53rm2e.js ReadableStreamDefaultReader.read.then 108ms",
+  "chunks/1iy2x_nqiyzm8.js t 33ms",
+  "chunks/1lha-inyemip4.js z 17ms",
+  "chunks/2yhk9aeug-aqs.js t 12ms"
+ ],
+ "loafStyleMs": 102,
+ "loafForceMs": 1037,
+ "inpMs": 72,
+ "images3DParSeconde": 0
+}

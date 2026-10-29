@@ -4,11 +4,25 @@
  * en différé, et pose `data-su-mode` sur <html> pour le repli 2D.
  */
 import dynamic from 'next/dynamic'
-import { useEffect, useState } from 'react'
-import { detecterPalier } from './quality'
+import { Component, useEffect, useState, type ReactNode } from 'react'
+import { detecterPalier, lireForcage } from './quality'
 import { useScene, type SceneParams } from './store'
 
 const Scene = dynamic(() => import('./Scene'), { ssr: false })
+
+/** Si WebGL ne peut pas démarrer (contexte refusé, pilote), la page garde son repli 2D : jamais d'écran cassé. */
+class GardeScene extends Component<{ children: ReactNode; repli: () => void }, { erreur: boolean }> {
+  state = { erreur: false }
+  static getDerivedStateFromError() {
+    return { erreur: true }
+  }
+  componentDidCatch() {
+    this.props.repli()
+  }
+  render() {
+    return this.state.erreur ? null : this.props.children
+  }
+}
 
 export default function SceneMount() {
   const [pret, setPret] = useState(false)
@@ -48,14 +62,37 @@ export default function SceneMount() {
       // three reste hors du chemin critique : le moteur n'est importé qu'à la demande.
       import('./engine').then(({ stackUniforms }) => ((window as unknown as { __su?: unknown }).__su = { scene: useScene, u: stackUniforms() }))
     }
-    detecterPalier().then((tier) => {
-      if (!vivant) return
-      setTier(tier)
-      if (tier === 'low' || q.get('webgl') === '0') setMode('2d')
-      setPret(true)
-    })
+    // La 3D démarre à la première interaction (souris, toucher, molette, clavier) ou, à défaut, après 10 s : tant que
+    // le visiteur ne touche à rien, la page montre le logo en SVG (repli 2D, dans le HTML, pixel pour pixel le même),
+    // et n'embarque ni three.js, ni compilation de shaders, ni contexte WebGL sur le chemin critique (LCP, TBT, INP).
+    // Les captures et les bancs d'essai (`?quality=`, `?scene=now`) démarrent tout de suite.
+    const demarrer = () =>
+      detecterPalier().then((tier) => {
+        if (!vivant) return
+        setTier(tier)
+        if (tier === 'low' || q.get('webgl') === '0') setMode('2d')
+        setPret(true)
+      })
+    const evenements = ['pointerdown', 'pointermove', 'wheel', 'keydown', 'touchstart', 'scroll'] as const
+    let lance = false
+    let delai = 0
+    const lancer = () => {
+      if (lance) return
+      lance = true
+      evenements.forEach((e) => window.removeEventListener(e, lancer))
+      window.clearTimeout(delai)
+      if (typeof window.requestIdleCallback === 'function') window.requestIdleCallback(() => vivant && demarrer(), { timeout: 400 })
+      else globalThis.setTimeout(() => vivant && demarrer(), 50)
+    }
+    if (lireForcage() || q.get('scene') === 'now') lancer()
+    else {
+      evenements.forEach((e) => window.addEventListener(e, lancer, { passive: true, once: true }))
+      delai = window.setTimeout(lancer, 10000)
+    }
     return () => {
       vivant = false
+      evenements.forEach((e) => window.removeEventListener(e, lancer))
+      window.clearTimeout(delai)
     }
   }, [setTier, setMode, setReduced, setStill])
 
@@ -111,8 +148,14 @@ export default function SceneMount() {
   const ready = useScene((s) => s.ready)
   useEffect(() => {
     document.documentElement.dataset.suReady = ready || mode === '2d' ? '1' : '0'
+    // La 3D est à l'écran : le repli SVG se dissout derrière elle.
+    document.documentElement.dataset.su3d = ready && mode !== '2d' ? '1' : '0'
   }, [ready, mode])
 
   if (!pret || mode === '2d') return null
-  return <Scene />
+  return (
+    <GardeScene repli={() => setMode('2d')}>
+      <Scene />
+    </GardeScene>
+  )
 }

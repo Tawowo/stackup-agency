@@ -12,17 +12,17 @@ import { MORPH } from '@/webgl/morph'
 import { useScene } from '@/webgl/store'
 import { useDragPile } from '@/webgl/useDragPile'
 import { useExclusion } from '@/webgl/useExclusion'
-import { gsap, ScrollTrigger, SplitText, initGsap } from '@/lib/gsap'
+import { gsap, ScrollTrigger, initGsap } from '@/lib/gsap'
 import Action from '@/components/ui/Action'
 import Cote from '@/components/ui/Cote'
 import './ouverture.css'
 
 const EXCLUSION_00 = ['.su-ouv__texte', '.su-nav__barre']
+const MOTS_TITRE = ['Sites', 'et', 'outils', 'sur', 'mesure.']
 
 export default function Ouverture() {
   const section = useRef<HTMLElement>(null)
   const scene = useRef<HTMLDivElement>(null)
-  const titre = useRef<HTMLHeadingElement>(null)
   const bind = useDragPile()
   useExclusion(EXCLUSION_00)
 
@@ -30,8 +30,7 @@ export default function Ouverture() {
     initGsap()
     const el = section.current
     const st = scene.current
-    const h1 = titre.current
-    if (!el || !st || !h1) return
+    if (!el || !st) return
     const s = useScene.getState()
     const reduit = s.reduced
     const mobile = window.innerWidth < 768
@@ -49,33 +48,14 @@ export default function Ouverture() {
     s.setPose({ x: 0, y: 0 })
     s.setActive(true)
 
-    // Le titre se déplie mot par mot depuis sa ligne de base.
-    const split = new SplitText(h1, { type: 'words', wordsClass: 'su-ouv__mot', aria: 'none' })
-    const mots = split.words
+    // Le titre se déplie mot par mot et le texte se découpe : tout cela est du CSS (keyframes, `ouverture.css`), lancé
+    // dès la première peinture, sans attendre le JavaScript (le texte est dans le HTML serveur, sans réécriture du DOM).
+    // Le JS ne pose que l'indicateur « prêt », à la fin de la séquence.
+    const fin = window.setTimeout(() => {
+      el.dataset.pret = '1'
+    }, reduit ? 0 : 1250)
     const ctx = gsap.context(() => {
-      if (reduit) {
-        gsap.set(mots, { rotateX: 0, opacity: 1 })
-        el.dataset.pret = '1'
-        return
-      }
-      gsap.set(mots, { rotateX: -90, transformOrigin: '50% 100%' })
-      gsap.to(mots, {
-        rotateX: 0,
-        duration: 0.62,
-        ease: 'power3.out',
-        stagger: 0.07,
-        delay: 0.15,
-        onStart: () => {
-          mots.forEach((m, i) => {
-            m.classList.add('su-ouv__mot--arete')
-            setTimeout(() => m.classList.remove('su-ouv__mot--arete'), 620 + i * 70)
-          })
-        },
-        onComplete: () => {
-          el.dataset.pret = '1'
-        },
-      })
-      gsap.fromTo('.su-ouv__ligne, .su-ouv__actions, .su-ouv__cotes', { clipPath: 'inset(0 100% 0 0)' }, { clipPath: 'inset(0 0% 0 0)', duration: 0.62, ease: 'power3.out', stagger: 0.07, delay: 0.5 })
+      if (reduit) return
 
       // Épinglage : p = 0 → 1 sur 150 vh (120 vh mobile).
       ScrollTrigger.create({
@@ -114,8 +94,8 @@ export default function Ouverture() {
     }, el)
 
     return () => {
+      window.clearTimeout(fin)
       ctx.revert()
-      split.revert()
       const sc = useScene.getState()
       sc.setTarget(null)
       sc.setScrub(false)
@@ -135,8 +115,15 @@ export default function Ouverture() {
           </div>
           <div className="su-ouv__texte">
             <p className="su-mono su-ouv__etiquette">00 — Ouverture</p>
-            <h1 ref={titre} id="su-ouv-titre" className="su-display su-ouv__titre">
-              Sites et outils sur mesure.
+            <h1 id="su-ouv-titre" className="su-display su-ouv__titre">
+              {MOTS_TITRE.map((m, i) => (
+                <span key={m}>
+                  {i > 0 && ' '}
+                  <span className="su-ouv__mot" style={{ '--i': i } as React.CSSProperties}>
+                    {m}
+                  </span>
+                </span>
+              ))}
             </h1>
             <p className="su-ouv__ligne">
               Pour les artisans, les commerçants et les petites entreprises qui veulent un outil à eux, pas un abonnement.

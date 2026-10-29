@@ -1,6 +1,10 @@
 # Journal du chantier — Stackup Agency V5
 
 
+## Mission 5 — fluidité, identité légale, référencement : décisions et avancement (en cours)
+
+- **A. Fluidité** (fait) : Lenis retiré (dépendance supprimée du package.json : défilement natif partout) ; rendu 3D à la demande (endormi 3,2 s après la dernière activité, éveil au scroll/pointeur/changement d'état), DPR 1–1,5 seulement aux paliers high/ultra ; aucun rendu React au scroll (Chantier, Compilation, Atelier : variables CSS) ; lecture des boîtes `StackFrame` une fois par trame ; intro du hero en CSS pur (LCP 7,4 s → 2,0 s) ; la 3D démarre à la première interaction (ou 10 s), le logo SVG du HTML est affiché d'ici là. Lighthouse mobile : accueil 95-97 (49 avant), autres pages 98-100. Mesures : `docs/qa/perf/`, scripts `perf-trace.mjs`, `perf-profil*.mjs`, `lighthouse.mjs`.
+
 ## Rapport SEO — Search Console (2026-10-29) — à lire en premier
 
 **Production** : `main` contient encore le middleware de maintenance (503 sur toutes les routes, `MAINTENANCE_ACTIVE = true`) : les 24 erreurs 5xx viennent de là. La V5 (cette branche) n'a aucun middleware : 420 URL du sitemap répondent 200 sur le build de production local. **Rien n'est corrigé en production tant que cette branche n'est pas fusionnée dans `main`** (décision du propriétaire).

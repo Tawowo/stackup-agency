@@ -13,13 +13,12 @@ export function lireForcage(): Tier | null {
   return q === 'ultra' || q === 'high' || q === 'medium' || q === 'low' ? q : null
 }
 
+/**
+ * WebGL2 présent ? Test sans créer de contexte (créer un contexte coûte 20 à 250 ms et three en recrée un juste après) :
+ * si la création échoue malgré tout, `Scene` le détecte (erreur ou contexte perdu) et bascule sur le repli 2D.
+ */
 export function webglDisponible(): boolean {
-  try {
-    const c = document.createElement('canvas')
-    return !!c.getContext('webgl2')
-  } catch {
-    return false
-  }
+  return typeof WebGL2RenderingContext !== 'undefined'
 }
 
 /**

@@ -53,11 +53,20 @@
 }
 .su-ouv__mot {
   display: inline-block;
-  transform-style: preserve-3d;
-  will-change: transform;
   position: relative;
+  transform-origin: 50% 100%;
+  /* Dépliage : chaque mot se relève depuis sa ligne de base (CSS pur, décalé par --i). */
+  animation: su-ouv-deplie 620ms cubic-bezier(0.22, 1, 0.36, 1) calc(150ms + var(--i, 0) * 70ms) backwards;
 }
-.su-ouv__mot--arete::after {
+@keyframes su-ouv-deplie {
+  from {
+    transform: perspective(900px) rotateX(-90deg);
+  }
+  to {
+    transform: perspective(900px) rotateX(0deg);
+  }
+}
+.su-ouv__mot::after {
   content: '';
   position: absolute;
   left: 0;
@@ -65,7 +74,40 @@
   bottom: 0.02em;
   height: 0.06em;
   background: var(--su-ambre);
-  animation: su-arete 620ms var(--su-pose) forwards;
+  opacity: 0;
+  animation: su-arete 620ms var(--su-pose) calc(150ms + var(--i, 0) * 70ms) forwards;
+}
+/* La ligne, les actions et les cotes se découpent de gauche à droite après le titre. */
+.su-ouv__ligne,
+.su-ouv__actions,
+.su-ouv__cotes {
+  animation: su-ouv-decoupe 620ms cubic-bezier(0.22, 1, 0.36, 1) backwards;
+}
+.su-ouv__ligne {
+  animation-delay: 500ms;
+}
+.su-ouv__actions {
+  animation-delay: 570ms;
+}
+.su-ouv__cotes {
+  animation-delay: 640ms;
+}
+@keyframes su-ouv-decoupe {
+  from {
+    clip-path: inset(0 100% 0 0);
+  }
+  to {
+    clip-path: inset(0 0% 0 0);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .su-ouv__mot,
+  .su-ouv__mot::after,
+  .su-ouv__ligne,
+  .su-ouv__actions,
+  .su-ouv__cotes {
+    animation: none;
+  }
 }
 @keyframes su-arete {
   0% {
