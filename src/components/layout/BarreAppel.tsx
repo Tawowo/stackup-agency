@@ -7,7 +7,7 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { SITE } from '@/config/site'
 
-const SANS_BARRE = /^\/(contact|tarifs|mentions-legales|cgv|politique-confidentialite|cookies)(\/|$)/
+const SANS_BARRE = /^\/(contact|tarifs|mentions-legales|cgv|cgv-plateforme|politique-confidentialite|cookies|desinscription)(\/|$)|^\/clubs-de-tennis\/simulateur/
 
 export default function BarreAppel() {
   const chemin = usePathname() ?? '/'
@@ -18,9 +18,16 @@ export default function BarreAppel() {
         Appeler
         <span className="sr-only"> le {SITE.telephone}</span>
       </a>
-      <Link className="su-barre-appel__demo" href="/contact?a=demo">
-        Demander ma démo
-      </Link>
+      {/* Offre clubs : la démo est en ligne, l'action utile est l'estimation du prix. */}
+      {chemin.startsWith('/clubs-de-tennis') ? (
+        <Link className="su-barre-appel__demo" href="/clubs-de-tennis/simulateur">
+          Estimer mon prix
+        </Link>
+      ) : (
+        <Link className="su-barre-appel__demo" href="/contact?a=demo">
+          Demander ma démo
+        </Link>
+      )}
     </nav>
   )
 }

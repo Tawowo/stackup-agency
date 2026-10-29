@@ -2,10 +2,25 @@
  * MESURE D'AUDIENCE RESPECTUEUSE — aucun cookie, aucun identifiant, aucune adresse IP conservée, aucun script tiers.
  * Le navigateur envoie un message anonyme (nom de l'événement, chemin de la page, origine du visiteur réduite au domaine)
  * à /api/mesure, qui le consigne dans les journaux du serveur. Respecte « Ne pas me suivre » et le signal GPC.
- * Événements : vue, estimation_lancee, contact_envoye, clic_telephone, clic_email, clic_demo, clic_appel, telechargement.
+ * Événements : vue, estimation_lancee, contact_envoye, clic_telephone, clic_email, clic_demo, clic_appel, telechargement ;
+ * offre clubs : clubs_demo (clic vers la démo), clubs_simulateur_commence, clubs_simulateur_termine, clubs_devis (demande envoyée).
+ * Campagne : les paramètres utm_source, utm_medium et utm_campaign de la page d'entrée (lien d'un e-mail) sont gardés pour
+ * la session (sessionStorage) et joints à chaque événement, pour rattacher une visite à la campagne qui l'a amenée.
  * Chaque événement porte la page d'entrée de la session (sessionStorage, jamais envoyée à un tiers) pour rattacher une demande à la page qui l'a amenée.
  */
-export type EvenementMesure = 'vue' | 'estimation_lancee' | 'contact_envoye' | 'clic_telephone' | 'clic_email' | 'clic_demo' | 'clic_appel' | 'telechargement'
+export type EvenementMesure = 'vue' | 'estimation_lancee' | 'contact_envoye' | 'clic_telephone' | 'clic_email' | 'clic_demo' | 'clic_appel' | 'telechargement' | 'clubs_demo' | 'clubs_simulateur_commence' | 'clubs_simulateur_termine' | 'clubs_devis'
+
+/** utm_source / utm_medium / utm_campaign : « source|medium|campagne », gardé pour la session. */
+function campagne(): string {
+  try {
+    const q = new URLSearchParams(location.search)
+    const v = ['utm_source', 'utm_medium', 'utm_campaign'].map((k) => (q.get(k) ?? '').replace(/[^\w.-]/g, '').slice(0, 40))
+    if (v.some(Boolean)) sessionStorage.setItem('su_campagne', v.join('|'))
+    return sessionStorage.getItem('su_campagne') ?? ''
+  } catch {
+    return ''
+  }
+}
 
 export function suivre(evenement: EvenementMesure, extra?: string) {
   if (typeof window === 'undefined') return
@@ -21,7 +36,8 @@ export function suivre(evenement: EvenementMesure, extra?: string) {
     entree = sessionStorage.getItem('su_entree') ?? ''
     if (!entree) sessionStorage.setItem('su_entree', (entree = location.pathname.slice(0, 200)))
   } catch {}
-  const corps = JSON.stringify({ e: evenement, p: location.pathname.slice(0, 200), o: origine.slice(0, 80), x: extra?.slice(0, 60), l: entree })
+  const u = campagne()
+  const corps = JSON.stringify({ e: evenement, p: location.pathname.slice(0, 200), o: origine.slice(0, 80), x: extra?.slice(0, 60), l: entree, ...(u ? { u } : {}) })
   try {
     if (!navigator.sendBeacon?.('/api/mesure', new Blob([corps], { type: 'application/json' }))) void fetch('/api/mesure', { method: 'POST', body: corps, keepalive: true, headers: { 'content-type': 'application/json' } })
   } catch {}

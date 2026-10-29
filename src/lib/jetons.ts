@@ -74,7 +74,7 @@ const TEXTES: Record<string, string> = {
 
 export function jetons(texte: string): string {
   if (!texte.includes('{{')) return texte
-  return texte.replace(/\{\{([a-z:-]+)\}\}/g, (m, k: string) => (k in VALEURS ? nombre(VALEURS[k]!) : k in TEXTES ? TEXTES[k]! : m))
+  return texte.replace(/\{\{([a-z0-9:-]+)\}\}/g, (m, k: string) => (k in VALEURS ? nombre(VALEURS[k]!) : k in TEXTES ? TEXTES[k]! : m))
 }
 
 /** Applique `jetons` à toutes les chaînes d'une structure de données (récursif). */

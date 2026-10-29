@@ -16,6 +16,7 @@ export default function Mesure() {
       const h = a.getAttribute('href') ?? ''
       if (h.startsWith('tel:')) suivre('clic_telephone')
       else if (h.startsWith('mailto:')) suivre('clic_email')
+      else if (h.startsWith('https://grand-chelem-platform.')) suivre('clubs_demo', h.replace(/^https:\/\/[^/]+/, '').slice(0, 60))
       else if (/[?&]a=demo\b/.test(h)) suivre('clic_demo')
       else if (/[?&]a=appel\b/.test(h)) suivre('clic_appel')
       else if (/\.(pdf|docx?|xlsx?)(\?|$)/i.test(h) || a.hasAttribute('download')) suivre('telechargement', h.split('/').pop()?.split('?')[0])

@@ -1,7 +1,7 @@
 /** LE FORMULAIRE DE CONTACT — schéma zod partagé client / serveur. */
 import { z } from 'zod'
 
-export const OBJETS = ['Site', 'Outil sur mesure', 'Maintenance', 'Autre'] as const
+export const OBJETS = ['Site', 'Outil sur mesure', 'Club de tennis', 'Maintenance', 'Autre'] as const
 
 export const ContactSchema = z.object({
   prenom: z.string({ message: 'Votre prénom est nécessaire.' }).trim().min(1, 'Votre prénom est nécessaire.').max(80),

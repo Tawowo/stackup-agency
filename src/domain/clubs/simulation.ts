@@ -140,7 +140,7 @@ export function simuler(e: EntreeSimulation): ResultatSimulation {
   })
 
   const deplacement = e.premierRdv === 'visio' ? 'visio' : e.distanceKm !== null && e.distanceKm > PRICING.premierRdvGratuitKm ? 'visio-ou-devis' : 'gratuit'
-  const surDevis = e.besoins.map((b) => BESOINS_SUR_DEVIS.find((x) => x.id === b)?.libelle).filter((x): x is string => !!x)
+  const surDevis: string[] = e.besoins.flatMap((b) => BESOINS_SUR_DEVIS.filter((x) => x.id === b).map((x) => x.libelle as string))
 
   const pack = e.formule === 'pack' ? { miseEnPlace: categorie.site.miseEnPlace + categorie.logiciel.miseEnPlace - base.miseEnPlace, mois: categorie.site.mois + categorie.logiciel.mois - base.mois } : { miseEnPlace: 0, mois: 0 }
 

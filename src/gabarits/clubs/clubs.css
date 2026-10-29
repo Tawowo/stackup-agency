@@ -1,0 +1,211 @@
+/* OFFRE « CLUBS DE TENNIS » — briques communes. Couleurs : tokens (src/styles/tokens.css), lisibles sur nuit et sur ivoire. */
+
+.cl-num {
+  color: var(--su-accent-texte);
+  font-size: 0.8125rem;
+}
+.cl-bloc {
+  margin-top: 56px;
+}
+.cl-bloc > h2 {
+  margin-top: 0;
+}
+
+/* Boutons de démo */
+.cl-demo-boutons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 20px 0 0;
+}
+.cl-demo-cartes {
+  list-style: none;
+  margin: 24px 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+}
+.cl-demo-cartes li {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+}
+.cl-demo-cartes h3 {
+  margin: 0;
+  font-family: var(--su-font-display), sans-serif;
+  font-size: 1.2rem;
+}
+.cl-demo-cartes p {
+  margin: 0 0 6px;
+  color: var(--su-texte-doux);
+}
+.cl-demo-cartes .su-action {
+  margin-top: auto;
+  align-self: flex-start;
+}
+
+/* Étapes */
+.cl-etapes {
+  list-style: none;
+  margin: 20px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 2px;
+  counter-reset: none;
+}
+.cl-etapes li {
+  display: grid;
+  grid-template-columns: 44px minmax(0, 1fr);
+  gap: 12px;
+  padding: 18px 0;
+  border-top: 1px solid color-mix(in srgb, var(--su-texte) 14%, transparent);
+}
+.cl-etapes li:last-child {
+  border-bottom: 1px solid color-mix(in srgb, var(--su-texte) 14%, transparent);
+}
+.cl-etapes h3 {
+  margin: 0 0 4px;
+  font-size: 1.125rem;
+}
+.cl-etapes p {
+  margin: 0;
+}
+.cl-etapes .cl-num {
+  padding-top: 4px;
+}
+
+/* Carte de prix */
+.cl-tarif {
+  margin: 40px 0;
+  padding: 24px;
+  border-left: 4px solid var(--su-ambre);
+}
+.cl-tarif__etiquette {
+  margin: 0 0 8px;
+  color: var(--su-accent-texte);
+  font-size: 0.75rem;
+}
+.cl-tarif__prix {
+  margin: 0 0 10px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 6px;
+}
+.cl-tarif__prix strong {
+  font-family: var(--su-font-display), sans-serif;
+  font-size: clamp(1.8rem, 3.4vw, 2.4rem);
+  line-height: 1;
+}
+.cl-tarif__prix small {
+  flex-basis: 100%;
+  color: var(--su-texte-doux);
+  font-size: 0.9375rem;
+}
+.cl-tarif__texte {
+  margin: 0 0 14px;
+}
+.cl-tarif__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+  margin: 0;
+}
+
+/* Liens */
+.cl-liens {
+  list-style: none;
+  margin: 16px 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 10px;
+}
+.cl-liens a {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  height: 100%;
+  padding: 14px 16px;
+  border-radius: 4px;
+  border: 1px solid color-mix(in srgb, var(--su-texte) 22%, transparent);
+  color: inherit;
+  text-decoration: none;
+}
+.cl-liens a span {
+  color: var(--su-texte-doux);
+  font-size: 0.9375rem;
+}
+.cl-liens a:hover,
+.cl-liens a:focus-visible {
+  border-color: var(--su-ambre);
+}
+
+/* Appel final */
+.cl-fin {
+  margin-top: 72px;
+  padding-top: 32px;
+  border-top: 1px solid color-mix(in srgb, var(--su-texte) 22%, transparent);
+}
+.cl-fin h2 {
+  margin: 0 0 12px;
+  font-size: clamp(1.9rem, 3.6vw, 3rem);
+}
+.cl-fin p {
+  max-width: 64ch;
+}
+.cl-fin__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 16px;
+}
+
+/* Pied d'offre */
+.cl-pied {
+  margin-top: 48px;
+  padding-top: 20px;
+  border-top: 1px dashed color-mix(in srgb, var(--su-texte) 26%, transparent);
+  color: var(--su-texte-doux);
+  font-size: 0.875rem;
+}
+.cl-pied p {
+  margin: 0 0 6px;
+}
+
+/* Note sous une capture de la démo */
+.cl-note-demo {
+  margin: 12px 0 0;
+  color: var(--su-texte-doux);
+  font-size: 0.875rem;
+}
+.cl-demo-liens {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 18px;
+  margin: 14px 0 0;
+  padding: 0;
+  list-style: none;
+}
+.cl-demo-liens a {
+  color: var(--su-accent-texte);
+  font-weight: 600;
+}
+
+/* Bloc « à compléter » (témoignage) : visible pour le propriétaire, jamais une fausse citation. */
+.cl-a-completer {
+  padding: 20px;
+  border: 2px dashed var(--su-ambre);
+  border-radius: 4px;
+}
+
+@media (max-width: 600px) {
+  .cl-demo-boutons .su-action,
+  .cl-fin__actions .su-action:not(.su-action--lien),
+  .cl-tarif__actions .su-action:not(.su-action--lien) {
+    width: 100%;
+  }
+}
