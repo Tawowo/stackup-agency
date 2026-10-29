@@ -1,0 +1,4356 @@
+[
+ {
+  "q": "comment vendre en ligne quand on a une boutique physique",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "faut-il avoir un site internet quand on a une boutique de quartier",
+  "theme": "e-commerce",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "est-ce que ça vaut le coup de vendre en ligne pour un petit commerce",
+  "theme": "e-commerce",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment garder ses clients de la boutique en vendant aussi sur internet",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "ma boutique ne désemplit pas mais les ventes baissent que faire",
+  "theme": "e-commerce",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "mes clients me demandent si je livre que répondre",
+  "theme": "e-commerce",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "les clients de passage ne reviennent pas comment les fidéliser en ligne",
+  "theme": "e-commerce",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment vendre ses produits à des gens qui n'habitent pas dans la ville",
+  "theme": "e-commerce",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "commerçant de proximité comment se lancer dans la vente en ligne",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "vendre en ligne sans fermer sa boutique",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "boutique physique et boutique en ligne comment tout gérer seul",
+  "theme": "e-commerce",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "est-ce que la vente en ligne cannibalise la boutique",
+  "theme": "e-commerce",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment proposer ses produits en ligne quand on est seul dans sa boutique",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "combien de temps faut-il pour s'occuper d'une boutique en ligne en plus du magasin",
+  "theme": "e-commerce",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment ne pas perdre de ventes pendant les fermetures de la boutique",
+  "theme": "e-commerce",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "vendre en ligne le dimanche quand la boutique est fermée",
+  "theme": "e-commerce",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "que faire quand les clients commandent par message privé sur instagram",
+  "theme": "e-commerce",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "je prends des commandes par téléphone comment passer à la commande en ligne",
+  "theme": "e-commerce",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment arrêter de prendre les commandes par sms",
+  "theme": "e-commerce",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "vendre sur internet quand on est commerçant indépendant",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "commerçant que vendre en ligne et que garder uniquement en magasin",
+  "theme": "e-commerce",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment savoir si mes produits se vendent bien sur internet",
+  "theme": "e-commerce",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "quels produits de boutique se vendent le mieux en ligne",
+  "theme": "e-commerce",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "site vitrine ou boutique en ligne pour un commerce de proximité",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "différence entre site vitrine et site e-commerce",
+  "theme": "e-commerce",
+  "etape": "problème",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "est-ce qu'un site vitrine suffit pour un commerçant",
+  "theme": "e-commerce",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "passer d'un site vitrine à une boutique en ligne",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "transformer mon site vitrine en boutique en ligne",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "ajouter une boutique à un site existant",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "ajouter un bouton acheter sur mon site",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "vendre quelques produits seulement sur mon site",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "vendre un seul produit en ligne comment faire",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "vendre en ligne sans stock important",
+  "theme": "e-commerce",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "commerçant qui veut vendre en ligne par où commencer",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "lancer une boutique en ligne en plus de son magasin physique",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "commerce de détail vendre sur internet les étapes",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "vendre en ligne depuis tours",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "local",
+  "metier": ""
+ },
+ {
+  "q": "créer une boutique en ligne",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "navigation",
+  "metier": ""
+ },
+ {
+  "q": "comment créer une boutique en ligne pour débutant",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment créer une boutique en ligne sans connaissances techniques",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment créer une boutique en ligne gratuitement",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "peut-on créer une boutique en ligne gratuitement vraiment",
+  "theme": "e-commerce",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "créer sa boutique en ligne étape par étape",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "de quoi a-t-on besoin pour ouvrir une boutique en ligne",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "quelles sont les démarches pour ouvrir une boutique en ligne",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "faut-il déclarer sa boutique en ligne",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "faut-il un statut juridique pour vendre en ligne",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "peut-on vendre en ligne en micro-entreprise",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "vendre en ligne en auto-entrepreneur ce qu'il faut savoir",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "créer une boutique en ligne quand on a déjà un commerce",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "combien de temps pour créer une boutique en ligne",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "quelle solution choisir pour créer une boutique en ligne",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "quel outil pour vendre en ligne quand on est petit commerçant",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "quelle plateforme e-commerce pour un artisan",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "meilleure plateforme pour vendre ses produits en ligne en 2026",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "comment choisir son logiciel de boutique en ligne",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "quel site e-commerce choisir pour un petit budget",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "faire sa boutique en ligne soi-même ou passer par un professionnel",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "faut-il confier sa boutique en ligne à une agence",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "agence pour créer une boutique en ligne en indre-et-loire",
+  "theme": "e-commerce",
+  "etape": "achat",
+  "intention": "local",
+  "metier": ""
+ },
+ {
+  "q": "créateur de boutique en ligne tours",
+  "theme": "e-commerce",
+  "etape": "achat",
+  "intention": "local",
+  "metier": ""
+ },
+ {
+  "q": "développeur boutique en ligne près de moi",
+  "theme": "e-commerce",
+  "etape": "achat",
+  "intention": "local",
+  "metier": ""
+ },
+ {
+  "q": "freelance pour créer ma boutique en ligne",
+  "theme": "e-commerce",
+  "etape": "achat",
+  "intention": "achat",
+  "metier": ""
+ },
+ {
+  "q": "faire créer sa boutique en ligne par un professionnel",
+  "theme": "e-commerce",
+  "etape": "achat",
+  "intention": "achat",
+  "metier": ""
+ },
+ {
+  "q": "boutique en ligne clé en main pour commerçant",
+  "theme": "e-commerce",
+  "etape": "achat",
+  "intention": "achat",
+  "metier": ""
+ },
+ {
+  "q": "boutique en ligne sur mesure pour petit commerce",
+  "theme": "e-commerce",
+  "etape": "achat",
+  "intention": "achat",
+  "metier": ""
+ },
+ {
+  "q": "boutique en ligne pour artisan",
+  "theme": "e-commerce",
+  "etape": "achat",
+  "intention": "achat",
+  "metier": ""
+ },
+ {
+  "q": "site e-commerce pour artisan créateur",
+  "theme": "e-commerce",
+  "etape": "achat",
+  "intention": "achat",
+  "metier": ""
+ },
+ {
+  "q": "site de vente en ligne pour petite entreprise",
+  "theme": "e-commerce",
+  "etape": "achat",
+  "intention": "achat",
+  "metier": ""
+ },
+ {
+  "q": "site marchand pour tpe",
+  "theme": "e-commerce",
+  "etape": "achat",
+  "intention": "achat",
+  "metier": ""
+ },
+ {
+  "q": "qu'est-ce qu'un site marchand",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "qu'est-ce qu'un site e-commerce exactement",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment fonctionne une boutique en ligne",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment fonctionne un panier sur un site internet",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "une boutique en ligne a-t-elle besoin d'un compte client obligatoire",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "faut-il proposer la commande sans création de compte",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "quelles pages sont indispensables sur une boutique en ligne",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "que doit contenir une boutique en ligne pour inspirer confiance",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment rassurer les clients sur une petite boutique en ligne",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment faire confiance à une petite boutique en ligne",
+  "theme": "e-commerce",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "shopify ou site sur mesure",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "shopify ou boutique sur mesure pour un artisan",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "shopify est-il adapté à un petit commerçant",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "shopify pour un commerce local est-ce une bonne idée",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "shopify ou woocommerce pour une petite boutique",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "shopify ou wix pour vendre en ligne",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "shopify ou prestashop quelle différence",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "shopify ou squarespace pour vendre des créations",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "avantages et inconvénients de shopify",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "quels sont les inconvénients de shopify pour un petit commerce",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "shopify en français est-ce simple à utiliser",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "peut-on quitter shopify facilement",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment migrer de shopify vers un site sur mesure",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "est-ce que shopify est propriétaire de ma boutique",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "à qui appartiennent les données d'une boutique shopify",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "que se passe-t-il si j'arrête mon abonnement shopify",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "shopify convient-il pour vendre des produits frais",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "fromager"
+ },
+ {
+  "q": "shopify pour un caviste",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": "caviste"
+ },
+ {
+  "q": "quand vaut-il mieux une boutique sur mesure qu'une solution toute faite",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "avantages d'une boutique en ligne sur mesure",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "quand passer d'une solution clé en main à du sur mesure",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "boutique en ligne sans commission sur les ventes",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "boutique en ligne que je possède vraiment",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "solution e-commerce française pour petit commerce",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "alternative à shopify pour petit commerçant",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "alternative à etsy pour vendre ses créations",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "alternative à wix pour boutique en ligne",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "alternative à la marketplace pour vendre en direct",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "woocommerce c'est quoi",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "woocommerce est-ce gratuit",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "woocommerce est-il difficile à utiliser pour un commerçant",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "woocommerce nécessite-t-il un hébergement",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "woocommerce et wordpress comment ça marche ensemble",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "woocommerce pour vendre en ligne les avantages",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "woocommerce ou site sur mesure",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "woocommerce ralentit-il le site",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "woocommerce mises à jour et sécurité à surveiller",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "woocommerce plugin indispensables pour une petite boutique",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "que faire quand une mise à jour woocommerce casse le site",
+  "theme": "e-commerce",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "site woocommerce piraté que faire",
+  "theme": "e-commerce",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "faire créer un site woocommerce par un professionnel",
+  "theme": "e-commerce",
+  "etape": "achat",
+  "intention": "achat",
+  "metier": ""
+ },
+ {
+  "q": "prestashop c'est quoi",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "prestashop est-il adapté à un petit commerce",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "prestashop est-il gratuit",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "prestashop ou woocommerce pour un artisan",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "prestashop est-il compliqué pour un débutant",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "prestashop faut-il un hébergeur spécifique",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "migrer de prestashop vers autre chose",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "mon site prestashop est trop lent que faire",
+  "theme": "e-commerce",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "wix e-commerce est-il suffisant pour une petite boutique",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "wix boutique en ligne avis et limites",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "squarespace pour vendre des produits en ligne",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "site e-commerce wordpress ou shopify pour un artisan",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "vaut-il mieux wordpress ou une solution sur mesure pour vendre",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "quelle différence entre cms et site sur mesure pour e-commerce",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "shopify prend-il une commission sur les ventes",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "combien coûte l'abonnement shopify par mois",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "quels sont les frais cachés d'une boutique shopify",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "frais de transaction shopify comment les éviter",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "quels frais pour une boutique en ligne chaque mois",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "quels sont les frais récurrents d'une boutique en ligne",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "boutique en ligne abonnement ou paiement unique",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "abonnement mensuel boutique en ligne est-ce rentable pour un petit commerce",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "commission etsy sur les ventes",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "combien prend etsy sur chaque vente",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "quels frais pour vendre sur etsy",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "vinted pro quels frais",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "commission des marketplaces pour les petits commerçants",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment calculer sa marge après les commissions d'une plateforme",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment calculer la rentabilité d'une boutique en ligne",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment calculer le coût réel d'une vente en ligne",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "une marketplace est-elle rentable pour un artisan",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "frais cachés de la vente en ligne pour un commerçant",
+  "theme": "e-commerce",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "frais d'abonnement boutique en ligne à comparer",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "combien coûte l'hébergement d'une boutique en ligne",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "nom de domaine pour boutique en ligne combien ça coûte",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "certificat ssl obligatoire pour une boutique en ligne",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "combien coûte une boutique en ligne pour un artisan",
+  "theme": "prix et devis",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "combien coûte la création d'une boutique en ligne",
+  "theme": "prix et devis",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "quel budget prévoir pour une boutique en ligne",
+  "theme": "prix et devis",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "prix d'un site e-commerce sur mesure",
+  "theme": "prix et devis",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "prix d'une boutique en ligne clé en main",
+  "theme": "prix et devis",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "tarif création site e-commerce pour petit commerce",
+  "theme": "prix et devis",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "devis boutique en ligne",
+  "theme": "prix et devis",
+  "etape": "achat",
+  "intention": "achat",
+  "metier": ""
+ },
+ {
+  "q": "devis site e-commerce artisan",
+  "theme": "prix et devis",
+  "etape": "achat",
+  "intention": "achat",
+  "metier": ""
+ },
+ {
+  "q": "demander un devis pour une boutique en ligne",
+  "theme": "prix et devis",
+  "etape": "achat",
+  "intention": "achat",
+  "metier": ""
+ },
+ {
+  "q": "combien facture une agence pour une boutique en ligne",
+  "theme": "prix et devis",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "combien facture un freelance pour un site e-commerce",
+  "theme": "prix et devis",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "pourquoi les prix des sites e-commerce varient autant",
+  "theme": "prix et devis",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "de quoi dépend le prix d'une boutique en ligne",
+  "theme": "prix et devis",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "qu'est-ce qui fait augmenter le prix d'un site e-commerce",
+  "theme": "prix et devis",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "est-ce qu'une boutique en ligne coûte cher à entretenir",
+  "theme": "prix et devis",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "combien coûte la maintenance d'une boutique en ligne",
+  "theme": "prix et devis",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "combien coûte l'ajout d'une boutique à un site existant",
+  "theme": "prix et devis",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "combien coûte un site e-commerce avec paiement en ligne",
+  "theme": "prix et devis",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "boutique en ligne pas chère mais fiable",
+  "theme": "prix et devis",
+  "etape": "achat",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "comment réduire le coût de création d'une boutique en ligne",
+  "theme": "prix et devis",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "un site e-commerce est-il un investissement rentable",
+  "theme": "prix et devis",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "au bout de combien de temps une boutique en ligne est rentabilisée",
+  "theme": "prix et devis",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "aides pour financer une boutique en ligne",
+  "theme": "prix et devis",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "subvention pour créer un site e-commerce commerçant",
+  "theme": "prix et devis",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "chèque numérique pour commerçant existe-t-il encore",
+  "theme": "prix et devis",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "aide région centre-val de loire pour passer au numérique commerce",
+  "theme": "prix et devis",
+  "etape": "solution",
+  "intention": "local",
+  "metier": ""
+ },
+ {
+  "q": "comment payer sa boutique en ligne en plusieurs fois",
+  "theme": "prix et devis",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "acompte pour la création d'un site e-commerce c'est normal",
+  "theme": "prix et devis",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comparatif prix boutique en ligne sur mesure et abonnement",
+  "theme": "prix et devis",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "stripe c'est quoi",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment fonctionne stripe pour un commerçant",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "stripe est-il fiable pour un petit commerce",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "stripe quels frais par transaction",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "stripe nécessite-t-il un compte professionnel",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment ouvrir un compte stripe en tant que micro-entrepreneur",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "stripe ou paypal pour une boutique en ligne",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "stripe ou payplug lequel choisir",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "payplug c'est quoi",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "payplug est-il adapté aux petits commerçants",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "paypal pour une boutique en ligne avantages et inconvénients",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "comment accepter paypal sur son site",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "paypal bloque mon compte vendeur que faire",
+  "theme": "e-commerce",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "paypal garde mon argent que faire",
+  "theme": "e-commerce",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "quel moyen de paiement proposer sur une boutique en ligne",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment accepter les paiements par carte bancaire sur son site",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment encaisser des paiements en ligne sans terminal",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "faut-il un contrat vad pour vendre en ligne",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "c'est quoi un contrat de vente à distance avec la banque",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "quelle banque choisir pour encaisser en ligne",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "mon banquier propose un paiement en ligne est-ce intéressant",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "comment sécuriser les paiements sur ma boutique en ligne",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "c'est quoi la double authentification 3d secure",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "pourquoi des clients abandonnent au moment de payer",
+  "theme": "e-commerce",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "un paiement a été refusé sur mon site que faire",
+  "theme": "e-commerce",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment gérer un impayé sur une vente en ligne",
+  "theme": "e-commerce",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "que faire en cas de fraude à la carte bancaire sur une commande",
+  "theme": "e-commerce",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment éviter les litiges de paiement en ligne",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "proposer le paiement en plusieurs fois sur sa boutique",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "virement bancaire comme moyen de paiement sur un site e-commerce",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "accepter les chèques sur une commande en ligne",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "accepter apple pay sur sa boutique en ligne",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "payer en boutique après avoir réservé en ligne",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "réserver en ligne et payer en magasin comment faire",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "combien de temps pour recevoir l'argent d'un paiement en ligne",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "quand l'argent d'une vente en ligne arrive-t-il sur mon compte",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment rembourser un client sur stripe",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment rembourser une commande payée en ligne",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "click and collect c'est quoi",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment mettre en place le click and collect dans sa boutique",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "click and collect pour commerçant comment s'y prendre",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "click and collect sans site e-commerce est-ce possible",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "click and collect avec paiement en ligne ou en magasin",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "click and collect pour un caviste",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "caviste"
+ },
+ {
+  "q": "click and collect pour un fromager",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "fromager"
+ },
+ {
+  "q": "click and collect pour une boulangerie",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "boulanger"
+ },
+ {
+  "q": "click and collect pour un fleuriste",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "fleuriste"
+ },
+ {
+  "q": "click and collect pour une boutique de vêtements",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "boutique de mode"
+ },
+ {
+  "q": "click and collect pour un épicier",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "épicier"
+ },
+ {
+  "q": "click and collect pour une librairie",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "libraire"
+ },
+ {
+  "q": "click and collect pour un boucher",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "boucher"
+ },
+ {
+  "q": "comment organiser les retraits en magasin de commandes en ligne",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "créneaux de retrait en boutique sur un site comment les gérer",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment prévenir un client que sa commande est prête",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment gérer les commandes non retirées en click and collect",
+  "theme": "e-commerce",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "click and collect ou livraison que choisir pour un petit commerce",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "les clients ne viennent pas chercher leur commande en magasin",
+  "theme": "e-commerce",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "logiciel click and collect pour commerçant",
+  "theme": "e-commerce",
+  "etape": "achat",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "module de retrait en magasin pour site internet",
+  "theme": "e-commerce",
+  "etape": "achat",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "commande en ligne retrait en boutique sur mesure",
+  "theme": "e-commerce",
+  "etape": "achat",
+  "intention": "achat",
+  "metier": ""
+ },
+ {
+  "q": "quel transporteur choisir pour une petite boutique en ligne",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "colissimo pour un petit commerçant comment ça marche",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "colissimo comment ouvrir un compte professionnel",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "colissimo ou mondial relay lequel est le moins cher",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "colissimo ou mondial relay quelle différence",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "comment proposer mondial relay sur sa boutique en ligne",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment intégrer colissimo à son site e-commerce",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment imprimer ses étiquettes colissimo depuis son site",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment expédier un colis quand on est commerçant",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment expédier des produits fragiles",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment emballer des bouteilles de vin pour l'envoi",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "caviste"
+ },
+ {
+  "q": "comment expédier du fromage par la poste",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "fromager"
+ },
+ {
+  "q": "comment envoyer des fleurs par colis",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "fleuriste"
+ },
+ {
+  "q": "comment expédier des bijoux en toute sécurité",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "bijoutier"
+ },
+ {
+  "q": "comment envoyer des vêtements à ses clients sans se ruiner",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "boutique de mode"
+ },
+ {
+  "q": "comment calculer les frais de port d'une boutique en ligne",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "frais de port offerts à partir d'un certain montant est-ce rentable",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "faut-il faire payer les frais de port aux clients",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "comment fixer ses frais de port sans perdre de clients",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment gérer les frais de port pour des produits lourds",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "livraison gratuite ou payante pour une petite boutique",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "livrer soi-même ses clients à domicile comment l'organiser",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "livraison locale par le commerçant sur un site internet",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment proposer la livraison en point relais",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "que faire si un colis est perdu par le transporteur",
+  "theme": "e-commerce",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "un client dit ne pas avoir reçu son colis que faire",
+  "theme": "e-commerce",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "colis abîmé à la livraison qui est responsable",
+  "theme": "e-commerce",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "qui paie les frais de retour d'un colis",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment gérer les retours de produits en boutique en ligne",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment suivre l'expédition de ses commandes",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment prévenir le client que son colis est expédié",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment livrer à l'étranger quand on vend en ligne",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "vendre dans toute l'europe depuis une petite boutique",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "expédier hors de france démarches pour un commerçant",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "logiciel pour gérer ses expéditions de commandes",
+  "theme": "e-commerce",
+  "etape": "achat",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "comparateur de transporteurs pour e-commerçant",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "mon site peut-il calculer automatiquement les frais de livraison",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "gestion de stock synchronisée caisse et site internet",
+  "theme": "logiciel de gestion",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment synchroniser le stock de la caisse et du site",
+  "theme": "logiciel de gestion",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment synchroniser le stock de la boutique avec le site internet",
+  "theme": "logiciel de gestion",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "synchroniser les stocks magasin et boutique en ligne",
+  "theme": "logiciel de gestion",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "logiciel de caisse relié à la boutique en ligne",
+  "theme": "logiciel de gestion",
+  "etape": "achat",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "logiciel de caisse compatible avec shopify",
+  "theme": "logiciel de gestion",
+  "etape": "achat",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "logiciel de caisse compatible woocommerce",
+  "theme": "logiciel de gestion",
+  "etape": "achat",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "logiciel de caisse et e-commerce pour petit commerce",
+  "theme": "logiciel de gestion",
+  "etape": "achat",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "logiciel de gestion de stock pour petit commerçant",
+  "theme": "logiciel de gestion",
+  "etape": "achat",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "logiciel de gestion de stock gratuit pour boutique",
+  "theme": "logiciel de gestion",
+  "etape": "achat",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "excel ou logiciel pour gérer le stock d'une boutique",
+  "theme": "logiciel de gestion",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "j'ai vendu en boutique un produit déjà vendu en ligne comment éviter ça",
+  "theme": "logiciel de gestion",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment éviter les ruptures de stock sur une boutique en ligne",
+  "theme": "logiciel de gestion",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment éviter de vendre un produit qui n'est plus en stock",
+  "theme": "logiciel de gestion",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "mon stock en ligne ne correspond pas à mon stock réel",
+  "theme": "logiciel de gestion",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment faire un inventaire quand on vend en magasin et en ligne",
+  "theme": "logiciel de gestion",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment gérer un stock unique pour plusieurs canaux de vente",
+  "theme": "logiciel de gestion",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment gérer les pièces uniques sur une boutique en ligne",
+  "theme": "logiciel de gestion",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment gérer des produits en quantité limitée sur un site",
+  "theme": "logiciel de gestion",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "alerte de stock bas comment la mettre en place",
+  "theme": "logiciel de gestion",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "outil de gestion de stock sur mesure pour commerçant",
+  "theme": "logiciel de gestion",
+  "etape": "achat",
+  "intention": "achat",
+  "metier": ""
+ },
+ {
+  "q": "application de gestion de commandes pour petite boutique",
+  "theme": "logiciel de gestion",
+  "etape": "achat",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "comment centraliser les commandes du site et de la boutique",
+  "theme": "logiciel de gestion",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment suivre ses commandes en ligne sans se tromper",
+  "theme": "logiciel de gestion",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "tableau de bord des ventes magasin et en ligne",
+  "theme": "logiciel de gestion",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment connaître les produits les plus vendus de sa boutique",
+  "theme": "logiciel de gestion",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment gérer les précommandes sur un site e-commerce",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment gérer les produits sur commande uniquement",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment gérer des produits fabriqués à la demande",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "comment automatiser la facturation des commandes en ligne",
+  "theme": "logiciel de gestion",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "facture automatique après une commande sur boutique en ligne",
+  "theme": "logiciel de gestion",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "logiciel de facturation pour e-commerçant",
+  "theme": "logiciel de gestion",
+  "etape": "achat",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "comment faire une facture pour une vente en ligne",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "une facture est-elle obligatoire pour une vente à un particulier en ligne",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "quelles mentions sur une facture de vente en ligne",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "tva sur les ventes en ligne comment ça marche",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment appliquer la tva sur une boutique en ligne",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "tva e-commerce vente à un client européen",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "tva vente en ligne à l'étranger petit commerçant",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "c'est quoi le guichet unique de tva pour l'e-commerce",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "franchise en base de tva et boutique en ligne",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "vendre en ligne en franchise de tva ce qu'il faut savoir",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "prix ttc ou ht sur une boutique en ligne",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "afficher les prix ttc sur un site marchand obligatoire",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment déclarer les ventes en ligne en comptabilité",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment déclarer ses revenus d'une boutique en ligne",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comptabilité d'une boutique en ligne pour un commerçant",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "faut-il un comptable pour une boutique en ligne",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment rapprocher les paiements en ligne avec la comptabilité",
+  "theme": "logiciel de gestion",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "export comptable des ventes de la boutique en ligne",
+  "theme": "logiciel de gestion",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "la facture électronique concerne-t-elle les boutiques en ligne",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "facturation électronique 2026 et vente en ligne aux particuliers",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "cgv boutique en ligne obligatoires ou non",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment rédiger les cgv d'une boutique en ligne",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "modèle de cgv pour boutique en ligne",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "que doivent contenir les conditions générales de vente en ligne",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "cgv et cgu différence pour un site marchand",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "faut-il faire accepter les cgv avant le paiement",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment faire accepter les cgv à la commande",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "droit de rétractation vente en ligne délai",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "droit de rétractation pour un site e-commerce comment l'appliquer",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "quels produits sont exclus du droit de rétractation",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "droit de rétractation produits personnalisés",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "droit de rétractation pour les produits alimentaires vendus en ligne",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "le droit de rétractation s'applique-t-il en click and collect",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "formulaire de rétractation obligatoire sur un site marchand",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "un client veut me retourner un produit que faire",
+  "theme": "e-commerce",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "puis-je refuser un retour de produit acheté en ligne",
+  "theme": "e-commerce",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "dans quel délai rembourser un client qui se rétracte",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "qui paie le retour en cas de rétractation",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "garantie légale de conformité vente en ligne ce que doit savoir le vendeur",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "mentions légales obligatoires boutique en ligne",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "mentions légales pour un site e-commerce quoi mettre",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "mentions obligatoires sur une fiche produit",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "quelles informations afficher avant la commande en ligne",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "politique de confidentialité obligatoire pour une boutique en ligne",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "rgpd boutique en ligne ce qu'il faut faire",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "bandeau cookies obligatoire sur un site e-commerce",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment gérer les données clients d'une boutique en ligne",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "faut-il déclarer un fichier clients quand on vend en ligne",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "médiateur de la consommation obligatoire pour une boutique en ligne",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment trouver un médiateur de la consommation pour mon commerce",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "bouton commande avec obligation de paiement c'est quoi",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "quelles sanctions si ma boutique en ligne n'est pas conforme",
+  "theme": "e-commerce",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "conformité légale d'une boutique en ligne comment la vérifier",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "vente en ligne de produits de beauté ou cosmétiques réglementation",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "vente en ligne de produits d'occasion règles à respecter",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "vendre des produits d'occasion en ligne en tant que professionnel",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment prendre de belles photos de ses produits pour la vente en ligne",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "photos de produits avec un smartphone est-ce suffisant",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment photographier des bijoux pour une boutique en ligne",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "bijoutier"
+ },
+ {
+  "q": "comment photographier des bouteilles de vin pour un site",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "caviste"
+ },
+ {
+  "q": "comment photographier des fromages pour la vente en ligne",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "fromager"
+ },
+ {
+  "q": "comment photographier des vêtements sans mannequin",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "boutique de mode"
+ },
+ {
+  "q": "comment photographier ses créations artisanales",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "créatrice"
+ },
+ {
+  "q": "fond blanc ou photos d'ambiance pour une boutique en ligne",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "faut-il un photographe professionnel pour sa boutique en ligne",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "combien de photos par fiche produit",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "quelle taille d'image pour une boutique en ligne",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment alléger les photos d'un site sans perdre en qualité",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment écrire une bonne fiche produit",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "exemple de fiche produit qui donne envie d'acheter",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "description de produit artisanal comment la rédiger",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "quelles informations mettre sur une fiche produit alimentaire",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment écrire une fiche produit pour un vin",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "caviste"
+ },
+ {
+  "q": "comment décrire un fromage sur un site internet",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "fromager"
+ },
+ {
+  "q": "comment décrire un bijou fait main",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "bijoutier"
+ },
+ {
+  "q": "comment présenter les tailles sur une fiche produit de vêtement",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "boutique de mode"
+ },
+ {
+  "q": "faut-il mettre les avis clients sur les fiches produits",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment récolter des avis clients pour sa boutique en ligne",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment répondre à un avis négatif sur sa boutique en ligne",
+  "theme": "e-commerce",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment importer ses produits dans une boutique en ligne",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment ajouter beaucoup de produits d'un coup sur un site",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment gérer des variantes de taille et de couleur",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "panier abandonné c'est quoi",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "pourquoi les clients abandonnent leur panier",
+  "theme": "e-commerce",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment réduire les paniers abandonnés sur une petite boutique",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "relance panier abandonné par e-mail comment faire",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "mes visiteurs ne commandent pas sur mon site que faire",
+  "theme": "e-commerce",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "j'ai des visites mais aucune vente sur ma boutique en ligne",
+  "theme": "e-commerce",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "pourquoi ma boutique en ligne ne vend pas",
+  "theme": "e-commerce",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment augmenter les ventes de sa boutique en ligne",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment améliorer le taux de conversion d'une petite boutique en ligne",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment simplifier le processus de commande",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment faire revenir les clients sur sa boutique en ligne",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment fidéliser ses clients en ligne quand on est commerçant",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment créer une newsletter pour sa boutique en ligne",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment faire des codes promo sur sa boutique en ligne",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "carte de fidélité en magasin et en ligne comment relier les deux",
+  "theme": "logiciel de gestion",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment vendre du vin en ligne",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "caviste"
+ },
+ {
+  "q": "vendre du vin sur internet quelle réglementation",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "caviste"
+ },
+ {
+  "q": "licence pour vendre de l'alcool en ligne",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "caviste"
+ },
+ {
+  "q": "faut-il une licence pour vendre du vin sur son site",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "caviste"
+ },
+ {
+  "q": "vérification de l'âge pour vendre de l'alcool en ligne",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "caviste"
+ },
+ {
+  "q": "caviste comment créer sa boutique en ligne",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "caviste"
+ },
+ {
+  "q": "site internet pour caviste avec vente en ligne",
+  "theme": "e-commerce",
+  "etape": "achat",
+  "intention": "achat",
+  "metier": "caviste"
+ },
+ {
+  "q": "comment expédier du vin à l'étranger quand on est caviste",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "caviste"
+ },
+ {
+  "q": "droits d'accises vente de vin en ligne",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "caviste"
+ },
+ {
+  "q": "comment vendre du fromage en ligne",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "fromager"
+ },
+ {
+  "q": "vendre des produits laitiers sur internet quelles règles",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "fromager"
+ },
+ {
+  "q": "fromager comment créer sa boutique en ligne",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "fromager"
+ },
+ {
+  "q": "site internet pour fromager avec commande en ligne",
+  "theme": "e-commerce",
+  "etape": "achat",
+  "intention": "achat",
+  "metier": "fromager"
+ },
+ {
+  "q": "comment garder la chaîne du froid en vendant en ligne",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "fromager"
+ },
+ {
+  "q": "vendre des produits frais en ligne comment s'organiser",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment vendre des bijoux en ligne",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "bijoutier"
+ },
+ {
+  "q": "bijoutier comment créer sa boutique en ligne",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "bijoutier"
+ },
+ {
+  "q": "site internet pour bijouterie avec vente en ligne",
+  "theme": "e-commerce",
+  "etape": "achat",
+  "intention": "achat",
+  "metier": "bijoutier"
+ },
+ {
+  "q": "comment vendre des bijoux de créateur sur internet",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "créatrice"
+ },
+ {
+  "q": "comment assurer l'envoi de bijoux de valeur",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "bijoutier"
+ },
+ {
+  "q": "comment vendre des vêtements en ligne",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "boutique de mode"
+ },
+ {
+  "q": "boutique de mode comment créer sa boutique en ligne",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "boutique de mode"
+ },
+ {
+  "q": "site internet pour boutique de vêtements avec vente en ligne",
+  "theme": "e-commerce",
+  "etape": "achat",
+  "intention": "achat",
+  "metier": "boutique de mode"
+ },
+ {
+  "q": "comment gérer les retours de vêtements achetés en ligne",
+  "theme": "e-commerce",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "boutique de mode"
+ },
+ {
+  "q": "comment gérer les tailles et les couleurs sur une boutique de vêtements en ligne",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "boutique de mode"
+ },
+ {
+  "q": "comment vendre ses créations en ligne",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "créatrice"
+ },
+ {
+  "q": "comment vendre ses créations faites main sur internet",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "créatrice"
+ },
+ {
+  "q": "créatrice comment ouvrir sa boutique en ligne",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "créatrice"
+ },
+ {
+  "q": "site pour vendre ses créations sans commission",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": "créatrice"
+ },
+ {
+  "q": "où vendre ses créations artisanales en ligne",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": "créatrice"
+ },
+ {
+  "q": "comment vendre ses créations sans passer par une marketplace",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": "créatrice"
+ },
+ {
+  "q": "comment fixer le prix de ses créations pour la vente en ligne",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "créatrice"
+ },
+ {
+  "q": "comment vendre ses produits locaux en ligne",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment vendre des produits du terroir sur internet",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "producteur local comment vendre en direct sur internet",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "vente directe de produits du terroir en ligne quelles obligations",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment lancer un drive fermier pour vendre ses produits",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment vendre des paniers de produits locaux en ligne",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment vendre des coffrets cadeaux en ligne",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment vendre ses plantes ou ses fleurs en ligne",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "fleuriste"
+ },
+ {
+  "q": "fleuriste comment créer sa boutique en ligne",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "fleuriste"
+ },
+ {
+  "q": "site internet pour fleuriste avec commande en ligne",
+  "theme": "e-commerce",
+  "etape": "achat",
+  "intention": "achat",
+  "metier": "fleuriste"
+ },
+ {
+  "q": "fleuriste comment gérer les commandes pour des fêtes",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "fleuriste"
+ },
+ {
+  "q": "comment prendre des commandes pour la fête des mères sur son site",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "fleuriste"
+ },
+ {
+  "q": "boulanger peut-il vendre en ligne",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "boulanger"
+ },
+ {
+  "q": "boulangerie comment prendre des commandes en ligne",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "boulanger"
+ },
+ {
+  "q": "site internet pour boulangerie avec commande de gâteaux",
+  "theme": "e-commerce",
+  "etape": "achat",
+  "intention": "achat",
+  "metier": "boulanger"
+ },
+ {
+  "q": "pâtissier comment prendre des commandes de gâteaux en ligne",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "pâtissier"
+ },
+ {
+  "q": "épicerie fine comment vendre en ligne",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "épicier"
+ },
+ {
+  "q": "épicier comment créer sa boutique en ligne",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "épicier"
+ },
+ {
+  "q": "site internet pour épicerie avec vente en ligne",
+  "theme": "e-commerce",
+  "etape": "achat",
+  "intention": "achat",
+  "metier": "épicier"
+ },
+ {
+  "q": "librairie indépendante comment vendre en ligne",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "libraire"
+ },
+ {
+  "q": "boucher comment prendre des commandes en ligne",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "boucher"
+ },
+ {
+  "q": "comment vendre des produits bio en ligne",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment vendre du miel ou des confitures en ligne",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "producteur"
+ },
+ {
+  "q": "comment vendre des objets de décoration sur internet",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "boutique de décoration comment vendre en ligne",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "boutique de cadeaux comment lancer sa vente en ligne",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "marketplace ou site propre pour vendre",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "marketplace ou site e-commerce quelle différence",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "quels sont les avantages d'une marketplace pour un petit commerçant",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "quels sont les inconvénients d'une marketplace",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "pourquoi avoir son propre site plutôt que vendre sur une marketplace",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "vendre sur amazon ou avoir son propre site",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "dépendre d'une marketplace est-ce risqué",
+  "theme": "e-commerce",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "ma boutique a été suspendue sur une marketplace que faire",
+  "theme": "e-commerce",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment récupérer ses clients d'une marketplace sur son propre site",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "peut-on combiner marketplace et site propre",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "etsy c'est quoi",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "etsy est-il adapté aux créateurs français",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "créatrice"
+ },
+ {
+  "q": "comment vendre sur etsy quand on est artisan",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "créatrice"
+ },
+ {
+  "q": "etsy ou site personnel pour vendre ses créations",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": "créatrice"
+ },
+ {
+  "q": "est-ce rentable de vendre sur etsy",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": "créatrice"
+ },
+ {
+  "q": "comment se démarquer sur etsy",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "créatrice"
+ },
+ {
+  "q": "etsy ou vinted pour vendre",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "vinted peut-il être utilisé par un commerçant",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "vendre des vêtements neufs de boutique sur vinted",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "boutique de mode"
+ },
+ {
+  "q": "vinted pro c'est quoi",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "vinted pro est-ce adapté à une boutique de vêtements",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": "boutique de mode"
+ },
+ {
+  "q": "leboncoin pro c'est quoi",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "leboncoin pro quels tarifs et avantages",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "leboncoin pro pour un commerçant est-ce rentable",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "leboncoin pro ou site internet",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "vendre des produits neufs sur leboncoin en tant que professionnel",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "peut-on vendre ses produits de boutique sur facebook marketplace",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "vendre sur instagram avec une boutique en ligne",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment vendre sur instagram quand on est commerçant",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment lier sa boutique en ligne à instagram",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment vendre sur facebook en tant que commerçant",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "vendre en live sur les réseaux sociaux pour un commerçant",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "google shopping pour un petit commerçant est-ce utile",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment faire apparaître ses produits sur google",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment faire apparaître ses produits sur google shopping gratuitement",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "vendre sur place de marché locale pour les commerçants de sa ville",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "local",
+  "metier": ""
+ },
+ {
+  "q": "marketplace locale pour commerçants de tours",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "local",
+  "metier": ""
+ },
+ {
+  "q": "vente à distance obligations du vendeur professionnel",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "c'est quoi la vente à distance",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "vente à distance et vente en ligne différence",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "vente à distance de produits alimentaires réglementation",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "vendre des denrées alimentaires en ligne quelles autorisations",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "e-commerce alimentaire ce qu'il faut savoir avant de se lancer",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "étiquetage des produits alimentaires vendus en ligne",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "allergènes à indiquer pour des produits alimentaires vendus en ligne",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "date limite de consommation et vente en ligne comment l'afficher",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "déclaration à la ddpp pour vendre des produits alimentaires en ligne",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "hygiène et emballage pour expédier des produits alimentaires",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "vendre des plats préparés en ligne c'est possible",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "vendre des produits artisanaux alimentaires sur internet démarches",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "vendre des produits faits maison en ligne ce qu'il faut déclarer",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "vente en ligne de cosmétiques faits maison réglementation",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "créatrice"
+ },
+ {
+  "q": "quelle assurance pour une boutique en ligne",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "faut-il une assurance spéciale pour vendre en ligne",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "seo e-commerce c'est quoi",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment référencer sa boutique en ligne sur google",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment être visible sur google avec une boutique en ligne",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment bien référencer ses fiches produits",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "seo fiche produit quelles bonnes pratiques",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment rédiger des titres de produits qui se placent sur google",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment éviter le contenu dupliqué sur une boutique en ligne",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment optimiser les catégories d'une boutique en ligne pour google",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "une boutique en ligne a-t-elle besoin d'un blog",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment faire du seo sur une boutique en ligne avec un petit budget",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment apparaître sur google quand on cherche un produit près de chez soi",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "local",
+  "metier": ""
+ },
+ {
+  "q": "référencement local pour un commerce qui vend en ligne",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "local",
+  "metier": ""
+ },
+ {
+  "q": "fiche google business et boutique en ligne comment les relier",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "afficher ses produits sur sa fiche google business",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "mon site e-commerce n'apparaît pas sur google pourquoi",
+  "theme": "e-commerce",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "ma boutique en ligne est trop lente que faire",
+  "theme": "e-commerce",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "un site e-commerce doit-il être adapté au téléphone",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "combien de clients achètent depuis leur téléphone",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment faire une page produit rapide à charger",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "agence seo e-commerce pour petite boutique",
+  "theme": "e-commerce",
+  "etape": "achat",
+  "intention": "achat",
+  "metier": ""
+ },
+ {
+  "q": "est-ce que vendre en ligne est rentable pour un artisan",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "vendre en ligne est-ce vraiment rentable pour un petit commerce",
+  "theme": "e-commerce",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "quels sont les avantages de la vente en ligne pour un commerçant",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "quels sont les inconvénients de la vente en ligne pour un petit commerce",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "quels sont les risques de l'e-commerce pour un artisan",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "quelles erreurs éviter quand on lance sa boutique en ligne",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "pourquoi tant de petites boutiques en ligne échouent",
+  "theme": "e-commerce",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "combien de temps avant les premières ventes d'une boutique en ligne",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment faire connaître sa boutique en ligne",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment trouver ses premiers clients pour une boutique en ligne",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment faire de la publicité pour une boutique en ligne",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "faire de la publicité facebook pour une boutique en ligne",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment utiliser l'intelligence artificielle pour décrire ses produits",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "chatgpt pour écrire des fiches produits est-ce une bonne idée",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment automatiser la gestion de sa boutique en ligne",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment gagner du temps avec une boutique en ligne",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment gérer les messages clients d'une boutique en ligne",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment gérer le service client quand on est seul",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment gérer les commandes spéciales sur mesure en ligne",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "comment prendre des commandes personnalisées sur un site",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "comment proposer des devis en ligne pour des produits sur mesure",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "formulaire de commande personnalisée pour artisan",
+  "theme": "e-commerce",
+  "etape": "achat",
+  "intention": "achat",
+  "metier": "artisan"
+ },
+ {
+  "q": "comment vendre des cartes cadeaux en ligne",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "carte cadeau valable en boutique et en ligne comment faire",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment proposer des bons d'achat sur son site",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment vendre des abonnements ou des box en ligne",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment gérer des livraisons récurrentes de produits",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment vendre des cours ou ateliers en ligne quand on est artisan",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "comment prendre des réservations d'ateliers sur un site",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "site vitrine avec boutique intégrée pour artisan",
+  "theme": "e-commerce",
+  "etape": "achat",
+  "intention": "achat",
+  "metier": "artisan"
+ },
+ {
+  "q": "site internet avec catalogue produits et demande de devis",
+  "theme": "e-commerce",
+  "etape": "achat",
+  "intention": "achat",
+  "metier": ""
+ },
+ {
+  "q": "catalogue en ligne sans paiement pour commerçant",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "catalogue en ligne ou boutique en ligne que choisir",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "comment présenter ses produits en ligne sans les vendre",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "vitrine en ligne de ses produits avec commande par téléphone",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "logiciel pour gérer sa boutique en ligne et sa boutique physique",
+  "theme": "logiciel de gestion",
+  "etape": "achat",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "outil tout-en-un pour commerçant caisse stock et site",
+  "theme": "logiciel de gestion",
+  "etape": "achat",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "outil de gestion sur mesure pour commerçant avec site e-commerce",
+  "theme": "logiciel de gestion",
+  "etape": "achat",
+  "intention": "achat",
+  "metier": ""
+ },
+ {
+  "q": "site e-commerce connecté à mon logiciel de gestion",
+  "theme": "logiciel de gestion",
+  "etape": "achat",
+  "intention": "achat",
+  "metier": ""
+ },
+ {
+  "q": "connecter son site à son logiciel de caisse",
+  "theme": "logiciel de gestion",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment relier sa boutique en ligne à sa comptabilité",
+  "theme": "logiciel de gestion",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment importer ses produits depuis son logiciel de caisse vers le site",
+  "theme": "logiciel de gestion",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "fichier produits excel vers boutique en ligne comment importer",
+  "theme": "logiciel de gestion",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "ma boutique en ligne prend trop de temps à gérer que faire",
+  "theme": "e-commerce",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "j'ai trop de commandes à gérer à la main comment m'organiser",
+  "theme": "logiciel de gestion",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "je perds du temps à recopier mes commandes dans un tableau",
+  "theme": "logiciel de gestion",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "mes clients veulent commander en ligne mais je n'ai pas de site",
+  "theme": "e-commerce",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "je n'arrive pas à vendre en ligne seul que faire",
+  "theme": "e-commerce",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "j'ai essayé de vendre en ligne sans succès comment relancer",
+  "theme": "e-commerce",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "ma boutique en ligne actuelle me coûte trop cher en commissions",
+  "theme": "e-commerce",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "mon abonnement de boutique en ligne augmente que faire",
+  "theme": "e-commerce",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "je veux quitter ma plateforme e-commerce comment récupérer mes produits",
+  "theme": "e-commerce",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment exporter ses produits et ses clients d'une boutique en ligne",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment refaire sa boutique en ligne sans perdre son référencement",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "refonte de boutique en ligne comment procéder",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "quand refaire sa boutique en ligne",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "ma boutique en ligne est vieillissante que faire",
+  "theme": "e-commerce",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "ma boutique en ligne est-elle sécurisée",
+  "theme": "e-commerce",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment sécuriser sa boutique en ligne contre le piratage",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "sauvegarde d'une boutique en ligne pourquoi et comment",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "qui gère les mises à jour d'une boutique en ligne",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "maintenance de boutique en ligne par un professionnel",
+  "theme": "e-commerce",
+  "etape": "achat",
+  "intention": "achat",
+  "metier": ""
+ },
+ {
+  "q": "puis-je modifier moi-même mes produits sur un site sur mesure",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment gérer soi-même sa boutique sur mesure sans compétences techniques",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "espace d'administration simple pour gérer ses produits",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "boutique en ligne simple à gérer pour un artisan seul",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "comment suivre les statistiques de sa boutique en ligne",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "google analytics pour une boutique en ligne est-ce nécessaire",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment mesurer les ventes qui viennent de chaque réseau",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "boutique en ligne éco-responsable emballages comment s'y prendre",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "emballage réutilisable pour expédier ses commandes",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment vendre local et livrer local en indre-et-loire",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "local",
+  "metier": ""
+ },
+ {
+  "q": "vendre en ligne dans une petite commune rurale",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "local",
+  "metier": ""
+ },
+ {
+  "q": "commerçant en milieu rural comment toucher plus de clients en ligne",
+  "theme": "e-commerce",
+  "etape": "solution",
+  "intention": "local",
+  "metier": ""
+ },
+ {
+  "q": "boutique en ligne pour commerçant à tours",
+  "theme": "e-commerce",
+  "etape": "achat",
+  "intention": "local",
+  "metier": ""
+ },
+ {
+  "q": "site e-commerce pour artisan en touraine",
+  "theme": "e-commerce",
+  "etape": "achat",
+  "intention": "local",
+  "metier": ""
+ },
+ {
+  "q": "développeur web e-commerce indre-et-loire",
+  "theme": "e-commerce",
+  "etape": "achat",
+  "intention": "local",
+  "metier": ""
+ },
+ {
+  "q": "agence web tours création de boutique en ligne",
+  "theme": "e-commerce",
+  "etape": "achat",
+  "intention": "local",
+  "metier": ""
+ }
+]

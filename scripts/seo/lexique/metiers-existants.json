@@ -1,0 +1,382 @@
+[
+ {
+  "slug": "videaste",
+  "metier": "vidéaste",
+  "categorie": "creatifs"
+ },
+ {
+  "slug": "agence-immobiliere",
+  "metier": "agence immobilière",
+  "categorie": "services"
+ },
+ {
+  "slug": "restaurant",
+  "metier": "restaurant",
+  "categorie": "restauration"
+ },
+ {
+  "slug": "pizzeria",
+  "metier": "pizzeria",
+  "categorie": "restauration"
+ },
+ {
+  "slug": "boulangerie-patisserie",
+  "metier": "boulangerie-pâtisserie",
+  "categorie": "restauration"
+ },
+ {
+  "slug": "plombier",
+  "metier": "plombier",
+  "categorie": "artisanat-btp"
+ },
+ {
+  "slug": "electricien",
+  "metier": "électricien",
+  "categorie": "artisanat-btp"
+ },
+ {
+  "slug": "salon-coiffure",
+  "metier": "salon de coiffure",
+  "categorie": "sante-bien-etre"
+ },
+ {
+  "slug": "avocat",
+  "metier": "avocat",
+  "categorie": "services"
+ },
+ {
+  "slug": "expert-comptable",
+  "metier": "expert-comptable",
+  "categorie": "services"
+ },
+ {
+  "slug": "garage-automobile",
+  "metier": "garage automobile",
+  "categorie": "services"
+ },
+ {
+  "slug": "chauffagiste-climatisation",
+  "metier": "chauffagiste & climatisation",
+  "categorie": "artisanat-btp"
+ },
+ {
+  "slug": "paysagiste-jardinier",
+  "metier": "paysagiste & jardinier",
+  "categorie": "artisanat-btp"
+ },
+ {
+  "slug": "osteopathe",
+  "metier": "ostéopathe",
+  "categorie": "sante-bien-etre"
+ },
+ {
+  "slug": "institut-beaute",
+  "metier": "institut de beauté",
+  "categorie": "sante-bien-etre"
+ },
+ {
+  "slug": "photographe",
+  "metier": "photographe",
+  "categorie": "services"
+ },
+ {
+  "slug": "fleuriste",
+  "metier": "fleuriste",
+  "categorie": "commerce"
+ },
+ {
+  "slug": "gite-location-saisonniere",
+  "metier": "gîte & location saisonnière",
+  "categorie": "tourisme"
+ },
+ {
+  "slug": "kebab-fast-food",
+  "metier": "kebab & fast-food",
+  "categorie": "restauration"
+ },
+ {
+  "slug": "food-truck",
+  "metier": "food truck",
+  "categorie": "restauration"
+ },
+ {
+  "slug": "brasserie-bar",
+  "metier": "brasserie & bar",
+  "categorie": "restauration"
+ },
+ {
+  "slug": "cafe-salon-the",
+  "metier": "café & salon de thé",
+  "categorie": "restauration"
+ },
+ {
+  "slug": "restaurant-gastronomique",
+  "metier": "restaurant gastronomique",
+  "categorie": "restauration"
+ },
+ {
+  "slug": "traiteur-evenementiel",
+  "metier": "traiteur événementiel",
+  "categorie": "restauration"
+ },
+ {
+  "slug": "boucherie-charcuterie",
+  "metier": "boucherie-charcuterie",
+  "categorie": "restauration"
+ },
+ {
+  "slug": "chocolatier",
+  "metier": "chocolatier",
+  "categorie": "restauration"
+ },
+ {
+  "slug": "glacier",
+  "metier": "glacier",
+  "categorie": "restauration"
+ },
+ {
+  "slug": "epicerie-fine",
+  "metier": "épicerie fine",
+  "categorie": "commerce"
+ },
+ {
+  "slug": "cave-vins-spiritueux",
+  "metier": "cave à vins",
+  "categorie": "commerce"
+ },
+ {
+  "slug": "fromager",
+  "metier": "fromager",
+  "categorie": "commerce"
+ },
+ {
+  "slug": "primeur",
+  "metier": "primeur",
+  "categorie": "commerce"
+ },
+ {
+  "slug": "poissonnier",
+  "metier": "poissonnier",
+  "categorie": "commerce"
+ },
+ {
+  "slug": "librairie-papeterie",
+  "metier": "librairie & papeterie",
+  "categorie": "commerce"
+ },
+ {
+  "slug": "tabac-presse",
+  "metier": "tabac-presse",
+  "categorie": "commerce"
+ },
+ {
+  "slug": "magasin-sport",
+  "metier": "magasin de sport",
+  "categorie": "commerce"
+ },
+ {
+  "slug": "magasin-jouets",
+  "metier": "magasin de jouets",
+  "categorie": "commerce"
+ },
+ {
+  "slug": "boutique-decoration",
+  "metier": "boutique de décoration",
+  "categorie": "commerce"
+ },
+ {
+  "slug": "magasin-informatique",
+  "metier": "magasin informatique & téléphonie",
+  "categorie": "commerce"
+ },
+ {
+  "slug": "opticien",
+  "metier": "opticien",
+  "categorie": "commerce"
+ },
+ {
+  "slug": "bijouterie-horlogerie",
+  "metier": "bijouterie-horlogerie",
+  "categorie": "commerce"
+ },
+ {
+  "slug": "vetements-enfants",
+  "metier": "boutique vêtements enfants",
+  "categorie": "commerce"
+ },
+ {
+  "slug": "boutique-mode",
+  "metier": "boutique de mode",
+  "categorie": "commerce"
+ },
+ {
+  "slug": "cosmetiques-naturels",
+  "metier": "cosmétiques naturels",
+  "categorie": "commerce"
+ },
+ {
+  "slug": "jardinerie-animalerie",
+  "metier": "jardinerie & animalerie",
+  "categorie": "commerce"
+ },
+ {
+  "slug": "macon-renovateur",
+  "metier": "maçon & rénovation",
+  "categorie": "artisanat-btp"
+ },
+ {
+  "slug": "couvreur-charpentier",
+  "metier": "couvreur & charpentier",
+  "categorie": "artisanat-btp"
+ },
+ {
+  "slug": "menuisier-ebeniste",
+  "metier": "menuisier & ébéniste",
+  "categorie": "artisanat-btp"
+ },
+ {
+  "slug": "peintre-decorateur",
+  "metier": "peintre en bâtiment",
+  "categorie": "artisanat-btp"
+ },
+ {
+  "slug": "carreleur-sol",
+  "metier": "carreleur & sols",
+  "categorie": "artisanat-btp"
+ },
+ {
+  "slug": "serrurier-depannage",
+  "metier": "serrurier",
+  "categorie": "artisanat-btp"
+ },
+ {
+  "slug": "cuisiniste",
+  "metier": "cuisiniste",
+  "categorie": "artisanat-btp"
+ },
+ {
+  "slug": "pisciniste",
+  "metier": "pisciniste",
+  "categorie": "artisanat-btp"
+ },
+ {
+  "slug": "vitrier",
+  "metier": "vitrier",
+  "categorie": "artisanat-btp"
+ },
+ {
+  "slug": "ramoneur",
+  "metier": "ramoneur",
+  "categorie": "artisanat-btp"
+ },
+ {
+  "slug": "facadier",
+  "metier": "façadier",
+  "categorie": "artisanat-btp"
+ },
+ {
+  "slug": "terrassier",
+  "metier": "terrassier",
+  "categorie": "artisanat-btp"
+ },
+ {
+  "slug": "cabinet-medical",
+  "metier": "cabinet médical",
+  "categorie": "sante-bien-etre"
+ },
+ {
+  "slug": "kinesitherapeute",
+  "metier": "kinésithérapeute",
+  "categorie": "sante-bien-etre"
+ },
+ {
+  "slug": "dentiste",
+  "metier": "dentiste",
+  "categorie": "sante-bien-etre"
+ },
+ {
+  "slug": "pharmacie-parapharmacie",
+  "metier": "pharmacie",
+  "categorie": "sante-bien-etre"
+ },
+ {
+  "slug": "veterinaire",
+  "metier": "vétérinaire",
+  "categorie": "sante-bien-etre"
+ },
+ {
+  "slug": "psychologue",
+  "metier": "psychologue",
+  "categorie": "sante-bien-etre"
+ },
+ {
+  "slug": "sophrologue",
+  "metier": "sophrologue",
+  "categorie": "sante-bien-etre"
+ },
+ {
+  "slug": "naturopathe",
+  "metier": "naturopathe",
+  "categorie": "sante-bien-etre"
+ },
+ {
+  "slug": "salle-de-sport",
+  "metier": "salle de sport",
+  "categorie": "sante-bien-etre"
+ },
+ {
+  "slug": "notaire",
+  "metier": "notaire",
+  "categorie": "services"
+ },
+ {
+  "slug": "architecte",
+  "metier": "architecte",
+  "categorie": "services"
+ },
+ {
+  "slug": "courtier-credit",
+  "metier": "courtier en crédit",
+  "categorie": "services"
+ },
+ {
+  "slug": "diagnostiqueur-immobilier",
+  "metier": "diagnostiqueur immobilier",
+  "categorie": "services"
+ },
+ {
+  "slug": "agence-evenementielle",
+  "metier": "agence événementielle",
+  "categorie": "services"
+ },
+ {
+  "slug": "organisme-formation",
+  "metier": "organisme de formation",
+  "categorie": "services"
+ },
+ {
+  "slug": "auto-ecole",
+  "metier": "auto-école",
+  "categorie": "services"
+ },
+ {
+  "slug": "camping",
+  "metier": "camping",
+  "categorie": "tourisme"
+ },
+ {
+  "slug": "ecole-danse-musique",
+  "metier": "école de danse & musique",
+  "categorie": "tourisme"
+ },
+ {
+  "slug": "tatoueur",
+  "metier": "tatoueur",
+  "categorie": "tourisme"
+ },
+ {
+  "slug": "toiletteur",
+  "metier": "toiletteur",
+  "categorie": "tourisme"
+ }
+]

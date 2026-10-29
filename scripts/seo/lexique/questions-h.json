@@ -1,0 +1,7212 @@
+[
+ {
+  "q": "comment avoir plus de clients quand on est artisan",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "comment trouver de nouveaux clients quand on est plombier",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "plombier"
+ },
+ {
+  "q": "pas assez de clients que faire",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "je n'ai pas assez de clients pour vivre de mon activité",
+  "theme": "visibilité et clients",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "carnet de commandes vide en hiver comment faire",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "couvreur"
+ },
+ {
+  "q": "carnet de commandes vide en hiver je suis maçon",
+  "theme": "visibilité et clients",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "maçon"
+ },
+ {
+  "q": "pourquoi mon activité est si saisonnière",
+  "theme": "visibilité et clients",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment lisser la saisonnalité de son activité",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment faire tourner un commerce en saison creuse",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "commerçant"
+ },
+ {
+  "q": "que faire quand les clients ne viennent plus en janvier",
+  "theme": "visibilité et clients",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "restaurateur"
+ },
+ {
+  "q": "je ne trouve pas de chantiers en ce moment",
+  "theme": "visibilité et clients",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "artisan du bâtiment"
+ },
+ {
+  "q": "où trouver des chantiers quand on est électricien indépendant",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "électricien"
+ },
+ {
+  "q": "comment trouver des chantiers de rénovation en tant que petit artisan",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "artisan du bâtiment"
+ },
+ {
+  "q": "le bouche à oreille ne suffit plus",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "mon bouche à oreille s'essouffle que faire",
+  "theme": "visibilité et clients",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment remplacer le bouche à oreille quand il ne marche plus",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment se faire connaître quand on s'installe à son compte",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment se faire connaître quand on vient d'ouvrir son commerce",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "commerçant"
+ },
+ {
+  "q": "comment se faire connaître dans sa ville quand on ouvre un salon de coiffure",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "coiffeur"
+ },
+ {
+  "q": "comment faire connaître son restaurant quand on vient de l'ouvrir",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "restaurateur"
+ },
+ {
+  "q": "comment trouver ses premiers clients en tant qu'indépendant",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment trouver ses premiers clients quand on reprend un commerce",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "commerçant"
+ },
+ {
+  "q": "reprendre un commerce comment garder les anciens clients",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "commerçant"
+ },
+ {
+  "q": "les clients de l'ancien propriétaire ne reviennent pas",
+  "theme": "visibilité et clients",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "boulanger"
+ },
+ {
+  "q": "comment attirer de nouveaux clients dans une boulangerie",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "boulanger"
+ },
+ {
+  "q": "comment attirer plus de clients dans son salon d'esthétique",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "esthéticienne"
+ },
+ {
+  "q": "comment remplir son planning quand on est coiffeur à domicile",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "coiffeur à domicile"
+ },
+ {
+  "q": "comment remplir son agenda quand on est ostéopathe",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "ostéopathe"
+ },
+ {
+  "q": "mon agenda de kiné n'est pas plein malgré les années d'installation",
+  "theme": "visibilité et clients",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "kinésithérapeute"
+ },
+ {
+  "q": "comment développer sa patientèle quand on est infirmière libérale",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "infirmière libérale"
+ },
+ {
+  "q": "comment développer sa patientèle de sophrologue",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "sophrologue"
+ },
+ {
+  "q": "comment avoir plus de patients quand on est dentiste",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "dentiste"
+ },
+ {
+  "q": "comment faire venir des patients dans un nouveau cabinet",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "médecin généraliste"
+ },
+ {
+  "q": "comment trouver des clients pour son cabinet de psychologue",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "psychologue"
+ },
+ {
+  "q": "comment avoir plus de clients pour son cabinet d'avocat",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "avocat"
+ },
+ {
+  "q": "comment développer une clientèle d'expert-comptable en zone rurale",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "expert-comptable"
+ },
+ {
+  "q": "comment trouver des clients quand on est architecte indépendant",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "architecte"
+ },
+ {
+  "q": "comment trouver des clients quand on est photographe de mariage",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "photographe"
+ },
+ {
+  "q": "comment trouver des clients quand on est photographe en freelance",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "photographe"
+ },
+ {
+  "q": "comment trouver des contrats quand on est vidéaste indépendant",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "vidéaste"
+ },
+ {
+  "q": "comment trouver des clients quand on est graphiste freelance",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "graphiste"
+ },
+ {
+  "q": "comment remplir ses sessions quand on est organisme de formation",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "organisme de formation"
+ },
+ {
+  "q": "comment faire venir du monde dans une boutique de vêtements",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "boutique de mode"
+ },
+ {
+  "q": "boutique vide malgré la rue passante",
+  "theme": "visibilité et clients",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "commerçant"
+ },
+ {
+  "q": "pourquoi personne n'entre dans ma boutique alors que la rue passe beaucoup",
+  "theme": "visibilité et clients",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "commerçant"
+ },
+ {
+  "q": "pourquoi les gens passent devant ma boutique sans entrer",
+  "theme": "visibilité et clients",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "commerçant"
+ },
+ {
+  "q": "les jeunes ne trouvent pas mon commerce",
+  "theme": "visibilité et clients",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "commerçant"
+ },
+ {
+  "q": "comment faire connaître un commerce de proximité aux jeunes",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "commerçant"
+ },
+ {
+  "q": "comment toucher une clientèle plus jeune quand on est fleuriste",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "fleuriste"
+ },
+ {
+  "q": "comment toucher les jeunes clients pour sa boucherie",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "boucher"
+ },
+ {
+  "q": "comment se démarquer quand on est artisan",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "comment se démarquer de la concurrence quand on est restaurateur",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "restaurateur"
+ },
+ {
+  "q": "comment se démarquer quand il y a plusieurs coiffeurs dans la même rue",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "coiffeur"
+ },
+ {
+  "q": "comment se différencier de la concurrence quand on est plombier",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "plombier"
+ },
+ {
+  "q": "comment se démarquer des grandes surfaces quand on est caviste",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "caviste"
+ },
+ {
+  "q": "comment se démarquer des enseignes quand on est libraire indépendant",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "libraire"
+ },
+ {
+  "q": "comment lutter contre les grandes surfaces quand on est petit commerçant",
+  "theme": "visibilité et clients",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "commerçant"
+ },
+ {
+  "q": "comment lutter contre la vente en ligne quand on a une boutique",
+  "theme": "visibilité et clients",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "commerçant"
+ },
+ {
+  "q": "mon concurrent est mieux placé que moi sur google",
+  "theme": "visibilité et clients",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "mon concurrent apparaît avant moi sur google que faire",
+  "theme": "visibilité et clients",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "pourquoi mon concurrent apparaît toujours en premier quand on cherche mon métier",
+  "theme": "visibilité et clients",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "les concurrents ont beaucoup plus d'avis que moi",
+  "theme": "visibilité et clients",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment rattraper un concurrent qui a plus d'avis",
+  "theme": "visibilité et clients",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "pourquoi mon concurrent a plus d'avis google que moi",
+  "theme": "visibilité et clients",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "manque de visibilité en ligne que faire",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "personne ne me trouve sur internet",
+  "theme": "visibilité et clients",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment être visible sur internet quand on est petit artisan",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "comment être visible en ligne quand on n'y connaît rien",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment être trouvé sur google quand on est menuisier",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "menuisier"
+ },
+ {
+  "q": "comment être trouvé par les clients de sa ville quand on est serrurier",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "serrurier"
+ },
+ {
+  "q": "comment faire venir des clients par internet quand on est carreleur",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "carreleur"
+ },
+ {
+  "q": "comment être visible quand on est peintre en bâtiment",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "peintre en bâtiment"
+ },
+ {
+  "q": "comment avoir des demandes de devis chaque semaine quand on est couvreur",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "couvreur"
+ },
+ {
+  "q": "comment recevoir plus de demandes de devis",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "je ne reçois plus de demandes de devis",
+  "theme": "visibilité et clients",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "pourquoi je ne reçois plus d'appels de nouveaux clients",
+  "theme": "visibilité et clients",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "le téléphone ne sonne plus depuis quelques mois",
+  "theme": "visibilité et clients",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "j'ai moins de clients que l'an dernier",
+  "theme": "visibilité et clients",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "pourquoi j'ai moins de clients cette année",
+  "theme": "visibilité et clients",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "mon chiffre d'affaires baisse chaque mois que faire",
+  "theme": "visibilité et clients",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "pourquoi les clients ne reviennent pas",
+  "theme": "visibilité et clients",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment faire revenir d'anciens clients",
+  "theme": "visibilité et clients",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment relancer d'anciens clients sans les harceler",
+  "theme": "visibilité et clients",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment fidéliser ses clients quand on est coiffeur",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "coiffeur"
+ },
+ {
+  "q": "comment fidéliser sa clientèle dans un institut de beauté",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "esthéticienne"
+ },
+ {
+  "q": "comment fidéliser les clients d'un restaurant",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "restaurateur"
+ },
+ {
+  "q": "comment fidéliser les clients d'une boulangerie",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "boulanger"
+ },
+ {
+  "q": "comment fidéliser ses clients quand on est garagiste",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "garagiste"
+ },
+ {
+  "q": "comment fidéliser les patients d'un cabinet de kiné",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "kinésithérapeute"
+ },
+ {
+  "q": "comment fidéliser ses clients quand on est fleuriste",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "fleuriste"
+ },
+ {
+  "q": "comment fidéliser une clientèle de particuliers quand on est artisan",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "comment fidéliser une clientèle de professionnels",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment obtenir plus d'avis google",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment demander un avis à un client sans le déranger",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment faire pour avoir des avis clients quand on est artisan",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "comment avoir des avis positifs quand on est restaurateur",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "restaurateur"
+ },
+ {
+  "q": "que faire face à un avis négatif",
+  "theme": "visibilité et clients",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "j'ai reçu un avis négatif injuste sur google",
+  "theme": "visibilité et clients",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment répondre à un avis négatif quand on est restaurateur",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "restaurateur"
+ },
+ {
+  "q": "comment répondre à un avis négatif quand on est artisan",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "comment répondre à un mauvais avis d'un patient",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "médecin généraliste"
+ },
+ {
+  "q": "comment faire supprimer un faux avis google",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "est-ce qu'un mauvais avis peut couler un commerce",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "commerçant"
+ },
+ {
+  "q": "combien d'avis faut-il pour être crédible sur google",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment les gens choisissent un artisan sur internet",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "comment les clients choisissent un restaurant",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "restaurateur"
+ },
+ {
+  "q": "comment les gens trouvent un coiffeur près de chez eux",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "local",
+  "metier": "coiffeur"
+ },
+ {
+  "q": "comment les gens trouvent un plombier en urgence",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "plombier"
+ },
+ {
+  "q": "comment les patients choisissent un kinésithérapeute",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "kinésithérapeute"
+ },
+ {
+  "q": "comment les gens choisissent un dentiste",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "dentiste"
+ },
+ {
+  "q": "comment trouver de nouveaux clients professionnels",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment démarcher des entreprises quand on est artisan",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "comment décrocher des contrats avec des entreprises locales",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment répondre à un appel d'offres local",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment répondre à un appel d'offres de commune quand on est petit artisan",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "artisan du bâtiment"
+ },
+ {
+  "q": "comment répondre à un marché public quand on est tpe",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "où trouver les appels d'offres des communes",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment travailler avec les mairies quand on est artisan",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "comment utiliser instagram pour un commerce de proximité",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "commerçant"
+ },
+ {
+  "q": "comment utiliser instagram pour son salon de coiffure",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "coiffeur"
+ },
+ {
+  "q": "comment utiliser facebook pour son restaurant",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "restaurateur"
+ },
+ {
+  "q": "est-ce que les réseaux sociaux servent vraiment à un artisan",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "faut-il être sur les réseaux sociaux quand on est plombier",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "plombier"
+ },
+ {
+  "q": "faut-il être sur instagram quand on est tatoueur",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "tatoueur"
+ },
+ {
+  "q": "faut-il une page facebook pour un commerce",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "commerçant"
+ },
+ {
+  "q": "je n'ai pas le temps de poster sur les réseaux sociaux",
+  "theme": "visibilité et clients",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment faire parler de son commerce sans budget",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "commerçant"
+ },
+ {
+  "q": "comment faire de la publicité pas chère quand on est artisan",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "comment faire sa publicité localement",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "la publicité dans le journal local marche-t-elle encore",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "les flyers dans les boîtes aux lettres marchent-ils encore",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "est-ce que les pages jaunes servent encore à quelque chose",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "faut-il encore être sur les pages jaunes en 2026",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment faire connaître son entreprise dans sa région",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment se faire connaître dans un village quand on est artisan",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "comment se faire connaître en zone rurale",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment développer son activité à tours",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "local",
+  "metier": ""
+ },
+ {
+  "q": "comment développer son activité quand on travaille seul",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment développer son entreprise artisanale sans embaucher",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "comment augmenter son chiffre d'affaires quand on est artisan",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "comment augmenter son panier moyen en boutique",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "commerçant"
+ },
+ {
+  "q": "comment vendre plus quand on est restaurateur",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "restaurateur"
+ },
+ {
+  "q": "comment remplir son restaurant en semaine",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "restaurateur"
+ },
+ {
+  "q": "comment remplir son restaurant le midi",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "restaurateur"
+ },
+ {
+  "q": "comment faire venir du monde dans un bar en semaine",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "gérant de bar"
+ },
+ {
+  "q": "comment attirer des touristes quand on a un commerce",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "commerçant"
+ },
+ {
+  "q": "comment remplir un gîte hors saison",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "gîte"
+ },
+ {
+  "q": "comment remplir son gîte sans passer par une plateforme de réservation",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "gîte"
+ },
+ {
+  "q": "comment avoir plus de réservations directes pour sa chambre d'hôtes",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "chambre d'hôtes"
+ },
+ {
+  "q": "comment remplir un camping en arrière-saison",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "camping"
+ },
+ {
+  "q": "comment éviter que les adhérents quittent sa salle de sport",
+  "theme": "visibilité et clients",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "salle de sport"
+ },
+ {
+  "q": "comment faire connaître son cabinet d'orthophonie",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "orthophoniste"
+ },
+ {
+  "q": "comment faire connaître son cabinet de podologie",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "podologue"
+ },
+ {
+  "q": "comment vendre plus de buffets quand on est traiteur",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "traiteur"
+ },
+ {
+  "q": "comment vendre plus de gâteaux sur commande quand on est pâtissier",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "pâtissier"
+ },
+ {
+  "q": "comment vendre sa production quand on est apiculteur",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "apiculteur"
+ },
+ {
+  "q": "comment vendre en direct quand on est agriculteur",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "agriculteur"
+ },
+ {
+  "q": "comment vendre sa bière quand on est brasseur artisanal",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "brasseur"
+ },
+ {
+  "q": "comment vendre ses créations quand on est potier",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "potier"
+ },
+ {
+  "q": "comment vendre ses bijoux quand on est créatrice indépendante",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "créateur de bijoux"
+ },
+ {
+  "q": "comment faire connaître sa cordonnerie",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "cordonnier"
+ },
+ {
+  "q": "comment faire vivre une librairie de quartier",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "libraire"
+ },
+ {
+  "q": "comment faire vivre un commerce de centre-ville",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "commerçant"
+ },
+ {
+  "q": "mon centre-ville se vide et mon commerce avec",
+  "theme": "visibilité et clients",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "commerçant"
+ },
+ {
+  "q": "les clients vont tous en zone commerciale",
+  "theme": "visibilité et clients",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "commerçant"
+ },
+ {
+  "q": "comment attirer des clients dans une cave à vins",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "caviste"
+ },
+ {
+  "q": "comment faire connaître une épicerie fine",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "épicier"
+ },
+ {
+  "q": "comment attirer plus de clients chez un fromager",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "fromager"
+ },
+ {
+  "q": "comment attirer plus de clients dans une pharmacie de village",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "pharmacien"
+ },
+ {
+  "q": "comment attirer des clients dans un magasin de bijoux",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "bijoutier"
+ },
+ {
+  "q": "comment attirer des clients chez un opticien indépendant",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "opticien"
+ },
+ {
+  "q": "comment faire connaître un magasin de jouets",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "commerçant"
+ },
+ {
+  "q": "comment faire connaître une jardinerie",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "jardinier"
+ },
+ {
+  "q": "comment vivre de son activité quand on est indépendant",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "je suis indépendant et je n'arrive pas à trouver des clients réguliers",
+  "theme": "visibilité et clients",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "je dépends d'un seul gros client que faire",
+  "theme": "visibilité et clients",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment ne plus dépendre d'un seul client",
+  "theme": "visibilité et clients",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment ne plus dépendre des plateformes pour trouver des clients",
+  "theme": "visibilité et clients",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "je paie des commissions énormes aux plateformes de mise en relation",
+  "theme": "visibilité et clients",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "les plateformes de devis en ligne valent-elles le coup pour un artisan",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "faut-il payer pour des contacts de clients quand on est artisan",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "les contacts achetés sur les plateformes sont toujours les mêmes que mes concurrents",
+  "theme": "visibilité et clients",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "comment avoir des clients sans payer de commission",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment recevoir des clients sans passer par une plateforme",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment gagner la confiance d'un client qu'on ne connaît pas",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment rassurer un client qui hésite à faire appel à un artisan",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "pourquoi les gens se méfient des artisans",
+  "theme": "visibilité et clients",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "comment montrer son travail sur internet quand on est artisan",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "comment présenter ses réalisations quand on est peintre",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "peintre en bâtiment"
+ },
+ {
+  "q": "comment montrer ses chantiers terminés à ses futurs clients",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "artisan du bâtiment"
+ },
+ {
+  "q": "comment mettre en valeur son savoir-faire",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment mettre en avant son métier sur internet",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment parler de soi quand on est timide et indépendant",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment faire de la communication quand on n'aime pas ça",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment faire sa communication quand on est seul",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment faire connaître son entreprise gratuitement",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment promouvoir son activité sans connaissance en marketing",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "que faire quand on ne sait pas se vendre",
+  "theme": "visibilité et clients",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment faire connaître une association locale",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "association"
+ },
+ {
+  "q": "comment attirer des adhérents pour son association",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "association"
+ },
+ {
+  "q": "comment faire connaître les activités d'un club de sport",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "association sportive"
+ },
+ {
+  "q": "comment promouvoir un événement local",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment réussir son ouverture de restaurant",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "restaurateur"
+ },
+ {
+  "q": "comment réussir l'ouverture d'un salon de coiffure",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "coiffeur"
+ },
+ {
+  "q": "comment réussir l'ouverture d'un commerce",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "commerçant"
+ },
+ {
+  "q": "comment réussir l'ouverture d'une boulangerie",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "boulanger"
+ },
+ {
+  "q": "comment lancer un cabinet libéral de dentiste",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "dentiste"
+ },
+ {
+  "q": "comment réussir la reprise d'un restaurant",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "restaurateur"
+ },
+ {
+  "q": "comment réussir la reprise d'un fonds de commerce",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "commerçant"
+ },
+ {
+  "q": "que faire les premiers mois après la reprise d'une boulangerie",
+  "theme": "visibilité et clients",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "boulanger"
+ },
+ {
+  "q": "comment relancer un commerce qui végète",
+  "theme": "visibilité et clients",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "commerçant"
+ },
+ {
+  "q": "comment relancer un restaurant qui ne marche plus",
+  "theme": "visibilité et clients",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "restaurateur"
+ },
+ {
+  "q": "comment relancer un salon de coiffure en perte de vitesse",
+  "theme": "visibilité et clients",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "coiffeur"
+ },
+ {
+  "q": "comment redonner un coup de jeune à un commerce",
+  "theme": "visibilité et clients",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "commerçant"
+ },
+ {
+  "q": "comment attirer les habitants du quartier dans sa boutique",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "commerçant"
+ },
+ {
+  "q": "comment attirer les touristes de passage dans son restaurant",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "restaurateur"
+ },
+ {
+  "q": "comment attirer les clients des alentours vers son commerce de village",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "commerçant"
+ },
+ {
+  "q": "clients qui ne rappellent pas après le devis",
+  "theme": "gestion d'entreprise",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "pourquoi les clients ne rappellent pas après un devis",
+  "theme": "gestion d'entreprise",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "mes devis sont toujours refusés pourquoi",
+  "theme": "gestion d'entreprise",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "pourquoi mes devis ne sont pas acceptés",
+  "theme": "gestion d'entreprise",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "plombier"
+ },
+ {
+  "q": "comment savoir pourquoi un client refuse un devis",
+  "theme": "gestion d'entreprise",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment relancer un client après l'envoi d'un devis",
+  "theme": "gestion d'entreprise",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment relancer un devis sans être lourd",
+  "theme": "gestion d'entreprise",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "quand relancer un client après un devis",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "quel message envoyer pour relancer un devis resté sans réponse",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment transformer plus de devis en chantiers",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "artisan du bâtiment"
+ },
+ {
+  "q": "que faire quand un client ne répond plus après un devis",
+  "theme": "gestion d'entreprise",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "un client me fait attendre depuis des semaines pour signer son devis",
+  "theme": "gestion d'entreprise",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "menuisier"
+ },
+ {
+  "q": "clients qui paient en retard que faire",
+  "theme": "gestion d'entreprise",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "j'ai des factures impayées que faire",
+  "theme": "gestion d'entreprise",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "un client ne veut pas payer sa facture",
+  "theme": "gestion d'entreprise",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "que faire quand un client ne paie pas sa facture",
+  "theme": "gestion d'entreprise",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "que faire face à un client qui ne paie pas après les travaux",
+  "theme": "gestion d'entreprise",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "artisan du bâtiment"
+ },
+ {
+  "q": "comment relancer une facture impayée sans se fâcher",
+  "theme": "gestion d'entreprise",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment éviter les impayés quand on est artisan",
+  "theme": "gestion d'entreprise",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "comment éviter les impayés quand on est indépendant",
+  "theme": "gestion d'entreprise",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment réclamer un paiement à un client professionnel",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment faire pour se faire payer plus vite par ses clients",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment demander un acompte à un particulier",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "comment gérer les retards de paiement quand on est tpe",
+  "theme": "gestion d'entreprise",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment faire une lettre de relance pour facture impayée",
+  "theme": "gestion d'entreprise",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "quand passer par un huissier pour une facture impayée",
+  "theme": "gestion d'entreprise",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment récupérer une facture impayée par un particulier",
+  "theme": "gestion d'entreprise",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "peut-on arrêter un chantier si le client ne paie pas l'acompte",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "artisan du bâtiment"
+ },
+ {
+  "q": "trésorerie tendue à cause des retards de paiement",
+  "theme": "gestion d'entreprise",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment gérer sa trésorerie quand on est artisan",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "comment gérer sa trésorerie en saison creuse",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment anticiper les mois creux de trésorerie",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "je perds des heures le soir à faire mes devis",
+  "theme": "gestion d'entreprise",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "je passe mes soirées à faire des devis et des factures",
+  "theme": "gestion d'entreprise",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "comment gagner du temps sur les devis quand on est artisan",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "comment faire un devis plus vite",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment faire ses devis rapidement sur le chantier",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "artisan du bâtiment"
+ },
+ {
+  "q": "comment ne plus passer ses soirées sur la paperasse",
+  "theme": "gestion d'entreprise",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "la paperasse administrative me submerge",
+  "theme": "gestion d'entreprise",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "trop de paperasse administrative pour un artisan",
+  "theme": "gestion d'entreprise",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "comment passer moins de temps sur l'administratif",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment réduire le temps passé sur l'administratif quand on est indépendant",
+  "theme": "gestion d'entreprise",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment alléger la paperasse d'une petite entreprise",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment s'organiser quand on fait tout soi-même dans son entreprise",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment s'organiser quand on est seul à la tête de son commerce",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "commerçant"
+ },
+ {
+  "q": "comment déléguer quand on est un petit patron",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment arrêter de tout faire soi-même dans son entreprise",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "mon planning est ingérable",
+  "theme": "gestion d'entreprise",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "je n'arrive plus à gérer mon planning de chantiers",
+  "theme": "gestion d'entreprise",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "artisan du bâtiment"
+ },
+ {
+  "q": "comment organiser son planning de chantiers",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "artisan du bâtiment"
+ },
+ {
+  "q": "comment organiser les tournées d'une équipe d'artisans",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment planifier les interventions quand on est plombier",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "plombier"
+ },
+ {
+  "q": "comment planifier les interventions de plusieurs techniciens",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "chauffagiste"
+ },
+ {
+  "q": "comment organiser son planning de rendez-vous quand on est coiffeur",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "coiffeur"
+ },
+ {
+  "q": "comment organiser le planning d'un salon avec plusieurs employées",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "coiffeur"
+ },
+ {
+  "q": "comment gérer un planning de cabinet avec plusieurs praticiens",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "kinésithérapeute"
+ },
+ {
+  "q": "comment éviter les doubles réservations",
+  "theme": "gestion d'entreprise",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "j'ai des doubles réservations sur mon planning",
+  "theme": "gestion d'entreprise",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment éviter les doubles réservations dans un gîte",
+  "theme": "gestion d'entreprise",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "gîte"
+ },
+ {
+  "q": "comment synchroniser les réservations d'un gîte entre plusieurs sites",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "gîte"
+ },
+ {
+  "q": "comment éviter les doubles réservations dans un restaurant",
+  "theme": "gestion d'entreprise",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "restaurateur"
+ },
+ {
+  "q": "comment gérer les réservations d'un restaurant sans cahier papier",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "restaurateur"
+ },
+ {
+  "q": "les rendez-vous non honorés me font perdre de l'argent",
+  "theme": "gestion d'entreprise",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment éviter les rendez-vous non honorés",
+  "theme": "gestion d'entreprise",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment limiter les no-show dans un salon de coiffure",
+  "theme": "gestion d'entreprise",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "coiffeur"
+ },
+ {
+  "q": "comment éviter les lapins des clients en institut de beauté",
+  "theme": "gestion d'entreprise",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "esthéticienne"
+ },
+ {
+  "q": "comment éviter les rendez-vous manqués chez le dentiste",
+  "theme": "gestion d'entreprise",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "dentiste"
+ },
+ {
+  "q": "comment réduire les rendez-vous non honorés en cabinet de kiné",
+  "theme": "gestion d'entreprise",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "kinésithérapeute"
+ },
+ {
+  "q": "comment réduire les absences de patients sans prévenir",
+  "theme": "gestion d'entreprise",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "ostéopathe"
+ },
+ {
+  "q": "que faire quand un patient ne vient pas à son rendez-vous",
+  "theme": "gestion d'entreprise",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "psychologue"
+ },
+ {
+  "q": "peut-on facturer un rendez-vous manqué",
+  "theme": "gestion d'entreprise",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment faire payer un rendez-vous non honoré",
+  "theme": "gestion d'entreprise",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "tatoueur"
+ },
+ {
+  "q": "comment rappeler automatiquement un rendez-vous à un client",
+  "theme": "gestion d'entreprise",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment envoyer des rappels de rendez-vous par sms",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "appels manqués pendant le chantier",
+  "theme": "gestion d'entreprise",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "je rate des appels de clients quand je suis sur un chantier",
+  "theme": "gestion d'entreprise",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "comment répondre au téléphone quand on est sur un chantier",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "artisan du bâtiment"
+ },
+ {
+  "q": "comment ne plus rater d'appels de clients quand on travaille",
+  "theme": "gestion d'entreprise",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment gérer les appels quand on est seul dans son salon",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "coiffeur"
+ },
+ {
+  "q": "comment gérer le téléphone quand on est en consultation",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "ostéopathe"
+ },
+ {
+  "q": "est-ce qu'un répondeur suffit pour un artisan",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "faut-il embaucher une secrétaire quand on est artisan",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "comment avoir un standard téléphonique pas cher quand on est indépendant",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment avoir une permanence téléphonique pour sa petite entreprise",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "est-ce que les clients rappellent quand ils tombent sur un répondeur",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment rappeler tous les clients quand on a manqué des appels",
+  "theme": "gestion d'entreprise",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment gérer les demandes qui arrivent par téléphone, sms et mail en même temps",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "je reçois des demandes de partout et je m'y perds",
+  "theme": "gestion d'entreprise",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment centraliser les demandes de ses clients",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment suivre ses clients sans logiciel",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment suivre ses demandes de devis",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment ne plus oublier de rappeler un client",
+  "theme": "gestion d'entreprise",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment garder une trace de ses échanges avec les clients",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment tenir un fichier clients simple",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment tenir un fichier clients quand on est artisan",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "comment ne pas perdre les informations de ses clients",
+  "theme": "gestion d'entreprise",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment tenir à jour son fichier clients en respectant le rgpd",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment gérer ses stocks quand on est petit commerçant",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "commerçant"
+ },
+ {
+  "q": "mon stock dort et mange ma trésorerie",
+  "theme": "gestion d'entreprise",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "commerçant"
+ },
+ {
+  "q": "comment écouler un stock qui dort",
+  "theme": "gestion d'entreprise",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "commerçant"
+ },
+ {
+  "q": "que faire des invendus quand on est boulanger",
+  "theme": "gestion d'entreprise",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "boulanger"
+ },
+ {
+  "q": "comment gérer son stock de matériaux quand on est artisan",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "artisan du bâtiment"
+ },
+ {
+  "q": "comment savoir ce qu'il reste en stock en boutique",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "commerçant"
+ },
+ {
+  "q": "comment faire un inventaire sans y passer la nuit",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "commerçant"
+ },
+ {
+  "q": "comment éviter les ruptures de stock dans une boutique",
+  "theme": "gestion d'entreprise",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "commerçant"
+ },
+ {
+  "q": "comment gérer les commandes fournisseurs d'un restaurant",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "restaurateur"
+ },
+ {
+  "q": "comment réduire le gaspillage alimentaire dans un restaurant",
+  "theme": "gestion d'entreprise",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "restaurateur"
+ },
+ {
+  "q": "comment calculer le coût de revient d'un plat",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "restaurateur"
+ },
+ {
+  "q": "comment calculer la marge sur ses produits en boutique",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "commerçant"
+ },
+ {
+  "q": "comment savoir si son restaurant est rentable",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "restaurateur"
+ },
+ {
+  "q": "comment savoir si son commerce est rentable",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "commerçant"
+ },
+ {
+  "q": "comment suivre la rentabilité de ses chantiers",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "artisan du bâtiment"
+ },
+ {
+  "q": "erreurs de caisse en fin de journée",
+  "theme": "gestion d'entreprise",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "commerçant"
+ },
+ {
+  "q": "pourquoi ma caisse ne tombe jamais juste",
+  "theme": "gestion d'entreprise",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "commerçant"
+ },
+ {
+  "q": "comment éviter les erreurs de caisse dans un commerce",
+  "theme": "gestion d'entreprise",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "commerçant"
+ },
+ {
+  "q": "comment éviter les erreurs de caisse quand on a des employés",
+  "theme": "gestion d'entreprise",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "boulanger"
+ },
+ {
+  "q": "comment choisir un système de caisse pour un petit commerce",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "commerçant"
+ },
+ {
+  "q": "comment gérer ses employés quand on est petit patron",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "j'ai du mal à gérer mes employés",
+  "theme": "gestion d'entreprise",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment manager sa première équipe quand on est artisan",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "comment manager une petite équipe dans un salon de coiffure",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "coiffeur"
+ },
+ {
+  "q": "comment gérer une équipe en cuisine quand on est restaurateur",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "restaurateur"
+ },
+ {
+  "q": "comment gérer un salarié qui ne fait pas son travail",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment motiver ses salariés dans une petite entreprise",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment remplacer un salarié absent dans un commerce",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "commerçant"
+ },
+ {
+  "q": "comment remplacer un salarié en arrêt maladie dans une petite entreprise",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "que faire quand un employé démissionne sans prévenir",
+  "theme": "gestion d'entreprise",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "restaurateur"
+ },
+ {
+  "q": "comment recruter un apprenti quand on est artisan",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "comment trouver un apprenti pour son salon de coiffure",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "coiffeur"
+ },
+ {
+  "q": "comment trouver un salarié quand on est boulanger",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "boulanger"
+ },
+ {
+  "q": "comment trouver du personnel quand on est restaurateur",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "restaurateur"
+ },
+ {
+  "q": "impossible de recruter du personnel dans la restauration",
+  "theme": "gestion d'entreprise",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "restaurateur"
+ },
+ {
+  "q": "je n'arrive pas à recruter un ouvrier qualifié",
+  "theme": "gestion d'entreprise",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "artisan du bâtiment"
+ },
+ {
+  "q": "comment organiser les plannings de ses salariés",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment faire un planning de travail pour des employés en commerce",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "commerçant"
+ },
+ {
+  "q": "comment suivre les heures de ses salariés",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment suivre les heures supplémentaires d'un salarié dans une tpe",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment faire les fiches de paie quand on a un seul salarié",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "trop de saisies sur excel que faire",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "je ressaisis les mêmes informations dans plusieurs fichiers",
+  "theme": "gestion d'entreprise",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "mon fichier excel devient ingérable",
+  "theme": "gestion d'entreprise",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "j'ai trop de fichiers excel pour gérer mon entreprise",
+  "theme": "gestion d'entreprise",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment sortir d'excel pour gérer son entreprise",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "quelles sont les limites d'excel pour une petite entreprise",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment éviter les erreurs de saisie dans excel",
+  "theme": "gestion d'entreprise",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "j'ai perdu des données de mon entreprise",
+  "theme": "gestion d'entreprise",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment éviter de perdre ses données d'entreprise",
+  "theme": "gestion d'entreprise",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment sauvegarder ses fichiers d'entreprise simplement",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "que faire quand l'ordinateur plante et qu'on a perdu ses devis",
+  "theme": "gestion d'entreprise",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment sécuriser ses données clients quand on est indépendant",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "ma comptabilité est en retard",
+  "theme": "gestion d'entreprise",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "je suis en retard dans ma comptabilité depuis des mois",
+  "theme": "gestion d'entreprise",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "que faire quand on a pris du retard dans sa comptabilité",
+  "theme": "gestion d'entreprise",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment rattraper une comptabilité en retard",
+  "theme": "gestion d'entreprise",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment tenir sa comptabilité quand on est artisan",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "comment tenir sa comptabilité de commerçant sans comptable",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "commerçant"
+ },
+ {
+  "q": "comment faire sa compta tout seul quand on est micro-entrepreneur",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment classer ses factures et ses justificatifs",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment classer ses factures fournisseurs",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment ne plus perdre ses tickets et justificatifs",
+  "theme": "gestion d'entreprise",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment gérer ses notes de frais quand on est indépendant",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment savoir combien il me reste vraiment à la fin du mois",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment savoir combien je gagne vraiment en tant qu'indépendant",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment calculer son seuil de rentabilité quand on est artisan",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "comment se verser un salaire quand on est gérant de tpe",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment fixer son taux horaire quand on est artisan",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "burn-out de l'indépendant que faire",
+  "theme": "gestion d'entreprise",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "je suis épuisé par mon métier d'artisan",
+  "theme": "gestion d'entreprise",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "épuisement professionnel du commerçant",
+  "theme": "gestion d'entreprise",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "commerçant"
+ },
+ {
+  "q": "burn-out d'un restaurateur comment s'en sortir",
+  "theme": "gestion d'entreprise",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "restaurateur"
+ },
+ {
+  "q": "burn-out chez les professions libérales",
+  "theme": "gestion d'entreprise",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment savoir si on est en burn-out quand on est chef d'entreprise",
+  "theme": "gestion d'entreprise",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment éviter le burn-out quand on est entrepreneur seul",
+  "theme": "gestion d'entreprise",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "je travaille tout le temps le week-end",
+  "theme": "gestion d'entreprise",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "je travaille le week-end pour rattraper mon administratif",
+  "theme": "gestion d'entreprise",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment ne plus travailler le week-end quand on est indépendant",
+  "theme": "gestion d'entreprise",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment trouver un équilibre entre vie pro et vie perso quand on est artisan",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "comment prendre des vacances quand on est seul dans son commerce",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "commerçant"
+ },
+ {
+  "q": "comment prendre des vacances sans perdre de clients",
+  "theme": "gestion d'entreprise",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment fermer son commerce pour congés sans perdre de chiffre d'affaires",
+  "theme": "gestion d'entreprise",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "commerçant"
+ },
+ {
+  "q": "comment se faire remplacer quand on est professionnel libéral",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment trouver un remplaçant pour son cabinet de kiné",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "kinésithérapeute"
+ },
+ {
+  "q": "comment trouver un remplaçant en cabinet d'infirmière",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "infirmière libérale"
+ },
+ {
+  "q": "comment avoir moins de secrétariat quand on est kiné",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "kinésithérapeute"
+ },
+ {
+  "q": "comment alléger le secrétariat d'un cabinet dentaire",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "dentiste"
+ },
+ {
+  "q": "comment réduire le secrétariat d'un cabinet d'infirmière",
+  "theme": "gestion d'entreprise",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "infirmière libérale"
+ },
+ {
+  "q": "comment réduire le temps de secrétariat d'un cabinet d'ostéopathe",
+  "theme": "gestion d'entreprise",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "ostéopathe"
+ },
+ {
+  "q": "comment se passer de secrétaire médicale",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "médecin généraliste"
+ },
+ {
+  "q": "est-ce qu'un cabinet de psychologue peut fonctionner sans secrétaire",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "psychologue"
+ },
+ {
+  "q": "comment gérer les appels de patients sans secrétaire",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "podologue"
+ },
+ {
+  "q": "comment gérer les rendez-vous d'un cabinet médical",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "médecin généraliste"
+ },
+ {
+  "q": "comment gérer les dossiers patients simplement",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "ostéopathe"
+ },
+ {
+  "q": "je passe trop de temps sur l'administratif dans mon cabinet",
+  "theme": "gestion d'entreprise",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "kinésithérapeute"
+ },
+ {
+  "q": "mon cabinet me prend toute mon énergie",
+  "theme": "gestion d'entreprise",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "dentiste"
+ },
+ {
+  "q": "comment diminuer la charge administrative d'un cabinet libéral",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment organiser son cabinet libéral",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment gérer son cabinet d'orthophoniste",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "orthophoniste"
+ },
+ {
+  "q": "comment gérer son cabinet de sage-femme",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "sage-femme"
+ },
+ {
+  "q": "comment gérer son activité de psychologue en libéral",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "psychologue"
+ },
+ {
+  "q": "comment s'organiser quand on est avocat en solo",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "avocat"
+ },
+ {
+  "q": "comment gérer l'administratif d'un cabinet d'avocat",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "avocat"
+ },
+ {
+  "q": "comment gérer l'administratif d'un cabinet d'architecte",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "architecte"
+ },
+ {
+  "q": "comment gérer ses dossiers clients quand on est expert-comptable indépendant",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "expert-comptable"
+ },
+ {
+  "q": "comment gérer son agence immobilière sans trop d'administratif",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "agent immobilier"
+ },
+ {
+  "q": "comment gérer plusieurs chantiers en même temps",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "artisan du bâtiment"
+ },
+ {
+  "q": "comment suivre l'avancement de ses chantiers",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "artisan du bâtiment"
+ },
+ {
+  "q": "comment gérer les chantiers qui prennent du retard",
+  "theme": "gestion d'entreprise",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "artisan du bâtiment"
+ },
+ {
+  "q": "comment gérer les imprévus sur un chantier",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "artisan du bâtiment"
+ },
+ {
+  "q": "comment gérer les demandes de travaux supplémentaires d'un client",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "artisan du bâtiment"
+ },
+ {
+  "q": "comment gérer un client difficile",
+  "theme": "gestion d'entreprise",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "comment gérer un client qui conteste sa facture",
+  "theme": "gestion d'entreprise",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment gérer un client mécontent dans un restaurant",
+  "theme": "gestion d'entreprise",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "restaurateur"
+ },
+ {
+  "q": "comment gérer une réclamation client dans un commerce",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "commerçant"
+ },
+ {
+  "q": "comment gérer les clients qui marchandent",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "commerçant"
+ },
+ {
+  "q": "comment répondre à un client qui trouve le prix trop cher",
+  "theme": "gestion d'entreprise",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment gérer les garanties et les litiges avec ses clients",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment gérer son entreprise quand on est nul en gestion",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment apprendre la gestion d'entreprise quand on est artisan",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "quelles sont les erreurs de gestion les plus fréquentes chez les artisans",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "quelles sont les erreurs à éviter quand on reprend un commerce",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "commerçant"
+ },
+ {
+  "q": "quelles sont les erreurs à éviter quand on ouvre un restaurant",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "restaurateur"
+ },
+ {
+  "q": "quelles sont les erreurs à éviter quand on ouvre un salon de coiffure",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "coiffeur"
+ },
+ {
+  "q": "que faut-il prévoir avant d'ouvrir un institut de beauté",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "esthéticienne"
+ },
+ {
+  "q": "que faut-il savoir avant de reprendre un commerce",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "commerçant"
+ },
+ {
+  "q": "que faut-il savoir avant de s'installer comme artisan",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "que faut-il savoir avant de s'installer en libéral",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment savoir si son commerce va survivre",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "commerçant"
+ },
+ {
+  "q": "mon entreprise ne décolle pas malgré mes efforts",
+  "theme": "gestion d'entreprise",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "j'ai l'impression de travailler pour rien",
+  "theme": "gestion d'entreprise",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "je travaille beaucoup mais je ne gagne pas assez",
+  "theme": "gestion d'entreprise",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "pourquoi je travaille autant pour gagner si peu",
+  "theme": "gestion d'entreprise",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "comment faire grandir sa petite entreprise sans s'épuiser",
+  "theme": "gestion d'entreprise",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment passer de seul à une petite équipe",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "quand embaucher son premier salarié",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment savoir si on peut embaucher",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment structurer son activité d'artisan",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "comment professionnaliser son activité d'indépendant",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment faire plus professionnel quand on est micro-entrepreneur",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment gérer un commerce à distance",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "commerçant"
+ },
+ {
+  "q": "comment gérer un restaurant et sa vie de famille",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "restaurateur"
+ },
+ {
+  "q": "comment gérer deux activités en même temps",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment gérer la saisonnalité dans un camping",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "camping"
+ },
+ {
+  "q": "comment gérer la haute saison dans un gîte",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "gîte"
+ },
+ {
+  "q": "comment gérer les réservations de groupes dans un restaurant",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "restaurateur"
+ },
+ {
+  "q": "comment gérer les commandes spéciales dans une boulangerie",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "boulanger"
+ },
+ {
+  "q": "comment gérer les commandes de fêtes dans une boucherie",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "boucher"
+ },
+ {
+  "q": "comment gérer les commandes de bouquets pour des mariages",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "fleuriste"
+ },
+ {
+  "q": "comment gérer les commandes de gâteaux d'anniversaire",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "pâtissier"
+ },
+ {
+  "q": "comment gérer la livraison de ses commandes quand on est commerçant",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "commerçant"
+ },
+ {
+  "q": "comment gérer les retours clients en boutique",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "commerçant"
+ },
+ {
+  "q": "comment gérer les abonnements d'une salle de sport",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "salle de sport"
+ },
+ {
+  "q": "comment gérer les inscriptions d'une école de danse",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "école de danse"
+ },
+ {
+  "q": "comment gérer les inscriptions de son club",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "association"
+ },
+ {
+  "q": "comment gérer les inscriptions à une formation",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "organisme de formation"
+ },
+ {
+  "q": "comment gérer les cotisations d'une association",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "association"
+ },
+ {
+  "q": "comment gérer les adhérents d'une association sans tableur",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "association"
+ },
+ {
+  "q": "comment gérer le planning des bénévoles",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "association"
+ },
+ {
+  "q": "comment gérer les leçons de conduite d'une auto-école",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "auto-école"
+ },
+ {
+  "q": "comment gérer le planning des moniteurs d'une auto-école",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "auto-école"
+ },
+ {
+  "q": "comment gérer le planning d'un camping",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "camping"
+ },
+ {
+  "q": "comment suivre les interventions d'une équipe de dépannage",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "chauffagiste"
+ },
+ {
+  "q": "comment suivre les contrats d'entretien de ses clients",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "chauffagiste"
+ },
+ {
+  "q": "comment gérer les contrats d'entretien annuels d'une chaudière",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "chauffagiste"
+ },
+ {
+  "q": "comment ne pas oublier les rappels d'entretien des clients",
+  "theme": "gestion d'entreprise",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "ramoneur"
+ },
+ {
+  "q": "comment gérer les tournées de ramonage",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "ramoneur"
+ },
+ {
+  "q": "comment gérer les rendez-vous de ses clients en garage",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "garagiste"
+ },
+ {
+  "q": "comment gérer les devis et ordres de réparation dans un garage",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "garagiste"
+ },
+ {
+  "q": "comment gérer le suivi des véhicules en atelier",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "garagiste"
+ },
+ {
+  "q": "comment suivre les réparations de téléphones en boutique",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "réparateur de téléphones"
+ },
+ {
+  "q": "quelles sont les obligations légales d'un artisan",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "quelles mentions obligatoires sur un devis",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "quelles mentions obligatoires sur une facture d'artisan",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "quelles mentions obligatoires sur une facture de micro-entrepreneur",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "quelles sont les obligations d'un commerçant en matière d'affichage des prix",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "commerçant"
+ },
+ {
+  "q": "quelles mentions légales mettre sur le site d'un artisan",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "les mentions légales sont-elles obligatoires pour un petit commerce",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "commerçant"
+ },
+ {
+  "q": "que risque-t-on sans mentions légales sur son site",
+  "theme": "obligations légales",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "je n'ai pas de mentions légales sur mon site que risquer",
+  "theme": "obligations légales",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "est-ce que le rgpd concerne les petits commerçants",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "commerçant"
+ },
+ {
+  "q": "quelles sont les obligations rgpd d'un artisan",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "quelles sont les obligations rgpd d'un cabinet médical",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "médecin généraliste"
+ },
+ {
+  "q": "quelles sont les obligations rgpd pour un salon de coiffure qui garde les fiches clients",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "coiffeur"
+ },
+ {
+  "q": "comment se mettre en conformité rgpd quand on est tpe",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment tenir un registre rgpd simplement",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "qu'est-ce qu'un registre des traitements pour une petite entreprise",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "est-ce obligatoire de mettre un bandeau cookies sur son site",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "que faire pour être conforme sur les cookies",
+  "theme": "obligations légales",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "quelles sont les obligations d'un restaurateur en matière d'hygiène",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "restaurateur"
+ },
+ {
+  "q": "qu'est-ce que la méthode haccp pour un restaurant",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "restaurateur"
+ },
+ {
+  "q": "quelles sont les obligations d'affichage des allergènes dans un restaurant",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "restaurateur"
+ },
+ {
+  "q": "quelles sont les obligations d'un boulanger en matière d'étiquetage",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "boulanger"
+ },
+ {
+  "q": "quelles assurances sont obligatoires pour un artisan du bâtiment",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "artisan du bâtiment"
+ },
+ {
+  "q": "c'est quoi la garantie décennale pour un artisan",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "artisan du bâtiment"
+ },
+ {
+  "q": "faut-il une décennale quand on est peintre en bâtiment",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "peintre en bâtiment"
+ },
+ {
+  "q": "faut-il une assurance décennale pour un électricien",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "électricien"
+ },
+ {
+  "q": "faut-il une décennale quand on est auto-entrepreneur dans le bâtiment",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "artisan du bâtiment"
+ },
+ {
+  "q": "quelle assurance pour un commerçant qui ouvre sa boutique",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "commerçant"
+ },
+ {
+  "q": "quelle assurance professionnelle pour un coiffeur à domicile",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "coiffeur à domicile"
+ },
+ {
+  "q": "quelle assurance faut-il pour un cabinet de kiné",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "kinésithérapeute"
+ },
+ {
+  "q": "quelle assurance pour un food truck",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "food truck"
+ },
+ {
+  "q": "quelle assurance responsabilité civile pour un photographe",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "photographe"
+ },
+ {
+  "q": "est-ce que la responsabilité civile professionnelle est obligatoire pour un freelance",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "quelles sont les obligations d'un auto-entrepreneur",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "quelles sont les obligations d'un micro-entrepreneur en 2026",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "quelles sont les obligations comptables d'un micro-entrepreneur",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "quelles sont les obligations comptables d'un commerçant",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "commerçant"
+ },
+ {
+  "q": "quelles sont les obligations comptables d'une association",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "association"
+ },
+ {
+  "q": "c'est quoi la facture électronique pour une tpe",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "qu'est-ce que la facturation électronique obligatoire pour un artisan",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "à partir de quand la facture électronique est-elle obligatoire pour une petite entreprise",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "faut-il se préparer à la facture électronique quand on est micro-entrepreneur",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment se préparer à la facture électronique quand on est artisan",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "comment se préparer à la facturation électronique quand on est commerçant",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "commerçant"
+ },
+ {
+  "q": "quel logiciel pour passer à la facture électronique sans se compliquer",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "est-ce que ma facture word sera encore acceptée avec la facture électronique",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "est-ce que je pourrai encore faire mes factures sur excel avec la facture électronique",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "est-ce que les factures papier vont disparaître pour les artisans",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "qu'est-ce qu'une plateforme agréée de facturation électronique",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "faut-il choisir une plateforme agréée pour la facture électronique en 2026",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "quelles sont les obligations de facturation électronique en 2027",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "c'est quoi l'e-reporting pour un commerçant",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "commerçant"
+ },
+ {
+  "q": "qu'est-ce que l'e-reporting quand on vend à des particuliers",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "est-ce qu'un artisan qui vend à des particuliers est concerné par l'e-reporting",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "quelles sont les sanctions si on ne respecte pas la facture électronique",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment faire une facture conforme quand on est artisan",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "comment numéroter ses factures correctement",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "combien de temps faut-il conserver ses factures",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "combien de temps conserver les dossiers de ses patients",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "médecin généraliste"
+ },
+ {
+  "q": "combien de temps conserver les devis signés",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "faut-il un logiciel de caisse certifié pour un commerce",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "commerçant"
+ },
+ {
+  "q": "qu'est-ce que la loi anti-fraude tva pour les caisses",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "commerçant"
+ },
+ {
+  "q": "mon logiciel de caisse doit-il être certifié",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "commerçant"
+ },
+ {
+  "q": "quelles sont les règles pour le ticket de caisse",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "commerçant"
+ },
+ {
+  "q": "quelles sont les règles à respecter pour une vente à distance quand on est commerçant",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "commerçant"
+ },
+ {
+  "q": "quelles sont les obligations quand on vend en ligne",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "quelle est la durée de rétractation pour une vente en ligne",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "faut-il des conditions générales de vente quand on est artisan",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "comment rédiger des conditions générales de vente simples",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "les conditions générales de vente sont-elles obligatoires pour un auto-entrepreneur",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment faire signer un devis à distance",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "un devis signé a-t-il valeur de contrat",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "peut-on signer un devis par mail",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "la signature électronique d'un devis est-elle valable",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "quelle est la durée de validité d'un devis",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "un devis est-il gratuit pour un artisan",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "le devis est-il obligatoire pour des travaux chez un particulier",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "artisan du bâtiment"
+ },
+ {
+  "q": "quelle différence entre devis et estimation",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "quand le devis est-il obligatoire pour un dépannage",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "plombier"
+ },
+ {
+  "q": "que faire si le client refuse de payer un devis accepté",
+  "theme": "obligations légales",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "c'est quoi la tva à taux réduit pour des travaux de rénovation",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "artisan du bâtiment"
+ },
+ {
+  "q": "comment savoir quel taux de tva appliquer sur un devis de travaux",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "artisan du bâtiment"
+ },
+ {
+  "q": "quel taux de tva pour un restaurant sur place et à emporter",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "restaurateur"
+ },
+ {
+  "q": "comment fonctionne la franchise en base de tva",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "quand faut-il facturer la tva quand on est micro-entrepreneur",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "que se passe-t-il quand on dépasse le seuil de tva en micro-entreprise",
+  "theme": "obligations légales",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment déclarer la tva quand on est artisan",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "comment faire sa déclaration de tva sans comptable",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "j'ai oublié de déclarer ma tva que faire",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "j'ai oublié de déclarer ma tva à temps",
+  "theme": "obligations légales",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "je suis en retard sur mes déclarations de tva",
+  "theme": "obligations légales",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment fonctionne la tva pour un restaurateur",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "restaurateur"
+ },
+ {
+  "q": "comment fonctionne la tva pour un coiffeur",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "coiffeur"
+ },
+ {
+  "q": "comment calculer les charges quand on est artisan",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "comment calculer ses charges sociales quand on est indépendant",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment fonctionnent les cotisations urssaf pour un artisan",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "comment déclarer son chiffre d'affaires à l'urssaf",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "que faire quand on oublie de déclarer son chiffre d'affaires à l'urssaf",
+  "theme": "obligations légales",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "j'ai reçu une mise en demeure de l'urssaf que faire",
+  "theme": "obligations légales",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "je ne peux pas payer mes cotisations urssaf",
+  "theme": "obligations légales",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment demander un délai de paiement à l'urssaf",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment obtenir un échéancier avec l'urssaf",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "que se passe-t-il si on ne paie pas ses charges sociales",
+  "theme": "obligations légales",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment fonctionnent les charges d'un commerçant indépendant",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "commerçant"
+ },
+ {
+  "q": "comment fonctionnent les charges quand on emploie un premier salarié",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment déclarer un salarié pour la première fois",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment faire une déclaration préalable à l'embauche",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "quelles sont les obligations d'un employeur de tpe",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "quel est le registre unique du personnel et comment le tenir",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "c'est quoi le document unique d'évaluation des risques",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "le document unique est-il obligatoire pour une tpe",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment rédiger son document unique d'évaluation des risques",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "coiffeur"
+ },
+ {
+  "q": "quelles formations obligatoires pour un salarié en cuisine",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "restaurateur"
+ },
+ {
+  "q": "quelles obligations pour un employeur dans un salon de coiffure",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "coiffeur"
+ },
+ {
+  "q": "quelles sont les obligations d'un propriétaire de gîte",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "gîte"
+ },
+ {
+  "q": "quelles sont les obligations légales d'un camping",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "camping"
+ },
+ {
+  "q": "quelles sont les obligations légales d'un gérant de bar",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "gérant de bar"
+ },
+ {
+  "q": "quelles sont les règles pour ouvrir un débit de boissons",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "gérant de bar"
+ },
+ {
+  "q": "quelle licence pour vendre de l'alcool dans un restaurant",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "restaurateur"
+ },
+ {
+  "q": "quelles autorisations pour ouvrir un food truck",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "food truck"
+ },
+ {
+  "q": "quelles démarches pour ouvrir un salon de coiffure",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "coiffeur"
+ },
+ {
+  "q": "quelles démarches pour ouvrir un institut de beauté",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "esthéticienne"
+ },
+ {
+  "q": "quelles démarches pour ouvrir un restaurant",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "restaurateur"
+ },
+ {
+  "q": "quelles démarches pour reprendre une boulangerie",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "boulanger"
+ },
+ {
+  "q": "quelles démarches pour ouvrir une librairie",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "libraire"
+ },
+ {
+  "q": "quelles démarches pour ouvrir un cabinet de kinésithérapie",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "kinésithérapeute"
+ },
+ {
+  "q": "quelle différence entre micro-entreprise et société pour un artisan",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "comparaison",
+  "metier": "artisan"
+ },
+ {
+  "q": "faut-il passer en société quand on est artisan",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "quel statut choisir quand on ouvre un commerce",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "commerçant"
+ },
+ {
+  "q": "quel statut choisir pour un cabinet libéral",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "quel statut juridique pour un restaurateur qui démarre",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "restaurateur"
+ },
+ {
+  "q": "comment changer de statut quand on dépasse le plafond de la micro-entreprise",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "que se passe-t-il quand on dépasse le plafond du chiffre d'affaires de la micro-entreprise",
+  "theme": "obligations légales",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "j'ai dépassé le plafond de la micro-entreprise que faire",
+  "theme": "obligations légales",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment calculer ses impôts quand on est artisan",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "comment faire sa déclaration d'impôts quand on est auto-entrepreneur",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment fonctionne le versement libératoire",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment fonctionne la cfe pour un artisan",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "est-on obligé de payer la cfe quand on est micro-entrepreneur",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment fonctionne le compte professionnel obligatoire pour un indépendant",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "faut-il un compte bancaire professionnel quand on est micro-entrepreneur",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment fonctionne la retraite d'un artisan",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "comment fonctionne la mutuelle obligatoire pour un salarié de tpe",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "quelles sont les obligations d'accessibilité pour un commerce recevant du public",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "commerçant"
+ },
+ {
+  "q": "comment rendre son commerce accessible aux personnes handicapées",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "commerçant"
+ },
+ {
+  "q": "le site internet d'un commerce doit-il être accessible",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "qu'est-ce que l'accessibilité numérique pour une petite entreprise",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "quelles obligations pour un kiné concernant les feuilles de soins",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "kinésithérapeute"
+ },
+ {
+  "q": "c'est quoi la certification qualiopi pour un petit organisme de formation",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "organisme de formation"
+ },
+ {
+  "q": "peut-on publier des photos de ses clients sur son site",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "photographe"
+ },
+ {
+  "q": "peut-on montrer des photos de chantiers chez des clients sur son site",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "artisan du bâtiment"
+ },
+ {
+  "q": "peut-on afficher des avis clients sur son site",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "quelles sont les règles sur les avis en ligne pour une entreprise",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "peut-on répondre publiquement à un avis google",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "quels sont les droits d'un client sur ses données personnelles",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment protéger son nom d'entreprise",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment vérifier si un nom d'entreprise est disponible",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment protéger le nom de son commerce",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "commerçant"
+ },
+ {
+  "q": "comment protéger sa marque quand on est artisan",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "comment protéger les photos de son travail contre la copie",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "photographe"
+ },
+ {
+  "q": "comment protéger ses créations quand on est potier",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "potier"
+ },
+ {
+  "q": "comment protéger sa clientèle quand on quitte un employeur",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment fonctionne une clause de non-concurrence quand on s'installe",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment obtenir un extrait kbis",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "c'est quoi un kbis et à quoi ça sert",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment faire apparaître son entreprise sur google maps légalement",
+  "theme": "obligations légales",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment fixer ses tarifs quand on est artisan",
+  "theme": "prix et devis",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "comment fixer ses tarifs quand on est indépendant",
+  "theme": "prix et devis",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment fixer ses prix quand on démarre son activité",
+  "theme": "prix et devis",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment fixer le prix d'une prestation de service",
+  "theme": "prix et devis",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment fixer ses tarifs de coiffure",
+  "theme": "prix et devis",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "coiffeur"
+ },
+ {
+  "q": "comment fixer ses prix en institut de beauté",
+  "theme": "prix et devis",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "esthéticienne"
+ },
+ {
+  "q": "comment fixer le prix de ses séances quand on est ostéopathe",
+  "theme": "prix et devis",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "ostéopathe"
+ },
+ {
+  "q": "comment fixer le tarif de ses séances de sophrologie",
+  "theme": "prix et devis",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "sophrologue"
+ },
+ {
+  "q": "comment fixer le tarif de ses séances quand on est psychologue",
+  "theme": "prix et devis",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "psychologue"
+ },
+ {
+  "q": "comment fixer le prix d'un reportage photo",
+  "theme": "prix et devis",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "photographe"
+ },
+ {
+  "q": "comment fixer son taux horaire d'électricien",
+  "theme": "prix et devis",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "électricien"
+ },
+ {
+  "q": "comment fixer son tarif de ménage à domicile",
+  "theme": "prix et devis",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "agent d'entretien"
+ },
+ {
+  "q": "comment ne pas se brader quand on est indépendant",
+  "theme": "prix et devis",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "j'ai peur d'augmenter mes prix",
+  "theme": "prix et devis",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment augmenter ses prix sans perdre de clients",
+  "theme": "prix et devis",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment annoncer une hausse de tarifs à ses clients",
+  "theme": "prix et devis",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "quand faut-il augmenter ses tarifs quand on est artisan",
+  "theme": "prix et devis",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "faut-il augmenter ses prix avec l'inflation quand on est commerçant",
+  "theme": "prix et devis",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "commerçant"
+ },
+ {
+  "q": "comment répercuter la hausse des matériaux sur un devis",
+  "theme": "prix et devis",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "artisan du bâtiment"
+ },
+ {
+  "q": "comment justifier un prix élevé à un client",
+  "theme": "prix et devis",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment répondre à un client qui demande une remise",
+  "theme": "prix et devis",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment répondre à un client qui dit que c'est trop cher",
+  "theme": "prix et devis",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "comment répondre à un client qui compare plusieurs devis",
+  "theme": "prix et devis",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "comment se démarquer quand le client demande plusieurs devis",
+  "theme": "prix et devis",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "artisan du bâtiment"
+ },
+ {
+  "q": "comment gagner un devis face à un concurrent moins cher",
+  "theme": "prix et devis",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "je perds tous mes devis face aux moins chers",
+  "theme": "prix et devis",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "les clients ne comprennent pas mes prix",
+  "theme": "prix et devis",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "comment expliquer ses prix à un client",
+  "theme": "prix et devis",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment répondre à une demande de devis",
+  "theme": "prix et devis",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment répondre à une demande de devis par mail",
+  "theme": "prix et devis",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment répondre à une demande de devis pour des travaux",
+  "theme": "prix et devis",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "artisan du bâtiment"
+ },
+ {
+  "q": "comment répondre à une demande de devis quand on ne peut pas se déplacer",
+  "theme": "prix et devis",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment répondre à une demande de devis trop vague",
+  "theme": "prix et devis",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment répondre à une demande de devis d'un client qu'on ne veut pas",
+  "theme": "prix et devis",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "modèle de réponse à une demande de devis",
+  "theme": "prix et devis",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "modèle de mail pour envoyer un devis à un client",
+  "theme": "prix et devis",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "modèle de mail de relance pour un devis sans réponse",
+  "theme": "prix et devis",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "modèle de devis pour artisan à télécharger",
+  "theme": "prix et devis",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "modèle de devis gratuit pour peintre en bâtiment",
+  "theme": "prix et devis",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "peintre en bâtiment"
+ },
+ {
+  "q": "modèle de devis pour photographe",
+  "theme": "prix et devis",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "photographe"
+ },
+ {
+  "q": "modèle de devis pour traiteur",
+  "theme": "prix et devis",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "traiteur"
+ },
+ {
+  "q": "modèle de devis pour paysagiste",
+  "theme": "prix et devis",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "paysagiste"
+ },
+ {
+  "q": "modèle de facture pour auto-entrepreneur",
+  "theme": "prix et devis",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "modèle de facture d'acompte",
+  "theme": "prix et devis",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment faire une facture d'acompte",
+  "theme": "prix et devis",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment faire une facture d'avoir",
+  "theme": "prix et devis",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment faire un devis sur word",
+  "theme": "prix et devis",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment faire un devis sur excel",
+  "theme": "prix et devis",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "un devis excel est-il valable",
+  "theme": "prix et devis",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment faire un devis professionnel quand on débute",
+  "theme": "prix et devis",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment faire un devis détaillé pour des travaux",
+  "theme": "prix et devis",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "artisan du bâtiment"
+ },
+ {
+  "q": "comment chiffrer un chantier de rénovation",
+  "theme": "prix et devis",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "artisan du bâtiment"
+ },
+ {
+  "q": "comment estimer le temps d'un chantier pour faire un devis",
+  "theme": "prix et devis",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "artisan du bâtiment"
+ },
+ {
+  "q": "comment chiffrer un chantier sans se déplacer",
+  "theme": "prix et devis",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "artisan du bâtiment"
+ },
+ {
+  "q": "comment calculer son prix de revient avant de faire un devis",
+  "theme": "prix et devis",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment calculer sa marge sur un devis",
+  "theme": "prix et devis",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "quelle marge appliquer sur les matériaux d'un devis",
+  "theme": "prix et devis",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "artisan du bâtiment"
+ },
+ {
+  "q": "comment faire un devis pour un client qui ne sait pas ce qu'il veut",
+  "theme": "prix et devis",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment faire un devis pour un événement",
+  "theme": "prix et devis",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "agence événementielle"
+ },
+ {
+  "q": "comment faire un devis de traiteur pour un mariage",
+  "theme": "prix et devis",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "traiteur"
+ },
+ {
+  "q": "comment faire un devis pour un salon professionnel",
+  "theme": "prix et devis",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "agence événementielle"
+ },
+ {
+  "q": "combien de temps faut-il pour faire un devis",
+  "theme": "prix et devis",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "quand faut-il facturer un devis",
+  "theme": "prix et devis",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "peut-on facturer un devis quand on est artisan",
+  "theme": "prix et devis",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "peut-on facturer un déplacement pour un devis",
+  "theme": "prix et devis",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "comment gérer les devis gratuits qui prennent trop de temps",
+  "theme": "prix et devis",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "je fais trop de devis gratuits qui ne débouchent sur rien",
+  "theme": "prix et devis",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "comment filtrer les demandes de devis peu sérieuses",
+  "theme": "prix et devis",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment trier les demandes de devis",
+  "theme": "prix et devis",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment ne plus perdre de temps avec les curieux qui demandent un devis",
+  "theme": "prix et devis",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment poser les bonnes questions avant de faire un devis",
+  "theme": "prix et devis",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment mieux qualifier une demande de devis en ligne",
+  "theme": "prix et devis",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment mettre un formulaire de demande de devis sur son site",
+  "theme": "prix et devis",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "qu'est-ce qu'un bon formulaire de demande de devis pour un artisan",
+  "theme": "prix et devis",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "comment proposer un devis en ligne instantané",
+  "theme": "prix et devis",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "est-ce possible de calculer un devis automatiquement en ligne",
+  "theme": "prix et devis",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "est-ce qu'un client accepte un devis calculé en ligne",
+  "theme": "prix et devis",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "est-ce qu'on peut afficher ses tarifs sur son site sans perdre de clients",
+  "theme": "prix et devis",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "faut-il afficher ses prix sur son site internet",
+  "theme": "prix et devis",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "faut-il afficher ses tarifs quand on est ostéopathe",
+  "theme": "prix et devis",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "ostéopathe"
+ },
+ {
+  "q": "faut-il afficher ses prix quand on est photographe",
+  "theme": "prix et devis",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "photographe"
+ },
+ {
+  "q": "faut-il afficher ses tarifs quand on est artisan",
+  "theme": "prix et devis",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "quel prix pour un site internet de petite entreprise",
+  "theme": "prix et devis",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "combien coûte un site internet pour un artisan",
+  "theme": "prix et devis",
+  "etape": "pas encore conscient",
+  "intention": "achat",
+  "metier": "artisan"
+ },
+ {
+  "q": "combien coûte un site internet pour un restaurant",
+  "theme": "prix et devis",
+  "etape": "pas encore conscient",
+  "intention": "achat",
+  "metier": "restaurateur"
+ },
+ {
+  "q": "combien coûte un site vitrine pour un commerce",
+  "theme": "prix et devis",
+  "etape": "pas encore conscient",
+  "intention": "achat",
+  "metier": "commerçant"
+ },
+ {
+  "q": "combien coûte un site de réservation en ligne pour un salon",
+  "theme": "prix et devis",
+  "etape": "pas encore conscient",
+  "intention": "achat",
+  "metier": "coiffeur"
+ },
+ {
+  "q": "combien coûte une application de gestion sur mesure pour une tpe",
+  "theme": "prix et devis",
+  "etape": "pas encore conscient",
+  "intention": "achat",
+  "metier": ""
+ },
+ {
+  "q": "combien coûte un logiciel de devis et factures",
+  "theme": "prix et devis",
+  "etape": "pas encore conscient",
+  "intention": "achat",
+  "metier": ""
+ },
+ {
+  "q": "combien coûte un logiciel de gestion pour artisan",
+  "theme": "prix et devis",
+  "etape": "pas encore conscient",
+  "intention": "achat",
+  "metier": "artisan"
+ },
+ {
+  "q": "combien coûte un logiciel de caisse pour un petit commerce",
+  "theme": "prix et devis",
+  "etape": "pas encore conscient",
+  "intention": "achat",
+  "metier": "commerçant"
+ },
+ {
+  "q": "combien coûte un logiciel de planning pour une petite équipe",
+  "theme": "prix et devis",
+  "etape": "pas encore conscient",
+  "intention": "achat",
+  "metier": ""
+ },
+ {
+  "q": "combien coûte un logiciel de prise de rendez-vous pour un cabinet",
+  "theme": "prix et devis",
+  "etape": "pas encore conscient",
+  "intention": "achat",
+  "metier": "kinésithérapeute"
+ },
+ {
+  "q": "combien coûte un outil de gestion sur mesure pour une association",
+  "theme": "prix et devis",
+  "etape": "pas encore conscient",
+  "intention": "achat",
+  "metier": "association"
+ },
+ {
+  "q": "combien faut-il prévoir pour la communication d'un commerce qui démarre",
+  "theme": "prix et devis",
+  "etape": "pas encore conscient",
+  "intention": "achat",
+  "metier": "commerçant"
+ },
+ {
+  "q": "combien faut-il investir dans sa visibilité en ligne quand on est artisan",
+  "theme": "prix et devis",
+  "etape": "pas encore conscient",
+  "intention": "achat",
+  "metier": "artisan"
+ },
+ {
+  "q": "combien coûte une fiche google pour son entreprise",
+  "theme": "prix et devis",
+  "etape": "pas encore conscient",
+  "intention": "achat",
+  "metier": ""
+ },
+ {
+  "q": "combien coûte le référencement local pour un petit commerce",
+  "theme": "prix et devis",
+  "etape": "pas encore conscient",
+  "intention": "achat",
+  "metier": "commerçant"
+ },
+ {
+  "q": "est-ce que ça vaut le coup de payer pour être visible sur google",
+  "theme": "prix et devis",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "combien coûte la publicité google pour un artisan local",
+  "theme": "prix et devis",
+  "etape": "pas encore conscient",
+  "intention": "achat",
+  "metier": "artisan"
+ },
+ {
+  "q": "combien coûte une campagne facebook pour un restaurant",
+  "theme": "prix et devis",
+  "etape": "pas encore conscient",
+  "intention": "achat",
+  "metier": "restaurateur"
+ },
+ {
+  "q": "combien coûte un community manager pour un commerce",
+  "theme": "prix et devis",
+  "etape": "pas encore conscient",
+  "intention": "achat",
+  "metier": "commerçant"
+ },
+ {
+  "q": "combien coûte une agence web pour une tpe",
+  "theme": "prix et devis",
+  "etape": "pas encore conscient",
+  "intention": "achat",
+  "metier": ""
+ },
+ {
+  "q": "combien coûte un freelance pour faire son site internet",
+  "theme": "prix et devis",
+  "etape": "pas encore conscient",
+  "intention": "achat",
+  "metier": ""
+ },
+ {
+  "q": "faut-il passer par une agence ou un freelance pour son site",
+  "theme": "prix et devis",
+  "etape": "pas encore conscient",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "vaut-il mieux faire son site soi-même ou le confier à un pro",
+  "theme": "prix et devis",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "les devis de sites internet sont trop différents je ne comprends rien",
+  "theme": "prix et devis",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "pourquoi les prix des sites internet varient autant",
+  "theme": "prix et devis",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment comparer les devis de sites internet",
+  "theme": "prix et devis",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment savoir si un devis de site internet est correct",
+  "theme": "prix et devis",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "sur mesure ou modèle pour un site de tpe quelle différence de prix",
+  "theme": "prix et devis",
+  "etape": "pas encore conscient",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "quelle différence de prix entre wix et un site sur mesure",
+  "theme": "prix et devis",
+  "etape": "pas encore conscient",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "est-ce que wix suffit pour un artisan",
+  "theme": "prix et devis",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "est-ce que wordpress est trop compliqué pour un commerçant",
+  "theme": "prix et devis",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "commerçant"
+ },
+ {
+  "q": "est-ce que shopify est adapté à une petite boutique",
+  "theme": "prix et devis",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "commerçant"
+ },
+ {
+  "q": "est-ce que squarespace convient à un photographe",
+  "theme": "prix et devis",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "photographe"
+ },
+ {
+  "q": "est-ce que prestashop est trop lourd pour un petit commerce",
+  "theme": "prix et devis",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "commerçant"
+ },
+ {
+  "q": "comment avoir un devis pour un outil de gestion sur mesure",
+  "theme": "prix et devis",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment obtenir un devis pour un logiciel métier sur mesure",
+  "theme": "prix et devis",
+  "etape": "pas encore conscient",
+  "intention": "achat",
+  "metier": ""
+ },
+ {
+  "q": "comment demander un devis à un développeur web local",
+  "theme": "prix et devis",
+  "etape": "pas encore conscient",
+  "intention": "achat",
+  "metier": ""
+ },
+ {
+  "q": "comment choisir un prestataire web près de chez soi en touraine",
+  "theme": "prix et devis",
+  "etape": "pas encore conscient",
+  "intention": "local",
+  "metier": ""
+ },
+ {
+  "q": "comment trouver un développeur web à tours pour une tpe",
+  "theme": "prix et devis",
+  "etape": "pas encore conscient",
+  "intention": "local",
+  "metier": ""
+ },
+ {
+  "q": "combien coûte un tarif de maintenance de site internet",
+  "theme": "prix et devis",
+  "etape": "pas encore conscient",
+  "intention": "achat",
+  "metier": ""
+ },
+ {
+  "q": "comment calculer le retour sur investissement d'un site internet",
+  "theme": "prix et devis",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "est-ce rentable d'avoir un site internet quand on est artisan",
+  "theme": "prix et devis",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "un site internet rapporte-t-il vraiment des clients à un commerçant",
+  "theme": "prix et devis",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "commerçant"
+ },
+ {
+  "q": "logiciel devis artisan gratuit",
+  "theme": "logiciel de gestion",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "logiciel devis facture artisan bâtiment",
+  "theme": "logiciel de gestion",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "artisan du bâtiment"
+ },
+ {
+  "q": "meilleur logiciel de devis et factures pour artisan",
+  "theme": "logiciel de gestion",
+  "etape": "pas encore conscient",
+  "intention": "comparaison",
+  "metier": "artisan"
+ },
+ {
+  "q": "logiciel de facturation pour auto-entrepreneur",
+  "theme": "logiciel de gestion",
+  "etape": "problème",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "logiciel de facturation simple pour une tpe",
+  "theme": "logiciel de gestion",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "logiciel de gestion pour petite entreprise",
+  "theme": "logiciel de gestion",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "logiciel de gestion pour tpe sans abonnement",
+  "theme": "logiciel de gestion",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "logiciel de gestion sur mesure ou logiciel du commerce lequel choisir",
+  "theme": "logiciel de gestion",
+  "etape": "problème",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "logiciel de gestion de chantier pour petit artisan",
+  "theme": "logiciel de gestion",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "artisan du bâtiment"
+ },
+ {
+  "q": "logiciel de suivi de chantier gratuit",
+  "theme": "logiciel de gestion",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "artisan du bâtiment"
+ },
+ {
+  "q": "logiciel de planning pour équipe d'artisans",
+  "theme": "logiciel de gestion",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "logiciel de planning interventions plombier",
+  "theme": "logiciel de gestion",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "plombier"
+ },
+ {
+  "q": "logiciel de gestion pour électricien",
+  "theme": "logiciel de gestion",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "électricien"
+ },
+ {
+  "q": "logiciel de gestion pour menuisier",
+  "theme": "logiciel de gestion",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "menuisier"
+ },
+ {
+  "q": "logiciel de gestion pour peintre en bâtiment",
+  "theme": "logiciel de gestion",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "peintre en bâtiment"
+ },
+ {
+  "q": "logiciel de gestion pour paysagiste",
+  "theme": "logiciel de gestion",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "paysagiste"
+ },
+ {
+  "q": "logiciel de gestion pour chauffagiste avec contrats d'entretien",
+  "theme": "logiciel de gestion",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "chauffagiste"
+ },
+ {
+  "q": "logiciel de caisse pour petit commerce sans abonnement",
+  "theme": "logiciel de gestion",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "commerçant"
+ },
+ {
+  "q": "logiciel de caisse tablette pour boulangerie",
+  "theme": "logiciel de gestion",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "boulanger"
+ },
+ {
+  "q": "logiciel de caisse restaurant simple",
+  "theme": "logiciel de gestion",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "restaurateur"
+ },
+ {
+  "q": "logiciel de caisse certifié pour coiffeur",
+  "theme": "logiciel de gestion",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "coiffeur"
+ },
+ {
+  "q": "logiciel de fidélité client pour commerçant",
+  "theme": "logiciel de gestion",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "commerçant"
+ },
+ {
+  "q": "logiciel de carte de fidélité pour salon de coiffure",
+  "theme": "logiciel de gestion",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "coiffeur"
+ },
+ {
+  "q": "logiciel de réservation en ligne pour restaurant",
+  "theme": "logiciel de gestion",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "restaurateur"
+ },
+ {
+  "q": "logiciel de réservation en ligne pour salon de coiffure",
+  "theme": "logiciel de gestion",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "coiffeur"
+ },
+ {
+  "q": "logiciel de prise de rendez-vous pour institut de beauté",
+  "theme": "logiciel de gestion",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "esthéticienne"
+ },
+ {
+  "q": "logiciel de prise de rendez-vous pour kiné",
+  "theme": "logiciel de gestion",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "kinésithérapeute"
+ },
+ {
+  "q": "logiciel de prise de rendez-vous pour ostéopathe",
+  "theme": "logiciel de gestion",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "ostéopathe"
+ },
+ {
+  "q": "logiciel de prise de rendez-vous pour psychologue",
+  "theme": "logiciel de gestion",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "psychologue"
+ },
+ {
+  "q": "logiciel de rendez-vous pour tatoueur",
+  "theme": "logiciel de gestion",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "tatoueur"
+ },
+ {
+  "q": "logiciel de rendez-vous pour toiletteur canin",
+  "theme": "logiciel de gestion",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "toiletteur"
+ },
+ {
+  "q": "logiciel de rendez-vous pour coach sportif",
+  "theme": "logiciel de gestion",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "coach sportif"
+ },
+ {
+  "q": "planity ou un outil sur mesure pour un salon",
+  "theme": "logiciel de gestion",
+  "etape": "problème",
+  "intention": "comparaison",
+  "metier": "coiffeur"
+ },
+ {
+  "q": "alternative à planity pour salon de coiffure",
+  "theme": "logiciel de gestion",
+  "etape": "problème",
+  "intention": "comparaison",
+  "metier": "coiffeur"
+ },
+ {
+  "q": "doctolib est-il adapté à un petit cabinet",
+  "theme": "logiciel de gestion",
+  "etape": "problème",
+  "intention": "comparaison",
+  "metier": "ostéopathe"
+ },
+ {
+  "q": "alternative à doctolib pour un cabinet de kiné",
+  "theme": "logiciel de gestion",
+  "etape": "problème",
+  "intention": "comparaison",
+  "metier": "kinésithérapeute"
+ },
+ {
+  "q": "doctolib ou agenda en ligne maison pour un praticien",
+  "theme": "logiciel de gestion",
+  "etape": "problème",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "crm simple pour artisan",
+  "theme": "logiciel de gestion",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "crm pas cher pour petite entreprise",
+  "theme": "logiciel de gestion",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "crm gratuit pour commerçant",
+  "theme": "logiciel de gestion",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "commerçant"
+ },
+ {
+  "q": "faut-il un crm quand on est indépendant",
+  "theme": "logiciel de gestion",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "c'est quoi un crm et à quoi ça sert pour une tpe",
+  "theme": "logiciel de gestion",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "obat ou tolteck lequel choisir pour un artisan",
+  "theme": "logiciel de gestion",
+  "etape": "problème",
+  "intention": "comparaison",
+  "metier": "artisan"
+ },
+ {
+  "q": "alternative à obat pour artisan",
+  "theme": "logiciel de gestion",
+  "etape": "problème",
+  "intention": "comparaison",
+  "metier": "artisan"
+ },
+ {
+  "q": "alternative à tolteck pour un petit artisan",
+  "theme": "logiciel de gestion",
+  "etape": "problème",
+  "intention": "comparaison",
+  "metier": "artisan"
+ },
+ {
+  "q": "obat est-il adapté à un petit artisan",
+  "theme": "logiciel de gestion",
+  "etape": "problème",
+  "intention": "comparaison",
+  "metier": "artisan"
+ },
+ {
+  "q": "pennylane est-il adapté à une tpe sans comptable",
+  "theme": "logiciel de gestion",
+  "etape": "problème",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "pennylane ou un logiciel de gestion sur mesure",
+  "theme": "logiciel de gestion",
+  "etape": "problème",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "quel logiciel de compta pour artisan",
+  "theme": "logiciel de gestion",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "quel logiciel de compta pour micro-entrepreneur",
+  "theme": "logiciel de gestion",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "logiciel de comptabilité simple pour commerçant",
+  "theme": "logiciel de gestion",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "commerçant"
+ },
+ {
+  "q": "un seul logiciel pour devis, factures, planning et clients",
+  "theme": "logiciel de gestion",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "quel logiciel choisir pour gérer son entreprise artisanale",
+  "theme": "logiciel de gestion",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "comment choisir un logiciel de gestion pour sa tpe",
+  "theme": "logiciel de gestion",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment choisir un logiciel de devis facture",
+  "theme": "logiciel de gestion",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "quels critères pour choisir un logiciel de gestion",
+  "theme": "logiciel de gestion",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "quelle différence entre logiciel de gestion standard et sur mesure",
+  "theme": "logiciel de gestion",
+  "etape": "pas encore conscient",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "pourquoi faire développer un logiciel sur mesure pour sa tpe",
+  "theme": "logiciel de gestion",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "quand faut-il passer à un outil sur mesure plutôt qu'un logiciel du commerce",
+  "theme": "logiciel de gestion",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "un logiciel sur mesure est-il trop cher pour un artisan",
+  "theme": "logiciel de gestion",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "est-ce qu'un artisan peut avoir son propre logiciel de gestion",
+  "theme": "logiciel de gestion",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "comment créer son propre outil de gestion sans savoir coder",
+  "theme": "logiciel de gestion",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "peut-on créer une application de gestion avec excel",
+  "theme": "logiciel de gestion",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment remplacer excel par un outil sur mesure",
+  "theme": "logiciel de gestion",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "application web de gestion pour petite entreprise",
+  "theme": "logiciel de gestion",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "application mobile pour artisan sur chantier",
+  "theme": "logiciel de gestion",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "artisan du bâtiment"
+ },
+ {
+  "q": "application pour faire des devis sur téléphone sur chantier",
+  "theme": "logiciel de gestion",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "artisan du bâtiment"
+ },
+ {
+  "q": "application pour pointer les heures des ouvriers",
+  "theme": "logiciel de gestion",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "artisan du bâtiment"
+ },
+ {
+  "q": "application pour gérer les interventions sur le terrain",
+  "theme": "logiciel de gestion",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "chauffagiste"
+ },
+ {
+  "q": "application pour saisir les rapports d'intervention depuis le chantier",
+  "theme": "logiciel de gestion",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "électricien"
+ },
+ {
+  "q": "application pour que les clients suivent leur dossier en ligne",
+  "theme": "logiciel de gestion",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "espace client en ligne pour artisan",
+  "theme": "logiciel de gestion",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "espace client en ligne pour cabinet comptable",
+  "theme": "logiciel de gestion",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "expert-comptable"
+ },
+ {
+  "q": "espace client en ligne pour agence événementielle",
+  "theme": "logiciel de gestion",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "agence événementielle"
+ },
+ {
+  "q": "portail client pour petite entreprise de services",
+  "theme": "logiciel de gestion",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "logiciel de signature électronique de devis",
+  "theme": "logiciel de gestion",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "logiciel de suivi des paiements clients",
+  "theme": "logiciel de gestion",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "logiciel de relance automatique des factures impayées",
+  "theme": "logiciel de gestion",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "logiciel pour envoyer des factures et suivre les paiements",
+  "theme": "logiciel de gestion",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "logiciel de commande en ligne pour boulangerie",
+  "theme": "logiciel de gestion",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "boulanger"
+ },
+ {
+  "q": "logiciel de click and collect pour commerçant",
+  "theme": "logiciel de gestion",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "commerçant"
+ },
+ {
+  "q": "logiciel de planning du personnel pour restaurant",
+  "theme": "logiciel de gestion",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "restaurateur"
+ },
+ {
+  "q": "logiciel de planning du personnel pour petit commerce",
+  "theme": "logiciel de gestion",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "commerçant"
+ },
+ {
+  "q": "logiciel de pointage des salariés simple",
+  "theme": "logiciel de gestion",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "logiciel de paie pour tpe",
+  "theme": "logiciel de gestion",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "logiciel de suivi de trésorerie pour artisan",
+  "theme": "logiciel de gestion",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "logiciel pour calculer le coût de revient d'un plat",
+  "theme": "logiciel de gestion",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "restaurateur"
+ },
+ {
+  "q": "logiciel de fiches techniques de cuisine",
+  "theme": "logiciel de gestion",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "restaurateur"
+ },
+ {
+  "q": "logiciel de traçabilité haccp pour restaurant",
+  "theme": "logiciel de gestion",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "restaurateur"
+ },
+ {
+  "q": "logiciel pour gérer les remplacements dans un cabinet",
+  "theme": "logiciel de gestion",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "logiciel de tableau de bord pour chef de tpe",
+  "theme": "logiciel de gestion",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "tableau de bord simple pour suivre son activité d'artisan",
+  "theme": "logiciel de gestion",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "tableau de bord pour suivre le chiffre d'affaires de sa boutique",
+  "theme": "logiciel de gestion",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "commerçant"
+ },
+ {
+  "q": "tableau de bord pour piloter son restaurant",
+  "theme": "logiciel de gestion",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "restaurateur"
+ },
+ {
+  "q": "comment suivre ses indicateurs quand on est indépendant",
+  "theme": "logiciel de gestion",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "logiciel qui remplace le cahier de rendez-vous papier",
+  "theme": "logiciel de gestion",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "logiciel qui remplace l'agenda papier d'un salon",
+  "theme": "logiciel de gestion",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "coiffeur"
+ },
+ {
+  "q": "logiciel qui remplace le cahier de commandes d'une boulangerie",
+  "theme": "logiciel de gestion",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "boulanger"
+ },
+ {
+  "q": "logiciel qui remplace le carnet de chantier papier",
+  "theme": "logiciel de gestion",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "artisan du bâtiment"
+ },
+ {
+  "q": "logiciel qui remplace les fichiers excel d'une petite entreprise",
+  "theme": "logiciel de gestion",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "logiciel métier pour petite entreprise de services à domicile",
+  "theme": "logiciel de gestion",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "logiciel pour entreprise de services à la personne",
+  "theme": "logiciel de gestion",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "logiciel pour artisan qui ne sait pas se servir d'un ordinateur",
+  "theme": "logiciel de gestion",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "logiciel facile à utiliser pour un commerçant peu à l'aise avec l'informatique",
+  "theme": "logiciel de gestion",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "commerçant"
+ },
+ {
+  "q": "logiciel français de gestion pour tpe",
+  "theme": "logiciel de gestion",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment utiliser l'ia quand on est artisan",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "comment utiliser chatgpt pour son commerce",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "commerçant"
+ },
+ {
+  "q": "comment utiliser chatgpt pour répondre à ses clients",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment utiliser chatgpt pour écrire ses devis",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment utiliser chatgpt pour rédiger des mails professionnels",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment utiliser chatgpt pour son restaurant",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "restaurateur"
+ },
+ {
+  "q": "comment utiliser chatgpt pour son salon de coiffure",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "coiffeur"
+ },
+ {
+  "q": "comment utiliser chatgpt quand on est kiné",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "kinésithérapeute"
+ },
+ {
+  "q": "comment utiliser chatgpt quand on est agent immobilier",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "agent immobilier"
+ },
+ {
+  "q": "comment utiliser chatgpt quand on est photographe",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "photographe"
+ },
+ {
+  "q": "comment utiliser chatgpt quand on est formateur",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "formateur"
+ },
+ {
+  "q": "chatgpt peut-il faire mes devis à ma place",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "chatgpt peut-il faire ma comptabilité",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "chatgpt peut-il remplacer une secrétaire",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "l'ia peut-elle remplacer un secrétariat de cabinet médical",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "médecin généraliste"
+ },
+ {
+  "q": "est-ce que l'ia peut répondre au téléphone à ma place",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "assistant vocal ia pour répondre aux appels d'un artisan",
+  "theme": "IA et automatisation",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "assistant téléphonique ia pour cabinet médical",
+  "theme": "IA et automatisation",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "médecin généraliste"
+ },
+ {
+  "q": "assistant téléphonique ia pour restaurant",
+  "theme": "IA et automatisation",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "restaurateur"
+ },
+ {
+  "q": "assistant ia pour prendre les rendez-vous d'un salon de coiffure",
+  "theme": "IA et automatisation",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "coiffeur"
+ },
+ {
+  "q": "répondeur intelligent pour artisan sur chantier",
+  "theme": "IA et automatisation",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "artisan du bâtiment"
+ },
+ {
+  "q": "comment automatiser les réponses aux clients",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment automatiser les réponses aux messages instagram d'un commerce",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "commerçant"
+ },
+ {
+  "q": "comment répondre automatiquement aux avis google",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment répondre aux demandes de devis automatiquement",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment automatiser l'envoi des devis",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment automatiser les relances de devis",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment automatiser les relances de factures impayées",
+  "theme": "IA et automatisation",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment automatiser la facturation d'une petite entreprise",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment automatiser la prise de rendez-vous",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment automatiser les rappels de rendez-vous",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment automatiser les confirmations de réservation d'un restaurant",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "restaurateur"
+ },
+ {
+  "q": "comment automatiser les réservations d'un gîte",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "gîte"
+ },
+ {
+  "q": "comment automatiser les inscriptions d'une association",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "association"
+ },
+ {
+  "q": "comment automatiser les tâches répétitives d'une tpe",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment automatiser son administratif quand on est indépendant",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment automatiser la saisie de ses factures fournisseurs",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment automatiser sa comptabilité",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment automatiser sa gestion de stock en boutique",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "commerçant"
+ },
+ {
+  "q": "comment automatiser les commandes fournisseurs",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "restaurateur"
+ },
+ {
+  "q": "comment automatiser le suivi des clients après un chantier",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "artisan du bâtiment"
+ },
+ {
+  "q": "comment envoyer automatiquement une demande d'avis après une prestation",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment envoyer un sms automatique de rappel à ses clients",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment envoyer des mails automatiques à ses clients sans y passer du temps",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment générer des devis automatiquement à partir d'une demande client",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment transformer un formulaire de contact en devis automatique",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment transférer automatiquement les demandes du site vers son agenda",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment relier son site internet à son logiciel de facturation",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment relier son agenda en ligne à son planning d'équipe",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment connecter ses outils entre eux sans coder",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "c'est quoi l'automatisation pour une petite entreprise",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "quelles tâches peut-on automatiser dans un cabinet libéral",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "quelles tâches peut-on automatiser dans un commerce",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "commerçant"
+ },
+ {
+  "q": "quelles tâches peut-on automatiser quand on est artisan",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "quelles tâches peut-on automatiser dans un restaurant",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "restaurateur"
+ },
+ {
+  "q": "l'automatisation est-elle réservée aux grandes entreprises",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "l'ia est-elle utile pour une tpe",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "l'ia est-elle utile pour un petit commerçant",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "commerçant"
+ },
+ {
+  "q": "l'ia est-elle utile pour un artisan du bâtiment",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "artisan du bâtiment"
+ },
+ {
+  "q": "l'ia va-t-elle remplacer les artisans",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "l'ia va-t-elle remplacer les petits commerces",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "commerçant"
+ },
+ {
+  "q": "l'ia va-t-elle remplacer les coiffeurs",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "coiffeur"
+ },
+ {
+  "q": "l'ia va-t-elle remplacer les comptables",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "expert-comptable"
+ },
+ {
+  "q": "comment ne pas se laisser dépasser par l'ia quand on est indépendant",
+  "theme": "IA et automatisation",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment s'y mettre à l'ia quand on n'y connaît rien",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "par où commencer avec l'ia pour une petite entreprise",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "quels outils d'ia pour une petite entreprise en 2026",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "quels outils d'ia pour un artisan en 2026",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "quels outils d'ia gratuits pour un commerçant",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "commerçant"
+ },
+ {
+  "q": "quels outils d'ia pour un professionnel de santé libéral",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "quels outils d'ia pour un restaurateur",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "restaurateur"
+ },
+ {
+  "q": "quels outils d'ia pour gagner du temps sur l'administratif",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "quels outils d'ia pour écrire ses publications sur les réseaux sociaux",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "quels outils d'ia pour créer des visuels pour son commerce",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "commerçant"
+ },
+ {
+  "q": "comment créer des publications instagram avec l'ia pour son restaurant",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "restaurateur"
+ },
+ {
+  "q": "comment créer des publications facebook avec l'ia pour un artisan",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "comment rédiger la description de ses produits avec l'ia",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "commerçant"
+ },
+ {
+  "q": "comment rédiger un site internet avec l'ia",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "peut-on créer un site internet avec l'ia gratuitement",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "un site créé par l'ia est-il bien référencé sur google",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "l'ia peut-elle faire mon site internet à la place d'un professionnel",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "est-ce que google pénalise les textes écrits par l'ia",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "est-ce risqué de confier les données de ses clients à une ia",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "l'ia respecte-t-elle le rgpd pour un cabinet médical",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "médecin généraliste"
+ },
+ {
+  "q": "peut-on mettre des données clients dans chatgpt",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "faut-il avoir peur de l'ia quand on est indépendant",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "quels sont les dangers de l'ia pour une petite entreprise",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "combien coûte un assistant ia pour une tpe",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "achat",
+  "metier": ""
+ },
+ {
+  "q": "combien coûte un chatbot pour un commerce",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "achat",
+  "metier": "commerçant"
+ },
+ {
+  "q": "combien coûte un agent vocal ia pour répondre aux appels",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "achat",
+  "metier": ""
+ },
+ {
+  "q": "chatbot pour répondre aux questions des clients d'un restaurant",
+  "theme": "IA et automatisation",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "restaurateur"
+ },
+ {
+  "q": "chatbot pour site d'artisan",
+  "theme": "IA et automatisation",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "chatbot pour prendre des rendez-vous sur un site de cabinet",
+  "theme": "IA et automatisation",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "kinésithérapeute"
+ },
+ {
+  "q": "chatbot pour gîte qui répond aux questions des voyageurs",
+  "theme": "IA et automatisation",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "gîte"
+ },
+ {
+  "q": "est-ce qu'un chatbot peut remplacer un standard téléphonique",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "est-ce qu'un chatbot sur mon site fait vraiment gagner des clients",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "ia et référencement local comment ça marche",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment apparaître dans les réponses de chatgpt quand on est artisan",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "comment être cité par les assistants ia quand on est commerçant",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "commerçant"
+ },
+ {
+  "q": "comment les assistants ia recommandent-ils un artisan local",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "comment apparaître dans les recommandations de chatgpt pour son restaurant",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "restaurateur"
+ },
+ {
+  "q": "pourquoi chatgpt ne parle pas de mon entreprise",
+  "theme": "IA et automatisation",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment faire connaître son entreprise aux intelligences artificielles",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "les gens demandent-ils à chatgpt de trouver un plombier",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "plombier"
+ },
+ {
+  "q": "les gens cherchent-ils un coiffeur avec chatgpt",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "coiffeur"
+ },
+ {
+  "q": "la recherche google va-t-elle disparaître avec l'ia pour les petits commerces",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "commerçant"
+ },
+ {
+  "q": "comment adapter sa visibilité en ligne à l'ia en 2026",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "ia pour faire un devis à partir d'une photo de chantier",
+  "theme": "IA et automatisation",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "artisan du bâtiment"
+ },
+ {
+  "q": "ia pour estimer des travaux à partir d'une photo",
+  "theme": "IA et automatisation",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "artisan du bâtiment"
+ },
+ {
+  "q": "ia pour transcrire une visite de chantier en devis",
+  "theme": "IA et automatisation",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "artisan du bâtiment"
+ },
+ {
+  "q": "ia pour transformer une note vocale en compte rendu d'intervention",
+  "theme": "IA et automatisation",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "électricien"
+ },
+ {
+  "q": "ia pour rédiger un compte rendu de séance",
+  "theme": "IA et automatisation",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "kinésithérapeute"
+ },
+ {
+  "q": "ia pour résumer une consultation en cabinet",
+  "theme": "IA et automatisation",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "psychologue"
+ },
+ {
+  "q": "ia pour prévoir les stocks d'un commerce",
+  "theme": "IA et automatisation",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "commerçant"
+ },
+ {
+  "q": "ia pour prévoir la fréquentation d'un restaurant",
+  "theme": "IA et automatisation",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "restaurateur"
+ },
+ {
+  "q": "ia pour optimiser les tournées d'une équipe",
+  "theme": "IA et automatisation",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "chauffagiste"
+ },
+ {
+  "q": "ia pour trier ses mails professionnels",
+  "theme": "IA et automatisation",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "ia pour classer automatiquement ses factures",
+  "theme": "IA et automatisation",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "ia pour lire une facture fournisseur et la saisir",
+  "theme": "IA et automatisation",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "ia pour répondre aux appels d'offres",
+  "theme": "IA et automatisation",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "ia pour rédiger un dossier d'appel d'offres",
+  "theme": "IA et automatisation",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "artisan du bâtiment"
+ },
+ {
+  "q": "ia pour gérer son planning",
+  "theme": "IA et automatisation",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "ia pour gérer ses réseaux sociaux quand on est commerçant",
+  "theme": "IA et automatisation",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "commerçant"
+ },
+ {
+  "q": "ia pour écrire des fiches produits d'une boutique en ligne",
+  "theme": "IA et automatisation",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "commerçant"
+ },
+ {
+  "q": "ia pour traduire son site en plusieurs langues",
+  "theme": "IA et automatisation",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "ia pour répondre aux avis clients",
+  "theme": "IA et automatisation",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "restaurateur"
+ },
+ {
+  "q": "ia pour fidéliser ses clients",
+  "theme": "IA et automatisation",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "commerçant"
+ },
+ {
+  "q": "ia et petits commerces quels usages concrets",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "commerçant"
+ },
+ {
+  "q": "ia et artisanat quels usages concrets",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "ia et professions libérales quels usages concrets en cabinet",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "ia et restauration quels usages concrets",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "restaurateur"
+ },
+ {
+  "q": "idées d'automatisation pour gagner du temps quand on est seul",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "exemples d'automatisation pour un artisan",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "exemples d'automatisation pour une boutique",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "commerçant"
+ },
+ {
+  "q": "exemples d'automatisation pour un salon",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "coiffeur"
+ },
+ {
+  "q": "zapier ou make pour automatiser une petite entreprise",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "c'est quoi zapier et est-ce utile pour un artisan",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "faut-il recruter un développeur pour automatiser son entreprise",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment faire automatiser son entreprise par un professionnel",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "automatisation sur mesure pour tpe près de tours",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "local",
+  "metier": ""
+ },
+ {
+  "q": "agence web à tours pour artisan qui n'a pas de site",
+  "theme": "visibilité et clients",
+  "etape": "problème",
+  "intention": "local",
+  "metier": "artisan"
+ },
+ {
+  "q": "quelqu'un pour s'occuper de la visibilité de mon commerce à tours",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "local",
+  "metier": "commerçant"
+ },
+ {
+  "q": "comment être visible à tours quand on est restaurateur",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "local",
+  "metier": "restaurateur"
+ },
+ {
+  "q": "comment se faire connaître à joué-lès-tours quand on ouvre un commerce",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "local",
+  "metier": "commerçant"
+ },
+ {
+  "q": "comment être mieux placé que les concurrents tourangeaux sur google",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "local",
+  "metier": ""
+ },
+ {
+  "q": "aide pour développer son activité d'artisan en touraine",
+  "theme": "visibilité et clients",
+  "etape": "pas encore conscient",
+  "intention": "local",
+  "metier": "artisan"
+ },
+ {
+  "q": "qui peut m'aider à organiser mon administratif de tpe près de tours",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "local",
+  "metier": ""
+ }
+]

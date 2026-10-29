@@ -1,0 +1,151 @@
+# slug|nom (pour les requêtes)|article|groupe|existant(1/0)
+videaste|vidéaste|un|créatifs|1
+agence-immobiliere|agent immobilier|un|services|1
+restaurant|restaurateur|un|restauration|1
+pizzeria|pizzaïolo|un|restauration|1
+boulangerie-patisserie|boulanger|un|restauration|1
+plombier|plombier|un|artisanat-btp|1
+electricien|électricien|un|artisanat-btp|1
+salon-coiffure|coiffeur|un|santé-bien-être|1
+avocat|avocat|un|services|1
+expert-comptable|expert-comptable|un|services|1
+garage-automobile|garagiste|un|services|1
+chauffagiste-climatisation|chauffagiste|un|artisanat-btp|1
+paysagiste-jardinier|paysagiste|un|artisanat-btp|1
+osteopathe|ostéopathe|un|santé-bien-être|1
+institut-beaute|esthéticienne|une|santé-bien-être|1
+photographe|photographe|un|services|1
+fleuriste|fleuriste|un|commerce|1
+gite-location-saisonniere|propriétaire de gîte|un|tourisme|1
+kebab-fast-food|restaurateur de restauration rapide|un|restauration|1
+food-truck|gérant de food truck|un|restauration|1
+brasserie-bar|gérant de bar|un|restauration|1
+cafe-salon-the|gérant de salon de thé|un|restauration|1
+restaurant-gastronomique|chef de restaurant gastronomique|un|restauration|1
+traiteur-evenementiel|traiteur|un|restauration|1
+boucherie-charcuterie|boucher|un|restauration|1
+chocolatier|chocolatier|un|restauration|1
+glacier|glacier|un|restauration|1
+epicerie-fine|épicier|un|commerce|1
+cave-vins-spiritueux|caviste|un|commerce|1
+fromager|fromager|un|commerce|1
+primeur|primeur|un|commerce|1
+poissonnier|poissonnier|un|commerce|1
+librairie-papeterie|libraire|un|commerce|1
+tabac-presse|buraliste|un|commerce|1
+magasin-sport|gérant de magasin de sport|un|commerce|1
+magasin-jouets|gérant de magasin de jouets|un|commerce|1
+boutique-decoration|gérant de boutique de décoration|un|commerce|1
+magasin-informatique|gérant de magasin informatique|un|commerce|1
+opticien|opticien|un|commerce|1
+bijouterie-horlogerie|bijoutier|un|commerce|1
+vetements-enfants|gérant de boutique de vêtements pour enfants|un|commerce|1
+boutique-mode|gérant de boutique de mode|un|commerce|1
+cosmetiques-naturels|créateur de cosmétiques naturels|un|commerce|1
+jardinerie-animalerie|gérant de jardinerie|un|commerce|1
+macon-renovateur|maçon|un|artisanat-btp|1
+couvreur-charpentier|couvreur|un|artisanat-btp|1
+menuisier-ebeniste|menuisier|un|artisanat-btp|1
+peintre-decorateur|peintre en bâtiment|un|artisanat-btp|1
+carreleur-sol|carreleur|un|artisanat-btp|1
+serrurier-depannage|serrurier|un|artisanat-btp|1
+cuisiniste|cuisiniste|un|artisanat-btp|1
+pisciniste|pisciniste|un|artisanat-btp|1
+vitrier|vitrier|un|artisanat-btp|1
+ramoneur|ramoneur|un|artisanat-btp|1
+facadier|façadier|un|artisanat-btp|1
+terrassier|terrassier|un|artisanat-btp|1
+cabinet-medical|médecin généraliste|un|santé-bien-être|1
+kinesitherapeute|kinésithérapeute|un|santé-bien-être|1
+dentiste|dentiste|un|santé-bien-être|1
+pharmacie-parapharmacie|pharmacien|un|santé-bien-être|1
+veterinaire|vétérinaire|un|santé-bien-être|1
+psychologue|psychologue|un|santé-bien-être|1
+sophrologue|sophrologue|un|santé-bien-être|1
+naturopathe|naturopathe|un|santé-bien-être|1
+salle-de-sport|gérant de salle de sport|un|santé-bien-être|1
+notaire|notaire|un|services|1
+architecte|architecte|un|services|1
+courtier-credit|courtier en crédit|un|services|1
+diagnostiqueur-immobilier|diagnostiqueur immobilier|un|services|1
+agence-evenementielle|organisateur d'événements|un|services|1
+organisme-formation|organisme de formation|un|services|1
+auto-ecole|auto-école|une|services|1
+camping|gérant de camping|un|tourisme|1
+ecole-danse-musique|professeur de musique|un|tourisme|1
+tatoueur|tatoueur|un|tourisme|1
+toiletteur|toiletteur|un|tourisme|1
+plaquiste|plaquiste|un|artisanat-btp|0
+installateur-panneaux-solaires|installateur de panneaux solaires|un|artisanat-btp|0
+installateur-pompe-a-chaleur|installateur de pompe à chaleur|un|artisanat-btp|0
+zingueur|zingueur|un|artisanat-btp|0
+etancheur|étancheur|un|artisanat-btp|0
+metallier|métallier|un|artisanat-btp|0
+ferronnier-art|ferronnier d'art|un|artisanat-btp|0
+tailleur-de-pierre|tailleur de pierre|un|artisanat-btp|0
+installateur-volets-roulants|installateur de volets roulants|un|artisanat-btp|0
+isolation-thermique|artisan de l'isolation|un|artisanat-btp|0
+domoticien|installateur de domotique|un|artisanat-btp|0
+antenniste|antenniste|un|artisanat-btp|0
+geometre-expert|géomètre|un|services|0
+bureau-etudes|bureau d'études|un|services|0
+carrossier|carrossier|un|services|0
+mecanicien-moto|mécanicien moto|un|services|0
+centre-controle-technique|centre de contrôle technique|un|services|0
+demenageur|déménageur|un|services|0
+entreprise-nettoyage|entreprise de nettoyage|une|services|0
+pressing|pressing|un|services|0
+cordonnier|cordonnier|un|services|0
+couturiere-retoucheuse|couturière|une|services|0
+tapissier|tapissier|un|artisanat|0
+luthier|luthier|un|artisanat|0
+imprimeur|imprimeur|un|services|0
+graphiste|graphiste|un|créatifs|0
+consultant-independant|consultant indépendant|un|services|0
+coach-professionnel|coach|un|services|0
+formateur-independant|formateur indépendant|un|services|0
+traducteur|traducteur|un|services|0
+redacteur-web|rédacteur web|un|créatifs|0
+community-manager|community manager|un|créatifs|0
+wedding-planner|wedding planner|un|services|0
+dj-animateur|DJ|un|services|0
+location-materiel|loueur de matériel|un|services|0
+location-salle|propriétaire de salle de réception|un|tourisme|0
+infirmier-liberal|infirmier libéral|un|santé-bien-être|0
+sage-femme|sage-femme|une|santé-bien-être|0
+orthophoniste|orthophoniste|un|santé-bien-être|0
+podologue|podologue|un|santé-bien-être|0
+dieteticien|diététicien|un|santé-bien-être|0
+acupuncteur|acupuncteur|un|santé-bien-être|0
+coach-sportif|coach sportif|un|santé-bien-être|0
+praticien-bien-etre|praticien en massage|un|santé-bien-être|0
+barbier|barbier|un|santé-bien-être|0
+onglerie|prothésiste ongulaire|une|santé-bien-être|0
+coiffeur-domicile|coiffeur à domicile|un|santé-bien-être|0
+taxi-vtc|chauffeur de taxi|un|services|0
+ambulancier|ambulancier|un|santé-bien-être|0
+aide-a-domicile|service d'aide à domicile|un|services|0
+micro-creche|gérant de micro-crèche|un|services|0
+elagueur|élagueur|un|artisanat-btp|0
+apiculteur|apiculteur|un|agriculture|0
+viticulteur|viticulteur|un|agriculture|0
+brasseur-artisanal|brasseur artisanal|un|agriculture|0
+producteur-vente-ferme|producteur en vente directe|un|agriculture|0
+maraicher|maraîcher|un|agriculture|0
+magasin-bio|gérant de magasin bio|un|commerce|0
+chambre-d-hotes|propriétaire de chambre d'hôtes|un|tourisme|0
+hotel-independant|hôtelier|un|tourisme|0
+guide-touristique|guide touristique|un|tourisme|0
+loueur-velos|loueur de vélos|un|tourisme|0
+centre-equestre|gérant de centre équestre|un|tourisme|0
+antiquaire-brocanteur|antiquaire|un|commerce|0
+galerie-art|galeriste|un|commerce|0
+potier-ceramiste|céramiste|un|artisanat|0
+createur-bijoux|créateur de bijoux|un|artisanat|0
+createur-mode|créateur de mode|un|artisanat|0
+pompes-funebres|gérant de pompes funèbres|un|services|0
+syndic-copropriete|syndic de copropriété|un|services|0
+conseiller-patrimoine|conseiller en gestion de patrimoine|un|services|0
+agent-assurance|agent d'assurance|un|services|0
+commissaire-justice|commissaire de justice|un|services|0
+expert-automobile|expert automobile|un|services|0

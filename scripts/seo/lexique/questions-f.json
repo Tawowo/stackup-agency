@@ -1,0 +1,3313 @@
+[
+ {
+  "q": "comment utiliser chatgpt pour son entreprise",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment utiliser chatgpt quand on est artisan",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "est-ce que chatgpt peut m'aider à faire mes devis",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment faire un devis avec chatgpt",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "chatgpt pour rédiger des réponses aux clients",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment répondre à un client mécontent avec chatgpt",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "chatgpt peut-il répondre à mes avis google",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment répondre aux avis google avec l'ia",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment rédiger une réponse à un avis négatif google avec chatgpt",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "chatgpt pour écrire des fiches produits de boutique",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "commerçant"
+ },
+ {
+  "q": "comment écrire des descriptions de produits avec l'ia",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "commerçant"
+ },
+ {
+  "q": "chatgpt pour décrire mes prestations sur mon site",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment faire écrire la présentation de mon entreprise par chatgpt",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "quels prompts chatgpt pour un artisan",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "quelles questions poser à chatgpt pour gérer ma tpe",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "chatgpt pour un plombier",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "plombier"
+ },
+ {
+  "q": "chatgpt pour un électricien",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "électricien"
+ },
+ {
+  "q": "chatgpt pour un maçon",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "maçon"
+ },
+ {
+  "q": "chatgpt pour un peintre en bâtiment",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "peintre"
+ },
+ {
+  "q": "chatgpt pour un menuisier",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "menuisier"
+ },
+ {
+  "q": "chatgpt pour un couvreur",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "couvreur"
+ },
+ {
+  "q": "chatgpt pour un paysagiste",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "paysagiste"
+ },
+ {
+  "q": "chatgpt pour un coiffeur",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "coiffeur"
+ },
+ {
+  "q": "chatgpt pour une esthéticienne",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "esthéticienne"
+ },
+ {
+  "q": "chatgpt pour un restaurateur",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "restaurateur"
+ },
+ {
+  "q": "chatgpt pour un boulanger",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "boulanger"
+ },
+ {
+  "q": "chatgpt pour un fleuriste",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "fleuriste"
+ },
+ {
+  "q": "chatgpt pour un garagiste",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "garagiste"
+ },
+ {
+  "q": "chatgpt pour un photographe",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "photographe"
+ },
+ {
+  "q": "chatgpt pour un kinésithérapeute",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "kinésithérapeute"
+ },
+ {
+  "q": "chatgpt pour un agent immobilier",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "agent immobilier"
+ },
+ {
+  "q": "chatgpt pour un comptable",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "comptable"
+ },
+ {
+  "q": "chatgpt pour un coach sportif",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "coach sportif"
+ },
+ {
+  "q": "chatgpt pour un commerçant de centre-ville",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "commerçant"
+ },
+ {
+  "q": "l'ia peut-elle écrire mes mails de prospection",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment rédiger un e-mail commercial avec chatgpt",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "chatgpt pour relancer un client qui ne répond pas",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment utiliser chatgpt pour répondre à une demande de devis",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "chatgpt pour rédiger une lettre de réclamation",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "chatgpt pour écrire une annonce d'offre d'emploi dans mon entreprise",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "chatgpt pour faire un planning de la semaine",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "chatgpt pour préparer un rendez-vous client",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment rédiger des conditions générales avec chatgpt",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "chatgpt pour résumer un long e-mail client",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "chatgpt peut-il remplacer un secrétaire pour une tpe",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "chatgpt gratuit ou payant pour une petite entreprise",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "quelle différence entre chatgpt gratuit et chatgpt payant pour un pro",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "quel assistant ia choisir pour une petite entreprise",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "chatgpt ou un outil sur mesure pour mon activité",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "quelle ia pour un artisan",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": "artisan"
+ },
+ {
+  "q": "meilleur outil ia pour tpe 2026",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "quelle ia gratuite pour entrepreneur",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "comment bien écrire un prompt pour son entreprise",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment donner du contexte à chatgpt sur mon métier",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment faire écrire à chatgpt dans le style de mon entreprise",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment former ses salariés à chatgpt",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "formation ia pour artisan",
+  "theme": "IA et automatisation",
+  "etape": "achat",
+  "intention": "achat",
+  "metier": "artisan"
+ },
+ {
+  "q": "formation chatgpt pour chef d'entreprise",
+  "theme": "IA et automatisation",
+  "etape": "achat",
+  "intention": "achat",
+  "metier": ""
+ },
+ {
+  "q": "atelier ia pour commerçants près de chez moi",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "local",
+  "metier": "commerçant"
+ },
+ {
+  "q": "formation intelligence artificielle tpe cci",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "aide financière pour se former à l'ia en tpe",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "par où commencer avec l'ia quand on est artisan",
+  "theme": "IA et automatisation",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "je ne sais pas par où commencer avec l'intelligence artificielle",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "l'ia c'est quoi concrètement pour un petit commerce",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "commerçant"
+ },
+ {
+  "q": "à quoi sert l'intelligence artificielle dans une petite entreprise",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "exemples d'utilisation de l'ia dans une tpe",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "exemples concrets d'ia chez un artisan",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "comment automatiser les relances de devis",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "relance automatique de devis par e-mail",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment relancer un devis sans passer pour insistant",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "quand relancer un devis non signé",
+  "theme": "IA et automatisation",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "modèle de mail de relance de devis",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "outil de relance de devis pour artisan",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": "artisan"
+ },
+ {
+  "q": "logiciel qui relance automatiquement les devis",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "comment ne plus oublier de relancer mes devis",
+  "theme": "IA et automatisation",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "je perds des clients parce que je ne relance pas mes devis",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "combien de devis signés sur ceux envoyés comment l'améliorer",
+  "theme": "IA et automatisation",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment automatiser les relances d'impayés",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "relance automatique de factures impayées",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment relancer un client qui ne paie pas poliment",
+  "theme": "IA et automatisation",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "modèle de mail de relance facture impayée",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "logiciel de relance d'impayés pour tpe",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "que faire si un client ne paie pas sa facture",
+  "theme": "IA et automatisation",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment ne plus avoir d'impayés dans mon entreprise",
+  "theme": "IA et automatisation",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment envoyer un rappel de paiement automatique",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "est-ce légal de relancer automatiquement un client par sms",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "faut-il envoyer une relance avant l'échéance de la facture",
+  "theme": "IA et automatisation",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "automatiser les relances clients avec zapier",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "automatiser les relances clients avec make",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment créer une séquence de relance de devis",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment automatiser la prise de rendez-vous",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "prise de rendez-vous en ligne automatique pour artisan",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": "artisan"
+ },
+ {
+  "q": "comment permettre à mes clients de prendre rendez-vous sur mon site",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "prise de rendez-vous en ligne pour coiffeur",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": "coiffeur"
+ },
+ {
+  "q": "prise de rendez-vous en ligne pour esthéticienne",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": "esthéticienne"
+ },
+ {
+  "q": "prise de rendez-vous en ligne pour kinésithérapeute",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": "kinésithérapeute"
+ },
+ {
+  "q": "prise de rendez-vous en ligne pour garage",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": "garagiste"
+ },
+ {
+  "q": "prise de rendez-vous en ligne pour photographe",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": "photographe"
+ },
+ {
+  "q": "prise de rendez-vous en ligne pour coach",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": "coach sportif"
+ },
+ {
+  "q": "prise de rendez-vous en ligne pour plombier",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": "plombier"
+ },
+ {
+  "q": "prise de rendez-vous pour devis gratuit sur un site d'artisan",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "planity ou site personnalisé pour les rendez-vous",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": "coiffeur"
+ },
+ {
+  "q": "doctolib ou agenda en ligne sur mon propre site",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": "médecin"
+ },
+ {
+  "q": "agenda en ligne gratuit pour professionnel",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "comment synchroniser un formulaire de contact avec google agenda",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "formulaire de site vers agenda automatique",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment faire arriver une demande de devis directement dans mon agenda",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment éviter les doubles réservations avec un agenda en ligne",
+  "theme": "IA et automatisation",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment réduire les rendez-vous non honorés",
+  "theme": "IA et automatisation",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "que faire contre les clients qui ne viennent pas à leur rendez-vous",
+  "theme": "IA et automatisation",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment envoyer des sms de rappel de rendez-vous",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "sms de rappel de rendez-vous automatique",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "logiciel sms rappel rendez-vous pour tpe",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "modèle de sms de rappel de rendez-vous",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "est-ce que les rappels sms réduisent les absences",
+  "theme": "IA et automatisation",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "rappel de rendez-vous par e-mail ou par sms lequel choisir",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "comment envoyer des sms à ses clients sans enfreindre le rgpd",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "combien coûte l'envoi de sms professionnels",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "faut-il le consentement du client pour lui envoyer un sms de rappel",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment répondre automatiquement aux e-mails",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "réponse automatique e-mail pour artisan en chantier",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "message d'absence professionnel exemple",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment programmer une réponse automatique dans gmail",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment trier automatiquement ses e-mails professionnels",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment créer des règles de tri dans sa messagerie pro",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "trop d'e-mails à traiter comment s'organiser quand on est seul",
+  "theme": "IA et automatisation",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "je passe mes soirées à répondre aux e-mails",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment gagner du temps sur les e-mails dans une tpe",
+  "theme": "IA et automatisation",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "l'ia peut-elle trier ma boîte mail",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment faire répondre l'ia à ma place sur les demandes de devis",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment répondre automatiquement à un appel manqué",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "sms automatique après un appel manqué",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "que faire quand on rate des appels de clients sur chantier",
+  "theme": "IA et automatisation",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "je rate des appels de clients parce que je suis en intervention",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "comment ne plus perdre de clients à cause des appels manqués",
+  "theme": "IA et automatisation",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "répondeur intelligent pour artisan",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": "artisan"
+ },
+ {
+  "q": "service de permanence téléphonique pour petite entreprise",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "secrétariat téléphonique externalisé ou assistant vocal",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "assistant vocal pour répondre au téléphone d'une entreprise",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "un assistant vocal ia peut-il prendre mes rendez-vous",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "est-ce que les clients acceptent de parler à un robot",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "assistant vocal pour coiffeur",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": "coiffeur"
+ },
+ {
+  "q": "assistant vocal pour restaurant qui prend les réservations",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": "restaurateur"
+ },
+ {
+  "q": "assistant vocal pour garage automobile",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": "garagiste"
+ },
+ {
+  "q": "assistant vocal pour cabinet de kinésithérapie",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": "kinésithérapeute"
+ },
+ {
+  "q": "comment transcrire un message vocal en texte",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "transcription automatique des messages vocaux du répondeur",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "transcrire un message vocal whatsapp",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment transformer un vocal en devis",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "dicter un compte rendu de chantier avec l'ia",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "dicter ses factures à la voix",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment faire un compte rendu de rendez-vous automatiquement",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "transcription de réunion client avec l'ia",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment mettre un chatbot sur son site",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "chatbot pour site d'artisan",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": "artisan"
+ },
+ {
+  "q": "chatbot pour site de commerçant",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": "commerçant"
+ },
+ {
+  "q": "est-ce qu'un chatbot est utile pour une petite entreprise",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "chatbot ou formulaire de contact lequel est le plus efficace",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "comment créer un chatbot gratuit pour mon site",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "chatbot qui répond aux questions fréquentes des clients",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "chatbot qui prend des rendez-vous",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "chatbot whatsapp pour professionnel",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "whatsapp business ou chatbot sur site",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "chatbot sur mesure pour tpe",
+  "theme": "IA et automatisation",
+  "etape": "achat",
+  "intention": "achat",
+  "metier": ""
+ },
+ {
+  "q": "combien coûte un chatbot pour un site de petite entreprise",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "un chatbot peut-il se tromper et donner un mauvais prix à un client",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "le chatbot est-il conforme au rgpd",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "faut-il prévenir le visiteur qu'il parle à un chatbot",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment utiliser l'ia avec des photos de chantier",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "l'ia peut-elle analyser une photo de chantier pour faire un devis",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "estimer des travaux à partir d'une photo avec l'ia",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "classer automatiquement les photos de chantier par client",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "comment organiser les photos de chantier sans y passer des heures",
+  "theme": "IA et automatisation",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "je ne sais plus où sont les photos de mes chantiers",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "l'ia peut-elle faire un avant après de mes réalisations",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "l'ia pour retoucher les photos de mes réalisations",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "photographe"
+ },
+ {
+  "q": "décrire automatiquement une photo de réalisation pour mon site",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "l'ia peut-elle repérer des malfaçons sur une photo",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "comment faire un rapport de fin de chantier avec photos automatiquement",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "générer un visuel de rénovation avec l'ia pour montrer au client",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "l'ia pour faire un plan de planning de chantier",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "comment utiliser l'ia pour son planning",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "planning automatique des interventions pour une petite équipe",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "optimiser les tournées d'un artisan avec l'ia",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "comment organiser ses tournées pour perdre moins de temps sur la route",
+  "theme": "IA et automatisation",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "logiciel de planning d'équipe qui prévient automatiquement les clients",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": "artisan"
+ },
+ {
+  "q": "comment répartir automatiquement les interventions entre mes salariés",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "l'ia peut-elle gérer mes plannings à ma place",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "planning de réservation pour restaurant avec rappel automatique",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "restaurateur"
+ },
+ {
+  "q": "gérer les rendez-vous d'un salon automatiquement",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "coiffeur"
+ },
+ {
+  "q": "l'ia pour écrire un site internet",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "peut-on faire un site internet avec l'ia",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "créer un site web avec chatgpt",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "générateur de site internet par ia est-ce que ça vaut le coup",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "un site fait par l'ia est-il bien référencé sur google",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "google pénalise-t-il les textes écrits par l'ia",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "faut-il mentionner qu'un texte a été écrit par une ia",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment rédiger un article de blog avec l'ia",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "l'ia pour écrire des articles de blog pour artisan",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "peut-on utiliser l'ia pour écrire les textes de son site sans perdre en qualité",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment relire et personnaliser un texte écrit par chatgpt",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "textes de site internet générés par ia ou rédacteur",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "quelle différence entre un site créé par ia et un site sur mesure",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "une ia peut-elle remplacer un développeur web",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "une ia peut-elle remplacer un agence web pour un petit site",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "créer une fiche google business avec l'ia",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "rédiger la description de son entreprise sur google avec chatgpt",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "générer des idées d'articles de blog pour mon métier",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "l'ia peut-elle faire mon référencement",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment utiliser chatgpt pour trouver des mots-clés",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "chatgpt peut-il optimiser le texte d'une page pour le référencement",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "les moteurs de réponse ia citent-ils les petits sites d'artisans",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "comment apparaître dans les réponses de chatgpt",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment être recommandé par chatgpt quand on est une entreprise locale",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "les clients cherchent-ils désormais un artisan avec chatgpt",
+  "theme": "IA et automatisation",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "l'ia est-elle dangereuse pour mon entreprise",
+  "theme": "IA et automatisation",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "quels sont les risques de l'ia pour une petite entreprise",
+  "theme": "IA et automatisation",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "peut-on mettre des données clients dans chatgpt",
+  "theme": "IA et automatisation",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "chatgpt et rgpd que faut-il savoir pour une tpe",
+  "theme": "IA et automatisation",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "est-ce que chatgpt garde mes données",
+  "theme": "IA et automatisation",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "que se passe-t-il si je copie un devis client dans chatgpt",
+  "theme": "IA et automatisation",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "est-ce confidentiel ce que j'écris dans chatgpt",
+  "theme": "IA et automatisation",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment anonymiser des données avant de les donner à une ia",
+  "theme": "IA et automatisation",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "faut-il déclarer l'usage de l'ia à la cnil",
+  "theme": "IA et automatisation",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "l'ia peut-elle se tromper dans un devis",
+  "theme": "IA et automatisation",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "chatgpt invente-t-il des informations juridiques",
+  "theme": "IA et automatisation",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "peut-on faire confiance à chatgpt pour des calculs de prix",
+  "theme": "IA et automatisation",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "pourquoi chatgpt se trompe-t-il dans les calculs",
+  "theme": "IA et automatisation",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment vérifier ce que dit chatgpt",
+  "theme": "IA et automatisation",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "responsabilité de l'artisan si une ia fait une erreur dans un document",
+  "theme": "IA et automatisation",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "que faire si une ia a envoyé un mauvais message à un client",
+  "theme": "IA et automatisation",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "les droits d'auteur des textes et images générés par ia",
+  "theme": "IA et automatisation",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "puis-je utiliser des images créées par l'ia sur mon site",
+  "theme": "IA et automatisation",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "faut-il indiquer qu'une photo de réalisation est générée par ia",
+  "theme": "IA et automatisation",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "l'ia peut-elle trahir le secret professionnel",
+  "theme": "IA et automatisation",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "avocat"
+ },
+ {
+  "q": "chatgpt et secret médical que faire",
+  "theme": "IA et automatisation",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "médecin"
+ },
+ {
+  "q": "règlement européen sur l'ia que change-t-il pour une tpe",
+  "theme": "IA et automatisation",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "charte d'utilisation de l'ia dans une petite entreprise",
+  "theme": "IA et automatisation",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment encadrer l'usage de l'ia par ses salariés",
+  "theme": "IA et automatisation",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "dépendance à l'ia pour une petite entreprise est-ce un risque",
+  "theme": "IA et automatisation",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "que faire si l'outil d'ia que j'utilise ferme ou devient payant",
+  "theme": "IA et automatisation",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "hébergement des données d'un outil d'ia hors de l'union européenne",
+  "theme": "IA et automatisation",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "l'ia peut-elle être utilisée pour répondre à des clients sans leur dire",
+  "theme": "IA et automatisation",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "mes clients vont-ils accepter que je réponde avec l'ia",
+  "theme": "IA et automatisation",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "l'ia fait-elle perdre le contact humain avec les clients",
+  "theme": "IA et automatisation",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "zapier pour un artisan",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": "artisan"
+ },
+ {
+  "q": "zapier pour un commerçant",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": "commerçant"
+ },
+ {
+  "q": "zapier c'est quoi et à quoi ça sert",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment utiliser zapier pour automatiser son entreprise",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "zapier gratuit est-ce suffisant pour une tpe",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "make ou zapier pour une petite entreprise",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "make automatisation c'est quoi",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "make pour artisan",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": "artisan"
+ },
+ {
+  "q": "n8n c'est quoi",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "n8n ou zapier lequel choisir",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "n8n pour une tpe",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "n8n est-ce compliqué pour un non-développeur",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "n8n auto-hébergé ou cloud pour une petite structure",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "alternative gratuite à zapier",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "alternative française à zapier",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "exemples d'automatisation zapier pour une tpe",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "exemples de scénarios make pour un commerçant",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "commerçant"
+ },
+ {
+  "q": "comment relier google agenda à un tableau de suivi automatiquement",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment envoyer un e-mail automatique quand un formulaire est rempli",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment recevoir une notification quand un client demande un devis",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment enregistrer automatiquement les demandes de contact dans un tableur",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment connecter son site internet à son outil de facturation",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment relier le formulaire de mon site à mon logiciel de devis",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "combien coûte zapier pour une petite entreprise",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "combien coûte make par mois",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "automatisation no code pour tpe",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "les outils no code suffisent-ils pour automatiser une petite entreprise",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "limites de zapier pour une entreprise qui grandit",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "que faire quand un scénario zapier ne fonctionne plus",
+  "theme": "IA et automatisation",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "mes automatisations tombent en panne à qui m'adresser",
+  "theme": "IA et automatisation",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "qui peut configurer zapier ou make à ma place",
+  "theme": "IA et automatisation",
+  "etape": "achat",
+  "intention": "achat",
+  "metier": ""
+ },
+ {
+  "q": "freelance pour automatiser ma petite entreprise près de tours",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "local",
+  "metier": ""
+ },
+ {
+  "q": "agence d'automatisation pour tpe en indre-et-loire",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "local",
+  "metier": ""
+ },
+ {
+  "q": "développeur d'outils sur mesure pour artisan à tours",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "local",
+  "metier": "artisan"
+ },
+ {
+  "q": "automatisation pour artisans à tours",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "local",
+  "metier": "artisan"
+ },
+ {
+  "q": "automatiser son entreprise sans être informaticien",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment automatiser sa facturation",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "facturation automatique pour artisan",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "comment générer une facture automatiquement à partir d'un devis accepté",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "transformer un devis en facture en un clic",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment envoyer ses factures automatiquement par e-mail",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "facturation récurrente automatique pour abonnement",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment automatiser la facturation d'acomptes",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "facture automatique après fin de chantier",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "logiciel de facturation automatique pour tpe",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "logiciel de devis et factures qui relance tout seul",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "obat ou outil sur mesure pour la facturation",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": "artisan"
+ },
+ {
+  "q": "tolteck ou outil personnalisé pour les devis",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": "artisan"
+ },
+ {
+  "q": "logiciel de devis facture gratuit artisan",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": "artisan"
+ },
+ {
+  "q": "facturation automatique et facture électronique 2026",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "mon logiciel de facturation sera-t-il prêt pour la facture électronique",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "pourquoi je perds du temps à faire mes factures le soir",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "combien de temps perd-on à faire ses devis et factures",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "comment gagner du temps sur l'administratif quand on est artisan",
+  "theme": "IA et automatisation",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "paperasse administrative trop lourde que faire quand on est seul",
+  "theme": "IA et automatisation",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment scanner ses factures fournisseurs automatiquement",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "logiciel de scan de factures fournisseurs",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "application pour numériser les tickets et factures avec le téléphone",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "comment envoyer ses factures fournisseurs au comptable sans effort",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "ocr facture fournisseur c'est quoi",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "l'ia peut-elle lire et classer mes factures",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "extraction automatique des données d'une facture avec l'ia",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment classer automatiquement ses justificatifs de dépenses",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment ne plus perdre de tickets de caisse et de notes de frais",
+  "theme": "IA et automatisation",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "rapprochement bancaire automatique c'est quoi",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment faire un rapprochement bancaire automatiquement",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "logiciel de rapprochement bancaire pour petite entreprise",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "pennylane ou logiciel sur mesure pour le rapprochement bancaire",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "comment automatiser sa comptabilité quand on est artisan",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "comment connecter son compte bancaire à son logiciel de gestion",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "l'ia peut-elle remplacer mon comptable",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "comptable"
+ },
+ {
+  "q": "automatiser le suivi de trésorerie d'une tpe",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "tableau de bord automatique de chiffre d'affaires pour artisan",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "tableau de bord de suivi des devis et des factures sans excel",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "comment automatiser la saisie des heures de mes salariés",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment automatiser les devis récurrents",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "générateur de devis automatique en ligne pour clients",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "formulaire de devis en ligne qui calcule le prix tout seul",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "configurateur de devis sur site d'artisan",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "comment automatiser les commandes d'une boutique",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "commerçant"
+ },
+ {
+  "q": "automatiser la gestion des stocks d'un petit commerce",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "commerçant"
+ },
+ {
+  "q": "alerte automatique de rupture de stock",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "commerçant"
+ },
+ {
+  "q": "comment automatiser la commande de fournitures auprès de mes fournisseurs",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment automatiser les réseaux sociaux",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "programmer ses publications instagram automatiquement",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "programmer ses publications facebook pour un commerce",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "commerçant"
+ },
+ {
+  "q": "publier automatiquement une réalisation sur instagram et facebook",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "l'ia pour créer des posts instagram pour un artisan",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "chatgpt pour des légendes de posts de commerçant",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "commerçant"
+ },
+ {
+  "q": "planning éditorial automatique pour petite entreprise",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "outil gratuit pour programmer ses posts",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "combien de temps passer sur les réseaux sociaux quand on est artisan",
+  "theme": "IA et automatisation",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "faut-il automatiser ses réseaux sociaux ou publier à la main",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "automatiser les messages de réponse sur instagram",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "répondre automatiquement aux messages facebook de mon entreprise",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "automatiser la demande d'avis google après une prestation",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment envoyer automatiquement un lien d'avis google à ses clients",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment demander des avis google automatiquement par sms",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "automatiser l'envoi d'une newsletter pour un commerce",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "commerçant"
+ },
+ {
+  "q": "automatiser l'e-mail de remerciement après un chantier",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "l'ia va-t-elle remplacer mon métier",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "l'ia va-t-elle remplacer les artisans",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "l'ia va-t-elle remplacer les plombiers",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "plombier"
+ },
+ {
+  "q": "l'ia va-t-elle remplacer les électriciens",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "électricien"
+ },
+ {
+  "q": "l'ia va-t-elle remplacer les coiffeurs",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "coiffeur"
+ },
+ {
+  "q": "l'ia va-t-elle remplacer les commerçants",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "commerçant"
+ },
+ {
+  "q": "l'ia va-t-elle remplacer les boulangers",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "boulanger"
+ },
+ {
+  "q": "l'ia va-t-elle remplacer les comptables",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "comptable"
+ },
+ {
+  "q": "l'ia va-t-elle remplacer les agents immobiliers",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "agent immobilier"
+ },
+ {
+  "q": "l'ia va-t-elle remplacer les photographes",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "photographe"
+ },
+ {
+  "q": "l'ia va-t-elle remplacer les avocats",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "avocat"
+ },
+ {
+  "q": "l'ia va-t-elle remplacer les médecins",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "médecin"
+ },
+ {
+  "q": "l'ia va-t-elle remplacer les architectes",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "architecte"
+ },
+ {
+  "q": "l'ia va-t-elle remplacer les secrétaires",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "l'ia va-t-elle remplacer les garagistes",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "garagiste"
+ },
+ {
+  "q": "les métiers manuels sont-ils menacés par l'ia",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "quels métiers de l'artisanat ne seront pas remplacés par l'ia",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "faut-il avoir peur de l'ia quand on a une petite entreprise",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "l'ia est-elle une opportunité pour les artisans",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "l'ia va-t-elle tuer les petits commerces",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "commerçant"
+ },
+ {
+  "q": "pourquoi les grandes entreprises utilisent l'ia et pas les tpe",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "mes concurrents utilisent l'ia suis-je en retard",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "ce qui est automatisable dans mon métier",
+  "theme": "IA et automatisation",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "qu'est-ce qu'on peut automatiser dans une petite entreprise",
+  "theme": "IA et automatisation",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "qu'est-ce qu'on peut automatiser quand on est artisan",
+  "theme": "IA et automatisation",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "quelles tâches automatiser en priorité dans une tpe",
+  "theme": "IA et automatisation",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "que peut-on automatiser dans un salon de coiffure",
+  "theme": "IA et automatisation",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "coiffeur"
+ },
+ {
+  "q": "que peut-on automatiser dans un institut de beauté",
+  "theme": "IA et automatisation",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "esthéticienne"
+ },
+ {
+  "q": "que peut-on automatiser dans une boulangerie",
+  "theme": "IA et automatisation",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "boulanger"
+ },
+ {
+  "q": "que peut-on automatiser dans un restaurant",
+  "theme": "IA et automatisation",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "restaurateur"
+ },
+ {
+  "q": "que peut-on automatiser dans une entreprise de plomberie",
+  "theme": "IA et automatisation",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "plombier"
+ },
+ {
+  "q": "que peut-on automatiser dans une entreprise d'électricité",
+  "theme": "IA et automatisation",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "électricien"
+ },
+ {
+  "q": "que peut-on automatiser dans une entreprise de maçonnerie",
+  "theme": "IA et automatisation",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "maçon"
+ },
+ {
+  "q": "que peut-on automatiser dans une entreprise de peinture",
+  "theme": "IA et automatisation",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "peintre"
+ },
+ {
+  "q": "que peut-on automatiser dans une menuiserie",
+  "theme": "IA et automatisation",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "menuisier"
+ },
+ {
+  "q": "que peut-on automatiser dans une entreprise de couverture",
+  "theme": "IA et automatisation",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "couvreur"
+ },
+ {
+  "q": "que peut-on automatiser pour un paysagiste",
+  "theme": "IA et automatisation",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "paysagiste"
+ },
+ {
+  "q": "que peut-on automatiser dans un garage",
+  "theme": "IA et automatisation",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "garagiste"
+ },
+ {
+  "q": "que peut-on automatiser dans une boutique de fleurs",
+  "theme": "IA et automatisation",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "fleuriste"
+ },
+ {
+  "q": "que peut-on automatiser dans un cabinet de kinésithérapie",
+  "theme": "IA et automatisation",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "kinésithérapeute"
+ },
+ {
+  "q": "que peut-on automatiser dans une agence immobilière",
+  "theme": "IA et automatisation",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "agent immobilier"
+ },
+ {
+  "q": "que peut-on automatiser dans un cabinet comptable",
+  "theme": "IA et automatisation",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "comptable"
+ },
+ {
+  "q": "que peut-on automatiser dans un cabinet d'avocat",
+  "theme": "IA et automatisation",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "avocat"
+ },
+ {
+  "q": "que peut-on automatiser pour un photographe",
+  "theme": "IA et automatisation",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "photographe"
+ },
+ {
+  "q": "que peut-on automatiser pour un coach sportif",
+  "theme": "IA et automatisation",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "coach sportif"
+ },
+ {
+  "q": "que peut-on automatiser dans une boutique en ligne",
+  "theme": "IA et automatisation",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "commerçant"
+ },
+ {
+  "q": "que peut-on automatiser dans une petite boutique de vêtements",
+  "theme": "IA et automatisation",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "commerçant"
+ },
+ {
+  "q": "quelles tâches répétitives font perdre du temps à un artisan",
+  "theme": "IA et automatisation",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "je recopie les mêmes informations à plusieurs endroits comment éviter ça",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "je ressaisis mes devis dans mes factures que faire",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "je passe trop de temps sur l'administratif et pas assez sur mon métier",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment arrêter de tout faire moi-même dans mon entreprise",
+  "theme": "IA et automatisation",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment déléguer les tâches répétitives à un outil",
+  "theme": "IA et automatisation",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment repérer les tâches qui méritent d'être automatisées",
+  "theme": "IA et automatisation",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "est-ce rentable d'automatiser quand on est seul",
+  "theme": "IA et automatisation",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "automatiser ou embaucher une secrétaire",
+  "theme": "IA et automatisation",
+  "etape": "problème",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "automatisation ou assistante virtuelle pour une tpe",
+  "theme": "IA et automatisation",
+  "etape": "problème",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "est-ce que l'automatisation est réservée aux grandes entreprises",
+  "theme": "IA et automatisation",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "combien coûte une automatisation pour une petite entreprise",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "combien coûte l'automatisation d'un processus de gestion",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "combien coûte un assistant ia pour une tpe",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "prix d'un outil sur mesure pour automatiser les devis",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "combien coûte la création d'un outil de gestion sur mesure pour artisan",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "combien coûte un chatbot sur mesure",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "quel budget prévoir pour automatiser sa tpe",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "une automatisation est-elle rentable pour une petite entreprise",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment calculer le gain de temps d'une automatisation",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "retour sur investissement d'un outil de gestion sur mesure",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "automatisation pas chère pour très petite entreprise",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "existe-t-il des aides pour financer l'automatisation d'une tpe",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "aide de la région pour numériser son entreprise artisanale",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "chèque numérique pour une tpe est-ce encore possible en 2026",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "subvention transformation numérique artisan 2026",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "crédit d'impôt pour la numérisation d'une petite entreprise",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "automatisation sur mesure ou outil du marché",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "outil sur mesure ou logiciel du commerce quand on est artisan",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": "artisan"
+ },
+ {
+  "q": "logiciel standard ou développement sur mesure pour une tpe",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "quand faut-il passer au sur mesure plutôt qu'un logiciel du marché",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "avantages d'un outil de gestion sur mesure pour un artisan",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": "artisan"
+ },
+ {
+  "q": "inconvénients d'un outil sur mesure pour une petite entreprise",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "un outil sur mesure est-il plus cher qu'un abonnement logiciel sur la durée",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "que se passe-t-il si mon développeur disparaît",
+  "theme": "IA et automatisation",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "à qui appartient un outil développé sur mesure pour mon entreprise",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "est-ce que je reste propriétaire de mon outil sur mesure",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment faire développer un petit outil pour mon entreprise",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment rédiger un cahier des charges pour un outil de sa tpe",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment expliquer son besoin à un développeur quand on n'est pas informaticien",
+  "theme": "IA et automatisation",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "qui peut me créer un outil de gestion adapté à mon métier",
+  "theme": "IA et automatisation",
+  "etape": "achat",
+  "intention": "achat",
+  "metier": ""
+ },
+ {
+  "q": "artisan développeur d'outils de gestion à tours",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "local",
+  "metier": "artisan"
+ },
+ {
+  "q": "créer un outil de gestion sur mesure pour tpe en touraine",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "local",
+  "metier": ""
+ },
+ {
+  "q": "agence web et automatisation pour commerçants à tours",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "local",
+  "metier": "commerçant"
+ },
+ {
+  "q": "faire développer un outil de suivi de chantiers",
+  "theme": "IA et automatisation",
+  "etape": "achat",
+  "intention": "achat",
+  "metier": "artisan"
+ },
+ {
+  "q": "outil sur mesure de suivi de clients pour un artisan",
+  "theme": "IA et automatisation",
+  "etape": "achat",
+  "intention": "achat",
+  "metier": "artisan"
+ },
+ {
+  "q": "mini logiciel de gestion sur mesure pour boutique",
+  "theme": "IA et automatisation",
+  "etape": "achat",
+  "intention": "achat",
+  "metier": "commerçant"
+ },
+ {
+  "q": "application sur mesure pour prise de commandes d'une boulangerie",
+  "theme": "IA et automatisation",
+  "etape": "achat",
+  "intention": "achat",
+  "metier": "boulanger"
+ },
+ {
+  "q": "application de gestion pour salon de coiffure sur mesure",
+  "theme": "IA et automatisation",
+  "etape": "achat",
+  "intention": "achat",
+  "metier": "coiffeur"
+ },
+ {
+  "q": "excel ou outil sur mesure pour gérer ses clients",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "quand excel ne suffit plus pour gérer une petite entreprise",
+  "theme": "IA et automatisation",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "mon fichier excel devient ingérable que faire",
+  "theme": "IA et automatisation",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment sortir d'excel pour gérer son activité",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "logiciel de gestion tout-en-un pour tpe ou plusieurs outils reliés",
+  "theme": "IA et automatisation",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "comment gérer son entreprise quand on est seul",
+  "theme": "gestion d'entreprise",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment s'organiser quand on est artisan indépendant",
+  "theme": "gestion d'entreprise",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "comment mieux organiser son travail de commerçant",
+  "theme": "gestion d'entreprise",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "commerçant"
+ },
+ {
+  "q": "comment gagner du temps dans la gestion d'une tpe",
+  "theme": "gestion d'entreprise",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment structurer son suivi client sans logiciel complexe",
+  "theme": "gestion d'entreprise",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment suivre ses devis en cours",
+  "theme": "gestion d'entreprise",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment suivre ses chantiers en cours simplement",
+  "theme": "gestion d'entreprise",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "comment suivre ses impayés de façon simple",
+  "theme": "gestion d'entreprise",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment gérer un carnet de commandes d'artisan",
+  "theme": "gestion d'entreprise",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "comment centraliser ses e-mails, ses devis et ses factures",
+  "theme": "gestion d'entreprise",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "je suis débordé par la gestion de mon entreprise",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "je ne m'y retrouve plus dans mes devis et mes factures",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "je perds des demandes de devis dans ma boîte mail",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment ne plus oublier un rappel client",
+  "theme": "gestion d'entreprise",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment ne plus oublier de rappeler un client",
+  "theme": "gestion d'entreprise",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment éviter les oublis de facturation",
+  "theme": "gestion d'entreprise",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "j'oublie de facturer certaines interventions",
+  "theme": "gestion d'entreprise",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "comment tenir un tableau de bord simple de son activité",
+  "theme": "gestion d'entreprise",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "quels indicateurs suivre quand on dirige une tpe",
+  "theme": "gestion d'entreprise",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment savoir si mon entreprise est rentable",
+  "theme": "gestion d'entreprise",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment fidéliser ses clients quand on est artisan",
+  "theme": "gestion d'entreprise",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "comment relancer d'anciens clients automatiquement",
+  "theme": "gestion d'entreprise",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment envoyer des vœux ou des rappels d'entretien à ses clients",
+  "theme": "gestion d'entreprise",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "rappel d'entretien automatique pour chaudière",
+  "theme": "gestion d'entreprise",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "plombier"
+ },
+ {
+  "q": "rappel de contrôle annuel automatique à ses clients",
+  "theme": "gestion d'entreprise",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "comment gérer un fichier client conforme au rgpd",
+  "theme": "gestion d'entreprise",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment gérer ses sous-traitants et leurs documents",
+  "theme": "gestion d'entreprise",
+  "etape": "solution",
+  "intention": "information",
+  "metier": "artisan"
+ }
+]

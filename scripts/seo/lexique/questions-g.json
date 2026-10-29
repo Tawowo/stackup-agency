@@ -1,0 +1,5091 @@
+[
+ {
+  "q": "mon site wordpress a été piraté que faire",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment savoir si mon site wordpress est piraté",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment nettoyer un site wordpress infecté",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment réparer un site wordpress piraté",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "mon site affiche des publicités que je n'ai pas mises",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "mon site redirige vers un autre site bizarre",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "mon site redirige vers des sites de casino ou de pharmacie",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "pourquoi mon site wordpress est-il piraté sans cesse",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment enlever un malware d'un site internet",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "google dit que mon site contient des logiciels malveillants",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "message site piraté dans les résultats google que faire",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "mon site apparaît avec des pages en japonais dans google",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment supprimer un virus sur mon site wordpress",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "que faire si un pirate a changé la page d'accueil de mon site",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "mon hébergeur a suspendu mon site pour piratage",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "mon site a été suspendu pour spam que faire",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment retrouver un site internet après un piratage",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "un pirate a créé un compte administrateur sur mon wordpress",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "mon site envoie des mails de spam sans que je le sache",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment sécuriser son site après un piratage",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "est-ce que mon site piraté peut me faire perdre mes clients",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "faut-il porter plainte si mon site internet est piraté",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "mon site piraté est-il un problème pour le rgpd",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "quelles données sont volées quand un site est piraté",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment sécuriser un site wordpress",
+  "theme": "maintenance et sécurité",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment protéger son site internet contre le piratage",
+  "theme": "maintenance et sécurité",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "quel plugin de sécurité wordpress choisir",
+  "theme": "maintenance et sécurité",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment éviter le piratage de mon site vitrine",
+  "theme": "maintenance et sécurité",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "mon site vitrine peut-il être piraté",
+  "theme": "maintenance et sécurité",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "est-ce que les petits sites sont ciblés par les pirates",
+  "theme": "maintenance et sécurité",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "faut-il un plugin de sécurité sur wordpress",
+  "theme": "maintenance et sécurité",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment changer l'adresse de connexion de wordpress",
+  "theme": "maintenance et sécurité",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment protéger la page de connexion wordpress",
+  "theme": "maintenance et sécurité",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment mettre une double authentification sur wordpress",
+  "theme": "maintenance et sécurité",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "quels sont les risques d'un site wordpress pas à jour",
+  "theme": "maintenance et sécurité",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment sécuriser un site internet de commerçant",
+  "theme": "maintenance et sécurité",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment savoir si mon site est sécurisé",
+  "theme": "maintenance et sécurité",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment tester la sécurité de mon site internet",
+  "theme": "maintenance et sécurité",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "un site sur mesure est-il plus sécurisé que wordpress",
+  "theme": "maintenance et sécurité",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "site internet sécurisé pour artisan",
+  "theme": "maintenance et sécurité",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "audit de sécurité site internet tpe",
+  "theme": "maintenance et sécurité",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "nettoyage site wordpress piraté prix",
+  "theme": "prix et devis",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "service de réparation de site piraté",
+  "theme": "maintenance et sécurité",
+  "etape": "achat",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "quelqu'un pour nettoyer mon site wordpress infecté",
+  "theme": "maintenance et sécurité",
+  "etape": "achat",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "dépannage site internet urgence",
+  "theme": "maintenance et sécurité",
+  "etape": "achat",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "sécurisation de site wordpress par un professionnel",
+  "theme": "maintenance et sécurité",
+  "etape": "achat",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "dépannage site wordpress près de tours",
+  "theme": "maintenance et sécurité",
+  "etape": "achat",
+  "intention": "local",
+  "metier": ""
+ },
+ {
+  "q": "maintenance site internet tours",
+  "theme": "maintenance et sécurité",
+  "etape": "achat",
+  "intention": "local",
+  "metier": ""
+ },
+ {
+  "q": "mon site affiche une erreur 500 que faire",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "pourquoi mon site wordpress affiche une erreur 500",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment résoudre une erreur 500 sur un site internet",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "mon site affiche une page blanche que faire",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "pourquoi mon site wordpress affiche un écran blanc",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment réparer l'écran blanc de la mort wordpress",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "mon site affiche une erreur 404 sur toutes les pages",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "pourquoi mes pages affichent une erreur 404 après une mise à jour",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment corriger une erreur 404 sur un site",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "mon site affiche une erreur 403 accès interdit",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "mon site affiche erreur de connexion à la base de données",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment réparer l'erreur d'établissement de la connexion à la base de données wordpress",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "mon site affiche une erreur critique wordpress",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "il y a eu une erreur critique sur ce site comment réparer",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "mon site est en mode maintenance et n'en sort plus",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "mon site reste bloqué sur briefly unavailable for scheduled maintenance",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "mon site affiche une erreur après avoir changé de php",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "pourquoi mon site ne s'affiche plus",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "mon site internet ne s'affiche plus que faire",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "mon site est inaccessible depuis ce matin",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "pourquoi mon site internet est inaccessible",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment savoir si mon site est en panne",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "mon site marche chez moi mais pas chez mes clients",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "mon site ne s'affiche plus sur téléphone",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "mon site s'affiche mal depuis une mise à jour",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "mon site est cassé depuis la dernière mise à jour",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "pourquoi mon site affiche du texte sans mise en forme",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "mon site a perdu son design du jour au lendemain",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "mes images ne s'affichent plus sur mon site",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "mon formulaire de contact ne fonctionne plus",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "je ne reçois plus les mails de mon formulaire de contact",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "les mails de mon site arrivent dans les spams",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "mon menu ne fonctionne plus sur mon site",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "mon site affiche une page de l'hébergeur à la place de mon site",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "mon site affiche index of à la place de ma page",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "mon site affiche ce site est en cours de construction",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "pourquoi mon site boucle en redirection infinie",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "err too many redirects comment corriger",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "mon site affiche une erreur de contenu mixte",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "que faire quand son site internet tombe en panne",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "qui contacter quand mon site est en panne",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment surveiller la disponibilité de son site internet",
+  "theme": "maintenance et sécurité",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment être prévenu quand mon site tombe en panne",
+  "theme": "maintenance et sécurité",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment éviter les pannes de site internet",
+  "theme": "maintenance et sécurité",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "dépannage site internet en panne",
+  "theme": "maintenance et sécurité",
+  "etape": "achat",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "réparation de site wordpress qui affiche une erreur",
+  "theme": "maintenance et sécurité",
+  "etape": "achat",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "pourquoi mon site est lent",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "mon site wordpress est très lent que faire",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment accélérer un site wordpress",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "pourquoi mon site met du temps à charger",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment savoir si mon site est lent",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "mon site est lent sur mobile",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "quelle est la vitesse idéale pour un site internet",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "la vitesse du site influence-t-elle le référencement",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment tester la vitesse de mon site gratuitement",
+  "theme": "prix et devis",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment optimiser les images de mon site",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "mes images sont trop lourdes pour mon site que faire",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "faut-il un plugin de cache sur wordpress",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "mon hébergement est-il la cause de la lenteur de mon site",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "trop de plugins ralentissent-ils wordpress",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment réduire le poids d'une page web",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "que veut dire core web vitals",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment améliorer les core web vitals de mon site",
+  "theme": "maintenance et sécurité",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "un site sur mesure est-il plus rapide qu'un site wordpress",
+  "theme": "maintenance et sécurité",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "faut-il changer d'hébergeur si mon site est lent",
+  "theme": "maintenance et sécurité",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "optimisation vitesse site internet",
+  "theme": "maintenance et sécurité",
+  "etape": "achat",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "audit performance site web tpe",
+  "theme": "maintenance et sécurité",
+  "etape": "achat",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "mon site affiche non sécurisé que faire",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "pourquoi mon site est marqué non sécurisé dans le navigateur",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "certificat ssl expiré comment renouveler",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "votre connexion n'est pas privée sur mon site que faire",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "mon certificat ssl est expiré mon site est bloqué",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment savoir si mon certificat ssl est valide",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment installer un certificat ssl sur son site",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment passer son site en https",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "mon site n'est pas en https que faire",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "le cadenas n'apparaît pas sur mon site",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "pourquoi le cadenas est barré sur mon site",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "certificat ssl gratuit ou payant quelle différence",
+  "theme": "prix et devis",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "faut-il payer pour un certificat ssl",
+  "theme": "prix et devis",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "let's encrypt suffit-il pour un site professionnel",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "mon certificat ssl ne se renouvelle pas automatiquement",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "erreur net err cert date invalid sur mon site",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "quand expire le certificat de mon site",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment renouveler automatiquement un certificat ssl",
+  "theme": "maintenance et sécurité",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "pourquoi un site sans https fait fuir les clients",
+  "theme": "maintenance et sécurité",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "google pénalise-t-il un site sans https",
+  "theme": "maintenance et sécurité",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "installation certificat ssl site internet",
+  "theme": "maintenance et sécurité",
+  "etape": "achat",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "qui peut me réparer mon certificat ssl",
+  "theme": "maintenance et sécurité",
+  "etape": "achat",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "un plugin wordpress a fait planter mon site",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment désactiver un plugin wordpress quand on n'a plus accès au site",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "mon site plante après l'installation d'un plugin",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment savoir quel plugin fait planter wordpress",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "mon plugin n'est plus compatible avec ma version de wordpress",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "un plugin wordpress n'est plus maintenu que faire",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment désinstaller un plugin wordpress sans accès à l'administration",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "pourquoi mes plugins wordpress ne se mettent pas à jour",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "mon thème wordpress n'est plus mis à jour que faire",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "que faire si l'éditeur de mon thème wordpress a disparu",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "mon constructeur de pages ralentit tout mon site",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "quels sont les risques d'un plugin wordpress gratuit",
+  "theme": "prix et devis",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment choisir un plugin wordpress fiable",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "combien de plugins wordpress peut-on installer",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "quels plugins wordpress sont vraiment indispensables",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment mettre à jour wordpress sans casser son site",
+  "theme": "maintenance et sécurité",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "faut-il mettre à jour wordpress tout de suite",
+  "theme": "maintenance et sécurité",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "est-ce dangereux de mettre à jour wordpress",
+  "theme": "maintenance et sécurité",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment faire la mise à jour de wordpress en toute sécurité",
+  "theme": "maintenance et sécurité",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "que faire avant une mise à jour wordpress",
+  "theme": "maintenance et sécurité",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "à quelle fréquence faut-il mettre à jour son site",
+  "theme": "maintenance et sécurité",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "que se passe-t-il si on ne met pas à jour wordpress",
+  "theme": "maintenance et sécurité",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "que se passe-t-il si je ne mets jamais à jour mon site",
+  "theme": "maintenance et sécurité",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment mettre à jour la version de php de son site",
+  "theme": "maintenance et sécurité",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "ma version de php est trop ancienne que faire",
+  "theme": "maintenance et sécurité",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment tester une mise à jour avant de la faire en vrai",
+  "theme": "maintenance et sécurité",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "qu'est-ce qu'un site de préproduction",
+  "theme": "maintenance et sécurité",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "les mises à jour automatiques de wordpress sont-elles fiables",
+  "theme": "maintenance et sécurité",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "mise à jour wordpress qui a mal tourné comment revenir en arrière",
+  "theme": "maintenance et sécurité",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "mise à jour wordpress par un professionnel",
+  "theme": "maintenance et sécurité",
+  "etape": "achat",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "maintenance wordpress pour petite entreprise",
+  "theme": "maintenance et sécurité",
+  "etape": "achat",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "comment sauvegarder son site wordpress",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment faire une sauvegarde de son site internet",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment savoir si mon site est sauvegardé",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "mon hébergeur fait-il des sauvegardes de mon site",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "à quelle fréquence faut-il sauvegarder son site",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "où stocker la sauvegarde de son site internet",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment restaurer un site wordpress à partir d'une sauvegarde",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment restaurer son site internet après une panne",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment récupérer un site supprimé par erreur",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "j'ai perdu mon site internet que faire",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment récupérer un ancien site web disparu",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "peut-on retrouver un site qui n'existe plus",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment récupérer le contenu d'un ancien site",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "quel plugin de sauvegarde wordpress utiliser",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "une sauvegarde automatique suffit-elle",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment vérifier qu'une sauvegarde fonctionne",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "pourquoi faut-il sauvegarder la base de données d'un site",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "que sauvegarder exactement sur un site wordpress",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment télécharger une copie complète de son site",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment automatiser la sauvegarde de son site internet",
+  "theme": "maintenance et sécurité",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment revenir à une version précédente de son site",
+  "theme": "maintenance et sécurité",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "sauvegarde automatique site internet professionnel",
+  "theme": "maintenance et sécurité",
+  "etape": "achat",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "restauration de site wordpress",
+  "theme": "maintenance et sécurité",
+  "etape": "achat",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "qu'est-ce qu'un hébergeur de site internet",
+  "theme": "maintenance et sécurité",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "où est hébergé mon site internet",
+  "theme": "maintenance et sécurité",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment savoir où est hébergé mon site",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment savoir chez qui est hébergé un site web",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "c'est quoi un hébergement web",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "quelle est la différence entre nom de domaine et hébergement",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "faut-il payer un hébergement pour un site internet",
+  "theme": "prix et devis",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "pourquoi payer un hébergement chaque année",
+  "theme": "prix et devis",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "quel hébergement choisir pour un site de petite entreprise",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "quel hébergement web pour un site vitrine",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "quel hébergement pour un site wordpress",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "hébergement mutualisé ou serveur dédié pour une tpe",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "c'est quoi un hébergement mutualisé",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "c'est quoi un vps et ai-je besoin d'un vps",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "hébergement gratuit pour site professionnel est-ce une bonne idée",
+  "theme": "prix et devis",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "faut-il un hébergement spécifique pour wordpress",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment changer d'hébergeur sans couper son site",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment migrer son site wordpress vers un autre hébergeur",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "combien de temps prend le changement d'hébergeur",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "mon hébergeur augmente ses tarifs que faire",
+  "theme": "prix et devis",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "mon hébergement expire bientôt que se passe-t-il",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "mon hébergement a expiré mon site a disparu",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment renouveler son hébergement web",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment résilier un hébergement web",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "faut-il résilier l'hébergement quand on change de prestataire",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "mon hébergeur ne répond pas à mes mails que faire",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "le support de mon hébergeur est injoignable",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment contacter le support ovh",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment accéder au panneau de contrôle de mon hébergement",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment trouver mon identifiant d'hébergement",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "j'ai perdu mes identifiants d'hébergement",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment accéder à mes fichiers par ftp",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "c'est quoi le ftp et à quoi ça sert",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "c'est quoi cpanel",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "c'est quoi un nom de serveur et pourquoi on me le demande",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment savoir quel espace disque j'utilise sur mon hébergement",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "mon hébergement est plein que faire",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "mon hébergeur me demande de passer à une offre supérieure",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "avis hébergeur ovh pour site de petite entreprise",
+  "theme": "maintenance et sécurité",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "ovh ou o2switch pour un site wordpress",
+  "theme": "maintenance et sécurité",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "o2switch ou ionos quelle différence",
+  "theme": "maintenance et sécurité",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "ionos ou ovh pour un site professionnel",
+  "theme": "maintenance et sécurité",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "vercel pour un site vitrine est-ce adapté",
+  "theme": "maintenance et sécurité",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "vercel ou hébergement classique pour une tpe",
+  "theme": "maintenance et sécurité",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "hébergement ovh avis",
+  "theme": "maintenance et sécurité",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "hébergement vercel gratuit pour un site professionnel",
+  "theme": "prix et devis",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "wix ou hébergement wordpress pour un artisan",
+  "theme": "maintenance et sécurité",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "comparatif hébergeurs web 2026",
+  "theme": "maintenance et sécurité",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "meilleur hébergeur site internet 2026",
+  "theme": "maintenance et sécurité",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "meilleur hébergeur wordpress en france",
+  "theme": "maintenance et sécurité",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "quel hébergeur choisir pour un petit commerce",
+  "theme": "maintenance et sécurité",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "hébergement web pas cher pour site professionnel",
+  "theme": "prix et devis",
+  "etape": "achat",
+  "intention": "achat",
+  "metier": ""
+ },
+ {
+  "q": "hébergement wordpress pas cher",
+  "theme": "prix et devis",
+  "etape": "achat",
+  "intention": "achat",
+  "metier": ""
+ },
+ {
+  "q": "offre hébergement ovh site web",
+  "theme": "maintenance et sécurité",
+  "etape": "achat",
+  "intention": "achat",
+  "metier": ""
+ },
+ {
+  "q": "offre hébergement o2switch",
+  "theme": "maintenance et sécurité",
+  "etape": "achat",
+  "intention": "achat",
+  "metier": ""
+ },
+ {
+  "q": "hébergement vercel pro tarif",
+  "theme": "prix et devis",
+  "etape": "achat",
+  "intention": "achat",
+  "metier": ""
+ },
+ {
+  "q": "hébergement site internet inclus dans le prix",
+  "theme": "prix et devis",
+  "etape": "achat",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "hébergement et maintenance de site internet",
+  "theme": "maintenance et sécurité",
+  "etape": "achat",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "hébergement de site internet pour artisan",
+  "theme": "maintenance et sécurité",
+  "etape": "achat",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "hébergement site web tours",
+  "theme": "maintenance et sécurité",
+  "etape": "achat",
+  "intention": "local",
+  "metier": ""
+ },
+ {
+  "q": "hébergeur web en indre-et-loire",
+  "theme": "maintenance et sécurité",
+  "etape": "achat",
+  "intention": "local",
+  "metier": ""
+ },
+ {
+  "q": "hébergement de site et rgpd ce qu'il faut savoir",
+  "theme": "obligations légales",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "mon hébergeur est-il conforme au rgpd",
+  "theme": "obligations légales",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "où doivent être hébergées les données de mon site",
+  "theme": "obligations légales",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "faut-il un hébergeur en europe pour le rgpd",
+  "theme": "obligations légales",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "un hébergeur américain est-il autorisé pour mon site",
+  "theme": "obligations légales",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "google analytics est-il conforme au rgpd",
+  "theme": "obligations légales",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "faut-il une bannière cookies sur mon site",
+  "theme": "obligations légales",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "faut-il un contrat avec mon hébergeur pour le rgpd",
+  "theme": "obligations légales",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "qu'est-ce qu'un sous-traitant rgpd pour un site internet",
+  "theme": "obligations légales",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "mon prestataire web a-t-il accès aux données de mes clients",
+  "theme": "obligations légales",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment protéger les données des visiteurs de mon site",
+  "theme": "obligations légales",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "que faire en cas de fuite de données sur mon site",
+  "theme": "obligations légales",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "faut-il déclarer une fuite de données à la cnil",
+  "theme": "obligations légales",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "qui est responsable des données collectées par mon site",
+  "theme": "obligations légales",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "que doit contenir la politique de confidentialité d'un site",
+  "theme": "obligations légales",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "combien de temps conserver les données d'un formulaire de contact",
+  "theme": "obligations légales",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "les formulaires de mon site sont-ils conformes au rgpd",
+  "theme": "obligations légales",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "mon site doit-il être conforme au rgpd même sans boutique",
+  "theme": "obligations légales",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment mettre son site en conformité rgpd",
+  "theme": "obligations légales",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment héberger son site en respectant le rgpd",
+  "theme": "obligations légales",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "c'est quoi un nom de domaine",
+  "theme": "maintenance et sécurité",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment acheter un nom de domaine",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "où acheter un nom de domaine pour son entreprise",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment choisir un nom de domaine pour son entreprise",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "quelle extension de nom de domaine choisir pour une entreprise en france",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "faut-il choisir un point fr ou un point com",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment vérifier si un nom de domaine est disponible",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment savoir à qui appartient un nom de domaine",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment savoir qui est le propriétaire de mon nom de domaine",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "qui est propriétaire du nom de domaine de mon site",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "mon prestataire a acheté mon nom de domaine à son nom que faire",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment récupérer la propriété de son nom de domaine",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "mon nom de domaine est au nom de mon ancien prestataire",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment savoir chez qui est enregistré mon nom de domaine",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "c'est quoi un whois",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment retrouver le registrar de mon nom de domaine",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment transférer un nom de domaine",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment transférer son nom de domaine vers un autre registrar",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment obtenir le code de transfert d'un nom de domaine",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "c'est quoi un code epp ou code auth",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "combien de temps dure le transfert d'un nom de domaine",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "peut-on transférer un nom de domaine sans perdre son site",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment transférer un domaine sans interruption du site et des mails",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment renouveler un nom de domaine",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "que se passe-t-il quand un nom de domaine expire",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "mon nom de domaine a expiré que faire",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment récupérer un nom de domaine expiré",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "combien de temps pour récupérer un nom de domaine expiré",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "c'est quoi la période de rédemption d'un nom de domaine",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "j'ai perdu l'accès à mon nom de domaine",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "j'ai perdu mes identifiants pour mon nom de domaine",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment récupérer l'accès à mon compte registrar",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "je ne sais plus chez qui j'ai acheté mon nom de domaine",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "mon nom de domaine est toujours à mon nom",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment savoir quand expire mon nom de domaine",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "pourquoi payer un nom de domaine chaque année",
+  "theme": "prix et devis",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "combien de temps garde-t-on un nom de domaine acheté",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "peut-on acheter un nom de domaine pour plusieurs années",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment mettre le nom de domaine à son nom propre",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "faut-il acheter plusieurs extensions de son nom de domaine",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "que faire si le nom de domaine que je veux est déjà pris",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment protéger sa marque avec un nom de domaine",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "qu'est-ce que le verrouillage d'un nom de domaine",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment rediriger un nom de domaine vers un autre",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment faire pointer un nom de domaine vers son site",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment connecter son nom de domaine à son site",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment utiliser un nom de domaine acheté ailleurs avec wix",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment utiliser son nom de domaine avec shopify",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "quelle est la différence entre registrar et hébergeur",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "mon nom de domaine peut-il être utilisé par quelqu'un d'autre",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment faire un changement de titulaire de nom de domaine",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "que faire si l'adresse mail du propriétaire du domaine n'existe plus",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "un artisan doit-il avoir son propre nom de domaine",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "ovh ou ionos pour acheter un nom de domaine",
+  "theme": "maintenance et sécurité",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "registrar nom de domaine comparatif",
+  "theme": "maintenance et sécurité",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "où acheter un nom de domaine pas cher en france",
+  "theme": "prix et devis",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "gandi ou ovh nom de domaine",
+  "theme": "maintenance et sécurité",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "nom de domaine pas cher",
+  "theme": "prix et devis",
+  "etape": "achat",
+  "intention": "achat",
+  "metier": ""
+ },
+ {
+  "q": "acheter un nom de domaine point com",
+  "theme": "maintenance et sécurité",
+  "etape": "achat",
+  "intention": "achat",
+  "metier": ""
+ },
+ {
+  "q": "réserver un nom de domaine pour son entreprise",
+  "theme": "maintenance et sécurité",
+  "etape": "achat",
+  "intention": "achat",
+  "metier": ""
+ },
+ {
+  "q": "achat nom de domaine et création de site",
+  "theme": "maintenance et sécurité",
+  "etape": "achat",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "gestion de nom de domaine par un prestataire",
+  "theme": "maintenance et sécurité",
+  "etape": "achat",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "c'est quoi le dns",
+  "theme": "maintenance et sécurité",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "c'est quoi une zone dns",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment modifier les dns d'un nom de domaine",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment changer les serveurs dns de son domaine",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "c'est quoi un enregistrement a dans le dns",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "c'est quoi un enregistrement mx",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "c'est quoi un enregistrement txt et à quoi sert-il",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "combien de temps pour la propagation dns",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "pourquoi mon site ne s'affiche pas après le changement de dns",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment vérifier la propagation dns",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment savoir si mes dns sont corrects",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "pourquoi mes modifications dns ne fonctionnent pas",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment configurer le dns pour un nouveau site",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment configurer le dns pour vercel",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment configurer les dns pour garder ses mails en changeant de site",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "est-ce que changer de dns coupe mes mails",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment faire pointer www vers mon site",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "mon site marche avec www mais pas sans www",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "que faire quand le dns ne pointe plus vers mon site",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment sécuriser son dns",
+  "theme": "maintenance et sécurité",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "c'est quoi dnssec",
+  "theme": "maintenance et sécurité",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "qui peut gérer mes dns à ma place",
+  "theme": "maintenance et sécurité",
+  "etape": "achat",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "comment faire des redirections 301 après une refonte",
+  "theme": "refonte",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "c'est quoi une redirection 301",
+  "theme": "refonte",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "pourquoi faire des redirections lors d'un changement de site",
+  "theme": "refonte",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "que se passe-t-il pour le référencement quand on change de site",
+  "theme": "refonte",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "est-ce qu'on perd son référencement en refaisant son site",
+  "theme": "refonte",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment ne pas perdre son référencement lors d'une refonte",
+  "theme": "refonte",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment garder ses anciennes adresses de pages après une refonte",
+  "theme": "refonte",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment changer de nom de domaine sans perdre son référencement",
+  "theme": "refonte",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment migrer un site vers un nouveau nom de domaine",
+  "theme": "refonte",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment passer de wordpress à un site sur mesure sans perdre ses visiteurs",
+  "theme": "refonte",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment passer de wix à un autre site sans perdre son référencement",
+  "theme": "refonte",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment quitter wix et garder son nom de domaine",
+  "theme": "refonte",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "peut-on exporter son site wix",
+  "theme": "refonte",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment exporter son site wordpress",
+  "theme": "refonte",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment transférer un site wordpress sur un nouvel hébergement",
+  "theme": "refonte",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "mes anciennes pages affichent une erreur 404 après la refonte",
+  "theme": "refonte",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "trop d'erreurs 404 après un changement de site que faire",
+  "theme": "refonte",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment vérifier les redirections de mon site",
+  "theme": "refonte",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment repérer les pages en erreur dans la search console",
+  "theme": "refonte",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "que faire des anciennes pages quand on refait un site",
+  "theme": "refonte",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "faut-il garder l'ancien site pendant la refonte",
+  "theme": "refonte",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment prévenir google d'un changement d'adresse de site",
+  "theme": "refonte",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "quand faut-il refaire son site",
+  "theme": "refonte",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "mon site a trop d'années faut-il le refaire ou le mettre à jour",
+  "theme": "refonte",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment savoir si mon site est obsolète",
+  "theme": "refonte",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment préparer la migration d'un site internet",
+  "theme": "refonte",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "checklist de migration de site internet",
+  "theme": "refonte",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "refonte de site sans perte de référencement",
+  "theme": "refonte",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "refonte site wordpress vers site sur mesure",
+  "theme": "refonte",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "migration de site internet prestataire",
+  "theme": "refonte",
+  "etape": "achat",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "refonte de site avec redirections incluses",
+  "theme": "refonte",
+  "etape": "achat",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "pourquoi mes mails professionnels arrivent dans les spams",
+  "theme": "maintenance et sécurité",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment avoir une adresse mail avec le nom de son entreprise",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment créer une adresse mail avec mon nom de domaine",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment avoir une adresse mail professionnelle gratuite",
+  "theme": "prix et devis",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "adresse mail professionnelle gratuite avec nom de domaine",
+  "theme": "prix et devis",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "faut-il une adresse mail professionnelle quand on est artisan",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "pourquoi utiliser une adresse mail pro plutôt que gmail",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "une adresse gmail fait-elle sérieux pour un professionnel",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "quelle est la différence entre adresse mail et nom de domaine",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "mon hébergement inclut-il des adresses mail",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "combien d'adresses mail sont incluses avec un hébergement",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment créer une adresse mail sur ovh",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment configurer sa messagerie professionnelle sur son téléphone",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment configurer une adresse mail pro dans gmail",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment lire ses mails professionnels dans gmail",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment envoyer des mails depuis son adresse pro avec gmail",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment utiliser son nom de domaine avec google workspace",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "c'est quoi google workspace",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "c'est quoi microsoft 365 pour une petite entreprise",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "google workspace ou microsoft 365 pour une tpe",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "google workspace est-il gratuit",
+  "theme": "prix et devis",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "google workspace vaut-il le coup pour un artisan",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "microsoft 365 business est-il adapté à une petite entreprise",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment migrer ses mails vers google workspace",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment migrer ses mails d'un hébergeur à un autre",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment changer d'hébergeur sans perdre ses mails",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "j'ai perdu mes mails en changeant de site",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "je ne reçois plus de mails sur mon adresse professionnelle",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "je n'arrive plus à envoyer de mails depuis mon adresse pro",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "mes mails sont refusés par certains destinataires",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "mes mails professionnels vont dans les courriers indésirables",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment éviter que mes mails arrivent en spam",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "c'est quoi spf dkim et dmarc",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "c'est quoi dkim et à quoi ça sert",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "c'est quoi dmarc et pourquoi mon fournisseur me le demande",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment configurer spf dkim dmarc pour mon nom de domaine",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment savoir si mes mails sont bien authentifiés",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "ma boîte mail est pleine que faire",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment augmenter la taille de ma boîte mail professionnelle",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment mettre une signature professionnelle dans ses mails",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment créer une adresse contact pour son site",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment faire suivre les mails d'une adresse vers une autre",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment créer une adresse mail partagée pour plusieurs personnes",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment sauvegarder ses mails professionnels",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "mon adresse mail pro a été piratée que faire",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "quelqu'un envoie des mails en mon nom que faire",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment éviter l'usurpation de mon adresse mail",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "mon domaine est blacklisté comment le savoir",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "mon compte mail a été suspendu par l'hébergeur",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "mes mails restent bloqués dans la boîte d'envoi",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "mon formulaire de contact envoie dans les spams",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "pourquoi mes mails de devis partent en spam",
+  "theme": "prix et devis",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment envoyer des devis par mail sans qu'ils finissent en spam",
+  "theme": "prix et devis",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "ovh mail ou google workspace",
+  "theme": "maintenance et sécurité",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "hébergement mail pro ou google workspace pour une tpe",
+  "theme": "maintenance et sécurité",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "zimbra ou google workspace",
+  "theme": "maintenance et sécurité",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "messagerie professionnelle comparatif tpe",
+  "theme": "maintenance et sécurité",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "meilleure messagerie professionnelle pour un artisan",
+  "theme": "maintenance et sécurité",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "gmail gratuit ou google workspace pour un professionnel",
+  "theme": "prix et devis",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "google workspace tarif tpe",
+  "theme": "prix et devis",
+  "etape": "achat",
+  "intention": "achat",
+  "metier": ""
+ },
+ {
+  "q": "microsoft 365 tarif petite entreprise",
+  "theme": "prix et devis",
+  "etape": "achat",
+  "intention": "achat",
+  "metier": ""
+ },
+ {
+  "q": "messagerie professionnelle pas chère",
+  "theme": "maintenance et sécurité",
+  "etape": "achat",
+  "intention": "achat",
+  "metier": ""
+ },
+ {
+  "q": "messagerie professionnelle avec nom de domaine prix",
+  "theme": "prix et devis",
+  "etape": "achat",
+  "intention": "achat",
+  "metier": ""
+ },
+ {
+  "q": "création adresse mail professionnelle",
+  "theme": "maintenance et sécurité",
+  "etape": "achat",
+  "intention": "achat",
+  "metier": ""
+ },
+ {
+  "q": "installer une messagerie professionnelle",
+  "theme": "maintenance et sécurité",
+  "etape": "achat",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "configuration google workspace pour mon entreprise",
+  "theme": "maintenance et sécurité",
+  "etape": "achat",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "mise en place de microsoft 365 pour une tpe",
+  "theme": "maintenance et sécurité",
+  "etape": "achat",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "configuration messagerie professionnelle tours",
+  "theme": "maintenance et sécurité",
+  "etape": "achat",
+  "intention": "local",
+  "metier": ""
+ },
+ {
+  "q": "qui est responsable de la maintenance d'un site internet",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "qui doit faire la maintenance de mon site",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "qui s'occupe des mises à jour de mon site après la livraison",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "le prestataire qui a créé mon site doit-il le maintenir",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "la maintenance est-elle comprise dans la création d'un site",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "en cas de piratage qui est responsable",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "le webmaster est-il responsable si le site est piraté",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "que comprend un contrat de maintenance de site internet",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "c'est quoi la maintenance d'un site web",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "la maintenance d'un site internet est-elle obligatoire",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "faut-il un contrat de maintenance pour un site vitrine",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "faut-il une maintenance pour un site wordpress",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "un site sur mesure a-t-il besoin de maintenance",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "en quoi consiste la maintenance corrective et évolutive",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "quelle différence entre maintenance corrective et évolutive",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "quelle différence entre maintenance et hébergement",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "que faire si je n'ai pas de contrat de maintenance",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment résilier un contrat de maintenance de site",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "mon contrat de maintenance est-il reconductible automatiquement",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment savoir si mon prestataire fait vraiment la maintenance",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment vérifier que la maintenance de mon site est faite",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "que doit contenir un contrat de maintenance de site internet",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "quels sont les délais d'intervention d'une maintenance de site",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "peut-on maintenir soi-même son site internet",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "peut-on faire la maintenance de son site sans compétences techniques",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "combien de temps par mois prend la maintenance d'un site",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "combien coûte la maintenance d'un site internet",
+  "theme": "prix et devis",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "combien coûte la maintenance d'un site wordpress",
+  "theme": "prix et devis",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "quel est le prix d'un contrat de maintenance de site web",
+  "theme": "prix et devis",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "tarif maintenance site vitrine par mois",
+  "theme": "prix et devis",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "pourquoi la maintenance d'un site coûte-t-elle de l'argent",
+  "theme": "prix et devis",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "faut-il payer un abonnement pour son site internet",
+  "theme": "prix et devis",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "abonnement maintenance site internet est-ce utile",
+  "theme": "prix et devis",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "est-ce normal de payer chaque mois pour un site",
+  "theme": "prix et devis",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "maintenance au forfait ou à l'heure pour un site",
+  "theme": "prix et devis",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "qu'est-ce qu'un tma ou tierce maintenance applicative",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "maintenance site internet abonnement ou à la demande",
+  "theme": "prix et devis",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "maintenance de site wordpress prix",
+  "theme": "prix et devis",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "maintenance de site sur mesure prix",
+  "theme": "prix et devis",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "abonnement maintenance site web mensuel",
+  "theme": "prix et devis",
+  "etape": "achat",
+  "intention": "achat",
+  "metier": ""
+ },
+ {
+  "q": "contrat de maintenance site internet tarif annuel",
+  "theme": "prix et devis",
+  "etape": "achat",
+  "intention": "achat",
+  "metier": ""
+ },
+ {
+  "q": "forfait maintenance site internet petite entreprise",
+  "theme": "prix et devis",
+  "etape": "achat",
+  "intention": "achat",
+  "metier": ""
+ },
+ {
+  "q": "maintenance de site internet pas cher",
+  "theme": "prix et devis",
+  "etape": "achat",
+  "intention": "achat",
+  "metier": ""
+ },
+ {
+  "q": "contrat de maintenance site web artisan",
+  "theme": "maintenance et sécurité",
+  "etape": "achat",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "contrat de maintenance site web tpe",
+  "theme": "maintenance et sécurité",
+  "etape": "achat",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "prestataire maintenance de site internet",
+  "theme": "maintenance et sécurité",
+  "etape": "achat",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "freelance maintenance site wordpress",
+  "theme": "maintenance et sécurité",
+  "etape": "achat",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "maintenance de site internet en indre-et-loire",
+  "theme": "maintenance et sécurité",
+  "etape": "achat",
+  "intention": "local",
+  "metier": ""
+ },
+ {
+  "q": "maintenance site web tours",
+  "theme": "maintenance et sécurité",
+  "etape": "achat",
+  "intention": "local",
+  "metier": ""
+ },
+ {
+  "q": "le prestataire qui a fait mon site ne répond plus",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "mon ancien prestataire est injoignable que faire",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "mon webmaster a disparu que faire",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "mon prestataire web a disparu avec mes accès",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "mon prestataire a fermé son entreprise et mon site",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment récupérer mon site internet auprès de mon ancien prestataire",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment récupérer les accès de mon site web",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment récupérer les identifiants de mon site wordpress",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "j'ai perdu le mot de passe administrateur de mon site wordpress",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment réinitialiser le mot de passe wordpress sans accès mail",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment récupérer l'accès à l'administration de son site",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "je n'ai pas les accès de mon site que faire",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "à qui appartient un site internet créé par un prestataire",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "le site créé par un freelance m'appartient-il",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "qui est propriétaire du site internet que j'ai payé",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "le prestataire peut-il garder mon site en otage",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "mon prestataire refuse de me donner les codes de mon site",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "mon ancien webmaster refuse de me donner mes accès",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "mon prestataire me demande de l'argent pour récupérer mon site",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment obtenir les fichiers source de mon site",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "qu'est-ce que je dois exiger de mon prestataire à la livraison d'un site",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "quels documents doit remettre un prestataire à la fin d'un site",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "mon site a été fait par un neveu que faire",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "mon site a été créé par un ami et il n'est plus disponible",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "mon site a été fait par un neveu comment le reprendre",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "mon site a été fait par un étudiant et plus personne ne le gère",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "le site a été créé par un freelance qui ne répond plus",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "mon site a été fait il y a longtemps et je n'ai aucun accès",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment reprendre un site internet fait par quelqu'un d'autre",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "peut-on reprendre la maintenance d'un site créé par un autre",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment faire reprendre son site par une autre agence",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "un autre prestataire peut-il reprendre mon site wordpress",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "que faire quand on ne connaît ni l'hébergeur ni le nom de domaine de son site",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment retrouver l'hébergeur de mon site sans accès",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment faire un audit de site hérité d'un ancien prestataire",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "mon site utilise un thème acheté par mon ancien prestataire",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "licences de plugins wordpress au nom de l'ancien prestataire que faire",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment changer de prestataire web",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment changer de webmaster sans perdre son site",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment mettre fin à la collaboration avec son prestataire web",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment sortir d'une agence web qui ne répond plus",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "mon site n'est plus mis à jour depuis le départ de mon prestataire",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "un prestataire web peut-il refuser de transmettre le code",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "que faire si un prestataire web ne livre pas le site",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment éviter d'être dépendant de son prestataire web",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment savoir si on est dépendant de son prestataire",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "reprise de site wordpress existant",
+  "theme": "maintenance et sécurité",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "reprise de site internet fait par un autre prestataire",
+  "theme": "maintenance et sécurité",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "audit de site existant pour reprise",
+  "theme": "maintenance et sécurité",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "reprise de maintenance d'un site existant",
+  "theme": "maintenance et sécurité",
+  "etape": "achat",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "récupération de site internet auprès d'un ancien prestataire",
+  "theme": "maintenance et sécurité",
+  "etape": "achat",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "aide pour récupérer les accès de mon site web",
+  "theme": "maintenance et sécurité",
+  "etape": "achat",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "prestataire pour reprendre un site abandonné",
+  "theme": "maintenance et sécurité",
+  "etape": "achat",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "comment protéger son formulaire de contact contre le spam",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "je reçois trop de spam sur mon formulaire de contact",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "pourquoi je reçois des messages bizarres par mon formulaire de contact",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment bloquer le spam des formulaires wordpress",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "c'est quoi un captcha",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "faut-il mettre un captcha sur son formulaire de contact",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "recaptcha est-il conforme au rgpd",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "quelle alternative à recaptcha respecte la vie privée",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "c'est quoi un honeypot dans un formulaire",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "un captcha fait-il fuir les visiteurs",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment éviter les faux messages sur un formulaire de devis",
+  "theme": "prix et devis",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "mon formulaire de devis reçoit des demandes en anglais",
+  "theme": "prix et devis",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment empêcher les robots de remplir mon formulaire",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment filtrer le spam sans captcha",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "des inscriptions bizarres sur mon site que faire",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "des commentaires spam sur mon blog wordpress",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment désactiver les commentaires sur wordpress",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment savoir si un message vient d'un robot",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "que faire contre les faux comptes clients sur mon site",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "protection antispam formulaire de contact",
+  "theme": "maintenance et sécurité",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment sécuriser un formulaire de contact",
+  "theme": "maintenance et sécurité",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "un formulaire de contact peut-il être piraté",
+  "theme": "maintenance et sécurité",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment connaître le nombre de visiteurs de mon site",
+  "theme": "visibilité et clients",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment savoir combien de personnes visitent mon site",
+  "theme": "visibilité et clients",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment voir les statistiques de mon site internet",
+  "theme": "visibilité et clients",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment savoir d'où viennent les visiteurs de mon site",
+  "theme": "visibilité et clients",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "quel outil de statistiques pour un petit site",
+  "theme": "visibilité et clients",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment installer google analytics sur son site",
+  "theme": "visibilité et clients",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "faut-il google analytics pour un site vitrine",
+  "theme": "visibilité et clients",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "google analytics sans bannière cookies est-ce possible",
+  "theme": "visibilité et clients",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "quelle alternative à google analytics respecte le rgpd",
+  "theme": "visibilité et clients",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "que veut dire taux de rebond",
+  "theme": "visibilité et clients",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment lire les statistiques de son site",
+  "theme": "visibilité et clients",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "quelles statistiques regarder pour un site de petite entreprise",
+  "theme": "visibilité et clients",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment savoir si mon site m'apporte des clients",
+  "theme": "visibilité et clients",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment mesurer les appels générés par mon site",
+  "theme": "visibilité et clients",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment suivre les demandes de devis venant de mon site",
+  "theme": "visibilité et clients",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "les statistiques de mon hébergeur sont-elles fiables",
+  "theme": "visibilité et clients",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "pourquoi mes statistiques de visites ont chuté",
+  "theme": "visibilité et clients",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "mon trafic a chuté après une mise à jour du site",
+  "theme": "visibilité et clients",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment savoir si mes visiteurs sont des robots",
+  "theme": "visibilité et clients",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "c'est quoi la search console et à quoi sert-elle",
+  "theme": "visibilité et clients",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment ajouter son site à la search console",
+  "theme": "visibilité et clients",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment savoir si google voit bien mon site",
+  "theme": "visibilité et clients",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment savoir si mon site est indexé par google",
+  "theme": "visibilité et clients",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "mon site n'apparaît plus dans google depuis un incident",
+  "theme": "visibilité et clients",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "mesure d'audience respectueuse de la vie privée",
+  "theme": "visibilité et clients",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "tableau de bord de visites pour un site de tpe",
+  "theme": "visibilité et clients",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "installer des statistiques de visites sur mon site",
+  "theme": "visibilité et clients",
+  "etape": "achat",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "suivi de statistiques de site internet pour artisan",
+  "theme": "visibilité et clients",
+  "etape": "achat",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "comment choisir un bon mot de passe pour son site",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "faut-il changer régulièrement le mot de passe de son site",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment savoir qui a accès à mon site",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment supprimer l'accès d'un ancien prestataire à mon site",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment supprimer les anciens utilisateurs d'un site wordpress",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "que faire quand un ancien salarié a encore accès au site",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment gérer les mots de passe de son entreprise",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "c'est quoi une attaque par force brute sur un site",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "c'est quoi une faille de sécurité sur un site internet",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "c'est quoi une injection sql",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "c'est quoi un pare-feu applicatif web",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "qu'est-ce que cloudflare et est-ce utile pour un petit site",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment protéger son site contre les attaques ddos",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment masquer la version de wordpress",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment savoir si mon site a des failles",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment savoir si mes plugins wordpress ont une faille connue",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "faut-il un antivirus pour son site internet",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "que faire quand google bloque mon site avec un avertissement rouge",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "mon site est signalé comme dangereux dans chrome",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "que faire si mon nom de domaine est dans une liste noire",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment retirer l'avertissement site dangereux de mon site",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment surveiller mon site contre les modifications non autorisées",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "quelles sont les obligations de sécurité pour un site qui collecte des données",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "mon assurance couvre-t-elle le piratage de mon site",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "quel est le coût d'un site piraté pour une petite entreprise",
+  "theme": "prix et devis",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment prévenir ses clients quand le site a été piraté",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment fonctionne la sécurité d'un site statique",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "un site statique est-il plus sûr qu'un wordpress",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "pourquoi wordpress est-il si souvent piraté",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "un site sans base de données peut-il être piraté",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "site sans wordpress moins de piratage",
+  "theme": "maintenance et sécurité",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "alternative à wordpress plus sécurisée pour une tpe",
+  "theme": "maintenance et sécurité",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "site internet qui ne coûte rien à maintenir",
+  "theme": "prix et devis",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "quel site internet demande le moins de maintenance",
+  "theme": "création site",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "site internet sans maintenance est-ce possible",
+  "theme": "création site",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment avoir un site internet sans se soucier de la technique",
+  "theme": "création site",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "un site internet clé en main avec hébergement et maintenance",
+  "theme": "création site",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "faut-il un hébergeur quand on prend wix",
+  "theme": "création site",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "hébergement et nom de domaine inclus dans un site wix",
+  "theme": "création site",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "que comprend le prix d'un site internet hébergement domaine maintenance",
+  "theme": "prix et devis",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "quels frais récurrents pour un site internet",
+  "theme": "prix et devis",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "quels sont les frais annuels d'un site internet de petite entreprise",
+  "theme": "prix et devis",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "combien coûte un site internet par an en frais fixes",
+  "theme": "prix et devis",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "le nom de domaine est-il inclus dans le prix d'un site",
+  "theme": "prix et devis",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "faut-il payer l'hébergement en plus du site",
+  "theme": "prix et devis",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "à qui doivent appartenir le domaine et l'hébergement de mon site",
+  "theme": "création site",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment s'assurer que le site m'appartient à la livraison",
+  "theme": "création site",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "quoi demander à son prestataire avant de signer pour un site",
+  "theme": "création site",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment choisir entre wordpress et un site sur mesure pour la sécurité",
+  "theme": "création site",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "site internet sur mesure avec hébergement et maintenance inclus",
+  "theme": "création site",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "site vitrine avec maintenance incluse",
+  "theme": "création site",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "création de site internet avec contrat de maintenance",
+  "theme": "création site",
+  "etape": "achat",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "site internet artisan hébergement inclus",
+  "theme": "création site",
+  "etape": "achat",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "devis site internet avec maintenance",
+  "theme": "prix et devis",
+  "etape": "achat",
+  "intention": "comparaison",
+  "metier": ""
+ },
+ {
+  "q": "création de site internet tours avec maintenance",
+  "theme": "création site",
+  "etape": "achat",
+  "intention": "local",
+  "metier": ""
+ },
+ {
+  "q": "mon site fait vieux et plante souvent",
+  "theme": "refonte",
+  "etape": "pas encore conscient",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "mon site wordpress est trop lent et plein de bugs faut-il le refaire",
+  "theme": "refonte",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "faut-il refaire son site ou le réparer",
+  "theme": "refonte",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "mon site est trop ancien pour être mis à jour",
+  "theme": "refonte",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "mon thème wordpress est abandonné faut-il refaire le site",
+  "theme": "refonte",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "mon site utilise une ancienne version de php faut-il le refaire",
+  "theme": "refonte",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "mon site n'est pas adapté aux mobiles que faire",
+  "theme": "refonte",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "mon site est-il encore en état de fonctionner dans quelques années",
+  "theme": "refonte",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "comment savoir si je dois réparer ou refaire mon site",
+  "theme": "refonte",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "réparer un vieux site ou en refaire un neuf",
+  "theme": "refonte",
+  "etape": "problème",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "quand refaire son site internet au lieu de le maintenir",
+  "theme": "refonte",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "refonte de site internet piraté",
+  "theme": "refonte",
+  "etape": "solution",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "refonte site internet artisan",
+  "theme": "refonte",
+  "etape": "achat",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "refonte de site wordpress vers site plus léger",
+  "theme": "refonte",
+  "etape": "achat",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "refonte de site internet avec migration des contenus",
+  "theme": "refonte",
+  "etape": "achat",
+  "intention": "information",
+  "metier": ""
+ },
+ {
+  "q": "le site de mon restaurant est piraté",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "restaurant"
+ },
+ {
+  "q": "comment sauvegarder le site de mon restaurant",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "restaurant"
+ },
+ {
+  "q": "mon système de réservation en ligne ne marche plus sur mon site",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "restaurant"
+ },
+ {
+  "q": "le site de mon salon de coiffure est en panne",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "coiffeur"
+ },
+ {
+  "q": "mon site de coiffeur ne s'affiche plus",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "coiffeur"
+ },
+ {
+  "q": "le module de prise de rendez-vous de mon site ne fonctionne plus",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "coiffeur"
+ },
+ {
+  "q": "le site de mon entreprise de plomberie est piraté",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "plombier"
+ },
+ {
+  "q": "mon site de plombier est lent sur téléphone",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "plombier"
+ },
+ {
+  "q": "je n'ai plus accès au site de mon entreprise de plomberie",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "plombier"
+ },
+ {
+  "q": "mon site d'électricien affiche non sécurisé",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "electricien"
+ },
+ {
+  "q": "mon site d'artisan affiche une page blanche",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "qui peut maintenir le site d'un artisan",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "combien coûte la maintenance du site d'un artisan",
+  "theme": "prix et devis",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "mon site de maçon a été fait par un ami et je n'ai aucun accès",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "macon"
+ },
+ {
+  "q": "le site de mon cabinet d'avocat doit-il être sauvegardé",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "avocat"
+ },
+ {
+  "q": "la sécurité du site d'un cabinet d'avocat et le secret professionnel",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "avocat"
+ },
+ {
+  "q": "site de cabinet médical et hébergement de données de santé",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "médecin"
+ },
+ {
+  "q": "mon site de kiné est-il concerné par l'hébergement de données de santé",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "kinésithérapeute"
+ },
+ {
+  "q": "adresse mail professionnelle sécurisée pour un cabinet de santé",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "infirmier"
+ },
+ {
+  "q": "adresse mail pro avec nom de domaine pour un artisan",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "artisan"
+ },
+ {
+  "q": "adresse mail professionnelle pour une profession libérale",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "profession libérale"
+ },
+ {
+  "q": "adresse mail professionnelle pour une association",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "association"
+ },
+ {
+  "q": "site d'association piraté que faire",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "association"
+ },
+ {
+  "q": "qui gère le nom de domaine du site de notre association",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "association"
+ },
+ {
+  "q": "l'ancien webmaster bénévole de notre association a disparu",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "association"
+ },
+ {
+  "q": "comment récupérer le site de notre association créé par un bénévole",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "association"
+ },
+ {
+  "q": "boutique en ligne piratée que faire",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "commerçant"
+ },
+ {
+  "q": "ma boutique prestashop affiche une erreur 500",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "commerçant"
+ },
+ {
+  "q": "ma boutique en ligne est lente que faire",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "commerçant"
+ },
+ {
+  "q": "ma boutique wordpress woocommerce ne s'affiche plus",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "commerçant"
+ },
+ {
+  "q": "comment sécuriser les paiements de ma boutique en ligne",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "commerçant"
+ },
+ {
+  "q": "faut-il un certificat ssl pour une boutique en ligne",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "commerçant"
+ },
+ {
+  "q": "le site de mon commerce est inaccessible",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "commerçant"
+ },
+ {
+  "q": "le site de ma boulangerie ne s'affiche plus",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "boulanger"
+ },
+ {
+  "q": "le site de mon garage a été piraté",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "garagiste"
+ },
+ {
+  "q": "le site de mon agence immobilière est lent",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "agent immobilier"
+ },
+ {
+  "q": "mes photos ne s'affichent plus sur mon portfolio",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "photographe"
+ },
+ {
+  "q": "mon site de coach a été supprimé par mon hébergeur",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "coach"
+ },
+ {
+  "q": "mon site de menuisier a été fait par un freelance qui ne répond plus",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "menuisier"
+ },
+ {
+  "q": "mon site d'auto-école ne s'affiche plus",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "auto-école"
+ },
+ {
+  "q": "mon site de comptable doit-il avoir une messagerie sécurisée",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "expert-comptable"
+ },
+ {
+  "q": "mon site de notaire est-il soumis à des règles d'hébergement",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "notaire"
+ },
+ {
+  "q": "le site de mon cabinet de vétérinaire est piraté",
+  "theme": "maintenance et sécurité",
+  "etape": "problème",
+  "intention": "information",
+  "metier": "vétérinaire"
+ },
+ {
+  "q": "maintenance site internet restaurant",
+  "theme": "maintenance et sécurité",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": "restaurant"
+ },
+ {
+  "q": "maintenance site internet coiffeur",
+  "theme": "maintenance et sécurité",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": "coiffeur"
+ },
+ {
+  "q": "maintenance site internet artisan du bâtiment",
+  "theme": "maintenance et sécurité",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": "artisan"
+ },
+ {
+  "q": "maintenance site internet association",
+  "theme": "maintenance et sécurité",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": "association"
+ },
+ {
+  "q": "maintenance site internet cabinet médical",
+  "theme": "maintenance et sécurité",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": "médecin"
+ },
+ {
+  "q": "maintenance boutique en ligne",
+  "theme": "maintenance et sécurité",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": "commerçant"
+ },
+ {
+  "q": "maintenance site internet photographe",
+  "theme": "maintenance et sécurité",
+  "etape": "solution",
+  "intention": "comparaison",
+  "metier": "photographe"
+ }
+]
