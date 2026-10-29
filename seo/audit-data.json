@@ -1,0 +1,862 @@
+{
+ "genere": "2026-10-29",
+ "urlsSitemap": 580,
+ "pagesExplorees": 619,
+ "parType": {
+  "accueil": {
+   "pages": 1,
+   "mots_mediane": 1660,
+   "mots_min": 1660,
+   "mots_max": 1660,
+   "entrants_mediane": 587
+  },
+  "article": {
+   "pages": 264,
+   "mots_mediane": 1466,
+   "mots_min": 904,
+   "mots_max": 3109,
+   "entrants_mediane": 6
+  },
+  "blog-index": {
+   "pages": 1,
+   "mots_mediane": 12279,
+   "mots_min": 12279,
+   "mots_max": 12279,
+   "entrants_mediane": 587
+  },
+  "blog-rayon": {
+   "pages": 8,
+   "mots_mediane": 1617,
+   "mots_min": 912,
+   "mots_max": 3552,
+   "entrants_mediane": 587
+  },
+  "comparatif": {
+   "pages": 3,
+   "mots_mediane": 2684,
+   "mots_min": 821,
+   "mots_max": 2879,
+   "entrants_mediane": 12
+  },
+  "departement": {
+   "pages": 6,
+   "mots_mediane": 1070,
+   "mots_min": 838,
+   "mots_max": 1185,
+   "entrants_mediane": 6
+  },
+  "legal": {
+   "pages": 5,
+   "mots_mediane": 723,
+   "mots_min": 316,
+   "mots_max": 4083,
+   "entrants_mediane": 587
+  },
+  "lexique-hub": {
+   "pages": 1,
+   "mots_mediane": 4806,
+   "mots_min": 4806,
+   "mots_max": 4806,
+   "entrants_mediane": 587
+  },
+  "lexique-terme": {
+   "pages": 139,
+   "mots_mediane": 839,
+   "mots_min": 739,
+   "mots_max": 991,
+   "entrants_mediane": 7
+  },
+  "metier": {
+   "pages": 77,
+   "mots_mediane": 1529,
+   "mots_min": 1323,
+   "mots_max": 1694,
+   "entrants_mediane": 14
+  },
+  "metiers-hub": {
+   "pages": 1,
+   "mots_mediane": 533,
+   "mots_min": 533,
+   "mots_max": 533,
+   "entrants_mediane": 587
+  },
+  "outil": {
+   "pages": 6,
+   "mots_mediane": 1607,
+   "mots_min": 223,
+   "mots_max": 1959,
+   "entrants_mediane": 587
+  },
+  "page": {
+   "pages": 7,
+   "mots_mediane": 510,
+   "mots_min": 148,
+   "mots_max": 1656,
+   "entrants_mediane": 587
+  },
+  "realisation": {
+   "pages": 2,
+   "mots_mediane": 285,
+   "mots_min": 248,
+   "mots_max": 285,
+   "entrants_mediane": 4
+  },
+  "realisations-hub": {
+   "pages": 1,
+   "mots_mediane": 137,
+   "mots_min": 137,
+   "mots_max": 137,
+   "entrants_mediane": 587
+  },
+  "ressource": {
+   "pages": 3,
+   "mots_mediane": 632,
+   "mots_min": 539,
+   "mots_max": 1128,
+   "entrants_mediane": 587
+  },
+  "service": {
+   "pages": 12,
+   "mots_mediane": 3326,
+   "mots_min": 443,
+   "mots_max": 4217,
+   "entrants_mediane": 587
+  },
+  "service-local": {
+   "pages": 6,
+   "mots_mediane": 479,
+   "mots_min": 441,
+   "mots_max": 525,
+   "entrants_mediane": 587
+  },
+  "services-hub": {
+   "pages": 1,
+   "mots_mediane": 843,
+   "mots_min": 843,
+   "mots_max": 843,
+   "entrants_mediane": 587
+  },
+  "solution": {
+   "pages": 13,
+   "mots_mediane": 389,
+   "mots_min": 356,
+   "mots_max": 458,
+   "entrants_mediane": 6
+  },
+  "solutions-hub": {
+   "pages": 1,
+   "mots_mediane": 828,
+   "mots_min": 828,
+   "mots_max": 828,
+   "entrants_mediane": 587
+  },
+  "ville": {
+   "pages": 17,
+   "mots_mediane": 1010,
+   "mots_min": 936,
+   "mots_max": 1249,
+   "entrants_mediane": 12
+  },
+  "villes-hub": {
+   "pages": 1,
+   "mots_mediane": 249,
+   "mots_min": 249,
+   "mots_max": 249,
+   "entrants_mediane": 587
+  },
+  "zone": {
+   "pages": 11,
+   "mots_mediane": 1519,
+   "mots_min": 1309,
+   "mots_max": 2734,
+   "entrants_mediane": 5
+  },
+  "zones-hub": {
+   "pages": 1,
+   "mots_mediane": 650,
+   "mots_min": 650,
+   "mots_max": 650,
+   "entrants_mediane": 587
+  }
+ },
+ "anomalies": {
+  "titreDouble": [],
+  "descDouble": [],
+  "titreLong": [],
+  "titreCourt": [
+   "/contact (24)",
+   "/cookies (24)",
+   "/plan-du-site (29)",
+   "/solutions (28)",
+   "/blog/livrer-galerie-mariage-processus (29)",
+   "/blog/pixieset-jingoo-pictime-cout-reel-abonnements (26)",
+   "/blog/ranker-page-metier-ville-seo (29)",
+   "/blog/ecommerce-mode-site-web (25)",
+   "/blog/amazon-marketplace-vs-site-propre (27)",
+   "/blog/blog-seo-tpe-artisan (29)",
+   "/blog/google-ads-petit-budget (28)",
+   "/blog/livraison-ecommerce-guide (29)",
+   "/blog/calendrier-editorial-methode-simple (25)",
+   "/blog/agenda-en-ligne-coach-formateur (28)",
+   "/blog/boutique-en-ligne-createur-mode (28)",
+   "/blog/devis-en-ligne-artisan (28)",
+   "/blog/e-commerce-produits-locaux-terroir (29)",
+   "/blog/seo-ia-generative-ai-overviews-google (28)",
+   "/blog/gestion-planning-employes (28)",
+   "/blog/gestion-stock-restaurant-digital (29)",
+   "/blog/google-ads-restaurant (26)",
+   "/blog/instagram-restaurant-strategie (25)",
+   "/blog/landing-page-vs-site-vitrine (28)",
+   "/blog/menu-en-ligne-restaurant-seo (29)",
+   "/blog/nom-de-domaine-choisir (26)",
+   "/blog/portfolio-digital-artisan-art (25)",
+   "/blog/seo-artisan-batiment (28)",
+   "/blog/seo-local-restaurant (26)",
+   "/blog/tableau-de-bord-dirigeant (26)"
+  ],
+  "descLongueur": [
+   "/contact (115)",
+   "/services/site-vitrine (118)",
+   "/blog/categorie/seo (116)",
+   "/blog/categorie/restaurants (118)"
+  ],
+  "sansH1": [],
+  "plusieursH1": [],
+  "mince": [
+   "/realisations/tennis-club-savigne-gizeux [realisation] 248 mots",
+   "/realisations/logiciel-gestion-artisans [realisation] 285 mots",
+   "/solutions/click-and-collect [solution] 396 mots",
+   "/solutions/reservation-restaurant [solution] 389 mots",
+   "/solutions/programme-fidelite [solution] 356 mots",
+   "/solutions/caisse-enregistreuse [solution] 391 mots",
+   "/solutions/gestion-stocks [solution] 372 mots",
+   "/solutions/portail-client [solution] 395 mots",
+   "/solutions/planning-employes [solution] 385 mots",
+   "/solutions/menu-qr-code [solution] 368 mots",
+   "/solutions/tableau-de-bord [solution] 377 mots",
+   "/solutions/reservation-location [solution] 383 mots",
+   "/agence-web [villes-hub] 249 mots"
+  ],
+  "orphelines": [],
+  "peuDeLiens": [
+   "/creation-site-internet/glacier (2)",
+   "/creation-site-internet/magasin-informatique (2)",
+   "/creation-site-internet/opticien (2)",
+   "/creation-site-internet/bijouterie-horlogerie (2)",
+   "/creation-site-internet/vetements-enfants (2)",
+   "/creation-site-internet/cosmetiques-naturels (2)",
+   "/creation-site-internet/jardinerie-animalerie (2)",
+   "/creation-site-internet/pisciniste (2)",
+   "/creation-site-internet/vitrier (2)",
+   "/creation-site-internet/ramoneur (2)",
+   "/creation-site-internet/facadier (2)",
+   "/creation-site-internet/terrassier (2)",
+   "/lexique/persona (2)",
+   "/lexique/signature-electronique (2)"
+  ],
+  "sansCanonical": [],
+  "canonicalDiff": [],
+  "noindex": [
+   "/blog/categorie/creation (noindex, follow)",
+   "/blog/categorie/seo (noindex, follow)",
+   "/blog/categorie/seo-local (noindex, follow)",
+   "/blog/categorie/commerce (noindex, follow)",
+   "/blog/categorie/outils (noindex, follow)",
+   "/blog/categorie/restaurants (noindex, follow)",
+   "/blog/categorie/artisans (noindex, follow)",
+   "/blog/categorie/strategie (noindex, follow)"
+  ],
+  "sansJsonLd": [],
+  "sansAlt": [],
+  "placeholders": [
+   "/mentions-legales : « à compléter] » dans «  08 98 SIREN / SIRET : [SIREN à compléter] / [SIRET à compléter] Code  »",
+   "/cgv : « à compléter] » dans « ncy.fr SIREN / SIRET : [SIREN à compléter] / [SIRET à compléter] Code  »",
+   "/services-locaux/creation-site-artisan : « [ville] » dans « tier Apparaître sur \"plombier [ville]\", \"électricien [secteur]\"... Cib »",
+   "/creation-site-internet/plombier : « [ville] » dans « tes de type \"plombier urgence [ville]\" et positionnons votre numéro bi »",
+   "/creation-site-internet/couvreur-charpentier : « [ville] » dans « les de type \"couvreur urgence [ville]\" et affichons votre contact en é »",
+   "/creation-site-internet/vitrier : « [ville] » dans « éférencé sur \"vitrier urgence [ville]\" reçoit des visites 24h/24 — vos »",
+   "/creation-site-internet/courtier-credit : « [ville] » dans « êtes de type \"courtier crédit [ville]\" et créons des formulaires de ca »",
+   "/creation-site-internet/organisme-formation : « [métier] » dans « rticulier cherche « formation [métier] financée », « reconversion », « »",
+   "/blog : « [métier] » dans «  page qui se positionne sur « [métier] + [ville] » — décortiquée secti »",
+   "/blog/supprimer-faux-avis-google : « [nom] » dans « e au [numéro] ? Cordialement, [nom]. Cas d'une critique que vous jugez »",
+   "/blog/ranker-page-metier-ville-seo : « [métier] » dans «  page qui se positionne sur « [métier] + [ville] » — décortiquée secti »",
+   "/blog/trouver-mots-cles-locaux-metier-ville : « [ville] » dans « mmédiat (\"fuite d'eau urgence [ville]\", \"prix rénovation salle de bain »",
+   "/blog/blog-restaurant-site-web : « [ville] » dans « echerches Google (\"restaurant [ville]\") où se prend la décision de rés »",
+   "/blog/paa-site-web-ventes : « [ville] » dans « es locales (\"plombier urgence [ville]\", \"électricien [département]\"),  »",
+   "/blog/portfolio-digital-creatif : « [ville] » dans « Prénom NOM — Designer UI/UX à [ville]\" (avec mot-clé métier + ville) T »",
+   "/blog/seo-local-artisan-batiment-2026 : « [ville] » dans « Prix remplacement chauffe-eau [ville] 2026\" \"Fuite d'eau sous évier :  »",
+   "/blog/blog-artisan-guide : « [ville] » dans « chat claire : \"prix [travaux] [ville] 2026\" → décision d'achat imminen »",
+   "/blog/reseaux-sociaux-tpe-guide : « [métier] » dans « e : \"Un jour dans la vie d'un [métier]\" Tutoriels et conseils courts ( »",
+   "/blog/site-web-coach-sportif : « [ville] » dans « prioritaires : \"coach sportif [ville]\" \"coach personnel [ville]\" \"coac »",
+   "/blog/chatgpt-gemini-outil-tpe : « [métier] » dans « es Prompt efficace : \"Je suis [métier] à [ville]. Quelles sont les 10  »",
+   "/blog/ai-overviews-seo-tpe : « [ville] » dans « \"acheter X\", \"commander pizza [ville]\") Les requêtes locales très spéc »",
+   "/blog/recyclerie-site-web : « [ville] » dans « ligne \"où donner mes affaires [ville]\" ou \"don objets recyclerie [dépa »",
+   "/blog/conciergerie-airbnb-site-web : « [ville] » dans « cibler : \"conciergerie Airbnb [ville]\" \"gestion location saisonnière [ »",
+   "/blog/site-web-food-truck : « [ville] » dans « food truck [votre spécialité] [ville]\" (burger, tacos, japonais, etc.) »",
+   "/blog/calendrier-editorial-methode-simple : « [ville] » dans « mmercial | \"[prestation] prix [ville]\" | | Semaine 2 | Guide pratique  »",
+   "/blog/avis-google-strategie-complete : « [nom] » dans « conditions. Toute l'équipe de [nom] est disponible pour vos futurs bes »",
+   "/blog/e-commerce-produits-locaux-terroir : « [ville] » dans « de chèvre artisanal livraison [ville]\" ou \"panier légumes bio [départe »",
+   "/blog/google-ads-restaurant : « [ville] » dans « requêtes du type « restaurant [ville] », « où manger [quartier] » ou « »",
+   "/blog/menu-en-ligne-restaurant-seo : « [ville] » dans « t plus seulement « restaurant [ville] » — ils cherchent « menu déjeune »",
+   "/blog/remplir-restaurant-digital : « [ville] » dans « ur Google « restaurant [type] [ville] » ou demande à son assistant voc »",
+   "/blog/vitesse-chargement-site-guide-technique-complet : « null » dans « s=\"style\" onload=\"this.onload=null;this.rel='stylesheet'\"> &#x3C;noscr »",
+   "/blog/seo-artisan-batiment : « [ville] » dans «  services locaux : \"[service] [ville]\" (plombier Lyon, électricien Mar »",
+   "/blog/seo-local-commerce : « [ville] » dans « t par Google : \"épicerie fine [ville]\", \"boulangerie artisanale [quart »",
+   "/blog/seo-local-restaurant : « [ville] » dans « ête sur \"restaurant [cuisine] [ville]\", trois leviers comptent le plus »",
+   "/lexique/contenu-duplique : « [ville] » dans « publie six pages « plombier à [ville] » avec le même texte, où seul le »",
+   "/lexique/mentions-legales : « à compléter] » dans «  Laisser un texte à trous (« [à compléter] ») resté en ligne. Mettre u »",
+   "/blog/categorie/seo : « [métier] » dans «  page qui se positionne sur « [métier] + [ville] » — décortiquée secti »"
+  ],
+  "compteurs": [],
+  "datesFutures": [
+   "/blog (2027-02-01)",
+   "/blog/accessibilite-site-web-guide (2027-02-01)",
+   "/blog/refonte-site-web-seo-redirections-301 (2027-01-25)"
+  ],
+  "sautsTitres": [],
+  "hors_sitemap": [],
+  "redirections": [
+   "/agence-web/departement/loiret → /zones-intervention",
+   "/agence-web/departement/eure-et-loir → /zones-intervention",
+   "/agence-web/departement/cher → /zones-intervention",
+   "/agence-web/departement/orne → /zones-intervention",
+   "/agence-web/departement/nievre → /zones-intervention",
+   "/agence-web/departement/allier → /zones-intervention",
+   "/agence-web/departement/creuse → /zones-intervention",
+   "/agence-web/departement/deux-sevres → /zones-intervention",
+   "/services/redaction-blog-seo → /services",
+   "/devis → /tarifs#estimer",
+   "/blog/netlinking-local-backlinks-region-methodes → /blog",
+   "/blog/donnees-structurees-schema-org-commerces-locaux → /blog"
+  ],
+  "erreurs": [
+   "/blog/paiement-en-ligne-guide-commercants (404)",
+   "/blog/agence-web-a-distance-comment-ca-se-passe (404)",
+   "/blog/agence-web-disparait-que-devient-site (404)",
+   "/blog/ouvrir-boutique-en-ligne-guide-complet (404)",
+   "/blog/cahier-des-charges-site-internet-modele-gratuit (404)",
+   "/blog/logiciel-sur-mesure-ou-saas-calcul-5-ans (404)",
+   "/blog/site-nextjs-explique (404)",
+   "/blog/mentions-legales-site-guide-generateur (404)",
+   "/blog/idee-mise-en-ligne-methode (404)",
+   "/blog/no-code-ou-code-site-internet (404)",
+   "/blog/proprietaire-site-internet-signification (404)",
+   "/blog/fiche-produit-qui-vend-structure-photos-seo (404)",
+   "/blog/prestashop-shopify-sur-mesure-ecommerce (404)",
+   "/blog/systeme-reservation-en-ligne-commission-ou-propriete (404)",
+   "/blog/migrer-site-wix-sans-perdre-seo (404)",
+   "/blog/posseder-son-logiciel-quitter-abonnements (404)",
+   "/blog/migrer-saas-vers-outil-propre (404)",
+   "/blog/site-template-ou-sur-mesure (404)",
+   "/blog/prix-wix-5-ans-addition-complete (404)"
+  ],
+  "liensCasses": [
+   "/lexique/3d-secure → /blog/paiement-en-ligne-guide-commercants (404)",
+   "/lexique/agence-web → /blog/agence-web-a-distance-comment-ca-se-passe (404)",
+   "/lexique/agence-web → /blog/agence-web-disparait-que-devient-site (404)",
+   "/lexique/boutique-en-ligne → /blog/ouvrir-boutique-en-ligne-guide-complet (404)",
+   "/lexique/cahier-des-charges → /blog/cahier-des-charges-site-internet-modele-gratuit (404)",
+   "/lexique/developpeur-web-freelance → /blog/agence-web-a-distance-comment-ca-se-passe (404)",
+   "/lexique/droit-de-retractation → /blog/ouvrir-boutique-en-ligne-guide-complet (404)",
+   "/lexique/dropshipping → /blog/ouvrir-boutique-en-ligne-guide-complet (404)",
+   "/lexique/erp → /blog/logiciel-sur-mesure-ou-saas-calcul-5-ans (404)",
+   "/lexique/front-end-et-back-end → /blog/site-nextjs-explique (404)",
+   "/lexique/maquette-de-site → /blog/cahier-des-charges-site-internet-modele-gratuit (404)",
+   "/lexique/mentions-legales → /blog/mentions-legales-site-guide-generateur (404)",
+   "/lexique/mise-en-production → /blog/idee-mise-en-ligne-methode (404)",
+   "/lexique/no-code → /blog/no-code-ou-code-site-internet (404)",
+   "/lexique/nom-de-domaine → /blog/proprietaire-site-internet-signification (404)",
+   "/lexique/paiement-en-ligne → /blog/paiement-en-ligne-guide-commercants (404)",
+   "/lexique/paiement-en-ligne → /blog/ouvrir-boutique-en-ligne-guide-complet (404)",
+   "/lexique/panier-moyen → /blog/fiche-produit-qui-vend-structure-photos-seo (404)",
+   "/lexique/prestashop → /blog/prestashop-shopify-sur-mesure-ecommerce (404)",
+   "/lexique/prise-de-rendez-vous-en-ligne → /blog/systeme-reservation-en-ligne-commission-ou-propriete (404)",
+   "/lexique/redirection-301 → /blog/migrer-site-wix-sans-perdre-seo (404)",
+   "/lexique/roi → /blog/logiciel-sur-mesure-ou-saas-calcul-5-ans (404)",
+   "/lexique/rich-snippet → /blog/fiche-produit-qui-vend-structure-photos-seo (404)",
+   "/lexique/saas → /blog/logiciel-sur-mesure-ou-saas-calcul-5-ans (404)",
+   "/lexique/saas → /blog/posseder-son-logiciel-quitter-abonnements (404)",
+   "/lexique/saas → /blog/migrer-saas-vers-outil-propre (404)",
+   "/lexique/shopify → /blog/prestashop-shopify-sur-mesure-ecommerce (404)",
+   "/lexique/shopify → /blog/ouvrir-boutique-en-ligne-guide-complet (404)",
+   "/lexique/site-e-commerce → /blog/ouvrir-boutique-en-ligne-guide-complet (404)",
+   "/lexique/site-sur-mesure → /blog/site-template-ou-sur-mesure (404)",
+   "/lexique/stripe → /blog/paiement-en-ligne-guide-commercants (404)",
+   "/lexique/webflow → /blog/no-code-ou-code-site-internet (404)",
+   "/lexique/webflow → /blog/site-template-ou-sur-mesure (404)",
+   "/lexique/wix → /blog/migrer-site-wix-sans-perdre-seo (404)",
+   "/lexique/wix → /blog/prix-wix-5-ans-addition-complete (404)"
+  ]
+ },
+ "similarites": [
+  {
+   "famille": "solution",
+   "a": "/solutions/reservation-restaurant",
+   "b": "/solutions/reservation-location",
+   "jaccard": 29.3
+  },
+  {
+   "famille": "solution",
+   "a": "/solutions/prise-rendez-vous-en-ligne",
+   "b": "/solutions/reservation-location",
+   "jaccard": 26.5
+  },
+  {
+   "famille": "solution",
+   "a": "/solutions/reservation-restaurant",
+   "b": "/solutions/caisse-enregistreuse",
+   "jaccard": 24.8
+  },
+  {
+   "famille": "solution",
+   "a": "/solutions/programme-fidelite",
+   "b": "/solutions/menu-qr-code",
+   "jaccard": 24.8
+  },
+  {
+   "famille": "solution",
+   "a": "/solutions/click-and-collect",
+   "b": "/solutions/programme-fidelite",
+   "jaccard": 24.5
+  },
+  {
+   "famille": "solution",
+   "a": "/solutions/caisse-enregistreuse",
+   "b": "/solutions/reservation-location",
+   "jaccard": 24.3
+  },
+  {
+   "famille": "solution",
+   "a": "/solutions/programme-fidelite",
+   "b": "/solutions/gestion-stocks",
+   "jaccard": 24.2
+  },
+  {
+   "famille": "solution",
+   "a": "/solutions/caisse-enregistreuse",
+   "b": "/solutions/portail-client",
+   "jaccard": 24
+  },
+  {
+   "famille": "solution",
+   "a": "/solutions/prise-rendez-vous-en-ligne",
+   "b": "/solutions/reservation-restaurant",
+   "jaccard": 23.9
+  },
+  {
+   "famille": "solution",
+   "a": "/solutions/crm-sur-mesure",
+   "b": "/solutions/tableau-de-bord",
+   "jaccard": 23.4
+  },
+  {
+   "famille": "solution",
+   "a": "/solutions/portail-client",
+   "b": "/solutions/reservation-location",
+   "jaccard": 23.3
+  },
+  {
+   "famille": "solution",
+   "a": "/solutions/crm-sur-mesure",
+   "b": "/solutions/planning-employes",
+   "jaccard": 23.2
+  },
+  {
+   "famille": "solution",
+   "a": "/solutions/planning-employes",
+   "b": "/solutions/tableau-de-bord",
+   "jaccard": 23.2
+  },
+  {
+   "famille": "solution",
+   "a": "/solutions/reservation-restaurant",
+   "b": "/solutions/portail-client",
+   "jaccard": 23.1
+  },
+  {
+   "famille": "solution",
+   "a": "/solutions/gestion-stocks",
+   "b": "/solutions/menu-qr-code",
+   "jaccard": 23.1
+  },
+  {
+   "famille": "solution",
+   "a": "/solutions/prise-rendez-vous-en-ligne",
+   "b": "/solutions/caisse-enregistreuse",
+   "jaccard": 22.7
+  },
+  {
+   "famille": "solution",
+   "a": "/solutions/click-and-collect",
+   "b": "/solutions/gestion-stocks",
+   "jaccard": 22.7
+  },
+  {
+   "famille": "solution",
+   "a": "/solutions/click-and-collect",
+   "b": "/solutions/menu-qr-code",
+   "jaccard": 22.1
+  },
+  {
+   "famille": "solution",
+   "a": "/solutions/prise-rendez-vous-en-ligne",
+   "b": "/solutions/portail-client",
+   "jaccard": 21.7
+  },
+  {
+   "famille": "solution",
+   "a": "/solutions/gestion-devis-factures",
+   "b": "/solutions/tableau-de-bord",
+   "jaccard": 20.7
+  },
+  {
+   "famille": "solution",
+   "a": "/solutions/gestion-devis-factures",
+   "b": "/solutions/crm-sur-mesure",
+   "jaccard": 20.4
+  },
+  {
+   "famille": "solution",
+   "a": "/solutions/gestion-devis-factures",
+   "b": "/solutions/planning-employes",
+   "jaccard": 20.1
+  },
+  {
+   "famille": "solution",
+   "a": "/solutions/tableau-de-bord",
+   "b": "/solutions/reservation-location",
+   "jaccard": 19.8
+  },
+  {
+   "famille": "solution",
+   "a": "/solutions/reservation-restaurant",
+   "b": "/solutions/programme-fidelite",
+   "jaccard": 18.9
+  },
+  {
+   "famille": "solution",
+   "a": "/solutions/portail-client",
+   "b": "/solutions/planning-employes",
+   "jaccard": 18.7
+  },
+  {
+   "famille": "solution",
+   "a": "/solutions/crm-sur-mesure",
+   "b": "/solutions/portail-client",
+   "jaccard": 18.5
+  },
+  {
+   "famille": "solution",
+   "a": "/solutions/click-and-collect",
+   "b": "/solutions/reservation-restaurant",
+   "jaccard": 18
+  },
+  {
+   "famille": "solution",
+   "a": "/solutions/caisse-enregistreuse",
+   "b": "/solutions/tableau-de-bord",
+   "jaccard": 18
+  },
+  {
+   "famille": "solution",
+   "a": "/solutions/reservation-restaurant",
+   "b": "/solutions/planning-employes",
+   "jaccard": 17.5
+  },
+  {
+   "famille": "solution",
+   "a": "/solutions/reservation-restaurant",
+   "b": "/solutions/tableau-de-bord",
+   "jaccard": 17.5
+  },
+  {
+   "famille": "solution",
+   "a": "/solutions/programme-fidelite",
+   "b": "/solutions/caisse-enregistreuse",
+   "jaccard": 17.5
+  },
+  {
+   "famille": "solution",
+   "a": "/solutions/planning-employes",
+   "b": "/solutions/reservation-location",
+   "jaccard": 17.5
+  },
+  {
+   "famille": "service-local",
+   "a": "/services-locaux/creation-site-restaurant",
+   "b": "/services-locaux/creation-site-artisan",
+   "jaccard": 17.5
+  },
+  {
+   "famille": "solution",
+   "a": "/solutions/caisse-enregistreuse",
+   "b": "/solutions/planning-employes",
+   "jaccard": 17.4
+  },
+  {
+   "famille": "lexique-terme",
+   "a": "/lexique/certificat-ssl",
+   "b": "/lexique/nom-de-domaine",
+   "jaccard": 17.3
+  },
+  {
+   "famille": "lexique-terme",
+   "a": "/lexique/dns",
+   "b": "/lexique/nom-de-domaine",
+   "jaccard": 17.3
+  },
+  {
+   "famille": "solution",
+   "a": "/solutions/prise-rendez-vous-en-ligne",
+   "b": "/solutions/tableau-de-bord",
+   "jaccard": 17.3
+  },
+  {
+   "famille": "solution",
+   "a": "/solutions/programme-fidelite",
+   "b": "/solutions/reservation-location",
+   "jaccard": 17.3
+  },
+  {
+   "famille": "solution",
+   "a": "/solutions/caisse-enregistreuse",
+   "b": "/solutions/gestion-stocks",
+   "jaccard": 17.2
+  },
+  {
+   "famille": "solution",
+   "a": "/solutions/portail-client",
+   "b": "/solutions/tableau-de-bord",
+   "jaccard": 17.2
+  },
+  {
+   "famille": "lexique-terme",
+   "a": "/lexique/certificat-ssl",
+   "b": "/lexique/dns",
+   "jaccard": 17.1
+  },
+  {
+   "famille": "lexique-terme",
+   "a": "/lexique/code-ape",
+   "b": "/lexique/siren",
+   "jaccard": 17.1
+  },
+  {
+   "famille": "solution",
+   "a": "/solutions/caisse-enregistreuse",
+   "b": "/solutions/crm-sur-mesure",
+   "jaccard": 17.1
+  },
+  {
+   "famille": "lexique-terme",
+   "a": "/lexique/bandeau-cookies",
+   "b": "/lexique/cookies",
+   "jaccard": 16.9
+  },
+  {
+   "famille": "solution",
+   "a": "/solutions/click-and-collect",
+   "b": "/solutions/reservation-location",
+   "jaccard": 16.9
+  },
+  {
+   "famille": "solution",
+   "a": "/solutions/crm-sur-mesure",
+   "b": "/solutions/reservation-location",
+   "jaccard": 16.8
+  },
+  {
+   "famille": "lexique-terme",
+   "a": "/lexique/backlink",
+   "b": "/lexique/netlinking",
+   "jaccard": 16.6
+  },
+  {
+   "famille": "solution",
+   "a": "/solutions/reservation-restaurant",
+   "b": "/solutions/crm-sur-mesure",
+   "jaccard": 16.6
+  },
+  {
+   "famille": "solution",
+   "a": "/solutions/menu-qr-code",
+   "b": "/solutions/reservation-location",
+   "jaccard": 16.5
+  },
+  {
+   "famille": "lexique-terme",
+   "a": "/lexique/indexation",
+   "b": "/lexique/robots-txt",
+   "jaccard": 16.4
+  },
+  {
+   "famille": "solution",
+   "a": "/solutions/prise-rendez-vous-en-ligne",
+   "b": "/solutions/planning-employes",
+   "jaccard": 16.4
+  },
+  {
+   "famille": "lexique-terme",
+   "a": "/lexique/balise-title",
+   "b": "/lexique/meta-description",
+   "jaccard": 16.3
+  },
+  {
+   "famille": "lexique-terme",
+   "a": "/lexique/boutique-en-ligne",
+   "b": "/lexique/click-and-collect",
+   "jaccard": 16.3
+  },
+  {
+   "famille": "lexique-terme",
+   "a": "/lexique/franchise-en-base-de-tva",
+   "b": "/lexique/tva",
+   "jaccard": 16.2
+  },
+  {
+   "famille": "solution",
+   "a": "/solutions/prise-rendez-vous-en-ligne",
+   "b": "/solutions/gestion-devis-factures",
+   "jaccard": 16.2
+  },
+  {
+   "famille": "solution",
+   "a": "/solutions/gestion-devis-factures",
+   "b": "/solutions/reservation-location",
+   "jaccard": 16.2
+  },
+  {
+   "famille": "solution",
+   "a": "/solutions/gestion-stocks",
+   "b": "/solutions/reservation-location",
+   "jaccard": 16.2
+  },
+  {
+   "famille": "lexique-terme",
+   "a": "/lexique/certificat-ssl",
+   "b": "/lexique/https",
+   "jaccard": 16.1
+  },
+  {
+   "famille": "lexique-terme",
+   "a": "/lexique/crawl",
+   "b": "/lexique/sitemap-xml",
+   "jaccard": 16.1
+  },
+  {
+   "famille": "solution",
+   "a": "/solutions/prise-rendez-vous-en-ligne",
+   "b": "/solutions/programme-fidelite",
+   "jaccard": 16.1
+  },
+  {
+   "famille": "solution",
+   "a": "/solutions/gestion-devis-factures",
+   "b": "/solutions/reservation-restaurant",
+   "jaccard": 16
+  },
+  {
+   "famille": "solution",
+   "a": "/solutions/reservation-restaurant",
+   "b": "/solutions/gestion-stocks",
+   "jaccard": 16
+  },
+  {
+   "famille": "solution",
+   "a": "/solutions/portail-client",
+   "b": "/solutions/menu-qr-code",
+   "jaccard": 15.9
+  },
+  {
+   "famille": "lexique-terme",
+   "a": "/lexique/agence-web",
+   "b": "/lexique/developpeur-web-freelance",
+   "jaccard": 15.8
+  },
+  {
+   "famille": "solution",
+   "a": "/solutions/prise-rendez-vous-en-ligne",
+   "b": "/solutions/crm-sur-mesure",
+   "jaccard": 15.6
+  },
+  {
+   "famille": "solution",
+   "a": "/solutions/gestion-stocks",
+   "b": "/solutions/portail-client",
+   "jaccard": 15.6
+  },
+  {
+   "famille": "solution",
+   "a": "/solutions/gestion-devis-factures",
+   "b": "/solutions/caisse-enregistreuse",
+   "jaccard": 15.5
+  },
+  {
+   "famille": "lexique-terme",
+   "a": "/lexique/siren",
+   "b": "/lexique/siret",
+   "jaccard": 15.4
+  },
+  {
+   "famille": "solution",
+   "a": "/solutions/reservation-restaurant",
+   "b": "/solutions/menu-qr-code",
+   "jaccard": 15.4
+  },
+  {
+   "famille": "solution",
+   "a": "/solutions/programme-fidelite",
+   "b": "/solutions/portail-client",
+   "jaccard": 15.4
+  },
+  {
+   "famille": "service-local",
+   "a": "/services-locaux/creation-site-restaurant",
+   "b": "/services-locaux/creation-site-commerce",
+   "jaccard": 15.4
+  },
+  {
+   "famille": "solution",
+   "a": "/solutions/prise-rendez-vous-en-ligne",
+   "b": "/solutions/click-and-collect",
+   "jaccard": 15.3
+  },
+  {
+   "famille": "solution",
+   "a": "/solutions/gestion-devis-factures",
+   "b": "/solutions/portail-client",
+   "jaccard": 15.3
+  },
+  {
+   "famille": "solution",
+   "a": "/solutions/caisse-enregistreuse",
+   "b": "/solutions/menu-qr-code",
+   "jaccard": 15.3
+  },
+  {
+   "famille": "lexique-terme",
+   "a": "/lexique/hebergement-web",
+   "b": "/lexique/nom-de-domaine",
+   "jaccard": 15.2
+  },
+  {
+   "famille": "service-local",
+   "a": "/services-locaux/creation-site-artisan",
+   "b": "/services-locaux/creation-site-commerce",
+   "jaccard": 15.2
+  },
+  {
+   "famille": "lexique-terme",
+   "a": "/lexique/dns",
+   "b": "/lexique/hebergement-web",
+   "jaccard": 15
+  },
+  {
+   "famille": "lexique-terme",
+   "a": "/lexique/entreprise-individuelle",
+   "b": "/lexique/micro-entreprise",
+   "jaccard": 15
+  }
+ ],
+ "nbSimilarites": 78
+}
