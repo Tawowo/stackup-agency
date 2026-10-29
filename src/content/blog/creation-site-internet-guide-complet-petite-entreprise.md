@@ -4,7 +4,7 @@ seoTitle: "Créer son site internet : guide pour petite entreprise"
 excerpt: "Par où commencer, que mettre sur chaque page, quel budget prévoir, seul ou avec un pro : le guide pas à pas pour créer le site d’une petite entreprise."
 date: "2026-10-29"
 updated: "2026-10-29"
-readTime: 12
+readTime: 13
 tag: "Création de site"
 category: "creation"
 type: "guide"

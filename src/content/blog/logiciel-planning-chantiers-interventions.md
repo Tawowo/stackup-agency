@@ -11,32 +11,15 @@ type: "guide"
 keywords: ["application de planning pour équipe terrain", "modèle de planning de chantier excel", "comment suivre la rentabilité d'un chantier", "modèle de rapport d'intervention artisan", "je rate des appels de clients quand je suis sur chantier", "comment organiser les tournées d'une équipe d'artisans"]
 sources: ["https://www.cnil.fr", "https://www.service-public.fr"]
 ---
-
 **Un planning de chantiers efficace montre à chacun, au bureau comme sur le terrain, qui est où, quand et pour quoi, et se met à jour dès qu'un changement survient. Un tableur suffit pour quelques chantiers et une petite équipe ; au-delà, une application partagée qui relie planning, comptes rendus, achats et facturation évite les oublis et les doubles saisies.**
 
-Pour un plombier, un électricien, un paysagiste, un maçon ou une équipe de dépannage, le planning est le centre de l'organisation : tout en dépend, y compris la rentabilité. Cet article parle de l'outil, mais surtout des questions que l'on se pose en pratique : comment planifier, comment suivre un chantier, comment rédiger un rapport, comment ne plus rater d'appels, comment ne plus oublier de facturer. Pour la description générale d'une application de suivi, [l'application de gestion de chantiers](/blog/application-gestion-chantiers) donne les grandes fonctions ; pour les salariés, [la gestion du planning des employés](/blog/gestion-planning-employes) traite des alertes et du remplacement. Ce texte ajoute le côté pratique : modèles, méthodes, limites.
+Pour un plombier, un électricien, un paysagiste ou une équipe de dépannage, le planning est le centre de l'organisation : tout en dépend, y compris la rentabilité. Cet article traite l'outil, mais surtout les questions pratiques : planifier, suivre un chantier, rédiger un rapport, ne plus rater d'appels, ne plus oublier de facturer. Pour les grandes fonctions d'une application de suivi, voir [l'application de gestion de chantiers](/blog/application-gestion-chantiers) ; pour les salariés, [la gestion du planning des employés](/blog/gestion-planning-employes).
 
 ## Modèle de planning de chantier ou d'employés sur Excel : à quoi ressemble-t-il ?
 
-Un tableur donne un premier planning utile en une heure. Voici une structure simple.
+Un tableur donne un premier planning utile en une heure. **Feuille « Planning »** : une ligne par intervenant, une colonne par jour ou demi-journée, avec dans chaque case le chantier (un code couleur par type de travaux aide). **Feuille « Chantiers »** : une ligne par chantier, avec nom et adresse, client et contact, référence du devis, dates de début et de fin prévue, intervenants, heures prévues au devis, heures réelles, statut (à planifier, planifié, en cours, terminé, à facturer) et remarques (accès, matériel à prévoir).
 
-**Feuille « Planning »** : une ligne par intervenant, une colonne par jour (ou demi-journée). Dans chaque case : le nom du chantier, éventuellement un code couleur par type de travaux ou par client.
-
-**Feuille « Chantiers »** : une ligne par chantier, avec :
-
-| Colonne | Utilité |
-|---|---|
-| Nom et adresse du chantier | Savoir où aller |
-| Client et contact | Joindre la bonne personne |
-| Devis ou référence | Relier au document commercial |
-| Date de début, date prévue de fin | Voir les échéances |
-| Intervenants prévus | Qui est assigné |
-| Heures prévues au devis | Base de comparaison |
-| Heures réelles | Mesure |
-| Statut | À planifier, planifié, en cours, terminé, à facturer |
-| Remarques | Accès, contraintes, matériel à prévoir |
-
-Un tel fichier évite le papier et dépanne bien. Ses limites apparaissent vite : une seule personne le met à jour sans conflit, il est peu pratique sur téléphone, il ne prévient pas quand deux chantiers se chevauchent, et chacun garde sa propre version. Les cases colorées ne déclenchent aucun rappel.
+Ses limites apparaissent vite : une seule personne peut le modifier sans conflit, il est peu pratique sur téléphone, il ne prévient pas quand deux chantiers se chevauchent, et chacun garde sa propre version. Les cases colorées ne déclenchent aucun rappel.
 
 ## Planning automatique des employés : qu'est-ce qui s'automatise vraiment ?
 
@@ -62,18 +45,7 @@ L'outil propose, vous validez ou modifiez. Le risque principal est de faire conf
 
 ## Quelle application de planning pour une équipe terrain ?
 
-Que l'outil soit un produit du marché ou un outil sur mesure, vérifiez ces points avant de choisir :
-
-- **Lisible sur téléphone**, avec le chantier du jour en premier ;
-- **Mise à jour en direct** et notifications de changement ;
-- **Utilisable sans réseau** quand le chantier est en zone blanche ;
-- **Un compte par intervenant**, avec des droits différents (le bureau modifie, le terrain consulte et complète) ;
-- **Des fiches chantier** avec adresse cliquable, contact, notes, photos, documents ;
-- **Un compte rendu** que l'intervenant remplit sur place ;
-- **Une liaison avec le devis et la facture**, pour éviter la ressaisie ;
-- **Une sortie possible** : vous exportez vos données si vous changez.
-
-Quant à l'**agenda partagé gratuit** pour TPE, il remplit la fonction d'affichage partagé, mais pas les comptes rendus, les achats ni le suivi d'heures. Il est fiable pour démarrer et demande de la discipline.
+Que l'outil soit un produit du marché ou sur mesure, vérifiez : une lecture confortable sur téléphone avec le chantier du jour en premier, des mises à jour en direct avec notification, un usage sans réseau en zone blanche, un compte par intervenant avec des droits différents (le bureau modifie, le terrain consulte et complète), des fiches chantier (adresse cliquable, contact, photos, documents), un compte rendu rempli sur place, une liaison avec le devis et la facture, et la possibilité d'exporter vos données. Un **agenda partagé gratuit** pour TPE remplit la fonction d'affichage, mais pas les comptes rendus, les achats ni le suivi d'heures.
 
 ### Un planning partagé entre le bureau et le terrain
 
@@ -98,31 +70,15 @@ Un point d'attention : ne promettez pas de dates à un client avant d'avoir rega
 
 ### ChatGPT ou une autre IA pour faire son planning de la semaine ?
 
-On peut s'aider d'un assistant d'IA pour **organiser une liste** : lui donner chantiers, durées, contraintes, et lui demander une proposition de répartition. Cela peut dégrossir un planning ou produire un message de confirmation. Mais :
-
-- il ne connaît ni les trajets réels, ni l'état d'avancement, ni les humeurs d'un client ;
-- il peut produire un planning séduisant **mais incohérent** (deux endroits à la même heure) ;
-- vous ne devez pas lui confier de données personnelles de clients sans savoir comment elles sont traitées (voir cnil.fr) ;
-- il ne se met pas à jour tout seul quand le terrain change.
-
-Comme brouillon, oui. Comme planning de référence partagé, non. Notre approche de l'IA intégrée à un outil est présentée sur la page [IA et automatisation](/services/ia-et-automatisation).
+Un assistant d'IA peut dégrossir une liste : vous lui donnez chantiers, durées et contraintes, il propose une répartition. Mais il ne connaît ni les trajets réels, ni l'avancement, ni les préférences d'un client ; il peut produire un planning séduisant mais incohérent (deux endroits à la même heure) ; et vous ne devez pas lui confier de données personnelles de clients sans savoir comment elles sont traitées (voir cnil.fr). Comme brouillon, oui ; comme planning de référence partagé, non. Notre approche de l'IA intégrée à un outil figure sur la page [IA et automatisation](/services/ia-et-automatisation).
 
 ## Comment chiffrer un chantier plus vite et estimer son prix ?
 
-Chiffrer vite exige un **socle de données personnelles** : vos prix de matériaux, votre taux horaire, vos temps types par tâche. Sans cela, on reste sur l'intuition.
-
-1. **Décomposez** le chantier en lots et en tâches.
-2. **Attribuez un temps** à chaque tâche à partir de vos chantiers passés. C'est la donnée la plus précieuse, et elle se construit en notant les heures réelles.
-3. **Chiffrez la main-d'œuvre** avec votre taux horaire complet (voir comment le calculer dans [la gestion des employés](/blog/gestion-des-employes-pointage-horaires-petite-entreprise)).
-4. **Ajoutez les matériaux** avec leur coût réel, une marge raisonnable sur les achats, les déplacements, la location de matériel, la sous-traitance.
-5. **Prévoyez une marge pour aléas** adaptée au risque du chantier (rénovation = plus d'inconnues que du neuf).
-6. **Comparez** avec des chantiers similaires déjà réalisés.
-
-Une bibliothèque de prestations dans votre outil de devis accélère tout cela. Voir [les logiciels de devis et de facturation](/blog/logiciel-de-devis-et-facturation-artisan-comment-choisir). Un [modèle de devis](/outils/modele-devis) sert de base de départ.
+Chiffrer vite suppose un socle de données personnelles : vos prix de matériaux, votre taux horaire, vos temps types par tâche. La méthode : décomposez le chantier en lots et en tâches ; attribuez un temps à chacune à partir de vos chantiers passés (la donnée la plus précieuse, qui se construit en notant les heures réelles) ; chiffrez la main-d'œuvre au taux horaire complet (voir [la gestion des employés](/blog/gestion-des-employes-pointage-horaires-petite-entreprise)) ; ajoutez matériaux, déplacements, locations et sous-traitance ; prévoyez une marge pour aléas adaptée au risque (la rénovation réserve plus de surprises que le neuf) ; comparez avec des chantiers similaires. Une bibliothèque de prestations accélère tout cela : voir [les logiciels de devis et de facturation](/blog/logiciel-de-devis-et-facturation-artisan-comment-choisir) et le [modèle de devis](/outils/modele-devis).
 
 ### Comment chiffrer le temps passé sur un chantier ?
 
-Le temps réel se mesure avec un **pointage par chantier** : l'intervenant indique sur quel chantier il travaille, à l'arrivée et au départ, ou en fin de journée. Les trajets professionnels, les achats de matériaux, les réunions et le temps de bureau lié au chantier comptent aussi. Même approximatif, ce suivi révèle quel type de chantier dépasse systématiquement. Faites-le simplement : trop de saisie décourage.
+Par un **pointage rattaché au chantier** : l'intervenant indique sur quel chantier il travaille, à l'arrivée et au départ, ou en fin de journée. Comptez aussi trajets, achats et temps de bureau lié au chantier. Même approximatif, ce suivi révèle quel type de chantier dépasse systématiquement ; gardez-le simple, sinon il sera abandonné.
 
 ## Comment suivre ses chantiers en cours ?
 
@@ -134,13 +90,9 @@ Un suivi utile tient en quelques indicateurs par chantier :
 - **Statut financier** : acomptes reçus, situations émises, solde à facturer.
 - **Alertes** : retard, dépassement, document manquant.
 
-### Comment suivre l'avancement ?
+### Comment suivre l'avancement et les heures passées par chantier ?
 
-Demandez aux équipes une **mise à jour courte à chaque fin de journée** (étape en cours, photos, problème rencontré). Cette routine remplace les appels de milieu de journée et alimente le compte rendu du client. Le suivi le plus utile est celui qui se fait en moins de deux minutes.
-
-### Comment suivre les heures passées par chantier ?
-
-Par un pointage rattaché au chantier. L'outil additionne ensuite les heures par chantier et par intervenant. Comparez avec les heures prévues au devis dès la première semaine : un écart précoce se corrige, un écart découvert à la fin se subit.
+Demandez une mise à jour courte à chaque fin de journée (étape en cours, photos, problème rencontré) : elle remplace les appels de milieu de journée et alimente le compte rendu du client. L'outil additionne les heures par chantier : comparez-les aux heures prévues dès la première semaine, car un écart précoce se corrige alors qu'un écart découvert à la fin se subit.
 
 ### Comment suivre les achats de matériaux par chantier ?
 
@@ -222,15 +174,7 @@ Rater des appels quand on travaille est un coût direct : le client suivant appe
 
 ## Organiser ses tournées pour perdre moins de temps sur la route
 
-Pour une équipe qui enchaîne des interventions (dépannage, entretien, livraison de matériel), le temps de route est un coût majeur. Méthode :
-
-1. **Regroupez par zone** : une journée, un secteur, plutôt que des allers-retours.
-2. **Fixez des créneaux compatibles** avec la zone du jour et proposez-les au client.
-3. **Placez les urgences en priorité**, puis insérez-les dans la tournée.
-4. **Prévoyez le matériel** pour toute la tournée avant le départ.
-5. **Mesurez** : kilomètres, temps de route, interventions par jour, pour repérer les inefficacités.
-
-Un outil d'optimisation d'itinéraire peut ordonner les arrêts. Dans ce domaine, l'intelligence artificielle est utile pour **calculer** des combinaisons, mais le résultat dépend de contraintes réelles (horaires, accès, clients à privilégier) que vous devez lui donner. Pour des tournées plus larges, voir [l'application de livraison interne](/blog/application-livraison-interne).
+Pour une équipe qui enchaîne des interventions, le temps de route est un coût majeur. Regroupez par zone (une journée, un secteur), proposez aux clients des créneaux compatibles avec la zone du jour, placez les urgences en priorité, prévoyez le matériel de toute la tournée avant le départ et mesurez kilomètres, temps de route et interventions par jour. Un outil d'optimisation d'itinéraire peut ordonner les arrêts, mais le résultat dépend de contraintes réelles (horaires, accès, clients à privilégier) que vous devez lui fournir. Voir aussi [l'application de livraison interne](/blog/application-livraison-interne).
 
 ## Je ne trouve pas de chantiers en ce moment : que faire ?
 
@@ -238,14 +182,9 @@ Cette question dépasse le planning, mais elle se pose à tout artisan en creux 
 
 ## Quel outil choisir ?
 
-| Situation | Outil raisonnable |
-|---|---|
-| Seul ou deux personnes, peu de chantiers | Tableur ou agenda partagé, modèle de rapport |
-| Équipe de quelques personnes, chantiers en parallèle | Application partagée de planning et de comptes rendus |
-| Interventions nombreuses et récurrentes | Application avec affectation, historique et facturation |
-| Besoins particuliers, plusieurs outils à relier | Outil sur mesure |
+Seul ou à deux, avec peu de chantiers : tableur ou agenda partagé et modèle de rapport. Équipe de quelques personnes avec chantiers en parallèle : application partagée de planning et de comptes rendus. Interventions nombreuses et récurrentes : application avec affectation, historique et facturation. Besoins particuliers ou plusieurs outils à relier : outil sur mesure.
 
-Un outil sur mesure se justifie quand vos règles (types de chantiers, documents, acomptes) ne rentrent pas dans un produit standard ou quand vous voulez relier planning, devis, factures et site. Notre offre démarre à partir de {{prix:outil}} € selon le périmètre, avec le prix fixé au devis. Le fonctionnement est décrit sur la page [logiciel de gestion](/services/logiciel-de-gestion). L'[estimateur](/tarifs) donne un ordre de grandeur, et vous pouvez [nous contacter](/contact) pour en parler. Une limite à connaître : un outil sur mesure dépend d'un prestataire pour ses évolutions ; exigez les accès et les données dès le départ.
+Un outil sur mesure se justifie quand vos règles (types de chantiers, documents, acomptes) ne rentrent pas dans un produit standard ou quand vous voulez relier planning, devis, factures et site. Notre offre démarre à partir de {{prix:outil}} € selon le périmètre, avec le prix fixé au devis ; le fonctionnement est décrit sur la page [logiciel de gestion](/services/logiciel-de-gestion). L'[estimateur](/tarifs) donne un ordre de grandeur, et vous pouvez [nous contacter](/contact). Limite à connaître : un outil sur mesure dépend d'un prestataire pour ses évolutions ; exigez les accès et les données dès le départ.
 
 ## Questions fréquentes
 
@@ -253,13 +192,10 @@ Un outil sur mesure se justifie quand vos règles (types de chantiers, documents
 Cela dépend de la simplicité de l'outil et de l'implication du responsable. Commencez par un seul usage (le planning du jour sur téléphone) avant d'ajouter comptes rendus et achats.
 
 **Faut-il que tous les salariés aient un smartphone ?**
-Pour un outil sur téléphone, il faut un appareil. Un téléphone professionnel fourni par l'entreprise évite de demander l'usage d'un appareil personnel. Dans tous les cas, ne rendez pas obligatoire un usage privé sans accord.
+Pour un outil sur téléphone, il faut un appareil. Un téléphone professionnel fourni par l'entreprise évite de demander l'usage d'un appareil personnel.
 
 **La géolocalisation des véhicules est-elle autorisée pour suivre les tournées ?**
 Elle est encadrée : finalité précise, information des salariés, proportionnalité. La CNIL publie ses recommandations sur cnil.fr. Un suivi déclaratif suffit souvent pour planifier.
 
-**Un tableur peut-il suffire pendant longtemps ?**
-Oui, tant que le volume est faible, qu'une seule personne tient le planning et que vous n'avez pas besoin du terrain. Les signes de passage à un outil : doublons, erreurs, ressaisies et retards d'information.
-
 **Comment partager un planning avec un sous-traitant ?**
-Donnez-lui un accès limité à ses chantiers (et pas à vos autres clients), ou envoyez-lui un extrait. Évitez de partager l'ensemble de votre agenda.
+Donnez-lui un accès limité à ses chantiers, ou envoyez-lui un extrait. Évitez de partager l'ensemble de votre agenda.

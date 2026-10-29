@@ -4,7 +4,7 @@ seoTitle: "Facture électronique artisan et micro-entrepreneur"
 excerpt: "Artisan, commerçant ou micro-entrepreneur : ce que la facture électronique change pour vous, comment choisir une plateforme agréée et vous préparer."
 date: "2026-10-29"
 updated: "2026-10-29"
-readTime: 10
+readTime: 9
 tag: "Facture électronique"
 category: "juridique"
 type: "reglementation"

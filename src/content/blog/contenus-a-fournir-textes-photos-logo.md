@@ -4,7 +4,7 @@ seoTitle: "Textes, photos, logo : que fournir pour son site internet"
 excerpt: "Textes, photos, logo : ce que votre prestataire attend, ce qu’il peut produire à votre place et les pièges de droits à éviter avant la mise en ligne."
 date: "2026-10-29"
 updated: "2026-10-29"
-readTime: 11
+readTime: 14
 tag: "Création de site"
 category: "creation"
 type: "guide"
@@ -61,7 +61,7 @@ Cela dépend des prestataires : la rédaction est parfois incluse, parfois propo
 
 ### Comment modifier soi-même les textes de son site ?
 
-Tout dépend de la façon dont le site est construit. Certains sites proposent un espace d’administration où vous changez un horaire ou une phrase en quelques clics ; d’autres sont figés et se modifient par une demande à votre prestataire. Aucun des deux n’est mauvais en soi : le premier vous rend autonome mais demande un peu de prise en main, le second est plus simple mais dépend de la réactivité de la personne qui s’en charge. Posez la question avant de signer : « Pourrai-je changer moi-même un horaire, un tarif, une photo ? Sinon, en combien de temps et à quelles conditions ? » Les modifications courantes relèvent souvent d’un contrat de [maintenance](/services/maintenance).
+Tout dépend de la façon dont le site est construit. Certains sites proposent un espace d’administration où vous changez un horaire ou une phrase en quelques clics ; d’autres sont figés et se modifient par une demande à votre prestataire. Aucun des deux n’est mauvais en soi : le premier vous rend autonome mais demande un peu de prise en main, le second est plus simple mais dépend de la réactivité de la personne qui s’en charge. Posez la question avant de signer : « Pourrai-je changer moi-même un horaire, un tarif, une photo ? Sinon, en combien de temps et à quelles conditions ? » Les modifications courantes relèvent souvent d’un contrat de maintenance.
 
 ## Quelles photos faut-il pour un site d’artisan ou de commerçant ?
 

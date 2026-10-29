@@ -4,7 +4,7 @@ seoTitle: "Devis obligatoire : quand, mentions et validité"
 excerpt: "Quand un devis est obligatoire, ce qu’il doit contenir, sa durée de validité, la signature en ligne et le droit de rétractation : les règles à connaître."
 date: "2026-10-29"
 updated: "2026-10-29"
-readTime: 12
+readTime: 14
 tag: "Juridique"
 category: "juridique"
 type: "reglementation"

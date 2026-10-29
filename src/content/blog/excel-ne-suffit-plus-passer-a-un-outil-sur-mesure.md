@@ -4,7 +4,7 @@ seoTitle: "Quand Excel ne suffit plus : outil de gestion sur mesure"
 excerpt: "Fichier Excel ingérable, doubles saisies, factures papier : les signes qu’il est temps de passer à un outil de gestion en ligne, et comment faire."
 date: "2026-10-29"
 updated: "2026-10-29"
-readTime: 12
+readTime: 11
 tag: "Applications métier"
 category: "applications-metier"
 type: "guide"

@@ -4,7 +4,7 @@ seoTitle: "Faut-il un site internet quand on est artisan ?"
 excerpt: "Un site est-il obligatoire, utile, rentable ? Facebook suffit-il ? Ce qu’un artisan ou commerçant doit savoir avant de se lancer ou de refaire son site."
 date: "2026-10-29"
 updated: "2026-10-29"
-readTime: 8
+readTime: 9
 tag: "Création de site"
 category: "creation"
 type: "question"
