@@ -23,7 +23,7 @@ export const FAQ_METIERS: Record<string, ContenuLocal['faq']> = {
       a: `Montrez ce qu’on ne trouve pas sur un catalogue : la serre un matin de printemps, les étals de légumes en godets, un massif réalisé avec vos plants, le salon de toilettage. Prenez la lumière du jour, au lieu des néons du magasin. Pour les animaux, demandez l’accord avant de photographier un client avec le sien. Instagram convient aux saisons, aux nouveautés et aux animaux présentés à l’adoption ; sur le site, gardez les pages qui durent, avec les derniers posts affichés sans effort.`,
     },
     {
-      q: `Pourquoi mon site de jardinerie n’apparaît-il pas quand on cherche « plantes près de chez moi » ?`,
+      q: `Pourquoi ma jardinerie reste-t-elle invisible sur « plantes près de chez moi » ?`,
       a: `Cette recherche s’appuie surtout sur la fiche Google et sur la proximité, moins sur le site lui-même. Vérifiez que l’adresse, les horaires et les catégories sont justes, puis donnez au site une page par univers : plantes d’intérieur, potager, aquariophilie, toilettage, avec la commune citée naturellement. Les contenus de saison, comme quoi planter en automne, attirent des lectures utiles. L’indexation prend du temps : ouvrez la Search Console, gratuite, pour voir ce que Google a compris de vos pages et ce qu’il ignore.`,
     },
     {
@@ -38,7 +38,7 @@ export const FAQ_METIERS: Record<string, ContenuLocal['faq']> = {
       a: `Créez ou revendiquez votre fiche Google, choisissez la catégorie qui décrit le mieux votre cœur de métier, maçon ou entreprise de rénovation, puis des catégories secondaires pour l’extension ou le carrelage si vous les faites. Si vous vous déplacez chez les clients, vous pouvez masquer l’adresse et indiquer vos communes. Ajoutez des photos de chantiers terminés. Les avis sont la clé : demandez-les à la réception des travaux, quand le client est satisfait, en lui envoyant le lien direct.`,
     },
     {
-      q: `Quelle adresse e-mail pour mon entreprise de maçonnerie : professionnelle ou celle de ma boîte perso ?`,
+      q: `Une adresse e-mail professionnelle est-elle utile pour une entreprise de maçonnerie ?`,
       a: `Une adresse à votre nom de domaine, du type prenom@votre-entreprise, rassure un particulier qui envoie son projet et un architecte qui cherche un sous-traitant. Elle évite aussi le mélange avec votre courrier privé et vous permet de partager une boîte commune avec votre conjoint ou votre secrétaire, sans donner vos accès personnels. Prévoyez une signature avec raison sociale, SIRET et numéro de téléphone du chantier. Le nom de domaine doit rester à votre nom, pas à celui de celui qui l’a installé.`,
     },
     {
@@ -116,7 +116,7 @@ export const FAQ_METIERS: Record<string, ContenuLocal['faq']> = {
       a: `Le bois aime la lumière rasante d’une fenêtre : placez le meuble près d’un mur clair, évitez le flash, montrez un détail d’assemblage, le fil du bois, une poignée. Une photo de l’ensemble dans la pièce du client donne l’échelle. Une courte vidéo du geste, un rabot qui passe, convainc plus qu’un texte sur le fait main. Instagram ou Pinterest servent bien l’ébénisterie, car les gens y cherchent de l’inspiration ; le site rassemble ensuite l’essentiel avec un moyen simple de vous contacter.`,
     },
     {
-      q: `Mon site de menuisier est discret sur Google : que faire pour recevoir plus de demandes ?`,
+      q: `Mon site de menuisier est discret sur Google : comment recevoir plus de demandes ?`,
       a: `Parlez de ce que les gens tapent : escalier sur mesure, bibliothèque, placard sous pente, avec une page par type d’ouvrage et votre secteur. Un portfolio sans texte reste invisible pour Google, ajoutez donc le contexte, les essences, la façon de faire. Tenez aussi votre fiche à jour et demandez des avis après livraison. Les architectes d’intérieur et les cuisinistes de la région sont des relais fréquents : faites-leur connaître le site. Le référencement demande des mois, mais il s’accumule.`,
     },
     {
@@ -147,7 +147,7 @@ export const FAQ_METIERS: Record<string, ContenuLocal['faq']> = {
       a: `Des séries avant et après prises du même angle, de jour, volets ouverts, sans le flash qui écrase les teintes. Ajoutez un gros plan sur une finition nette : un angle de plinthe, une ligne de cache, un enduit lissé. Nommez la teinte ou l’effet quand le client est d’accord. Évitez les photos où l’on distingue des objets personnels ou la décoration reconnaissable. Sur les réseaux, quelques transformations marquantes d’une pièce font davantage que de longues publications ; les avis Google viennent compléter l’ensemble.`,
     },
     {
-      q: `Pourquoi mon site de peintre n’est-il pas visible quand on tape « peintre près de chez moi » ?`,
+      q: `Pourquoi mon site de peintre reste-t-il invisible sur « peintre près de chez moi » ?`,
       a: `Cette recherche pointe d’abord les fiches Google, pas les sites. Faites en sorte que la vôtre soit complète et reçoive des avis. Pour le site, créez une page par prestation et par secteur, par exemple ravalement de façade ou peinture d’un appartement, avec un vrai texte et vos photos. Le bouche-à-oreille compte beaucoup dans votre métier : mettez l’adresse du site sur les devis, sur les panneaux de chantier et sur la carte de visite. Contrôlez que le site s’affiche vite sur un téléphone.`,
     },
     {
@@ -189,7 +189,7 @@ export const FAQ_METIERS: Record<string, ContenuLocal['faq']> = {
 
   'serrurier-depannage': [
     {
-      q: `Comment un serrurier choisit-il sa catégorie Google pour ne pas être confondu avec les faux dépanneurs ?`,
+      q: `Quelle catégorie Google un serrurier choisit-il pour ne pas être confondu avec les faux dépanneurs ?`,
       a: `Retenez serrurier comme catégorie principale, ajoutez ensuite les services réels : fabrication de clés, blindage, pose de portes. Utilisez une adresse véritable et vérifiable, avec la vérification de la fiche par Google, et si vous vous déplacez uniquement, masquez l’adresse tout en listant les communes. Affichez votre nom, votre numéro d’entreprise sur le site et sur la fiche. Les faux dépanneurs s’appuient sur des adresses fictives : votre force est d’être joignable, identifié et d’avoir des avis de voisins.`,
     },
     {
@@ -209,7 +209,7 @@ export const FAQ_METIERS: Record<string, ContenuLocal['faq']> = {
       a: `Évitez les photos de banque d’images : elles laissent penser à une centrale. Montrez votre véhicule, votre atelier, vos poses de portes blindées ou de serrures multipoints, après accord du client et sans rendre l’adresse identifiable. Un portrait de vous, avec votre nom, crée la confiance. Les avis Google sont décisifs : après un dépannage, un client soulagé laisse volontiers un mot si vous lui envoyez le lien. Sur les réseaux, le conseil de prévention, comme vérifier une serrure avant les vacances, a plus de valeur qu’une promotion.`,
     },
     {
-      q: `Mon site de serrurier n’arrive pas en tête sur « serrurier urgence » : comment progresser ?`,
+      q: `Comment progresser sur « serrurier urgence » quand mon site n’arrive pas en tête ?`,
       a: `Sur cette requête, les annonces payantes et les centrales d’appel occupent le haut de la page. Visez donc le local : fiche Google exacte, pages par commune desservie, avec votre vrai secteur et vos horaires, et des avis récents. Cherchez aussi les requêtes moins disputées : changement de serrure après un cambriolage, blindage de porte, clé cassée dans la serrure. Le site doit s’afficher vite sur un téléphone, avec le numéro cliquable en haut. Comptez des mois avant de gagner des places durables.`,
     },
     {
@@ -220,7 +220,7 @@ export const FAQ_METIERS: Record<string, ContenuLocal['faq']> = {
 
   'cuisiniste': [
     {
-      q: `Comment mon showroom de cuisines apparaît-il sur Google Maps quand on cherche une cuisine sur mesure ?`,
+      q: `Comment mon showroom de cuisines apparaît-il sur Google Maps pour une cuisine sur mesure ?`,
       a: `Sur votre fiche, choisissez la catégorie qui correspond à votre activité de vente et d’agencement de cuisines, puis des secondaires pour la pose ou le mobilier. Indiquez les horaires du showroom, sur rendez-vous ou en libre accès. Montrez des photos des cuisines exposées et de réalisations chez des clients, avec leur accord. Ajoutez le nom des marques que vous distribuez, seulement si vous en êtes revendeur. Un avis qui raconte la visite de métré, la conception, puis la pose en dit plus qu’une note seule.`,
     },
     {
@@ -260,7 +260,7 @@ export const FAQ_METIERS: Record<string, ContenuLocal['faq']> = {
     },
     {
       q: `Comment faire plus vite le devis d’une piscine et celui d’un contrat d’entretien ?`,
-      a: `Pour la construction, séparez terrassement, bassin, filtration, margelles, pose d’une couverture et branchements : le client voit ce qui est inclus et ce qui est en option. Pour l’entretien, un modèle distinct reprend la fréquence des passages, l’ouverture et l’hivernage. Un logiciel de devis et de facturation qui garde vos tarifs et gère les échéances évite la ressaisie. Le formulaire du site peut recueillir en amont la taille du terrain, la forme souhaitée et le type de bassin. Les mentions obligatoires se vérifient sur service-public.fr.`,
+      a: `Pour la construction, séparez terrassement, bassin, filtration, margelles, pose d’une couverture et branchements : le client voit ce qui est inclus et ce qui est en option. Pour l’entretien, un modèle distinct reprend la fréquence des passages, l’ouverture et l’hivernage. Un logiciel de devis et de facturation qui garde vos tarifs et gère les échéances évite la ressaisie. Le formulaire du site peut recueillir en amont la taille du terrain, la forme souhaitée et le type de bassin. Pour les mentions obligatoires, consultez service-public.fr.`,
     },
     {
       q: `Quels rappels automatiques pour un pisciniste : ouverture, hivernage, contrôles ?`,
@@ -282,7 +282,7 @@ export const FAQ_METIERS: Record<string, ContenuLocal['faq']> = {
 
   'vitrier': [
     {
-      q: `Comment un vitrier choisit-il sa catégorie sur Google Maps pour être trouvé en cas de bris de glace ?`,
+      q: `Quelle catégorie Google un vitrier retient-il pour être trouvé après un bris de glace ?`,
       a: `Choisissez vitrier comme catégorie principale, puis ajoutez les services que vous assurez : miroiterie, double vitrage, vitrines. Renseignez des horaires réalistes ; si vous intervenez en urgence le soir, précisez-le seulement si c’est vrai. Si vous vous déplacez chez les clients, indiquez vos communes plutôt que de laisser croire à un magasin ouvert. Ajoutez des photos de remplacements terminés et de votre véhicule. Les avis qui racontent une intervention rapide un samedi comptent beaucoup pour une recherche faite dans l’urgence.`,
     },
     {
@@ -318,7 +318,7 @@ export const FAQ_METIERS: Record<string, ContenuLocal['faq']> = {
     },
     {
       q: `Quel nom de domaine et quelle e-mail utiliser pour envoyer les certificats de ramonage ?`,
-      a: `Un domaine à votre nom ou à celui de votre entreprise, court et facile à retenir, suffit. L’adresse e-mail à ce domaine sert à envoyer le certificat de ramonage et les factures : un client qui reçoit un document depuis une adresse sérieuse le conserve et le présente plus volontiers à son assureur. Evitez une messagerie grand public qui part en courrier indésirable. Si vous travaillez avec des syndics ou des agences, une signature claire avec la raison sociale et le SIRET facilite leurs échanges.`,
+      a: `Un domaine à votre nom ou à celui de votre entreprise, court et facile à retenir, suffit. L’adresse e-mail à ce domaine sert à envoyer le certificat de ramonage et les factures : un client qui reçoit un document depuis une adresse sérieuse le conserve et le présente plus volontiers à son assureur. Évitez une messagerie grand public qui part en courrier indésirable. Si vous travaillez avec des syndics ou des agences, une signature claire avec la raison sociale et le SIRET facilite leurs échanges.`,
     },
     {
       q: `Comment préparer plus vite mes devis et factures de ramonage et d’entretien ?`,

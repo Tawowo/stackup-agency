@@ -68,15 +68,15 @@ Pour passer un site entier de HTTP à HTTPS **sans perdre son référencement**,
 
 ## Comment renouveler automatiquement un certificat, et pourquoi il ne se renouvelle pas
 
-Les certificats gratuits ont une durée de validité courte, justement pour que le renouvellement soit automatique. Quand ça ne marche pas, les causes les plus fréquentes sont :
+Les certificats gratuits ont une validité courte, justement pour que le renouvellement soit automatique. Quand il échoue, les causes les plus fréquentes sont :
 
-- **Le domaine ne pointe plus vers le bon hébergement.** L'outil de renouvellement vérifie que vous contrôlez bien l'adresse ; si le DNS a changé, la vérification échoue.
-- **Une règle de redirection ou de protection bloque la vérification** (pare-feu, protection d'accès par mot de passe, mauvaise redirection).
+- **Le domaine ne pointe plus vers le bon hébergement** : l'outil vérifie que vous contrôlez l'adresse, et le DNS a changé.
+- **Une redirection ou un pare-feu bloque la vérification.**
 - **Le compte d'hébergement est suspendu** pour impayé.
-- **Le renouvellement automatique a été désactivé** lors d'une migration ou d'une mise à jour.
+- **Le renouvellement automatique a été désactivé** lors d'une migration.
 - **Un certificat manuel** a été installé un jour et personne ne l'a renouvelé.
 
-Pour savoir quand expire votre certificat, regardez le détail du certificat dans le navigateur, ou utilisez un service de test en ligne gratuit. Mettez la date dans votre agenda un mois à l'avance si vous n'avez pas de renouvellement automatique. Un contrat de [maintenance](/services/maintenance) inclut généralement cette surveillance : c'est le genre de tâche invisible qui évite l'alerte rouge un samedi matin ; voir aussi notre [guide de la maintenance d'un site web](/blog/maintenance-site-web-guide).
+Pour connaître la date d'expiration, ouvrez le détail du certificat dans le navigateur et notez-la dans votre agenda. Un contrat de [maintenance](/services/maintenance) inclut généralement cette surveillance ; voir aussi le [guide de la maintenance d'un site](/blog/maintenance-site-web-guide).
 
 ## Mon certificat est expiré, mon site est bloqué : comment le renouveler ?
 
@@ -91,9 +91,7 @@ Une fois le problème résolu, videz le cache et vérifiez que le site s'affiche
 
 ## Pourquoi un site sans HTTPS fait-il fuir les clients ?
 
-Parce que le navigateur le dit lui-même : « Non sécurisé » s'affiche avant même que la page soit lue. Pour un artisan ou un commerçant, la conséquence est simple : une personne qui hésite entre deux entreprises choisira celle qui n'affiche pas d'alerte. Dès que votre site contient un formulaire (contact, devis, réservation), les données saisies (nom, téléphone, adresse) passent sur le réseau, et le chiffrement protège ces échanges.
-
-Côté référencement, le HTTPS est un signal que Google a mentionné comme léger. Sa vraie valeur est ailleurs : la confiance, et la possibilité d'utiliser les fonctions modernes des navigateurs. Pour un panorama plus large, voir [SSL et HTTPS pour votre site](/blog/ssl-https-site-web).
+Parce que le navigateur le dit lui-même : « Non sécurisé » s'affiche avant même que la page soit lue. Une personne qui hésite entre deux entreprises choisira celle qui n'affiche pas d'alerte. Et dès que votre site contient un formulaire (contact, devis, réservation), le chiffrement protège les données saisies. Côté référencement, le HTTPS est un signal léger ; voir [SSL et HTTPS pour votre site](/blog/ssl-https-site-web).
 
 ## Le certificat SSL est-il obligatoire pour une boutique en ligne ?
 

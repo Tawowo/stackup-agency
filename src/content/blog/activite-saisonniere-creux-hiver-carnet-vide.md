@@ -87,9 +87,7 @@ Si vous avez été déçu par un prestataire, ne concluez pas que tout site est 
 
 ## Acheter ou louer son site internet ?
 
-Louer (abonnement mensuel) étale le coût et inclut souvent l'hébergement et la maintenance, mais vous ne possédez pas toujours le résultat. Acheter demande plus au départ et vous laisse propriétaire, avec une maintenance à prévoir. Pour une activité saisonnière dont la trésorerie est tendue l'hiver, l'abonnement peut lisser les dépenses ; pour un site qui doit durer, la propriété compte. Dans les deux cas, demandez par écrit ce qui vous appartient. Notre article [site internet : abonnement ou achat](/blog/site-internet-abonnement-ou-achat) compare les deux.
-
-Pour estimer un projet, l'[estimateur de tarifs](/tarifs) donne un prix « à partir de » et un délai indicatif ; un [site vitrine](/services/site-vitrine) démarre à partir de {{prix:une-page}} pour une page.
+Louer (abonnement) étale le coût et inclut souvent l'hébergement, mais vous ne possédez pas toujours le résultat. Acheter demande plus au départ et vous laisse propriétaire, avec une maintenance à prévoir. Dans les deux cas, demandez par écrit ce qui vous appartient ; notre article [abonnement ou achat](/blog/site-internet-abonnement-ou-achat) compare les deux. Pour situer un projet, l'[estimateur de tarifs](/tarifs) donne un prix « à partir de » et un délai indicatif ; un [site vitrine](/services/site-vitrine) démarre à partir de {{prix:une-page}} pour une page.
 
 ## Questions fréquentes
 
