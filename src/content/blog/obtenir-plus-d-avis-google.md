@@ -4,7 +4,7 @@ seoTitle: "Obtenir plus d'avis Google : méthode, QR code, SMS"
 excerpt: "Lien d'avis, QR code, SMS après un chantier, message type : la méthode pour obtenir plus d'avis Google sans enfreindre les règles de la plateforme."
 date: "2026-10-29"
 updated: "2026-10-29"
-readTime: 8
+readTime: 9
 tag: "SEO local"
 category: "seo-local"
 type: "question"

@@ -4,7 +4,7 @@ seoTitle: "Nom de domaine : choisir, acheter, renouveler, DNS"
 excerpt: "Choisir et acheter son nom de domaine, le renouveler, le transférer, comprendre le DNS et créer une adresse e-mail pro, sans perdre la main sur le vôtre."
 date: "2026-10-29"
 updated: "2026-10-29"
-readTime: 12
+readTime: 11
 tag: "Technique"
 category: "technique"
 type: "guide"

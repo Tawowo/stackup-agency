@@ -4,7 +4,7 @@ seoTitle: "Obligations légales d'un site pro : liste de contrôle"
 excerpt: "Mentions légales, RGPD, prix affichés, facturation, caisse, avis, jeux concours : la liste de contrôle des obligations d'un artisan ou commerçant en ligne."
 date: "2026-10-29"
 updated: "2026-10-29"
-readTime: 13
+readTime: 12
 tag: "Juridique"
 category: "juridique"
 type: "reglementation"

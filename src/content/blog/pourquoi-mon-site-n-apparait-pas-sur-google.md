@@ -4,7 +4,7 @@ seoTitle: "Pourquoi mon site n'apparaît pas sur Google : 8 causes"
 excerpt: "Site absent de Google ? Vérifiez en cinq minutes s'il est indexé, repérez la cause (noindex, fiche, refonte, délai) et suivez les corrections à faire."
 date: "2026-10-29"
 updated: "2026-10-29"
-readTime: 8
+readTime: 9
 tag: "Référencement"
 category: "seo"
 type: "question"

@@ -4,7 +4,7 @@ seoTitle: "Marketplace ou site propre : Etsy, Vinted, Leboncoin"
 excerpt: "Etsy, Vinted Pro, Leboncoin Pro, Amazon ou votre boutique : avantages, frais, limites et façon de combiner les deux pour vendre sans perdre vos clients."
 date: "2026-10-29"
 updated: "2026-10-29"
-readTime: 11
+readTime: 10
 tag: "E-commerce"
 category: "ecommerce"
 type: "guide"

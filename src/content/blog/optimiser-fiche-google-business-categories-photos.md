@@ -4,7 +4,7 @@ seoTitle: "Optimiser sa fiche Google Business : étape par étape"
 excerpt: "Catégorie principale, description, photos, publications, horaires spéciaux : le détail de chaque réglage de votre fiche Google, et les erreurs à éviter."
 date: "2026-10-29"
 updated: "2026-10-29"
-readTime: 12
+readTime: 10
 tag: "SEO local"
 category: "seo-local"
 type: "guide"

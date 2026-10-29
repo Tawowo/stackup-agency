@@ -4,7 +4,7 @@ seoTitle: "Trop d'administratif : comment gagner du temps (TPE)"
 excerpt: "Soirées perdues en devis et factures, compta en retard, commandes à la main : la méthode pour reprendre la main sur l'administratif de votre TPE."
 date: "2026-10-29"
 updated: "2026-10-29"
-readTime: 8
+readTime: 9
 tag: "Artisans"
 category: "artisans"
 type: "question"

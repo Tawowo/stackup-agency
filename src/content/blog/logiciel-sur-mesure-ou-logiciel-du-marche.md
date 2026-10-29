@@ -4,7 +4,7 @@ seoTitle: "Logiciel sur mesure ou du marché : comment décider"
 excerpt: "Logiciel du marché, Airtable, ChatGPT ou outil sur mesure : les critères pour choisir, les limites de chaque option et le bon moment pour changer."
 date: "2026-10-29"
 updated: "2026-10-29"
-readTime: 11
+readTime: 10
 tag: "Applications métier"
 category: "applications-metier"
 type: "guide"

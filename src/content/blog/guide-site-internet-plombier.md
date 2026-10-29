@@ -18,9 +18,7 @@ sources: ["https://www.service-public.fr", "https://www.impots.gouv.fr", "https:
 
 Oui, mais pas pour les raisons que l'on entend souvent. Le site ne sert pas à « être moderne » ni à épater les confrères. Il sert à rassurer un inconnu qui hésite entre trois numéros, et à convaincre celui qui a reçu votre carte par le bouche-à-oreille de vérifier que vous existez bien.
 
-Le bouche-à-oreille reste la première source de chantiers pour beaucoup d'artisans. Mais la recommandation d'un voisin se termine presque toujours par une recherche : le nom de l'entreprise, la ville, « avis ». Si cette recherche ne montre rien, ou une fiche vide, ou un vieux site illisible sur téléphone, le doute s'installe. À l'inverse, une page claire, un numéro cliquable et quelques avis lisibles transforment la recommandation en appel.
-
-Un site ne remplace pas votre savoir-faire ni votre réactivité au téléphone. Il évite simplement de perdre le client avant même qu'il ait composé le numéro.
+Le bouche-à-oreille reste une source majeure de chantiers, mais la recommandation d'un voisin se termine presque toujours par une recherche : le nom de l'entreprise, la ville, « avis ». Si elle ne montre rien, ou un vieux site illisible sur téléphone, le doute s'installe. Une page claire, un numéro cliquable et quelques avis lisibles transforment la recommandation en appel.
 
 ## Comment les gens trouvent-ils un plombier en urgence ?
 
@@ -30,7 +28,7 @@ Il faut distinguer deux situations, car elles ne demandent pas la même vitrine.
 
 **Le projet.** Remplacer une salle de bains, installer une pompe à chaleur, changer une chaudière. Ici, le client prend son temps : il compare, demande souvent deux ou trois devis, lit les pages de prestations, regarde des photos de chantiers, vérifie vos qualifications. Le site fait alors le travail d'un commercial discret.
 
-Les assistants conversationnels commencent aussi à répondre à des questions du type « qui appeler pour un dégât des eaux près de chez moi ? ». Personne ne peut promettre d'y apparaître. Ce que vous maîtrisez, c'est la cohérence de vos informations : même nom, même adresse, même téléphone, mêmes prestations sur votre site, votre fiche Google et vos annuaires. Plus ces informations concordent, plus il est facile pour un moteur ou un assistant de vous identifier correctement.
+Les assistants conversationnels répondent aussi à des questions du type « qui appeler pour un dégât des eaux près de chez moi ? ». Personne ne peut promettre d'y apparaître. Ce que vous maîtrisez, c'est la cohérence de vos informations : même nom, adresse, téléphone et prestations sur votre site, votre fiche Google et vos annuaires.
 
 ## Que mettre sur le site d'un plombier ?
 
@@ -40,15 +38,15 @@ Les clients ne cherchent pas « intervention sanitaire ». Ils écrivent « fuit
 
 ### Une page par prestation importante
 
-Plutôt qu'une longue liste en une seule page, créez une page par grande famille de travaux : dépannage et recherche de fuite, chauffe-eau, salle de bains, chauffage et chaudière, pompe à chaleur si vous la posez, débouchage. Chaque page explique ce que vous faites, comment se passe l'intervention, ce que le client doit préparer (accès au compteur, vanne d'arrêt), et dans quels cas vous recommandez de changer plutôt que de réparer. Cette honnêteté est une preuve de compétence.
+Créez une page par grande famille de travaux : dépannage et recherche de fuite, chauffe-eau, salle de bains, chauffage et chaudière, débouchage. Chaque page explique comment se passe l'intervention, ce que le client doit préparer (accès à la vanne d'arrêt), et dans quels cas vous recommandez de changer plutôt que de réparer. Cette honnêteté est une preuve de compétence.
 
 ### La zone d'intervention, dite précisément
 
-« Secteur de Tours et alentours » ne dit rien. Citez les communes que vous desservez vraiment, et dites ce que vous faites dans chacune. Pour les secteurs principaux, une page dédiée avec quelques phrases propres au territoire est préférable à une liste de villes collée en bas de page : le moteur y voit du contenu utile, et le visiteur y trouve la confirmation qu'il attend.
+« Secteur de Tours et alentours » ne dit rien. Citez les communes que vous desservez vraiment, et dites ce que vous faites dans chacune. Une page dédiée par secteur principal vaut mieux qu'une liste de villes collée en bas de page.
 
 ### Des preuves, sans chiffres inventés
 
-Vous n'avez pas besoin de statistiques. Des photos de vrais chantiers (avant, pendant, après), un court texte sur ce qui a été fait et pourquoi, vos qualifications et assurances affichées avec leurs intitulés exacts, les avis Google visibles, le nom du dirigeant et son visage : voilà ce qui rassure. Ne mettez jamais un nombre de clients satisfaits que vous ne pouvez pas documenter.
+Vous n'avez pas besoin de statistiques. Des photos de vrais chantiers (avant, pendant, après), un court texte sur ce qui a été fait et pourquoi, vos qualifications et assurances affichées avec leurs intitulés exacts, les avis Google visibles, le nom du dirigeant et son visage : voilà ce qui rassure.
 
 Exemple type : un plombier chauffagiste présente la remise en service d'une chaudière d'un pavillon, avec deux photos et trois phrases sur le diagnostic, la pièce changée et le conseil donné pour l'entretien. Ce paragraphe vaut plus qu'un slogan.
 
@@ -60,27 +58,23 @@ Le téléphone doit être un lien d'appel, visible en haut de chaque page et en 
 
 Un **site vitrine** présente votre activité : accueil, prestations, zone, réalisations, contact. C'est le bon point de départ pour la plupart des artisans seuls ou en petite équipe.
 
-Un **site plus complet** ajoute des fonctions : demande de devis guidée, prise de rendez-vous, espace pour suivre un dossier, outil interne de gestion des interventions. Il se justifie quand ces tâches vous prennent du temps chaque semaine, pas parce qu'il paraît plus sérieux.
-
-Le bon raisonnement : commencez par la vitrine qui répond à l'urgence et au projet, mesurez ce qui vous fait perdre du temps (appels pour des devis simples, rendez-vous mal notés, relances oubliées), puis ajoutez uniquement l'outil qui règle ce point. Une structure bien pensée permet d'ajouter ces briques plus tard sans tout refaire.
+Un **site plus complet** ajoute des fonctions : demande de devis guidée, prise de rendez-vous, outil interne de gestion des interventions. Il se justifie quand ces tâches vous prennent du temps chaque semaine, pas parce qu'il paraît plus sérieux. Commencez par la vitrine, repérez ce qui vous fait perdre du temps, puis ajoutez uniquement l'outil qui règle ce point.
 
 ## Fiche Google plombier : quelle catégorie choisir et comment gérer les avis ?
 
 Pour un plombier, la fiche Google est souvent plus décisive que le site, puisqu'elle apparaît dans la carte avant même les résultats classiques. Quelques règles utiles.
 
-**La catégorie principale.** Choisissez celle qui décrit votre cœur de métier dans la liste proposée par Google (« plombier » en général), puis ajoutez des catégories secondaires fidèles à vos activités réelles : chauffagiste, installateur de chauffe-eau, etc. N'en ajoutez pas qui ne correspondent pas à ce que vous faites, la fiche pourrait ne plus refléter la réalité. La liste officielle évolue, consultez l'aide Google Business Profile.
+**La catégorie principale.** Choisissez celle qui décrit votre cœur de métier dans la liste proposée par Google (« plombier » en général), puis ajoutez des catégories secondaires fidèles à vos activités réelles : chauffagiste, installateur de chauffe-eau, etc. N'en ajoutez pas qui ne correspondent pas à ce que vous faites. La liste évolue, consultez l'aide Google Business Profile.
 
 **Les informations.** Nom exact de l'entreprise sans mots-clés ajoutés, adresse ou zone de service, horaires, téléphone, lien vers votre site, liste de services avec descriptions courtes, photos de chantiers et de véhicule. Si vous travaillez à domicile sans accueillir de public, indiquez une zone de service plutôt que de laisser une adresse affichée.
 
-**Les avis.** Demandez-les systématiquement, juste après une intervention réussie, quand le client est satisfait : un lien direct ou un QR code sur la facture suffit. Répondez à chaque avis, positif ou négatif, calmement, sans vous justifier à outrance. Face à un avis injuste, une réponse factuelle et polie rassure davantage les lecteurs que l'avis lui-même ne les inquiète. Ne rémunérez jamais des avis et n'en faites pas écrire à votre place : c'est contraire aux règles de Google et à la loi sur les pratiques commerciales trompeuses.
+**Les avis.** Demandez-les systématiquement, juste après une intervention réussie, quand le client est satisfait : un lien direct ou un QR code sur la facture suffit. Répondez à chaque avis, positif ou négatif, calmement, sans vous justifier à outrance. Ne rémunérez jamais des avis et n'en faites pas écrire à votre place : c'est contraire aux règles de Google et à la loi sur les pratiques commerciales trompeuses.
 
 Pour aller plus loin sur la visibilité locale, la page [référencement local](/services/referencement-local) détaille ce qui se travaille sur la fiche et sur le site.
 
 ## Plombier : devis en ligne et prise de rendez-vous en ligne
 
 Un devis en ligne ne signifie pas que le prix tombe tout seul. Pour un plombier, il s'agit plutôt d'un **formulaire de demande bien conçu** : type de problème, logement (maison, appartement, étage), photos, disponibilité du client, numéro pour le rappeler. Vous gagnez du temps parce que vous arrivez au premier appel avec les informations utiles, et le client se sent pris au sérieux.
-
-Pour les travaux simples et répétitifs (remplacement d'un robinet, d'un chauffe-eau standard), vous pouvez proposer une estimation indicative en précisant ce qui peut la faire varier : accès, état des arrivées, évacuation, mise aux normes. Dites toujours que l'estimation est indicative et que le devis ferme suit la visite.
 
 La **prise de rendez-vous en ligne** convient bien aux visites de devis, aux entretiens de chaudière ou aux poses planifiées. Elle convient mal aux urgences : pour une fuite, un client veut parler à quelqu'un. Proposez donc deux chemins distincts sur le site : « J'ai une urgence » (appel direct) et « Je prépare un projet » (formulaire ou créneau).
 
@@ -94,7 +88,6 @@ Avant de chercher la cause dans le prix, vérifiez les points suivants.
 - **Le contenu du devis.** Un devis d'une ligne « remplacement salle de bains » inquiète. Détaillez les postes, les fournitures, ce qui est inclus et exclu.
 - **Les options.** Proposer une version de base et une version améliorée évite le « oui ou non » et laisse le client choisir.
 - **L'absence de relance.** Beaucoup de devis ne sont pas refusés, ils sont oubliés. Un message poli quelques jours après, sans pression, en rouvre beaucoup.
-- **Le manque de preuves.** Si le client ne retrouve ni avis ni réalisations quand il vous cherche, il hésite.
 
 Un outil qui garde la liste des devis envoyés, leur statut et la date de relance suffit à régler la plupart de ces points.
 
@@ -104,9 +97,9 @@ Une fois le client acquis, l'organisation fait la différence. Trois besoins rev
 
 **Planifier.** Quand les interventions arrivent par téléphone, SMS et formulaire, l'agenda se disperse. Un planning unique, accessible depuis le téléphone, avec l'adresse, la nature du problème et les notes d'accès, évite les doubles réservations et les trajets inutiles.
 
-**Suivre ce qui a été posé.** Modèle du chauffe-eau, référence de la pièce, date de pose : retrouver ces informations des mois plus tard, quand le client rappelle, vous épargne un déplacement de diagnostic. Une fiche par client et par installation, avec photos, suffit.
+**Suivre ce qui a été posé.** Modèle du chauffe-eau, référence de la pièce, date de pose : retrouver ces informations des mois plus tard, quand le client rappelle, vous épargne un déplacement de diagnostic.
 
-**Rappeler l'entretien.** L'entretien annuel de certaines chaudières est une obligation réglementaire pour l'occupant, à vérifier sur service-public.fr selon le type d'appareil. Un rappel automatique envoyé au client à l'approche de l'échéance est utile pour lui, et c'est du travail récurrent pour vous. Le rappel se programme à partir des fiches : date de dernier entretien, type d'appareil, coordonnées. Prévenez toujours vos clients que vous conservez ces données dans ce but, et laissez-leur le moyen de s'y opposer.
+**Rappeler l'entretien.** L'entretien annuel de certaines chaudières est une obligation réglementaire pour l'occupant, à vérifier sur service-public.fr selon le type d'appareil. Un rappel automatique envoyé au client à l'approche de l'échéance est utile pour lui, et c'est du travail récurrent pour vous. Le rappel se programme à partir des fiches : date de dernier entretien, type d'appareil, coordonnées. Informez vos clients que vous conservez ces données dans ce but.
 
 C'est le genre de besoin où un petit [logiciel de gestion sur mesure](/services/logiciel-de-gestion) peut avoir du sens, à condition d'être limité à ces trois fonctions.
 
@@ -122,7 +115,7 @@ La réforme de la facturation électronique est en cours de déploiement, avec u
 
 ### Quel logiciel de devis et de facturation choisir ?
 
-Posez-vous quatre questions : fait-il devis et factures sur téléphone ? se connecte-t-il à une plateforme agréée si vous en avez besoin ? gère-t-il les acomptes et les situations de travaux ? peut-on exporter ses données pour changer d'outil ? Les solutions du marché répondent bien à ces besoins pour la majorité des artisans. Un outil sur mesure ne se justifie que si votre façon de travailler est très spécifique, avec l'inconvénient d'un coût de départ et d'une dépendance à votre prestataire.
+Quatre questions : fait-il devis et factures sur téléphone ? se connecte-t-il à une plateforme agréée si besoin ? gère-t-il acomptes et situations de travaux ? peut-on exporter ses données ? Les solutions du marché répondent à ces besoins pour la majorité des artisans. Un outil sur mesure ne se justifie que si votre façon de travailler est très spécifique, avec l'inconvénient d'un coût de départ et d'une dépendance à votre prestataire.
 
 ### Client qui ne paie pas : que faire ?
 
@@ -163,7 +156,7 @@ Pour vous situer, la page dédiée [création de site internet pour plombier](/c
 
 ## L'IA va-t-elle remplacer les plombiers ?
 
-Non : un tuyau ne se remplace pas par une conversation. L'IA peut en revanche alléger votre administratif : rédiger un brouillon de réponse à un avis, reformuler une description de prestation, classer des demandes, préparer le texte d'un devis que vous relisez. Utilisez-la comme un assistant de rédaction, jamais comme source de règles techniques ou juridiques, et relisez tout ce qui part sous votre nom. Évitez de saisir des données personnelles de clients dans un outil dont vous ne connaissez pas la politique de confidentialité.
+Non : un tuyau ne se remplace pas par une conversation. L'IA peut en revanche alléger votre administratif : rédiger un brouillon de réponse à un avis, reformuler une description de prestation, classer des demandes, préparer le texte d'un devis que vous relisez. Utilisez-la comme assistant de rédaction, jamais comme source de règles techniques ou juridiques, et relisez tout ce qui part sous votre nom.
 
 ## Questions fréquentes
 

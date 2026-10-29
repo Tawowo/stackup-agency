@@ -4,7 +4,7 @@ seoTitle: "Mentions obligatoires sur une facture : liste complète"
 excerpt: "Facture, devis, TVA non applicable, pénalités de retard : la liste des mentions à ne pas oublier, métier par métier, et que faire en cas d'oubli."
 date: "2026-10-29"
 updated: "2026-10-29"
-readTime: 10
+readTime: 12
 tag: "Juridique"
 category: "juridique"
 type: "reglementation"

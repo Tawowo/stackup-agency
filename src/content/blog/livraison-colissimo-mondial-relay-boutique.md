@@ -24,16 +24,6 @@ Les deux services répondent à des besoins qui se recoupent mais ne se confonde
 
 **Mondial Relay** est un réseau de points relais (commerces de proximité, consignes). Le colis y est déposé et le destinataire vient le chercher avec une pièce d'identité ou un code. Sa force : un coût généralement attractif pour les colis légers et courants, et une grande souplesse d'horaires pour le client. Sa limite : le client doit se déplacer, certains colis volumineux ou lourds ne sont pas acceptés, et la qualité de l'expérience dépend beaucoup du point relais choisi.
 
-Un tableau de comparaison honnête :
-
-| Question | Colissimo | Mondial Relay |
-|---|---|---|
-| Mode principal | Domicile ou point de retrait | Point relais |
-| Colis volumineux ou lourds | Plus de formules | Limites de taille et de poids plus strictes |
-| Envois hors de France | Oui, avec des formules dédiées | Selon les pays desservis |
-| Tarif | Dépend de la formule, du poids et de votre contrat | Dépend du poids et du pays ; souvent moins cher sur les petits colis |
-| Pour le client | Livraison chez soi | Retrait à son rythme, près de chez soi |
-
 Ces éléments évoluent : vérifiez les conditions actuelles sur les sites des transporteurs avant de décider.
 
 ## Colissimo ou Mondial Relay : lequel est le moins cher ?
@@ -62,18 +52,9 @@ Pour démarrer, une configuration simple et robuste : **un mode à domicile, un 
 
 ### Le multi-transporteur, pour qui ?
 
-Un outil multi-transporteur permet de proposer plusieurs services depuis un même tableau de bord : comparer les tarifs, éditer les étiquettes, suivre les colis. Il se justifie si vous expédiez régulièrement et si vous voulez choisir le moins cher ou le plus adapté colis par colis. Pour quelques colis par semaine, un seul compte professionnel est plus simple.
+Un outil multi-transporteur compare les tarifs, édite les étiquettes et suit les colis depuis un seul tableau de bord. Il se justifie si vous expédiez régulièrement ; pour quelques colis par semaine, un seul compte professionnel est plus simple.
 
-## Quels services offrent les options de livraison les plus flexibles ?
-
-La flexibilité, pour l'acheteur, c'est de pouvoir **choisir** : à domicile ou en point relais, avec ou sans signature, créneau, report, changement de point de retrait après l'expédition. Ces options existent chez plusieurs transporteurs, avec des conditions différentes. Plutôt que de chercher « le plus flexible », regardez ce qui compte pour vos clients :
-
-- le choix du **point de retrait** lors de la commande ;
-- le **suivi** par SMS ou e-mail avec un lien clair ;
-- la possibilité de **redéfinir** la livraison (autre jour, autre adresse, autre point) ;
-- la **fenêtre de retrait** en point relais, suffisamment longue.
-
-### Livraison le jour même ou le lendemain : en a-t-on besoin ?
+## Livraison le jour même ou le lendemain : en a-t-on besoin ?
 
 Des services express existent pour le jour même et le lendemain, mais ils sont généralement plus chers et ne concernent pas tous les secteurs. Pour un petit commerce, c'est rarement un critère : vos clients attendent la cohérence avec ce que vous annoncez (par exemple, préparation sous votre propre rythme) plus qu'une vitesse extrême. En revanche, un commerce de bouche, un fleuriste ou une pharmacie peut avoir intérêt à proposer une **livraison locale**, avec ses propres tournées ou un coursier, sur un périmètre limité. Cela se met en place dans la boutique avec une zone et des créneaux. Pour organiser ses propres tournées, voir [l'application de livraison interne](/blog/application-livraison-interne).
 
@@ -81,31 +62,17 @@ Annoncez toujours le calendrier d'expédition que vous pouvez réellement tenir,
 
 ## Colissimo : comment ouvrir un compte professionnel et l'intégrer à sa boutique ?
 
-La démarche, en général :
-
-1. **Ouvrir un compte entreprise** auprès de La Poste (espace dédié aux professionnels), avec votre numéro d'entreprise et vos coordonnées.
-2. **Choisir les formules** dont vous avez besoin (domicile, retrait, international) et accepter les conditions.
-3. **Récupérer vos identifiants** techniques pour relier la boutique, si elle est reliée automatiquement.
-4. **Configurer** les produits : poids, dimensions, valeur déclarée.
-5. **Tester** une commande de bout en bout avec un colis réel.
+La démarche : ouvrir un compte entreprise auprès de La Poste avec votre numéro d'entreprise, choisir les formules utiles (domicile, retrait, international), récupérer vos identifiants techniques si la boutique doit se relier automatiquement, configurer le poids et les dimensions des produits, puis tester une commande réelle de bout en bout.
 
 L'intégration à la boutique existe à trois niveaux :
 
-- **Manuel** : vous éditez l'étiquette sur le site du transporteur, vous copiez l'adresse. Possible pour quelques colis.
-- **Module ou extension** : les plateformes courantes (WooCommerce, PrestaShop, Shopify et d'autres) proposent des modules d'expédition. Comparez leurs conditions, ils sont parfois payants ou limités.
-- **Liaison directe** : sur une boutique fabriquée sur mesure, la boutique dialogue avec le service du transporteur pour récupérer les tarifs, générer l'étiquette et suivre le colis. C'est la solution qui évite de ressaisir l'adresse. Voir [le service de site e-commerce](/services/site-ecommerce), et pour comparer avec une plateforme clé en main, [Shopify ou boutique sur mesure](/comparatif/shopify-ou-boutique-sur-mesure).
+- **Manuel** : vous éditez l'étiquette sur le site du transporteur et recopiez l'adresse. Possible pour quelques colis.
+- **Module ou extension** : les plateformes courantes proposent des modules d'expédition, parfois payants ou limités.
+- **Liaison directe** : sur une boutique sur mesure, la boutique dialogue avec le service du transporteur pour récupérer les tarifs, générer l'étiquette et suivre le colis, sans ressaisie. Voir [le service de site e-commerce](/services/site-ecommerce), et pour comparer avec une plateforme clé en main, [Shopify ou boutique sur mesure](/comparatif/shopify-ou-boutique-sur-mesure).
 
 ## Comment imprimer ses étiquettes Colissimo depuis son site ?
 
-Le principe est le même quel que soit le transporteur : la commande validée contient l'adresse du client, le poids, le service choisi. La boutique (ou le module) envoie ces informations au transporteur, qui renvoie une **étiquette** à imprimer, avec son numéro de suivi. Concrètement :
-
-1. Vous ouvrez la commande dans votre tableau de bord.
-2. Vous vérifiez poids et dimensions réels (le poids saisi dans la fiche produit ne tient pas compte de l'emballage).
-3. Vous cliquez sur « créer l'étiquette ».
-4. Vous imprimez, collez sur le colis, déposez ou attendez l'enlèvement.
-5. Le numéro de suivi est enregistré sur la commande et envoyé au client.
-
-Une imprimante classique peut suffire, avec une étiquette collée ou glissée dans une pochette transparente. Les étiquettes thermiques sont plus confortables si vous expédiez tous les jours.
+La commande validée contient l'adresse, le poids et le service choisi ; la boutique (ou le module) les envoie au transporteur, qui renvoie une **étiquette** avec son numéro de suivi. Vérifiez le poids réel du colis fermé (la fiche produit ne tient pas compte de l'emballage), créez l'étiquette depuis la commande, imprimez-la, collez-la, puis déposez ou attendez l'enlèvement. Le numéro de suivi s'enregistre sur la commande et part chez le client. Une imprimante classique suffit pour démarrer ; une imprimante d'étiquettes est plus confortable si vous expédiez chaque jour.
 
 ## Comment proposer Mondial Relay (ou un point relais) sur sa boutique ?
 
@@ -159,10 +126,6 @@ Le client doit recevoir, **automatiquement**, un message au moment où le colis 
 
 Un deuxième message (ou celui du transporteur) l'informe de l'arrivée en point de retrait ou du passage du livreur. Ces e-mails sont des e-mails de service : faites-les envoyer par un expéditeur de votre domaine pour qu'ils n'atterrissent pas en indésirables (voir [la protection des formulaires et l'envoi des e-mails](/blog/formulaire-contact-spam-captcha-protection)).
 
-### Comment suivre l'expédition de ses commandes ?
-
-Idéalement, le statut du colis remonte dans votre tableau de bord de la boutique : préparé, expédié, en livraison, livré, incident. Sinon, conservez un tableau avec le numéro de suivi par commande et consultez-le quotidiennement. Les colis sans mouvement depuis plusieurs jours sont ceux à surveiller en premier.
-
 ## Un client dit ne pas avoir reçu son colis : que faire ?
 
 Face à une réclamation, appliquez une procédure :
@@ -194,11 +157,7 @@ Fixez un **horaire quotidien de préparation** pour regrouper les expéditions e
 
 ## Colis de produits locaux : pour un client ou pour une entreprise
 
-Un panier de produits du terroir, un coffret gourmand ou un cadeau d'entreprise soulèvent des besoins particuliers.
-
-- **Pour un client particulier**, le message clé est la mise en valeur : emballage soigné, carte, présentation du producteur. La livraison peut être à une adresse différente de celle du payeur : prévoyez un champ « adresse de livraison » et un champ message.
-- **Pour une entreprise** (cadeaux de fin d'année, achats groupés), proposez un **devis** : quantités, personnalisation, livraison à plusieurs adresses, facturation. Une boutique ne remplace pas ce dialogue, mais elle peut recueillir la demande par un formulaire. Votre catalogue de produits locaux se met en valeur avec [une boutique de produits locaux et de terroir](/blog/e-commerce-produits-locaux-terroir) ou [une boutique d'artisanat](/blog/ecommerce-artisanat-guide).
-- **Personnalisation et service sur mesure** : mot manuscrit, papier cadeau, boîte à votre marque. Ces options se prévoient dans la fiche produit, avec un temps de préparation annoncé.
+Pour un **particulier**, soignez la présentation (emballage, carte, mot du producteur) et prévoyez une adresse de livraison distincte de celle du payeur, avec un champ message. Pour une **entreprise** (cadeaux de fin d'année, achats groupés), proposez un devis : quantités, personnalisation, plusieurs adresses, facturation. Votre catalogue se met en valeur avec [une boutique de produits locaux et de terroir](/blog/e-commerce-produits-locaux-terroir) ou [une boutique d'artisanat](/blog/ecommerce-artisanat-guide). Les options de personnalisation (papier cadeau, boîte à votre marque) se prévoient dans la fiche produit, avec le temps de préparation annoncé.
 
 ## Hygiène et emballage pour expédier des produits alimentaires
 
@@ -215,26 +174,20 @@ En pratique :
 
 ### Boutique en ligne éco-responsable : comment s'y prendre ?
 
-Sans promettre ce que vous ne pouvez pas tenir, quelques gestes réalistes : emballages recyclables ou réemployés, cartons à la bonne taille, calages en papier, étiquette unique, regroupement des expéditions, retrait local encouragé. Dites ce que vous faites précisément plutôt qu'avec des formules vagues : les allégations environnementales trop générales sont encadrées par la réglementation sur les pratiques commerciales.
+Restez précis et réaliste : emballages recyclables ou réemployés, cartons à la bonne taille, calages en papier, regroupement des expéditions, retrait local encouragé. Les allégations environnementales trop générales sont encadrées par la réglementation sur les pratiques commerciales : dites ce que vous faites, sans formule vague.
 
 ## Livraisons récurrentes : abonnement et paniers réguliers
 
-Un panier hebdomadaire de légumes, un abonnement à des cafés, un réassort mensuel pour un restaurateur : la récurrence demande trois choses.
-
-- **Un paiement récurrent** consenti par le client, avec facilité pour suspendre, modifier ou résilier.
-- **Un calendrier de préparation** et d'expédition précis, visible du client.
-- **Une gestion des exceptions** : vacances, produit indisponible, changement d'adresse.
-
-Ce mécanisme est plus simple à intégrer dans une boutique fabriquée sur mesure que dans une plateforme généraliste, mais il suppose un suivi sérieux des paiements.
+Un panier hebdomadaire ou un réassort mensuel demandent un paiement récurrent consenti par le client (avec possibilité de suspendre ou résilier), un calendrier de préparation visible, et une gestion des exceptions (vacances, produit indisponible, changement d'adresse). Ce mécanisme s'intègre plus facilement dans une boutique sur mesure que dans une plateforme généraliste, à condition de suivre sérieusement les paiements.
 
 ## Et si je vends sur une marketplace ?
 
-Sur une place de marché, le transporteur et les délais sont souvent imposés ou encadrés par la plateforme. Vous avez moins de latitude, mais aussi moins de choix à gérer. Pour reprendre la main sur vos conditions de livraison et sur vos marges, voir [vendre en ligne sans Amazon](/blog/amazon-marketplace-vs-site-propre). Pour construire votre propre boutique, notre offre démarre à partir de {{prix:boutique}} € ; l'[estimateur de tarifs](/tarifs) précise le périmètre.
+Le transporteur et les délais y sont souvent encadrés par la plateforme : moins de latitude, moins de choix à gérer. Pour reprendre la main, voir [vendre en ligne sans Amazon](/blog/amazon-marketplace-vs-site-propre). Pour construire votre propre boutique, notre offre démarre à partir de {{prix:boutique}} € ; l'[estimateur de tarifs](/tarifs) précise le périmètre.
 
 ## Questions fréquentes
 
 **Doit-on proposer le retrait en boutique ?**
-Ce n'est pas obligatoire, mais c'est un bon complément pour un commerce avec local : il est gratuit, simplifie la préparation et amène du passage en magasin. Précisez les horaires de retrait et prévenez le client quand la commande est prête.
+Ce n'est pas obligatoire, mais c'est un bon complément pour un commerce avec local : gratuit, simple à préparer, il amène du passage en magasin. Précisez les horaires et prévenez le client quand la commande est prête.
 
 **Qui paie les frais de retour d'un produit ?**
 En principe, pour un achat à distance par un consommateur, les frais de renvoi sont à la charge du client, sauf si vous avez accepté de les prendre en charge ou si vous ne l'aviez pas informé. Précisez-le dans vos conditions de vente et vérifiez sur economie.gouv.fr.
@@ -242,8 +195,5 @@ En principe, pour un achat à distance par un consommateur, les frais de renvoi 
 **Peut-on expédier sans compte professionnel chez le transporteur ?**
 On peut déposer des colis en tant que particulier, mais cela devient vite coûteux et peu pratique. Dès que vous vendez régulièrement, un compte professionnel donne accès aux étiquettes en ligne, aux tarifs négociés et au suivi.
 
-**Que mettre dans les conditions de vente sur la livraison ?**
-Les modes de livraison proposés, les tarifs, le calendrier d'expédition que vous pouvez tenir, la procédure en cas de colis endommagé ou non reçu, et les conditions de retour. Faites-les relire si vos produits sont réglementés.
-
 **Comment limiter la casse pendant le transport ?**
-Un carton adapté, un calage ajusté, une mention « fragile » (qui ne suffit pas à elle seule) et un test d'emballage avec un colis sacrifié avant le lancement. Photographiez les colis avant la fermeture pour documenter une éventuelle réclamation.
+Un carton adapté, un calage ajusté et un test d'emballage avant le lancement. Photographiez les colis avant fermeture pour documenter une éventuelle réclamation.
