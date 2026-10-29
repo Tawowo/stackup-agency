@@ -9,7 +9,7 @@
 import { writeFileSync } from 'node:fs'
 import { lireSitemapXml } from '../lib-sitemap.mjs'
 
-const BASE = process.argv.find((a) => a.startsWith('http')) ?? 'http://localhost:3000'
+const BASE = process.argv.find((a) => a.startsWith('http')) ?? 'http://localhost:3100'
 const ORIGINE = 'https://stackup-agency.fr'
 const xml = await lireSitemapXml(BASE)
 const pages = [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1].replace(ORIGINE, '') || '/')

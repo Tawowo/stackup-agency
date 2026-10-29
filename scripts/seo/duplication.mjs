@@ -6,7 +6,7 @@
 import { writeFileSync } from 'node:fs'
 import { lireSitemapXml } from '../lib-sitemap.mjs'
 
-const BASE = process.argv.find((a) => a.startsWith('http')) ?? 'http://localhost:3000'
+const BASE = process.argv.find((a) => a.startsWith('http')) ?? 'http://localhost:3100'
 const SEUIL = 0.15
 const N = 6
 const xml = await lireSitemapXml(BASE)
