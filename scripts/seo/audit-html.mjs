@@ -24,7 +24,7 @@ for (let i = 0; i < urls.length; i += 10)
     urls.slice(i, i + 10).map(async (u) => {
       const h = await (await fetch(BASE + u)).text()
       if (h.length > poidsMax.n) poidsMax = { u, n: h.length }
-      if (!/<html[^>]*\slang="fr"/.test(h)) note(u, 'lang : absent ou ≠ fr')
+      if (!/<html[^>]*\slang="fr(-FR)?"/.test(h)) note(u, 'lang : absent ou ≠ fr')
       const niveaux = [...h.matchAll(/<h([1-6])[\s>]/g)].map((m) => Number(m[1]))
       for (let k = 1; k < niveaux.length; k++) if (niveaux[k] > niveaux[k - 1] + 1) { note(u, `saut de titre : h${niveaux[k - 1]} → h${niveaux[k]}`); break }
       for (const m of h.matchAll(/<img\b([^>]*)>/g)) if (!/\salt=/.test(m[1])) { note(u, 'image sans alt : ' + (m[1].match(/src="([^"]+)"/)?.[1] ?? '?').slice(0, 60)); break }

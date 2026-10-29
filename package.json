@@ -32,7 +32,11 @@
     "seo:check": "node scripts/seo/verifier-site.mjs",
     "seo:report": "node scripts/seo/inventaire.mjs",
     "seo:links": "node scripts/seo/maillage.mjs",
-    "seo:meta": "node scripts/seo/verifier-meta.mjs --tous"
+    "seo:meta": "node scripts/seo/verifier-meta.mjs --tous",
+    "seo:conversions": "node scripts/seo/conversions.mjs",
+    "seo:triage": "node scripts/seo/blog-triage.mjs",
+    "seo:briefs": "node scripts/seo/content-briefs.mjs",
+    "seo:nap": "node scripts/seo/nap.mjs"
   },
   "dependencies": {
     "@gsap/react": "^2.1.2",

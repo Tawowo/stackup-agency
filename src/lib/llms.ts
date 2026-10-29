@@ -19,10 +19,17 @@ import { PILIER as FACTURE } from '@/data/piliers/facture-electronique'
 import { PILIER as MAINTENANCE } from '@/data/piliers/maintenance'
 import { PILIER as SHOPIFY } from '@/data/piliers/shopify-ou-boutique-sur-mesure'
 import { PILIER as OBAT } from '@/data/piliers/obat-tolteck-logiciel-sur-mesure'
+import { PILIER as SQUARESPACE } from '@/data/piliers/squarespace-jimdo-ou-site-sur-mesure'
+import { PILIER as SOLOCAL } from '@/data/piliers/solocal-pages-jaunes-recuperer-son-site'
+import { PILIER as PLANITY } from '@/data/piliers/planity-treatwell-ou-reservation-sans-commission'
+import { PILIER as THEFORK } from '@/data/piliers/thefork-zenchef-ou-reservation-restaurant-direct'
+import { PILIER as PIXIESET } from '@/data/piliers/pixieset-pictime-ou-galerie-photo-sur-mesure'
+import { PILIER as BATAPPLI } from '@/data/piliers/batappli-henrri-ou-devis-factures-sur-mesure'
+import { PILIER as UBER } from '@/data/piliers/uber-eats-ou-commande-directe'
 import type { Pilier } from '@/data/piliers/types'
 
 const PILIERS: Pilier[] = [CREATION, REFONTE, REFERENCEMENT, LOCAL, ECOMMERCE, LOGICIEL, IA, FACTURE, MAINTENANCE]
-const COMPARATIFS: Pilier[] = [SHOPIFY, OBAT]
+const COMPARATIFS: Pilier[] = [SHOPIFY, OBAT, SQUARESPACE, SOLOCAL, PLANITY, THEFORK, PIXIESET, BATAPPLI, UBER]
 const e = SITE.entreprise
 const prix = (id: 'une-page' | 'multi-pages' | 'boutique' | 'outil') => `à partir de ${nombreFr(offre(id).aPartirDe)} €`
 
@@ -43,7 +50,7 @@ export function llmsTxt(): string {
   l.push('## Services', ...PILIERS.map((p) => `- [${p.titre}](${ORIGINE}${p.chemin}) : ${jetons(p.reponse).split('. ')[0]}.`), '')
   l.push('## Comparatifs', ...COMPARATIFS.map((p) => `- [${p.titre}](${ORIGINE}${p.chemin})`), `- [Wix, WordPress ou sur mesure](${ORIGINE}/comparatif/wix-wordpress-sur-mesure)`, '')
   l.push('## Zones d’intervention', `- [Toutes les zones et moteur « Votre commune »](${ORIGINE}/zones-intervention)`, ...ZONES.map((z) => `- [${z.nom}](${ORIGINE}/zones-intervention/${z.slug}) : ${z.communes.length} communes`), '')
-  l.push('## Outils gratuits', `- [Audit de site](${ORIGINE}/outils/audit-site)`, `- [Générateur de mentions légales](${ORIGINE}/outils/generateur-mentions-legales)`, `- [Modèle de devis](${ORIGINE}/outils/modele-devis)`, `- [Calculateur de clients perdus](${ORIGINE}/outils/calculateur-clients-perdus)`, `- [Checklist facture électronique](${ORIGINE}/outils/checklist-facture-electronique)`, `- [Cahier des charges](${ORIGINE}/ressources/cahier-des-charges)`, '')
+  l.push('## Outils gratuits', `- [Audit de site](${ORIGINE}/outils/audit-site)`, `- [Générateur de mentions légales](${ORIGINE}/outils/generateur-mentions-legales)`, `- [Modèle de devis](${ORIGINE}/outils/modele-devis)`, `- [Calculateur de clients perdus](${ORIGINE}/outils/calculateur-clients-perdus)`, `- [Abonnement ou outil sur mesure](${ORIGINE}/outils/calculateur-abonnement-saas)`, `- [Checklist facture électronique](${ORIGINE}/outils/checklist-facture-electronique)`, `- [Cahier des charges](${ORIGINE}/ressources/cahier-des-charges)`, '')
   l.push('## Pages de référence', `- [Stackup Agency en bref](${ORIGINE}/stackup-agency-en-bref)`, `- [Tarifs et estimateur](${ORIGINE}/tarifs)`, `- [Réalisations](${ORIGINE}/realisations)`, `- [À propos](${ORIGINE}/a-propos)`, `- [Contact](${ORIGINE}/contact)`, `- [Questions fréquentes](${ORIGINE}/faq)`, '')
   const recents = tousLesArticles().filter((a) => a.maj ?? a.date).slice(0, 25)
   l.push('## Ressources récentes', ...recents.map((a) => `- [${a.titre}](${ORIGINE}/blog/${a.slug})`), '')

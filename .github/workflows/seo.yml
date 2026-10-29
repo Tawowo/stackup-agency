@@ -21,6 +21,8 @@ jobs:
           for i in $(seq 1 30); do curl -sf http://localhost:3100/ > /dev/null && break; sleep 2; done
       - name: Garde-fous SEO (title, meta, h1, canonical, JSON-LD, placeholders, dates, liens)
         run: npm run seo:check
+      - name: Cohérence NAP (téléphone, e-mail, adresse)
+        run: npm run seo:nap
       - name: Metas des articles
         run: npm run seo:meta
       - name: Maillage (orphelines, profondeur)

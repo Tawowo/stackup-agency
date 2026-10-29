@@ -1,5 +1,15 @@
 # Journal du chantier — Stackup Agency V5
 
+## RAPPORT — mission 7 « SEO complet, phases 0 à 8 » (2026-10-29) — à lire en premier
+
+1. **Audit** (Phase 0) : `seo/SEO-AUDIT.md`, `inventory.csv` ; correctifs techniques (Phase 1) et JSON-LD centralisé `src/lib/schema.ts` (Phase 2) livrés plus tôt (commits c6d3665, c3073f0, f5496d7).
+2. **Contenus (Phase 3)** : 20 métiers prioritaires (5 sections ≈ 1 100 mots chacun, `metiers-prio-1..4.ts`), 15 solutions (6 sections + 3 Q/R, `solutions-contenu-1..3.ts`), 537 Q/R métiers, 7 nouveaux comparatifs + hub `/comparatif` (aucun prix de tiers), études de cas Tennis Club et Artibox, calculateur « abonnement ou sur mesure ».
+3. **Blog** : 20 articles fusionnés/renommés (301, 191 redirections, 0 chaîne), 66 articles débarrassés des statistiques et prix de tiers non sourcés, `seo/blog-triage.csv` (`npm run seo:triage`) ; liens vers articles programmés neutralisés (`src/lib/liens-publies.ts`).
+4. **Conversion (Phase 5)** : barre d'appel mobile, CTA par catégorie d'article, appel gratuit `/contact?a=appel`, événements `clic_email`, `clic_appel`, `telechargement` + page d'entrée de session ; `npm run seo:conversions journal.log`.
+5. **Hors site (Phase 7)** : `seo/OFFSITE-ACTIONS.md`, `seo/offsite/` (textes à copier, 12 publications Google Business). **Phase 8** : `seo/KPIS.md`, `seo/README.md` (politique robots IA), `seo/content-briefs/` (96 briefs, `npm run seo:briefs`), CI : NAP, Lighthouse budgets.
+6. **Contrôles (build de production)** : `seo:check` 0 manquement ; maillage 0 orpheline, ≤ 3 clics ; similarité max 13,6 % ; audit HTML 0 remarque ; 191 redirections sans problème ; tests unitaires 29/29.
+7. **Reste à votre charge** : `seo/TODO-HUMAIN.md` (SIREN, horaires, fiche Google, avis, relecture des faits juridiques et du calendrier facture électronique, accord du club). Budget JS 150 ko non atteint (245-320 ko). **Fusion dans `main`** : la maintenance (503) de `main` disparaît ; IndexNow seulement après votre accord.
+
 ## RAPPORT — mission 6 « renforcer tout le SEO » (2026-10-29) — à lire en premier
 
 1. **Univers** : 65 471 formulations (21 424 avant), 13 128 formulations-types distinctes (hors métier et lieu), 5 575 grappes, 380 pages cibles ; mots courts (têtes de 1 à 3 mots), lexique (24 tournures par terme), 150 métiers × 50 besoins, 272 communes × 12 services, 20 métiers ruraux × 272 communes, outils et comparatifs. Ce sont des formulations PLAUSIBLES (aucun volume mesuré), une carte de couverture : jamais une page par combinaison (`scripts/seo/extensions.mjs`).
@@ -95,29 +105,6 @@
   injoignable d'ici, état lu par l'API GitHub.
 - **Ouverts hérités.** Envoi Resend réel non testé (clé à poser sur Vercel) ; bandeau de 07 derrière les étapes
   sur mobile ; cadence réelle à mesurer sur GPU (SwiftShader plafonne à 16 i/s).
-
-## Historique condensé (2026-10-13)
-
-- **Logo officiel + hero « impression »** : navy + ambre partout, liseré ivoire des arêtes, halo ambre ; couches de trois plaques posées une à une (`empile`).
-- **Pages-mondes** : /tarifs (chaîne d'assemblage), /realisations (galerie), /services (compilation), /solutions (tableau de bord), /a-propos (atelier de nuit), /contact (enveloppe).
-- **Gabarits** : `src/gabarits/locale/` (villes, départements, métiers, services locaux), `src/gabarits/document/` (légal, FAQ, outils).
-- **Blog** 300 articles (67 programmés, ISR 12 h) ; SEO : `src/config/routes.ts`, sitemap, robots, 80 redirections (`scripts/redirections.mjs`).
-- **QA** : `scripts/tour.mjs` (toutes les routes), `axe.mjs`, `sans-js.mjs`, `poids.mjs`, `logo-zoom.mjs`, `shots.mjs` ; rapport `docs/qa/rapport.json`.
-- **Décisions** : prix toujours « à partir de » ; aucune durée affichée (`conforme()`) ; PDF retirés (identité légale erronée) ; pages légales « [à compléter] » ;
-  PageSpeed (gratuit) pour l'audit ; cadran d'une traite ; nav en voile ; Lumière complète même en fin de page.
-
-## 2026-10-14 — Règle prioritaire : montrer la vraie chose (mission 2)
-
-- Décision : le S est un objet rigide (plus de respiration, de dérive par plaque, de lentille qui soulève) ; seules
-  la lumière et la caméra vivent (la dérive de caméra s'éteint en projection orthographique).
-- Décision : géométrie du ruban refaite à l'exact (`scripts/logo-trace.mjs`) : une plaque canonique + cisaillement par
-  bande (`aShear`), x ∈ [L, R] identique, haut devant milieu devant ambre, arêtes droites milieu/ambre confondues.
-  Superposition à DPR 3 (`scripts/logo-zoom.mjs`) : plis nets, écart total 1,75 % en trop / 0,36 % en moins.
-- Décision : les mots de particules (COUCHES, OFFRES…) sont supprimés (jamais parfaitement nets) ; les titres HTML suffisent.
-- Décision : bibliothèque de maquettes HTML/CSS/SVG (`src/components/maquettes/`) = la vraie chose ; les plaques ne font
-  plus que la matière (hero, fond) et la transition (métamorphose de dalles dans « Ce qu'on fabrique »).
-- Décision : « Comment on travaille » : scène en `position: fixed` + découpe (un calque épinglé laissait un fantôme).
-- Décision : réalisations : portable/téléphone en 3D (géométrie extrudée + environnement de pièce généré, sans fichier).
 
 ## Mission « grille tarifaire + estimateur » (décisions, 1 ligne chacune)
 - `exceljs` ajouté en dépendance de dev : seule lib qui lit l'xlsx avec les formules ; sert uniquement à `npm run tarifs`, jamais embarquée dans le site.
