@@ -7,7 +7,7 @@
   "partCommune": 34,
   "ressembleA": "/solutions/reservation-location",
   "jaccard": 25,
-  "liensRecus": 420,
+  "liensRecus": 419,
   "verdict": "correcte"
  },
  {
@@ -18,7 +18,7 @@
   "partCommune": 24,
   "ressembleA": "/solutions/tableau-de-bord",
   "jaccard": 20,
-  "liensRecus": 420,
+  "liensRecus": 419,
   "verdict": "correcte"
  },
  {
@@ -29,7 +29,7 @@
   "partCommune": 25,
   "ressembleA": "/solutions/programme-fidelite",
   "jaccard": 23,
-  "liensRecus": 420,
+  "liensRecus": 419,
   "verdict": "correcte"
  },
  {
@@ -40,7 +40,7 @@
   "partCommune": 37,
   "ressembleA": "/solutions/reservation-location",
   "jaccard": 29,
-  "liensRecus": 420,
+  "liensRecus": 419,
   "verdict": "enrichir"
  },
  {
@@ -51,7 +51,7 @@
   "partCommune": 27,
   "ressembleA": "/solutions/click-and-collect",
   "jaccard": 23,
-  "liensRecus": 420,
+  "liensRecus": 419,
   "verdict": "correcte"
  },
  {
@@ -62,7 +62,7 @@
   "partCommune": 37,
   "ressembleA": "/solutions/portail-client",
   "jaccard": 24,
-  "liensRecus": 420,
+  "liensRecus": 419,
   "verdict": "enrichir"
  },
  {
@@ -150,7 +150,7 @@
   "partCommune": 27,
   "ressembleA": "/services-locaux/creation-site-artisan",
   "jaccard": 17,
-  "liensRecus": 420,
+  "liensRecus": 419,
   "verdict": "correcte"
  },
  {
@@ -161,7 +161,7 @@
   "partCommune": 27,
   "ressembleA": "/services-locaux/creation-site-restaurant",
   "jaccard": 17,
-  "liensRecus": 420,
+  "liensRecus": 419,
   "verdict": "correcte"
  },
  {
@@ -172,7 +172,7 @@
   "partCommune": 25,
   "ressembleA": "/services-locaux/creation-site-restaurant",
   "jaccard": 15,
-  "liensRecus": 420,
+  "liensRecus": 419,
   "verdict": "correcte"
  },
  {
@@ -216,7 +216,7 @@
   "partCommune": 19,
   "ressembleA": "/agence-web/vendome",
   "jaccard": 11,
-  "liensRecus": 420,
+  "liensRecus": 419,
   "verdict": "correcte"
  },
  {
@@ -227,7 +227,7 @@
   "partCommune": 20,
   "ressembleA": "/agence-web/vendome",
   "jaccard": 12,
-  "liensRecus": 420,
+  "liensRecus": 419,
   "verdict": "correcte"
  },
  {
@@ -238,7 +238,7 @@
   "partCommune": 20,
   "ressembleA": "/agence-web/vendome",
   "jaccard": 11,
-  "liensRecus": 420,
+  "liensRecus": 419,
   "verdict": "correcte"
  },
  {
@@ -249,7 +249,7 @@
   "partCommune": 19,
   "ressembleA": "/agence-web/nogent-le-rotrou",
   "jaccard": 11,
-  "liensRecus": 420,
+  "liensRecus": 419,
   "verdict": "correcte"
  },
  {
@@ -260,7 +260,7 @@
   "partCommune": 19,
   "ressembleA": "/agence-web/nogent-le-rotrou",
   "jaccard": 11,
-  "liensRecus": 420,
+  "liensRecus": 419,
   "verdict": "correcte"
  },
  {
@@ -370,7 +370,7 @@
   "partCommune": 19,
   "ressembleA": "/agence-web/rambouillet",
   "jaccard": 11,
-  "liensRecus": 420,
+  "liensRecus": 419,
   "verdict": "correcte"
  },
  {
@@ -381,7 +381,7 @@
   "partCommune": 20,
   "ressembleA": "/agence-web/saumur",
   "jaccard": 11,
-  "liensRecus": 420,
+  "liensRecus": 419,
   "verdict": "correcte"
  },
  {
@@ -689,7 +689,7 @@
   "partCommune": 9,
   "ressembleA": "/creation-site-internet/salle-de-sport",
   "jaccard": 6,
-  "liensRecus": 420,
+  "liensRecus": 419,
   "verdict": "correcte"
  },
  {
@@ -700,7 +700,7 @@
   "partCommune": 10,
   "ressembleA": "/creation-site-internet/avocat",
   "jaccard": 7,
-  "liensRecus": 420,
+  "liensRecus": 419,
   "verdict": "correcte"
  },
  {
@@ -711,7 +711,7 @@
   "partCommune": 10,
   "ressembleA": "/creation-site-internet/kebab-fast-food",
   "jaccard": 7,
-  "liensRecus": 420,
+  "liensRecus": 419,
   "verdict": "correcte"
  },
  {
@@ -722,7 +722,7 @@
   "partCommune": 11,
   "ressembleA": "/creation-site-internet/kebab-fast-food",
   "jaccard": 7,
-  "liensRecus": 420,
+  "liensRecus": 419,
   "verdict": "correcte"
  },
  {
@@ -733,7 +733,7 @@
   "partCommune": 10,
   "ressembleA": "/creation-site-internet/pizzeria",
   "jaccard": 7,
-  "liensRecus": 420,
+  "liensRecus": 419,
   "verdict": "correcte"
  },
  {
@@ -744,7 +744,7 @@
   "partCommune": 10,
   "ressembleA": "/creation-site-internet/vitrier",
   "jaccard": 7,
-  "liensRecus": 420,
+  "liensRecus": 419,
   "verdict": "correcte"
  },
  {
@@ -755,7 +755,7 @@
   "partCommune": 10,
   "ressembleA": "/creation-site-internet/couvreur-charpentier",
   "jaccard": 7,
-  "liensRecus": 420,
+  "liensRecus": 419,
   "verdict": "correcte"
  },
  {
@@ -1532,33 +1532,33 @@
   "famille": "rubriques",
   "chemin": "/blog/categorie/creation",
   "mots": 3558,
-  "motsPropres": 3243,
+  "motsPropres": 3241,
   "partCommune": 1,
   "ressembleA": "/blog/categorie/strategie",
   "jaccard": 1,
-  "liensRecus": 420,
+  "liensRecus": 419,
   "verdict": "correcte"
  },
  {
   "famille": "rubriques",
   "chemin": "/blog/categorie/seo",
   "mots": 1312,
-  "motsPropres": 1168,
+  "motsPropres": 1166,
   "partCommune": 3,
   "ressembleA": "/blog/categorie/seo-local",
   "jaccard": 2,
-  "liensRecus": 420,
+  "liensRecus": 419,
   "verdict": "correcte"
  },
  {
   "famille": "rubriques",
   "chemin": "/blog/categorie/seo-local",
   "mots": 1950,
-  "motsPropres": 1720,
+  "motsPropres": 1718,
   "partCommune": 2,
   "ressembleA": "/blog/categorie/seo",
   "jaccard": 2,
-  "liensRecus": 420,
+  "liensRecus": 419,
   "verdict": "correcte"
  },
  {
@@ -1569,7 +1569,7 @@
   "partCommune": 3,
   "ressembleA": "/blog/categorie/seo",
   "jaccard": 2,
-  "liensRecus": 420,
+  "liensRecus": 419,
   "verdict": "correcte"
  },
  {
@@ -1580,7 +1580,7 @@
   "partCommune": 3,
   "ressembleA": "/blog/categorie/restaurants",
   "jaccard": 2,
-  "liensRecus": 420,
+  "liensRecus": 419,
   "verdict": "correcte"
  },
  {
@@ -1591,7 +1591,7 @@
   "partCommune": 3,
   "ressembleA": "/blog/categorie/artisans",
   "jaccard": 2,
-  "liensRecus": 420,
+  "liensRecus": 419,
   "verdict": "correcte"
  },
  {
@@ -1600,7 +1600,7 @@
   "mots": 677,
   "motsPropres": 574,
   "partCommune": 4,
-  "ressembleA": "/blog/categorie/associations",
+  "ressembleA": "/blog/categorie/restaurants",
   "jaccard": 2,
   "liensRecus": 11,
   "verdict": "correcte"
@@ -1609,23 +1609,12 @@
   "famille": "rubriques",
   "chemin": "/blog/categorie/strategie",
   "mots": 2128,
-  "motsPropres": 1918,
+  "motsPropres": 1916,
   "partCommune": 2,
   "ressembleA": "/blog/categorie/seo",
   "jaccard": 2,
   "liensRecus": 40,
   "verdict": "correcte"
- },
- {
-  "famille": "rubriques",
-  "chemin": "/blog/categorie/associations",
-  "mots": 60,
-  "motsPropres": 40,
-  "partCommune": 27,
-  "ressembleA": "/blog/categorie/artisans",
-  "jaccard": 2,
-  "liensRecus": 1,
-  "verdict": "enrichir"
  },
  {
   "famille": "articles",

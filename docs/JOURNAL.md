@@ -1,6 +1,19 @@
 # Journal du chantier — Stackup Agency V5
 
 
+## Rapport SEO — Search Console (2026-10-29) — à lire en premier
+
+**Production** : `main` contient encore le middleware de maintenance (503 sur toutes les routes, `MAINTENANCE_ACTIVE = true`) : les 24 erreurs 5xx viennent de là. La V5 (cette branche) n'a aucun middleware : 420 URL du sitemap répondent 200 sur le build de production local. **Rien n'est corrigé en production tant que cette branche n'est pas fusionnée dans `main`** (décision du propriétaire).
+1. **Chiffres parasites** : les roues du Cadran étaient du texte (colonnes 0-9) ; `aria-hidden` n'empêche pas Google de les lire. Les colonnes sont maintenant du contenu CSS ; le prix n'existe qu'une fois, en `.sr-only`. Vérifié dans le HTML brut de 12 pages puis sur les 420 URL.
+2. **Canonical** absente sur `/`, `/tarifs`, `/contact` : ajoutée. Toutes les pages : une seule canonical absolue vers elles-mêmes.
+3. **404** : des articles publiés renvoyaient des liens vers des articles programmés (pas encore en ligne) : liens retirés tant que l'article n'est pas publié (58 articles programmés d'ici février 2027). Redirection `idee-mise-en-ligne-10-jours-methode` (cible non publiée) → `/blog`.
+4. **Redirections** : 301 en un seul saut, variantes avec barre finale et www comprises (`skipTrailingSlashRedirect` + règles jumelles) ; 105 règles, 0 chaîne, 0 boucle ; 1 171 URL anciennes testées + export Search Console (pages) : 0 problème.
+5. **Doublons** : les 21 catégories du blog n'étaient que 9 pages en double (100 % identiques) : 13 redirections 301 vers leurs rubriques ; rubrique de moins de 3 articles = noindex et hors sitemap.
+6. **Pages faibles** : villes 325 → 989 mots (texte commun 62 → 20 %), métiers 284 → 848 mots (33 → 11 %), textes locaux uniques et 3 FAQ propres par page (`src/data/enrichissements/`) ; à relire (faits locaux écrits de mémoire).
+7. **Sitemap** : plus d'URL qui redirige, 404 ou noindex ; `lastmod` réel (date du dernier commit qui touche le contenu de la famille, `npm run lastmod` ; articles : leur date).
+8. **Scripts** : `scripts/controle-sitemap.mjs` (statut, canonical, h1, title/description uniques, prix propres, meta hors contenu), `controle-anciennes-urls.mjs`, `audit-redirections.mjs`, `audit-pages.mjs`, `lastmod.mjs`.
+**Reste** : solutions (3 fiches proches : 390 mots) et 2 articles courts à enrichir ; `next build` local s'arrête avec « SecurityFatalError » (version de Next signalée vulnérable) après avoir produit le build : à traiter en mettant Next à jour (non fait sans accord) ; le build Vercel passe.
+
 ## Rapport de la mission 4 « réalisations réelles, estimateur pas à pas, documents » (2026-10-15) — à lire en premier
 
 **Prévisualisation Vercel** : https://stackup-agency-o9lxhm2ka-tawowo-s-projects.vercel.app (commit 51e7f1a) (branche `claude/new-session-26nojr`).
