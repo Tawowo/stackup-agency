@@ -1,0 +1,435 @@
+/* LE MODÈLE DE DEVIS — /outils/modele-devis */
+.su-mdv {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+.su-mdv__promesse {
+  margin: 0;
+  padding: 14px 18px;
+  border-left: 3px solid var(--su-ambre);
+  background: color-mix(in srgb, var(--su-ambre) 10%, transparent);
+  color: var(--su-texte);
+  max-width: 78ch;
+}
+
+/* Saisie */
+.su-mdv__saisie {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.su-mdv__groupe {
+  margin: 0;
+  min-width: 0;
+  padding: 24px 28px 28px;
+  border: 1px solid color-mix(in srgb, var(--su-texte) 18%, transparent);
+  border-top: 2px solid var(--su-ambre);
+  background: color-mix(in srgb, var(--su-texte) 3%, transparent);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  align-items: flex-start;
+}
+.su-mdv__groupe > legend {
+  padding: 0 8px;
+  font-size: 1.35rem;
+  color: var(--su-texte);
+}
+.su-mdv__grille {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+.su-mdv__champ {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+.su-mdv__champ--large {
+  grid-column: 1 / -1;
+}
+.su-mdv__champ label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--su-texte);
+}
+.su-mdv input[type='text'],
+.su-mdv input[type='date'],
+.su-mdv textarea,
+.su-mdv select {
+  width: 100%;
+  min-height: 44px;
+  padding: 8px 12px;
+  border: 1px solid color-mix(in srgb, var(--su-texte) 40%, transparent);
+  border-radius: 4px;
+  background: #fff;
+  color: var(--su-navy);
+  font: inherit;
+  font-size: 1rem;
+}
+.su-mdv textarea {
+  resize: vertical;
+}
+.su-mdv ::placeholder {
+  color: #5d6b7c;
+  opacity: 1;
+}
+.su-mdv input:focus-visible,
+.su-mdv textarea:focus-visible,
+.su-mdv select:focus-visible,
+.su-mdv button:focus-visible {
+  outline: 2px solid var(--su-ambre);
+  outline-offset: 2px;
+}
+.su-mdv__radios {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.su-mdv__radios legend {
+  padding: 0;
+  margin-bottom: 6px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--su-texte);
+}
+.su-mdv__radios label,
+.su-mdv__case {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  color: var(--su-texte);
+  cursor: pointer;
+}
+.su-mdv__radios input,
+.su-mdv__case input {
+  flex: none;
+  width: 20px;
+  height: 20px;
+  margin: 2px 0 0;
+  accent-color: var(--su-ambre);
+}
+
+/* Lignes */
+.su-mdv__lignes {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.su-mdv__ligne {
+  margin: 0;
+  min-width: 0;
+  padding: 14px 16px 16px;
+  border: 1px solid color-mix(in srgb, var(--su-texte) 22%, transparent);
+  background: color-mix(in srgb, var(--su-ivoire) 60%, transparent);
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 12px;
+  align-items: end;
+}
+.su-mdv__ligne > legend {
+  padding: 0 6px;
+  font-size: 0.75rem;
+  color: var(--su-accent-texte);
+}
+.su-mdv__ligne .su-mdv__champ {
+  grid-column: span 3;
+}
+.su-mdv__ligne .su-mdv__l-des {
+  grid-column: 1 / -1;
+}
+.su-mdv__l-total {
+  grid-column: span 6;
+  margin: 0;
+  font-size: 0.8125rem;
+  color: var(--su-texte-doux);
+}
+.su-mdv__l-total strong {
+  color: var(--su-texte);
+}
+.su-mdv__retirer {
+  grid-column: span 6;
+  justify-self: end;
+  min-height: 44px;
+  padding: 0 16px;
+  border: 1px solid color-mix(in srgb, var(--su-texte) 40%, transparent);
+  border-radius: 4px;
+  background: transparent;
+  color: var(--su-texte);
+  font: inherit;
+  font-size: 0.875rem;
+  cursor: pointer;
+}
+.su-mdv__retirer:hover:not(:disabled) {
+  border-color: var(--su-ambre);
+}
+.su-mdv__retirer:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+/* Totaux en direct */
+.su-mdv__totaux h2 {
+  margin: 0 0 14px;
+  font-size: clamp(1.4rem, 2.6vw, 1.9rem);
+  color: var(--su-texte);
+}
+.su-mdv__totaux dl {
+  margin: 0;
+  max-width: 520px;
+  display: grid;
+  gap: 0;
+  border-top: 2px solid var(--su-ambre);
+}
+.su-mdv__totaux dl > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 10px 0;
+  border-bottom: 1px solid color-mix(in srgb, var(--su-texte) 16%, transparent);
+  color: var(--su-texte);
+}
+.su-mdv__totaux dd {
+  margin: 0;
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+}
+.su-mdv__ttc {
+  font-weight: 700;
+  font-size: 1.15rem;
+}
+.su-mdv__note {
+  margin: 10px 0 0;
+  font-size: 0.875rem;
+  color: var(--su-texte-doux);
+  max-width: 62ch;
+}
+.su-mdv__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px;
+}
+.su-mdv__message {
+  margin: 0;
+  font-size: 0.9375rem;
+  color: var(--su-texte-doux);
+}
+
+/* Aperçu : une feuille blanche, texte noir, comme sur le papier. */
+.su-mdv__apercu-cadre {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.su-mdv__apercu-titre {
+  margin: 0;
+  font-size: clamp(1.4rem, 2.6vw, 1.9rem);
+}
+.su-mdv__apercu {
+  background: #fff;
+  color: #111;
+  border: 1px solid #c9ced6;
+  padding: clamp(18px, 4vw, 40px);
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.su-mdv__apercu p {
+  margin: 0;
+}
+.su-mdv__a-tete {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+.su-mdv__a-nom {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+.su-mdv__a-ref {
+  text-align: right;
+}
+.su-mdv__a-devis {
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+.su-mdv__a-etiquette {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #4a5565;
+}
+.su-mdv__a-client {
+  padding: 12px 16px;
+  border-left: 3px solid #111;
+  background: #f4f5f7;
+}
+.su-mdv__vide {
+  color: #6b7280;
+  font-style: italic;
+  border-bottom: 1px dotted #6b7280;
+}
+.su-mdv__a-defil {
+  overflow-x: auto;
+}
+.su-mdv__a-table,
+.su-mdv__a-sommes {
+  width: 100%;
+  border-collapse: collapse;
+  font-variant-numeric: tabular-nums;
+}
+.su-mdv__a-table th,
+.su-mdv__a-table td {
+  padding: 8px 10px;
+  border-bottom: 1px solid #c9ced6;
+  text-align: left;
+  vertical-align: top;
+}
+.su-mdv__a-table thead th {
+  border-bottom: 2px solid #111;
+  font-size: 0.8125rem;
+}
+.su-mdv__num {
+  text-align: right !important;
+  white-space: nowrap;
+}
+.su-mdv__a-sommes {
+  max-width: 420px;
+  margin-left: auto;
+}
+.su-mdv__a-sommes th,
+.su-mdv__a-sommes td {
+  padding: 6px 10px;
+  border-bottom: 1px solid #e1e4e9;
+  text-align: left;
+  font-weight: 400;
+}
+.su-mdv__a-sommes td {
+  text-align: right;
+  white-space: nowrap;
+}
+.su-mdv__a-ttc th,
+.su-mdv__a-ttc td {
+  font-weight: 700;
+  border-bottom: 2px solid #111;
+}
+.su-mdv__a-mentions {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.su-mdv__a-signature {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  break-inside: avoid;
+}
+.su-mdv__a-cadre {
+  min-height: 110px;
+  border: 1px solid #111;
+}
+.su-mdv__avertissement {
+  margin: 0;
+  font-size: 0.875rem;
+  color: var(--su-graphite-ivoire);
+}
+
+/* Texte sous l'outil */
+.su-mdv-texte {
+  margin-top: 9svh;
+}
+.su-mdv-texte.su-prose h2:first-child {
+  margin-top: 0;
+}
+.su-mdv-faq {
+  margin-top: 9svh;
+}
+.su-mdv-faq h2 {
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  margin: 0 0 20px;
+}
+
+@media (max-width: 767px) {
+  .su-mdv__groupe {
+    padding: 18px 16px 22px;
+  }
+  .su-mdv__grille {
+    grid-template-columns: 1fr;
+  }
+  .su-mdv__ligne .su-mdv__champ,
+  .su-mdv__l-total,
+  .su-mdv__retirer {
+    grid-column: 1 / -1;
+  }
+  .su-mdv__retirer {
+    justify-self: stretch;
+  }
+  .su-mdv__apercu-cadre {
+    padding: 14px;
+  }
+  .su-mdv__a-ref {
+    text-align: left;
+  }
+}
+
+/* IMPRESSION — seul l'aperçu sort : tout ce qui n'est ni lui, ni dedans, ni un de ses parents disparaît. */
+@media print {
+  @page {
+    margin: 16mm;
+  }
+  body *:not(:has(.su-mdv__apercu)):not(.su-mdv__apercu):not(.su-mdv__apercu *) {
+    display: none !important;
+  }
+  body,
+  body :has(.su-mdv__apercu) {
+    display: block !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    min-height: 0 !important;
+    max-width: none !important;
+    background: #fff !important;
+    box-shadow: none !important;
+    border: 0 !important;
+    transform: none !important;
+    clip-path: none !important;
+    animation: none !important;
+  }
+  .su-mdv__apercu {
+    border: 0;
+    padding: 0;
+    font-size: 11pt;
+    color: #000;
+  }
+  .su-mdv__a-client {
+    background: none;
+  }
+  .su-mdv__vide {
+    color: transparent;
+    font-style: normal;
+    border-bottom: 1px dotted #000;
+    display: inline-block;
+    min-width: 8em;
+  }
+  .su-mdv__a-defil {
+    overflow: visible;
+  }
+  .su-mdv__a-table tr {
+    break-inside: avoid;
+  }
+}

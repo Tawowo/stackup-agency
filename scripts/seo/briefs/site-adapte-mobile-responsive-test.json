@@ -1,0 +1,63 @@
+{
+ "slug": "site-adapte-mobile-responsive-test",
+ "titre": "Site adapté au mobile (responsive) : vérifier et corriger",
+ "theme": "création site",
+ "type": "guide",
+ "categorie": "creation",
+ "requetes": [
+  "agence web et mobile à chateauroux",
+  "rendre mon site compatible mobile prestataire",
+  "application mobile sur mesure pour mes équipes terrain",
+  "appli mobile gestion et suivi de chantier",
+  "site internet mobile first pourquoi",
+  "mon site est-il optimisé pour mobile",
+  "un site doit-il être adapté aux mobiles",
+  "comment rendre son site adapté au mobile",
+  "comment afficher un bouton appeler sur mobile",
+  "application de facturation pour artisan sur smartphone",
+  "application de gestion de stock sur smartphone",
+  "pourquoi mon site n'est pas adapté aux smartphones",
+  "logiciel de caisse sur tablette",
+  "mon site ne s'affiche pas correctement sur tablette"
+ ],
+ "articlesAProposerEnLien": [
+  {
+   "slug": "brasseur-artisanal-site-web",
+   "titre": "Site web pour brasseur artisanal : se faire connaître et vendre en ligne"
+  },
+  {
+   "slug": "conciergerie-airbnb-site-web",
+   "titre": "Site web pour conciergerie Airbnb : attirer plus de propriétaires"
+  },
+  {
+   "slug": "paa-combien-coute-site-web",
+   "titre": "Combien coûte un site web professionnel en 2026 ? (réponse directe)"
+  },
+  {
+   "slug": "paa-delai-creation-site",
+   "titre": "Combien de temps pour créer un site web ? Ce qui fait varier le délai"
+  },
+  {
+   "slug": "paa-site-web-necessaire",
+   "titre": "Est-ce qu'un site web est encore nécessaire en 2026 ?"
+  },
+  {
+   "slug": "paa-site-web-ventes",
+   "titre": "Un site web augmente-t-il vraiment les ventes ?"
+  }
+ ],
+ "articlesExistantsProches": [
+  {
+   "slug": "quest-ce-que-le-responsive-design",
+   "titre": "Qu'est-ce que le responsive design",
+   "mots": 1076,
+   "score": 0.3
+  },
+  {
+   "slug": "site-web-vs-application-mobile",
+   "titre": "Site web vs application mobile : quoi choisir",
+   "mots": 1114,
+   "score": 0.22
+  }
+ ]
+}

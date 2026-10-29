@@ -1,0 +1,86 @@
+{
+ "slug": "optimiser-fiche-google-business-categories-photos",
+ "titre": "Optimiser sa fiche Google Business : catégories, description, photos, horaires",
+ "theme": "Google Business",
+ "type": "guide",
+ "categorie": "seo-local",
+ "requetes": [
+  "c'est quoi une publication google business",
+  "comment améliorer sa fiche google",
+  "comment faire un post google business",
+  "à quoi servent les publications google business",
+  "comment programmer une publication google business",
+  "idées de publications google business pour un artisan",
+  "quelles photos mettre sur sa fiche google",
+  "combien de photos mettre sur sa fiche google",
+  "photos de chantier sur fiche google bonne idée",
+  "comment supprimer une photo sur ma fiche google",
+  "comment choisir sa photo de profil google business",
+  "comment changer la photo de couverture de sa fiche google",
+  "quelle catégorie google business choisir pour un artisan",
+  "comment changer la catégorie de sa fiche google",
+  "comment choisir la catégorie principale de sa fiche google",
+  "comment choisir ses catégories secondaires google business",
+  "comment optimiser sa fiche google business",
+  "optimiser google business profile en 2026",
+  "afficher ses produits sur sa fiche google business",
+  "combien de photos par fiche produit",
+  "comment optimiser les fiches produits pour google",
+  "quelqu'un a ajouté une mauvaise photo sur ma fiche",
+  "une photo d'un client sur ma fiche me dérange que faire",
+  "comment indiquer des horaires spéciaux jours fériés google business",
+  "comment afficher ses horaires et son adresse sur son site",
+  "comment modifier ses horaires d'ouverture sur sa fiche google",
+  "que mettre dans la description de sa fiche google",
+  "quelle longueur pour la description google business",
+  "google affiche une ancienne description de mon site"
+ ],
+ "articlesAProposerEnLien": [
+  {
+   "slug": "avis-google-strategie-complete",
+   "titre": "Avis Google : stratégie complète pour obtenir 50+ avis 5 étoiles"
+  },
+  {
+   "slug": "cout-seo-local-pme",
+   "titre": "Combien coûte le SEO local pour une PME en 2026 ?"
+  },
+  {
+   "slug": "erreurs-seo-local",
+   "titre": "Les 8 erreurs de SEO local qui vous font perdre des clients"
+  },
+  {
+   "slug": "fiche-google-business-optimisation",
+   "titre": "Fiche Google Business : l'optimisation complète en 20 points"
+  },
+  {
+   "slug": "google-maps-integration-site",
+   "titre": "Google Maps sur votre site web : intégration et avantages SEO"
+  },
+  {
+   "slug": "netlinking-local-backlinks-region-methodes",
+   "titre": "Netlinking local : 12 méthodes pour obtenir des backlinks dans votre région"
+  }
+ ],
+ "articlesExistantsProches": [
+  {
+   "slug": "fiche-google-business-restaurant-guide",
+   "titre": "Fiche Google Business restaurant : le guide complet (horaires, menu, avis, photos)",
+   "mots": 870,
+   "score": 0.42,
+   "programme": "2026-10-19"
+  },
+  {
+   "slug": "fiche-google-business-optimisation",
+   "titre": "Fiche Google Business : l'optimisation complète en 20 points",
+   "mots": 1793,
+   "score": 0.3
+  },
+  {
+   "slug": "fiche-google-business-photographe",
+   "titre": "Fiche Google Business photographe : le guide complet",
+   "mots": 968,
+   "score": 0.27,
+   "programme": "2026-09-26"
+  }
+ ]
+}

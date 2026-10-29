@@ -1,0 +1,74 @@
+{
+ "slug": "logiciel-sur-mesure-ou-logiciel-du-marche",
+ "titre": "Logiciel sur mesure ou logiciel du marché : comment décider",
+ "theme": "logiciel de gestion",
+ "type": "comparatif",
+ "categorie": "applications-metier",
+ "requetes": [
+  "développement intranet sur mesure agence",
+  "application sur mesure pour mon entreprise",
+  "application de gestion sur mesure pour artisan",
+  "automatisation sur mesure ou outil du marché",
+  "chatgpt ou un outil sur mesure pour mon activité",
+  "airtable ou outil sur mesure pour gérer mon activité",
+  "avantages d'un outil de gestion sur mesure pour un artisan",
+  "inconvénients d'un outil sur mesure pour une petite entreprise",
+  "comment faire évoluer un outil sur mesure dans le temps",
+  "application métier sur mesure",
+  "qui peut me créer un outil de gestion adapté à mon métier",
+  "création application métier agence",
+  "agence application métier",
+  "c'est quoi une application métier",
+  "mon activité est trop spécifique pour les logiciels existants",
+  "site internet clé en main pour artisan",
+  "quand passer d'une solution clé en main à du sur mesure",
+  "utilisation d'une police d'écriture licence site web"
+ ],
+ "articlesAProposerEnLien": [
+  {
+   "slug": "application-fidelite-sur-mesure",
+   "titre": "Application de fidélité sur mesure : pourquoi les solutions génériques ne suffisent pas"
+  },
+  {
+   "slug": "application-gestion-chantiers",
+   "titre": "Application gestion de chantiers : suivi terrain et reporting en temps réel"
+  },
+  {
+   "slug": "application-gestion-rdv",
+   "titre": "Prise de rendez-vous en ligne : Calendly, Planity ou le vôtre ?"
+  },
+  {
+   "slug": "application-livraison-interne",
+   "titre": "Application de livraison interne : gérer ses tournées et ses livreurs"
+  },
+  {
+   "slug": "application-reservation-location",
+   "titre": "Application de réservation et location : gérer un parc de biens en ligne"
+  },
+  {
+   "slug": "automatisation-processus-pme",
+   "titre": "Automatisation des processus PME : ce qu'on peut faire avec le digital"
+  }
+ ],
+ "articlesExistantsProches": [
+  {
+   "slug": "application-fidelite-sur-mesure",
+   "titre": "Application de fidélité sur mesure : pourquoi les solutions génériques ne suffisent pas",
+   "mots": 1023,
+   "score": 0.29
+  },
+  {
+   "slug": "prix-logiciel-sur-mesure",
+   "titre": "Combien coûte un logiciel de gestion sur mesure ?",
+   "mots": 928,
+   "score": 0.29,
+   "programme": "2026-09-11"
+  },
+  {
+   "slug": "gestion-caisse-sur-mesure",
+   "titre": "Caisse enregistreuse : logiciel du commerce vs solution sur mesure",
+   "mots": 1215,
+   "score": 0.22
+  }
+ ]
+}

@@ -1,0 +1,233 @@
+/* LA CHECKLIST FACTURE ÉLECTRONIQUE — /outils/checklist-facture-electronique */
+.su-cfe {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+/* Progression : une barre dont la largeur suit les cases cochées. */
+.su-cfe__progres {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px 24px;
+  border-top: 3px solid var(--su-ambre);
+  background: color-mix(in srgb, var(--su-texte) 5%, transparent);
+}
+.su-cfe__progres-tete {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+}
+.su-cfe__compte,
+.su-cfe__pct {
+  margin: 0;
+  font-size: 0.8125rem;
+  color: var(--su-texte-doux);
+}
+.su-cfe__nombre {
+  font-size: 2rem;
+  line-height: 1;
+  color: var(--su-texte);
+}
+.su-cfe__barre {
+  height: 10px;
+  border-radius: 2px;
+  background: color-mix(in srgb, var(--su-texte) 14%, transparent);
+  overflow: hidden;
+}
+.su-cfe__remplie {
+  display: block;
+  height: 100%;
+  background: var(--su-ambre);
+  transition: width var(--su-geste) var(--su-glisse);
+}
+
+/* Blocs : un fieldset par thème. */
+.su-cfe__blocs {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+.su-cfe__bloc {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  min-width: 0;
+  scroll-margin-top: 96px;
+}
+.su-cfe__legende {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 0;
+  margin-bottom: 8px;
+}
+.su-cfe__bloc-num {
+  font-size: 0.75rem;
+  color: var(--su-accent-texte);
+}
+.su-cfe__bloc-titre {
+  font-size: clamp(1.4rem, 2.6vw, 2rem);
+  line-height: 1.1;
+  color: var(--su-texte);
+}
+.su-cfe__intro {
+  margin: 0 0 16px;
+  max-width: 62ch;
+  color: var(--su-texte-doux);
+}
+.su-cfe__points {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+.su-cfe__point {
+  display: grid;
+  grid-template-columns: 28px minmax(0, 1fr);
+  gap: 16px;
+  padding: 16px 0;
+  border-top: 1px solid color-mix(in srgb, var(--su-texte) 16%, transparent);
+}
+.su-cfe__point:last-child {
+  border-bottom: 1px solid color-mix(in srgb, var(--su-texte) 16%, transparent);
+}
+.su-cfe__case {
+  width: 28px;
+  height: 28px;
+  margin: 0;
+  accent-color: var(--su-ambre);
+  cursor: pointer;
+}
+.su-cfe__case:focus-visible {
+  outline: 3px solid var(--su-ambre);
+  outline-offset: 3px;
+}
+.su-cfe__label {
+  display: block;
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--su-texte);
+  cursor: pointer;
+}
+.su-cfe__point[data-coche='1'] .su-cfe__label {
+  text-decoration: line-through;
+  text-decoration-color: var(--su-ambre);
+  text-decoration-thickness: 2px;
+}
+.su-cfe__explication {
+  margin: 4px 0 0;
+  max-width: 64ch;
+  font-size: 0.9375rem;
+  color: var(--su-texte-doux);
+}
+.su-cfe__lien {
+  color: var(--su-accent-texte);
+  text-underline-offset: 3px;
+  overflow-wrap: anywhere;
+}
+.su-cfe__lien:focus-visible {
+  outline: 2px solid var(--su-ambre);
+  outline-offset: 2px;
+}
+
+.su-cfe__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* Message de fin. */
+.su-cfe__bilan {
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.su-cfe__bilan-titre {
+  margin: 0;
+  font-size: clamp(1.4rem, 2.6vw, 2rem);
+  color: var(--su-ivoire);
+}
+.su-cfe__bilan-texte {
+  margin: 0;
+  max-width: 62ch;
+  color: color-mix(in srgb, var(--su-ivoire) 86%, transparent);
+}
+.su-cfe__bilan-note {
+  margin: 6px 0 0;
+  max-width: 62ch;
+  font-size: 0.875rem;
+  color: var(--su-gris-nuit);
+}
+
+/* Texte explicatif et FAQ sous l'outil (rendu serveur). */
+.su-cfe-explic {
+  max-width: 920px;
+  margin: 9svh auto 0;
+}
+.su-cfe-faq {
+  max-width: 920px;
+  margin: 9svh auto 0;
+}
+.su-cfe-faq h2 {
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  margin: 0 0 20px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .su-cfe__remplie {
+    transition: none;
+  }
+}
+@media (max-width: 767px) {
+  .su-cfe__progres,
+  .su-cfe__bilan {
+    padding: 18px;
+  }
+  .su-cfe__point {
+    gap: 12px;
+  }
+}
+
+/* Impression : la liste seule, en noir sur blanc. */
+@media print {
+  body:has(.su-cfe) {
+    background: #fff !important;
+    --su-texte: #000;
+    --su-texte-doux: #333;
+    --su-accent-texte: #000;
+  }
+  body:has(.su-cfe) .su-doc__tete,
+  body:has(.su-cfe) .su-cfe__actions,
+  body:has(.su-cfe) .su-cfe-explic,
+  body:has(.su-cfe) .su-cfe-faq,
+  body:has(.su-cfe) header,
+  body:has(.su-cfe) footer,
+  body:has(.su-cfe) nav {
+    display: none !important;
+  }
+  .su-cfe__bloc,
+  .su-cfe__point {
+    break-inside: avoid;
+  }
+  .su-cfe__bilan {
+    background: #fff;
+    border: 1px solid #000;
+    box-shadow: none;
+  }
+  .su-cfe__bilan-titre,
+  .su-cfe__bilan-texte,
+  .su-cfe__bilan-note {
+    color: #000;
+  }
+  .su-cfe__lien::after {
+    content: ' (' attr(href) ')';
+    font-size: 0.75rem;
+  }
+}

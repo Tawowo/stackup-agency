@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Tarifs from '@/experiences/tarifs/Tarifs'
 import { decoder } from '@/domain/devis/etat'
-import { meta } from '@/lib/seo'
+import { JsonLd, filAriane, meta } from '@/lib/seo'
 import { nombreFr } from '@/lib/jetons'
 import { PRIX_PLANCHER } from '@/domain/devis/offres'
 
@@ -14,5 +14,10 @@ export const metadata: Metadata = meta({
 export default async function Page({ searchParams }: { searchParams: Promise<Record<string, string | string[] | undefined>> }) {
   const q = await searchParams
   const e = typeof q.e === 'string' ? q.e : null
-  return <Tarifs initial={decoder(e)} />
+  return (
+    <>
+      <JsonLd data={filAriane([{ nom: 'Accueil', chemin: '/' }, { nom: 'Tarifs', chemin: '/tarifs' }])} />
+      <Tarifs initial={decoder(e)} />
+    </>
+  )
 }

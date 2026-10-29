@@ -1,0 +1,72 @@
+{
+ "slug": "adresse-mail-professionnelle-nom-de-domaine",
+ "titre": "Adresse e-mail professionnelle avec son nom de domaine : mise en place",
+ "theme": "maintenance et sécurité",
+ "type": "guide",
+ "categorie": "technique",
+ "requetes": [
+  "création adresse mail professionnelle",
+  "comment répondre automatiquement aux e-mails",
+  "comment envoyer ses factures automatiquement par e-mail",
+  "comment trier automatiquement ses e-mails professionnels",
+  "comment envoyer des mails à mes clients sans logiciel compliqué",
+  "comment envoyer un e-mail automatique quand un formulaire est rempli",
+  "facture envoyée par e-mail valable",
+  "comment créer une adresse mail sur ovh",
+  "j'ai perdu mes mails en changeant de site",
+  "l'ia peut-elle trier ma boîte mail",
+  "l'ia peut-elle écrire mes mails de prospection",
+  "comment construire une liste de clients par e-mail",
+  "ma boîte mail est pleine que faire",
+  "ia pour trier ses mails professionnels",
+  "mes mails restent bloqués dans la boîte d'envoi",
+  "prospection e-mail artisan clients particuliers",
+  "comment augmenter la taille de ma boîte mail professionnelle",
+  "envoyer un e-mail de prospection à un professionnel est-ce autorisé",
+  "modèle de mail de relance de devis",
+  "modèle de mail de relance pour impayé",
+  "relance automatique de devis par e-mail",
+  "modèle de mail de relance facture impayée",
+  "relance panier abandonné par e-mail comment faire",
+  "réponse automatique e-mail pour artisan en chantier",
+  "automatiser l'e-mail de remerciement après un chantier",
+  "modèle de mail de relance pour un devis sans réponse",
+  "quel service de messagerie offre la livraison la plus fiable en france",
+  "comment créer des règles de tri dans sa messagerie pro",
+  "comment configurer sa messagerie professionnelle sur son téléphone",
+  "messagerie professionnelle pas chère",
+  "installer une messagerie professionnelle",
+  "messagerie professionnelle comparatif tpe",
+  "quels services de messagerie en france offrent les options de livraison les plus flexibles",
+  "comment rédiger un e-mail commercial avec chatgpt",
+  "démarchage commercial par e-mail règles",
+  "démarchage par e-mail aux particuliers opt-in",
+  "e-mail commercial désinscription lien obligatoire",
+  "comment utiliser chatgpt pour rédiger des mails professionnels",
+  "c'est quoi microsoft 365 pour une petite entreprise",
+  "mise en place de microsoft 365 pour une tpe",
+  "microsoft 365 business est-il adapté à une petite entreprise",
+  "c'est quoi spf dkim et dmarc",
+  "c'est quoi dkim et à quoi ça sert",
+  "c'est quoi dmarc et pourquoi mon fournisseur me le demande"
+ ],
+ "articlesAProposerEnLien": [
+  {
+   "slug": "accessibilite-site-web-guide",
+   "titre": "Site accessible (RGAA) : obligations et bonnes pratiques pour une TPE"
+  },
+  {
+   "slug": "maintenance-site-web-guide",
+   "titre": "Maintenance de site web : pourquoi c'est indispensable et combien ça coûte"
+  },
+  {
+   "slug": "paa-hebergement-site",
+   "titre": "Quel hébergement choisir pour son site web en 2026 ?"
+  },
+  {
+   "slug": "vitesse-mobile-optimisation",
+   "titre": "Vitesse mobile : comment accélérer votre site sur smartphone"
+  }
+ ],
+ "articlesExistantsProches": []
+}

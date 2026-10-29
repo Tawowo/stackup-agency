@@ -136,6 +136,10 @@ export default function PolitiqueConfidentialite() {
         <p>
           Le site ne dépose aucun cookie publicitaire, de mesure d’audience ou de réseau social. Le détail est sur la page <Link href="/cookies">cookies</Link>.
         </p>
+        <h3>Mesure d’audience sans cookie</h3>
+        <p>
+          Pour savoir quelles pages sont lues et si le site aide à être contacté, le site compte, de façon anonyme, les vues de pages, les clics sur le numéro de téléphone et sur « demander ma démo », les demandes d’estimation et les messages envoyés. Chaque comptage ne contient que le nom de l’événement, l’adresse de la page et, s’il existe, le domaine du site d’où vient la visite. Il n’y a ni cookie, ni identifiant, ni adresse IP conservée, ni outil tiers ; ces comptages ne permettent pas de reconnaître un visiteur d’une page à l’autre et ne sont pas croisés avec d’autres données. Votre navigateur peut s’y opposer avec l’option « Ne pas me suivre » ou le signal Global Privacy Control, que le site respecte.
+        </p>
 
         <h2 id="reclamation">Droit de réclamation</h2>
         <p>

@@ -1,0 +1,75 @@
+.su-pil__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin: 26px 0 0;
+}
+.su-doc__reponse {
+  font-size: 1.1rem;
+  margin: 0 0 1.4em;
+}
+.su-doc__tableau {
+  overflow-x: auto;
+  margin: 1.2em 0;
+}
+.su-doc__tableau table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+.su-doc__tableau th,
+.su-doc__tableau td {
+  text-align: left;
+  vertical-align: top;
+  padding: 10px 12px;
+  border-bottom: 1px solid color-mix(in srgb, currentColor 18%, transparent);
+}
+.su-doc__tableau thead th {
+  font-family: var(--su-font-display), system-ui, sans-serif;
+}
+.su-doc__tableau tbody th {
+  font-weight: 600;
+  min-width: 9rem;
+}
+.su-doc__maj-fin {
+  margin-top: 2.4em;
+  font-size: 0.8rem;
+  opacity: 0.8;
+}
+.su-ref__sommaire {
+  margin: 3rem 0 1.5rem;
+}
+.su-ref__sommaire ol {
+  columns: 2 22rem;
+  padding-left: 1.2rem;
+  margin: 0.6rem 0 0;
+}
+.su-ref__sommaire li {
+  margin: 0.25rem 0;
+}
+.su-ref__guide {
+  margin-top: 1rem;
+}
+
+/* Fiche d'identité : liste de définitions */
+.su-bref {
+  margin: 1rem 0 2rem;
+}
+.su-bref > div {
+  display: grid;
+  grid-template-columns: 9rem 1fr;
+  gap: 4px 18px;
+  padding: 10px 0;
+  border-bottom: 1px solid color-mix(in srgb, currentColor 16%, transparent);
+}
+.su-bref dt {
+  font-weight: 600;
+}
+.su-bref dd {
+  margin: 0;
+}
+@media (max-width: 560px) {
+  .su-bref > div {
+    grid-template-columns: 1fr;
+  }
+}

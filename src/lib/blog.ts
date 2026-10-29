@@ -23,6 +23,10 @@ export interface Article {
   categorie: string
   motsCles: string[]
   publieLe?: string
+  /** Titre de page (60 caractères au plus), sinon le titre de l'article. */
+  seoTitre?: string
+  type?: 'question' | 'guide' | 'reglementation'
+  sources?: string[]
 }
 
 export interface ArticleComplet extends Article {
@@ -64,6 +68,9 @@ function normaliser(slug: string, d: Record<string, unknown>): Article {
     categorie: String(d.category ?? 'creation'),
     motsCles: Array.isArray(d.keywords) ? (d.keywords as string[]) : [],
     publieLe: d.publishAt ? String(d.publishAt) : undefined,
+    seoTitre: d.seoTitle ? conforme(String(d.seoTitle)) : undefined,
+    type: d.type === 'question' || d.type === 'guide' || d.type === 'reglementation' ? d.type : undefined,
+    sources: Array.isArray(d.sources) ? (d.sources as string[]) : undefined,
   }
 }
 

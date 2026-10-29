@@ -16,6 +16,10 @@ export const metadata = meta({
 
 const OUTILS = [
   { href: '/outils/audit-site', nom: 'Audit de site', genre: 'Outil', texte: 'Une adresse, une mesure Google PageSpeed Insights : performance, accessibilité et SEO sur 100, et les priorités expliquées en français.' },
+  { href: '/outils/generateur-mentions-legales', nom: 'Générateur de mentions légales', genre: 'Outil', texte: 'Statut, éditeur, hébergeur, TVA : le texte de vos mentions légales se compose en direct, à copier ou à imprimer. Tout reste dans votre navigateur.' },
+  { href: '/outils/calculateur-clients-perdus', nom: 'Calculateur de clients perdus', genre: 'Outil', texte: 'Vos propres hypothèses, un calcul écrit étape par étape et un ordre de grandeur du manque à gagner d’un site peu visible. Jamais une promesse.' },
+  { href: '/outils/checklist-facture-electronique', nom: 'Checklist facture électronique', genre: 'Outil', texte: 'Vingt et un points à cocher pour faire le point avant la facture électronique : clients, logiciel, données, comptable. Imprimable, sans avis de conformité.' },
+  { href: '/outils/modele-devis', nom: 'Modèle de devis', genre: 'Outil', texte: 'Remplissez votre devis : totaux HT, TVA, TTC et acompte calculés au centime, aperçu à imprimer en PDF ou à copier. Rien n’est envoyé.' },
   { href: '/tarifs#estimer', nom: 'Estimateur de prix', genre: 'Outil', texte: 'Site, boutique ou outil de gestion : répondez à quelques questions simples et voyez une fourchette de prix se préciser à chaque choix.' },
   { href: '/ressources/cahier-des-charges', nom: 'Cahier des charges', genre: 'Ressource', texte: 'Les bonnes questions à se poser avant de demander un site ou un outil, dans l’ordre où on les pose.' },
   { href: '/ressources/documents', nom: 'Documents en PDF', genre: 'Ressource', texte: 'Les documents qui encadrent un projet : conditions générales, contrats de prestation et de maintenance, cession de droits, modèles de devis et de facture.' },

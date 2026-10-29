@@ -6,6 +6,7 @@ import Action from '@/components/ui/Action'
 import { article, articlesLies, rayonDe, tousLesArticles } from '@/lib/blog'
 import { meta, filAriane, faqPage, JsonLd, ORIGINE } from '@/lib/seo'
 import { SITE } from '@/config/site'
+import { sourceSure } from '@/gabarits/pilier/PilierCorps'
 import '@/experiences/journal/journal.css'
 import '@/components/editorial/editorial.css'
 import '@/experiences/journal/lecture.css'
@@ -21,7 +22,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params
   const a = tousLesArticles().find((x) => x.slug === slug)
   if (!a) return {}
-  return { ...meta({ titre: `${a.titre} | Stackup Agency`, description: a.extrait.slice(0, 160), chemin: `/blog/${slug}`, type: 'article' }), keywords: a.motsCles }
+  return { ...meta({ titre: a.seoTitre ?? a.titre, description: a.extrait, chemin: `/blog/${slug}`, type: 'article' }), keywords: a.motsCles }
 }
 
 const dateFr = (d: string) => new Date(d).toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' })
@@ -49,7 +50,9 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
             description: a.extrait,
             datePublished: a.date,
             dateModified: a.maj ?? a.date,
-            author: { '@type': 'Person', name: SITE.fondateur },
+            author: { '@type': 'Person', '@id': `${ORIGINE}/#matheo`, name: SITE.fondateur, url: `${ORIGINE}/auteur/matheo-reboul` },
+            image: `${ORIGINE}/og.png`,
+            inLanguage: 'fr-FR',
             publisher: { '@id': `${ORIGINE}/#agence` },
             mainEntityOfPage: `${ORIGINE}/blog/${slug}`,
             keywords: a.motsCles.join(', '),
@@ -65,13 +68,27 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
           <h1 className="su-display su-lec__titre">{a.titre}</h1>
           <p className="su-lec__chapo">{a.extrait}</p>
           <p className="su-mono su-lec__meta">
-            {SITE.fondateur} · {a.maj ? `mis à jour le ${dateFr(a.maj)}` : dateFr(a.date)} · {a.lecture} min de lecture
+            <Link href="/auteur/matheo-reboul">{SITE.fondateur}</Link> · {a.maj ? `mis à jour le ${dateFr(a.maj)}` : dateFr(a.date)} · {a.lecture} min de lecture
           </p>
         </div>
       </header>
       <div data-moment="lecture-corps" data-nuit="0">
         <Lecture sommaire={a.sommaire}>
           <div className="su-prose" dangerouslySetInnerHTML={{ __html: a.html }} />
+          {a.sources && a.sources.filter(sourceSure).length > 0 && (
+            <aside className="su-prose" aria-label="Sources officielles">
+              <h2 id="sources">Sources officielles</h2>
+              <ul>
+                {a.sources.filter(sourceSure).map((u) => (
+                  <li key={u}>
+                    <a href={sourceSure(u)!} rel="noopener noreferrer" target="_blank">
+                      {new URL(sourceSure(u)!).hostname.replace(/^www\./, '')}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </aside>
+          )}
           <aside className="su-lec__cta su-plaque">
             <p className="su-display">Un site ou un outil pour votre métier ?</p>
             <p>Une démo avant de signer, un prix écrit avant de commencer.</p>

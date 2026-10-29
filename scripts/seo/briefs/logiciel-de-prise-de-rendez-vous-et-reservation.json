@@ -1,0 +1,99 @@
+{
+ "slug": "logiciel-de-prise-de-rendez-vous-et-reservation",
+ "titre": "Prise de rendez-vous et réservation en ligne : choisir son outil",
+ "theme": "logiciel de gestion",
+ "type": "guide",
+ "categorie": "applications-metier",
+ "requetes": [
+  "prise de rendez-vous automatisée et assistée",
+  "prise de rendez-vous automatique par téléphone",
+  "prise de rendez-vous en ligne pour artisan",
+  "prise de rendez-vous en ligne sans abonnement",
+  "prise de rendez-vous en ligne pour mon site internet",
+  "prise de rendez-vous en ligne automatique pour artisan",
+  "rappel de rendez-vous par sms automatique pour petit commerce",
+  "modèle de sms de rappel de rendez-vous",
+  "sms de rappel de rendez-vous automatique",
+  "application pour réserver des leçons",
+  "comment permettre à mes clients de réserver en ligne",
+  "comment réserver en ligne sans passer par une plateforme",
+  "réservation de leçons avec l'application",
+  "solution anti no-show",
+  "agenda en ligne gratuit pour professionnel",
+  "agenda en ligne partagé pour petite équipe",
+  "doctolib ou agenda en ligne sur mon propre site",
+  "doctolib ou agenda en ligne maison pour un praticien",
+  "formulaire de site vers agenda automatique",
+  "comment partager un agenda avec mes salariés",
+  "comment faire arriver une demande de devis directement dans mon agenda",
+  "comment gérer les disponibilités de plusieurs personnes sur un seul agenda",
+  "comment transférer automatiquement les demandes du site vers son agenda",
+  "alternative à planity pour mon salon",
+  "alternative à doctolib pour un petit cabinet",
+  "planity ou site personnalisé pour les rendez-vous",
+  "planity ou outil sur mesure pour réserver en ligne",
+  "doctolib est-il adapté à un petit cabinet",
+  "planity ou un outil sur mesure pour un salon",
+  "application de réservation d'auto-école",
+  "comment intégrer une réservation en ligne à son site",
+  "comment mettre en place un système de réservation sur mon site",
+  "comment éviter les doubles réservations",
+  "comment éviter les doubles réservations avec un agenda en ligne",
+  "reservation wellness",
+  "comment permettre à mes clients de prendre rendez-vous sur mon site",
+  "un assistant vocal ia peut-il prendre mes rendez-vous",
+  "comment prendre des réservations d'ateliers sur un site",
+  "comment arrêter de prendre les rendez-vous par téléphone",
+  "comment faire un compte rendu de rendez-vous automatiquement",
+  "comment rappeler automatiquement un rendez-vous à un client",
+  "comment réduire les rendez-vous non honorés",
+  "les rendez-vous non honorés me font perdre de l'argent"
+ ],
+ "articlesAProposerEnLien": [
+  {
+   "slug": "application-fidelite-sur-mesure",
+   "titre": "Application de fidélité sur mesure : pourquoi les solutions génériques ne suffisent pas"
+  },
+  {
+   "slug": "application-gestion-chantiers",
+   "titre": "Application gestion de chantiers : suivi terrain et reporting en temps réel"
+  },
+  {
+   "slug": "application-gestion-rdv",
+   "titre": "Prise de rendez-vous en ligne : Calendly, Planity ou le vôtre ?"
+  },
+  {
+   "slug": "application-livraison-interne",
+   "titre": "Application de livraison interne : gérer ses tournées et ses livreurs"
+  },
+  {
+   "slug": "application-reservation-location",
+   "titre": "Application de réservation et location : gérer un parc de biens en ligne"
+  },
+  {
+   "slug": "automatisation-processus-pme",
+   "titre": "Automatisation des processus PME : ce qu'on peut faire avec le digital"
+  }
+ ],
+ "articlesExistantsProches": [
+  {
+   "slug": "application-gestion-rdv",
+   "titre": "Prise de rendez-vous en ligne : Calendly, Planity ou le vôtre ?",
+   "mots": 1277,
+   "score": 0.42
+  },
+  {
+   "slug": "systeme-reservation-en-ligne-commission-ou-propriete",
+   "titre": "Système de réservation en ligne : commission ou propriété ?",
+   "mots": 1084,
+   "score": 0.33,
+   "programme": "2026-11-22"
+  },
+  {
+   "slug": "application-reservation-location",
+   "titre": "Application de réservation et location : gérer un parc de biens en ligne",
+   "mots": 1060,
+   "score": 0.3
+  }
+ ]
+}

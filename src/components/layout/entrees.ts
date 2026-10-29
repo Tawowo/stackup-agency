@@ -10,9 +10,9 @@ export const ENTREES = [
 /** Le menu « Ressources » (nav) : tout ce qui n'est pas une page principale, une porte chacun. */
 export const RESSOURCES = [
   { href: '/ressources/cahier-des-charges', nom: 'Cahier des charges', ligne: 'Décrivez votre projet en détail, étape par étape' },
-  { href: '/blog', nom: 'Le journal', ligne: '300 articles pour créer son site, être trouvé, vendre' },
-  { href: '/outils', nom: 'Outils gratuits', ligne: 'Audit de site, estimateur de prix, cahier des charges' },
+  { href: '/blog', nom: 'Le journal', ligne: 'Guides, réponses précises et comparatifs' },
+  { href: '/outils', nom: 'Outils gratuits', ligne: 'Audit, mentions légales, devis, checklist facture électronique' },
   { href: '/faq', nom: 'Questions fréquentes', ligne: 'Prix, propriété du code, hébergement, suivi' },
-  { href: '/zones-intervention', nom: 'Zones d’intervention', ligne: 'Tours, la région, et toute la France à distance' },
+  { href: '/zones-intervention', nom: 'Zones d’intervention', ligne: 'Touraine, 11 communautés de communes, visio partout' },
   { href: '/parrainage', nom: 'Parrainage', ligne: 'Recommandez-nous, vous y gagnez aussi' },
 ] as const

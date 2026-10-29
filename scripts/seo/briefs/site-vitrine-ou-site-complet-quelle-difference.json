@@ -1,0 +1,58 @@
+{
+ "slug": "site-vitrine-ou-site-complet-quelle-difference",
+ "titre": "Site vitrine, multi-pages, boutique : quelle différence et lequel choisir ?",
+ "theme": "création site",
+ "type": "guide",
+ "categorie": "creation",
+ "requetes": [
+  "site vitrine administrable",
+  "passer d'un site vitrine à une boutique en ligne",
+  "transformer mon site vitrine en boutique en ligne",
+  "pack site vitrine",
+  "comparer création site vitrine",
+  "agence site vitrine",
+  "mise en conformité site vitrine par un développeur",
+  "comparatif création site vitrine",
+  "différence entre site vitrine et site e-commerce",
+  "quelle différence entre un site créé par ia et un site sur mesure",
+  "quelle est la différence entre un site vitrine et un site complet pour un agent d'assurance",
+  "quelle différence entre une refonte et un nouveau site",
+  "quelle différence entre site vitrine et site e-commerce",
+  "landing page ou site vitrine",
+  "qu'est-ce qu'un site one page"
+ ],
+ "articlesAProposerEnLien": [
+  {
+   "slug": "brasseur-artisanal-site-web",
+   "titre": "Site web pour brasseur artisanal : se faire connaître et vendre en ligne"
+  },
+  {
+   "slug": "conciergerie-airbnb-site-web",
+   "titre": "Site web pour conciergerie Airbnb : attirer plus de propriétaires"
+  },
+  {
+   "slug": "paa-combien-coute-site-web",
+   "titre": "Combien coûte un site web professionnel en 2026 ? (réponse directe)"
+  },
+  {
+   "slug": "paa-delai-creation-site",
+   "titre": "Combien de temps pour créer un site web ? Ce qui fait varier le délai"
+  },
+  {
+   "slug": "paa-site-web-necessaire",
+   "titre": "Est-ce qu'un site web est encore nécessaire en 2026 ?"
+  },
+  {
+   "slug": "paa-site-web-ventes",
+   "titre": "Un site web augmente-t-il vraiment les ventes ?"
+  }
+ ],
+ "articlesExistantsProches": [
+  {
+   "slug": "site-web-multipage-guide",
+   "titre": "Site web multi-pages : quand en avez-vous vraiment besoin ?",
+   "mots": 1279,
+   "score": 0.23
+  }
+ ]
+}

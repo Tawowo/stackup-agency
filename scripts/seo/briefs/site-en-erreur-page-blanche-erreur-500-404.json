@@ -1,0 +1,97 @@
+{
+ "slug": "site-en-erreur-page-blanche-erreur-500-404",
+ "titre": "Site en erreur (500, 404, page blanche) : causes et solutions",
+ "theme": "maintenance et sécurité",
+ "type": "question",
+ "categorie": "technique",
+ "requetes": [
+  "artisan débutant erreur",
+  "c'est quoi une erreur 404",
+  "quelles erreurs éviter quand on lance sa boutique en ligne",
+  "erreurs de caisse en fin de journée",
+  "mon site affiche une erreur 500 que faire",
+  "comment corriger une erreur 404 sur un site",
+  "mon site affiche une erreur de contenu mixte",
+  "ma boutique prestashop affiche une erreur 500",
+  "pourquoi mon site ne s'affiche plus",
+  "mon site d'auto-école ne s'affiche plus",
+  "mon site ne s'affiche plus sur téléphone",
+  "mon site affiche une page blanche que faire",
+  "mon site d'artisan affiche une page blanche",
+  "mon site affiche index of à la place de ma page",
+  "mon site affiche ce site est en cours de construction",
+  "qu'est-ce qu'un site de préproduction",
+  "peut-on retrouver un site qui n'existe plus",
+  "que faire quand son site internet tombe en panne",
+  "comment être prévenu quand mon site tombe en panne",
+  "comment savoir si mon site est en panne",
+  "qui contacter quand mon site est en panne",
+  "mes automatisations tombent en panne à qui m'adresser",
+  "que faire si ma plateforme de facturation est en panne le jour de l'envoi",
+  "c'est quoi cpanel",
+  "c'est quoi une injection sql",
+  "le prestataire qui a fait mon site ne répond plus",
+  "comment relancer un client qui ne répond pas à mon devis",
+  "que faire si mon prestataire web ne répond plus",
+  "comment sortir d'une agence web qui ne répond plus",
+  "le site a été créé par un freelance qui ne répond plus",
+  "que faire quand un client ne répond plus après un devis",
+  "qui peut maintenir le site d'un artisan",
+  "le prestataire qui a créé mon site doit-il le maintenir",
+  "que faire quand l'ordinateur plante et qu'on a perdu ses devis",
+  "mon site fait vieux et plante souvent",
+  "mon tableau excel plante tout le temps comment faire",
+  "que se passe-t-il si je ne mets jamais à jour mon site",
+  "pourquoi mon site met du temps à charger",
+  "comment tester une mise à jour avant de la faire en vrai",
+  "mon site a perdu son design du jour au lendemain",
+  "comment savoir quel plugin fait planter wordpress",
+  "mon site plante après l'installation d'un plugin",
+  "comment savoir si mon site est sécurisé",
+  "comment savoir où est hébergé mon site",
+  "mon menu ne fonctionne plus sur mon site",
+  "mon formulaire de contact ne fonctionne plus",
+  "que faire quand un scénario zapier ne fonctionne plus",
+  "le module de prise de rendez-vous de mon site ne fonctionne plus",
+  "mon site marche chez moi mais pas chez mes clients",
+  "comment remplacer le bouche à oreille quand il ne marche plus",
+  "les clients me disent que mon site ne marche pas sur téléphone",
+  "en cas de piratage qui est responsable",
+  "comment sécuriser son site après un piratage",
+  "mon assurance couvre-t-elle le piratage de mon site",
+  "pourquoi mon site internet est inaccessible",
+  "mon site est inaccessible depuis ce matin"
+ ],
+ "articlesAProposerEnLien": [
+  {
+   "slug": "accessibilite-site-web-guide",
+   "titre": "Site accessible (RGAA) : obligations et bonnes pratiques pour une TPE"
+  },
+  {
+   "slug": "maintenance-site-web-guide",
+   "titre": "Maintenance de site web : pourquoi c'est indispensable et combien ça coûte"
+  },
+  {
+   "slug": "paa-hebergement-site",
+   "titre": "Quel hébergement choisir pour son site web en 2026 ?"
+  },
+  {
+   "slug": "vitesse-mobile-optimisation",
+   "titre": "Vitesse mobile : comment accélérer votre site sur smartphone"
+  }
+ ],
+ "articlesExistantsProches": [
+  {
+   "slug": "landing-page-vs-site-vitrine",
+   "titre": "Landing page ou site vitrine : quelle solution pour votre activité ?",
+   "mots": 1301,
+   "score": 0.3
+  },
+  {
+   "slug": "erreurs-404-seo-guide",
+   "titre": "Erreurs 404 et SEO : comment les détecter et les corriger",
+   "mots": 1042,
+   "score": 0.29
+  }
+ ]
+}

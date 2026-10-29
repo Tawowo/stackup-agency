@@ -1,0 +1,269 @@
+/* LE CALCULATEUR DE CLIENTS PERDUS — /outils/calculateur-clients-perdus */
+.su-ccp {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+.su-ccp__form {
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.su-ccp__entete {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+.su-ccp__h2 {
+  margin: 0;
+  font-size: clamp(1.5rem, 2.6vw, 2.2rem);
+  line-height: 1.1;
+}
+.su-ccp__form .su-ccp__h2 {
+  color: var(--su-ivoire);
+}
+.su-ccp__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+}
+.su-ccp__note {
+  margin: 0;
+  max-width: 70ch;
+  font-size: 0.9375rem;
+  color: color-mix(in srgb, var(--su-ivoire) 82%, transparent);
+}
+.su-ccp__exemple {
+  margin: 0;
+  padding: 10px 14px;
+  border-left: 3px solid var(--su-ambre);
+  background: color-mix(in srgb, var(--su-ambre) 14%, transparent);
+  color: var(--su-ambre-clair);
+  font-size: 0.8125rem;
+}
+.su-ccp__champs {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px var(--su-gouttiere);
+}
+.su-ccp__champ {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.su-ccp__label {
+  color: var(--su-ivoire);
+  font-weight: 600;
+  line-height: 1.3;
+}
+.su-ccp__num {
+  color: var(--su-ambre-clair);
+  font-size: 0.75rem;
+}
+.su-ccp__saisie {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.su-ccp__input {
+  flex: 0 1 160px;
+  min-width: 0;
+  min-height: 48px;
+  padding: 0 16px;
+  border: 1px solid color-mix(in srgb, var(--su-ivoire) 30%, transparent);
+  border-radius: 4px;
+  background: color-mix(in srgb, var(--su-encre) 70%, transparent);
+  color: var(--su-ivoire);
+  font: inherit;
+  font-size: 1.0625rem;
+}
+.su-ccp__input:focus-visible {
+  outline: 2px solid var(--su-ambre-clair);
+  outline-offset: 2px;
+}
+.su-ccp__input[aria-invalid='true'] {
+  border-color: var(--su-ambre);
+}
+.su-ccp__unite {
+  font-size: 0.75rem;
+  color: var(--su-gris-nuit);
+}
+.su-ccp__aide {
+  margin: 0;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: var(--su-gris-nuit);
+}
+.su-ccp__err {
+  margin: 0;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--su-ambre-clair);
+}
+
+/* Résultat : la phrase d'ordre de grandeur, annoncée par aria-live. */
+.su-ccp__attente {
+  margin: 0;
+  padding: 14px 18px;
+  border-left: 3px solid var(--su-ambre);
+  background: color-mix(in srgb, var(--su-texte) 5%, transparent);
+  color: var(--su-texte-doux);
+}
+.su-ccp__phrase {
+  margin: 0;
+  padding: 20px 24px;
+  border-left: 3px solid var(--su-ambre);
+  background: color-mix(in srgb, var(--su-ambre) 12%, transparent);
+  font-size: clamp(1.15rem, 2vw, 1.5rem);
+  line-height: 1.35;
+  color: var(--su-texte);
+}
+.su-ccp__phrase strong {
+  color: var(--su-accent-texte);
+  white-space: nowrap;
+}
+.su-ccp__resultats {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  animation: su-ccp-decoupe var(--su-scene) var(--su-pose) both;
+}
+.su-ccp__resultats .su-ccp__h2 {
+  color: var(--su-texte);
+  margin-top: 8px;
+}
+@keyframes su-ccp-decoupe {
+  from {
+    clip-path: inset(0 -40px 100% -40px);
+  }
+  to {
+    clip-path: inset(-40px);
+  }
+}
+.su-ccp__etapes {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 12px;
+  counter-reset: etape;
+}
+.su-ccp__etapes li {
+  counter-increment: etape;
+  display: grid;
+  grid-template-columns: 3ch minmax(0, 1fr) minmax(0, 1.4fr);
+  align-items: baseline;
+  gap: 8px 16px;
+  padding: 14px 18px;
+  border-top: 2px solid var(--su-ambre);
+  background: color-mix(in srgb, var(--su-texte) 5%, transparent);
+}
+.su-ccp__etapes li::before {
+  content: counter(etape);
+  font-family: var(--su-font-mono), monospace;
+  font-size: 0.75rem;
+  color: var(--su-accent-texte);
+}
+.su-ccp__etape {
+  font-weight: 600;
+  color: var(--su-texte);
+}
+.su-ccp__formule {
+  font-size: 0.875rem;
+  color: var(--su-texte-doux);
+  overflow-wrap: anywhere;
+}
+.su-ccp__tableau {
+  overflow-x: auto;
+  max-width: 760px;
+}
+.su-ccp__tableau:focus-visible {
+  outline: 2px solid var(--su-ambre);
+  outline-offset: 3px;
+}
+.su-ccp__tableau table {
+  width: 100%;
+  border-collapse: collapse;
+  color: var(--su-texte);
+}
+.su-ccp__tableau th,
+.su-ccp__tableau td {
+  padding: 12px 14px;
+  text-align: left;
+  border-bottom: 1px solid color-mix(in srgb, var(--su-texte) 18%, transparent);
+  vertical-align: top;
+}
+.su-ccp__tableau thead th {
+  font-size: 0.8125rem;
+  color: var(--su-texte-doux);
+}
+.su-ccp__tableau tbody th {
+  font-weight: 500;
+}
+.su-ccp__tableau td {
+  white-space: nowrap;
+  text-align: right;
+}
+.su-ccp__tableau thead th:last-child {
+  text-align: right;
+}
+.su-ccp__lecture {
+  margin: 0;
+  max-width: 68ch;
+  color: var(--su-texte-doux);
+}
+.su-ccp__honnete {
+  padding: 28px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.su-ccp__honnete p {
+  margin: 0;
+  max-width: 62ch;
+  color: color-mix(in srgb, var(--su-ivoire) 82%, transparent);
+}
+.su-ccp__suite {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+/* Texte rédactionnel sous l'outil (rendu serveur). */
+.su-ccp-texte {
+  margin-top: 9svh;
+}
+.su-ccp-faq {
+  margin-top: 9svh;
+}
+.su-ccp-faq h2 {
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  margin: 0 0 20px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .su-ccp__resultats {
+    animation: none;
+  }
+}
+@media (max-width: 767px) {
+  .su-ccp__form,
+  .su-ccp__honnete {
+    padding: 20px;
+  }
+  .su-ccp__champs {
+    grid-template-columns: 1fr;
+  }
+  .su-ccp__etapes li {
+    grid-template-columns: 2.5ch minmax(0, 1fr);
+  }
+  .su-ccp__formule {
+    grid-column: 2;
+  }
+}

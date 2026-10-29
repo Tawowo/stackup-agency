@@ -1,0 +1,68 @@
+{
+ "slug": "hebergement-site-internet-choisir-un-hebergeur",
+ "titre": "Hébergement de site internet : comment choisir un hébergeur",
+ "theme": "maintenance et sécurité",
+ "type": "guide",
+ "categorie": "technique",
+ "requetes": [
+  "solution hébergement web",
+  "solution hébergement cloud agence web",
+  "hébergement site web agence ou client",
+  "offre hébergement ovh site web",
+  "agence web hébergement inclus ou non",
+  "cloud pour agences web",
+  "hébergement pour agence web",
+  "agence web hebergement",
+  "site internet artisan hébergement inclus",
+  "qu'est-ce qu'un hébergeur de site internet",
+  "meilleur hébergeur wordpress en france",
+  "quel hébergeur choisir pour un petit commerce",
+  "prestashop faut-il un hébergeur spécifique",
+  "comment changer d'hébergeur sans perdre son site",
+  "comment migrer son site wix vers un autre hébergeur",
+  "faut-il un hébergeur quand on prend wix",
+  "le support de mon hébergeur est injoignable",
+  "mon hébergeur augmente ses tarifs que faire",
+  "o2switch ou ionos quelle différence",
+  "ovh ou o2switch pour un site wordpress",
+  "ionos ou ovh pour un site professionnel"
+ ],
+ "articlesAProposerEnLien": [
+  {
+   "slug": "accessibilite-site-web-guide",
+   "titre": "Site accessible (RGAA) : obligations et bonnes pratiques pour une TPE"
+  },
+  {
+   "slug": "maintenance-site-web-guide",
+   "titre": "Maintenance de site web : pourquoi c'est indispensable et combien ça coûte"
+  },
+  {
+   "slug": "paa-hebergement-site",
+   "titre": "Quel hébergement choisir pour son site web en 2026 ?"
+  },
+  {
+   "slug": "vitesse-mobile-optimisation",
+   "titre": "Vitesse mobile : comment accélérer votre site sur smartphone"
+  }
+ ],
+ "articlesExistantsProches": [
+  {
+   "slug": "paa-hebergement-site",
+   "titre": "Quel hébergement choisir pour son site web en 2026 ?",
+   "mots": 930,
+   "score": 0.4
+  },
+  {
+   "slug": "site-web-vs-application-mobile",
+   "titre": "Site web vs application mobile : quoi choisir",
+   "mots": 1114,
+   "score": 0.33
+  },
+  {
+   "slug": "hebergement-web-choisir",
+   "titre": "Hébergement web : les différentes solutions et comment choisir",
+   "mots": 1306,
+   "score": 0.29
+  }
+ ]
+}

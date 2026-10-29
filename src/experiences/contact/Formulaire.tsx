@@ -14,6 +14,7 @@ import { calculer } from '@/domain/devis/calcul'
 import { decoder } from '@/domain/devis/etat'
 import { euros, fourchetteTexte, lignesConfig, resumeTexte } from '@/domain/devis/resume'
 import { gsap } from '@/lib/gsap'
+import { suivre } from '@/lib/mesure'
 import { useScene } from '@/webgl/store'
 import StackFrame from '@/webgl/StackFrame'
 import Action from '@/components/ui/Action'
@@ -109,6 +110,7 @@ export default function Formulaire({ e, action, projet, objet }: { e: string | n
       const res = await fetch('/api/contact', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify(r.data) })
       const j = (await res.json()) as { ok: boolean; envoye?: boolean; erreur?: string; champs?: Champs }
       if (res.ok && j.ok) {
+        suivre('contact_envoye')
         // Le départ : la pile se plie en enveloppe, le logo la scelle, puis elle
         // file au fond de la scène ; la page de confirmation prend le relais.
         const sc = useScene.getState()

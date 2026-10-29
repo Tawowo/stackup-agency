@@ -1,0 +1,39 @@
+{
+ "slug": "site-pirate-que-faire-wordpress-hack",
+ "titre": "Mon site a été piraté : que faire, étape par étape",
+ "theme": "maintenance et sécurité",
+ "type": "question",
+ "categorie": "technique",
+ "requetes": [
+  "refonte de site internet piraté",
+  "quelqu'un pour nettoyer mon site wordpress infecté",
+  "un formulaire de contact peut-il être piraté",
+  "est-ce que les petits sites sont ciblés par les pirates",
+  "site woocommerce piraté que faire",
+  "boutique en ligne piratée que faire",
+  "site d'association piraté que faire",
+  "comment réparer un site wordpress piraté",
+  "c'est quoi une faille de sécurité sur un site internet",
+  "comment savoir si mes plugins wordpress ont une faille connue",
+  "comment fonctionne la sécurité d'un site statique"
+ ],
+ "articlesAProposerEnLien": [
+  {
+   "slug": "accessibilite-site-web-guide",
+   "titre": "Site accessible (RGAA) : obligations et bonnes pratiques pour une TPE"
+  },
+  {
+   "slug": "maintenance-site-web-guide",
+   "titre": "Maintenance de site web : pourquoi c'est indispensable et combien ça coûte"
+  },
+  {
+   "slug": "paa-hebergement-site",
+   "titre": "Quel hébergement choisir pour son site web en 2026 ?"
+  },
+  {
+   "slug": "vitesse-mobile-optimisation",
+   "titre": "Vitesse mobile : comment accélérer votre site sur smartphone"
+  }
+ ],
+ "articlesExistantsProches": []
+}

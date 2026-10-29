@@ -1,0 +1,88 @@
+{
+ "slug": "vitesse-site-core-web-vitals",
+ "titre": "Vitesse du site et Core Web Vitals : mesurer et améliorer",
+ "theme": "maintenance et sécurité",
+ "type": "guide",
+ "categorie": "technique",
+ "requetes": [
+  "audit performance site web",
+  "audit performance site internet",
+  "audit de performance site web",
+  "audit performance site",
+  "audit performance site web tpe",
+  "c'est quoi l'inp",
+  "c'est quoi le cls",
+  "c'est quoi le lcp",
+  "pagespeed insights comment lire les résultats",
+  "pourquoi mon site internet est-il lent à charger",
+  "mon site wix est lent pourquoi",
+  "pourquoi mon site est lent sur mobile",
+  "mon site wordpress est très lent que faire",
+  "faut-il changer d'hébergeur si mon site est lent",
+  "pourquoi mon site est lent",
+  "mon site est lent sur mobile",
+  "comment savoir si mon site est lent",
+  "vitesse chargement site agence web",
+  "optimisation de la vitesse d'un site web par un professionnel",
+  "comment tester la vitesse de mon site",
+  "comment tester la vitesse de son site",
+  "la vitesse du site compte-t-elle pour google",
+  "la vitesse de chargement et le taux de rebond",
+  "comment mesurer la vitesse de mon site gratuitement",
+  "combien coûte l'optimisation de la vitesse d'un site",
+  "comment améliorer la vitesse d'une boutique en ligne",
+  "core web vitals 2026",
+  "c'est quoi les core web vitals",
+  "core web vitals wix comment améliorer",
+  "core web vitals wordpress comment améliorer",
+  "comment améliorer les core web vitals de mon site",
+  "que veut dire core web vitals",
+  "core web vitals landivisiau",
+  "comment réduire le poids d'une page web",
+  "les clients appellent mon concurrent et pas moi",
+  "pourquoi les clients appellent moins qu'avant",
+  "pourquoi mes clients parlent de plateforme pour recevoir mes factures",
+  "comment attirer les clients des alentours vers son commerce de village",
+  "clients qui ne rappellent pas après le devis",
+  "pourquoi les clients ne rappellent pas après un devis",
+  "est-ce que les clients rappellent quand ils tombent sur un répondeur",
+  "les plateformes de devis en ligne valent-elles le coup pour un artisan",
+  "comment optimiser les images pour le seo",
+  "comment optimiser les images produits pour le référencement",
+  "comment optimiser les images de mon site",
+  "les clients de mon salon veulent prendre rendez-vous le soir tard",
+  "mes clients veulent commander en ligne mais je n'ai pas de site"
+ ],
+ "articlesAProposerEnLien": [
+  {
+   "slug": "accessibilite-site-web-guide",
+   "titre": "Site accessible (RGAA) : obligations et bonnes pratiques pour une TPE"
+  },
+  {
+   "slug": "maintenance-site-web-guide",
+   "titre": "Maintenance de site web : pourquoi c'est indispensable et combien ça coûte"
+  },
+  {
+   "slug": "paa-hebergement-site",
+   "titre": "Quel hébergement choisir pour son site web en 2026 ?"
+  },
+  {
+   "slug": "vitesse-mobile-optimisation",
+   "titre": "Vitesse mobile : comment accélérer votre site sur smartphone"
+  }
+ ],
+ "articlesExistantsProches": [
+  {
+   "slug": "vitesse-mobile-optimisation",
+   "titre": "Vitesse mobile : comment accélérer votre site sur smartphone",
+   "mots": 1099,
+   "score": 0.36
+  },
+  {
+   "slug": "pourquoi-site-charge-lentement",
+   "titre": "Pourquoi votre site charge lentement",
+   "mots": 1125,
+   "score": 0.33
+  }
+ ]
+}

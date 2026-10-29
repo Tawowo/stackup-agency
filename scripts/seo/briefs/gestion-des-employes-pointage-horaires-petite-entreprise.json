@@ -1,0 +1,58 @@
+{
+ "slug": "gestion-des-employes-pointage-horaires-petite-entreprise",
+ "titre": "Gérer ses employés : pointage, horaires, congés dans une petite entreprise",
+ "theme": "gestion d'entreprise",
+ "type": "guide",
+ "categorie": "artisans",
+ "requetes": [
+  "comment suivre les heures de ses salariés",
+  "comment former ses salariés à chatgpt",
+  "comment contrôler les heures de mes salariés",
+  "comment gérer les congés de mes salariés simplement",
+  "comment automatiser la saisie des heures de mes salariés",
+  "est-ce obligatoire de suivre le temps de travail de ses salariés",
+  "comment déclarer un salarié pour la première fois",
+  "comment gérer un salarié qui ne fait pas son travail",
+  "comment fixer son taux horaire quand on est artisan",
+  "comment calculer son taux horaire d'artisan",
+  "comment présenter ses horaires sur un site internet",
+  "comment fixer son taux horaire d'électricien",
+  "mes patients demandent mon adresse et mes horaires par téléphone",
+  "mes clients me demandent mes horaires par téléphone toute la journée",
+  "je n'arrive pas à recruter un ouvrier qualifié",
+  "comment recruter un apprenti quand on est artisan",
+  "faut-il embaucher une secrétaire quand on est artisan",
+  "comment savoir si on peut embaucher",
+  "quand embaucher son premier salarié",
+  "comment développer son entreprise artisanale sans embaucher",
+  "comment gérer ses employés quand on est petit patron",
+  "que faire quand un employé démissionne sans prévenir"
+ ],
+ "articlesAProposerEnLien": [
+  {
+   "slug": "avis-clients-artisan-strategie",
+   "titre": "Avis clients pour artisans : la stratégie pour obtenir 100+ avis Google"
+  },
+  {
+   "slug": "click-collect-boucherie-charcuterie",
+   "titre": "Click & Collect pour boucherie et charcuterie : guide pratique de mise en place"
+  },
+  {
+   "slug": "devis-en-ligne-artisan",
+   "titre": "Devis en ligne pour artisans : comment automatiser et gagner du temps"
+  },
+  {
+   "slug": "portfolio-artisan-digital",
+   "titre": "Portfolio digital pour artisan : montrer son travail et convaincre sans se déplacer"
+  },
+  {
+   "slug": "portfolio-digital-artisan-art",
+   "titre": "Artisan d'art et créateur : le portfolio digital qui attire les clients premium"
+  },
+  {
+   "slug": "prise-rdv-en-ligne-plombier-electricien",
+   "titre": "Plombier, électricien, chauffagiste : la prise de RDV en ligne qui remplit votre agenda"
+  }
+ ],
+ "articlesExistantsProches": []
+}

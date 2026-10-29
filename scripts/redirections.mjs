@@ -27,6 +27,10 @@ const nouvelles = [
   { source: '/solutions/commande-en-ligne-livraison', destination: '/solutions/click-and-collect', permanent: true },
   { source: '/solutions/galerie-client-photographe', destination: '/solutions', permanent: true },
   { source: '/services/site-association', destination: '/services', permanent: true },
+  // Villes et départements hors de la zone réelle d'intervention : plus de page (contenu de page satellite), tout mène aux zones.
+  ...['orleans', 'chartres', 'dreux', 'bourges', 'vierzon', 'chateaudun', 'nantes', 'laval', 'caen', 'rouen', 'evreux', 'alencon', 'lisieux', 'rambouillet', 'anet', 'vernouillet', 'nogent-le-rotrou'].map((slug) => ({ source: `/agence-web/${slug}`, destination: '/zones-intervention', permanent: true })),
+  { source: '/agence-web/chateauroux', destination: '/agence-web/departement/indre', permanent: true },
+  ...['loiret', 'eure-et-loir', 'cher', 'deux-sevres', 'yonne', 'nievre', 'allier', 'creuse', 'orne'].map((slug) => ({ source: `/agence-web/departement/${slug}`, destination: '/zones-intervention', permanent: true })),
 ]
 // Les 21 catégories de l'ancien blog se regroupent en 9 rayons : une page par rayon, les autres URL de catégorie y mènent.
 const blogTs = fs.readFileSync('src/lib/blog.ts', 'utf8')
@@ -41,6 +45,8 @@ const parCategorie = [...categories]
   .filter((c) => !rayons.some((r) => r.id === c))
   .map((c) => ({ source: `/blog/categorie/${c}`, destination: `/blog/categorie/${(rayons.find((r) => r.cats.includes(c)) ?? rayons[0]).id}`, permanent: true }))
 nouvelles.push(...parCategorie)
+// Articles fusionnés ou retirés par l'audit éditorial (scripts/seo/audit-articles.mjs --appliquer).
+if (fs.existsSync('src/config/redirections-articles.json')) nouvelles.push(...JSON.parse(fs.readFileSync('src/config/redirections-articles.json', 'utf8')))
 const toutes = [...vieilles, ...nouvelles]
 const sortie = `/**
  * REDIRECTIONS 301 — générées par scripts/redirections.mjs (ne pas éditer à la main).

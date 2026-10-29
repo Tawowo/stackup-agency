@@ -1,0 +1,80 @@
+{
+ "slug": "search-console-indexation-explorees-non-indexees",
+ "titre": "Google Search Console : indexation, « explorée non indexée » et sitemap",
+ "theme": "référencement",
+ "type": "guide",
+ "categorie": "seo",
+ "requetes": [
+  "c'est quoi google search console",
+  "comment utiliser google search console",
+  "c'est quoi le ctr dans la search console",
+  "comment connecter wix à la search console",
+  "comment ajouter mon site à la search console",
+  "à quoi sert la search console pour un artisan",
+  "comment lire les rapports de la search console",
+  "comment connecter wordpress à la search console",
+  "c'est quoi un sitemap",
+  "sitemap wix où le trouver",
+  "sitemap wordpress où le trouver",
+  "comment soumettre un sitemap à google",
+  "comment créer un sitemap pour mon site",
+  "comment trouver le sitemap de mon site",
+  "sitemap soumis mais pages non indexées",
+  "détectée actuellement non indexée que faire",
+  "explorée actuellement non indexée signification",
+  "comment indexer son site wordpress sur google",
+  "comment forcer google à indexer mon site",
+  "comment faire indexer mon site rapidement",
+  "mon site affiche noindex que faire",
+  "comment enlever le noindex de mon site",
+  "à quoi sert le fichier robots.txt",
+  "comment savoir si mes visiteurs sont des robots",
+  "page bloquée par le fichier robots.txt que faire",
+  "comment modifier le fichier robots.txt de mon site",
+  "comment empêcher les robots de remplir mon formulaire",
+  "combien de temps pour que google indexe une nouvelle page",
+  "pourquoi google n'indexe pas mes nouvelles pages",
+  "comment savoir si mon site est indexé par google",
+  "que faire si google a désindexé mon site",
+  "que veut dire page en double sans url canonique sélectionnée par l'utilisateur",
+  "faut-il changer l'url d'une page déjà indexée",
+  "page en double google a choisi une url canonique différente de celle de l'utilisateur",
+  "indexation mobile-first",
+  "comment demander l'indexation d'une page à google",
+  "comment demander à google de réexplorer mon site"
+ ],
+ "articlesAProposerEnLien": [
+  {
+   "slug": "10-erreurs-seo-site-web",
+   "titre": "SEO : les 15 erreurs qui plombent les sites de petites entreprises"
+  },
+  {
+   "slug": "ai-overviews-seo-tpe",
+   "titre": "Google AI Overviews : comment être cité par l'IA de Google"
+  },
+  {
+   "slug": "articles-blog-ia-seo-2026",
+   "titre": "Articles de blog générés par IA et SEO en 2026 : ce qu'il faut vraiment savoir"
+  },
+  {
+   "slug": "audit-seo-technique-checklist-50-points",
+   "titre": "Audit SEO technique : checklist 50 points complète"
+  },
+  {
+   "slug": "blog-artisan-guide",
+   "titre": "Créer un blog pour son entreprise artisanale : ce qui vaut vraiment la peine"
+  },
+  {
+   "slug": "blog-seo-tpe-artisan",
+   "titre": "Blog SEO pour TPE et artisans : comment attirer des clients sans publicité"
+  }
+ ],
+ "articlesExistantsProches": [
+  {
+   "slug": "google-search-console-guide-avance-seo",
+   "titre": "Google Search Console : guide avancé pour le SEO",
+   "mots": 1779,
+   "score": 0.25
+  }
+ ]
+}

@@ -44,6 +44,8 @@ export const SITE = {
     /** Indemnité forfaitaire de recouvrement entre professionnels (art. D.441-5 du Code de commerce). */
     indemniteRecouvrement: 40,
   },
+  /** Horaires d'ouverture (données structurées) : à renseigner par le propriétaire, au format schema.org OpeningHoursSpecification. Vide = non publié. */
+  horaires: [] as { '@type': 'OpeningHoursSpecification'; dayOfWeek: string[]; opens: string; closes: string }[],
   social: {
     linkedin: 'https://www.linkedin.com/in/stackup-agency-5756943aa/',
     instagram: 'https://www.instagram.com/stackup.agency/',

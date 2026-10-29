@@ -1,0 +1,75 @@
+{
+ "slug": "excel-ne-suffit-plus-passer-a-un-outil-sur-mesure",
+ "titre": "Quand Excel ne suffit plus : passer à un outil de gestion sur mesure",
+ "theme": "logiciel de gestion",
+ "type": "guide",
+ "categorie": "applications-metier",
+ "requetes": [
+  "peut-on créer une application de gestion avec excel",
+  "excel ou outil sur mesure pour gérer ses clients",
+  "transformer un fichier excel en outil de gestion en ligne",
+  "comment remplacer excel par une application",
+  "comment sortir d'excel pour gérer son activité",
+  "pourquoi remplacer excel par un outil sur mesure",
+  "comment transformer mon tableau excel en application",
+  "peut-on faire une application à partir d'un fichier excel",
+  "mon fichier excel devient ingérable",
+  "qu'est-ce qui change pour un petit artisan qui facture sur papier",
+  "que se passe-t-il pour mes anciennes factures papier après la réforme",
+  "est-ce que les factures papier vont disparaître pour les artisans",
+  "facture papier encore autorisée",
+  "comment relier devis, factures et comptabilité sans ressaisie",
+  "comment gérer un carnet de commandes d'artisan",
+  "comment remplir son carnet de commandes",
+  "carnet de commandes vide en hiver comment faire",
+  "que dois-je faire de mon carnet de factures à souche",
+  "je fais mes factures à la main sur un carnet, que va-t-il se passer"
+ ],
+ "articlesAProposerEnLien": [
+  {
+   "slug": "application-fidelite-sur-mesure",
+   "titre": "Application de fidélité sur mesure : pourquoi les solutions génériques ne suffisent pas"
+  },
+  {
+   "slug": "application-gestion-chantiers",
+   "titre": "Application gestion de chantiers : suivi terrain et reporting en temps réel"
+  },
+  {
+   "slug": "application-gestion-rdv",
+   "titre": "Prise de rendez-vous en ligne : Calendly, Planity ou le vôtre ?"
+  },
+  {
+   "slug": "application-livraison-interne",
+   "titre": "Application de livraison interne : gérer ses tournées et ses livreurs"
+  },
+  {
+   "slug": "application-reservation-location",
+   "titre": "Application de réservation et location : gérer un parc de biens en ligne"
+  },
+  {
+   "slug": "automatisation-processus-pme",
+   "titre": "Automatisation des processus PME : ce qu'on peut faire avec le digital"
+  }
+ ],
+ "articlesExistantsProches": [
+  {
+   "slug": "prix-logiciel-sur-mesure",
+   "titre": "Combien coûte un logiciel de gestion sur mesure ?",
+   "mots": 928,
+   "score": 0.38,
+   "programme": "2026-09-11"
+  },
+  {
+   "slug": "gestion-caisse-sur-mesure",
+   "titre": "Caisse enregistreuse : logiciel du commerce vs solution sur mesure",
+   "mots": 1215,
+   "score": 0.3
+  },
+  {
+   "slug": "gestion-planning-employes",
+   "titre": "Gestion du planning employés : l'application qui remplace les tableurs Excel",
+   "mots": 1101,
+   "score": 0.3
+  }
+ ]
+}

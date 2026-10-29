@@ -1,0 +1,78 @@
+{
+ "slug": "pourquoi-mon-site-n-apparait-pas-sur-google",
+ "titre": "Pourquoi mon site n’apparaît pas sur Google (et comment le corriger)",
+ "theme": "référencement",
+ "type": "question",
+ "categorie": "seo",
+ "requetes": [
+  "comment apparaître sur google",
+  "comment apparaître sur google quand on cherche un produit près de chez soi",
+  "faut-il payer pour apparaître sur google",
+  "comment apparaître en premier sur google",
+  "comment passer en première page de google",
+  "mon site wordpress n'apparaît pas sur google",
+  "comment faire apparaître ses produits sur google",
+  "comment apparaître dans les aperçus ia de google",
+  "pourquoi mon site n'apparaît pas sur google",
+  "ma fiche google n'apparaît pas dans les recherches",
+  "l'ancienne adresse de mon entreprise apparaît encore sur internet",
+  "ma fiche google n'apparaît pas quand je cherche le nom de mon entreprise",
+  "pourquoi mon commerce n'apparaît pas quand on cherche près de chez soi",
+  "le cadenas n'apparaît pas sur mon site",
+  "mon site wix n'apparaît pas sur google",
+  "mon entreprise n'apparaît pas sur google",
+  "après refonte mon site n'apparaît plus sur google",
+  "comment apparaître dans les villes autour de chez moi",
+  "comment apparaître dans les résultats près de chez moi",
+  "comment apparaître dans plusieurs villes quand on se déplace chez les clients",
+  "mon site existe depuis des mois et reste invisible"
+ ],
+ "articlesAProposerEnLien": [
+  {
+   "slug": "10-erreurs-seo-site-web",
+   "titre": "SEO : les 15 erreurs qui plombent les sites de petites entreprises"
+  },
+  {
+   "slug": "ai-overviews-seo-tpe",
+   "titre": "Google AI Overviews : comment être cité par l'IA de Google"
+  },
+  {
+   "slug": "articles-blog-ia-seo-2026",
+   "titre": "Articles de blog générés par IA et SEO en 2026 : ce qu'il faut vraiment savoir"
+  },
+  {
+   "slug": "audit-seo-technique-checklist-50-points",
+   "titre": "Audit SEO technique : checklist 50 points complète"
+  },
+  {
+   "slug": "blog-artisan-guide",
+   "titre": "Créer un blog pour son entreprise artisanale : ce qui vaut vraiment la peine"
+  },
+  {
+   "slug": "blog-seo-tpe-artisan",
+   "titre": "Blog SEO pour TPE et artisans : comment attirer des clients sans publicité"
+  }
+ ],
+ "articlesExistantsProches": [
+  {
+   "slug": "combien-temps-visible-google",
+   "titre": "Combien de temps pour être visible sur Google ?",
+   "mots": 1777,
+   "score": 0.3,
+   "programme": "2026-10-23"
+  },
+  {
+   "slug": "erreurs-404-seo-guide",
+   "titre": "Erreurs 404 et SEO : comment les détecter et les corriger",
+   "mots": 1042,
+   "score": 0.27
+  },
+  {
+   "slug": "site-osteopathe-doctolib-et-google",
+   "titre": "Ostéopathe : être trouvé sur Doctolib ET sur Google",
+   "mots": 994,
+   "score": 0.25,
+   "programme": "2026-12-15"
+  }
+ ]
+}

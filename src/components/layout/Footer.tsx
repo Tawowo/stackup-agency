@@ -2,7 +2,7 @@ import Link from 'next/link'
 import LogoMarque from '@/components/ui/LogoMarque'
 import { ENTREES, RESSOURCES } from './entrees'
 import { SITE } from '@/config/site'
-import { SERVICES } from '@/data/services'
+import { ZONES } from '@/data/zones'
 import { SOLUTIONS } from '@/data/solutions'
 import { METIERS } from '@/data/metiers'
 import { VILLES } from '@/data/villes'
@@ -13,6 +13,18 @@ import { RAYONS } from '@/lib/blog'
 /** Les métiers et villes les plus demandés (priorité P1 des données) : le footer en cite quelques-uns, le reste est à un clic. */
 const METIERS_PHARES = METIERS.filter((m) => m.priorite === 'P1').slice(0, 7)
 const VILLES_PHARES = VILLES.filter((v) => v.priorite === 'P1').slice(0, 7)
+
+const PILIERS_PIED: [string, string][] = [
+  ['/services/creation-de-site-internet', 'Création de site internet'],
+  ['/services/refonte-de-site-internet', 'Refonte de site'],
+  ['/services/referencement', 'Référencement'],
+  ['/services/referencement-local', 'Référencement local'],
+  ['/services/site-ecommerce', 'Boutique en ligne'],
+  ['/services/logiciel-de-gestion', 'Logiciel de gestion'],
+  ['/services/ia-et-automatisation', 'IA et automatisation'],
+  ['/services/facture-electronique', 'Facture électronique'],
+  ['/services/maintenance', 'Maintenance'],
+]
 
 /**
  * FOOTER COMPLET — logo exact, puis toutes les familles de pages : offres,
@@ -51,14 +63,11 @@ export default function Footer() {
           <div className="su-footer__famille">
             <h2>Services</h2>
             <ul>
-              {Object.entries(SERVICES).map(([slug, s]) => (
-                <li key={slug}>
-                  <Link href={`/services/${slug}`}>{s.title}</Link>
+              {PILIERS_PIED.map(([href, nom]) => (
+                <li key={href}>
+                  <Link href={href}>{nom}</Link>
                 </li>
               ))}
-              <li>
-                <Link href="/services/referencement">Référencement</Link>
-              </li>
               {Object.entries(SERVICES_LOCAUX)
                 .slice(0, 3)
                 .map(([slug, s]) => (
@@ -106,7 +115,13 @@ export default function Footer() {
                 <Link href="/agence-web">Les {VILLES.length} villes →</Link>
               </li>
               <li>
-                <Link href="/zones-intervention">{DEPARTEMENTS.length} départements →</Link>
+                <Link href="/zones-intervention">{ZONES.length} zones et votre commune →</Link>
+              </li>
+              <li>
+                <Link href="/zones-intervention/touraine-ouest-val-de-loire">Touraine Ouest Val de Loire</Link>
+              </li>
+              <li>
+                <Link href="/agence-web/departement/indre-et-loire">{DEPARTEMENTS.length} départements</Link>
               </li>
             </ul>
           </div>
@@ -130,6 +145,18 @@ export default function Footer() {
                 <Link href="/outils/audit-site">Audit de site</Link>
               </li>
               <li>
+                <Link href="/outils/generateur-mentions-legales">Mentions légales</Link>
+              </li>
+              <li>
+                <Link href="/outils/modele-devis">Modèle de devis</Link>
+              </li>
+              <li>
+                <Link href="/outils/calculateur-clients-perdus">Clients perdus</Link>
+              </li>
+              <li>
+                <Link href="/outils/checklist-facture-electronique">Facture électronique</Link>
+              </li>
+              <li>
                 <Link href="/tarifs#estimer">Estimer mon projet</Link>
               </li>
               <li>
@@ -151,6 +178,12 @@ export default function Footer() {
         </nav>
         <div className="su-footer__bas su-mono">
           <ul>
+            <li>
+              <Link href="/stackup-agency-en-bref">Stackup en bref</Link>
+            </li>
+            <li>
+              <Link href="/auteur/matheo-reboul">L’auteur</Link>
+            </li>
             <li>
               <Link href="/mentions-legales">Mentions légales</Link>
             </li>

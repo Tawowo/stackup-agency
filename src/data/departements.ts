@@ -526,4 +526,6 @@ export function getArticles(slug: string): { dans: string; de: string } {
   return ARTICLES[slug] || { dans: 'le ', de: 'du ' }
 }
 
-export const DEPARTEMENTS: Departement[] = jetonsProfond(BRUT_DEPARTEMENTS)
+/** Les six départements de la zone réelle : Indre-et-Loire d'abord, puis Loir-et-Cher, Indre, Maine-et-Loire, Sarthe, Vienne. Les autres mènent à /zones-intervention (301). */
+const DEPARTEMENTS_GARDES = ['indre-et-loire', 'loir-et-cher', 'indre', 'maine-et-loire', 'sarthe', 'vienne']
+export const DEPARTEMENTS: Departement[] = jetonsProfond(BRUT_DEPARTEMENTS).filter((d) => DEPARTEMENTS_GARDES.includes(d.slug))

@@ -1,0 +1,57 @@
+{
+ "slug": "nom-de-domaine-choisir-acheter-renouveler-transferer",
+ "titre": "Nom de domaine : choisir, acheter, renouveler, transférer",
+ "theme": "maintenance et sécurité",
+ "type": "guide",
+ "categorie": "technique",
+ "requetes": [
+  "comment choisir son nom de domaine",
+  "acheter un nom de domaine point com",
+  "réserver un nom de domaine pour son entreprise",
+  "messagerie professionnelle avec nom de domaine prix",
+  "gandi ou ovh nom de domaine",
+  "comment choisir un nom de domaine",
+  "registrar nom de domaine comparatif",
+  "achat nom de domaine et création de site",
+  "c'est quoi le dns",
+  "comment sécuriser son dns",
+  "c'est quoi une zone dns",
+  "comment vérifier la propagation dns",
+  "comment configurer le dns pour vercel",
+  "comment savoir si mes dns sont corrects",
+  "est-ce que changer de dns coupe mes mails",
+  "comment configurer le dns pour un nouveau site",
+  "comment changer les serveurs dns de son domaine",
+  "comment créer une adresse mail avec mon nom de domaine",
+  "adresse mail professionnelle gratuite avec nom de domaine",
+  "quelle est la différence entre adresse mail et nom de domaine",
+  "mon prestataire a acheté mon nom de domaine à son nom que faire",
+  "comment utiliser un nom de domaine acheté ailleurs avec wix"
+ ],
+ "articlesAProposerEnLien": [
+  {
+   "slug": "accessibilite-site-web-guide",
+   "titre": "Site accessible (RGAA) : obligations et bonnes pratiques pour une TPE"
+  },
+  {
+   "slug": "maintenance-site-web-guide",
+   "titre": "Maintenance de site web : pourquoi c'est indispensable et combien ça coûte"
+  },
+  {
+   "slug": "paa-hebergement-site",
+   "titre": "Quel hébergement choisir pour son site web en 2026 ?"
+  },
+  {
+   "slug": "vitesse-mobile-optimisation",
+   "titre": "Vitesse mobile : comment accélérer votre site sur smartphone"
+  }
+ ],
+ "articlesExistantsProches": [
+  {
+   "slug": "nom-de-domaine-choisir",
+   "titre": "Choisir son nom de domaine : guide complet pour les entrepreneurs",
+   "mots": 1259,
+   "score": 0.33
+  }
+ ]
+}

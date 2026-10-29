@@ -1,0 +1,65 @@
+{
+ "slug": "comptabilite-tva-charges-ne-pas-perdre-pied",
+ "titre": "Comptabilité, TVA, charges : ne pas se laisser déborder",
+ "theme": "gestion d'entreprise",
+ "type": "question",
+ "categorie": "artisans",
+ "requetes": [
+  "comment savoir si je dois facturer la tva",
+  "comment faire sa déclaration de tva sans comptable",
+  "quand devient-on assujetti à la tva",
+  "comment demander la tva en tant qu'artisan",
+  "attestation tva réduite travaux obligatoire",
+  "je suis en retard sur mes déclarations de tva",
+  "taux de tva travaux de rénovation attestation",
+  "tva intracommunautaire numéro comment l'obtenir",
+  "comment faire sa déclaration d'impôts quand on est auto-entrepreneur",
+  "comment calculer ses impôts quand on est artisan",
+  "site impots.gouv liste des plateformes agréées",
+  "peut-on utiliser son expert-comptable comme plateforme de facturation",
+  "compte bancaire pro obligatoire micro-entrepreneur",
+  "faut-il un compte bancaire professionnel quand on est micro-entrepreneur",
+  "comment faire sa compta tout seul quand on est micro-entrepreneur",
+  "déclaration chiffre d'affaires urssaf comment faire",
+  "déclaration de chiffre d'affaires micro-entrepreneur mensuelle ou trimestrielle",
+  "comment déclarer son chiffre d'affaires à l'urssaf",
+  "c'est quoi le ftp et à quoi ça sert",
+  "c'est quoi un kbis et à quoi ça sert",
+  "comment faire de la communication quand on n'aime pas ça",
+  "ma comptabilité est en retard",
+  "comment rattraper une comptabilité en retard",
+  "que faire quand on a pris du retard dans sa comptabilité",
+  "comment tenir sa comptabilité quand on est artisan",
+  "je ne peux pas payer mes cotisations urssaf",
+  "comment obtenir un échéancier avec l'urssaf",
+  "comment gérer les cotisations d'une association",
+  "comment gérer sa trésorerie quand on est artisan"
+ ],
+ "articlesAProposerEnLien": [
+  {
+   "slug": "avis-clients-artisan-strategie",
+   "titre": "Avis clients pour artisans : la stratégie pour obtenir 100+ avis Google"
+  },
+  {
+   "slug": "click-collect-boucherie-charcuterie",
+   "titre": "Click & Collect pour boucherie et charcuterie : guide pratique de mise en place"
+  },
+  {
+   "slug": "devis-en-ligne-artisan",
+   "titre": "Devis en ligne pour artisans : comment automatiser et gagner du temps"
+  },
+  {
+   "slug": "portfolio-artisan-digital",
+   "titre": "Portfolio digital pour artisan : montrer son travail et convaincre sans se déplacer"
+  },
+  {
+   "slug": "portfolio-digital-artisan-art",
+   "titre": "Artisan d'art et créateur : le portfolio digital qui attire les clients premium"
+  },
+  {
+   "slug": "prise-rdv-en-ligne-plombier-electricien",
+   "titre": "Plombier, électricien, chauffagiste : la prise de RDV en ligne qui remplit votre agenda"
+  }
+ ],
+ "articlesExistantsProches": []
+}

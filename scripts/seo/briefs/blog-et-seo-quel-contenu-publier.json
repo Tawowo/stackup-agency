@@ -1,0 +1,81 @@
+{
+ "slug": "blog-et-seo-quel-contenu-publier",
+ "titre": "Blog et référencement : quel contenu publier et à quelle fréquence",
+ "theme": "référencement",
+ "type": "guide",
+ "categorie": "seo",
+ "requetes": [
+  "commander un article de blog",
+  "comment rédiger un article seo",
+  "comment rédiger un article de blog avec l'ia",
+  "comment trouver des idées d'articles de blog",
+  "comment rédiger un article de blog optimisé seo",
+  "comment structurer un article de blog pour google",
+  "l'ia pour écrire des articles de blog pour artisan",
+  "générer des idées d'articles de blog pour mon métier",
+  "combien d'articles faut-il pour que le blog serve au seo",
+  "externalisation rédaction blog",
+  "un blog aide-t-il à avoir des clients",
+  "un blog sur wix est-il bon pour le seo",
+  "à quelle fréquence publier sur son blog",
+  "faut-il un blog sur le site d'un artisan",
+  "un blog est-il utile pour le référencement",
+  "sur quoi écrire un blog quand on est artisan",
+  "faut-il tenir un blog quand on est commerçant",
+  "une boutique en ligne a-t-elle besoin d'un blog",
+  "agence rédaction web",
+  "freelance redaction web",
+  "rédaction web freelance",
+  "agence de rédaction web",
+  "prestataire rédaction web",
+  "à quel moment externaliser la rédaction de contenus optimisés pour le seo.",
+  "rédaction article seo",
+  "externaliser rédaction web"
+ ],
+ "articlesAProposerEnLien": [
+  {
+   "slug": "10-erreurs-seo-site-web",
+   "titre": "SEO : les 15 erreurs qui plombent les sites de petites entreprises"
+  },
+  {
+   "slug": "ai-overviews-seo-tpe",
+   "titre": "Google AI Overviews : comment être cité par l'IA de Google"
+  },
+  {
+   "slug": "articles-blog-ia-seo-2026",
+   "titre": "Articles de blog générés par IA et SEO en 2026 : ce qu'il faut vraiment savoir"
+  },
+  {
+   "slug": "audit-seo-technique-checklist-50-points",
+   "titre": "Audit SEO technique : checklist 50 points complète"
+  },
+  {
+   "slug": "blog-artisan-guide",
+   "titre": "Créer un blog pour son entreprise artisanale : ce qui vaut vraiment la peine"
+  },
+  {
+   "slug": "blog-seo-tpe-artisan",
+   "titre": "Blog SEO pour TPE et artisans : comment attirer des clients sans publicité"
+  }
+ ],
+ "articlesExistantsProches": [
+  {
+   "slug": "blog-immobilier-sujets-mandats",
+   "titre": "Blog immobilier : 15 sujets d'articles pour obtenir plus de mandats",
+   "mots": 918,
+   "score": 0.25
+  },
+  {
+   "slug": "blog-seo-tpe-artisan",
+   "titre": "Blog SEO pour TPE et artisans : comment attirer des clients sans publicité",
+   "mots": 1209,
+   "score": 0.25
+  },
+  {
+   "slug": "frequence-publication-blog-seo",
+   "titre": "Blog d'entreprise : combien d'articles pour des résultats ?",
+   "mots": 1486,
+   "score": 0.25
+  }
+ ]
+}

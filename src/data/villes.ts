@@ -1,3 +1,5 @@
+import { VILLES_A } from './enrichissements/villes-nouvelles-a'
+import { VILLES_B } from './enrichissements/villes-nouvelles-b'
 export interface Ville {
   slug: string
   ville: string
@@ -11,7 +13,7 @@ export interface Ville {
   secteurs: string[]
 }
 
-export const VILLES: Ville[] = [
+const VILLES_ANCIENNES: Ville[] = [
   {
     slug: 'tours',
     ville: 'Tours',
@@ -349,6 +351,10 @@ export const VILLES: Ville[] = [
     secteurs: ['Plasturgie & métallurgie', 'Commerce de centre-ville', 'Artisanat local', 'Services aux entreprises'],
   },
 ]
+
+/** Villes de la zone réelle d'intervention : les villes plus lointaines (Normandie, Île-de-France, Loiret…) n'ont plus de page (301 vers les zones). */
+const VILLES_GARDEES = new Set(['tours', 'blois', 'amboise', 'chinon', 'vendome', 'loches', 'joue-les-tours', 'le-mans', 'angers', 'saumur'])
+export const VILLES: Ville[] = [...VILLES_ANCIENNES.filter((v) => VILLES_GARDEES.has(v.slug)), ...VILLES_A, ...VILLES_B]
 
 export function getVille(slug: string): Ville | undefined {
   return VILLES.find(v => v.slug === slug)

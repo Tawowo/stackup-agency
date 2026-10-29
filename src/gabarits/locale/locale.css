@@ -305,3 +305,53 @@
   color: var(--su-accent-texte);
   font-weight: 600;
 }
+
+/* Moteur « Votre commune » */
+.su-commune__label {
+  display: block;
+  margin: 1.4rem 0 0.4rem;
+}
+.su-commune__champ {
+  width: 100%;
+  max-width: 34rem;
+  padding: 0.85rem 1rem;
+  font: inherit;
+  border: 1.5px solid currentColor;
+  border-radius: 6px;
+  background: transparent;
+  color: inherit;
+}
+.su-commune__resultat {
+  margin-top: 1rem;
+  min-height: 3.5rem;
+}
+.su-commune__choix {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.su-commune__choix button {
+  font: inherit;
+  padding: 0.5rem 0.9rem;
+  border: 1.5px solid currentColor;
+  border-radius: 6px;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+}
+.su-commune__carte {
+  max-width: 44rem;
+  padding: 1.2rem 1.4rem;
+  border-left: 4px solid var(--su-ambre);
+  background: color-mix(in srgb, var(--su-ambre) 10%, transparent);
+}
+.su-commune__oui {
+  margin: 0 0 0.5rem;
+  font-size: 1.4rem;
+}
+.su-commune__actions a {
+  font-weight: 600;
+}

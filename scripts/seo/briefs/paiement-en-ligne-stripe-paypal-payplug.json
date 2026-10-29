@@ -1,0 +1,58 @@
+{
+ "slug": "paiement-en-ligne-stripe-paypal-payplug",
+ "titre": "Paiement en ligne : Stripe, PayPal, Payplug, carte — quoi choisir ?",
+ "theme": "e-commerce",
+ "type": "guide",
+ "categorie": "ecommerce",
+ "requetes": [
+  "paiement plusieurs fois internet",
+  "boutique en ligne abonnement ou paiement unique",
+  "catalogue en ligne sans paiement pour commerçant",
+  "système de réservation avec paiement d'acompte en ligne",
+  "mon banquier propose un paiement en ligne est-ce intéressant",
+  "comment éviter les litiges de paiement en ligne",
+  "comment envoyer un rappel de paiement automatique",
+  "comment suivre les factures en attente de paiement",
+  "comment encaisser des paiements en ligne sans terminal",
+  "stripe c'est quoi",
+  "stripe ou paypal pour une boutique en ligne",
+  "payplug est-il adapté aux petits commerçants",
+  "stripe quels frais par transaction",
+  "comment rembourser un client sur stripe",
+  "stripe est-il fiable pour un petit commerce",
+  "comment fonctionne stripe pour un commerçant",
+  "stripe nécessite-t-il un compte professionnel",
+  "comment ouvrir un compte stripe en tant que micro-entrepreneur",
+  "comment accepter paypal sur son site",
+  "accepter apple pay sur sa boutique en ligne",
+  "paypal garde mon argent que faire",
+  "paypal bloque mon compte vendeur que faire"
+ ],
+ "articlesAProposerEnLien": [
+  {
+   "slug": "amazon-marketplace-vs-site-propre",
+   "titre": "Vendre en ligne sans Amazon : reprendre le contrôle de ses marges"
+  },
+  {
+   "slug": "cgv-boutique-en-ligne",
+   "titre": "E-commerce : les obligations légales françaises (CGV, rétractation…)"
+  },
+  {
+   "slug": "dropshipping-site-web-guide",
+   "titre": "Dropshipping et site web : ce que personne ne vous dit en 2026"
+  },
+  {
+   "slug": "ecommerce-alimentaire-guide",
+   "titre": "Vente en ligne de produits alimentaires : règles et fonctionnalités clés"
+  },
+  {
+   "slug": "ecommerce-artisanat-guide",
+   "titre": "Vendre son artisanat en ligne : créer sa boutique sans se ruiner"
+  },
+  {
+   "slug": "ecommerce-mode-site-web",
+   "titre": "Boutique en ligne de mode : les fonctionnalités indispensables"
+  }
+ ],
+ "articlesExistantsProches": []
+}

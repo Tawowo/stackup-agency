@@ -1,0 +1,18 @@
+{
+ "date": "2026-10-29T09:22:46.816Z",
+ "base": "http://localhost:3100",
+ "pages": 445,
+ "repartitionProfondeur": {
+  "0": 1,
+  "1": 67,
+  "2": 377
+ },
+ "orphelines": [],
+ "injoignables": [],
+ "plusDeTroisClics": [],
+ "sansFilAriane": [
+  "/contact",
+  "/tarifs"
+ ],
+ "avecUnSeulLienEntrant": 0
+}

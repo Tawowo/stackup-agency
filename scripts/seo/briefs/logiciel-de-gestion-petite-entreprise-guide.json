@@ -1,0 +1,79 @@
+{
+ "slug": "logiciel-de-gestion-petite-entreprise-guide",
+ "titre": "Logiciel de gestion pour petite entreprise : le guide",
+ "theme": "logiciel de gestion",
+ "type": "guide",
+ "categorie": "applications-metier",
+ "requetes": [
+  "gestion des devis automatisée",
+  "les outils no code suffisent-ils pour automatiser une petite entreprise",
+  "application web de gestion pour petite entreprise",
+  "gestion de la e-réputation pour une tpe",
+  "comment gagner du temps dans la gestion d'une tpe",
+  "comment relier mon site internet à mon outil de gestion",
+  "c'est quoi un pare-feu applicatif web",
+  "automatiser gestion rdv",
+  "tableau de suivi des prospects gratuit",
+  "tableau de suivi des devis envoyés",
+  "automatiser le suivi de trésorerie d'une tpe",
+  "comment installer le suivi des clics sur le bouton appeler",
+  "comment gérer le suivi des véhicules en atelier",
+  "comment donner un espace client à mes clients",
+  "comment ne saisir qu'une seule fois mes données clients",
+  "comment gérer des produits en quantité limitée sur un site",
+  "erp artisan",
+  "outil gratuit pour trouver des mots-clés",
+  "quels outils d'ia gratuits pour un commerçant",
+  "quels outils pour être visible en ligne quand on est artisan",
+  "application pour pointer les heures des ouvriers",
+  "comment déléguer les tâches répétitives à un outil",
+  "tableau de bord d'activité en milieu industriel",
+  "tableau de bord des ventes magasin et en ligne",
+  "tableau de bord automatique de chiffre d'affaires pour artisan",
+  "comment tenir un tableau de bord simple de son activité",
+  "tableau de bord simple pour suivre son activité d'artisan",
+  "quels outils d'ia pour un artisan en 2026",
+  "quels outils d'ia pour une petite entreprise en 2026",
+  "quels outils d'ia pour créer des visuels pour son commerce",
+  "que faire si l'outil d'ia que j'utilise ferme ou devient payant",
+  "quels outils d'ia pour un professionnel de santé libéral",
+  "quels outils d'ia pour écrire ses publications sur les réseaux sociaux",
+  "quelles aides pour numériser son entreprise artisanale",
+  "aides pour numériser une petite entreprise"
+ ],
+ "articlesAProposerEnLien": [
+  {
+   "slug": "application-fidelite-sur-mesure",
+   "titre": "Application de fidélité sur mesure : pourquoi les solutions génériques ne suffisent pas"
+  },
+  {
+   "slug": "application-gestion-chantiers",
+   "titre": "Application gestion de chantiers : suivi terrain et reporting en temps réel"
+  },
+  {
+   "slug": "application-gestion-rdv",
+   "titre": "Prise de rendez-vous en ligne : Calendly, Planity ou le vôtre ?"
+  },
+  {
+   "slug": "application-livraison-interne",
+   "titre": "Application de livraison interne : gérer ses tournées et ses livreurs"
+  },
+  {
+   "slug": "application-reservation-location",
+   "titre": "Application de réservation et location : gérer un parc de biens en ligne"
+  },
+  {
+   "slug": "automatisation-processus-pme",
+   "titre": "Automatisation des processus PME : ce qu'on peut faire avec le digital"
+  }
+ ],
+ "articlesExistantsProches": [
+  {
+   "slug": "prix-logiciel-sur-mesure",
+   "titre": "Combien coûte un logiciel de gestion sur mesure ?",
+   "mots": 928,
+   "score": 0.25,
+   "programme": "2026-09-11"
+  }
+ ]
+}

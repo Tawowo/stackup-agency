@@ -12,14 +12,14 @@ import { LIGNES, NIVEAUX_IA, PARAMS, PORTEES } from '@/config/tarifs.generated'
 import { lienEstimateur } from '@/domain/devis/etat'
 import { euros } from '@/domain/devis/resume'
 import { IA_PHRASE, PHRASE_IA, PHRASE_PORTEE, TITRE_IA, TITRE_PORTEE, nettoyer } from '@/experiences/estimateur/donnees'
-import { JsonLd, filAriane, meta } from '@/lib/seo'
+import { JsonLd, faqPage, filAriane } from '@/lib/seo'
+import PilierCorps, { sommaireDe } from '@/gabarits/pilier/PilierCorps'
+import { metaPilier } from '@/gabarits/pilier/PagePilier'
+import { PILIER } from '@/data/piliers/referencement'
+import '@/gabarits/pilier/pilier.css'
 import './referencement.css'
 
-export const metadata = meta({
-  titre: 'Référencement — être trouvé sur Google et dans les IA | Stackup Agency',
-  description: 'Cinq niveaux pour être trouvé, de votre nom à toute la France, la visibilité dans ChatGPT, Gemini et les résumés de Google, des modules à la carte : décrits par leur résultat, avec des prix publics.',
-  chemin: '/services/referencement',
-})
+export const metadata = metaPilier(PILIER)
 
 const coef = PARAMS.coefficient
 const seo = LIGNES.filter((l) => l.famille === 'seo')
@@ -29,7 +29,7 @@ export default function Page() {
   const lien = lienEstimateur({ etape: 4 })
   return (
     <>
-      <JsonLd data={filAriane([{ nom: 'Accueil', chemin: '/' }, { nom: 'Services', chemin: '/services' }, { nom: 'Référencement', chemin: '/services/referencement' }])} />
+      <JsonLd data={[filAriane([{ nom: 'Accueil', chemin: '/' }, { nom: 'Services', chemin: '/services' }, { nom: 'Référencement', chemin: '/services/referencement' }]), faqPage(PILIER.faq)]} />
       <Document
         moment="doc-referencement"
         ariane={[
@@ -150,6 +150,19 @@ export default function Page() {
               </Link>
             </p>
           </aside>
+        </div>
+        <nav aria-label="Sommaire du guide" className="su-ref__sommaire">
+          <p className="su-mono">Le référencement expliqué</p>
+          <ol>
+            {sommaireDe(PILIER).map((x) => (
+              <li key={x.id}>
+                <a href={`#${x.id}`}>{x.titre}</a>
+              </li>
+            ))}
+          </ol>
+        </nav>
+        <div className="su-prose su-doc__prose su-ref__guide">
+          <PilierCorps pilier={PILIER} />
         </div>
       </Document>
     </>

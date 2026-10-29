@@ -5,6 +5,8 @@ import SceneMount from '@/webgl/SceneMount'
 import Nav from '@/components/layout/Nav'
 import Footer from '@/components/layout/Footer'
 import AnimationsDifferees from '@/components/layout/AnimationsDifferees'
+import Mesure from '@/components/layout/Mesure'
+import { JsonLd, organisation, siteWeb } from '@/lib/seo'
 import '@/styles/chrome.css'
 
 export const metadata: Metadata = {
@@ -24,6 +26,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="fr" className={`${poppins.variable} ${inter.variable} ${jetbrains.variable}`}>
       <body>
+        <JsonLd data={[organisation(), siteWeb()]} />
         <SceneMount />
         <div className="su-lueur" aria-hidden="true" />
         <Nav />
@@ -32,6 +35,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <Footer />
         </div>
         <AnimationsDifferees />
+        <Mesure />
       </body>
     </html>
   )

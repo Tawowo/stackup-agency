@@ -1,0 +1,68 @@
+{
+ "slug": "marketplace-ou-site-propre-etsy-vinted-amazon",
+ "titre": "Marketplace ou site propre : Etsy, Vinted, Amazon, Leboncoin pro",
+ "theme": "e-commerce",
+ "type": "comparatif",
+ "categorie": "ecommerce",
+ "requetes": [
+  "vendre sur sa boutique ou sur les marketplaces",
+  "quels sont les inconvénients d'une marketplace",
+  "marketplace ou site e-commerce quelle différence",
+  "une marketplace est-elle rentable pour un artisan",
+  "alternative à la marketplace pour vendre en direct",
+  "comment vendre ses créations sans passer par une marketplace",
+  "quels sont les avantages d'une marketplace pour un petit commerçant",
+  "pourquoi avoir son propre site plutôt que vendre sur une marketplace",
+  "etsy c'est quoi",
+  "est-ce rentable de vendre sur etsy",
+  "alternative à etsy pour vendre ses créations",
+  "etsy ou site personnel pour vendre ses créations",
+  "comment se démarquer sur etsy",
+  "commission etsy sur les ventes",
+  "quels frais pour vendre sur etsy",
+  "combien prend etsy sur chaque vente",
+  "etsy est-il adapté aux créateurs français",
+  "leboncoin pro c'est quoi",
+  "leboncoin pro pour un commerçant est-ce rentable",
+  "leboncoin pro quels tarifs et avantages",
+  "vendre des produits neufs sur leboncoin en tant que professionnel",
+  "vinted pro c'est quoi",
+  "vinted peut-il être utilisé par un commerçant",
+  "vendre des vêtements neufs de boutique sur vinted",
+  "vinted pro quels frais"
+ ],
+ "articlesAProposerEnLien": [
+  {
+   "slug": "amazon-marketplace-vs-site-propre",
+   "titre": "Vendre en ligne sans Amazon : reprendre le contrôle de ses marges"
+  },
+  {
+   "slug": "cgv-boutique-en-ligne",
+   "titre": "E-commerce : les obligations légales françaises (CGV, rétractation…)"
+  },
+  {
+   "slug": "dropshipping-site-web-guide",
+   "titre": "Dropshipping et site web : ce que personne ne vous dit en 2026"
+  },
+  {
+   "slug": "ecommerce-alimentaire-guide",
+   "titre": "Vente en ligne de produits alimentaires : règles et fonctionnalités clés"
+  },
+  {
+   "slug": "ecommerce-artisanat-guide",
+   "titre": "Vendre son artisanat en ligne : créer sa boutique sans se ruiner"
+  },
+  {
+   "slug": "ecommerce-mode-site-web",
+   "titre": "Boutique en ligne de mode : les fonctionnalités indispensables"
+  }
+ ],
+ "articlesExistantsProches": [
+  {
+   "slug": "amazon-marketplace-vs-site-propre",
+   "titre": "Vendre en ligne sans Amazon : reprendre le contrôle de ses marges",
+   "mots": 912,
+   "score": 0.25
+  }
+ ]
+}

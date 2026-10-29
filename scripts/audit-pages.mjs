@@ -6,10 +6,11 @@
  *
  * Usage : node scripts/audit-pages.mjs [http://localhost:3000]   → docs/qa/audit-pages.json + tableau en console.
  */
+import { lireSitemapXml } from './lib-sitemap.mjs'
 import { writeFileSync } from 'node:fs'
 
 const BASE = process.argv[2] ?? 'http://localhost:3000'
-const xml = await (await fetch(`${BASE}/sitemap.xml`)).text()
+const xml = await lireSitemapXml(BASE)
 const chemins = [...xml.matchAll(/<loc>https:\/\/stackup-agency\.fr([^<]*)<\/loc>/g)].map((m) => m[1] || '/')
 const famille = (c) => {
   if (c.startsWith('/agence-web/departement/')) return 'départements'

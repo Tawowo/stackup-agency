@@ -1,0 +1,38 @@
+{
+ "slug": "devis-obligatoire-regles-validite",
+ "titre": "Devis : quand est-il obligatoire et que doit-il contenir ?",
+ "theme": "obligations légales",
+ "type": "reglementation",
+ "categorie": "juridique",
+ "requetes": [
+  "un devis est-il obligatoire pour un artisan",
+  "quand le devis est-il obligatoire pour un dépannage",
+  "e-mail de relance devis légal",
+  "devis détaillé obligatoire ou non",
+  "durée de validité d'un devis obligation",
+  "un devis peut-il être payant légalement",
+  "devis gratuit ou payant obligation légale",
+  "peut-on envoyer un devis par e-mail légalement",
+  "pourquoi mes devis ne sont pas signés",
+  "devis signé en ligne puis facture automatique",
+  "est-ce que le droit de rétractation s'applique à un devis signé sur le site",
+  "quand relancer un devis non signé",
+  "un devis non signé est-il valable",
+  "valeur juridique d'un devis signé",
+  "droit de rétractation devis signé en foire",
+  "droit de rétractation devis signé à domicile",
+  "le devis est-il obligatoire pour travaux chez un particulier",
+  "devis gratuit obligatoire pour les travaux d'un particulier",
+  "le devis est-il obligatoire pour des travaux chez un particulier",
+  "peut-on modifier un devis après signature",
+  "devis en ligne légalité signature",
+  "est-ce qu'un devis peut être refusé après signature"
+ ],
+ "articlesAProposerEnLien": [
+  {
+   "slug": "rgpd-site-web-2026",
+   "titre": "RGPD et site web en 2026 : les obligations qui ont vraiment changé"
+  }
+ ],
+ "articlesExistantsProches": []
+}

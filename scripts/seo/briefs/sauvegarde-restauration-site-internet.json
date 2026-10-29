@@ -1,0 +1,52 @@
+{
+ "slug": "sauvegarde-restauration-site-internet",
+ "titre": "Sauvegarder et restaurer son site internet",
+ "theme": "maintenance et sécurité",
+ "type": "guide",
+ "categorie": "technique",
+ "requetes": [
+  "logiciel click and collect restauration",
+  "guide click and collect restauration",
+  "impossible de recruter du personnel dans la restauration",
+  "ia et restauration quels usages concrets",
+  "restauration de site wordpress",
+  "no show restauration",
+  "instagram restauration",
+  "click and collect restauration",
+  "quel logiciel de facturation pour un restaurateur qui facture des traiteurs et des particuliers",
+  "maintenance site web et sauvegarde automatique",
+  "sauvegarde automatique site internet professionnel",
+  "sauvegarde d'une boutique en ligne pourquoi et comment",
+  "comment automatiser la sauvegarde de son site internet",
+  "comment savoir si mon site est sauvegardé",
+  "quel plugin de sauvegarde wordpress utiliser",
+  "comment vérifier qu'une sauvegarde fonctionne",
+  "où stocker la sauvegarde de son site internet",
+  "comment faire une sauvegarde de son site internet",
+  "comment sauvegarder son site wordpress",
+  "que sauvegarder exactement sur un site wordpress",
+  "comment sauvegarder ses fichiers d'entreprise simplement",
+  "j'ai perdu mon site internet que faire",
+  "j'ai perdu des données de mon entreprise",
+  "comment supprimer les anciens utilisateurs d'un site wordpress"
+ ],
+ "articlesAProposerEnLien": [
+  {
+   "slug": "accessibilite-site-web-guide",
+   "titre": "Site accessible (RGAA) : obligations et bonnes pratiques pour une TPE"
+  },
+  {
+   "slug": "maintenance-site-web-guide",
+   "titre": "Maintenance de site web : pourquoi c'est indispensable et combien ça coûte"
+  },
+  {
+   "slug": "paa-hebergement-site",
+   "titre": "Quel hébergement choisir pour son site web en 2026 ?"
+  },
+  {
+   "slug": "vitesse-mobile-optimisation",
+   "titre": "Vitesse mobile : comment accélérer votre site sur smartphone"
+  }
+ ],
+ "articlesExistantsProches": []
+}

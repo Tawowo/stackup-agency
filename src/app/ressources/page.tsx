@@ -6,11 +6,12 @@ import Link from 'next/link'
 import Document from '@/gabarits/document/Document'
 import Plaque from '@/components/ui/Plaque'
 import { JsonLd, filAriane, meta } from '@/lib/seo'
+import { tousLesArticles } from '@/lib/blog'
 import '@/experiences/ressources/ressources.css'
 
 export const metadata = meta({
-  titre: 'Ressources gratuites — cahier des charges, documents, outils | Stackup Agency',
-  description: 'Préparez votre projet web : un cahier des charges à remplir et imprimer, les documents contractuels en PDF, un audit de site et un estimateur de prix. Gratuit, sans inscription.',
+  titre: 'Centre de ressources : guides, réponses, outils gratuits',
+  description: 'Guides, réponses précises, règles à connaître, comparatifs et outils gratuits pour les artisans, commerçants et TPE : site, référencement, devis, facture électronique.',
   chemin: '/ressources',
 })
 
@@ -45,7 +46,26 @@ const RESSOURCES = [
   },
 ]
 
+const TYPES: { id: 'guide' | 'question' | 'reglementation'; titre: string; texte: string }[] = [
+  { id: 'question', titre: 'Réponses précises', texte: 'Une question, la réponse dans les deux premières phrases, puis le détail.' },
+  { id: 'guide', titre: 'Guides', texte: 'Les sujets qui demandent de prendre le temps : choisir, mettre en place, durer.' },
+  { id: 'reglementation', titre: 'Règles et obligations', texte: 'Mentions légales, RGPD, facture électronique : ce que dit la règle, et vers quelle source officielle se tourner.' },
+]
+const COMPARATIFS = [
+  { href: '/comparatif/wix-wordpress-sur-mesure', nom: 'Wix, WordPress ou site sur mesure' },
+  { href: '/comparatif/shopify-ou-boutique-sur-mesure', nom: 'Shopify ou boutique sur mesure' },
+  { href: '/comparatif/obat-tolteck-logiciel-sur-mesure', nom: 'Obat, Tolteck ou outil sur mesure' },
+]
+const OUTILS = [
+  { href: '/outils/audit-site', nom: 'Audit de site' },
+  { href: '/outils/generateur-mentions-legales', nom: 'Générateur de mentions légales' },
+  { href: '/outils/modele-devis', nom: 'Modèle de devis' },
+  { href: '/outils/calculateur-clients-perdus', nom: 'Calculateur de clients perdus' },
+  { href: '/outils/checklist-facture-electronique', nom: 'Checklist facture électronique' },
+]
+
 export default function Page() {
+  const articles = tousLesArticles().filter((a) => a.type)
   return (
     <>
       <JsonLd
@@ -103,6 +123,52 @@ export default function Page() {
                 Le parrainage
               </Link>
             </div>
+          </section>
+
+          {TYPES.map((t) => {
+            const liste = articles.filter((a) => a.type === t.id)
+            if (!liste.length) return null
+            return (
+              <section key={t.id} className="su-res__section" aria-labelledby={`su-res-${t.id}`}>
+                <h2 id={`su-res-${t.id}`} className="su-res__h2">
+                  {t.titre}
+                </h2>
+                <p className="su-res__chapo">{t.texte}</p>
+                <ul className="su-res__liste">
+                  {liste.map((a) => (
+                    <li key={a.slug}>
+                      <Link href={`/blog/${a.slug}`}>{a.titre}</Link>
+                    </li>
+                  ))}
+                </ul>
+              </section>
+            )
+          })}
+
+          <section className="su-res__section" aria-labelledby="su-res-comp">
+            <h2 id="su-res-comp" className="su-res__h2">
+              Comparatifs honnêtes
+            </h2>
+            <ul className="su-res__liste">
+              {COMPARATIFS.map((c) => (
+                <li key={c.href}>
+                  <Link href={c.href}>{c.nom}</Link>
+                </li>
+              ))}
+            </ul>
+          </section>
+
+          <section className="su-res__section" aria-labelledby="su-res-outils">
+            <h2 id="su-res-outils" className="su-res__h2">
+              Tous les outils gratuits
+            </h2>
+            <ul className="su-res__liste">
+              {OUTILS.map((c) => (
+                <li key={c.href}>
+                  <Link href={c.href}>{c.nom}</Link>
+                </li>
+              ))}
+            </ul>
           </section>
         </div>
       </Document>

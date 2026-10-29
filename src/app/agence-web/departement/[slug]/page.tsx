@@ -9,7 +9,7 @@ import type { Epingle } from '@/components/carte/epingles'
 import { CHEF_LIEU, GEO } from '@/data/geo'
 import { sansDelai } from '@/gabarits/locale/formes'
 import { conforme } from '@/lib/conformite'
-import { JsonLd, ORIGINE, faqPage, filAriane, meta } from '@/lib/seo'
+import { JsonLd, ORIGINE, faqPage, filAriane, meta, offreService } from '@/lib/seo'
 import { offre } from '@/config/site'
 
 export const dynamicParams = false
@@ -54,7 +54,7 @@ export default async function PageDepartement({ params }: { params: Promise<{ sl
             { nom: 'Agence web', chemin: '/agence-web' },
             { nom: d.nom, chemin: `/agence-web/departement/${d.slug}` },
           ]),
-          { '@context': 'https://schema.org', '@type': 'Service', name: `Création de site internet ${a.dans}${d.nom}`, provider: { '@id': `${ORIGINE}/#agence` }, areaServed: { '@type': 'AdministrativeArea', name: d.nom } },
+          { '@context': 'https://schema.org', '@type': 'Service', name: `Création de site internet ${a.dans}${d.nom}`, provider: { '@id': `${ORIGINE}/#agence` }, areaServed: { '@type': 'AdministrativeArea', name: d.nom }, offers: offreService('une-page') },
           faqPage(faq),
         ]}
       />

@@ -9,7 +9,7 @@ import { GEO } from '@/data/geo'
 import { sansDelai } from '@/gabarits/locale/formes'
 import { conforme } from '@/lib/conformite'
 import { CONTENU_VILLES } from '@/data/enrichissements'
-import { JsonLd, ORIGINE, faqPage, filAriane, meta } from '@/lib/seo'
+import { JsonLd, ORIGINE, faqPage, filAriane, meta, offreService } from '@/lib/seo'
 import { SITE, offre } from '@/config/site'
 
 export const dynamicParams = false
@@ -63,7 +63,7 @@ export default async function PageVille({ params }: { params: Promise<{ ville: s
             { nom: 'Agence web', chemin: '/agence-web' },
             { nom: v.ville, chemin: `/agence-web/${v.slug}` },
           ]),
-          { '@context': 'https://schema.org', '@type': 'Service', name: `Création de site internet à ${v.ville}`, provider: { '@id': `${ORIGINE}/#agence` }, areaServed: { '@type': 'City', name: v.ville } },
+          { '@context': 'https://schema.org', '@type': 'Service', name: `Création de site internet à ${v.ville}`, provider: { '@id': `${ORIGINE}/#agence` }, areaServed: { '@type': 'City', name: v.ville }, offers: offreService('une-page') },
           faqPage(faq),
         ]}
       />

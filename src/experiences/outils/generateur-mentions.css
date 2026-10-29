@@ -1,0 +1,222 @@
+/* LE GÉNÉRATEUR DE MENTIONS LÉGALES — /outils/generateur-mentions-legales */
+.su-gm {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 32px;
+  align-items: start;
+}
+@media (min-width: 1000px) {
+  .su-gm {
+    grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
+  }
+  .su-gm__sortie {
+    position: sticky;
+    top: 96px;
+  }
+}
+
+/* Formulaire */
+.su-gm__form {
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.su-gm__confiance {
+  margin: 0;
+  padding: 14px 18px;
+  border-left: 3px solid var(--su-ambre);
+  background: color-mix(in srgb, var(--su-ambre) 14%, var(--su-ivoire));
+  color: var(--su-navy);
+  font-size: 0.9375rem;
+  line-height: 1.5;
+}
+.su-gm__groupe {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.su-gm__legende {
+  padding: 0 0 8px;
+  margin-bottom: 4px;
+  width: 100%;
+  border-bottom: 1px solid color-mix(in srgb, var(--su-navy) 25%, transparent);
+  color: var(--su-ambre-texte);
+  font-size: 0.8125rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.su-gm__champ {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.su-gm__label {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--su-navy);
+}
+.su-gm__champ-saisie {
+  width: 100%;
+  min-height: 46px;
+  padding: 10px 14px;
+  border: 1px solid var(--su-graphite-ivoire);
+  border-radius: 4px;
+  background: var(--su-ivoire);
+  color: var(--su-navy);
+  font: inherit;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+textarea.su-gm__champ-saisie {
+  resize: vertical;
+}
+.su-gm__champ-saisie::placeholder {
+  color: var(--su-graphite-ivoire);
+  opacity: 0.8;
+}
+.su-gm__champ-saisie:focus-visible,
+.su-gm__radio input:focus-visible {
+  outline: 3px solid var(--su-navy-clair);
+  outline-offset: 2px;
+}
+.su-gm__aide {
+  margin: 0;
+  font-size: 0.875rem;
+  line-height: 1.45;
+  color: var(--su-graphite-ivoire);
+}
+.su-gm__radios {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.su-gm__radio {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 44px;
+  padding: 6px 12px;
+  border: 1px solid color-mix(in srgb, var(--su-navy) 25%, transparent);
+  border-radius: 4px;
+  background: var(--su-ivoire);
+  color: var(--su-navy);
+  cursor: pointer;
+}
+.su-gm__radio:has(input:checked) {
+  border-color: var(--su-navy);
+  box-shadow: inset 4px 0 0 var(--su-ambre);
+}
+.su-gm__radio input {
+  width: 20px;
+  height: 20px;
+  flex: none;
+  accent-color: var(--su-navy);
+}
+
+/* Sortie */
+.su-gm__sortie {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  min-width: 0;
+}
+.su-gm__entete {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.su-gm__h2 {
+  margin: 0;
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+}
+.su-gm__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.su-gm__statut {
+  margin: 0;
+  min-height: 1.5em;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--su-accent-texte);
+}
+.su-gm__avertissement {
+  margin: 0;
+  padding: 12px 16px;
+  border-left: 3px solid var(--su-navy);
+  background: var(--su-ivoire-creuse);
+  color: var(--su-navy);
+  font-size: 0.9375rem;
+  line-height: 1.5;
+}
+.su-gm__texte {
+  padding: 28px;
+  border: 1px solid color-mix(in srgb, var(--su-navy) 25%, transparent);
+  border-radius: 4px;
+  background: var(--su-ivoire);
+  color: var(--su-navy);
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+.su-gm__texte p {
+  margin: 0 0 6px;
+}
+.su-gm__titre-doc {
+  margin: 0 0 18px;
+  font-size: 1.5rem;
+}
+.su-gm__rubrique {
+  margin: 20px 0 8px;
+  font-family: var(--su-font-display), sans-serif;
+  font-size: 1.0625rem;
+  color: var(--su-navy);
+}
+.su-gm__copie {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+/* Texte explicatif sous l'outil */
+.su-gm-texte {
+  margin-top: 9svh;
+}
+.su-gm-faq {
+  margin-top: 9svh;
+}
+.su-gm-faq h2 {
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  margin: 0 0 20px;
+}
+
+/* Impression : seul le texte des mentions sort. */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  .su-gm__texte,
+  .su-gm__texte * {
+    visibility: visible;
+  }
+  .su-gm__texte {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 0;
+    border: 0;
+    background: #fff;
+    color: #000;
+  }
+}

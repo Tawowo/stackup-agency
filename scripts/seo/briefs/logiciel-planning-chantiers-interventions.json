@@ -1,0 +1,92 @@
+{
+ "slug": "logiciel-planning-chantiers-interventions",
+ "titre": "Logiciel de planning de chantiers et d’interventions",
+ "theme": "logiciel de gestion",
+ "type": "guide",
+ "categorie": "applications-metier",
+ "requetes": [
+  "planning automatique employes",
+  "solution planning employé",
+  "modèle de planning employés excel",
+  "modèle de planning de chantier excel",
+  "application de planning pour équipe terrain",
+  "gestion planning salariés",
+  "comment utiliser l'ia pour son planning",
+  "chatgpt pour faire un planning de la semaine",
+  "comment chiffrer un chantier plus vite",
+  "comment estimer le prix d'un chantier",
+  "comment chiffrer le temps passé sur un chantier",
+  "comment planifier plusieurs chantiers en même temps",
+  "comment savoir si un chantier est rentable",
+  "je ne trouve pas de chantiers en ce moment",
+  "répondeur intelligent pour artisan sur chantier",
+  "comment gérer les chantiers qui prennent du retard",
+  "modèle de rapport d'intervention artisan",
+  "comment envoyer un rappel d'intervention à un client",
+  "comment suivre mes clients et leurs historiques d'interventions",
+  "comment répartir automatiquement les interventions entre mes salariés",
+  "application pour gérer les interventions sur le terrain",
+  "application pour saisir les rapports d'intervention depuis le chantier",
+  "j'oublie de facturer certaines interventions",
+  "comment suivre les interventions d'une équipe de dépannage",
+  "comment planifier les interventions de plusieurs techniciens",
+  "comment suivre la rentabilité d'un chantier",
+  "comment suivre l'avancement d'un chantier",
+  "comment suivre les heures passées par chantier",
+  "comment suivre les achats de matériaux par chantier",
+  "comment suivre ses chantiers en cours simplement",
+  "comment suivre l'avancement de ses chantiers",
+  "comment suivre la rentabilité de ses chantiers",
+  "agenda partagé gratuit pour tpe",
+  "agenda partagé pour toute l'équipe",
+  "agenda partagé avec les clients pour qu'ils choisissent un créneau",
+  "planning partagé entre le bureau et le terrain",
+  "je rate des appels de clients quand je suis sur chantier",
+  "que faire quand on rate des appels de clients sur chantier",
+  "je rate des appels de clients quand je suis sur un chantier",
+  "je rate des appels de clients parce que je suis en intervention",
+  "comment répondre au téléphone quand on est sur un chantier",
+  "application pour que mes équipes voient leurs chantiers sur téléphone",
+  "facturation depuis le chantier avec son téléphone",
+  "comment faire un compte rendu de chantier",
+  "dicter un compte rendu de chantier avec l'ia",
+  "ia pour transformer une note vocale en compte rendu d'intervention",
+  "ia pour optimiser les tournées d'une équipe",
+  "comment organiser ses tournées pour perdre moins de temps sur la route",
+  "comment organiser les tournées d'une équipe d'artisans"
+ ],
+ "articlesAProposerEnLien": [
+  {
+   "slug": "application-fidelite-sur-mesure",
+   "titre": "Application de fidélité sur mesure : pourquoi les solutions génériques ne suffisent pas"
+  },
+  {
+   "slug": "application-gestion-chantiers",
+   "titre": "Application gestion de chantiers : suivi terrain et reporting en temps réel"
+  },
+  {
+   "slug": "application-gestion-rdv",
+   "titre": "Prise de rendez-vous en ligne : Calendly, Planity ou le vôtre ?"
+  },
+  {
+   "slug": "application-livraison-interne",
+   "titre": "Application de livraison interne : gérer ses tournées et ses livreurs"
+  },
+  {
+   "slug": "application-reservation-location",
+   "titre": "Application de réservation et location : gérer un parc de biens en ligne"
+  },
+  {
+   "slug": "automatisation-processus-pme",
+   "titre": "Automatisation des processus PME : ce qu'on peut faire avec le digital"
+  }
+ ],
+ "articlesExistantsProches": [
+  {
+   "slug": "gestion-planning-employes",
+   "titre": "Gestion du planning employés : l'application qui remplace les tableurs Excel",
+   "mots": 1101,
+   "score": 0.22
+  }
+ ]
+}

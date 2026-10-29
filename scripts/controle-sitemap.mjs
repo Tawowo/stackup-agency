@@ -14,6 +14,7 @@
  *         node scripts/controle-sitemap.mjs [BASE=http://localhost:3000] [--rapide]
  * Sortie : docs/qa/controle-sitemap.json ; code de sortie 1 s'il reste une erreur.
  */
+import { lireSitemapXml } from './lib-sitemap.mjs'
 import { writeFileSync } from 'node:fs'
 
 const BASE = process.argv.find((a) => a.startsWith('http')) ?? process.env.BASE ?? 'http://localhost:3000'
@@ -22,7 +23,7 @@ const UA_ROBOT = 'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com
 const UA_NAV = 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130 Safari/537.36'
 const entites = (s) => s.replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&quot;/g, '"').replace(/&#x27;|&#39;/g, "'").replace(/&nbsp;|&#160;/g, ' ')
 
-const xml = await (await fetch(`${BASE}/sitemap.xml`)).text()
+const xml = await lireSitemapXml(BASE)
 const locs = [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => entites(m[1]))
 const erreurs = []
 const err = (url, msg) => erreurs.push({ url, msg })
@@ -34,6 +35,44 @@ const chemins = locs.map((l) => l.slice(ORIGINE.length) || '/')
 const titres = new Map()
 const descriptions = new Map()
 const resultats = []
+
+/** Données structurées : chaque bloc JSON-LD est du JSON valide et porte les propriétés attendues pour son type. */
+function validerDonneesStructurees(chemin, html) {
+  const blocs = [...html.matchAll(/<script type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/g)].map((m) => m[1])
+  if (!blocs.length) return err(chemin, 'aucune donnée structurée')
+  const objets = []
+  for (const b of blocs) {
+    try {
+      const j = JSON.parse(b)
+      objets.push(...(Array.isArray(j) ? j : [j]))
+    } catch (e) {
+      err(chemin, `JSON-LD invalide : ${e.message.slice(0, 60)}`)
+    }
+  }
+  const types = new Set(objets.map((o) => o['@type']))
+  if (chemin !== '/' && !types.has('BreadcrumbList')) err(chemin, 'BreadcrumbList absent')
+  for (const o of objets) {
+    const t = o['@type']
+    if (!t) { err(chemin, 'JSON-LD sans @type'); continue }
+    if (t === 'FAQPage') {
+      const q = o.mainEntity ?? []
+      if (!q.length || q.some((x) => !x.name || !x.acceptedAnswer?.text)) err(chemin, 'FAQPage incomplète')
+    } else if (t === 'BreadcrumbList') {
+      const l = o.itemListElement ?? []
+      if (!l.length || l.some((x, i) => x.position !== i + 1 || !x.name || !String(x.item).startsWith('https://stackup-agency.fr'))) err(chemin, 'BreadcrumbList invalide')
+    } else if (t === 'Service') {
+      if (!o.name || !o.provider || !(o.offers?.priceSpecification?.minPrice > 0)) err(chemin, 'Service sans nom, fournisseur ou prix « à partir de »')
+    } else if (t === 'BlogPosting' || t === 'Article') {
+      if (!o.headline || !o.datePublished || !o.author?.name) err(chemin, `${t} incomplet`)
+    } else if (t === 'ProfessionalService') {
+      if (!o.name || !o.address?.addressLocality || !o.telephone || !o.areaServed) err(chemin, 'ProfessionalService incomplet')
+    } else if (t === 'WebApplication') {
+      if (!o.name || !o.applicationCategory || o.offers?.price === undefined) err(chemin, 'WebApplication incomplète')
+    } else if (t === 'HowTo') {
+      if (!o.name || !(o.step?.length > 0)) err(chemin, 'HowTo incomplet')
+    }
+  }
+}
 
 function analyser(chemin, html, ua) {
   const tete = (html.match(/<head[\s\S]*?<\/head>/i) ?? [''])[0]
@@ -52,6 +91,9 @@ function analyser(chemin, html, ua) {
   const titre = entites((tout.match(/<title[^>]*>([\s\S]*?)<\/title>/i) ?? [])[1] ?? '').trim()
   const descTag = (tout.match(/<meta[^>]+name="description"[^>]*>/i) ?? [''])[0]
   const description = entites((descTag.match(/content="([^"]*)"/) ?? [])[1] ?? '').trim()
+  if (titre.length > 60) err(chemin, `title ${titre.length} caractères (> 60) : « ${titre} »`)
+  if (description.length > 155) err(chemin, `meta description ${description.length} caractères (> 155)`)
+  validerDonneesStructurees(chemin, tout)
   if (!titre) err(chemin, 'title absent')
   if (!description) err(chemin, 'meta description absente')
   // Corps visible : on retire scripts, styles, templates, noscript, svg, et les conteneurs `hidden` de métadonnées.

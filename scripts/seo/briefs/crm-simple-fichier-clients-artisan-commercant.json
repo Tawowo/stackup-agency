@@ -1,0 +1,57 @@
+{
+ "slug": "crm-simple-fichier-clients-artisan-commercant",
+ "titre": "Fichier clients et CRM simple pour une petite entreprise",
+ "theme": "logiciel de gestion",
+ "type": "guide",
+ "categorie": "applications-metier",
+ "requetes": [
+  "agence développement crm sur mesure",
+  "agence crm personnalisé",
+  "crm pour commerçant de proximité",
+  "crm pour petite entreprise pas cher",
+  "agence crm mayenne",
+  "crm pas cher pour petite entreprise",
+  "faut-il un crm quand on est tout seul",
+  "est-ce qu'un artisan a besoin d'un crm",
+  "à quoi sert un crm quand on est artisan",
+  "comment tenir un fichier clients quand on est artisan",
+  "faut-il déclarer un fichier clients quand on vend en ligne",
+  "comment tenir un fichier clients simple",
+  "outil sur mesure de suivi de clients pour un artisan",
+  "comment envoyer un sms de rappel à mes clients",
+  "comment envoyer un sms automatique de rappel à ses clients",
+  "comment être contacté par de nouveaux clients",
+  "newsletter désinscription obligatoire",
+  "comment faire une newsletter pour mes clients de proximité",
+  "l'ia fait-elle perdre le contact humain avec les clients",
+  "faut-il payer pour des contacts de clients quand on est artisan",
+  "mes contacts clients sont éparpillés dans mon téléphone que faire"
+ ],
+ "articlesAProposerEnLien": [
+  {
+   "slug": "application-fidelite-sur-mesure",
+   "titre": "Application de fidélité sur mesure : pourquoi les solutions génériques ne suffisent pas"
+  },
+  {
+   "slug": "application-gestion-chantiers",
+   "titre": "Application gestion de chantiers : suivi terrain et reporting en temps réel"
+  },
+  {
+   "slug": "application-gestion-rdv",
+   "titre": "Prise de rendez-vous en ligne : Calendly, Planity ou le vôtre ?"
+  },
+  {
+   "slug": "application-livraison-interne",
+   "titre": "Application de livraison interne : gérer ses tournées et ses livreurs"
+  },
+  {
+   "slug": "application-reservation-location",
+   "titre": "Application de réservation et location : gérer un parc de biens en ligne"
+  },
+  {
+   "slug": "automatisation-processus-pme",
+   "titre": "Automatisation des processus PME : ce qu'on peut faire avec le digital"
+  }
+ ],
+ "articlesExistantsProches": []
+}

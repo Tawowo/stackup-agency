@@ -555,3 +555,23 @@ a.su-res__carte:focus-visible {
 .su-par__bonus .su-res__etiquette {
   color: var(--su-ivoire);
 }
+
+/* Centre de ressources : listes de guides et de réponses */
+.su-res__liste {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0;
+  columns: 2 22rem;
+  column-gap: 2.5rem;
+}
+.su-res__liste li {
+  break-inside: avoid;
+  padding: 0.45rem 0;
+  border-bottom: 1px solid color-mix(in srgb, currentColor 14%, transparent);
+}
+.su-res__liste a {
+  text-decoration: none;
+}
+.su-res__liste a:hover {
+  text-decoration: underline;
+}

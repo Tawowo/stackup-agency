@@ -2,11 +2,12 @@
  * AUDIT DES REDIRECTIONS — lit src/config/redirections.ts : boucles, chaînes (A → B → C), cibles qui ne sont ni une
  * route du sitemap ni un fichier public, sources en double. Lit aussi le sitemap servi par BASE (serveur de production local). Usage : node --experimental-strip-types --no-warnings scripts/audit-redirections.mjs
  */
+import { lireSitemapXml } from './lib-sitemap.mjs'
 import { REDIRECTIONS } from '../src/config/redirections.ts'
 import { existsSync } from 'node:fs'
 
 const BASE = process.env.BASE ?? 'http://localhost:3000'
-const xml = await (await fetch(`${BASE}/sitemap.xml`)).text()
+const xml = await lireSitemapXml(BASE)
 const routes = new Set([...xml.matchAll(/<loc>https:\/\/stackup-agency\.fr([^<]*)<\/loc>/g)].map((m) => m[1] || '/'))
 // Chemins qui répondent 200 sans être dans le sitemap (pages noindex, API, fichiers).
 const AUTRES = new Set(['/contact/merci', '/lab'])

@@ -1,0 +1,59 @@
+{
+ "slug": "gestion-de-stock-petit-commerce-artisan",
+ "titre": "Gérer son stock quand on est petit commerçant ou artisan",
+ "theme": "logiciel de gestion",
+ "type": "guide",
+ "categorie": "applications-metier",
+ "requetes": [
+  "comment gérer son stock quand on est artisan",
+  "excel suffit-il pour gérer un stock",
+  "gestion de stock simple pour artisan",
+  "tableau excel de gestion de stock gratuit",
+  "alerte automatique de rupture de stock",
+  "comment gérer le stock dans un petit commerce",
+  "alerte de stock bas comment la mettre en place",
+  "comment faire un inventaire de stock facilement",
+  "comment automatiser les commandes fournisseurs",
+  "comment suivre les commandes fournisseurs",
+  "comment automatiser la commande de fournitures auprès de mes fournisseurs",
+  "ia pour lire une facture fournisseur et la saisir",
+  "est-ce que je dois pouvoir recevoir des factures électroniques de mes fournisseurs",
+  "comment classer ses factures fournisseurs",
+  "comment automatiser la saisie de ses factures fournisseurs",
+  "où stocker ses factures électroniques"
+ ],
+ "articlesAProposerEnLien": [
+  {
+   "slug": "application-fidelite-sur-mesure",
+   "titre": "Application de fidélité sur mesure : pourquoi les solutions génériques ne suffisent pas"
+  },
+  {
+   "slug": "application-gestion-chantiers",
+   "titre": "Application gestion de chantiers : suivi terrain et reporting en temps réel"
+  },
+  {
+   "slug": "application-gestion-rdv",
+   "titre": "Prise de rendez-vous en ligne : Calendly, Planity ou le vôtre ?"
+  },
+  {
+   "slug": "application-livraison-interne",
+   "titre": "Application de livraison interne : gérer ses tournées et ses livreurs"
+  },
+  {
+   "slug": "application-reservation-location",
+   "titre": "Application de réservation et location : gérer un parc de biens en ligne"
+  },
+  {
+   "slug": "automatisation-processus-pme",
+   "titre": "Automatisation des processus PME : ce qu'on peut faire avec le digital"
+  }
+ ],
+ "articlesExistantsProches": [
+  {
+   "slug": "gestion-stocks-digitale",
+   "titre": "Gestion des stocks pour petit commerce : la solution simple",
+   "mots": 1360,
+   "score": 0.33
+  }
+ ]
+}

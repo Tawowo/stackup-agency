@@ -44,6 +44,8 @@ export interface PropsLocale {
   offres?: boolean
   /** Le monde de la page (carte, maquette…) : remplace la pile dans l'en-tête. */
   monde?: ReactNode
+  /** Bloc libre (outil, moteur de recherche) inséré après les sections de texte. */
+  apres?: ReactNode
 }
 
 export default function Locale(p: PropsLocale) {
@@ -111,6 +113,7 @@ export default function Locale(p: PropsLocale) {
               ))}
             </section>
           ))}
+          {p.apres}
           {p.points && (
             <section className="su-loc__bloc">
               <h2 className="su-loc__h2">{p.points.titre}</h2>

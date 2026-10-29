@@ -1,0 +1,55 @@
+{
+ "slug": "retrouver-acces-site-identifiants-hebergeur",
+ "titre": "Retrouver les accès de son site : hébergeur, domaine, administration",
+ "theme": "maintenance et sécurité",
+ "type": "question",
+ "categorie": "technique",
+ "requetes": [
+  "site internet administrable",
+  "comment savoir qui a accès à mon site",
+  "j'ai perdu l'accès à mon nom de domaine",
+  "je n'ai pas les accès de mon site que faire",
+  "que faire quand un ancien salarié a encore accès au site",
+  "comment désactiver un plugin wordpress quand on n'a plus accès au site",
+  "comment désinstaller un plugin wordpress sans accès à l'administration",
+  "votre connexion n'est pas privée sur mon site que faire",
+  "qui doit transmettre les données de facturation à l'administration fiscale",
+  "comment choisir ma plateforme auprès de l'administration",
+  "comment savoir si mon logiciel de caisse transmet les données à l'administration",
+  "comment facturer une administration ou une mairie depuis un logiciel de facturation",
+  "je passe trop de temps sur l'administratif dans mon cabinet",
+  "comment gagner du temps sur l'administratif quand on est artisan",
+  "comment passer moins de temps sur l'administratif",
+  "quels outils d'ia pour gagner du temps sur l'administratif",
+  "je passe trop de temps sur l'administratif et pas assez sur mon métier",
+  "je travaille le week-end pour rattraper mon administratif",
+  "trop de paperasse administrative pour un artisan",
+  "paperasse administrative trop lourde que faire quand on est seul",
+  "ouvrir un commerce démarches administratives",
+  "j'ai perdu mes identifiants pour mon nom de domaine",
+  "comment trouver mon identifiant d'hébergement",
+  "je ne retrouve plus l'identifiant de mon nom de domaine",
+  "j'ai perdu le mot de passe administrateur de mon site wordpress",
+  "comment réinitialiser le mot de passe wordpress sans accès mail",
+  "un pirate a créé un compte administrateur sur mon wordpress"
+ ],
+ "articlesAProposerEnLien": [
+  {
+   "slug": "accessibilite-site-web-guide",
+   "titre": "Site accessible (RGAA) : obligations et bonnes pratiques pour une TPE"
+  },
+  {
+   "slug": "maintenance-site-web-guide",
+   "titre": "Maintenance de site web : pourquoi c'est indispensable et combien ça coûte"
+  },
+  {
+   "slug": "paa-hebergement-site",
+   "titre": "Quel hébergement choisir pour son site web en 2026 ?"
+  },
+  {
+   "slug": "vitesse-mobile-optimisation",
+   "titre": "Vitesse mobile : comment accélérer votre site sur smartphone"
+  }
+ ],
+ "articlesExistantsProches": []
+}

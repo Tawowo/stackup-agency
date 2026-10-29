@@ -32,6 +32,13 @@ export const GEO: Record<string, { nom: string; lat: number; lon: number }> = {
   anet: { nom: 'Anet', lat: 48.862, lon: 1.438 },
   vernouillet: { nom: 'Vernouillet', lat: 48.723, lon: 1.362 },
   'nogent-le-rotrou': { nom: 'Nogent-le-Rotrou', lat: 48.32, lon: 0.822 },
+  'saint-cyr-sur-loire': { nom: 'Saint-Cyr-sur-Loire', lat: 47.405, lon: 0.665 },
+  'saint-pierre-des-corps': { nom: 'Saint-Pierre-des-Corps', lat: 47.388, lon: 0.724 },
+  'chambray-les-tours': { nom: 'Chambray-lès-Tours', lat: 47.338, lon: 0.706 },
+  langeais: { nom: 'Langeais', lat: 47.327, lon: 0.409 },
+  bourgueil: { nom: 'Bourgueil', lat: 47.282, lon: 0.172 },
+  'chateau-la-valliere': { nom: 'Château-la-Vallière', lat: 47.5, lon: 0.3 },
+  chatellerault: { nom: 'Châtellerault', lat: 46.817, lon: 0.546 },
   // Chefs-lieux sans page ville (points de repère des départements).
   poitiers: { nom: 'Poitiers', lat: 46.58, lon: 0.34 },
   niort: { nom: 'Niort', lat: 46.324, lon: -0.459 },

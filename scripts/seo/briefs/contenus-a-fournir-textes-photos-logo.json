@@ -1,0 +1,61 @@
+{
+ "slug": "contenus-a-fournir-textes-photos-logo",
+ "titre": "Textes, photos, logo : ce qu’il faut fournir pour son site",
+ "theme": "création site",
+ "type": "guide",
+ "categorie": "creation",
+ "requetes": [
+  "protéger photos",
+  "application de suivi de chantier avec photos",
+  "nombre de photos séance photo",
+  "comment centraliser les photos de chantier",
+  "comment utiliser l'ia avec des photos de chantier",
+  "estimer des travaux à partir d'une photo avec l'ia",
+  "l'ia peut-elle repérer des malfaçons sur une photo",
+  "photos de produits avec un smartphone est-ce suffisant",
+  "classer automatiquement les photos de chantier par client",
+  "peut-on utiliser chatgpt pour écrire ses textes de site",
+  "comment éviter de sur-optimiser son texte",
+  "comment placer ses mots-clés dans un texte",
+  "comment transcrire un message vocal en texte",
+  "la rédaction des textes coûte-t-elle en plus",
+  "comment modifier soi-même les textes de son site",
+  "quelle longueur de texte pour une page de service",
+  "faut-il mentionner qu'un texte a été écrit par une ia",
+  "identité visuelle logo",
+  "est-ce que je peux mettre mon logo sans le déposer",
+  "je n'ai pas de logo peut-on faire un site quand même",
+  "est-ce que je peux utiliser des logos de marques partenaires sur mon site artisan",
+  "logo et marketing identité visuelle",
+  "logo et identité visuelle",
+  "identité visuelle et logo",
+  "logo identité"
+ ],
+ "articlesAProposerEnLien": [
+  {
+   "slug": "brasseur-artisanal-site-web",
+   "titre": "Site web pour brasseur artisanal : se faire connaître et vendre en ligne"
+  },
+  {
+   "slug": "conciergerie-airbnb-site-web",
+   "titre": "Site web pour conciergerie Airbnb : attirer plus de propriétaires"
+  },
+  {
+   "slug": "paa-combien-coute-site-web",
+   "titre": "Combien coûte un site web professionnel en 2026 ? (réponse directe)"
+  },
+  {
+   "slug": "paa-delai-creation-site",
+   "titre": "Combien de temps pour créer un site web ? Ce qui fait varier le délai"
+  },
+  {
+   "slug": "paa-site-web-necessaire",
+   "titre": "Est-ce qu'un site web est encore nécessaire en 2026 ?"
+  },
+  {
+   "slug": "paa-site-web-ventes",
+   "titre": "Un site web augmente-t-il vraiment les ventes ?"
+  }
+ ],
+ "articlesExistantsProches": []
+}

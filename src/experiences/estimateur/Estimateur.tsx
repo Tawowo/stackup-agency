@@ -10,6 +10,7 @@ import { calculer } from '@/domain/devis/calcul'
 import { ETAT_VIDE, RACCOURCIS, assainir, encoder, type EtatEstimateur } from '@/domain/devis/etat'
 import { euros, lignesConfig } from '@/domain/devis/resume'
 import type { ConfigDevis } from '@/domain/devis/types'
+import { suivre } from '@/lib/mesure'
 import { useScene } from '@/webgl/store'
 import Action from '@/components/ui/Action'
 import { ETAPES } from './donnees'
@@ -123,6 +124,7 @@ export default function Estimateur({ initial }: { initial: EtatEstimateur }) {
     setEtat({ ...e, etape: 1 })
     setRepartir(Object.values(e.cfg.pages).filter((n) => n > 0).length > 1)
     setDepart(id)
+    suivre('estimation_lancee', id)
   }
   const copier = async () => {
     try {

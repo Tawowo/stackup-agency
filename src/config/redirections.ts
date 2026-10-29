@@ -1,6 +1,6 @@
 /**
  * REDIRECTIONS 301 — générées par scripts/redirections.mjs (ne pas éditer à la main).
- * 71 reprises de l'ancien site + 34 pour les pages retirées en V5.
+ * 71 reprises de l'ancien site + 61 pour les pages retirées en V5.
  */
 import type { Redirect } from 'next/dist/lib/load-custom-routes'
 
@@ -469,6 +469,141 @@ export const REDIRECTIONS: Redirect[] = [
   {
     "source": "/services/site-association",
     "destination": "/services",
+    "permanent": true
+  },
+  {
+    "source": "/agence-web/orleans",
+    "destination": "/zones-intervention",
+    "permanent": true
+  },
+  {
+    "source": "/agence-web/chartres",
+    "destination": "/zones-intervention",
+    "permanent": true
+  },
+  {
+    "source": "/agence-web/dreux",
+    "destination": "/zones-intervention",
+    "permanent": true
+  },
+  {
+    "source": "/agence-web/bourges",
+    "destination": "/zones-intervention",
+    "permanent": true
+  },
+  {
+    "source": "/agence-web/vierzon",
+    "destination": "/zones-intervention",
+    "permanent": true
+  },
+  {
+    "source": "/agence-web/chateaudun",
+    "destination": "/zones-intervention",
+    "permanent": true
+  },
+  {
+    "source": "/agence-web/nantes",
+    "destination": "/zones-intervention",
+    "permanent": true
+  },
+  {
+    "source": "/agence-web/laval",
+    "destination": "/zones-intervention",
+    "permanent": true
+  },
+  {
+    "source": "/agence-web/caen",
+    "destination": "/zones-intervention",
+    "permanent": true
+  },
+  {
+    "source": "/agence-web/rouen",
+    "destination": "/zones-intervention",
+    "permanent": true
+  },
+  {
+    "source": "/agence-web/evreux",
+    "destination": "/zones-intervention",
+    "permanent": true
+  },
+  {
+    "source": "/agence-web/alencon",
+    "destination": "/zones-intervention",
+    "permanent": true
+  },
+  {
+    "source": "/agence-web/lisieux",
+    "destination": "/zones-intervention",
+    "permanent": true
+  },
+  {
+    "source": "/agence-web/rambouillet",
+    "destination": "/zones-intervention",
+    "permanent": true
+  },
+  {
+    "source": "/agence-web/anet",
+    "destination": "/zones-intervention",
+    "permanent": true
+  },
+  {
+    "source": "/agence-web/vernouillet",
+    "destination": "/zones-intervention",
+    "permanent": true
+  },
+  {
+    "source": "/agence-web/nogent-le-rotrou",
+    "destination": "/zones-intervention",
+    "permanent": true
+  },
+  {
+    "source": "/agence-web/chateauroux",
+    "destination": "/agence-web/departement/indre",
+    "permanent": true
+  },
+  {
+    "source": "/agence-web/departement/loiret",
+    "destination": "/zones-intervention",
+    "permanent": true
+  },
+  {
+    "source": "/agence-web/departement/eure-et-loir",
+    "destination": "/zones-intervention",
+    "permanent": true
+  },
+  {
+    "source": "/agence-web/departement/cher",
+    "destination": "/zones-intervention",
+    "permanent": true
+  },
+  {
+    "source": "/agence-web/departement/deux-sevres",
+    "destination": "/zones-intervention",
+    "permanent": true
+  },
+  {
+    "source": "/agence-web/departement/yonne",
+    "destination": "/zones-intervention",
+    "permanent": true
+  },
+  {
+    "source": "/agence-web/departement/nievre",
+    "destination": "/zones-intervention",
+    "permanent": true
+  },
+  {
+    "source": "/agence-web/departement/allier",
+    "destination": "/zones-intervention",
+    "permanent": true
+  },
+  {
+    "source": "/agence-web/departement/creuse",
+    "destination": "/zones-intervention",
+    "permanent": true
+  },
+  {
+    "source": "/agence-web/departement/orne",
+    "destination": "/zones-intervention",
     "permanent": true
   },
   {

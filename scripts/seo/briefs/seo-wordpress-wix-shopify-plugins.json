@@ -1,0 +1,55 @@
+{
+ "slug": "seo-wordpress-wix-shopify-plugins",
+ "titre": "SEO sur WordPress, Wix ou Shopify : ce qui compte vraiment",
+ "theme": "référencement",
+ "type": "guide",
+ "categorie": "seo",
+ "requetes": [
+  "wix ou wordpress pour le référencement",
+  "wix ou wordpress lequel est meilleur pour le seo",
+  "site codé à la main ou wordpress pour le référencement",
+  "un site sur mesure est-il meilleur pour le seo qu'un wix",
+  "quels plugins pour le seo wordpress",
+  "comment faire le seo de son site wix",
+  "wix est-il bon pour le référencement",
+  "comment optimiser le seo d'un site wix",
+  "shopify est-il bon pour le référencement",
+  "wordpress est-il bon pour le référencement",
+  "seo shopify comment faire"
+ ],
+ "articlesAProposerEnLien": [
+  {
+   "slug": "10-erreurs-seo-site-web",
+   "titre": "SEO : les 15 erreurs qui plombent les sites de petites entreprises"
+  },
+  {
+   "slug": "ai-overviews-seo-tpe",
+   "titre": "Google AI Overviews : comment être cité par l'IA de Google"
+  },
+  {
+   "slug": "articles-blog-ia-seo-2026",
+   "titre": "Articles de blog générés par IA et SEO en 2026 : ce qu'il faut vraiment savoir"
+  },
+  {
+   "slug": "audit-seo-technique-checklist-50-points",
+   "titre": "Audit SEO technique : checklist 50 points complète"
+  },
+  {
+   "slug": "blog-artisan-guide",
+   "titre": "Créer un blog pour son entreprise artisanale : ce qui vaut vraiment la peine"
+  },
+  {
+   "slug": "blog-seo-tpe-artisan",
+   "titre": "Blog SEO pour TPE et artisans : comment attirer des clients sans publicité"
+  }
+ ],
+ "articlesExistantsProches": [
+  {
+   "slug": "migrer-site-wix-sans-perdre-seo",
+   "titre": "Quitter Wix : migrer son site sans perdre son SEO",
+   "mots": 1186,
+   "score": 0.23,
+   "programme": "2026-11-07"
+  }
+ ]
+}

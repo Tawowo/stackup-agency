@@ -1,0 +1,71 @@
+{
+ "slug": "apparaitre-google-maps-pack-local",
+ "titre": "Comment apparaître sur Google Maps et dans le pack local",
+ "theme": "Google Business",
+ "type": "guide",
+ "categorie": "seo-local",
+ "requetes": [
+  "lier google et google maps",
+  "comment référencer son entreprise sur google maps",
+  "ma fiche google n'est plus visible sur google maps",
+  "les photos améliorent-elles le classement sur google maps",
+  "comment apparaître sur google maps",
+  "critères de classement google maps",
+  "artisan qui se déplace comment apparaître sur google maps",
+  "comment apparaître dans les premiers résultats google maps",
+  "la proximité compte-t-elle pour apparaître sur google maps",
+  "comment dépasser un concurrent sur google maps",
+  "comment voir ce que font mes concurrents sur google maps",
+  "comment passer devant ses concurrents sur google maps",
+  "pourquoi le concurrent d'à côté apparaît avant moi sur google maps",
+  "c'est quoi le pack local de google",
+  "comment apparaître dans le pack local",
+  "comment google choisit les entreprises qui apparaissent dans le pack local"
+ ],
+ "articlesAProposerEnLien": [
+  {
+   "slug": "avis-google-strategie-complete",
+   "titre": "Avis Google : stratégie complète pour obtenir 50+ avis 5 étoiles"
+  },
+  {
+   "slug": "cout-seo-local-pme",
+   "titre": "Combien coûte le SEO local pour une PME en 2026 ?"
+  },
+  {
+   "slug": "erreurs-seo-local",
+   "titre": "Les 8 erreurs de SEO local qui vous font perdre des clients"
+  },
+  {
+   "slug": "fiche-google-business-optimisation",
+   "titre": "Fiche Google Business : l'optimisation complète en 20 points"
+  },
+  {
+   "slug": "google-maps-integration-site",
+   "titre": "Google Maps sur votre site web : intégration et avantages SEO"
+  },
+  {
+   "slug": "netlinking-local-backlinks-region-methodes",
+   "titre": "Netlinking local : 12 méthodes pour obtenir des backlinks dans votre région"
+  }
+ ],
+ "articlesExistantsProches": [
+  {
+   "slug": "seo-local-google-maps-2026",
+   "titre": "Apparaître sur Google Maps en premier : la méthode complète",
+   "mots": 1534,
+   "score": 0.44
+  },
+  {
+   "slug": "cout-seo-local-pme",
+   "titre": "Combien coûte le SEO local pour une PME en 2026 ?",
+   "mots": 1169,
+   "score": 0.29
+  },
+  {
+   "slug": "seo-local-sans-site-web",
+   "titre": "Peut-on faire du SEO local sans site web ? La réponse complète",
+   "mots": 1221,
+   "score": 0.29
+  }
+ ]
+}
