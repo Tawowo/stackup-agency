@@ -24,7 +24,7 @@ Les deux services répondent à des besoins qui se recoupent mais ne se confonde
 
 **Mondial Relay** est un réseau de points relais (commerces de proximité, consignes). Le colis y est déposé et le destinataire vient le chercher avec une pièce d'identité ou un code. Sa force : un coût généralement attractif pour les colis légers et courants, et une grande souplesse d'horaires pour le client. Sa limite : le client doit se déplacer, certains colis volumineux ou lourds ne sont pas acceptés, et la qualité de l'expérience dépend beaucoup du point relais choisi.
 
-Ces éléments évoluent : vérifiez les conditions actuelles sur les sites des transporteurs avant de décider.
+Ces conditions évoluent : vérifiez-les sur les sites des transporteurs avant de décider.
 
 ## Colissimo ou Mondial Relay : lequel est le moins cher ?
 
@@ -124,7 +124,7 @@ Le client doit recevoir, **automatiquement**, un message au moment où le colis 
 - le mode de livraison (domicile ou point relais, avec l'adresse du point) ;
 - une adresse de contact si quelque chose ne va pas.
 
-Un deuxième message (ou celui du transporteur) l'informe de l'arrivée en point de retrait ou du passage du livreur. Ces e-mails sont des e-mails de service : faites-les envoyer par un expéditeur de votre domaine pour qu'ils n'atterrissent pas en indésirables (voir [la protection des formulaires et l'envoi des e-mails](/blog/formulaire-contact-spam-captcha-protection)).
+Faites envoyer ces e-mails depuis une adresse de votre domaine pour qu'ils n'atterrissent pas en indésirables (voir [la protection des formulaires et l'envoi des e-mails](/blog/formulaire-contact-spam-captcha-protection)).
 
 ## Un client dit ne pas avoir reçu son colis : que faire ?
 
@@ -146,14 +146,7 @@ Si le colis est déclaré perdu, vous réexpédiez ou remboursez le client, puis
 
 Pour une première expédition :
 
-1. **Emballez** : un carton adapté à la taille, un calage qui empêche le contenu de bouger, un adhésif solide, aucun vide.
-2. **Pesez et mesurez** le colis fermé.
-3. **Éditez l'étiquette** depuis la commande ou l'espace du transporteur.
-4. **Remettez le colis** : dépôt en point de dépôt (bureau de poste, point relais) ou enlèvement planifié si le volume le justifie.
-5. **Enregistrez** le numéro de suivi sur la commande et prévenez le client.
-6. **Conservez** la preuve de dépôt.
-
-Fixez un **horaire quotidien de préparation** pour regrouper les expéditions et ne pas perdre du temps à chaque commande.
+Emballez avec un carton adapté et un calage qui empêche le contenu de bouger, pesez et mesurez le colis fermé, éditez l'étiquette, remettez le colis (dépôt en bureau de poste ou point relais, ou enlèvement planifié si le volume le justifie), enregistrez le numéro de suivi sur la commande et conservez la preuve de dépôt. Fixez un **horaire quotidien de préparation** pour regrouper les expéditions.
 
 ## Colis de produits locaux : pour un client ou pour une entreprise
 

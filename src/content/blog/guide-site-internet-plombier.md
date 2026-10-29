@@ -24,9 +24,9 @@ Le bouche-à-oreille reste une source majeure de chantiers, mais la recommandati
 
 Il faut distinguer deux situations, car elles ne demandent pas la même vitrine.
 
-**L'urgence.** Une fuite, un chauffe-eau qui lâche, des toilettes bouchées un dimanche. La personne est sur son téléphone, souvent stressée. Elle tape « plombier » avec le nom de sa commune, regarde les trois premiers résultats de la carte Google, puis ouvre une fiche ou un site. Elle cherche : un numéro à toucher du pouce, une confirmation que vous intervenez chez elle, des horaires ou une mention d'astreinte, quelques avis récents. Elle ne lira pas un paragraphe sur votre histoire.
+**L'urgence.** Une fuite, un chauffe-eau qui lâche, des toilettes bouchées un dimanche. La personne est sur son téléphone, souvent stressée. Elle tape « plombier » avec le nom de sa commune, regarde les trois premiers résultats de la carte Google, puis ouvre une fiche ou un site. Elle cherche : un numéro à toucher du pouce, une confirmation que vous intervenez chez elle, des horaires ou une mention d'astreinte, quelques avis récents.
 
-**Le projet.** Remplacer une salle de bains, installer une pompe à chaleur, changer une chaudière. Ici, le client prend son temps : il compare, demande souvent deux ou trois devis, lit les pages de prestations, regarde des photos de chantiers, vérifie vos qualifications. Le site fait alors le travail d'un commercial discret.
+**Le projet.** Salle de bains, pompe à chaleur, chaudière. Le client prend son temps : il demande plusieurs devis, lit les pages de prestations, regarde des photos de chantiers, vérifie vos qualifications. Le site fait alors le travail d'un commercial discret.
 
 Les assistants conversationnels répondent aussi à des questions du type « qui appeler pour un dégât des eaux près de chez moi ? ». Personne ne peut promettre d'y apparaître. Ce que vous maîtrisez, c'est la cohérence de vos informations : même nom, adresse, téléphone et prestations sur votre site, votre fiche Google et vos annuaires.
 
@@ -74,7 +74,7 @@ Pour aller plus loin sur la visibilité locale, la page [référencement local](
 
 ## Plombier : devis en ligne et prise de rendez-vous en ligne
 
-Un devis en ligne ne signifie pas que le prix tombe tout seul. Pour un plombier, il s'agit plutôt d'un **formulaire de demande bien conçu** : type de problème, logement (maison, appartement, étage), photos, disponibilité du client, numéro pour le rappeler. Vous gagnez du temps parce que vous arrivez au premier appel avec les informations utiles, et le client se sent pris au sérieux.
+Un devis en ligne, pour un plombier, c'est surtout un **formulaire de demande bien conçu** : type de problème, logement, photos, disponibilité du client, numéro pour le rappeler. Vous arrivez au premier appel avec les informations utiles. Le prix ferme suit la visite ; une estimation affichée doit toujours être indicative.
 
 La **prise de rendez-vous en ligne** convient bien aux visites de devis, aux entretiens de chaudière ou aux poses planifiées. Elle convient mal aux urgences : pour une fuite, un client veut parler à quelqu'un. Proposez donc deux chemins distincts sur le site : « J'ai une urgence » (appel direct) et « Je prépare un projet » (formulaire ou créneau).
 
@@ -85,15 +85,14 @@ Un [modèle de devis](/outils/modele-devis) bien structuré aide aussi : plus vo
 Avant de chercher la cause dans le prix, vérifiez les points suivants.
 
 - **Le délai de réponse.** Le client qui demande trois devis signe souvent avec celui qui a répondu et envoyé un document clair en premier.
-- **Le contenu du devis.** Un devis d'une ligne « remplacement salle de bains » inquiète. Détaillez les postes, les fournitures, ce qui est inclus et exclu.
-- **Les options.** Proposer une version de base et une version améliorée évite le « oui ou non » et laisse le client choisir.
+- **Le contenu du devis.** Une ligne « remplacement salle de bains » inquiète. Détaillez les postes, ce qui est inclus et exclu, et proposez si possible une version de base et une version améliorée.
 - **L'absence de relance.** Beaucoup de devis ne sont pas refusés, ils sont oubliés. Un message poli quelques jours après, sans pression, en rouvre beaucoup.
 
-Un outil qui garde la liste des devis envoyés, leur statut et la date de relance suffit à régler la plupart de ces points.
+Un outil qui garde la liste des devis, leur statut et la date de relance règle la plupart de ces points.
 
 ## Planifier les interventions, suivre les pièces posées, rappeler l'entretien
 
-Une fois le client acquis, l'organisation fait la différence. Trois besoins reviennent chez les plombiers.
+Trois besoins reviennent chez les plombiers.
 
 **Planifier.** Quand les interventions arrivent par téléphone, SMS et formulaire, l'agenda se disperse. Un planning unique, accessible depuis le téléphone, avec l'adresse, la nature du problème et les notes d'accès, évite les doubles réservations et les trajets inutiles.
 
@@ -171,9 +170,6 @@ En combinant une fiche Google complète, des pages par prestation et par secteur
 
 **Un devis en ligne remplace-t-il la visite chez le client ?**
 Non. Il sert à qualifier la demande et à préparer la visite, le prix ferme dépend de ce que vous constatez sur place.
-
-**Quelle catégorie Google choisir pour un plombier ?**
-« Plombier » comme catégorie principale en général, puis des catégories secondaires qui correspondent à vos vraies activités, à vérifier dans l'interface Google Business Profile.
 
 **La facture électronique est-elle obligatoire pour un plombier ?**
 Le calendrier a été décalé et dépend de la taille de l'entreprise et du type de clients : consultez les sites officiels pour votre situation.

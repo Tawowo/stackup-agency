@@ -22,11 +22,11 @@ Non. Un artisan, un commerçant ou une profession libérale peut exercer sans si
 
 ## Les artisans sans site internet perdent-ils des clients ?
 
-On ne peut pas chiffrer sérieusement ce que perd un artisan donné, mais le mécanisme est connu : quand un prospect reçoit votre nom (recommandation, camion, carte de visite), il le cherche sur son téléphone. S’il ne trouve rien ou une fiche incomplète, il peut hésiter et appeler quelqu’un d’autre qu’il trouve plus facilement. Cela n’arrive pas à tous les clients : certains vous appellent directement. Posez-vous plutôt la question : voulez-vous élargir votre secteur, choisir vos clients, proposer de nouvelles prestations ? Si oui, un site vous aide. L’article [Est-ce qu’un site web est encore nécessaire en 2026 ?](/blog/paa-site-web-necessaire) approfondit ce point.
+On ne peut pas chiffrer sérieusement ce que perd un artisan donné, mais le mécanisme est connu : quand un prospect reçoit votre nom (recommandation, camion, carte de visite), il le cherche sur son téléphone. S’il ne trouve rien ou une fiche incomplète, il peut hésiter et appeler quelqu’un d’autre qu’il trouve plus facilement. Posez-vous plutôt la question : voulez-vous élargir votre secteur, choisir vos clients, proposer de nouvelles prestations ? Si oui, un site vous aide. L’article [Est-ce qu’un site web est encore nécessaire en 2026 ?](/blog/paa-site-web-necessaire) approfondit ce point.
 
 ### Je n’ai pas de site internet : que faire ?
 
-Avant de penser à un site, assurez les bases : une fiche Google complète (coordonnées, horaires, photos, zone d’intervention), des avis clients, des informations identiques partout (nom, téléphone, adresse). Puis publiez un site simple : une page d’accueil qui dit ce que vous faites et où, vos prestations, quelques réalisations, un moyen de vous joindre. Vous pourrez l’enrichir plus tard. Un petit site clair vaut mieux qu’un grand site jamais terminé. Pour savoir ce que vous devez rassembler, lisez [Textes, photos, logo : ce qu’il faut fournir](/blog/contenus-a-fournir-textes-photos-logo).
+Avant de penser à un site, assurez les bases : une fiche Google complète (coordonnées, horaires, photos, zone d’intervention), des avis clients, des informations identiques partout (nom, téléphone, adresse). Puis publiez un site simple : une page d’accueil qui dit ce que vous faites et où, vos prestations, quelques réalisations, un moyen de vous joindre. Vous pourrez l’enrichir plus tard. Pour savoir ce que vous devez rassembler, lisez [Textes, photos, logo : ce qu’il faut fournir](/blog/contenus-a-fournir-textes-photos-logo).
 
 ### Un site vitrine est-il utile pour un artisan ?
 
@@ -34,7 +34,7 @@ Oui, surtout pour montrer le travail réalisé, rassurer sur le sérieux et faci
 
 ## Facebook suffit-il pour avoir des clients ?
 
-Une page Facebook est un bon complément, pas toujours un substitut. Elle est gratuite, rapide à créer et utile pour les nouveautés. Ses limites : vous dépendez des règles et des changements de la plateforme, vos publications ne sont pas toujours vues, certaines personnes n’y ont pas de compte, et la page apparaît moins bien qu’un site sur les recherches précises (« plombier chauffagiste Tours »). Un site complète la page : il reste votre vitrine fixe, que vous maîtrisez, vers laquelle vous renvoyez depuis vos réseaux. Si vous n’avez qu’une page Facebook et que ça marche, ne la supprimez surtout pas : ajoutez-y un site quand vous avez besoin de plus de visibilité.
+Une page Facebook est un bon complément, pas toujours un substitut. Elle est gratuite, rapide à créer et utile pour les nouveautés. Ses limites : vous dépendez des règles et des changements de la plateforme, vos publications ne sont pas toujours vues, certaines personnes n’y ont pas de compte, et la page apparaît moins bien qu’un site sur les recherches précises (« plombier chauffagiste Tours »). Un site complète la page : il reste votre vitrine fixe, que vous maîtrisez, vers laquelle vous renvoyez depuis vos réseaux. Si votre page Facebook marche, gardez-la et ajoutez un site quand il vous faut plus de visibilité.
 
 ## Est-ce rentable d’avoir un site quand on est artisan ?
 
@@ -68,7 +68,7 @@ Cela dépend de la fréquence à laquelle il change. Un site qui évolue raremen
 
 ### Un contrat de création de site est-il obligatoire ?
 
-Aucune forme particulière n’est imposée, mais l’écrit est vivement conseillé : devis détaillé, contrat ou conditions de vente précisant ce qui est livré, la propriété du site et du nom de domaine, les modifications incluses, les délais, les conditions de paiement. Sans écrit, tout désaccord devient difficile à régler.
+Aucune forme particulière n’est imposée, mais l’écrit est vivement conseillé : devis détaillé, contrat ou conditions de vente précisant ce qui est livré, la propriété du site et du nom de domaine, les modifications incluses, les délais, les conditions de paiement.
 
 ## Ce qui est utile, et ce qui l’est moins
 
@@ -103,8 +103,8 @@ Pour un avis honnête sur votre situation, [contactez Stackup Agency](/contact) 
 **Un site avec un nom de domaine à mon nom est-il vraiment nécessaire ?**
 C’est très recommandé : le nom de domaine est votre adresse en ligne. S’il est enregistré au nom du prestataire, vous risquez de perdre le contrôle de votre site si vous changez de collaborateur.
 
-**Combien de pages faut-il pour un site d’artisan ?**
-Quelques-unes suffisent : accueil, prestations, réalisations, à propos, contact. Le nombre dépend du nombre de métiers ou de prestations à présenter séparément.
-
 **Puis-je créer mon site moi-même ?**
 Oui, avec un outil simple, si vous avez du temps et de l’aisance. Le coût réel est votre temps, et la conformité légale reste votre responsabilité.
+
+**Combien de pages faut-il pour un site d’artisan ?**
+Accueil, prestations, réalisations, à propos et contact suffisent le plus souvent.
