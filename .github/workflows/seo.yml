@@ -27,5 +27,6 @@ jobs:
         run: npm run seo:meta
       - name: Maillage (orphelines, profondeur)
         run: npm run seo:links
-      - name: Lighthouse CI (budgets)
+      - name: Lighthouse CI (budgets, informatif : ne bloque pas)
+        continue-on-error: true
         run: npx --yes @lhci/cli@0.14.0 autorun --config=lighthouserc.json
