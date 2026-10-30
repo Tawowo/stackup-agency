@@ -16,7 +16,13 @@ export default defineConfig({
     },
     {
       name: 'mobile-390',
-      use: { ...devices['Pixel 5'], launchOptions: { executablePath: CHROMIUM, args: ARGS } },
+      use: { ...devices['Pixel 5'], viewport: { width: 390, height: 844 }, launchOptions: { executablePath: CHROMIUM, args: ARGS } },
+    },
+    {
+      // Tablette : seulement les parcours de l'offre clubs (390 / 768 / 1440 demandés pour l'offre).
+      name: 'tablette-768',
+      testMatch: /clubs\.spec\.ts/,
+      use: { viewport: { width: 768, height: 1024 }, hasTouch: true, launchOptions: { executablePath: CHROMIUM, args: ARGS } },
     },
   ],
 })

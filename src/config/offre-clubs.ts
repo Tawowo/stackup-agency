@@ -37,9 +37,9 @@ export type RoleDemo = 'presidente' | 'tresorier' | 'secretaire' | 'enseignant' 
 
 /** Les trois boutons de démo, réutilisés partout. */
 export const BOUTONS_DEMO = [
-  { id: 'site', libelle: 'Voir le site d’un club', url: DEMO.site, decouverte: 'Le site public du Grand Chelem Tennis Club : accueil animé, tarifs et adhésion en ligne, école de tennis, Challenge interne, actualités, agenda, réservation, galerie.' },
-  { id: 'bureau', libelle: 'Ouvrir le logiciel du bureau', url: DEMO.role('presidente'), decouverte: '« Ma journée » de la présidente, les adhérents et les familles, les dossiers d’adhésion, la trésorerie, l’école de tennis, les équipes, les statistiques.' },
-  { id: 'parent', libelle: 'Essayer en tant que parent', url: DEMO.role('parent'), decouverte: 'L’espace d’un parent sur téléphone : le planning des enfants, une absence en un geste, les autorisations à signer, la carte de membre.' },
+  { id: 'site', titre: 'Le site du club', libelle: 'Voir le site d’un club', url: DEMO.site, decouverte: 'Le site public du Grand Chelem Tennis Club : accueil animé, tarifs et adhésion en ligne, école de tennis, Challenge interne, actualités, agenda, réservation, galerie.' },
+  { id: 'bureau', titre: 'Le logiciel du bureau', libelle: 'Ouvrir le logiciel du bureau', url: DEMO.role('presidente'), decouverte: '« Ma journée » de la présidente, les adhérents et les familles, les dossiers d’adhésion, la trésorerie, l’école de tennis, les équipes, les statistiques.' },
+  { id: 'parent', titre: 'L’espace parent', libelle: 'Essayer en tant que parent', url: DEMO.role('parent'), decouverte: 'L’espace d’un parent sur téléphone : le planning des enfants, une absence en un geste, les autorisations à signer, la carte de membre.' },
 ] as const
 
 /** Référence réelle : le club qui utilise la solution. */

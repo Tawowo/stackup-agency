@@ -33,10 +33,10 @@ export function BoutonsDemo({ ids = ['site', 'bureau', 'parent'], avecTexte = fa
       {boutons.map((b, i) => (
         <li key={b.id} className="su-plaque su-plaque--ivoire">
           <span className="su-mono cl-num">{String(i + 1).padStart(2, '0')}</span>
-          <h3>{b.libelle}</h3>
+          <h3>{b.titre}</h3>
           <p>{b.decouverte}</p>
           <Action href={b.url} variante={b.id === 'bureau' ? 'plein' : 'contour'}>
-            Ouvrir la démo
+            {b.libelle}
           </Action>
         </li>
       ))}

@@ -10,7 +10,7 @@ import Accordeon from '@/components/editorial/Accordeon'
 import { Portable, Telephone } from '@/components/appareils/Appareils'
 import Simulateur from '@/experiences/simulateur-clubs/Simulateur'
 import { BoutonsDemo, PiedOffre, eur } from '@/gabarits/clubs/composants'
-import { DEMO, PRODUCT_NAME, PROMESSE, RACINE_CLUBS, REFERENCE } from '@/config/offre-clubs'
+import { BOUTONS_DEMO, DEMO, PRODUCT_NAME, PROMESSE, RACINE_CLUBS, REFERENCE } from '@/config/offre-clubs'
 import { CATEGORIES, PRICING, coutParLicencieAn, tarif } from '@/data/offre-clubs/pricing'
 import { ABONNEMENT_NON_INCLUS, INCLUS_LOGICIEL, INCLUS_SITE, SUR_DEVIS } from '@/data/offre-clubs/inclus'
 import { PAGES_FONCTIONNALITES } from '@/data/offre-clubs/catalogue'
@@ -124,6 +124,16 @@ export default function Offre() {
                 Estimer le prix pour mon club
               </Action>
             </p>
+            <ul className="co-heros__demo" aria-label="La démo en ligne">
+              {BOUTONS_DEMO.map((b) => (
+                <li key={b.id}>
+                  <a href={b.url} target="_blank" rel="noopener noreferrer">
+                    {b.libelle} <span aria-hidden="true">↗</span>
+                    <span className="sr-only"> (nouvel onglet)</span>
+                  </a>
+                </li>
+              ))}
+            </ul>
             <p className="co-heros__prix">
               À partir de <strong>{eur(tarif(CATEGORIES[0]!, 'site').mois)}</strong> par mois pour le site, <strong>{eur(tarif(CATEGORIES[0]!, 'logiciel').mois)}</strong> pour le logiciel. Pour un club de {MOYEN.clubType} licenciés avec les deux : environ <strong>{parLicencie} €</strong> par licencié et par an.
             </p>
