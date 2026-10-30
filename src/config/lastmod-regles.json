@@ -1,4 +1,6 @@
 [
+  {"exact": "/cgv-plateforme", "cle": "cgv-plateforme", "chemins": ["src/data/offre-clubs/cgv-plateforme.ts", "src/app/cgv-plateforme", "src/config/company.ts"]},
+  {"prefixe": "/clubs-de-tennis", "cle": "clubs", "chemins": ["src/data/offre-clubs", "src/app/clubs-de-tennis", "src/experiences/clubs", "src/experiences/simulateur-clubs", "src/gabarits/clubs", "src/config/offre-clubs.ts"]},
   {"prefixe": "/services/creation-de-site-internet", "cle": "pilier-creation-de-site-internet", "chemins": ["src/data/piliers/creation-de-site-internet.ts", "src/app/services/creation-de-site-internet", "src/gabarits/pilier"]},
   {"prefixe": "/services/refonte-de-site-internet", "cle": "pilier-refonte-de-site-internet", "chemins": ["src/data/piliers/refonte-de-site-internet.ts", "src/app/services/refonte-de-site-internet", "src/gabarits/pilier"]},
   {"prefixe": "/services/referencement-local", "cle": "pilier-referencement-local", "chemins": ["src/data/piliers/referencement-local.ts", "src/app/services/referencement-local", "src/gabarits/pilier"]},

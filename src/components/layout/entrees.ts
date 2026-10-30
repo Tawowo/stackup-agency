@@ -9,6 +9,7 @@ export const ENTREES = [
 
 /** Le menu « Ressources » (nav) : tout ce qui n'est pas une page principale, une porte chacun. */
 export const RESSOURCES = [
+  { href: '/clubs-de-tennis', nom: 'Clubs de tennis', ligne: 'Le site et le logiciel du club, connectés en direct' },
   { href: '/ressources/cahier-des-charges', nom: 'Cahier des charges', ligne: 'Décrivez votre projet en détail, étape par étape' },
   { href: '/blog', nom: 'Le journal', ligne: 'Guides, réponses précises et comparatifs' },
   { href: '/outils', nom: 'Outils gratuits', ligne: 'Audit, mentions légales, devis, checklist facture électronique' },

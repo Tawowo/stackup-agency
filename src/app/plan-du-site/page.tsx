@@ -24,6 +24,7 @@ type Groupe = Route['groupe']
 const GROUPES: { id: Groupe; titre: string }[] = [
   { id: 'principal', titre: 'L’essentiel' },
   { id: 'offre', titre: 'Les offres' },
+  { id: 'clubs', titre: 'Clubs de tennis' },
   { id: 'outils', titre: 'Outils et ressources' },
   { id: 'local', titre: 'Près de chez vous' },
   { id: 'journal', titre: 'Le journal' },
@@ -32,6 +33,8 @@ const GROUPES: { id: Groupe; titre: string }[] = [
 
 /** Familles d'adresses : le premier préfixe qui correspond donne le sous-titre. */
 const FAMILLES: { prefixe: string; titre: string }[] = [
+  { prefixe: '/clubs-de-tennis/fonctionnalites/', titre: 'Fonctionnalités' },
+  { prefixe: '/clubs-de-tennis/guides/', titre: 'Guides' },
   { prefixe: '/realisations/', titre: 'Réalisations' },
   { prefixe: '/services/', titre: 'Services' },
   { prefixe: '/solutions/', titre: 'Outils de gestion' },

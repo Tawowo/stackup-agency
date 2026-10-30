@@ -1096,3 +1096,12 @@
   .su-est__curseur { flex-basis: 100%; }
   .su-est__nav { gap: 10px; }
 }
+
+/* Le détour vers le simulateur des clubs de tennis (offre plateforme). */
+.su-est__club {
+  margin: 14px 0 0;
+}
+.su-est__depart--club {
+  text-decoration: none;
+  border-style: dashed;
+}

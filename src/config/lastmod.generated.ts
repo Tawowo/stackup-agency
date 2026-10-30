@@ -1,6 +1,8 @@
 // FICHIER GÉNÉRÉ par scripts/lastmod.mjs (npm run lastmod). Ne pas modifier.
 
 export const LASTMOD: Record<string, string> = {
+  "cgv-plateforme": "2026-10-29",
+  "clubs": "2026-10-30",
   "pilier-creation-de-site-internet": "2026-10-29",
   "pilier-refonte-de-site-internet": "2026-10-29",
   "pilier-referencement-local": "2026-10-29",
@@ -12,17 +14,17 @@ export const LASTMOD: Record<string, string> = {
   "pilier-site-ecommerce": "2026-10-29",
   "comparatif-shopify-ou-boutique-sur-mesure": "2026-10-29",
   "comparatif-obat-tolteck-logiciel-sur-mesure": "2026-10-29",
-  "accueil": "2026-10-29",
-  "realisations": "2026-10-15",
+  "accueil": "2026-10-30",
+  "realisations": "2026-10-29",
   "services-locaux": "2026-10-29",
   "services": "2026-10-29",
-  "solutions": "2026-10-15",
-  "tarifs": "2026-10-29",
+  "solutions": "2026-10-29",
+  "tarifs": "2026-10-30",
   "a-propos": "2026-10-29",
   "contact": "2026-10-29",
-  "faq": "2026-10-15",
+  "faq": "2026-10-29",
   "comparatif": "2026-10-29",
-  "parrainage": "2026-10-15",
+  "parrainage": "2026-10-29",
   "outils": "2026-10-29",
   "lexique": "2026-10-29",
   "ressources": "2026-10-29",
@@ -33,8 +35,8 @@ export const LASTMOD: Record<string, string> = {
   "mentions": "2026-10-29",
   "cgv": "2026-10-29",
   "confidentialite": "2026-10-29",
-  "cookies": "2026-10-15",
-  "plan": "2026-10-29",
+  "cookies": "2026-10-29",
+  "plan": "2026-10-30",
   "en-bref": "2026-10-29",
   "auteur": "2026-10-29"
 }

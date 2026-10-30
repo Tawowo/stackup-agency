@@ -92,6 +92,29 @@ export default function Footer() {
             </ul>
           </div>
           <div className="su-footer__famille">
+            <h2>Clubs de tennis</h2>
+            <ul>
+              <li>
+                <Link href="/clubs-de-tennis">Site et logiciel de club</Link>
+              </li>
+              <li>
+                <Link href="/clubs-de-tennis/tarifs">Tarifs clubs</Link>
+              </li>
+              <li>
+                <Link href="/clubs-de-tennis/simulateur">Simulateur clubs</Link>
+              </li>
+              <li>
+                <Link href="/clubs-de-tennis/demo">Démo d’un club</Link>
+              </li>
+              <li>
+                <Link href="/clubs-de-tennis/indre-et-loire">Clubs d’Indre-et-Loire</Link>
+              </li>
+              <li>
+                <Link href="/clubs-de-tennis/guides">Guides pour les clubs</Link>
+              </li>
+            </ul>
+          </div>
+          <div className="su-footer__famille">
             <h2>Métiers</h2>
             <ul>
               {METIERS_PHARES.map((m) => (
@@ -199,6 +222,9 @@ export default function Footer() {
             </li>
             <li>
               <Link href="/cgv">CGV</Link>
+            </li>
+            <li>
+              <Link href="/cgv-plateforme">CGV plateforme</Link>
             </li>
             <li>
               <Link href="/cookies">Cookies</Link>

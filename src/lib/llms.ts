@@ -5,7 +5,7 @@
 import { SITE, offre } from '@/config/site'
 import { ZONES } from '@/data/zones'
 import { ORIGINE } from './seo'
-import { jetons, nombreFr } from './jetons'
+import { jetons, jetonsProfond, nombreFr } from './jetons'
 import { tousLesArticles } from './blog'
 import { toutesLesEntrees } from './lexique'
 import { PILIER as CREATION } from '@/data/piliers/creation-de-site-internet'
@@ -27,6 +27,11 @@ import { PILIER as PIXIESET } from '@/data/piliers/pixieset-pictime-ou-galerie-p
 import { PILIER as BATAPPLI } from '@/data/piliers/batappli-henrri-ou-devis-factures-sur-mesure'
 import { PILIER as UBER } from '@/data/piliers/uber-eats-ou-commande-directe'
 import type { Pilier } from '@/data/piliers/types'
+import { DEMO, MENTIONS_CLUBS, PRODUCT_NAME, PROMESSE, RACINE_CLUBS } from '@/config/offre-clubs'
+import { CATEGORIES, OPTIONS, PRICING, tarif } from '@/data/offre-clubs/pricing'
+import { CATALOGUE_CLUBS } from '@/data/offre-clubs/catalogue'
+import { TOUTES_LES_PAGES_CLUBS } from '@/data/offre-clubs/pages'
+import { FAQ_CLUBS } from '@/data/offre-clubs/faq'
 
 const PILIERS: Pilier[] = [CREATION, REFONTE, REFERENCEMENT, LOCAL, ECOMMERCE, LOGICIEL, IA, FACTURE, MAINTENANCE]
 const COMPARATIFS: Pilier[] = [SHOPIFY, OBAT, SQUARESPACE, SOLOCAL, PLANITY, THEFORK, PIXIESET, BATAPPLI, UBER]
@@ -45,10 +50,27 @@ export const IDENTITE = [
   `TVA : ${SITE.mentions.tva}`,
 ]
 
+/** L'offre « clubs de tennis » en quelques lignes : mêmes faits partout (nom, adresse, prix « à partir de »). */
+function blocClubs(): string[] {
+  const m = (f: 'site' | 'logiciel' | 'pack') => tarif(CATEGORIES[0]!, f)
+  return [
+    `## Offre clubs de tennis : ${PRODUCT_NAME}`,
+    `> ${PROMESSE.titre} ${PROMESSE.sousTitre} ${PROMESSE.pourQui}`,
+    `- Prix indicatifs « à partir de » (catégorie Mini, 1 à 49 licenciés) : site ${m('site').mois} €/mois + mise en place ${nombreFr(m('site').miseEnPlace)} € ; logiciel ${m('logiciel').mois} €/mois + ${nombreFr(m('logiciel').miseEnPlace)} € ; site + logiciel ${m('pack').mois} €/mois + ${nombreFr(m('pack').miseEnPlace)} € (−${Math.round(PRICING.packDiscount * 100)} %). Catégories selon les licenciés FFT de la saison en cours : ${CATEGORIES.map((c) => `${c.nom} ${c.min}${c.max ? `-${c.max}` : '+'}`).join(', ')}.`,
+    `- Mise en place payable en ${PRICING.installments} fois sans frais ; abonnement annuel −${Math.round(PRICING.annualDiscount * 100)} % ; engagement ${PRICING.engagementMois} mois ; prélèvement SEPA. ${MENTIONS_CLUBS.prix}`,
+    `- ADOC : ${MENTIONS_CLUBS.adoc} (aucune connexion directe, aucun partenariat). ${MENTIONS_CLUBS.fft}`,
+    `- Options : ${OPTIONS.map((o) => o.nom).join(', ')}.`,
+    `- Démo en ligne (club fictif) : site ${DEMO.site} ; logiciel ${DEMO.bureau} ; choix du rôle ${DEMO.accueil}`,
+    ...CATALOGUE_CLUBS.filter((p) => p.chemin !== '/desinscription').map((p) => `- [${p.nom}](${ORIGINE}${p.chemin})`),
+    '',
+  ]
+}
+
 export function llmsTxt(): string {
   const l: string[] = []
   l.push('# Stackup Agency', '', `> Agence web d’une personne, ${SITE.fondateur}, basée à Savigné-sur-Lathan (Indre-et-Loire), près de Tours. Sites internet, boutiques en ligne et outils de gestion sur mesure pour les artisans, commerçants, TPE et professions libérales de Touraine et d’ailleurs (visio). Une démo avant de signer ; prix toujours « à partir de ».`, '')
   l.push('## L’essentiel', ...IDENTITE.map((x) => `- ${x}`), `- Prix publics : site une page ${prix('une-page')} ; site multi-pages ${prix('multi-pages')} ; boutique en ligne ${prix('boutique')} ; outil de gestion ${prix('outil')} (montants indicatifs, devis précis dans l’estimateur ${ORIGINE}/tarifs).`, '')
+  l.push(...blocClubs())
   l.push('## Services', ...PILIERS.map((p) => `- [${p.titre}](${ORIGINE}${p.chemin}) : ${jetons(p.reponse).split('. ')[0]}.`), '')
   l.push('## Comparatifs', ...COMPARATIFS.map((p) => `- [${p.titre}](${ORIGINE}${p.chemin})`), `- [Wix, WordPress ou sur mesure](${ORIGINE}/comparatif/wix-wordpress-sur-mesure)`, '')
   l.push('## Zones d’intervention', `- [Toutes les zones et moteur « Votre commune »](${ORIGINE}/zones-intervention)`, ...ZONES.map((z) => `- [${z.nom}](${ORIGINE}/zones-intervention/${z.slug}) : ${z.communes.length} communes`), '')
@@ -68,6 +90,14 @@ export function llmsFull(): string {
     l.push(`## ${j.titre}`, `URL : ${ORIGINE}${j.chemin}`, '', j.reponse, '')
     for (const q of j.faq.slice(0, 6)) l.push(`**${q.q}** ${q.a}`, '')
   }
+  l.push(...blocClubs())
+  for (const p of TOUTES_LES_PAGES_CLUBS) {
+    const j = jetonsProfond(p)
+    l.push(`## ${j.titre}`, `URL : ${ORIGINE}${j.chemin}`, '', j.reponse, '')
+    for (const q of j.faq.slice(0, 4)) l.push(`**${q.q}** ${q.a}`, '')
+  }
+  l.push(`## Questions fréquentes des clubs (${ORIGINE}${RACINE_CLUBS}/faq)`, '')
+  for (const q of jetonsProfond(FAQ_CLUBS)) l.push(`**${q.q}** ${q.a.replace(/\[([^\]]+)\]\([^)]+\)/g, '$1')}`, '')
   l.push('## Lexique', '')
   for (const e of toutesLesEntrees()) l.push(`**${e.terme}** (${ORIGINE}/lexique/${e.slug}) : ${e.definition}`, '')
   return l.join('\n') + '\n'

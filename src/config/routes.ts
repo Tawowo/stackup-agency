@@ -11,11 +11,12 @@ import { PROJETS } from '@/experiences/galerie/projets'
 import { RAYONS, tousLesArticles } from '@/lib/blog'
 import { toutesLesEntrees } from '@/lib/lexique'
 import { ZONES } from '@/data/zones'
+import { CATALOGUE_CLUBS } from '@/data/offre-clubs/catalogue'
 
 export interface Route {
   chemin: string
   nom: string
-  groupe: 'principal' | 'offre' | 'outils' | 'local' | 'journal' | 'legal'
+  groupe: 'principal' | 'offre' | 'clubs' | 'outils' | 'local' | 'journal' | 'legal'
   priorite: number
 }
 
@@ -89,16 +90,19 @@ export function routesDynamiques(): Route[] {
     ...[...categories].map((c) => ({ chemin: `/blog/categorie/${c}`, nom: c, groupe: 'journal' as const, priorite: 0.4 })),
     ...articles.map((a) => ({ chemin: `/blog/${a.slug}`, nom: a.titre, groupe: 'journal' as const, priorite: 0.5 })),
     ...toutesLesEntrees().map((e) => ({ chemin: `/lexique/${e.slug}`, nom: `Lexique : ${e.terme}`, groupe: 'outils' as const, priorite: 0.5 })),
+    // Offre « clubs de tennis » : la désinscription (noindex) n'entre ni au sitemap ni au plan du site.
+    ...CATALOGUE_CLUBS.filter((p) => p.chemin !== '/desinscription').map((p) => ({ chemin: p.chemin, nom: p.nom, groupe: p.groupe === 'legal' ? ('legal' as const) : ('clubs' as const), priorite: p.chemin === '/clubs-de-tennis' ? 0.9 : p.groupe === 'legal' ? 0.2 : 0.7 })),
   ]
 }
 
 export const toutesLesRoutes = () => [...PAGES_FIXES, ...routesDynamiques()]
 
 /** Famille de sitemap (un fichier par type de page : suivi de l'indexation par type dans la Search Console). */
-export type FamilleSitemap = 'pages' | 'services' | 'solutions' | 'metiers' | 'villes' | 'blog' | 'realisations' | 'outils' | 'lexique'
-export const FAMILLES_SITEMAP: FamilleSitemap[] = ['pages', 'services', 'solutions', 'metiers', 'villes', 'blog', 'realisations', 'outils', 'lexique']
+export type FamilleSitemap = 'pages' | 'services' | 'solutions' | 'clubs' | 'metiers' | 'villes' | 'blog' | 'realisations' | 'outils' | 'lexique'
+export const FAMILLES_SITEMAP: FamilleSitemap[] = ['pages', 'services', 'solutions', 'clubs', 'metiers', 'villes', 'blog', 'realisations', 'outils', 'lexique']
 export function familleSitemap(chemin: string): FamilleSitemap {
   const debut = (p: string) => chemin === p || chemin.startsWith(p + '/')
+  if (debut('/clubs-de-tennis')) return 'clubs'
   if (debut('/creation-site-internet')) return 'metiers'
   if (debut('/agence-web') || debut('/zones-intervention')) return 'villes'
   if (debut('/blog')) return 'blog'

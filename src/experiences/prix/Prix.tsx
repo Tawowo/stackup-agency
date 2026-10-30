@@ -113,6 +113,9 @@ export default function Prix() {
           <Action href="/tarifs" mot="Voir">
             Voir tous les tarifs
           </Action>
+          <Action href="/clubs-de-tennis" variante="lien">
+            Vous êtes un club de tennis ? Le site et le logiciel du club
+          </Action>
         </div>
       </div>
     </section>

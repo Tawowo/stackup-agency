@@ -195,6 +195,12 @@ export default function Estimateur({ initial }: { initial: EtatEstimateur }) {
               )
             })}
           </ul>
+          <p className="su-est__club">
+            <a href="/clubs-de-tennis/simulateur" className="su-est__depart su-est__depart--club">
+              <span className="su-est__depart-titre">Je suis un club de tennis →</span>
+              <span className="su-est__depart-phrase">Le site et le logiciel du club ont leur propre simulateur, au prix selon vos licenciés.</span>
+            </a>
+          </p>
           <p className="su-est__annonce" role="status" aria-live="polite">
             {depart ? `Point de départ chargé : « ${RACCOURCIS.find((r) => r.id === depart)!.titre} ». Ajustez ce que vous voulez ci-dessous.` : ''}
           </p>
