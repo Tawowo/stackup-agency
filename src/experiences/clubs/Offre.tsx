@@ -308,7 +308,7 @@ export default function Offre() {
                     <span>{c.max === null ? `${c.min} licenciés et +` : `${c.min} à ${c.max}`}</span>
                   </th>
                   {(['site', 'logiciel', 'pack'] as const).map((f) => (
-                    <td key={f}>
+                    <td key={f} data-formule={f === 'site' ? 'Le site' : f === 'logiciel' ? 'Le logiciel' : 'Site + logiciel'}>
                       <strong>{eur(tarif(c, f).mois)}</strong>/mois
                       <span>{eur(tarif(c, f).miseEnPlace)} à la mise en place</span>
                     </td>

@@ -34,7 +34,7 @@ const SOMMAIRE = [
   { id: 'options', titre: 'Les options' },
   { id: 'conditions', titre: 'Les conditions' },
   { id: 'sur-devis', titre: 'Ce qui passe en devis' },
-  { id: 'faq', titre: 'Questions sur les prix' },
+  { id: 'faq', titre: 'Questions sur le contrat' },
 ]
 
 const FORMULES = [
@@ -43,7 +43,7 @@ const FORMULES = [
   { id: 'pack', nom: 'Site + logiciel' },
 ] as const
 
-const FAQ = jetonsProfond(FAQ_CLUBS.filter((q) => q.theme === 'prix' || q.theme === 'contrat'))
+const FAQ = jetonsProfond(FAQ_CLUBS.filter((q) => q.theme === 'contrat'))
 
 export default function Page() {
   const ariane = arianeDe({ chemin: CHEMIN, titre: 'Tarifs', famille: 'formule' })
@@ -207,7 +207,7 @@ export default function Page() {
         </section>
 
         <section id="faq" aria-labelledby="faq-t">
-          <h2 id="faq-t">Questions sur les prix et le contrat</h2>
+          <h2 id="faq-t">Questions sur le contrat</h2>
           <Accordeon questions={FAQ.map((f) => ({ q: f.q, r: f.a }))} groupe="faq-tarifs-clubs" />
         </section>
         <AppelFinal />

@@ -539,6 +539,49 @@
     max-width: 520px;
   }
 }
+@media (max-width: 700px) {
+  /* Tableau des prix : une carte par catégorie, une ligne par formule (pas de défilement de côté). */
+  .co-tableau table,
+  .co-tableau tbody,
+  .co-tableau tr,
+  .co-tableau th,
+  .co-tableau td {
+    display: block;
+  }
+  .co-tableau thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+  }
+  .co-tableau tr {
+    margin-bottom: 14px;
+    border-radius: 4px;
+    background: var(--su-ivoire);
+    box-shadow: 0 0 0 1px rgba(13, 44, 76, 0.12);
+    color: var(--su-navy);
+  }
+  .co-tableau tbody th {
+    font-family: var(--su-font-display), sans-serif;
+    font-size: 1.15rem;
+    border-bottom: 2px solid var(--su-ambre);
+  }
+  .co-tableau td {
+    display: grid;
+    grid-template-columns: 7.5em minmax(0, 1fr);
+    column-gap: 10px;
+  }
+  .co-tableau td::before {
+    content: attr(data-formule);
+    grid-row: span 2;
+    font-weight: 600;
+  }
+  .co-tableau tbody th span,
+  .co-tableau td span {
+    color: var(--su-graphite-ivoire);
+  }
+}
 @media (max-width: 767px) {
   .co-section {
     padding: 72px 0;
