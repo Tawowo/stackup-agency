@@ -132,7 +132,7 @@ export default function Page() {
               <h3>Inclus</h3>
               <ul className="ct-liste ct-liste--oui">
                 {ABONNEMENT_INCLUS.map((x) => (
-                  <li key={x}>{jetons(x)}</li>
+                  <li key={jetons(x)}>{jetons(x)}</li>
                 ))}
               </ul>
             </div>
@@ -140,7 +140,7 @@ export default function Page() {
               <h3>Non inclus</h3>
               <ul className="ct-liste ct-liste--non">
                 {ABONNEMENT_NON_INCLUS.map((x) => (
-                  <li key={x}>{jetons(x)}</li>
+                  <li key={jetons(x)}>{jetons(x)}</li>
                 ))}
               </ul>
             </div>
@@ -185,7 +185,7 @@ export default function Page() {
           <h2 id="conditions-t">Les conditions</h2>
           <ul>
             {CONDITIONS.map((x) => (
-              <li key={x}>{jetons(x)}</li>
+              <li key={jetons(x)}>{jetons(x)}</li>
             ))}
             <li>Support par e-mail ou formulaire, réponse sous {PRICING.supportJoursOuvres} jours ouvrés.</li>
           </ul>
@@ -198,7 +198,7 @@ export default function Page() {
           <h2 id="sur-devis-t">Ce qui passe en devis sur mesure</h2>
           <ul>
             {SUR_DEVIS.map((x) => (
-              <li key={x}>{jetons(x)}</li>
+              <li key={jetons(x)}>{jetons(x)}</li>
             ))}
           </ul>
           <p className="cl-demo-boutons">

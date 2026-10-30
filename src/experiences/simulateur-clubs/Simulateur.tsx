@@ -396,7 +396,7 @@ export default function Simulateur({ compact = false, initial = '' }: { compact?
             <summary>Ce qui est inclus avec cette formule</summary>
             <ul className="cs-inclus">
               {inclus.map((x) => (
-                <li key={x}>{jetons(x)}</li>
+                <li key={jetons(x)}>{jetons(x)}</li>
               ))}
               <li>Hébergement, nom de domaine, sauvegardes quotidiennes, mises à jour, support (réponse sous {PRICING.supportJoursOuvres} jours ouvrés), {categorie.stockageGo} Go de stockage</li>
               <li>
