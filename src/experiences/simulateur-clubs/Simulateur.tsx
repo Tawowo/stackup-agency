@@ -18,7 +18,7 @@ import { texteRecap } from '@/domain/clubs/resume'
 import { MENTIONS_CLUBS, RACINE_CLUBS } from '@/config/offre-clubs'
 import { jetons } from '@/lib/jetons'
 import { suivre } from '@/lib/mesure'
-import { ROLES_CLUB } from '@/lib/clubs-demande'
+import { ROLES_CLUB } from '@/lib/clubs-roles'
 import '@/experiences/estimateur/estimateur.css'
 import './simulateur.css'
 
@@ -37,6 +37,8 @@ type Demande = 'estimation' | 'devis' | null
 
 export default function Simulateur({ compact = false, initial = '' }: { compact?: boolean; initial?: string }) {
   const uid = useId()
+  // Niveaux de titres : la page du simulateur n'a que son h1 au-dessus ; la grande page l'insère sous un h2.
+  const Titre = compact ? 'h3' : 'h2'
   // L'état de départ vient de l'adresse, lue par la page côté serveur (lien partagé par un autre membre du bureau).
   const [depart] = useState(() => lireEtat(new URLSearchParams(initial)))
   const [club, setClub] = useState<Club>(depart.club)
@@ -97,9 +99,9 @@ export default function Simulateur({ compact = false, initial = '' }: { compact?
 
   const etape1 = (
     <section className="cs-etape" aria-labelledby={`${uid}-e1`}>
-      <h3 id={`${uid}-e1`} className="cs-etape__titre">
+      <Titre id={`${uid}-e1`} className="cs-etape__titre">
         <span className="su-mono">Étape 1 sur {compact ? 2 : 5}</span> Le club
-      </h3>
+      </Titre>
       {!compact && (
         <div className="cs-champs cs-champs--3">
           <p className="cs-champ">
@@ -157,9 +159,9 @@ export default function Simulateur({ compact = false, initial = '' }: { compact?
   const eco = economiePack(categorie)
   const etape2 = (
     <section className="cs-etape" aria-labelledby={`${uid}-e2`}>
-      <h3 id={`${uid}-e2`} className="cs-etape__titre">
+      <Titre id={`${uid}-e2`} className="cs-etape__titre">
         <span className="su-mono">Étape 2 sur {compact ? 2 : 5}</span> La formule
-      </h3>
+      </Titre>
       <CartesRadio<Formule>
         nom="formule"
         legende="La formule"
@@ -182,9 +184,9 @@ export default function Simulateur({ compact = false, initial = '' }: { compact?
 
   const etape3 = (
     <section className="cs-etape" aria-labelledby={`${uid}-e3`}>
-      <h3 id={`${uid}-e3`} className="cs-etape__titre">
+      <Titre id={`${uid}-e3`} className="cs-etape__titre">
         <span className="su-mono">Étape 3 sur 5</span> Les options
-      </h3>
+      </Titre>
       <p className="su-est__aide">Toutes facultatives. Une option grisée demande le site, le logiciel ou une autre option : sa condition est indiquée.</p>
       {GROUPES_OPTIONS.map((g) => (
         <fieldset key={g.id} className="cs-groupe">
@@ -236,9 +238,9 @@ export default function Simulateur({ compact = false, initial = '' }: { compact?
 
   const etape4 = (
     <section className="cs-etape" aria-labelledby={`${uid}-e4`}>
-      <h3 id={`${uid}-e4`} className="cs-etape__titre">
+      <Titre id={`${uid}-e4`} className="cs-etape__titre">
         <span className="su-mono">Étape 4 sur 5</span> L’accompagnement
-      </h3>
+      </Titre>
       <p className="su-est__aide">
         {fr.format(incluses)} h d’accompagnement sont incluses avec cette formule et cette catégorie (recueil des demandes, prise en main, formation). Au-delà : {eur(PRICING.heureSupplementaire)} de l’heure, par tranche de 30 minutes, en visio, par téléphone ou au club.
       </p>
@@ -264,9 +266,9 @@ export default function Simulateur({ compact = false, initial = '' }: { compact?
 
   const etape5 = (
     <section className="cs-etape" aria-labelledby={`${uid}-e5`}>
-      <h3 id={`${uid}-e5`} className="cs-etape__titre">
+      <Titre id={`${uid}-e5`} className="cs-etape__titre">
         <span className="su-mono">Étape 5 sur 5</span> Le paiement
-      </h3>
+      </Titre>
       <CartesRadio<'mensuel' | 'annuel'>
         nom="abo"
         legende="Abonnement"
@@ -294,9 +296,9 @@ export default function Simulateur({ compact = false, initial = '' }: { compact?
 
   const recap = (
     <div className="cs-recap" id={compact ? undefined : 'recap'} aria-labelledby={`${uid}-recap`} role="region">
-      <h3 id={`${uid}-recap`} className="cs-recap__titre">
+      <Titre id={`${uid}-recap`} className="cs-recap__titre">
         {club.nom ? `Estimation pour ${club.nom}` : 'Votre estimation'}
-      </h3>
+      </Titre>
       <p className="su-mono cs-recap__formule">
         {NOMS[entree.formule]} · catégorie {categorie.nom}
       </p>
@@ -487,7 +489,8 @@ export default function Simulateur({ compact = false, initial = '' }: { compact?
         {etape5}
       </form>
       <aside className="cs-cote">{recap}</aside>
-      <a className="cs-barre" href="#recap" aria-label={`Voir l’estimation : mise en place ${eur(r.miseEnPlace.total)}, ${r.abonnement.annuel !== null ? `${eur(r.abonnement.annuel)} par an` : `${eur(r.abonnement.mensuel)} par mois`}`}>
+      <a className="cs-barre" href="#recap">
+        <span className="sr-only">Voir l’estimation : </span>
         <span>
           <b>{eur(r.miseEnPlace.total)}</b> mise en place
         </span>
@@ -571,9 +574,9 @@ function FormulaireDemande({ type, simulation, recap }: { type: 'estimation' | '
   }
   return (
     <form className="cs-form" onSubmit={envoyer} noValidate aria-labelledby={`${uid}-titre`}>
-      <h4 id={`${uid}-titre`} tabIndex={-1}>
+      <h3 id={`${uid}-titre`} tabIndex={-1}>
         {titre}
-      </h4>
+      </h3>
       <div className="cs-champs cs-champs--2">
         {champ('prenom', 'Prénom', { type: 'text', autoComplete: 'given-name', maxLength: 80 })}
         {champ('nom', 'Nom', { type: 'text', autoComplete: 'family-name', maxLength: 80, required: true })}

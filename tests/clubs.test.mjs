@@ -4,6 +4,7 @@ import { CATEGORIES, PRICING, categorieDe, coutParLicencieAn, economiePack, tari
 import { SIMULATION_DEFAUT, echeances, optionDisponible, simuler } from '../src/domain/clubs/simulation.ts'
 import { ecrireEtat, lireEtat } from '../src/domain/clubs/etat.ts'
 import { jetons } from '../src/lib/jetons.ts'
+import { PricingSchema } from '../src/data/offre-clubs/pricing.schema.ts'
 
 const entree = (x = {}) => ({ ...SIMULATION_DEFAUT, ...x, licencies: { ...SIMULATION_DEFAUT.licencies, ...(x.licencies ?? {}) } })
 
@@ -15,6 +16,11 @@ const REFERENCE = {
   grand: { site: [1490, 35], logiciel: [1590, 59], pack: [2620, 80], heures: [3, 5, 8], go: 20 },
   'tres-grand': { site: [1890, 45], logiciel: [1990, 79], pack: [3300, 105], heures: [3, 6, 9], go: 50 },
 }
+
+test('la grille est valide (zod : types, catégories contiguës, options complètes)', () => {
+  assert.doesNotThrow(() => PricingSchema.parse(PRICING))
+  assert.throws(() => PricingSchema.parse({ ...PRICING, categories: PRICING.categories.slice(1) }))
+})
 
 test('chaque catégorie : site, logiciel et pack calculé (−15 %, mise en place à la dizaine, abonnement à l’euro)', () => {
   for (const c of CATEGORIES) {

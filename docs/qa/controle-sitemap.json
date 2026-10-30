@@ -1,8 +1,677 @@
 {
- "date": "2026-10-29T12:10:20.490Z",
+ "date": "2026-10-30T00:23:32.556Z",
  "base": "http://localhost:3100",
- "urls": 580,
- "testees": 580,
- "descriptionsRepriseesDuChapo": 136,
- "erreurs": []
+ "urls": 617,
+ "testees": 103,
+ "descriptionsRepriseesDuChapo": 33,
+ "erreurs": [
+  {
+   "url": "/",
+   "msg": "JSON-LD sans @type"
+  },
+  {
+   "url": "/comparatif/wix-wordpress-sur-mesure",
+   "msg": "JSON-LD sans @type"
+  },
+  {
+   "url": "/comparatif/thefork-zenchef-ou-reservation-restaurant-direct",
+   "msg": "JSON-LD sans @type"
+  },
+  {
+   "url": "/services/referencement-local",
+   "msg": "JSON-LD sans @type"
+  },
+  {
+   "url": "/cgv-plateforme",
+   "msg": "JSON-LD sans @type"
+  },
+  {
+   "url": "/parrainage",
+   "msg": "JSON-LD sans @type"
+  },
+  {
+   "url": "/services-locaux/developpement-application-metier",
+   "msg": "JSON-LD sans @type"
+  },
+  {
+   "url": "/solutions/reservation-restaurant",
+   "msg": "JSON-LD sans @type"
+  },
+  {
+   "url": "/services/site-ecommerce",
+   "msg": "JSON-LD sans @type"
+  },
+  {
+   "url": "/solutions/planning-employes",
+   "msg": "JSON-LD sans @type"
+  },
+  {
+   "url": "/clubs-de-tennis/fonctionnalites/site-modifiable",
+   "msg": "JSON-LD sans @type"
+  },
+  {
+   "url": "/clubs-de-tennis/fonctionnalites/site-modifiable",
+   "msg": "Service sans nom, fournisseur ou prix « à partir de »"
+  },
+  {
+   "url": "/clubs-de-tennis/fonctionnalites/equipes-et-competitions",
+   "msg": "JSON-LD sans @type"
+  },
+  {
+   "url": "/clubs-de-tennis/fonctionnalites/equipes-et-competitions",
+   "msg": "Service sans nom, fournisseur ou prix « à partir de »"
+  },
+  {
+   "url": "/clubs-de-tennis/indre",
+   "msg": "JSON-LD sans @type"
+  },
+  {
+   "url": "/clubs-de-tennis/indre",
+   "msg": "Service sans nom, fournisseur ou prix « à partir de »"
+  },
+  {
+   "url": "/clubs-de-tennis/fonctionnalites/reservation-de-courts",
+   "msg": "JSON-LD sans @type"
+  },
+  {
+   "url": "/clubs-de-tennis/fonctionnalites/reservation-de-courts",
+   "msg": "Service sans nom, fournisseur ou prix « à partir de »"
+  },
+  {
+   "url": "/clubs-de-tennis/simulateur",
+   "msg": "JSON-LD sans @type"
+  },
+  {
+   "url": "/clubs-de-tennis/guides/reinscriptions-en-ligne",
+   "msg": "JSON-LD sans @type"
+  },
+  {
+   "url": "/clubs-de-tennis/guides/reinscriptions-en-ligne",
+   "msg": "Article incomplet"
+  },
+  {
+   "url": "/clubs-de-tennis/guides/rgpd-club-de-tennis",
+   "msg": "JSON-LD sans @type"
+  },
+  {
+   "url": "/clubs-de-tennis/guides/rgpd-club-de-tennis",
+   "msg": "Article incomplet"
+  },
+  {
+   "url": "/creation-site-internet/restaurant",
+   "msg": "JSON-LD sans @type"
+  },
+  {
+   "url": "/creation-site-internet/restaurant",
+   "msg": "Markdown brut visible dans le texte"
+  },
+  {
+   "url": "/creation-site-internet/food-truck",
+   "msg": "JSON-LD sans @type"
+  },
+  {
+   "url": "/creation-site-internet/osteopathe",
+   "msg": "JSON-LD sans @type"
+  },
+  {
+   "url": "/creation-site-internet/osteopathe",
+   "msg": "Markdown brut visible dans le texte"
+  },
+  {
+   "url": "/creation-site-internet/avocat",
+   "msg": "JSON-LD sans @type"
+  },
+  {
+   "url": "/creation-site-internet/avocat",
+   "msg": "Markdown brut visible dans le texte"
+  },
+  {
+   "url": "/creation-site-internet/chocolatier",
+   "msg": "JSON-LD sans @type"
+  },
+  {
+   "url": "/creation-site-internet/poissonnier",
+   "msg": "JSON-LD sans @type"
+  },
+  {
+   "url": "/creation-site-internet/magasin-informatique",
+   "msg": "JSON-LD sans @type"
+  },
+  {
+   "url": "/creation-site-internet/serrurier-depannage",
+   "msg": "JSON-LD sans @type"
+  },
+  {
+   "url": "/creation-site-internet/serrurier-depannage",
+   "msg": "Markdown brut visible dans le texte"
+  },
+  {
+   "url": "/creation-site-internet/jardinerie-animalerie",
+   "msg": "JSON-LD sans @type"
+  },
+  {
+   "url": "/creation-site-internet/terrassier",
+   "msg": "JSON-LD sans @type"
+  },
+  {
+   "url": "/creation-site-internet/psychologue",
+   "msg": "JSON-LD sans @type"
+  },
+  {
+   "url": "/creation-site-internet/courtier-credit",
+   "msg": "JSON-LD sans @type"
+  },
+  {
+   "url": "/creation-site-internet/ecole-danse-musique",
+   "msg": "JSON-LD sans @type"
+  },
+  {
+   "url": "/zones-intervention/tours-metropole-val-de-loire",
+   "msg": "JSON-LD sans @type"
+  },
+  {
+   "url": "/zones-intervention/touraine-est-vallees",
+   "msg": "JSON-LD sans @type"
+  },
+  {
+   "url": "/agence-web/amboise",
+   "msg": "JSON-LD sans @type"
+  },
+  {
+   "url": "/agence-web/angers",
+   "msg": "JSON-LD sans @type"
+  },
+  {
+   "url": "/agence-web/langeais",
+   "msg": "JSON-LD sans @type"
+  },
+  {
+   "url": "/agence-web/departement/sarthe",
+   "msg": "JSON-LD sans @type"
+  },
+  {
+   "url": "/blog/annuaires-pages-jaunes-nap-citations",
+   "msg": "JSON-LD sans @type"
+  },
+  {
+   "url": "/blog/annuaires-pages-jaunes-nap-citations",
+   "msg": "BlogPosting incomplet"
+  },
+  {
+   "url": "/blog/blog-et-seo-quel-contenu-publier",
+   "msg": "JSON-LD sans @type"
+  },
+  {
+   "url": "/blog/blog-et-seo-quel-contenu-publier",
+   "msg": "BlogPosting incomplet"
+  },
+  {
+   "url": "/blog/comptabilite-tva-charges-ne-pas-perdre-pied",
+   "msg": "JSON-LD sans @type"
+  },
+  {
+   "url": "/blog/comptabilite-tva-charges-ne-pas-perdre-pied",
+   "msg": "BlogPosting incomplet"
+  },
+  {
+   "url": "/blog/devis-obligatoire-regles-validite",
+   "msg": "JSON-LD sans @type"
+  },
+  {
+   "url": "/blog/devis-obligatoire-regles-validite",
+   "msg": "BlogPosting incomplet"
+  },
+  {
+   "url": "/blog/facture-electronique-logiciel-gratuit-conforme",
+   "msg": "JSON-LD sans @type"
+  },
+  {
+   "url": "/blog/facture-electronique-logiciel-gratuit-conforme",
+   "msg": "BlogPosting incomplet"
+  },
+  {
+   "url": "/blog/guide-site-internet-boulangerie-patisserie",
+   "msg": "JSON-LD sans @type"
+  },
+  {
+   "url": "/blog/guide-site-internet-boulangerie-patisserie",
+   "msg": "BlogPosting incomplet"
+  },
+  {
+   "url": "/blog/hebergement-site-internet-choisir-un-hebergeur",
+   "msg": "JSON-LD sans @type"
+  },
+  {
+   "url": "/blog/hebergement-site-internet-choisir-un-hebergeur",
+   "msg": "BlogPosting incomplet"
+  },
+  {
+   "url": "/blog/obligations-legales-artisan-commercant-site",
+   "msg": "JSON-LD sans @type"
+  },
+  {
+   "url": "/blog/obligations-legales-artisan-commercant-site",
+   "msg": "BlogPosting incomplet"
+  },
+  {
+   "url": "/blog/logiciel-planning-chantiers-interventions",
+   "msg": "JSON-LD sans @type"
+  },
+  {
+   "url": "/blog/logiciel-planning-chantiers-interventions",
+   "msg": "BlogPosting incomplet"
+  },
+  {
+   "url": "/blog/prix-referencement-seo-agence-freelance",
+   "msg": "JSON-LD sans @type"
+  },
+  {
+   "url": "/blog/prix-referencement-seo-agence-freelance",
+   "msg": "BlogPosting incomplet"
+  },
+  {
+   "url": "/blog/rgpd-site-internet-artisan-commercant",
+   "msg": "JSON-LD sans @type"
+  },
+  {
+   "url": "/blog/rgpd-site-internet-artisan-commercant",
+   "msg": "BlogPosting incomplet"
+  },
+  {
+   "url": "/blog/seo-wordpress-wix-shopify-plugins",
+   "msg": "JSON-LD sans @type"
+  },
+  {
+   "url": "/blog/seo-wordpress-wix-shopify-plugins",
+   "msg": "BlogPosting incomplet"
+  },
+  {
+   "url": "/blog/trouver-de-nouveaux-clients-quand-on-est-artisan",
+   "msg": "JSON-LD sans @type"
+  },
+  {
+   "url": "/blog/trouver-de-nouveaux-clients-quand-on-est-artisan",
+   "msg": "BlogPosting incomplet"
+  },
+  {
+   "url": "/blog/avis-google-seo-referencement",
+   "msg": "JSON-LD sans @type"
+  },
+  {
+   "url": "/blog/avis-google-seo-referencement",
+   "msg": "BlogPosting incomplet"
+  },
+  {
+   "url": "/blog/filigrane-droits-auteur-photos-en-ligne",
+   "msg": "JSON-LD sans @type"
+  },
+  {
+   "url": "/blog/filigrane-droits-auteur-photos-en-ligne",
+   "msg": "BlogPosting incomplet"
+  },
+  {
+   "url": "/blog/pixieset-jingoo-pictime-cout-reel-abonnements",
+   "msg": "JSON-LD sans @type"
+  },
+  {
+   "url": "/blog/pixieset-jingoo-pictime-cout-reel-abonnements",
+   "msg": "BlogPosting incomplet"
+  },
+  {
+   "url": "/blog/site-photographe-fonctionnalites-indispensables",
+   "msg": "JSON-LD sans @type"
+  },
+  {
+   "url": "/blog/site-photographe-fonctionnalites-indispensables",
+   "msg": "BlogPosting incomplet"
+  },
+  {
+   "url": "/blog/instagram-artisan-guide",
+   "msg": "JSON-LD sans @type"
+  },
+  {
+   "url": "/blog/instagram-artisan-guide",
+   "msg": "BlogPosting incomplet"
+  },
+  {
+   "url": "/blog/redaction-article-seo-guide",
+   "msg": "JSON-LD sans @type"
+  },
+  {
+   "url": "/blog/redaction-article-seo-guide",
+   "msg": "BlogPosting incomplet"
+  },
+  {
+   "url": "/blog/amazon-marketplace-vs-site-propre",
+   "msg": "JSON-LD sans @type"
+  },
+  {
+   "url": "/blog/amazon-marketplace-vs-site-propre",
+   "msg": "BlogPosting incomplet"
+  },
+  {
+   "url": "/blog/google-ads-petit-budget",
+   "msg": "JSON-LD sans @type"
+  },
+  {
+   "url": "/blog/google-ads-petit-budget",
+   "msg": "BlogPosting incomplet"
+  },
+  {
+   "url": "/blog/meta-ads-tpe-guide",
+   "msg": "JSON-LD sans @type"
+  },
+  {
+   "url": "/blog/meta-ads-tpe-guide",
+   "msg": "BlogPosting incomplet"
+  },
+  {
+   "url": "/blog/linkedin-tpe-b2b-guide",
+   "msg": "JSON-LD sans @type"
+  },
+  {
+   "url": "/blog/linkedin-tpe-b2b-guide",
+   "msg": "BlogPosting incomplet"
+  },
+  {
+   "url": "/blog/site-web-coach-sportif",
+   "msg": "JSON-LD sans @type"
+  },
+  {
+   "url": "/blog/site-web-coach-sportif",
+   "msg": "BlogPosting incomplet"
+  },
+  {
+   "url": "/blog/photos-produits-ecommerce",
+   "msg": "JSON-LD sans @type"
+  },
+  {
+   "url": "/blog/photos-produits-ecommerce",
+   "msg": "BlogPosting incomplet"
+  },
+  {
+   "url": "/blog/10-erreurs-seo-site-web",
+   "msg": "JSON-LD sans @type"
+  },
+  {
+   "url": "/blog/10-erreurs-seo-site-web",
+   "msg": "BlogPosting incomplet"
+  },
+  {
+   "url": "/blog/application-fidelite-sur-mesure",
+   "msg": "JSON-LD sans @type"
+  },
+  {
+   "url": "/blog/application-fidelite-sur-mesure",
+   "msg": "BlogPosting incomplet"
+  },
+  {
+   "url": "/blog/application-reservation-location",
+   "msg": "JSON-LD sans @type"
+  },
+  {
+   "url": "/blog/application-reservation-location",
+   "msg": "BlogPosting incomplet"
+  },
+  {
+   "url": "/blog/idees-articles-blog-artisan",
+   "msg": "JSON-LD sans @type"
+  },
+  {
+   "url": "/blog/idees-articles-blog-artisan",
+   "msg": "BlogPosting incomplet"
+  },
+  {
+   "url": "/blog/carte-qr-code-restaurant-menu",
+   "msg": "JSON-LD sans @type"
+  },
+  {
+   "url": "/blog/carte-qr-code-restaurant-menu",
+   "msg": "BlogPosting incomplet"
+  },
+  {
+   "url": "/blog/erp-artisan-pme",
+   "msg": "JSON-LD sans @type"
+  },
+  {
+   "url": "/blog/erp-artisan-pme",
+   "msg": "BlogPosting incomplet"
+  },
+  {
+   "url": "/blog/gestion-planning-employes",
+   "msg": "JSON-LD sans @type"
+  },
+  {
+   "url": "/blog/gestion-planning-employes",
+   "msg": "BlogPosting incomplet"
+  },
+  {
+   "url": "/blog/intranet-entreprise-communication",
+   "msg": "JSON-LD sans @type"
+  },
+  {
+   "url": "/blog/intranet-entreprise-communication",
+   "msg": "BlogPosting incomplet"
+  },
+  {
+   "url": "/blog/personal-branding-image-en-ligne",
+   "msg": "JSON-LD sans @type"
+  },
+  {
+   "url": "/blog/personal-branding-image-en-ligne",
+   "msg": "BlogPosting incomplet"
+  },
+  {
+   "url": "/blog/menu-digital-vs-menu-papier",
+   "msg": "JSON-LD sans @type"
+  },
+  {
+   "url": "/blog/menu-digital-vs-menu-papier",
+   "msg": "BlogPosting incomplet"
+  },
+  {
+   "url": "/blog/prise-rdv-en-ligne-plombier-electricien",
+   "msg": "JSON-LD sans @type"
+  },
+  {
+   "url": "/blog/prise-rdv-en-ligne-plombier-electricien",
+   "msg": "BlogPosting incomplet"
+  },
+  {
+   "url": "/blog/site-ecommerce-prix-guide",
+   "msg": "JSON-LD sans @type"
+  },
+  {
+   "url": "/blog/site-ecommerce-prix-guide",
+   "msg": "BlogPosting incomplet"
+  },
+  {
+   "url": "/blog/reservation-en-ligne-spa-wellness",
+   "msg": "JSON-LD sans @type"
+  },
+  {
+   "url": "/blog/reservation-en-ligne-spa-wellness",
+   "msg": "BlogPosting incomplet"
+  },
+  {
+   "url": "/blog/site-web-multilingue-tourisme",
+   "msg": "JSON-LD sans @type"
+  },
+  {
+   "url": "/blog/site-web-multilingue-tourisme",
+   "msg": "BlogPosting incomplet"
+  },
+  {
+   "url": "/blog/ssl-https-site-web",
+   "msg": "JSON-LD sans @type"
+  },
+  {
+   "url": "/blog/ssl-https-site-web",
+   "msg": "BlogPosting incomplet"
+  },
+  {
+   "url": "/blog/tunnel-vente-site-web-pme",
+   "msg": "JSON-LD sans @type"
+  },
+  {
+   "url": "/blog/tunnel-vente-site-web-pme",
+   "msg": "BlogPosting incomplet"
+  },
+  {
+   "url": "/blog/vitrine-digitale-artisan-batiment",
+   "msg": "JSON-LD sans @type"
+  },
+  {
+   "url": "/blog/vitrine-digitale-artisan-batiment",
+   "msg": "BlogPosting incomplet"
+  },
+  {
+   "url": "/lexique/rgaa",
+   "msg": "JSON-LD sans @type"
+  },
+  {
+   "url": "/ressources",
+   "msg": "JSON-LD sans @type"
+  },
+  {
+   "url": "/lexique/application-metier",
+   "msg": "JSON-LD sans @type"
+  },
+  {
+   "url": "/lexique/balise-alt",
+   "msg": "JSON-LD sans @type"
+  },
+  {
+   "url": "/outils/audit-site",
+   "msg": "JSON-LD sans @type"
+  },
+  {
+   "url": "/lexique/cahier-des-charges",
+   "msg": "JSON-LD sans @type"
+  },
+  {
+   "url": "/lexique/chatbot",
+   "msg": "JSON-LD sans @type"
+  },
+  {
+   "url": "/lexique/contenu-duplique",
+   "msg": "JSON-LD sans @type"
+  },
+  {
+   "url": "/lexique/devis",
+   "msg": "JSON-LD sans @type"
+  },
+  {
+   "url": "/lexique/e-e-a-t",
+   "msg": "JSON-LD sans @type"
+  },
+  {
+   "url": "/lexique/factur-x",
+   "msg": "JSON-LD sans @type"
+  },
+  {
+   "url": "/lexique/garantie-decennale",
+   "msg": "JSON-LD sans @type"
+  },
+  {
+   "url": "/lexique/ia-generative",
+   "msg": "JSON-LD sans @type"
+  },
+  {
+   "url": "/lexique/lead",
+   "msg": "JSON-LD sans @type"
+  },
+  {
+   "url": "/lexique/marketplace",
+   "msg": "JSON-LD sans @type"
+  },
+  {
+   "url": "/lexique/mobile-first",
+   "msg": "JSON-LD sans @type"
+  },
+  {
+   "url": "/lexique/nom-de-domaine",
+   "msg": "JSON-LD sans @type"
+  },
+  {
+   "url": "/lexique/pointage-et-planning",
+   "msg": "JSON-LD sans @type"
+  },
+  {
+   "url": "/lexique/pwa",
+   "msg": "JSON-LD sans @type"
+  },
+  {
+   "url": "/lexique/roi",
+   "msg": "JSON-LD sans @type"
+  },
+  {
+   "url": "/lexique/schema-org",
+   "msg": "JSON-LD sans @type"
+  },
+  {
+   "url": "/lexique/shopify",
+   "msg": "JSON-LD sans @type"
+  },
+  {
+   "url": "/lexique/site-one-page",
+   "msg": "JSON-LD sans @type"
+  },
+  {
+   "url": "/lexique/tableau-de-bord",
+   "msg": "JSON-LD sans @type"
+  },
+  {
+   "url": "/lexique/webmaster",
+   "msg": "JSON-LD sans @type"
+  },
+  {
+   "url": "/tarifs",
+   "msg": "JSON-LD sans @type"
+  },
+  {
+   "url": "/solutions",
+   "msg": "JSON-LD sans @type"
+  },
+  {
+   "url": "/agence-web/tours",
+   "msg": "JSON-LD sans @type"
+  },
+  {
+   "url": "/creation-site-internet/videaste",
+   "msg": "JSON-LD sans @type"
+  },
+  {
+   "url": "/creation-site-internet/agence-immobiliere",
+   "msg": "JSON-LD sans @type"
+  },
+  {
+   "url": "/creation-site-internet/agence-immobiliere",
+   "msg": "Markdown brut visible dans le texte"
+  },
+  {
+   "url": "/creation-site-internet/pizzeria",
+   "msg": "JSON-LD sans @type"
+  },
+  {
+   "url": "/creation-site-internet/pizzeria",
+   "msg": "Markdown brut visible dans le texte"
+  },
+  {
+   "url": "/blog/activite-saisonniere-creux-hiver-carnet-vide",
+   "msg": "JSON-LD sans @type"
+  },
+  {
+   "url": "/blog/activite-saisonniere-creux-hiver-carnet-vide",
+   "msg": "BlogPosting incomplet"
+  },
+  {
+   "url": "/blog/adresse-mail-professionnelle-nom-de-domaine",
+   "msg": "JSON-LD sans @type"
+  },
+  {
+   "url": "/blog/adresse-mail-professionnelle-nom-de-domaine",
+   "msg": "BlogPosting incomplet"
+  }
+ ]
 }

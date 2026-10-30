@@ -9,7 +9,7 @@ import { CATEGORIES, tarif, type Formule } from '@/data/offre-clubs/pricing'
 
 const NOMS: Record<Formule, string> = { site: `${PRODUCT_NAME} — le site du club`, logiciel: `${PRODUCT_NAME} — le logiciel du bureau`, pack: `${PRODUCT_NAME} — site + logiciel` }
 
-/** Une offre « à partir de » : mise en place + abonnement mensuel, catégorie la plus petite. */
+/** Une offre « à partir de » : abonnement mensuel (prix principal), la mise en place en offre jointe ; catégorie la plus petite. */
 export function offreFormule(f: Formule) {
   const t = tarif(CATEGORIES[0]!, f)
   return {
@@ -19,10 +19,8 @@ export function offreFormule(f: Formule) {
     priceCurrency: 'EUR',
     availability: 'https://schema.org/InStock',
     seller: { '@id': ID.agence },
-    priceSpecification: [
-      { '@type': 'PriceSpecification', name: 'Mise en place (à partir de)', minPrice: t.miseEnPlace, priceCurrency: 'EUR', valueAddedTaxIncluded: false },
-      { '@type': 'UnitPriceSpecification', name: 'Abonnement mensuel (à partir de)', minPrice: t.mois, priceCurrency: 'EUR', unitCode: 'MON', referenceQuantity: { '@type': 'QuantitativeValue', value: 1, unitCode: 'MON' }, valueAddedTaxIncluded: false },
-    ],
+    priceSpecification: { '@type': 'UnitPriceSpecification', name: 'Abonnement mensuel (à partir de)', minPrice: t.mois, priceCurrency: 'EUR', unitCode: 'MON', referenceQuantity: { '@type': 'QuantitativeValue', value: 1, unitCode: 'MON' }, valueAddedTaxIncluded: false },
+    addOn: { '@type': 'Offer', name: 'Mise en place (à partir de)', priceCurrency: 'EUR', priceSpecification: { '@type': 'PriceSpecification', minPrice: t.miseEnPlace, priceCurrency: 'EUR', valueAddedTaxIncluded: false } },
   }
 }
 
@@ -51,7 +49,7 @@ export function serviceClubs(o: { nom: string; chemin: string; description: stri
     provider: { '@id': ID.agence },
     audience: { '@type': 'Audience', audienceType: 'Clubs de tennis associatifs (sections padel et pickleball comprises)' },
     areaServed: o.zone ? [{ '@type': 'AdministrativeArea', name: o.zone }, { '@type': 'Country', name: 'France' }] : [{ '@type': 'Country', name: 'France' }],
-    offers: o.formule ? offreFormule(o.formule) : offreAgregee(),
+    offers: offreFormule(o.formule ?? 'site'),
   }
 }
 

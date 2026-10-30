@@ -341,12 +341,12 @@
   flex-direction: column;
   gap: 12px;
 }
-.cs-form h4 {
+.cs-form h3 {
   margin: 0;
   font-family: var(--su-font-display), sans-serif;
   font-size: 1.15rem;
 }
-.cs-form h4:focus {
+.cs-form h3:focus {
   outline: none;
 }
 .cs-form .cs-champs--2 {

@@ -564,6 +564,10 @@
 .su-footer__bas a {
   color: inherit;
   text-decoration: none;
+  /* Cible d'au moins 24 px de haut (WCAG 2.2, critère 2.5.8). */
+  display: inline-flex;
+  align-items: center;
+  min-height: 24px;
 }
 .su-footer__bas a:hover,
 .su-footer__bas a:focus-visible {

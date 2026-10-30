@@ -2,7 +2,6 @@
  * ÉTAT PARTAGEABLE DU SIMULATEUR — la simulation tient dans l'adresse (paramètres courts, lisibles), pour que le
  * président l'envoie au trésorier. Lecture tolérante : un paramètre faux est ignoré, jamais une erreur.
  */
-import { z } from 'zod'
 import { OPTION_IDS, type OptionId } from '../../data/offre-clubs/pricing.ts'
 import { BESOINS_SUR_DEVIS, SIMULATION_DEFAUT, type BesoinId, type EntreeSimulation } from './simulation.ts'
 
@@ -25,7 +24,7 @@ const entier = (v: string | null, max: number) => {
 }
 const texte = (v: string | null, max = 80) => (v ?? '').replace(/[\u0000-\u001f<>]/g, '').slice(0, max)
 
-const Formule = z.enum(['site', 'logiciel', 'pack'])
+const FORMULES = ['site', 'logiciel', 'pack'] as const
 
 /** Paramètres d'adresse → état. */
 export function lireEtat(params: URLSearchParams): EtatSimulateur {
@@ -45,7 +44,7 @@ export function lireEtat(params: URLSearchParams): EtatSimulateur {
         precedente: entier(params.get('l1'), 5000),
         avantDerniere: entier(params.get('l2'), 5000),
       },
-      formule: Formule.safeParse(params.get('f')).success ? (params.get('f') as EntreeSimulation['formule']) : d.formule,
+      formule: (FORMULES as readonly string[]).includes(params.get('f') ?? '') ? (params.get('f') as EntreeSimulation['formule']) : d.formule,
       options,
       heuresPrevues: Number.isFinite(heures) && heures >= 0 ? Math.min(Math.round(heures * 2) / 2, 200) : d.heuresPrevues,
       premierRdv: params.get('rdv') === 'visio' ? 'visio' : 'presentiel',

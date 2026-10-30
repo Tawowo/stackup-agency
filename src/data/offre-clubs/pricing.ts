@@ -1,29 +1,11 @@
 /**
  * PRIX DE L'OFFRE « CLUBS DE TENNIS » — SOURCE UNIQUE DE VÉRITÉ.
  * Les pages, les tableaux, le simulateur, les jetons {{club:…}} des textes et les données structurées lisent
- * uniquement ce fichier. Le pack « site + logiciel » n'est jamais écrit : il se calcule (remise PACK_DISCOUNT).
+ * uniquement ce fichier. Le pack « site + logiciel » n'est jamais écrit : il se calcule (remise packDiscount).
  * Montants en euros, hors taxe (voir la mention TVA de src/config/company.ts).
- * Modifier un prix : changer le nombre ici, puis `npm test` (les tests rappellent les montants de référence).
+ * Validation : le schéma zod de pricing.schema.ts vérifie ce fichier à chaque `npm test` (le schéma reste hors du
+ * JavaScript envoyé au navigateur). Modifier un prix : changer le nombre ici, puis `npm test`.
  */
-import { z } from 'zod'
-
-const Tarif = z.object({ miseEnPlace: z.number().int().positive(), mois: z.number().int().positive() })
-
-const Categorie = z.object({
-  id: z.enum(['mini', 'petit', 'moyen', 'grand', 'tres-grand']),
-  nom: z.string(),
-  /** Licenciés FFT de la saison en cours (tennis, padel et pickleball compris). */
-  min: z.number().int().positive(),
-  max: z.number().int().positive().nullable(),
-  /** Taille du « club type » qui sert d'exemple (coût par licencié et par an). Hypothèse affichée comme telle. */
-  clubType: z.number().int().positive(),
-  site: Tarif,
-  logiciel: Tarif,
-  /** Heures d'accompagnement incluses à la mise en place : site seul, logiciel seul, les deux. */
-  heures: z.object({ site: z.number().int().nonnegative(), logiciel: z.number().int().nonnegative(), pack: z.number().int().nonnegative() }),
-  stockageGo: z.number().int().positive(),
-})
-
 export const OPTION_IDS = [
   'assistant-ia',
   'commande-vocale',
@@ -46,56 +28,73 @@ export const OPTION_IDS = [
   'copie-autonome',
 ] as const
 export type OptionId = (typeof OPTION_IDS)[number]
-
-const Option = z.object({
-  id: z.enum(OPTION_IDS),
-  nom: z.string(),
-  description: z.string(),
-  miseEnPlace: z.number().int().nonnegative(),
-  /** 0 = pas d'abonnement pour cette option. */
-  mois: z.number().int().nonnegative(),
-  /** « fixe » : une fois ; « page » : prix par page (quantité). */
-  unite: z.enum(['fixe', 'page']),
-  /** Ce dont l'option a besoin : le site, le logiciel, ou une autre option. */
-  requiert: z.enum(['site', 'logiciel', 'assistant-ia']).nullable(),
-  condition: z.string(),
-  /** Proposée dans le simulateur (la copie autonome ne se commande qu'au départ). */
-  simulateur: z.boolean(),
-  groupe: z.enum(['fonctions', 'visibilite', 'mise-en-place', 'depart']),
-})
-
-const Pricing = z.object({
-  /** Remise du pack site + logiciel, sur la mise en place et sur l'abonnement. */
-  packDiscount: z.number().min(0).max(0.5),
-  /** Remise du paiement annuel de l'abonnement. */
-  annualDiscount: z.number().min(0).max(0.5),
-  /** Mise en place payable en N fois, sans frais, sur les N premiers mois. */
-  installments: z.number().int().min(1),
-  /** Engagement (mois), puis reconduction annuelle. */
-  engagementMois: z.number().int().positive(),
-  /** Heure d'accompagnement supplémentaire, facturée par tranche de 30 minutes. */
-  heureSupplementaire: z.number().int().positive(),
-  trancheMinutes: z.number().int().positive(),
-  /** Développement propre à un seul club, chiffré avant. */
-  heureDeveloppement: z.number().int().positive(),
-  /** Premier rendez-vous en présentiel gratuit jusqu'à cette distance de Savigné-sur-Lathan. */
-  premierRdvGratuitKm: z.number().int().positive(),
-  /** Pages créées à la mise en place (pages légales en plus). */
-  pagesIncluses: z.number().int().positive(),
-  /** Délai de réponse du support (jours ouvrés). */
-  supportJoursOuvres: z.number().int().positive(),
-  /** Seuil de baisse des licenciés (saison en cours / moyenne des 3 saisons) qui déclenche le message « justificatif ». */
-  seuilBaisse: z.number().min(0).max(1),
-  categories: z.array(Categorie).length(5),
-  options: z.array(Option),
-})
-
-export type Categorie = z.infer<typeof Categorie>
-export type CategorieId = Categorie['id']
-export type Option = z.infer<typeof Option>
+export type CategorieId = 'mini' | 'petit' | 'moyen' | 'grand' | 'tres-grand'
 export type Formule = 'site' | 'logiciel' | 'pack'
 
-export const PRICING = Pricing.parse({
+export interface Tarif {
+  miseEnPlace: number
+  mois: number
+}
+
+export interface Categorie {
+  id: CategorieId
+  nom: string
+  /** Licenciés FFT de la saison en cours (tennis, padel et pickleball compris). */
+  min: number
+  max: number | null
+  /** Taille du « club type » qui sert d'exemple (coût par licencié et par an). Hypothèse affichée comme telle. */
+  clubType: number
+  site: Tarif
+  logiciel: Tarif
+  /** Heures d'accompagnement incluses à la mise en place : site seul, logiciel seul, les deux. */
+  heures: Record<Formule, number>
+  stockageGo: number
+}
+
+export interface Option {
+  id: OptionId
+  nom: string
+  description: string
+  miseEnPlace: number
+  /** 0 = pas d'abonnement pour cette option. */
+  mois: number
+  /** « fixe » : une fois ; « page » : prix par page (quantité). */
+  unite: 'fixe' | 'page'
+  /** Ce dont l'option a besoin : le site, le logiciel, ou une autre option. */
+  requiert: 'site' | 'logiciel' | 'assistant-ia' | null
+  condition: string
+  /** Proposée dans le simulateur (la copie autonome ne se commande qu'au départ). */
+  simulateur: boolean
+  groupe: 'fonctions' | 'visibilite' | 'mise-en-place' | 'depart'
+}
+
+export interface Pricing {
+  /** Remise du pack site + logiciel, sur la mise en place et sur l'abonnement. */
+  packDiscount: number
+  /** Remise du paiement annuel de l'abonnement. */
+  annualDiscount: number
+  /** Mise en place payable en N fois, sans frais, sur les N premiers mois. */
+  installments: number
+  /** Engagement (mois), puis reconduction annuelle. */
+  engagementMois: number
+  /** Heure d'accompagnement supplémentaire, facturée par tranche de trancheMinutes. */
+  heureSupplementaire: number
+  trancheMinutes: number
+  /** Développement propre à un seul club, chiffré avant. */
+  heureDeveloppement: number
+  /** Premier rendez-vous en présentiel gratuit jusqu'à cette distance de Savigné-sur-Lathan. */
+  premierRdvGratuitKm: number
+  /** Pages créées à la mise en place (pages légales en plus). */
+  pagesIncluses: number
+  /** Délai de réponse du support (jours ouvrés). */
+  supportJoursOuvres: number
+  /** Seuil de baisse des licenciés (saison en cours / moyenne des 3 saisons) qui déclenche le message « justificatif ». */
+  seuilBaisse: number
+  categories: Categorie[]
+  options: Option[]
+}
+
+export const PRICING: Pricing = {
   packDiscount: 0.15,
   annualDiscount: 0.1,
   installments: 3,
@@ -135,7 +134,7 @@ export const PRICING = Pricing.parse({
     { id: 'adresses-email', nom: 'Adresses e-mail du club', description: 'Mise en place des adresses du club (contact@, president@…).', miseEnPlace: 60, mois: 0, unite: 'fixe', requiert: null, condition: 'Coût du service e-mail à la charge du club.', simulateur: true, groupe: 'mise-en-place' },
     { id: 'copie-autonome', nom: 'Copie autonome du site en cas de départ', description: 'Une copie du site qui fonctionne sans la plateforme, à héberger où le club le souhaite.', miseEnPlace: 690, mois: 0, unite: 'fixe', requiert: 'site', condition: 'À la fin du contrat.', simulateur: false, groupe: 'depart' },
   ],
-})
+}
 
 export const CATEGORIES = PRICING.categories
 export const OPTIONS = PRICING.options

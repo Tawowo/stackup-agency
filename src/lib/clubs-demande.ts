@@ -10,7 +10,7 @@ import { COMPANY } from '../config/company.ts'
 import { MENTIONS_CLUBS, PRODUCT_NAME } from '../config/offre-clubs.ts'
 import type { LigneRecap } from '../domain/clubs/resume.ts'
 
-export const ROLES_CLUB = ['Président ou présidente', 'Trésorier ou trésorière', 'Secrétaire', 'Enseignant ou enseignante', 'Membre du bureau', 'Autre'] as const
+export { ROLES_CLUB } from './clubs-roles.ts'
 
 export const DemandeClubSchema = z.object({
   type: z.enum(['estimation', 'devis']),
