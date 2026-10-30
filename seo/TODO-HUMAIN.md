@@ -31,3 +31,15 @@ Les champs ci-dessous sont aujourd'hui soit des `[… à compléter]` dans `src/
 - [ ] **Démos par métier** (captures dédiées) : non réalisées ; les pages métiers s’appuient sur des textes et cas types fictifs annoncés comme tels.
 - [ ] **IndexNow** : à envoyer seulement après la mise en ligne (`node scripts/indexnow.mjs --envoyer`), sur votre accord.
 - [ ] **Titre de l’article** `e-commerce-produits-locaux-terroir` : contient « garder 100 % de vos marges » ; à arbitrer (promesse commerciale).
+
+## Offre clubs de tennis (`/clubs-de-tennis`) — à valider avant les premiers e-mails
+- [ ] **Relecture juridique** des conditions de la plateforme (`/cgv-plateforme`) : préavis, mise en demeure, révision des prix, reconduction (information des non-professionnels, article L215-1 du Code de la consommation), juridiction, annexe de traitement des données. Paramètres : `CGV_PLATEFORME` dans `src/config/offre-clubs.ts`.
+- [ ] **Sous-traitants et localisation des données** (annexe 1) : fournisseur de base de données, fournisseur d’IA (option), région d’hébergement de chaque service : `SOUS_TRAITANTS` dans `offre-clubs.ts`.
+- [ ] **TVA** : confirmer « TVA non applicable, art. 293 B du CGI » (`src/config/company.ts`, commentaire TODO).
+- [ ] **Témoignage du TCSG** : citation, nom, rôle, photo, accord écrit (`REFERENCE.temoignage`).
+- [ ] **Nom du produit** : « Stackup Club » est un nom de travail (`PRODUCT_NAME`).
+- [ ] **Liens directs de la démo** par écran (`DEMO_ECRANS`) et captures réelles de la démo si vous le souhaitez.
+- [ ] **Faits locaux** des pages départementales (Cher, Eure-et-Loir, Indre, Loir-et-Cher, Loiret, Indre-et-Loire) : rédigés de mémoire, aucun chiffre ; à relire.
+- [ ] **Médiateur de la consommation** et **assurance RC pro** (toujours à compléter).
+- [ ] **Liste de suppression** de la prospection : à tenir (`/desinscription` envoie un e-mail à chaque opposition).
+- [ ] **Premier envoi** : liens avec `?utm_source=email&utm_medium=prospection&utm_campaign=<nom>` ; n’envoyer à aucun club tant que les points ci-dessus ne sont pas validés.

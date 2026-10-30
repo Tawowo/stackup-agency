@@ -14,6 +14,8 @@ export default function Mesure() {
       const a = (e.target as Element | null)?.closest?.('a[href]') as HTMLAnchorElement | null
       if (!a) return
       const h = a.getAttribute('href') ?? ''
+      const evt = a.dataset.evt
+      if (evt && /^clubs_[a-z_]+$/.test(evt)) suivre(evt as Parameters<typeof suivre>[0], h.slice(0, 60))
       if (h.startsWith('tel:')) suivre('clic_telephone')
       else if (h.startsWith('mailto:')) suivre('clic_email')
       else if (/[?&]a=demo\b/.test(h)) suivre('clic_demo')

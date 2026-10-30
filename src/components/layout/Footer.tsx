@@ -53,7 +53,7 @@ export default function Footer() {
           <div className="su-footer__famille">
             <h2>L’agence</h2>
             <ul>
-              {[...ENTREES, { href: '/contact', nom: 'Contact' }].map((e) => (
+              {[...ENTREES, { href: '/clubs-de-tennis', nom: 'Clubs de tennis' }, { href: '/contact', nom: 'Contact' }].map((e) => (
                 <li key={e.href}>
                   <Link href={e.href}>{e.nom}</Link>
                 </li>

@@ -5,6 +5,7 @@
  * aucune offre association.
  */
 import { PRIX_PUBLICS as P } from './prix-publics.generated.ts'
+import { COMPANY, adresseCourte } from './company.ts'
 
 const aPartirDe = (id: keyof typeof P.offres) => P.offres[id]
 const description = (code: keyof typeof P.descriptions) => P.descriptions[code]
@@ -79,32 +80,37 @@ export const SITE = {
       inclus: [description('O00'), `${P.nbModulesOutil} modules au choix, selon votre métier`, 'Vos données vous appartiennent'],
     },
   ] as const satisfies readonly Offre[],
-  mentions: { tva: 'TVA non applicable, art. 293 B du CGI', devisValable: '30 jours' },
+  mentions: { tva: COMPANY.tva.mention, devisValable: '30 jours' },
   /**
    * IDENTITÉ LÉGALE — la seule source pour les mentions légales, les devis et tous les documents PDF
    * (`npm run documents`). Les champs entre crochets sont à compléter par le propriétaire.
    */
   entreprise: {
-    identite: 'Mathéo Reboul EI — Stackup Agency',
-    exploitant: 'Mathéo Reboul',
-    forme: 'Entrepreneur individuel (EI)',
-    /** Adresse (avis de situation INSEE) : rue, puis code postal et commune séparés pour les données structurées. */
-    adresse: '706 rue des Cormiers, 37340 Savigné-sur-Lathan',
-    rue: '706 rue des Cormiers',
-    codePostal: '37340',
-    commune: 'Savigné-sur-Lathan',
-    /** À recopier de l'avis de situation INSEE (non fourni à ce jour) : un champ « [… à compléter] » n'est jamais publié dans le JSON-LD. */
-    siren: '[SIREN à compléter]',
-    siret: '[SIRET à compléter]',
-    ape: '[Code APE à compléter]',
-    debutActivite: '[Date de début d’activité à compléter]',
+    /** Dénomination légale + nom commercial : « Mathéo REBOUL EI — Stackup Agency ». */
+    identite: `${COMPANY.denomination} — ${COMPANY.nomCommercial}`,
+    exploitant: COMPANY.exploitant,
+    forme: COMPANY.formeJuridique,
+    /** Adresse (avis d'immatriculation) : rue, puis code postal et commune séparés pour les données structurées. */
+    adresse: adresseCourte,
+    rue: COMPANY.adresse.rue,
+    codePostal: COMPANY.adresse.codePostal,
+    commune: COMPANY.adresse.commune,
+    siren: COMPANY.sirenAffiche,
+    siret: COMPANY.siretAffiche,
+    /** Formes brutes (sans espace), pour les données structurées. */
+    sirenBrut: COMPANY.siren,
+    siretBrut: COMPANY.siret,
+    ape: `${COMPANY.ape} — ${COMPANY.apeLibelle}`,
+    immatriculation: `${COMPANY.immatriculation.registre}, le ${COMPANY.immatriculation.dateAffichee}`,
+    /** Date ISO d'immatriculation (données structurées). */
+    debutActivite: COMPANY.immatriculation.date,
     mediateur: '[Médiateur de la consommation à compléter : nom, adresse postale et site internet]',
     assurance: '[Assurance responsabilité civile professionnelle à compléter : assureur et couverture géographique]',
   },
   /** Documents PDF : version, date, et mention de relecture (`documentsValides: true` la retire). */
   documents: {
-    version: '1.0',
-    dateVersion: '15 octobre 2026',
+    version: '1.1',
+    dateVersion: '30 octobre 2026',
     documentsValides: false,
     mentionRelecture: 'Modèle à faire valider par un professionnel du droit avant usage',
   },

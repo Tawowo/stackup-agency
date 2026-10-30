@@ -55,7 +55,7 @@ export default function CGV() {
         etiquette="Conditions de vente"
         titre="Conditions générales de vente"
         chapo="Ce qui est inclus, comment on paie, à qui appartient le code. Le devis précise le reste, par écrit, avant de commencer."
-        maj="13 octobre 2026"
+        maj="30 octobre 2026"
         sommaire={SOMMAIRE}
       >
         <p>
@@ -82,10 +82,10 @@ export default function CGV() {
             <strong>SIREN / SIRET :</strong> {SITE.entreprise.siren} / {SITE.entreprise.siret}
           </li>
           <li>
-            <strong>Code APE :</strong> {SITE.entreprise.ape}
+            <strong>Code APE (NAF) :</strong> {SITE.entreprise.ape}
           </li>
           <li>
-            <strong>Début d’activité :</strong> {SITE.entreprise.debutActivite}
+            <strong>Immatriculation :</strong> {SITE.entreprise.immatriculation}
           </li>
           <li>
             <strong>TVA :</strong> {SITE.mentions.tva}

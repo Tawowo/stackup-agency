@@ -27,6 +27,10 @@ import { PILIER as PIXIESET } from '@/data/piliers/pixieset-pictime-ou-galerie-p
 import { PILIER as BATAPPLI } from '@/data/piliers/batappli-henrri-ou-devis-factures-sur-mesure'
 import { PILIER as UBER } from '@/data/piliers/uber-eats-ou-commande-directe'
 import type { Pilier } from '@/data/piliers/types'
+import { routesClubs } from './clubs'
+import { PRICING } from '@/data/offre-clubs/pricing'
+import { prixPack } from '@/domain/clubs/calcul'
+import { PRODUCT_NAME, MENTION_FFT } from '@/config/offre-clubs'
 
 const PILIERS: Pilier[] = [CREATION, REFONTE, REFERENCEMENT, LOCAL, ECOMMERCE, LOGICIEL, IA, FACTURE, MAINTENANCE]
 const COMPARATIFS: Pilier[] = [SHOPIFY, OBAT, SQUARESPACE, SOLOCAL, PLANITY, THEFORK, PIXIESET, BATAPPLI, UBER]
@@ -49,6 +53,15 @@ export function llmsTxt(): string {
   l.push('## L’essentiel', ...IDENTITE.map((x) => `- ${x}`), `- Prix publics : site une page ${prix('une-page')} ; site multi-pages ${prix('multi-pages')} ; boutique en ligne ${prix('boutique')} ; outil de gestion ${prix('outil')} (montants indicatifs, devis précis dans l’estimateur ${ORIGINE}/tarifs).`, '')
   l.push('## Services', ...PILIERS.map((p) => `- [${p.titre}](${ORIGINE}${p.chemin}) : ${jetons(p.reponse).split('. ')[0]}.`), '')
   l.push('## Comparatifs', ...COMPARATIFS.map((p) => `- [${p.titre}](${ORIGINE}${p.chemin})`), `- [Wix, WordPress ou sur mesure](${ORIGINE}/comparatif/wix-wordpress-sur-mesure)`, '')
+  const pack = PRICING.categories.map((c) => prixPack(c))
+  l.push(
+    '## Offre pour les clubs de tennis, de padel et de pickleball',
+    `- ${PRODUCT_NAME} : le site du club et le logiciel de gestion du bureau, connectés, par abonnement. Prix indicatifs « à partir de », selon le nombre de licenciés (5 catégories) : site à partir de ${nombreFr(Math.min(...PRICING.categories.map((c) => c.site.mensuel)))} € par mois, logiciel à partir de ${nombreFr(Math.min(...PRICING.categories.map((c) => c.logiciel.mensuel)))} € par mois, site + logiciel de ${nombreFr(Math.min(...pack.map((p) => p.mensuel)))} à ${nombreFr(Math.max(...pack.map((p) => p.mensuel)))} € par mois selon la catégorie, plus une mise en place. Import et export des fichiers ADOC (aucune connexion directe).`,
+    `- ${MENTION_FFT}`,
+    ...routesClubs().filter((r) => !r.chemin.startsWith('/cgv')).map((r) => `- [${r.nom}](${ORIGINE}${r.chemin})`),
+    `- [Conditions générales de la plateforme](${ORIGINE}/cgv-plateforme)`,
+    '',
+  )
   l.push('## Zones d’intervention', `- [Toutes les zones et moteur « Votre commune »](${ORIGINE}/zones-intervention)`, ...ZONES.map((z) => `- [${z.nom}](${ORIGINE}/zones-intervention/${z.slug}) : ${z.communes.length} communes`), '')
   l.push('## Outils gratuits', `- [Audit de site](${ORIGINE}/outils/audit-site)`, `- [Générateur de mentions légales](${ORIGINE}/outils/generateur-mentions-legales)`, `- [Modèle de devis](${ORIGINE}/outils/modele-devis)`, `- [Calculateur de clients perdus](${ORIGINE}/outils/calculateur-clients-perdus)`, `- [Abonnement ou outil sur mesure](${ORIGINE}/outils/calculateur-abonnement-saas)`, `- [Checklist facture électronique](${ORIGINE}/outils/checklist-facture-electronique)`, `- [Cahier des charges](${ORIGINE}/ressources/cahier-des-charges)`, '')
   l.push('## Pages de référence', `- [Stackup Agency en bref](${ORIGINE}/stackup-agency-en-bref)`, `- [Tarifs et estimateur](${ORIGINE}/tarifs)`, `- [Réalisations](${ORIGINE}/realisations)`, `- [À propos](${ORIGINE}/a-propos)`, `- [Contact](${ORIGINE}/contact)`, `- [Questions fréquentes](${ORIGINE}/faq)`, '')

@@ -1096,3 +1096,11 @@
   .su-est__curseur { flex-basis: 100%; }
   .su-est__nav { gap: 10px; }
 }
+
+/* Tuile « Je suis un club de tennis » : un lien vers le simulateur dédié, présenté comme les points de départ. */
+a.su-est__depart--club {
+  display: grid;
+  text-decoration: none;
+  color: inherit;
+  text-align: left;
+}

@@ -5,6 +5,7 @@
  * on revient. La chaîne d'assemblage de la Fabrique se construit au fil des choix.
  * Sans JS, toutes les étapes sont présentes à la suite ; avec JS, une à la fois.
  */
+import Link from 'next/link'
 import { useCallback, useEffect, useMemo, useRef, useState, useSyncExternalStore } from 'react'
 import { calculer } from '@/domain/devis/calcul'
 import { ETAT_VIDE, RACCOURCIS, assainir, encoder, type EtatEstimateur } from '@/domain/devis/etat'
@@ -194,6 +195,13 @@ export default function Estimateur({ initial }: { initial: EtatEstimateur }) {
                 </li>
               )
             })}
+            <li>
+              <Link className="su-est__depart su-est__depart--club" href="/clubs-de-tennis/simulateur" data-evt="clubs_clic_estimateur">
+                <span className="su-est__depart-titre">Je suis un club de tennis</span>
+                <span className="su-est__depart-phrase">Le site et le logiciel d’un club, par abonnement : un simulateur dédié, selon vos licenciés.</span>
+                <span className="su-mono su-est__mention">Ouvrir le simulateur des clubs →</span>
+              </Link>
+            </li>
           </ul>
           <p className="su-est__annonce" role="status" aria-live="polite">
             {depart ? `Point de départ chargé : « ${RACCOURCIS.find((r) => r.id === depart)!.titre} ». Ajustez ce que vous voulez ci-dessous.` : ''}

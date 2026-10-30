@@ -15,6 +15,7 @@ export default function Action({
   className = '',
   type,
   onClick,
+  evt,
 }: {
   href?: string
   variante?: Variante
@@ -24,12 +25,14 @@ export default function Action({
   className?: string
   type?: 'submit' | 'button'
   onClick?: (e: React.MouseEvent<HTMLAnchorElement & HTMLButtonElement>) => void
+  /** Événement de mesure anonyme envoyé au clic (voir lib/mesure.ts, attribut data-evt). */
+  evt?: string
 }) {
   void mot
   const cls = `su-action su-action--${variante} ${className}`
   if (href && /^https?:\/\//.test(href)) {
     return (
-      <a href={href} className={cls} target="_blank" rel="noopener noreferrer" onClick={onClick}>
+      <a href={href} className={cls} target="_blank" rel="noopener noreferrer" onClick={onClick} data-evt={evt}>
         <span className="su-action__texte">{children}</span>
         <span className="sr-only"> (nouvel onglet)</span>
       </a>
@@ -37,13 +40,13 @@ export default function Action({
   }
   if (href) {
     return (
-      <Link href={href} className={cls} onClick={onClick}>
+      <Link href={href} className={cls} onClick={onClick} data-evt={evt}>
         <span className="su-action__texte">{children}</span>
       </Link>
     )
   }
   return (
-    <button type={type ?? 'button'} className={cls} onClick={onClick}>
+    <button type={type ?? 'button'} className={cls} onClick={onClick} data-evt={evt}>
       <span className="su-action__texte">{children}</span>
     </button>
   )

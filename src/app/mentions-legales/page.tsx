@@ -39,7 +39,7 @@ export default function MentionsLegales() {
         etiquette="Informations légales"
         titre="Mentions légales"
         chapo="Qui édite ce site, qui l’héberge, et ce que vous pouvez en faire."
-        maj="13 octobre 2026"
+        maj="30 octobre 2026"
         sommaire={SOMMAIRE}
       >
         <h2 id="editeur">Éditeur du site</h2>
@@ -69,10 +69,10 @@ export default function MentionsLegales() {
             <strong>SIREN / SIRET :</strong> {SITE.entreprise.siren} / {SITE.entreprise.siret}
           </li>
           <li>
-            <strong>Code APE :</strong> {SITE.entreprise.ape}
+            <strong>Code APE (NAF) :</strong> {SITE.entreprise.ape}
           </li>
           <li>
-            <strong>Début d’activité :</strong> {SITE.entreprise.debutActivite}
+            <strong>Immatriculation :</strong> {SITE.entreprise.immatriculation}
           </li>
           <li>
             <strong>TVA :</strong> {SITE.mentions.tva}

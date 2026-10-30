@@ -4,6 +4,8 @@
  * l'Excel, via `prix-publics.generated.ts`). Un seul endroit pour que tous les « à partir de » suivent la grille.
  */
 import { PRIX_PUBLICS as P } from '../config/prix-publics.generated.ts'
+import { valeurJetonClub } from '../domain/clubs/jetons.ts'
+import { PRODUCT_NAME } from '../config/offre-clubs.ts'
 
 const fr = new Intl.NumberFormat('fr-FR', { maximumFractionDigits: 0 })
 const nombre = (n: number) => fr.format(n).replace(/[\u202f\u00a0]/g, '\u00a0')
@@ -27,9 +29,12 @@ const VALEURS: Record<string, number> = {
   'carte:visio': P.visio,
 }
 
+/** Jetons de texte : `{{nom:produit}}`. */
+const TEXTES: Record<string, string> = { 'nom:produit': PRODUCT_NAME }
+
 export function jetons(texte: string): string {
   if (!texte.includes('{{')) return texte
-  return texte.replace(/\{\{([a-z:-]+)\}\}/g, (m, k: string) => (k in VALEURS ? nombre(VALEURS[k]!) : m))
+  return texte.replace(/\{\{([a-z:-]+)\}\}/g, (m, k: string) => (k in TEXTES ? TEXTES[k]! : k in VALEURS ? nombre(VALEURS[k]!) : k.startsWith('club:') && valeurJetonClub(k) !== undefined ? nombre(valeurJetonClub(k)!) : m))
 }
 
 /** Applique `jetons` à toutes les chaînes d'une structure de données (récursif). */

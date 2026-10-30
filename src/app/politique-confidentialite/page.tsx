@@ -6,6 +6,7 @@
 import Link from 'next/link'
 import Document from '@/gabarits/document/Document'
 import { SITE } from '@/config/site'
+import { COMPANY } from '@/config/company'
 import { JsonLd, filAriane, meta } from '@/lib/seo'
 
 export const metadata = meta({
@@ -24,6 +25,8 @@ const SOMMAIRE = [
   { id: 'transferts', titre: 'Transferts hors Union européenne' },
   { id: 'droits', titre: 'Vos droits' },
   { id: 'exercer', titre: 'Exercer vos droits' },
+  { id: 'clubs', titre: 'Simulateur et offre pour les clubs' },
+  { id: 'prospection', titre: 'Prospection' },
   { id: 'cookies', titre: 'Cookies' },
   { id: 'reclamation', titre: 'Réclamation' },
 ]
@@ -41,7 +44,7 @@ export default function PolitiqueConfidentialite() {
         etiquette="Données personnelles"
         titre="Politique de confidentialité"
         chapo="Ce que le formulaire de contact recueille, ce qu’on en fait, et rien de plus. Pas de publicité, pas de revente, pas de pistage."
-        maj="13 octobre 2026"
+        maj="30 octobre 2026"
         sommaire={SOMMAIRE}
       >
         <h2 id="responsable">Responsable du traitement</h2>
@@ -131,6 +134,33 @@ export default function PolitiqueConfidentialite() {
         <p>
           Écrivez à <a href={`mailto:${SITE.email}`}>{SITE.email}</a> en précisant votre demande. Une réponse vous est apportée dans un délai d’un mois.
         </p>
+
+        <h2 id="clubs">Simulateur et offre pour les clubs</h2>
+        <p>
+          Le <Link href="/clubs-de-tennis/simulateur">simulateur de prix pour les clubs</Link> calcule son estimation dans votre navigateur ; elle n’est enregistrée nulle part. Si vous demandez à la recevoir par e-mail, nous utilisons votre adresse e-mail, votre nom (facultatif) et les réponses de la simulation (club, commune, licenciés, formule, options) pour vous envoyer l’estimation et vous répondre. Ces informations sont conservées avec votre demande, dans les conditions décrites plus haut. Le lien partageable de la simulation ne contient que les réponses de la simulation, jamais votre adresse e-mail.
+        </p>
+
+        <h2 id="prospection">Prospection</h2>
+        <p>
+          {COMPANY.denomination} ({COMPANY.nomCommercial}) peut contacter par e-mail des clubs de tennis, de padel et de pickleball pour leur présenter la plateforme {SITE.nom} destinée aux clubs.
+        </p>
+        <ul>
+          <li>
+            <strong>Données utilisées :</strong> l’adresse e-mail de contact du club, telle qu’elle est publiée par le club lui-même (site internet, annuaire, réseaux), le nom du club et sa commune. Aucune donnée n’est achetée ni revendue.
+          </li>
+          <li>
+            <strong>Finalité :</strong> présenter l’offre et proposer un échange, sans suite si vous ne répondez pas.
+          </li>
+          <li>
+            <strong>Base légale :</strong> l’intérêt légitime (article 6.1.f du RGPD). La prospection s’adresse à des personnes morales, des associations, à propos de leur activité ; elle est sans lien avec une relation commerciale de particulier à professionnel.
+          </li>
+          <li>
+            <strong>Durée :</strong> les coordonnées de prospection sont conservées au plus trois ans après le dernier échange, ou jusqu’à votre opposition.
+          </li>
+          <li>
+            <strong>Droit d’opposition :</strong> chaque message rappelle comment ne plus en recevoir. Vous pouvez aussi vous opposer à tout moment, sans motif et sans frais, depuis la page <Link href="/desinscription">désinscription</Link> ou en écrivant à <a href={`mailto:${SITE.email}`}>{SITE.email}</a>. Votre adresse est alors retirée de nos listes et conservée uniquement pour ne plus vous solliciter.
+          </li>
+        </ul>
 
         <h2 id="cookies">Cookies</h2>
         <p>

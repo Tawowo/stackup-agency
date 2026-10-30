@@ -5,7 +5,19 @@
  * Événements : vue, estimation_lancee, contact_envoye, clic_telephone, clic_email, clic_demo, clic_appel, telechargement.
  * Chaque événement porte la page d'entrée de la session (sessionStorage, jamais envoyée à un tiers) pour rattacher une demande à la page qui l'a amenée.
  */
-export type EvenementMesure = 'vue' | 'estimation_lancee' | 'contact_envoye' | 'clic_telephone' | 'clic_email' | 'clic_demo' | 'clic_appel' | 'telechargement'
+export type EvenementMesure = 'vue' | 'estimation_lancee' | 'contact_envoye' | 'clic_telephone' | 'clic_email' | 'clic_demo' | 'clic_appel' | 'telechargement' | 'clubs_clic_demo' | 'clubs_simulateur_commence' | 'clubs_simulateur_termine' | 'clubs_devis_demande' | 'clubs_estimation_envoyee' | 'clubs_clic_estimateur'
+
+/** Campagne d'arrivée (utm_source / utm_medium / utm_campaign), gardée pour la session : rattache une demande à l'e-mail qui l'a amenée. */
+function campagne(): string {
+  try {
+    const q = new URLSearchParams(location.search)
+    const c = [q.get('utm_source'), q.get('utm_medium'), q.get('utm_campaign')].map((v) => (v ?? '').replace(/[^a-z0-9_-]/gi, '').slice(0, 20)).join('.')
+    if (c !== '..') sessionStorage.setItem('su_campagne', c)
+    return sessionStorage.getItem('su_campagne') ?? ''
+  } catch {
+    return ''
+  }
+}
 
 export function suivre(evenement: EvenementMesure, extra?: string) {
   if (typeof window === 'undefined') return
@@ -21,7 +33,7 @@ export function suivre(evenement: EvenementMesure, extra?: string) {
     entree = sessionStorage.getItem('su_entree') ?? ''
     if (!entree) sessionStorage.setItem('su_entree', (entree = location.pathname.slice(0, 200)))
   } catch {}
-  const corps = JSON.stringify({ e: evenement, p: location.pathname.slice(0, 200), o: origine.slice(0, 80), x: extra?.slice(0, 60), l: entree })
+  const corps = JSON.stringify({ e: evenement, p: location.pathname.slice(0, 200), o: origine.slice(0, 80), x: extra?.slice(0, 60), l: entree, u: campagne() || undefined })
   try {
     if (!navigator.sendBeacon?.('/api/mesure', new Blob([corps], { type: 'application/json' }))) void fetch('/api/mesure', { method: 'POST', body: corps, keepalive: true, headers: { 'content-type': 'application/json' } })
   } catch {}

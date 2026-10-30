@@ -9,7 +9,7 @@ export const DOCUMENTS: DocumentPdf[] = [
     "groupe": "legal",
     "revue": true,
     "pages": 6,
-    "ko": 489
+    "ko": 490
   },
   {
     "slug": "conditions-abonnement",
@@ -18,7 +18,7 @@ export const DOCUMENTS: DocumentPdf[] = [
     "groupe": "contractuel",
     "revue": true,
     "pages": 3,
-    "ko": 467
+    "ko": 469
   },
   {
     "slug": "devis-bon-de-commande",
@@ -27,7 +27,7 @@ export const DOCUMENTS: DocumentPdf[] = [
     "groupe": "commercial",
     "revue": true,
     "pages": 2,
-    "ko": 475
+    "ko": 479
   },
   {
     "slug": "pv-livraison",
@@ -36,7 +36,7 @@ export const DOCUMENTS: DocumentPdf[] = [
     "groupe": "contractuel",
     "revue": true,
     "pages": 2,
-    "ko": 433
+    "ko": 437
   },
   {
     "slug": "cession-droits-auteur",
@@ -45,7 +45,7 @@ export const DOCUMENTS: DocumentPdf[] = [
     "groupe": "contractuel",
     "revue": true,
     "pages": 3,
-    "ko": 482
+    "ko": 490
   },
   {
     "slug": "sous-traitance-rgpd",
@@ -54,7 +54,7 @@ export const DOCUMENTS: DocumentPdf[] = [
     "groupe": "contractuel",
     "revue": true,
     "pages": 4,
-    "ko": 484
+    "ko": 489
   },
   {
     "slug": "formulaire-retractation",
@@ -63,7 +63,7 @@ export const DOCUMENTS: DocumentPdf[] = [
     "groupe": "legal",
     "revue": true,
     "pages": 1,
-    "ko": 429
+    "ko": 432
   },
   {
     "slug": "politique-confidentialite-cookies",
@@ -72,7 +72,7 @@ export const DOCUMENTS: DocumentPdf[] = [
     "groupe": "legal",
     "revue": true,
     "pages": 4,
-    "ko": 498
+    "ko": 502
   },
   {
     "slug": "guide-accueil-client",
@@ -81,7 +81,7 @@ export const DOCUMENTS: DocumentPdf[] = [
     "groupe": "commercial",
     "revue": false,
     "pages": 3,
-    "ko": 468
+    "ko": 470
   },
   {
     "slug": "reglement-parrainage",
@@ -90,7 +90,7 @@ export const DOCUMENTS: DocumentPdf[] = [
     "groupe": "contractuel",
     "revue": true,
     "pages": 3,
-    "ko": 466
+    "ko": 468
   },
   {
     "slug": "grille-tarifaire",
@@ -99,6 +99,6 @@ export const DOCUMENTS: DocumentPdf[] = [
     "groupe": "commercial",
     "revue": false,
     "pages": 7,
-    "ko": 513
+    "ko": 515
   }
 ]

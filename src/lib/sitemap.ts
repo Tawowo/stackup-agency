@@ -5,6 +5,7 @@ import { RAYONS, tousLesArticles } from '@/lib/blog'
 import { toutesLesEntrees } from '@/lib/lexique'
 import { ORIGINE } from '@/lib/seo'
 import { PROJETS } from '@/experiences/galerie/projets'
+import { FONCTIONNALITES, PAGES_LOCALES, guides, RACINE_CLUBS } from '@/lib/clubs'
 
 type Regle = { exact?: string; prefixe?: string; cle: string }
 
@@ -31,6 +32,9 @@ export function entreesSitemap(famille: string): EntreeSitemap[] {
   const dates = new Map<string, string>([
     ...articles.map((a): [string, string] => [`/blog/${a.slug}`, a.maj ?? a.date]),
     ...toutesLesEntrees().map((e): [string, string] => [`/lexique/${e.slug}`, e.maj]),
+    ...FONCTIONNALITES.map((f): [string, string] => [`${RACINE_CLUBS}/fonctionnalites/${f.slug}`, f.maj]),
+    ...PAGES_LOCALES.map((p): [string, string] => [`${RACINE_CLUBS}/${p.slug}`, p.maj]),
+    ...guides().map((g): [string, string] => [`${RACINE_CLUBS}/guides/${g.slug}`, g.maj]),
   ])
   const dernier = articles.map((a) => a.maj ?? a.date).sort().at(-1)
   const rayons = new Set(RAYONS.map((r) => `/blog/categorie/${r.id}`))
@@ -39,6 +43,7 @@ export function entreesSitemap(famille: string): EntreeSitemap[] {
     .map((r) => {
       let lastModified: string | undefined = dates.get(r.chemin)
       if (!lastModified && (r.chemin === '/blog' || rayons.has(r.chemin))) lastModified = dernier
+      if (!lastModified && r.chemin.startsWith(RACINE_CLUBS)) lastModified = '2026-10-30'
       if (!lastModified) {
         const k = cle(r.chemin)
         lastModified = k ? LASTMOD[k] : undefined

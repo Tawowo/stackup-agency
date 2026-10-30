@@ -1,5 +1,13 @@
 # Journal du chantier — Stackup Agency V5
 
+## RAPPORT — mission 8 « Offre Clubs de tennis » (2026-10-30) — à lire en premier
+
+1. **Livré** : `/clubs-de-tennis` (16 sections), tarifs, simulateur 5 étapes (URL partageable, e-mail recalculé côté serveur, devis prérempli, impression), formules site et logiciel, démo (3 liens), FAQ (64 questions), 14 fonctionnalités, 6 pages départementales + Centre-Val de Loire, padel, pickleball, 12 guides, `/cgv-plateforme`, `/desinscription`.
+2. **Source unique des prix** : `src/data/offre-clubs/pricing.ts` (zod) → moteur pur `src/domain/clubs/` (46 tests) → jetons `{{club:…}}` ; jamais de prix écrit à la main. Identité légale centralisée dans `src/config/company.ts` (mentions, CGV, politique de confidentialité, JSON-LD, PDF régénérés).
+3. **Honnêteté** : « import et export des fichiers ADOC » seulement, mention FFT en pied de page, aucun logo fédéral, aucun chiffre ni témoignage inventé (emplacement TCSG non affiché), exception de la règle 8 notée dans CLAUDE.md. `scripts/clubs/verifier-contenus.mjs --tous` ✓.
+4. **Contrôles (build de production)** : `seo:check` 620 URL 0 manquement ; similarité max 12,6 % ; audit HTML 0 remarque ; NAP 0 écart ; lint 0 erreur ; e2e `clubs.spec.ts` 17/17 à 1440, 768 et 390 px ; captures lues dans `docs/offre-clubs/screenshots/`.
+5. **À valider par vous** : TVA 293 B ; relecture juridique des CGV et de l'annexe RGPD ; témoignage du TCSG ; nom « Stackup Club » ; sous-traitants et lieu des données (`SOUS_TRAITANTS`) ; faits locaux des pages départementales ; médiateur et assurance `[à compléter]` ; `RESEND_API_KEY` pour les e-mails ; captures réelles de la démo (`DEMO_ECRANS` vide : maquettes illustratives). Détails : `docs/offre-clubs/DECISIONS.md`.
+
 ## RAPPORT — mission 7 « SEO complet, phases 0 à 8 » (2026-10-29) — à lire en premier
 
 1. **Audit** (Phase 0) : `seo/SEO-AUDIT.md`, `inventory.csv` ; correctifs techniques (Phase 1) et JSON-LD centralisé `src/lib/schema.ts` (Phase 2) livrés plus tôt (commits c6d3665, c3073f0, f5496d7).

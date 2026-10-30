@@ -81,6 +81,9 @@ export default function Tarifs({ initial }: { initial: EtatEstimateur }) {
             <p className="su-tar__secondaire">
               Vous savez déjà ce que vous voulez ? <a href="/ressources/cahier-des-charges">Décrivez votre projet en détail</a>
             </p>
+            <p className="su-tar__secondaire">
+              Vous êtes un club de tennis, de padel ou de pickleball ? <Link href="/clubs-de-tennis/simulateur">Estimez le prix du site et du logiciel de votre club</Link>
+            </p>
           </header>
           <div className="su-tar__scene" {...bind()} role="img" aria-label="Le produit en construction sur la chaîne d’assemblage ; faites-le tourner">
             <StackFrame className="su-tar__cadre" />

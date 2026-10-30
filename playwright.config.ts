@@ -15,6 +15,11 @@ export default defineConfig({
       use: { viewport: { width: 1440, height: 900 }, launchOptions: { executablePath: CHROMIUM, args: ARGS } },
     },
     {
+      name: 'tablet-768',
+      testMatch: /clubs\.spec\.ts/,
+      use: { viewport: { width: 768, height: 1024 }, launchOptions: { executablePath: CHROMIUM, args: ARGS } },
+    },
+    {
       name: 'mobile-390',
       use: { ...devices['Pixel 5'], launchOptions: { executablePath: CHROMIUM, args: ARGS } },
     },
