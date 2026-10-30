@@ -3,7 +3,7 @@
  * Source du plan du site, du sitemap, du maillage interne et de la table mot-clé → page (docs/offre-clubs/SEO.md).
  * Une seule page par intention de recherche.
  */
-import { RACINE_CLUBS as R } from '@/config/offre-clubs'
+import { RACINE_CLUBS as R } from '../../config/offre-clubs.ts'
 
 export interface EntreeCatalogue {
   chemin: string
