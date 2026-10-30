@@ -1,5 +1,12 @@
 # Journal du chantier — Stackup Agency V5
 
+## RAPPORT — mission 8 « Offre clubs de tennis » (2026-10-30) — à lire en premier
+
+1. **Offre** `/clubs-de-tennis` (plateforme « Stackup Club », site + logiciel) : grande page en 16 moments, tarifs, simulateur dédié, démo rôle par rôle, FAQ (63 questions), 2 formules, 14 fonctionnalités, région + 6 départements, padel, pickleball, 10 guides, `/cgv-plateforme`, `/desinscription`. Mode d’emploi : `docs/offre-clubs/README.md` ; décisions : `DECISIONS.md` ; mots-clés : `SEO.md`.
+2. **Prix** : source unique `src/data/offre-clubs/pricing.ts` (pack calculé, validation zod dans `npm test`), moteur pur `src/domain/clubs/`, jetons `{{club:…}}` ; 14 tests. **Légal** : `src/config/company.ts` (Mathéo REBOUL EI, SIREN/SIRET, APE, RNE) partout, 11 PDF régénérés ; TVA « à confirmer ».
+3. **Contrôles (build de production)** : `npm run verify` vert (43 tests) ; e2e clubs 390 / 768 / 1440 ; `seo:check` 0 manquement (617 URL) ; maillage 0 orpheline ; similarité max 13,1 % ; axe 0 violation ; Lighthouse mobile 97-98 (accueil de l’offre, simulateur, tarifs, démo, Indre-et-Loire, guide), LCP ≤ 2,0 s, CLS 0.
+4. **Reste au propriétaire** : TVA ; relecture juridique des CGV plateforme ; témoignage TCSG ; nom du produit ; fusion de la démo (`?role=`) en production ; faits locaux ; fusion de cette branche dans `main`.
+
 ## RAPPORT — mission 7 « SEO complet, phases 0 à 8 » (2026-10-29) — à lire en premier
 
 1. **Audit** (Phase 0) : `seo/SEO-AUDIT.md`, `inventory.csv` ; correctifs techniques (Phase 1) et JSON-LD centralisé `src/lib/schema.ts` (Phase 2) livrés plus tôt (commits c6d3665, c3073f0, f5496d7).

@@ -1,6 +1,6 @@
 {
- "genere": "2026-10-14",
- "phase": "mission 3 — grille tarifaire et estimateur",
+ "genere": "2026-10-30",
+ "phase": "mission 8 — offre clubs de tennis",
  "captures": [
   {
    "fichier": "docs/qa/shots/contact/vide-1440.png",
@@ -2389,6 +2389,119 @@
    "defauts": [
     "Débordement horizontal de 4 px (nom de module trop long dans une grille 1fr) : minmax(0,1fr) + overflow-wrap"
    ],
+   "corrige": true
+  },
+  {
+   "fichier": "docs/offre-clubs/screenshots/clubs-de-tennis-1440.jpg",
+   "route": "/clubs-de-tennis",
+   "etat": "pleine page",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Héro nuit : promesse en h1, ADOC / Stackup Club en gras, « Voir la démo » ambre et « Estimer le prix » contour, trois liens de démo, prix « à partir de » ; à droite l’ordinateur (logiciel) et le téléphone (site, espace parent) qui font défiler les vraies captures. Puis 15 moments nuit / ivoire.",
+   "defauts": [
+    "Première passe : cartes masquées par une découpe pilotée par le défilement (contenu absent des captures pleine page, contraire à la règle 6) — retirée",
+    "Jetons {{produit}} et {{club:pages}} non remplacés : serveur de développement resté sur l’ancien module — redémarré ; clés React rendues avec les jetons remplacés"
+   ],
+   "corrige": true
+  },
+  {
+   "fichier": "docs/offre-clubs/screenshots/clubs-de-tennis-390.jpg",
+   "route": "/clubs-de-tennis",
+   "etat": "pleine page",
+   "largeur": 390,
+   "rm": false,
+   "visible": "Téléphone : texte du héros d’abord, boutons pleine largeur, appareils ensuite ; cartes empilées ; barre « Appeler / Estimer mon prix ».",
+   "defauts": [
+    "Tableau des prix par catégorie défilant sur le côté — devenu une carte par catégorie sous 700 px"
+   ],
+   "corrige": true
+  },
+  {
+   "fichier": "docs/offre-clubs/screenshots/clubs-de-tennis--tarifs-390.jpg",
+   "route": "/clubs-de-tennis/tarifs",
+   "etat": "pleine page",
+   "largeur": 390,
+   "rm": false,
+   "visible": "Cinq cartes de catégorie empilées (site, logiciel, pack surligné), coût par licencié, inclus / non inclus en deux listes, options en lignes, conditions, sur devis.",
+   "defauts": [],
+   "corrige": true
+  },
+  {
+   "fichier": "docs/offre-clubs/screenshots/clubs-de-tennis--simulateur-1440.jpg",
+   "route": "/clubs-de-tennis/simulateur",
+   "etat": "pleine page",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Feuille ivoire à gauche (5 étapes : club, formule, options grisées avec leur condition, accompagnement, paiement), récapitulatif nuit collant à droite : mise en place et échéances, abonnement, 3 premiers mois, première année, coût par licencié, actions.",
+   "defauts": [
+    "Libellé « abonnement ÷ licenciés » rendu « + » par la police — reformulé",
+    "Titres h3 directement sous le h1 — h2 sur la page, h3 dans la grande page"
+   ],
+   "corrige": true
+  },
+  {
+   "fichier": "docs/offre-clubs/screenshots/clubs-de-tennis--simulateur-390.jpg",
+   "route": "/clubs-de-tennis/simulateur",
+   "etat": "pleine page",
+   "largeur": 390,
+   "rm": false,
+   "visible": "Téléphone : étapes en une colonne, barre fixe en bas « mise en place / par mois / Voir », récapitulatif après les étapes.",
+   "defauts": [],
+   "corrige": true
+  },
+  {
+   "fichier": "docs/offre-clubs/screenshots/clubs-de-tennis--demo-1440.jpg",
+   "route": "/clubs-de-tennis/demo",
+   "etat": "pleine page",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Trois entrées en cartes ivoire (le bouton porte le libellé de démo), parcours conseillé en 8 étapes, rôle par rôle avec la capture de chaque rôle.",
+   "defauts": [
+    "Cartes : bouton « Ouvrir la démo » peu explicite — remplacé par le libellé (« Voir le site d’un club »…)"
+   ],
+   "corrige": true
+  },
+  {
+   "fichier": "docs/offre-clubs/screenshots/clubs-de-tennis--fonctionnalites--ecole-de-tennis-1440.jpg",
+   "route": "/clubs-de-tennis/fonctionnalites/ecole-de-tennis",
+   "etat": "pleine page",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Gabarit Document : fil d’Ariane court, titre, chapô, appareils de la démo (école de tennis), puis À voir dans la démo, étapes, sections, prix, FAQ, pages voisines, appel final, mentions.",
+   "defauts": [
+    "Titres longs sur 5-6 lignes — taille réduite d’un cran sur les pages de l’offre",
+    "Fil d’Ariane avec le titre entier — nom court du catalogue"
+   ],
+   "corrige": true
+  },
+  {
+   "fichier": "docs/offre-clubs/screenshots/clubs-de-tennis--indre-et-loire-1440.jpg",
+   "route": "/clubs-de-tennis/indre-et-loire",
+   "etat": "pleine page",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "Page départementale la plus riche : TCSG (lien du fondateur dit), rendez-vous au club, communes par secteur ; capture du site de la démo.",
+   "defauts": [],
+   "corrige": true
+  },
+  {
+   "fichier": "docs/offre-clubs/screenshots/clubs-de-tennis--guides--rgpd-club-de-tennis-390.jpg",
+   "route": "/clubs-de-tennis/guides/rgpd-club-de-tennis",
+   "etat": "pleine page",
+   "largeur": 390,
+   "rm": false,
+   "visible": "Guide : méthode en étapes, sections, FAQ, sources officielles à la racine (CNIL…).",
+   "defauts": [],
+   "corrige": true
+  },
+  {
+   "fichier": "docs/offre-clubs/screenshots/cgv-plateforme-1440.jpg",
+   "route": "/cgv-plateforme",
+   "etat": "pleine page",
+   "largeur": 1440,
+   "rm": false,
+   "visible": "CGV plateforme : identité complète (EI, SIREN/SIRET, APE, RNE, TVA), 24 articles, annexe données en 14 points ; notes de relecture jamais affichées.",
+   "defauts": [],
    "corrige": true
   }
  ]

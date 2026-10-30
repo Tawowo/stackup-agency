@@ -209,3 +209,9 @@
     width: 100%;
   }
 }
+
+/* Titres des pages de l'offre : souvent longs (la requête entière), un cran plus petits que les autres documents. */
+.su-doc__tete[data-moment^='clubs-'] .su-doc__titre {
+  font-size: clamp(2rem, 3.9vw, 3.5rem);
+  max-width: 24ch;
+}
